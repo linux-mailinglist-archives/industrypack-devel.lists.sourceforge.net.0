@@ -2,70 +2,87 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2B71F105B4
-	for <lists+industrypack-devel@lfdr.de>; Wed,  1 May 2019 09:09:16 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6AD591264C
+	for <lists+industrypack-devel@lfdr.de>; Fri,  3 May 2019 04:24:48 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1hLjMg-0003DS-Ln
-	for lists+industrypack-devel@lfdr.de; Wed, 01 May 2019 07:09:14 +0000
+	id 1hMNsV-0006Aw-2x
+	for lists+industrypack-devel@lfdr.de; Fri, 03 May 2019 02:24:47 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <882@educationeducation.xyz>) id 1hLjMf-0003DG-NU
- for industrypack-devel@lists.sourceforge.net; Wed, 01 May 2019 07:09:13 +0000
+ (envelope-from <bounce@collectivetranscription.info>)
+ id 1hMNsU-0006Ap-CA
+ for industrypack-devel@lists.sourceforge.net; Fri, 03 May 2019 02:24:46 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=o69ce1L6LIh2vw77uuuqRehPVhhBf7syiSkpjRqg/NI=; b=jIzOIAhYYDQZt0aTvQKLHsVngO
- m3Qut1aeKq2lgQx1x8GDi71/jqqDs8HcWpRXPgnY5SAt0knEsxMchlc/hdg2VoFEGxIu9FjVVSyM3
- Wq3xSvT9AbBNmm0VssVX2GCVjbETxdcsaQpvzUhXFnj+zDy1Ry09VCV4IPfN6iirYwGQ=;
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:
+ List-Unsubscribe:MIME-Version:Reply-To:From:Date:Message-ID:Subject:To:Sender
+ :Cc:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=892254/iSCBGjOOTbcnVTM/ccKUJJg4sgrovif37bJw=; b=Wr59pcuNX3ZtklI5CLMWpZopwj
+ FMKA0cdFzDVtTivPoDnS2M02exDKzoSAkbeBNk88Hqq0sDNcqXqOqqCfmn3YKlyUnNTb15dPCMnaX
+ zLogfzddqKTAT34IpX6IPtqsB47cPKKR+iRkIn4zOWnsA8ASy/80hw3KgXOT8Wo+afgM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=o69ce1L6LIh2vw77uuuqRehPVhhBf7syiSkpjRqg/NI=; b=d
- yoJMI7RSH+kA+0fBo5pDXhANPo4cHYz0/avxmV30bVQa3MXcy+WHTYzVQMK4hhj1mdKC4WtKB0j//
- 5NvTtHmz+qMPRokAiJmNHCER/O4A09a++k3ZMf+ekzSgzbyJcr1jXqg9QhaYLK26SbRjyHlylB5Re
- IEtVCjdcTlHHH/8I=;
-Received: from [23.236.77.111] (helo=mail.educationeducation.xyz)
- by sfi-mx-4.v28.lw.sourceforge.com with esmtp (Exim 4.90_1)
- id 1hLjMP-001K0o-Nk
- for industrypack-devel@lists.sourceforge.net; Wed, 01 May 2019 07:09:13 +0000
-Received: from hinet.com by mail.educationeducation.xyz (MDaemon PRO v10.1.1)
- with ESMTP id md50002397308.msg
- for <industrypack-devel@lists.sourceforge.net>; Wed, 01 May 2019 15:08:37 +0800
-X-Spam-Processed: mail.educationeducation.xyz, Wed, 01 May 2019 15:08:37 +0800
- (not processed: spam filter heuristic analysis disabled)
-X-MDHeloLookup-Result: hardfail smtp.helo=hinet.com (does not match
- 171.90.248.174) (mail.educationeducation.xyz)
-X-Authenticated-Sender: 882@educationeducation.xyz
-X-MDRemoteIP: 171.90.248.174
-X-Return-Path: 882@educationeducation.xyz
-X-Envelope-From: 882@educationeducation.xyz
-X-MDaemon-Deliver-To: industrypack-devel@lists.sourceforge.net
-Date: Wed, 1 May 2019 15:08:37 +0800
-From: "lsess" <sales2@xiyibearings.com>
-To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20190501150850721035@educationeducation.xyz>
-X-mailer: Foxmail 6, 13, 102, 15 [cn]
-Mime-Version: 1.0
-X-Spam-Score: 4.8 (++++)
+ h=Content-Transfer-Encoding:Content-Type:List-Unsubscribe:MIME-Version:
+ Reply-To:From:Date:Message-ID:Subject:To:Sender:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=892254/iSCBGjOOTbcnVTM/ccKUJJg4sgrovif37bJw=; b=eK1h7H9cYp7EA+EJLH17E98z3U
+ giTJrWaUOcE4AlzHe2+WLc05z+5F+ropNu0p0WnIdsRAzTDtXjpjUxwUQEvU7ftNl1Th5mPnFdg54
+ /O8jyS0F9UsjnSzmU6h3ohqZ0tBmUkKbpOzWxfIXBmTq3V7ahxuE2QG/NSVNZWrrfBy0=;
+Received: from collectivetranscription.info ([45.249.221.13])
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ id 1hMNsS-003p47-MQ
+ for industrypack-devel@lists.sourceforge.net; Fri, 03 May 2019 02:24:46 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=collectivetranscription.info; s=mail; h=Content-Transfer-Encoding:
+ Content-Type:List-Unsubscribe:MIME-Version:Reply-To:From:Date:Message-ID:
+ Subject:To:Sender:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:
+ Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+ List-Id:List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=892254/iSCBGjOOTbcnVTM/ccKUJJg4sgrovif37bJw=; b=0/18milwacdqpk2uR5c6IcG2eZ
+ a+GxF2NTTVubZhLsF0wcpFDN46H0YQc5KeB5IEP1AeJklDkiCvMiglviVXoshK9Erqi5psatwxxii
+ l0Y3CXG7y06ak06g2qf6DSsS8jz6er7S+ortxT4JEFbRCqZZFGcnBuEqIg1UA/ORMtq0=;
+Received: from root by collectivetranscription.info with local (Exim 4.91)
+ (envelope-from <bounce@collectivetranscription.info>)
+ id 1hMNsM-0008Bk-IP
+ for industrypack-devel@lists.sourceforge.net; Fri, 03 May 2019 02:24:38 +0000
+To: industrypack-devel@lists.sourceforge.net
+X-PHP-Originating-Script: 0:email.php
+Message-ID: <f65f9ea8ba278726585cda8b9f51a2e5@collectivetranscription.info>
+Date: Fri, 03 May 2019 01:39:02 +0000
+From: "Virginia Hall" <info@collectivetranscription.info>
+MIME-Version: 1.0
+X-Mailer-LID: 4
+X-Mailer-RecptId: 138668
+X-Mailer-SID: 4
+X-Mailer-Sent-By: 1
+X-Spam-Score: 5.7 (+++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [23.236.77.111 listed in zen.spamhaus.org]
- 1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
- https://senderscore.org/blacklistlookup/
- [23.236.77.111 listed in bl.score.senderscore.com]
- 0.0 TIME_LIMIT_EXCEEDED    Exceeded time limit / deadline
-X-Headers-End: 1hLjMP-001K0o-Nk
-Subject: Re: [Industrypack-devel] Order
+ 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
+ blocklist [URIs: collectivetranscription.info]
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: collectivetranscription.info]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 1.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.0 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1hMNsS-003p47-MQ
+Subject: [Industrypack-devel] Audio Transcription Service Provider
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -77,68 +94,123 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: sales2@xiyibearings.com
-Content-Type: multipart/mixed; boundary="===============3759899066613352466=="
+Reply-To: info@collectivetranscription.info
+Content-Type: multipart/mixed; boundary="===============4308354625044495948=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+--===============4308354625044495948==
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
 
---===============3759899066613352466==
-Content-Type: multipart/alternative;
-	boundary="=====003_Dragon083883326421_====="
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+</head>
+<body>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Hello, &nbsp; </span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Do you need someone reliable to transcribe both your short term and
+long term projects?&nbsp; Or do you need an accurate transcript for your
+audio or video?&nbsp; &nbsp; </span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Allow us to transcribe your audio and provide you accurate
+transcripts and let us help you reach your business/project goals through
+the help of our transcription services. &nbsp; </span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">What are our goals with each transcript? &nbsp; </span></p>
+<ul>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Speed</span></p>
+</li>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Accuracy</span></p>
+</li>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Confidentiality</span></p>
+</li>
+</ul>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;"> &nbsp; Each transcript is properly formatted. Strict grammar and
+punctuation rules are adhered to and of course, file security is something
+we take very seriously. &nbsp; </span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Have any transcription queries? Send me a message. Let's discuss
+what you need to get done.&nbsp; We will address any concerns you have.
+&nbsp; </span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">- Professional transcription </span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">- Accurate and thorough </span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">- Beautifully transcribed documents. </span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">- Grammar, spelling and jargon thoroughly checked &nbsp;
+</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">We have transcribed within most industries: &nbsp; </span></p>
+<ul>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Medical transcription</span></p>
+</li>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Technological</span></p>
+</li>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Academic</span></p>
+</li>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Lectures</span></p>
+</li>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Business</span></p>
+</li>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Groups</span></p>
+</li>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Legal</span></p>
+</li>
+<li>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Research interviews</span></p>
+</li>
+</ul>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;"> more... &nbsp; </span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Skilled with international accents and prompt response.&nbsp; Our
+pricing is better or comparable to individual service provider.&nbsp; In
+addition we also assist in APA Style formatting for research papers.&nbsp;
+Please note we don&rsquo;t conduct research but assist only in formatting
+of the papers. &nbsp; <br /><br />Regards,<br /></span><span
+style="font-family: arial, helvetica, sans-serif; font-size:
+small;">Virginia Hall</span></p>
+<img
+src="http://collectivetranscription.info/mailsoft/open.php?M=138668&L=4&N=4&F=H&image=.jpg"
+height="1" width="10"></body>
+</html>
 
-This is a multi-part message in MIME format.
 
---=====003_Dragon083883326421_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-SGkgc2lyLA0KRG8geW91IHRyYWRlIGJlYXJpbmdzPw0KbWFpbmx5OiBTS0YsTlNLLEZBRyxOVE4s
-VElNS0VOLEtPWU8sSU5BLElLTyxOQUNISSxGWUgsQVNBSEksDQoNCkFzIGEgcHJvZmVzc29uYWwg
-QmFsbCBCZWFyaW5nIGZhY3RvcnkgaW4gQ2hpbmEsV2Ugd2lsbCBvZmZlciBiZXN0IHByaWNlIGZv
-ciB5b3UuDQoNCklmIHlvdSBpbnRlcmVzdCwgaSB3aWxsIHNlbmQgRlJFRSBTQU1QTEVTIHRvIHlv
-dS4NClRoYW5rcw0KUGhpbGlwDQpTaGFuZ0hhaSBYaVlpKFNpbkhhaSlJbmR1c3RyaWFsIENvLixM
-dGQgDQpTa3lwZTtwaGlsaXAyMTR3YW5nDQpUZWw7Kzg2LTIxLTY0MTg1Mzc3DQp3aGF0c2FwcDsw
-MDg2MTM2NjE4ODQ1NjENCkNvbXBhbnkgQWRkcmVzczoxNDA1IHJvb20gb2YgTm8gMjAwdGggU2hl
-bmdUYWkgQnVpbGRpbmcgU2lwaW5nIFJvYWQgSG9uZ0tvdSBEaXN0cmljdCBTaGFuZ2hhaS5DaGlu
-YQ==
---=====003_Dragon083883326421_=====
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCA4LjAwLjYwMDEuMjM3MDciPjwvSEVBRD4NCjxCT0RZPg0KPFA+PEZPTlQgY29s
-b3I9cmVkPjxGT05UIGNvbG9yPSMwMDAwMDA+SGkgc2lyLDwvRk9OVD48L0ZPTlQ+PC9QPg0KPFA+
-PEZPTlQgY29sb3I9cmVkPjxGT05UIGNvbG9yPSMwMDAwMDA+RG8geW91IHRyYWRlIGJlYXJpbmdz
-PzwvRk9OVD48L0ZPTlQ+PC9QPg0KPFA+PEZPTlQgY29sb3I9cmVkPjxGT05UIGNvbG9yPSMwMDAw
-MDA+bWFpbmx5OiANClNLRixOU0ssRkFHLE5UTixUSU1LRU4sS09ZTyxJTkEsSUtPLE5BQ0hJLEZZ
-SCxBU0FISSw8QlI+PC9QPjwvRk9OVD48L0ZPTlQ+DQo8UD48Rk9OVCBjb2xvcj1yZWQ+PEZPTlQg
-Y29sb3I9IzAwMDAwMD5BcyBhIHByb2Zlc3NvbmFsIEJhbGwgQmVhcmluZyBmYWN0b3J5IGluIA0K
-Q2hpbmEsV2Ugd2lsbCBvZmZlciBiZXN0IHByaWNlIGZvciB5b3UuPEJSPjwvRk9OVD48L0ZPTlQ+
-PC9QPg0KPFA+SWYgeW91IGludGVyZXN0LCBpIHdpbGwgc2VuZCBGUkVFIFNBTVBMRVMgdG8geW91
-LjwvUD4NCjxQPlRoYW5rczwvUD4NCjxQPlBoaWxpcDxCUj5TaGFuZ0hhaSBYaVlpKFNpbkhhaSlJ
-bmR1c3RyaWFsIENvLixMdGQgDQo8QlI+U2t5cGU7cGhpbGlwMjE0d2FuZzxCUj5UZWw7Kzg2LTIx
-LTY0MTg1Mzc3PEJSPndoYXRzYXBwOzAwODYxMzY2MTg4NDU2MTxCUj5Db21wYW55IA0KQWRkcmVz
-czoxNDA1IHJvb20gb2YgTm8gMjAwdGggU2hlbmdUYWkgQnVpbGRpbmcgU2lwaW5nIFJvYWQgSG9u
-Z0tvdSBEaXN0cmljdCANClNoYW5naGFpLkNoaW5hPC9QPjwvQk9EWT48L0hUTUw+DQo=
-
---=====003_Dragon083883326421_=====--
-
-
-
-
---===============3759899066613352466==
+--===============4308354625044495948==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3759899066613352466==
+--===============4308354625044495948==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -149,7 +221,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3759899066613352466==--
-
-
-
+--===============4308354625044495948==--
