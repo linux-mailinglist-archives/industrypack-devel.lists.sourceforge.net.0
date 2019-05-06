@@ -2,71 +2,73 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 79DB621E13
-	for <lists+industrypack-devel@lfdr.de>; Fri, 17 May 2019 21:13:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 37A3E14923
+	for <lists+industrypack-devel@lfdr.de>; Mon,  6 May 2019 13:49:19 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1hRiIj-0007uO-6m
-	for lists+industrypack-devel@lfdr.de; Fri, 17 May 2019 19:13:53 +0000
+	id 1hNc7R-000600-Vp
+	for lists+industrypack-devel@lfdr.de; Mon, 06 May 2019 11:49:17 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <light@blackyun.net>) id 1hRiIh-0007uB-Km
- for industrypack-devel@lists.sourceforge.net; Fri, 17 May 2019 19:13:51 +0000
+ (envelope-from <nicky@tech-inc.cn>) id 1hNc7Q-0005zr-4g
+ for industrypack-devel@lists.sourceforge.net; Mon, 06 May 2019 11:49:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:
- List-Unsubscribe:MIME-Version:Reply-To:From:Date:Message-ID:Subject:To:Sender
- :Cc:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=VvSADCS9m9h30+GaiOtmLPtL9TkYBBc/wqENS4c8bkU=; b=USQNxeTueiy5cun0cI2umFRZhy
- x8xcqEKnShyk5LkRDsttDgHYKUIReV56lAfKHs6GV8lTKVfgh3emBG98UefuQMwJQY/akBUw64LiJ
- 1FLyWpPFAxUXCyCPuAtFlOX9BVfWJGmZ1ogSPIjjxHrT2AOvoxlTS3h6KP1YSzmYUJc8=;
+ d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=FTXCNHrUYrHwGUstFvot0Z1KIy75S8H38SGUhr3dnvc=; b=k2I+ClSRcspz4tH27XpH6R6nE8
+ KdKXJdUOvByzwaeRCaQRYxatzYNi+laQpy7foANJLVoANTCrL2Z1aIst/zqFfmsaAtVYeKlljJi+H
+ xt+EztYZSmb/vARq/kjJRzOev83L1Tac9Ui0c7dMG+843HOHkmFSMRceQIBTqvsVY3KA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:List-Unsubscribe:MIME-Version:
- Reply-To:From:Date:Message-ID:Subject:To:Sender:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=VvSADCS9m9h30+GaiOtmLPtL9TkYBBc/wqENS4c8bkU=; b=LKuSIg3jj/iXkI4g1wTdjpmTnG
- 9T2j6AiMnWM+X2k9wcciGm7DSXdauI8pofSgBKjer09wpUceoDmsK9qlGzwplP31kqNmc4l6YfjQ3
- 8cDc67Um/mqWWRyvm27V/fGWb952s0bNjp6+jChNOnxswAH6oxdqof5GG5jc0w5fPUbA=;
-Received: from [182.254.163.47] (helo=mx088.blackyun.net)
- by sfi-mx-3.v28.lw.sourceforge.com with esmtp (Exim 4.90_1)
- id 1hRiIf-003pje-3O
- for industrypack-devel@lists.sourceforge.net; Fri, 17 May 2019 19:13:51 +0000
-Received: from 182.254.163.47 (mx088.blackyun.net [127.0.0.1])
- by mx088.blackyun.net (Postfix) with ESMTPA id CE97D29FEE9
- for <industrypack-devel@lists.sourceforge.net>;
- Sat, 18 May 2019 02:28:52 +0800 (CST)
-To: industrypack-devel@lists.sourceforge.net
-Message-ID: <364ccf37b9258e992a1299d7da3f0161@182.254.163.47>
-Date: Sun, 05 May 2019 10:20:08 +0800
-From: "light" <sales2@xiyibearings.com>
-MIME-Version: 1.0
-X-Mailer-LID: 118
-X-Mailer-RecptId: 17251646
-X-Mailer-SID: 135
-X-Mailer-Sent-By: 21
-X-Spam-Score: 7.9 (+++++++)
+ h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=FTXCNHrUYrHwGUstFvot0Z1KIy75S8H38SGUhr3dnvc=; b=V
+ AofCUQnvtXuKxzIOjOhgFNerx7n81EE6OEmT989Vd94Jd4zeNQGBPE7QwxXoclIAdH6Ao4h3USdsD
+ Y6oj/srjeX+MLKDe8gpGKa8dWLE0H1UYmWpQ/+y2k1Y8AtUwS5mf3qyK1auWKisuJA8tQytmoBLii
+ TT6UghZQ94KbySN4=;
+Received: from [185.170.210.27] (helo=mail.tech-inc.cn)
+ by sfi-mx-4.v28.lw.sourceforge.com with esmtp (Exim 4.90_1)
+ id 1hNc7L-007C5H-Jk
+ for industrypack-devel@lists.sourceforge.net; Mon, 06 May 2019 11:49:16 +0000
+Received: from ccidnet.com by mail.tech-inc.cn (MDaemon PRO v10.1.1)
+ with ESMTP id md50001093678.msg
+ for <industrypack-devel@lists.sourceforge.net>; Mon, 06 May 2019 19:49:06 +0800
+X-Spam-Processed: mail.tech-inc.cn, Mon, 06 May 2019 19:49:06 +0800
+ (not processed: spam filter heuristic analysis disabled)
+X-MDHeloLookup-Result: hardfail smtp.helo=ccidnet.com (does not match
+ 171.90.248.170) (mail.tech-inc.cn)
+X-Authenticated-Sender: nicky@tech-inc.cn
+X-MDRemoteIP: 171.90.248.170
+X-Return-Path: nicky@tech-inc.cn
+X-Envelope-From: nicky@tech-inc.cn
+X-MDaemon-Deliver-To: industrypack-devel@lists.sourceforge.net
+Date: Mon, 6 May 2019 19:48:49 +0800
+From: "rony" <drymixmortar@163.com>
+To: <industrypack-devel@lists.sourceforge.net>
+Message-ID: <20190506194901555253@tech-inc.cn>
+X-mailer: Foxmail 6, 13, 102, 15 [cn]
+Mime-Version: 1.0
+X-Spam-Score: 6.8 (++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [182.254.163.47 listed in zen.spamhaus.org]
+ 1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
+ 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+ (drymixmortar[at]163.com)
  1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
  https://senderscore.org/blacklistlookup/
- [182.254.163.47 listed in bl.score.senderscore.com]
- 2.1 DATE_IN_PAST_96_XX     Date: is 96 hours or more before Received: date
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
- domains are different
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ [185.170.210.27 listed in bl.score.senderscore.com]
+ 1.0 HTML_MESSAGE           BODY: HTML included in message
  1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
- -0.0 AWL AWL: Adjusted score from AWL reputation of From: address
-X-Headers-End: 1hRiIf-003pje-3O
-Subject: [Industrypack-devel] Hi
+ 1.8 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1hNc7L-007C5H-Jk
+Subject: Re: [Industrypack-devel] RDP (Re-dispersible polymer Powder)
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -78,34 +80,76 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: sales2@xiyibearings.com
-Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
+Reply-To: drymixmortar@163.com
+Content-Type: multipart/mixed; boundary="===============3856393260994970165=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-Hi sir,
+This is a multi-part message in MIME format.
 
-This is  Mr Philip from bearings factory :
-SKF,NSK,FAG,NTN,TIMKEN,KOYO,INA,NACHI,FYH,ASAHI.
+--===============3856393260994970165==
+Content-Type: multipart/alternative;
+	boundary="=====003_Dragon831073007204_====="
 
-Do you have Bearings requirments?
+This is a multi-part message in MIME format.
+
+--=====003_Dragon831073007204_=====
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+RGVhciBTaXJzLA0KIA0KV2UgYXJlIGEgcHJvZmVzc2lvbmFsIHN1cHBsaWVyIG9mIGNlbGx1bG9z
+ZSBldGhlcnMgaW4gQ2hpbmEsIEFueSBpbnF1aXJ5LCBwbGVhc2UgY29udGFjdCBtZS4gdGhhbmtz
+IA0KIA0KUHJvZHVjdHMgTGlzdDoNCkhQTUMgKEh5ZHJveHkgcHJvcHlsIG1ldGh5bCBjZWxsdWxv
+c2UpDQpIRU1DKEh5ZHJveHlldGh5bCBNZXRoeWxDZWxsdWxvc2UpDQpDTUMgKENhcmJveHlsIG1l
+dGh5bCBjZWxsdWxvc2UpDQpDYWxjaXVtIEZvcm1hdGUNClJEUCAoUmUtZGlzcGVyc2libGUgRW11
+bHNpb24gUG93ZGVyKQ0KIA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLQ0KQmVzdCAgcmVnYXJkcw0KUm9ueQ0KU2VuaW9yIFNhbGVzIEVuZ2lu
+ZWVyaW5n
+
+--=====003_Dragon831073007204_=====
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCA4LjAwLjYwMDEuMjM3MDciPjwvSEVBRD4NCjxCT0RZPg0KPFA+RGVhciBTaXJz
+LDxCUj4mbmJzcDs8L1A+DQo8UD5XZSBhcmUgYSBwcm9mZXNzaW9uYWwgc3VwcGxpZXIgb2YgY2Vs
+bHVsb3NlIGV0aGVycyBpbiBDaGluYSwgQW55IGlucXVpcnksIA0KcGxlYXNlIGNvbnRhY3QgbWUu
+IHRoYW5rcyZuYnNwOzxCUj4mbmJzcDs8L1A+DQo8UD5Qcm9kdWN0cyBMaXN0OjwvUD4NCjxQPkhQ
+TUMgKEh5ZHJveHkgcHJvcHlsIG1ldGh5bCBjZWxsdWxvc2UpPC9QPg0KPFA+SEVNQyhIeWRyb3h5
+ZXRoeWwmbmJzcDtNZXRoeWxDZWxsdWxvc2UpPC9QPg0KPFA+Q01DIChDYXJib3h5bCBtZXRoeWwg
+Y2VsbHVsb3NlKTwvUD4NCjxQPkNhbGNpdW0gRm9ybWF0ZTxCUj5SRFAgKFJlLWRpc3BlcnNpYmxl
+IEVtdWxzaW9uIFBvd2Rlcik8QlI+Jm5ic3A7PC9QPg0KPFA+LS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTwvUD4NCjxQPkJlc3QgJm5ic3A7cmVn
+YXJkczwvUD4NCjxQPlJvbnk8L1A+DQo8UD5TZW5pb3IgU2FsZXMgRW5naW5lZXJpbmc8L1A+PC9C
+T0RZPjwvSFRNTD4NCg==
+
+--=====003_Dragon831073007204_=====--
 
 
 
-Best regards!
-Mr Philip wang-General Manager
-ShangHai XiYi(SinHai)Industrial Co.,Ltd
-Skype;philip214wang
-Tel;+86-21-64185377
-whatsapp;008613661884561
-Company Address:1302room of No 200th ShengTai Building Siping Road HongKou
-District Shanghai.China
+
+--===============3856393260994970165==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 
-
-
+--===============3856393260994970165==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
+
+--===============3856393260994970165==--
+
+
+
