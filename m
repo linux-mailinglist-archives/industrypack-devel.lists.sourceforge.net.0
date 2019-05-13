@@ -2,73 +2,72 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 37A3E14923
-	for <lists+industrypack-devel@lfdr.de>; Mon,  6 May 2019 13:49:19 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 83E911B4DD
+	for <lists+industrypack-devel@lfdr.de>; Mon, 13 May 2019 13:24:36 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1hNc7R-000600-Vp
-	for lists+industrypack-devel@lfdr.de; Mon, 06 May 2019 11:49:17 +0000
+	id 1hQ94N-0002Cm-9D
+	for lists+industrypack-devel@lfdr.de; Mon, 13 May 2019 11:24:35 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <nicky@tech-inc.cn>) id 1hNc7Q-0005zr-4g
- for industrypack-devel@lists.sourceforge.net; Mon, 06 May 2019 11:49:16 +0000
+ (envelope-from <oky@pet-snack.xyz>) id 1hQ94L-0002Cb-OJ
+ for industrypack-devel@lists.sourceforge.net; Mon, 13 May 2019 11:24:33 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
  From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=FTXCNHrUYrHwGUstFvot0Z1KIy75S8H38SGUhr3dnvc=; b=k2I+ClSRcspz4tH27XpH6R6nE8
- KdKXJdUOvByzwaeRCaQRYxatzYNi+laQpy7foANJLVoANTCrL2Z1aIst/zqFfmsaAtVYeKlljJi+H
- xt+EztYZSmb/vARq/kjJRzOev83L1Tac9Ui0c7dMG+843HOHkmFSMRceQIBTqvsVY3KA=;
+ bh=Fye+puxltbNDKP9aQMHsOXNoWvtUUEKUcMmlBW5PDR4=; b=BJ1GPGzRT8oGdjd1rU0aCNZkeX
+ cZw0VUj2J28CgTfVwWG8ly7Z4P39fR6E4tjA3nZmYmRxfiLzfEUhoNmUXsZ7QNm+uL6/AeW5xEv8V
+ NDIJdc7yI+KSA/FZ1MwVsLp70pjsmDU6qs6Hv/3D7tee2ql65nyCkHJyKly0TmvdAFOw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=FTXCNHrUYrHwGUstFvot0Z1KIy75S8H38SGUhr3dnvc=; b=V
- AofCUQnvtXuKxzIOjOhgFNerx7n81EE6OEmT989Vd94Jd4zeNQGBPE7QwxXoclIAdH6Ao4h3USdsD
- Y6oj/srjeX+MLKDe8gpGKa8dWLE0H1UYmWpQ/+y2k1Y8AtUwS5mf3qyK1auWKisuJA8tQytmoBLii
- TT6UghZQ94KbySN4=;
-Received: from [185.170.210.27] (helo=mail.tech-inc.cn)
- by sfi-mx-4.v28.lw.sourceforge.com with esmtp (Exim 4.90_1)
- id 1hNc7L-007C5H-Jk
- for industrypack-devel@lists.sourceforge.net; Mon, 06 May 2019 11:49:16 +0000
-Received: from ccidnet.com by mail.tech-inc.cn (MDaemon PRO v10.1.1)
- with ESMTP id md50001093678.msg
- for <industrypack-devel@lists.sourceforge.net>; Mon, 06 May 2019 19:49:06 +0800
-X-Spam-Processed: mail.tech-inc.cn, Mon, 06 May 2019 19:49:06 +0800
+ List-Owner:List-Archive; bh=Fye+puxltbNDKP9aQMHsOXNoWvtUUEKUcMmlBW5PDR4=; b=m
+ qieJV8YhoQ1H9aY6KDP7UMfYqSFvNCGEnZFkHZBB91LMnXmAMkSTV3j4MvErZKIfpdnxIXgPpl05J
+ RhBUPvfR6e3Yo9OEEzDHWekm/ySxforYrQTqnBBWDFbPTKYz01AbJk5WaRMXp2p1nBYjaVhqNd131
+ jxNQ0lpkdbYnNnAo=;
+Received: from [185.170.210.71] (helo=mail.pet-snack.xyz)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.90_1)
+ id 1hQ94I-0021FB-7l
+ for industrypack-devel@lists.sourceforge.net; Mon, 13 May 2019 11:24:33 +0000
+Received: from cctv.com by mail.pet-snack.xyz (MDaemon PRO v10.1.1)
+ with ESMTP id md50002654978.msg
+ for <industrypack-devel@lists.sourceforge.net>; Mon, 13 May 2019 19:23:21 +0800
+X-Spam-Processed: mail.pet-snack.xyz, Mon, 13 May 2019 19:23:21 +0800
  (not processed: spam filter heuristic analysis disabled)
-X-MDHeloLookup-Result: hardfail smtp.helo=ccidnet.com (does not match
- 171.90.248.170) (mail.tech-inc.cn)
-X-Authenticated-Sender: nicky@tech-inc.cn
-X-MDRemoteIP: 171.90.248.170
-X-Return-Path: nicky@tech-inc.cn
-X-Envelope-From: nicky@tech-inc.cn
+X-MDHeloLookup-Result: hardfail smtp.helo=cctv.com (does not match
+ 171.90.248.174) (mail.pet-snack.xyz)
+X-Authenticated-Sender: oky@pet-snack.xyz
+X-MDRemoteIP: 171.90.248.174
+X-Return-Path: oky@pet-snack.xyz
+X-Envelope-From: oky@pet-snack.xyz
 X-MDaemon-Deliver-To: industrypack-devel@lists.sourceforge.net
-Date: Mon, 6 May 2019 19:48:49 +0800
-From: "rony" <drymixmortar@163.com>
+Date: Mon, 13 May 2019 19:23:04 +0800
+From: "summer" <summer.jiang@esun-light.com>
 To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20190506194901555253@tech-inc.cn>
+Message-ID: <20190513192315563071@pet-snack.xyz>
 X-mailer: Foxmail 6, 13, 102, 15 [cn]
 Mime-Version: 1.0
-X-Spam-Score: 6.8 (++++++)
+X-Spam-Score: 6.0 (++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (drymixmortar[at]163.com)
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [185.170.210.71 listed in zen.spamhaus.org]
  1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
  https://senderscore.org/blacklistlookup/
- [185.170.210.27 listed in bl.score.senderscore.com]
+ [185.170.210.71 listed in bl.score.senderscore.com]
  1.0 HTML_MESSAGE           BODY: HTML included in message
  1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
- 1.8 AWL AWL: Adjusted score from AWL reputation of From: address
-X-Headers-End: 1hNc7L-007C5H-Jk
-Subject: Re: [Industrypack-devel] RDP (Re-dispersible polymer Powder)
+ -0.8 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1hQ94I-0021FB-7l
+Subject: Re: [Industrypack-devel] Enquiry
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -80,33 +79,37 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: drymixmortar@163.com
-Content-Type: multipart/mixed; boundary="===============3856393260994970165=="
+Reply-To: summer.jiang@esun-light.com
+Content-Type: multipart/mixed; boundary="===============0503800904856675821=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
 
---===============3856393260994970165==
+--===============0503800904856675821==
 Content-Type: multipart/alternative;
-	boundary="=====003_Dragon831073007204_====="
+	boundary="=====003_Dragon408213038364_====="
 
 This is a multi-part message in MIME format.
 
---=====003_Dragon831073007204_=====
+--=====003_Dragon408213038364_=====
 Content-Type: text/plain;
 	charset="utf-8"
 Content-Transfer-Encoding: base64
 
-RGVhciBTaXJzLA0KIA0KV2UgYXJlIGEgcHJvZmVzc2lvbmFsIHN1cHBsaWVyIG9mIGNlbGx1bG9z
-ZSBldGhlcnMgaW4gQ2hpbmEsIEFueSBpbnF1aXJ5LCBwbGVhc2UgY29udGFjdCBtZS4gdGhhbmtz
-IA0KIA0KUHJvZHVjdHMgTGlzdDoNCkhQTUMgKEh5ZHJveHkgcHJvcHlsIG1ldGh5bCBjZWxsdWxv
-c2UpDQpIRU1DKEh5ZHJveHlldGh5bCBNZXRoeWxDZWxsdWxvc2UpDQpDTUMgKENhcmJveHlsIG1l
-dGh5bCBjZWxsdWxvc2UpDQpDYWxjaXVtIEZvcm1hdGUNClJEUCAoUmUtZGlzcGVyc2libGUgRW11
-bHNpb24gUG93ZGVyKQ0KIA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLQ0KQmVzdCAgcmVnYXJkcw0KUm9ueQ0KU2VuaW9yIFNhbGVzIEVuZ2lu
-ZWVyaW5n
+U21hcnQgV2lmaSZCbHVldG9vdGggUXVlZW4gQnVsYi55b3UgY2FuIGdldCBzb21lIHNhbXBsZXMg
+dG8gY2hlY2ssd2hhdCBkbyB5b3UgdGhpbms/IGlmIHlvdSB3YW50IG1vcmUgaW5mbyBwbGVhc2Ug
+bGV0IG1lIGtub3cuOikNCg0KMSkuIFdpZmkgUkdCVyAob25lIEFQUCBjb250cm9sIGh1bmRyZWRz
+IG9mIEJ1bGJzKQ0KMikuIEJsdWV0b290aCBSR0JXIFNwZWFrZXIgQnVsYiAtLS1BUFAgY29udHJv
+bCAob24gbW9iaWxlKQ0KMykuIEJsdWV0b290aCBSR0JXIFNwZWFrZXIgQnVsYiAtLS1SZW1vdGUg
+Y29udHJvbA0KQ2FuIHUga2luZGx5IHRlbGwgbWUgaWYgeW91IGludGVyZXN0IGluIFdpZmkmQmx1
+ZXRvb3RoIFF1ZWVuIEJ1bGI/IGlmIHlvdSBkbywgIEkgd2lsbCBzZW5kIHNhbXBsZSB0byB1Lg0K
+VGhhbmtzIGFuZCBSZWdhcmRzISANClN1bW1lcg0KICANClRoYW5rcyBhbmQgUmVnYXJkcyENClN1
+bW1lcg0KVGVsOiArODYgNTkyIDcxMTM3NTgNClBob25lOiArODYgMTM0MDA2MDg3ODMgKFdlY2hh
+dCAmIFdoYXRzQXBwKQ0KU2t5cGU6IGppYW5neGlhb3l1YW4wOTExDQpYaWFtZW4gTGFpa2VuIExp
+Z2h0aW5nIFRlY2hub2xvZ3kgQ28uLEx0ZCwNCjIzIyxTaU1pbmcgSW5kdXN0cmlhbCBQYXJrLCBN
+ZWl4aSBSb2FkLCBUb25nJ2FuIERpc3RyaWN0LFhpYW1lbixDaGluYS4=
 
---=====003_Dragon831073007204_=====
+--=====003_Dragon408213038364_=====
 Content-Type: text/html;
 	charset="utf-8"
 Content-Transfer-Encoding: base64
@@ -114,31 +117,36 @@ Content-Transfer-Encoding: base64
 PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
 L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
 Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCA4LjAwLjYwMDEuMjM3MDciPjwvSEVBRD4NCjxCT0RZPg0KPFA+RGVhciBTaXJz
-LDxCUj4mbmJzcDs8L1A+DQo8UD5XZSBhcmUgYSBwcm9mZXNzaW9uYWwgc3VwcGxpZXIgb2YgY2Vs
-bHVsb3NlIGV0aGVycyBpbiBDaGluYSwgQW55IGlucXVpcnksIA0KcGxlYXNlIGNvbnRhY3QgbWUu
-IHRoYW5rcyZuYnNwOzxCUj4mbmJzcDs8L1A+DQo8UD5Qcm9kdWN0cyBMaXN0OjwvUD4NCjxQPkhQ
-TUMgKEh5ZHJveHkgcHJvcHlsIG1ldGh5bCBjZWxsdWxvc2UpPC9QPg0KPFA+SEVNQyhIeWRyb3h5
-ZXRoeWwmbmJzcDtNZXRoeWxDZWxsdWxvc2UpPC9QPg0KPFA+Q01DIChDYXJib3h5bCBtZXRoeWwg
-Y2VsbHVsb3NlKTwvUD4NCjxQPkNhbGNpdW0gRm9ybWF0ZTxCUj5SRFAgKFJlLWRpc3BlcnNpYmxl
-IEVtdWxzaW9uIFBvd2Rlcik8QlI+Jm5ic3A7PC9QPg0KPFA+LS0tLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTwvUD4NCjxQPkJlc3QgJm5ic3A7cmVn
-YXJkczwvUD4NCjxQPlJvbnk8L1A+DQo8UD5TZW5pb3IgU2FsZXMgRW5naW5lZXJpbmc8L1A+PC9C
-T0RZPjwvSFRNTD4NCg==
+bnQ9Ik1TSFRNTCA4LjAwLjYwMDEuMjM3MDciPjwvSEVBRD4NCjxCT0RZPg0KPFA+U21hcnQgV2lm
+aSZhbXA7Qmx1ZXRvb3RoIFF1ZWVuIEJ1bGIueW91IGNhbiBnZXQgc29tZSBzYW1wbGVzIHRvIGNo
+ZWNrLHdoYXQgZG8gDQp5b3UgdGhpbms/IGlmIHlvdSB3YW50IG1vcmUgaW5mbyBwbGVhc2UgbGV0
+IG1lIGtub3cuOik8L1A+DQo8UD48QlI+MSkuIFdpZmkgUkdCVyAob25lIEFQUCBjb250cm9sIGh1
+bmRyZWRzIG9mIEJ1bGJzKTxCUj4yKS4gQmx1ZXRvb3RoIFJHQlcgDQpTcGVha2VyIEJ1bGIgLS0t
+QVBQIGNvbnRyb2wgKG9uIG1vYmlsZSk8QlI+MykuIEJsdWV0b290aCBSR0JXIFNwZWFrZXIgQnVs
+YiANCi0tLVJlbW90ZSBjb250cm9sPC9QPg0KPFA+PFNUUk9ORz5DYW4gdSBraW5kbHkgdGVsbCBt
+ZSBpZiB5b3UgaW50ZXJlc3QgaW4gV2lmaSZhbXA7Qmx1ZXRvb3RoIFF1ZWVuIA0KQnVsYj8gaWYg
+eW91IGRvLCZuYnNwOyA8Rk9OVCBjb2xvcj1ibHVlPkkgd2lsbCBzZW5kIHNhbXBsZSB0byANCnUu
+PC9GT05UPjwvU1RST05HPjwvUD4NCjxQPlRoYW5rcyBhbmQgUmVnYXJkcyEgPEJSPlN1bW1lcjxC
+Uj4mbmJzcDsgPEJSPlRoYW5rcyBhbmQgDQpSZWdhcmRzITxCUj5TdW1tZXI8L1A+DQo8UD5UZWw6
+ICs4NiA1OTIgNzExMzc1ODxCUj5QaG9uZTogKzg2IDEzNDAwNjA4NzgzIChXZWNoYXQgJmFtcDsg
+DQpXaGF0c0FwcCk8QlI+U2t5cGU6IGppYW5neGlhb3l1YW4wOTExPC9QPg0KPFA+WGlhbWVuIExh
+aWtlbiBMaWdodGluZyBUZWNobm9sb2d5IENvLixMdGQsPEJSPjIzIyxTaU1pbmcgSW5kdXN0cmlh
+bCBQYXJrLCANCk1laXhpIFJvYWQsIFRvbmcnYW4gRGlzdHJpY3QsWGlhbWVuLENoaW5hLjwvUD48
+L0JPRFk+PC9IVE1MPg0K
 
---=====003_Dragon831073007204_=====--
+--=====003_Dragon408213038364_=====--
 
 
 
 
---===============3856393260994970165==
+--===============0503800904856675821==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3856393260994970165==
+--===============0503800904856675821==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -149,7 +157,7 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3856393260994970165==--
+--===============0503800904856675821==--
 
 
 
