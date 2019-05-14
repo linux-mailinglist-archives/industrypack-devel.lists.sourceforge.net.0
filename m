@@ -2,75 +2,101 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 83E911B4DD
-	for <lists+industrypack-devel@lfdr.de>; Mon, 13 May 2019 13:24:36 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 51FBA1E443
+	for <lists+industrypack-devel@lfdr.de>; Wed, 15 May 2019 00:05:16 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1hQ94N-0002Cm-9D
-	for lists+industrypack-devel@lfdr.de; Mon, 13 May 2019 11:24:35 +0000
+	id 1hQfXv-0003Bn-21
+	for lists+industrypack-devel@lfdr.de; Tue, 14 May 2019 22:05:15 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <oky@pet-snack.xyz>) id 1hQ94L-0002Cb-OJ
- for industrypack-devel@lists.sourceforge.net; Mon, 13 May 2019 11:24:33 +0000
+ (envelope-from <info@economytranscription.info>) id 1hQfXt-0003BD-17
+ for industrypack-devel@lists.sourceforge.net; Tue, 14 May 2019 22:05:13 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Fye+puxltbNDKP9aQMHsOXNoWvtUUEKUcMmlBW5PDR4=; b=BJ1GPGzRT8oGdjd1rU0aCNZkeX
- cZw0VUj2J28CgTfVwWG8ly7Z4P39fR6E4tjA3nZmYmRxfiLzfEUhoNmUXsZ7QNm+uL6/AeW5xEv8V
- NDIJdc7yI+KSA/FZ1MwVsLp70pjsmDU6qs6Hv/3D7tee2ql65nyCkHJyKly0TmvdAFOw=;
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :List-Unsubscribe:Message-ID:Reply-To:From:Date:Subject:To:Sender:Cc:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=u89luVfyrFRa/xCD5ZK1Hlf1NDvcCOTV49TSZ5Iy0x0=; b=K5L+1nurcwiSBKSTdtqLNvIBzZ
+ F9H1whs/IxXte+yfCSKs44J4ono6BoBSbN1siijN/TCB8KYZU22HQmZ4Lukr3R7FwmXHJMWRLNU7W
+ 1hdOyhxZ6a7GLE54worcFBWx9bKCBlyUuXBQBYHZH9YqFyhQSSaZTaoSyTPv0RuF/kwM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Fye+puxltbNDKP9aQMHsOXNoWvtUUEKUcMmlBW5PDR4=; b=m
- qieJV8YhoQ1H9aY6KDP7UMfYqSFvNCGEnZFkHZBB91LMnXmAMkSTV3j4MvErZKIfpdnxIXgPpl05J
- RhBUPvfR6e3Yo9OEEzDHWekm/ySxforYrQTqnBBWDFbPTKYz01AbJk5WaRMXp2p1nBYjaVhqNd131
- jxNQ0lpkdbYnNnAo=;
-Received: from [185.170.210.71] (helo=mail.pet-snack.xyz)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.90_1)
- id 1hQ94I-0021FB-7l
- for industrypack-devel@lists.sourceforge.net; Mon, 13 May 2019 11:24:33 +0000
-Received: from cctv.com by mail.pet-snack.xyz (MDaemon PRO v10.1.1)
- with ESMTP id md50002654978.msg
- for <industrypack-devel@lists.sourceforge.net>; Mon, 13 May 2019 19:23:21 +0800
-X-Spam-Processed: mail.pet-snack.xyz, Mon, 13 May 2019 19:23:21 +0800
- (not processed: spam filter heuristic analysis disabled)
-X-MDHeloLookup-Result: hardfail smtp.helo=cctv.com (does not match
- 171.90.248.174) (mail.pet-snack.xyz)
-X-Authenticated-Sender: oky@pet-snack.xyz
-X-MDRemoteIP: 171.90.248.174
-X-Return-Path: oky@pet-snack.xyz
-X-Envelope-From: oky@pet-snack.xyz
-X-MDaemon-Deliver-To: industrypack-devel@lists.sourceforge.net
-Date: Mon, 13 May 2019 19:23:04 +0800
-From: "summer" <summer.jiang@esun-light.com>
-To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20190513192315563071@pet-snack.xyz>
-X-mailer: Foxmail 6, 13, 102, 15 [cn]
-Mime-Version: 1.0
-X-Spam-Score: 6.0 (++++++)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:List-Unsubscribe:
+ Message-ID:Reply-To:From:Date:Subject:To:Sender:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=u89luVfyrFRa/xCD5ZK1Hlf1NDvcCOTV49TSZ5Iy0x0=; b=fHm2/dHod1iQUMVPQmo1uiYWlS
+ qPbH0QjZgtFjiHDK1s4Fx3mYYO0S7xUxd1Pk+gq4nfiEUeRFgObsLAeJHP1uGQEH+/+jaZPqt5mHS
+ R2EaUo6vtuVboZ47HefqGlCd+4eVQUnYqjNL7GIrwl0dc6Pqi4/eUbeE9kjLNCK8YWcM=;
+Received: from [192.154.230.24] (helo=strom.royalclouds.net)
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ id 1hQfXp-00GyoK-Uc
+ for industrypack-devel@lists.sourceforge.net; Tue, 14 May 2019 22:05:12 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=economytranscription.info; s=default; h=Content-Transfer-Encoding:
+ Content-Type:MIME-Version:List-Unsubscribe:Message-ID:Reply-To:From:Date:
+ Subject:To:Sender:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:
+ Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+ List-Id:List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=u89luVfyrFRa/xCD5ZK1Hlf1NDvcCOTV49TSZ5Iy0x0=; b=PxbH0V2ff5t2UG/EtlSxOATZvd
+ lnzU01cgrI0Kb114M+/wRKH75Io+5+B4uJMit2fwJHnnNmcaYcol/LHko8aZrIVRxeOg4PckiBHVL
+ KEOHMKxB/X40yDbOzwP09u6DZF1ECv0q6XMDeG0a8bsva/I2jgEtqdK/NL0vizuIefFVnP2teqtGD
+ +ZmDsvqjDzh06rcvBCk/be6BuDWMDCbtC6qMCMLgETuew/4XqzIG9FXA+z7vKzT3oXTm6802Czg7k
+ 73bvo8VkoyLlL7sUHIOkgxE0B1JRfIZWnZQZuTBHrUU5fDKJBaSnFvayOjtK2XkGrAD0PFRB5K3Uz
+ cUEIrUDA==;
+Received: from economyt by server2.royalclouds.net with local (Exim 4.91)
+ (envelope-from <info@economytranscription.info>) id 1hQfXi-0008Cg-QK
+ for industrypack-devel@lists.sourceforge.net; Wed, 15 May 2019 02:05:03 +0400
+To: industrypack-devel@lists.sourceforge.net
+X-PHP-Script: economytranscription.info/wp-cron.php for 192.154.230.20
+X-PHP-Originating-Script: 2746:class-phpmailer.php
+Date: Tue, 14 May 2019 22:05:02 +0000
+From: Rachel Cooper <info@economytranscription.info>
+Message-ID: <0baefa27542695db9179167fca8a4957@economytranscription.info>
+X-Priority: 3
+X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+Precedence: bulk
+MIME-Version: 1.0
+X-OutGoing-Spam-Status: No, score=1.9
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - server2.royalclouds.net
+X-AntiAbuse: Original Domain - lists.sourceforge.net
+X-AntiAbuse: Originator/Caller UID/GID - [2746 993] / [47 12]
+X-AntiAbuse: Sender Address Domain - economytranscription.info
+X-Get-Message-Sender-Via: server2.royalclouds.net: authenticated_id:
+ economyt/from_h
+X-Authenticated-Sender: server2.royalclouds.net: info@economytranscription.info
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: economytranscription.info:/public_html
+X-From-Rewrite: unmodified, already matched
+X-Spam-Score: 4.2 (++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [185.170.210.71 listed in zen.spamhaus.org]
- 1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
- https://senderscore.org/blacklistlookup/
- [185.170.210.71 listed in bl.score.senderscore.com]
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: economytranscription.info]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  1.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
  1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
- -0.8 AWL AWL: Adjusted score from AWL reputation of From: address
-X-Headers-End: 1hQ94I-0021FB-7l
-Subject: Re: [Industrypack-devel] Enquiry
+X-Headers-End: 1hQfXp-00GyoK-Uc
+Subject: [Industrypack-devel] Audio Transcription Service Provider
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
-Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -79,74 +105,374 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: summer.jiang@esun-light.com
-Content-Type: multipart/mixed; boundary="===============0503800904856675821=="
+Reply-To: Rachel Cooper <info@tecksmew.com>
+Content-Type: multipart/mixed; boundary="===============5728608775706181352=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+--===============5728608775706181352==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
---===============0503800904856675821==
-Content-Type: multipart/alternative;
-	boundary="=====003_Dragon408213038364_====="
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>My Blog</title>
+		
+		<style type="text/css">
+		/* -------------------------------------
+		    GLOBAL
+		    A very basic CSS reset
+		------------------------------------- */
+		* {
+		  margin: 0;
+		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		  box-sizing: border-box;
+		  /*font-size: 14px;*/
+		}
+		
+		img {
+		  max-width: 100%;
+		  height: auto;
+		}
+		
+		body {
+		  -webkit-font-smoothing: antialiased;
+		  -webkit-text-size-adjust: none;
+		  width: 100% !important;
+		  height: 100%;
+		  line-height: 1.6;
+		  font-size: 14px;
+		}
+		
+		/* Let's make sure all tables have defaults */
+		table td {
+		  vertical-align: top;
+		}
+		
+		/* -------------------------------------
+		    BODY & CONTAINER
+		------------------------------------- */
+		body {
+		  background-color: #f6f6f6;
+		  font-size: 14px;
+		  line-height: auto;
+		}
+		
+		.body-wrap {
+		  background-color: #f6f6f6;
+		  width: 100%;
+		}
+		
+		.container {
+		  display: block !important;
+		  max-width: 600px !important;
+		  margin: 0 auto !important;
+		  /* makes it centered */
+		  clear: both !important;
+		}
+		
+		.content {
+		  max-width: 600px;
+		  margin: 0 auto;
+		  display: block;
+		  padding: 20px;
+		}
+		
+		/* -------------------------------------
+		    HEADER, FOOTER, MAIN
+		------------------------------------- */
+		.main {
+		  background-color: #fff;
+		  border: 1px solid #e9e9e9;
+		  border-radius: 3px;
+		}
+		
+		.content-wrap {
+		  padding: 20px;
+		}
+		
+		.content-block {
+		  padding: 0 0 20px;
+		}
+		
+		.header {
+		  width: 100%;
+		  margin-bottom: 20px;
+		}
+		
+		.footer {
+		  width: 100%;
+		  clear: both;
+		  color: #999;
+		  padding: 20px;
+		}
+		.footer a {
+		  color: #999;
+		}
+		.footer p, .footer a, .footer unsubscribe, .footer td {
+		  font-size: 12px;
+		}
+		
+		/* -------------------------------------
+		    TYPOGRAPHY
+		------------------------------------- */
+		h1, h2, h3 {
+		  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		  color: #000;
+		  margin: 40px 0 20px 0;
+		  line-height: 1.2;
+		  font-weight: bold;
+		}
+		
+		h1 {
+		  font-size: 32px;
+		  font-weight: 500;
+		}
+		
+		h2 {
+		  font-size: 24px;
+		}
+		
+		h3 {
+		  font-size: 18px;
+		}
+		
+		h4 {
+		  font-size: 14px;
+		  font-weight: 600;
+		}
+		
+		p, ul, ol {
+			margin-top: 10px;
+		  margin-bottom: 15px;
+		  font-weight: normal;
+		}
+		p li, ul li, ol li {
+		  margin-left: 5px;
+		  list-style-position: inside;
+		}
+		
+		/* -------------------------------------
+		    LINKS & BUTTONS
+		------------------------------------- */
+		a {
+		  color: #348eda;
+		  text-decoration: underline;
+		}
+		
+		.btn-primary, .newsletters_button {
+		  text-decoration: none;
+		  color: #FFF;
+		  background-color: #348eda;
+		  border: solid #348eda;
+		  border-width: 10px 20px;
+		  line-height: 2;
+		  font-weight: bold;
+		  text-align: center;
+		  cursor: pointer;
+		  display: inline-block;
+		  border-radius: 5px;
+		  text-transform: capitalize;
+		}
+		
+		/* -------------------------------------
+		    OTHER STYLES THAT MIGHT BE USEFUL
+		------------------------------------- */
+		.last {
+		  margin-bottom: 0;
+		}
+		
+		.first {
+		  margin-top: 0;
+		}
+		
+		.aligncenter {
+		  text-align: center;
+		}
+		
+		.alignright {
+		  text-align: right;
+		}
+		
+		.alignleft {
+		  text-align: left;
+		}
+		
+		.clear {
+		  clear: both;
+		}
+		
+		hr {
+		    border: 0;
+		    height: 0;
+		    border-top: 1px solid rgba(0, 0, 0, 0.1);
+		    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		}
+		
+		/* -------------------------------------
+		    ALERTS
+		    Change the class depending on warning email, good email or bad email
+		------------------------------------- */
+		.alert {
+		  font-size: 16px;
+		  color: #fff;
+		  font-weight: 500;
+		  padding: 20px;
+		  text-align: center;
+		  border-radius: 3px 3px 0 0;
+		}
+		.alert a {
+		  color: #fff;
+		  text-decoration: none;
+		  font-weight: 500;
+		  font-size: 16px;
+		}
+		.alert.alert-warning {
+		  background-color: #FF9F00;
+		}
+		.alert.alert-bad {
+		  background-color: #D0021B;
+		}
+		.alert.alert-good {
+		  background-color: #68B90F;
+		}
+		
+		/* -------------------------------------
+		    INVOICE
+		    Styles for the billing table
+		------------------------------------- */
+		.invoice {
+		  margin: 40px auto;
+		  text-align: left;
+		  width: 80%;
+		}
+		.invoice td {
+		  padding: 5px 0;
+		}
+		.invoice .invoice-items {
+		  width: 100%;
+		}
+		.invoice .invoice-items td {
+		  border-top: #eee 1px solid;
+		}
+		.invoice .invoice-items .total td {
+		  border-top: 2px solid #333;
+		  border-bottom: 2px solid #333;
+		  font-weight: 700;
+		}
+		
+		/* -------------------------------------
+		    RESPONSIVE AND MOBILE FRIENDLY STYLES
+		------------------------------------- */
+		@media only screen and (max-width: 640px) {
+		  h1, h2, h3, h4 {
+		    font-weight: 600 !important;
+		    margin: 20px 0 5px !important;
+		  }
+		
+		  h1 {
+		    font-size: 22px !important;
+		  }
+		
+		  h2 {
+		    font-size: 18px !important;
+		  }
+		
+		  h3 {
+		    font-size: 16px !important;
+		  }
+		
+		  .container {
+		    width: 100% !important;
+		  }
+		
+		  .content, .content-wrap {
+		    padding: 10px !important;
+		  }
+		
+		  .invoice {
+		    width: 100% !important;
+		  }
+		}
+		</style>
+	</head>
+	
+	<body itemscope itemtype="https://schema.org/EmailMessage">
+		<table class="body-wrap">
+			<tr>
+				<td></td>
+				<td class="container" width="600">
+					<div class="content">
+						<table class="main" width="100%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="alert alert-good">
+									Audio Transcription Service Provider
+								</td>
+							</tr>
+							<tr>
+								<td class="content-wrap">
+									<table width="100%" cellpadding="0" cellspacing="0">
+										<tr>
+											<td class="content-block">
+												<!-- Content Goes Here --><p>Hello,</p>
+<p>Do you need someone reliable to transcribe both your short term and long term projects?  Or do you need an accurate transcript for your audio or video?  </p>
+<p>Allow us to transcribe your audio and provide you accurate transcripts and let us help you reach your business/project goals through the help of our transcription services.</p>
+<p>What are our goals with each transcript?</p>
+<p>•	Speed<br />
+•	Accuracy<br />
+•	Confidentiality</p>
+<p>Each transcript is properly formatted. Strict grammar and punctuation rules are adhered to and of course, file security is something we take very seriously. </p>
+<p>Have any transcription queries? Send me a message. Let's discuss what you need to get done.  We will address any concerns you have. </p>
+<p>- Professional transcription<br />
+- Accurate and thorough<br />
+- Beautifully transcribed documents.<br />
+- Grammar, spelling and jargon thoroughly checked</p>
+<p>We have transcribed within most industries:</p>
+<p>•	Medical transcription<br />
+•	Technological<br />
+•	Academic<br />
+•	Lectures<br />
+•	Business<br />
+•	Groups<br />
+•	Legal<br />
+•	Research interviews<br />
+more...</p>
+<p>Skilled with international accents and prompt response.  Our pricing is better or comparable to individual service provider.  In addition we also assist in APA Style formatting for research papers.  Please note we don’t conduct research but assist only in formatting of the papers.</p>
+<p>Regards,<br />
+Rachel Cooper</p>
+																									<img alt="track" class="newsletters-tracking" src="http://economytranscription.info?wpmlmethod=track&id=09bfa2a680ee62a914d2a675f734563c" />																							</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<div class="footer">
+							<table width="100%">
+								<tr>
+									
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>
 
-This is a multi-part message in MIME format.
-
---=====003_Dragon408213038364_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-U21hcnQgV2lmaSZCbHVldG9vdGggUXVlZW4gQnVsYi55b3UgY2FuIGdldCBzb21lIHNhbXBsZXMg
-dG8gY2hlY2ssd2hhdCBkbyB5b3UgdGhpbms/IGlmIHlvdSB3YW50IG1vcmUgaW5mbyBwbGVhc2Ug
-bGV0IG1lIGtub3cuOikNCg0KMSkuIFdpZmkgUkdCVyAob25lIEFQUCBjb250cm9sIGh1bmRyZWRz
-IG9mIEJ1bGJzKQ0KMikuIEJsdWV0b290aCBSR0JXIFNwZWFrZXIgQnVsYiAtLS1BUFAgY29udHJv
-bCAob24gbW9iaWxlKQ0KMykuIEJsdWV0b290aCBSR0JXIFNwZWFrZXIgQnVsYiAtLS1SZW1vdGUg
-Y29udHJvbA0KQ2FuIHUga2luZGx5IHRlbGwgbWUgaWYgeW91IGludGVyZXN0IGluIFdpZmkmQmx1
-ZXRvb3RoIFF1ZWVuIEJ1bGI/IGlmIHlvdSBkbywgIEkgd2lsbCBzZW5kIHNhbXBsZSB0byB1Lg0K
-VGhhbmtzIGFuZCBSZWdhcmRzISANClN1bW1lcg0KICANClRoYW5rcyBhbmQgUmVnYXJkcyENClN1
-bW1lcg0KVGVsOiArODYgNTkyIDcxMTM3NTgNClBob25lOiArODYgMTM0MDA2MDg3ODMgKFdlY2hh
-dCAmIFdoYXRzQXBwKQ0KU2t5cGU6IGppYW5neGlhb3l1YW4wOTExDQpYaWFtZW4gTGFpa2VuIExp
-Z2h0aW5nIFRlY2hub2xvZ3kgQ28uLEx0ZCwNCjIzIyxTaU1pbmcgSW5kdXN0cmlhbCBQYXJrLCBN
-ZWl4aSBSb2FkLCBUb25nJ2FuIERpc3RyaWN0LFhpYW1lbixDaGluYS4=
-
---=====003_Dragon408213038364_=====
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCA4LjAwLjYwMDEuMjM3MDciPjwvSEVBRD4NCjxCT0RZPg0KPFA+U21hcnQgV2lm
-aSZhbXA7Qmx1ZXRvb3RoIFF1ZWVuIEJ1bGIueW91IGNhbiBnZXQgc29tZSBzYW1wbGVzIHRvIGNo
-ZWNrLHdoYXQgZG8gDQp5b3UgdGhpbms/IGlmIHlvdSB3YW50IG1vcmUgaW5mbyBwbGVhc2UgbGV0
-IG1lIGtub3cuOik8L1A+DQo8UD48QlI+MSkuIFdpZmkgUkdCVyAob25lIEFQUCBjb250cm9sIGh1
-bmRyZWRzIG9mIEJ1bGJzKTxCUj4yKS4gQmx1ZXRvb3RoIFJHQlcgDQpTcGVha2VyIEJ1bGIgLS0t
-QVBQIGNvbnRyb2wgKG9uIG1vYmlsZSk8QlI+MykuIEJsdWV0b290aCBSR0JXIFNwZWFrZXIgQnVs
-YiANCi0tLVJlbW90ZSBjb250cm9sPC9QPg0KPFA+PFNUUk9ORz5DYW4gdSBraW5kbHkgdGVsbCBt
-ZSBpZiB5b3UgaW50ZXJlc3QgaW4gV2lmaSZhbXA7Qmx1ZXRvb3RoIFF1ZWVuIA0KQnVsYj8gaWYg
-eW91IGRvLCZuYnNwOyA8Rk9OVCBjb2xvcj1ibHVlPkkgd2lsbCBzZW5kIHNhbXBsZSB0byANCnUu
-PC9GT05UPjwvU1RST05HPjwvUD4NCjxQPlRoYW5rcyBhbmQgUmVnYXJkcyEgPEJSPlN1bW1lcjxC
-Uj4mbmJzcDsgPEJSPlRoYW5rcyBhbmQgDQpSZWdhcmRzITxCUj5TdW1tZXI8L1A+DQo8UD5UZWw6
-ICs4NiA1OTIgNzExMzc1ODxCUj5QaG9uZTogKzg2IDEzNDAwNjA4NzgzIChXZWNoYXQgJmFtcDsg
-DQpXaGF0c0FwcCk8QlI+U2t5cGU6IGppYW5neGlhb3l1YW4wOTExPC9QPg0KPFA+WGlhbWVuIExh
-aWtlbiBMaWdodGluZyBUZWNobm9sb2d5IENvLixMdGQsPEJSPjIzIyxTaU1pbmcgSW5kdXN0cmlh
-bCBQYXJrLCANCk1laXhpIFJvYWQsIFRvbmcnYW4gRGlzdHJpY3QsWGlhbWVuLENoaW5hLjwvUD48
-L0JPRFk+PC9IVE1MPg0K
-
---=====003_Dragon408213038364_=====--
 
 
-
-
---===============0503800904856675821==
+--===============5728608775706181352==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0503800904856675821==
+--===============5728608775706181352==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -157,7 +483,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0503800904856675821==--
-
-
-
+--===============5728608775706181352==--
