@@ -2,62 +2,69 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E1E0D226D3
-	for <lists+industrypack-devel@lfdr.de>; Sun, 19 May 2019 14:32:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 948122368F
+	for <lists+industrypack-devel@lfdr.de>; Mon, 20 May 2019 14:52:27 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
+	Reply-To:From:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Subject:Date:Message-Id:MIME-Version:To:Sender:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=MAFGqkrE9oVrEUA+KSqI7mpof8o35ryY92hVFRQvWps=; b=EO3GE/NSKxFFVIxSMJhFjOqqMI
+	xj8H0wBks42j7TIZ/W4n+cYhYKAPaU0d6cnQFBjM9hox1PlohW78+JmIx305LFeMlfIoEEESY962T
+	Tdxn5eOsguIu0CfyezycRWui6MuOzOecAEoy/ek4IWB0pMZaoP2xSmyLQi63bkw75+u8=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1hSKz9-00070V-HZ
-	for lists+industrypack-devel@lfdr.de; Sun, 19 May 2019 12:32:15 +0000
+	id 1hShmE-0002yX-8P
+	for lists+industrypack-devel@lfdr.de; Mon, 20 May 2019 12:52:26 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <862989805@qq.com>) id 1hSKz8-00070M-Aq
- for industrypack-devel@lists.sourceforge.net; Sun, 19 May 2019 12:32:14 +0000
+ (envelope-from <apache@boombf2am.ml>) id 1hShmD-0002yP-A5
+ for industrypack-devel@lists.sourceforge.net; Mon, 20 May 2019 12:52:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Date:Subject:To:From:Message-ID:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Date:Message-Id:Content-Transfer-Encoding:
+ Content-Type:MIME-Version:Reply-To:From:Subject:To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=il0Y/alZJXIn+Owq3qVNzno4ScgNUlvvyDkdijBObEU=; b=DQTer4OOlCCJ2VZyIGfSI56RFh
- QFGerxqKFzmijeAeQWIF8uFeySvRlBQmFi251CFEkEtuUFU7TLwYkYLKtPjIVf390/ddY/+M3vNGu
- NJ0kbdFAztl4FMJO9bv12jW9a6kJpdEA7RHLEPZhomrCFKuutHBdAucEBKKRJl72YTkc=;
+ bh=aCJ/pbIQmsvJs70kR3RErYMMvKB8ywWN1hLGEcVH/yE=; b=ajAvYN6sxYDMJaS5pXYAtprTAM
+ iNf6Ccvpn1jNDrE3oLg8wAKQFP4StpfniuVcuROo1+OGFbtdfl8ThlDILUYskfdh3GTsrbcKeOLZj
+ uRT8Veb6W6nL/oBiC9t2atp8QdNxDemvSpAA2+zMHXk7RIs9dBLbgCmbbPaE4zPnWOmk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Date:Subject:To:From:
- Message-ID:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Date:Message-Id:Content-Transfer-Encoding:Content-Type:MIME-Version:
+ Reply-To:From:Subject:To:Sender:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=il0Y/alZJXIn+Owq3qVNzno4ScgNUlvvyDkdijBObEU=; b=H
- ZhrRVQjIWrHpvN048vrUDxf2aGKVOj611RPoMTGD/pvpQufNUiP/4cK2yfZ9fmw/1PBeWM/yl996o
- /iaFAWy/OKkay0Wt8ni7Or/pqjWhC7/QGtVLHXewaAgmfD6bmXersA3hJ2DKzn/oTtbORzqZ8dcWR
- JC7FOeWBxcl57S5c=;
-Received: from [183.23.74.202] (helo=gdepri.com)
- by sfi-mx-3.v28.lw.sourceforge.com with smtp (Exim 4.90_1)
- id 1hSKys-008SdN-TD
- for industrypack-devel@lists.sourceforge.net; Sun, 19 May 2019 12:32:14 +0000
-Received: from gdepri.com (unknown (214.138.214.58])
- by gdepri.com with SMTP id c19ac6d8-cace-47dc-a246-9b0b7dad0d5d;
- for <862989805@qq.com>;Sun, 19 May 2019 20:31:48 +08:00
-Message-ID: <d6d08ae88aca817636b869331f1ffe6c@qq.com>
-From: "=?utf-8?B?5L6v5YWx?=" <862989805@qq.com>
-To: <industrypack-devel@lists.sourceforge.net>
-Date: Sun, 19 May 2019 20:31:48 +0800
+ List-Owner:List-Archive; bh=aCJ/pbIQmsvJs70kR3RErYMMvKB8ywWN1hLGEcVH/yE=; b=b
+ FJNidUycLwm4vUKI2OsdrSlDlgUKQo5m7itBlh0s7L/p4fFRKXJ2fQVjZXxVULf/G1kgZZw70egMu
+ wnogpSvBbsak7K87AqB+8rjR99pAgMKGcZKcfcba0cZL1gJLYFgxg2tmOR84LMz5QmHnl14tth8wk
+ fMbSCVjylnUs0oOA=;
+Received: from [159.89.165.40] (helo=mail.boombf2am.ml)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.90_1)
+ id 1hShly-00H79I-Eg
+ for industrypack-devel@lists.sourceforge.net; Mon, 20 May 2019 12:52:25 +0000
+Received: by mail.boombf2am.ml (Postfix, from userid 48)
+ id 6805C4D2E4D; Mon, 20 May 2019 11:14:14 +0000 (UTC)
+To: industrypack-devel@lists.sourceforge.net
+X-PHP-Originating-Script: 0:hdahged.php
 MIME-Version: 1.0
-X-Spam-Score: 1.9 (+)
+Message-Id: <20190520112037.6805C4D2E4D@mail.boombf2am.ml>
+Date: Mon, 20 May 2019 11:14:14 +0000 (UTC)
+X-Spam-Score: 3.7 (+++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (862989805[at]qq.com)
- 1.6 SUBJ_ALL_CAPS          Subject is all capitals
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends in
- digit (862989805[at]qq.com)
- 0.0 TIME_LIMIT_EXCEEDED    Exceeded time limit / deadline
-X-Headers-End: 1hSKys-008SdN-TD
-Subject: [Industrypack-devel] =?utf-8?b?5pawIOaJiyDlhYUg5YC8IOWuiyDlmo4g?=
-	=?utf-8?b?56S8IDEgMCAwIOmOuSAzIDTlj68g5Ye6IOasviDogZQg57ucIFE1OTE5?=
-	=?utf-8?b?MTYyNTjov57mnbDikaUwNDk14pGl77yjT86c?=
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+ domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+ 0.2 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1hShly-00H79I-Eg
+Subject: [Industrypack-devel] Trade enquiry 20/May/2019
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -69,59 +76,29 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4663118743588392443=="
+From: Daniel Murray via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: danielmurray@mail.ru
+Cc: Daniel Murray <sinara-group@bk.ru>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4663118743588392443==
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
+Hi,friend,
 
-<p><font color=3D"#B22222">=E5=B9=B3<span style=3D"font:0px  =
-oIo"><=E6=9C=BA=E6=A2=B0=E5=8A=A8=E5=8A=9B=E5=AD=A6></span>=E8=87=BA=E8=AE=
-=93<span style=3D"font:0px  =
-H"><=E4=BA=8B=E4=BB=B6=E6=B2=89=E7=A7=AF></span>=E6=82=A8=E5=AE=89=E5=BF=83=
-<span style=3D"font:0px  =
-aP"><=E6=97=8B=E8=BD=ACzhuan=E5=8F=98=E6=8D=A2></span>=E5=A8=9B=E6=A8=82<sp=
-an style=3D"font:0px  D"><try></span>=E3=80=82<span style=3D"font:0px  =
-Fg"><free></span>=E6=89=8B=E6=8B=B5<span style=3D"font:0px  =
-zd"><=E5=86=85=E5=8A=A1=E5=A4=84=E7=90=86=E7=A8=8B=E5=BA=8F></span>=E9=A4=
-=B8<span style=3D"font:0px  TU"><=E6=8F=90=E9=AB=98></span>=E6=9C=80<span =
-style=3D"font:0px  RPp"><deflect></span>=E9=AB=98=EF=BC=93<span =
-style=3D"font:0px  =
-X"><=E6=B0=B4=E5=B9=B3=E7=9A=84></span>=EF=BC=98=EF=BC=98<span =
-style=3D"font:0px  FZj"><embedded></span>=EF=BC=98<span style=3D"font:0px  =
-zoW"><=E7=89=99=E5=B5=8C=E7=A6=BB=E5=90=88=E5=99=A8></span>=E6=99=82=E6=99=
-=82<span style=3D"font:0px  u"><lvalue></span>=E8=A8=88=E5=8A=83<span =
-style=3D"font:0px  =
-do"><=E9=97=AD=E7=8E=AF=E7=94=B5=E6=B3=A2=E6=8E=A2=E6=B5=8B=E5=99=A8></span=
->=E6=9D=BE=E6=9D=BE=E6=9D=BE<span style=3D"font:0px  =
-g"><=E7=94=A8=E6=88=B7=E5=9D=90=E6=A0=87=E7=B3=BBxi></span>=EF=BC=8C=E9=96=
-=8B=E7=8D=8E<span style=3D"font:0px  =
-PCQ"><=E6=96=87=E4=BB=B6=E9=94=81></span>=E9=80=9F=E5=BA=A6=E3=80=80<span =
-style=3D"font:0px  =
-m"><=E6=AD=A3=E5=90=91=E5=B1=80=E5=9F=9F=E7=BD=91=E4=BF=A1=E9=81=93></span>=
-=E6=90=9C=E6=98=93=EF=BC=BA<span style=3D"font:0px  =
-lkz"><=E8=BF=9B=E7=A7=AF=E4=BD=9C=E7=94=A8></span></font></p>
+This is Daniel Murray and i am from Sinara Group Co.Ltd in Russia.
+We are glad to know about your company from the web and we are interested in your products.
+Could you kindly send us your Latest catalog and price list for our trial order.
+
+Best Regards,
+
+Daniel Murray
+Purchasing Manager
 
 
 
---===============4663118743588392443==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============4663118743588392443==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============4663118743588392443==--
