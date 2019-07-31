@@ -2,72 +2,64 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 53BB979E79
-	for <lists+industrypack-devel@lfdr.de>; Tue, 30 Jul 2019 04:11:46 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 14C987CC3B
+	for <lists+industrypack-devel@lfdr.de>; Wed, 31 Jul 2019 20:46:21 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1hsHc9-0007GZ-2z
-	for lists+industrypack-devel@lfdr.de; Tue, 30 Jul 2019 02:11:45 +0000
+	id 1hstcB-0003QG-KJ
+	for lists+industrypack-devel@lfdr.de; Wed, 31 Jul 2019 18:46:19 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <nicky@casecasecase.xyz>) id 1hsHc7-0007GA-Qg
- for industrypack-devel@lists.sourceforge.net; Tue, 30 Jul 2019 02:11:43 +0000
+ (envelope-from <mbohday@edecegyt.net>) id 1hstcA-0003Q9-L4
+ for industrypack-devel@lists.sourceforge.net; Wed, 31 Jul 2019 18:46:18 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Reply-To:Date:From:To:Subject:MIME-Version:
+ Content-Type:Sender:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=xhFrrzBmFX0I4Fli9qXeH2D9LziZuBLwvOxWmt2RY/Q=; b=ZUQMxT2kilOoBzfnxcre6wu/hz
- Rlldwg9VM6F8FGlqiyCJ9vD3rwa/f8yMxwlflYLBhOqBq7ysEHI4jw6fC+M+WjuSkphR/1hDuPBKK
- IVkksSr0SYpbA24hbh351CJcM9/dQA2oyfBW4x+HuoscvPfAx0lcFe7OiREmEkmzfbsI=;
+ bh=nru1ixOxJzmf1OZqjlL/b/c6t983s6hr9S9ALYJYiAc=; b=UPj2DercquxfcvMRm4dV4EC6Iz
+ Mpj34RT31C0OqCfe8p+Qt9Hv59n3+ekAoD/T3tM6ZFYIwICYbiVsNbSHNWeqEeDLLvRtTX7HOPE19
+ XfkE7p7hkkfaqQR33ywMJsAQdtf7hYD3nxZB2eXa6Di0Ox1w6LbaD8UrEOv2tNsZyafc=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
+ h=Reply-To:Date:From:To:Subject:MIME-Version:Content-Type:Sender:Message-ID
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=xhFrrzBmFX0I4Fli9qXeH2D9LziZuBLwvOxWmt2RY/Q=; b=V
- rvm3G4kqjR75DyJthVh9dZr1EMbVaeN4nSKiBgkVsWuGb5tBdyCqo+ETfApCAQYvVq8vPZahvgP8t
- L0R3TJ7nkJfmwRoKSoc09qYem3eU2FR4XVxDHTSxzeWDxTfZPhHvS+sWHinWpwPIfhSUnVC/eqrmW
- QKDSZQ0+YGa1e3JE=;
-Received: from [43.227.64.69] (helo=mail.casecasecase.xyz)
+ List-Owner:List-Archive; bh=nru1ixOxJzmf1OZqjlL/b/c6t983s6hr9S9ALYJYiAc=; b=Q
+ xdUMU47TzAZqMgZbMveFBcIJ4CmUCZLVJDi/pnPSYcES+0n3NlLOJWUhaKdAdl1XM2jp1HtuCQG6Z
+ 5VJlqabyJ1mOs44Hl2YCWVcua96ru7kjj8VYBkfcorwgBuJsvCobVfHWGBoWLoV7nGhGSQN8ZRgvf
+ q65vytb5VxDZMRss=;
+Received: from ns1.otokuni119-kyoto.jp ([59.190.138.76]
+ helo=otokuni119-kyoto.jp)
  by sfi-mx-3.v28.lw.sourceforge.com with esmtp (Exim 4.90_1)
- id 1hsHc3-004Iu3-BL
- for industrypack-devel@lists.sourceforge.net; Tue, 30 Jul 2019 02:11:43 +0000
-Received: from 2118.com.cn by mail.casecasecase.xyz (MDaemon PRO v10.1.1)
- with ESMTP id md50001372284.msg
- for <industrypack-devel@lists.sourceforge.net>; Tue, 30 Jul 2019 10:11:31 +0800
-X-Spam-Processed: mail.casecasecase.xyz, Tue, 30 Jul 2019 10:11:31 +0800
- (not processed: spam filter heuristic analysis disabled)
-X-MDHeloLookup-Result: hardfail smtp.helo=2118.com.cn (does not match
- 122.227.191.226) (mail.casecasecase.xyz)
-X-Authenticated-Sender: nicky@casecasecase.xyz
-X-MDRemoteIP: 122.227.191.226
-X-Return-Path: nicky@casecasecase.xyz
-X-Envelope-From: nicky@casecasecase.xyz
-X-MDaemon-Deliver-To: industrypack-devel@lists.sourceforge.net
-Date: Tue, 30 Jul 2019 09:59:05 +0800
-From: "Alice" <lydia@mlth.com>
-To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20190730095913365282@casecasecase.xyz>
-X-mailer: Foxmail 6, 13, 102, 15 [cn]
-Mime-Version: 1.0
-X-Spam-Score: 6.8 (++++++)
+ id 1hstc9-005weD-C0
+ for industrypack-devel@lists.sourceforge.net; Wed, 31 Jul 2019 18:46:18 +0000
+Received: from [102.165.38.24] (unknown [102.165.38.24])
+ by localhost.localdomain (Postfix) with ESMTPA id 4B12D7CF9DE
+ for <industrypack-devel@lists.sourceforge.net>;
+ Thu,  1 Aug 2019 02:49:41 +0900 (JST)
+MIME-Version: 1.0
+To: industrypack-devel@lists.sourceforge.net
+From: "Kenneth F. McKenzie Jr."  <mbohday@edecegyt.net>
+Date: Wed, 31 Jul 2019 10:48:06 -0700
+X-Spam-Score: 3.9 (+++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [43.227.64.69 listed in zen.spamhaus.org]
  1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
  https://senderscore.org/blacklistlookup/
- [43.227.64.69 listed in bl.score.senderscore.com]
+ [59.190.138.76 listed in bl.score.senderscore.com]
+ 0.7 SPF_NEUTRAL            SPF: sender does not match SPF record (neutral)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.0 HTML_MESSAGE           BODY: HTML included in message
- 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
-X-Headers-End: 1hsHc3-004Iu3-BL
-Subject: [Industrypack-devel] =?utf-8?b?5Li76aKY?=
+ 1.0 MISSING_MID            Missing Message-Id: header
+ 0.0 LOTS_OF_MONEY          Huge... sums of money
+ 0.0 T_MONEY_PERCENT        X% of a lot of money for you
+X-Headers-End: 1hstc9-005weD-C0
+Subject: [Industrypack-devel] Funds !! (Ref: LGWB/20M/DD/029719)
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -79,58 +71,132 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: lydia@mlth.com
-Content-Type: multipart/mixed; boundary="===============7827002136569486339=="
+Reply-To: mboghday@edecegyt.net
+Content-Type: multipart/mixed; boundary="===============7848014977088705203=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1hstcB-0003QG-KJ@sfs-ml-4.v29.lw.sourceforge.com>
 
-This is a multi-part message in MIME format.
+You will not see this in a MIME-aware mail reader.
+--===============7848014977088705203==
+Content-Type: multipart/alternative; boundary="===============1720120663=="
 
---===============7827002136569486339==
-Content-Type: multipart/alternative;
-	boundary="=====003_Dragon112622738836_====="
+You will not see this in a MIME-aware mail reader.
+--===============1720120663==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
 
-This is a multi-part message in MIME format.
+Ref: LGWB/20M/DD/029719
+  =
 
---=====003_Dragon112622738836_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+ Hello, this is Lt. Gen. Barnett (Ms.) of the U.S. Army Aviation and Missil=
+e Research, Development, and Engineering Center (AMRDEC) base in Afghanista=
+n.
+  =
 
-RGVhciANCndlIGFyZSBzcHJpbmcgd2lyZSBhbmQgc3ByaW5nIG1hbnVmYWN0dXJlciB3aXRoIDMw
-IHllYXJzIGV4cGVyaWVuY2XvvIxhbnkgcmVxdWlyZW1lbnTvvIxwbHMgY29udGFjdCB1cyBieSB5
-b3VyIGZyZWUgdGltZSx0aGFua3MNCg0KDQpJZiB5b3UgYXJlIG5vdCBpbnRlcmVzdGVkIGluIG91
-ciBwcm9kdWN0cywgcGxlYXNlIGluZm9ybSB1cyB0aGF0IHdlIHdpbGwgZGVsZXRlIHlvdXIgbWFp
-bGJveCBpbiBvdXIgY3VzdG9tZXJzIGxpc3QuDQpTb3JyeSBkbyBkaXN0dXJiIHlvdS4=
+ It will interest you to know that I have named you my beneficiary to recei=
+ve ($20 Million USD) containing in two trunks (boxes); the consignments whi=
+ch arrived the United States today is presently at the JFK Airport New York.
+  =
 
---=====003_Dragon112622738836_=====
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+ My desire and purpose is to have the U.S Military Air & Surface Transporta=
+tion Company (ADM Europa LLC) in New York to deliver the funds to you (or) =
+to any overseas address under your supervision as long as I=2019m assured t=
+hat it will be safe in your care until I return home ending of the year.
+  =
 
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE4NjM5Ij48L0hFQUQ+DQo8Qk9EWT4NCjxQPkRlYXIgPC9Q
-Pg0KPFA+d2UgYXJlIHNwcmluZyB3aXJlIGFuZCBzcHJpbmcgbWFudWZhY3R1cmVyIHdpdGggMzAg
-eWVhcnMgZXhwZXJpZW5jZe+8jGFueSANCnJlcXVpcmVtZW5077yMcGxzIGNvbnRhY3QgdXMgYnkg
-eW91ciBmcmVlIHRpbWUsdGhhbmtzPC9QPg0KPFA+Jm5ic3A7PC9QPg0KPFA+Jm5ic3A7PC9QPg0K
-PFA+SWYgeW91IGFyZSBub3QgaW50ZXJlc3RlZCBpbiBvdXIgcHJvZHVjdHMsIHBsZWFzZSBpbmZv
-cm0gdXMgdGhhdCB3ZSB3aWxsIA0KZGVsZXRlIHlvdXIgbWFpbGJveCBpbiBvdXIgY3VzdG9tZXJz
-IGxpc3QuPC9QPg0KPFA+U29ycnkgZG8gZGlzdHVyYiB5b3UuPC9QPjwvQk9EWT48L0hUTUw+DQo=
+ Please e-mail your address and contact information; the deal is 60/40 spli=
+t (60% for me and 40% for you); I am not a greedy person and I hope you wil=
+l not double cross a single mother who have sacrificed her life in the serv=
+ice of the nation.
+  =
 
---=====003_Dragon112622738836_=====--
+ God bless you !!
+  =
+
+ Respectfully,
+    Lt. Gen. Wendy Barnett (Ms.),
+ APO 1256, SD...Delta Force 18 TG Airborne Corps
+
+--===============1720120663==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
+
+<HTML><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dutf-8"/></head><BODY><P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt">=
+<SPAN lang=3DEN-US style=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-ser=
+if; COLOR: #222a35'>Ref: LGWB/20M/DD/029719<?xml:namespace prefix =3D "o" n=
+s =3D "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'><o:p=
+>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'>Hell=
+o, this is Lt. Gen. Barnett (Ms.) of the U.S. Army Aviation and Missile Res=
+earch, Development, and Engineering Center (AMRDEC) base in Afghanistan.<o:=
+p></o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'><o:p=
+>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'>It w=
+ill interest you to know that I have named you my beneficiary to receive ($=
+20 Million USD) containing in two trunks (boxes); the consignments which ar=
+rived the United States today is presently at the JFK Airport New York.<o:p=
+></o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'><o:p=
+>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'>My d=
+esire and purpose is to have the U.S Military Air &amp; Surface Transportat=
+ion Company (ADM Europa LLC) in New York to deliver the funds to you (or) t=
+o any overseas address under your supervision as long as I=E2=80=99m assure=
+d that it will be safe in your care until I return home ending of the year.=
+<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'><o:p=
+>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'>Plea=
+se e-mail your address and contact information; the deal is 60/40 split (60=
+% for me and 40% for you); I am not a greedy person and I hope you will not=
+ double cross a single mother who have sacrificed her life in the service o=
+f the nation.<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'><o:p=
+>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'>God =
+bless you !!<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'><o:p=
+>&nbsp;</o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'>Resp=
+ectfully,<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'><SPA=
+N style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>Lt. Gen. Wendy Barnett (M=
+s.),<o:p></o:p></SPAN></P>
+<P class=3DMsoNormal style=3D"MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=
+=3D'FONT-SIZE: 14pt; FONT-FAMILY: "Tahoma",sans-serif; COLOR: #222a35'>APO =
+1256, SD...Delta Force 18 TG Airborne Corps<o:p></o:p></SPAN></P></BODY></H=
+TML>
+--===============1720120663==--
 
 
-
-
---===============7827002136569486339==
+--===============7848014977088705203==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7827002136569486339==
+--===============7848014977088705203==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -141,7 +207,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7827002136569486339==--
-
-
+--===============7848014977088705203==--
 
