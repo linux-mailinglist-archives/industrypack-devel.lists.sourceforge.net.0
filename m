@@ -2,70 +2,76 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 69B6CB8846
-	for <lists+industrypack-devel@lfdr.de>; Fri, 20 Sep 2019 01:55:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 99BD7B8849
+	for <lists+industrypack-devel@lfdr.de>; Fri, 20 Sep 2019 01:56:54 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1iB6Gs-00052E-72
-	for lists+industrypack-devel@lfdr.de; Thu, 19 Sep 2019 23:55:34 +0000
+	id 1iB6I9-0005CL-DM
+	for lists+industrypack-devel@lfdr.de; Thu, 19 Sep 2019 23:56:53 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <ec2-user@ip-172-31-13-68.us-west-2.compute.internal>)
- id 1iB6Gr-000523-9X
- for industrypack-devel@lists.sourceforge.net; Thu, 19 Sep 2019 23:55:33 +0000
+ (envelope-from <ecomsconsultant@usloft5319.dedicatedpanel.com>)
+ id 1iB6I8-0005C8-KW
+ for industrypack-devel@lists.sourceforge.net; Thu, 19 Sep 2019 23:56:52 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-type:MIME-Version:From:Subject:To:
- Message-Id:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Date:Message-Id:Content-type:MIME-Version:From:
+ Subject:To:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=WpIbsd4U3x/QVv7wDrphYc42xAADwGnXf46hScE/ikw=; b=WTMfxaTbFrX75gVySo0xtbgySA
- bL/EuazWNCuQ98MQGmMArTPPz2URpkBmtkP9MGvuNho6u3FjwXd3GS1Y3BsBBdED0m0N3rghY22Kz
- qgp/6o81m6OKCgtCAOwHSlVVYQHWR/ZZAVZQytRYYrhkp91+jJlGf+iW+yEKG64ccWWk=;
+ bh=BCH5GlVNsnkv4Ce06iIEGUcLNZ2KdbGCyqGkAwsPGd4=; b=QalMGK0+RlZxvb3wtlSUaaOCRN
+ FdLwdN8jCp3bdN2VMqdOHs+fM2MXY14TXEv0Ei5j/N2VecvesJx6qeBmmvRz77J7KbCI+Hz4UfW5n
+ CXoptGJp0iRCrMWbkVoUNyb5AnUUsMj4wOebqLyygtvfsorSFLfXjncfevuIRXxW9UtY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-type:MIME-Version:From:Subject:To:Message-Id:Date:Sender:Reply-To
+ h=Date:Message-Id:Content-type:MIME-Version:From:Subject:To:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=WpIbsd4U3x/QVv7wDrphYc42xAADwGnXf46hScE/ikw=; b=g
- HKXNNF8OSel8hWYCnQPnC92za+AlFFQNQrjfLShuKivGZ9MKZGkUFEO3gQRLmek0goHRy/YxN7U+Y
- 4C80hfsxJLbpS2ib4X/DMQigC1PzvdogRoOMcrNaoetecumxKLQoY385VPGbP4q52FHMDzX4ug5xW
- PUp74ZzHcl2w1R/U=;
-Received: from buyabarcode.com ([34.210.164.220]
- helo=ip-172-31-13-68.us-west-2.compute.internal)
- by sfi-mx-4.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=BCH5GlVNsnkv4Ce06iIEGUcLNZ2KdbGCyqGkAwsPGd4=; b=D
+ YILX0WEyjnZDRy3xRdnW5OuvdfdNf2An1icUYhKH3jXa3ntEMJcZGkXVW3Q++lf0Tuv7ka3xuaRbZ
+ 9fbGRbqi7sc6NtaRjIl5V0WSdp/aMUPsXx69IXk8KBnijRXOrVNN6n5SOuY7z/4jhbLuVsLnHy/sZ
+ lGmk27ZWZGrkaQME=;
+Received: from usloft5319.dedicatedpanel.com ([209.126.116.146])
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- id 1iB6Gp-00Ak9V-UU
- for industrypack-devel@lists.sourceforge.net; Thu, 19 Sep 2019 23:55:33 +0000
-Received: from ip-172-31-13-68.us-west-2.compute.internal (localhost
- [127.0.0.1])
- by ip-172-31-13-68.us-west-2.compute.internal (8.14.4/8.14.4) with ESMTP id
- x8JNtQVP020230
- for <industrypack-devel@lists.sourceforge.net>; Thu, 19 Sep 2019 23:55:26 GMT
-Received: (from ec2-user@localhost)
- by ip-172-31-13-68.us-west-2.compute.internal (8.14.4/8.14.4/Submit) id
- x8JNtQ06020226; Thu, 19 Sep 2019 23:55:26 GMT
-Date: Thu, 19 Sep 2019 23:55:26 GMT
-Message-Id: <201909192355.x8JNtQ06020226@ip-172-31-13-68.us-west-2.compute.internal>
+ id 1iB6I6-00BDHO-1F
+ for industrypack-devel@lists.sourceforge.net; Thu, 19 Sep 2019 23:56:52 +0000
+Received: from ecomsconsultant by usloft5319.dedicatedpanel.com with local
+ (Exim 4.92)
+ (envelope-from <ecomsconsultant@usloft5319.dedicatedpanel.com>)
+ id 1iB6Hz-0009jK-Id
+ for industrypack-devel@lists.sourceforge.net; Fri, 20 Sep 2019 01:56:43 +0200
 To: industrypack-devel@lists.sourceforge.net
-X-PHP-Originating-Script: 500:new.php
-From: =?UTF-8?B?QmFuayBvZiBBbWVyaWNh?= <BankofAmerica@accounts.com>
+X-PHP-Script: ecomsconsultant.in/new.php for 104.216.86.117
+X-PHP-Originating-Script: 540:new.php
+From: =?UTF-8?B?QmFuayBvZiBBbWVyaWNh?=
+ <BankofAmerica@customerloyalty.accounts.com>
 MIME-Version: 1.0;
-Content-type: multipart/mixed; boundary="--Cj9xCXP1iu"
-X-Spam-Score: 6.6 (++++++)
+Content-type: multipart/mixed; boundary="--PJUiRHUNDo"
+Message-Id: <E1iB6Hz-0009jK-Id@usloft5319.dedicatedpanel.com>
+Date: Fri, 20 Sep 2019 01:56:43 +0200
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - usloft5319.dedicatedpanel.com
+X-AntiAbuse: Original Domain - lists.sourceforge.net
+X-AntiAbuse: Originator/Caller UID/GID - [540 498] / [47 12]
+X-AntiAbuse: Sender Address Domain - usloft5319.dedicatedpanel.com
+X-Get-Message-Sender-Via: usloft5319.dedicatedpanel.com: authenticated_id:
+ ecomsconsultant/only user confirmed/virtual account not confirmed
+X-Authenticated-Sender: usloft5319.dedicatedpanel.com: ecomsconsultant
+X-Source: 
+X-Source-Args: php-fpm: pool ecomsconsultant_in                       
+X-Source-Dir: ecomsconsultant.in:/public_html
+X-Spam-Score: 1.3 (+)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
  for more information. [URIs: bankofamerica.com]
- 0.4 NO_DNS_FOR_FROM        DNS: Envelope sender has no MX or A DNS records
- 1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
- https://senderscore.org/blacklistlookup/
- [34.210.164.220 listed in bl.score.senderscore.com]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
  domains are different
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
@@ -73,11 +79,7 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  0.0 T_TVD_MIME_NO_HEADERS  BODY: No description available.
  1.0 HTML_MESSAGE           BODY: HTML included in message
  0.0 FROM_EXCESS_BASE64     From: base64 encoded unnecessarily
- 3.2 HELO_DYNAMIC_IPADDR    Relay HELO'd using suspicious hostname (IP addr
- 1)
- 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
- 0.0 AWL AWL: Adjusted score from AWL reputation of From: address
-X-Headers-End: 1iB6Gp-00Ak9V-UU
+X-Headers-End: 1iB6I6-00BDHO-1F
 Subject: [Industrypack-devel] =?utf-8?q?_Online_Banking_Alert?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -92,7 +94,7 @@ List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-----Cj9xCXP1iu
+----PJUiRHUNDo
 Content-type: text/html; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
@@ -299,17 +301,17 @@ Content-Transfer-Encoding: 8bit
 					</td>
 				</tr>
 		        </tbody></table></div></td></tr></tbody></table>
-----Cj9xCXP1iu
+----PJUiRHUNDo
 
 
-----Cj9xCXP1iu
+----PJUiRHUNDo
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
-----Cj9xCXP1iu
+----PJUiRHUNDo
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -320,5 +322,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
-----Cj9xCXP1iu--
-
+----PJUiRHUNDo--
