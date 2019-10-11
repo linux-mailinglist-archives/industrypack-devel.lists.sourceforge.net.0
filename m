@@ -2,74 +2,74 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C652BD3410
-	for <lists+industrypack-devel@lfdr.de>; Fri, 11 Oct 2019 00:45:57 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 021E7D37F2
+	for <lists+industrypack-devel@lfdr.de>; Fri, 11 Oct 2019 05:43:17 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1iIhC0-0001cW-Kh
-	for lists+industrypack-devel@lfdr.de; Thu, 10 Oct 2019 22:45:56 +0000
+	id 1iIlpj-0006JX-QR
+	for lists+industrypack-devel@lfdr.de; Fri, 11 Oct 2019 03:43:15 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <test@coupling-media.com>) id 1iIhBz-0001cE-9L
- for industrypack-devel@lists.sourceforge.net; Thu, 10 Oct 2019 22:45:55 +0000
+ (envelope-from <test@coupling-media.com>) id 1iIlpi-0006JG-2l
+ for industrypack-devel@lists.sourceforge.net; Fri, 11 Oct 2019 03:43:14 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Reply-To:Date:From:To:Subject:MIME-Version:
  Content-Type:Sender:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=JEsCtVqYCN6wUSOjyFBHzaf7yfZPLDyCXpXJbxIMN/g=; b=LMAoDw4ocjOYGGItUhcFnzhZTi
- 7Hp3b0q7MU9PZjnPb7IYBJRUxhOZUKWmtlVRM0HWWnpZz6IEwAcTG3f7P+wrp43rtt7iMMTsJ85Sy
- PlQAxZQmfDWnY22wLrMzoqFCyLT0sPUXag8IeZ1N/Ea62uTfcYIFMdo2hdlFXFHWcrCo=;
+ bh=DIlBxIctYS7pIUxcCqVELwMaJuHII4l91xYlh37BIfI=; b=Mg3gV6sEP2NDte4ONyAhS33hu3
+ 4u8+RVWxA2fNgu0K1mXrbhGqNtqREdtMYMyUTRDfh/s7YTRKIVEthI2eDPkHtnY2Zvs9hzE0OEDs+
+ d02MpjakovxHGm16T3J2LjFTICiQ6o/Aks4TV7lsRG8dbWheRzNYCGlp4Xd9PZjCYiSs=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Reply-To:Date:From:To:Subject:MIME-Version:Content-Type:Sender:Message-ID
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=JEsCtVqYCN6wUSOjyFBHzaf7yfZPLDyCXpXJbxIMN/g=; b=k
- 0JYUJm3zp/lSh0xDdQZvmojdLJBBB4Y/2j6PMVpXAm5spbUxhJZwljjakaIIwYk7ibdxFaXofL/6I
- oFF1Ug2JgDEpfQsLM6FlQO27GS+Jx8n05AlFZE/p00sSn8jQO+ad0VmHZf/2Y7InnR37mJ/rNa94v
- KUMKRWtCK+rGY3Fg=;
+ List-Owner:List-Archive; bh=DIlBxIctYS7pIUxcCqVELwMaJuHII4l91xYlh37BIfI=; b=M
+ 6iYUbFyB7o9HzFfZSgBX8nM96MpSLbXZ3J+1/6vSEIzcpo19veqFp5upNaA6LtuXuexzE4FZVKIt7
+ z9pFmgQXPm1dbrk0LLaGOiYfAvwmOXq949rw+KJT3h7HlN2st9kn9+vRySUTrj2rsPkpOirydfd7Y
+ Rxupn1WJEsrsDQNU=;
 Received: from mailserver.coupling-media.com ([212.62.90.203])
- by sfi-mx-3.v28.lw.sourceforge.com with esmtps (TLSv1:DHE-RSA-AES256-SHA:256)
- (Exim 4.92.2) id 1iIhBw-005OlB-I7
- for industrypack-devel@lists.sourceforge.net; Thu, 10 Oct 2019 22:45:55 +0000
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps (TLSv1:DHE-RSA-AES256-SHA:256)
+ (Exim 4.92.2) id 1iIlpe-00DZYg-Rd
+ for industrypack-devel@lists.sourceforge.net; Fri, 11 Oct 2019 03:43:13 +0000
 Received: from localhost (localhost [127.0.0.1])
- by mailserver.coupling-media.com (Postfix) with ESMTP id 8D8EE8452AD0
+ by mailserver.coupling-media.com (Postfix) with ESMTP id D45828447408
  for <industrypack-devel@lists.sourceforge.net>;
- Fri, 11 Oct 2019 00:02:25 +0200 (CEST)
+ Fri, 11 Oct 2019 05:43:00 +0200 (CEST)
 X-Virus-Scanned: Debian amavisd-new at mailserver.coupling-media.com
 Received: from mailserver.coupling-media.com ([127.0.0.1])
  by localhost (mailserver.coupling-media.com [127.0.0.1]) (amavisd-new,
- port 10024) with ESMTP id JkEefvkZMxq4
+ port 10024) with ESMTP id a3hvw52NGi4C
  for <industrypack-devel@lists.sourceforge.net>;
- Fri, 11 Oct 2019 00:02:25 +0200 (CEST)
-Received: from [172.20.10.2] (8ta-250-0-129.telkomadsl.co.za [102.250.0.129])
- by mailserver.coupling-media.com (Postfix) with ESMTPSA id
- 4CF068452AAA for <industrypack-devel@lists.sourceforge.net>;
- Fri, 11 Oct 2019 00:02:24 +0200 (CEST)
+ Fri, 11 Oct 2019 05:43:00 +0200 (CEST)
+Received: from [172.20.10.2] (8ta-229-1-15.telkomadsl.co.za [197.229.1.15])
+ by mailserver.coupling-media.com (Postfix) with ESMTPSA id 7D692844732C
+ for <industrypack-devel@lists.sourceforge.net>;
+ Fri, 11 Oct 2019 05:42:58 +0200 (CEST)
 MIME-Version: 1.0
 To: industrypack-devel@lists.sourceforge.net
 From: keisha Almoru<test@coupling-media.com>
-Date: Fri, 11 Oct 2019 00:02:16 +0200
+Date: Fri, 11 Oct 2019 05:42:57 +0200
 X-Spam-Score: 4.5 (++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [212.62.90.203 listed in list.dnswl.org]
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: akros-trading.com]
+ for more information. [URIs: outlook.com]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+ trust [212.62.90.203 listed in list.dnswl.org]
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.0 HTML_MESSAGE           BODY: HTML included in message
  1.0 MISSING_MID            Missing Message-Id: header
  2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
-X-Headers-End: 1iIhBw-005OlB-I7
+X-Headers-End: 1iIlpe-00DZYg-Rd
 Subject: [Industrypack-devel] Product order request
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -83,16 +83,16 @@ List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: sales02-akros.trading@outlook.com
-Content-Type: multipart/mixed; boundary="===============8672015796006610802=="
+Content-Type: multipart/mixed; boundary="===============4480171217170964666=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
-Message-Id: <E1iIhC0-0001cW-Kh@sfs-ml-1.v29.lw.sourceforge.com>
+Message-Id: <E1iIlpj-0006JX-QR@sfs-ml-4.v29.lw.sourceforge.com>
 
 You will not see this in a MIME-aware mail reader.
---===============8672015796006610802==
-Content-Type: multipart/alternative; boundary="===============0048289202=="
+--===============4480171217170964666==
+Content-Type: multipart/alternative; boundary="===============2049123395=="
 
 You will not see this in a MIME-aware mail reader.
---===============0048289202==
+--===============2049123395==
 Content-Type: text/plain; charset="utf-8"
 MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
@@ -123,7 +123,7 @@ TD)
  Email: sales02-akros.trading@outlook.com
    Website: http://www.akros-trading.com/office/
 
---===============0048289202==
+--===============2049123395==
 Content-Type: text/html; charset="utf-8"
 MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
@@ -364,17 +364,17 @@ trading.com/office/&amp;source=3Dgmail&amp;ust=3D1570684643889000&amp;usg=
 =3DAFQjCNHPUKo60YOloG2DP_H_ADAd8Ye8gw">http://www.akros-<WBR>trading.com/of=
 fice/</A></SPAN></SPAN></FONT></B></SPAN></P></DIV></DIV></DIV></DIV></DIV>=
 </DIV></DIV></DIV></BODY></HTML>
---===============0048289202==--
+--===============2049123395==--
 
 
---===============8672015796006610802==
+--===============4480171217170964666==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8672015796006610802==
+--===============4480171217170964666==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -385,5 +385,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8672015796006610802==--
+--===============4480171217170964666==--
 
