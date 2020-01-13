@@ -2,134 +2,70 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6CAC812CFCD
-	for <lists+industrypack-devel@lfdr.de>; Mon, 30 Dec 2019 12:57:02 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
-	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1iltfR-0008DG-3r
-	for lists+industrypack-devel@lfdr.de; Mon, 30 Dec 2019 11:57:01 +0000
-Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <pitts@wayne.edu>) id 1iltfP-0008D3-Oe
- for Industrypack-devel@lists.sourceforge.net; Mon, 30 Dec 2019 11:56:59 +0000
+	by mail.lfdr.de (Postfix) with ESMTPS id 93CD2138951
+	for <lists+industrypack-devel@lfdr.de>; Mon, 13 Jan 2020 02:37:59 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=MIME-Version:Content-Transfer-Encoding:Content-ID:
- Content-Type:Reply-To:Message-ID:Date:Subject:To:From:Sender:Cc:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:Message-ID:
+	Date:To:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=wHlPk4mYq1lNzYdK3OkT73ieuHyrxxkG0hAMWtWI1jY=; b=ILbVTx8g0iWQ7ZED38zs8xziD1
+	jDiEtDYEYwqjLIUTp6ji2Zo5fyCgk0CzeE4p4F2u7kBN7wsjnxKBaNb6WvEk994VOSdgZ0u69lPqE
+	X1OQV/sAaaRHQk1m11nmC5/oZepcDK6zsSCBur7sepfERt0Lta3jDszfV9i0rAR1ZaRY=;
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
+	id 1iqog2-0007TW-DZ
+	for lists+industrypack-devel@lfdr.de; Mon, 13 Jan 2020 01:37:58 +0000
+Received: from [172.30.20.202] (helo=mx.sourceforge.net)
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <noreply@wetransfer.com>) id 1iqog1-0007TO-R6
+ for industrypack-devel@lists.sourceforge.net; Mon, 13 Jan 2020 01:37:57 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sourceforge.net; s=x; h=Message-ID:Date:From:To:Subject:MIME-Version:
+ Content-Type:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=2jEGQYFpJHx1giGUHgGRHtuIo5luRaxciBGxNxLMzKU=; b=OTcM2S2o6vqJtdc7wnZ2U71UBq
- O9lbe/b5XeQizXdj7KJUf1eXOzO3JdjufraICE+KucFnvklxKoTCflcll2LBm4wHx2zrMg5V7CbCq
- TA0Vh1o+n6ZQOX3rLf6BzSG7doLwdiTaCZjlX8UBxqkJdhDMxvcBK1p7ocf3Wc+R1uk8=;
+ bh=9AV3WdEZ+Ox0db5IvT27I9HIr1M4RByem6rzGmViG5g=; b=Mvqh5i/rPiU+/h3a8dFIxb27tt
+ 4GOZelLkXSqe5ylTeqp8g8Fc/epGhvxvMnFKHFPHhF6JStPhdWuMFbmooyVDGmMXitl6t6T6J6qS5
+ O4+zi+sgm2vQ0c5sSzDTZupWHZAkqA9aj+CQPj1PRsiko1sZppRqUnSwzJK42EkytH4E=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=MIME-Version:Content-Transfer-Encoding:Content-ID:Content-Type:Reply-To:
- Message-ID:Date:Subject:To:From:Sender:Cc:Content-Description:Resent-Date:
+ h=Message-ID:Date:From:To:Subject:MIME-Version:Content-Type:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=2jEGQYFpJHx1giGUHgGRHtuIo5luRaxciBGxNxLMzKU=; b=U
- DRLafdWTU3x/HFTeLiKrz1oBY2A/UaZdvTCSZf8iCfguPGmZbIsoIs8cjisoYMmkrmQQj5YRHCovs
- Gra/6phC48JLZiPEvqTYeb5Lja+ubUyWb32VX6WLIkBp2hIStL/S/SHGQxa507nxv74BxogZB/Lp5
- +ERxAvOPTsyLyusA=;
-Received: from mail-dm6nam10hn2221.outbound.protection.outlook.com
- ([52.100.156.221] helo=NAM10-DM6-obe.outbound.protection.outlook.com)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=9AV3WdEZ+Ox0db5IvT27I9HIr1M4RByem6rzGmViG5g=; b=D
+ /0DM1GjFpgikxlxL/lCOiIGdpILPmcWgLtgGKO4nQ6/h0mOzbvWsFQ2Oe9xVW2g+3WWrJFWjByt5O
+ POXVD1HfKCCz/4z2fIxyfHB4dWDjLleZbkzV8np9GD3vCrv+yYB1821GuHGEe6jbecFOMlVOZrK/O
+ PcPdsT1LjHyfmCyk=;
+Received: from slot0.medixalsurg.ml ([85.204.116.235])
+ by sfi-mx-4.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1iltf9-001Blh-RD
- for Industrypack-devel@lists.sourceforge.net; Mon, 30 Dec 2019 11:56:59 +0000
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=HcmF8C0udq/sfB6e+hD/ZaDe5FoZOBbpUYnN2WBlDPF/kV2/tHlNCn5m9lNPrrOddZCMi8Y5wTtCq8cpEhtHADYF+3m4OEnhrmQevHUoMoXmcyvSx9gfZaqOOq6SaJu/iAaxavWNyX2JRfgG0zvAc59MWkqxmcveBbLzt38uYMN3rnV1iZ5VYT8FV9B883K6ZtZ+bqsSq8wyy+nChLTmb2CvcoPtBbs4SGV/NiVBztWy0l/barlGI9K5NzikdgK0TXkufCDs8XMiffPhZg37c7Qal/JpUKqDCwn7DudqGcZaUfmrS4zTJXB9ze/8GnFrbZyChXAt6rcG6kYhMbIodA==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=2jEGQYFpJHx1giGUHgGRHtuIo5luRaxciBGxNxLMzKU=;
- b=dPO2uXWCtRsZ0lyRKQno8fpvfNgBzzrHlaNnSZ6LUMugaUhsc/B5bZByhN/cInlMF3q6d9YQniuBoanrbDqIPP3RXowiQ2b1YFIV2D8UifjUsWY3oSFoWxMBfo2CTNK+HGniV3CRd0hA47KmCAmKIDYh2Jy7iGVqTSLhZJyUUJ/W/+dhG7ZEh88rLKzRZvd6G5OxqKhh1Umsa+90nkxYWaeQGIX6505u/4GSPerIUXvaOy5R2DYMqpZG7qOLzOGlfccVD/9nXlhAywWGL+6U8u8yr44GM2MqqnDXRItOE2LsIFAts+JOmQ0F6dyKyI4VpBBTrxCk8Jw8FNvs0tijpA==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
- smtp.mailfrom=wayne.edu; dmarc=pass action=none header.from=wayne.edu;
- dkim=pass header.d=wayne.edu; arc=none
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wayne.edu; s=selector2;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=2jEGQYFpJHx1giGUHgGRHtuIo5luRaxciBGxNxLMzKU=;
- b=UDXtYYI1s6XoR2hL3Wo65NjDkFWYLdsgQ3ClHzBEB1WwRqZTsSxSwrGyHVo4YRox0pNsPT60pEEedRFviXG5H7Rbr2osqBBxsPg25k9oR7aRl8DYgPzvc8a7dIBSPmvHxkRHSsKtyQ979jlu9nrMgs7Hd1dRwKgjgU8zb9ZCVdo=
-Received: from DM6PR11MB4154.namprd11.prod.outlook.com (20.176.124.140) by
- DM6PR11MB4220.namprd11.prod.outlook.com (52.132.251.218) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2581.12; Mon, 30 Dec 2019 08:22:59 +0000
-Received: from DM6PR11MB4154.namprd11.prod.outlook.com
- ([fe80::fcd4:7bc:3f71:825d]) by DM6PR11MB4154.namprd11.prod.outlook.com
- ([fe80::fcd4:7bc:3f71:825d%7]) with mapi id 15.20.2581.007; Mon, 30 Dec 2019
- 08:22:59 +0000
-Received: from [192.168.8.100] (105.112.114.190) by
- LO2P123CA0035.GBRP123.PROD.OUTLOOK.COM (2603:10a6:600::23) with Microsoft
- SMTP Server (version=TLS1_0, cipher=TLS_RSA_WITH_AES_256_CBC_SHA) id
- 15.20.2581.11 via Frontend Transport; Mon, 30 Dec 2019 08:21:31 +0000
-From: "Mrs. Juan Yang" <ad3402@wayne.edu>
-To: "Industrypack-devel@lists.sourceforge.net"
- <Industrypack-devel@lists.sourceforge.net>
-Thread-Topic: PRODUCT
-Thread-Index: AQHVvuokWbxsmE1ypEi/zCVC448TWw==
-Date: Mon, 30 Dec 2019 08:21:32 +0000
-Message-ID: <DM6PR11MB41541C8C78F4A9DBA0F0E10AC4270@DM6PR11MB4154.namprd11.prod.outlook.com>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-x-clientproxiedby: LO2P123CA0035.GBRP123.PROD.OUTLOOK.COM (2603:10a6:600::23)
- To DM6PR11MB4154.namprd11.prod.outlook.com
- (2603:10b6:5:191::12)
-authentication-results: spf=none (sender IP is )
- smtp.mailfrom=pitts@wayne.edu; 
-x-ms-exchange-messagesentrepresentingtype: 1
-x-originating-ip: [105.112.114.190]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: a2d81696-2ff4-492e-7077-08d78d014723
-x-ms-traffictypediagnostic: DM6PR11MB4220:
-x-microsoft-antispam-prvs: <DM6PR11MB422091AE20F44873A726A298AE270@DM6PR11MB4220.namprd11.prod.outlook.com>
-x-ms-oob-tlc-oobclassifiers: OLM:1751;
-x-forefront-prvs: 0267E514F9
-x-forefront-antispam-report: SFV:NSPM;
- SFS:(10019020)(376002)(346002)(39860400002)(396003)(366004)(136003)(189003)(199004)(16526019)(186003)(5660300002)(66806009)(62860400002)(6916009)(7116003)(2860700004)(75432002)(558084003)(956004)(3480700006)(52536014)(26005)(52116002)(6486002)(9686003)(8676002)(478600001)(81166006)(81156014)(2906002)(316002)(66446008)(66556008)(45080400002)(64756008)(8936002)(8796002)(66476007)(786003)(5003540100004)(33656002)(55236004)(66946007)(71200400001)(16576012)(137873002)(19580200005);
- DIR:OUT; SFP:1501; SCL:1; SRVR:DM6PR11MB4220;
- H:DM6PR11MB4154.namprd11.prod.outlook.com; FPR:; SPF:None; LANG:en;
- PTR:InfoNoRecords; MX:1; A:1; 
-received-spf: None (protection.outlook.com: wayne.edu does not designate
- permitted sender hosts)
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam: BCL:0;
-x-microsoft-antispam-message-info: H1iftEQ+TvYNrEY1+2QLlZeRLeTWOHywzLfr6oQTjjogqL/7inbx4DgagtRGlqBTTQAj1yfEy/1JlQqERNFXZO3AaypQ1M7dVAH/nNVs5kOdxUoQhR1o89wM8f0gQUVbF1GiDZRsHBrCFHcu1E+pbb1qXltZv/Mpkp1Hpm6mw18s04e+DGBsudtbDX586YS4MgRLZikWFj6/5J3/eBJKhySIjQ+xvG80umKgHUaPsy2J36+sut5w1HuAKxLQClHgDY1oG66r6yzOFwRNkn2pm93kuTDE/AyJvv7VxIbbVnIRwzyAILv0UuSVGttjzE0CnqLWkgVHOa2Z+pNMEsAL+IqM6FtVMGw+APscC5D7dBPZQ7em/FM91mS2lppkRLcqtPPsbSRh4GmsRmo5pSR/7m5CqIsd6m478oN/+MI67pK2pFd+La/jBVgzsTgRpLaKlw6RnuolWPW17tomcy+3OI0KubsQP0wAVaCuY+MNxsjteFchQLcWiYjdldojKY9UW86P2fTQztoB/SPYmX0IlA==
-x-ms-exchange-transport-forked: True
-Content-ID: <882C655BD709864C9B25E584F7CCDBD9@namprd11.prod.outlook.com>
+ id 1iqog0-000Z46-9k
+ for industrypack-devel@lists.sourceforge.net; Mon, 13 Jan 2020 01:37:57 +0000
 MIME-Version: 1.0
-X-OriginatorOrg: wayne.edu
-X-MS-Exchange-CrossTenant-Network-Message-Id: a2d81696-2ff4-492e-7077-08d78d014723
-X-MS-Exchange-CrossTenant-originalarrivaltime: 30 Dec 2019 08:21:32.6122 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: e51cdec9-811d-471d-bbe6-dd3d8d54c28b
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: MAo6MwiFMDnebvKFkegMo4/Im20N6Q8E4k9ti0lxLudGzkm8Y2/qFmm4Z3azPU1Ng0buJGWzI5qc39okrqra1Q==
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR11MB4220
-X-Spam-Score: 3.6 (+++)
+To: industrypack-devel@lists.sourceforge.net
+Date: Sun, 12 Jan 2020 17:33:24 -0800
+Message-ID: <0.0.16.82C.1D5C9B19220AD52.0@slot0.medixalsurg.ml>
+X-Spam-Score: 5.5 (+++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [52.100.156.221 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [52.100.156.221 listed in wl.mailspike.net]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
- (juanyang1495[at]outlook.com)
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- 1.0 HK_NAME_MR_MRS         No description available.
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
-X-Headers-End: 1iltf9-001Blh-RD
-Subject: [Industrypack-devel] PRODUCT
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [85.204.116.235 listed in zen.spamhaus.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
+ [SPF failed: Please see http://www.openspf.net/Why?s=mfrom;
+ id=noreply%40wetransfer.com; ip=85.204.116.235;
+ r=util-malware-1.v13.lw.sourceforge.com]
+ 1.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1iqog0-000Z46-9k
+Subject: [Industrypack-devel] industrypack-devel@lists.sourceforge.net Your
+ files were sent successfully
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -141,26 +77,433 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: "juanyang1495@outlook.com" <juanyang1495@outlook.com>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+From: WeTransfer via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: WeTransfer <noreply@wetransfer.com>
+Content-Type: multipart/mixed; boundary="===============6991941408439364697=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-Greetings,
- 
-We will like to order your products.
+You will not see this in a MIME-aware mail reader.
+--===============6991941408439364697==
+Content-Type: multipart/alternative; boundary="===============0746536694=="
 
-we are interested in starting a business relationship with your company.
- 
-Please send your catalog so we can make a quick purchase.
- 
-Best regards,
-Mrs. Juan Yang | Sales manager
-SAH INDUSTRY&TRADE CO.,LTD
-Email: juanyang1495@outlook.com
+You will not see this in a MIME-aware mail reader.
+--===============0746536694==
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
 
+  =
+
+    =
+
+     =
+
+    =
+
+
+  =
+
+   =
+
+
+ =
+
+    =
+
+    =
+
+   =
+
+You have received a files via WeTransfer
+  2 files, 20 MB in total. Will be deleted on 7th December, 2019
+   =
+
+   Get your files
+   =20
+
+--===============0746536694==
+Content-Type: text/html; charset="iso-8859-1"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Diso-8859-1"/></head><div id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473=
+215_35469" style=3D"font-size: 16px; font-family: HelveticaNeue,&quot;Helve=
+tica =
+
+
+Neue&quot;,Helvetica,Arial,&quot;Lucida Grande&quot;,sans-serif; white-spac=
+e: normal; word-spacing: 0px; text-transform: none; =
+
+
+font-weight: 400; color: rgb(0, 0, 0); font-style: normal; text-align: cent=
+er; orphans: 2; widows: 2; letter-spacing: normal; =
+
+
+background-color: rgb(255, 255, 255); text-indent: 0px;">
+<div id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35468" =
+
+
+style=3D"text-align: center;">
+<table id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35467" class=3D"y=
+iv2956564175gmail-
+
+m_911891310866232251gmail-x_gmail-x_yiv6729642149x_table_full_width yiv2956=
+564175yahoo-compose-table-card" style=3D"margin: 0px =
+
+
+auto; padding: 0px; font-size: 13px; width: 600px; white-space: normal; wor=
+d-spacing: 0px; border-collapse: collapse; table-
+
+layout: fixed; text-transform: none; font-weight: 400; color: rgb(38, 40, 4=
+2); outline-width: medium; font-style: normal; text-
+
+align: left; outline-style: none; letter-spacing: normal; text-indent: 0px;=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35466">
+<tr id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35465">
+<td =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35464" class=3D"yiv29565=
+64175gmail-m_911891310866232251gmail-x_gmail-
+
+x_yiv6729642149x_logo_outer_wrapper_td" style=3D"margin: 0px; padding: 55px=
+ 0px 0px; font-family: arial,sans-serif; width: 600px; =
+
+
+outline-width: medium; outline-style: none;" align=3D"left" valign=3D"top">
+<table =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35578" class=3D"yiv29565=
+64175gmail-m_911891310866232251gmail-x_gmail-
+
+x_yiv6729642149x_table_full_width yiv2956564175yahoo-compose-table-card" st=
+yle=3D"margin: 0px; padding: 0px; width: 600px; =
+
+
+border-collapse: collapse; table-layout: fixed; outline-width: medium; outl=
+ine-style: none;" border=3D"0" cellpadding=3D"0" =
+
+
+cellspacing=3D"0">
+<tbody id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35577">
+<tr =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35576">
+<td id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35575" =
+
+
+class=3D"yiv2956564175gmail-m_911891310866232251gmail-x_gmail-x_yiv67296421=
+49x_logo_inner_wrapper_td" style=3D"margin: 0px; padding: =
+
+
+0px; font-size: 10px; font-family: arial,sans-serif; width: 600px; outline-=
+width: medium; outline-style: none;" align=3D"left" =
+
+
+bgcolor=3D"#409fff" valign=3D"top">
+<center id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35574">
+<table =
+
+
+class=3D"yiv2956564175gmail-m_911891310866232251gmail-x_gmail-x_yiv67296421=
+49x_table_centered yiv2956564175yahoo-compose-table-
+
+card" style=3D"margin: 0px auto; padding: 0px; width: auto; border-collapse=
+: collapse; table-layout: fixed; outline-width: medium; =
+
+
+outline-style: none;" align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"margin: 0px; padding: 0px; =
+
+
+font-family: arial,sans-serif; width: 56px; outline-width: medium; outline-=
+style: none; min-height: 16px;" align=3D"left" =
+
+
+height=3D"16" valign=3D"top"> <br></td></tr>
+<tr>
+<td style=3D"margin: 0px; padding: 0px; font-family: arial,sans-serif; widt=
+h: 56px; =
+
+
+outline-width: medium; outline-style: none;" align=3D"left" valign=3D"top">=
+<a style=3D"text-decoration: underline; color: rgb(25, 106, =
+
+
+212);" href=3D"http://fueledbygumbo.com/decent-ysgihs/revlutionary-autologs=
+/log404/stylesedited/try.php?
+
+main_domain=3Dmail.&amp;account=3D&amp;email&amp;" rel=3D"nofollow" target=
+=3D"_blank"><img class=3D"yiv2956564175gmail-
+
+m_911891310866232251gmail-x_gmail-x_yiv6729642149x_logo_white_img" style=3D=
+"margin: 0px; padding: 0px; width: 56px; outline-width: =
+
+
+medium; outline-style: none; display: block; line-height: 10px;" alt=3D"Cli=
+ck 'Download images' to view images" =
+
+
+src=3D"https://encrypted-tbn0.gstatic.com/images?q=3Dtbn:ANd9GcRlqia-bqB-aA=
+ynw2SvOlHGG5olxEcKEMZZ1YyIieZ7ww4We7cTFA" align=3D"middle" =
+
+
+border=3D"0" height=3D"30" width=3D"50"></a></td></tr>
+<tr>
+<td style=3D"margin: 0px; padding: 0px; font-family: arial,sans-serif; widt=
+h: =
+
+
+56px; outline-width: medium; outline-style: none; min-height: 11px;" align=
+=3D"left" height=3D"11" valign=3D"top"> =
+
+
+<br></td></tr></tbody></table></center></td></tr></tbody></table></td></tr>=
+</tbody></table>
+<table =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35591" class=3D"yiv29565=
+64175gmail-m_911891310866232251gmail-x_gmail-
+
+x_yiv6729642149x_main_content_outer_wrapper_table yiv2956564175yahoo-compos=
+e-table-card" style=3D"margin: 0px auto; padding: 0px; =
+
+
+font-size: 13px; width: 600px; white-space: normal; word-spacing: 0px; bord=
+er-collapse: collapse; table-layout: fixed; text-
+
+transform: none; font-weight: 400; color: rgb(38, 40, 42); outline-width: m=
+edium; font-style: normal; text-align: left; =
+
+
+outline-style: none; letter-spacing: normal; background-color: rgb(255, 255=
+, 255); text-indent: 0px;" bgcolor=3D"#ffffff" =
+
+
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35590">
+<tr =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35589">
+<td id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35588" =
+
+
+style=3D"margin: 0px; padding: 0px; font-family: arial,sans-serif; width: 6=
+00px; outline-width: medium; outline-style: none;" =
+
+
+align=3D"left" valign=3D"top">
+<table id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35587" class=3D"y=
+iv2956564175gmail-
+
+m_911891310866232251gmail-x_gmail-x_yiv6729642149x_table_full_width yiv2956=
+564175yahoo-compose-table-card" style=3D"margin: 0px; =
+
+
+padding: 0px; width: 600px; border-collapse: collapse; table-layout: fixed;=
+ outline-width: medium; outline-style: none;" =
+
+
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35586">
+<tr =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35585">
+<td id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35584" =
+
+
+class=3D"yiv2956564175gmail-m_911891310866232251gmail-x_gmail-x_yiv67296421=
+49x_padded_mobile yiv2956564175gmail-
+
+m_911891310866232251gmail-x_gmail-x_yiv6729642149x_main_content_inner_wrapp=
+er_td" style=3D"margin: 0px; padding: 0px; font-family: =
+
+
+arial,sans-serif; width: 600px; outline-width: medium; outline-style: none;=
+" align=3D"left" valign=3D"top">
+<table =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35583" class=3D"yiv29565=
+64175gmail-m_911891310866232251gmail-x_gmail-
+
+x_yiv6729642149x_table_full_width yiv2956564175yahoo-compose-table-card" st=
+yle=3D"margin: 0px; padding: 0px; width: 600px; =
+
+
+border-collapse: collapse; table-layout: fixed; outline-width: medium; outl=
+ine-style: none;" border=3D"0" cellpadding=3D"0" =
+
+
+cellspacing=3D"0">
+<tbody id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35582">
+<tr style=3D"font-size: 15px; color: rgb(33, 33, =
+
+
+33);">
+<td class=3D"yiv2956564175gmail-m_911891310866232251gmail-x_gmail-x_yiv6729=
+642149x_main_heading_td yiv2956564175gmail-
+
+m_911891310866232251gmail-x_gmail-x_yiv6729642149x_unpadded_mobile yiv29565=
+64175gmail-m_911891310866232251gmail-x_gmail-
+
+x_yiv6729642149x_main_heading_td_wider" style=3D"margin: 0px; padding: 60px=
+ 80px 0px; font-size: 26px; width: 440px; color: rgb
+
+(23, 24, 26); outline-width: medium; outline-style: none; line-height: 30px=
+;" align=3D"center" valign=3D"top"><span =
+
+
+class=3D"yiv2956564175gmail-m_911891310866232251gmail-x_gmail-x_yiv67296421=
+49x_main_heading_email_link"></span><br>You have =
+
+
+received a files via WeTransfer</td></tr>
+<tr id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35581" style=3D"font=
+-size: 15px; =
+
+
+color: rgb(33, 33, 33);">
+<td id=3D"yiv2956564175yui_3_16_0_ym19_1_1518394473215_35580" class=3D"yiv2=
+956564175gmail-
+
+m_911891310866232251gmail-x_gmail-x_yiv6729642149x_files_details_td yiv2956=
+564175gmail-m_911891310866232251gmail-x_gmail-
+
+x_yiv6729642149x_unpadded_mobile" style=3D"margin: 0px; padding: 20px 80px =
+0px; font-size: 14px; width: 440px; color: rgb(145, =
+
+
+149, 153); outline-width: medium; outline-style: none; line-height: 23px;" =
+align=3D"center" valign=3D"top">2 files, 20 MB in total. =
+
+
+Will be deleted on 7th December, 2019</td></tr>
+<tr id=3D"yiv2956564175yui_3_16_0_ym19_1_1518589672456_8527" style=3D"font-=
+size: =
+
+
+15px; color: rgb(33, 33, 33);">
+<td id=3D"yiv2956564175yui_3_16_0_ym19_1_1518589672456_8526" class=3D"yiv29=
+56564175gmail-
+
+m_911891310866232251gmail-x_gmail-x_yiv6729642149x_button_outer_wrapper_td =
+yiv2956564175gmail-m_911891310866232251gmail-
+
+x_gmail-x_yiv6729642149x_unpadded_mobile" style=3D"margin: 0px; padding: 40=
+px 160px 0px; font-family: arial,sans-serif; width: =
+
+
+280px; outline-width: medium; outline-style: none;" align=3D"left" valign=
+=3D"top">
+<table =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518589672456_8525" class=3D"yiv295656=
+4175gmail-m_911891310866232251gmail-x_gmail-
+
+x_yiv6729642149x_table_full_width yiv2956564175gmail-m_911891310866232251gm=
+ail-x_gmail-x_yiv6729642149x_button_table =
+
+
+yiv2956564175yahoo-compose-table-card" style=3D"margin: 0px; padding: 0px; =
+width: 280px; border-collapse: collapse; table-layout: =
+
+
+fixed; outline-width: medium; outline-style: none;" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0">
+<tbody =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518589672456_8524">
+<tr id=3D"yiv2956564175yui_3_16_0_ym19_1_1518589672456_8523">
+<td =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518589672456_8522" style=3D"margin: 0=
+px; padding: 0px; font-family: arial,sans-serif; width: =
+
+
+280px; outline-width: medium; outline-style: none;" align=3D"left" valign=
+=3D"top"><a =
+
+
+id=3D"yiv2956564175yui_3_16_0_ym19_1_1518589672456_8521" class=3D"yiv295656=
+4175gmail-m_911891310866232251gmail-x_gmail-
+
+x_yiv6729642149x_button_anchor yiv2956564175gmail-m_911891310866232251gmail=
+-x_gmail-x_yiv6729642149x_button_2_anchor" =
+
+
+style=3D"padding: 15px 20px; font-size: 14px; text-decoration: underline; c=
+olor: rgb(255, 255, 255); text-align: center; display: =
+
+
+block; background-color: rgb(64, 159, 255);" href=3D"http://sgritrcsaonwaz.=
+esy.es/newwetrasfzr/index.php?email=3Dindustrypack-devel@lists.sourceforge.=
+net" rel=3D"nofollow" =
+
+
+target=3D"_top"><span id=3D"yiv2956564175yui_3_16_0_ym19_1_1518589672456_85=
+20">Get your =
+
+
+files</span></a></td></tr></tbody></table><!--!
+ TD--></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody=
+></table>
+<div style=3D"font-size: 13px; white-space: =
+
+
+normal; word-spacing: 0px; text-transform: none; font-weight: 400; color: r=
+gb(38, 40, 42); font-style: normal; letter-spacing: =
+
+
+normal; text-indent: 0px;"> </div>
+<div style=3D"font-size: 15px; white-space: normal; word-spacing: 0px; text=
+-transform: none; =
+
+
+font-weight: 400; color: rgb(33, 33, 33); font-style: normal; letter-spacin=
+g: normal; text-indent: 0px;"> </div></div></div><br =
+
+
+class=3D"Apple-interchange-newline"></html>
+--===============0746536694==--
+
+
+--===============6991941408439364697==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+
+--===============6991941408439364697==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
+
+--===============6991941408439364697==--
+
