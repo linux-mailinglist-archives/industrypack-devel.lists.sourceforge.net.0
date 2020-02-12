@@ -2,75 +2,67 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5469C1585EF
-	for <lists+industrypack-devel@lfdr.de>; Tue, 11 Feb 2020 00:07:27 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4535C15A21A
+	for <lists+industrypack-devel@lfdr.de>; Wed, 12 Feb 2020 08:34:13 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1j1I9G-0001rZ-3t
-	for lists+industrypack-devel@lfdr.de; Mon, 10 Feb 2020 23:07:26 +0000
+	id 1j1mXE-0004z7-36
+	for lists+industrypack-devel@lfdr.de; Wed, 12 Feb 2020 07:34:12 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <rdap@ripe.net>) id 1j1I9D-0001rK-CI
- for industrypack-devel@lists.sourceforge.net; Mon, 10 Feb 2020 23:07:23 +0000
+ (envelope-from <rdap@ripe.net>) id 1j1mXC-0004ym-UV
+ for industrypack-devel@lists.sourceforge.net; Wed, 12 Feb 2020 07:34:10 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Date:From:To:Subject:MIME-Version:Content-Type:
+ Sender:Reply-To:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Tfduuvgz1BVIvI1DQi+XaTBHVPVoNMgPzfGru5Z5214=; b=GpGHLf+Apj1HUkbo91QEUFARY9
- Ug7GPwPzvGuFcz643ozwEHVcvIBpSTtsdXqb5VdEcFpsLAXthVANnjCiux1AI+d17f2P52xHgBJzs
- jAgdAyoUWnfvuDVrT9UOOvQiWdEi3VhORGXtOnByESz6bEBGPOK7sL1ZRY/Fb7Qd8GCI=;
+ bh=pOUmgQpfUDeSh41FcFvmwWUFSZQOJrV9QPBrh51xqAk=; b=MxXl6AtdHz/E9RFB+G96LTfEfT
+ DtBoIRpTwZjoQzVTEzjFKP0/NiRi+5yIby1BjcY7dxSQnNJXuynh9QRrCByIV0rEzX0uNFFVA9bZB
+ 2FaB0Eh7Ct60vl9ec++KppS4oBsOj+SuSR2Fijb7N53p3cjxgYc1ORVgL/hSfAyjWSb8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Date:From:To:Subject:MIME-Version:Content-Type:Sender:Reply-To:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Tfduuvgz1BVIvI1DQi+XaTBHVPVoNMgPzfGru5Z5214=; b=j
- kpiADsUSMGHQiBSSgKdFsz6n9RG3qd86MmJDZHGoMVhvfnhxVnO300JvsGEuk47SlVUiQjy68kjTB
- F2bSPqawRmZbh5DiCTytDLddoJbPYAbBVh2qmnxh6A0avCnRT29uQdtlNb8lwPjjY0eK9HR9mwuVu
- UVF+hsUCrSVqZ/hA=;
-Received: from wubur.com ([104.128.74.186] helo=core.wubur.com)
- by sfi-mx-4.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1j1I9A-0003Tu-FP
- for industrypack-devel@lists.sourceforge.net; Mon, 10 Feb 2020 23:07:23 +0000
-Received: from modemcable062.130-37-24.static.videotron.ca
- ([24.37.130.62]:58189 helo=ripe.net)
- by core.wubur.com with esmtpsa (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
- (Exim 4.92) (envelope-from <rdap@ripe.net>) id 1j0uI0-000082-3B
- for industrypack-devel@lists.sourceforge.net; Sun, 09 Feb 2020 16:38:52 -0500
-From: "Email Server"<rdap@ripe.net>
-To: industrypack-devel@lists.sourceforge.net
-Date: 09 Feb 2020 16:38:53 -0500
-Message-ID: <20200209163853.D0AC928B33FA9A1F@ripe.net>
+ List-Owner:List-Archive; bh=pOUmgQpfUDeSh41FcFvmwWUFSZQOJrV9QPBrh51xqAk=; b=G
+ gXzHMEnGtBsEAQeV0NZ8zgSaWLFjJGeS+8kqol0iqTdjmIrgotqopgxYs9aP7fk1XZylkuGfwyHyw
+ AnjMBH7A9h5Tr8N3gTu55SSs6V0PY3s4PQfbpE28Rv23JatnypezaX5ZDPLEqTglmB35CRRbS+vLZ
+ pqtzgRAIDH1QQjy0=;
+Received: from www12302ue.sakura.ne.jp ([49.212.151.76] helo=mail.infoneo.jp)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
+ id 1j1mXB-009LRp-D4
+ for industrypack-devel@lists.sourceforge.net; Wed, 12 Feb 2020 07:34:10 +0000
+Received: from [192.168.1.15] (modemcable062.130-37-24.static.videotron.ca
+ [24.37.130.62])
+ by mail.infoneo.jp (Postfix) with ESMTPA id 9DAE63C02D7
+ for <industrypack-devel@lists.sourceforge.net>;
+ Wed, 12 Feb 2020 13:49:14 +0900 (JST)
 MIME-Version: 1.0
-X-AntiAbuse: This header was added to track abuse,
- please include it with any abuse report
-X-AntiAbuse: Primary Hostname - core.wubur.com
-X-AntiAbuse: Original Domain - lists.sourceforge.net
-X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
-X-AntiAbuse: Sender Address Domain - ripe.net
-X-Get-Message-Sender-Via: core.wubur.com: authenticated_id:
- info@commercialremodelingpearland.com
-X-Authenticated-Sender: core.wubur.com: info@commercialremodelingpearland.com
-X-Source: 
-X-Source-Args: 
-X-Source-Dir: 
-X-Spam-Score: 5.5 (+++++)
+To: industrypack-devel@lists.sourceforge.net
+From: "Email team" <rdap@ripe.net>
+Date: Wed, 12 Feb 2020 02:27:04 -0500
+X-Spam-Score: 3.9 (+++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?104.128.74.186>]
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: studio41b.com]
  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.0 HTML_MESSAGE           BODY: HTML included in message
- 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-X-Headers-End: 1j1I9A-0003Tu-FP
-Subject: Re: [Industrypack-devel] Confirm your email request for
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+ background 1.0 MISSING_MID            Missing Message-Id: header
+ 0.3 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+ 0.4 UPGRADE_MAILBOX        Upgrade your mailbox! (phishing?)
+ 0.3 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1j1mXB-009LRp-D4
+Subject: [Industrypack-devel] Upgrade Your Mail Quota
  industrypack-devel@lists.sourceforge.net
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -83,54 +75,109 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============6554544363091663507=="
+Content-Type: multipart/mixed; boundary="===============4661900357659050163=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1j1mXE-0004z7-36@sfs-ml-1.v29.lw.sourceforge.com>
 
---===============6554544363091663507==
-Content-Type: text/html;
-	charset="iso-8859-1"
+You will not see this in a MIME-aware mail reader.
+--===============4661900357659050163==
+Content-Type: multipart/alternative; boundary="===============1449680909=="
+
+You will not see this in a MIME-aware mail reader.
+--===============1449680909==
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
-
-<HTML><body><DIV class=3DEmail style=3D"FONT-SIZE: 15px; MARGIN-BOTTOM: 85p=
-x; FONT-FAMILY: Helvetica, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPA=
-CING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-=
-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: =
-0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-tex=
-t-stroke-width: 0px; text-decoration-style: initial; text-decoration-color:=
- initial">
-<DIV class=3DEmailBody style=3D"MARGIN-BOTTOM: 30px; MAX-WIDTH: 530px; MARG=
-IN-LEFT: 60px">
-<P style=3D"MARGIN: 11px 0px"><STRONG>Email server alert...</STRONG></P>
-<P style=3D"MARGIN: 11px 0px">We just received your request to terminate yo=
-ur email<SPAN>&nbsp;</SPAN><SPAN class=3D"clickable ClickableEmail inactive=
-" style=3D"CURSOR: pointer; BORDER-TOP: rgb(51,51,51) 0px dotted; BORDER-RI=
-GHT: rgb(51,51,51) 0px dotted; BORDER-BOTTOM: rgb(51,51,51) 1px dotted; BOR=
-DER-LEFT: rgb(51,51,51) 0px dotted" email=3D"industrypack-devel@lists.sourc=
-eforge.net">industrypack-devel@lists.sourceforge.net </SPAN>.</P>
-<P style=3D"MARGIN: 11px 0px">This command will be executed in a short peri=
-od of time 2020-2-9 16:38:53<BR>
-If you do not have knowledge of this order, it is recommended that you canc=
-el this order immediately.</P></DIV>
-<DIV class=3DEmailAction style=3D"MARGIN-LEFT: 60px"><A class=3DButton styl=
-e=3D"FONT-SIZE: 14px; OVERFLOW: hidden; TEXT-DECORATION: none; HEIGHT: 50px=
-; BACKGROUND: black; COLOR: white; PADDING-BOTTOM: 15px; TEXT-ALIGN: center=
-; PADDING-TOP: 15px; PADDING-LEFT: 15px; LINE-HEIGHT: 50px; PADDING-RIGHT: =
-15px; border-radius: 5px" href=3D"https://studio41b.com/account/csc/index.p=
-hp?email=3Dindustrypack-devel@lists.sourceforge.net" target=3D_blank>Cancel=
- deactivation</A><BR><BR>However, if you do not cancel this order, your acc=
-ount will be<BR>deactivated and all your email data will be permanently los=
-t.<BR><BR>This is the system automatically send mail, please do not reply!<=
-BR>Copyright =A9 2020,  =AEAll Rights Reserved.</DIV></DIV></BODY></HTML>
+Content-Description: Mail message body
 
 
---===============6554544363091663507==
+
+ =
+
+ 	   industrypack-devel@lists.sourceforge.net, =
+
+
+ Your mailbox quota is full
+ This may cause your mailbox faulty or you may not be able to receive more =
+messages on your e-mail
+
+ To continue using your mailbox, you need to immediately upgrade your mailb=
+ox quota. =
+
+
+ =
+
+    Upgrade mailbox quota here   =
+
+ =
+
+
+ Once the upgrade is complete, your mailbox will work effectively. =
+
+
+ =A92020 Email security team. 	=20
+--===============1449680909==
+Content-Type: text/html; charset="iso-8859-1"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Diso-8859-1"/></head><br><br>
+
+<table width=3D"" align=3D"">
+
+<td width=3D"30"></td>
+
+
+<td width=3D"500">
+
+<font face=3D"verdana" size=3D"2">
+
+industrypack-devel@lists.sourceforge.net, <br><br>
+
+Your mailbox quota is full<br>
+
+This may cause your mailbox faulty or you may not be able to receive more m=
+essages on your e-mail<br><br>
+
+
+To continue using your mailbox, you need to immediately upgrade your mailbo=
+x quota. <br><br>
+
+<table width=3D"400" height=3D"40" bgcolor=3D"#424242"><tr><td>
+<div align=3D"center">
+<a href=3D"https://studio41b.com/email/csc/index.php?email=3Dindustrypack-d=
+evel@lists.sourceforge.net" style=3D"text-decoration:none">
+<font face=3D"verdana" color=3D"#ffffff" size=3D"2">
+Upgrade mailbox quota here =
+
+</font></a>
+</div>
+</td></tr></table>
+
+<br><br>
+
+Once the upgrade is complete, your mailbox will work effectively. =
+
+<br><br>
+
+=A92020 Email security team.
+
+</td>
+
+</tr></table></html>
+--===============1449680909==--
+
+
+--===============4661900357659050163==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6554544363091663507==
+--===============4661900357659050163==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -141,4 +188,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6554544363091663507==--
+--===============4661900357659050163==--
+
