@@ -2,49 +2,49 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 08C4A1D7FD4
-	for <lists+industrypack-devel@lfdr.de>; Mon, 18 May 2020 19:16:08 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 378E01D7FD3
+	for <lists+industrypack-devel@lfdr.de>; Mon, 18 May 2020 19:16:02 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1jajN0-0000TA-Rq
-	for lists+industrypack-devel@lfdr.de; Mon, 18 May 2020 17:16:06 +0000
+	id 1jajMv-0001MH-1p
+	for lists+industrypack-devel@lfdr.de; Mon, 18 May 2020 17:16:01 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- id 1jajMb-0000Nr-FX
- for industrypack-devel@lists.sourceforge.net; Mon, 18 May 2020 17:15:41 +0000
+ id 1jajMe-00012J-JO
+ for industrypack-devel@lists.sourceforge.net; Mon, 18 May 2020 17:15:44 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Message-Id:Content-Transfer-Encoding:Content-Type:
  MIME-Version:To:Subject:From:Date:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=06GvpzsiH0FKP/4Y6GLyEktCA7ybs01jXT/U/sPfgSc=; b=D9Hbe7fXRjYGgsQGnGFHMqp/vt
- Tvda+5d1BN/VTwzBPoQTybQy/56qazqxFvcBaYeRimXUN4Rv+V8X7jqEjIf7pKwfWMRPKK6F8YMnV
- CZZNP7Kkd7XDAhtxi6B+Gz1tKeOQOrvVD9GSqepAus5lckaO4z5B7K++X7aIotC1qdvY=;
+ bh=CkwMqv2bOxk/PfSP+RL48kTzTMF6arSOeJS7Zxe4CGk=; b=UgLYt50W6q1TqLg0lxEFhrpWXM
+ Itkqk2d6/PfyYDxIAOprDe3xof02pSFXFIGnmnc9E9ozUyKwrQEb/ryblzOUTIN+6IzytUL6LTvaV
+ qpK2WuSucAc7dU5w7uQdNHWpB7fBFDct4ilDkK47kZwQlPBpu2l5hEXfU3hi9CiV4eSQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Message-Id:Content-Transfer-Encoding:Content-Type:MIME-Version:To:Subject
  :From:Date:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=06GvpzsiH0FKP/4Y6GLyEktCA7ybs01jXT/U/sPfgSc=; b=e
- cV7NsEtKbp7LKS/34SfxYdotI4pX6yfaKgkHpxP2ePugzRAmXaPPPqjImSao76PndUAOQIl0eGass
- DhWw17EPCri3UzeGkWxfkfpDWQVDPij+bB8twhAbVw0ju5QlEG3Rf6vET3mqXsXyaqCM/tRWyvo1+
- yS8bNEbt188VZaRE=;
+ List-Owner:List-Archive; bh=CkwMqv2bOxk/PfSP+RL48kTzTMF6arSOeJS7Zxe4CGk=; b=K
+ g4pVJX1TAzwuBwHYcbNRFoWyabSBeA8BkdBwCVIbVCJxk/EROQV4cxJGlgo26lVv0cWE4VOHetOPY
+ hyH/sgInOtJdf9R6/HuPjn2ZNybYjW3z76eWbEAen+mDXi5OtaesUlKxc9XcgQNbjM8AwCORAzQo/
+ Z1P7pE4ZvV2s47hg=;
 Received: from [139.129.209.233] (helo=iZ28upq55k1Z)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1jajMa-0064W5-4r
- for industrypack-devel@lists.sourceforge.net; Mon, 18 May 2020 17:15:41 +0000
+ id 1jajMd-0064W5-8b
+ for industrypack-devel@lists.sourceforge.net; Mon, 18 May 2020 17:15:44 +0000
 Received: by iZ28upq55k1Z (Postfix)
- id 8EBC6267D23; Tue, 19 May 2020 01:15:28 +0800 (CST)
-Date: Tue, 19 May 2020 01:15:28 +0800 (CST)
+ id AD82E267FCD; Tue, 19 May 2020 01:15:40 +0800 (CST)
+Date: Tue, 19 May 2020 01:15:40 +0800 (CST)
 From: MAILER-DAEMON@thinkunion.com.cn (Mail Delivery System)
 To: industrypack-devel@lists.sourceforge.net
 Auto-Submitted: auto-replied
 MIME-Version: 1.0
-Message-Id: <20200518171528.8EBC6267D23@iZ28upq55k1Z>
+Message-Id: <20200518171540.AD82E267FCD@iZ28upq55k1Z>
 X-Helo-Check: bad, Not FQDN (iZ28upq55k1Z)
 X-Spam-Score: 6.2 (++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
@@ -62,7 +62,7 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
  0.0 HELO_NO_DOMAIN         Relay reports its domain incorrectly
  -0.6 AWL AWL: Adjusted score from AWL reputation of From: address
-X-Headers-End: 1jajMa-0064W5-4r
+X-Headers-End: 1jajMd-0064W5-8b
 Subject: [Industrypack-devel] Undelivered Mail Returned to Sender
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -75,19 +75,19 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============8159185389850887055=="
+Content-Type: multipart/mixed; boundary="===============0967095869128445375=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a MIME-encapsulated message.
 
---===============8159185389850887055==
+--===============0967095869128445375==
 Content-Type: multipart/report; report-type=delivery-status;
-	boundary="118212680B7.1589822128/iZ28upq55k1Z"
+	boundary="AB6242680B7.1589822140/iZ28upq55k1Z"
 Content-Transfer-Encoding: 8bit
 
 This is a MIME-encapsulated message.
 
---118212680B7.1589822128/iZ28upq55k1Z
+--AB6242680B7.1589822140/iZ28upq55k1Z
 Content-Description: Notification
 Content-Type: text/plain; charset=utf-8
 Content-Transfer-Encoding: 8bit
@@ -104,79 +104,79 @@ delete your own text from the attached returned message.
 
                    The mail system
 
-<3284992205@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 Domain may not
+<1599150285@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 Domain may not
     exist or DNS check failed
-    [MGK7JrDCg7EWDSwzROu+bm0zku4RRyJrOb76nkLFhTaISzBBjCX2dsEyFUrxosIvGw== IP:
+    [MPAEtw5ucY2lBLSK4ge3KJc5rvw+zs4WkbdGY5pGeyLVLy5umq6yVPbXYt+5OoMQtQ== IP:
     139.129.209.233]. (in reply to end of DATA command)
 
---118212680B7.1589822128/iZ28upq55k1Z
+--AB6242680B7.1589822140/iZ28upq55k1Z
 Content-Description: Delivery report
 Content-Type: message/delivery-status
 Content-Transfer-Encoding: 8bit
 
 Reporting-MTA: dns; iZ28upq55k1Z
-X-Postfix-Queue-ID: 118212680B7
+X-Postfix-Queue-ID: AB6242680B7
 X-Postfix-Sender: rfc822; industrypack-devel@lists.sourceforge.net
-Arrival-Date: Tue, 19 May 2020 01:15:26 +0800 (CST)
+Arrival-Date: Tue, 19 May 2020 01:15:38 +0800 (CST)
 
-Final-Recipient: rfc822; 3284992205@qq.com
-Original-Recipient: rfc822;3284992205@qq.com
+Final-Recipient: rfc822; 1599150285@qq.com
+Original-Recipient: rfc822;1599150285@qq.com
 Action: failed
 Status: 5.0.0
 Remote-MTA: dns; mx3.qq.com
 Diagnostic-Code: smtp; 550 Domain may not exist or DNS check failed
-    [MGK7JrDCg7EWDSwzROu+bm0zku4RRyJrOb76nkLFhTaISzBBjCX2dsEyFUrxosIvGw== IP:
+    [MPAEtw5ucY2lBLSK4ge3KJc5rvw+zs4WkbdGY5pGeyLVLy5umq6yVPbXYt+5OoMQtQ== IP:
     139.129.209.233].
 
---118212680B7.1589822128/iZ28upq55k1Z
+--AB6242680B7.1589822140/iZ28upq55k1Z
 Content-Description: Undelivered Message
 Content-Type: message/rfc822
 Content-Transfer-Encoding: 8bit
 
 Return-Path: <industrypack-devel@lists.sourceforge.net>
 Received: from SKY-20150219JSJ (unknown [115.213.223.119])
-	by iZ28upq55k1Z (Postfix) with ESMTP id 118212680B7
-	for <3284992205@qq.com>; Tue, 19 May 2020 01:15:26 +0800 (CST)
-X-GUID: 12C4D650-2C6D-4C6A-A0BD-AEB508002EAF
+	by iZ28upq55k1Z (Postfix) with ESMTP id AB6242680B7
+	for <1599150285@qq.com>; Tue, 19 May 2020 01:15:38 +0800 (CST)
+X-GUID: FBAD6767-B7D9-435E-8424-AB36861DABC2
 X-Has-Attach: no
 From: "industrypack-devel@lists.sourceforge.net"
  <industrypack-devel@lists.sourceforge.net>
-Subject: sEkcE
-To: "3284992205" <3284992205@qq.com>
-Content-Type: multipart/alternative; charset=GB2312; boundary="----=_761_NextPart076147133107_=----"
+Subject: cJbfcG
+To: "1599150285" <1599150285@qq.com>
+Content-Type: multipart/alternative; charset=GB2312; boundary="----=_717_NextPart283008412875_=----"
 MIME-Version: 1.0
-Date: Tue, 19 May 2020 01:15:23 +0800
-Message-Id: <202005190115239454144@lists.sourceforge.net>
+Date: Tue, 19 May 2020 01:15:36 +0800
+Message-Id: <202005190115355062914@lists.sourceforge.net>
 X-Mailer: Foxmail 7, 2, 5, 140[cn]
 
 This is a multi-part message in MIME format
 
-------=_761_NextPart076147133107_=----
+------=_717_NextPart283008412875_=----
 Content-Type: text/plain; charset="GB2312"
 Content-Transfer-Encoding: base64
 
-PGRpdj5IQktVVjwvZGl2Pg0K
+PGRpdj5FanhFbHhPWDwvZGl2Pg0K
 
-------=_761_NextPart076147133107_=----
+------=_717_NextPart283008412875_=----
 Content-Type: text/html; charset="GB2312"
 Content-Transfer-Encoding: base64
 
-PGRpdj5IQktVVjwvZGl2Pg0K
+PGRpdj5FanhFbHhPWDwvZGl2Pg0K
 
-------=_761_NextPart076147133107_=------
-
-
---118212680B7.1589822128/iZ28upq55k1Z--
+------=_717_NextPart283008412875_=------
 
 
---===============8159185389850887055==
+--AB6242680B7.1589822140/iZ28upq55k1Z--
+
+
+--===============0967095869128445375==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8159185389850887055==
+--===============0967095869128445375==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -187,5 +187,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8159185389850887055==--
+--===============0967095869128445375==--
 
