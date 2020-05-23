@@ -2,69 +2,76 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 08FE11DDD49
-	for <lists+industrypack-devel@lfdr.de>; Fri, 22 May 2020 04:41:55 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
-	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
-	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=4P2RdOkimixdWuA8hlWFSk0YeMl+KcfTvli5hNXzf54=; b=RKxgln0DeZ6N8MrtkiSZe1VvBO
-	HdD8Rcciy1e0uHoAZ5AKCba0Zi0R4a/ydw7SS0R2eVx1l8L2kou6R9YWasEsqsY4VkfAmvYD9ODVO
-	VJKodh45y5JdueuJM9LH6VKwzuHuvjOZ/BpELx9+TlemCifu7Rlv9nrPUj/MlPCMl7oE=;
+	by mail.lfdr.de (Postfix) with ESMTPS id 128571DF74C
+	for <lists+industrypack-devel@lfdr.de>; Sat, 23 May 2020 14:51:25 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1jbxdB-0002KU-QL
-	for lists+industrypack-devel@lfdr.de; Fri, 22 May 2020 02:41:53 +0000
+	id 1jcTcZ-000869-Hn
+	for lists+industrypack-devel@lfdr.de; Sat, 23 May 2020 12:51:23 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <SHIPMENT.EXPRESS@DHL.COM>) id 1jbxdB-0002KN-8w
- for industrypack-devel@lists.sourceforge.net; Fri, 22 May 2020 02:41:53 +0000
+ (envelope-from <mailreturn@smtp35.ymlpsvr.com>) id 1jcTcV-00085H-Tu
+ for industrypack-devel@lists.sourceforge.net; Sat, 23 May 2020 12:51:19 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=7OsMFz2dzJL37st68UH1xlxjwSHIZLcXSiGg0VCYbr8=; b=jdseQ7FuK6fz8GVK/tPUyLGiby
- ZQVmxKmmlCw90dpYL1wxioktWQ30yc+mb/4AtrSz0v3Y/SlMBWR2SbWMxLCNqKf53NbBvQAbdYYev
- aUZ4MG6i3HGYITGOFKZ5KklT9dRewsEQAlDlV40afDTY8A+EeOiDD1yXf9mtCwGr8WD8=;
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:List-Unsubscribe:
+ Message-ID:Subject:From:To:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=PR2xLC0zUSikffn1tBELKQJs7jxNnjSmihYfRUGS7to=; b=ST7116q4MgVVpM9ygDUEW+eh8j
+ 6BJAqsSdwVB3afBm1n1ulkIVM+03+YwbzseeG5nOWawuPfpPVtaMgRP/NTuzbSlqwembsJ+mkVut1
+ 72C3Fwt2cdhecgm25lWavRQfm/ZfS+PZND0zKK7w/qMNFWKTZZWQjnQT1H60Lu62uhfs=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=7OsMFz2dzJL37st68UH1xlxjwSHIZLcXSiGg0VCYbr8=; b=O
- w+GQbbddKrVzvMt58/yZtFmPKy5dxa3fefa5cZjUktE8hwtfpncXCbgBWn3Lfqak1tAgQlViDysD9
- QoGHFeOF16gfXyomgB6YFc8FrV+0ioQXZ3k212mSz11SWXvVUO/KzS+VbL3hcy2Fg8zxi7VtP/DxT
- MqP6Xc72PrDGKD6Q=;
-Received: from [179.43.156.238] (helo=DHL.COM)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1jbxd8-00C3It-K6
- for industrypack-devel@lists.sourceforge.net; Fri, 22 May 2020 02:41:53 +0000
+ h=Content-Type:MIME-Version:List-Unsubscribe:Message-ID:Subject:From:To:
+ Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=PR2xLC0zUSikffn1tBELKQJs7jxNnjSmihYfRUGS7to=; b=hnmkxdRuSUfhxI1Ex0PEG0LeRi
+ LghTSzPmxHFnvBFSD1JImfEmSaQ3aeJeflse6YSQYntb8LdvYf0to4txjXNTdmrC1k+tWs4gSDIN7
+ ysYtLYmGWa+1uKf0vOaDo20ksO9ASsMZ0W330ITt8S2NFsFJ95icTFqNnP2mPlc/NrJE=;
+Received: from smtp35.ymlpsvr.com ([185.83.51.44])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
+ id 1jcTcU-00ENUT-2L
+ for industrypack-devel@lists.sourceforge.net; Sat, 23 May 2020 12:51:19 +0000
+Date: Sat, 23 May 2020 13:43:08 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=smtp35.ymlpsvr.com;
+ s=ymlp; t=1590234188;
+ bh=PR2xLC0zUSikffn1tBELKQJs7jxNnjSmihYfRUGS7to=;
+ h=To:From:Subject:List-Unsubscribe:From;
+ b=iHo+vbzUJUdPf4D4hg2re6XHzLhJdXASmssteNlwNvbf586AB55DiqJ6ik85st8Rk
+ X0VX5z0Y9aWEHal3ITcyvM0/onWfBh3JoRmimQS9XwSxQrEeYKk8ZpmYIc6TDeWRpI
+ 8rbesJ6nh0o8mcb3kxr+I89iXui0+7JLmNQ/3uAg=
 To: industrypack-devel@lists.sourceforge.net
-Date: 21 May 2020 19:41:35 -0700
-Message-ID: <20200521194135.955DE385BE4009B4@DHL.COM>
+From: Change Management  <raodeh@gmail.com>
+Message-ID: <0145d3f4c16f7a4183db642da01a1829@smtp35.ymlpsvr.com>
+X-YMLPcode: w5qk+2009+1864151
 MIME-Version: 1.0
-X-Spam-Score: 5.5 (+++++)
+X-Spam-Score: 4.0 (++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.5 RCVD_IN_PSBL           RBL: Received via a relay in PSBL
- [179.43.156.238 listed in psbl.surriel.com]
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.9 SPF_HELO_SOFTFAIL      SPF: HELO does not match SPF record (softfail)
- 0.0 T_KAM_HTML_FONT_INVALID BODY: Test for Invalidly Named or Formatted
- Colors in HTML
- 0.1 MIME_HTML_MOSTLY       BODY: Multipart message mostly text/html MIME
+ 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+ (raodeh[at]gmail.com)
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 DKIM_ADSP_CUSTOM_MED   No valid author signature, adsp_override is
+ CUSTOM_MED
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+ domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 1.3 HTML_IMAGE_ONLY_24     BODY: HTML: images with 2000-2400 bytes of words
  1.0 HTML_MESSAGE           BODY: HTML included in message
- 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
-X-Headers-End: 1jbxd8-00C3It-K6
-Subject: [Industrypack-devel] =?utf-8?q?=E2=9C=88_Track_Your_Shipment_-_Ex?=
- =?utf-8?q?press?=
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
+ freemail headers are different
+ 1.2 NML_ADSP_CUSTOM_MED    ADSP custom_med hit, and not from a mailing list
+X-Headers-End: 1jcTcU-00ENUT-2L
+Subject: [Industrypack-devel] Survey on Change Management
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -76,237 +83,126 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: "SHIPMENT.EXPRESS--- via Industrypack-devel"
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: SHIPMENT.EXPRESS@DHL.COM
-Content-Type: multipart/mixed; boundary="===============0472036675259284973=="
+Content-Type: multipart/mixed; boundary="===============1327753874071503805=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 
---===============0472036675259284973==
+--===============1327753874071503805==
 Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0012_64ED1BEC.3D5936D7"
+	boundary="b1_0145d3f4c16f7a4183db642da01a1829"
 
 
-------=_NextPart_000_0012_64ED1BEC.3D5936D7
-Content-Type: text/plain;
-	charset="utf-8"
+--b1_0145d3f4c16f7a4183db642da01a1829
+Content-Type: text/plain; charset = "utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-9467957950
-------=_NextPart_000_0012_64ED1BEC.3D5936D7
-Content-Type: text/html;
-	charset="iso-8859-1"
+--------------------------------------------------------------------------=
+------
+This email newsletter was sent to you in graphical HTML format.
+If you're seeing this version, your email program prefers plain text =
+emails.
+You can read the original version online:
+https://ymlptr9.net/zxMlt3
+--------------------------------------------------------------------------=
+------
+
+
+Greetings
+
+Many organizations fail to respond to external and internal
+environment which in turn affect the well-being of the organization
+and may cause total shutdown and loss of business such as Nokia case.
+Other organizations are considering the Marketing Mix along with the
+change best practices to insure continued prosperity and revenues.The
+study will also conclude the best leadership style that should be
+associated with a change. This research is done to investigates the
+best practices of organizational change and the best leadership theory
+that could be used to implement change. It aims at helping
+organizations in implementing a successful change, as well as the
+marketing and leadership strategies of change adopted to insure
+successful implantation of the change. This study seeks to identify
+the most recurrent factors that drives organizational change, and to
+illustrate methodologies for an effective change.
+
+We kindly ask you to complete this quick 12 Questons Suervy in this
+regard.
+
+https://www.smartsurvey.co.uk/s/ChangeManagementleadershipstyle/
+
+Many Thanks
+
+_____________________________
+Unsubscribe / Change Profile: =
+https://ymlptr9.net/ugwhmwyqgsguqhjubugessyggjemes
+Powered by YourMailingListProvider
+
+
+--b1_0145d3f4c16f7a4183db642da01a1829
+Content-Type: text/html; charset = "utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
-
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
-<BODY style=3D"MARGIN: 0.5em">
-<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Arial, sans-serif; WHI=
-TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: nor=
-mal; COLOR: rgb(102,102,102); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LE=
-TTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px"=
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+</head>
+<body>
+<div>
+<div style=3D"margin-left:9.75pt;text-align:justify;">Greetings</div>
+<div style=3D"margin-left:9.75pt;text-align:justify;">&nbsp;</div>
+<div style=3D"margin-left:9.75pt;text-align:justify;"><span =
+style=3D"font-family:times new roman,serif;"><span =
+style=3D"font-size:12.0pt;">Many organizations fail to respond to external =
+and internal environment which in turn affect the well-being of the =
+organization and may cause total shutdown and loss of business such as =
+Nokia case. Other organizations are considering the Marketing Mix along =
+with the change best practices to insure continued prosperity and =
+revenues.The study will also conclude the best leadership style that =
+should be associated with a change. This research is done to investigates =
+the best practices of organizational change and the best leadership theory =
+that could be used to implement change. It aims at helping organizations =
+in implementing a successful change, as well as the marketing and =
+leadership strategies of change adopted to insure successful implantation =
+of the change. This study seeks to identify the most recurrent factors =
+that drives organizational change, and to illustrate methodologies for an =
+effective change.</span></span></div>
+<div style=3D"margin-left:9.75pt;text-align:justify;">&nbsp;</div>
+<div style=3D"margin-left:9.75pt;text-align:justify;"><u>We kindly ask you =
+to complete this quick 12 Questons Suervy in this regard.&nbsp;</u></div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>https://www.smartsurvey.co.uk/s/ChangeManagementleadershipstyle/</div=
 >
-<IMG id=3Dlogo class=3Dlogo style=3D"BORDER-TOP: medium none; BORDER-RIGHT:=
- medium none; BORDER-BOTTOM: medium none; FLOAT: left; PADDING-BOTTOM: 0px;=
- PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0.6=
-em 0px 1em; PADDING-RIGHT: 0px" alt=3DRetour&nbsp;&agrave;&nbsp;la&nbsp;pag=
-e&nbsp;d&#8217;accueil src=3D"http://www.dhl-ma.com/img/meta/dhl_logo.gif" =
-width=3D134 height=3D42><BR><BR><BR><BR><BR>Dear Customer,</P>
-<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Arial, sans-serif; WHI=
-TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: nor=
-mal; COLOR: rgb(102,102,102); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LE=
-TTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px"=
->Your package has been returned to the&nbsp;DHL Office.<BR>The reason for t=
-he return is - payment of shipping costs.<BR>
-the landed cost of your shipment is not paid yet so you will be charged to =
-pay handling cost 4,65 $&nbsp;(USD) <BR>You have a period of 72 hours to re=
-cover your package, otherwise it will be returned to the sender.<BR><BR></P=
->
-<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Arial, sans-serif; WHI=
-TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: nor=
-mal; COLOR: rgb(102,102,102); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LE=
-TTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px;=
- font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-st=
-roke-width: 0px; text-decoration-style: initial; text-decoration-color: ini=
-tial"><BR>
-<FONT style=3D"BACKGROUND-COLOR: rgb(255,255,255)" color=3D#000000><STRONG>=
-Tracking Number :</STRONG></FONT><BR></P>
-<H2 id=3Dx_x_x_x_ecxyui_3_16_0_1_1421937263738_21639 style=3D"WHITE-SPACE: =
-normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADD=
-ING-BOTTOM: 0px; PADDING-TOP: 0px; FONT: 15px/21px Verdana, Arial; PADDING-=
-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px 0px 10px; LETTER-SPACING: nor=
-mal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0=
-px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-de=
-coration-color: initial"></H2>
-<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Arial, sans-serif; WHI=
-TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: nor=
-mal; COLOR: rgb(102,102,102); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LE=
-TTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px;=
- font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-st=
-roke-width: 0px; text-decoration-style: initial; text-decoration-color: ini=
-tial"></P>
-<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Arial, sans-serif; WHI=
-TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: nor=
-mal; COLOR: rgb(102,102,102); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LE=
-TTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px;=
- font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-st=
-roke-width: 0px; text-decoration-style: initial; text-decoration-color: ini=
-tial"></P>
-<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Arial, sans-serif; WHI=
-TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: nor=
-mal; COLOR: rgb(102,102,102); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LE=
-TTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px;=
- font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-st=
-roke-width: 0px; text-decoration-style: initial; text-decoration-color: ini=
-tial"></P>
-<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Arial, sans-serif; WHI=
-TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: nor=
-mal; COLOR: rgb(102,102,102); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LE=
-TTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px"=
->
-<TABLE id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407ecxyiv2560135160yui_3_1=
-6_0_1_1401807633682_59616 style=3D"FONT-SIZE: 11px; HEIGHT: 15px; FONT-FAMI=
-LY: arial, sans-serif; WIDTH: 254px; WHITE-SPACE: normal; WORD-SPACING: 0px=
-; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(34,34,34); PADDING-=
-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; ORPHA=
-NS: 2; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 15px; PADDING-RIGHT:=
- 0px; BACKGROUND-COLOR: rgb(255,255,255);=20
-TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal=
-; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-deco=
-ration-color: initial" cellSpacing=3D0 cellPadding=3D10 border=3D0>
-<TBODY id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407ecxyiv2560135160yui_3_1=
-6_0_1_1401807633682_59615 style=3D"WIDTH: 530px; LINE-HEIGHT: 15px">
-<TR id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407ecxyiv2560135160yui_3_16_0=
-_1_1401807633682_59614 style=3D"LINE-HEIGHT: 15px">
-<TD id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407ecxyiv2560135160yui_3_16_0=
-_1_1401807633682_59613 style=3D"FONT-FAMILY: arial, sans-serif; BORDER-SPAC=
-ING: 2px; LINE-HEIGHT: 15px; BACKGROUND-COLOR: rgb(232,241,250)"><SPAN styl=
-e=3D"FONT-FAMILY: arial, sans-serif, serif, EmojiFont; FONT-WEIGHT: bold; L=
-INE-HEIGHT: 15px">
-<UL style=3D"MARGIN-TOP: 0px">
-<LI>
-<H4 style=3D"FONT-SIZE: 11px; FONT-FAMILY: arial, sans-serif; WHITE-SPACE: =
-normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); FONT=
--STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT:=
- 0px"><FONT color=3D#44bb47 size=3D4>9467957950</FONT></H4></LI></UL></SPAN=
-></TD>
-<TD id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407yui_3_16_0_1_1402917244929=
-_62474 style=3D"FONT-SIZE: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; =
-COLOR: rgb(255,255,255); BORDER-SPACING: 2px; LINE-HEIGHT: 0px" vAlign=3Dto=
-p align=3Dleft>djdj</TD></TR></TBODY></TABLE>
-<BR style=3D"FONT-SIZE: 11px; FONT-FAMILY: arial, sans-serif; WHITE-SPACE: =
-normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR=
-: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING:=
- normal; LINE-HEIGHT: 15px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT=
-: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-t=
-ext-stroke-width: 0px; text-decoration-style: initial; text-decoration-colo=
-r: initial">
-<A style=3D"FONT-SIZE: 12px; FONT-FAMILY: arial, sans-serif; WHITE-SPACE: n=
-ormal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rg=
-b(1,134,186); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: no=
-rmal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-li=
-gatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px"=
- href=3D"https://bit.ly/2zgEBhK" rel=3Dnoreferrer target=3D_blank><FONT siz=
-e=3D2>Click here to view the status of your order<BR>
-dhl.com/apps/dhltrack/?action=3Dtrack</FONT></A><FONT style=3D"FONT-FAMILY:=
- arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM:=
- none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS:=
- 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); =
-TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal=
-; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-deco=
-ration-color: initial" size=3D3><SPAN>&nbsp;</SPAN>
- <SPAN>&nbsp;<BR><BR><BR></SPAN></FONT><BR style=3D"FONT-SIZE: 12px; FONT-F=
-AMILY: arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRAN=
-SFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; OR=
-PHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,=
-255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: =
-normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; tex=
-t-decoration-color: initial"></P>
-<H2 id=3Dx_x_x_x_ecxyui_3_16_0_1_1421937263738_21639 style=3D"WHITE-SPACE: =
-normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); PADD=
-ING-BOTTOM: 0px; PADDING-TOP: 0px; FONT: 15px/21px Verdana, Arial; PADDING-=
-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px 0px 10px; LETTER-SPACING: nor=
-mal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0=
-px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-de=
-coration-color: initial">
-<DIV id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407ecxyiv2560135160yui_3_16_=
-0_1_1401807633682_59620 style=3D"FONT-SIZE: 11px; FONT-FAMILY: arial, sans-=
-serif, serif, EmojiFont; FONT-WEIGHT: normal; PADDING-TOP: 0px; LINE-HEIGHT=
-: 15px; BORDER-TOP-WIDTH: 0px">
-<DIV id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407ecxyiv2560135160yui_3_16_=
-0_1_1401807633682_59619 style=3D"PADDING-TOP: 0px; LINE-HEIGHT: 15px; BORDE=
-R-TOP-WIDTH: 0px">
-<DIV id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407ecxyiv2560135160yui_3_16_=
-0_1_1401807633682_59619 style=3D"PADDING-TOP: 0px; LINE-HEIGHT: 15px; BORDE=
-R-TOP-WIDTH: 0px">
-<DIV id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407ecxyui_3_16_0_1_140215707=
-5943_8702 style=3D"FONT-FAMILY: Calibri, sans-serif, serif, EmojiFont; COLO=
-R: rgb(68,68,68); PADDING-TOP: 0px; LINE-HEIGHT: 21px; BORDER-TOP-WIDTH: 0p=
-x"><SPAN style=3D"FONT-SIZE: small; LINE-HEIGHT: 18px"><FONT style=3D"LINE-=
-HEIGHT: normal" size=3D3>
-<DIV id=3Dx_x_x_x_ecxyiv1580565887ecxyiv7647241407ecxyui_3_16_0_1_140215707=
-5943_8702 style=3D"FONT-FAMILY: Calibri, sans-serif, serif, EmojiFont; COLO=
-R: rgb(68,68,68); PADDING-TOP: 0px; LINE-HEIGHT: 21px; BORDER-TOP-WIDTH: 0p=
-x"><SPAN style=3D"FONT-SIZE: small; LINE-HEIGHT: 18px"><FONT style=3D"LINE-=
-HEIGHT: normal" size=3D3>
-<SPAN class=3D"x_x_x_contextualExtensionHighlight x_x_x_ms-font-color-theme=
-Primary x_x_x_ms-border-color-themePrimary x_x_x_ident_596_602" style=3D"BO=
-RDER-TOP-COLOR: rgb(67,33,88); BORDER-BOTTOM: rgb(67,33,88) 1px dashed; BOR=
-DER-LEFT-COLOR: rgb(67,33,88); COLOR: rgb(67,33,88); BORDER-RIGHT-COLOR: rg=
-b(67,33,88)">
-<SPAN class=3D"x_x_contextualExtensionHighlight x_x_ms-font-color-themePrim=
-ary x_x_ms-border-color-themePrimary x_x_ident_625_631" style=3D"BORDER-TOP=
--COLOR: rgb(67,33,88); BORDER-BOTTOM: rgb(67,33,88) 1px dashed; BORDER-LEFT=
--COLOR: rgb(67,33,88); COLOR: rgb(67,33,88); BORDER-RIGHT-COLOR: rgb(67,33,=
-88)">
-<SPAN class=3D"x_contextualExtensionHighlight x_ms-font-color-themePrimary =
-x_ms-border-color-themePrimary x_ident_661_667" style=3D"BORDER-TOP-COLOR: =
-rgb(67,33,88); BORDER-BOTTOM: rgb(67,33,88) 1px dashed; BORDER-LEFT-COLOR: =
-rgb(67,33,88); COLOR: rgb(67,33,88); BORDER-RIGHT-COLOR: rgb(67,33,88)">
-<SPAN class=3D"contextualExtensionHighlight ms-font-color-themePrimary ms-b=
-order-color-themePrimary ident_702_708" style=3D"CURSOR: pointer; BORDER-TO=
-P-COLOR: rgb(67,33,88); BORDER-BOTTOM: rgb(67,33,88) 1px dashed; BORDER-LEF=
-T-COLOR: rgb(67,33,88); COLOR: rgb(67,33,88); BORDER-RIGHT-COLOR: rgb(67,33=
-,88)"><FONT size=3D4><EM>
-<SPAN style=3D"FONT-SIZE: medium; FONT-FAMILY: Calibri, sans-serif, serif, =
-EmojiFont; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FL=
-OAT: none; FONT-WEIGHT: 400; COLOR: rgb(68,68,68); FONT-STYLE: normal; ORPH=
-ANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACK=
-GROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-style: initial; text-decoration-color:=20
-initial"><FONT size=3D4>Support Team -</FONT></SPAN> <FONT size=3D4>
-<FONT style=3D"FONT-SIZE: medium; FONT-FAMILY: Calibri, sans-serif, serif, =
-EmojiFont; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FO=
-NT-WEIGHT: 400; FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: =
-normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-=
-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0p=
-x; text-decoration-style: initial; text-decoration-color: initial; -webkit-=
-font-smoothing: antialiased" color=3D#f02b0f size=3D4>
-<SPAN class=3Dmarkgpmxphxng style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-W=
-IDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: ; PAD=
-DING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING=
--RIGHT: 0px; BORDER-TOP-WIDTH: 0px; -webkit-font-smoothing: antialiased" da=
-ta-markjs=3D"true" data-ogac=3D"" data-ogab=3D"" data-ogsc=3D"" data-ogsb=
-=3D"">DHL</SPAN></FONT></FONT></EM></FONT></SPAN></SPAN></SPAN></SPAN></FON=
-T></SPAN></DIV></FONT></SPAN><BR>&nbsp;</DIV></DIV></DIV></DIV>
-</H2></BODY></HTML>
-------=_NextPart_000_0012_64ED1BEC.3D5936D7--
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>Many Thanks&nbsp;</div>
+<!--YMLPUF--><div align=3Dcenter style=3D"padding-top:10px;padding-bottom:=
+10px;font-family:Verdana;font-size:8pt;color:#000000;"><hr noshade =
+color=3D#000000 width=3D50% size=3D1>
+<a href=3D"https://ymlptr9.net/ugwhmwyqgsguqhjubugessyggjemes" =
+style=3D"color:#000000;">Unsubscribe / Change Profile</a>
+<br>
+<a href=3Dhttps://ymlptr9.net/m/ style=3D"color:#000000;">Powered by =
+YMLP</a>
+</div><!--YMLPUFE-->
+<img src=3D"https://ymlptr9.net/1eefbpuqhjubulohbuhskuuui/footer.gif" =
+alt=3D" " height=3D"1" width=3D"1" border=3D"0">
+</body></html>
 
 
 
---===============0472036675259284973==
+--b1_0145d3f4c16f7a4183db642da01a1829--
+
+
+--===============1327753874071503805==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0472036675259284973==
+--===============1327753874071503805==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -317,6 +213,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0472036675259284973==--
-
+--===============1327753874071503805==--
 
