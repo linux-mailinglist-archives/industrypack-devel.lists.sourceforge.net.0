@@ -2,79 +2,85 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 192D51F16B3
-	for <lists+industrypack-devel@lfdr.de>; Mon,  8 Jun 2020 12:29:43 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 823991F2399
+	for <lists+industrypack-devel@lfdr.de>; Tue,  9 Jun 2020 01:16:09 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1jiF2D-0002jg-Tc
-	for lists+industrypack-devel@lfdr.de; Mon, 08 Jun 2020 10:29:41 +0000
+	id 1jiQzw-00088p-9c
+	for lists+industrypack-devel@lfdr.de; Mon, 08 Jun 2020 23:16:08 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <rogata@gl.mm-m.ne.jp>) id 1jiF2C-0002jX-9Y
- for industrypack-devel@lists.sourceforge.net; Mon, 08 Jun 2020 10:29:40 +0000
+ (envelope-from <sashal@kernel.org>) id 1jiQzv-00088X-CU
+ for industrypack-devel@lists.sourceforge.net; Mon, 08 Jun 2020 23:16:07 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:References:
+ In-Reply-To:Message-Id:Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=YagyA/KyCB1X7Ii1UdRpkgpazQKzu7Wg0QSepDx0HEs=; b=gmU5UCyrjmGkL9yv798FQo3q5y
- Y++165VlE9L+18ggeVdYWq9mIcuTOOfU+FiV8bYrbNJZT1dpraPEG0xLikY/MSnhYsncISCOY4HDn
- zcfc3sSuoxdLnmdFuPzzUNSREsoe+4SbEeJnMJgNA2Nivyjg3cK786eflquXA3mFYFXE=;
+ bh=Bp7SrtvJjPQmGBC9iypvUIjA0wForfyXvEG6sP+Q97Y=; b=WguQ1gfZBwIHIkSevkddKgyXtC
+ ryM+iOYIXInL0cYebUN6HPO2VZ/Az+Wt9hxQT3NZ4DJXdOxc1h52Ggj5Hskoo7zA7U2dLlarYn5dd
+ eKrh6JlHuROiEnaekcrqjbvPqJdMew2T0o2EvFPesg26y409TquYtNxA/9cKdeoKLFLA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=YagyA/KyCB1X7Ii1UdRpkgpazQKzu7Wg0QSepDx0HEs=; b=h
- m6YyMOUG/vBnbeuNRJtQRm2NcD6eLaGQh7dXuUHPnCi6QzQ8927UnChxzwpKSDCW9Tt3w8dBZtyMx
- QG5p4+NHgo20QConvxI4Y7fOjjc+1OTtueQVR0w8rLQNra1SrPtGycR/+VIk2x8aKIuwEP15TfqVT
- mhmCz88FvSI59H80=;
-Received: from fbsky1.nw.wakwak.com ([211.9.230.150])
- by sfi-mx-3.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1jiF28-00DG2u-HD
- for industrypack-devel@lists.sourceforge.net; Mon, 08 Jun 2020 10:29:40 +0000
-Received: from mgsky4.nw.wakwak.com (mgsky4.nw.wakwak.com [211.9.226.84])
- by fbsky1.nw.wakwak.com (8.14.8/8.14.8/2016-04-19) with ESMTP id
- 058ATUQ3031941 for <industrypack-devel@lists.sourceforge.net>;
- Mon, 8 Jun 2020 19:29:30 +0900 (JST)
- (envelope-from rogata@gl.mm-m.ne.jp)
-Received: from vcsky2.nw.wakwak.com (vcsky2.nw.wakwak.com [211.9.227.92])
- by mgsky4.nw.wakwak.com (8.15.2/8.15.2/2020-03-09) with SMTP id 058ATBLw029225
- for <industrypack-devel@lists.sourceforge.net>; Mon, 8 Jun 2020 19:29:11 +0900
-Received: from mail3.mm-m.ne.jp (mail3.mm-m.ne.jp [211.19.121.70])
- by vcsky2.nw.wakwak.com (Postfix) with ESMTP id 802262007A41
- for <industrypack-devel@lists.sourceforge.net>;
- Mon,  8 Jun 2020 19:29:11 +0900 (JST)
-Received: from hc360.com ([103.119.30.107])
- (user=rogata@gl.mm-m.ne.jp mech=LOGIN)
- by mail3.mm-m.ne.jp (8.15.2/8.15.2/2019-12-14) with ESMTPA/inet id
- 058ATB1M005039
- for <industrypack-devel@lists.sourceforge.net>; Mon, 8 Jun 2020 19:29:11 +0900
-Date: Mon, 8 Jun 2020 18:28:59 +0800
-From: "jenny" <jennybgn@163.com>
-To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20200608182911803668@gl.mm-m.ne.jp>
-X-mailer: Foxmail 6, 13, 102, 15 [cn]
-Mime-Version: 1.0
-X-Spam-Score: 2.3 (++)
+ h=Content-Transfer-Encoding:MIME-Version:References:In-Reply-To:Message-Id:
+ Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=Bp7SrtvJjPQmGBC9iypvUIjA0wForfyXvEG6sP+Q97Y=; b=LpiQauqHN4nqmROeKJQCUc0ARd
+ jxw8FeXGjYlcnpCzoT3mWznU3S0mevRHvn5A5MRejJx+WE9nWRF04E2zHkxW95fxgdCI91/s++llB
+ YAxvHRPgzyjUNvwYHu9v3ncviGJ7LEOosobRvnEftpbY960WnwqjtcKzbfXiicWGdN0U=;
+Received: from mail.kernel.org ([198.145.29.99])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
+ id 1jiQzr-00C3A4-Gs
+ for industrypack-devel@lists.sourceforge.net; Mon, 08 Jun 2020 23:16:07 +0000
+Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
+ [73.47.72.35])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 2875120659;
+ Mon,  8 Jun 2020 23:15:50 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1591658150;
+ bh=7AjkuNnUHAomKFcixfNAvXlLVD+ewVcKV2HKY7ByS1o=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=jKMcNHBgsRCgtBG13ql40VV2fpy2+AM2TisUf/F7kjV6AzrWNi7EhA7CKvZCUqEuU
+ 7xC+mnHAbIsN6E9NYMAZZDwygU9UCeSxHpFbK+Zfr0G22cRBE/+mQ4PTAhveZVAPs1
+ pmFk19N8CeBMxI5moXkYHENgoVY6IDIppkhHxgM4=
+From: Sasha Levin <sashal@kernel.org>
+To: linux-kernel@vger.kernel.org,
+	stable@vger.kernel.org
+Date: Mon,  8 Jun 2020 19:05:08 -0400
+Message-Id: <20200608231211.3363633-183-sashal@kernel.org>
+X-Mailer: git-send-email 2.25.1
+In-Reply-To: <20200608231211.3363633-1-sashal@kernel.org>
+References: <20200608231211.3363633-1-sashal@kernel.org>
+MIME-Version: 1.0
+X-stable: review
+X-Patchwork-Hint: Ignore
+X-Spam-Score: -0.4 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (jennybgn[at]163.com)
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
- domains are different
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: huawei.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 HTML_MESSAGE           BODY: HTML included in message
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
- freemail headers are different
- 0.8 AWL AWL: Adjusted score from AWL reputation of From: address
-X-Headers-End: 1jiF28-00DG2u-HD
-Subject: Re: [Industrypack-devel] Hydraulic power unit/HPU factory
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.3 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1jiQzr-00C3A4-Gs
+Subject: [Industrypack-devel] [PATCH AUTOSEL 5.6 183/606] ipack: tpci200:
+ fix error return code in tpci200_register()
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -86,74 +92,50 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: jennybgn@163.com
-Content-Type: multipart/mixed; boundary="===============2032409357388911808=="
+Cc: Hulk Robot <hulkci@huawei.com>,
+ Samuel Iglesias Gonsalvez <siglesias@igalia.com>,
+ Wei Yongjun <weiyongjun1@huawei.com>, industrypack-devel@lists.sourceforge.net,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+From: Wei Yongjun <weiyongjun1@huawei.com>
 
---===============2032409357388911808==
-Content-Type: multipart/alternative;
-	boundary="=====003_Dragon136706118205_====="
+commit 133317479f0324f6faaf797c4f5f3e9b1b36ce35 upstream.
 
-This is a multi-part message in MIME format.
+Fix to return negative error code -ENOMEM from the ioremap() error handling
+case instead of 0, as done elsewhere in this function.
 
---=====003_Dragon136706118205_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+Fixes: 43986798fd50 ("ipack: add error handling for ioremap_nocache")
+Reported-by: Hulk Robot <hulkci@huawei.com>
+Signed-off-by: Wei Yongjun <weiyongjun1@huawei.com>
+Cc: stable <stable@vger.kernel.org>
+Acked-by: Samuel Iglesias Gonsalvez <siglesias@igalia.com>
+Link: https://lore.kernel.org/r/20200507094237.13599-1-weiyongjun1@huawei.com
+Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+---
+ drivers/ipack/carriers/tpci200.c | 1 +
+ 1 file changed, 1 insertion(+)
 
-SGksDQpXZSBhcmUgYSBwcm9mZXNzaW9uYWwgbWFudWZhY3R1cmVyIG9mIEh5ZHJhdWxpYyBwb3dl
-ciB1bml0IGluIENoaW5hLiBPdXIgbWFpbiBwcm9kdWN0cyBhcHBsaWVkIHRvIGxvdHMgb2YgaW5k
-dXN0cmllcyBsaWsgYmVsb3cuIFBsZWFzZSBiZSBraW5kbHkgZW1haWwgbWUgYmFjayBpZiB5b3Ug
-YXJlIGludGVyZXN0ZWQgaW4uDQoxLCBUcmFpbGVyLCBEdW1wIFRydWNrOw0KMiwgVGFibGUgbGlm
-dA0KMywgTWF0ZXJpYWwgSGFuZGxpbmcNCjQsIEVsZWN0cmljIFN0YWNrZXIvIHBhbGxldA0KNSwg
-V29yayBQbGF0Zm9ybQ0KNiwgQWVyaWFsIE9yZGVyIFBpY2tlcg0KNywgY2FyIGxpZnQNCjgsIFRh
-aWwgZ2F0ZQ0KOSwgRG9jayBMZXZlbGxlcg0KMTAsIFdpbmdib3ggdHJ1Y2sNCuKApuKApg0KVGhh
-bmtzDQpfX19fX19fX19fX19fX19fX19fX19fX19fX19fDQpCZXN0IFdpc2hlcw0KSmVubnk=
-
---=====003_Dragon136706118205_=====
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE4MjMxIj48L0hFQUQ+DQo8Qk9EWT4NCjxQPkhpLDwvUD4N
-CjxQPldlIGFyZSBhIHByb2Zlc3Npb25hbCBtYW51ZmFjdHVyZXIgb2YgSHlkcmF1bGljIHBvd2Vy
-IHVuaXQgaW4gQ2hpbmEuIE91ciBtYWluIA0KcHJvZHVjdHMgYXBwbGllZCB0byBsb3RzIG9mIGlu
-ZHVzdHJpZXMgbGlrIGJlbG93LiBQbGVhc2UgYmUga2luZGx5IGVtYWlsIG1lIGJhY2sgDQppZiB5
-b3UgYXJlIGludGVyZXN0ZWQgaW4uPC9QPg0KPFA+MSwgVHJhaWxlciwgRHVtcCBUcnVjazs8QlI+
-MiwgVGFibGUgbGlmdDxCUj4zLCBNYXRlcmlhbCBIYW5kbGluZzxCUj40LCANCkVsZWN0cmljIFN0
-YWNrZXIvIHBhbGxldDxCUj41LCBXb3JrIFBsYXRmb3JtPEJSPjYsIEFlcmlhbCBPcmRlciBQaWNr
-ZXI8QlI+NywgY2FyIA0KbGlmdDxCUj44LCBUYWlsIGdhdGU8QlI+OSwgRG9jayBMZXZlbGxlcjxC
-Uj4xMCwgV2luZ2JveCANCnRydWNrPEJSPuKApuKApjxCUj5UaGFua3M8QlI+X19fX19fX19fX19f
-X19fX19fX19fX19fX19fXzwvUD4NCjxQPkJlc3QgV2lzaGVzPEJSPkplbm55PEJSPjwvUD48L0JP
-RFk+PC9IVE1MPg0K
-
---=====003_Dragon136706118205_=====--
+diff --git a/drivers/ipack/carriers/tpci200.c b/drivers/ipack/carriers/tpci200.c
+index 23445ebfda5c..ec71063fff76 100644
+--- a/drivers/ipack/carriers/tpci200.c
++++ b/drivers/ipack/carriers/tpci200.c
+@@ -306,6 +306,7 @@ static int tpci200_register(struct tpci200_board *tpci200)
+ 			"(bn 0x%X, sn 0x%X) failed to map driver user space!",
+ 			tpci200->info->pdev->bus->number,
+ 			tpci200->info->pdev->devfn);
++		res = -ENOMEM;
+ 		goto out_release_mem8_space;
+ 	}
+ 
+-- 
+2.25.1
 
 
-
---===============2032409357388911808==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============2032409357388911808==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============2032409357388911808==--
-
-
