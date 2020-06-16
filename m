@@ -2,94 +2,119 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 018381F87A1
-	for <lists+industrypack-devel@lfdr.de>; Sun, 14 Jun 2020 10:21:39 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 080581FA557
+	for <lists+industrypack-devel@lfdr.de>; Tue, 16 Jun 2020 03:02:15 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1jkNta-0002my-OG
-	for lists+industrypack-devel@lfdr.de; Sun, 14 Jun 2020 08:21:38 +0000
+	id 1jkzzR-0002IE-Aj
+	for lists+industrypack-devel@lfdr.de; Tue, 16 Jun 2020 01:02:13 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <info@hwinfotech.net>) id 1jkNtZ-0002mI-G4
- for industrypack-devel@lists.sourceforge.net; Sun, 14 Jun 2020 08:21:37 +0000
+ (envelope-from <anling135@gmail.com>) id 1jkzzQ-0002I8-Mw
+ for industrypack-devel@lists.sourceforge.net; Tue, 16 Jun 2020 01:02:12 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=List-Id:List-Unsubscribe:Content-Type:MIME-Version:
- To:Reply-To:From:Subject:Date:Message-ID:Sender:Cc:Content-Transfer-Encoding:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:Subject:To:
+ From:MIME-Version:List-Unsubscribe:Date:Message-ID:Sender:Reply-To:Cc:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Help:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=TkAV2TWI1kLcmZpZE3JH14IdJKC5aLdGpeyLwFURlZ8=; b=j76f/VvnwvKiuj8/N0hY82nSW7
- 7h82omkgpw33LEsKsO3sU0FQfdBbQuWsC0W5boXXs90UVYxupVmKqjzbJlQOeZ1AZ2kwuE3RLL0+w
- QbPveXS4YHrxSUu8HmWkozcnCUr/L8J+7M56aULkEGAGerdAJtlnSKFr9eCzJSOUCTus=;
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=bV1Lhu6amGs4oO8DqLfrwzoxdp7WJYEA8XHQ6CvqVzo=; b=Excf9FtNGZvT6OecdVwm5GQojy
+ rtmS8+kLBuzjN3G1MiLjunpD4jeMePBG2aMYhUQdog2fJlHF1pYbyh0zbpIgpohFtGqHNnNM+vJVX
+ 0M8Es15UgK2y4majx1o1+4sV4gq6U6ih6cyFzELzQijDrTtl4ZEBa2ZgYDGSxYs/8f70=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=List-Id:List-Unsubscribe:Content-Type:MIME-Version:To:Reply-To:From:
- Subject:Date:Message-ID:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ h=Content-Transfer-Encoding:Content-Type:Subject:To:From:MIME-Version:
+ List-Unsubscribe:Date:Message-ID:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Help:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=TkAV2TWI1kLcmZpZE3JH14IdJKC5aLdGpeyLwFURlZ8=; b=G
- j57wZl6ORkIigS+2tXQamLZTQscpeoQKTJooxMrS5LJDYP7DSx0SGQyZmRDOlZJ6ucArah5rWQznj
- BDwV/yyfqiPVtSAtTYwd0DKiEqvs1KdA6zUFszJ/abMbXSmfm97xt4jrbn47g31juChHeiuz4eUYU
- PwQzCNrezfXe3oYg=;
-Received: from data.hwinfotech.net ([66.70.132.133])
- by sfi-mx-3.v28.lw.sourceforge.com with esmtps
- (TLSv1:ECDHE-RSA-AES256-SHA:256) (Exim 4.92.2) id 1jkNtY-001svt-42
- for industrypack-devel@lists.sourceforge.net; Sun, 14 Jun 2020 08:21:37 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=hwinfotech.net; 
- h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:List-Unsubscribe:List-Id;
- i=info@hwinfotech.net; bh=x32V2u6ADZQMyoJ0OBwt2fCJv4o=;
- b=iNcL1Yu8gn9oxQfyLAIf0V6Oc5ZJGdlAoBqmGM3LAf7P8zzk6cDyDw5YKUMFzFs3dyiiG3pxS0tP
- UhfmPYsDJAlTBi2qKVhLJgEmlWtHFEgLenKYeTlVl3RUTOmcoU81wDA/8hcR6FrWvNoivDjctqOj
- xqYp1N2+H7X31xf9VSI=
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=hwinfotech.net;
- b=iJph6GSfWnmJ3KaJXq4iFltbjG1jX44o+KMnFo4AE/hyDxuD1coaYuHxtTIQbC8RlLW/RkP/Ndgf
- RpqfpwAzNiUrz2L/efmw06Vgq/4rUuxUT8AjIuUv4Ecab6pUbtpwfHKZr6lkyjrBsaOjVpp0JC7V
- Fe9yQzj5EiRIVnSlpE0=;
-Message-ID: <68a1b04c43eb0f381033e17d152636fa@hwinfotech.net>
-Date: Sun, 14 Jun 2020 08:21:32 +0000
-From: HW Infotech <info@hwinfotech.net>
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=bV1Lhu6amGs4oO8DqLfrwzoxdp7WJYEA8XHQ6CvqVzo=; b=Vy3YqF47pGc54FkeRGFUNqDQgq
+ Zbu/tWdmoI+tvF7Sp0vBgxtwNoq3XCRKVXG0BKHaaobyByuoOkJPukxolQMAY+upHX6EB8RZPgX1d
+ 6i/ziNYRdNYOvJNg27uHkwn1nqZeZoTvU+Xuglp8hH6oOWeRY05efhuJewaDADBWa7/M=;
+Received: from mail-pl1-f193.google.com ([209.85.214.193])
+ by sfi-mx-4.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.2)
+ id 1jkzzO-007L8m-Nm
+ for industrypack-devel@lists.sourceforge.net; Tue, 16 Jun 2020 01:02:12 +0000
+Received: by mail-pl1-f193.google.com with SMTP id g12so7607437pll.10
+ for <industrypack-devel@lists.sourceforge.net>;
+ Mon, 15 Jun 2020 18:02:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=message-id:date:list-unsubscribe:mime-version:from:to:subject
+ :content-transfer-encoding;
+ bh=bV1Lhu6amGs4oO8DqLfrwzoxdp7WJYEA8XHQ6CvqVzo=;
+ b=XKhCsUh9dOaTnO1DDZgWE5ZmHSofIUjqBdWCmHaDt4j0rHa7v7ZmM8S82mUEV95sgi
+ 2Ati3oo2ExmdGT+4hTmxWX05KGqxfA4ak5eXfI1MeKyfx5LnYLYZLlGUWdbQWmCFU+zh
+ yPY6qlYsGMReA/loFuGJdivDaUU8NSJi74ieP9LiaYUO0Z0jgHkFdBfhVVZ2GFVSyS+7
+ suIdO+e+vLBokp6XNOk/2ppX9sx9UH2c2k8YtkMi1zjC8MfkxdECAuy1eH1UhPWI8Hlw
+ E1sbqibSL5kSOtvivXp1k84jgx5Ks93rPA7qpK/66Q9rtOf/7zML35/4Hi5a4i7eWkum
+ KZNQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:message-id:date:list-unsubscribe:mime-version
+ :from:to:subject:content-transfer-encoding;
+ bh=bV1Lhu6amGs4oO8DqLfrwzoxdp7WJYEA8XHQ6CvqVzo=;
+ b=ukbHElKvvltub9kIk476GHuaxsR+dmG8sxjaoOZy5EoO9aSEWnfGPxrmy2f0y/Y+2b
+ +ZXyJGXGpZe7QByly3WH7e+4i4i5k6tz9dug5japicagi40XFSvVxv7bbLEfqx8aHzdh
+ VTjigRJ6E5ehXqodjdKdcrvnsX2N54RZelDIxeUgYLvrFmY/SUy0PuTiASW3og7E9w6g
+ 1NAtIikdhS834SXRwmOd07hLHr+7JSS7MLS3iWthm8Ly6YIPY+j46c5SZX1/IabGVM4P
+ UxRnCLBKzYvspFLJIXNVr93CUkpcbhH/WixXz9aFJra+6OXZ7QiX+GTQDa9Esmh/wes+
+ 8l9g==
+X-Gm-Message-State: AOAM530UNqpIaVhCCgGQGquzAzJJG95yJzpL3ByPag4gsVpeHRRrvDua
+ 7nyXyGaBH0phI/L8vVk42o55jpHD
+X-Google-Smtp-Source: ABdhPJzEdcyBvvFcJoCR0YZpeINLn/j8HXDeiLwSXhWeSkPWUiKaji3Wb5dO4m3EIr+P6YOYgg2rTQ==
+X-Received: by 2002:a17:90b:18c:: with SMTP id t12mr324956pjs.53.1592269325001; 
+ Mon, 15 Jun 2020 18:02:05 -0700 (PDT)
+Received: from Computer ([2402:800:6315:1bc9:f8cb:297e:a1e0:2063])
+ by smtp.gmail.com with ESMTPSA id k19sm15887013pfg.153.2020.06.15.18.02.03
+ for <industrypack-devel@lists.sourceforge.net>
+ (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+ Mon, 15 Jun 2020 18:02:04 -0700 (PDT)
+Message-ID: <5ee81a0c.1c69fb81.5ad4.3a09@mx.google.com>
+Date: Mon, 15 Jun 2020 18:02:04 -0700 (PDT)
+X-Google-Original-Date: 16 Jun 2020 08:02:04 +0700
 MIME-Version: 1.0
-X-Sender: info@hwinfotech.net
-X-Report-Abuse: Please report abuse for this campaign here:
- http://app.hwinfotech.net/index.php/campaigns/ok072mq8cc88f/report-abuse/dd296hm0jzd67/ja300hljodf5e
-X-Receiver: industrypack-devel@lists.sourceforge.net
-X-Fxyn-Tracking-Did: 0
-X-Fxyn-Subscriber-Uid: ja300hljodf5e
-X-Fxyn-Mailer: SwiftMailer - 5.4.x
-X-Fxyn-EBS: http://app.hwinfotech.net/index.php/lists/block-address
-X-Fxyn-Delivery-Sid: 3
-X-Fxyn-Customer-Uid: pp359780cbfd3
-X-Fxyn-Customer-Gid: 0
-X-Fxyn-Campaign-Uid: ok072mq8cc88f
-Precedence: bulk
-Feedback-ID: ok072mq8cc88f:ja300hljodf5e:dd296hm0jzd67:pp359780cbfd3
-X-Spam-Score: 0.5 (/)
+From: "Anne" <anling135@gmail.com>
+To: industrypack-devel@lists.sourceforge.net
+X-Spam-Score: 6.9 (++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
+ 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+ (anling135[at]gmail.com)
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: hwinfotech.com]
+ for more information. [URIs: thantich.com]
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.214.193 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+ trust [209.85.214.193 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends in
+ digit (anling135[at]gmail.com)
  0.7 HTML_IMAGE_ONLY_20     BODY: HTML: images with 1600-2000 bytes of words
  1.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
- -1.0 MAILING_LIST_MULTI     Multiple indicators imply a widely-seen list
- manager
- -0.1 AWL AWL: Adjusted score from AWL reputation of From: address
-X-Headers-End: 1jkNtY-001svt-42
-Subject: [Industrypack-devel] Website and Mobile App Development
+ 0.5 RAZOR2_CHECK           Listed in Razor2 (http://razor.sf.net/)
+ 1.5 RAZOR2_CF_RANGE_51_100 Razor2 gives confidence level above 50%
+ [cf: 100] -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.1 PLING_QUERY            Subject has exclamation mark and question mark
+ 0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
+ 0.0 T_REMOTE_IMAGE         Message contains an external image
+X-Headers-End: 1jkzzO-007L8m-Nm
+Subject: [Industrypack-devel] =?utf-8?q?industrypack-devel=3F=E6=8B=A9?=
+ =?utf-8?b?5ZaE5Zu65omn44CA5bim57uZ5LiW55WM5biM5pybIUZyb20gQW5uZS4=?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
+Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -98,138 +123,63 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: HW Infotech <info@hwinfotech.net>
-Content-Type: multipart/mixed; boundary="===============2963162223050517096=="
+Content-Type: multipart/mixed; boundary="===============1359539648790400603=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-
---===============2963162223050517096==
-Content-Type: multipart/alternative;
- boundary="_=_swift_v4_1592122892_b6fa76b0954b5ab54c83679e89d8c116_=_"
-
-
---_=_swift_v4_1592122892_b6fa76b0954b5ab54c83679e89d8c116_=_
-Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
-
-We have =E2=9C=85 500+ clone ScriptHi,
-I am Waseem From HW Infotech.
-=
-=C2=A0
-Please share your phone number or Skype id, Whatsapp if you are
-=
-looking to develop a clone of any website.
-Work in the following area :=
-
-=E2=9C=85 Clone Script for any Website and Mobile APP -Development and=
-
-Digital Marketing for App, Web, Software Clone Scripts
-=E2=9C=85Readym=
-ade Script for useful product -Shop Website Templates, Clone
-Scripts, & M=
-arketplace Software | HW Infotech
-=E2=9C=85Software Requirement Specifica=
-tion Documentation
-=E2=9C=85A wireframe design for Website, ERP, Product =
-&Mobile app
-=E2=9C=85PHP Framework & MYSQL, HTML5, CSS3, JavaScript, jQue=
-ry, XML, JSON.
-=E2=9C=85eCommerce, WordPress,Magento,Open Cart, Joomla, M=
-agento 2,
-Prestashop
-=E2=9C=85Mobile APP- Android, IOS, Phone Gap and F=
-lutter
-=E2=9C=85SEO, SMO, and PPC
-=E2=9C=85Install and config the proje=
-ct
-=E2=9C=85Plugin: Customize and create a new plugin
-=E2=9C=85Migrate =
-& Upgrade: sustainable development and long-term
-=E2=9C=85WHM Panel serve=
-r configuration
-=E2=9C=85Server Optimization
-=E2=9C=85Website and Serve=
-r Penetration testing
-=E2=9C=85Load Balancing and Failover clustering Ser=
-ver
-=E2=9C=85Mail Server configuration for bulk emailing
-Contact us - H=
-ire A Developer | Web and App Development Services | HW
-Infotech
-Regard=
-s
-Waseem
-www.hwinfotech.com=C2=A0=C2=A0Gurugram | California |London|Va=
-ncouver|Abuja |
-Melbourne
-http://app.hwinfotech.net/index.php/lists/dd2=
-96hm0jzd67/unsubscribe/ja300hljodf5e/ok072mq8cc88f
-
---_=_swift_v4_1592122892_b6fa76b0954b5ab54c83679e89d8c116_=_
+--===============1359539648790400603==
 Content-Type: text/html; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
+Content-Transfer-Encoding: base64
 
-<!DOCTYPE html>
-<html>
-<head><meta charset=3D"utf-8"/>
-=09<title></title>
-<style type=3D"text/css">span.preheader{display:none!important;mso-hide:all=
-;}</style></head>
-<body><span class=3D"preheader" style=3D"display:none!important;mso-hide:al=
-l;">We have =E2=9C=85  500+ clone Script</span>Hi,<br />
-<br />
-I am Waseem From HW Infotech.<br />
-=C2=A0<br />
-Please share your phone number or Skype id, Whatsapp if you are looking to =
-develop a clone of any website.<br />
-Work in the following area :<br />
-=E2=9C=85 Clone Script for any Website and Mobile APP -Development and Digi=
-tal Marketing for App, Web, Software Clone Scripts<br />
-=E2=9C=85Readymade Script for useful product -Shop Website Templates, Clone=
- Scripts, & Marketplace Software | HW Infotech<br />
-=E2=9C=85Software Requirement Specification Documentation<br />
-=E2=9C=85A wireframe design for Website, ERP, Product &Mobile app<br />
-=E2=9C=85PHP Framework & MYSQL, HTML5, CSS3, JavaScript, jQuery, XML, JSON.=
-<br />
-=E2=9C=85eCommerce, WordPress,Magento,Open Cart, Joomla, Magento 2, Prestas=
-hop<br />
-=E2=9C=85Mobile APP- Android, IOS, Phone Gap and Flutter<br />
-=E2=9C=85SEO, SMO, and PPC<br />
-=E2=9C=85Install and config the project<br />
-=E2=9C=85Plugin: Customize and create a new plugin<br />
-=E2=9C=85Migrate & Upgrade: sustainable development and long-term<br />
-=E2=9C=85WHM Panel server configuration<br />
-=E2=9C=85Server Optimization<br />
-=E2=9C=85Website and Server Penetration testing<br />
-=E2=9C=85Load Balancing and Failover clustering Server<br />
-=E2=9C=85Mail Server configuration for bulk emailing<br />
-Contact us - Hire A Developer | Web and App Development Services | HW Infot=
-ech<br />
-<br />
-Regards<br />
-Waseem<br />
-www.hwinfotech.com=C2=A0=C2=A0Gurugram | California |London|Vancouver|Abuja=
- | Melbourne<br />
-<br />
-http://app.hwinfotech.net/index.php/lists/dd296hm0jzd67/unsubscribe/ja300hl=
-jodf5e/ok072mq8cc88f<img width=3D"1" height=3D"1" src=3D"http://app.hwinfot=
-ech.net/index.php/campaigns/ok072mq8cc88f/track-opening/ja300hljodf5e" alt=
-=3D"" />
-</body>
-</html>
-
---_=_swift_v4_1592122892_b6fa76b0954b5ab54c83679e89d8c116_=_--
+PENFTlRFUj4KPHA+PGRpdiBzdHlsZT0iZm9udC1zaXplOiAyN3B4OyBmb250LWZhbWls
+eTogdmVyZGFuYSwgYXJpYWwsIGhlbHZldGljYSwgc2Fucy1zZXJpZjsgYmFja2dyb3Vu
+ZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpIj48Zm9udCBjb2xvcj0iIzAwMDBjYyI+
+PGEgaHJlZj0iaHR0cDovL3RyYWNrLnRoYW50aWNoLmNvbS9nZXRkb2N1bWVudHMuYXNw
+eD9lbWFpbD15VVI2MkJCQkJORE5tQkJCQk5KbEVjMm5JbHo3eE5OdGIydXRpdkFBQUFW
+VXJzQUxHSUxER2NUVWJDQm1wc2k5U1c5NXloOU1iUklwckc3amdCQkJCcEx0UEVBQUFB
+VnFxMm9uUT09JmlkPUc4dTEzOWdGWEtkbjhCQkJCdG9Bb0tqMUE9PSIgdGFyZ2V0PSJf
+YmxhbmsiIHJlbD0ibm9yZWZlcnJlciI+VGhlIHRydXRoLmluZm88L2E+PC9mb250Pjwv
+ZGl2Pgo8ZGl2Pgo8aW1nIHNyYz0iaHR0cDovL3RyYWNrLnRoYW50aWNoLmNvbS9nZXRk
+b2N1bWVudHMuYXNweD9lbWFpbD15VVI2MkJCQkJORE5tQkJCQk5KbEVjMm5JbHo3eE5O
+dGIydXRpdkFBQUFWVXJzQUxHSUxBelAxVGdMWDdscFkyZnVrY3QyS1ZCQkJCeHgyNExt
+UlhFRWdwWExqQUFBQWYyWkVnOU8ybkZrYjlaNnU2cldsMGxxRVFXMD0maWQ9TFRCQkJC
+azZTa2dSYjlhQWFJTjlodmRFTUVxMkNNTDVmRnpWV3N5TWF5d3RTYTRCUTFZaFFldFlZ
+cGtqcmNJYXo3ayI+CjxpbWcgc3JjPSJodHRwOi8vdHJhY2sudGhhbnRpY2guY29tL2dl
+dGRvY3VtZW50cy5hc3B4P2VtYWlsPXlVUjYyQkJCQk5ETm1CQkJCTkpsRWMybklsejd4
+Tk50YjJ1dGl2QUFBQVZVcnNBTEdJTERHY1RVYkNCbXBzaTlTVzk1eWg5TWJSSXByRzdq
+Z0JCQkJwTHRQRUFBQUFWcXEyb25RPT0maWQ9RHlOUUFBQUFWWnRGQjdRQ3EzU2xQNll6
+QkJCQk43bzNjQW1LN1l4bndtaEp3TlUzVE5BSlZBQUFBcnVHS2pwWmRvanNsdXV2aSI+
+CjxpbWcgc3JjPSJodHRwOi8vdHJhY2sudGhhbnRpY2guY29tL2dldGRvY3VtZW50cy5h
+c3B4P2VtYWlsPXlVUjYyQkJCQk5ETm1CQkJCTkpsRWMybklsejd4Tk50YjJ1dGl2QUFB
+QVZVcnNBTEdJTERHY1RVYkNCbXBzaTlTVzk1eWg5TWJSSXByRzdqZ0JCQkJwTHRQRUFB
+QUFWcXEyb25RPT0maWQ9T2ZPTnR6SzlwZ0RCQkJCOE9LQkpVRmNmRXpjYmRpYXZVTnlP
+ZTcxM1dBQUFBdUtyOFlHYnBZM2s0Nzk4MnFPaW55QkJCQlYzZkJCQkJCQkJCazdBd2tQ
+YVNBQUFBdnBzRjRibDI5Z2lvZXhMbkVFZ0Vsd0JCQkJnZm9mMDRlOVE9Ij4KPGltZyBz
+cmM9Imh0dHA6Ly90cmFjay50aGFudGljaC5jb20vZ2V0ZG9jdW1lbnRzLmFzcHg/ZW1h
+aWw9eVVSNjJCQkJCTkRObUJCQkJOSmxFYzJuSWx6N3hOTnRiMnV0aXZBQUFBVlVyc0FM
+R0lMREdjVFViQ0JtcHNpOVNXOTV5aDlNYlJJcHJHN2pnQkJCQnBMdFBFQUFBQVZxcTJv
+blE9PSZpZD1PZk9OdHpLOXBnREJCQkI4T0tCSlVGY2ZFemNiZGlhdlVOeU9lNzEzV0FB
+QUF1S3JBQUFBaGprY0NCSlFUcHNaaTZXTjIwZ0JrckVWdE5mNzFKSU0xQzdGU21CQkJC
+SGV5dUNOeXFHUE5mbFQ2bW5HbFlYT3NpZz0iPgo8aW1nIHNyYz0iaHR0cDovL3RyYWNr
+LnRoYW50aWNoLmNvbS9nZXRkb2N1bWVudHMuYXNweD9lbWFpbD15VVI2MkJCQkJORE5t
+QkJCQk5KbEVjMm5JbHo3eE5OdGIydXRpdkFBQUFWVXJzQUxHSUxER2NUVWJDQm1wc2k5
+U1c5NXloOU1iUklwckc3amdCQkJCcEx0UEVBQUFBVnFxMm9uUT09JmlkPU9mT050eks5
+cGdEQkJCQjhPS0JKVUZjZkV6Y2JkaWF2VU55T2U3MTNXQUFBQXVLckJCQkIxTHNoS3VB
+QUFBT3FyNHAxN2QybzNsbWt0SWxSdGtDdE9XSDlTamcwZlhFWkJCQkJta0o0MDBHeDhu
+a3V2VEdOZFZDSElrPSI+CjxkaXY+CjxlbT4q5YW25LuW5paH5Lu2OjwvZW0+PGJyIC8+
+CjxlbT5odHRwczovL3d3dy5tZWRpYWZpcmUuY29tL2ZvbGRlci9pbmoydmVkd2U3Y2oz
+PC9lbT48YnIgLz4KPGVtPmh0dHA6Ly9jb2R1eWVuLmluZm8vbWgvMDAvOSZwaV9uLmcu
+cGRmPC9lbT48YnIgLz4=
 
 
 
---===============2963162223050517096==
+--===============1359539648790400603==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2963162223050517096==
+--===============1359539648790400603==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -240,6 +190,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2963162223050517096==--
-
-
+--===============1359539648790400603==--
