@@ -2,89 +2,102 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 649F6234F90
-	for <lists+industrypack-devel@lfdr.de>; Sat,  1 Aug 2020 05:14:44 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
-	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1k1hyt-0003Is-1u
-	for lists+industrypack-devel@lfdr.de; Sat, 01 Aug 2020 03:14:43 +0000
-Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <bounce-452-23080196-452-248@a.9885n.cc>)
- id 1k1hyr-0003Ij-8x
- for industrypack-devel@lists.sourceforge.net; Sat, 01 Aug 2020 03:14:41 +0000
+	by mail.lfdr.de (Postfix) with ESMTPS id 5AD8623AA33
+	for <lists+industrypack-devel@lfdr.de>; Mon,  3 Aug 2020 18:09:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
- :List-Unsubscribe:Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=TdwRf2Avgby5Ff6AE7VrgSoDuP55IQotiafaFqlLMF4=; b=CId3X3/yvNne5wQeSUHNDfRAeQ
- pUri5RPcq0DnMqXSWB8DZp+ZVrs9Ye6xpSfC0k382ND+hawg/hxFqfS0nk2sIgoQBJLWmbc2FFYZn
- UL3qcfoKbky2Rxevmcj1imfjrOLkDkCTfIKTQuyMXxh2zY75HzYxwIjHzPolm/5CIg+E=;
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:Message-ID:
+	References:Mime-Version:Date:To:Sender:Cc:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:List-Owner;
+	bh=6/3iaye6q+hclqzz8BOvynqklWx8bJzdpBSuc3p9y8s=; b=WBe677iFKpUHM879/PxqnJQD4Q
+	T94QcyX36P425WTkm8bPf5uMfGigAr2aNePUJF6jZlm0YgV+xkTD3xLxjaPrMh5WjkfyRK30WRxyg
+	4lOpfdMUOIttOQlOhjFuETlXfu1pHsugRQCrAvNs9r2azZAwPW0Mo1jxXt9ttFxvzNH0=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
+	id 1k2d1O-0003pU-C9
+	for lists+industrypack-devel@lfdr.de; Mon, 03 Aug 2020 16:09:06 +0000
+Received: from [172.30.20.202] (helo=mx.sourceforge.net)
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from
+ <01010173b5153128-75d9df71-3ea1-41ad-9931-342da5da0061-000000@us-west-2.amazonses.com>)
+ id 1k2d1M-0003p9-ML
+ for industrypack-devel@lists.sourceforge.net; Mon, 03 Aug 2020 16:09:04 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sourceforge.net; s=x; h=Message-ID:References:Content-Type:Mime-Version:
+ Date:To:From:Subject:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=32KsQ+zThp2oS2G9wV1d9abKbzgvAIvGg8XH7DGxkII=; b=XTwIIB2RW0y9aGbc/MT8FDTzxq
+ qq6vprelqvCrcVmnBcBXK7ypuQOLrvWAhuelMqzTM/DFb4oY8aY73Tos56wSgwdLa4bo8XJwj3Db0
+ 0DpqIqG1gO18cljTuLHGC4WAWU6MsNvksk2V2m4uP8KsLNWPUvCiZa9sVxf3E9t0/AuA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Content-Transfer-Encoding:MIME-Version:List-Unsubscribe:
- Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=TdwRf2Avgby5Ff6AE7VrgSoDuP55IQotiafaFqlLMF4=; b=T5VsLKTSD5kS2xhs2BZSyQss2y
- RHvu5UpD3+SVdXW+ECI4K1Qotbl7dzfG20pjGfoiivfPYsJb+8V6fQBGWYd3OGqUCNHA3gtgMFXkz
- x+WgYTJEc3eUBDrRMnZi/R8hzUDD1Y1+DC3r/Ys+DC2iJCejFNvZGtkmc5DU3PV+Jvgc=;
-Received: from [103.196.22.106] (helo=a.9885n.cc)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1k1hyn-00GZ9I-Kl
- for industrypack-devel@lists.sourceforge.net; Sat, 01 Aug 2020 03:14:41 +0000
-Received: by a.9885n.cc id h4jf1o0e97cs for
- <industrypack-devel@lists.sourceforge.net>;
- Sat, 1 Aug 2020 11:14:30 +0800 (envelope-from
- <bounce-452-23080196-452-248@a.9885n.cc>)
-Date: Sat, 1 Aug 2020 11:14:29 +0800
-To: "industrypack-devel@lists.sourceforge.net"
+ h=Message-ID:References:Content-Type:Mime-Version:Date:To:From:Subject:
+ Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=32KsQ+zThp2oS2G9wV1d9abKbzgvAIvGg8XH7DGxkII=; b=I
+ Miuyn7QkpYkwSmDOUZihOrjtvnVW1N6QHTREpKDr+pZJksSU1MbXduB/aIadUxO3vknipHq6oo6yi
+ tKVWxzO23rtum/MMzlFLsFdskl2mRIpV/Opri6Rpa9kn9yOUJJTyXkC8vlhNtEfmhyuMWF3Sbkgc9
+ OueR5LvenkEcODYU=;
+Received: from a27-233.smtp-out.us-west-2.amazonses.com ([54.240.27.233])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-SHA256:128) (Exim 4.92.2)
+ id 1k2d1I-001bfU-Nu
+ for industrypack-devel@lists.sourceforge.net; Mon, 03 Aug 2020 16:09:04 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+ s=sknkt525wmvsd5qrslvt4aisaznnhvir; d=konnectglobalmarketing.com;
+ t=1596470931;
+ h=Subject:From:To:Date:Mime-Version:Content-Type:References:Message-Id;
+ bh=32KsQ+zThp2oS2G9wV1d9abKbzgvAIvGg8XH7DGxkII=;
+ b=BI67T/scfN3aPPMQDGt3WFixE6BWTrI6ckKWInp/NxKFiiVY0Uso7QabDNZdhBO0
+ 5ULJga2SyNnPamzbB5tdTU7oQ6M41ybHwLEcsJjDlmCCibsrvLlABEG6MWW0oYND211
+ hAv7YQ5hjoOKeXEBND+XcohI2FxH4u5Ks9o0TPXU=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+ s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1596470931;
+ h=Subject:From:To:Date:Mime-Version:Content-Type:References:Message-Id:Feedback-ID;
+ bh=32KsQ+zThp2oS2G9wV1d9abKbzgvAIvGg8XH7DGxkII=;
+ b=ijmuQ5+xHYdGJ5FhVoT9HVFtE/kZPwD7BnIUXln/N2kcBP+QD3qwAETJZjrSvtIq
+ J8Tto7pug7TiYRoW33gwvESHsy+1jmrTfyWaCpunfUBD5ovW/zeX85qZuCmaI9wqurz
+ c+e7jFQhqf5IENb/2rsBZdWDAhsvF7FUJQzyVCOk=
+To: =?UTF-8?Q?=27industrypack-devel=40lists=2Esourceforge=2Enet=27?=
  <industrypack-devel@lists.sourceforge.net>
-From: sunsesoftdo <sunsesoftkd@163.com>
-Message-ID: <21dc3ca8ce40e317e05339febad53a45@103.196.22.106>
-X-Priority: 3
-X-Mailer: Email Sending System
-X-Complaints-To: sunsesoftkd@163.com
-X-MessageID: Mnx8fHwxMTMxMzh8fHx8aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldHx8fHwyfHx8fDF8fHx8MA%3D%3D
-X-Report-Abuse: <http://103.196.22.106/oem/report_abuse.php?mid=Mnx8fHwxMTMxMzh8fHx8aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldHx8fHwyfHx8fDF8fHx8MA%3D%3D>
-MIME-Version: 1.0
-X-Spam-Score: 7.7 (+++++++)
+Date: Mon, 3 Aug 2020 16:08:51 +0000
+Mime-Version: 1.0
+References: <mail.666e3828-2bca-41c3-940f-9cb5e6edd499@storage.wm.amazon.com> 
+ <mail.666e3828-2bca-41c3-940f-9cb5e6edd499@storage.wm.amazon.com>
+X-Priority: 3 (Normal)
+X-Mailer: Amazon WorkMail
+Thread-Index: AdZpr9P0OD8jqRi5SrSww+02ISjv6g==
+Thread-Topic: RE: Altium - Proposal
+X-Wm-Sent-Timestamp: 1596470931
+Message-ID: <01010173b5153128-75d9df71-3ea1-41ad-9931-342da5da0061-000000@us-west-2.amazonses.com>
+X-SES-Outgoing: 2020.08.03-54.240.27.233
+Feedback-ID: 1.us-west-2.An468LAV0jCjQDrDLvlZjeAthld7qrhZr+vow8irkvU=:AmazonSES
+X-Spam-Score: 0.9 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (sunsesoftkd[at]163.com)
- 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
- See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: 103.196.22.106]
- 1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
- https://senderscore.org/blacklistlookup/
- [103.196.22.106 listed in bl.score.senderscore.com]
  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
  domains are different
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
- 0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
- address
- 1.3 HTML_IMAGE_ONLY_24     BODY: HTML: images with 2000-2400 bytes of words
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [54.240.27.233 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+ trust [54.240.27.233 listed in list.dnswl.org]
  1.0 HTML_MESSAGE           BODY: HTML included in message
- 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
- freemail headers are different
- 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
- 0.0 T_REMOTE_IMAGE         Message contains an external image
- 1.3 SPOOFED_FREEMAIL       No description available.
- -0.5 AWL AWL: Adjusted score from AWL reputation of From: address
-X-Headers-End: 1k1hyn-00GZ9I-Kl
-Subject: [Industrypack-devel] =?utf-8?b?QjJC5bmz5Y+w77yM5Y+C5bGV6LS555So?=
- =?utf-8?b?5aSq6auY77yf6K+l55So5paw5pa55byP5LqG?=
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 0.0 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1k2d1I-001bfU-Nu
+Subject: Re: [Industrypack-devel] Altium - Proposal
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -96,106 +109,283 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: sunsesoftdo <sunsesoftkd@163.com>
-Content-Type: multipart/mixed; boundary="===============0734023856136502542=="
+From: =?UTF-8?Q?Kelsey_Cooper?= via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: =?UTF-8?Q?Kelsey_Cooper?= <kelsey@konnectglobalmarketing.com>
+Content-Type: multipart/mixed; boundary="===============1835471176870969044=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============0734023856136502542==
+This is a multi-part message in MIME format. Your mail reader does not
+understand MIME message format.
+--===============1835471176870969044==
+Content-Type: multipart/alternative; 
+ boundary="=_jq3a-IG5Od7hv5QZVfcVM1x+hAiWnINx1cU0DqrzOTEQuHgp"
+
+This is a multi-part message in MIME format. Your mail reader does not
+understand MIME message format.
+--=_jq3a-IG5Od7hv5QZVfcVM1x+hAiWnINx1cU0DqrzOTEQuHgp
+Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html; charset="utf-8"
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
-w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-<title>Untitled document</title>
-</head>
-<body>
-<p><span style=3D"font-size: small;"><strong>=E6=88=91=E4=BB=AC=E4=BA=A7=E5=
-=93=81=E7=9A=84=E5=AE=9A=E4=B9=89=EF=BC=9A=E6=98=AF=E7=B2=BE=E5=87=86=E5=A4=
-=96=E8=B4=B8=E4=B8=BB=E5=8A=A8=E8=90=A5=E9=94=80=E7=B3=BB=E7=BB=9F=E3=80=82=
-=E9=87=8D=E7=82=B9=E5=B0=B1=E5=9C=A8=E4=BA=8E=E7=B2=BE=E5=87=86=E4=B8=8E=E4=
-=B8=BB=E5=8A=A8=E3=80=82=E4=B8=8D=E5=9C=A8=E6=98=AF=E8=A2=AB=E5=8A=A8=E7=9A=
-=84=E7=AD=89=E5=BE=85=E5=AE=A2=E6=88=B7=E7=9A=84=E8=AF=A2=E7=9B=98=EF=BC=8C=
-=E4=B9=9F=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E6=9B=B4=E5=A4=9A=E7=9A=84=E6=
-=96=B9=E6=B3=95=E5=BC=80=E5=8F=91=E5=88=B0=E6=BD=9C=E5=9C=A8=E5=AE=A2=E6=88=
-=B7=E3=80=82=E8=80=8C=E7=B2=BE=E5=87=86=E7=9A=84=E6=84=8F=E6=80=9D=E5=B0=B1=
-=E6=98=AF=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E4=BD=A0get=E5=88=B0=E7=9A=84=
-=E4=BB=BB=E6=84=8F=E4=BF=A1=E6=81=AF=EF=BC=8C=E5=8C=85=E6=8B=AC=E5=85=B3=E9=
-=94=AE=E8=AF=8D=E3=80=81=E5=85=AC=E5=8F=B8=E5=90=8D=E7=A7=B0=E3=80=81=E7=BD=
-=91=E5=9D=80=E5=8F=8A=E9=82=AE=E7=AE=B1=E6=89=BE=E5=88=B0=E4=BD=A0=E6=83=B3=
-=E8=A6=81=E7=9A=84=E4=BF=A1=E6=81=AF=E3=80=82=E6=B3=A8=E6=84=8F=EF=BC=9A=E6=
-=88=91=E4=BB=AC=E4=B8=8D=E5=8F=AA=E6=98=AF=E4=B8=80=E4=B8=AA=E6=95=B0=E6=8D=
-=AE=E5=BA=93=EF=BC=8C=E8=80=8C=E6=98=AF=E5=AE=9E=E6=97=B6=E6=9B=B4=E6=96=B0=
-=E7=9A=84=E5=A4=96=E8=B4=B8=E5=A4=A7=E6=95=B0=E6=8D=AE=E7=B3=BB=E7=BB=9F=E3=
-=80=82</strong><br /><br /><span style=3D"color: #888888;">=E4=B8=BB=E8=A6=
-=81=E5=8A=9F=E8=83=BD=E6=9C=89=E5=93=AA=E4=BA=9B=EF=BC=9F<br />1.=E6=88=91=
-=E4=BB=AC=E6=8F=90=E4=BE=9B=E5=85=A8=E7=90=83220=E4=B8=AA=E5=9B=BD=E5=AE=B6=
-=E5=9C=B0=E5=8C=BA=EF=BC=8C1000=E5=A4=9A=E4=B8=AA=E5=BC=95=E6=93=8E=EF=BC=
-=8C=E6=AF=8F=E5=A4=A9=E7=B2=BE=E5=87=86=E6=90=9C=E7=B4=A2=E4=B8=8A=E4=B8=87=
-=E5=9B=BD=E5=A4=96=E7=9B=AE=E6=A0=87=E5=95=86=E4=B8=9A=E5=AE=A2=E6=88=B7=E4=
-=BF=A1=E6=81=AF=EF=BC=8C=E5=B8=AE=E6=82=A8=E6=8C=96=E6=8E=98=E5=85=A8=E7=90=
-=83=E6=82=A8=E7=9A=84=E7=9B=AE=E6=A0=87=E5=95=86=E6=9C=BA=E5=AE=A2=E6=88=B7=
-=E4=BF=A1=E6=81=AF=E3=80=82<br />2.=E7=BB=93=E5=90=88=E5=AE=A2=E6=88=B7=E6=
-=89=8B=E4=B8=8A=E5=B1=95=E4=BC=9A=E4=BF=A1=E6=81=AF=E6=AF=94=E5=A6=82=E5=B9=
-=BF=E4=BA=A4=E4=BC=9A=E5=90=8D=E7=89=87=EF=BC=8C=E5=A4=9A=E5=B9=B4=E8=80=81=
-=E5=AE=A2=E6=88=B7=EF=BC=89=E8=BF=9B=E8=A1=8C=E5=AF=BC=E5=85=A5=E5=88=B0=E7=
-=B3=BB=E7=BB=9F=E5=95=86=E6=9C=BA=E6=B1=A0=E5=9C=A8=E7=B3=BB=E7=BB=9F=E5=95=
-=86=E6=9C=BA=E6=B1=A0=E8=BF=9B=E8=A1=8C=E7=AE=A1=E7=90=86=E3=80=81=E8=AE=BE=
-=E7=BD=AE=E6=A0=87=E7=AD=BE=EF=BC=8C=E6=99=BA=E8=83=BD=E6=8C=81=E7=BB=AD=E6=
-=8C=96=E6=8E=98=E3=80=81=E5=92=8C=E6=B7=B1=E6=8C=96=E4=BF=A1=E6=81=AF=E3=80=
-=82<br />3.=E6=B7=B1=E5=BA=A6=E6=8C=96=E6=8E=98=E5=AE=A2=E6=88=B7=E4=BF=A1=
-=E6=81=AF=EF=BC=8C=E5=8C=85=E6=8B=AC=E5=85=AC=E5=8F=B8=E4=BF=A1=E6=81=AF=EF=
-=BC=8C=E4=BA=A7=E5=93=81=E4=BF=A1=E6=81=AF=EF=BC=8C=E7=94=9A=E8=87=B3=E4=B8=
-=AA=E4=BA=BA=E4=BF=A1=E6=81=AF=EF=BC=9B<br />4.=E6=88=91=E4=BB=AC=E4=BA=A7=
-=E5=93=81=E7=BB=93=E5=90=88=E5=A4=9A=E4=B8=AA=E5=9B=BD=E5=A4=96=E7=A4=BE=E4=
-=BA=A4=E5=B9=B3=E5=8F=B0=EF=BC=8C=E5=8F=AF=E4=BB=A5=E6=B8=85=E6=99=B0=E4=BA=
-=86=E8=A7=A3=E5=AE=A2=E6=88=B7=E7=9A=84=E5=95=86=E4=B8=9A=E8=A1=8C=E4=B8=BA=
-=E8=BD=A8=E8=BF=B9=E4=B8=8E=E4=B8=AA=E4=BA=BA=E7=9B=B8=E5=85=B3=E4=BF=A1=E6=
-=81=AF=EF=BC=8C=E5=B0=A4=E5=85=B6=E6=98=AF=E4=B8=8ELinkedIn&nbsp;FB&nbsp;=
-=E6=8E=A8=E7=89=B9=E7=AD=89=E7=9A=84=E7=BB=93=E5=90=88=E3=80=82<br />6.=E7=
-=A1=AE=E8=AE=A4=E5=AE=A2=E6=88=B7=E8=BA=AB=E4=BB=BD=EF=BC=8C=E7=9B=B4=E6=8E=
-=A5=E6=89=BE=E5=88=B0=E5=AF=B9=E5=BA=94=E5=AE=A2=E6=88=B7=E7=9A=84=E4=BC=81=
-=E4=B8=9A=E9=82=AE=E7=AE=B1=EF=BC=9B<br />7.=E9=99=84=E5=8A=A0=E7=9A=84CRM=
-=E7=AE=A1=E7=90=86=E7=B3=BB=E7=BB=9F=EF=BC=8C=E7=9B=B4=E6=8E=A5=E5=9C=A8=E7=
-=BA=BF=E8=B7=9F=E5=AE=A2=E6=88=B7=E5=8F=91=E9=82=AE=E4=BB=B6=EF=BC=9B200=E4=
-=B8=AA=E9=82=AE=E4=BB=B6=E6=A8=A1=E6=9D=BF=E5=8F=AF=E4=BB=A5=E9=80=89=E6=8B=
-=A9<br /><br />=E6=B5=B7=E5=85=B3=E6=95=B0=E6=8D=AE=E6=98=AF=E5=AE=A2=E6=88=
-=B7=E9=87=87=E8=B4=AD=E8=A1=8C=E4=B8=BA=E5=92=8C=E5=AE=9E=E5=8A=9B=E7=9A=84=
-=E4=BD=93=E7=8E=B0=EF=BC=8C=E8=87=AA=E5=B8=A6=E8=81=94=E7=B3=BB=E6=96=B9=E5=
-=BC=8F=E7=9A=84=E6=B5=B7=E5=85=B3=E6=95=B0=E6=8D=AE=E6=9B=B4=E6=98=AF=E4=B8=
-=87=E5=88=86=E7=BB=99=E5=8A=9B=E3=80=82&nbsp;=E7=94=A8=E6=88=B7=E5=8F=AF=E4=
-=BB=A5=E9=80=89=E6=8B=A9=E4=BA=A7=E5=93=81=E6=8F=8F=E8=BF=B0=E3=80=81=E5=85=
-=AC=E5=8F=B8=E5=90=8D=E7=A7=B0=E3=80=81=E9=87=87=E8=B4=AD=E5=95=86=E3=80=81=
-=E4=BE=9B=E5=BA=94=E5=95=86=E3=80=81=E5=92=8C=E8=B4=B8=E6=98=93=E5=9B=BD=E5=
-=AE=B65=E4=B8=AA=E7=BB=B4=E5=BA=A6=E7=BB=84=E5=90=88=E6=9F=A5=E8=AF=A2=EF=
-=BC=8C=E8=AE=A9=E6=95=B0=E6=8D=AE=E6=9F=A5=E6=89=BE=E6=9B=B4=E4=BE=BF=E5=88=
-=A9=E3=80=82</span><br /><br /><strong>=E8=81=94=E7=B3=BB=E8=85=BE=E8=AE=AF=
-=E6=89=A3=E6=89=A3=EF=BC=9A2267734821&nbsp; &nbsp; &nbsp; &nbsp;WECAHT=EF=
-=BC=9Asunsesoftdo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span></p>
-<p><span style=3D"font-size: small;"><strong>------=E5=85=8D=E8=B4=B9=E7=BB=
-=99=E6=82=A8=E6=8E=A2=E6=B5=8B10=E5=AE=B6=E4=BC=81=E4=B8=9A=E8=BA=AB=E4=BB=
-=BD=E4=BF=A1=E6=81=AF=EF=BC=8C=E6=AF=94=E5=A6=82=E5=86=B3=E7=AD=96=E4=BA=BA=
-&nbsp;CEO=E7=AD=89=E7=AD=89=E9=AB=98=E8=81=8C=E4=BD=8D=E9=82=AE=E7=AE=B1=E5=
-=9C=B0=E5=9D=80</strong></span></p>
-<p><span style=3D"font-size: small;"><strong>=E5=85=8D=E8=B4=B9=E5=9C=A8=E7=
-=BA=BF=E6=BC=94=E7=A4=BA</strong></span></p>
+Hi,
 
-<img src=3D"http://103.196.22.106/oem/to.php?p=3Dru/ru/rs/2g2i/ru/rs" width=
-=3D"5" height=3D"2" alt=3D".">
+=C2=A0
+I have been trying to get in touch with you to see if there is a mutual f=
+it between our company=E2=80=99s expertise and your goals around.
 
-</body>
-</html>
+=C2=A0
+Please review my previous emails and let me know your thoughts.
+
+=C2=A0
+Await your response.
+
+=C2=A0
+Regards,
+
+Kelsey Cooper - Marketing Executive
+
+=C2=A0
+=C2=A0
+Hi,
 
 
---===============0734023856136502542==
+Did you get a chance to go through my previous email=3F=20
+
+
+Kindly let me know your target audience Job Titles & Geography that you w=
+ish to target, so that I can get back with the counts, pricing and all th=
+e details for your review.
+
+=C2=A0
+Appreciate your response.
+
+=C2=A0
+Regards,
+
+Kelsey Cooper - Marketing Executive
+
+=C2=A0
+=C2=A0
+Hi,
+
+=C2=A0
+Would you like to send in your Business Proposals/Newsletter to key decis=
+ion Makers from companies currently using Altium Software=3F
+
+=C2=A0
+Titles Like:=C2=A0 IT Decision Makers, C-level, Managers and other job ti=
+tles as per your requirement.=20
+
+=C2=A0
+Kindly let me know the Job Titles & Geography that you wish to target, so=
+ that I can get back with the samples, counts and more details for your r=
+eview.=20
+
+=C2=A0
+We cater other Industry contacts such as: Manufacturing,=C2=A0Constructio=
+n,=C2=A0Education,=C2=A0Retail,=C2=A0Healthcare, Energy, Utilities & Wast=
+e Treatment, Transportation, etc.=20
+
+=C2=A0
+Looking forward to your response.
+
+=C2=A0
+Regards,
+
+Kelsey Cooper - Marketing Executive
+
+=C2=A0
+Stay safe.
+
+Reply back =E2=80=9CPass=E2=80=9D for no further emails.
+
+=C2=A0
+
+--=_jq3a-IG5Od7hv5QZVfcVM1x+hAiWnINx1cU0DqrzOTEQuHgp
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-mi=
+crosoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:wo=
+rd" xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D=
+"http://www.w3.org/TR/REC-html40"><head><META HTTP-EQUIV=3D"Content-Type"=
+ CONTENT=3D"text/html; charset=3Dus-ascii"><meta name=3DGenerator content=
+=3D"Microsoft Word 15 (filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+=09{font-family:"Cambria Math";
+=09panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+=09{font-family:Calibri;
+=09panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+=09{margin:0in;
+=09margin-bottom:.0001pt;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+=09{mso-style-priority:1;
+=09margin:0in;
+=09margin-bottom:.0001pt;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+p.xmsonormal, li.xmsonormal, div.xmsonormal
+=09{mso-style-name:x_msonormal;
+=09margin:0in;
+=09margin-bottom:.0001pt;
+=09font-size:11.0pt;
+=09font-family:"Calibri",sans-serif;}
+=2EMsoChpDefault
+=09{mso-style-type:export-only;
+=09font-family:"Calibri",sans-serif;}
+=2EMsoPapDefault
+=09{mso-style-type:export-only;
+=09margin-bottom:8.0pt;
+=09line-height:107%;}
+@page WordSection1
+=09{size:8.5in 11.0in;
+=09margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+=09{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DEN-US><div class=3D=
+WordSection1><p class=3DMsoNoSpacing><span lang=3DEN-IN style=3D'font-siz=
+e:12.0pt;color:black;background:white;mso-fareast-language:EN-IN'>Hi,<o:p=
+></o:p></span></p><p class=3DMsoNoSpacing><span lang=3DEN-IN style=3D'fon=
+t-size:12.0pt;color:black;background:white;mso-fareast-language:EN-IN'><o=
+:p>&nbsp;</o:p></span></p><p class=3DMsoNoSpacing><span lang=3DEN-IN styl=
+e=3D'font-size:12.0pt;color:black;background:white;mso-fareast-language:E=
+N-IN'>I have been trying to get in touch with you to see if there is a mu=
+tual fit between our company&#8217;s expertise and your goals around.<o:p=
+></o:p></span></p><p class=3DMsoNoSpacing><span lang=3DEN-IN style=3D'fon=
+t-size:12.0pt;color:black;background:white;mso-fareast-language:EN-IN'><o=
+:p>&nbsp;</o:p></span></p><p class=3DMsoNoSpacing><span lang=3DEN-IN styl=
+e=3D'font-size:12.0pt;color:black;background:white;mso-fareast-language:E=
+N-IN'>Please review my previous emails and let me know your thoughts.<o:p=
+></o:p></span></p><p class=3DMsoNoSpacing><span lang=3DEN-IN style=3D'fon=
+t-size:12.0pt;color:black;background:white;mso-fareast-language:EN-IN'><o=
+:p>&nbsp;</o:p></span></p><p class=3DMsoNoSpacing><span lang=3DEN-IN styl=
+e=3D'font-size:12.0pt;color:black;background:white;mso-fareast-language:E=
+N-IN'>Await your response.<o:p></o:p></span></p><p class=3DMsoNoSpacing><=
+span lang=3DEN-IN style=3D'font-size:12.0pt;color:black;background:white;=
+mso-fareast-language:EN-IN'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNoS=
+pacing><b><i><span style=3D'font-size:12.0pt;color:black;background:white=
+;mso-fareast-language:EN-IN'>Regards,<o:p></o:p></span></i></b></p><p cla=
+ss=3DMsoNoSpacing><b><i><span style=3D'font-size:12.0pt;color:black;backg=
+round:white;mso-fareast-language:EN-IN'>Kelsey Cooper </span></i></b><b><=
+i><span lang=3DEN-AU style=3D'font-size:12.0pt;color:black;background:whi=
+te;mso-fareast-language:EN-IN'>- </span></i></b><b><i><span style=3D'font=
+-size:12.0pt;color:black;background:white;mso-fareast-language:EN-IN'>Mar=
+keting Executive</span></i></b><b><i><span lang=3DEN-AU style=3D'font-siz=
+e:12.0pt;color:black;background:white;mso-fareast-language:EN-IN'><o:p></=
+o:p></span></i></b></p><div style=3D'mso-element:para-border-div;border:n=
+one;border-bottom:solid windowtext 1.5pt;padding:0in 0in 1.0pt 0in'><p cl=
+ass=3DMsoNoSpacing style=3D'border:none;padding:0in'><span style=3D'font-=
+size:12.0pt;color:black;background:white;mso-fareast-language:EN-IN'><o:p=
+>&nbsp;</o:p></span></p></div><p class=3DMsoNoSpacing><span style=3D'font=
+-size:12.0pt;color:black;background:white;mso-fareast-language:EN-IN'><o:=
+p>&nbsp;</o:p></span></p><p class=3DMsoNoSpacing><span style=3D'font-size=
+:12.0pt;color:black;background:white;mso-fareast-language:EN-IN'>Hi,<o:p>=
+</o:p></span></p><p class=3DMsoNoSpacing><span style=3D'font-size:12.0pt;=
+color:black;background:white;mso-fareast-language:EN-IN'><br>Did you get =
+a chance to go through my previous email=3F <o:p></o:p></span></p><p clas=
+s=3DMsoNoSpacing><span style=3D'font-size:12.0pt;color:black;background:w=
+hite;mso-fareast-language:EN-IN'><br>Kindly let me know your target audie=
+nce</span><span style=3D'font-size:12.0pt;color:black;background:white'> =
+</span><b><span lang=3DEN-IN style=3D'font-size:12.0pt;color:black;backgr=
+ound:white'>Job Titles &amp; Geography</span></b><span lang=3DEN-IN style=
+=3D'font-size:12.0pt;color:black;background:white'> </span><span style=3D=
+'font-size:12.0pt;color:black;background:white;mso-fareast-language:EN-IN=
+'>that you wish to target, so that I can get back with the <u>counts, pri=
+cing</u> and all the details for your review.<o:p></o:p></span></p><p cla=
+ss=3DMsoNoSpacing><span style=3D'font-size:12.0pt;color:black;background:=
+white;mso-fareast-language:EN-IN'>&nbsp;<o:p></o:p></span></p><p class=3D=
+MsoNoSpacing><span style=3D'font-size:12.0pt;color:black;background:white=
+;mso-fareast-language:EN-IN'>Appreciate your response.<o:p></o:p></span><=
+/p><p class=3DMsoNoSpacing><span style=3D'font-size:12.0pt;color:black;ba=
+ckground:white;mso-fareast-language:EN-IN'>&nbsp;<o:p></o:p></span></p><p=
+ class=3Dxmsonormal><b><i><span lang=3DEN-IN style=3D'font-size:12.0pt;co=
+lor:black'>Regards,<o:p></o:p></span></i></b></p><p class=3Dxmsonormal><b=
+><i><span style=3D'font-size:12.0pt;color:black'>Kelsey Cooper </span></i=
+></b><b><i><span lang=3DEN-IN style=3D'font-size:12.0pt;color:black'>- Ma=
+rketing Executive<o:p></o:p></span></i></b></p><div style=3D'mso-element:=
+para-border-div;border:none;border-bottom:solid windowtext 1.5pt;padding:=
+0in 0in 1.0pt 0in'><p class=3DMsoNormal style=3D'border:none;padding:0in'=
+><span lang=3DEN-IN style=3D'font-size:12.0pt;color:black;background:whit=
+e'><o:p>&nbsp;</o:p></span></p></div><p class=3DMsoNormal><span lang=3DEN=
+-IN style=3D'font-size:12.0pt;color:black;background:white'><o:p>&nbsp;</=
+o:p></span></p><p class=3DMsoNormal><span lang=3DEN-IN style=3D'font-size=
+:12.0pt;color:black;background:white'>Hi,</span></p><p class=3DMsoNormal>=
+<span lang=3DEN-IN style=3D'font-size:12.0pt;color:black;background:white=
+'>&nbsp;</span></p><p class=3DMsoNormal><span style=3D'font-size:12.0pt'>=
+Would you like to send in your Business Proposals/Newsletter to key decis=
+ion Makers<span style=3D'color:black;background:white'> </span></span><sp=
+an lang=3DEN-IN style=3D'font-size:12.0pt;color:black;background:white'>f=
+rom companies currently using<b> </b></span><b><span style=3D'font-size:1=
+2.0pt;color:black;background:white'>Altium Software</span></b><b><span la=
+ng=3DEN-IN style=3D'font-size:12.0pt;color:black;background:white'>=3F</s=
+pan></b><b><span style=3D'font-size:12.0pt;color:black;background:white'>=
+<o:p></o:p></span></b></p><p class=3DMsoNormal><span lang=3DEN-IN style=3D=
+'font-size:12.0pt;color:black'>&nbsp;</span></p><p class=3DMsoNormal><u><=
+span lang=3DEN-IN style=3D'font-size:12.0pt;color:black'>Titles Like:</sp=
+an></u><b><span lang=3DEN-IN style=3D'font-size:12.0pt;color:black'>&nbsp=
+;</span></b><b><span lang=3DEN-IN style=3D'font-size:12.0pt;color:black;b=
+ackground:white;mso-fareast-language:EN-IN'> </span></b><span lang=3DEN-I=
+N style=3D'font-size:12.0pt;color:black;background:white'>IT Decision Mak=
+ers, C-level, Managers and other job titles as per your requirement. </sp=
+an></p><p class=3DMsoNormal><span lang=3DEN-IN style=3D'font-size:12.0pt;=
+color:black;background:white'>&nbsp;</span></p><p class=3DMsoNoSpacing><s=
+pan lang=3DEN-IN style=3D'font-size:12.0pt;color:black;background:white;m=
+so-fareast-language:EN-IN'>Kindly let me know the <b>Job Titles &amp; Geo=
+graphy</b> that you wish to target, so that I can get back with the <u>sa=
+mples, counts </u>and more details for your review. </span></p><p class=3D=
+MsoNormal><span lang=3DEN-IN style=3D'font-size:12.0pt;color:black;backgr=
+ound:white'>&nbsp;</span></p><p class=3DMsoNormal><span lang=3DEN-IN styl=
+e=3D'font-size:12.0pt;color:black;background:white'>We cater other Indust=
+ry contacts such as: <b>Manufacturing,&nbsp;</b></span><b><span style=3D'=
+font-size:12.0pt;color:black;background:white'>Construction</span></b><b>=
+<span lang=3DEN-IN style=3D'font-size:12.0pt;color:black;background:white=
+'>,&nbsp;</span></b><b><span style=3D'font-size:12.0pt;color:black;backgr=
+ound:white'>Education</span></b><b><span lang=3DEN-IN style=3D'font-size:=
+12.0pt;color:black;background:white'>,&nbsp;</span></b><b><span style=3D'=
+font-size:12.0pt;color:black;background:white'>Retail</span></b><b><span =
+lang=3DEN-IN style=3D'font-size:12.0pt;color:black;background:white'>,&nb=
+sp;</span></b><b><span style=3D'font-size:12.0pt;color:black;background:w=
+hite'>Healthcare, Energy, Utilities &amp; Waste Treatment, Transportation=
+, </span></b><b><span lang=3DEN-IN style=3D'font-size:12.0pt;color:black;=
+background:white'>etc. </span></b></p><p class=3DMsoNormal><span lang=3DE=
+N-IN style=3D'font-size:12.0pt;color:black;background:white'>&nbsp;</span=
+></p><p class=3DMsoNormal style=3D'background:white'><span style=3D'font-=
+size:12.0pt'>Looking forward to your response.</span></p><p class=3DMsoNo=
+rmal><span lang=3DEN-IN style=3D'font-size:12.0pt;mso-fareast-language:EN=
+-IN'>&nbsp;</span></p><p class=3Dxmsonormal><b><i><span lang=3DEN-IN styl=
+e=3D'font-size:12.0pt;color:black'>Regards,<o:p></o:p></span></i></b></p>=
+<p class=3Dxmsonormal><b><i><span style=3D'font-size:12.0pt;color:black'>=
+Kelsey Cooper </span></i></b><b><i><span lang=3DEN-IN style=3D'font-size:=
+12.0pt;color:black'>- Marketing Executive<o:p></o:p></span></i></b></p><p=
+ class=3Dxmsonormal><b><i><span lang=3DEN-IN style=3D'color:black'>&nbsp;=
+</span></i></b><span style=3D'font-family:"Times New Roman",serif'><o:p><=
+/o:p></span></p><p class=3Dxmsonormal><b><span lang=3DEN-IN style=3D'colo=
+r:#BFBFBF'>Stay safe.</span></b><span lang=3DEN-AU><o:p></o:p></span></p>=
+<p class=3Dxmsonormal><span lang=3DEN-IN style=3D'font-size:8.0pt;color:#=
+D9D9D9'>Reply back &#8220;Pass&#8221; for no further emails.<o:p></o:p></=
+span></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p></div></body></html>
+--=_jq3a-IG5Od7hv5QZVfcVM1x+hAiWnINx1cU0DqrzOTEQuHgp--
+
+
+--===============1835471176870969044==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0734023856136502542==
+--===============1835471176870969044==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -206,4 +396,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0734023856136502542==--
+--===============1835471176870969044==--
+
