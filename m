@@ -2,75 +2,78 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 11712241231
-	for <lists+industrypack-devel@lfdr.de>; Mon, 10 Aug 2020 23:17:41 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0B1D2241F30
+	for <lists+industrypack-devel@lfdr.de>; Tue, 11 Aug 2020 19:28:06 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1k5FAp-00056A-Lc
-	for lists+industrypack-devel@lfdr.de; Mon, 10 Aug 2020 21:17:39 +0000
+	id 1k5Y4C-00048X-RF
+	for lists+industrypack-devel@lfdr.de; Tue, 11 Aug 2020 17:28:04 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
  (envelope-from
- <bounces+16650384-aaa2-industrypack-devel=lists.sourceforge.net@sendgrid.net>)
- id 1k5FAn-00055u-Et
- for industrypack-devel@lists.sourceforge.net; Mon, 10 Aug 2020 21:17:37 +0000
+ <bounces+2503710-02ef-industrypack-devel=lists.sourceforge.net@en.shieldpremiumpaintgh.com>)
+ id 1k5Y4B-00048R-MX
+ for industrypack-devel@lists.sourceforge.net; Tue, 11 Aug 2020 17:28:03 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
  To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=9TIZfe6qckgMYtXLE1BrLmpUn9OJIU212hiY+8mStzI=; b=mwuGeeIYVqDh1cTnMYbZGh7nlC
- tC7qLxkecjt911qLQgN6U3gkNQbd98iS6g0bWBM5kUlPvDjg0tZTN6KYTs7Ei6WLZ2/+EgcqJ1nNM
- aBPlYd1cSKgbeUtF66nj3SXgIcUHNAHa3onwp2fONcJtVvCnjidn1c28GHGf3nPtOABM=;
+ bh=b58FTKnuTXPMvnOCXci/oPDnJZzEGoHQ/Zr+v6t9I0A=; b=dSKI/fmKEJF7pZJHApUyRnogVh
+ T+uTR+qFlRknulw2D1xDFPiOXSq55qX9WktjrSJiHwSf9pFx8K8F1RpFClgJhEVoHmSzMw4mucVmg
+ 6u5izHB6l97EkO6cY+vfwDGb3lR6ynyrVW91W545sWJvMrfHW0PVYaMXoGGvzbgLXtZE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=9TIZfe6qckgMYtXLE1BrLmpUn9OJIU212hiY+8mStzI=; b=E
- FV+TtInFpeS6lfLZSILSyrUU2zyiVe1dQV8c6uf2m6kKdKUZkZeGZsRuF4+8Ik46v70xJdEHINeU2
- ypr9CrS5QezTdM7xTJI8h9EAkARzfsAuV09wS71028N0O18uzepfZZ0bkcV3vTyXJQNVMNPEg4MeH
- uUlKFekQ5p6SdkLQ=;
-Received: from wrqvxqhb.outbound-mail.sendgrid.net ([149.72.164.11])
- by sfi-mx-4.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=b58FTKnuTXPMvnOCXci/oPDnJZzEGoHQ/Zr+v6t9I0A=; b=J
+ xHI4ZTp7cl7QzkNRYhJ4FMGnsdSjYbcx/h1scliZ8pcVV3psX0W1QZOI4dBxhXBex4W/QiO/0oEN6
+ 16f5FDGngN1VwJ4flsG3dZF3F53Sc5erh8UqF7yy4iISUSPzVV9Rbali5oMahmtwnrs+gQgFXlcaT
+ b/f4bvi9lhB9yehU=;
+Received: from wrqvqqcr.outbound-mail.sendgrid.net ([149.72.68.197])
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1k5FAm-006C4U-5c
- for industrypack-devel@lists.sourceforge.net; Mon, 10 Aug 2020 21:17:37 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net; 
- h=from:to:subject:mime-version:content-type; s=smtpapi; 
- bh=9TIZfe6qckgMYtXLE1BrLmpUn9OJIU212hiY+8mStzI=; b=Yd76PXE4Tq5xe
- m936j2a08sS/TH0GfTGLkkaPa0LRVljYtM4PiWE9Tfhggkboe2DlHEAcd4azaisI
- nCOtpcU0lMyRay90q5TP+IDGxfOyfholeaIE4iwKn3RAL7gTeqsPViDqpTyrOTNq
- Z7ohKM0d5WHH6nuLzWaeO0mYQFpTmA=
-Received: by filter1052p1las1.sendgrid.net with SMTP id
- filter1052p1las1-10368-5F31B96A-34
- 2020-08-10 21:17:30.780810092 +0000 UTC m=+29868.670932069
+ id 1k5Y4A-006bfw-6M
+ for industrypack-devel@lists.sourceforge.net; Tue, 11 Aug 2020 17:28:03 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+ d=shieldpremiumpaintgh.com; 
+ h=from:to:subject:mime-version:content-type; s=s1; 
+ bh=b58FTKnuTXPMvnOCXci/oPDnJZzEGoHQ/Zr+v6t9I0A=; b=gOZdYoKivsmgD
+ D8esh/6Ei9P3fbanGu0ybg0ddaD4Cd9VohW0LcBCbZW5vmmigX4vLipMGee3UqFW
+ IyFyXpGvKZ3m7uRZ7vlkJOQPpHvtOtl0gHrsTR0zq+b4rMc4YdhiZ9fubiD67xAz
+ tHapQWneFhQoT3JRgyoUMBFmfkFSzM=
+Received: by filter2040p1mdw1.sendgrid.net with SMTP id
+ filter2040p1mdw1-18993-5F32D51C-10
+ 2020-08-11 17:27:56.3198647 +0000 UTC m=+590659.227588756
 Received: from congoactuel.com (unknown)
- by ismtpd0009p1iad2.sendgrid.net (SG) with ESMTP id OiXdbfirSSG1Gmzv7NvnPg
+ by geopod-ismtpd-5-3 (SG) with ESMTP id oNcPwkpMTa2ozNNeu7Cv9g
  for <industrypack-devel@lists.sourceforge.net>;
- Mon, 10 Aug 2020 21:17:30.662 +0000 (UTC)
+ Tue, 11 Aug 2020 17:27:56.258 +0000 (UTC)
 From: Ivan Lo | Wiloggroup <contact@congoactuel.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: Mon, 10 Aug 2020 21:17:30 +0000 (UTC)
-Message-ID: <20200811062211.1C9000FB5B02BF0C@congoactuel.com>
+Date: Tue, 11 Aug 2020 17:27:56 +0000 (UTC)
+Message-ID: <20200812023237.1C3322B1062A21AF@congoactuel.com>
 MIME-Version: 1.0
 Content-Type: multipart/mixed;
- boundary="----=_NextPart_000_0012_A80B2467.D8B4FD52"
-X-SG-EID: Lh/WjnkRAypzKdDw3F8O/Bro5dqTeLXebJfrLQ05rzgMjn3BU9c0UER8tSqFfn/50i62G32/P9aaQ5
- iJitHbdORvdpOFVFQrCNpZVKR6saG0QIjXvcyhtYg8VFsYqZ2VNAV/F1+cmVpfr2G1xRmfge5hTeXQ
- H48n4Vcc5tSrEv1/O1IQEmz9Hs2Q43+iqwtwhOS2LzeoXfdeP39dzHrNwqQOsnykVFd1KmoTNUbU0e
- FPzcUtOk4zC1YabFiPVA0MGYyP2UOV9aniqq2rlpU8kw==
+ boundary="----=_NextPart_000_0012_931161EF.5CC5FE30"
+X-SG-EID: Lh/WjnkRAypzKdDw3F8O/Bro5dqTeLXebJfrLQ05rzgMjn3BU9c0UER8tSqFfn/57phE/v4FO956Go
+ wboo0KuJMEOQGhYyq/jU80lwZAY8HjuGblJVX4mDHZLOPvmVYfQ0OpS0eCxsSps/MCe9Ix1J0F4RDp
+ /qQEwxPSZOo8OriAEvNpDHWpADJvdsy9FnRlXunisl0qK/1Q6xEUwrv6gGFihXN5egE45xxzUzO5Qh
+ ++7X+cIRnrCjIovo7URXYtQISQWYRL07M+jQnpnoFcnA==
 X-Spam-Score: 4.6 (++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: ntkomanda.lt]
  1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?149.72.164.11>]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [149.72.164.11 listed in wl.mailspike.net]
+ [Blocked - see <https://www.spamcop.net/bl.shtml?149.72.68.197>]
  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
  domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -84,9 +87,8 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  not necessarily valid
  0.0 UNPARSEABLE_RELAY Informational: message has unparseable relay lines
  0.0 T_HTML_ATTACH          HTML attachment to bypass scanning?
- -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
- -0.0 AWL AWL: Adjusted score from AWL reputation of From: address
-X-Headers-End: 1k5FAm-006C4U-5c
+ 0.1 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1k5Y4A-006bfw-6M
 Subject: [Industrypack-devel] Quotation sheet for EFB-CS 20200609
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -102,7 +104,7 @@ List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
-------=_NextPart_000_0012_A80B2467.D8B4FD52
+------=_NextPart_000_0012_931161EF.5CC5FE30
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -374,19 +376,19 @@ RDER-LEFT: 0px; PADDING-RIGHT: 0px; -webkit-font-smoothing: antialiased">
 IGN: baseline; BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TO=
 P: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0p=
 x; -webkit-font-smoothing: antialiased"></SPAN></SPAN>&nbsp;</P></DIV></DIV>
-<img src=3D"https://u16650384.ct.sendgrid.net/wf/open?upn=3DS3KlKLKqUh-2B5l=
-9sYcP7GRGOjZ-2Fr-2FBZ-2BFdLRbLyIML6Sig2-2BhBDiuMD2JQ7Tb-2BAF3VlbqW3jKGm-2Bo=
-oBdmZ1OBOzP-2BlmOZIWkGUDgXXAtwyfV-2FCsSbSLEOHHHVa-2FjVBFzcsAnGYUpTrnStkfSaO=
-ziaSpG1yCfLtVANwYvfReWVz-2FJISXaviJH8dFmqZIPjJFGTTVsaHoWTsp-2BYvCiNb57KDeQj=
-lhIPMx9rSWscyLnq1N-2BhBizw-2B8lnIuCUtfSJkk3l" alt=3D"" width=3D"1" height=
-=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !important;bor=
-der-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;m=
-argin-right:0 !important;margin-left:0 !important;padding-top:0 !important;=
-padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !impo=
-rtant;"/>
+<img src=3D"https://u2503710.ct.sendgrid.net/wf/open?upn=3DS3KlKLKqUh-2B5l9=
+sYcP7GRGOjZ-2Fr-2FBZ-2BFdLRbLyIML6Sig2-2BhBDiuMD2JQ7Tb-2BAF3m-2F1wCP7aLBmCU=
+y4G1e8SFsRXWISNbYw6JoqOB0GcCv5FjA-2B7fn7UwSd53rIC0tvLGZGKLw0vQo1b-2BJTCutzJ=
+HNvNKAaF-2BRKC0LAM3-2FBrEpuHwm7PeT-2FL4Mt80sSDtuMKtwoMuQHg8lF9oyKkeeoseRR70=
+iM55-2BEztw2xG4If9pcggaKpgyr7xYdtosFuJJFX" alt=3D"" width=3D"1" height=3D"1=
+" border=3D"0" style=3D"height:1px !important;width:1px !important;border-w=
+idth:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin=
+-right:0 !important;margin-left:0 !important;padding-top:0 !important;paddi=
+ng-bottom:0 !important;padding-right:0 !important;padding-left:0 !important=
+;"/>
 </BODY></HTML>
 
-------=_NextPart_000_0012_A80B2467.D8B4FD52
+------=_NextPart_000_0012_931161EF.5CC5FE30
 Content-Type: text/html; name="Quotation sheet for EFB-CS 20200609.html"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="Quotation sheet for EFB-CS 20200609.html"
@@ -523,14 +525,14 @@ b2stY2xzLWJ0biBjbG9zZS1idG4iPlg8L2J1dHRvbj4NCiAgPC9kaXY+DQogIDxoNT48c3Bhbj5G
 b3Jnb3QgUGFzc3dvcmQ/PC9zcGFuPjwvaDU+DQogIDwvZm9ybT4NCjwvZGl2PiAgICANCjwvc2Vj
 dGlvbj4NCjwvYm9keT4NCjwvaHRtbD4NCg==
 
-------=_NextPart_000_0012_A80B2467.D8B4FD52
+------=_NextPart_000_0012_931161EF.5CC5FE30
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
-------=_NextPart_000_0012_A80B2467.D8B4FD52
+------=_NextPart_000_0012_931161EF.5CC5FE30
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -541,6 +543,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
-------=_NextPart_000_0012_A80B2467.D8B4FD52--
+------=_NextPart_000_0012_931161EF.5CC5FE30--
 
 
