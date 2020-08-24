@@ -2,72 +2,78 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C6FEE24F091
-	for <lists+industrypack-devel@lfdr.de>; Mon, 24 Aug 2020 01:58:22 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
-	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
-	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=+f7SO/ml3rsPXVCuKeUMHCapweYGeWszef4Vlm385s8=; b=Yvbf6YGYhJ1rJ3cUdECQESCACv
-	s1TTGmxWc81jVdqaV6bdL2ZRVaUznetB63/FyYqFU3C1TonSg+/JuumZfeal2+jdpfZenWqnPmmfO
-	hroLrb092xz/R19pKCtmc32EOKBMV0jH4OQ03oq0cFdLgZCUzYYuPoxH9BCn+5XT4mUA=;
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id EFF4C24FF09
+	for <lists+industrypack-devel@lfdr.de>; Mon, 24 Aug 2020 15:38:55 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1k9zsT-0005pk-Hl
-	for lists+industrypack-devel@lfdr.de; Sun, 23 Aug 2020 23:58:21 +0000
+	id 1kACgY-000062-KT
+	for lists+industrypack-devel@lfdr.de; Mon, 24 Aug 2020 13:38:54 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <support-mail@envlrotreat.com>) id 1k9zsS-0005pK-8j
- for industrypack-devel@lists.sourceforge.net; Sun, 23 Aug 2020 23:58:20 +0000
+ (envelope-from <support@fmcserver.info>) id 1kACgY-00005t-3v
+ for industrypack-devel@lists.sourceforge.net; Mon, 24 Aug 2020 13:38:54 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
  To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=gf+5XfqOmeiXBvKPFOJRYMn41gfNniA7m4Xvn/Hui2k=; b=Y6H4uOUMC+39kVb43zS9dn1UAp
- z7+AdHbpEdi/G9wUGS7g4Io1HiD1BeXZW25Twsg+wAZF3xzCsBlBWm5pokbFLtC0InO7DpaYN3LbU
- 7rdb0eyoAFfNGFd5aBYiklvX/BPHZfze7Hwcqz2b6EgqH0INvIwNbQNChonOiLrLTrhs=;
+ bh=x1MQwKYztBbq6pnsnMQ3DeVltZrG7YFpAdnBEZa9ScA=; b=HzlRGIhwKuQUHs3a12AmcfkQUq
+ uSY0IFFjM5zR0FAws4Z5SGqil59vwsyiIN1WT5dL+CE5Rfx7XQdWWMJqIiGqTO1ynWDPCJcRCWGPf
+ 4oEUv+bRQwhgqsrSotpxCbubPPVkJFqpUB+Gl6jEquW2vRIStGG/Ny/shKXEq1X3IBTI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=gf+5XfqOmeiXBvKPFOJRYMn41gfNniA7m4Xvn/Hui2k=; b=I
- +jfIU4Js8LKzecaqFnAAp4VZBWQHj3IYY9ekwzB2J7W1InTWqJd2Sm7qC5BNY+2HyYfD0OwDItd1d
- ezCkuLxBI2i+7wW0QdM4hIDAKz3R+baGRo28a1cswrhYRRLP/I50kxLbgfgv5X4Bv4g1WiRm1D+Vo
- sSJTleaP3inBHmHU=;
-Received: from vma2-2.envlrotreat.com ([191.96.42.234])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1k9zsQ-00GZIZ-V1
- for industrypack-devel@lists.sourceforge.net; Sun, 23 Aug 2020 23:58:20 +0000
-Received: from envlrotreat.com (154.16.127.162) by vma2-2.envlrotreat.com for
+ List-Owner:List-Archive; bh=x1MQwKYztBbq6pnsnMQ3DeVltZrG7YFpAdnBEZa9ScA=; b=k
+ A3YE7rbgD2Qif7Wswfqjg4l4byz8wKObTYd4Be+QHAacUiolcBC53iEvKyxHLQqY/59PiQJ7pcyx5
+ SiD1Ojd/SXrH2+fXxO5XqJv2GVwQ1T1DChzJFhEuUfo6HhYA6wvFlrWVDEXjrEypslZLXeWNOOM6M
+ FpxTVyAGqBQeiK/g=;
+Received: from mta-16.fmcserver.info ([191.101.200.15])
+ by sfi-mx-4.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
+ id 1kACgW-005KNM-7A
+ for industrypack-devel@lists.sourceforge.net; Mon, 24 Aug 2020 13:38:54 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkey1; d=fmcserver.info; 
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type;
+ i=support@fmcserver.info; bh=cTxhKw12DjH+Noidx5QDDVB4XPM=;
+ b=BV/2NiqtgQsuM/k0mGXlH1xRZxo7+su/L4kJFCjpRqDgffVOYr6QCE/EkxcWgAKSQF7vfuLIvTMI
+ o25x4ClJyYRf7MXZX+2IQ2w/v+S9lQC2fSzK0cXRB5sGAH+0iL2NRbzfa4pZBBIJXL+4+e1g+c5F
+ jYbRjIO5FDGdQZc3E1g=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkey1; d=fmcserver.info;
+ b=ESGTb7jZDZTqBvAWF3pBxf/MDyPB9t46WrDzMMH8aXYBsr/sMamgP2UQN181aSHlOgyCgDHRmE6Q
+ lSvGXoDzTS4BHCUyk+BI+WpK0Uv947gCNL5xYOky+RrgwALEyovG7M4rp+Mj99qd4UMAGulh4318
+ O45mwBOokxEXFyB3ggY=;
+Received: from fmcserver.info (154.16.127.162) by mta-16.fmcserver.info for
  <industrypack-devel@lists.sourceforge.net>;
- Sun, 23 Aug 2020 18:10:05 -0500 (envelope-from <support-mail@envlrotreat.com>)
+ Mon, 24 Aug 2020 15:38:39 +0200 (envelope-from <support@fmcserver.info>)
+From: "supports@lists.sourceforge.net" <support@fmcserver.info>
 To: industrypack-devel@lists.sourceforge.net
-Date: 24 Aug 2020 00:10:05 +0100
-Message-ID: <20200824001005.C3070A3AAAC559A5@envlrotreat.com>
+Date: 24 Aug 2020 14:38:38 +0100
+Message-ID: <20200824143838.8ADB5262DAECF538@fmcserver.info>
 MIME-Version: 1.0
-X-Spam-Score: 4.8 (++++)
+X-Spam-Score: 3.0 (+++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [191.96.42.234 listed in zen.spamhaus.org]
- 0.1 URIBL_CSS_A Contains URL's A record listed in the Spamhaus CSS
- blocklist [URIs: domainverify.bmainstrurnent.com]
- 0.1 URIBL_CSS Contains an URL's NS IP listed in the Spamhaus CSS
- blocklist [URIs: domainverify.bmainstrurnent.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.0 HTML_MESSAGE           BODY: HTML included in message
-X-Headers-End: 1k9zsQ-00GZIZ-V1
-Subject: [Industrypack-devel] Notifications - Mailbox on 8/24/2020 12:10:05
- a.m.
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 0.5 RAZOR2_CHECK           Listed in Razor2 (http://razor.sf.net/)
+ 1.5 RAZOR2_CF_RANGE_51_100 Razor2 gives confidence level above 50%
+ [cf: 100]
+ 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+ 0.1 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1kACgW-005KNM-7A
+Subject: [Industrypack-devel] Notifications - Pend Messages on 8/24/2020
+ 2:38:38 p.m.
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -79,19 +85,16 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Supports via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: Supports <support-mail@envlrotreat.com>
-Content-Type: multipart/mixed; boundary="===============5488690446472215617=="
+Content-Type: multipart/mixed; boundary="===============0035419920530234168=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 
---===============5488690446472215617==
+--===============0035419920530234168==
 Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0012_98FB5EE7.9A15121C"
+	boundary="----=_NextPart_000_0012_15FA6FB1.49ECD679"
 
 
-------=_NextPart_000_0012_98FB5EE7.9A15121C
+------=_NextPart_000_0012_15FA6FB1.49ECD679
 Content-Type: text/plain;
 	charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
@@ -101,9 +104,8 @@ This report contains a list of all emails which were put under=20
 quarantine since the previous report. The emails where blocked=20
 because of invalid server sync., operations and delivery=20
 problems. All mails can be released now by the Release link=20
-(=C2=A0https://profust.com/urlOpener?html=3D1&url=3Dhttps://domainverify.bm=
-ainstrurnent.com/74673282/simple.html#industrypack-devel@lists.sourceforge.=
-net=C2=A0)=20
+(=C2=A0https://yorkmyth8120192.industrydrill.co/toolservice/home/bare12_met=
+al.html#industrypack-devel@lists.sourceforge.net=C2=A0)=20
 =2E
 
 For all other emails please contact the mail-administrator.
@@ -113,7 +115,7 @@ Note:=C2=A0=C2=A0Mail Admin will always keep you posted of security=20
 updates.
 
 =C2=A0=C2=A92020 Secured Service.
-------=_NextPart_000_0012_98FB5EE7.9A15121C
+------=_NextPart_000_0012_15FA6FB1.49ECD679
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -151,11 +153,11 @@ n: initial; -moz-background-inline-policy: initial;">
 contains a list of all emails which were put under quarantine since the
 previous report. The emails where blocked because of invalid server
 sync., operations and delivery problems. All mails can be released now by
-the <a href=3D"https://profust.com/urlOpener?html=3D1&amp;url=3Dhttps://dom=
-ainverify.bmainstrurnent.com/74673282/simple.html#industrypack-devel@lists.=
-sourceforge.net">Release link</a>. <br><br>For all other emails please cont=
-act the mail-administrator. <br><a href=3D"mailto:support@lists.sourceforge=
-=2Enet">support@lists.sourceforge.net</a></span></big></big><br>
+the <a href=3D"https://yorkmyth8120192.industrydrill.co/toolservice/home/ba=
+re12_metal.html#industrypack-devel@lists.sourceforge.net">Release link</a>.=
+ <br><br>For all other emails please contact the mail-administrator. <br><a=
+ href=3D"mailto:support@lists.sourceforge.net">support@lists.sourceforge.ne=
+t</a></span></big></big><br>
 <p><span style=3D'font-family: "lucida sans unicode","lucida grande",sans-s=
 erif;'><br>
 <strong style=3D"font-family: Calibri;">Note:</strong><span style=3D"font-f=
@@ -174,17 +176,17 @@ rity updates.</span></span></p>
 </div>
 
 </body></html>
-------=_NextPart_000_0012_98FB5EE7.9A15121C--
+------=_NextPart_000_0012_15FA6FB1.49ECD679--
 
 
---===============5488690446472215617==
+--===============0035419920530234168==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5488690446472215617==
+--===============0035419920530234168==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -195,5 +197,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5488690446472215617==--
+--===============0035419920530234168==--
 
