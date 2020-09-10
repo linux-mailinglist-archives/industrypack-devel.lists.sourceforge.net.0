@@ -2,62 +2,88 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6E9B52634D5
-	for <lists+industrypack-devel@lfdr.de>; Wed,  9 Sep 2020 19:42:51 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3819C263C06
+	for <lists+industrypack-devel@lfdr.de>; Thu, 10 Sep 2020 06:30:51 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kG47O-00089b-8b
-	for lists+industrypack-devel@lfdr.de; Wed, 09 Sep 2020 17:42:50 +0000
+	id 1kGEEU-0007A0-0A
+	for lists+industrypack-devel@lfdr.de; Thu, 10 Sep 2020 04:30:50 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <soonyoung@nate.com>)
- id 1kG47A-000883-0l; Wed, 09 Sep 2020 17:42:36 +0000
+ (envelope-from <bounce-248-6582716-248-248@yaqe.net>)
+ id 1kGEER-00079r-Gg
+ for industrypack-devel@lists.sourceforge.net; Thu, 10 Sep 2020 04:30:47 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Subject:To:Reply-To:
- From:Message-ID:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=2jHbnZei8HhvI997o2LVdid4OKrwyS8iGhMt1eUIofI=; b=GnbMQ3P07xh7WaEyk8bo1fwCOj
- Laf0dgvVAT7bt9i6vO+XM8WJr0sAFu89MC8JTfAYHJ12fcubtix3aGRJ0HggkykAX6Z9BYkdAETgL
- SkGVY/potSbBKFy0gh+gewPsUJXR32plE6Ph/ymSFyDLBzVcK92MyP9j1p5UurqLLils=;
+ d=sourceforge.net; s=x; h=Subject:Content-Type:Content-Transfer-Encoding:
+ MIME-Version:List-Unsubscribe:Message-ID:Reply-to:From:To:Date:Sender:Cc:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=NwzMoFXKOiukHv+9P324hOs/1WUSRkK1Tegj8iSS4r8=; b=SsGblg0kqmo3xboPYboavxLdRz
+ /uU1IssL7aA7eeseSTVOE/OsxLan2OQo8gjqBWKVeMFzpp9gA5C8ZD4j/B6I1Em3K521tqtbaoBFn
+ 0iiGDPtUUncNuyItdQ31fdNfyVrwMTqVemyG7kbM+tU4QHuET5dqDLLxqWqqN5pYZCBM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Date:Subject:To:Reply-To:From:Message-ID:Sender
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=2jHbnZei8HhvI997o2LVdid4OKrwyS8iGhMt1eUIofI=; b=c
- R8G4bcMEK3KIpZ99c8BXxN7dNpAt17Q7i3Z4FNFkmTq21nFBMcPiacXrNud6fCFqPKJxygwdT6I7R
- mg3rU+OCsk1+/wvTICZ95q9725Si9xU0l505cPTZyfEoH4hbRO+/86MASXUdjf9h7I/lzrEWGHAwY
- b43DMWCQ3ZurNsLw=;
-Received: from [61.163.29.158] (helo=216.105.38.6)
- by sfi-mx-1.v28.lw.sourceforge.com with smtp (Exim 4.92.2)
- id 1kG46n-000s3w-8d; Wed, 09 Sep 2020 17:42:35 +0000
-Received: from [178.99.224.26] by 216.105.38.6 id 46H2007NX131;
- Wed, 09 Sep 2020 20:37:13 +0300
-Message-ID: <h$i1f99g$g2541f$yl@6fo.yd50.wxd>
-From: "±è¼ø¿µ" <soonyoung@nate.com>
-To: industrypack-devel@lists.sourceforge.net
-Subject: Ãß¼®¼±¹°¼¼Æ®°¡ ÃÖ´ë 70%ÇÒÀÎ?!
-Date: Wed, 09 Sep 2020 20:37:13 +0300
-X-Mailer: Microsoft Outlook IMO, Build 9.0.2416 (9.0.2910.0)
+ h=Subject:Content-Type:Content-Transfer-Encoding:MIME-Version:
+ List-Unsubscribe:Message-ID:Reply-to:From:To:Date:Sender:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=NwzMoFXKOiukHv+9P324hOs/1WUSRkK1Tegj8iSS4r8=; b=PoCcdtRfMBBRwYUWRKYPPQXum4
+ pIAPBjCAjB761c+RMZDI0wOaXvr3UlrdlNO29NaKkg39M7SnXeGrrhOSnOjX2qzXzjrytKxgc69lK
+ 6ezHw0UZAZFkkUgG9PTjWnAH543NBm4YYQ8BtXuihSyhoxMnzro2+gBA+S11vsXO7hOo=;
+Received: from [143.92.43.77] (helo=yaqe.net)
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
+ id 1kGEED-001R5L-Ko
+ for industrypack-devel@lists.sourceforge.net; Thu, 10 Sep 2020 04:30:47 +0000
+Received: by yaqe.net id hb6lui0e97c9 for
+ <industrypack-devel@lists.sourceforge.net>;
+ Thu, 10 Sep 2020 12:08:59 +0800 (envelope-from
+ <bounce-248-6582716-248-248@yaqe.net>)
+Date: Thu, 10 Sep 2020 12:08:59 +0800
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+From: Simon <505693237@qq.com>
+Message-ID: <552390057cd6439fc0630ac4b80bd05a@143.92.43.77>
+X-Priority: 3
+X-Mailer: Email Sending System
+X-Complaints-To: 505693237@qq.com
+X-MessageID: MXx8fHwzMjI2OHx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDF8fHx8MXx8fHww
+X-Report-Abuse: <http://143.92.43.77/oem/report_abuse.php?mid=MXx8fHwzMjI2OHx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDF8fHx8MXx8fHww>
 MIME-Version: 1.0
-X-Priority: 5
-X-Helo-Check: bad, Forged Our Address (216.105.38.6)
-X-Spam-Score: 2.9 (++)
+X-Spam-Score: 8.3 (++++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.5 VA_HELO_CHECK          Host Used Invalid or Forged HELO/EHLO
  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (soonyoung[at]nate.com)
- 1.2 RCVD_HELO_IP_MISMATCH  Received: HELO and IP do not match, but should
- 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?61.163.29.158>]
- 0.0 TIME_LIMIT_EXCEEDED    Exceeded time limit / deadline
-X-Headers-End: 1kG46n-000s3w-8d
+ (505693237[at]qq.com)
+ 1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
+ https://senderscore.org/blacklistlookup/
+ [143.92.43.77 listed in bl.score.senderscore.com]
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: 143.92.43.77]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+ domains are different
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
+ (505693237[at]qq.com)
+ 0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
+ 0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
+ address
+ 1.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
+ freemail headers are different
+ 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
+ 2.0 SPOOFED_FREEMAIL       No description available.
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1kGEED-001R5L-Ko
+Subject: [SPAM] å¸®ä½ æ‰¾åˆ°å›½å¤–å†³ç­–äººé‚®ç®±
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -69,77 +95,124 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: ±è¼ø¿µ <soonyoung@nate.com>
-Content-Type: multipart/mixed; boundary="===============2630002571280562447=="
+Reply-To: Simon <505693237@qq.com>
+Content-Type: multipart/mixed; boundary="===============2787790399929613543=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-
---===============2630002571280562447==
-Content-Type: multipart/alternative;
-	boundary="..30__C_.30B9F"
-
-
---..30__C_.30B9F
-Content-Type: text/html;
+--===============2787790399929613543==
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-  <head>
-  <meta http-equiv=3D"Content-type" content=3D"text/html; charset=3Deuc-kr=
-">
-      <title></title>
-  </head>
-  <BODY>
-<DIV>=BE=C8=B3=E7=C7=CF=BC=BC=BF=E4 =C4=AB=C6=E4=C8=B8=BF=F8
-=BF=A9=B7=AF=BA=
-=D0</DIV>
-<DIV>&nbsp;</DIV>
-<DIV>=C4=DA=B7=CE=B3=AA=BF=A1 =C0=E5=B8=B6=BF=A1 =C5=C2=C7=B3=BF=A1 =C1=A4=
-=B8=BB =B4=D9=B5=E9 =C8=FB=B5=E5=BC=CC=C1=D2?</DIV>
-<DIV>=B0=F0 =C3=DF=BC=AE=C0=CC =B4=D9=B0=A1=BF=C0=B4=C2=B5=A5 =C1=C1=C0=BA=
- "=C3=DF=BC=AE=BC=B1=B9=B0=BC=BC=C6=AE" =B0=A1 =C0=D6=BE=EE=BC=AD
-=BE=CB=B7=
-=C1=B5=E5=B8=B3=B4=CF=B4=D9.</DIV>
-<DIV>&nbsp;</DIV>
-<DIV>=B8=F0=B5=CE =C0=DF=BE=C6=BD=C3=B4=C2 =C1=A4=B0=FC=C0=E5 =C8=AB=BB=EF=
- =C0=CE=B5=A5=BF=E4!</DIV>
-<DIV>&nbsp;</DIV>
-<DIV>=C3=D6=B4=EB 70%=B3=AA =C7=D2=C0=CE=C0=CC =B5=C8=B4=D9=B0=ED
-=C7=CF=B3=
-=D7=BF=E4 =A4=A7=A4=A7=A4=A7</DIV>
-<DIV>=BF=E4=C1=F2=B0=B0=C0=BA =BA=D2=B0=E6=B1=E2=BF=A1
-=C0=CC=B7=B8=B0=D4=B3=
-=AA....!</DIV>
-<DIV>&nbsp;</DIV>
-<DIV>=BF=E4=C1=F2 =C4=DA=B7=CE=B3=AA=B7=CE =BD=C7=B3=BB=BF=A1=BC=AD=B8=B8 =
-=B0=E8=BD=C3=B4=C2 =BA=CE=B8=F0=B4=D4=B0=FA =BE=C6=C0=CC=B5=E9=B5=B5
-=B8=B9=
-=BE=C6=BC=AD =B8=E9=BF=AA=B7=C2=C0=CC =B3=B7=BE=C6=C1=FA=BC=F6=B5=B5
-=C0=D6=
-=C0=DD=BE=C6=BF=E4</DIV>
-<DIV>=C0=CC=C2=FC=BF=A1 =C7=D2=C0=CE=B5=B5 =B9=DE=B0=ED =B0=C7=B0=AD=B5=B5=
- =C3=AC=B1=E2=B8=E9 =C1=C1=C0=BB=B0=C5 =B0=B0=BE=C6=BF=E4</DIV>
-<DIV>&nbsp;</DIV>
-<DIV>=B1=D7=B7=B3 =B4=D9=B5=E9 =B0=C7=B0=AD=C7=CF=BD=C3=B0=ED =BA=B9=B5=C8=
-=C7=D1=C1=D6 =B5=C7=BC=BC=BF=E4 ^^</DIV>
-<DIV>&nbsp;</DIV>
-<DIV><A href=3D"https://is.gd/LzfKDN">https://is.gd/LzfKDN</A></DIV>
-<DIV>&nbsp;</DIV>
-  </BODY>
+<head>
+<title>Untitled document</title>
+</head>
+<body>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E9=9B=86=E8=8E=B7=E5=AE=A2--=E8=90=A5=E9=94=80--=E7=AE=A1=E7=90=86=E4=
+=BA=8E=E4=B8=80=E4=BD=93=E7=9A=84=E5=A4=96=E8=B4=B8SAAS=E5=B9=B3=E5=8F=B0=
+=E3=80=82</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E4=B8=BB=E8=A6=81=E5=8A=9F=E8=83=BD=EF=BC=9A</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E4=B8=80=E3=80=81=E9=80=9A=E8=BF=871000=E5=A4=9A=E4=B8=AA=E5=BC=95=E6=
+=93=8E=EF=BC=8C=E6=AF=8F=E5=A4=A9=E5=8F=AF=E5=B8=AE=E6=82=A8=E6=8C=96=E6=8E=
+=98=E6=95=B0=E4=B8=87=E5=AE=A2=E6=88=B7=E4=BF=A1=E6=81=AF=E3=80=82</span></=
+div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E4=BA=8C=E3=80=81AI=E6=99=BA=E8=83=BD=E8=AF=86=E5=88=AB=EF=BC=9A=E8=AF=
+=86=E5=88=AB=E9=82=AE=E7=AE=B1=E5=AF=B9=E5=BA=94=E8=BA=AB=E4=BB=BD=E8=81=8C=
+=E4=BD=8D=EF=BC=8C=E5=AE=9A=E4=BD=8D=E5=AE=A2=E6=88=B7=E5=86=B3=E7=AD=96=E4=
+=BA=BA=E3=80=82</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E4=B8=89=E3=80=81=E8=90=A5=E9=94=80=E6=8E=A8=E5=B9=BF: =E8=87=AA=E5=8A=
+=A8=E5=8F=91=E4=BF=A1=EF=BC=8C=E8=AF=A6=E7=BB=86=E5=8F=91=E9=80=81=E6=8A=A5=
+=E5=91=8A=EF=BC=8C=E6=8C=96=E6=8E=98=E5=AE=A2=E6=88=B7=E9=9C=80=E6=B1=82=E3=
+=80=82</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">....</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E5=9C=A8=E7=BA=BF=E4=BD=93=E9=AA=8C=E3=80=81=E8=AE=B2=E8=A7=A3 =EF=BC=
+=9A&nbsp; &nbsp;</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">QQ: 505693237</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E5=BE=AE=E4=BF=A1: J_TopOne</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E6=89=8B=E6=9C=BA=EF=BC=9A18819230171</span></div>
+<div><span style=3D"font-size: 10px;">=E9=9B=86=E8=8E=B7=E5=AE=A2--=E8=90=
+=A5=E9=94=80--=E7=AE=A1=E7=90=86=E4=BA=8E=E4=B8=80=E4=BD=93=E7=9A=84=E5=A4=
+=96=E8=B4=B8SAAS=E5=B9=B3=E5=8F=B0=E3=80=82</span></div>
+<div><span style=3D"font-size: 10px;"><br /></span></div>
+<div><span style=3D"font-size: 10px;">=E4=B8=BB=E8=A6=81=E5=8A=9F=E8=83=BD=
+=EF=BC=9A</span></div>
+<div><span style=3D"font-size: 10px;"><br /></span></div>
+<div><span style=3D"font-size: 10px;">=E4=B8=80=E3=80=81=E9=80=9A=E8=BF=871=
+000=E5=A4=9A=E4=B8=AA=E5=BC=95=E6=93=8E=EF=BC=8C=E6=AF=8F=E5=A4=A9=E5=8F=AF=
+=E5=B8=AE=E6=82=A8=E6=8C=96=E6=8E=98=E6=95=B0=E4=B8=87=E5=AE=A2=E6=88=B7=E4=
+=BF=A1=E6=81=AF=E3=80=82</span></div>
+<div><span style=3D"font-size: 10px;"><br /></span></div>
+<div><span style=3D"font-size: 10px;">=E4=BA=8C=E3=80=81AI=E6=99=BA=E8=83=
+=BD=E8=AF=86=E5=88=AB=EF=BC=9A=E8=AF=86=E5=88=AB=E9=82=AE=E7=AE=B1=E5=AF=B9=
+=E5=BA=94=E8=BA=AB=E4=BB=BD=E8=81=8C=E4=BD=8D=EF=BC=8C=E5=AE=9A=E4=BD=8D=E5=
+=AE=A2=E6=88=B7=E5=86=B3=E7=AD=96=E4=BA=BA=E3=80=82</span></div>
+<div><span style=3D"font-size: 10px;"><br /></span></div>
+<div><span style=3D"font-size: 10px;">=E4=B8=89=E3=80=81=E8=90=A5=E9=94=80=
+=E6=8E=A8=E5=B9=BF: =E8=87=AA=E5=8A=A8=E5=8F=91=E4=BF=A1=EF=BC=8C=E8=AF=A6=
+=E7=BB=86=E5=8F=91=E9=80=81=E6=8A=A5=E5=91=8A=EF=BC=8C=E6=8C=96=E6=8E=98=E5=
+=AE=A2=E6=88=B7=E9=9C=80=E6=B1=82=E3=80=82</span></div>
+<div><span style=3D"font-size: 10px;">....</span></div>
+<div><span style=3D"font-size: 10px;"><br /></span></div>
+<div><span style=3D"font-size: 10px;">=E5=9C=A8=E7=BA=BF=E4=BD=93=E9=AA=8C=
+=E3=80=81=E8=AE=B2=E8=A7=A3 =EF=BC=9A&nbsp; &nbsp;</span></div>
+<div><span style=3D"font-size: 10px;">QQ: 505693237</span></div>
+<div><span style=3D"font-size: 10px;">=E5=BE=AE=E4=BF=A1: J_TopOne</span></=
+div>
+<div><span style=3D"font-size: 10px;">=E6=89=8B=E6=9C=BA=EF=BC=9A1881923017=
+1</span></div>
+
+<img src=3D"http://143.92.43.77/oem/to.php?p=3Drt/rt/rs/po4/rt/rs" width=3D=
+"5" height=3D"2" alt=3D".">
+
+</body>
 </html>
 
---..30__C_.30B9F--
 
-
-
---===============2630002571280562447==
+--===============2787790399929613543==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2630002571280562447==
+--===============2787790399929613543==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -150,6 +223,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2630002571280562447==--
-
-
+--===============2787790399929613543==--
