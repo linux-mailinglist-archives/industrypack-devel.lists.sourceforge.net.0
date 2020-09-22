@@ -2,66 +2,74 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C0E1126CF27
-	for <lists+industrypack-devel@lfdr.de>; Thu, 17 Sep 2020 00:54:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 320C92746CC
+	for <lists+industrypack-devel@lfdr.de>; Tue, 22 Sep 2020 18:39:58 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kIgJi-0001JN-Jr
-	for lists+industrypack-devel@lfdr.de; Wed, 16 Sep 2020 22:54:22 +0000
+	id 1kKlKf-0004qt-09
+	for lists+industrypack-devel@lfdr.de; Tue, 22 Sep 2020 16:39:57 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <uehara@proteng.co.jp>) id 1kIgJh-0001JG-4o
- for industrypack-devel@lists.sourceforge.net; Wed, 16 Sep 2020 22:54:21 +0000
+ (envelope-from <nick@nicknicc.xyz>) id 1kKlKd-0004qh-Lb
+ for industrypack-devel@lists.sourceforge.net; Tue, 22 Sep 2020 16:39:55 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
  From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=wdKJmnZomt/1VZeAPy7qjI/rju8svsHgkmUm+qpz5F8=; b=iOLPwYotscgMgqC+LucIIOwoD6
- PVleagK1mYudPYmL2VDri5gDhhUDh89IcO/A3L5XVpEvrYTBn2OAHecUK9ycD3tAzuqfGTyp1zlwI
- ftQ9C2tKfUJYOOklilZUMMurdhbE2+PP+T17qQwoIWnwYKq+0ozQ7zVUjWBzx6bUkaDY=;
+ bh=tmODvNbaXBKCxIG3ByCnyYl0Wuq641EPgrIk1poyCTE=; b=X0Pxchzbc5MblU/XB7A3QDZwSJ
+ 1Ph5eQlNS/Wmx0PwoVkvRV5pCUra+Arh2PmDFrDLfAz1B4SDu7noImw4i3ap6qPd4QyiWcB8ISaRG
+ 0ibLp+4D8zz4kePmYtYyxRGpYmparZsUlc+zSWIjJ4AUFY2pZmPOJJl+OPpHQasP/yK4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=wdKJmnZomt/1VZeAPy7qjI/rju8svsHgkmUm+qpz5F8=; b=Z
- rQFdaYoUj9wWNdyTEfZ0UpDJF6j7V5QjH3438UCjRftmfWQ/3iaLIJvOy6C2vHGVwW++gqL09RH+u
- B1aB/vHXIKfgja7Y7pO8HyaSzn76MM7liFvWAn3yj1eHAM1r+AG3tuPGNONx8tvu/k9ZDoIH7IMZu
- GH1SRl6Jopal5XkE=;
-Received: from mail.proteng.co.jp ([202.218.119.209] helo=proteng.co.jp)
- by sfi-mx-3.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1kIgJX-00C75K-9Z
- for industrypack-devel@lists.sourceforge.net; Wed, 16 Sep 2020 22:54:21 +0000
-Received: from ecgi.jx.cn (unknown [2.59.154.189])
- by mail.proteng.co.jp (Postfix) with ESMTPA id DD5D220760ABE
- for <industrypack-devel@lists.sourceforge.net>;
- Thu, 17 Sep 2020 07:40:58 +0900 (JST)
-Date: Thu, 17 Sep 2020 06:40:51 +0800
-From: "Jessear" <manager@etopbusiness.com>
+ List-Owner:List-Archive; bh=tmODvNbaXBKCxIG3ByCnyYl0Wuq641EPgrIk1poyCTE=; b=S
+ kAJGBZVe+IUol1S9AE5gABYSpA4v0h5xZ7/mh2BQE0Ckoo9RvNcSTXUL+zb35st1QwJ2jf2VpJ2Sm
+ wc9biKZfJ9trvl1kFaaNM9XYvKKNSSncQ4zagvJHi/c5dD6Xj1MOZy543XrzsFSzBrdi+lsczZu7P
+ CLBYpyAhjqlYdqWM=;
+Received: from [103.45.130.156] (helo=mail.nicknicc.xyz)
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
+ id 1kKlKR-001Vb2-FQ
+ for industrypack-devel@lists.sourceforge.net; Tue, 22 Sep 2020 16:39:55 +0000
+Received: from guangzhou.gd.cn by mail.nicknicc.xyz (MDaemon PRO v10.1.1)
+ with ESMTP id md50000230609.msg
+ for <industrypack-devel@lists.sourceforge.net>; Wed, 23 Sep 2020 00:39:12 +0800
+X-Spam-Processed: mail.nicknicc.xyz, Wed, 23 Sep 2020 00:39:12 +0800
+ (not processed: spam filter heuristic analysis disabled)
+X-MDHeloLookup-Result: hardfail smtp.helo=guangzhou.gd.cn (does not match
+ 61.177.20.76) (mail.nicknicc.xyz)
+X-Authenticated-Sender: nick@nicknicc.xyz
+X-MDRemoteIP: 61.177.20.76
+X-Return-Path: nick@nicknicc.xyz
+X-Envelope-From: nick@nicknicc.xyz
+X-MDaemon-Deliver-To: industrypack-devel@lists.sourceforge.net
+Date: Wed, 23 Sep 2020 00:38:59 +0800
+From: "Jessear" <happyangle2003@163.com>
 To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20200917064057870575@proteng.co.jp>
+Message-ID: <20200923003912403721@nicknicc.xyz>
 X-mailer: Foxmail 6, 13, 102, 15 [cn]
 Mime-Version: 1.0
-X-Spam-Score: 3.8 (+++)
+X-Spam-Score: 5.5 (+++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?2.59.154.189>]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
- domains are different
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+ (happyangle2003[at]163.com)
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
+ (happyangle2003[at]163.com)
  1.3 HTML_IMAGE_ONLY_24     BODY: HTML: images with 2000-2400 bytes of words
  1.0 HTML_MESSAGE           BODY: HTML included in message
-X-Headers-End: 1kIgJX-00C75K-9Z
-Subject: Re: [Industrypack-devel] Fingertip pulse oximeter in stock for
- trail order and quickly shipping time for bulk order/ Etop/Jessear
+ 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
+ 2.0 SPOOFED_FREEMAIL       No description available.
+X-Headers-End: 1kKlKR-001Vb2-FQ
+Subject: Re: [Industrypack-devel] kalg
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -73,24 +81,24 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: manager@etopbusiness.com
-Content-Type: multipart/mixed; boundary="===============6044372282842157389=="
+Reply-To: happyangle2003@163.com
+Content-Type: multipart/mixed; boundary="===============6843159953050386685=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
 
---===============6044372282842157389==
+--===============6843159953050386685==
 Content-Type: multipart/related;
 	type="multipart/alternative";
-	boundary="=====003_Dragon041176153367_====="
+	boundary="=====003_Dragon650805717768_====="
 
 This is a multi-part message in MIME format.
 
---=====003_Dragon041176153367_=====
+--=====003_Dragon650805717768_=====
 Content-Type: multipart/alternative;
-	boundary="=====002_Dragon041176153367_====="
+	boundary="=====002_Dragon650805717768_====="
 
---=====002_Dragon041176153367_=====
+--=====002_Dragon650805717768_=====
 Content-Type: text/plain;
 	charset="utf-8"
 Content-Transfer-Encoding: base64
@@ -112,15 +120,17 @@ YWJsZSB3aXRob3V0IENFKCB1c2UgdGhlIENFIG9mIEFEODA1KQ0KDQotQUQ4MDUgZGlnaXRhbCB0
 dWJlICggTm90IGEgY29sb3Igc2NyZWVu77yJDQotQmFkeSBjb2xvciBibGFjayBhbmQgYmx1ZSBm
 b3Igb3B0aW9uDQotVW5pdCBwcmljZSA6IFVTRDUuOC9wY3MNCi1MZWFkIHRpbWU6IGFmdGVyIHBh
 eW1lbnQgcmVjZWl2aW5nIGdvb2RzIGJlIHNoaXBlZCB3aXRoaW4gMS0zIGRheXMuDQotQ29sb3Ig
-Ym94IGFuZCBsYWJlbCBhbGwgd2l0aCBDRQ0KRG8geW91IHdhbnQgYSBUcmFpbCBvcmRlcj8NClRo
-YW5rcw0KSmVzc2VhciBMdW8NClNhbGVzIE1hbmFnZXINClNIRU5aSEVOIEVUT1AgRUxFQ1RST05J
-QyBCVVNJTkVTUyBDTy4sTFREDQpTa3lwZS93ZWNoYXQ6SmVzc2Vhcl9sdW8NCkZhY3RvcnkgQWRk
-LjogM3JkIEZsb29yLCBCdWlsZGluZyBBLCBYaW5sb25nIFRlY2hub2xvZ3kgUGFyaywgTm8uNTAg
-RmVuZ3RhbmcgQXZlbnVlLCBCYW8nYW4gRGlzdHJpY3QsIFNoZW56aGVuLCBDaGluYS4NClNhbGVz
-IE9mZmljZSBBZGQuOiAxMDE5LCBHYW9zaGVuZyBCdWlsZGluZyAsIE5vLiAxOCBDZW50cmFsIFJv
-YWQsIFNoYWppbmcgQmFvYW4sIFNoZW56aGVuLCBHdWFuZ2RvbmcgLiBDaGluYQ==
+Ym94IGFuZCBsYWJlbCBhbGwgd2l0aCBDRQ0KRG8geW91IHdhbnQgYSBmaW5nZXJ0aXAgcHVsc2Ug
+b3hpbWV0ZXIgb3JkZXI/IEl0IHdpbGwgbWFrZSB5b3UgbW9yZSBoZWF0aHkuDQoNCkplc3NlYXIg
+THVvDQpTYWxlcyBNYW5hZ2VyDQpTSEVOWkhFTiBFVE9QIEVMRUNUUk9OSUMgQlVTSU5FU1MgQ08u
+LExURA0KU2t5cGUvd2VjaGF0Okplc3NlYXJfbHVvDQpNb2IvV2hhdHNhcHA6Kzg2IDE1ODg5NTIw
+MDc1DQpGYWN0b3J5IEFkZC46IDNyZCBGbG9vciwgQnVpbGRpbmcgQSwgWGlubG9uZyBUZWNobm9s
+b2d5IFBhcmssIE5vLjUwIEZlbmd0YW5nIEF2ZW51ZSwgQmFvJ2FuIERpc3RyaWN0LCBTaGVuemhl
+biwgQ2hpbmEuDQpTYWxlcyBPZmZpY2UgQWRkLjogMTAxOSwgR2Fvc2hlbmcgQnVpbGRpbmcgLCBO
+by4gMTggQ2VudHJhbCBSb2FkLCBTaGFqaW5nIEJhb2FuLCBTaGVuemhlbiwgR3Vhbmdkb25nIC4g
+Q2hpbmE=
 
---=====002_Dragon041176153367_=====
+--=====002_Dragon650805717768_=====
 Content-Type: text/html;
 	charset="utf-8"
 Content-Transfer-Encoding: base64
@@ -128,49 +138,49 @@ Content-Transfer-Encoding: base64
 PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
 L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
 Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE2Mzg0Ij48L0hFQUQ+DQo8Qk9EWT4NCjxQPkhpIFNpciw8
-L1A+DQo8UD5JIGFtIEplc3NlYXIgZnJvbSBFdG9wLCBob3BlIGV2ZXJ5dGhpbmcgaXMgZ29pbmcg
-d2VsbCB3aXRoIHlvdS4mbmJzcDsgV2UgYXJlIA0KYSBmaW5nZXJ0aXAgcHVsc2Ugb3hpbWV0ZXIg
-ZmFjdG9yeSwgSSB3b3VsZCBsaWtlIHRvIGludHJ1Y2Ugb3VyIGZvbGxvdyAzIG1vZGVsIA0KZm9y
-IHlvdXIgcmVmZXJlbmNlIGFuZCB3aXNoIHdlIGhhdmUgdGhlIG9wcG9ydHVuaXR5IHRvIGJlIG9u
-ZSBvZiB5b3VyIA0Kc3VwcGxpZXIuPC9QPg0KPFA+PEJSPjxTVFJPTkc+PEZPTlQgY29sb3I9Ymx1
-ZT5JbiBzdG9jayBmb3IgdHJhaWwgb3JkZXIgd2hpY2ggY2FuIGJlIHNlbnQgYXMgDQpzb29uIGFz
-IHBheW1lbnQgcmVjZWl2ZWQ8L0ZPTlQ+PC9TVFJPTkc+PC9QPg0KPFA+PElNRyBib3JkZXI9MCBo
-c3BhY2U9MCBhbHQ9IiIgc3JjPSJjaWQ6MDAwMjdFMTE3NzBEXzAzNDFDQTk2XzBEM0E1MzUzIiAN
-CmFsaWduPWJhc2VsaW5lPjxCUj48Rk9OVCBjb2xvcj1ibHVlPjxGT05UIGNvbG9yPXJlZD4tQUQ4
-MDcgVEZUIGNvbG9yIA0Kc2NyZWVuPEJSPjwvRk9OVD4tQmFkeSBjb2xvcjombmJzcDsgYmxhY2sg
-YW5kIGJsdWUgZm9yIG9wdGlvbjxCUj4tVW5pdCBwcmljZSA6IA0KPEZPTlQgY29sb3I9cmVkPlVT
-RDUvcGNzPC9GT05UPjxCUj4tTGVhZCB0aW1lOiBhZnRlciBwYXltZW50IHJlY2VpdmluZyBnb29k
-cyBiZSANCnNoaXBlZCB3aXRoaW4gMy01IGRheXMuPEJSPi1Db2xvciBib3ggd2l0aCBDRSwgbGFi
-bGUgd2l0aG91dCBDRSggdXNlIHRoZSBDRSBvZiANCkFEODA1KTwvRk9OVD48L1A+DQo8UD48QlI+
-PEZPTlQgY29sb3I9Ymx1ZT48Rk9OVCBjb2xvcj1yZWQ+LUFEODA3IGRpZ2l0YWwgdHViZSAoIE5v
-dCBhIGNvbG9yIA0Kc2NyZWVu77yJPEJSPjwvRk9OVD4tQmFkeSBjb2xvcjogYmxhY2sgYW5kIGJs
-dWUgZm9yIG9wdGlvbjxCUj4tVW5pdCBwcmljZSA6IA0KVVNENC41L3BjczxCUj4tTGVhZCB0aW1l
-OiBhZnRlciBwYXltZW50IHJlY2VpdmluZyBnb29kcyBiZSBzaGlwZWQgd2l0aGluIDEtMyANCmRh
-eXMuPEJSPi1Db2xvciBib3ggd2l0aCBDRSwgbGFibGUgd2l0aG91dCBDRSggdXNlIHRoZSBDRSBv
-ZiBBRDgwNSk8L0ZPTlQ+PC9QPg0KPFA+Jm5ic3A7PC9QPg0KPFA+PEZPTlQgY29sb3I9Ymx1ZT48
-Rk9OVCBjb2xvcj1yZWQ+LUFEODA1IGRpZ2l0YWwgdHViZSAoIE5vdCBhIGNvbG9yIA0Kc2NyZWVu
-77yJPEJSPjwvRk9OVD4tQmFkeSBjb2xvciBibGFjayBhbmQgYmx1ZSBmb3Igb3B0aW9uPEJSPi1V
-bml0IHByaWNlIDogDQpVU0Q1LjgvcGNzPEJSPi1MZWFkIHRpbWU6IGFmdGVyIHBheW1lbnQgcmVj
-ZWl2aW5nIGdvb2RzIGJlIHNoaXBlZCB3aXRoaW4gMS0zIA0KZGF5cy48QlI+LUNvbG9yIGJveCBh
-bmQgbGFiZWwgYWxsIHdpdGggQ0U8L0ZPTlQ+PC9QPg0KPFA+PEZPTlQgY29sb3I9IzAwMDBmZj48
-U1RST05HPkRvIHlvdSB3YW50IGEgVHJhaWwgb3JkZXI/PC9TVFJPTkc+PC9GT05UPjwvUD4NCjxQ
-PjxTVFJPTkc+PEZPTlQgY29sb3I9IzAwMDBmZj5UaGFua3M8L0ZPTlQ+PC9TVFJPTkc+PEJSPkpl
-c3NlYXIgTHVvPEJSPlNhbGVzIA0KTWFuYWdlcjxCUj5TSEVOWkhFTiBFVE9QIEVMRUNUUk9OSUMg
-QlVTSU5FU1MgDQpDTy4sTFREPEJSPlNreXBlL3dlY2hhdDpKZXNzZWFyX2x1bzxCUj5GYWN0b3J5
-IEFkZC46IDNyZCBGbG9vciwgQnVpbGRpbmcgQSwgDQpYaW5sb25nIFRlY2hub2xvZ3kgUGFyaywg
-Tm8uNTAgRmVuZ3RhbmcgQXZlbnVlLCBCYW8nYW4gRGlzdHJpY3QsIFNoZW56aGVuLCANCkNoaW5h
-LjxCUj5TYWxlcyBPZmZpY2UgQWRkLjogMTAxOSwgR2Fvc2hlbmcgQnVpbGRpbmcgLCBOby4gMTgg
-Q2VudHJhbCBSb2FkLCANClNoYWppbmcgQmFvYW4sIFNoZW56aGVuLCBHdWFuZ2RvbmcgLiBDaGlu
-YTwvUD48L0JPRFk+PC9IVE1MPg0K
+bnQ9Ik1TSFRNTCA4LjAwLjYwMDEuMjM3MDciPjwvSEVBRD4NCjxCT0RZPg0KPFA+SGkgU2lyLDwv
+UD4NCjxQPkkgYW0gSmVzc2VhciBmcm9tIEV0b3AsIGhvcGUgZXZlcnl0aGluZyBpcyBnb2luZyB3
+ZWxsIHdpdGggeW91LiZuYnNwOyBXZSBhcmUgDQphIGZpbmdlcnRpcCBwdWxzZSBveGltZXRlciBm
+YWN0b3J5LCBJIHdvdWxkIGxpa2UgdG8gaW50cnVjZSBvdXIgZm9sbG93IDMgbW9kZWwgDQpmb3Ig
+eW91ciByZWZlcmVuY2UgYW5kIHdpc2ggd2UgaGF2ZSB0aGUgb3Bwb3J0dW5pdHkgdG8gYmUgb25l
+IG9mIHlvdXIgDQpzdXBwbGllci48L1A+DQo8UD48QlI+PFNUUk9ORz48Rk9OVCBjb2xvcj1ibHVl
+PkluIHN0b2NrIGZvciB0cmFpbCBvcmRlciB3aGljaCBjYW4gYmUgc2VudCBhcyANCnNvb24gYXMg
+cGF5bWVudCByZWNlaXZlZDwvRk9OVD48L1NUUk9ORz48L1A+DQo8UD48SU1HIGJvcmRlcj0wIGhz
+cGFjZT0wIGFsdD0iIiBhbGlnbj1iYXNlbGluZSANCnNyYz0iY2lkOjAwMDI5RDUyOTY1Ml8wRkVE
+Mzk5M18wQjk1M0IzNCI+PEJSPjxGT05UIGNvbG9yPWJsdWU+PEZPTlQgDQpjb2xvcj1yZWQ+LUFE
+ODA3IFRGVCBjb2xvciBzY3JlZW48QlI+PC9GT05UPi1CYWR5IGNvbG9yOiZuYnNwOyBibGFjayBh
+bmQgYmx1ZSANCmZvciBvcHRpb248QlI+LVVuaXQgcHJpY2UgOiA8Rk9OVCBjb2xvcj1yZWQ+VVNE
+NS9wY3M8L0ZPTlQ+PEJSPi1MZWFkIHRpbWU6IGFmdGVyIA0KcGF5bWVudCByZWNlaXZpbmcgZ29v
+ZHMgYmUgc2hpcGVkIHdpdGhpbiAzLTUgZGF5cy48QlI+LUNvbG9yIGJveCB3aXRoIENFLCBsYWJs
+ZSANCndpdGhvdXQgQ0UoIHVzZSB0aGUgQ0Ugb2YgQUQ4MDUpPC9GT05UPjwvUD4NCjxQPjxCUj48
+Rk9OVCBjb2xvcj1ibHVlPjxGT05UIGNvbG9yPXJlZD4tQUQ4MDcgZGlnaXRhbCB0dWJlICggTm90
+IGEgY29sb3IgDQpzY3JlZW7vvIk8QlI+PC9GT05UPi1CYWR5IGNvbG9yOiBibGFjayBhbmQgYmx1
+ZSBmb3Igb3B0aW9uPEJSPi1Vbml0IHByaWNlIDogDQpVU0Q0LjUvcGNzPEJSPi1MZWFkIHRpbWU6
+IGFmdGVyIHBheW1lbnQgcmVjZWl2aW5nIGdvb2RzIGJlIHNoaXBlZCB3aXRoaW4gMS0zIA0KZGF5
+cy48QlI+LUNvbG9yIGJveCB3aXRoIENFLCBsYWJsZSB3aXRob3V0IENFKCB1c2UgdGhlIENFIG9m
+IEFEODA1KTwvRk9OVD48L1A+DQo8UD4mbmJzcDs8L1A+DQo8UD48Rk9OVCBjb2xvcj1ibHVlPjxG
+T05UIGNvbG9yPXJlZD4tQUQ4MDUgZGlnaXRhbCB0dWJlICggTm90IGEgY29sb3IgDQpzY3JlZW7v
+vIk8QlI+PC9GT05UPi1CYWR5IGNvbG9yIGJsYWNrIGFuZCBibHVlIGZvciBvcHRpb248QlI+LVVu
+aXQgcHJpY2UgOiANClVTRDUuOC9wY3M8QlI+LUxlYWQgdGltZTogYWZ0ZXIgcGF5bWVudCByZWNl
+aXZpbmcgZ29vZHMgYmUgc2hpcGVkIHdpdGhpbiAxLTMgDQpkYXlzLjxCUj4tQ29sb3IgYm94IGFu
+ZCBsYWJlbCBhbGwgd2l0aCBDRTwvRk9OVD48L1A+DQo8UD48U1RST05HPjxGT05UIGNvbG9yPXJl
+ZD5EbyB5b3Ugd2FudCBhIGZpbmdlcnRpcCBwdWxzZSBveGltZXRlciBvcmRlcj8gSXQgd2lsbCAN
+Cm1ha2UgeW91IG1vcmUgaGVhdGh5LjwvRk9OVD48L1NUUk9ORz48L1A+DQo8UD48QlI+SmVzc2Vh
+ciBMdW88QlI+U2FsZXMgTWFuYWdlcjxCUj5TSEVOWkhFTiBFVE9QIEVMRUNUUk9OSUMgQlVTSU5F
+U1MgDQpDTy4sTFREPEJSPlNreXBlL3dlY2hhdDpKZXNzZWFyX2x1bzxCUj5Nb2IvV2hhdHNhcHA6
+Kzg2IDE1ODg5NTIwMDc1PEJSPkZhY3RvcnkgDQpBZGQuOiAzcmQgRmxvb3IsIEJ1aWxkaW5nIEEs
+IFhpbmxvbmcgVGVjaG5vbG9neSBQYXJrLCBOby41MCBGZW5ndGFuZyBBdmVudWUsIA0KQmFvJ2Fu
+IERpc3RyaWN0LCBTaGVuemhlbiwgQ2hpbmEuPEJSPlNhbGVzIE9mZmljZSBBZGQuOiAxMDE5LCBH
+YW9zaGVuZyBCdWlsZGluZyANCiwgTm8uIDE4IENlbnRyYWwgUm9hZCwgU2hhamluZyBCYW9hbiwg
+U2hlbnpoZW4sIEd1YW5nZG9uZyAuIA0KQ2hpbmE8L1A+PC9CT0RZPjwvSFRNTD4NCg==
 
---=====002_Dragon041176153367_=====--
+--=====002_Dragon650805717768_=====--
 
---=====003_Dragon041176153367_=====
+--=====003_Dragon650805717768_=====
 Content-Type: image/jpeg;
 	name="1.jpg"
 Content-Transfer-Encoding: base64
-Content-ID: <00027E11770D_0341CA96_0D3A5353>
+Content-ID: <00029D529652_0FED3993_0B953B34>
 
 /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
 HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
@@ -479,18 +489,19 @@ NS8/1QOngQDfbwflmoV2/wC0uzY2bPwfUOU7s/qKlJqrbCMjvVVQhlNKvwRC7Wpa/wDwRZVoqkjA
 E37w/MqReDR8yuIcjZH+Iye33b8Qw3X2/iWyuw6Hj/4zFn5VRy2PBDeHo2m8Y7bgjVG4GvxFVbb/
 AI//2Q==
 
---=====003_Dragon041176153367_=====--
+--=====003_Dragon650805717768_=====--
 
 
 
---===============6044372282842157389==
+
+--===============6843159953050386685==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6044372282842157389==
+--===============6843159953050386685==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -501,6 +512,7 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6044372282842157389==--
+--===============6843159953050386685==--
+
 
 
