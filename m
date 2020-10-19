@@ -2,81 +2,108 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 681CA292082
-	for <lists+industrypack-devel@lfdr.de>; Mon, 19 Oct 2020 00:48:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9DF16292E3A
+	for <lists+industrypack-devel@lfdr.de>; Mon, 19 Oct 2020 21:13:26 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kUHTy-0007cw-5n
-	for lists+industrypack-devel@lfdr.de; Sun, 18 Oct 2020 22:48:54 +0000
+	id 1kUaaz-0002w8-9B
+	for lists+industrypack-devel@lfdr.de; Mon, 19 Oct 2020 19:13:25 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <postmaster@rastivadoazadokrk.ga>) id 1kUHTw-0007ci-Ri
- for industrypack-devel@lists.sourceforge.net; Sun, 18 Oct 2020 22:48:52 +0000
+ (envelope-from
+ <3ReWNXxAJAEoom30xuzm.5ms30FDsymux.o0y@trix.bounces.google.com>)
+ id 1kUaay-0002vv-6c
+ for industrypack-devel@lists.sourceforge.net; Mon, 19 Oct 2020 19:13:24 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:List-Unsubscribe:MIME-Version:
- Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=S7vaKjhGlKgWab1AU5RQzs/tgA7Mwyl7qGLsiZSxeq0=; b=Xx1qQ+cjzBvjf7tjEVsrMzp0Oy
- OOF1wn8SHZzkoWizG0MjsbTFy9UltJwfu1lzzAviTRzs/+7aSJwjLT8bgrhDjnqE3hOBmgvhZkfl6
- jIZUJjSdI1FS9dCDPRp+omUrC0KUOIaePPDgp+uoVNHVWqLtfZ0P5CQsQBGM0XK/Sglk=;
+ d=sourceforge.net; s=x; h=Content-Type:To:From:Subject:Date:Message-ID:
+ Reply-To:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=AnNatUbccrqwkh+iEzJQPUxOf4rq+XNOGWrblmD/DDk=; b=mp4JKCcr5KjgccYTVYaGtHtkFi
+ mh44UYVq5SSmpFqkksolgChCQC9fN6OQwADXbNOXQECF5UcO9qo2FqFcxtr3GRez/WMGmlCNv7+hB
+ 8rIKcI1Qbn5uFIA0pCK9RF+az/XYjOXwEhS5rYyqDrJubwjYzdTT/jBiQ06Bwm7rchxo=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:List-Unsubscribe:MIME-Version:Message-ID:Date:Subject:To:
- From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=S7vaKjhGlKgWab1AU5RQzs/tgA7Mwyl7qGLsiZSxeq0=; b=Gc1IbkNnubJBF0lU4+YcJGlDMQ
- SM4PiMSg6Hq5wZuU4ltdBJgM8wRGYI1LXXv32jTs3xlQXxuQXlUYkuYBUwh4SFxzOpGYWbf1ha3ab
- zpuB5rYB+538+7iKPRZp6fMxnM90E4hD9YwPNi/2MHOk8YR0ER2P0koLsxnZ/t/NYCSU=;
-Received: from smtp-out6.rastivadoazadokrk.ga ([191.101.200.69])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1kUHTm-0031xY-D7
- for industrypack-devel@lists.sourceforge.net; Sun, 18 Oct 2020 22:48:52 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkey1;
- d=rastivadoazadokrk.ga; 
- h=From:To:Subject:Date:Message-ID:MIME-Version:List-Unsubscribe:Content-Type;
- i=postmaster@rastivadoazadokrk.ga; 
- bh=axoBKorApDtOdDlZ63K47Zk+hBY=;
- b=ZOO+VmSxGVyD82twtnS1zCaJGi0V6t1MntctjofX4YDEuhgp7U1Y1+KMpK+ssYFJAC1VP+C37zxF
- v302vykhtiJGT+Oy6bpuxT9nTLitvNdA+MpvRbE+KixcUwIwYrJHtn1N10amRAcfkDt1w6lkuRuJ
- qE2/2QrZw0YFRuLWGKk=
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkey1;
- d=rastivadoazadokrk.ga; 
- b=TojUZR3tEh2getuZGDj/2Vz7M0a8IiGfWPuiiPibAdTOHdIuPbCIgxOQ/LIFfBvOdboA02Do4O09
- jXGjh08fPRTSXzsItt5ihld42mPlsip+puQbE++J5hd68l81eNjB8Q+b62fUl2EQc/io36Z7tdg4
- VU4aT5Dupg5uaQopnvo=;
-Received: from [104.43.242.93] (104.43.242.93) by
- smtp-out6.rastivadoazadokrk.ga for <industrypack-devel@lists.sourceforge.net>;
- Mon, 19 Oct 2020 00:48:36 +0200 (envelope-from
- <postmaster@rastivadoazadokrk.ga>)
-From: "admin@lists.sourceforge.net" <postmaster@rastivadoazadokrk.ga>
-To: industrypack-devel@lists.sourceforge.net
-Date: 19 Oct 2020 06:48:36 +0800
-Message-ID: <20201019064836.8091584A97836550@rastivadoazadokrk.ga>
+ h=Content-Type:To:From:Subject:Date:Message-ID:Reply-To:MIME-Version:Sender
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=AnNatUbccrqwkh+iEzJQPUxOf4rq+XNOGWrblmD/DDk=; b=T
+ Rvok/jxj/NeDHj7jF8jLqau2DMW/VcA3fLUqe5ZR1bCDPYLDe380FHKfcv6dNNxMIalFn9omlXxc9
+ fi3JZWcAdB7HwAnUTTwJB8WQpGVt6HkykXPZ28qYhoU2NG8vMFtkyJbWqQeNTDrQkcxSdQwRPGHHK
+ hdfM2Lz8rCxdI9QE=;
+Received: from mail-io1-f71.google.com ([209.85.166.71])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.2)
+ id 1kUaap-004AtW-7N
+ for industrypack-devel@lists.sourceforge.net; Mon, 19 Oct 2020 19:13:24 +0000
+Received: by mail-io1-f71.google.com with SMTP id k14so863323ioj.9
+ for <industrypack-devel@lists.sourceforge.net>;
+ Mon, 19 Oct 2020 12:13:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:reply-to:message-id:date:subject:from:to;
+ bh=AnNatUbccrqwkh+iEzJQPUxOf4rq+XNOGWrblmD/DDk=;
+ b=iuwCGRxrjA5OKUIgYg1csLq4djbVCxcnRa8JsPvI02a3mdx8/7lRcEi1WvHQ35VhnQ
+ hfZHeWpaE9X6nx7NYN3KYWNA3a9CSr2SvZjn9UQ2GiwA6zC7E9yBc7nUM0KDm9qGWnMy
+ zZgCHOoPRUjO9Zv+rlceVpHSzk6DBMLDFGGM9KKdvj5+KcFvhABfoisK+/MmeGDbH03O
+ 6i9FOlNptv2yJ9dRizEgzP28KeB8xTfhQEKaYJ1TWEu5+oZxfJKVg4ow4KLM8Hx7ueRs
+ OBuUSPBlb8Bc4BY2qJNZea86OvuNg/1H4sOCvNzXzcSgm0Evgi+fx1f7HJKuD8ExbClR
+ mVbw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:reply-to:message-id:date:subject
+ :from:to;
+ bh=AnNatUbccrqwkh+iEzJQPUxOf4rq+XNOGWrblmD/DDk=;
+ b=KUxt9++IzsRvr4luhGwOwoFridEvcRZMk7e+ajFFNf++vuKxd5/F7mNtQXeIIwVL6r
+ f3mWGYDCFeKBu8wwYltr2t4wOoE+AdvzdxtULl2fGmy84R6ZTiF3YGexs2h6QH2v3jeg
+ gfFgsGKfgI1dzjGT+2SSnmNA8Ne1bnkE5EGeIU3AX9kzHWM4c748OtXyuzkboBDPya9T
+ V8Pjk3xmdUZb6bATfOdEWcjDZoXUeCFQLzrDfMol4rGsmlB9UFcwRbxs0DNKGdeAcdOl
+ rfzL4hWXLqZ1njOzDWl5JdA/z+eyFCMMLqcMRNslo4R8zbpJ5LuWPC3fYJA8DJubS7cG
+ RZSA==
+X-Gm-Message-State: AOAM533KHaK1+PpnYrNMx7TihQMahhIciR+urhtqmxAA/JR/0KCgF4UO
+ C+X/IqjE9WwU2Qtvtz7akvUmz78InMMc05t2ooyw
 MIME-Version: 1.0
-X-Spam-Score: 0.9 (/)
+X-Received: by 2002:a05:6e02:931:: with SMTP id
+ o17mt1248656ilt.273.1603134789249; 
+ Mon, 19 Oct 2020 12:13:09 -0700 (PDT)
+X-No-Auto-Attachment: 1
+Message-ID: <000000000000a3f29f05b20ae7ea@google.com>
+Date: Mon, 19 Oct 2020 19:13:09 +0000
+From: carolina.tagro31@gmail.com
+To: industrypack-devel@lists.sourceforge.net
+X-Spam-Score: 4.5 (++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
- See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: windows.com]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+ trust [209.85.166.71 listed in list.dnswl.org]
+ 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+ (carolina.tagro31[at]gmail.com)
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+ domains are different
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.71 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
+ (carolina.tagro31[at]gmail.com)
  1.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
-X-Headers-End: 1kUHTm-0031xY-D7
-Subject: [Industrypack-devel] New Messages :: 10/19/2020 6:48:36 a.m.
- Notifications
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
+ freemail headers are different
+ 0.0 LOTS_OF_MONEY          Huge... sums of money
+ 1.0 FREEMAIL_REPLYTO       Reply-To/From or Reply-To/body contain different
+ freemails
+ 0.0 T_MONEY_PERCENT        X% of a lot of money for you
+ 1.8 ADVANCE_FEE_5_NEW_MONEY Advance Fee fraud and lots of money
+X-Headers-End: 1kUaap-004AtW-7N
+Subject: [Industrypack-devel] Good Morning From Miss Nidal Aoussa.
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,319 +115,114 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4574011315319678148=="
+Reply-To: carolina.tagro31@gmail.com
+Content-Type: multipart/mixed; boundary="===============3909174083861438616=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
+--===============3909174083861438616==
+Content-Type: multipart/alternative; boundary="000000000000a7dfe205b20ae78d"
 
---===============4574011315319678148==
-Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0012_113E95BA.1B714054"
+--000000000000a7dfe205b20ae78d
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
 
-
-------=_NextPart_000_0012_113E95BA.1B714054
-Content-Type: text/plain;
-	charset="utf-8"
+SmUgdm91cyBhaSBpbnZpdMOpIMOgIHJlbXBsaXIgbGUgZm9ybXVsYWlyZSBzdWl2YW50wqA6DQpG
+b3JtdWxhaXJlIHNhbnMgdGl0cmUNCg0KUG91ciByZW1wbGlyIGNlIGZvcm11bGFpcmUsIGNvbnN1
+bHRlesKgOg0KaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vZm9ybXMvZC9lLzFGQUlwUUxTZTRmUG4w
+aG00N1dySG9RbVlkNnItY3ZvSFl4NUdRZ3J2bXRWaDFYT3VxdkJocXBnL3ZpZXdmb3JtP3ZjPTAm
+YW1wO2M9MCZhbXA7dz0xJmFtcDtmbHI9MCZhbXA7dXNwPW1haWxfZm9ybV9saW5rDQoNCkhlbGxv
+IERlYXIsDQoNCkkgYW0gdmVyeSBzb3JyeSB0aGF0IG15IGxldHRlciBtYXkgY29tZSBhcyBhIHN1
+cnByaXNlIHRvIHlvdSBzaW5jZSB3ZSBoYXZlICANCm5ldmVyIG1ldCBlYWNoIG90aGVyIGJlZm9y
+ZS4gSSBhbSBNaXNzIE5pZGFsIEFvdXNzYS4gSSBhbSB0aGUgb25seSBkYXVnaHRlciAgDQpvZiBD
+aGVpa2ggQWcgQW91c3NhLCB0aGUgUHJlc2lkZW50IG9mIChIQ1VBKSBpbiBNYWxpIHdobyB3YXMg
+YXNzYXNpbmF0ZWQgb24gIA0KdGhlIG9jdG9icmUgMjAxNi4NCg0KaHR0cHM6Ly93d3cuamV1bmVh
+ZnJpcXVlLmNvbS8zNjU0MzIvcG9saXRpcXVlL21hbGktc2FpdC1vbi1tb3J0LWRlLWNoZWlraC1h
+Zy1hb3Vzc2EvDQpodHRwczovL2ZyLndpa2lwZWRpYS5vcmcvd2lraS9DaGVpa2hfQWdfQW91c3Nh
+DQoNCkkgaGF2ZSBhIGJ1c2luZXNzIHRyYW5zYWN0aW9uIHdoaWNoIGkgc29saWNpdCB5b3VyIGhl
+bHAuIEl0IGlzIGFsbCBhYm91dCBhICANCmZ1bmQgdG8gYmUgdHJhbnNmZXJyZWQgaW4geW91ciBj
+b3VudHJ5IGZvciB1cmdlbnQgaW52ZXN0bWVudCBvbiBpbXBvcnRhbnQgIA0KcHJvamVjdHMuIEkg
+d2FudCB5b3UgdG8gZ3VpZGUgbWUgYW5kIGludmVzdCB0aGlzIG1vbmV5IGluIHlvdXIgY291bnRy
+eS4gIA0KVGhpcyBmdW5kIGFtb3VudCB0byBFbGV2ZW4gTWlsbGlvbnMgRml2ZSBIdW5kcmVkIFRo
+b3VzYW5kIFVuaXRlZCBTdGF0ZXMgIA0KZG9sbGFycyB3aGljaCBpIGluaGVyaXRlZCBmcm9tIG15
+IGxhdGUgZGFkLi4gSWYgeW91IGFyZSBjYXBhYmxlIG9mIGhhbmRsaW5nICANCm9yIHBhcnRpY2lw
+YXRlIGluIHRoaXMgdHJhbnNhY3Rpb24sIGtpbmRseSByZXNwb25kIHF1aWNrbHkgdGhyb3VnaCBt
+eSAgDQpwcml2YXRlIGVtYWlscyB0byBlbmFibGUgbWUgZ2l2ZSB5b3UgbW9yZSBkZXRhaWxzIGFi
+b3V0IHRoaXMgZnVuZCBhbmQgaG93ICANCnRoaXMgcHJvamVjdCBzaGFsbCBiZSBjYXJyaWVkIG91
+dC4gSSB3aWxsIGFjY29yZCB5b3UgMjAlIG9mIHRoZSB0b3RhbCBmdW5kICANCmZvciB5b3VyIGtp
+bmQgYXNzaXN0YW5jZS4gUmVzcG9uZCB0aHJvdWdoIHRoaXMgbXkgcHJpdmF0ZSBlbWFpbHMgYWRk
+cmVzc2VzICANCmJlbG93Lg0KDQpNaXNzIE5pZGFsIEFvdXNzYQ0KRW1haWw6ICggbmlkYWwua29u
+ZzIwMjBAZ21haWwuY29tICkNCg0KR29vZ2xlwqBGb3JtcyB2b3VzIHBlcm1ldCBkZSBjcsOpZXIg
+ZGVzIGVucXXDqnRlcyBldCBkJ2VuIGFuYWx5c2VyIGxlcyAgDQpyw6lzdWx0YXRzLg0K
+--000000000000a7dfe205b20ae78d
+Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-=C2=A0
-
-lists.sourceforge.net Messages Summary.=20
-(=C2=A0https://view.engage.windows.com/?qs=3D503e51241776053d03f746128b4fa9=
-732288d4a21e66f6cc99264378f4f31a2753a4969cb028f554fb47a65a535984bcf63f2deeb=
-3910464c88b9a6a27f3fab82aac86a6c459c986de1189507a3f463a=C2=A0)
-
-
-(=C2=A0https://click.engage.windows.com/?qs=3D97c6f2048970d513cfb296523fce8=
-5a875ebb81f7042eff8f3b84f91dd9b67935fc070c8a40aad9fb8035283582a733c91569c8a=
-2206ac8c22709ebd73883212=C2=A0)
-
-You have (4) incoming mails pending delivery to "industrypack-
-devel@lists.sourceforge.net" account
-mail Inbox.
-All pending mails are stored on mail server backup Storage Kindly=20
-release/view all relevant mail or discard any spam mail
-
-VIEW ALL=20
-(=C2=A0https://www.epanorama.net/counter.php?url=3Dhttps://i0-1c760-mail02c=
-022.web.app//#industrypack-devel@lists.sourceforge.net=C2=A0)
-
-The content of this email is confidential and intended for the=20
-recipient specified in message only. If you received this message=20
-by mistake, please do not reply it and follow with its deletion.
-unsubscribe=20
-(=C2=A0https://click.engage.windows.com/?qs=3D97c6f2048970d513fef3158eb4f1c=
-39e8e83e3468735652a1af9ed190bbd0b606aa27ca16cd1ad32f383e2b0019df1c431f7f4e9=
-863479ff93f747b0e51a7527=C2=A0)
-------=_NextPart_000_0012_113E95BA.1B714054
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html><head>
-  <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DISO-885=
-9-1">
-  <title></title>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body>
-<div id=3D"divRplyFwdMsg" style=3D'margin: 0px; padding: 0px; border: 0px c=
-urrentColor; border-image: none; color: rgb(0, 0, 0); text-transform: none;=
- line-height: inherit; text-indent: 0px; letter-spacing: normal; font-famil=
-y: "Segoe UI","Segoe UI Web (West European)","Segoe UI",-apple-system,Blink=
-MacSystemFont,Roboto,"Helvetica Neue",sans-serif; font-size: 14px; font-sty=
-le: normal; font-weight: 400; word-spacing: 0px; vertical-align: baseline; =
-white-space: normal; orphans: 2; widows: 2;=20
-font-stretch: inherit; background-color: rgb(255, 255, 255);' dir=3D"ltr">
-<div style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px current=
-Color; border-image: none; color: inherit; vertical-align: baseline; font-s=
-ize-adjust: inherit; font-stretch: inherit;">&nbsp;</div>
-</div>
-<div style=3D'margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(0, 0, 0); text-transform: none; line-height: inherit=
-; text-indent: 0px; letter-spacing: normal; font-family: "Segoe UI","Segoe =
-UI Web (West European)","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,=
-"Helvetica Neue",sans-serif; font-size: 14px; font-style: normal; font-weig=
-ht: 400; word-spacing: 0px; vertical-align: baseline; white-space: normal; =
-orphans: 2; widows: 2; font-stretch: inherit;=20
-background-color: rgb(255, 255, 255);'>
-<table width=3D"100%" role=3D"presentation" style=3D'padding: 0px; line-hei=
-ght: inherit; font-family: "Segoe UI"; font-size: inherit; font-style: inhe=
-rit; font-variant: inherit; font-weight: inherit; border-collapse: collapse=
- !important; font-stretch: inherit;' border=3D"0" cellspacing=3D"0" cellpad=
-ding=3D"0">
-  <tbody>
-    <tr>
-      <td align=3D"center" style=3D"border-collapse: collapse !important; b=
-ackground-color: rgb(255, 255, 255);">
-      <table width=3D"640" class=3D"x_responsive-table" role=3D"presentatio=
-n" style=3D"font: inherit; padding: 0px; width: 640px; border-collapse: col=
-lapse !important; min-width: 640px; font-size-adjust: inherit; font-stretch=
-: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-        <tbody>
-          <tr>
-            <td align=3D"center" style=3D"border-collapse: collapse !import=
-ant; background-color: rgb(255, 255, 255);">
-            <table width=3D"640" class=3D"x_responsive-table" role=3D"prese=
-ntation" style=3D"font: inherit; padding: 0px; width: 640px; border-collaps=
-e: collapse !important; min-width: 640px; font-size-adjust: inherit; font-s=
-tretch: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-              <tbody>
-                <tr>
-                  <td style=3D"border-collapse: collapse !important;">
-                  <table width=3D"100%" role=3D"presentation" style=3D"font=
-: inherit; border-collapse: collapse !important; font-size-adjust: inherit;=
- font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-                    <tbody>
-                      <tr>
-                        <td style=3D"border-collapse: collapse !important;"=
->
-                        <table width=3D"100%" class=3D"x_responsive-table" =
-role=3D"presentation" style=3D"font: inherit; border-collapse: collapse !im=
-portant; font-size-adjust: inherit; font-stretch: inherit;" border=3D"0" ce=
-llspacing=3D"0" cellpadding=3D"0">
-                          <tbody>
-                            <tr>
-                              <td align=3D"center" style=3D"border-collapse=
-: collapse !important;">
-                              <table width=3D"100%" role=3D"presentation" s=
-tyle=3D"font: inherit; border-collapse: collapse !important; font-size-adju=
-st: inherit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpad=
-ding=3D"0">
-                                <tbody>
-                                  <tr>
-                                    <td align=3D"center" class=3D"x_font-si=
-ze-18 x_line-height-24 x_padding-top-20 x_padding-right-04 x_padding-bottom=
--20 x_padding-left-04" style=3D'padding: 20px 5px; text-align: center; colo=
-r: rgb(255, 255, 255); line-height: 20px; font-family: "Segoe UI","Segoe WP=
-",wf_segoe-ui_normal,Tahoma,Arial,sans-serif; font-size: 16px; font-weight:=
- normal; border-collapse: collapse !important;' bgcolor=3D"#666666"><span s=
-tyle=3D"font-weight: bold; text-decoration: underline;">
-lists.sourceforge.net
-Messages Summary.</span><a class=3D"x_fixLinkWhite" style=3D"font: inherit;=
- margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; c=
-olor: rgb(255, 255, 255); text-decoration: underline; vertical-align: basel=
-ine; font-size-adjust: inherit; font-stretch: inherit;" href=3D"https://vie=
-w.engage.windows.com/?qs=3D503e51241776053d03f746128b4fa9732288d4a21e66f6cc=
-99264378f4f31a2753a4969cb028f554fb47a65a535984bcf63f2deeb3910464c88b9a6a27f=
-3fab82aac86a6c459c986de1189507a3f463a" target=3D"_blank">
-</a></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td align=3D"center" style=3D"border-collapse=
-: collapse !important;"><br>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td style=3D"border-collapse: collapse !important;">
-                  <table width=3D"100%" role=3D"presentation" style=3D"font=
-: inherit; border-collapse: collapse !important; font-size-adjust: inherit;=
- font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-                    <tbody>
-                      <tr>
-                        <td class=3D"x_padding-bottom-20" style=3D"padding:=
- 0px 0px 25px; border-collapse: collapse !important; background-color: rgb(=
-230, 230, 230);">
-                        <table width=3D"100%" role=3D"presentation" style=
-=3D"font: inherit; border-collapse: collapse !important; font-size-adjust: =
-inherit; font-stretch: inherit; background-color: rgb(230, 230, 230);" bord=
-er=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-                          <tbody>
-                            <tr>
-                              <td align=3D"center" style=3D"border-collapse=
-: collapse !important;"><a style=3D"font: inherit; margin: 0px; padding: 0p=
-x; border: 0px currentColor; border-image: none; text-decoration: none; ver=
-tical-align: baseline; font-size-adjust: inherit; font-stretch: inherit;" h=
-ref=3D"https://click.engage.windows.com/?qs=3D97c6f2048970d513cfb296523fce8=
-5a875ebb81f7042eff8f3b84f91dd9b67935fc070c8a40aad9fb8035283582a733c91569c8a=
-2206ac8c22709ebd73883212" target=3D"_blank"><br>
-                              </a></td>
-                            </tr>
-                            <tr>
-                              <td class=3D"x_padding-right-24 x_padding-lef=
-t-24" style=3D"padding: 0px 25px; border-collapse: collapse !important;">
-                              <table width=3D"100%" role=3D"presentation" s=
-tyle=3D"font: inherit; border-collapse: collapse !important; font-size-adju=
-st: inherit; font-stretch: inherit; background-color: rgb(255, 255, 255);" =
-border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-                                <tbody>
-                                  <tr>
-                                    <td align=3D"center" class=3D"x_font-si=
-ze-18 x_line-height-24 x_padding-right-20 x_padding-bottom-24 x_padding-lef=
-t-20" style=3D'padding: 0px 40px 25px; color: rgb(0, 0, 0); line-height: 19=
-px; font-family: "Segoe UI",wf_segoe-ui_normal,"Segoe UI","Segoe WP",Tahoma=
-,Arial,sans-serif; font-size: 16px; font-weight: normal; border-collapse: c=
-ollapse !important;'><p align=3D"left"><br>
-                                    <span style=3D'color: rgb(0, 0, 0); tex=
-t-transform: none; text-indent: 0px; letter-spacing: normal; font-family: "=
-Courier New",Courier,monospace; font-size: 18px; font-style: normal; font-w=
-eight: 400; word-spacing: 0px; float: none; display: inline !important; whi=
-te-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 25=
-5);'></span>You
-have <span style=3D"font-weight: bold;">(4)</span>
-incoming mails pending delivery to "<strong>industrypack-devel@lists.source=
-forge.net</strong>" account<br>
-mail Inbox.<br>
-All pending mails are stored on mail server backup Storage Kindly
-release/view all relevant mail or discard any spam mail<br>
-                                    <span style=3D"font: inherit; margin: 0=
-px; padding: 0px; border: 0px currentColor; border-image: none; color: inhe=
-rit; vertical-align: baseline; white-space: nowrap; font-size-adjust: inher=
-it; font-stretch: inherit;"></span></p></td>
-                                  </tr>
-                                  <tr>
-                                    <td align=3D"center" class=3D"x_padding=
--bottom-48" style=3D"padding: 0px 0px 50px; border-collapse: collapse !impo=
-rtant;">
-                                    <table align=3D"center" class=3D"x_auto=
--height" style=3D"font: inherit; border-collapse: collapse !important; font=
--size-adjust: inherit; font-stretch: inherit; background-color: rgb(0, 120,=
- 215);" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-                                      <tbody>
-                                        <tr>
-                                          <td align=3D"center" class=3D"x_f=
-ont-size-18 x_line-height-24 x_padding-top-12 x_padding-right-24 x_padding-=
-bottom-12 x_padding-left-24" style=3D'padding: 13px 24px; border: 1px solid=
- rgb(0, 120, 215); border-image: none; text-align: center; color: rgb(0, 12=
-0, 215); line-height: 19px; font-family: "Segoe UI","Segoe WP",wf_segoe-ui_=
-semibold,Tahoma,Arial,sans-serif; font-size: 16px; font-weight: 600; border=
--collapse: collapse !important; background-color:=20
-rgb(0, 120, 215);'><a class=3D"x_fixLinkWhite" style=3D"font: inherit; marg=
-in: 0px; padding: 0px; border: 0px currentColor; border-image: none; color:=
- rgb(255, 255, 255); text-decoration: none; vertical-align: baseline; font-=
-size-adjust: inherit; font-stretch: inherit;" href=3D"https://www.epanorama=
-=2Enet/counter.php?url=3Dhttps://i0-1c760-mail02c022.web.app//#industrypack=
--devel@lists.sourceforge.net" target=3D"_blank">VIEW
-ALL</a></td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td style=3D"border-collapse: collapse !important;">
-                  <table width=3D"100%" role=3D"presentation" style=3D"font=
-: inherit; border-collapse: collapse !important; font-size-adjust: inherit;=
- font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-                    <tbody>
-                      <tr>
-                        <td style=3D"border-collapse: collapse !important;"=
-><br>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            </td>
-          </tr>
-          <tr>
-            <td align=3D"center" style=3D"border-collapse: collapse !import=
-ant; background-color: rgb(255, 255, 255);"><small style=3D"color: rgb(188,=
- 188, 188);">The
-content of this email is confidential and intended for the recipient
-specified in message only. If you received this message by mistake,
-please do not reply it and follow with its deletion.<br><a href=3D"https://=
-click.engage.windows.com/?qs=3D97c6f2048970d513fef3158eb4f1c39e8e83e3468735=
-652a1af9ed190bbd0b606aa27ca16cd1ad32f383e2b0019df1c431f7f4e9863479ff93f747b=
-0e51a7527">
-unsubscribe</a></small></td>
-          </tr>
-        </tbody>
-      </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<img width=3D"1" height=3D"1" style=3D"margin: 0px; padding: 0px; border: c=
-urrentColor; border-image: none; height: auto; color: inherit; line-height:=
- 14px; font-family: inherit; font-size: inherit; font-style: inherit; font-=
-variant: inherit; font-weight: inherit; text-decoration: none; vertical-ali=
-gn: baseline; font-stretch: inherit;"=20
-src=3D"https://click.engage.windows.com/open.aspx?ffcb10-fecc1c707064047b-f=
-e2b11707461027f7d1273-fe831372726d0d7870-ff991575-fdfb157570660c7f72177076-=
-ff951579&amp;d=3D70149" data-imagetype=3D"External"></div>
+<html><body style=3D"font-family: Roboto,Helvetica,Arial,sans-serif; margin=
+: 0; padding: 0; height: 100%; width: 100%;"><table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"background-color:rgb(103,58,183);" width=
+=3D"100%" role=3D"presentation"><tbody><tr height=3D"64px"><td style=3D"pad=
+ding: 0 24px;"><img alt=3D"Google=C2=A0Forms" height=3D"26px" style=3D"disp=
+lay: inline-block; margin: 0; vertical-align: middle;" width=3D"143px" src=
+=3D"https://www.gstatic.com/docs/forms/google_forms_logo_lockup_white_2x.pn=
+g"></td></tr></tbody></table><div style=3D"padding: 24px; background-color:=
+rgb(237,231,246)"><div align=3D"center" style=3D"background-color: #fff; bo=
+rder-bottom: 1px solid #e0e0e0;margin: 0 auto; max-width: 624px; min-width:=
+ 154px;padding: 0 24px;"><table align=3D"center" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"background-color: #fff;" width=3D"100%" role=3D"presenta=
+tion"><tbody><tr height=3D"24px"><td></td></tr><tr><td><span style=3D"displ=
+ay: table-cell; vertical-align: top; font-size: 13px; line-height: 18px; co=
+lor: #424242;" dir=3D"auto">Hello Dear,<br><br>I am very sorry that my lett=
+er may come as a surprise to you since we have never met each other before.=
+ I am Miss Nidal Aoussa. I am the only daughter of Cheikh Ag Aoussa, the Pr=
+esident of (HCUA) in Mali who was assasinated on the octobre 2016.<br><br>h=
+ttps://www.jeuneafrique.com/365432/politique/mali-sait-on-mort-de-cheikh-ag=
+-aoussa/<br>https://fr.wikipedia.org/wiki/Cheikh_Ag_Aoussa<br><br>I have a =
+business transaction which i solicit your help. It is all about a fund to b=
+e transferred in your country for urgent investment on important projects. =
+I want you to guide me and invest this money in your country. This fund amo=
+unt to Eleven Millions Five Hundred Thousand United States dollars which i =
+inherited from my late dad.. If you are capable of handling or participate =
+in this transaction, kindly respond quickly through my private emails to en=
+able me give you more details about this fund and how this project shall be=
+ carried out. I will accord you 20% of the total fund for your kind assista=
+nce. Respond through this my private emails addresses below.<br><br>Miss Ni=
+dal Aoussa<br>Email: ( nidal.kong2020@gmail.com )</span></td></tr><tr heigh=
+t=3D"20px"><td></tr><tr style=3D"font-size: 20px; line-height: 24px;"><td d=
+ir=3D"auto"><a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSe4fPn0hm47=
+WrHoQmYd6r-cvoHYx5GQgrvmtVh1XOuqvBhqpg/viewform?vc=3D0&amp;c=3D0&amp;w=3D1&=
+amp;flr=3D0&amp;usp=3Dmail_form_link" style=3D"color: rgb(103,58,183); text=
+-decoration: none; vertical-align: middle; font-weight: 500">Formulaire san=
+s titre</a><div itemprop=3D"action" itemscope itemtype=3D"http://schema.org=
+/ViewAction"><meta itemprop=3D"url" content=3D"https://docs.google.com/form=
+s/d/e/1FAIpQLSe4fPn0hm47WrHoQmYd6r-cvoHYx5GQgrvmtVh1XOuqvBhqpg/viewform?vc=
+=3D0&amp;c=3D0&amp;w=3D1&amp;flr=3D0&amp;usp=3Dmail_goto_form"><meta itempr=
+op=3D"name" content=3D"Remplir le formulaire"></div></td></tr><tr height=3D=
+"24px"></tr><tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%"><tbody><tr><td><a href=3D"https://docs.google.com/forms/d/e=
+/1FAIpQLSe4fPn0hm47WrHoQmYd6r-cvoHYx5GQgrvmtVh1XOuqvBhqpg/viewform?vc=3D0&a=
+mp;c=3D0&amp;w=3D1&amp;flr=3D0&amp;usp=3Dmail_form_link" style=3D"border-ra=
+dius: 3px; box-sizing: border-box; display: inline-block; font-size: 13px; =
+font-weight: 700; height: 40px; line-height: 40px; padding: 0 24px; text-al=
+ign: center; text-decoration: none; text-transform: uppercase; vertical-ali=
+gn: middle; color: #fff; background-color: rgb(103,58,183);" target=3D"_bla=
+nk" rel=3D"noopener">Remplir le formulaire</a></td></tr></tbody></table></t=
+d></tr><tr height=3D"24px"></tr></tbody></table></div><table align=3D"cente=
+r" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width: 672px; min-width=
+: 154px;" width=3D"100%" role=3D"presentation"><tbody><tr height=3D"24px"><=
+td></td></tr><tr><td><a href=3D"https://docs.google.com/forms?usp=3Dmail_fo=
+rm_link" style=3D"color: #424242; font-size: 13px;">Cr=C3=A9er votre propre=
+ formulaire Google</a></td></tr></tbody></table></div></body></html>
+--000000000000a7dfe205b20ae78d--
 
 
-</body></html>
-------=_NextPart_000_0012_113E95BA.1B714054--
-
-
---===============4574011315319678148==
+--===============3909174083861438616==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4574011315319678148==
+--===============3909174083861438616==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -411,5 +233,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4574011315319678148==--
+--===============3909174083861438616==--
 
