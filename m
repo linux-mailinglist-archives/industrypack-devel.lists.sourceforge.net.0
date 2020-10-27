@@ -2,57 +2,58 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id DAE0229A5EB
-	for <lists+industrypack-devel@lfdr.de>; Tue, 27 Oct 2020 08:56:07 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9A04129CA93
+	for <lists+industrypack-devel@lfdr.de>; Tue, 27 Oct 2020 21:46:40 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kXJpu-0005Gk-M3
-	for lists+industrypack-devel@lfdr.de; Tue, 27 Oct 2020 07:56:06 +0000
+	id 1kXVrb-0002J3-CF
+	for lists+industrypack-devel@lfdr.de; Tue, 27 Oct 2020 20:46:39 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <sanche@financ.com>) id 1kXJpu-0005Gd-2g
- for industrypack-devel@lists.sourceforge.net; Tue, 27 Oct 2020 07:56:06 +0000
+ (envelope-from <sanche@financ.com>) id 1kXVra-0002Ir-5g
+ for industrypack-devel@lists.sourceforge.net; Tue, 27 Oct 2020 20:46:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=IKRoUfgK24B/q8joqtXj6tiZYsl5mEYDaBpjd/d19wc=; b=cxVwp2Ld0zaczQWfS/+LjAf+Dc
- NXu5QZkFiLvHFD5ibXWjfywUXu38P3bKRc74V/uRgIBGjTg47vPLP2q2PV0JRlyzWF9rdNAyfx8TI
- AJFiHoGluYBZNPFakMfjte5zOqnjmvgt/75ulUzrm07HodfWuJUJU/++JZS9Gg2Gy4MQ=;
+ bh=IKRoUfgK24B/q8joqtXj6tiZYsl5mEYDaBpjd/d19wc=; b=JZ/XoSTBpxMpkdhoKiac6HM0nL
+ ttaSsetIw1FXThtPhCO2bvm3Rcp5YVTW7x5EaMLyCkxO0sH+NGjFuMqDkZqqJlDBlb516YawgHPs1
+ 99r3DzlO/SelFAnIaA1BUt/EglsRtmarHKi+vtNqQdUIJ4NVO8g69qOpw17S7RtUeUN0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=IKRoUfgK24B/q8joqtXj6tiZYsl5mEYDaBpjd/d19wc=; b=Z
- zgmdq25UOBMzD5AADyMOr02C8F0q2T+3jiO1p9M7P3cI1k7GglPZGPPLlN7ZCm95X7Gkcs55w1rc9
- dCVrxTBJ40a3VHtUQqnB9jb2RpYls/lQlzPxsLSjPz8kdo8z3T0Us6IrfjCWP7v7LUE2q8HJeR6ID
- SMSsDFb+ZoH+I1OQ=;
-Received: from smtp.easynet.es ([213.139.0.17])
- by sfi-mx-3.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1kXJpl-008U7q-3A
- for industrypack-devel@lists.sourceforge.net; Tue, 27 Oct 2020 07:56:06 +0000
-Received: from rrcs-71-43-247-254.se.biz.rr.com ([71.43.247.254]
- helo=financ.com) by smtp.easynet.es with esmtpa (Exim 4.72)
- (envelope-from <sanche@financ.com>) id 1kXBVQ-0006SU-E3
- for industrypack-devel@lists.sourceforge.net; Tue, 27 Oct 2020 00:02:27 +0100
+ List-Owner:List-Archive; bh=IKRoUfgK24B/q8joqtXj6tiZYsl5mEYDaBpjd/d19wc=; b=A
+ qLUFX7YBxkNdjyTNLwuQEg/M1z1a3x4xENKBTkkmnS1ngZ+8v24paKwZ7bOa0YMkZElGuXAkjv2nO
+ 6dNUBfGitkUCS+gg6i+wBQ92F/+cCR1Jdcu0jCibF0jmUwIA9jS3OlHBEfRs2BpAh3XVvr4eH3s4J
+ pQ1E7OibgUN4jLqM=;
+Received: from irigs.irk.ru ([195.93.129.14])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
+ id 1kXVrF-00G4k2-2C
+ for industrypack-devel@lists.sourceforge.net; Tue, 27 Oct 2020 20:46:38 +0000
+Received: from [71.43.247.254] (helo=financ.com)
+ by irigs.irk.ru with esmtpa (Exim 4.80.1)
+ (envelope-from <sanche@financ.com>) id 1kXVqZ-0006wA-Tm
+ for industrypack-devel@lists.sourceforge.net; Wed, 28 Oct 2020 04:45:37 +0800
 From: Francisco <sanche@financ.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 26 Oct 2020 19:02:26 -0400
-Message-ID: <20201026190226.0066645D7FFDFD78@financ.com>
+Date: 27 Oct 2020 16:45:49 -0400
+Message-ID: <20201027164549.234A673DE012E508@financ.com>
 MIME-Version: 1.0
-X-Easynet-ES-Outgoing-Spam-Score: 0.7 (/)
-X-Outgoing-Spam-Report: Spam detection software,
- running on the system "aspam1.nsa.es.easynet.net", has
+X-SA-Score: 0.7
+X-SA-Report: Spam detection software, running on the system "mail.irigs.irk.ru",
+ has
  identified this incoming email as possible spam.  The original message
  has been attached to this so you can view it (if it isn't spam) or label
  similar future email.  If you have any questions, see
- @@CONTACT_ADDRESS@@ for details.
+ the administrator of that system for details.
  Content preview:  Dear Sir / Madam, We offer all kind of loans - Business Loan
  / Real Estate Project -Financing we are comprehensive financial services
  firm committed to helping our clients improve their long-term financial
@@ -62,24 +63,14 @@ X-Outgoing-Spam-Report: Spam detection software,
  ---- ---------------------- --------------------------------------------------
  -1.0 ALL_TRUSTED            Passed through trusted hosts only via SMTP
  1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
-X-Outgoing-SpamScan-Signature: 2895352351eec59a4e23aee436d22fdd
-X-Easynet-bounce-key: easynet.es;sanche@financ.com;1603785356;1266364e;
-X-Spam-Score: 5.5 (+++++)
+X-Spam-Score: 4.2 (++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
  1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [213.139.0.17 listed in list.dnswl.org]
- 1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
- https://senderscore.org/blacklistlookup/
- [213.139.0.17 listed in bl.score.senderscore.com]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [213.139.0.17 listed in wl.mailspike.net]
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
-X-Headers-End: 1kXJpl-008U7q-3A
+X-Headers-End: 1kXVrF-00G4k2-2C
 Subject: [Industrypack-devel] Business Loans
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
