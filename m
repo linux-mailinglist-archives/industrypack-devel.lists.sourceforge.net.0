@@ -2,102 +2,103 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D913F2A0A38
-	for <lists+industrypack-devel@lfdr.de>; Fri, 30 Oct 2020 16:48:30 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9DEBB2A3E29
+	for <lists+industrypack-devel@lfdr.de>; Tue,  3 Nov 2020 08:57:21 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kYWdh-0001Nz-Li
-	for lists+industrypack-devel@lfdr.de; Fri, 30 Oct 2020 15:48:29 +0000
+	id 1kZrBw-0001Y7-Dq
+	for lists+industrypack-devel@lfdr.de; Tue, 03 Nov 2020 07:57:20 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from
- <3wTWcXxEJAKAGABRIELTHOMASjabaGMAIL.COM@trix.bounces.google.com>)
- id 1kYWdf-0001Nm-HD
- for industrypack-devel@lists.sourceforge.net; Fri, 30 Oct 2020 15:48:27 +0000
+ (envelope-from <3Qg2hXw8JAOMJaFSYFUJbTWkoogLRFNQ.HTR@trix.bounces.google.com>)
+ id 1kZrBu-0001Xy-Sn
+ for industrypack-devel@lists.sourceforge.net; Tue, 03 Nov 2020 07:57:18 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:To:From:Subject:Date:Message-ID:
  Reply-To:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=SkGmBpppzJ+j66RIzXKCnSnYeRsXWI8lc2KBaI2/p9U=; b=PUxv+r273wPBMvlzA7JuS0LrSi
- nvLdfw3MZma2HF8eH3bpA8dErfAl6MmpEHfilbJG1InuVkEQNQC2x5xczwLMx53lO93D2bD6vlpU0
- k3E1dJF0EJ26R55bE4ZU25g5hhDDS45LuC+w9KQP83ahj9ulk1XSPyxC8T/LObylqB9E=;
+ bh=R3qmvbM4RaPPb8fJPgvB0gPj4YfuSqGV5cUM0d1hZqE=; b=VF8SD85w5x5k1F2orWatyjdrKl
+ um8KSPsPk1cqz9UrWc6VfPciBnt9K5c6fQjxDIKGFsfzwfXWwimjOlGz0a3tpG7GCqp4NGL+TrSGt
+ UOtxeBEj8gXKJqCkb2unfjACsDvvjES3wZIWmBkeqGNkyyzQu39J5VvyXXPIOHPj09k8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:To:From:Subject:Date:Message-ID:Reply-To:MIME-Version:Sender
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=SkGmBpppzJ+j66RIzXKCnSnYeRsXWI8lc2KBaI2/p9U=; b=H
- 37HGrwuVRfJQ9eTvXmYUkm/7eRz7qePV/5eA6PNU7Eyjtp5yJI/oWUG9fpdAxZZHSpNmuqWd1teF5
- 0LlDs7XAv+iNYC5qcA0QloVo9uKZj0FSRabaUxCjJA3urDh9Nrh5BVaXXlXQIGF4izNnCiq5OSS/A
- pntg0JZZZ0MLl1+A=;
-Received: from mail-qk1-f197.google.com ([209.85.222.197])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=R3qmvbM4RaPPb8fJPgvB0gPj4YfuSqGV5cUM0d1hZqE=; b=G
+ pZ+IRbAH+AWu+ktvbCV4WRYXKxG2w6jTYlLm4yuQksRXK6oBwjHm5WeEs/NcRaXufdTN9XgbyXYh4
+ gRrdRx6TjVeIDCIp916PpaaAh6TRfZ/4EKXV45kk2K++KMNmjF21JfgUPI1a5NyPUhW8n37i4MXb0
+ 0nglw6bJLKtdPCXw=;
+Received: from mail-ot1-f69.google.com ([209.85.210.69])
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.2)
- id 1kYWdb-002k7c-Bw
- for industrypack-devel@lists.sourceforge.net; Fri, 30 Oct 2020 15:48:27 +0000
-Received: by mail-qk1-f197.google.com with SMTP id t67so691532qke.10
+ id 1kZrBj-00HFb9-Sz
+ for industrypack-devel@lists.sourceforge.net; Tue, 03 Nov 2020 07:57:18 +0000
+Received: by mail-ot1-f69.google.com with SMTP id a3so803445otf.23
  for <industrypack-devel@lists.sourceforge.net>;
- Fri, 30 Oct 2020 08:48:23 -0700 (PDT)
+ Mon, 02 Nov 2020 23:57:07 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:reply-to:message-id:date:subject:from:to;
- bh=SkGmBpppzJ+j66RIzXKCnSnYeRsXWI8lc2KBaI2/p9U=;
- b=tYIaaQfujMC90cm+//wuWMtE+bD0eIw+W3UKMQOxcxca8KD+dLScx8dm/fj6r5W2K/
- k36NXgVz6tb5bQ8P1GOlUTjCY7J6K9YaKnK2dBwEB5oz3rapSJbZhf3hPvzDderMWYCq
- 9hh2/lW+3KL+Bop46Qq039o9T4+oGKGWPpU9VeLATHo4eTuHBrOO9AGBohQvqXdrsAiU
- gMD/UJZOvXz58u2gJ0UMW74j3yfnqbcBuMXFrr1+AiEkPxV3/aar/6CUO5C+M6LIRIxf
- tqV7W7BISQsAxWcEtyKtsB+jlg52Gtm8YJtxR10grALwkxspKW1b/vX8zUE3i3vRWktY
- EznQ==
+ bh=R3qmvbM4RaPPb8fJPgvB0gPj4YfuSqGV5cUM0d1hZqE=;
+ b=N0dNrM1L+DhrT15Az5inYO+e5H/lDu8ANFkcfypjCQrjIk43Yn+QLhXEXaJFkhxtze
+ 9Xe8wxoXpOcySMTYRdFdmgzEqk40wooqYDh4pth+Cez/94BNepCGbZ5Ft/HHU4tkuWbM
+ nsvh4W2Olc2X4VUWrr9EtRbiEEs89Ic1P4+abi5NwSMAw9PFbW+WLgqZsk2vir5AIpgJ
+ 7BUFxJfF4+gyaqiJMbGLEWOSPvbyBifB8a7NcIppMCQ0r/wB5lptAhEuiXDh03NfK2VL
+ TbZJqivHx4FmCqQ/fITaaEAUbyKwU5jGocOciHNYrGfi1hEVFOzwIwqGtAXgLFTGC8ro
+ mE2A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:reply-to:message-id:date:subject
  :from:to;
- bh=SkGmBpppzJ+j66RIzXKCnSnYeRsXWI8lc2KBaI2/p9U=;
- b=Edymp5vV5btDvKG9Ki0FuKa7mwF3zLqJOBJ3wRXT5OS4qhhgoZRPMIqfFRKOIxNIMf
- t/zbtJIW8ES8ySFXVdgz8NQ2JLeCROQWy48+tU+Lf//tj792CYQ7gUYBqVdlBPrVx04+
- WVZIlIoIaaqCphcr1VM9G8yiwqqJDXa8HegKFhaD02BmODxQ+6V3heZaiTEdcCR4sqCP
- n1SnlJpXlPDe7jd0R27/09hcdrtch3sLp7McOS2B41Q8+WAAcXF6I2+wrzKImInDltFt
- WSq4rMCKDbsmDhbVaMHzyPnyDUQXX3ciWQoqtb4z0T7bYjQGCq7L+625Hj/uaDFX585P
- ASBg==
-X-Gm-Message-State: AOAM531i8s9XNENkB5G3JqJjFKRw2TbO1BZcqOfBeDRrm31uvW8CI70F
- 18wPnJOJsuPpTN0uADfBx70598olE2+s/zZTtV+Z
+ bh=R3qmvbM4RaPPb8fJPgvB0gPj4YfuSqGV5cUM0d1hZqE=;
+ b=E/1FJ5CtMJ8rXa1kvZxjkSr3HRqfO7L3GDl5Dd8AYcsAwu3P+AC3z1q8CMn+ezXjPl
+ vMrV6BfpPC1Ym6zw5ClHTjha85kgwdT+zD5QSRnFHN7v42jXQdS3tTozW8tWepZKfZvf
+ 2mUGUcN0GMxQAyl6pUdjTs6kXtd25mqLmPbMhzSSmbuuVSvBt8XQOPQrkRw3blVaqAgU
+ kOEEmOtn/r/P12M/n9MZ+9Hyr2FJxxlQDZFSWVX0sSVVwulKKTyxooFF7JKmq0t1ah59
+ I+xRNbHiWn6diiO2GVWZKVd541jRLJ/hHmjOKdjq62HrJJ9FATQ55ZVu56FdspkWbOWp
+ h4qw==
+X-Gm-Message-State: AOAM532iuZ4k90xgZszGJKir2MH2rIUHawTAHScNedngicnT4slDoDlI
+ bGjKtHgXoVCfYu2S5eceiCaqGrVhoJ53B0twS9Wn
 MIME-Version: 1.0
-X-Received: by 2002:ad4:464f:: with SMTP id y15mt6561657qvv.52.1604072897572; 
- Fri, 30 Oct 2020 08:48:17 -0700 (PDT)
+X-Received: by 2002:a9d:828:: with SMTP id 37mt12148472oty.147.1604390210017; 
+ Mon, 02 Nov 2020 23:56:50 -0800 (PST)
 X-No-Auto-Attachment: 1
-Message-ID: <00000000000041000605b2e553ba@google.com>
-Date: Fri, 30 Oct 2020 15:48:17 +0000
-From: gabrielthomas9010@gmail.com
+Message-ID: <0000000000008ce8f105b32f34b7@google.com>
+Date: Tue, 03 Nov 2020 07:56:55 +0000
+From: evantapewor5991@gmail.com
 To: industrypack-devel@lists.sourceforge.net
-X-Spam-Score: 1.6 (+)
+X-Spam-Score: 1.7 (+)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [209.85.222.197 listed in list.dnswl.org]
  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (gabrielthomas9010[at]gmail.com)
+ (evantapewor5991[at]gmail.com)
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.69 listed in wl.mailspike.net]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
  domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
- (gabrielthomas9010[at]gmail.com)
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.222.197 listed in wl.mailspike.net]
+ (evantapewor5991[at]gmail.com)
  1.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+ trust [209.85.210.69 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
  freemail headers are different
-X-Headers-End: 1kYWdb-002k7c-Bw
-Subject: [Industrypack-devel] Hi,
+X-Headers-End: 1kZrBj-00HFb9-Sz
+Subject: [Industrypack-devel] =?utf-8?b?55ar5oOF5LmL5LiL5aaC5L2V5byA5Y+R?=
+ =?utf-8?b?5a6i5oi35pu05a655piT56ev57Sv?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -109,112 +110,105 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: gabrielthomas9010@gmail.com
-Content-Type: multipart/mixed; boundary="===============4808876258519794894=="
+Reply-To: evantapewor5991@gmail.com
+Content-Type: multipart/mixed; boundary="===============2471192234978347153=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4808876258519794894==
-Content-Type: multipart/alternative; boundary="00000000000043fe9d05b2e5537c"
+--===============2471192234978347153==
+Content-Type: multipart/alternative; boundary="000000000000dc291b05b32f34c6"
 
---00000000000043fe9d05b2e5537c
+--000000000000dc291b05b32f34c6
 Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
 
-I've invited you to fill out the following form:
-Untitled form
-
-To fill it out, visit:
-https://docs.google.com/forms/d/e/1FAIpQLScuNN46De4NTNDuI_3Rm2L6CNABd5Ra0TyGG6ZxgVbAw2h7Ug/viewform?vc=0&amp;c=0&amp;w=1&amp;flr=0&amp;usp=mail_form_link
-
-  Hi,
-Hope I am not intruding on your space here.
-If you are interested in equity or loan financing,
-I would be glad to assist.
-We are a private financial firm that acquires well established small and  
-lower
-middle market businesses with predictable revenue and cash flow;
-typically partnering with industry professionals
-to operate them.
-We also have a Capital Formation Division that assists companies at
-all levels of development raise
-capital through hedge funds. We charge %1 commission at the successful
-closing of any deal.
-Additionally, we also fund
-secured as well as unsecured lines of credit and term loans.
-Would that be something of interest to you and your group?
-Please let me know your thoughts.
-Sorry if you get this message in your spam box, poor network
-connection may be responsible for such.
-Best regards...... Gennadiy Medovoy.
-
-Google Forms: Create and analyze surveys.
-
---00000000000043fe9d05b2e5537c
+SSd2ZSBpbnZpdGVkIHlvdSB0byBmaWxsIGluIHRoZSBmb2xsb3dpbmcgZm9ybToNCueWq+aDheS5
+i+S4i+WmguS9leW8gOWPkeWuouaIt+abtOWuueaYk+enr+e0rw0KDQpUbyBmaWxsIGl0IGluLCB2
+aXNpdDoNCmh0dHBzOi8vZG9jcy5nb29nbGUuY29tL2Zvcm1zL2QvZS8xRkFJcFFMU2U4aHc5WEJn
+MkhuaFNEWnF3d19jc09IUWJ0RnJVcmlyOEdPX0ZCTzZ0YlNyTDFudy92aWV3Zm9ybT92Yz0wJmFt
+cDtjPTAmYW1wO3c9MSZhbXA7ZmxyPTAmYW1wO3VzcD1tYWlsX2Zvcm1fbGluaw0KDQpJJiMzOTt2
+ZSBpbnZpdGVkIHlvdSB0byBmaWxsIGluIGEgZm9ybToNCg0KR29vZ2xlIEZvcm1zOiBDcmVhdGUg
+YW5kIGFuYWx5c2Ugc3VydmV5cy4NCg==
+--000000000000dc291b05b32f34c6
 Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Content-Transfer-Encoding: base64
 
-<html><body style=3D"font-family: Roboto,Helvetica,Arial,sans-serif; margin=
-: 0; padding: 0; height: 100%; width: 100%;"><table border=3D"0" cellpaddin=
-g=3D"0" cellspacing=3D"0" style=3D"background-color:rgb(103,58,183);" width=
-=3D"100%" role=3D"presentation"><tbody><tr height=3D"64px"><td style=3D"pad=
-ding: 0 24px;"><img alt=3D"Google Forms" height=3D"26px" style=3D"display: =
-inline-block; margin: 0; vertical-align: middle;" width=3D"143px" src=3D"ht=
-tps://www.gstatic.com/docs/forms/google_forms_logo_lockup_white_2x.png"></t=
-d></tr></tbody></table><div style=3D"padding: 24px; background-color:rgb(23=
-7,231,246)"><div align=3D"center" style=3D"background-color: #fff; border-b=
-ottom: 1px solid #e0e0e0;margin: 0 auto; max-width: 624px; min-width: 154px=
-;padding: 0 24px;"><table align=3D"center" cellpadding=3D"0" cellspacing=3D=
-"0" style=3D"background-color: #fff;" width=3D"100%" role=3D"presentation">=
-<tbody><tr height=3D"24px"><td></td></tr><tr><td><span style=3D"display: ta=
-ble-cell; vertical-align: top; font-size: 13px; line-height: 18px; color: #=
-424242;" dir=3D"auto"> Hi,<br>Hope I am not intruding on your space here.<b=
-r>If you are interested in equity or loan financing,<br>I would be glad to =
-assist.<br>We are a private financial firm that acquires well established s=
-mall and lower<br>middle market businesses with predictable revenue and cas=
-h flow;<br>typically partnering with industry professionals<br>to operate t=
-hem.<br>We also have a Capital Formation Division that assists companies at=
-<br>all levels of development raise<br>capital through hedge funds. We char=
-ge %1 commission at the successful<br>closing of any deal.<br>Additionally,=
- we also fund<br>secured as well as unsecured lines of credit and term loan=
-s.<br>Would that be something of interest to you and your group?<br>Please =
-let me know your thoughts.<br>Sorry if you get this message in your spam bo=
-x, poor network<br>connection may be responsible for such.<br>Best regards.=
-..... Gennadiy Medovoy.</span></td></tr><tr height=3D"20px"><td></tr><tr st=
-yle=3D"font-size: 20px; line-height: 24px;"><td dir=3D"auto"><a href=3D"htt=
-ps://docs.google.com/forms/d/e/1FAIpQLScuNN46De4NTNDuI_3Rm2L6CNABd5Ra0TyGG6=
-ZxgVbAw2h7Ug/viewform?vc=3D0&amp;c=3D0&amp;w=3D1&amp;flr=3D0&amp;usp=3Dmail=
-_form_link" style=3D"color: rgb(103,58,183); text-decoration: none; vertica=
-l-align: middle; font-weight: 500">Untitled form</a><div itemprop=3D"action=
-" itemscope itemtype=3D"http://schema.org/ViewAction"><meta itemprop=3D"url=
-" content=3D"https://docs.google.com/forms/d/e/1FAIpQLScuNN46De4NTNDuI_3Rm2=
-L6CNABd5Ra0TyGG6ZxgVbAw2h7Ug/viewform?vc=3D0&amp;c=3D0&amp;w=3D1&amp;flr=3D=
-0&amp;usp=3Dmail_goto_form"><meta itemprop=3D"name" content=3D"Fill out for=
-m"></div></td></tr><tr height=3D"24px"></tr><tr><td><table border=3D"0" cel=
-lpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr><td><a href=3D"h=
-ttps://docs.google.com/forms/d/e/1FAIpQLScuNN46De4NTNDuI_3Rm2L6CNABd5Ra0TyG=
-G6ZxgVbAw2h7Ug/viewform?vc=3D0&amp;c=3D0&amp;w=3D1&amp;flr=3D0&amp;usp=3Dma=
-il_form_link" style=3D"border-radius: 3px; box-sizing: border-box; display:=
- inline-block; font-size: 13px; font-weight: 700; height: 40px; line-height=
-: 40px; padding: 0 24px; text-align: center; text-decoration: none; text-tr=
-ansform: uppercase; vertical-align: middle; color: #fff; background-color: =
-rgb(103,58,183);" target=3D"_blank" rel=3D"noopener">Fill out form</a></td>=
-</tr></tbody></table></td></tr><tr height=3D"24px"></tr></tbody></table></d=
-iv><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"max=
--width: 672px; min-width: 154px;" width=3D"100%" role=3D"presentation"><tbo=
-dy><tr height=3D"24px"><td></td></tr><tr><td><a href=3D"https://docs.google=
-.com/forms?usp=3Dmail_form_link" style=3D"color: #424242; font-size: 13px;"=
->Create your own Google Form</a></td></tr></tbody></table></div></body></ht=
-ml>
---00000000000043fe9d05b2e5537c--
+PGh0bWw+PGJvZHkgc3R5bGU9ImZvbnQtZmFtaWx5OiBSb2JvdG8sSGVsdmV0aWNhLEFyaWFsLHNh
+bnMtc2VyaWY7IG1hcmdpbjogMDsgcGFkZGluZzogMDsgaGVpZ2h0OiAxMDAlOyB3aWR0aDogMTAw
+JTsiPjx0YWJsZSBib3JkZXI9IjAiIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgc3R5
+bGU9ImJhY2tncm91bmQtY29sb3I6cmdiKDEwMyw1OCwxODMpOyIgd2lkdGg9IjEwMCUiIHJvbGU9
+InByZXNlbnRhdGlvbiI+PHRib2R5Pjx0ciBoZWlnaHQ9IjY0cHgiPjx0ZCBzdHlsZT0icGFkZGlu
+ZzogMCAyNHB4OyI+PGltZyBhbHQ9Ikdvb2dsZSBGb3JtcyIgaGVpZ2h0PSIyNnB4IiBzdHlsZT0i
+ZGlzcGxheTogaW5saW5lLWJsb2NrOyBtYXJnaW46IDA7IHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7
+IiB3aWR0aD0iMTQzcHgiIHNyYz0iaHR0cHM6Ly93d3cuZ3N0YXRpYy5jb20vZG9jcy9mb3Jtcy9n
+b29nbGVfZm9ybXNfbG9nb19sb2NrdXBfd2hpdGVfMngucG5nIj48L3RkPjwvdHI+PC90Ym9keT48
+L3RhYmxlPjxkaXYgc3R5bGU9InBhZGRpbmc6IDI0cHg7IGJhY2tncm91bmQtY29sb3I6cmdiKDIz
+NywyMzEsMjQ2KSI+PGRpdiBhbGlnbj0iY2VudGVyIiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjog
+I2ZmZjsgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNlMGUwZTA7bWFyZ2luOiAwIGF1dG87IG1h
+eC13aWR0aDogNjI0cHg7IG1pbi13aWR0aDogMTU0cHg7cGFkZGluZzogMCAyNHB4OyI+PHRhYmxl
+IGFsaWduPSJjZW50ZXIiIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCIgc3R5bGU9ImJh
+Y2tncm91bmQtY29sb3I6ICNmZmY7IiB3aWR0aD0iMTAwJSIgcm9sZT0icHJlc2VudGF0aW9uIj48
+dGJvZHk+PHRyIGhlaWdodD0iMjRweCI+PHRkPjwvdGQ+PC90cj48dHI+PHRkPjxzcGFuIHN0eWxl
+PSJkaXNwbGF5OiB0YWJsZS1jZWxsOyB2ZXJ0aWNhbC1hbGlnbjogdG9wOyBmb250LXNpemU6IDEz
+cHg7IGxpbmUtaGVpZ2h0OiAxOHB4OyBjb2xvcjogIzQyNDI0MjsiIGRpcj0iYXV0byI+SSYjMzk7
+dmUgaW52aXRlZCB5b3UgdG8gZmlsbCBpbiBhIGZvcm06PC9zcGFuPjwvdGQ+PC90cj48dHIgaGVp
+Z2h0PSIyMHB4Ij48dGQ+PC90cj48dHIgc3R5bGU9ImZvbnQtc2l6ZTogMjBweDsgbGluZS1oZWln
+aHQ6IDI0cHg7Ij48dGQgZGlyPSJhdXRvIj48YSBocmVmPSJodHRwczovL2RvY3MuZ29vZ2xlLmNv
+bS9mb3Jtcy9kL2UvMUZBSXBRTFNlOGh3OVhCZzJIbmhTRFpxd3dfY3NPSFFidEZyVXJpcjhHT19G
+Qk82dGJTckwxbncvdmlld2Zvcm0/dmM9MCZhbXA7Yz0wJmFtcDt3PTEmYW1wO2Zscj0wJmFtcDt1
+c3A9bWFpbF9mb3JtX2xpbmsiIHN0eWxlPSJjb2xvcjogcmdiKDEwMyw1OCwxODMpOyB0ZXh0LWRl
+Y29yYXRpb246IG5vbmU7IHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7IGZvbnQtd2VpZ2h0OiA1MDAi
+PueWq+aDheS5i+S4i+WmguS9leW8gOWPkeWuouaIt+abtOWuueaYk+enr+e0rzwvYT48ZGl2IGl0
+ZW1wcm9wPSJhY3Rpb24iIGl0ZW1zY29wZSBpdGVtdHlwZT0iaHR0cDovL3NjaGVtYS5vcmcvVmll
+d0FjdGlvbiI+PG1ldGEgaXRlbXByb3A9InVybCIgY29udGVudD0iaHR0cHM6Ly9kb2NzLmdvb2ds
+ZS5jb20vZm9ybXMvZC9lLzFGQUlwUUxTZThodzlYQmcySG5oU0RacXd3X2NzT0hRYnRGclVyaXI4
+R09fRkJPNnRiU3JMMW53L3ZpZXdmb3JtP3ZjPTAmYW1wO2M9MCZhbXA7dz0xJmFtcDtmbHI9MCZh
+bXA7dXNwPW1haWxfZ290b19mb3JtIj48bWV0YSBpdGVtcHJvcD0ibmFtZSIgY29udGVudD0iRmls
+bCBvdXQgZm9ybSI+PC9kaXY+PC90ZD48L3RyPjx0ciBoZWlnaHQ9IjE2cHgiPjwvdHI+PHRyPjx0
+ZCBzdHlsZT0iZGlzcGxheTogdGFibGUtY2VsbDsgdmVydGljYWwtYWxpZ246IHRvcDsgZm9udC1z
+aXplOiAxM3B4OyBsaW5lLWhlaWdodDogMThweDsgY29sb3I6ICM0MjQyNDI7IiBkaXI9ImF1dG8i
+PuS9oOS4jeiDveWGjeetieS6hu+8jOWQjOihjOmDveWcqOeUqOeahOWklui0uOiOt+WuouelnuWZ
+qDxicj7pm4bojrflrqItLeWIhuaekC0t5byA5Y+RLS3nrqHnkIbkuo7kuIDkvZPnmoTlpJbotLhT
+QUFT5bmz5Y+w44CCPGJyPjxicj7kuIDjgIHpgJrov4cxMDAw5aSa5Liq5byV5pOO77yM5Zu95aSW
+MTEwMDDlpJrnu4RJUOaXoOmcgOe/u+Wime+8jOavj+WkqeWPr+W4ruaCqOaMluaOmOaVsOS4h+Wu
+ouaIt+S/oeaBr++8jOenr+e0r+ayiea3gOaEj+WQkeWuouaIt+OAgjxicj48YnI+5LqM44CBQUnm
+mbrog73nrpfms5XvvIzor4bliKvpgq7nrrHlr7nlupRs6IGU57O75Lq66Lqr5Lu96IGM5L2N77yM
+5a6a5L2N5a6i5oi36YeH6LSt5Yaz562W6ICF77yM5pu05Yqg57K+5YeG5byA5Y+R6Lef6L+b5a6i
+5oi344CCPGJyPiA8YnI+5LiJ44CBRURN6YKu5Lu26JCl6ZSA77ya5ZCO5Y+w5YWo6Ieq5Yqo5Y+R
+6YCB77yM5b2i5oiQ6K+m57uG5Y+R6YCB5oql5ZGK77yM6L+96Liq5a6i5oi36KGM5Li677yM5oyW
+5o6Y5a6i5oi36ZyA5rGC44CCPGJyPjxicj7lm5vjgIFDRU3lrqLmiLfnrqHnkIbvvIzmjozmjqfm
+r4/kuKrlrqLmiLflhbfkvZPkv6Hmga/vvIzmmbrog73mjqjojZDlt7LmiJDkuqTnmoTnsbvkvLzk
+vIHkuJrvvIzpq5jmlYjlvIDlj5E8YnI+PGJyPuS8gem5heekvuS6pOWPt++8mjE4LzcyNC8xNC85
+MTIgd2VpeGluOjEzMDI1MTg1NzUyIOaJi+acuu+8mjEzMDI1MTg1NzUyICA8L3RkPjwvdHI+PHRy
+IGhlaWdodD0iMjRweCI+PC90cj48dHI+PHRkPjx0YWJsZSBib3JkZXI9IjAiIGNlbGxwYWRkaW5n
+PSIwIiBjZWxsc3BhY2luZz0iMCIgd2lkdGg9IjEwMCUiPjx0Ym9keT48dHI+PHRkPjxhIGhyZWY9
+Imh0dHBzOi8vZG9jcy5nb29nbGUuY29tL2Zvcm1zL2QvZS8xRkFJcFFMU2U4aHc5WEJnMkhuaFNE
+WnF3d19jc09IUWJ0RnJVcmlyOEdPX0ZCTzZ0YlNyTDFudy92aWV3Zm9ybT92Yz0wJmFtcDtjPTAm
+YW1wO3c9MSZhbXA7ZmxyPTAmYW1wO3VzcD1tYWlsX2Zvcm1fbGluayIgc3R5bGU9ImJvcmRlci1y
+YWRpdXM6IDNweDsgYm94LXNpemluZzogYm9yZGVyLWJveDsgZGlzcGxheTogaW5saW5lLWJsb2Nr
+OyBmb250LXNpemU6IDEzcHg7IGZvbnQtd2VpZ2h0OiA3MDA7IGhlaWdodDogNDBweDsgbGluZS1o
+ZWlnaHQ6IDQwcHg7IHBhZGRpbmc6IDAgMjRweDsgdGV4dC1hbGlnbjogY2VudGVyOyB0ZXh0LWRl
+Y29yYXRpb246IG5vbmU7IHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7IHZlcnRpY2FsLWFsaWdu
+OiBtaWRkbGU7IGNvbG9yOiAjZmZmOyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTAzLDU4LDE4Myk7
+IiB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub29wZW5lciI+RmlsbCBvdXQgZm9ybTwvYT48L3RkPjwv
+dHI+PC90Ym9keT48L3RhYmxlPjwvdGQ+PC90cj48dHIgaGVpZ2h0PSIyNHB4Ij48L3RyPjwvdGJv
+ZHk+PC90YWJsZT48L2Rpdj48dGFibGUgYWxpZ249ImNlbnRlciIgY2VsbHBhZGRpbmc9IjAiIGNl
+bGxzcGFjaW5nPSIwIiBzdHlsZT0ibWF4LXdpZHRoOiA2NzJweDsgbWluLXdpZHRoOiAxNTRweDsi
+IHdpZHRoPSIxMDAlIiByb2xlPSJwcmVzZW50YXRpb24iPjx0Ym9keT48dHIgaGVpZ2h0PSIyNHB4
+Ij48dGQ+PC90ZD48L3RyPjx0cj48dGQ+PGEgaHJlZj0iaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20v
+Zm9ybXM/dXNwPW1haWxfZm9ybV9saW5rIiBzdHlsZT0iY29sb3I6ICM0MjQyNDI7IGZvbnQtc2l6
+ZTogMTNweDsiPkNyZWF0ZSB5b3VyIG93biBHb29nbGUgRm9ybTwvYT48L3RkPjwvdHI+PC90Ym9k
+eT48L3RhYmxlPjwvZGl2PjwvYm9keT48L2h0bWw+
+--000000000000dc291b05b32f34c6--
 
 
---===============4808876258519794894==
+--===============2471192234978347153==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4808876258519794894==
+--===============2471192234978347153==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -225,5 +219,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4808876258519794894==--
+--===============2471192234978347153==--
 
