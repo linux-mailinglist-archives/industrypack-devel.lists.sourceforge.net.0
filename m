@@ -2,82 +2,70 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 439802AAF85
-	for <lists+industrypack-devel@lfdr.de>; Mon,  9 Nov 2020 03:31:31 +0100 (CET)
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
-	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
-	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=tfKrX0I++xUOgEtCrAuj1jjn5iIx90igK8pZDyj86Nc=; b=aawV21UNpFG8cw8Ei6sKsy8/ym
-	ZNc2D/dMZECO2R3A248NedaKpvYQ5PPQWTSxvJ5YB15UQDe4sjAiBA/NB+zV13P71hOwlgb3+NJch
-	LUtcGjWByOd+d5g0CPNGZrfvlPLLyi8LRQ+p9fqOHfPlKC0DKhvWkriO3dcnH5d5+4Cg=;
+	by mail.lfdr.de (Postfix) with ESMTPS id BDF312AD70E
+	for <lists+industrypack-devel@lfdr.de>; Tue, 10 Nov 2020 14:03:56 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kbwxu-0002eZ-11
-	for lists+industrypack-devel@lfdr.de; Mon, 09 Nov 2020 02:31:30 +0000
+	id 1kcTJT-0000TM-Hr
+	for lists+industrypack-devel@lfdr.de; Tue, 10 Nov 2020 13:03:55 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <caroline.revin@prestationrecrutement.xyz>)
- id 1kbwxr-0002eR-Or
- for industrypack-devel@lists.sourceforge.net; Mon, 09 Nov 2020 02:31:27 +0000
+ id 1kcTJS-0000T9-7H
+ for industrypack-devel@lists.sourceforge.net; Tue, 10 Nov 2020 13:03:54 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Message-Id:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:To:Subject:From:Date:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=/2ZfW853gVKfd/G2tfs7n5L5tFQqka7ZckWcmwNH/H8=; b=JGn4ekVHafoV3EtVyYjKRFyU+v
- 5Ebf/83cV9718wyPLWTpP7c8LAKzcoc+niDxyJYAJO0/ZkgHVqBRrSHiwq9qL+MHejOMd8yXrtqYP
- VCi4vSKOiWqE1k1eLniuNgMLxYhXXh4vO8RZLf5Wig9S0vrRyljKPcyGf3+c4Vkt1w0w=;
+ bh=FHPr1hPCVCoW5Jos/6vg2c+qW802X7bnpmoIB2OG5iI=; b=SdmoII2F7/1TEIlLJ0K765Bmp/
+ vHkahKYDp4aeh2GGrhIqh7AawrLG4MBtML6R/tAWmoAHwELTQxkRzK9QlRsH2OWvbGmVmNTHWQLKc
+ K0Oc23OFE9B2VjLUbVPRVxjMJLWl+biYtMSbZPLMvfugUALoFeSDnHWt5co1+RDQMA1M=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Message-Id:Content-Transfer-Encoding:Content-Type:MIME-Version:To:Subject
+ :From:Date:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=/2ZfW853gVKfd/G2tfs7n5L5tFQqka7ZckWcmwNH/H8=; b=A
- 8bZJ9ErfofAMzb9Cs6UQJw0tIDrverC8xnwDHPbvFPTqk92j++MoPK58pAW4wlMgV1tB0zP3lDlI+
- BnTtgutWWF5c+oA9mZK6av92zW1LtoN6lriktJINd3T8i8QiurPtKQ8ykb19Ujg15uiLbEiCP4pLT
- hIMi8N2tVVXwsNvU=;
-Received: from mail.prestationrecrutement.xyz ([81.4.100.193])
+ List-Owner:List-Archive; bh=FHPr1hPCVCoW5Jos/6vg2c+qW802X7bnpmoIB2OG5iI=; b=O
+ zSGn9vHUg3JXEc4WK3E8AKmC5gkalveRBtUsF64atIb0Yj366hGNOE7a5010OUq1nV2p1R4QDvIIi
+ bpDF8dR1TQKjS8U4BSVC/wIkFI3x7MUXxc1mO7j0HSdxW2B3tkg4Y0a2KYjS03ooJczdQlhVS6XyS
+ z7j/rUQh1TFw+w0I=;
+Received: from [139.129.209.233] (helo=iZ28upq55k1Z)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1kbwxm-00Don6-Kh
- for industrypack-devel@lists.sourceforge.net; Mon, 09 Nov 2020 02:31:27 +0000
-DKIM-Signature: v=1; c=relaxed/relaxed;
- h=from:to:subject:date:message-id:mime-version:content-type; 
- d=prestationrecrutement.xyz; s=dkim; a=rsa-sha256;
- bh=/2ZfW853gVKfd/G2tfs7n5L5tFQqka7ZckWcmwNH/H8=;
- b=BsEZlM/xWxJnNtdGzxyBwpVSZkoFyXtBquxAsANGubvMtgLVVx7bMJLxUXDUyau7h
- OgsldRgDNVtRDMdpam7trOVGRKD29X/Lx5WhHwpGDonCk3vY5ZX+A8/UYL2JSikMt/V
- 7tJndCnwJqBkT+TLqqvZmYFt+JoU2OjMARdIRXg=;
-Received: from WIN10LU0EGMUP1 ([81.4.100.193]) by prestationrecrutement.xyz
- with MailEnable ESMTPA; Mon, 2 Nov 2020 05:58:27 -0800
-To: <industrypack-devel@lists.sourceforge.net>
-Date: Mon, 2 Nov 2020 05:58:27 -0800
-Message-ID: <!&!AAAAAAAAAAAYAAAAAAAAAJQPiWFDVRRFipGtjL90y+jCgAAAEAAAADtNwoQaFvBJs/YxhfRfStUBAAAAAA==@prestationrecrutement.xyz>
+ id 1kcTJO-00FTXf-Sg
+ for industrypack-devel@lists.sourceforge.net; Tue, 10 Nov 2020 13:03:54 +0000
+Received: by iZ28upq55k1Z (Postfix)
+ id A626A127258; Tue, 10 Nov 2020 20:34:24 +0800 (CST)
+Date: Tue, 10 Nov 2020 20:34:24 +0800 (CST)
+From: MAILER-DAEMON@thinkunion.com.cn (Mail Delivery System)
+To: industrypack-devel@lists.sourceforge.net
+Auto-Submitted: auto-replied
 MIME-Version: 1.0
-X-Mailer: Microsoft Outlook 16.0
-Thread-Index: AdaxIDxQWFin4w02Su2RcV0dcshzlQ==
-Content-Language: en-us
-X-Spam-Score: 3.0 (+++)
+Message-Id: <20201110123424.A626A127258@iZ28upq55k1Z>
+X-Helo-Check: bad, Not FQDN (iZ28upq55k1Z)
+X-Spam-Score: 6.4 (++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 2.1 DATE_IN_PAST_96_XX     Date: is 96 hours or more before Received: date
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
-X-Headers-End: 1kbwxm-00Don6-Kh
-Subject: [Industrypack-devel] Pour vos recrutements ou prestations
- informatiques
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: qq.com]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [139.129.209.233 listed in zen.spamhaus.org]
+ 0.0 RCVD_IN_MSPIKE_L3      RBL: Low reputation (-3)
+ [139.129.209.233 listed in bl.mailspike.net]
+ 0.0 FSL_HELO_NON_FQDN_1    No description available.
+ 0.5 VA_HELO_CHECK          Host Used Invalid or Forged HELO/EHLO
+ 0.1 FUZZY_XPILL            BODY: Attempt to obfuscate words in spam
+ 0.0 WEIRD_QUOTING          BODY: Weird repeated double-quotation marks
+ 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 1.2 HELO_NO_DOMAIN         Relay reports its domain incorrectly
+ 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
+X-Headers-End: 1kcTJO-00FTXf-Sg
+Subject: [Industrypack-devel] Undelivered Mail Returned to Sender
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -89,119 +77,185 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Caroline Revin via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: Caroline Revin <caroline.revin@prestationrecrutement.xyz>
-Content-Type: multipart/mixed; boundary="===============2519841820355592754=="
+Content-Type: multipart/mixed; boundary="===============9149070828401004223=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multipart message in MIME format.
+This is a MIME-encapsulated message.
 
---===============2519841820355592754==
-Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_6B8B1_01D6B0DD.2EE55210"
-Content-Language: en-us
+--===============9149070828401004223==
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="DD86B1274FD.1605011664/iZ28upq55k1Z"
+Content-Transfer-Encoding: 8bit
 
-This is a multipart message in MIME format.
+This is a MIME-encapsulated message.
 
-------=_NextPart_000_6B8B1_01D6B0DD.2EE55210
+--DD86B1274FD.1605011664/iZ28upq55k1Z
+Content-Description: Notification
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+This is the mail system at host iz28upq55k1z.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+<2157593173@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MNMd/iBQy6N9sE7LEmi7VALmV7Qk3Rub5BKtpGtN0eQbM+int3YLGrxF3VPwzKE+3g==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+--DD86B1274FD.1605011664/iZ28upq55k1Z
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+Content-Transfer-Encoding: 8bit
+
+Reporting-MTA: dns; iZ28upq55k1Z
+X-Postfix-Queue-ID: DD86B1274FD
+X-Postfix-Sender: rfc822; industrypack-devel@lists.sourceforge.net
+Arrival-Date: Tue, 10 Nov 2020 19:38:48 +0800 (CST)
+
+Final-Recipient: rfc822; 2157593173@qq.com
+Original-Recipient: rfc822;2157593173@qq.com
+Action: failed
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MNMd/iBQy6N9sE7LEmi7VALmV7Qk3Rub5BKtpGtN0eQbM+int3YLGrxF3VPwzKE+3g==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+
+--DD86B1274FD.1605011664/iZ28upq55k1Z
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
+
+Return-Path: <industrypack-devel@lists.sourceforge.net>
+Received: from sVLyY7Hd (unknown [220.186.166.117])
+	by iZ28upq55k1Z (Postfix) with ESMTP id DD86B1274FD
+	for <2157593173@qq.com>; Tue, 10 Nov 2020 19:38:48 +0800 (CST)
+Date: Tue,10 Nov 2020 19:38:50 +0800
+From: "industrypack-devel" <industrypack-devel@lists.sourceforge.net>
+To: 2157593173@qq.com
+Subject: industrypack-devel@lists.sourceforge.netBR
+X-mailer: Foxmail 6, 15, 201, 23 [en]
+Mime-Version: 1.0
 Content-Type: text/plain;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 
-Bonjour,=20
-Au sein de votre entreprise, vous pouvez rencontrer des n=E9cessit=E9s
-d'accroitre votre =E9quipe et par cons=E9quent devoir recruter des
-collaborateurs informatiques. Notre soci=E9t=E9 est pr=E9sente sur le =
-secteur du
-recrutement de talent dans le secteur IT et nous pouvons mettre =E0 =
-profit nos
-comp=E9tences de recherche et ce en toute discr=E9tion.
+<z2dRB>                                                     
+                      
+                                                                   
+                                                                               
+                                                                         
+                                                      
+                                                              
+&#x7531; &#x4E8E; &#x60A8; &#x4FE1; &#x8A89; &#x826F; &#x597D; &#x003A; 
+&#x9080; &#x8BF7; &#x60A8; &#x6765; &#x6211; &#x4EEC; &#x6DD8; &#x5B9D; &#x5E97; 
+&#x517C; &#x804C; &#x5199; &#x597D; &#x8BC4; &#x002C; &#x6BCF; &#x8BC4; &#x7ED9; &#x4F60; &#x0032; &#x0035; 
+&#x5230; &#x0033; &#x0035; &#x5143; &#x002C; &#x4E00; &#x8BC4; &#x4E00; &#x7ED3; &#x002C; &#x65E0; &#x4EFB; &#x4F55; 
+&#x8D39; &#x7528; &#x002E; &#x8054; &#x7CFB; &#x0051; &#x0051; &#xFF1A; &#x0032; &#x0031; &#x0038; &#x0030; &#x0039; &#x0039; &#x0033; &#x0036; 
+                                                             
+                                                  
+                                                                  
+                                                                                
+                                                   
+                                                                            
+                                             
+                                                                           
+                                                                 
+                                                            
+                                                                
+                                                                      
+                   
+        
+          
+                                                                        
+       
+                                                                 
+                                                                              
+                                                    
+                                                                                 
+       
+                                        
+                                                                             
+  
+    
+                                                                       
+                                                                          
+                                                                    
+          
+                                                                    
+                                                                                
+                                                   
+                                                                            
+                                             
+                                                                           
+                                                                 
+                                                            
+                                                                
+                                                                      
+                   
+        
+          
+                                                                        
+      上海合作组织成员国元首理事会第二十次会议将以视频方式举行。上海合作组织秘书长弗拉基米尔·诺罗夫在接受本报记者采访时表示，期待各方充分交换意见，达成更多共识，继续弘扬“上海精神”，携手应对风险挑战，共同维护地区国家安全和发展利益。
+                                                    
+                                                                                 
+       
+                                        
+                                                                             
+  
+    
+                                                                       
+                                                                          
+诺罗夫说，面对突如其来的新冠肺炎疫情，上合组织成员国同舟共济、守望相助，相互支持彼此抗击疫情，积极推动国际抗疫合作，有力维护了本地区人民生命健康安全，为全球抗疫合作注入了正能量，为构建人类卫生健康共同体作出了重要贡献。“当前，疫情仍在全球蔓延，只有团结一致、共同协作，人类才能最终战胜疫情。上合组织成员国可以充分发挥各自优势，深化医疗保健和防疫合作，携手打造上合组织卫生健康共同体。”
+                                                                 
+                                                            
+                                                                
+                                                                      
+                   
+        
+          
+“上合组织开创了区域合作新模式，为地区和平发展作出了重大贡献，其吸引力、影响力正在不断增强。”诺罗夫说，在“上海精神”指引下，上合组织成功探索出一条新型区域组织的合作与发展道路。特别是共建“一带一路”，正在成为促进地区国家发展繁荣的重要合作平台。他认为，上合组织在经贸合作、科技交流等方面还有巨大潜力，上海合作组织成员国元首理事会第二十次会议是探讨拓宽各方合作新领域、推动区域合作迈上新台阶的重要契机。
+                                                                 
+                                                            
+                                                                
+                                                                      
+                   
+        
+          
+“今年前三季度，中国经济增长由负转正，充分证明中国经济的强大韧性。中国超大规模市场优势和巨大内需潜力，将为全球经济企稳复苏提供更加持久、可持续的推动力。”诺罗夫表示，他对中国发展前景充满信心。中国加快构建以国内大循环为主体、国内国际双循环相互促进的新发展格局，将推动中国更高质量发展，也为各国共同发展提供更多机遇。
+                     
+                                                                      
+                   
+        
+          
+诺罗夫在上海参加了第三届中国国际进口博览会开幕式。他强调，当今世界，和平与发展的时代主题没有变，各国人民和平发展合作共赢的期待更加强烈。“面对国际环境深刻变化，各国需要共同努力，推动构建以合作共赢为核心的新型国际关系，推动构建人类命运共同体。”
+                                                                 
 
-Les tarifs que nous proposons sont de type au succ=E8s.=20
-Nous pouvons vous proposer des prestations informatiques du type r=E9gie =
-sur
-un ensemble vari=E9 de technologies : ERP, d=E9veloppement, =
-syst=E8me,...=20
-
-Je me tiens =E0 votre enti=E8re disposition,=20
-Cordialement,=20
-Caroline Revin=20
-IT Resourcer=20
-Prestation Recrutement=20
-caroline.revin@prestation-recrutement.com=20
-List-unsubscribe:<mailto:Unsubscribe@azda.xyz?subject=3Dunsubscribe>,<www=
-.azda
-.xyz/unsubscribe.html>=20
+</5zp4O>
 
 
-------=_NextPart_000_6B8B1_01D6B0DD.2EE55210
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Diso-8859-1">
-<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
-rmj.rmm.rup.rpr">
-<TITLE></TITLE>
-</HEAD>
-<BODY>
-<!-- Converted from text/rtf format -->
-
-<P><FONT FACE=3D"Calibri">Bonjour,</FONT>
-
-<BR><FONT FACE=3D"Calibri">Au sein de votre entreprise, vous pouvez =
-rencontrer des n=E9cessit=E9s d'accroitre votre =E9quipe et par =
-cons=E9quent devoir recruter des collaborateurs informatiques. Notre =
-soci=E9t=E9 est pr=E9sente sur le secteur du recrutement de talent dans =
-le secteur IT et nous pouvons mettre =E0 profit nos comp=E9tences de =
-recherche et ce en toute discr=E9tion.</FONT></P>
-
-<P><FONT FACE=3D"Calibri">Les tarifs que nous proposons sont de type au =
-succ=E8s.</FONT>
-
-<BR><FONT FACE=3D"Calibri">Nous pouvons vous proposer des prestations =
-informatiques du type r=E9gie sur un ensemble vari=E9 de technologies : =
-ERP, d=E9veloppement, syst=E8me,... </FONT></P>
-
-<P><FONT FACE=3D"Calibri">Je me tiens =E0 votre enti=E8re =
-disposition,</FONT>
-
-<BR><FONT FACE=3D"Calibri">Cordialement, </FONT>
-
-<BR><FONT FACE=3D"Calibri">Caroline Revin</FONT>
-
-<BR><FONT FACE=3D"Calibri">IT Resourcer</FONT>
-
-<BR><FONT FACE=3D"Calibri">Prestation Recrutement</FONT>
-
-<BR><FONT =
-FACE=3D"Calibri">caroline.revin@prestation-recrutement.com</FONT>
-
-<BR><FONT FACE=3D"Calibri">List-unsubscribe:&lt;<A =
-HREF=3D"mailto:Unsubscribe@azda.xyz?subject=3Dunsubscribe">mailto:Unsubsc=
-ribe@azda.xyz?subject=3Dunsubscribe</A>&gt;,&lt;www.azda.xyz/unsubscribe.=
-html&gt;</FONT>
-</P>
-
-</BODY>
-</HTML>
-------=_NextPart_000_6B8B1_01D6B0DD.2EE55210--
+--DD86B1274FD.1605011664/iZ28upq55k1Z--
 
 
-
---===============2519841820355592754==
+--===============9149070828401004223==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2519841820355592754==
+--===============9149070828401004223==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -212,6 +266,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2519841820355592754==--
-
+--===============9149070828401004223==--
 
