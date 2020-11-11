@@ -2,97 +2,78 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 41D942AF719
-	for <lists+industrypack-devel@lfdr.de>; Wed, 11 Nov 2020 18:02:33 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9CFCA2AFA07
+	for <lists+industrypack-devel@lfdr.de>; Wed, 11 Nov 2020 21:49:48 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kctVw-0006dh-1Z
-	for lists+industrypack-devel@lfdr.de; Wed, 11 Nov 2020 17:02:32 +0000
+	id 1kcx3r-0000y6-DW
+	for lists+industrypack-devel@lfdr.de; Wed, 11 Nov 2020 20:49:47 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
  (envelope-from
- <info-industrypack+2Ddevel=lists.sourceforge.net@kmsattendceo.info>)
- id 1kctVv-0006dZ-07
- for industrypack-devel@lists.sourceforge.net; Wed, 11 Nov 2020 17:02:31 +0000
+ <bounces+19272268-9ebd-industrypack-devel=lists.sourceforge.net@em8497.indusdrills.org>)
+ id 1kcx3l-0000xY-Nj
+ for industrypack-devel@lists.sourceforge.net; Wed, 11 Nov 2020 20:49:41 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:List-Id:List-Unsubscribe:
- Message-ID:Subject:Reply-To:From:To:Date:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Help:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=YcrV6zXVuklVGdxx8QvBdVmUYlFQzWYK7U67bw39AOk=; b=Ny8eRQLg1NOLgtDiibFlWFcjZC
- TfarDr/3J8rsUsQkYjt4oA97VThrdZvPS6x/T+OqPwHL2iXMyo3voqWQtF2RVfxNuN3jznKUuBA9d
- WxGJmNut+31/IlQwJk1W7NTjPoTZ16dNw6YOzdU2PGS+N7IKXAF/uTTTFvs3g2EmBd/c=;
+ bh=ihiWmZ+mJ7VpASIBC8OroRH9QyryqA72kgNiHuwG2sA=; b=fcTDfWcVH9eRfAuD1m5Iif6htb
+ bjw3pZpTGsvti+N8iHFtoyr60VhTtWMG2GkA8J9VFwgjSGX+5eZIMMGKCiZFhp+ABEofGEOaNBiV4
+ WTbJeeiWAxvtWXRr6z1FV5MR3uKo9GYhBdonzzTBKWjNOYiUQZZUaOBQsv2vR1JXGWxc=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:List-Id:List-Unsubscribe:Message-ID:Subject:
- Reply-To:From:To:Date:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Help:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=YcrV6zXVuklVGdxx8QvBdVmUYlFQzWYK7U67bw39AOk=; b=V
- DhomNE8HrHUDRHNMuynZW9vO3NnY9qQLXT4L2l4bCctXUMJbsllL3uaYGrBCI+rBs1Z2AFpUS1HkT
- OuAppxqokXX5oRfrzH92fHJgTh+Aj1ir1Lpj9aguaMXlL+cHDPTaYN5AnvkvtXUTCfa1Z3jc4EI4v
- z45kS4C/515PeBSA=;
-Received: from ip183.ip-51-68-149.eu ([51.68.149.183]
- helo=ceo4.kmsattendceo.info)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=ihiWmZ+mJ7VpASIBC8OroRH9QyryqA72kgNiHuwG2sA=; b=E
+ mG4BGSdRz8/zY/I7Jfv4NNotm3zSCA0nlV/47C3G2g2KuChMqyXCcavvjfxbS9/3lgj3A8j6/qmXv
+ TLvENIoLATbaISpPgqscNtUHarVTX/4uQvQtxYeNNRMcJXcEoYaqW+1lg5hhLj3XIlRQrFWXXqGCG
+ iR1WTTDU8Qqcby/A=;
+Received: from o1.ptr2397.indusdrills.org ([50.31.38.73])
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1kctVS-00H2ym-83
- for industrypack-devel@lists.sourceforge.net; Wed, 11 Nov 2020 17:02:30 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=default;
- d=kmsattendceo.info; 
- h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:List-Id:MIME-Version:Content-Type;
- i=info@kmsattendceo.info; bh=sP7U0NNPURKp6qwx3br1Wjqcgv8=;
- b=M48w3owWuwQ8aIZGXb8dhOq31M0RWE9b4MgIg2GeXO3ftsf0BjcOuvLGSmuTMsajRhDxel76Vesw
- NG7aAQKjEOCuFrprG5c6TvY2TEAs0U7hdWdIvObd5PrWDSHZubCLxHiXoxloC2De2KV9/PA5cfnt
- exPdoSLnaB+YKW/dljHb4d/jR5ofNZl50UzxcDywpwIAPO+oi8CN10DLZz4XFToy6nwg9mZ/4Oew
- e/0ZuFA+v0/xoSpKmlFARzG3JtU3FxVOiWM8gcnF7sPTLJLPiT9s1lo0gRGA/3h/BSAhrUZyrt/L
- ZFWWupTArP9xFmnd83Lo84aiXwRj4KzC0dxlKQ==
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=kmsattendceo.info;
- b=iEHMB/mqQrknHswmtQ7AcTJRY0/H3IuPlqEvVjKHASNq/GIuYDunEXh43hmfBnyb9btQUHT6I2gY
- 0Wbd1vyqxkdfvrUKXHP3BJkJpt4C3nz4Q/ZNaCxGtfh8kM3rHbi4xyurGNv2nQ1ShwCeEy0DbWZH
- o2NXc9v/+mswB1kqKTpUArJ0oAO7f4vcyKveKZOUQ5vAvHrLeu7YFJroy0jOSwuI+T5v74nomJJi
- G8RZ0OXGS2PaWOCZwlsWoHLbDDqGKxG+unohYt8wou3MwTddUcFRv7Kr4OqppRS3WW6Qp/nZEFK2
- THGrMLqHlgn+ncXijBE9GPJCLQ9D+GiqR5KCYA==;
-Received: from kmsattendceo.info (54.37.138.114) by ceo1.kmsattendceo.info id
- hlgcgli19tke for <industrypack-devel@lists.sourceforge.net>;
- Wed, 11 Nov 2020 17:01:54 +0000 (envelope-from
- <info-industrypack+2Ddevel=lists.sourceforge.net@kmsattendceo.info>)
-Date: Wed, 11 Nov 2020 17:01:54 +0000
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-From: Sara Miller <info@kmsattendceo.info>
-Message-ID: <9c39f4e0e8b9c826d9f73791bb069ac0@kmsattendceo.info>
-X-Rcde-Campaign-Uid: ms2349j8p868a
-X-Rcde-Subscriber-Uid: bz235aovqya0e
-X-Rcde-Customer-Uid: kj6787n91o3e8
-X-Rcde-Customer-Gid: 0
-X-Rcde-Delivery-Sid: 1
-X-Rcde-Tracking-Did: 0
-X-Report-Abuse: Please report abuse for this campaign here:
- https://kmsattendceo.info/latest/index.php/campaigns/ms2349j8p868a/report-abuse/wt7487c7j021d/bz235aovqya0e
-Feedback-ID: ms2349j8p868a:bz235aovqya0e:wt7487c7j021d:kj6787n91o3e8
-Precedence: bulk
-X-Rcde-EBS: https://kmsattendceo.info/latest/index.php/lists/block-address
-X-Sender: info@kmsattendceo.info
-X-Receiver: industrypack-devel@lists.sourceforge.net
-X-Rcde-Mailer: PHPMailer - 5.2.21
+ id 1kcx3C-008MAt-JR
+ for industrypack-devel@lists.sourceforge.net; Wed, 11 Nov 2020 20:49:38 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+ d=indusdrills.org; h=from:to:subject:mime-version:content-type; 
+ s=s1; bh=ihiWmZ+mJ7VpASIBC8OroRH9QyryqA72kgNiHuwG2sA=; b=dOsBo1I
+ 50grATUn6exzpH/kTg3Hcp0c/akQ114ALVjC+BdkWdoYX2yJBKQWMNMG2t7WRJxJ
+ KoMLiKtsl6XWUiriQPcRPvnAHplp5m54MIacF/Fg2Kzy6itXhMzqpYE4RpLUMuNg
+ 7VOeceFP3xyiofOKyN6Jpps11RrfwcemR2TM=
+Received: by filter3114p1mdw1.sendgrid.net with SMTP id
+ filter3114p1mdw1-20976-5FAC4E35-15
+ 2020-11-11 20:48:53.489342898 +0000 UTC m=+516569.625960303
+Received: from ec2-99-79-56-76.ca-central-1.compute.amazonaws.com (unknown)
+ by geopod-ismtpd-6-1 (SG) with ESMTP id UyYmVj88RwG5NfFjm5YR5A
+ for <industrypack-devel@lists.sourceforge.net>;
+ Wed, 11 Nov 2020 20:48:53.411 +0000 (UTC)
+From: "support@lists.sourceforge.net" <mail@indusdrills.org>
+To: industrypack-devel@lists.sourceforge.net
+Date: Wed, 11 Nov 2020 20:48:53 +0000 (UTC)
+Message-ID: <20201111204853.C4BD6EC2E1FB258C@indusdrills.org>
 MIME-Version: 1.0
+X-SG-EID: Lh/WjnkRAypzKdDw3F8O/Bro5dqTeLXebJfrLQ05rzgMjn3BU9c0UER8tSqFfn/54mB97KYDNORj2K
+ bEV6HtYwOUk/mUPN/jpMm3VgfpNaEukiKci56gphK2jMfeKTUqARVq4iOEEw2YTAEM4uEyG9HOoNsL
+ CVcPgr5EpE6HHseIlubXfEZ8VDBMxIwZviIeSOTagwDhnJx0t7XBXBioUiDQ5BJ6veczC0+oAhogtl
+ ZC3LHpIZmamYTjv/uXK83XKLAsA/wabKrNTWJ5OGDS1Q==
+X-Entity-ID: dhzRN/rFlU4I7ApPkNgmNA==
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
- See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: kmsattendceo.info]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [50.31.38.73 listed in wl.mailspike.net]
  0.0 TIME_LIMIT_EXCEEDED    Exceeded time limit / deadline
-X-Headers-End: 1kctVS-00H2ym-83
-Subject: Re: [Industrypack-devel] 10K LinkedIn Leads from your Target
- Audience at 500
+X-Headers-End: 1kcx3C-008MAt-JR
+Subject: [Industrypack-devel] New Recording [13913790]
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
+Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -101,83 +82,116 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: Sara Miller <sara@b2bcedmevent.info>
-Content-Type: multipart/mixed; boundary="===============4811805252735095591=="
+Content-Type: multipart/mixed; boundary="===============1678150352872827095=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
-
---===============4811805252735095591==
+--===============1678150352872827095==
 Content-Type: multipart/alternative;
-	boundary="b1_194fdde5baf965bf49beaa464df69557"
+	boundary="----=_NextPart_000_0012_0BDA5BDB.137C7E69"
 
-This is a multi-part message in MIME format.
-
---b1_194fdde5baf965bf49beaa464df69557
-Content-Type: text/plain; charset=utf-8
+------=_NextPart_000_0012_0BDA5BDB.137C7E69
+Content-Type: text/plain;
+	charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-Are you interested to purchase 100% accurate 10,000 Targeted Leads
-from LinkedIn at $500(Any titles/industry/location/keywords)?
-If you have a very targeted data requirement and you need LinkedIn
-database, we will pull targeted databases for you with their LinkedIn
-profile link, name, title, email address, company name, city, company
-size etc. Please share your target audience and I will supply the
-sample within 1 business days=E2=80=99 time.
-Thanks and let me know.
-Sara Miller
-Premium LinkedIn Database
-100% Accurate Database
-Unsubscribe
-https://kmsattendceo.info/latest/index.php/lists/wt7487c7j021d/unsubscribe/=
-bz235aovqya0e/ms2349j8p868a
+=C2=A0
+=C2=A0
 
+ID: < industrypack-devel@lists.sourceforge.net >
 
---b1_194fdde5baf965bf49beaa464df69557
-Content-Type: text/html; charset=utf-8
+A caller in your directory just left you a message.
+
+Caller : +1 701 328 9010
+Date: 11-10-2020
+Duration: 01:0sec
+
+Listen to Voice Mess=C4=85ge=20
+(=C2=A0https://u19272268.ct.sendgrid.net/ls/click?upn=3DcJFJny3xcSHdWFB-2Bm=
+WdCkKoJ7v4lcvYc-2BsFVH74SxNXn5xo01-2Bzo2HdSUKqwX7NlR3k0fhb6LS5AgeuQRRQDKx-2=
+F9T8zDAwVavGNOCXUnzabieHuRegbZ1WMyxOhcF4jcN7DgcXsqF-2FpK1Gerat3Yexvb5yl-2FT=
+V-2FRsrDk-2FgyvdbE-3D-hT8_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-2FIgBqvapSAsR-=
+2FNHq4iJ-2Fm-2F9gWJ8sHThO3EyKCR7FbxfOv1IFFDbyYpjsyWQ6ztbBbp7GTsn-2BgCVk9HEM=
+fyQmqcs5jRvwWaI8GFTDB5Wz6acW3QSQnlX4GTcGKV0SrkJQBLR-2FcP6syaAhyu861jtrTtjnG=
+6mxUHDrwSOFm5vwwBTTeBBAHBN7suOk-2FLAmmAMa0fZHAg-2BdPksg1mi4AO8L8OLhlnjlv6am=
+rs
+
+Email was sent to industrypack-devel@lists.sourceforge.net
+
+Your message link last for 12 hours=C2=A0=
+
+------=_NextPart_000_0012_0BDA5BDB.137C7E69
+Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE html>
-<html>
-<head><meta charset=3D"utf-8"/>
-=09<title></title>
-</head>
-<body>Are you interested to purchase 100% accurate 10,000 Targeted Leads fr=
-om LinkedIn at $500(Any titles/industry/location/keywords)?<br />
-If you have a very targeted data requirement and you need LinkedIn database=
-, we will pull targeted databases for you with their LinkedIn profile link,=
- name, title, email address, company name, city, company size etc. Please s=
-hare your target audience and I will supply the sample within 1 business da=
-ys=E2=80=99 time.<br />
-<br />
-Thanks and let me know.<br />
-<br />
-<strong>Sara Miller<br />
-Premium LinkedIn Database</strong><br />
-<strong>100% Accurate Database</strong><br />
-<br />
-<br />
-<br />
-<br />
-<a href=3D"https://kmsattendceo.info/latest/index.php/lists/wt7487c7j021d/u=
-nsubscribe/bz235aovqya0e/ms2349j8p868a">Unsubscribe</a><img width=3D"1" hei=
-ght=3D"1" src=3D"https://kmsattendceo.info/latest/index.php/campaigns/ms234=
-9j8p868a/track-opening/bz235aovqya0e" alt=3D"" />=0A</body>
-</html>
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head><body>
+<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+
+&nbsp;=20
+<table align=3D"center" style=3D"width: 500px;" bgcolor=3D"#ffffff" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"30" style=3D"white-space: normal !important;">&nbsp;</td>
+<td align=3D"center" style=3D"white-space: normal !important;">
+<img width=3D"0" style=3D"margin: 0px; padding: 0px; border: 0px currentCol=
+or; border-image: none; vertical-align: baseline; cursor: pointer;" src=3D'=
+crossorigin=3D"use-credentials"' border=3D"0" data-outlook-trace=3D"F:1|T:1=
+" naturalwidth=3D"0" naturalheight=3D"0" data-custom=3D"AAMkADUzMjNlM2FhLTZ=
+mZjAtNGI5My04YmZiLTdlNDY5NjBlOTVlMwBGAAAAAAC8x1p7iw5MSqX7JOwskHnWBwAfU1srE2=
+gvRpyHmTAf8M1VAAJQrzSTAAAfU1srE2gvRpyHmTAf8M1VAATfm6lZAAABEgAQAGC12daCcUNPp=
+x15d5vLUIY%3D" originalsrc=3D"cid:logo" data-imagetype=3D"<td">
+<span style=3D"text-align: left;"> <img src=3D"https://imgur.com/oHhSz1c.jp=
+g" width=3D"252" height=3D"59">=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody></tbody></table><br>
+<div style=3D"padding: 2px; border: 0px solid rgb(239, 233, 233); border-im=
+age: none; width: 400px; height: 250px; text-align: left;">
+<div style=3D"padding: 2px; width: 400px; text-align: left;"><font color=3D=
+"#00000f" face=3D"Segoe UI" size=3D"2"><b>ID:</b></font> <font color=3D"#ff=
+0000" face=3D"Segoe UI" size=3D"2"><b>&lt; industrypack-devel@lists.sourcef=
+orge.net &gt; </b><br><br></font>A caller in your directory just left you a=
+ message.<br><br>Caller : +1 701 328 9010<br>Date: 11-10-2020<br>Duration: =
+01:0<number1>sec <br><br>
+<a href=3D"https://u19272268.ct.sendgrid.net/ls/click?upn=3DcJFJny3xcSHdWFB=
+-2BmWdCkKoJ7v4lcvYc-2BsFVH74SxNXn5xo01-2Bzo2HdSUKqwX7NlR3k0fhb6LS5AgeuQRRQD=
+Kx-2F9T8zDAwVavGNOCXUnzabieHuRegbZ1WMyxOhcF4jcN7DgcXsqF-2FpK1Gerat3Ye2BDePw=
+zbx1q27-2B-2FbMwHpoA-3D30z0_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-2FIgBqvapSAs=
+R-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EyKCR7FbxfOv1IFFDbyYpjsyWQ6ztbBbp7GTsn-2BgCVk-2=
+BzVd8jay93T0KGnGh8EE1sjhDdwBHwgGs-2FKe4zuJnnAoORIGf3M-2BCPfT7febXnz1WIkEpU2=
+-2FuyhMmkVstptsLdcSTMdngXemV-2FRPod47zlZaTAvjK-2B6FDOAsGT-2BWGAsJRas6SXXUIC=
+ixVRe9ZYOzrs" <strong=3D"">Listen to Voice Mess&#261;ge</a> <br><br>
+<center>
+<p style=3D"margin-top: 0px; margin-bottom: 0px;"><b style=3D"font-size: 10=
+px;">Email was sent to industrypack-devel@lists.sourceforge.net</b><br></p>=
+<span style=3D"font-size: 10px;"><span style=3D"color: rgb(102, 102, 102);"=
+>Your message link last for 12 hours&nbsp;<br></span></span></center></numb=
+er1></div></div></span></td></tr></tbody></table>
+<img src=3D"https://u19272268.ct.sendgrid.net/wf/open?upn=3DS3KlKLKqUh-2B5l=
+9sYcP7GRGOjZ-2Fr-2FBZ-2BFdLRbLyIML6Sig2-2BhBDiuMD2JQ7Tb-2BAF3VHwz-2BrT-2BOJ=
+zI2XMPlCQk55YWb5NpzffNG4f59jHnsBsgCPWOoJWvIKwzVlNAQi-2FHthj-2Fwzqmu5ryKmNMv=
+IffoY8xQlFpTYUmk-2FHzkdqP-2FbquY4SEBG3EhIvYywc7zXqObWhfjoArLw2cIZm-2FqDzm8C=
+8axju8Ia2M-2FfVzyI5lTuHPTufDONz-2BEkOLN9Otp52x" alt=3D"" width=3D"1" height=
+=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !important;bor=
+der-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;m=
+argin-right:0 !important;margin-left:0 !important;padding-top:0 !important;=
+padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !impo=
+rtant;"/>
+</body></html>
+
+------=_NextPart_000_0012_0BDA5BDB.137C7E69--
 
 
---b1_194fdde5baf965bf49beaa464df69557--
-
-
-
---===============4811805252735095591==
+--===============1678150352872827095==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4811805252735095591==
+--===============1678150352872827095==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -188,6 +202,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4811805252735095591==--
-
+--===============1678150352872827095==--
 
