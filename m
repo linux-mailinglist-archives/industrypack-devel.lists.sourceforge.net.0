@@ -2,43 +2,43 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 807072B2510
-	for <lists+industrypack-devel@lfdr.de>; Fri, 13 Nov 2020 21:04:24 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1F97A2B250E
+	for <lists+industrypack-devel@lfdr.de>; Fri, 13 Nov 2020 21:04:21 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kdfJ1-0000qB-Ab
-	for lists+industrypack-devel@lfdr.de; Fri, 13 Nov 2020 20:04:23 +0000
+	id 1kdfIx-0000oX-TB
+	for lists+industrypack-devel@lfdr.de; Fri, 13 Nov 2020 20:04:19 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- id 1kddss-0004A6-Ud
- for industrypack-devel@lists.sourceforge.net; Fri, 13 Nov 2020 18:33:18 +0000
+ id 1kddsq-00049P-JY
+ for industrypack-devel@lists.sourceforge.net; Fri, 13 Nov 2020 18:33:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Subject:From:To:Date:
  Message-Id:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=dX60ZXnEwC6WJ4xrH418NSYn8uojvJKYzWvO+eDFMso=; b=d6bsWjzdpLhEXP7fGCSC/w47Ut
- hnPvbLSSyurooHXNg/Fc2DTQR5W6iQyU1GEmirQqq+pzWpC52euRmqq+pyC1PqvVi3rGTKgIJSUvT
- qSb3ScIWeL3aX1wj4EAoRJpVkEJFN2PKqNVQGOxx5rA+gzHRuarNCBf26pQxHpELc/TA=;
+ bh=+DkpVf1z35rTcjRzWMhR5fWmPNDqOgUNe00RAokYRpY=; b=OysNZKMw8cO8VT8Js0OoPZYQpw
+ x+bwzd8Lw++eB4EoJ+SjIouzT4gHXhuHNW9NdUw5A24MvYedPIJa+oN4Yc1PKL7IKfXsquPHN+l1e
+ /6Wt9pySgE1p9Smzds526haqEwPPvCkODTMh20KTUSBSF+dTb2SSvOZFEqOhY9QCLvW0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:MIME-Version:Subject:From:To:Date:Message-Id:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=dX60ZXnEwC6WJ4xrH418NSYn8uojvJKYzWvO+eDFMso=; b=e
- TMV6CEbxrYkUf9mBNmtx7H3FSUAxJaiSZVrQesD4flDJVrEekruT5kUGfw6iL2+N5iu8Cs06Nh83C
- hcobShSGzJ1oijdanwHqJkJskcmIcrPcS2KtjxterkvVZ6RfJdlxvIGr4M8XYljWMat3DleJghso3
- izzOnhSEUxt9/t+4=;
+ List-Owner:List-Archive; bh=+DkpVf1z35rTcjRzWMhR5fWmPNDqOgUNe00RAokYRpY=; b=c
+ AG/xsi9t02PrExazMgP/KOYEggrjzCurky6VyGJpcR453yLz/42OjjLAFr4/5+gjmIhf8Jc8zzv0l
+ I4TtW1lX6nnIx70yHTbxJmczLMVYOUnRiWZN34QuSoln+17owb1i+APCQHX1X6IaCWf/K3C98YpRG
+ AGXdZZOR2kTFrb70=;
 Received: from ip.sgp.pillogistics.com ([203.116.38.243])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps (TLSv1.2:AES256-SHA:256)
- (Exim 4.92.2) id 1kddso-002J19-18
- for industrypack-devel@lists.sourceforge.net; Fri, 13 Nov 2020 18:33:18 +0000
+ (Exim 4.92.2) id 1kddso-002Itm-12
+ for industrypack-devel@lists.sourceforge.net; Fri, 13 Nov 2020 18:33:16 +0000
 Received: from localhost by ip.sgp.pillogistics.com; 14 Nov 2020 02:32:18 +0800
-Message-Id: <8eb11c$tu4ma@ip.sgp.pillogistics.com>
+Message-Id: <8eb11c$tu4m9@ip.sgp.pillogistics.com>
 Date: 14 Nov 2020 02:32:18 +0800
 To: industrypack-devel@lists.sourceforge.net
 From: "Mail Delivery System" <MAILER-DAEMON@ip.sgp.pillogistics.com>
@@ -53,7 +53,7 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 TVD_SPACE_RATIO        No description available.
  2.5 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
-X-Headers-End: 1kddso-002J19-18
+X-Headers-End: 1kddso-002Itm-12
 Subject: [Industrypack-devel] Delivery Status Notification (Failure)
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -66,36 +66,36 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============3901590842857340674=="
+Content-Type: multipart/mixed; boundary="===============7272637475665164592=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3901590842857340674==
-Content-Type: multipart/report; report-type=delivery-status; boundary="1tn7f.5j04/caLz.2ObcEkaRg7J.2tGFSVs"
+--===============7272637475665164592==
+Content-Type: multipart/report; report-type=delivery-status; boundary="1tn7f.5j04/cZpY.3cZhAjD4F+I.CVJ49wZ"
 
---1tn7f.5j04/caLz.2ObcEkaRg7J.2tGFSVs
+--1tn7f.5j04/cZpY.3cZhAjD4F+I.CVJ49wZ
 content-type: text/plain;
     charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-The following message to <1097439346@qq.com> was undeliverable.
+The following message to <2067569366@qq.com> was undeliverable.
 The reason for the problem:
 5.3.0 - Other mail system problem 550-'SPF check failed [MD+a9hGRwrPERtw3Uk=
 4rl+26DLmPwOTtJ5mee6eNFKX3DDUdsLwbcyjSU5yPrh6QdQ=3D=3D  IP: 203.116.38.243]=
 . http://service.mail.qq.com/cgi-bin/help?subtype=3D1&&no=3D1001445&&id=3D2=
 0022.'
 
---1tn7f.5j04/caLz.2ObcEkaRg7J.2tGFSVs
+--1tn7f.5j04/cZpY.3cZhAjD4F+I.CVJ49wZ
 content-type: message/delivery-status
 
 Reporting-MTA: dns; ip.sgp.pillogistics.com
 
-Final-Recipient: rfc822;1097439346@qq.com
+Final-Recipient: rfc822;2067569366@qq.com
 Action: failed
 Status: 5.0.0 (permanent failure)
 Remote-MTA: dns; [203.205.219.57]
 Diagnostic-Code: smtp; 5.3.0 - Other mail system problem 550-'SPF check failed [MD+a9hGRwrPERtw3Uk4rl+26DLmPwOTtJ5mee6eNFKX3DDUdsLwbcyjSU5yPrh6QdQ==  IP: 203.116.38.243]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.' (delivery attempts: 0)
 
---1tn7f.5j04/caLz.2ObcEkaRg7J.2tGFSVs
+--1tn7f.5j04/cZpY.3cZhAjD4F+I.CVJ49wZ
 content-type: message/rfc822
 
 Authentication-Results: ip.sgp.pillogistics.com; spf=Pass smtp.mailfrom=industrypack-devel@lists.sourceforge.net; dmarc=pass (p=none dis=none) d=sourceforge.net
@@ -192,19 +192,19 @@ X-MIMETrack: Itemize by SMTP Server on PILNOTES17/SVR/PIL(Release 9.0.1FP5|Novem
 Content-Type: multipart/mixed; charset=UTF-8; boundary="----=_778_NextPart713543022905_=----"
 
 
---1tn7f.5j04/caLz.2ObcEkaRg7J.2tGFSVs--
+--1tn7f.5j04/cZpY.3cZhAjD4F+I.CVJ49wZ--
 
 
 
 
---===============3901590842857340674==
+--===============7272637475665164592==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3901590842857340674==
+--===============7272637475665164592==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -215,7 +215,7 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3901590842857340674==--
+--===============7272637475665164592==--
 
 
 
