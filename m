@@ -2,75 +2,59 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9CFCA2AFA07
-	for <lists+industrypack-devel@lfdr.de>; Wed, 11 Nov 2020 21:49:48 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id EC2B32B209B
+	for <lists+industrypack-devel@lfdr.de>; Fri, 13 Nov 2020 17:39:56 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kcx3r-0000y6-DW
-	for lists+industrypack-devel@lfdr.de; Wed, 11 Nov 2020 20:49:47 +0000
+	id 1kdc79-0008Tg-Nd
+	for lists+industrypack-devel@lfdr.de; Fri, 13 Nov 2020 16:39:55 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from
- <bounces+19272268-9ebd-industrypack-devel=lists.sourceforge.net@em8497.indusdrills.org>)
- id 1kcx3l-0000xY-Nj
- for industrypack-devel@lists.sourceforge.net; Wed, 11 Nov 2020 20:49:41 +0000
+ id 1kdbxH-00056P-QH
+ for industrypack-devel@lists.sourceforge.net; Fri, 13 Nov 2020 16:29:43 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Subject:From:To:Date:
+ Message-Id:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=ihiWmZ+mJ7VpASIBC8OroRH9QyryqA72kgNiHuwG2sA=; b=fcTDfWcVH9eRfAuD1m5Iif6htb
- bjw3pZpTGsvti+N8iHFtoyr60VhTtWMG2GkA8J9VFwgjSGX+5eZIMMGKCiZFhp+ABEofGEOaNBiV4
- WTbJeeiWAxvtWXRr6z1FV5MR3uKo9GYhBdonzzTBKWjNOYiUQZZUaOBQsv2vR1JXGWxc=;
+ bh=IamUxazYnotrB7+7N2FblY8CCqZcr9nkDt0PmsltKv0=; b=j87h4+e8PUs/Tq0m+Uy/zNrpqK
+ GLkSaCM3MxWNSQE/nuCpUnyWjcxY7GyUihJ5tntA/cwbic+XSid8rKIChbeQMBwQyoBD54tBKUfNd
+ 7LjKQRJ4aFkQn/q8bF6aEnvSaj+SFN5gkoTH9mWhNJcs6eVstMA46R+VwnxPr1KIRdZE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
+ h=Content-Type:MIME-Version:Subject:From:To:Date:Message-Id:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=ihiWmZ+mJ7VpASIBC8OroRH9QyryqA72kgNiHuwG2sA=; b=E
- mG4BGSdRz8/zY/I7Jfv4NNotm3zSCA0nlV/47C3G2g2KuChMqyXCcavvjfxbS9/3lgj3A8j6/qmXv
- TLvENIoLATbaISpPgqscNtUHarVTX/4uQvQtxYeNNRMcJXcEoYaqW+1lg5hhLj3XIlRQrFWXXqGCG
- iR1WTTDU8Qqcby/A=;
-Received: from o1.ptr2397.indusdrills.org ([50.31.38.73])
- by sfi-mx-3.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1kcx3C-008MAt-JR
- for industrypack-devel@lists.sourceforge.net; Wed, 11 Nov 2020 20:49:38 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
- d=indusdrills.org; h=from:to:subject:mime-version:content-type; 
- s=s1; bh=ihiWmZ+mJ7VpASIBC8OroRH9QyryqA72kgNiHuwG2sA=; b=dOsBo1I
- 50grATUn6exzpH/kTg3Hcp0c/akQ114ALVjC+BdkWdoYX2yJBKQWMNMG2t7WRJxJ
- KoMLiKtsl6XWUiriQPcRPvnAHplp5m54MIacF/Fg2Kzy6itXhMzqpYE4RpLUMuNg
- 7VOeceFP3xyiofOKyN6Jpps11RrfwcemR2TM=
-Received: by filter3114p1mdw1.sendgrid.net with SMTP id
- filter3114p1mdw1-20976-5FAC4E35-15
- 2020-11-11 20:48:53.489342898 +0000 UTC m=+516569.625960303
-Received: from ec2-99-79-56-76.ca-central-1.compute.amazonaws.com (unknown)
- by geopod-ismtpd-6-1 (SG) with ESMTP id UyYmVj88RwG5NfFjm5YR5A
- for <industrypack-devel@lists.sourceforge.net>;
- Wed, 11 Nov 2020 20:48:53.411 +0000 (UTC)
-From: "support@lists.sourceforge.net" <mail@indusdrills.org>
+ List-Owner:List-Archive; bh=IamUxazYnotrB7+7N2FblY8CCqZcr9nkDt0PmsltKv0=; b=A
+ fU625pcHI8vPWhv4pkpfLE6YmnWOGK7KtQs3ANCn4ap+FFgQlQGzP3jhMP2kIB5xfqWuMcF5B+QEH
+ 8r5HN3X9oMWA7Y/BaKjVbOWiHKBFkhiWjmd4ubLLESkzXfYluc4ttNqhVaqZ/2OAaJTXGEDRDv3QS
+ pEYxBGDQOvxmQh1g=;
+Received: from ip.sgp.pillogistics.com ([203.116.38.243])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps (TLSv1.2:AES256-SHA:256)
+ (Exim 4.92.2) id 1kdbxC-002AKW-7u
+ for industrypack-devel@lists.sourceforge.net; Fri, 13 Nov 2020 16:29:43 +0000
+Received: from localhost by ip.sgp.pillogistics.com; 14 Nov 2020 00:28:39 +0800
+Message-Id: <8eb11c$ttu8p@ip.sgp.pillogistics.com>
+Date: 14 Nov 2020 00:28:39 +0800
 To: industrypack-devel@lists.sourceforge.net
-Date: Wed, 11 Nov 2020 20:48:53 +0000 (UTC)
-Message-ID: <20201111204853.C4BD6EC2E1FB258C@indusdrills.org>
+From: "Mail Delivery System" <MAILER-DAEMON@ip.sgp.pillogistics.com>
 MIME-Version: 1.0
-X-SG-EID: Lh/WjnkRAypzKdDw3F8O/Bro5dqTeLXebJfrLQ05rzgMjn3BU9c0UER8tSqFfn/54mB97KYDNORj2K
- bEV6HtYwOUk/mUPN/jpMm3VgfpNaEukiKci56gphK2jMfeKTUqARVq4iOEEw2YTAEM4uEyG9HOoNsL
- CVcPgr5EpE6HHseIlubXfEZ8VDBMxIwZviIeSOTagwDhnJx0t7XBXBioUiDQ5BJ6veczC0+oAhogtl
- ZC3LHpIZmamYTjv/uXK83XKLAsA/wabKrNTWJ5OGDS1Q==
-X-Entity-ID: dhzRN/rFlU4I7ApPkNgmNA==
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: 2.5 (++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [50.31.38.73 listed in wl.mailspike.net]
- 0.0 TIME_LIMIT_EXCEEDED    Exceeded time limit / deadline
-X-Headers-End: 1kcx3C-008MAt-JR
-Subject: [Industrypack-devel] New Recording [13913790]
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: qq.com]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 TVD_SPACE_RATIO        No description available.
+ 2.5 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
+X-Headers-End: 1kdbxC-002AKW-7u
+Subject: [Industrypack-devel] Delivery Status Notification (Failure)
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -82,116 +66,144 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============1678150352872827095=="
+Content-Type: multipart/mixed; boundary="===============2104373649290744704=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============1678150352872827095==
-Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0012_0BDA5BDB.137C7E69"
+--===============2104373649290744704==
+Content-Type: multipart/report; report-type=delivery-status; boundary="1tlVk.5i/+5NcuU.1i5U3d0kLGN.9RfTeiT"
 
-------=_NextPart_000_0012_0BDA5BDB.137C7E69
-Content-Type: text/plain;
-	charset="utf-8"
+--1tlVk.5i/+5NcuU.1i5U3d0kLGN.9RfTeiT
+content-type: text/plain;
+    charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-=C2=A0
-=C2=A0
+The following message to <1060134315@qq.com> was undeliverable.
+The reason for the problem:
+5.3.0 - Other mail system problem 550-'SPF check failed [MEwUXI54nn8jyqcjDv=
+6SmRDAXoxm9H9qj+8GbzpmOK5BSZaKLFEt7R8yMglbCroWhQ=3D=3D  IP: 203.116.38.243]=
+. http://service.mail.qq.com/cgi-bin/help?subtype=3D1&&no=3D1001445&&id=3D2=
+0022.'
 
-ID: < industrypack-devel@lists.sourceforge.net >
+--1tlVk.5i/+5NcuU.1i5U3d0kLGN.9RfTeiT
+content-type: message/delivery-status
 
-A caller in your directory just left you a message.
+Reporting-MTA: dns; ip.sgp.pillogistics.com
 
-Caller : +1 701 328 9010
-Date: 11-10-2020
-Duration: 01:0sec
+Final-Recipient: rfc822;1060134315@qq.com
+Action: failed
+Status: 5.0.0 (permanent failure)
+Remote-MTA: dns; [203.205.219.57]
+Diagnostic-Code: smtp; 5.3.0 - Other mail system problem 550-'SPF check failed [MEwUXI54nn8jyqcjDv6SmRDAXoxm9H9qj+8GbzpmOK5BSZaKLFEt7R8yMglbCroWhQ==  IP: 203.116.38.243]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.' (delivery attempts: 0)
 
-Listen to Voice Mess=C4=85ge=20
-(=C2=A0https://u19272268.ct.sendgrid.net/ls/click?upn=3DcJFJny3xcSHdWFB-2Bm=
-WdCkKoJ7v4lcvYc-2BsFVH74SxNXn5xo01-2Bzo2HdSUKqwX7NlR3k0fhb6LS5AgeuQRRQDKx-2=
-F9T8zDAwVavGNOCXUnzabieHuRegbZ1WMyxOhcF4jcN7DgcXsqF-2FpK1Gerat3Yexvb5yl-2FT=
-V-2FRsrDk-2FgyvdbE-3D-hT8_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-2FIgBqvapSAsR-=
-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EyKCR7FbxfOv1IFFDbyYpjsyWQ6ztbBbp7GTsn-2BgCVk9HEM=
-fyQmqcs5jRvwWaI8GFTDB5Wz6acW3QSQnlX4GTcGKV0SrkJQBLR-2FcP6syaAhyu861jtrTtjnG=
-6mxUHDrwSOFm5vwwBTTeBBAHBN7suOk-2FLAmmAMa0fZHAg-2BdPksg1mi4AO8L8OLhlnjlv6am=
-rs
+--1tlVk.5i/+5NcuU.1i5U3d0kLGN.9RfTeiT
+content-type: message/rfc822
 
-Email was sent to industrypack-devel@lists.sourceforge.net
+Authentication-Results: ip.sgp.pillogistics.com; spf=Pass smtp.mailfrom=industrypack-devel@lists.sourceforge.net; dmarc=pass (p=none dis=none) d=sourceforge.net
+IronPort-SDR: TprDMT+7crAWPuyKPS+PUbhdkgeHRlhm29XMSwkpl8mW4aGiv6X51fkUv1zMrBHOZRQlGFcnCh
+ X6BtY/MfuwDA==
+IronPort-PHdr: =?us-ascii?q?9a23=3AAfFqph0nJQo+tG+ssmDT+DRfVm0co7zxezQtwd?=
+ =?us-ascii?q?8ZsesfK/7xwZ3uMQTl6Ol3ixeRBMOHsq0C0rCL+PC8EUU7or+5+EgYd5JNUx?=
+ =?us-ascii?q?JXwe43pCcHRPC/NEvgMfTxZDY7FskRHHVs/nW8LFQHUJ2mPw6arXK99yMdFQ?=
+ =?us-ascii?q?viPgRpOOv1BpTSj8Oq3Oyu5pHfeQpFiCe/bL9oMRm6swXcusYVjIZtN6081g?=
+ =?us-ascii?q?bHrnxUdupM2GhmP0iTnxHy5sex+J5s7SFdsO8/+sBDTKv3Yb02QaRXAzo6PW?=
+ =?us-ascii?q?814tbrtQTYQguU+nQcSGQWnQFWDAXD8Rr3Q43+sir+tup6xSmaIcj7Rq06VD?=
+ =?us-ascii?q?i+86tmTgLjhSEaPDA77W7XkNR9gqJGrhy/qBN/2YDaboKSOvViZa7deM8WSH?=
+ =?us-ascii?q?BbU8hRSyBMAIWxZJYPAeobOuZYqpHwpV0Irxm4GAKhA+LvyjlViX/rxq06z/?=
+ =?us-ascii?q?4hEAHe3AM6A90Os23Yo8jrO6cMT++1yLLFzTHCb/NNxTf985LEcgsmofGRR7?=
+ =?us-ascii?q?J/bdTeyUcoFwPfgVWft5bpPzWL2eQRqmWW6fdrWu2zhWA9sQ5xviSvydk2io?=
+ =?us-ascii?q?nPno8Z1F7J+CZ2zYs2O9C1SVJ3bcClHZZetiyXOYV4Tt0sTmxruis3ybILt5?=
+ =?us-ascii?q?67cSQXypkqxhDRZvyHfoaH/h7uSumcLDFlj3xmYLKynwu+/Eq+xuHmWMS4zE?=
+ =?us-ascii?q?xGojdZntXQrHwA2B7e586aQfVn5EihwyyA1wXL5+FBJkA7iLTUJoY6wr41ip?=
+ =?us-ascii?q?oTqUPDHjLqmEnujK+ZaEEk+u+w5uT/Y7XmopmcN4hoig7gKaQih86yDf4jMg?=
+ =?us-ascii?q?gBR2iX4/y81Lzn/U3iQLVKj+U2nrPFv5DdIMQXvq+5AwlL3YY/8xuzEjWr3M?=
+ =?us-ascii?q?oCkXQJMF5JYg+Lg5T1N13UL/31D++zg1G2nzdqw/DGMKfhApLILnXbkbfhe6?=
+ =?us-ascii?q?ty61NHyAov19Be54pUBasdL/LwQ0P+qcLXDgEnPAyw2OvnDNR91pgCWWKUGK?=
+ =?us-ascii?q?OZK6TSsUKS5u0zPeaMaogVuCzyK/c7/fLui2E2mUMFcamzwZQXcGy4HuhhI0?=
+ =?us-ascii?q?iBYnfhjdMMHGgEswcwTeHnikOOXCVKZ3arRa4z+jY7CIe+B4fZWo+tmKCB3D?=
+ =?us-ascii?q?u8HpBOZGBGCUqDEXnzd4WGRfgNZiGSIsFnkjEfTLihUpUt2g2ptA//07BnNP?=
+ =?us-ascii?q?bb+jUEtZL/09h4//DfmBAx+DF2DsmQ12KAQm9wk28UXDI2xbl/rVZhxVeE1K?=
+ =?us-ascii?q?hym+ZYGsBL5/NVTgc6MobRw/F6Bt3xVA/McdSERVioT9inHD08Vcsxw8YUb0?=
+ =?us-ascii?q?lhHNWiiwjJ3zC2DL8Ni7yLGJs0/7rC03TtJ8twynnL2aogglQnTMZDK3arhr?=
+ =?us-ascii?q?dm9wTJG4HJlECZnb6wdasAxC7N6HuDzW2WsUxcTQJ9UqbIUHMDakbUrtn06F?=
+ =?us-ascii?q?jPT6a3Cbg9LgRBzsuCILNQatL1lVVGWOvjONPGbm6slWq9ARSFy7KQYIfkZ2?=
+ =?us-ascii?q?kRwSTQBVMdkwAK53qJKQ8+BiK5qWLEEDNuDU7vY1/r8eRmqH62TEE5wgOIYk?=
+ =?us-ascii?q?F91be49QAZiOeFS/MKxL4LpCAhqzBsFlanw93WE8aApxZmfKhEfN8x/ElL2X?=
+ =?us-ascii?q?/EuwF/PpGtL6Bvi1wFfgRupkPizQl4CoJFkcIytnMl0BJyKb6E0FNGbz6UwJ?=
+ =?us-ascii?q?T9N77LJmT8/h2ib6Db11PC3NuN46cP8e40pEnkvAGsDkAi6Wlo08FJ03uA4Z?=
+ =?us-ascii?q?XHFAsfXY/xX0sz9xV2ub7XbyY96o7PzH1sKLO4vSPF29IsHOEl0Aqvf89DMK?=
+ =?us-ascii?q?OYEw//C9AWC9SvJeA2hlSkYB0JMe5P+KM0JM6mbuKG1LS3M+ZnmTKslX5H75?=
+ =?us-ascii?q?xl0kKQ6yp8TfbF04sLzvyc3QaKVTXxgEuiv8zrhIxJfigSHnOlxSf4A45RY7?=
+ =?us-ascii?q?V4fZwXBme2P8232tJ+iobuVnJF6FKvGV0L1c2pdBeSYVHwxhRQ1V0NrXO7ni?=
+ =?us-ascii?q?u4yiR+kys1oaqHwCzO3+PieQIJN2NEQGRvg0vgLIm3gt0YQkSldBEplAK/6U?=
+ =?us-ascii?q?nmwKhbobx1L3PPTkdQYyj2M2ZiX7Owu7eMbMNC6Y4kvCFZXeiibl2XUaf9ow?=
+ =?us-ascii?q?IA3yz/GGtewSgxdyu2tZXhgxx6lGWdIW5woXfYZc19xRTS6dLCSfJMwzYLXz?=
+ =?us-ascii?q?B4iSDNClegONmp+M2el43fveCmS2KhSppTfDH1wY6AsCa3+21nDBy8kv28ht?=
+ =?us-ascii?q?HqHxM30Tbi19VwSSrIqxP8aJHx16umKeJnYlVoBFjk5sZkG4xznYo9iI8R1H?=
+ =?us-ascii?q?UZhZiY8mQLnHzqMdVCw67xcH0NRTsTyd7P/AflwFFjLm6Ox4/hS3mQzctsa8?=
+ =?us-ascii?q?e6b24U2S8x88JHBaSP4bxdhCt5uEa3rQXUYfJlhDcS1eMu6GIGg+EOoAch0C?=
+ =?us-ascii?q?GQDq0TEERYOSHhlAiE4tOwoahMfWavaKK821Z5ndCkX/m+pVQWCCqoJsx5Q3?=
+ =?us-ascii?q?AqpI0rYA6djCaotN6+UMDJK9kUs0vHqRrYi/lpL8cylfkR33I9YTul5FU80q?=
+ =?us-ascii?q?gwihk984u9ud1/050lqKO/DgNDKifkf8oY+XThgLhTmu6S3puzBdN6HSgRV5?=
+ =?us-ascii?q?bmSuinHXQUuOixZFXGKyE1tnrOQemXJgSY8koz9y+dP7WCDVrOfSJLlZFOQR?=
+ =?us-ascii?q?CHL3ZSiwcOUGdyhssgCwmwzcr9cUF0ongJ7UKt80MUjqpzL0z5VWHS4E+hZj?=
+ =?us-ascii?q?Q1Tc2FaFJf9RlMsl2RedaD57dAX25b8YGiqVbUM0SSaEJECGgTUU2NARboOb?=
+ =?us-ascii?q?zhoZGZq7TIW7Xgd7r7JbOJr+EEDaWh2I6v3416/j2FKsSIODxYAuYm3lZYBC?=
+ =?us-ascii?q?snScXB3S4AU2oPlibJaMGavwu98TYxpce6o7zwQAy63YKUEPNJNMl3vRW/gK?=
+ =?us-ascii?q?ONLemV0Sd/JStDyokd3XbDy/0T0UAfjwlqdiKxCvIbsjPXR6/enbVYAlgdZj?=
+ =?us-ascii?q?8gfMdN5rg3ixFEItWTysug0Ll+g7Y5CkwQU1vnl4DhaZkRJHynP17JA1yEOf?=
+ =?us-ascii?q?KAKCHG?=
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: =?us-ascii?q?A2FRBwASs65f/y9kHqxigRCBSoEyb4Z?=
+ =?us-ascii?q?tlC+ICoM9aBUBdIIggw2BA4NdgUkTCwEBAQEBAQEBAQQBDyAEBAEBhEIIGQc?=
+ =?us-ascii?q?TgW0mOBMCAwEBAQMCBQEBAQUBAQEBAQEFBAEBAoYVQQRDAQwBgWYihAIBHQR?=
+ =?us-ascii?q?SGw0NAgMBIgIEFQEONxILhRpYAQGwb38zGgKFKYI5F4E3dxCBDioBgVISg3+?=
+ =?us-ascii?q?CPh6DP4NcgUcNgk8+hQeCToJfBJMniSAJAUWSJQOIcIJ3hFGWRCKDBwGPXQO?=
+ =?us-ascii?q?DTiyLF7Y4gXsfXIEHBlYVGoEdTxmdAoRhiyYBAQ?=
+X-IPAS-Result: =?us-ascii?q?A2FRBwASs65f/y9kHqxigRCBSoEyb4ZtlC+ICoM9aBUBd?=
+ =?us-ascii?q?IIggw2BA4NdgUkTCwEBAQEBAQEBAQQBDyAEBAEBhEIIGQcTgW0mOBMCAwEBA?=
+ =?us-ascii?q?QMCBQEBAQUBAQEBAQEFBAEBAoYVQQRDAQwBgWYihAIBHQRSGw0NAgMBIgIEF?=
+ =?us-ascii?q?QEONxILhRpYAQGwb38zGgKFKYI5F4E3dxCBDioBgVISg3+CPh6DP4NcgUcNg?=
+ =?us-ascii?q?k8+hQeCToJfBJMniSAJAUWSJQOIcIJ3hFGWRCKDBwGPXQODTiyLF7Y4gXsfX?=
+ =?us-ascii?q?IEHBlYVGoEdTxmdAoRhiyYBAQ?=
+X-IronPort-AV: E=Sophos;i="5.77,476,1596470400"; 
+   d="jpeg'145?scan'145,208,217,145";a="31389678"
+Received: from unknown (HELO pilnotes17.sgp.pilship.com) ([172.30.100.47])
+  by ip.sgp.pillogistics.com with ESMTP; 14 Nov 2020 00:28:08 +0800
+Received: from HC-VM-PC ([172.30.100.180])
+          by pilnotes17.sgp.pilship.com (IBM Domino Release 9.0.1FP5)
+          with ESMTP id 2020111400275992-645103 ;
+          Sat, 14 Nov 2020 00:27:59 +0800 
+X-GUID: 7B02271C-B751-4166-A963-0D2684E6D17A
+X-Has-Attach: yes
+From: =?UTF-8?B?5a2f6K+X6bi/?= <industrypack-devel@lists.sourceforge.net>
+Subject: Re:A41140
+To: "849433672" <849433672@qq.com>
+Cc: "jkafsjewkfn" <jkafsjewkfn@qq.com>, "1687698390" <1687698390@qq.com>, "1583483361" <1583483361@qq.com>, "2056486632" <2056486632@qq.com>, "918880783" <918880783@qq.com>, "1397603016" <1397603016@qq.com>, "573770742" <573770742@qq.com>, "1021175557" <1021175557@qq.com>, "1980379370" <1980379370@qq.com>, "615952445" <615952445@qq.com>, "1060134315" <1060134315@qq.com>, "1398770801" <1398770801@qq.com>, "810237553" <810237553@qq.com>, "349306872" <349306872@qq.com>, "534619324" <534619324@qq.com>, "860583211" <860583211@qq.com>, "2592568403" <2592568403@qq.com>, "2646268842" <2646268842@qq.com>, "1452578078" <1452578078@qq.com>, "2916598083" <2916598083@qq.com>
+MIME-Version: 1.0
+Reply-To: kkks2020101@qq.com
+Date: Sat, 14 Nov 2020 00:28:33 +0800
+Message-Id: <202011140028304090640@lists.sourceforge.net>
+X-Mailer: Foxmail 7, 2, 5, 140[cn]
+X-MIMETrack: Itemize by SMTP Server on PILNOTES17/SVR/PIL(Release 9.0.1FP5|November  22, 2015) at
+ 14/11/2020 12:28:01 AM,
+	Serialize by Router on PILNOTES17/SVR/PIL(Release 9.0.1FP5|November  22, 2015) at
+ 14/11/2020 12:28:01 AM
+Content-Type: multipart/mixed; charset=UTF-8; boundary="----=_310_NextPart910639083995_=----"
 
-Your message link last for 12 hours=C2=A0=
 
-------=_NextPart_000_0012_0BDA5BDB.137C7E69
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
-
-<html><head><title></title>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head><body>
-<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001">
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-
-&nbsp;=20
-<table align=3D"center" style=3D"width: 500px;" bgcolor=3D"#ffffff" border=
-=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-<tbody>
-<tr>
-<td width=3D"30" style=3D"white-space: normal !important;">&nbsp;</td>
-<td align=3D"center" style=3D"white-space: normal !important;">
-<img width=3D"0" style=3D"margin: 0px; padding: 0px; border: 0px currentCol=
-or; border-image: none; vertical-align: baseline; cursor: pointer;" src=3D'=
-crossorigin=3D"use-credentials"' border=3D"0" data-outlook-trace=3D"F:1|T:1=
-" naturalwidth=3D"0" naturalheight=3D"0" data-custom=3D"AAMkADUzMjNlM2FhLTZ=
-mZjAtNGI5My04YmZiLTdlNDY5NjBlOTVlMwBGAAAAAAC8x1p7iw5MSqX7JOwskHnWBwAfU1srE2=
-gvRpyHmTAf8M1VAAJQrzSTAAAfU1srE2gvRpyHmTAf8M1VAATfm6lZAAABEgAQAGC12daCcUNPp=
-x15d5vLUIY%3D" originalsrc=3D"cid:logo" data-imagetype=3D"<td">
-<span style=3D"text-align: left;"> <img src=3D"https://imgur.com/oHhSz1c.jp=
-g" width=3D"252" height=3D"59">=20
-<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
-<tbody></tbody></table><br>
-<div style=3D"padding: 2px; border: 0px solid rgb(239, 233, 233); border-im=
-age: none; width: 400px; height: 250px; text-align: left;">
-<div style=3D"padding: 2px; width: 400px; text-align: left;"><font color=3D=
-"#00000f" face=3D"Segoe UI" size=3D"2"><b>ID:</b></font> <font color=3D"#ff=
-0000" face=3D"Segoe UI" size=3D"2"><b>&lt; industrypack-devel@lists.sourcef=
-orge.net &gt; </b><br><br></font>A caller in your directory just left you a=
- message.<br><br>Caller : +1 701 328 9010<br>Date: 11-10-2020<br>Duration: =
-01:0<number1>sec <br><br>
-<a href=3D"https://u19272268.ct.sendgrid.net/ls/click?upn=3DcJFJny3xcSHdWFB=
--2BmWdCkKoJ7v4lcvYc-2BsFVH74SxNXn5xo01-2Bzo2HdSUKqwX7NlR3k0fhb6LS5AgeuQRRQD=
-Kx-2F9T8zDAwVavGNOCXUnzabieHuRegbZ1WMyxOhcF4jcN7DgcXsqF-2FpK1Gerat3Ye2BDePw=
-zbx1q27-2B-2FbMwHpoA-3D30z0_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-2FIgBqvapSAs=
-R-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EyKCR7FbxfOv1IFFDbyYpjsyWQ6ztbBbp7GTsn-2BgCVk-2=
-BzVd8jay93T0KGnGh8EE1sjhDdwBHwgGs-2FKe4zuJnnAoORIGf3M-2BCPfT7febXnz1WIkEpU2=
--2FuyhMmkVstptsLdcSTMdngXemV-2FRPod47zlZaTAvjK-2B6FDOAsGT-2BWGAsJRas6SXXUIC=
-ixVRe9ZYOzrs" <strong=3D"">Listen to Voice Mess&#261;ge</a> <br><br>
-<center>
-<p style=3D"margin-top: 0px; margin-bottom: 0px;"><b style=3D"font-size: 10=
-px;">Email was sent to industrypack-devel@lists.sourceforge.net</b><br></p>=
-<span style=3D"font-size: 10px;"><span style=3D"color: rgb(102, 102, 102);"=
->Your message link last for 12 hours&nbsp;<br></span></span></center></numb=
-er1></div></div></span></td></tr></tbody></table>
-<img src=3D"https://u19272268.ct.sendgrid.net/wf/open?upn=3DS3KlKLKqUh-2B5l=
-9sYcP7GRGOjZ-2Fr-2FBZ-2BFdLRbLyIML6Sig2-2BhBDiuMD2JQ7Tb-2BAF3VHwz-2BrT-2BOJ=
-zI2XMPlCQk55YWb5NpzffNG4f59jHnsBsgCPWOoJWvIKwzVlNAQi-2FHthj-2Fwzqmu5ryKmNMv=
-IffoY8xQlFpTYUmk-2FHzkdqP-2FbquY4SEBG3EhIvYywc7zXqObWhfjoArLw2cIZm-2FqDzm8C=
-8axju8Ia2M-2FfVzyI5lTuHPTufDONz-2BEkOLN9Otp52x" alt=3D"" width=3D"1" height=
-=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !important;bor=
-der-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;m=
-argin-right:0 !important;margin-left:0 !important;padding-top:0 !important;=
-padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !impo=
-rtant;"/>
-</body></html>
-
-------=_NextPart_000_0012_0BDA5BDB.137C7E69--
+--1tlVk.5i/+5NcuU.1i5U3d0kLGN.9RfTeiT--
 
 
---===============1678150352872827095==
+
+
+--===============2104373649290744704==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============1678150352872827095==
+--===============2104373649290744704==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -202,5 +214,7 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============1678150352872827095==--
+--===============2104373649290744704==--
+
+
 
