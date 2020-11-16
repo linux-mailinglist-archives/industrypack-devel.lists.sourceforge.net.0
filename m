@@ -2,69 +2,71 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 90F4B2B3BE3
-	for <lists+industrypack-devel@lfdr.de>; Mon, 16 Nov 2020 04:42:17 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id AFE2E2B3CCB
+	for <lists+industrypack-devel@lfdr.de>; Mon, 16 Nov 2020 07:09:58 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1keVPE-0000No-CD
-	for lists+industrypack-devel@lfdr.de; Mon, 16 Nov 2020 03:42:16 +0000
+	id 1keXi9-0006aA-Gw
+	for lists+industrypack-devel@lfdr.de; Mon, 16 Nov 2020 06:09:57 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- id 1keVPC-0000NR-Da
- for industrypack-devel@lists.sourceforge.net; Mon, 16 Nov 2020 03:42:14 +0000
+ id 1keXi6-0006Zh-Ij
+ for industrypack-devel@lists.sourceforge.net; Mon, 16 Nov 2020 06:09:54 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Message-ID:Content-Type:MIME-Version:Date:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Message-Id:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:To:Subject:From:Date:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=TdSAwKNwoi50swjGvIaEM4qAtU9FXiC0IHYIKr5iCpU=; b=gA3LZkd1tFp7Azqv0MvOCoeBDj
- opwOLuuRbpbdtsGVhwAu/mzQ+dgpravaFKzZy/1WFsP2QX30VczKPyPeLUjh7+u/Y8bDem/ARk9ep
- WoqvEx4EmQWQ0wxgRczA4SZvtmj/75yHPIQieis6YKyWYd/dj6IGU5uETWddQ6wJpv9s=;
+ bh=Mk//2HvsN+FcdvDXh7AKqzl23Ec6fI7p9fvLtEHxTU0=; b=cx9ekETdugdmVOfD9VXYwoqdrK
+ p+j7FD4IYDbUrX5sMYeaailWFzKQnXVtd56R+93zcy0MCwO3A9EhNtwbQAHDxnpyOrZkh3Rc9M3E+
+ 6vMT9Mvzi1/EeFgjMmVbjkXpBv5nySzZqWxjRwL+2XeHmORE10fnu848d3wL6qvewC2c=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Message-ID:Content-Type:MIME-Version:Date:To:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Message-Id:Content-Transfer-Encoding:Content-Type:MIME-Version:To:Subject
+ :From:Date:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=TdSAwKNwoi50swjGvIaEM4qAtU9FXiC0IHYIKr5iCpU=; b=Y
- agCT1+XF78e5BIBrBnujo846Z7DVpLEpNVrAIlvcDwrf3XQlqDzWLjcdUsl3xgh6kFntN76Pm+bzH
- 2/2mt43uAr1g2VdclM+EapuDTxVyhPPCGsDRgbTi8ZNsWnyt6s5Eg/jSDBnnrHIHa6TBRZCS5D7T9
- EK68mHzJrTsXgi4o=;
-Received: from arsy-00002.arnold-cn.com ([61.161.131.38])
- by sfi-mx-3.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1keVP7-00Dq0r-Iv
- for industrypack-devel@lists.sourceforge.net; Mon, 16 Nov 2020 03:42:14 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=s1024; d=arnold-cn.com;
- h=from:to:date:mime-version:content-type:message-id:subject;
- bh=TdSAwKNwoi50swjGvIaEM4qAtU9FXiC0IHYIKr5iCpU=;
- b=Yw0KzZcFgGi20YZr9TSlVuF5P5pXIZiTfo1Mf983ryHAYV0fAVCJ+1Kd5MPQHH
- T0W7cf3TVoZ2O7C9yFPXD7gXARdXtpXNtxujIFCeRekjMkxdKKDRwdroJ0H/VL
- 1/YdkJK7lRTwce/fiPQF+JETPe1RrYDCiFoL+cLpx4LPg0s=
-From: postmaster@arnold-cn.com
+ List-Owner:List-Archive; bh=Mk//2HvsN+FcdvDXh7AKqzl23Ec6fI7p9fvLtEHxTU0=; b=R
+ Dm+gH+wc3sAeOU5n5Z+jx63oabtTvbql2gnSxLGhgnzDAKheRMDNsCjuKmr5Hr/WvVgGhyLV8oVr6
+ I7zbvwz/gtNDBRSt50Rvb1j8zozq9hs9my+ZvH6FkucBQ7NiAqXCfD76sYfRCPKa9uJ4d3ch9zJa1
+ vAzQeRwttd7aM2nU=;
+Received: from [139.129.209.233] (helo=iZ28upq55k1Z)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
+ id 1keXht-0060EW-Ru
+ for industrypack-devel@lists.sourceforge.net; Mon, 16 Nov 2020 06:09:54 +0000
+Received: by iZ28upq55k1Z (Postfix)
+ id 7A790341DB0; Mon, 16 Nov 2020 08:51:26 +0800 (CST)
+Date: Mon, 16 Nov 2020 08:51:26 +0800 (CST)
+From: MAILER-DAEMON@thinkunion.com.cn (Mail Delivery System)
 To: industrypack-devel@lists.sourceforge.net
-Date: Mon, 16 Nov 2020 11:40:42 +0800
+Auto-Submitted: auto-replied
 MIME-Version: 1.0
-X-DSNContext: 7ce717b1 - 1194 - 00000002 - 00000000
-Message-ID: <AATiyhGvD0000063e@arsy-00002.arnold-cn.com>
-X-Spam-Score: 1.7 (+)
+Message-Id: <20201116005127.7A790341DB0@iZ28upq55k1Z>
+X-Helo-Check: bad, Not FQDN (iZ28upq55k1Z)
+X-Spam-Score: 8.0 (++++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FSL_HELO_NON_FQDN_1    No description available.
+ 0.5 VA_HELO_CHECK          Host Used Invalid or Forged HELO/EHLO
+ 1.1 DATE_IN_PAST_03_06     Date: is 3 to 6 hours before Received: date
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [139.129.209.233 listed in zen.spamhaus.org]
+ 0.0 RCVD_IN_MSPIKE_L3      RBL: Low reputation (-3)
+ [139.129.209.233 listed in bl.mailspike.net]
  0.1 MIME_HTML_MOSTLY       BODY: Multipart message mostly text/html MIME
  1.0 HTML_MESSAGE           BODY: HTML included in message
  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
  background
  0.7 MPART_ALT_DIFF         BODY: HTML and text parts are different
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
-X-Headers-End: 1keVP7-00Dq0r-Iv
-Subject: [Industrypack-devel] Delivery Status Notification (Failure)
+ 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 HELO_NO_DOMAIN         Relay reports its domain incorrectly
+ 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
+ 0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
+X-Headers-End: 1keXht-0060EW-Ru
+Subject: [Industrypack-devel] Undelivered Mail Returned to Sender
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -76,206 +78,419 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============2184428458216205529=="
+Content-Type: multipart/mixed; boundary="===============3594626084555835099=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a MIME-formatted message.  
-Portions of this message may be unreadable without a MIME-capable mail program.
+This is a MIME-encapsulated message.
 
---===============2184428458216205529==
+--===============3594626084555835099==
 Content-Type: multipart/report; report-type=delivery-status;
-	boundary="9B095B5ADSN=_01D6B7FCF09F1AA400002C05arsy?00002.arnol"
+	boundary="8CEF8267868.1605487886/iZ28upq55k1Z"
+Content-Transfer-Encoding: 8bit
 
-This is a MIME-formatted message.  
-Portions of this message may be unreadable without a MIME-capable mail program.
+This is a MIME-encapsulated message.
 
---9B095B5ADSN=_01D6B7FCF09F1AA400002C05arsy?00002.arnol
-Content-Type: text/plain; charset=unicode-1-1-utf-7
+--8CEF8267868.1605487886/iZ28upq55k1Z
+Content-Description: Notification
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
 
-This is an automatically generated Delivery Status Notification.
+This is the mail system at host iz28upq55k1z.
 
-Delivery to the following recipients failed.
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
 
-       1337672190@qq.com
-       jkafsjewkfn@qq.com
-       414465370@qq.com
-       1743229615@qq.com
-       1805175462@qq.com
-       1394110175@qq.com
-       2742611683@qq.com
-       1024306078@qq.com
-       1025295164@qq.com
-       2970575849@qq.com
-       2954570838@qq.com
-       505715706@qq.com
-       2634560885@qq.com
-       1967812804@qq.com
-       1814540318@qq.com
-       1030721189@qq.com
-       2413964177@qq.com
-       2212420929@qq.com
-       2690894115@qq.com
-       1980634036@qq.com
-       2521621230@qq.com
+For further assistance, please send mail to postmaster.
 
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
 
+                   The mail system
 
+<jkafsjewkfn@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 Mailbox
+    unavailable or access denied
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw== IP:
+    139.129.209.233] (in reply to RCPT TO command)
 
---9B095B5ADSN=_01D6B7FCF09F1AA400002C05arsy?00002.arnol
+<1531357493@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<1768488968@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<1771325933@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<2297938112@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<2409047696@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<2481292572@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<2817068744@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<2992555159@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<571749728@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<1350283492@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<1522169897@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<1595679231@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<2364485447@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<2535954044@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<2658615414@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<3160274062@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<3431566606@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<469474863@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<910953463@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+<1145460226@qq.com>: host mx3.qq.com[58.251.110.111] said: 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+    (in reply to end of DATA command)
+
+--8CEF8267868.1605487886/iZ28upq55k1Z
+Content-Description: Delivery report
 Content-Type: message/delivery-status
+Content-Transfer-Encoding: 8bit
 
-Reporting-MTA: dns;arsy-00002.arnold-cn.com
-Received-From-MTA: dns;HC-VM-PC
-Arrival-Date: Mon, 16 Nov 2020 11:38:21 +0800
+Reporting-MTA: dns; iZ28upq55k1Z
+X-Postfix-Queue-ID: 8CEF8267868
+X-Postfix-Sender: rfc822; industrypack-devel@lists.sourceforge.net
+Arrival-Date: Mon, 16 Nov 2020 03:44:45 +0800 (CST)
 
-Final-Recipient: rfc822;1337672190@qq.com
+Final-Recipient: rfc822; jkafsjewkfn@qq.com
+Original-Recipient: rfc822;jkafsjewkfn@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 Mailbox unavailable or access denied
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw== IP:
+    139.129.209.233]
 
-Final-Recipient: rfc822;jkafsjewkfn@qq.com
+Final-Recipient: rfc822; 1531357493@qq.com
+Original-Recipient: rfc822;1531357493@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 Mailbox unavailable or access denied [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q== IP: 61.161.131.38]
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;414465370@qq.com
+Final-Recipient: rfc822; 1768488968@qq.com
+Original-Recipient: rfc822;1768488968@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;1743229615@qq.com
+Final-Recipient: rfc822; 1771325933@qq.com
+Original-Recipient: rfc822;1771325933@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;1805175462@qq.com
+Final-Recipient: rfc822; 2297938112@qq.com
+Original-Recipient: rfc822;2297938112@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;1394110175@qq.com
+Final-Recipient: rfc822; 2409047696@qq.com
+Original-Recipient: rfc822;2409047696@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;2742611683@qq.com
+Final-Recipient: rfc822; 2481292572@qq.com
+Original-Recipient: rfc822;2481292572@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;1024306078@qq.com
+Final-Recipient: rfc822; 2817068744@qq.com
+Original-Recipient: rfc822;2817068744@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;1025295164@qq.com
+Final-Recipient: rfc822; 2992555159@qq.com
+Original-Recipient: rfc822;2992555159@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;2970575849@qq.com
+Final-Recipient: rfc822; 571749728@qq.com
+Original-Recipient: rfc822;571749728@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;2954570838@qq.com
+Final-Recipient: rfc822; 1350283492@qq.com
+Original-Recipient: rfc822;1350283492@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;505715706@qq.com
+Final-Recipient: rfc822; 1522169897@qq.com
+Original-Recipient: rfc822;1522169897@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;2634560885@qq.com
+Final-Recipient: rfc822; 1595679231@qq.com
+Original-Recipient: rfc822;1595679231@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;1967812804@qq.com
+Final-Recipient: rfc822; 2364485447@qq.com
+Original-Recipient: rfc822;2364485447@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;1814540318@qq.com
+Final-Recipient: rfc822; 2535954044@qq.com
+Original-Recipient: rfc822;2535954044@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;1030721189@qq.com
+Final-Recipient: rfc822; 2658615414@qq.com
+Original-Recipient: rfc822;2658615414@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;2413964177@qq.com
+Final-Recipient: rfc822; 3160274062@qq.com
+Original-Recipient: rfc822;3160274062@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;2212420929@qq.com
+Final-Recipient: rfc822; 3431566606@qq.com
+Original-Recipient: rfc822;3431566606@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;2690894115@qq.com
+Final-Recipient: rfc822; 469474863@qq.com
+Original-Recipient: rfc822;469474863@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;1980634036@qq.com
+Final-Recipient: rfc822; 910953463@qq.com
+Original-Recipient: rfc822;910953463@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
-Final-Recipient: rfc822;2521621230@qq.com
+Final-Recipient: rfc822; 1145460226@qq.com
+Original-Recipient: rfc822;1145460226@qq.com
 Action: failed
-Status: 5.5.0
-Diagnostic-Code: smtp;550 SPF check failed [MEwUXI54nn8jyqcjDv6SmRCfXa5tcJb1BTODKiCvbMPFzGrPmHZ6eTdtCH86GWaM+Q==  IP: 61.161.131.38]. http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
+Status: 5.0.0
+Remote-MTA: dns; mx3.qq.com
+Diagnostic-Code: smtp; 550 SPF check failed
+    [MELk9PB61ekdOqkGs8ZJm8oHHSYGm/6ziSoVR5mB0izDEkhiTKNSGEx0ebosHBlcmw==  IP:
+    139.129.209.233].
+    http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
---9B095B5ADSN=_01D6B7FCF09F1AA400002C05arsy?00002.arnol
+--8CEF8267868.1605487886/iZ28upq55k1Z
+Content-Description: Undelivered Message
 Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
 
-Received: from HC-VM-PC ([112.194.89.35] RDNS failed) by arsy-00002.arnold-cn.com with Microsoft SMTPSVC(6.0.3790.4675);
-	 Mon, 16 Nov 2020 11:38:21 +0800
-X-GUID: BF41082D-FF01-40D9-B97C-5AFADDA24D26
+Return-Path: <industrypack-devel@lists.sourceforge.net>
+Received: from HC-VM-PC (unknown [112.194.83.69])
+	by iZ28upq55k1Z (Postfix) with ESMTP id 8CEF8267868;
+	Mon, 16 Nov 2020 03:44:45 +0800 (CST)
+X-GUID: 70F1080E-89A2-41E5-A784-D748259AF7FE
 X-Has-Attach: yes
-From: =?UTF-8?B?6IGC5b+X5by6?= <industrypack-devel@lists.sourceforge.net>
-Subject:  =?UTF-8?B?6IGC5b+X5by65piO5pel5Li65oKo5rS+5Lu277yM5b+r6YCS5bey6YCB6L6+?=
- =?UTF-8?B?5bCa5paH6Lev5YiG6YOoYkNKYmVEMTg0NA==?=
-To: "1337672190" <1337672190@qq.com>
-Cc: "jkafsjewkfn" <jkafsjewkfn@qq.com>, "414465370" <414465370@qq.com>, "1743229615" <1743229615@qq.com>, "1805175462" <1805175462@qq.com>, "1394110175" <1394110175@qq.com>, "2742611683" <2742611683@qq.com>, "1024306078" <1024306078@qq.com>, "1025295164" <1025295164@qq.com>, "2970575849" <2970575849@qq.com>, "2954570838" <2954570838@qq.com>, "505715706" <505715706@qq.com>, "2634560885" <2634560885@qq.com>, "1967812804" <1967812804@qq.com>, "1814540318" <1814540318@qq.com>, "1030721189" <1030721189@qq.com>, "2413964177" <2413964177@qq.com>, "2212420929" <2212420929@qq.com>, "2690894115" <2690894115@qq.com>, "1980634036" <1980634036@qq.com>, "2521621230" <2521621230@qq.com>
-Content-Type: multipart/mixed; charset=UTF-8; boundary="----=_162_NextPart837071496403_=----"
+From: =?UTF-8?B?5p2O5a6d5a6P?= <industrypack-devel@lists.sourceforge.net>
+Subject: E-mail
+ =?UTF-8?B?5b+r5Lu25bey5oq16L6+5aSp55uu6Lev5YiG6YOoIOadjuWuneWuj+aYjuaX?=
+ =?UTF-8?B?peS4uuaCqOa0vumAgUhwbTUwODA3OA==?=
+To: "2297938112" <2297938112@qq.com>
+Cc: "jkafsjewkfn" <jkafsjewkfn@qq.com>, "2817068744" <2817068744@qq.com>, "2409047696" <2409047696@qq.com>, "571749728" <571749728@qq.com>, "1768488968" <1768488968@qq.com>, "1531357493" <1531357493@qq.com>, "2992555159" <2992555159@qq.com>, "1771325933" <1771325933@qq.com>, "2481292572" <2481292572@qq.com>, "2658615414" <2658615414@qq.com>, "1350283492" <1350283492@qq.com>, "910953463" <910953463@qq.com>, "1522169897" <1522169897@qq.com>, "2535954044" <2535954044@qq.com>, "3431566606" <3431566606@qq.com>, "2364485447" <2364485447@qq.com>, "3160274062" <3160274062@qq.com>, "1595679231" <1595679231@qq.com>, "469474863" <469474863@qq.com>, "1145460226" <1145460226@qq.com>
+Content-Type: multipart/mixed; charset=UTF-8; boundary="----=_399_NextPart955618269180_=----"
 MIME-Version: 1.0
 Reply-To: kkks2020101@qq.com
-Date: Mon, 16 Nov 2020 11:38:18 +0800
-Message-Id: <202011161138163195159@lists.sourceforge.net>
+Date: Mon, 16 Nov 2020 03:44:43 +0800
+Message-Id: <202011160344422642301@lists.sourceforge.net>
 X-Mailer: Foxmail 7, 2, 5, 140[cn]
-X-WatchGuard-Spam-ID: v=2.3 cv=COlUoijD c=1 sm=1 tr=0 a=WOZTC118SjYrOp+ZXDScbw==:117 a=WOZTC118SjYrOp+ZXDScbw==:17 a=6LdepkVwp1oA:10 a=IkcTkHD0fZMA:10 a=x7bEGLp0ZPQA:10 a=5KLPUuaC_9wA:10 a=M51BFTxLslgA:10 a=9DvhAHx2yrWFMPxQWpQA:9 a=ZE2ILGNgtRijy3_x7ZMA:9 a=FHcKIkuKs_LABXQy:21 a=QEXdDO2ut3YA:10 a=QY6NDqdClV_qy4oN54YA:9 a=SjNilyfMzlWhnpXL:18 a=HXjIzolwW10A:10 a=T6a71-JsGAwA:10 a=oUCISkJof7o7a-37xU4A:9
-X-WatchGuard-Spam-Score: clean
-X-WatchGuard-Mail-Client-IP: 112.194.89.35
-X-WatchGuard-Mail-From: industrypack-devel@lists.sourceforge.net
-X-WatchGuard-Mail-Recipients: 1337672190@qq.com;jkafsjewkfn@qq.com;414465370@qq.com;1743229615@qq.com;1805175462@qq.com;1394110175@qq.com;2742611683@qq.com;1024306078@qq.com;1025295164@qq.com;2970575849@qq.com
-Return-Path: industrypack-devel@lists.sourceforge.net
-X-OriginalArrivalTime: 16 Nov 2020 03:38:22.0992 (UTC) FILETIME=[EF32E900:01D6BBC9]
 
 This is a multi-part message in MIME format
 
-------=_162_NextPart837071496403_=----
+------=_399_NextPart955618269180_=----
 Content-Type: multipart/alternative;
-	boundary="----=_320_NextPart273274523748_=----"
+	boundary="----=_957_NextPart341279660801_=----"
 
-------=_320_NextPart273274523748_=----
+------=_957_NextPart341279660801_=----
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: base64
 Content-Disposition: inline
-X-WatchGuard-AntiVirus: part scanned. clean action=allow
 
 PGRpdj4NCgk8YnIgLz4NCjwvZGl2Pg0KPGRpdj4NCgk8ZGl2Pg0KCQk8YnIgLz4NCgk8L2Rpdj4N
 Cgk8ZGl2Pg0KCQk8YnIgLz4NCgk8L2Rpdj4NCgk8ZGl2Pg0KCQk8ZGl2Pg0KCQkJPGJyIC8+DQoJ
 CTwvZGl2Pg0KCQk8ZGl2Pg0KCQkJPGJyIC8+DQoJCTwvZGl2Pg0KCQk8ZGl2Pg0KCQkJPGRpdj4N
 CgkJCQk8ZGl2Pg0KCQkJCQk8cCBhbGlnbj0iY2VudGVyIj4NCgkJCQkJCTxpbWcgc3JjPSJjaWQ6
-SURfQjFDRThGQUMtOTEyOC00N0ZDLThENEYtRDU2QkVGNzIzNDQyIiAvPiANCgkJCQkJPC9wPg0K
+SURfNDFGN0IxMDMtQkY2Qi00NEYyLTlFQUQtM0U5OUE3QThBNzVDIiAvPiANCgkJCQkJPC9wPg0K
 CQkJCQk8ZGl2Pg0KCQkJCQkJPGJyIC8+DQoJCQkJCTwvZGl2Pg0KCQkJCQk8ZGl2Pg0KCQkJCQkJ
 PGRpdj4NCgkJCQkJCQk8ZGl2Pg0KCQkJCQkJCQkmbmJzcDsNCgkJCQkJCQk8L2Rpdj4NCgkJCQkJ
 CQk8ZGl2Pg0KCQkJCQkJCQk8cD4NCgkJCQkJCQkJCTxzcGFuIHN0eWxlPSJjb2xvcjpibGFjazsi
@@ -317,12 +532,12 @@ CQkJCQkJCQkmbmJzcDsNCgkJCQkJCQkJPC9kaXY+DQoJCQkJCQkJCTxkaXY+DQoJCQkJCQkJCQkm
 bmJzcDsNCgkJCQkJCQkJPC9kaXY+DQoJCQkJCQkJCTxkaXY+DQoJCQkJCQkJCQkmbmJzcDsNCgkJ
 CQkJCQkJPC9kaXY+DQoJCQkJCQkJCTxkaXY+DQoJCQkJCQkJCQkmbmJzcDsNCgkJCQkJCQkJPC9k
 aXY+DQoJCQkJCQkJCTxkaXY+DQoJCQkJCQkJCQk8YnIgLz4NCiZuYnNwOzxiciAvPg0KJm5ic3A7
-PGJyIC8+DQombmJzcDs8YnIgLz4NCiZuYnNwOyA8YnIgLz4NCiZuYnNwOyYjMDAwMDAwMDAwMDEy
-Mjg4JiMwMDAwMDAwMDAwMDAwMDAwMDAwMDEyMjg4JiMwMDAwMDAwMDAwMDAwMDAwMTIyODgmIzAw
-MDAwMDAwMDAwMDEyMjg4JiMwMDAwMDAwMDAxMjI4OCYjMDAwMDAwMDAwMDAwMDEyMjg4JiMwMDAw
-MDAwMDAwMDAwMTIyODgmIzAwMDAwMDAwMDAwMTIyODgmbmJzcDsgPGJyIC8+DQo8YnIgLz4NCjxi
-ciAvPg0KJm5ic3A7JiMwMDAwMDAxMjI4OCYjMDAwMDAwMDAwMDAwMTIyODgmIzAwMDAwMDAwMDAw
-MDAwMDAwMDAxMjI4OCYjMDAwMDAxMjI4OCZuYnNwOyA8YnIgLz4NCiZuYnNwOyA8YnIgLz4NCiZu
+PGJyIC8+DQombmJzcDs8YnIgLz4NCiZuYnNwOyA8YnIgLz4NCiZuYnNwOyYjMDAwMDAwMTIyODgm
+IzAwMDAwMDAwMDAwMDEyMjg4JiMwMDAwMDAwMDAwMDEyMjg4JiMwMDAwMDAwMDAwMDAwMDAwMDAx
+MjI4OCYjMDAwMDAwMDEyMjg4JiMwMDAwMDAwMDAwMDAwMDAwMDAwMDEyMjg4JiMwMDAwMDAwMDEy
+Mjg4JiMwMDAwMDAwMDAwMDAwMDAxMjI4OCZuYnNwOyA8YnIgLz4NCjxiciAvPg0KPGJyIC8+DQom
+bmJzcDsmIzAwMDAwMDAwMDAwMDEyMjg4JiMwMDAwMDAwMDAwMDAwMDAwMDAwMDEyMjg4JiMwMDAw
+MDAxMjI4OCYjMDAwMDAwMDAwMDAxMjI4OCZuYnNwOyA8YnIgLz4NCiZuYnNwOyA8YnIgLz4NCiZu
 YnNwOyA8YnIgLz4NCiZuYnNwOyA8YnIgLz4NCjxiciAvPg0KCQkJCQkJCQk8L2Rpdj4NCgkJCQkJ
 CQkJPGRpdj4NCgkJCQkJCQkJCSZuYnNwOw0KCQkJCQkJCQk8L2Rpdj4NCgkJCQkJCQkJPGRpdj4N
 CgkJCQkJCQkJCSZuYnNwOw0KCQkJCQkJCQk8L2Rpdj4NCgkJCQkJCQkJPGRpdj4NCgkJCQkJCQkJ
@@ -350,236 +565,175 @@ CTxwPg0KCQkJCQkJCQkJJm5ic3A7DQoJCQkJCQkJCTwvcD4NCgkJCQkJCQkJPHA+DQoJCQkJCQkJ
 CQkmbmJzcDsNCgkJCQkJCQkJPC9wPg0KCQkJCQkJCQk8cD4NCgkJCQkJCQkJCSZuYnNwOw0KCQkJ
 CQkJCQk8L3A+DQoJCQkJCQkJCTxwPg0KCQkJCQkJCQkJJm5ic3A7DQoJCQkJCQkJCTwvcD4NCgkJ
 CQkJCQkJPHA+DQoJCQkJCQkJCQk8c3BhbiBzdHlsZT0iY29sb3I6d2hpdGU7Zm9udC1zaXplOngt
-c21hbGw7Ij4tJiMwMDAwMDAwMDAwMDAyMDE3MCYjMDAwMDAwMDAwMDAwMDAwMDAyNjIwMjE5JiMw
-MDAwMDAwMjYxMDImIzAwMDAwMDAwMDAwMDAwMDAwMDY1MjkyNDI3MjkxJiMwMDAwMDAwMDIwMzEz
-JiMwMDAwMDAwMDAwMDAwMDIwMzAxJiMwMDAwMDAwMDAwMDAwMDAwMzM0MDImIzAwMDAwMDAwMDAw
-MDAwMjY0MTUmIzAwMDAwMDAwMDAwMDAwMjQwMzcmIzAwMDAwMDAwMDIwMzE2JiMwMDAwMDAwMDAw
-MDAwMDAwMDAwMzI3NzMmIzAwMDAwMDAwMDAwMDAwMjAyMDQmIzAwMDAwMDAwMDAwMjM1NTgmIzAw
-MDAwMDAwMDQwNzg0JiMwMDAwMDAwMDAwMDAwMDAwMDAzMjg1OCYjMDAwMDAwMDAwMDAwMjYzNjYm
-IzAwMDAwMDAwMDAwMDAwMDAwMjAzMTYmIzAwMDAwMDAwMDAwMDAwMDAwMDAyMDAyNiYjMDAwMDAw
-MDAwMDI0NjA1JiMwMDAwMDAwMDAwMDAwMDQwNjUzJiMwMDAwMDI0MjAyJiMwMDAwMDAwMDAwMDM2
-NzI0JiMwMDAwMDAwMDAwMDAwMDAwMDIzNTA2JiMwMDAwMDAyMzA4MSYjMDAwMDAwMDAwMDI2MDQx
-JiMwMDAwMDAwMDAwMDAwMDAwMDAwMDMzMzI5JiMwMDAwMDAwMDAwMDIxMzA3JiMwMDAwMDAwMDAz
-ODQ5OCYjMDAwMDAwMDAwMDAwMzAzNDAmIzAwMDAwMDAwMDI3NDk0JiMwMDAwMDAwMDAwMDAwMDAw
-MDAyNzcyMSYjMDAwMDAwMDAwMDAwMDAwMjAzMDcmIzAwMDAwMDAwMDAwMDAwMzI5NDYmIzAwMDAw
-MDAwMDAwMDAwMDAwMDAwMjAwMTMmIzAwMDAwMDAwMDAwMDAwMDAwMjQ1MTUmIzAwMDAwMDAwMDAy
-MDMwNyYjMDAwMDAwMDAwMDAwMDAwMDAzMjk0NiYjMDAwMDAwMDAwMDAwMDM5MzAyJiMwMDAwMDY1
-MjkyJiMwMDAwMDAwMDAwMDAxOTk3OCYjMDAwMDAwMDAwMDAwMDAwMjg0MzYmIzAwMDAwMDAwMDEy
-Mjk4JiMwMDAwMDAwMDAwMDAwMDAwMDAwMDI1MTA1JiMwMDAwMDAwMDAyMDIwNCYjMDAwMDAwMDAz
-MDM0MCYjMDAwMDAwMDI5OTgzJiMwMDAwMDAyNzk2MyYjMDAwMDAwMDAwMDAwMjA4MDUmIzAwMDAw
-MDAwMDAwMDAwMDAwMDAwMjgzODUmIzAwMDAwMDAwMDAwMDM4NDUxJiMwMDAwMDAwMDAwMDAwMjA4
-MDkmIzAwMDAwMDAwMDAwMDAwMDAwMjMwMTYmIzAwMDAwMDAwMDAwMjQ5MzAmIzAwMDAwMDAwMDAz
-MjQ3NyYjMDAwMDAwMDAwMDAyNTMyOSYjMDAwMDAwMDAwMDAyNDc1NCYjMDAwMDAwMDAwMDAwMDgy
-MTImIzAwMDAwMDI2MjgwJiMwMDAwMDAwMDAwMDAwMDAwMDAwMDIxNTE3JiMwMDAwMDAwMDAwMDAw
-MDAwMDIzNDc4JiMwMDAwMDAyNjAzMiYjMDAwMDAwMDI2MTQzJiMwMDAwMDI4NDM2JiMwMDAwMDAw
-MDAwMDAwMDAwMDAwMjE4MDkmIzAwMDAwMDAwMDAwMDAwMDAwMDIwMjUwJiMwMDAwMDAwMDAwMDEy
-Mjk5JiMwMDAwMDAwMDAwMDAwMDAwMTIyOTAmIzAwMDAwMDAwMDAwMDAwMDAwMDI2MzY2JiMwMDAw
-MDAwMDAwMDAwMDAwMDAwMjQxMDImIzAwMDAwMDAwMjY0NjkmIzAwMDAwMDAwMDAwMDAyNDg2MyYj
-MDAwMDAwMDAwMDAwMDAwMDAwMDIxMTYwJiMwMDAwMDAwMDIxNjQ0JiMwMDAwMDAwMDAwMDAzNjIx
-MyYjMDAwMDAwMDAwMDAwMDAwMDAwMjAyMzkmIzAwMDAwMDAwMjY2NDEmIzAwMDAwMDAwMDAyNjM3
-OSYjMDAwMDAwMDAwMDAwMDAwMDAyNzg4MiYjMDAwMDAwMDAwMDAwMDAwMjc3MDAmIzAwMDAwMDAw
-MDAwMDAwMDAzMDM0MCYjMDAwMDAyMjgyMyYjMDAwMDAwMDAwMDAwMDAwMDIyNDExJiMwMDAwMDAw
-MDAwMDAwMDIxNDA3JiMwMDAwMDAwMDAwMDAwMDAwMDAwMDIxMDE5JiMwMDAwMDAwMDAwMDAzMzgy
-OSYjMDAwMDAwMDAwMDAwMDAwMDAwMjAxNjcmIzAwMDAwMDAwMDAwMDAwMjY4MjUmIzAwMDAwMDAw
-MDAwMDAwMDAwMjUzMTgmIzAwMDAwMDAwMDAwMjAxMzImIzAwMDAwMDAwMDAwMDAwMDAwMjE3MDkm
-IzAwMDAwMDAwMDAwMDAwMDAwMDAwMjYzNTQmIzAwMDAwMDAwMDAxMjI5OCYjMDAwMDAwMDAwMDAw
-MjgwMjAmIzAwMDAwMDAwMDAwMDAwMjg3NzkmIzAwMDAwMDAwMDAwMDAwMDAzNzMyNSYjMDAwMDAy
-OTk4MyYjMDAwMDAwMDAwMDAwMDAwMDAwMDAxMjI5OSYjMDAwMDA2NTI5MiYjMDAwMDAwMDAwMDIz
-NTU4JiMwMDAwMDAwMDAwMDAwMjA4NzcmIzAwMDAwMDAwMDAwMDAwMDAwMDAwMjc0MjUmIzAwMDAw
-MDAwMDAwMDAwMDAwMDM1MDY0JiMwMDAwMDAwMDAwMDAwMDAwMDMxNTcyJiMwMDAwMDAwMDAyMTY0
-NyYjMDAwMDAwMDAwMDAwMDAwMDAwMDMyNTQ0JiMwMDAwMDAwMzU4NDYmIzAwMDAwMDAwMDAwMDAw
-MjI4NjMmIzAwMDAwMDAyMTcwOSYjMDAwMDAwMDAwMDAwMDAwMDEyMjkwaW1ja2ImIzAwMDAwMDIw
-MTU0JiMwMDAwMDAwMDAwMDAwMDAwMDAyNzY2NSYjMDAwMDAwMDAwMDAwMDAwMDI2MDg1JiMwMDAw
-MDAwMDAwMDAwMDAwMDI1MjUzICYjMDAwMDAwMDAwMDAwMDAwMDAwMDAyNDEwMiYjMDAwMDAwMDAy
-MDMyMCYjMDAwMDAyNDg2MyYjMDAwMDAwMDAwMDAwMDAwMDAyMTQ2MyYjMDAwMDAwMDAwMDAwMDAw
-MDAwMDAyOTYxNiYjMDAwMDAwMDAwMDAwMjIzMzAmIzAwMDAwMDAwMDAwMDAwMDAwMDY1MjkyJiMw
-MDAwMDE5OTY4JiMwMDAwMDAwMDAwMDAwMDAwMDAwMzYyMTUmIzAwMDAwMDAzMjgzOCYjMDAwMDAw
-MDAwMjE1NDgmIzAwMDAwMDAwMDAwMDI3OTY1JiMwMDAwMDAwMDAwMDAwMDAwMDAwMDMwMjQ2JiMw
-MDAwMDAyMDMxNSYjMDAwMDAwMDAwMDAwMDAyNzQ5NCYjMDAwMDAwMDAwMDAwMDAyMTg5NTwvc3Bh
-bj4gDQoJCQkJCQkJCTwvcD4NCgkJCQkJCQk8L2Rpdj4NCgkJCQkJCTwvZGl2Pg0KCQkJCQk8L2Rp
-dj4NCgkJCQk8L2Rpdj4NCgkJCTwvZGl2Pg0KCQk8L2Rpdj4NCgk8L2Rpdj4NCjwvZGl2Pg0K
+c21hbGw7Ij4tJiMwMDAwMDAwMjAxNzAmIzAwMDAwMDAwMDAwMDAwMDI2MjAyODUmIzAwMDAwMDAw
+MDAwMDAwMDAwMDAwMjYxMDImIzAwMDAwMDAwMDAwMDAwMDAwMDY1MjkyNjE4MDgzJiMwMDAwMDAw
+MDAwMDAwMjAzMTMmIzAwMDAwMDAwMDAwMDAwMDAwMDAwMjAzMDEmIzAwMDAwMDAwMDMzNDAyJiMw
+MDAwMDAwMDAwMDAwMDAwMDAwMDI2NDE1JiMwMDAwMDAwMDAwMDAwMjQwMzcmIzAwMDAwMDIwMzE2
+JiMwMDAwMDAwMDAwMDAzMjc3MyYjMDAwMDAwMDAwMDAwMjAyMDQmIzAwMDAwMjM1NTgmIzAwMDAw
+MDAwMDA0MDc4NCYjMDAwMDAwMDAwMDAwMDAwMDAzMjg1OCYjMDAwMDAwMDAwMDAwMDAwMDAyNjM2
+NiYjMDAwMDAwMDAwMDAyMDMxNiYjMDAwMDAwMDAwMDAwMDAwMDIwMDI2JiMwMDAwMDAwMDAwMDAw
+MDAwMDAzNjk4MSYjMDAwMDAwMDAwMDAyMDE5NSYjMDAwMDAwMDAwMjE0NTImIzAwMDAwMDAwMDAz
+MTA2MiYjMDAwMDAwMDAwMDAwMDAwMDAwMzY3NzEmIzAwMDAwMDAwMDAwMDAwMjYwNDEmIzAwMDAw
+MDAwMDAwMDAwMDAwMDAzMzMyOSYjMDAwMDAwMDAwMDAwMDAwMDIxMzA3JiMwMDAwMDAwMDM4NDk4
+JiMwMDAwMDAwMDAwMDAwMDAwMzAzNDAmIzAwMDAwMDAwMDI3NDk0JiMwMDAwMDAwMDAwMDAwMDAy
+NzcyMSYjMDAwMDAwMDAwMDAwMDAwMjAzMDcmIzAwMDAwMDAwMDAwMDAzMjk0NiYjMDAwMDAwMDAy
+MDAxMyYjMDAwMDAwMDAwMDAwMDI0NTE1JiMwMDAwMDAwMjAzMDcmIzAwMDAwMDAzMjk0NiYjMDAw
+MDAwMDAwMDAwMDAwMDAwMzkzMDImIzAwMDAwMDAwMDAwMDA2NTI5MiYjMDAwMDAwMDAwMDAwMDE5
+OTc4JiMwMDAwMDAwMjg0MzYmIzAwMDAwMDAwMDAwMDAwMDEyMjk4JiMwMDAwMDAwMDI1MTA1JiMw
+MDAwMDAwMDAwMDIwMjA0JiMwMDAwMDMwMzQwJiMwMDAwMDAwMDAyOTk4MyYjMDAwMDAyNzk2MyYj
+MDAwMDAwMDAwMDAwMDAwMDAyMDgwNSYjMDAwMDAwMjgzODUmIzAwMDAwMDAwMzg0NTEmIzAwMDAw
+MDAwMjA4MDkmIzAwMDAwMDAwMDAwMjA4NzImIzAwMDAwMDAwMDAwMDMzNDk5JiMwMDAwMDAwMDIz
+NjE2JiMwMDAwMDAwMDAzODQ5NyYjMDAwMDAwMDAwMDAwMDAwMzI3MzYmIzAwMDAwMDAwMzY1MjMm
+IzAwMDAwMDAwMDAwMDAwMDAwMDgyMTImIzAwMDAwMDAwMDAwMDAwMjYyODAmIzAwMDAwMDAwMDIx
+NTE3JiMwMDAwMDAwMDAyMzQ3OCYjMDAwMDAwMjYwMzImIzAwMDAwMDI2MTQzJiMwMDAwMDAwMDAw
+MDAwMDAwMDAwMDI4NDM2JiMwMDAwMDAwMDAwMDAwMDAwMDAwMjE4MDkmIzAwMDAwMDAyMDI1MCYj
+MDAwMDAwMTIyOTkmIzAwMDAwMDAwMDAwMDAwMDAwMDEyMjkwJiMwMDAwMDAwMDAwMDAwMDAwMDAw
+MDI2MzY2JiMwMDAwMDAwMDAyNDEwMiYjMDAwMDAyNjQ2OSYjMDAwMDAwMDAwMDI0ODYzJiMwMDAw
+MDAwMDAwMDAwMDAwMDIxMTYwJiMwMDAwMDAwMDAyMTY0NCYjMDAwMDAwMDAwMDAwMzgwNzUmIzAw
+MDAwMDAwMDAwMDAwMDAwMDIyOTY5JiMwMDAwMDAwMDIxMTk1JiMwMDAwMDAwMDAzMTAzNiYjMDAw
+MDAwMDAwMzQ1MDMmIzAwMDAwMDAwMDAwMDAwMDAyMTM4NSYjMDAwMDAwMDAyNzg4MiYjMDAwMDAw
+MDAwMDAwMDAwMjc3MDAmIzAwMDAwMDAwMDAwMDAwMDMwMzQwJiMwMDAwMDAyMjgyMyYjMDAwMDAw
+MDAwMDAwMDAwMDIyNDExJiMwMDAwMDAwMDAwMDAwMDAyMTQwNyYjMDAwMDAwMDAwMDAwMDAwMDAw
+MDIxMDE5JiMwMDAwMDM0NjkxJiMwMDAwMDAwMDAwMDAwMzAzMzMmIzAwMDAwMDAwMjM1MDcmIzAw
+MDAwMDAyMTMzMCYjMDAwMDAwMjIzNzQmIzAwMDAwMDAwMDAwMDAwMDAwMDAyMDEzMiYjMDAwMDAw
+MDAwMDAwMDAwMDAyMTcwOSYjMDAwMDAwMDAwMDAwMDAwMDI2MzU0JiMwMDAwMDAwMDAwMDAwMTIy
+OTgmIzAwMDAwMDAwMjgwMjAmIzAwMDAwMDAwMDAwMDI4Nzc5JiMwMDAwMDAwMDAwMzczMjUmIzAw
+MDAwMDAwMDAwMDAwMjk5ODMmIzAwMDAwMDAwMDAwMDAwMDAwMDAxMjI5OSYjMDAwMDAwMDAwNjUy
+OTImIzAwMDAwMDAwMDAwMDAwMDAyMzU1OCYjMDAwMDAwMjA4NzcmIzAwMDAwMDAwMDAwMDI3NDI1
+JiMwMDAwMDAwMDAwMDAwMDAwMDAwMDI1MDYyJiMwMDAwMDAzNTAyOSYjMDAwMDAwMDI1MjIwJiMw
+MDAwMDAwMDM0MzIxJiMwMDAwMDAwMDAwMzQxMDkmIzAwMDAwMjYyNTcmIzAwMDAwMDAwMDAwMDAw
+MDAwMDAwMjI4NjMmIzAwMDAwMDAwMDAwMDAyMTcwOSYjMDAwMDAwMDAwMDAwMDAwMDAwMTIyOTB4
+b3Z5aHUmIzAwMDAwMDAwMDAwMjAxNTQmIzAwMDAwMDAwMDAwMDAwMjc2NjUmIzAwMDAwMDI2MDg1
+JiMwMDAwMDAwMjUyNTMgJiMwMDAwMDAwMDAwMDAwMDAyNDEwMiYjMDAwMDAwMDAwMDAwMDAwMDAy
+MDMyMCYjMDAwMDAwMDAwMjQ4NjMmIzAwMDAwMDAwMDIxNDYzJiMwMDAwMDAwMDAwMDAyOTYxNiYj
+MDAwMDAwMDAwMjIzMzAmIzAwMDAwMDA2NTI5MiYjMDAwMDAwMDAwMDAwMDAxOTk2OCYjMDAwMDAw
+MDAwMDAzNjIxNSYjMDAwMDAzMjgzOCYjMDAwMDAwMDAwMDAwMDAwMDAyMTU0OCYjMDAwMDAwMDAw
+MDAwMDMwNzQ2JiMwMDAwMDAyODgyMSYjMDAwMDAwMDAwMDAwMDAwMDMwMzM4JiMwMDAwMDAwMDAw
+MDAwMDAwMDM4MDU0JiMwMDAwMDAzNDUxNjwvc3Bhbj4gDQoJCQkJCQkJCTwvcD4NCgkJCQkJCQk8
+L2Rpdj4NCgkJCQkJCTwvZGl2Pg0KCQkJCQk8L2Rpdj4NCgkJCQk8L2Rpdj4NCgkJCTwvZGl2Pg0K
+CQk8L2Rpdj4NCgk8L2Rpdj4NCjwvZGl2Pg0K
 
-------=_320_NextPart273274523748_=------
+------=_957_NextPart341279660801_=------
 
-------=_162_NextPart837071496403_=----
+------=_399_NextPart955618269180_=----
 Content-Type: application/octet-stream;
-	name="=?UTF-8?B?5b6I6auY5YW05L2g5pS25Yiw5oiR5Lus55qE6YKA6K+3LnBuZw==?="
+	name="=?UTF-8?B?6K+m57uG5ZKo6K+icTEyNDc0OTExMTEuZ2lm?="
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment;
-	filename="=?UTF-8?B?5b6I6auY5YW05L2g5pS25Yiw5oiR5Lus55qE6YKA6K+3LnBuZw==?="
-Content-ID: ID_B1CE8FAC-9128-47FC-8D4F-D56BEF723442
-X-WatchGuard-AntiVirus: scanned '=?UTF-8?B?5b6I6auY5YW05L2g5pS25Yiw5oiR5Lus55qE6YKA6K+3LnBuZw==?='. clean action=allow
+	filename="=?UTF-8?B?6K+m57uG5ZKo6K+icTEyNDc0OTExMTEuZ2lm?="
+Content-ID: ID_41F7B103-BF6B-44F2-9EAD-3E99A7A8A75C
 
-iVBORw0KGgoAAAANSUhEUgAAAa4AAADqCAIAAAB1KTYDAAAiDElEQVR42u2dMch+OVbGMwjaKNjI
-dtuMiNXiIsKCoGCl8F8Eu20URgQtZBFshBURBRtBxMJCHHCb7QRxQCtBQViRZWEqC6exW2wErQTR
-D1995517k5PnnPOcJDf3PMXy3/lyk5Pc5JeTk7w37338398qqe307otf+ejb35he0DAzUimn3ksU
-plKDlTNEqGzN60Khqsh8/YsoX0SKojWHv7mg9Ao3V4IvpdU9+8ynKLxn/afoWk19LWtT9xG3Z47z
-CqNH1AojdgUbUqmUQfddICPYSrSluFqnR61jySIagcJs9IPODZJNlBqjK/a0MTbf1ytMpaq6IixS
-fiUKl9bVh+XV7U/dR4lCi3KEp1Ib6HUgX+8wzcHOq5gt1+LSpVxX2T4U7dGMRq/wrfJv/zur/tNL
-9xfdqgJSNdyAR25CQd2yxog1luTWW/bXEQV4C0H2CNmGjrK5Q7gqFwoPlQGPp1CaILoptbjRWtIi
-EZdQ01GIj3ODJecqsCr1zKfoe7i5LPmrFlV7ujl359Qizhx4cdo3uBsKW8MYEaWzUpBazUQ1hrU1
-6hKK2EX8FRQwiovl57ZKfzx+qJS5MT0+O6usapVts4XNTQ6lm5B41nLbgkLn4g5vr64ZSD7dEgVY
-hKJwjKfmRCGlLP+DZ/yBlbI16Ws+59g0kpu/c77m4GR6afi2chHat6lq6pGTDSgjCs2jCwFTUFW1
-C4Guqd/5yl//4j/9mZw5t8TXlPj0G9ThqozotkbLHqFHlRrd8B6opaGc/vBXubtSIgPOCVKeHg72
-e+ArxCsMGkzDN1PVKNR2REOa8bKx6e2vf/rDv/BGQyIHkcbxh/9nLfRKz09xFkRxt8HZWgA6vixF
-fndko5LW3fPEFsCKOyvll9zNOihUrQ6CUDggdmAbQo+/vtHwc9/4adxgELsqR0nI2YPCiL0j3EhD
-Wc55upVSe34LHCYt6hWfF6ytTjWZynnHE8iWzz2Uo/MK5T4Rh0JVlVjriEPpQu95Wym//eMARG31
-/XsRSPei73iA5doS29rQE4wnLrFlFJba+vQp7RqTNaCQcoOOPU0/3aVAYXcSw4eZKhw2xuvWnm45
-l/UGxC4NKVHCVhuClDEvAIX0eI2CUPjIwb/sElDI2ktFUI6vtQ317b6vFqfMDYuQYXrQDEUhMqJC
-vcJhKCyNyQqprExDYWMBiRkJ/10AgRaFFA4KWc3yCstptHcPCZn3EPwoBMu1vSwEhdFL1wX3DOy/
-Qd4MheVlJIARnGpBAg1xB1NbqJxP9R1RDtngh2Dk4Y2Aiaju0rX4fCIiCimjCYl1+s8PIQYLec4N
-FJaII9b+l+d5E2BK4XGkXnJBVRrKwXJkIWkbGK1h4EShOYA70SsEs/UvDykoRNpEnkQPAuOA+DKi
-W5CtiWY5jCuisPoIrjEoNAdowO1Ilvs8BoXIqlMIfgkLN8RCQ1i5mi0rUjYXhaX20kvN2XxN5q9+
-dXXvkWcgG569wK9NhnmFoVWornq0gTaD8dqi6VtPSPwr2itUBd1WQGF3xlIZJr/rAlASLEXVSquJ
-j0JEZo5EC5yKPYQC+2U0CquWUCIM/lW8uZRuzxTwJIx8LXGcKCzwEqRbUJenQufU+tq3Q6HQq5Ax
-75zHtIrY+dI6U6oVcWmg0BM5wrcFR6IQ9I4p1Sw9l1AGX7RXKEPHH1Y75N/VwRhz4OLwJ1CzYKo+
-Yi1YjI9efOeRImLjdvc6EdzYDlJQtk26tnmaa7xX2N2hVvmD1fw/0h9XRFAoCHcgPI4F/rLAujuR
-Pd2p1B2xLo0ttlZlnO/A2S7OHlnVR7VfCPjX+4gnogp4ycUJRXAjrWAtDChstTwSmvTXQpsD+Fct
-8pwo5G7f3QuFcuwAGVrgPOPcmjBn0sqK+JQZhd0aGShjiI7jtagyy4zC6p613Ai2DrAsCouyP1Sb
-V14sm2lrq5etIMSSwB1kZMx0UehpVlWYQ1tct3RPEyOZ4MMP7HCy6yQ8gqOwmwYfFV3X9TVPEDTE
-tz8dhQXuNq0SuwzVRn4M9UK0kFcI+tIFHqWsaIvNITI0bnf95V+2I3YaNkNbXphcC9sLEpqOFSts
-uYGquMc2KDQUJDQvvoDDp8mRXiF9O7QMOFc4ZpHiLPrs82rLUlUNB4F/GaXaoVoKhcX6WlXBfqTQ
-zVBoiMbYzgZ0Q2qeutM14oi1AeGzvMK4UGarNQxhINUjeBiOsva3NZ15BxlvHE8t9kMh4iRqG+Ec
-KVaFoSnbAx4NQmHRHFAqk1BoODqgyv/5oH/nzubw0utisAqJwJhLQVbHoJu8Kwrx/S6bM37wB1//
-hGhzr7Aw3nE0CrU4MK8ru/3SXN9ucd2KaOuCW4VvZJtLqe4aGbB7FRSqVjDl5ItoQ7F4XKKYRuIO
-C2Q5InDevI/bQZZfQHc0grZVTTJ4ux57VP61agcZNA/PDWkfJwpbQdJq0Zuh0LZibSXz9LpEYfO/
-g10WLCJ62wRMWX0QrFQRUQhu0xssxBvNs1L2eJeykd0ZrohkOddxBRQK8qPQEIBGWgaxp5g8SjBN
-qAI/x9CN5qh8IsreiyeZ/HjBvI8BdD7ncyYvGG4zDGbK4RUwPT7AXm2joxDZhQD/KkTVqxNANx+h
-QTw7V0LTmb1dSof31CIKhaAjXfTvsmvYM9sxL4C42XJGTETvVAV9qpY4w4vd/CmPyI9rp2Fni8n5
-ewoyH2MwPIU0HV4v5ztl6WlzCAr94XyWp1ZMb47VIIJhtpiL3zCwyrIN3MM3eE3HrN89C2T8/dp2
-tw2NpmoWWcTzSXE1MouJwkKFC4UCRbOuGaAxa/ZqPtPPbflrylpDPf6hWvCqPFDiHlFQDoOl3eGZ
-Ivs1T4N1ude/grLRUilQ0G+Qt9c9a3035VtOCbqMV5gyKxFwZ+XbB5UoTKVQJVY21r1QuH1X3r6C
-qVSQ7oXClFkJ2dROOvfnRCGqZEEqtbEShSlIORNwxT2rmPIrUThT2cVTKaJG/wY5ldpYd5if7lBH
-rRKFOmUfSqW2VKIwta5y4kkN02dQmD2vpWyZVErW1cdIrFd49dYJVTYOSxNbkl509opZIqPQfG+R
-nGeJ/GoeniG3RM/X98bUV5XV3M9/zarL4RIlig3jv1j11W9/7Q+/+LuUrFb43JZNChQKn6gF74gx
-tJF8S0P1T2YhX7Ijlmi+aMLGkbPxrOq03sVgB4f7NUMwK9V39rU2jPE3BQ567j6LePXEHnWums4r
-9F+IxbqfZLxLSC9U/sQ09zKg6rP4fUm2phvsIIBfkAZvDjB/TXZZGrZ61Psfvv/JB5/Iz+Lfafa8
-9JFXoJyrZkFhaQxg+SIh4j1N9I7i+bi09rKhrgQXG6w4eAMGaxh7Lut4JvN/+Zny1XjK5XaDL8wB
-261qlbw0NnuF4NU9Ldlo6MxfHSuUx0/rBokpLqHqSgqkNwt1J9ZOZcD5r1ULDZfvgI4AeHHVK99b
-Ej6j77mWCCmr1SYHG8CuiASd/dMDUlA3cReFLA6CzyKPB10CwUFht4sQgw62UUG5posbGNKikDud
-FGB2NQTLIhKY666V+a477Ww9jOyySd3dktbQpm+Nqp6l9E/Cl2nMKFS1aRFRSJwQVPFN561JqiaK
-DuSZ/9RNea6IH3NjcEknVNFT0mywwZl6oJB4a1tEL22lB3mCz1WEwzRCB0IWON2wQneWNi9SCja6
-ymfx1zIbJLusFvsMc0m3mv4x4AloImYY0pTeS3euWw2G+R+h5HNI/3QJhXbzozBoDnMGK6pV5qBQ
-NkvbQM+/gp6RvJkjvwBZBxs8G+hCNZG/mo8RUFw/VeaUnYegNPTHbZX12Gm2VkahbUbUTvCtTJz+
-oNAseBcdhELVIvdd46AiHtSjNGu1ImUSCs3VNKMQdKufMq/l8YKiUXjoachKXzsZRGwN4488y32N
-EnIXyIaNPm4IuOs/tQo1Xgmv6iIICt/1TuQIhY6JqXcLoqCwNQ10DYiIcz2kPZ6ypleo9SbOTxla
-OKhP+ifFCBRWHRdbsxMbh4nCVg8A44CqiULeOjibhB96sLWpf4oz73fbtiZBq2xZVZ/1e68DUNj1
-xeTXJHQtSohAJdVWSdWqw8Yxq4cQ998NZbX+im8/Ql5hd3Oz6tDZAoXdCiORQcPGvCCVX8DaK1gf
-hf73i6dXbZvI6s7BKi/Jg0LzNCmbJBf3/ofvHw7QXAKFXYeslS0ecycskM/mdimpqj/Y+TzdUdUP
-8LcitDveS15b1RBpkvcHVf+9mmA1FPpDxsNQGFGXbp6hKNS2A9ErFAJrr/8WymKisIgMlqNgeIUL
-Bh1/rD1umWMY2K09Ck9Zqh35QwJDLIbYGuY0cl2QFrs0Cs8c7NYXNMPWDubWcxpW/ZMLhaolyaub
-Y3O5tTvIhyGN7wBqm1vbegUYaaDzaytOiGkg3VcG37VQqMpHtaQdgEJViLyKQnna86Pwo9OPcVUN
-qB3yeMpzxWleoSqaY0ChgAnPFlj3PXkGuVwjuX0iBnY1glFqvie+DxuBQlu4IwiFMm4u5BV+9dtf
-++SDT/w7gWDK6JhGqfVbmx75qL9M00L12VkgBmIF+B7qI1ulske1PEcqFRc66RZabaIuGfH8d/UK
-u+uSKSg0LA5KPApHzl6UBfJBZK/wIOcGaISniRcBDnKBNdUHtXsphhhrweaJIg77Q+l4Aw5AoRZA
-oDMuqPXuxqPQ1uEfHNSa6pnjZ6EQ3wQ7iINCZI1TAGqA0x0yPv20RQY50i+r78ajrl/5mhLs69y9
-PFVW/k0kStMh9nBRGNoTwHqFotC/TvI/uCIKuw6IqtBhMfJWoWZv1Om8yO7JU+Ca17wx/bRhAArH
-0BZJvIJXyM2ThULPZEBEodmSwvrhXQF6qh+Fj3+AJMIdTDlBtV6enkpBYVWf/4Pv/cLXv2w70ECs
-zt4oxFuGiEJbcLBbLyJwDwu+KSg0b+c+FPIbZHxp6dxnfPzDsz9j8ApVZjtL1NbojYb/8mv/oc3T
-U6MNUIgvOLpd/R12IGlAqxpKIQIXNJUblnHu03pRWP23M8hdrZvZve+WUhqb1EHdUVjnUlYrBxri
-Pg5rC/5yKESKm75tQpmGQcspxiP5sFBodi9eZfyKdTnhQxurYqFQjhe0rEXM0I5A1ZI8yCssMArB
-uOciKHSyxrb5fsbf3Fghl4b0TepztkgUi1WKvwjdPcjls4zrjmczOzwDjOVqGWxw7pqxXuorDUH/
-otVrp6OQwhqbV6jdDDSbhxs8YLfwNcFD06NYwoOGJUVL6JdpqvWheElgcRdCoVzxASgsLzTULiVK
-b/D7W0lbaz8RbF5hASaGK6JQFUavtoPwiHPhpaoCYlsIClW+NJeDeJW045m7QMYt1G7UPIW36oOG
-ql3vcw+jo1C12pWJoJX2RAESLhiMwoMNQqRbm62hNQ72GIa8H4XETWrCB/2LtWu2KuNxBLRhjmpo
-o2WeHFMTatStSHfn0eDXfPzzf/mFr38ZtKpVl+6zNt9ZbudDszhbQ5W+u6BrUc8zadkMVnlt5vCf
-au8RzMrZUEGb1BwUdmvrb4KgnLXx6a4ZSIegR5FbuT1o6FyAFDYKz6VoN6+jF8hml7brVIIGG+Q5
-R+FpPXw/s9oOnrXj0ijEa8Ia8EGWTLGQjsLyv77h4aShIZOiGQmqprO1f/fkQIT8AZDBIloiRCqi
-WabN1hysmIPCFFHd7ng+d526ldbxPFZWonB/dVGYQyVUd2jeDep4LxRu8MJsinAMb9uYQXK2Z74O
-pyyfbp1ts0XXtZylXCanDspB8ap7eYU3121pePMxj5z8Z5Uyu652bYXCq7+MaB1+kGc+GZtKPbVN
-/9kKhesrot+o8rytYzhY2wDiPkoU3k4eGp5/350D/lba+I0nCvva7/Wnbzhe+/WixaU9pX9tFGb3
-silRmEoddJfDNHO1YLslDQUt+L6WtWobXdsrTHm0Bw1DAZH0uY/2QWH2WoP2oGEq5dc+KEwZZEZh
-Tjypli7aNzZHIf4JzCu+PIrSMVRpcG+5KFauWOurohBvLPyjyjfscw9RaDiSERMBMbiaj39cpWeu
-D27BQi8KL/GJU8PdLHeTk4asK4EW1+Dekp1zpC7pFWpHUfcD/UFd7UKj/fVOKIOuUk2nxq+ORxY3
-ReuMEfW5wsN/4d6ehedDuVvrDl0NF/KF18K+b+Ap/82c1cTnC7yG9T3/IM/++dQAYuquhPdcyOm5
-KtffKOBtGEtddTJeMg1D78oIunCZ3vfAZ6MvV/Ik5uqKQ6NqM4pC8zWM3MutndcMglrz1Y7pcwIN
-WePNcLmrrRd5niJq5NV3/gu2uI9cSOiV8OZbUMHLrUH5r76mXOvuqcLiikahbU619SJu32O1wIJl
-pQqOwtK+6nQkd8D0h4ve8fXRmP63OEBbNPQ3jq2rjHQYbcbTtSwHp39wM052FCJ/neWCUUxa5A2t
-o1AUmp9KFKYomonCQj0pTTFpp5NcXJRTWiZoWWoIPhqMSRTuLcK5Qs/GiGrNSzxTPXeBfEWZTwto
-czA8xdpcZiV2KjvhFBF+bVIcXT8UhWZt2QudAwx/mw91p0bwXGGicLBuGxdyodDvYeG+BmstM9Ir
-9PSqkectgspqnUJVketuKEyXEBeX2hYUgmf3E4Vm+6tPzZ2uX0HmPJ+sCu2tgMKRR6wShbN0Aa/Q
-dvywrITCDeTfW5c3XrZBoWd/SfvsTrt8WtE9gwtsmyQKVxALhdplBPhUCUPhYV2vku2jIQbRo+3m
-RxbJ3KDVUeh0QGwK6lhcjTTA8JNhJBMkwXSvcNjc+WhSVSBi1syt3cNcCnktcT7SRezE5wTgFxPA
-bNMrNKiFwtd3YfieApJgIgqR5Sfxd9mlsafkqUIK19Io9EfotSWmzjKvQKv5XAiFZpttLdz9GWtQ
-6amHCL82KeIa2RMHDPrBYyEtgW8StDa/XDAff0GtLWlnDJp+IgfJIVE4S+EoLNbVaNy5FiTbLubA
-E8Jcy6dEhVoVtDmGw3oR5XhDdLTO5s+ySk+9amkUDvt5iSxhoS2n2UDc6Wok1JyWUzZVDM8mCg2i
-eAmxn2OQ//rO9KU5f6tRcr4DCikbC2CGg3uRzT/1pAQfVPkHicJXOYHYQeEzdzO2KK+c216F13s2
-7ousSAKY7ToOY9F0P1sHYG3rbdb9BoSAhCIId5sU9gaf/zSvyph1cltHob+vYG34Bp2+NkRmiB3g
-ziicK/KNd13nEXkq+ox7oaJwvw0T80GZh/B1peoR81Mlsu/RFzeXQOFVTk2rtNw9yBHTbFB4ZcsO
-4Qx+PXXFlon4iWdRgjL6532pllZEYVyUUHuaf4qdE0U5GvIq/9njiZMW8VhC0Io71CvcsocLWguF
-Axz+DK+0ROn6Nzl2HqcVUHg3CD60HAoHbCGVGTvXqlLWDw6mBN0HJTvVdC0UplLTxfKOt2HETZQo
-THH091/457f//fGPf7CbcmNMbFy17fUpCvMtpoqpG+AQHGZSaqT2eEHpFabsOkNwj1GRYulC/SFR
-uKEG9L9oT3B8jVIPLd7UcebVUbh4c9xWht9C0N/jYAheXTmUrqL0ClOoLgTBBFBKq0Rhqq9XCCZl
-7qyN3/4IFG7cfNvrQp7gLI2/lCIVoet5hdm34vTatgnB1K10PRTeWcRpoJXVg4AlIZg6yfxVi0v4
-Lv+HwquYm4pTuoGpdTSeSO99/kd+aB0I3pzIs6q/5iHBiZ3h5v3wnpIWyNftENe1fLC4ENy42Teu
-2gqK/kopknJCrHDMTds2w4jfiVt88HQhGP0x+vGae1EnWMr0I/QrK7S+c7ZN6LdKEq1CCr30B0oR
-T/BQQXxJG9Qs0yH7NOC1Kej3wV+uWXbStB1kz6UQ400ypxwv4TP0v/Ffv/P2v7/3Xb+pyjDo3jvt
-U9wLrCkOb/USPtvlUx6t2Q8vp8koLKZrauPsWeFOiQgdPMEI+233hb7KQEMPTeRp2CnKhOpP0Hoq
-outefbVuR6G55q/XzJew+Av3FkdP4rmqLoenoLBFGYMbZb6zyUwNvK8S1xaUBJfopSvIiELKWGpd
-fojfrcwyj5U+4gJ7nM6HlEJMMPoi85bTNzG4FlH0OihM5PmlQKHzakfn0gPfyjCYR0HhhfZSolE4
-rNxntsSiheuJl0Uhtz3vqXFeoTk4aOjEBrS1XFGc4Mse/ak+SzT4EttNWiOdShReTqNRKMSq/Si0
-PSJ4ATaDI/QDX/rbf/3mT+L2E9uHmFtQjLL1js4bLGYj0yvcXiEoxJcYYG5lLAq7S93BMRqBgzZt
-hkLhr9ozgEIUuDioZ2uNaBRmhPFVd/cKtdQ2m2QWyEHDiTaEC6oQbXSsUMUjm1fIOkyDtEmeK1xK
-t0aheaofhkK6P6itIysZXm4181cNQCFeRHH0W3qC9PI8mrBtYlMcCg1ltQYMtyNqOUj3aLoNonIJ
-iwmFXZxxUaiy2Ty7g2mWWp1sr/QKLT+cEn72wOqXQf7gwXjKSb1hscLxKFT1TO3Pk+URgTRseoVE
-3RqF4FOtE4tanwhXHAcLFYXaTLqD3/B4HAoNThk3cppe4UglCu2PlJh5OJSDhYTClgcUGgYZhkLn
-tpJ5bUFPkMKVKPz0kRW6lIGD4O8Xq41DRyFetEHDdpAPi1O5RtrzOrhJicKRuva2iTAtq8xbloNc
-w84BTYovvEes8Ax0m5Ebo3CRYRKk9AqhX5t0O4G/U0avi6t2UtznPVAImkr0efNc4VKqoNAcwDY/
-Qp/ctIPzrNbvT7qy1WIMBwsDhd08KSnxx4VXE4TCc+bcIogJUrhmfqTLkBsrIP2a7Cm5z1G8wupA
-msVB3Gxttq3WW80rNLh4xBk9UbiUlkZhtTcj5dL9FAoKq+QdxsHSQ6E5ErSCVzhygVwYKBxzBjuF
-i4/Cd/rPWxk0+IdxQSicy0HEbG60hI7CuKLvjMK9t0daWtorXCpD+bCIYW74h+/55cEcLBuh0IM2
-53HuMhyFrJMSKUGJQigH4g7yIyWRgx5agQNSDrGNR+GAo6YGJ1rlTHVbFbE5UUiUBYXCr4vk3hA9
-ub17+eVm1bygeqmq8JZypD9YRF/GhkJP3cGUckUMmZiPmp6d+ur/jTAmUThSrrtNXuXZeSAG77Xm
-gZvIRByMjA92DaMMtvEojKOPtmj8EMLhqTG/zHMacHWpqum6B5nVoLMmN9zLALeAulUYv09SfGOJ
-kkk3JV4KWJDHSEPRKiCam8t8oCKFkGralfAHQ8s8FFLOM1JWmuOrpjo67o9vdFFYeE5QtWp48Ndc
-O6QW5qLPlUoOsnRrFKosHHx8x2OqyhKEhqq6d3/+YRjPnlnEGTtW2Qa6t/51dHcve4WueC0lClEL
-1/H4BBvK2s71LNE9O3NZV48peQxe3NolUHhPrd857qaJb+Q///1z3/193+Hm+Y+/8q0f++MfvVAj
-zFWiMJWaoANxolF4W8Dh2g2Fl3vllzM4VLdtjXW8wgHSvuWIXnHOczcUXle3pUC2Q4lBYVmYhhRx
-u0qi8Ka6J3GWVaJwuhKFo7U+g9a3cD8lCqdrORSef/tZ/SueT+rSMnxd9YoajMIcHWcth8Ipyp4x
-RtnOVRk4CLZkeoW4EoWp1GQFuYQlUahRotCldHNSfsWhsCQNYSUKU6nJShSuoJuiML25lF+sXpQo
-XEE3RWEqtY4ShSsoUdjR4I8Mpq96QyUKR6o1yvoodF5e8/qnYrqSYi4dWN8K5n4Zf2NNf+PjFYrC
-4qPhsNcx/b3rvELPF0wNTIn+ZDn3Zstu5nlrT6qqCBS+dr90DBGpF8jm8TzgwkaDBuOJO1Wk9tDK
-XuF9ZERhAa680fpEeEHaNbvK2vP32Ymfm3few7ml8seUQSh8NhcXhbu+Bfs9yCoUcl1C/HKiV4FB
-zOpVFZ78wXqx7sb1yzDTGNoBr5T/9hW8rFahoauZJwptlOk+Vf2G6wpEW8GGpwgorAbFtFeqI810
-uJwb9DpVd9HZXMLnv4Vr4WR7DHCPi5+CmaveAtKAA1BovmXUcNmeFoXmfcXuU29pfutLv/7qGDqv
-Ql2HX0TxvUIkvS1C9/yPdBS+Jm6h0H/1JaVJI7xC7hV0xEgIkqHNh6WXZfOO357687/7m5/7iZ/S
-PqUt680x/O1v/r7BwvuIcK7Qtlx9CO9z3dfvR6HsErIW/q0GDPI4IowhXoUq3DD3KCWCg8WBQqRe
-qnf0ujrGn9KWdQgX3jYwLSj2iLXnLOGhl79mFeEVnovrcrCQFgvEXSC/BqDwEI7wXOmr3XLpluWv
-O5jPU4NRiEww99RyKEQwF41C4UignIzeRIbDiaH2gGlUbW5GoeHw/21RSHlqsAYHJY0oDNruFJal
-D0Vvm7T+77N05+tp7QXhxm+DwsMmmLZSth9BUVBISfOUAYWGzT2PhTcRhMJWNDAIhYciQByYUYhs
-iMsJtO1WXph+GKLddkaq44R1oaKwas853NEt1FxNvKxqTzN45ekVUrS/V6j6xQWegwGF+NEKz7kK
-IeLZndttpbfOxMnOr6F2YIvJzWJAoc0l7JZ1Fa/QXJbzqaVEB6UdhWNOxuHD1eYVgod7WQG7IBSC
-e9+IzQNQCG5JyUV4pqKSKLw+CumiobC0+WhucRXd6Cj0DxvhKcFblEuxVQfHTdAr69YItE0VrjWU
-ZZsaKW045anBi9CVxUTh+a+ecYVAClcEO2zuzGv6v/jw+3/2g3/rmgGicPyZuOrj2h1YbTOaXUKk
-LLl5wWMoF0Kh6qm9FYLC12Ql7EepcbFCfM5sReW69XqD4Ns/HhxUGc/aHXImK+3dcNUjJQyF5rLk
-EESicFfxURi60y/MzJQFssHg6q63nPiXfvWvnhBsZdLKcB0Unh8EV7itBjQDjl6W8E4ThbtqmlfY
-yqF69OEp+rnCV7YWPQS1DH1LduZgqRG5VVOh7mUeCs0cBI1XFcQqy9w+60PNcMpte27OQaHQI5El
-J/1cIXK4ryW8izwWxX/yRz+DGzlxgez0v/A0dBSyyvK3YUTmE5/aWwQU2gjyFGtUmxlhSKlNXP5/
-h6SKto8YvzaZtUDWNm9XhmhjUFnmysbhiXVII1F4FgeFzl1LQ+nlOih83SHBF8KtUqajEAwLaI+8
-UGwjlhXahhd9qlx/pSzYz1kgI4E/bn3KRVD4PC5zfgphyoIoBFNeFIXms0p+O9d/am/t4BWq1pgs
-a7lHW53bJohJXBSqnEckK6JtnrIShbeVF4XvemetC6PFDz34Ql5hqyKlBriW/Cjk4oblgUbY5izL
-34sOibVTQqJwllwo7L5yT4u3qFEcKCSC24lCM8cNrt875c8kqha2krWk3XhBHhkTK6w67Hi5YBte
-7qntZb/b5CHuASvwuPLVvULQSPPsUj2QhPiMVXUPPIFPgeUGLTJUZSEnulRtAha04FP3kQuFQScz
-uo8EHQCci0LVeLPt/dkeTKXuoLVQWOAztHi29INvr4omi9ZvorRDKnVDLfo5BmK2Sy2QnVV+KFF4
-RV39RN72Wu6aJzDbiF6lReHgnu0sMVG4vhKXExWLwtQ6ShSmUoIShfsL3JdPpe6sROEgcT/0ck9l
-y6TilChcWqGDP8mSSj21EAq7I3PloQt+n+KKVUul7qCFUHgtJbxSGyi78VMbojDfbiqV0mpDFKZw
-5bSRSj00CIU55FKp1MpKrzB1YeUUm2IpUZhKpVLlfwD0wlRXeWCPrQAAAABJRU5ErkJggg==
+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
 
-------=_162_NextPart837071496403_=------
+------=_399_NextPart955618269180_=------
 
 
+--8CEF8267868.1605487886/iZ28upq55k1Z--
 
---9B095B5ADSN=_01D6B7FCF09F1AA400002C05arsy?00002.arnol--
 
-
---===============2184428458216205529==
+--===============3594626084555835099==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2184428458216205529==
+--===============3594626084555835099==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -590,5 +744,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2184428458216205529==--
+--===============3594626084555835099==--
 
