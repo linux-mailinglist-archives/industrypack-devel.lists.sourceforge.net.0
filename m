@@ -2,50 +2,50 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 419702C5C9E
-	for <lists+industrypack-devel@lfdr.de>; Thu, 26 Nov 2020 20:32:35 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 231F52C5CC2
+	for <lists+industrypack-devel@lfdr.de>; Thu, 26 Nov 2020 20:58:44 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kiN0M-00060m-1q
-	for lists+industrypack-devel@lfdr.de; Thu, 26 Nov 2020 19:32:34 +0000
+	id 1kiNPe-0007Bv-U5
+	for lists+industrypack-devel@lfdr.de; Thu, 26 Nov 2020 19:58:42 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- id 1kiM4N-0003P4-Kq
- for industrypack-devel@lists.sourceforge.net; Thu, 26 Nov 2020 18:32:39 +0000
+ id 1kiM5N-0003Tu-H3
+ for industrypack-devel@lists.sourceforge.net; Thu, 26 Nov 2020 18:33:41 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Message-Id:Content-Transfer-Encoding:Content-Type:
  MIME-Version:To:Subject:From:Date:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=aknso/Rn56Mnxf1CM+cN5/8k1EThHO+K53Dka9IV+8k=; b=WIm+plmpEzhy2amtIRJuYBxnKY
- ZNk7kgRn7zLvKmLXIz+n7sUfSxdHNAU+EBWjYks/DNWUhcJq7oU5g3Le/hyhhg9cZ6CueWAelk5n+
- SicJefPteErqiWhzDLXY3frZtw7Zjnaka2B1+GA7njmrcBEgq+tENF7+tT8RwEoc+2vg=;
+ bh=2+FnO5fABO8PEnDmcvpu2Eho/aHlqa24DZJ0xeN51gI=; b=Qr2GhAsMKvTbPX3ES0lXsyv+5x
+ sj305p/6NZRStLqfLYa/+eCRJB9R4r1auI5Ap+fBdSIUtE/Lu4k0y+u92b2pwvuckRCipLXIzvUsX
+ 5cu03xjD8uf6Glh3YCRO6urSuPLgHoD/G77bTNsblIEv+nkIAksSPnKKj/WX8Lzjmnf4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Message-Id:Content-Transfer-Encoding:Content-Type:MIME-Version:To:Subject
  :From:Date:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=aknso/Rn56Mnxf1CM+cN5/8k1EThHO+K53Dka9IV+8k=; b=J
- cxobkMh2+43sk+Isef/CObS9ftE+dat0TLFMLV0DzTvjawVrgp1ymzamczV/5rYNvB0gMhANLh3gs
- xXv9iTrQHfuQGz5WoBZdTCE2DnsrIf5GzCVb7Vr9iqgrGpAdmUu+mHVuN9ZwB47imXuNhKOk4TIfk
- ARYxUYuelpJpj+Fk=;
+ List-Owner:List-Archive; bh=2+FnO5fABO8PEnDmcvpu2Eho/aHlqa24DZJ0xeN51gI=; b=i
+ 4SOhAV52hHtfp9qbuL+yBKbPy30QtPtigrdlfZeF0LHrpztgf5h6Irwwg2kE9fgumMKqrjZkpzzHd
+ phqReF1c/FRJRcufnJPBF5qlBgbsvRpuJTumH6WQ1Dp1BbJWVyfUsG/Gx/uVWdR1KedGrQkqCSPAp
+ IA2Dd4rcbBC9wGdI=;
 Received: from [218.94.69.222] (helo=zt3000mail.com)
- by sfi-mx-3.v28.lw.sourceforge.com with esmtps
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1kiM4D-005sHy-L0
- for industrypack-devel@lists.sourceforge.net; Thu, 26 Nov 2020 18:32:39 +0000
+ id 1kiM5J-00HTRf-8d
+ for industrypack-devel@lists.sourceforge.net; Thu, 26 Nov 2020 18:33:41 +0000
 Received: by zt3000mail.com (Postfix)
- id 4Chlmy1LBsz6N96x9; Fri, 27 Nov 2020 01:56:18 +0800 (CST)
-Date: Fri, 27 Nov 2020 01:56:18 +0800 (CST)
+ id 4Chln369R3z6N96dt; Fri, 27 Nov 2020 01:56:23 +0800 (CST)
+Date: Fri, 27 Nov 2020 01:56:23 +0800 (CST)
 From: MAILER-DAEMON@zt3000mail.com (Mail Delivery System)
 To: industrypack-devel@lists.sourceforge.net
 Auto-Submitted: auto-replied
 MIME-Version: 1.0
-Message-Id: <4Chlmy1LBsz6N96x9@zt3000mail.com>
+Message-Id: <4Chln369R3z6N96dt@zt3000mail.com>
 X-Spam-Score: 6.8 (++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
@@ -63,7 +63,7 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  0.7 MPART_ALT_DIFF         BODY: HTML and text parts are different
  1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
  0.4 NORDNS_LOW_CONTRAST    No rDNS + hidden text
-X-Headers-End: 1kiM4D-005sHy-L0
+X-Headers-End: 1kiM5J-00HTRf-8d
 Subject: [Industrypack-devel] Undelivered Mail Returned to Sender
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -76,19 +76,19 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4391422121755040801=="
+Content-Type: multipart/mixed; boundary="===============3254320104615107430=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a MIME-encapsulated message.
 
---===============4391422121755040801==
+--===============3254320104615107430==
 Content-Type: multipart/report; report-type=delivery-status;
-	boundary="4ChlG354F0z6NC95w.1606413378/zt3000mail.com"
+	boundary="4ChlG35D9zz6NC93l.1606413383/zt3000mail.com"
 Content-Transfer-Encoding: 7bit
 
 This is a MIME-encapsulated message.
 
---4ChlG354F0z6NC95w.1606413378/zt3000mail.com
+--4ChlG35D9zz6NC93l.1606413383/zt3000mail.com
 Content-Description: Notification
 Content-Type: text/plain; charset=us-ascii
 
@@ -104,56 +104,56 @@ delete your own text from the attached returned message.
 
                    The mail system
 
-<1628128092@qq.com>: host mx3.qq.com[113.96.208.206] said: 550 SPF check failed
-    [MONIV/heX0jlnj+6MPLq9/MKH3qjwhrzg9zEKeX27ZEfVmBdPU56UUEWfbNhsYjcQg==  IP:
+<185576234@qq.com>: host mx3.qq.com[113.96.208.206] said: 550 SPF check failed
+    [MJcvQyved5AaJzDciUooUkEggRXs6JPynxAkJFON2qDwSgjKh3BfezOk3fy7AxNyoA==  IP:
     218.94.69.222].
     http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
     (in reply to end of DATA command)
 
---4ChlG354F0z6NC95w.1606413378/zt3000mail.com
+--4ChlG35D9zz6NC93l.1606413383/zt3000mail.com
 Content-Description: Delivery report
 Content-Type: message/delivery-status
 
 Reporting-MTA: dns; zt3000mail.com
-X-Postfix-Queue-ID: 4ChlG354F0z6NC95w
+X-Postfix-Queue-ID: 4ChlG35D9zz6NC93l
 X-Postfix-Sender: rfc822; industrypack-devel@lists.sourceforge.net
 Arrival-Date: Fri, 27 Nov 2020 01:32:59 +0800 (CST)
 
-Final-Recipient: rfc822; 1628128092@qq.com
-Original-Recipient: rfc822;1628128092@qq.com
+Final-Recipient: rfc822; 185576234@qq.com
+Original-Recipient: rfc822;185576234@qq.com
 Action: failed
 Status: 5.0.0
 Remote-MTA: dns; mx3.qq.com
 Diagnostic-Code: smtp; 550 SPF check failed
-    [MONIV/heX0jlnj+6MPLq9/MKH3qjwhrzg9zEKeX27ZEfVmBdPU56UUEWfbNhsYjcQg==  IP:
+    [MJcvQyved5AaJzDciUooUkEggRXs6JPynxAkJFON2qDwSgjKh3BfezOk3fy7AxNyoA==  IP:
     218.94.69.222].
     http://service.mail.qq.com/cgi-bin/help?subtype=1&&no=1001445&&id=20022.
 
---4ChlG354F0z6NC95w.1606413378/zt3000mail.com
+--4ChlG35D9zz6NC93l.1606413383/zt3000mail.com
 Content-Description: Undelivered Message
 Content-Type: message/rfc822
 Content-Transfer-Encoding: 7bit
 
 Return-Path: <industrypack-devel@lists.sourceforge.net>
 Received: from mx.zt3000mail.com (localhost [127.0.0.1])
-	by zt3000mail.com (Postfix) with ESMTP id 4ChlG354F0z6NC95w
-	for <1628128092@qq.com>; Fri, 27 Nov 2020 01:32:59 +0800 (CST)
+	by zt3000mail.com (Postfix) with ESMTP id 4ChlG35D9zz6NC93l
+	for <185576234@qq.com>; Fri, 27 Nov 2020 01:32:59 +0800 (CST)
 X-Virus-Scanned: amavisd-new at mx.zt3000mail.com
 X-Spam-Flag: YES
-X-Spam-Score: 11.77
+X-Spam-Score: 11.771
 X-Spam-Level: ***********
-X-Spam-Status: Yes, score=11.77 tagged_above=2 required=6.2
+X-Spam-Status: Yes, score=11.771 tagged_above=2 required=6.2
 	tests=[BAYES_50=0.8, DKIM_ADSP_ALL=0.8, FREEMAIL_FORGED_REPLYTO=2.095,
 	FREEMAIL_REPLYTO_END_DIGIT=0.25, FSL_HELO_NON_FQDN_1=0.001,
 	HELO_NO_DOMAIN=0.001, HTML_FONT_LOW_CONTRAST=0.001,
 	HTML_MESSAGE=0.001, HTML_MIME_NO_HTML_TAG=0.377, MIME_HTML_ONLY=0.1,
 	MPART_ALT_DIFF=0.79, NORDNS_LOW_CONTRAST=0.001,
-	PDS_TONAME_EQ_TOLOCAL_FREEM_FORGE=2, RCVD_IN_PBL=3.335,
-	RDNS_NONE=0.793, SPF_FAIL=0.001, URIBL_GREY=0.424]
+	PDS_TONAME_EQ_TOLOCAL_FREEM_FORGE=2, RCVD_IN_DNSWL_BLOCKED=0.001,
+	RCVD_IN_PBL=3.335, RDNS_NONE=0.793, SPF_FAIL=0.001, URIBL_GREY=0.424]
 	autolearn=no autolearn_force=no
 Received: from zt3000mail.com ([127.0.0.1])
 	by mx.zt3000mail.com (mx.zt3000mail.com [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id 0NnXbELjQdVM for <1628128092@qq.com>;
+	with ESMTP id JJ1PGMMNRc_h for <185576234@qq.com>;
 	Fri, 27 Nov 2020 01:32:48 +0800 (CST)
 Received: from HC-VM-PC (unknown [112.194.81.177])
 	by zt3000mail.com (Postfix) with ESMTP id 4ChlFW32khz6NC8vx;
@@ -544,17 +544,17 @@ GDph2HChQAhpwkfziBmFMDxtoUBuBv0gIZ8IIwISBi4UCCHkOfC4KiEPZfkSankBSA8Kwww4AAgx
 ------=_835_NextPart529972119566_=------
 
 
---4ChlG354F0z6NC95w.1606413378/zt3000mail.com--
+--4ChlG35D9zz6NC93l.1606413383/zt3000mail.com--
 
 
---===============4391422121755040801==
+--===============3254320104615107430==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4391422121755040801==
+--===============3254320104615107430==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -565,5 +565,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4391422121755040801==--
+--===============3254320104615107430==--
 
