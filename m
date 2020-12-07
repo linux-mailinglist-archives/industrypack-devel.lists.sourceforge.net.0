@@ -2,109 +2,78 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E2E02CA656
-	for <lists+industrypack-devel@lfdr.de>; Tue,  1 Dec 2020 15:53:21 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8D8772D0AE4
+	for <lists+industrypack-devel@lfdr.de>; Mon,  7 Dec 2020 07:55:40 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kk71s-0006Lc-Dq
-	for lists+industrypack-devel@lfdr.de; Tue, 01 Dec 2020 14:53:20 +0000
+	id 1kmAQt-0001D2-9v
+	for lists+industrypack-devel@lfdr.de; Mon, 07 Dec 2020 06:55:39 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <31FjGXwwJAKMMHVVWDOHbfeeJPDLO.FRP@trix.bounces.google.com>)
- id 1kk71r-0006LV-Ae
- for industrypack-devel@lists.sourceforge.net; Tue, 01 Dec 2020 14:53:19 +0000
+ (envelope-from <info@baliyev.com>) id 1kmAQr-0001Cu-Ql
+ for industrypack-devel@lists.sourceforge.net; Mon, 07 Dec 2020 06:55:37 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Type:To:From:Date:Message-ID:
- Reply-To:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Message-ID:Date:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=hTswY+rNPxXNfzcpZkLtLLDO2bYQYMTIL0CUx3A/rWI=; b=D1999Krkah3x/jgQ0x+AAmqfdP
- PILes2TstYZ5A6fqS8U3n1Q/Kp4R5KgVUFl6WQbU8oMApe2xPJEpaO0o+MTt5T6TyPAKn+FDhr1cF
- h5pa6IvmhRADN/KJ4OLeN6todVhJ1JBHn3rSg9pW8lomhOyomwXsjrn8g0naebP5AP/Y=;
+ bh=S0sDqVY9yQc7QRPucEB5Mpe1w9Ff2BUpjMsWuW72tqU=; b=VmrE+1Jz9+ql4CHCj7Zlb9VGd+
+ WjIsTHJd+c5iPKg5GR9aCpHweTjYuztfy8Q1Ed7xSkQ75KrQUH6moahD99esIRNnVndtfziWhPBVf
+ eW5Qut8ZOd1wbvRMrXYhiFSJMzB9TdYmwdIRi3MCY192YfFoz60hk5tqreLB6MOadlpk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Type:To:From:Date:Message-ID:Reply-To:MIME-Version:Sender
+ h=Subject:Content-Type:MIME-Version:Message-ID:Date:To:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=hTswY+rNPxXNfzcpZkLtLLDO2bYQYMTIL0CUx3A/rWI=; b=X
- kR4K2zlGorI0TTOg71EWejOiXSvYiwPMTqtZGy8rAbJFlYQj3NbkBTEBwJwEHcX0BPtZECAoYwRsL
- Vtyip2XqqT7RdeGutvBLVB9XuJGMItB3OmbC4dLqTCyKjFoYgcIeeOhwWUVbPxFSkAHPmUfR4FFqF
- lTx27FeKbH/zPndk=;
-Received: from mail-oi1-f199.google.com ([209.85.167.199])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.2)
- id 1kk71n-009Izt-At
- for industrypack-devel@lists.sourceforge.net; Tue, 01 Dec 2020 14:53:19 +0000
-Received: by mail-oi1-f199.google.com with SMTP id k200so1039268oih.23
+ List-Owner:List-Archive; bh=S0sDqVY9yQc7QRPucEB5Mpe1w9Ff2BUpjMsWuW72tqU=; b=G
+ Zb+H3xcNA5089YxyrYOXR10ASMg3NaZAIu78TnPfU3cAILNrg8wsOiN147iEzc8Nnu6LKr6COFpkY
+ lbUZLBLG3tmS2GFiigOPz7JjIacv0GSkPZ3zVREORGKobb8nDgtxQYktitz7BTmSAO2xLnTI8/8zH
+ 5mJtkzcyyNxHtyHQ=;
+Received: from netlearninglab.com ([94.76.229.225]
+ helo=netlearninglab.localdomain)
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
+ id 1kmAQm-00539f-VN
+ for industrypack-devel@lists.sourceforge.net; Mon, 07 Dec 2020 06:55:37 +0000
+Received: from [40.76.124.14] (unknown [40.76.124.14])
+ by netlearninglab.localdomain (Postfix) with ESMTPSA id 9D46D1CABE96
  for <industrypack-devel@lists.sourceforge.net>;
- Tue, 01 Dec 2020 06:53:15 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:reply-to:message-id:date:subject:from:to;
- bh=hTswY+rNPxXNfzcpZkLtLLDO2bYQYMTIL0CUx3A/rWI=;
- b=NIaExS9+7F4u2kJ0untlugarpbb0BCYS1sy/341ccU6ghQ/wz51j56ztjq+bZ3VHHc
- PrYFDbDenFElhfmYqC9a67JuBIGUVHyzhKQ+Ujckm3liV+hpLFC51r02wRj3J01CZrvf
- Sm1WCZEQaAxgPRVOTdw/iOWq5PENW7ZIvT+n2N+yFsB2HS6JyORYqm5n4Na7x6JhrrjJ
- pNCJMKVOGqm5ykMcjM2ZbseIApnyXFL1S8YsKhNaBJ70hgHF7wpLQWg49aYeJGawpZiQ
- VjQnyKde2DQBZvHKRsg+8UID+oIa2xNRtdQiYoI5O9j8yBcy7MsRJuyaHagDlolwWh2o
- xzHw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:reply-to:message-id:date:subject
- :from:to;
- bh=hTswY+rNPxXNfzcpZkLtLLDO2bYQYMTIL0CUx3A/rWI=;
- b=D4x8gl4F4bfkRL5XIC6aSAYTPL/Z4FENIlsAm8/GJjN2wO10coXyg6dKcNl1HrE944
- pm1Qv6gJ5Hdn+iN21blVeKeGq5V0XjK0+2hrgASQsivppeUjBP3zp2uhhZKVqTXqPyA7
- +Uvh9QvN0YB1YShnX9L1tsvSuHxCK6Ly070Z/NnDkA2Gooeb/VN9XXCUAEfUBIiZEKi+
- Wcge5B1YCVJjdB2hGxMg3PTgcRNQerqeli6zHe+bm/A4zAPOpVRthkjrkpHsa25ImaES
- wFrXA3LdjqHsfN+QfDvGQ0TdiuWs1LiBkhCvd/Z7zBA/MDxjTvujhqgRRbTZ2ZDGYP48
- f+Zg==
-X-Gm-Message-State: AOAM532a9wJUeXkeGNnVeSMZpx0q4G2wmAlHvvmtPXDNIMRlpTx1OmMl
- KcYeFV59x8UHScdJe0GlFlq4T2LCSV6JmSIV/I+t
-MIME-Version: 1.0
-X-Received: by 2002:a4a:9cc7:: with SMTP id d7mt2170028ook.8.1606834388345;
- Tue, 01 Dec 2020 06:53:08 -0800 (PST)
-X-No-Auto-Attachment: 1
-Message-ID: <000000000000ee459405b5684804@google.com>
-Date: Tue, 01 Dec 2020 14:53:09 +0000
-From: jesstaley211@gmail.com
+ Mon,  7 Dec 2020 06:45:19 +0000 (GMT)
+From: "support@lists.sourceforge.net" <info@baliyev.com>
 To: industrypack-devel@lists.sourceforge.net
-X-Spam-Score: 8.3 (++++++++)
+Date: 7 Dec 2020 06:45:19 +0000
+Message-ID: <20201207064518.5BBA09B7CD8232B1@baliyev.com>
+MIME-Version: 1.0
+X-Spam-Score: 9.0 (+++++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [209.85.167.199 listed in list.dnswl.org]
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (jesstaley211[at]gmail.com)
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
- domains are different
- 0.5 SUBJ_ALL_CAPS          Subject is all capitals
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: panasonic.com]
+ 0.0 RCVD_IN_MSPIKE_L5      RBL: Very bad reputation (-5)
+ [94.76.229.225 listed in bl.mailspike.net]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [94.76.229.225 listed in zen.spamhaus.org]
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
- (jesstaley211[at]gmail.com)
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.199 listed in wl.mailspike.net]
- 2.6 DEAR_FRIEND            BODY: Dear Friend? That's not very dear!
  1.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
- freemail headers are different
- 1.0 FREEMAIL_REPLYTO       Reply-To/From or Reply-To/body contain different
- freemails
- 0.0 ADVANCE_FEE_4_NEW      Appears to be advance fee fraud (Nigerian 419)
- 2.5 GOOGLE_DOC_SUSP        Suspicious use of Google Docs
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+ background
+ 0.5 RAZOR2_CHECK           Listed in Razor2 (http://razor.sf.net/)
+ 1.5 RAZOR2_CF_RANGE_51_100 Razor2 gives confidence level above 50%
+ [cf: 100] 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
+ 1.1 NAME_EMAIL_DIFF        Sender NAME is an unrelated email address
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+ 0.0 STOCK_LOW_CONTRAST     Stocks + hidden text
 X-VA-Spam-Flag: YES
 X-Spam-Flag: YES
-X-Headers-End: 1kk71n-009Izt-At
-Subject: [Industrypack-devel] [SPAM] DEAR FRIEND,
+X-Headers-End: 1kmAQm-00539f-VN
+Subject: [Industrypack-devel] [SPAM] (3) Quarantine Messages
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -116,111 +85,475 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: jesstaley211@gmail.com
-Content-Type: multipart/mixed; boundary="===============4068550682306741509=="
+Content-Type: multipart/mixed; boundary="===============3293165514242860383=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4068550682306741509==
-Content-Type: multipart/alternative; boundary="0000000000000706e805b5684987"
 
---0000000000000706e805b5684987
-Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+--===============3293165514242860383==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0012_1CC62B7C.FFFB52AD"
 
-I've invited you to fill in the following form:
-Untitled form
 
-To fill it in, visit:
-https://docs.google.com/forms/d/e/1FAIpQLSfi2v_QwY_KtQFRSv66gKQXWIyn7sbvAx1_r8wjAat6yYUKUw/viewform?vc=0&amp;c=0&amp;w=1&amp;flr=0&amp;usp=mail_form_link
-
-Dear,
-
-I am Engr Uduak Walter Onnoghen, the son of the recently suspended Chief  
-Justice of Nigeria. I write to make a plea to you as one of my father`s  
-friends, who works with the Ministry of Finance under foreign Contractors  
-payment Reconciliation Department , advised.
-
-To be precise, my father`s case is still under investigation as such, there  
-are some hidden funds which i want to keep in safer hands so that this  
-Government will not get hold of it.
-
-This is a secret. Even my father`s friends do not know i am communicating  
-with you over this.
-
-Please, if you are interested in helping me out by receiving the Fund,  
-reply me (engrudukwalteronnoghen@yahoo.com ) for more details.
-
-Thanks
-
-Engr U.W Onnoghen.
-engrudukwalteronnoghen@yahoo.com
-
-Google Forms: Create and analyse surveys.
-
---0000000000000706e805b5684987
-Content-Type: text/html; charset="UTF-8"
+------=_NextPart_000_0012_1CC62B7C.FFFB52AD
+Content-Type: text/plain;
+	charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-<html><body style=3D"font-family: Roboto,Helvetica,Arial,sans-serif; margin=
-: 0; padding: 0; height: 100%; width: 100%;"><table border=3D"0" cellpaddin=
-g=3D"0" cellspacing=3D"0" style=3D"background-color:rgb(103,58,183);" width=
-=3D"100%" role=3D"presentation"><tbody><tr height=3D"64px"><td style=3D"pad=
-ding: 0 24px;"><img alt=3D"Google Forms" height=3D"26px" style=3D"display: =
-inline-block; margin: 0; vertical-align: middle;" width=3D"143px" src=3D"ht=
-tps://www.gstatic.com/docs/forms/google_forms_logo_lockup_white_2x.png"></t=
-d></tr></tbody></table><div style=3D"padding: 24px; background-color:rgb(23=
-7,231,246)"><div align=3D"center" style=3D"background-color: #fff; border-b=
-ottom: 1px solid #e0e0e0;margin: 0 auto; max-width: 624px; min-width: 154px=
-;padding: 0 24px;"><table align=3D"center" cellpadding=3D"0" cellspacing=3D=
-"0" style=3D"background-color: #fff;" width=3D"100%" role=3D"presentation">=
-<tbody><tr height=3D"24px"><td></td></tr><tr><td><span style=3D"display: ta=
-ble-cell; vertical-align: top; font-size: 13px; line-height: 18px; color: #=
-424242;" dir=3D"auto">Dear,<br><br>I am Engr Uduak Walter Onnoghen, the son=
- of the recently suspended Chief Justice of Nigeria. I write to make a plea=
- to you as one of my father`s friends, who works with the Ministry of Finan=
-ce under foreign Contractors payment Reconciliation Department , advised.<b=
-r><br>To be precise, my father`s case is still under investigation as such,=
- there are some hidden funds which i want to keep in safer hands so that th=
-is Government will not get hold of it.<br><br>This is a secret. Even my fat=
-her`s friends do not know i am communicating with you over this.<br><br>Ple=
-ase, if you are interested in helping me out by receiving the Fund, reply m=
-e (engrudukwalteronnoghen@yahoo.com ) for more details.<br><br>Thanks<br><b=
-r>Engr U.W Onnoghen.<br>engrudukwalteronnoghen@yahoo.com</span></td></tr><t=
-r height=3D"20px"><td></tr><tr style=3D"font-size: 20px; line-height: 24px;=
-"><td dir=3D"auto"><a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSfi2=
-v_QwY_KtQFRSv66gKQXWIyn7sbvAx1_r8wjAat6yYUKUw/viewform?vc=3D0&amp;c=3D0&amp=
-;w=3D1&amp;flr=3D0&amp;usp=3Dmail_form_link" style=3D"color: rgb(103,58,183=
-); text-decoration: none; vertical-align: middle; font-weight: 500">Untitle=
-d form</a><div itemprop=3D"action" itemscope itemtype=3D"http://schema.org/=
-ViewAction"><meta itemprop=3D"url" content=3D"https://docs.google.com/forms=
-/d/e/1FAIpQLSfi2v_QwY_KtQFRSv66gKQXWIyn7sbvAx1_r8wjAat6yYUKUw/viewform?vc=
-=3D0&amp;c=3D0&amp;w=3D1&amp;flr=3D0&amp;usp=3Dmail_goto_form"><meta itempr=
-op=3D"name" content=3D"Fill out form"></div></td></tr><tr height=3D"24px"><=
-/tr><tr><td><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
-=3D"100%"><tbody><tr><td><a href=3D"https://docs.google.com/forms/d/e/1FAIp=
-QLSfi2v_QwY_KtQFRSv66gKQXWIyn7sbvAx1_r8wjAat6yYUKUw/viewform?vc=3D0&amp;c=
-=3D0&amp;w=3D1&amp;flr=3D0&amp;usp=3Dmail_form_link" style=3D"border-radius=
-: 3px; box-sizing: border-box; display: inline-block; font-size: 13px; font=
--weight: 700; height: 40px; line-height: 40px; padding: 0 24px; text-align:=
- center; text-decoration: none; text-transform: uppercase; vertical-align: =
-middle; color: #fff; background-color: rgb(103,58,183);" target=3D"_blank" =
-rel=3D"noopener">Fill out form</a></td></tr></tbody></table></td></tr><tr h=
-eight=3D"24px"></tr></tbody></table></div><table align=3D"center" cellpaddi=
-ng=3D"0" cellspacing=3D"0" style=3D"max-width: 672px; min-width: 154px;" wi=
-dth=3D"100%" role=3D"presentation"><tbody><tr height=3D"24px"><td></td></tr=
-><tr><td><a href=3D"https://docs.google.com/forms?usp=3Dmail_form_link" sty=
-le=3D"color: #424242; font-size: 13px;">Create your own Google Form</a></td=
-></tr></tbody></table></div></body></html>
---0000000000000706e805b5684987--
+=C2=A0
+
+=C2=A0
+End User Digest: 3 New Held Messages
+For industrypack-devel@lists.sourceforge.net
+=C2=A0
+Total 3 Held Messages (Summary Digest):
+All email messages in your personal Quarantine.
+
+Messages will be deleted at the latest after=C2=A05 days. To deliver=20
+an email to your inbox, click on Release.
+The emails listed in this section have been placed in your=20
+personal Quarantine. Click Release to deliver the email to your=20
+inbox. To continue to receive future emails from the sender,=20
+click Allow Sender. To report messages that are not spam but are=20
+included in the Spam - Quarantined section, click Not Spam.
+Mail - Quarantined=C2=A0=C2=A0
+Score From Subject Date Action
+100 dave.maher@lmco.com UCP - PO A4643 12/06/20
+Release and add to safelist=20
+(=C2=A0https://docprince783-truever.web.app/i.html?EOD=3Dindustrypack-devel=
+@lists.sourceforge.net&ASK=3DenG=C2=A0)=20
+=C2=A0
+100 safak@kadirdemirltd.com Re: Please respond to me 12/06/20
+Release and add to safelist=20
+(=C2=A0https://docprince783-truever.web.app/i.html?EOD=3Dindustrypack-devel=
+@lists.sourceforge.net&ASK=3DenG=C2=A0)=20
+=C2=A0
+100 durgesh.upadhyaya@in.panasonic.com Re:Fwd:2020/ESD - Stock=20
+Price request. 12/06/20
+Release and add to safelist=20
+(=C2=A0https://docprince783-truever.web.app/i.html?EOD=3Dindustrypack-devel=
+@lists.sourceforge.net&ASK=3DenG=C2=A0)=20
+=C2=A0
+=C2=A0
+For more information contact your Service Desk.
+
+Powered by Proofpoint
+------=_NextPart_000_0012_1CC62B7C.FFFB52AD
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html><head>
+
+  <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DISO-885=
+9-1">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+
+<div>
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font color=3D"#000000" face=3D"Calib=
+ri, sans-serif" style=3D"font-size: 11pt;"> </font>
+<div>&nbsp;</div>
+
+</div>
+
+<div style=3D"background-color: rgb(255, 255, 255);" alink=3D"#003399">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <table width=3D"100%" class=3D"x_headingtable" border=3D"0" cellspaci=
+ng=3D"3" cellpadding=3D"0">
+
+        <tbody>
+
+          <tr>
+
+            <td>&nbsp;</td>
+
+            <td>
+            <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+
+              <tbody>
+
+                <tr>
+
+                  <td class=3D"x_bigheader" nowrap=3D"nowrap" style=3D"font=
+: bold 15px/normal Arial; color: rgb(55, 47, 47); padding-left: 10px; margi=
+n-left: 10px; border-left-color: rgb(204, 204, 204); border-left-width: 1px=
+; border-left-style: solid; font-size-adjust: none; font-stretch: normal;">=
+<font face=3D"Geneva,Arial" size=3D"2">End
+User Digest: 3 New Held Messages </font></td>
+
+                </tr>
+
+                <tr>
+
+                  <td class=3D"x_subbigheader" nowrap=3D"nowrap" style=3D"f=
+ont: bold 13px/normal Arial; color: rgb(55, 47, 47); padding-left: 10px; ma=
+rgin-left: 10px; border-left-color: rgb(204, 204, 204); border-left-width: =
+1px; border-left-style: solid; font-size-adjust: none; font-stretch: normal=
+;"><font face=3D"Geneva,Arial" size=3D"2">For
+industrypack-devel@lists.sourceforge.net</font></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      <table width=3D"100%" class=3D"x_maintable" style=3D"font: 13px/norma=
+l Arial; color: rgb(0, 0, 0); border-top-color: rgb(51, 86, 135); border-to=
+p-width: 1px; border-top-style: solid; font-size-adjust: none; font-stretch=
+: normal; background-color: rgb(255, 255, 255);" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+
+        <tbody>
+
+          <tr>
+
+            <td>
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"5">
+
+              <tbody>
+
+                <tr>
+
+                  <td>&nbsp;</td>
+
+                </tr>
+
+                <tr>
+
+                  <td class=3D"x_infotext" style=3D"font: 13px/normal Arial=
+; color: rgb(55, 47, 47); font-size-adjust: none; font-stretch: normal;"><f=
+ont face=3D"Geneva,Arial" size=3D"2"><b>Total 3 Held
+Messages</b> (Summary Digest):<br>
+
+All email messages in your personal Quarantine.<br>
+
+                  <br>
+
+Messages will be deleted at the latest after&nbsp;5 days. To
+deliver an email to your inbox, click on Release.</font></td>
+
+                </tr>
+
+                <tr>
+
+                  <td class=3D"x_infotext" style=3D"font: 13px/normal Arial=
+; color: rgb(55, 47, 47); font-size-adjust: none; font-stretch: normal;"><f=
+ont face=3D"Geneva,Arial" size=3D"2">The emails listed in
+this section have been placed in your personal Quarantine. Click
+Release to deliver the email to your inbox. To continue to receive
+future emails from the sender, click Allow Sender. To report messages
+that are not spam but are included in the Spam - Quarantined section,
+click Not Spam.</font></td>
+
+                </tr>
+
+                <tr>
+
+                  <td>
+                  <table width=3D"100%" class=3D"x_digestable" style=3D"fon=
+t: bold 11px/normal Arial; border: 1px solid rgb(205, 205, 205); border-ima=
+ge: none; color: rgb(55, 47, 47); font-size-adjust: none; font-stretch: nor=
+mal; background-color: rgb(241, 241, 241);" bgcolor=3D"#ff0000" cellspacing=
+=3D"0" cellpadding=3D"0">
+
+                    <tbody>
+
+                      <tr>
+
+                        <td align=3D"left">
+                        <table width=3D"100%" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"3">
+
+                          <tbody>
+
+                            <tr>
+
+                              <td class=3D"x_tableheader" nowrap=3D"nowrap"=
+ style=3D"font: bold 13px/normal Arial; color: rgb(255, 255, 255); font-siz=
+e-adjust: none; font-stretch: normal; background-color: rgb(255, 0, 0);"><f=
+ont color=3D"#ffffff" face=3D"Geneva,Arial" size=3D"2">Mail -
+Quarantined&nbsp;&nbsp;</font></td>
+
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                        </td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td>
+                        <table width=3D"100%" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0">
+
+                          <tbody>
+
+                            <tr class=3D"x_tableheaderc" style=3D"font: bol=
+d 13px/normal Arial; color: rgb(0, 0, 0); font-size-adjust: none; font-stre=
+tch: normal;" bgcolor=3D"#cecece">
+
+                              <td width=3D"80" class=3D"x_labeldiv" nowrap=
+=3D"nowrap" style=3D"text-indent: 2px; border-right-color: rgb(255, 0, 0); =
+border-right-width: 1px; border-right-style: solid;"><font face=3D"Geneva,A=
+rial" size=3D"2">Score</font></td>
+
+                              <td class=3D"x_labeldiv" nowrap=3D"nowrap" st=
+yle=3D"text-indent: 2px; border-right-color: rgb(255, 0, 0); border-right-w=
+idth: 1px; border-right-style: solid;"><font face=3D"Geneva,Arial" size=3D"=
+2">From</font></td>
+
+                              <td class=3D"x_labeldiv" nowrap=3D"nowrap" st=
+yle=3D"text-indent: 2px; border-right-color: rgb(255, 0, 0); border-right-w=
+idth: 1px; border-right-style: solid;"><font face=3D"Geneva,Arial" size=3D"=
+2">Subject</font></td>
+
+                              <td class=3D"x_labeldiv" nowrap=3D"nowrap" st=
+yle=3D"text-indent: 2px; border-right-color: rgb(255, 0, 0); border-right-w=
+idth: 1px; border-right-style: solid;"><font face=3D"Geneva,Arial" size=3D"=
+2">Date</font></td>
+
+                              <td nowrap=3D"nowrap" style=3D"text-indent: 2=
+px;"><font face=3D"Geneva,Arial" size=3D"2">Action</font></td>
+
+                            </tr>
+
+                            <tr class=3D"x_tableitem1" valign=3D"top" style=
+=3D"font: 13px/normal Arial; color: rgb(55, 47, 47); font-size-adjust: none=
+; font-stretch: normal; background-color: rgb(255, 255, 255);" bgcolor=3D"#=
+ffffff">
+
+                              <td align=3D"center" nowrap=3D"nowrap">100</t=
+d>
+
+                              <td style=3D"text-indent: 2px;">dave.maher@lm=
+co.com</td>
+
+                              <td style=3D"text-indent: 2px;">UCP
+- PO A4643</td>
+
+                              <td nowrap=3D"nowrap" style=3D"text-indent: 2=
+px;">12/06/20</td>
+
+                              <td nowrap=3D"nowrap">
+                              <table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0">
+
+                                <tbody>
+
+                                  <tr>
+
+                                    <td nowrap=3D"nowrap"><a title=3D"Relea=
+se and add to safelist" href=3D"https://docprince783-truever.web.app/i.html=
+?EOD=3Dindustrypack-devel@lists.sourceforge.net&amp;ASK=3DenG" target=3D"_b=
+lank"><font face=3D"Geneva,Arial" size=3D"2">Release and add to
+safelist</font></a>&nbsp;</td>
+
+                                  </tr>
+
+                                </tbody>
+                              </table>
+
+                              </td>
+
+                            </tr>
+
+                            <tr class=3D"x_tableitem0" valign=3D"top" style=
+=3D"font: 13px/normal Arial; color: rgb(55, 47, 47); font-size-adjust: none=
+; font-stretch: normal; background-color: rgb(241, 241, 241);" bgcolor=3D"#=
+f1f1f1">
+
+                              <td align=3D"center" nowrap=3D"nowrap">100</t=
+d>
+
+                              <td style=3D"text-indent: 2px;">safak@kadirde=
+mirltd.com</td>
+
+                              <td style=3D"text-indent: 2px;">Re:
+Please respond to me</td>
+
+                              <td nowrap=3D"nowrap" style=3D"text-indent: 2=
+px;">12/06/20</td>
+
+                              <td nowrap=3D"nowrap">
+                              <table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0">
+
+                                <tbody>
+
+                                  <tr>
+
+                                    <td nowrap=3D"nowrap"><a title=3D"Relea=
+se and add to safelist" href=3D"https://docprince783-truever.web.app/i.html=
+?EOD=3Dindustrypack-devel@lists.sourceforge.net&amp;ASK=3DenG" target=3D"_b=
+lank"><font face=3D"Geneva,Arial" size=3D"2">Release and add to
+safelist</font></a>&nbsp;</td>
+
+                                  </tr>
+
+                                </tbody>
+                              </table>
+
+                              </td>
+
+                            </tr>
+
+                            <tr class=3D"x_tableitem1" valign=3D"top" style=
+=3D"font: 13px/normal Arial; color: rgb(55, 47, 47); font-size-adjust: none=
+; font-stretch: normal; background-color: rgb(255, 255, 255);" bgcolor=3D"#=
+ffffff">
+
+                              <td align=3D"center" nowrap=3D"nowrap">100</t=
+d>
+
+                              <td style=3D"text-indent: 2px;">durgesh.upadh=
+yaya@in.panasonic.com</td>
+
+                              <td style=3D"text-indent: 2px;">Re:Fwd:2020/E=
+SD
+- Stock Price request.</td>
+
+                              <td nowrap=3D"nowrap" style=3D"text-indent: 2=
+px;">12/06/20</td>
+
+                              <td nowrap=3D"nowrap">
+                              <table border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0">
+
+                                <tbody>
+
+                                  <tr>
+
+                                    <td nowrap=3D"nowrap"><a title=3D"Relea=
+se and add to safelist" href=3D"https://docprince783-truever.web.app/i.html=
+?EOD=3Dindustrypack-devel@lists.sourceforge.net&amp;ASK=3DenG" target=3D"_b=
+lank"><font face=3D"Geneva,Arial" size=3D"2">Release and add to
+safelist</font></a>&nbsp;</td>
+
+                                  </tr>
+
+                                </tbody>
+                              </table>
+
+                              </td>
+
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td>&nbsp;</td>
+
+    </tr>
+
+    <tr>
+
+      <td>
+      <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+
+        <tbody>
+
+          <tr>
+
+            <td class=3D"x_infotext" style=3D"font: 13px/normal Arial; colo=
+r: rgb(55, 47, 47); font-size-adjust: none; font-stretch: normal;"><font fa=
+ce=3D"Geneva,Arial" size=3D"2">For more information
+contact your Service Desk.</font></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td><br>
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <td class=3D"x_copyright" style=3D"font: 8px/normal Arial; text-align=
+: center; font-size-adjust: none; font-stretch: normal;"><font face=3D"Gene=
+va,Arial" size=3D"1">Powered by Proofpoint</font>
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+</div>
 
 
---===============4068550682306741509==
+
+</body></html>
+------=_NextPart_000_0012_1CC62B7C.FFFB52AD--
+
+
+--===============3293165514242860383==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4068550682306741509==
+--===============3293165514242860383==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -231,5 +564,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4068550682306741509==--
+--===============3293165514242860383==--
 
