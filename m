@@ -2,27 +2,27 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id A01042E8BCC
-	for <lists+industrypack-devel@lfdr.de>; Sun,  3 Jan 2021 11:58:18 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 223782E8C2A
+	for <lists+industrypack-devel@lfdr.de>; Sun,  3 Jan 2021 13:50:06 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kw15V-0002fO-BE
-	for lists+industrypack-devel@lfdr.de; Sun, 03 Jan 2021 10:58:17 +0000
+	id 1kw2pg-0001g7-TE
+	for lists+industrypack-devel@lfdr.de; Sun, 03 Jan 2021 12:50:04 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <barbaralimon90@gmail.com>) id 1kw15U-0002fG-3K
- for industrypack-devel@lists.sourceforge.net; Sun, 03 Jan 2021 10:58:16 +0000
+ (envelope-from <barbaralimon90@gmail.com>) id 1kw2pf-0001fn-IZ
+ for industrypack-devel@lists.sourceforge.net; Sun, 03 Jan 2021 12:50:03 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Message-ID:Date:Content-Transfer-Encoding:
  Content-Type:Subject:To:Reply-To:From:MIME-Version:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=p5Qfb5AKKl/JqHMFQnfYUQrXymdVnV4fiENxA5S+duc=; b=K8IAoZmPYMpMdwicNwCcYSoLIl
- AJwQiRCM21AsaCJtwwTG6OFf24rco0saQQnjxTzk0Y6/g5PkcmxLsRrR8W16MbTM/eMuFFEfYS0m6
- I2Arw/0YNIckt8YXnPTAOGCNZzVxzxjxpwu6iNDFWoDqj38y2a/U21Zj+IYSeffF34Hs=;
+ bh=p5Qfb5AKKl/JqHMFQnfYUQrXymdVnV4fiENxA5S+duc=; b=gOBtYLxMWWdKWQ4FY/iPheNKqh
+ isws10TcsGfb5axlF1ZQyeGSep43+RL6m8gMZ9HkaadSnXkMwQruqe+CR0308+S3GuCclwJdevtKf
+ IKJTKq22ooA2Tx2Lp9aCvAa8Lceh3TFyKBEv4BILfWA1T+VN7E/SWrmPQFu6mmrfNmqs=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Message-ID:Date:Content-Transfer-Encoding:Content-Type:Subject:To:
@@ -30,54 +30,55 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
  In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=p5Qfb5AKKl/JqHMFQnfYUQrXymdVnV4fiENxA5S+duc=; b=f75LWCio2WuVgnK8MGiHposAW5
- pdQAW/lX5ISia6iHQkASVsW1cf+VGKmwUumOsNS5RG84HTsVI0g8lbiPI6pfxCOamdtcVdWj1ETWH
- +Px8SdAPId4A7DKCvlneMmohXRtqTGI1iUSdktus6B//EGBepXlvbHylxSDsaxek2k/U=;
-Received: from mail-pg1-f169.google.com ([209.85.215.169])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ bh=p5Qfb5AKKl/JqHMFQnfYUQrXymdVnV4fiENxA5S+duc=; b=Hhnh0fVyBTSrblcrLnOmlM5yba
+ /Y6xX8w/Tr7kg5O1BJqahFMT6/PKiUkknL1V8ITdCsiDX2FjgB4cbsSfhj0uQM0H9tdZeog/1SKtq
+ VKnXC02Uh2QoON2qNnG1USfPBJEiMCxpiXcL+dDd8JNxjUUgXNuLImUbQ4NfqnMdry08=;
+Received: from mail-pj1-f45.google.com ([209.85.216.45])
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.2)
- id 1kw15R-008NkK-6I
- for industrypack-devel@lists.sourceforge.net; Sun, 03 Jan 2021 10:58:16 +0000
-Received: by mail-pg1-f169.google.com with SMTP id 15so16909301pgx.7
+ id 1kw2pW-003Rut-V6
+ for industrypack-devel@lists.sourceforge.net; Sun, 03 Jan 2021 12:50:03 +0000
+Received: by mail-pj1-f45.google.com with SMTP id lj6so8169333pjb.0
  for <industrypack-devel@lists.sourceforge.net>;
- Sun, 03 Jan 2021 02:58:13 -0800 (PST)
+ Sun, 03 Jan 2021 04:49:54 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:from:reply-to:to:subject:content-transfer-encoding
  :date:message-id;
  bh=p5Qfb5AKKl/JqHMFQnfYUQrXymdVnV4fiENxA5S+duc=;
- b=M3DHFgW7Hyo/KkrrJyYm36OJR+R0/VzxLxzdNXUfgMKc867GBWfOPp6BeBrtdtF1aX
- RkV1sZZD2ZY7D7SawAZLfMJfLkoMT2eDdBpwlGmhPnV/fxoobcc1/57C1AZlEDZrU0R2
- LfSYsX8J98zQlVG7buQMcHaM65U3ImkHbSq1zyW2sHTNM936O4Db4NegcCRm39aYlVsQ
- Y6Su21tnrs3qa5z8UuRYD5b/Tv+O07ERCokNuYJXpZi3da7ax7qOGHfipzTAW9Z1oS6S
- laZ700sY6W+3F2qzfZel/coc2slHc/KVYwTiytvnRBc2/50buKMpmU6EhviTLsHHb0uG
- ft2A==
+ b=aJhVOHMIOIOWLBWWbe4kMorop8ee4JR+2f4meXvWxpG96gX2r5AK7hU5xyWrG9s6ok
+ uQiXtKH3mw8ApP/G38jtwAsipJ7KU34d0GhzItVC3DRmXD2fOv5dfO6U5Hpu+HcHrtV1
+ elUotEaR2nrZ41oj0kg5gU4EOSjZNHR82dom2yavRyP8a1FEPRGzoiGnVvthmPebvzso
+ 4Oi/3IoT96Kn5zYzB0yKuZ6pcSj6VxuRmDLRmKGbdmagzX5HSpr8Lx6Qzz8b18GIYVb3
+ VMRiy/NW7kG8cNeDU+dV8uSWuAsUa3G1we9fxOx4alWIkCa0fcSBmHwCOL6UeqvgvL3G
+ XhTw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:from:reply-to:to:subject
  :content-transfer-encoding:date:message-id;
  bh=p5Qfb5AKKl/JqHMFQnfYUQrXymdVnV4fiENxA5S+duc=;
- b=Uv5OIjKwOUW+OzTeTu+z4v2WTYI0B+QS8E5zA1O2t1gnd+sCKHWEF2/oYR6p52tDQ6
- f5MpXxWEjFz0VJ5Lzx3L4r8O/4VK/nULWkCG22/67FzzXbEBXGl67MdhSsG7ItRro+X0
- POMgzr5uBC9r8guQ8BBfABn7PRkora7HsCyFxrHJryY5u3AYikow4i8ygETOyF02VAzQ
- bgPF/MKKPNX1U6noF3LcdLiDafGbiXA0vPq0YytNRF4utMv/PpG+WR1dcw9JXMUFzUKG
- ccbHEjlbKSHmieZFu89NLGdkFFI87taMJh4F/cVJQuIRbkm7jqdqXwYClAVwBt0Nnxs6
- uR2w==
-X-Gm-Message-State: AOAM530eYfKY6wHlpIcNHwBtgd/W5jXyRFJgEsas5wyPaIZEt0iO6Wnj
- ju2EIsGsmV0X9qL2bGJJ/2NRD8YRVprt+oef
-X-Google-Smtp-Source: ABdhPJy3rzOaxEMqjpowFPt/o53mVrA4M7G+Rvkw4Zb/RzxAx01eVfQQDn7mmuI8sa6Us0T4NdRVlw==
-X-Received: by 2002:a63:643:: with SMTP id 64mr66677904pgg.422.1609671487383; 
- Sun, 03 Jan 2021 02:58:07 -0800 (PST)
+ b=RVtDy+pduZaBnq8AGoAE3CdupJmnN4zWa72XTb0NZm/1DokdVTYWChiKg/z6Y+RbMY
+ ydfla26ra/+aO7VcuC0H5YqE0frBrJaFTAcWR5w3wxUOEgz0JcSAOqc7wcK84U2frYEc
+ 9oNZFeihLo0Oouco11XYLrvP+4rp6r3jEosBGORXm2f0uM/g89RT3pVHxt803NzOGcvp
+ /nL3bsqAM8vsDds9Kp56mkw683k6PjCDn8MJ4CyJwF2TNoPmluVGLQ5FC4gMrqIKwEJf
+ QGkhHIgIacjnojHdydvGLdOmKIZ9JMXrmLS3WUVcWqK1EPIBs/4htdCKqraeDHdjrWKy
+ qmIQ==
+X-Gm-Message-State: AOAM531kcNgj1lIu2pV/RY4AjmEPkB3lHl23adlFHslCZ+oDoaKNm1Kq
+ K0nSMjtJEjAzRsjsaB9S4n3LI0aJP3K/NcOT
+X-Google-Smtp-Source: ABdhPJwOouo5FXIMr/kxfL/+FlC2IEBv63G6q9iLLZfVoNCjVP/Jgxrq0MEr2PIGudVeWWySlnsaTA==
+X-Received: by 2002:a17:90b:3355:: with SMTP id
+ lm21mr25181154pjb.115.1609678189096; 
+ Sun, 03 Jan 2021 04:49:49 -0800 (PST)
 Received: from DESKTOP53F6QH8 ([103.99.182.34])
- by smtp.gmail.com with ESMTPSA id jx4sm17543702pjb.24.2021.01.03.02.58.05
+ by smtp.gmail.com with ESMTPSA id j20sm52748255pfd.106.2021.01.03.04.49.47
  for <industrypack-devel@lists.sourceforge.net>
  (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Sun, 03 Jan 2021 02:58:06 -0800 (PST)
+ Sun, 03 Jan 2021 04:49:48 -0800 (PST)
 MIME-Version: 1.0
 From: "GiftCardoffer" <barbaralimon90@gmail.com>
 To: industrypack-devel@lists.sourceforge.net
 X-Mailer: Smart_Send_4_4_2
-Date: Sun, 3 Jan 2021 16:57:57 +0600
-Message-ID: <18468464491672784418815@DESKTOP-53F6QH8>
+Date: Sun, 3 Jan 2021 18:49:38 +0600
+Message-ID: <61364719770561933017153@DESKTOP-53F6QH8>
 X-Spam-Score: 7.9 (+++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
@@ -86,15 +87,15 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
  (barbaralimon90[at]gmail.com)
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [209.85.215.169 listed in list.dnswl.org]
+ trust [209.85.216.45 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.216.45 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
  (barbaralimon90[at]gmail.com)
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends in
  digit (barbaralimon90[at]gmail.com)
- -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.215.169 listed in wl.mailspike.net]
  1.0 HTML_MESSAGE           BODY: HTML included in message
  2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
@@ -104,7 +105,7 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  not necessarily valid
  -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
-X-Headers-End: 1kw15R-008NkK-6I
+X-Headers-End: 1kw2pW-003Rut-V6
 Subject: [Industrypack-devel] Get Free amazon gift card is here
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -118,10 +119,10 @@ List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: barbaralimon90@gmail.com
-Content-Type: multipart/mixed; boundary="===============6477694305771736483=="
+Content-Type: multipart/mixed; boundary="===============0981375802763526901=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============6477694305771736483==
+--===============0981375802763526901==
 Content-Type: text/html; charset="windows-1252"
 Content-Transfer-Encoding: quoted-printable
 
@@ -140,14 +141,14 @@ lete to the one simple task or offer for =0A unlocking your premium content=
 heck your account</p>=0A</body>
 
 
---===============6477694305771736483==
+--===============0981375802763526901==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6477694305771736483==
+--===============0981375802763526901==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -158,4 +159,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6477694305771736483==--
+--===============0981375802763526901==--
