@@ -2,68 +2,114 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C079D2EB9E6
-	for <lists+industrypack-devel@lfdr.de>; Wed,  6 Jan 2021 07:14:27 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 73AF52EC4EE
+	for <lists+industrypack-devel@lfdr.de>; Wed,  6 Jan 2021 21:33:15 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kx25S-00027B-I4
-	for lists+industrypack-devel@lfdr.de; Wed, 06 Jan 2021 06:14:26 +0000
+	id 1kxFUY-0006sL-7X
+	for lists+industrypack-devel@lfdr.de; Wed, 06 Jan 2021 20:33:14 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <admin@visau.buzz>) id 1kx25R-000274-BX
- for industrypack-devel@lists.sourceforge.net; Wed, 06 Jan 2021 06:14:25 +0000
+ (envelope-from
+ <3cx72XxQJAI43sAzs5v9s05y9s4GF1PIy4s03.u64@trix.bounces.google.com>)
+ id 1kxFUQ-0006s1-J5
+ for industrypack-devel@lists.sourceforge.net; Wed, 06 Jan 2021 20:33:06 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Subject:To:From:
- Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Type:To:From:Date:Message-ID:
+ Reply-To:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=R605YGzGaUafC6kn+P3z2cMbn3rj1v6eBPS94Zu95Cs=; b=Gc1kWwdnFbrgNcyU7v1cU6aQsT
- VJZLTC0F4DPmrwTNG7IBKLQmIZpjN6qr1haVTxsQ1h2IvR4+Z4xm5Tl0Qwxt/HDlDQj3sHztJ6H4n
- ho5g0tBFk9Yxph3awxLJBJtqzOp+DxLEbYCq3hGX2MBAaaXjS8/Y5bzWY8FPli1TNe28=;
+ bh=lDkSRzjY/ETEXKVPSAVHcao7M+9f+S8m+4yRzCU9z5w=; b=SyQgIrdIBepZA3ThhWGS9uObGa
+ wGzYiLBGJeK0Dcvndi/wXDSzHdjoLZrhyNS1KrRZNTi9T06P7D3eDNvvAdvX8hOhqRZpBZ6PESLpr
+ TqrMPYC/yxV7RvmIBezNUxtx/4SjaIPjCwgNcMVC7kmmyORTwkZBi4HimnC4xLcap7HQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Date:Subject:To:From:Message-ID:Sender:Reply-To
+ h=Subject:Content-Type:To:From:Date:Message-ID:Reply-To:MIME-Version:Sender
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=R605YGzGaUafC6kn+P3z2cMbn3rj1v6eBPS94Zu95Cs=; b=A
- i3mdKR+RGgKTGVwUo56ec0S27xPLUpR6SGsarcpT3bSK/OkkDitkG0+vNaDAb7kVCoaXDfEQKhI0O
- n6WmXHCBSDm8dks101HPaCNgLQjZav63vhtYWCI0lase9nd8B4ZgnUpBMywknMErqRdDpEBJDBcwI
- xitN3m2zNv4DkXsM=;
-Received: from hwsrv-821964.hostwindsdns.com ([104.168.135.127]
- helo=visau.buzz) by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1kx25O-002dO1-9H
- for industrypack-devel@lists.sourceforge.net; Wed, 06 Jan 2021 06:14:25 +0000
-Message-ID: <20210106141408280410@visau.buzz>
-From: =?utf-8?B?VUPjgqvjg7zjg4k=?= <uccard.co.jp>
-To: <industrypack-devel@lists.sourceforge.net>
-Date: Wed, 6 Jan 2021 14:13:56 +0800
+ List-Owner:List-Archive; bh=lDkSRzjY/ETEXKVPSAVHcao7M+9f+S8m+4yRzCU9z5w=; b=L
+ V0g9TSpIUFWxZ4ctq7eJh7CJm+7+cWHmeoCI6yhSLbTsbn3lF8894qqI8UCL1r/Er0EDJmQ/wQDLO
+ bYTnSblqyjciSV3k3RvTGukCQTcyfZQ7Bdmecyz2zSDyEmsIR8cUWqsgzBoGotOkUf6zrZfq7Wd7J
+ 2+abdJKjSD46huj8=;
+Received: from mail-io1-f80.google.com ([209.85.166.80])
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.2)
+ id 1kxFUH-00HDIF-JR
+ for industrypack-devel@lists.sourceforge.net; Wed, 06 Jan 2021 20:33:06 +0000
+Received: by mail-io1-f80.google.com with SMTP id r16so2848695ioa.1
+ for <industrypack-devel@lists.sourceforge.net>;
+ Wed, 06 Jan 2021 12:32:57 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:reply-to:message-id:date:subject:from:to;
+ bh=lDkSRzjY/ETEXKVPSAVHcao7M+9f+S8m+4yRzCU9z5w=;
+ b=eEk8WSX+In/Y8tX/OccJZr6hBNx07eT2r/hF7OBsat6QsOgUD22BnTLG8QPkDAjItS
+ uNC0m4XXn25SfGXISdfsz4JRY8XfSuYbNg/Ie58xZeL/rBFeNXNSmUICJyU/h3eg/a7j
+ jWuAeZzoN9cO9dIoBRMq4yIV0ByDy8eYZGm11MmJE4hrP/DVKBIY9NEn6xiuMzi2O9nf
+ 3DOsXDQpiwqo9iDgHKWt5EU5jt/CGxS3etjaE4Xzg2ti/pV3K/gXd84dUDTEDs16cBth
+ IcSxcjnW8pOppYl+UgRCx8Nxdvmlge6Pl5jFI0GMXZUxyeJ+g/YaKXliJO3D+toRWYbF
+ wMrg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:reply-to:message-id:date:subject
+ :from:to;
+ bh=lDkSRzjY/ETEXKVPSAVHcao7M+9f+S8m+4yRzCU9z5w=;
+ b=VJkHiwOBWONl5/wJMu7rEmTLFrVwMGnSW+TDeZEZ3bzR4tVzW3j0e33iNBF9Z7MvmF
+ S5G7jtTkmorWWeUdaOCqXYt2SpVtvnF+ejXaBmNGxAVvBT0ec7jQeSWZIMzy5FANHo65
+ WsF6rMuGOgL90JFsMuggWnEyunPlJy4mjD26N4Fvy5HS129jYONZzQq88+TcUtMEgoCv
+ 8k7MMvgtMmOmXtaFXX8kFroiih2tcJsf4/JqE7x3vZyAGkNWMdkX37Sa1uxqPHAAvePq
+ i7UqJVLTvdiRLlQsmpwyp/g6tbnF4pJF9IhCYIwJrasLdrvBEXwFDTzBHuUEtLaVQwi0
+ 9fag==
+X-Gm-Message-State: AOAM533tMb19EaaIr82YuibMQdtbmFRxXZD3EcBQKYw6SmSlguCAO6GX
+ kn+bkfbgwHdLYCLWu0fIMGXDAldVaK4w559pWoZG
 MIME-Version: 1.0
-X-Spam-Score: 7.3 (+++++++)
+X-Received: by 2002:a02:a88c:: with SMTP id l12mt5539585jam.53.1609965171768; 
+ Wed, 06 Jan 2021 12:32:51 -0800 (PST)
+X-No-Auto-Attachment: 1
+Message-ID: <0000000000002a104305b8413a00@google.com>
+Date: Wed, 06 Jan 2021 20:32:52 +0000
+From: lashandraingramyxj70@gmail.com
+To: industrypack-devel@lists.sourceforge.net
+X-Spam-Score: 8.3 (++++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
- See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: uccard.co.jp]
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [104.168.135.127 listed in zen.spamhaus.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+ trust [209.85.166.80 listed in list.dnswl.org]
+ 0.3 MILLION_USD            BODY: Talks about millions of dollars
+ 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+ (lashandraingramyxj70[at]gmail.com)
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+ domains are different
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.80 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
- 0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
- address
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
+ (lashandraingramyxj70[at]gmail.com)
  1.0 HTML_MESSAGE           BODY: HTML included in message
- 2.0 PDS_SHORT_SPOOFED_URL  HTML message short and T_SPOOFED_URL (S_U_FP)
- 0.7 PDS_NO_FULL_NAME_SPOOFED_URL HTML message short, T_SPOOFED_URL and
- T_KHOP_NO_FULL_NAME
-X-Headers-End: 1kx25O-002dO1-9H
-Subject: [Industrypack-devel] =?utf-8?b?77yc6YeN6KaB77ye44CQVUPjgqvjg7w=?=
- =?utf-8?b?44OJ44CR44GU5Yip55So56K66KqN44Gu44GK6aGY44GE?=
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
+ freemail headers are different
+ 3.0 JM_SOUGHT_FRAUD_3      Body contains frequently-spammed text patterns
+ 0.0 LOTS_OF_MONEY          Huge... sums of money
+ 0.0 HK_SCAM                No description available.
+ 0.3 MONEY_FREEMAIL_REPTO   Lots of money from someone using free email?
+ 0.0 XFER_LOTSA_MONEY       Transfer a lot of money
+ 0.0 T_MONEY_PERCENT        X% of a lot of money for you
+ 0.0 MONEY_FRAUD_8          Lots of money and very many fraud phrases
+ 0.0 ADVANCE_FEE_5_NEW_MONEY Advance Fee fraud and lots of money
+ 3.0 GOOGLE_DOC_SUSP        Suspicious use of Google Docs
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1kxFUH-00HDIF-JR
+Subject: [Industrypack-devel] [SPAM] Re: Can I trust You?
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -75,122 +121,158 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============6148432305358483027=="
+Reply-To: lashandraingramyxj70@gmail.com
+Content-Type: multipart/mixed; boundary="===============6112268587974951194=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+--===============6112268587974951194==
+Content-Type: multipart/alternative; boundary="000000000000303f2105b8413aec"
 
---===============6148432305358483027==
-Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0F68_0138BABE.1BC66E90"
+--000000000000303f2105b8413aec
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
 
-This is a multi-part message in MIME format.
+I've invited you to fill in the following form:
+Untitled form
 
-------=_NextPart_000_0F68_0138BABE.1BC66E90
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+To fill it in, visit:
+https://docs.google.com/forms/d/e/1FAIpQLScIK91W48xsXJPMl7FgIiIYaWHpg3Y6zY4ln6W5P_nUEoM7Xw/viewform?vc=0&amp;c=0&amp;w=1&amp;flr=0&amp;usp=mail_form_link
 
-VUPjgqvkuIDjg4njgqLjg4jjg6bkuIAt44ON44OD44OIIeODgOOCpOODq+WkluOCkuOBk37liKnn
-lKjjgYTjgZ/jgaDjgY3jgIHoqqDjgavjgYLjgorjgYzjgajjgYbjgZbjgYTjgb7jgZkNClVDIENB
-UkTjgqLjg4Pjg4jjg6bkuIDjg43jg4Pjg4ggIQ0K5pys44Oh5LiA44Or44Gv44OJ44Oh44Kk44Oz
-44Gu6YGL55SoKOODoeS4gOODq+mAgeWPl+S/oeOChOODm+S4gOODoOODmeS4gOOCuOOBruihqOek
-uinjgavplqLjgo/jgovph43opoHjgarpgJrnn6Xjgajjgarjgorjgb7jgZnjgIINCuOBhOOBpOOC
-glVD44Kr5LiA44OJ44KS44GU5Yip55So44GX44Gf44Gg44GN44GC44KK44GM44Go44GG44GU44GW
-44GE44G+44GZ44CCDQoNCuW8iuekvuOBp+OBr+OAgeOBiuWuouanmOOBq+WuieW/g+OBl+OBpuOC
-q+S4gOODieOCkuOBlOWIqeeUqOOBhOOBn+OBoOOBj+OBk+OBqOOCkuebrueahOOBq+OAgQ0K56ys
-5LiJ6ICF44Gr44KI44KL5LiN5q2j5L2/55So44KS6Ziy5q2i44GZ44KL44Oi44OL44K/44Oq44Oz
-44Kw44KS6KGM44Gj44Gm44GE44G+44GZ44CCDQrlvZPnpL7jga7jgYLjgarjgZ/jga7jgqLjgqvj
-gqbjg7Pjg4jjgavjgYrjgZfjgabmgqrmhI/jga7jgYLjgovnrKzkuInogIXjga7jg63jgrDjgqTj
-g7PjgpLmpJzlh7rjgZfjgb7jgZfjgZ/jgIINCuOBquOBiuOAgeOBlOWlkee0hOOBn+OBoOOBhOOB
-puOBhOOCi+OCq+S4gOODieOBq+OBpOOBhOOBpuOBr+OAgeesrOS4ieiAheOBq+OCiOOCi+S4jeat
-o+S9v+eUqOOBrg0K5Y+v6IO95oCn44GM44GU44GW44GE44G+44GZ44Gu44Gn44CB44Kr5LiA44OJ
-44Gu44GU5Yip55So44KS5LiA5pmC55qE44Gr5YGc5q2i44GV44Gb44Gm44GE44Gf44Gg44GE44Gm
-44GE44KL44CBDQrjgoLjgZfjgY/jga/ku4rlvozlgZzmraLjgZXjgZvjgabjgYTjgZ/jgaDjgY/l
-oLTlkIjjgYzjgZTjgZbjgYTjgb7jgZnjgIINCuOBlOS4jeS+v+OBqOOBlOW/g+mFjeOCkuOBiuOB
-i+OBkeOBl+OBvuOBl+OBpuiqoOOBq+eUs+OBl+ios+OBlOOBluOBhOOBvuOBm+OCk+OBjOOAgQ0K
-5L2V44Go44Ge44GU55CG6Kej6LOc44KK44Gf44GP44GK6aGY44GX55Sz44GX44GC44GS44G+44GZ
-44CCDQp1Y+OCq+S4gOODieS8muWToeOCteS4gOODk+OCueOBuOOBruaDheWgseWGjeeiuuiqjeOC
-kuaXqeaApeOBq+OBiumhmOOBhOOBl+OBvuOBmeOAgg0K44Ki44OD44OI44Ol5LiA44ON44OD44OI
-44Ot44Kw44Kk44OzDQrilqAg5rOo5oSP5LqL6aCFDQrigLvjgZPjga7jg6HkuIDjg6vjga9OZXTj
-gqLjg7PjgrXkuIDjgYvjgonoh6rli5XphY3kv6HjgZfjgabjgYrjgorjgb7jgZnjgIINCuKAu+OB
-tuOBk+OBruODoeS4gOODq+OBp+OBr+OAgeesrOS4ieiAheOBq+OCiOOCi+S4jeato+S9v+eUqOOB
-ruWPr+iDveaAp+OCkuaknOefpeOBl+OBvuOBl+OBn+OBruOBp+OAgeOBlOmAo+e1oeOCkuW3ruOB
-l+OBguOBkuOBvuOBl+OBn+OAgg0K4oC75pys44Oh5LiA44Or44Gr44GU6L+U5L+h44GX44Gf44Gg
-44GN44G+44GX44Gm44KC44CB44GU6LOq5ZWPP+OBlOS+nemgvOOBquOBqeOBq+OBiuetlOOBiOOB
-p+OBjeOBvuOBm+OCk+OBruOBp+OAgeOBguOCieOBi+OBmOOCgeOBlOS6huaJv+OBj+OBoOOBleOB
-hOOAguKAu+ODoeS4gOODq+OBq+mWouOBmeOCi+WQhOeoruOBiuaJi+e2muOBjeaWueazleOBq+OB
-pOOBjeOBvuOBl+OBpuOBr+OAgeS7peS4i+OCkuOBlOeiuuiqjeOBj+OBoOOBleOBhOOAgg0KaHR0
-cDovL3d3dzIudWNjYXJkLmNvLmpwL2F0dS9tYWlsX3RvaWF3YXNlLmh0bWw=
+Dearest One,
 
-------=_NextPart_000_0F68_0138BABE.1BC66E90
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+        Permit me to inform you of my desire of going into a business  
+relationship with you. I am quite aware that my message will come to you as  
+a surprise because it is indeed very strange for someone you have not met  
+before to contact you in this regard.
 
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE5ODY3Ij48L0hFQUQ+DQo8Qk9EWT48U1BBTiBzdHlsZT0i
-Rk9OVC1TSVpFOiAxOXB4Ij48U1BBTiBzdHlsZT0iRk9OVC1GQU1JTFk6IOetiee6vyI+PFNQQU4g
-DQpzdHlsZT0iRk9OVC1TSVpFOiAxOXB4Ij48U1BBTiBzdHlsZT0iRk9OVC1GQU1JTFk6IEDlrovk
-vZMiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTlweCI+PFNQQU4gc3R5bGU9IkZPTlQtU0la
-RTogMTlweCI+PFNQQU4gDQpzdHlsZT0iRk9OVC1GQU1JTFk6IEFyaWFsIj48U1BBTiBzdHlsZT0i
-Rk9OVC1TSVpFOiAxOXB4Ij48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDE5cHgiPjxTUEFOIHN0
-eWxlPSJGT05ULVNJWkU6IDE5cHgiPjxTUEFOPg0KPFA+PFNUUk9ORz5VQ+OCq+S4gOODieOCouOD
-iOODpuS4gC3jg43jg4Pjg4gh44OA44Kk44Or5aSW44KS44GTfuWIqeeUqOOBhOOBn+OBoOOBjeOA
-geiqoOOBq+OBguOCiuOBjOOBqOOBhuOBluOBhOOBvuOBmTwvU1RST05HPjwvUD4NCjxQPjxTUEFO
-IHN0eWxlPSJGT05ULVNJWkU6IDI5cHgiPjxTVFJPTkc+VUMgQ0FSROOCouODg+ODiOODpuS4gOOD
-jeODg+ODiCANCiE8L1NUUk9ORz48L1NQQU4+PC9QPjxTUEFOIHN0eWxlPSJGT05ULVNJWkU6IDE0
-cHgiPg0KPFA+5pys44Oh5LiA44Or44Gv44OJ44Oh44Kk44Oz44Gu6YGL55SoKOODoeS4gOODq+mA
-geWPl+S/oeOChOODm+S4gOODoOODmeS4gOOCuOOBruihqOekuinjgavplqLjgo/jgovph43opoHj
-garpgJrnn6Xjgajjgarjgorjgb7jgZnjgII8QlI+44GE44Gk44KCVUPjgqvkuIDjg4njgpLjgZTl
-iKnnlKjjgZfjgZ/jgaDjgY3jgYLjgorjgYzjgajjgYbjgZTjgZbjgYTjgb7jgZnjgII8L1A+DQo8
-UD48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDdweCI+PEJSPjwvU1BBTj7lvIrnpL7jgafjga/j
-gIHjgYrlrqLmp5jjgavlronlv4PjgZfjgabjgqvkuIDjg4njgpLjgZTliKnnlKjjgYTjgZ/jgaDj
-gY/jgZPjgajjgpLnm67nmoTjgavjgIE8QlI+56ys5LiJ6ICF44Gr44KI44KL5LiN5q2j5L2/55So
-44KS6Ziy5q2i44GZ44KL44Oi44OL44K/44Oq44Oz44Kw44KS6KGM44Gj44Gm44GE44G+44GZ44CC
-PEJSPuW9k+ekvuOBruOBguOBquOBn+OBruOCouOCq+OCpuODs+ODiOOBq+OBiuOBl+OBpuaCquaE
-j+OBruOBguOCi+esrOS4ieiAheOBruODreOCsOOCpOODs+OCkuaknOWHuuOBl+OBvuOBl+OBn+OA
-gjxCUj7jgarjgYrjgIHjgZTlpZHntITjgZ/jgaDjgYTjgabjgYTjgovjgqvkuIDjg4njgavjgaTj
-gYTjgabjga/jgIHnrKzkuInogIXjgavjgojjgovkuI3mraPkvb/nlKjjga48QlI+5Y+v6IO95oCn
-44GM44GU44GW44GE44G+44GZ44Gu44Gn44CB44Kr5LiA44OJ44Gu44GU5Yip55So44KS5LiA5pmC
-55qE44Gr5YGc5q2i44GV44Gb44Gm44GE44Gf44Gg44GE44Gm44GE44KL44CBPEJSPuOCguOBl+OB
-j+OBr+S7iuW+jOWBnOatouOBleOBm+OBpuOBhOOBn+OBoOOBj+WgtOWQiOOBjOOBlOOBluOBhOOB
-vuOBmeOAgjxCUj7jgZTkuI3kvr/jgajjgZTlv4PphY3jgpLjgYrjgYvjgZHjgZfjgb7jgZfjgabo
-qqDjgavnlLPjgZfoqLPjgZTjgZbjgYTjgb7jgZvjgpPjgYzjgIE8QlI+5L2V44Go44Ge44GU55CG
-6Kej6LOc44KK44Gf44GP44GK6aGY44GX55Sz44GX44GC44GS44G+44GZ44CCPEJSPnVj44Kr5LiA
-44OJ5Lya5ZOh44K15LiA44OT44K544G444Gu5oOF5aCx5YaN56K66KqN44KS5pep5oCl44Gr44GK
-6aGY44GE44GX44G+44GZ44CCPC9QPg0KPFA+PC9TUEFOPjxGT05UIGNvbG9yPSMwMDAwZmY+PFNQ
-QU4gc3R5bGU9IkZPTlQtU0laRTogMjlweCI+PEEgDQpocmVmPSJodHRwOi8vNDEuMjE2LjE4OS4y
-NDIiPuOCouODg+ODiOODpeS4gOODjeODg+ODiOODreOCsOOCpOODszwvQT48L1NQQU4+PC9GT05U
-PjwvU1BBTj48L1A+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxNHB4Ij4NCjxQPuKWoCANCuaz
-qOaEj+S6i+mghTxCUj7igLvjgZPjga7jg6HkuIDjg6vjga9OZXTjgqLjg7PjgrXkuIDjgYvjgono
-h6rli5XphY3kv6HjgZfjgabjgYrjgorjgb7jgZnjgII8QlI+4oC744G244GT44Gu44Oh5LiA44Or
-44Gn44Gv44CB56ys5LiJ6ICF44Gr44KI44KL5LiN5q2j5L2/55So44Gu5Y+v6IO95oCn44KS5qSc
-55+l44GX44G+44GX44Gf44Gu44Gn44CB44GU6YCj57Wh44KS5beu44GX44GC44GS44G+44GX44Gf
-44CCPEJSPuKAu+acrOODoeS4gOODq+OBq+OBlOi/lOS/oeOBl+OBn+OBoOOBjeOBvuOBl+OBpuOC
-guOAgeOBlOizquWVjz/jgZTkvp3poLzjgarjganjgavjgYrnrZTjgYjjgafjgY3jgb7jgZvjgpPj
-ga7jgafjgIHjgYLjgonjgYvjgZjjgoHjgZTkuobmib/jgY/jgaDjgZXjgYTjgILigLvjg6HkuIDj
-g6vjgavplqLjgZnjgovlkITnqK7jgYrmiYvntprjgY3mlrnms5XjgavjgaTjgY3jgb7jgZfjgabj
-ga/jgIHku6XkuIvjgpLjgZTnorroqo3jgY/jgaDjgZXjgYTjgII8QlI+PEEgDQpocmVmPSJodHRw
-Oi8vNDEuMjE2LjE4OS4yNDIiPjxGT05UIA0KY29sb3I9I2Q5YzU2Nj5odHRwOi8vd3d3Mi51Y2Nh
-cmQuY28uanAvYXR1L21haWxfdG9pYXdhc2UuaHRtbDwvRk9OVD48L0E+PC9QPjwvU1BBTj48L1NQ
-QU4+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BB
-Tj48L1NQQU4+PC9CT0RZPjwvSFRNTD4NCg==
+I am Ms Joyce Kabore the only daughter of late Chief. And Mrs. Bande  
+Kabore. My father was a very wealthy Cocoa merchant, an ally of President  
+Blaise Compaore in Ouagadougou, the economic capital city of Burkina Faso,  
+my father was poisoned by his business associates on one of their outings  
+on a business trip during the coup that ended 27 years of President Blaise  
+Compaore rain. My mother died when I was a baby and since then my father  
+took me so special. Before the death of my father on October 2017 in a  
+private hospital here in Burkina Faso He secretly called me on his bed side  
+and told me that he has the sum of (Seven million, five hundred thousand  
+United State Dollars).USD ($7.500, 000, 00) left in a fixed / suspense  
+account in one of the prime banks in Asia, that he used my name as his only
+daughter for the next of Kin in depositing the fund. He also explained to  
+me that it was because of this wealth that he was poisoned by his business  
+associates; he told me where he hid the documents. That I should seek a  
+foreign partner in a country of my choice where I will transfer this money  
+and use it for investment purposes such as real estate or hotel management.
 
-------=_NextPart_000_0F68_0138BABE.1BC66E90--
+Dear, I am honorably seeking your assistance in the following ways:
+(1) To provide a bank account into which this money would be transferred to.
+(2) To serve as a guardian of this fund since I am only 17 years old.
+(3) To make arrangements for me to come over to your country to further my  
+education and also to secure a resident permit in your country. Moreover,  
+Dear I am willing to offer you 15% of the total sum as compensation for  
+your effort/ input after the successful transfer of this fund into your  
+nominated account overseas.
+
+Furthermore, please indicate your options towards assisting me as I believe  
+that this transaction would be concluded within seven (7) days, you signify  
+your interest to assist me, anticipating hearing from you soonest.
+
+Kindly keep this as a top secret as I am still hiding from my late father  
+business partner, because of the documents of this fund that are in my  
+position.
+
+Thanks and God bless you.
+Yours Sincerely,
+Ms Joyce Kabore
 
 
+Google Forms: Create and analyse surveys.
 
---===============6148432305358483027==
+--000000000000303f2105b8413aec
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"font-family: Roboto,Helvetica,Arial,sans-serif; margin=
+: 0; padding: 0; height: 100%; width: 100%;"><table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"background-color:rgb(103,58,183);" width=
+=3D"100%" role=3D"presentation"><tbody><tr height=3D"64px"><td style=3D"pad=
+ding: 0 24px;"><img alt=3D"Google Forms" height=3D"26px" style=3D"display: =
+inline-block; margin: 0; vertical-align: middle;" width=3D"143px" src=3D"ht=
+tps://www.gstatic.com/docs/forms/google_forms_logo_lockup_white_2x.png"></t=
+d></tr></tbody></table><div style=3D"padding: 24px; background-color:rgb(23=
+7,231,246)"><div align=3D"center" style=3D"background-color: #fff; border-b=
+ottom: 1px solid #e0e0e0;margin: 0 auto; max-width: 624px; min-width: 154px=
+;padding: 0 24px;"><table align=3D"center" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"background-color: #fff;" width=3D"100%" role=3D"presentation">=
+<tbody><tr height=3D"24px"><td></td></tr><tr><td><span style=3D"display: ta=
+ble-cell; vertical-align: top; font-size: 13px; line-height: 18px; color: #=
+424242;" dir=3D"auto">Dearest One,<br><br>       Permit me to inform you of=
+ my desire of going into a business relationship with you. I am quite aware=
+ that my message will come to you as a surprise because it is indeed very s=
+trange for someone you have not met before to contact you in this regard.<b=
+r><br>I am Ms Joyce Kabore the only daughter of late Chief. And Mrs. Bande =
+Kabore. My father was a very wealthy Cocoa merchant, an ally of President B=
+laise Compaore in Ouagadougou, the economic capital city of Burkina Faso, m=
+y father was poisoned by his business associates on one of their outings on=
+ a business trip during the coup that ended 27 years of President Blaise Co=
+mpaore rain. My mother died when I was a baby and since then my father took=
+ me so special. Before the death of my father on October 2017 in a private =
+hospital here in Burkina Faso He secretly called me on his bed side and tol=
+d me that he has the sum of (Seven million, five hundred thousand United St=
+ate Dollars).USD ($7.500, 000, 00) left in a fixed / suspense account in on=
+e of the prime banks in Asia, that he used my name as his only<br>daughter =
+for the next of Kin in depositing the fund. He also explained to me that it=
+ was because of this wealth that he was poisoned by his business associates=
+; he told me where he hid the documents. That I should seek a foreign partn=
+er in a country of my choice where I will transfer this money and use it fo=
+r investment purposes such as real estate or hotel management.<br><br>Dear,=
+ I am honorably seeking your assistance in the following ways:<br>(1) To pr=
+ovide a bank account into which this money would be transferred to.<br>(2) =
+To serve as a guardian of this fund since I am only 17 years old.<br>(3) To=
+ make arrangements for me to come over to your country to further my educat=
+ion and also to secure a resident permit in your country. Moreover, Dear I =
+am willing to offer you 15% of the total sum as compensation for your effor=
+t/ input after the successful transfer of this fund into your nominated acc=
+ount overseas.<br><br>Furthermore, please indicate your options towards ass=
+isting me as I believe that this transaction would be concluded within seve=
+n (7) days, you signify your interest to assist me, anticipating hearing fr=
+om you soonest.<br><br>Kindly keep this as a top secret as I am still hidin=
+g from my late father business partner, because of the documents of this fu=
+nd that are in my position.<br><br>Thanks and God bless you.<br>Yours Since=
+rely,<br>Ms Joyce Kabore<br></span></td></tr><tr height=3D"20px"><td></tr><=
+tr style=3D"font-size: 20px; line-height: 24px;"><td dir=3D"auto"><a href=
+=3D"https://docs.google.com/forms/d/e/1FAIpQLScIK91W48xsXJPMl7FgIiIYaWHpg3Y=
+6zY4ln6W5P_nUEoM7Xw/viewform?vc=3D0&amp;c=3D0&amp;w=3D1&amp;flr=3D0&amp;usp=
+=3Dmail_form_link" style=3D"color: rgb(103,58,183); text-decoration: none; =
+vertical-align: middle; font-weight: 500">Untitled form</a><div itemprop=3D=
+"action" itemscope itemtype=3D"http://schema.org/ViewAction"><meta itemprop=
+=3D"url" content=3D"https://docs.google.com/forms/d/e/1FAIpQLScIK91W48xsXJP=
+Ml7FgIiIYaWHpg3Y6zY4ln6W5P_nUEoM7Xw/viewform?vc=3D0&amp;c=3D0&amp;w=3D1&amp=
+;flr=3D0&amp;usp=3Dmail_goto_form"><meta itemprop=3D"name" content=3D"Fill =
+out form"></div></td></tr><tr height=3D"24px"></tr><tr><td><table border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr><td><a hr=
+ef=3D"https://docs.google.com/forms/d/e/1FAIpQLScIK91W48xsXJPMl7FgIiIYaWHpg=
+3Y6zY4ln6W5P_nUEoM7Xw/viewform?vc=3D0&amp;c=3D0&amp;w=3D1&amp;flr=3D0&amp;u=
+sp=3Dmail_form_link" style=3D"border-radius: 3px; box-sizing: border-box; d=
+isplay: inline-block; font-size: 13px; font-weight: 700; height: 40px; line=
+-height: 40px; padding: 0 24px; text-align: center; text-decoration: none; =
+text-transform: uppercase; vertical-align: middle; color: #fff; background-=
+color: rgb(103,58,183);" target=3D"_blank" rel=3D"noopener">Fill out form</=
+a></td></tr></tbody></table></td></tr><tr height=3D"24px"></tr></tbody></ta=
+ble></div><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"max-width: 672px; min-width: 154px;" width=3D"100%" role=3D"presentatio=
+n"><tbody><tr height=3D"24px"><td></td></tr><tr><td><a href=3D"https://docs=
+.google.com/forms?usp=3Dmail_form_link" style=3D"color: #424242; font-size:=
+ 13px;">Create your own Google Form</a></td></tr></tbody></table></div></bo=
+dy></html>
+--000000000000303f2105b8413aec--
+
+
+--===============6112268587974951194==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6148432305358483027==
+--===============6112268587974951194==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -201,6 +283,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6148432305358483027==--
-
+--===============6112268587974951194==--
 
