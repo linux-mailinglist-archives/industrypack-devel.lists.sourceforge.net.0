@@ -2,67 +2,74 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5E6A82EF56F
-	for <lists+industrypack-devel@lfdr.de>; Fri,  8 Jan 2021 17:06:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 31A7C2EFC00
+	for <lists+industrypack-devel@lfdr.de>; Sat,  9 Jan 2021 01:06:22 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1kxuHY-00058Z-4j
-	for lists+industrypack-devel@lfdr.de; Fri, 08 Jan 2021 16:06:32 +0000
+	id 1ky1ls-0006CB-QD
+	for lists+industrypack-devel@lfdr.de; Sat, 09 Jan 2021 00:06:20 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <cjw1@cp64.net>) id 1kxuHX-00058S-Aq
- for industrypack-devel@lists.sourceforge.net; Fri, 08 Jan 2021 16:06:31 +0000
+ (envelope-from <support@otichearing.com>) id 1ky1lq-0006C3-Rn
+ for industrypack-devel@lists.sourceforge.net; Sat, 09 Jan 2021 00:06:18 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-ID:Content-Type:MIME-Version:Date:Subject:
- To:Reply-To:From:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Reply-To:From:Date:Subject:To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=eGjdQivLCo/XnVSOX6+9WTPmlgTy844G6HbIf1rhoxY=; b=MI02rtnqRUNBWdChJxjyod+RdO
- OklvBaCoqAafb8TqwgByBx65fUjWTcLqXvQSS8JgwerwudvlVrlHnhO91Xff7H5h1xUnpnAr1VV+r
- A0gbDTouzvWxv7was/mV2zYsxc0MvUwjhGx0zwURuRnqm0+p4RsSazeMO2SPNWqHn63w=;
+ bh=QWBB28nR3bFajT4EV8DW6mX6uuSZ7W4yCPMXffAJVnk=; b=Jf3xzHnmVwo6qRLUzPYCRaGes0
+ ebOzAE0d77eFu16PvcleWRV9c0m90zM2PNlneE6pALvql2zht+XBP/0cR6skElmxFupk++SFTii1w
+ x//zWaFHoilOOjvD9g8HEQs2mGug57bcGt7oM07KKzlhrrEWau5w8xfywVr9lPsx/6pE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-ID:Content-Type:MIME-Version:Date:Subject:To:Reply-To:From:Sender
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Reply-To:
+ From:Date:Subject:To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=eGjdQivLCo/XnVSOX6+9WTPmlgTy844G6HbIf1rhoxY=; b=L
- fGrXdweYhlmrTEfX6MR5n00Vme+uvU++BZy9eJjaX5V0QGxTWNvPTRaA0lxFGSo47MNlyBDQJKks+
- KOiBUQGa4TBXpgqskyUAz4Mx8PiJMogKTmfnnrsn9Noj3ZHY9LcEHcIFVdIbcHsQJVTQpGi+zUk8R
- lHDHV3lsSmtArx/g=;
-Received: from [98.159.111.43] (helo=a.cp64.net)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1kxuHH-000Slg-QO
- for industrypack-devel@lists.sourceforge.net; Fri, 08 Jan 2021 16:06:31 +0000
-Received: from USER-20200619JV (unknown [59.42.111.242])
- by a.cp64.net (Postfix) with ESMTPA id 41CB160C39
- for <industrypack-devel@lists.sourceforge.net>;
- Fri,  8 Jan 2021 11:05:44 -0500 (EST)
-From: cjw1@cp64.net
+ List-Owner:List-Archive; bh=QWBB28nR3bFajT4EV8DW6mX6uuSZ7W4yCPMXffAJVnk=; b=W
+ u/lagCpo2qP+9PsegeLbvXZjBRhDFAzCXdvynsHdXvvcl+ykaW3F9blKcLFnGodkH52T7FcCFnXeN
+ Vv+sz+lC1zB/0wkQ31oD27Fgs1ZrT8p2t7rzIQNl/uuZZtTWQTs0g2iFsFrUE+PmzAaPle6Ryxy/d
+ pGgoBybrFiuBOWXM=;
+Received: from mail.otichearing.com ([202.181.196.249] helo=vm.otichearing.com)
+ by sfi-mx-3.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
+ id 1ky1lj-00Bwok-OC
+ for industrypack-devel@lists.sourceforge.net; Sat, 09 Jan 2021 00:06:18 +0000
+Received: by vm.otichearing.com (Postfix, from userid 5004)
+ id 058EF5495344; Sat,  9 Jan 2021 06:59:01 +0800 (HKT)
 To: industrypack-devel@lists.sourceforge.net
-Date: Sat, 9 Jan 2021 0:06:08 +0800
+X-PHP-Originating-Script: 5004:kbfcxuydnh.php
+Date: Fri, 8 Jan 2021 22:59:01 +0000
+From: El_Gordo_Primitiva <support@otichearing.com>
+Message-ID: <ba3694387072dd69a0fca2da394d65f3@www.otichearing.com>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="Mark=_399469919199734959756"
-X-Mailer: Foxmail 7, 2,52,  20[cn]
-Message-ID: <17CF6D5F01090006081D20B2D4165A@USER-20200619JV>
-X-Spam-Score: 7.5 (+++++++)
+X-Spam-Score: 6.4 (++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.3 RCVD_IN_RP_RNBL        RBL: Relay in RNBL,
- https://senderscore.org/blacklistlookup/
- [98.159.111.43 listed in bl.score.senderscore.com]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: post.com]
+ 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
+ [Blocked - see <https://www.spamcop.net/bl.shtml?202.181.196.249>]
+ 1.5 RCVD_IN_PSBL           RBL: Received via a relay in PSBL
+ [202.181.196.249 listed in psbl.surriel.com]
+ 0.0 RCVD_IN_MSPIKE_L5      RBL: Very bad reputation (-5)
+ [202.181.196.249 listed in bl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
- (3309119269[at]qq.com)
- 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.1 TRACKER_ID             BODY: Incorporates a tracking ID number
+ 1.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
  2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
- 2.5 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
-X-Headers-End: 1kxuHH-000Slg-QO
-Subject: [Industrypack-devel] =?utf-8?b?5Zyo57q/5oyW5o6Y6YeH6LSt5L+h5oGv?=
+ 0.0 PHP_ORIG_SCRIPT        Sent by bot & other signs
+ 0.0 FILL_THIS_FORM         Fill in a form with personal information
+ 0.0 T_FILL_THIS_FORM_LOAN  Answer loan question(s)
+X-Headers-End: 1ky1lj-00Bwok-OC
+Subject: [Industrypack-devel] ESP
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -74,69 +81,289 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: 3309119269@qq.com
+Reply-To: DrEnriqueBlanco@mail.com
+Content-Type: multipart/mixed; boundary="===============8930750634143086122=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
 
---Mark=_399469919199734959756
-Content-Type: multipart/related; type="multipart/alternative";
-	boundary="Mark=_399469919199734959601"
+--===============8930750634143086122==
+Content-Type: multipart/alternative;
+	boundary="b1_ba3694387072dd69a0fca2da394d65f3"
+Content-Transfer-Encoding: 8bit
+
+This is a multi-part message in MIME format.
+
+--b1_ba3694387072dd69a0fca2da394d65f3
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
 
---Mark=_399469919199734959601
-Content-Type: multipart/alternative; boundary="Mark=_399469919199734959995"
 
 
---Mark=_399469919199734959995
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
 
-=E6=B5=B7=E5=A4=96=E7=96=AB=E6=83=85=E4=BB=8D=E5=9C=A8=E7=BB=A7=E7=BB=AD=
-=EF=BC=8C=E7=BA=BF=E4=B8=8B=E7=9A=84=E5=B1=95=E4=BC=9A=EF=BC=8C=E5=87=BA=
-=E5=9B=BD=E6=8B=9C=E8=AE=BF=E7=AD=89=E7=AD=89=E6=B2=9F=E9=80=9A=E6=96=B9=
-=E5=BC=8F=E6=97=A0=E6=B3=95=E8=BF=9B=E8=A1=8C=EF=BC=9F
+                                      El_Gordo_Primitiva
 
-=E7=BA=AF=E7=BA=BF=E4=B8=8A=E9=82=AE=E4=BB=B6=E6=B2=9F=E9=80=9A=EF=BC=8C=
-=E6=B2=A1=E5=8A=9E=E6=B3=95=E5=B8=AE=E5=8A=A9=E4=B9=B0=E5=AE=B6=E5=BB=BA=
-=E7=AB=8B=E4=BF=A1=E4=BB=BB=EF=BC=8C=E4=B9=B0=E5=AE=B6=E4=B8=8E=E5=8D=96=
-=E5=AE=B6=E7=BC=BA=E4=B9=8F=E6=9C=89=E6=95=88=E7=9A=84=E6=B2=9F=E9=80=9A=
-=EF=BC=9F
+calle estaben collantes 12
 
-=E6=9C=80=E6=96=B0=E5=8A=9F=E8=83=BD=E2=80=94=E2=80=94=E4=BA=91=E5=95=86=
-=E9=93=BA=EF=BC=8C=E6=8B=A5=E6=9C=89IM=E5=8D=B3=E6=97=B6=E6=B2=9F=E9=80=
-=9A=EF=BC=8C=E5=9C=A8=E7=BA=BF=E7=9B=B4=E6=92=AD=EF=BC=8C=E8=A7=86=E9=A2=
-=91=E5=AF=BC=E8=B4=AD=E7=AD=89=E5=8A=9F=E8=83=BD=EF=BC=8C=E6=A0=B9=E6=8D=
-=AE=E8=87=AA=E5=B7=B1=E7=9A=84=E4=BA=A7=E5=93=81=E4=B8=80=E9=94=AE=E5=BB=
-=BA=E7=AB=8B=E4=BA=91=E5=95=86=E9=93=BA=EF=BC=8C=E5=B0=86=E4=BA=A7=E5=93=
-=81=E5=BA=97=E9=9D=A2=E7=9B=B4=E6=8E=A5=E5=B1=95=E7=A4=BA=E7=BB=99=E5=AE=
-=A2=E6=88=B7=E3=80=82
+28017 Madrid Spain
 
-=E8=A7=86=E9=A2=91=E5=AF=BC=E8=B4=AD=E5=92=8C=E5=9C=A8=E7=BA=BF=E7=9B=B4=
-=E6=92=AD=EF=BC=8C=E5=8F=AF=E4=BB=A5=E8=AE=A9=E6=82=A8=E4=B8=8E=E4=B9=B0=
-=E5=AE=B6=E9=9B=B6=E8=B7=9D=E7=A6=BB=E6=8E=A5=E8=A7=A6=EF=BC=8C=E5=9C=A8=
-=E7=BA=BF=E5=B1=95=E7=A4=BA=E5=85=AC=E5=8F=B8=E5=AE=9E=E5=8A=9B=EF=BC=8C=
-=E4=B8=8E=E4=B9=B0=E5=AE=B6=E5=BF=AB=E9=80=9F=E5=BB=BA=E7=AB=8B=E4=BF=A1=
-=E4=BB=BB=E5=85=B3=E7=B3=BB=EF=BC=8C=E6=8F=90=E9=AB=98=E9=94=80=E5=94=AE=
-=E6=95=88=E7=8E=87=EF=BC=8C=E6=9B=B4=E5=BF=AB=E8=B5=A2=E5=BE=97=E5=AE=A2=
-=E6=88=B7=E8=AE=A2=E5=8D=95=EF=BC=81=EF=BC=81
+Tell 34 911 231 117 fax, 34 912 916 313.
 
-Wechat=EF=BC=9A 15920165384
-QQ=EF=BC=9A3309119269
-=E6=AC=A2=E8=BF=8E=E5=89=8D=E6=9D=A5=E5=92=A8=E8=AF=A2=E4=BD=93=E9=AA=8C=
+Offizielle mitteilung
 
---Mark=_399469919199734959995--
+Des präsidenten der internationalen
 
---Mark=_399469919199734959601--
+Promotion-gewinnzuteilung
 
---Mark=_399469919199734959756
+Referenznummer:Esp/15286114
+
+Bearbeitungsnummer:665002
+
+Email.bilbaogroupo@gmail.com
+
+ 
+
+Guten Tag,
+
+ 
+
+                         Offizielle Gewinnbenachritigung
+
+ Wir sind erfreut Ihnen mitteilen zu können, das die Gewinnliste Lotto
+
+Programm am 19/12/2020. erschienen ist. Die offizielle Liste der Gewinner
+
+erschien am 08/01/2021. Ihr Name wurde auf dem Los mit der Nummer: 025.
+
+114649 .750 und mit der Seriennummer: 791026-57 registriert. Die
+
+Glücksnummer: 4-6-9-11-19-23 * 10 hat in der 4. Kategorie gewonnen.
+
+ 
+
+ Sie sind damit Gewinner von: 935.470,00 € (Neun Hundert Fünfunddreissig
+
+Tausend Vierhundert Und Siebzig Euro). Die Summe ergibt sich aus einer
+
+Gewinnausschüttung von EURO: 16.626.870,00 (Sechzehn Millionen Sechshundert
+
+Sechsundzwanzig Tausend Achthundert Und Siebzig Euro). Die Summe wurde durch
+
+17 Gewinner aus der gleichen Kategorie geteilt. Herzlichen Glückwunsch!
+
+Der Gewinn ist bei einer Sicherheitsfirma hinterlegt und in ihrem Namen
+
+versichert. Um keine Komplikationen bei der Abwicklung der Auszahlung zu
+
+verursachen bitten wir Sie diese offizielle Mitteilung diskret zu behandeln,
+
+sie ist Teil unseres Sicherheitsprotokolls und garantiert Ihnen einen
+
+reibunglosen Ablauf.
+
+ Einmal im Jahr veranstalten wir eine Auslosung, in der die Gewinner von
+
+unserem Computer, aus 45.000 Namen aus Asien, Europa, Australien und Amerika,
+
+gezogen werden.
+
+Bitte kontaktieren Sie unseren Auslandssachbearbeiter Dr,Enrique Blanco bei
+
+der Sicherheitfirma GRUPO BILBAO S.L. Tel: 0034 685 091 224. Email:
+
+EnriqueBlanco@post.com
+
+.Bitte denken Sie daran, jeder Gewinnanspruch muss bis zum 29/01/2021.
+
+Angemeldete sein. Jeder nicht angemeldet Gewinnanspruch verfällt und geht
+
+zurück an das MINISTERIO DE ECONOMIA Y HACIENDA. Bitte denken sie auch daran
+
+das 10% Ihres gewinnes an die Sicherheitsfirma GRUPO BILBAO S.L. geht. Namen
+
+versichert ist.
+
+ WICHTIG: Um Verzögerungen und Komplikationen zu vermeiden, geben Sie bitte
+
+immer die Referenz- und Bearbeitungsnummer an. Adressänderungen teilen Sie
+
+uns bitte umgehend mit. Anbei ein Anmeldeformular, bitte ausfüllen und per
+
+Email an die Sicherheitsfirma GRUPO BILBAO S.L.on Email:
+
+alvarosanchez@email.com
+
+schicken.
+
+Bitte Füllen Sie Die Unten Angegebenen Daten Aus:
+
+(1) Frau Oder Herr:___________________ (2)Name:______________________________
+
+(3) Vorname:__________________________ (4)Adresse:___________________________
+
+(5) Plz:______________________________ (6)Stadt:_____________________________
+
+(7) Geburtsdatum:_____________________ (8)Nationalität:______________________
+
+(9) Telefon:__________________________ (10)Mobil:____________________________
+
+(11) Fax:_____________________________ (12)Email:____________________________
+
+(13) Beruf:___________________________ (14)Sprache/S:________________________
+
+ Die oben genannten, Anforderungen sind erforderlich. Herzliche
+
+Glückwünsche noch einmal.
+
+Carl Francisco Leon
+
+PRÄSIDENT.
+
+
+
+--b1_ba3694387072dd69a0fca2da394d65f3
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+</HEAD>
+<BODY bgcolor=#FFFFFF leftmargin=5 topmargin=5 rightmargin=5 bottommargin=5>
+<FONT size=2 color=#000000 face="Arial">
+<DIV>
+<FONT face="Courier New">                                      </FONT><FONT face="Courier New"><B>El_Gordo_Primitiva</B></FONT></DIV>
+<DIV>
+<FONT face="Courier New">calle estaben collantes 12</FONT></DIV>
+<DIV>
+<FONT face="Courier New">28017 Madrid Spain</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Tell 34 911 231 117 fax, 34 912 916 313.</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Offizielle mitteilung</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Des präsidenten der internationalen</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Promotion-gewinnzuteilung</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Referenznummer:Esp/15286114</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Bearbeitungsnummer:665002</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Email.bilbaogroupo@gmail.com</FONT></DIV>
+<DIV>
+<FONT face="Courier New"> </FONT></DIV>
+<DIV>
+<FONT face="Courier New">Guten Tag,</FONT></DIV>
+<DIV>
+<FONT face="Courier New"> </FONT></DIV>
+<DIV>
+<FONT face="Courier New">                         Offizielle Gewinnbenachritigung</FONT></DIV>
+<DIV>
+<FONT face="Courier New"> Wir sind erfreut Ihnen mitteilen zu können, das die Gewinnliste Lotto</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Programm am 19/12/2020. erschienen ist. Die offizielle Liste der Gewinner</FONT></DIV>
+<DIV>
+<FONT face="Courier New">erschien am 08/01/2021. Ihr Name wurde auf dem Los mit der Nummer: 025.</FONT></DIV>
+<DIV>
+<FONT face="Courier New">114649 .750 und mit der Seriennummer: 791026-57 registriert. Die</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Glücksnummer: 4-6-9-11-19-23 * 10 hat in der 4. Kategorie gewonnen.</FONT></DIV>
+<DIV>
+<FONT face="Courier New"> </FONT></DIV>
+<DIV>
+<FONT face="Courier New"> Sie sind damit Gewinner von:</FONT><FONT face="Courier New"><B> 935.470,00 €</B></FONT><FONT face="Courier New"> (Neun Hundert Fünfunddreissig</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Tausend Vierhundert Und Siebzig Euro). Die Summe ergibt sich aus einer</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Gewinnausschüttung von EURO: 16.626.870,00 (Sechzehn Millionen Sechshundert</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Sechsundzwanzig Tausend Achthundert Und Siebzig Euro). Die Summe wurde durch</FONT></DIV>
+<DIV>
+<FONT face="Courier New">17 Gewinner aus der gleichen Kategorie geteilt. Herzlichen Glückwunsch!</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Der Gewinn ist bei einer Sicherheitsfirma hinterlegt und in ihrem Namen</FONT></DIV>
+<DIV>
+<FONT face="Courier New">versichert. Um keine Komplikationen bei der Abwicklung der Auszahlung zu</FONT></DIV>
+<DIV>
+<FONT face="Courier New">verursachen bitten wir Sie diese offizielle Mitteilung diskret zu behandeln,</FONT></DIV>
+<DIV>
+<FONT face="Courier New">sie ist Teil unseres Sicherheitsprotokolls und garantiert Ihnen einen</FONT></DIV>
+<DIV>
+<FONT face="Courier New">reibunglosen Ablauf.</FONT></DIV>
+<DIV>
+<FONT face="Courier New"> Einmal im Jahr veranstalten wir eine Auslosung, in der die Gewinner von</FONT></DIV>
+<DIV>
+<FONT face="Courier New">unserem Computer, aus 45.000 Namen aus Asien, Europa, Australien und Amerika,</FONT></DIV>
+<DIV>
+<FONT face="Courier New">gezogen werden.</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Bitte kontaktieren Sie unseren Auslandssachbearbeiter Dr,Enrique Blanco bei</FONT></DIV>
+<DIV>
+<FONT face="Courier New">der Sicherheitfirma </FONT><FONT face="Courier New"><B>GRUPO BILBAO S.L.</B></FONT><FONT face="Courier New"> Tel: 0034 685 091 224. Email:</FONT></DIV>
+<DIV>
+<FONT face="Courier New">EnriqueBlanco@post.com</FONT></DIV>
+<DIV>
+<FONT face="Courier New">.Bitte denken Sie daran, jeder Gewinnanspruch muss bis zum 29/01/2021.</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Angemeldete sein. Jeder nicht angemeldet Gewinnanspruch verfällt und geht</FONT></DIV>
+<DIV>
+<FONT face="Courier New">zurück an das MINISTERIO DE ECONOMIA Y HACIENDA. Bitte denken sie auch daran</FONT></DIV>
+<DIV>
+<FONT face="Courier New">das 10% Ihres gewinnes an die Sicherheitsfirma</FONT><FONT face="Courier New"><B> GRUPO BILBAO S.L.</B></FONT><FONT face="Courier New"> geht. Namen</FONT></DIV>
+<DIV>
+<FONT face="Courier New">versichert ist.</FONT></DIV>
+<DIV>
+<FONT face="Courier New"> WICHTIG: Um Verzögerungen und Komplikationen zu vermeiden, geben Sie bitte</FONT></DIV>
+<DIV>
+<FONT face="Courier New">immer die Referenz- und Bearbeitungsnummer an. Adressänderungen teilen Sie</FONT></DIV>
+<DIV>
+<FONT face="Courier New">uns bitte umgehend mit. Anbei ein Anmeldeformular, bitte ausfüllen und per</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Email an die Sicherheitsfirma GRUPO BILBAO S.L.on Email:</FONT></DIV>
+<DIV>
+<FONT face="Courier New">alvarosanchez@email.com</FONT></DIV>
+<DIV>
+<FONT face="Courier New">schicken.</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Bitte Füllen Sie Die Unten Angegebenen Daten Aus:</FONT></DIV>
+<DIV>
+<FONT face="Courier New">(1) Frau Oder Herr:___________________ (2)Name:______________________________</FONT></DIV>
+<DIV>
+<FONT face="Courier New">(3) Vorname:__________________________ (4)Adresse:___________________________</FONT></DIV>
+<DIV>
+<FONT face="Courier New">(5) Plz:______________________________ (6)Stadt:_____________________________</FONT></DIV>
+<DIV>
+<FONT face="Courier New">(7) Geburtsdatum:_____________________ (8)Nationalität:______________________</FONT></DIV>
+<DIV>
+<FONT face="Courier New">(9) Telefon:__________________________ (10)Mobil:____________________________</FONT></DIV>
+<DIV>
+<FONT face="Courier New">(11) Fax:_____________________________ (12)Email:____________________________</FONT></DIV>
+<DIV>
+<FONT face="Courier New">(13) Beruf:___________________________ (14)Sprache/S:________________________</FONT></DIV>
+<DIV>
+<FONT face="Courier New"> Die oben genannten, Anforderungen sind erforderlich. Herzliche</FONT></DIV>
+<DIV>
+<FONT face="Courier New">Glückwünsche noch einmal.</FONT></DIV>
+<DIV>
+<FONT face="Courier New"><B>Carl Francisco Leon</B></FONT></DIV>
+<DIV>
+<FONT face="Courier New"><B>PRÄSIDENT.</B></FONT></DIV>
+</FONT>
+</BODY></HTML>
+
+
+
+--b1_ba3694387072dd69a0fca2da394d65f3--
+
+
+
+--===============8930750634143086122==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---Mark=_399469919199734959756
+--===============8930750634143086122==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -147,5 +374,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---Mark=_399469919199734959756--
+--===============8930750634143086122==--
+
 
