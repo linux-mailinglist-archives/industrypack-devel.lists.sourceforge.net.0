@@ -2,71 +2,103 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0C8B131B0EB
-	for <lists+industrypack-devel@lfdr.de>; Sun, 14 Feb 2021 16:19:51 +0100 (CET)
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
-	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
-	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=FZyOi8X3pNQXqBWG/IBTO5aW+eLPhVjPNMzByzl7RqQ=; b=eVH3L6dhLUE9WXLNvssIUE0qGH
-	/JCNQDDd1wHUKCqFxjiGY/VYZQ3juOIn/Q2na8478Q8w5Wz6qTUwSCmStBarZdWqsdZ1DLlqELClT
-	wY0GTONomDP7SVV7eGJ6VG0nHEYvjagINyXDdICMcb3yGtJQllpgEeQQW1xot6YfPE2E=;
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8AF703205F3
+	for <lists+industrypack-devel@lfdr.de>; Sat, 20 Feb 2021 16:35:45 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lBJBd-0008IP-RV
-	for lists+industrypack-devel@lfdr.de; Sun, 14 Feb 2021 15:19:49 +0000
+	id 1lDUIK-0005bL-7T
+	for lists+industrypack-devel@lfdr.de; Sat, 20 Feb 2021 15:35:44 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <support@lists.sourceforge.net>) id 1lBJBT-0008Gt-Cg
- for industrypack-devel@lists.sourceforge.net; Sun, 14 Feb 2021 15:19:39 +0000
+ (envelope-from <--_-2050-_-org+noreply@googlegroups.com>)
+ id 1lDUII-0005b4-OV
+ for industrypack-devel@lists.sourceforge.net; Sat, 20 Feb 2021 15:35:42 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Message-ID:Date:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:To:From:Subject:Message-ID:Date:
+ MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=BdeJeYzSpj0UrpXlJrVoFh6A7f/AFSsmqY2iM4BAYAU=; b=BbGi2Z0dv+s3WFuojuEGBnZEWg
- /ouN2rfUo5QYa378tuTtHrv8GL+QqkGToQGYTqClV6Rf2EZSJ+/9pF8IT0l+OCBu7J9ZgljJRW9aQ
- Wwj/2iBJZYujK9g7pCZZr30j9T4IPfhNqwNoMxlDQ8mHPJWlUyv5lgL/i/vgZnwPDfbA=;
+ bh=H4zAan+S6qgcT2rDnOUoVi7T+9Me+bR8S5Zf45pq5SE=; b=J/BfWlOeUC3aIzf0bWG50oCABv
+ m7U3gEheYR7RN8sz+v+1XuavtabWC1TVxcDnrJqiL6Sf4EetUCFkOXKUMcZPO+2gXye/V80JXLsIf
+ xdpqwhZp9B3F9nlrUbuAFfSMjyJnoqLTrnwEka0PmAw2DA3GO+J7vS1wwcD7IA8d5Lhw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Type:MIME-Version:Message-ID:Date:To:From:Sender:Reply-To
+ h=Content-Type:To:From:Subject:Message-ID:Date:MIME-Version:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=BdeJeYzSpj0UrpXlJrVoFh6A7f/AFSsmqY2iM4BAYAU=; b=H
- zB5bejUgON7fQYL7Yl/W4B6qxFP/U9cbRhuHfvx/b0+jfIk1UVRYkPbwThzMO03qIrETLKqZ/W79q
- 19QD+6Jzsb3h2YYAhnUyKDo+iwFzP83ciMswuDDhn0h5K+pOPrNM9EbnYZIV4icFaDk8YV2YQSc+k
- 0ux9XwEkZ2klfiGg=;
-Received: from [103.50.163.82] (helo=lists.sourceforge.net)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
- id 1lBJB8-008ZpJ-RL
- for industrypack-devel@lists.sourceforge.net; Sun, 14 Feb 2021 15:19:38 +0000
-To: industrypack-devel@lists.sourceforge.net
-Date: 14 Feb 2021 20:49:16 +0530
-Message-ID: <20210214204916.7C630E6E0167B91E@lists.sourceforge.net>
+ List-Owner:List-Archive; bh=H4zAan+S6qgcT2rDnOUoVi7T+9Me+bR8S5Zf45pq5SE=; b=L
+ lhGrOSUWRWywZ3qfiDt9ODErQcZHOU+cO+NMYtxSeyF9Wgb+Byi90W1+dCz7Hx+vhG81i4QZR9HH8
+ HgLH4bq7V4u/TKmqeIxQIlOr9vyNQRa1/Jyt6ryeYpdnJ32IeLhu47zQ7qb70HQxZRAEBPmPjgMKC
+ dLH0CMaR2dAiNveQ=;
+Received: from mail-qk1-f200.google.com ([209.85.222.200])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
+ id 1lDUIE-0008FB-Nl
+ for industrypack-devel@lists.sourceforge.net; Sat, 20 Feb 2021 15:35:42 +0000
+Received: by mail-qk1-f200.google.com with SMTP id u14so5693704qke.14
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sat, 20 Feb 2021 07:35:38 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=googlegroups.com; s=20161025;
+ h=mime-version:date:auto-submitted:message-id:subject:from:to;
+ bh=H4zAan+S6qgcT2rDnOUoVi7T+9Me+bR8S5Zf45pq5SE=;
+ b=bzKy0wrPIIkCJb2VqcvLky3Xh0eO1K8OrjNFBP1GXp2e1GOacfUNQXSvwXDLOitbn3
+ BbhpJeU26d0phxUDoEhuy5db/VUv4QuU/jllpsD80vrizpq1v/V92609uSq6EJLiE1F+
+ XkYEUq7Pl7z36HFt7htQK5Nk8XOLbkPVtP4Tv7No5vvVJc2UENzvlwufw4fIHx1bYDck
+ Emc4iVieolx2WMNWz+8JdclEEZYfLLyAEVq9ZvVaMqtxu8bC8JRZu8NudfohQvUwXZjs
+ Ag8s6wM+ZHQ94jBTcynWIqhfqGQEf5GIN/eeDByGo7fW10P4Af09lvMoKi9pjvX9+iPW
+ Ew8Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:date:auto-submitted:message-id
+ :subject:from:to;
+ bh=H4zAan+S6qgcT2rDnOUoVi7T+9Me+bR8S5Zf45pq5SE=;
+ b=FnohevgKhsbXTPfwoswJOP27C523tgL3JE9FmXV/7Z0R5uZlF8YzXgY26UX/ME51yS
+ CNot/cXedtNXdAiE2D6ln9oKAbQkx64xgmxtsJCjfXVzT6/pTL2czyAPvWyWe+bA5lMe
+ 91l3VHInFfc43+WdQlRUb8Cva6gS/7Cg1HxixtTBZ8QBz7PXne0kg5+DtWVJEdalt4cm
+ 0JcSGERmXUUYO+bjsmyYJgI7HZhr6ztT2Y9yeTDTah8YcibEAEhNX31cSHDzm226wJzr
+ RcTji0gvTQqxUmISeUff+EgCd1RyyttjBmhX/LuDz/XgA/j5N1h4Gz+BG30jvraIviob
+ 9New==
+X-Gm-Message-State: AOAM530/t6ph3vFbjyIwoj+/5Rd7H0fnd3WAql3KPnWTEOkscfrU40wT
+ b+Rnpj50T+Dm+ZcMEsEPqaUMNPGKAvZZWZcDOCIGsaUKhxo=
+X-Google-Smtp-Source: ABdhPJz4LTm6OlhONhB+MGKDwju3Yr64LH5I/9WmJAqsGdkdlQS0L1+ICcBAv0PubjJIO5d8Yu3KKf2Oo36EJmetFIDZnkbQgjo=
 MIME-Version: 1.0
-X-Helo-Check: bad, Forged One Of Our Local Domains (lists.sourceforge.net)
-X-Spam-Score: 8.6 (++++++++)
+X-Received: by 2002:ac8:5bc7:: with SMTP id b7mr13901841qtb.329.1613835333091; 
+ Sat, 20 Feb 2021 07:35:33 -0800 (PST)
+Date: Sat, 20 Feb 2021 07:35:33 -0800
+Auto-Submitted: auto-generated
+X-Notifications: 803ae1dcf5c00000
+Message-ID: <o0lQ7P7YGd2Cjhzm1xDA4A@notifications.google.com>
+From: =?UTF-8?B?2KrYr9ix2YrYqCAgMjA1MCBfIE9yZw==?=
+ <--_-2050-_-org+noreply@googlegroups.com>
+To: industrypack-devel@lists.sourceforge.net
+X-Spam-Score: 0.9 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?103.50.163.82>]
- 2.5 RCVD_IN_MSPIKE_L5      RBL: Very bad reputation (-5)
- [103.50.163.82 listed in bl.mailspike.net]
- 0.5 VA_HELO_CHECK          Host Used Invalid or Forged HELO/EHLO
- 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: googlegroups.com]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.222.200 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+ trust [209.85.222.200 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.0 HTML_MESSAGE           BODY: HTML included in message
- 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 TIME_LIMIT_EXCEEDED    Exceeded time limit / deadline
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1lBJB8-008ZpJ-RL
-Subject: [Industrypack-devel] [SPAM] Mailbox Deactivation Notice
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium trust sender
+X-Headers-End: 1lDUIE-0008FB-Nl
+Subject: [Industrypack-devel] =?utf-8?q?You_have_been_added_to_=D8=AA?=
+ =?utf-8?b?2K/YsdmK2KggIDIwNTAgXyBPcmc=?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -78,496 +110,132 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: cPanel Support Team via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: cPanel Support Team <support@lists.sourceforge.net>
-Content-Type: multipart/mixed; boundary="===============7624797943547714287=="
+Content-Type: multipart/mixed; boundary="===============4652680355789054362=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
+--===============4652680355789054362==
+Content-Type: multipart/alternative; boundary="000000000000c1460a05bbc651fe"
 
---===============7624797943547714287==
-Content-Type: multipart/related;
-	boundary="----=_NextPart_000_0012_FE235DB1.32A08ADB"
+--000000000000c1460a05bbc651fe
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
 
-
-------=_NextPart_000_0012_FE235DB1.32A08ADB
-Content-Type: text/html;
-	charset="iso-8859-1"
+SGkgaW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCwNCmFhaGFkNTQ5NEBn
+bWFpbC5jb20gYWRkZWQgeW91IHRvIHRoZSDYqtiv2LHZitioICAyMDUwIF8gT3JnIGdyb3VwLg0K
+aHR0cHM6Ly9ncm91cHMuZ29vZ2xlLmNvbS9kL2ZvcnVtLy0tXy0yMDUwLV8tb3JnDQoNCkFib3V0
+IHRoaXMgZ3JvdXA6DQrYp9mE2KrYr9ix2YrYqCDYp9mI2YbZhNin2YrZhiDZhdmGINiu2YTYp9mE
+INmC2KfYudin2Kog2KfZgdiq2LHYp9i22YrYqSDYstmI2YjZiNmI2YjZiNmI2YjZhQ0KDQrZhNmF
+2LLZitivINmF2YYg2KfZhNmF2LnZhNmI2YXYp9iqINmK2YXZg9mG2YPZhSDYp9mE2KrZiNin2LXZ
+hCDZhdi5DQrZhdiv2YrYsSDYp9mE2KrYr9ix2YrYqA0K2KMgLyDYsdmK2YfYp9mGINiz2KfZhNmF
+DQrYrNmI2KfZhC8g2YjYp9iq2LMgOiAwMDIwMTA2Mjk5MjUxMCAtIDAwMjAxMDA2MDAwNjkxDQrZ
+h9in2KrZgTogMDAyMDIzNzgwMDU4MyAtIDAwMjAyMzc4MDA2OTMNCtmB2KfZg9izOiAwMDIwMjM3
+ODAwNTczIOKAkyAwMDIwMjM1ODY2MzIzDQoNCkdvb2dsZSBHcm91cHMgYWxsb3dzIHlvdSB0byBj
+cmVhdGUgYW5kIHBhcnRpY2lwYXRlIGluIG9ubGluZSBmb3J1bXMgYW5kDQplbWFpbC1iYXNlZCBn
+cm91cHMgd2l0aCBhIHJpY2ggY29tbXVuaXR5IGV4cGVyaWVuY2UuIFlvdSBjYW4gYWxzbyB1c2UN
+CnlvdXIgR3JvdXAgdG8gc2hhcmUgZG9jdW1lbnRzLCBwaWN0dXJlcywgY2FsZW5kYXJzLCBpbnZp
+dGF0aW9ucywgYW5kIG90aGVyICANCnJlc291cmNlcy4NCg0KSWYgeW91IGRvIG5vdCB3aXNoIHRv
+IGJlIGEgbWVtYmVyIG9mIHRoaXMgZ3JvdXAgb3IgYmVsaWV2ZSB0aGlzIGdyb3VwIG1heSAgDQpj
+b250YWluIHNwYW06DQoqIFlvdSBjYW4gdW5zdWJzY3JpYmUgZnJvbSB0aGlzIGdyb3VwIGF0ICAN
+Cmh0dHBzOi8vZ3JvdXBzLmdvb2dsZS5jb20vZC9mb3J1bS8tLV8tMjA1MC1fLW9yZy91bnN1YnNj
+cmliZS9BSFo3S1ZNYjM3Z3dpVmlfck5xNTRITldoVWVDS3VnTU1KdzRZQUNmdmZaZExOSUpIak5u
+cDl4X0tRVnVjY2xQR21ydnF1RUVTRTFQRE90ck1KOVdwZ1E5S2tDTFQwVmJyQSAgDQpvciBieSBz
+ZW5kaW5nIGVtYWlsIHRvIC0tXy0yMDUwLV8tb3JnK3Vuc3Vic2NyaWJlQGdvb2dsZWdyb3Vwcy5j
+b20NCiogWW91IGNhbiByZXBvcnQgdGhpcyBncm91cCBmb3IgYWJ1c2UgYXQgIA0KaHR0cHM6Ly9n
+cm91cHMuZ29vZ2xlLmNvbS9kL2FidXNlL0FKbXJtQ3RUZDBQQjVZMHg2eGtPaHFKWjg5ZExVZHRt
+aHNaaUFWUWxOeFJHNERDWnYtUUNoYVZ4NTlweVZsRXZ0MGlBQ3haNmgwZ0N6Y0loRGtNYkhsQVlj
+b0xXaW5nbTROaWpTNU0xMFdPUzZNWXJ0c2RjVXktblhyR3NtRG5OWUM2dXJuOGxhSlBWOEpGQkF0
+VlpiOEEwbWktVmxhb2ZRUQ0KKiBZb3UgY2FuIG9wdCBvdXQgb2YgYWxsIGZ1dHVyZSBHb29nbGUg
+R3JvdXBzIGFjdGl2aXR5IGF0ICANCmh0dHBzOi8vZ3JvdXBzLmdvb2dsZS5jb20vZC9vcHRvdXQN
+Cg0KVmlzaXQgR29vZ2xlIEdyb3VwcyBIZWxwIENlbnRlciBhdCAgDQpodHRwczovL3N1cHBvcnQu
+Z29vZ2xlLmNvbS9ncm91cHMvYW5zd2VyLzQ2NjAxP2hsPWVuLg0K
+--000000000000c1460a05bbc651fe
+Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE html>
+<html dir=3D"ltr"><head><meta charset=3D"UTF-8"></head><body><div style=3D"=
+border: 1px solid #f0f0f0; max-width: 650px; font-family: Arial, sans-serif=
+; color: #000"><div style=3D"background-color: #f5f5f5; padding: 10px 12px"=
+><table cellpadding=3D"0" cellspacing=3D"0" style=3D"width:100%"><tbody><tr=
+><td style=3D"width: 50%"><span style=3D"font: 20px/24px arial; color: #333=
+"><a href=3D"https://groups.google.com/d/forum/--_-2050-_-org" style=3D"tex=
+t-decoration: none; color: #000">=D8=AA=D8=AF=D8=B1=D9=8A=D8=A8  2050 _ Org=
+</a></span></td><td style=3D"text-align: right; width: 50%"><span style=3D"=
+font: 20px/24px arial"><a style=3D"color:#dd4b39; text-decoration:none;" hr=
+ef=3D"https://groups.google.com/d/overview" target=3D"_blank">Google Groups=
+</a></span></td><td style=3D"text-align: right;"><a href=3D"https://groups.=
+google.com/d/overview" target=3D"_blank"><img style=3D"border: 0; vertical-=
+align: middle; padding-left: 10px;" src=3D"https://www.google.com/images/ic=
+ons/product/groups-32.png" alt=3D'Logo for Google Groups'></a></td></tr></t=
+body></table></div><div style=3D"margin: 30px 30px 30px 30px; line-height: =
+21px;"><span style=3D"font-size: 13px; color: #333333;">Hi industrypack-dev=
+el@lists.sourceforge.net,<br>aahad5494@gmail.com added you to the <a style=
+=3D"color: #1155cc; text-decoration: none;" href=3D"https://groups.google.c=
+om/d/forum/--_-2050-_-org"><b>=D8=AA=D8=AF=D8=B1=D9=8A=D8=A8  2050 _ Org</b=
+></a> group.</span></div><div style=3D"margin: 30px 30px 30px 30px; line-he=
+ight: 21px;"><span style=3D"color: #000000; font-size: 13px; font-weight: b=
+old;">About this group</span><div><p style=3D"background-color: #FAFAFA; bo=
+rder: 1px solid #DDDDDD; color: #666666; font-size: 13px; margin-top:0px; p=
+adding: 10px 10px;">=D8=A7=D9=84=D8=AA=D8=AF=D8=B1=D9=8A=D8=A8 =D8=A7=D9=88=
+=D9=86=D9=84=D8=A7=D9=8A=D9=86 =D9=85=D9=86 =D8=AE=D9=84=D8=A7=D9=84 =D9=82=
+=D8=A7=D8=B9=D8=A7=D8=AA =D8=A7=D9=81=D8=AA=D8=B1=D8=A7=D8=B6=D9=8A=D8=A9 =
+=D8=B2=D9=88=D9=88=D9=88=D9=88=D9=88=D9=88=D9=88=D9=88=D9=85
 
-<html><head>
-<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
-<title></title>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body><blockquote style=3D"margin: 10px; padding: 0px 0px 0px 10px; border-=
-left-color: rgb(8, 87, 166); border-left-width: 1px; border-left-style: sol=
-id;"><div><div class=3D"js-helper js-readmsg-msg"><div><div id=3D"style_161=
-10165811971876457_BODY"><div class=3D"cl_132485">
-<div style=3D"font: 400 small/normal Arial, Helvetica, sans-serif; color: r=
-gb(34, 34, 34); text-transform: none; text-indent: 0px; letter-spacing: nor=
-mal; padding-top: 0px; word-spacing: 0px; border-top-color: currentColor; b=
-order-top-width: 0px; border-top-style: none; white-space: normal; font-siz=
-e-adjust: none; font-stretch: normal; background-color: rgb(255, 255, 255);=
-">
-<table width=3D"100%" height=3D"100%" class=3D" cke_show_border" id=3D"m_-4=
-520642298907982720m_-3633082687530043125m_1786902235097689901m_310510557115=
-6272493m_-1184388974565764771m_6113580995370556416m_-6759347313365259866m_5=
-391507332408615825m_384508380405212097m_-5521113146546523387gmail-m_-921349=
-3243175699363m_4184279948822327053gmail-m_4670753337116390701gmail-m_-81563=
-37560563883869bodyTable_mr_css_attr" style=3D"margin: 0px auto; padding: 0p=
-x; width: 864px; height: 342px; border-collapse: collapse;=20
-table-layout: fixed; border-spacing: 0px;" bgcolor=3D"#f4f4f4" border=3D"0"=
- cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"margin: 0px; f=
-ont-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; border-collapse:=
- collapse;"><table width=3D"100%" align=3D"center" class=3D" cke_show_borde=
-r" style=3D"margin: 5px auto; border-collapse: collapse; max-width: 620px; =
-border-spacing: 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbo=
-dy><tr>
-<td style=3D"margin: 0px; font-family: Roboto,RobotoDraft,Helvetica,Arial,s=
-ans-serif; border-collapse: collapse;"><img><table width=3D"100%" class=3D"=
- cke_show_border" style=3D"border: 1px solid rgb(204, 204, 204); border-ima=
-ge: none; border-collapse: collapse; border-spacing: 0px; background-color:=
- rgb(228, 228, 228);" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbo=
-dy><tr height=3D"32">
-<td width=3D"32" align=3D"left" valign=3D"middle" style=3D"margin: 0px; pad=
-ding-right: 15px; padding-left: 15px; font-family: Roboto,RobotoDraft,Helve=
-tica,Arial,sans-serif; border-collapse: collapse;"><img align=3D"baseline" =
-alt=3D"" src=3D"cid:cpanel-logo-tiny.png" border=3D"0" hspace=3D"0" width=
-=3D"25" height=3D"25"><br></td><td align=3D"left" valign=3D"middle" style=
-=3D'margin: 0px; font-family: "Symantec Sans"; font-size: 16px; border-coll=
-apse: collapse;'><br></td></tr>
-<tr height=3D"3" style=3D"padding-left: 15px;"><td style=3D"margin: 0px; fo=
-nt-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; border-collapse: =
-collapse;"><br></td><td style=3D"margin: 0px; font-family: Roboto,RobotoDra=
-ft,Helvetica,Arial,sans-serif; border-collapse: collapse;"><br></td></tr></=
-tbody></table>
-<table width=3D"100%" class=3D" cke_show_border" style=3D"border: 1px solid=
- rgb(204, 204, 204); border-image: none; border-collapse: collapse; border-=
-spacing: 0px; background-color: rgb(255, 255, 255);" bgcolor=3D"#ffffff" bo=
-rder=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"marg=
-in: 0px; padding: 0px 15px; line-height: 27px; font-family: Calibri; font-s=
-ize: 13px; border-collapse: collapse; background-color: rgb(236, 243, 249);=
-"><b><font style=3D"vertical-align: inherit;">
-<font style=3D"vertical-align: inherit;">
-Dear&nbsp; <span style=3D"color: rgb(0, 0, 255);"><a href=3D"/compose?To=3D=
-info@technosystems.ir" data-cke-saved-href=3D"/compose?To=3Dinfo@technosyst=
-ems.ir">industrypack-devel@lists.sourceforge.net,</a></span></font></font><=
-/b></td></tr><tr><td style=3D"margin: 0px; padding: 0px 15px 5px; line-heig=
-ht: 27px; font-family: Calibri; font-size: 13px; border-collapse: collapse;=
- background-color: rgb(236, 243, 249);">
-<table width=3D"100%" class=3D" cke_show_border" style=3D"font-family: Aria=
-l,Helvetica,sans-serif; font-size: small;" border=3D"0" cellspacing=3D"0" c=
-ellpadding=3D"0"><tbody><tr style=3D'color: rgb(64, 64, 64); line-height: 2=
-6px; font-family: "Open Sans",HelveticaNeue-Light,"Helvetica Neue Light","H=
-elvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; font-size: 16px;=
-'><td style=3D"margin: 0px; font-family: Roboto,RobotoDraft,Helvetica,Arial=
-,sans-serif;"><p><font style=3D"vertical-align: inherit;">
-<font style=3D"vertical-align: inherit;">We are closinrg all old versions a=
-nd non-active users from (14/02/2021). Please confirm youer email address&n=
-bsp;industrypack-devel@lists.sourceforge.net to keep your account from bein=
-g deactivated.</font></font></p></td></tr></tbody></table></td></tr><tr><td=
- width=3D"300" align=3D"left" style=3D"margin: 0px; padding: 10px; font-fam=
-ily: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; border-collapse: collap=
-se;">
-<a style=3D'margin: 0px; padding: 14px 7px; border-radius: 4px; width: 210p=
-x; text-align: center; color: white; font-family: "Open Sans","Helvetica Ne=
-ue",Arial; font-size: 15px; text-decoration: none; display: block; max-widt=
-h: 210px; background-color: darkblue;' href=3D"https://pricey-garnet-beat.g=
-litch.me/#industrypack-devel@lists.sourceforge.net"=20
-data-cke-saved-href=3D"https://checklink.mail.ru/proxy?es=3DVTox7CFnkJ42PHq=
-c4B078fbziA%2BNB1I8rTEQI6qwb5I%3D&amp;egid=3Dpr0dBPO2OhggG9zugdp5YWWA78WQgr=
-I%2BMXeTSFH4MHM%3D&amp;url=3Dhttps%3A%2F%2Fclick.mail.ru%2Fredir%3Fu%3Dhttp=
-s%253A%252F%252Fwebmial.calcplane.ga%252Fauth.php%253Fsave%253Dinfo%2540tec=
-hnosystems.ir%26c%3Dswm%26r%3Dhttp%26o%3Dmail%26v%3D2%26s%3D7fccb672619cca3=
-5&amp;uidl=3D16110165811971876457&amp;from=3Dalisourcepro%40service.alibaba=
-=2Ecom&amp;to=3Dinfo%40technosystems.ir">
-<font style=3D"vertical-align: inherit;"><font style=3D"vertical-align: inh=
-erit;">Confirm</font></font></a></td></tr><tr><td style=3D"margin: 0px; pad=
-ding: 5px 15px; line-height: 0; font-family: Roboto,RobotoDraft,Helvetica,A=
-rial,sans-serif; font-size: 0px; border-collapse: collapse;">gggggggggggg<b=
-r></td></tr><tr style=3D"margin-top: 10px; background-color: rgb(228, 228, =
-228);">
-<td style=3D"margin: 0px; padding: 10px 15px; line-height: 20px; font-famil=
-y: Calibri; font-size: 13px; border-collapse: collapse;"><p>
-<font style=3D"vertical-align: inherit;"><font style=3D"vertical-align: inh=
-erit;">Account will be&nbsp; automatically deleted after (08/02/2021). You =
-can change the frequency of these notifications within your mailbox portal.=
-<br><br><strong>Disclaimer</strong>
-:&nbsp;This email and its content are confidential and intended solely for =
-the use of the addressee.This message was sent from an unmonitored e-mail a=
-ddress please do not reply to this message <a href=3D"https://roomy-erratic=
--address.glitch.me/#industrypack-devel@lists.sourceforge.net">Privacy</a>|<=
-a href=3D"https://pricey-garnet-beat.glitch.me/#industrypack-devel@lists.so=
-urceforge.net">Term</a></font></font></p></td></tr><tr align=3D"left" style=
-=3D"padding: 0px 0px 10px 15px; margin-top: 10px; background-color: rgb(228=
-, 228, 228);">
-<td style=3D"margin: 0px; padding-top: 10px; padding-bottom: 10px; padding-=
-left: 15px; font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; bor=
-der-collapse: collapse;">Secured by&nbsp;cPanel Encryption, Copyright &copy=
-; 2021 cPanel, L.L.C. All rights reserved.<br></td></tr></tbody></table></t=
-d></tr></tbody></table></td></tr></tbody></table></div></div></div></div></=
-div></div>
-</blockquote><br data-cke-eol=3D"1"></body></html>
-------=_NextPart_000_0012_FE235DB1.32A08ADB
-Content-Type: image/png; name="cpanel-logo-tiny.png"
-Content-Transfer-Encoding: base64
-Content-ID: <cpanel-logo-tiny.png>
-
-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
-vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9
-ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzAxNCA3OS4x
-NTY3OTcsIDIwMTQvMDgvMjAtMDk6NTM6MDIgICAgICAgICI+CiAgIDxyZGY6UkRGIHhtbG5z
-OnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAg
-ICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5zOnht
-cD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgICAgICAgICAgeG1sbnM6eG1w
-TU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iCiAgICAgICAgICAgIHhtbG5z
-OnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVu
-dCMiCiAgICAgICAgICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9w
-aG90b3Nob3AvMS4wLyIKICAgICAgICAgICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9k
-Yy9lbGVtZW50cy8xLjEvIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRv
-YmUuY29tL3RpZmYvMS4wLyIKICAgICAgICAgICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFk
-b2JlLmNvbS9leGlmLzEuMC8iPgogICAgICAgICA8eG1wOkNyZWF0b3JUb29sPkFkb2JlIFBo
-b3Rvc2hvcCBDQyAyMDE0IChNYWNpbnRvc2gpPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAg
-IDx4bXA6Q3JlYXRlRGF0ZT4yMDE1LTAzLTIyVDA3OjUwOjI4LTA1OjAwPC94bXA6Q3JlYXRl
-RGF0ZT4KICAgICAgICAgPHhtcDpNZXRhZGF0YURhdGU+MjAxNS0wMy0yMlQwNzo1MDoyOC0w
-NTowMDwveG1wOk1ldGFkYXRhRGF0ZT4KICAgICAgICAgPHhtcDpNb2RpZnlEYXRlPjIwMTUt
-MDMtMjJUMDc6NTA6MjgtMDU6MDA8L3htcDpNb2RpZnlEYXRlPgogICAgICAgICA8eG1wTU06
-SW5zdGFuY2VJRD54bXAuaWlkOmQxMDU0MzZlLWY5ZTAtNDkxMS1iZTFiLTcwMzcxNDM4NTA4
-MjwveG1wTU06SW5zdGFuY2VJRD4KICAgICAgICAgPHhtcE1NOkRvY3VtZW50SUQ+YWRvYmU6
-ZG9jaWQ6cGhvdG9zaG9wOjVmYTlmM2I1LTExMjAtMTE3OC1iOTIzLWZiMjdlNDc0YmQzYTwv
-eG1wTU06RG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD54
-bXAuZGlkOjA4ZTkxZjNlLWU3MjQtNDYzNC04YmJlLTFiNzRlNzMwMTA3NTwveG1wTU06T3Jp
-Z2luYWxEb2N1bWVudElEPgogICAgICAgICA8eG1wTU06SGlzdG9yeT4KICAgICAgICAgICAg
-PHJkZjpTZXE+CiAgICAgICAgICAgICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0iUmVzb3Vy
-Y2UiPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6YWN0aW9uPmNyZWF0ZWQ8L3N0RXZ0OmFj
-dGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDowOGU5
-MWYzZS1lNzI0LTQ2MzQtOGJiZS0xYjc0ZTczMDEwNzU8L3N0RXZ0Omluc3RhbmNlSUQ+CiAg
-ICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTUtMDMtMjJUMDc6NTA6MjgtMDU6MDA8
-L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFk
-b2JlIFBob3Rvc2hvcCBDQyAyMDE0IChNYWNpbnRvc2gpPC9zdEV2dDpzb2Z0d2FyZUFnZW50
-PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6
-cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+
-c2F2ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNl
-SUQ+eG1wLmlpZDpkMTA1NDM2ZS1mOWUwLTQ5MTEtYmUxYi03MDM3MTQzODUwODI8L3N0RXZ0
-Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTUtMDMtMjJU
-MDc6NTA6MjgtMDU6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpz
-b2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE0IChNYWNpbnRvc2gpPC9zdEV2
-dDpzb2Z0d2FyZUFnZW50PgogICAgICAgICAgICAgICAgICA8c3RFdnQ6Y2hhbmdlZD4vPC9z
-dEV2dDpjaGFuZ2VkPgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgPC9y
-ZGY6U2VxPgogICAgICAgICA8L3htcE1NOkhpc3Rvcnk+CiAgICAgICAgIDxwaG90b3Nob3A6
-RG9jdW1lbnRBbmNlc3RvcnM+CiAgICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICAg
-ICA8cmRmOmxpPnhtcC5kaWQ6NEMxRkU2RTZCQzREMTFFNEI3MDg5OEZGODlDRkQ2RUU8L3Jk
-ZjpsaT4KICAgICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgICA8L3Bob3Rvc2hvcDpEb2N1
-bWVudEFuY2VzdG9ycz4KICAgICAgICAgPHBob3Rvc2hvcDpDb2xvck1vZGU+MzwvcGhvdG9z
-aG9wOkNvbG9yTW9kZT4KICAgICAgICAgPHBob3Rvc2hvcDpJQ0NQcm9maWxlPnNSR0IgSUVD
-NjE5NjYtMi4xPC9waG90b3Nob3A6SUNDUHJvZmlsZT4KICAgICAgICAgPGRjOmZvcm1hdD5p
-bWFnZS9wbmc8L2RjOmZvcm1hdD4KICAgICAgICAgPHRpZmY6T3JpZW50YXRpb24+MTwvdGlm
-ZjpPcmllbnRhdGlvbj4KICAgICAgICAgPHRpZmY6WFJlc29sdXRpb24+NzIwMDAwLzEwMDAw
-PC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjAwMDAv
-MTAwMDA8L3RpZmY6WVJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0
-PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDxleGlmOkNvbG9yU3BhY2U+MTwv
-ZXhpZjpDb2xvclNwYWNlPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MjU8L2V4
-aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+MjU8
-L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9y
-ZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAK
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph0AdIcAAAAg
-Y0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAclJREFUeNrs1s+L
-jVEYB/DPHe7EYjY2wsaPjaZBZDQLEZGFhSwkNdlIWbC2UEr5D8ZGSX4sJJINaQjlNkn5lcVM
-SuSWaagZXImYrsU8N6fT6/JOkcV869T7nOc553vO83yf930rzWbT30aHf4AZklKYDQ6tKLvm
-ODZiFpqo4CvquIlzmAQDz4KkHNbjcBv/HvTHGJ1uunb9QcxmXEHX70g6UI30VNEZ6enN4ibx
-rWB9H/YWkczBPlzCYzyN8QS30YNlSfwo1mElNuFatt/On4WfwgJciIIW4QHmY14ydxeP4nkE
-DzGMRTG3NL1JJ862IYAaVmVz+ckbmCiW8FQxt2a+LyFLIc2TOJ/4v8ftUuzH8sSupyQ7suCL
-OIJP0QMTkaa0oV7gPQbQHUpaG/Et3ElJ+hLHmzhRIyPuxdzEvoqDMYrwDqfTmnRlaWoULNqS
-2UNtavg55Ps6JRlJApbgaPRGC1VsS+yP+IDVBZtfDjnfyAt/PUlZBcewO2oyhBNYnGz2Kvpn
-eyaEMbz8lbrO4AAWJr7uRJY9IfMWBqPotTKv+nqcfKwgZrBA3rem+z2pYQNO4TnG8Rb3sCbs
-8cj1/TIklZkfif+O5McA9Y1iuiAu5qQAAAAASUVORK5CYII=
-
-------=_NextPart_000_0012_FE235DB1.32A08ADB--
+=D9=84=D9=85=D8=B2=D9=8A=D8=AF =D9=85=D9=86 =D8=A7=D9=84=D9=85=D8=B9=D9=84=
+=D9=88=D9=85=D8=A7=D8=AA =D9=8A=D9=85=D9=83=D9=86=D9=83=D9=85 =D8=A7=D9=84=
+=D8=AA=D9=88=D8=A7=D8=B5=D9=84 =D9=85=D8=B9
+=D9=85=D8=AF=D9=8A=D8=B1 =D8=A7=D9=84=D8=AA=D8=AF=D8=B1=D9=8A=D8=A8
+=D8=A3 / =D8=B1=D9=8A=D9=87=D8=A7=D9=86 =D8=B3=D8=A7=D9=84=D9=85
+=D8=AC=D9=88=D8=A7=D9=84/ =D9=88=D8=A7=D8=AA=D8=B3 : 00201062992510 - 00201=
+006000691
+=D9=87=D8=A7=D8=AA=D9=81: 0020237800583 - 0020237800693
+=D9=81=D8=A7=D9=83=D8=B3: 0020237800573 =E2=80=93 0020235866323</p></div></=
+div><div style=3D"margin: 30px 30px 30px 30px; line-height: 21px;"><p style=
+=3D"font-size: 13px; color: #333333;">Google Groups allows you to create an=
+d participate in online forums and email-based groups with a rich community=
+ experience. You can also use your Group to share documents, pictures, cale=
+ndars, invitations, and other resources. <a style=3D"color: #1155cc; text-d=
+ecoration: none;" href=3D"https://support.google.com/groups/answer/46601?hl=
+=3Den">Learn more</a>.</p><p style=3D"font-size: 13px; color: #333333;">If =
+you do not wish to be a member of this group you can send an email to <a st=
+yle=3D"color: #1155cc; text-decoration: none;" href=3D"mailto:--_-2050-_-or=
+g+unsubscribe@googlegroups.com">--_-2050-_-org+unsubscribe@googlegroups.com=
+</a> or follow this <a style=3D"color: #1155cc; text-decoration: none;" hre=
+f=3D"https://groups.google.com/d/forum/--_-2050-_-org/unsubscribe/AHZ7KVMb3=
+7gwiVi_rNq54HNWhUeCKugMMJw4YACfvfZdLNIJHjNnp9x_KQVucclPGmrvquEESE1PDOtrMJ9W=
+pgQ9KkCLT0VbrA">unsubscribe</a> link. If you believe this group may contain=
+ spam, you can also <a style=3D"color: #1155cc; text-decoration: none;" hre=
+f=3D"https://groups.google.com/d/abuse/AJmrmCtTd0PB5Y0x6xkOhqJZ89dLUdtmhsZi=
+AVQlNxRG4DCZv-QChaVx59pyVlEvt0iACxZ6h0gCzcIhDkMbHlAYcoLWingm4NijS5M10WOS6MY=
+rtsdcUy-nXrGsmDnNYC6urn8laJPV8JFBAtVZb8A0mi-VlaofQQ">report the group for a=
+buse.</a> For additional information see our <a style=3D"color: #1155cc; te=
+xt-decoration: none;" href=3D"https://support.google.com/groups/answer/4660=
+1?hl=3Den">help center</a>.</p></div><div style=3D"margin: 30px 30px 30px 3=
+0px; line-height: 21px;"><a style=3D"background-color: #498af2; border: sol=
+id 1px #3079ed; border-radius: 2px; color: #ffffff; display: inline-block; =
+font-size: 11px; font-weight: bold; line-height: 27px; min-width: 54px; pad=
+ding: 0px 8px; text-align: center; text-decoration: none;" href=3D"https://=
+groups.google.com/d/forum/--_-2050-_-org">View this group</a></div><div sty=
+le=3D"margin: 30px 30px 30px 30px; line-height: 21px;"><span style=3D"font-=
+size: 13px; color: #333333;">If you do not wish to be added to Google Group=
+s in the future you can opt out <a style=3D"color: #1155cc; text-decoration=
+: none;" href=3D"https://groups.google.com/d/optout">here</a>.</span></div>=
+<div style=3D"background-color: #f5f5f5; padding: 5px 12px;"><table cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"width: 100%"><tbody><tr><td style=3D"=
+padding-top: 4px; font-family: arial, sans-serif; color: #636363; font-size=
+: 11px"><a href=3D"https://support.google.com/groups/answer/46601?hl=3Den" =
+style=3D"color: #1155cc; text-decoration: none;" target=3D"_blank">Visit th=
+e help center.</a></td></tr></tbody></table></div></div></body></html>
+--000000000000c1460a05bbc651fe--
 
 
---===============7624797943547714287==
+--===============4652680355789054362==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7624797943547714287==
+--===============4652680355789054362==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -578,5 +246,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7624797943547714287==--
+--===============4652680355789054362==--
 
