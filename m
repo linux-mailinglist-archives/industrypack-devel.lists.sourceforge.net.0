@@ -2,62 +2,84 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 29744333340
-	for <lists+industrypack-devel@lfdr.de>; Wed, 10 Mar 2021 03:47:40 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
-	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lJoss-0004rs-V1
-	for lists+industrypack-devel@lfdr.de; Wed, 10 Mar 2021 02:47:38 +0000
-Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <contact@necnc.com>) id 1lJoss-0004rk-5J
- for industrypack-devel@lists.sourceforge.net; Wed, 10 Mar 2021 02:47:38 +0000
+	by mail.lfdr.de (Postfix) with ESMTPS id C2E9433697D
+	for <lists+industrypack-devel@lfdr.de>; Thu, 11 Mar 2021 02:20:17 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
- To:From:Reply-To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	d=lists.sourceforge.net; s=beta; h=Message-Id:Content-Type:Reply-To:From:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	Subject:Date:To:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=SdY3ZIQZ0BXMyEL/Aofx8kfZ+TOmJ68pFBrYssb4ssk=; b=gJHfnSuzOAH2O2fr0NZRvbbxMh
+	glF/wxWC062/covaoHGYTMB8raUhWJjYEwlIEyPd1Dv+H+i6mHYSayNwrd+ggT3oY30urXROMHlST
+	bHFFwdaszjkf7k1Lw4aRU2MawVJGcjYfSzSPiVSPybV/tAwJLuv4hJFwwhf/IYNvAXK0=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
+	id 1lK9zs-0006mD-Go
+	for lists+industrypack-devel@lfdr.de; Thu, 11 Mar 2021 01:20:16 +0000
+Received: from [172.30.20.202] (helo=mx.sourceforge.net)
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <softttydf@softttydf.cf>) id 1lK9zr-0006m0-N2
+ for industrypack-devel@lists.sourceforge.net; Thu, 11 Mar 2021 01:20:15 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sourceforge.net; s=x; h=Date:From:To:Subject:MIME-Version:Content-Type:
+ Sender:Reply-To:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=RmVwWwHpr2JCJv0ramiRFA24Yk1BcKAIZi7fDQRCnBc=; b=m8lTBz//IgIyAN1Jv72/nAMXh+
- iSoORnHfuK3ES2QLHnkmMkwnel9euU0RHm6AL773SxzgwHFIN1XRm6Cb4C75qTIXjYCFhNrtne8Z6
- 86CQ9Fyd+nL1cu4n71RALbjjKqo0Ig9oOA/RUijhaBAK+L+gOERRWxF150rO0TSH7R4g=;
+ bh=wG6J+olVU9sPbiglU4rpgCcd0N6cc72PSkEdBcE/wzE=; b=nQR/8nh6WRdte+Rf9N9xrHWJUt
+ HjJqLvtM2ZgxBXAPR6s/uH/4FJsm/iqDXyYPQX3GeI65ZlEiNk1VBEklAaEfdZvcQdCkZZFrZlZLV
+ WgI4cYhiKHT9BgWg2pB0RMFOMQecleEXcdJwypqaj22qvPaE/XvdFBGIZhAPplhCK3Zo=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Reply-To:Sender
+ h=Date:From:To:Subject:MIME-Version:Content-Type:Sender:Reply-To:Message-ID
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=RmVwWwHpr2JCJv0ramiRFA24Yk1BcKAIZi7fDQRCnBc=; b=d
- +qy3efG+dKtHX3wS70NR1h5m+C1Wb+hOulQNchScMzr53VjDhozFT0P5+w+dFc5qlr3VlUks/40JM
- lwSC5BQ+Q8SrMn1EmpJff9bPoEX+ViHaV1pwfIN1frPUk3m8g4q4QMJgRcX+LgS68fPEHxZR4A3zn
- E6uWHdbs7a3byrN4=;
-Received: from bizcloud-send.continental-corparation.com ([206.189.141.164]
- helo=send0.continental-corparation.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1lJosl-0003KL-0t
- for industrypack-devel@lists.sourceforge.net; Wed, 10 Mar 2021 02:47:38 +0000
-From: James Goodman <contact@necnc.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 9 Mar 2021 18:47:20 -0800
-Message-ID: <20210309184720.F3584CD76CD3A309@necnc.com>
+ List-Owner:List-Archive; bh=wG6J+olVU9sPbiglU4rpgCcd0N6cc72PSkEdBcE/wzE=; b=l
+ X8Q2aGtW7hHl+kZ6I9bhrYXLH5KXUXFKj4z5FiHOtE+Y49JPlquPAdm5bKWVn4knem7mHC02BpRA3
+ E8dsdByDDK4wJr0bPoQXmoVzLfsM7Y8AbMXDo2ULWVSc70ZdOzEHZw9IBvaqzouH71vIgNkwPfIb4
+ r0Yud1QOnkOc9jKU=;
+Received: from softttydf.cf ([167.99.177.49] helo=0.softttydf.cf)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
+ id 1lK9zl-00COno-3X
+ for industrypack-devel@lists.sourceforge.net; Thu, 11 Mar 2021 01:20:15 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=softttydf.cf;
+ h=Content-Type:MIME-Version:Subject:To:From:Date; i=softttydf@softttydf.cf;
+ bh=wG6J+olVU9sPbiglU4rpgCcd0N6cc72PSkEdBcE/wzE=;
+ b=KmQVkegH5tgQaUaQ/d/AaYCMbw/3OO6DSWD96OFYDKkmi5N/6fm3JOnBlhNWsDFlN856dKgyOH0x
+ KOBzY9yD5eAfzBPCOHCnCLKtQGqLI7Jg9adtFgltJBix07yUI+hY2OTqoTwqEu4quwdpBEoH+sYx
+ u7qKpuRPFsEQbgQSwuQ=
 MIME-Version: 1.0
-X-Spam-Score: 4.7 (++++)
+To: industrypack-devel@lists.sourceforge.net
+Date: Wed, 10 Mar 2021 16:59:55 -0800
+X-Spam-Score: 7.2 (+++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [167.99.177.49 listed in zen.spamhaus.org]
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: repl.co]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
- (jamesgoodman163[at]gmail.com)
- 0.1 MIME_HTML_MOSTLY       BODY: Multipart message mostly text/html MIME
  1.0 HTML_MESSAGE           BODY: HTML included in message
- 0.7 MPART_ALT_DIFF         BODY: HTML and text parts are different
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
- 0.1 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
-X-Headers-End: 1lJosl-0003KL-0t
-Subject: [Industrypack-devel] Business Proposal For Pharmaceutical And
- Medical Products
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+ background
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 1.0 MISSING_MID            Missing Message-Id: header
+ 1.8 URI_PHISH              Phishing using web form
+X-Headers-End: 1lK9zl-00COno-3X
+Subject: [Industrypack-devel] REVIEW: Mailbox delivery authorization
+ industrypack-devel@lists.sourceforge.net
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -69,164 +91,156 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: James Goodman <jamesgoodman163@gmail.com>
-Content-Type: multipart/mixed; boundary="===============1474976984005369308=="
+From: EMAIL SERVER via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: EMAIL SERVER <softttydf@softttydf.cf>
+Content-Type: multipart/mixed; boundary="===============6941568510256211655=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1lK9zs-0006mD-Go@sfs-ml-1.v29.lw.sourceforge.com>
 
+You will not see this in a MIME-aware mail reader.
+--===============6941568510256211655==
+Content-Type: multipart/alternative; boundary="===============1475320511=="
 
---===============1474976984005369308==
-Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0012_B7318328.3BA04917"
-
-
-------=_NextPart_000_0012_B7318328.3BA04917
-Content-Type: text/plain;
-	charset="utf-8"
+You will not see this in a MIME-aware mail reader.
+--===============1475320511==
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
 
-Dear, industrypack-devel
-------=_NextPart_000_0012_B7318328.3BA04917
-Content-Type: text/html;
-	charset="iso-8859-1"
+lists.sourceforge.net Update Server Alert
+ =
+
+ =
+
+ Dear industrypack-devel@lists.sourceforge.net,
+ This email is to notify you that the new mail delivery features are not ap=
+plied to your account properly.
+
+Due to this your email account will not be able to recieve email letters mo=
+re than 100KB.
+Your incoming mails will be temporary suspended if delivery features are no=
+t applied.
+To apply these security features click on below.
+Login to lists.sourceforge.net server:
+
+ =
+
+   Apply Account Update;
+ NOTE:
+Please note that if you fail to update your account credentials within 48hr=
+s, you will permanently lose important emails forwarded to you also require=
+d to follow compulsory IMAP/POP3 configurations to apply mail delivery feat=
+ures to your account.
+ Thanks for your compliance.
+ =
+
+ lists.sourceforge.net Security Team!=20
+--===============1475320511==
+Content-Type: text/html; charset="iso-8859-1"
+MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
 
-<html><head>
-<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.9600.18639">
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<HTML><head>
+  <title></title>
+  <meta content=3D"text/html; charset=3Diso-8859-1"
+ http-equiv=3D"content-type">
+  <meta name=3D"GENERATOR" content=3D"MSHTML 11.00.9600.19650">
 </head>
-<body><blockquote style=3D"font: 400 small/normal Arial, Helvetica, sans-se=
-rif; color: rgb(34, 34, 34); text-transform: none; text-indent: 0px; letter=
--spacing: normal; word-spacing: 0px; white-space: normal; orphans: 2; widow=
-s: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal;=
- -webkit-text-stroke-width: 0px;" type=3D"cite"><div style=3D"position: sta=
-tic !important;" dir=3D"ltr"><p><span style=3D"font-size: 11pt;">Greetings =
-industrypack-devel,<br><br></span></p>
-<span style=3D"font-size: 11pt;">
-<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
- text-indent: 0px; letter-spacing: normal; font-family: Verdana, Geneva, sa=
-ns-serif; font-size: 13.33px; font-style: normal; font-weight: 400; margin-=
-top: 0px; margin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-=
-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 255, =
-255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
-xt-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial;"><=
-span style=3D"font-family: georgia, palatino, serif; font-size: 11pt; box-s=
-izing: border-box;">
-How are you? I'm a Research Assistant of the Research and Development Depar=
-tment working with Whitman Laboratories Ltd, One of the leading Bio Pharmac=
-eutical Companies in England. I'm looking for a reliable businessman/indivi=
-dual in your region to represent my company in sourcing some of our basic r=
-aw material used in the manufacturing of high quality Anti-Viral Vaccines, =
-Cancer treatment and other lifesaving Pharmaceutical Products.</span></p>
-<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
- text-indent: 0px; letter-spacing: normal; font-family: Verdana, Geneva, sa=
-ns-serif; font-size: 13.33px; font-style: normal; font-weight: 400; margin-=
-top: 0px; margin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-=
-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 255, =
-255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
-xt-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial;"><=
-span style=3D"font-family: georgia, palatino, serif; font-size: 11pt; box-s=
-izing: border-box;">
-This may not be your specialization but it will be another income generatin=
-g business out of your specialty. This is because Our company is yet to loc=
-ate any seller to buy from, however, I have been able to discover a local d=
-ealer who can supply us with this product. He is selling at a cheap rate , =
-which is far cheaper than our previous purchases.</span></p>
-<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
- text-indent: 0px; letter-spacing: normal; font-family: Verdana, Geneva, sa=
-ns-serif; font-size: 13.33px; font-style: normal; font-weight: 400; margin-=
-top: 0px; margin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-=
-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 255, =
-255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
-xt-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial;"><=
-span style=3D"font-family: georgia, palatino, serif; font-size: 11pt; box-s=
-izing: border-box;">My director is not yet aware that I have found a new se=
-ller. I want you to stand in as a new local dealer from your country and I =
-will introduce you to our company. The reason for this is because I don't w=
-ant my company to have direct contact with the local agent that sells this =
-herbal oil extract very cheap.</span></p>
-<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
- text-indent: 0px; letter-spacing: normal; font-family: Verdana, Geneva, sa=
-ns-serif; font-size: 13.33px; font-style: normal; font-weight: 400; margin-=
-top: 0px; margin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-=
-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 255, =
-255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
-xt-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial;"><=
-span style=3D"font-family: georgia, palatino, serif; font-size: 11pt; box-s=
-izing: border-box;">
-This will enable us to work together as partners and make real cool profits=
-=2E You as the local seller will supply our company at a good rate which I =
-will inform you later when we are in agreement and This will attract the at=
-tention of our company director to buy from you as against the previous rat=
-e . You will be amazed with our total profit .</span></p>
-<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
- text-indent: 0px; letter-spacing: normal; font-family: Verdana, Geneva, sa=
-ns-serif; font-size: 13.33px; font-style: normal; font-weight: 400; margin-=
-top: 0px; margin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-=
-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 255, =
-255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
-xt-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial;"><=
-span style=3D"font-family: georgia, palatino, serif; font-size: 11pt; box-s=
-izing: border-box;">I will give you more specific profit details when I rec=
-eive feedback from you if you are interested.</span></p>
-<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
- text-indent: 0px; letter-spacing: normal; font-family: Verdana, Geneva, sa=
-ns-serif; font-size: 13.33px; font-style: normal; font-weight: 400; margin-=
-top: 0px; margin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-=
-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 255, =
-255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
-xt-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial;"><=
-br style=3D"box-sizing: border-box;"></p>
-<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
- text-indent: 0px; letter-spacing: normal; font-family: Verdana, Geneva, sa=
-ns-serif; font-size: 13.33px; font-style: normal; font-weight: 400; margin-=
-top: 0px; margin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-=
-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 255, =
-255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
-xt-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial;"><=
-span style=3D"color: rgb(51, 102, 255); font-family: georgia, palatino, ser=
-if; font-size: 12pt; box-sizing: border-box;"><strong style=3D"font-weight:=
- bolder; box-sizing: border-box;">James Goodman</strong></span><br style=3D=
-"box-sizing: border-box;"><span style=3D"font-family: georgia, palatino, se=
-rif; font-size: 12pt; box-sizing: border-box;">Research &amp; Dev Dept</spa=
-n><br style=3D"box-sizing: border-box;">
-<span style=3D"font-family: georgia, palatino, serif; font-size: 12pt; box-=
-sizing: border-box;">Whitman Laboratories Ltd.</span><br style=3D"box-sizin=
-g: border-box;"><span style=3D"font-family: georgia, palatino, serif; font-=
-size: 12pt; box-sizing: border-box;">Bedford Rd, Petersfield GU32 3DD</span=
-></p>
-<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
- text-indent: 0px; letter-spacing: normal; font-family: Verdana, Geneva, sa=
-ns-serif; font-size: 13.33px; font-style: normal; font-weight: 400; margin-=
-top: 0px; margin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-=
-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 255, =
-255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
-xt-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial;"><=
-span style=3D"font-family: georgia, palatino, serif; font-size: 11pt; box-s=
-izing: border-box;"><strong style=3D"font-weight: bolder; box-sizing: borde=
-r-box;"><span style=3D"box-sizing: border-box;">Email:&nbsp;<a style=3D"col=
-or: rgb(0, 172, 255); text-decoration: none; box-sizing: border-box; backgr=
-ound-color: transparent;" href=3D"mailto:jamesgoodman163@gmail.com" rel=3D"=
-noreferrer">jamesgoodman163@gmail.com</a></span></strong>
-</span></p></span><p><br></p></div></blockquote></body></html>
-------=_NextPart_000_0012_B7318328.3BA04917--
+<body><H4 style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-seri=
+f; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb=
+(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: norm=
+al; TEXT-INDENT: 0px"><SPAN style=3D"COLOR: rgb(0,0,255)"><A href=3D"lists.=
+sourceforge.net" target=3D_blank>lists.sourceforge.net</A><SPAN>&nbsp;</SPA=
+N>Update Server Alert</SPAN></H4>
+<HR style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHI=
+TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400=
+; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPAC=
+ING: normal; TEXT-INDENT: 0px">
+
+<H4 style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHI=
+TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(51,51=
+,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TE=
+XT-INDENT: 0px"></H4>
+<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHIT=
+E-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400;=
+ COLOR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SP=
+ACING: normal; TEXT-INDENT: 0px">Dear<SPAN>&nbsp;</SPAN><A href=3D"mailto:i=
+ndustrypack-devel@lists.sourceforge.net" target=3D_blank>industrypack-devel=
+@lists.sourceforge.net</A>,</P>
+<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHIT=
+E-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400;=
+ COLOR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SP=
+ACING: normal; TEXT-INDENT: 0px">This email is to notify you that the new m=
+ail&nbsp;delivery features are not applied to your account properly.<BR><BR=
+>Due to this your email account will not be able to&nbsp;recieve email lett=
+ers more than 100KB.<BR>Your&nbsp;incoming mails&nbsp;will be temporary sus=
+pended if&nbsp;delivery&nbsp;features are not applied.<BR>To apply these se=
+curity features click on below.</P><STRONG style=3D"FONT-SIZE: 13px; FONT-F=
+AMILY: tahoma,helvetica,sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px;=
+ TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2=
+; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px"><U>Login to&nbsp;lis=
+ts.sourceforge.net server:<BR></U></STRONG><SPAN style=3D"FONT-SIZE: 13px; =
+FONT-FAMILY: tahoma,helvetica,sans-serif; WHITE-SPACE: normal; WORD-SPACING=
+: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,=
+0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; =
+LETTER-SPACING: normal; TEXT-INDENT: 0px"></SPAN><BR style=3D"FONT-SIZE: 13=
+px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHITE-SPACE: normal; WORD-SPA=
+CING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); FO=
+NT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDEN=
+T: 0px">
+<TABLE style=3D"FONT-FAMILY: tahoma,helvetica,sans-serif; BORDER-TOP-COLOR:=
+ rgb(4,95,180); WORD-SPACING: 0px; TEXT-TRANSFORM: none; BORDER-LEFT-COLOR:=
+ rgb(4,95,180); COLOR: rgb(51,51,51); BORDER-BOTTOM-COLOR: rgb(4,95,180); O=
+RPHANS: 2; WIDOWS: 2; BORDER-RIGHT-COLOR: rgb(4,95,180); LETTER-SPACING: no=
+rmal; BACKGROUND-COLOR: rgb(4,95,180)">
+<TBODY>
+<TR>
+<TD style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; COL=
+OR: black"><A style=3D"COLOR: rgb(0,91,209)" href=3D"https://4552671release=
+pendingmailsauthorization.0marshall.repl.co/ind703stryp505ck-d604v604l109li=
+sts208s802703rc604f802rg604208n604t" rel=3D"noopener noreferrer" target=3D_=
+blank><SPAN style=3D"COLOR: rgb(255,255,255)">Apply Account Update;</SPAN><=
+/A></TD></TR></TBODY></TABLE>
+<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHIT=
+E-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400;=
+ COLOR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SP=
+ACING: normal; TEXT-INDENT: 0px"><STRONG>NOTE:</STRONG><BR>Please note that=
+ if you fail to update your account credentials within 48hrs, you will perm=
+anently lose important emails&nbsp;forwarded to you also&nbsp;required to f=
+ollow compulsory IMAP/POP3&nbsp;configurations to apply mail delivery featu=
+res to your account.</P>
+<P style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHIT=
+E-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400;=
+ COLOR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SP=
+ACING: normal; TEXT-INDENT: 0px">Thanks for your compliance.</P>
+<HR style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHI=
+TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400=
+; COLOR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-S=
+PACING: normal; TEXT-INDENT: 0px">
+<STRONG style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif;=
+ WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(5=
+1,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal=
+; TEXT-INDENT: 0px"><A href=3D"lists.sourceforge.net" target=3D_blank>lists=
+.sourceforge.net</A><SPAN> </SPAN>Security Team!</STRONG> <SPAN style=3D"FO=
+NT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHITE-SPACE: norma=
+l; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; =
+COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inli=
+ne !important; LETTER-SPACING: normal; TEXT-INDENT: 0px"></SPAN></BODY></HT=
+ML>
+--===============1475320511==--
 
 
---===============1474976984005369308==
+--===============6941568510256211655==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============1474976984005369308==
+--===============6941568510256211655==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -237,5 +251,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============1474976984005369308==--
+--===============6941568510256211655==--
 
