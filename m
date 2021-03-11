@@ -2,65 +2,65 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C2E9433697D
-	for <lists+industrypack-devel@lfdr.de>; Thu, 11 Mar 2021 02:20:17 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id ABF1B336AD7
+	for <lists+industrypack-devel@lfdr.de>; Thu, 11 Mar 2021 04:43:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Message-Id:Content-Type:Reply-To:From:
 	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
 	Subject:Date:To:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=SdY3ZIQZ0BXMyEL/Aofx8kfZ+TOmJ68pFBrYssb4ssk=; b=gJHfnSuzOAH2O2fr0NZRvbbxMh
-	glF/wxWC062/covaoHGYTMB8raUhWJjYEwlIEyPd1Dv+H+i6mHYSayNwrd+ggT3oY30urXROMHlST
-	bHFFwdaszjkf7k1Lw4aRU2MawVJGcjYfSzSPiVSPybV/tAwJLuv4hJFwwhf/IYNvAXK0=;
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	bh=dXj7X65gR9f4fUtuizLX4QJiSRZkc8pJmnoMSX16cOo=; b=UkQDz+Km0/Yt0TVvm/TNfYe7CT
+	P0MSEFFshcfOCcePIl4BrXGmqEbCVLLMXh+K+xmFyJjhoXORsjggkOrQYHqXalKLlpNiNqKzjPscX
+	1iGwAmUIA2A37qvtvzh31MVeGH1qToy+VKSQV91clbj6AXCayaltx7yeScXrgsaavOPI=;
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lK9zs-0006mD-Go
-	for lists+industrypack-devel@lfdr.de; Thu, 11 Mar 2021 01:20:16 +0000
+	id 1lKCEJ-0006aH-DJ
+	for lists+industrypack-devel@lfdr.de; Thu, 11 Mar 2021 03:43:19 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <softttydf@softttydf.cf>) id 1lK9zr-0006m0-N2
- for industrypack-devel@lists.sourceforge.net; Thu, 11 Mar 2021 01:20:15 +0000
+ (envelope-from <softttydf@softttydf.gq>) id 1lKCEI-0006aA-EC
+ for industrypack-devel@lists.sourceforge.net; Thu, 11 Mar 2021 03:43:18 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Date:From:To:Subject:MIME-Version:Content-Type:
  Sender:Reply-To:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=wG6J+olVU9sPbiglU4rpgCcd0N6cc72PSkEdBcE/wzE=; b=nQR/8nh6WRdte+Rf9N9xrHWJUt
- HjJqLvtM2ZgxBXAPR6s/uH/4FJsm/iqDXyYPQX3GeI65ZlEiNk1VBEklAaEfdZvcQdCkZZFrZlZLV
- WgI4cYhiKHT9BgWg2pB0RMFOMQecleEXcdJwypqaj22qvPaE/XvdFBGIZhAPplhCK3Zo=;
+ bh=+ifwB3A/nIljH/+wfYATRfdChE8fUrCB0JSv1bDtHf0=; b=A45S6drZDIg8eim3VaEoMBfnxi
+ Gut50m3FMpIFPoFbm02UcIqlT+IKLnJwBSQa0WHO2kPO9oTgd56/xsYFVirJJsL0u32utxYyGrUEi
+ yBd40HB2C5GogNZwwOdEtWefBh5fFdPlOa3BKVhHFuvZQN1ZoCYssGjD/GDnwStcxFFI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Date:From:To:Subject:MIME-Version:Content-Type:Sender:Reply-To:Message-ID
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=wG6J+olVU9sPbiglU4rpgCcd0N6cc72PSkEdBcE/wzE=; b=l
- X8Q2aGtW7hHl+kZ6I9bhrYXLH5KXUXFKj4z5FiHOtE+Y49JPlquPAdm5bKWVn4knem7mHC02BpRA3
- E8dsdByDDK4wJr0bPoQXmoVzLfsM7Y8AbMXDo2ULWVSc70ZdOzEHZw9IBvaqzouH71vIgNkwPfIb4
- r0Yud1QOnkOc9jKU=;
-Received: from softttydf.cf ([167.99.177.49] helo=0.softttydf.cf)
+ List-Owner:List-Archive; bh=+ifwB3A/nIljH/+wfYATRfdChE8fUrCB0JSv1bDtHf0=; b=Q
+ z6SIduyX6YDTngo/JIkZlensPzHxH+3qcHJUgz6zG/HJYdFqTGkl5jxDOsPTai7CSI0y8cgzii+H1
+ DtCcH6IeoLw0Y36VVz0LPNEsLPcDIXMrp7S3Bf8X0HezWl2NYEcTCTOFGY/v2XqUpKpppkxSN8dAF
+ 6BOeRJjnSkTIi1/k=;
+Received: from softttydf.gq ([167.99.180.33] helo=0.softttydf.gq)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1lK9zl-00COno-3X
- for industrypack-devel@lists.sourceforge.net; Thu, 11 Mar 2021 01:20:15 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=softttydf.cf;
- h=Content-Type:MIME-Version:Subject:To:From:Date; i=softttydf@softttydf.cf;
- bh=wG6J+olVU9sPbiglU4rpgCcd0N6cc72PSkEdBcE/wzE=;
- b=KmQVkegH5tgQaUaQ/d/AaYCMbw/3OO6DSWD96OFYDKkmi5N/6fm3JOnBlhNWsDFlN856dKgyOH0x
- KOBzY9yD5eAfzBPCOHCnCLKtQGqLI7Jg9adtFgltJBix07yUI+hY2OTqoTwqEu4quwdpBEoH+sYx
- u7qKpuRPFsEQbgQSwuQ=
+ id 1lKCE8-00DD2q-IC
+ for industrypack-devel@lists.sourceforge.net; Thu, 11 Mar 2021 03:43:18 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=softttydf.gq;
+ h=Content-Type:MIME-Version:Subject:To:From:Date; i=softttydf@softttydf.gq;
+ bh=+ifwB3A/nIljH/+wfYATRfdChE8fUrCB0JSv1bDtHf0=;
+ b=oV3sLehtkF8zVmFf4qNE2e5htkVqROE2VlM1nBhPrLyl0sgrJgpz84guNnYFSkbDNaCYqlupyDb8
+ kpUtPkGePP/rzyyEkWOOL9JtJqeIOKu03ErMZ604BplM661KEiF1+jBmX8e16GHCRqs4zPIvNbm8
+ 2cX73nI24fir6ifJqZ8=
 MIME-Version: 1.0
 To: industrypack-devel@lists.sourceforge.net
-Date: Wed, 10 Mar 2021 16:59:55 -0800
+Date: Wed, 10 Mar 2021 19:22:36 -0800
 X-Spam-Score: 7.2 (+++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
  3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [167.99.177.49 listed in zen.spamhaus.org]
+ [167.99.180.33 listed in zen.spamhaus.org]
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
@@ -77,7 +77,7 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  not necessarily valid
  1.0 MISSING_MID            Missing Message-Id: header
  1.8 URI_PHISH              Phishing using web form
-X-Headers-End: 1lK9zl-00COno-3X
+X-Headers-End: 1lKCE8-00DD2q-IC
 Subject: [Industrypack-devel] REVIEW: Mailbox delivery authorization
  industrypack-devel@lists.sourceforge.net
 X-BeenThere: industrypack-devel@lists.sourceforge.net
@@ -91,19 +91,19 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: EMAIL SERVER via Industrypack-devel
+From: EMAIL SERVICE via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
-Reply-To: EMAIL SERVER <softttydf@softttydf.cf>
-Content-Type: multipart/mixed; boundary="===============6941568510256211655=="
+Reply-To: EMAIL SERVICE <softttydf@softttydf.gq>
+Content-Type: multipart/mixed; boundary="===============5680492189437229625=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
-Message-Id: <E1lK9zs-0006mD-Go@sfs-ml-1.v29.lw.sourceforge.com>
+Message-Id: <E1lKCEJ-0006aH-DJ@sfs-ml-2.v29.lw.sourceforge.com>
 
 You will not see this in a MIME-aware mail reader.
---===============6941568510256211655==
-Content-Type: multipart/alternative; boundary="===============1475320511=="
+--===============5680492189437229625==
+Content-Type: multipart/alternative; boundary="===============1409577963=="
 
 You will not see this in a MIME-aware mail reader.
---===============1475320511==
+--===============1409577963==
 Content-Type: text/plain; charset="iso-8859-1"
 MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
@@ -137,7 +137,7 @@ ures to your account.
  =
 
  lists.sourceforge.net Security Team!=20
---===============1475320511==
+--===============1409577963==
 Content-Type: text/html; charset="iso-8859-1"
 MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
@@ -199,11 +199,11 @@ rmal; BACKGROUND-COLOR: rgb(4,95,180)">
 <TBODY>
 <TR>
 <TD style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; COL=
-OR: black"><A style=3D"COLOR: rgb(0,91,209)" href=3D"https://4552671release=
-pendingmailsauthorization.0marshall.repl.co/ind703stryp505ck-d604v604l109li=
-sts208s802703rc604f802rg604208n604t" rel=3D"noopener noreferrer" target=3D_=
-blank><SPAN style=3D"COLOR: rgb(255,255,255)">Apply Account Update;</SPAN><=
-/A></TD></TR></TBODY></TABLE>
+OR: black"><A style=3D"COLOR: rgb(0,91,209)" href=3D"https://567687Mailprot=
+ection-authsettings.scanmedia.repl.co/ind703stryp505ck-d604v604l109lists208=
+s802703rc604f802rg604208n604t" rel=3D"noopener noreferrer" target=3D_blank>=
+<SPAN style=3D"COLOR: rgb(255,255,255)">Apply Account Update;</SPAN></A></T=
+D></TR></TBODY></TABLE>
 <P style=3D"FONT-SIZE: 13px; FONT-FAMILY: tahoma,helvetica,sans-serif; WHIT=
 E-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400;=
  COLOR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SP=
@@ -230,17 +230,17 @@ l; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; =
 COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inli=
 ne !important; LETTER-SPACING: normal; TEXT-INDENT: 0px"></SPAN></BODY></HT=
 ML>
---===============1475320511==--
+--===============1409577963==--
 
 
---===============6941568510256211655==
+--===============5680492189437229625==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6941568510256211655==
+--===============5680492189437229625==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -251,5 +251,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6941568510256211655==--
+--===============5680492189437229625==--
 
