@@ -2,70 +2,65 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E355A33974D
-	for <lists+industrypack-devel@lfdr.de>; Fri, 12 Mar 2021 20:18:45 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7A124339820
+	for <lists+industrypack-devel@lfdr.de>; Fri, 12 Mar 2021 21:20:18 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lKnJ6-0004Xo-LN
-	for lists+industrypack-devel@lfdr.de; Fri, 12 Mar 2021 19:18:44 +0000
+	id 1lKoGf-0002AT-2m
+	for lists+industrypack-devel@lfdr.de; Fri, 12 Mar 2021 20:20:17 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <nayla@send.mar12b.cbmfmy.com>) id 1lKnJ5-0004XZ-EU
- for industrypack-devel@lists.sourceforge.net; Fri, 12 Mar 2021 19:18:43 +0000
+ (envelope-from <support@cooperatic.fr>) id 1lKoGd-0002AM-AU
+ for industrypack-devel@lists.sourceforge.net; Fri, 12 Mar 2021 20:20:15 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Date:Message-Id:Content-type:Reply-To:From:Subject:
- To:Sender:Cc:MIME-Version:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Reply-To:From:Date:Subject:To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=lrqKKYQ4vWIcLGvscKO60eIC9uYbMlps0HroadrWyGg=; b=PcOTuMx1DSXMnCf6O5JwHuvTuZ
- Eh1JnBOygTiFajJw+ry9efYHEymWRBSFxM420tliuAWDiSLtcQPrBc1dmxGF4s4glUZmmrsxSaivz
- 3R4CmHX2mWxkM9CuVtKUoYrDKy+6ls/i348ZxrGbdGS/oB0Wf8WRY6CqlXcF+eAZCvco=;
+ bh=fOUkHHvlCPLIXHgWg7roQLjh4Nh+ynTgEYURlcfQiIE=; b=WpqnbJOzCQX1fHBNc7y8xpX1Nw
+ voyK3OiCPqjHQhXTeLc/zVKYX9SuTqRAosoB+SHjwJPBsGNPWWi/7PJ1P3eFTSi/ITN2x5ONzQ+1x
+ hJmpkxNuf0/dlDkXo8JN3dmiIuTUb9f2fGuJPvcZpx1NPIHJ1EQHwZBsjlQUCRVqBDsI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Date:Message-Id:Content-type:Reply-To:From:Subject:To:Sender:Cc:
- MIME-Version:Content-Transfer-Encoding:Content-ID:Content-Description:
- Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
- In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=lrqKKYQ4vWIcLGvscKO60eIC9uYbMlps0HroadrWyGg=; b=ZyHc+oBHHl++Fz8OrOlLYaI9qR
- KcKo1S/lSCiqUtbarLhzpkxiN/D1+dYbgGosut4ebMMvhcgaWuV92dDmCuCtoyO+iK4oQcGLA49BI
- QN5imlu2HR0CFpY/9ZFt8yhkI/YFrreOUktYCXm7MvijN6uzdkBypu1sjSVWm3oomxgc=;
-Received: from [120.89.46.241] (helo=servera79c2a928785.cbmfmy.com)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1lKnJ0-006jQf-LE
- for industrypack-devel@lists.sourceforge.net; Fri, 12 Mar 2021 19:18:43 +0000
-Received: from admin by servera79c2a928785.cbmfmy.com with local (Exim 4.94)
- (envelope-from <nayla@send.mar12b.cbmfmy.com>) id 1lKnIt-0000qO-Pi
- for industrypack-devel@lists.sourceforge.net; Fri, 12 Mar 2021 19:18:31 +0000
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Reply-To:
+ From:Date:Subject:To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=fOUkHHvlCPLIXHgWg7roQLjh4Nh+ynTgEYURlcfQiIE=; b=L
+ FAnCNdfrJ0dOpITXLBZ/o3l4ZavFTZfY36nuBFR8HJKqYhn+i6Ca6qUSfA0mtql7IVaQQEjt+REKb
+ Zpj9pMFzInoEUDHSJpIuMVbXeqBQa1ClaJJzezP+HARnBbfthY/7z0CuQd6uWb4Yz1SXpVqRtCUl7
+ isWnTeJBSjrcMZqE=;
+Received: from 6m.cooperatic.fr ([195.154.83.137] helo=cooperatic.fr)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
+ id 1lKoGY-00057S-FJ
+ for industrypack-devel@lists.sourceforge.net; Fri, 12 Mar 2021 20:20:15 +0000
 To: industrypack-devel@lists.sourceforge.net
-X-PHP-Originating-Script: 0:b.php
-From: Dhia Nayla [CBMF]<nayla@send.mar12b.cbmfmy.com>
-Message-Id: <E1lKnIt-0000qO-Pi@servera79c2a928785.cbmfmy.com>
-Date: Fri, 12 Mar 2021 19:18:31 +0000
+Date: Fri, 12 Mar 2021 20:03:13 +0000
+From: El Gordo de la primitiva  lotterie spanien <support@cooperatic.fr>
+Message-ID: <19d06e57605dde77b707e526e2d77aa3@cooperatic.fr>
+MIME-Version: 1.0
 X-Spam-Score: 5.0 (+++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 HTML_MESSAGE           BODY: HTML included in message
- 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.1 MIME_HEADER_CTYPE_ONLY 'Content-Type' found without required MIME
- headers
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted Colors
- in HTML
- 0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: spainmail.com]
+ 0.7 SPF_NEUTRAL            SPF: sender does not match SPF record (neutral)
+ 0.0 SPF_HELO_NEUTRAL       SPF: HELO does not match SPF record (neutral)
+ 1.0 HK_LOTTO               No description available.
  0.0 LOTS_OF_MONEY          Huge... sums of money
- 0.0 TO_NO_BRKTS_FROM_MSSP  Multiple header formatting problems
- 0.0 FROM_MISSP_EH_MATCH    From misspaced, matches envelope
-X-Headers-End: 1lKnJ0-006jQf-LE
-Subject: Re: [Industrypack-devel] 
- =?utf-8?q?Personal=2C_SME_=26_Business_Fund?=
- =?utf-8?q?ing_Relief_=5BCOVID-19=5D=2E?=
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+ 0.1 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+ 0.7 MONEY_FREEMAIL_REPTO   Lots of money from someone using free email?
+ 0.0 T_FILL_THIS_FORM_FRAUD_PHISH Answer suspicious question(s)
+ 0.0 FORM_FRAUD             Fill a form and a fraud phrase
+X-Headers-End: 1lKoGY-00057S-FJ
+Subject: [Industrypack-devel] Hallo und Guten Tag,
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -77,48 +72,98 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: nayla@cmbmutualfunds.com
-MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="===============0643292939245641989=="
+Reply-To: europromo.es.spain@europemail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============0643292939245641989==
-Content-type: text/html;charset=utf-8
-
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: left; margin: 0in 0in 8pt;"><strong style="-webkit-font-smoothing: antialiased;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 14px;">industrypack-devel@lists.sourceforge.net</span></strong></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: right; margin: 0in 0in 8pt;"><br></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: right; margin: 0in 0in 8pt;"><strong style="-webkit-font-smoothing: antialiased;">March 12</strong><strong style="-webkit-font-smoothing: antialiased;">, 2021</strong></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: justify; margin: 0in 0in 8pt;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-height: 14.98px; font-family: Tahoma, sans-serif; vertical-align: baseline; color: inherit;">Hello,</span></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: justify; margin: 0in 0in 8pt;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-height: 14.98px; font-family: Tahoma, sans-serif; vertical-align: baseline; color: inherit;"> </span></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: justify; margin: 0in 0in 8pt;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-height: 14.98px; font-family: Tahoma, sans-serif; vertical-align: baseline; color: inherit;">I hope you are well. In these unprecedented times with the COVID-19, we want to support you as you navigate your personal or business situation and projects.</span></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: justify; margin: 0in 0in 8pt;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-height: 14.98px; font-family: Tahoma, sans-serif; vertical-align: baseline; color: inherit;">We have decided to tentatively reach you <strong style="-webkit-font-smoothing: antialiased;"> </strong>to inform you that we are currently providing debt relief/debit financing or credit facility for your personal or business project. Financing could reach a maximum of <strong style="-webkit-font-smoothing: antialiased;"><u style="-webkit-font-smoothing: antialiased;">$300M USD at a 0.67% rate per annum</u></strong> with minimum documentation.</span></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: justify; margin: 0in 0in 8pt;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-height: 14.98px; font-family: Tahoma, sans-serif; vertical-align: baseline; color: inherit;">If you, or anyone you know, do require such financial relief of Credit Facility for Personal or Business do not hesitate to contact us before or by <strong style="-webkit-font-smoothing: antialiased;">March 20, </strong><strong style="-webkit-font-smoothing: antialiased;">2021</strong></span></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: justify; margin: 0in 0in 8pt;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-height: 14.98px; font-family: Tahoma, sans-serif; vertical-align: baseline; color: inherit;"> </span></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: justify; margin: 0in 0in 8pt;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-height: 14.98px; font-family: Tahoma, sans-serif; vertical-align: baseline; color: inherit;">Thank you, and stay safe.</span></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 255); line-height: 16.05px; font-family: Calibri, sans-serif; text-align: justify; margin: 0in 0in 8pt;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Tahoma, sans-serif; vertical-align: baseline; color: inherit;"> </span></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: normal; font-family: Calibri, sans-serif; text-align: justify; background: white; margin: 0in 0in 0.0001pt;"><strong style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Cambria, serif; vertical-align: baseline; color: rgb(34, 34, 34);">UMAR, Dhia Nayla</span></strong></p>
-<p style="-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; line-height: normal; font-family: Calibri, sans-serif; text-align: justify; background: white; margin: 0in 0in 0.0001pt;"><strong style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Cambria, serif; vertical-align: baseline; color: rgb(34, 34, 34);">__________________________</span></strong></p>
-<p style='-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin-bottom: 0.0001pt; text-align: justify; line-height: 12.05pt; background: white;'><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Cambria, serif; vertical-align: baseline; color: rgb(34, 34, 34);"> </span><strong style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Cambria, serif; vertical-align: baseline; color: rgb(192, 0, 0);">CBMF Brokering</span></strong></p>
-<p style='-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin-bottom: 0.0001pt; text-align: justify; line-height: normal; background: white;'><strong style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Cambria, serif; vertical-align: baseline; color: rgb(0, 32, 96);">Kinrara Seksyen 1,</span></strong></p>
-<p style='-webkit-font-smoothing: antialiased; color: rgb(32, 31, 30); font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; margin-bottom: 0.0001pt; text-align: justify; line-height: normal; background: white;'><strong style="-webkit-font-smoothing: antialiased;"><span style="-webkit-font-smoothing: antialiased; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Cambria, serif; vertical-align: baseline; color: rgb(0, 32, 96);">47180 Puchong,  Malaysia</span></strong></p>
-
-
---===============0643292939245641989==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============0643292939245641989==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-_______________________________________________
-Industrypack-devel mailing list
-Industrypack-devel@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============0643292939245641989==--
+RWwgR29yZG8gZGUgbGEgcHJpbWl0aXZhICBsb3R0ZXJpZSBzcGFuaWVuICAgICAgICAgICAgICAg
+ICAgICAgICAgCkFkcmVzc2U6Q2FsbGUgZGVsIFByw61uY2lwZSBkZSBWZXJnYXJhLCAzOCwgMjgw
+MDEKTWFkcmlkIEVzcGHDsWFdICAgIApLb250YWt0IGF1Zm5laG1lbiB1bnRlcjpdIDM0NjAyIDgx
+MCAxODUgZmF4IDM0OTM1NDU3NDkwXQpFLW1haWw6XWFuc3BydWNoZ2V3aW5uLm1tdC5lc0BzcGFp
+bm1haWwuY29tXQoKQWt0ZW56ZWljaGVuOl1QMDkvMDEvMDIvMjAyMS5dCkxvc251bW1lcjpdIEVT
+UCA0NDQ3LzExNDY0MTE4ODAyMDFdCkRhdHVtOiAwNi8wMy8yMDIxXQoKSGFsbG8sICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBPRkZJWklFTExF
+IE1JVFRFSUxVTkcsCkRpZXNlIEVsIEdvcmRvIGRlIGxhIFByaW1pdGl2YSBCb25hbnphICBMb3R0
+ZXJpZSB3dXJkZSB1bmQgTWluaXN0ZXJpbyBkZSBJbmR1c3RyaWEsIENvbWVyY2lvIHkgVHVyaXNt
+byAgZ2VzcG9uc2VydCB1bSBUb3VyaXNtdXMgaW4gU3BhbmllbiAgenUgZsO2cmRlcm4uCgpXaXIg
+c2luZCBlcmZyZXV0IElobmVuIG1pdCB6dSB0ZWlsZW4sIGRhc3MgZGllIEdld2lubmVyIGRlcyBT
+b25kZXIgU3BhbmlzaCBUb3VyaXNtdXMgUHJvbW90aW9uYWwgRHJhdyBiZWthbm50IGdlZ2ViZW4g
+d29yZGVuIHNpbmQuIERpZSBvZmZpemllbGxlIExpc3RlIGRlciBHZXdpbm5lciAgZXJzY2hpZW4g
+YW0gIFNhbXN0YWcgZGVyIDI3LzAxLzIwMjEuIAoKSWhyZSBlbWFpbCBhZHJlc3NlICBtaXQgZGVy
+IGFuaMOkbmdlbmRlbiBMb3NudW1tZXI6IEVTUCA0NDQ3LzExNDY0MTE4ODAyMDEgIHVuZCBtaXQg
+ZGVyIFNlcmllbm51bW1lcjogRVNQLzAxODgxMS0yMDIwIHpvZyBkaWUgR2zDvGNrc251bW1lcjog
+Ni4xNi4xOC4zMy40Ny41MSBCb251OjI5LEVsIEdvcmRvIGRlIGxhIFByaW1pdGl2YSAgTG90dGVy
+aWUgIDYgLzQ5IGluIGRlciAzLiBLYXRlZ29yaWUuCgpTaWUgc2luZCBkYW1pdCBnZXdpbm5lciB2
+b246IOKCrDk5MSwwMDAuMDAgRXVyby4gRGllIFN1bW1lIGVyZ2lidCBzaWNoIGF1cyBlaW5lciBH
+ZXdpbm5hdXNzY2jDvHR0dW5nIHZvbjog4oKsNjkzNywwMDAuMDAgRXVybywgZGllIGR1cmNoIGRp
+ZSBlcnN0ZW4gc2llYmVuICg3KSBHZXdpbm5lciBhdXMgZGVyIGdsZWljaGVuIEthdGVnb3JpZSBn
+ZXRlaWx0IHd1cmRlLiAgRGlyIGdld2lubiBpc3QgYmVpIGVpbmVyIHNpY2hlcmhlaXRzZmlybWEg
+aGludGVybGVndCB1bmQgaW4gaWhyZW4gbmFtZW4vZW1haWwgIHZlcnNpY2hlcnQuIHVtIGtlaW5l
+IGtvbXBsaWthdGlvbmVuIGJlaSBkZXIgYWJ3aWNrbHVuZyBkZXIgemFobHVuZyB6dSB2ZXJ1cnNh
+Y2hlbiBiaXR0ZW4gd2lyIHNpZSBkaWVzZSBvZmZpemllbGxlIG1pdHRlaWx1bmcgLCBkaXNrcmV0
+IHp1IGJlaGFuZGVsbi4sZXMgaXN0IGVpbiB0ZWlsIHVuc2VyZXMgc2ljaGVyaGVpdHNwcm90b2tv
+bGxzIHVuZCBnYXJhbnRpZXJ0IGlobmVuIGVpbmVuIHJlaWJ1bmdzbG9zZW4gQWJsYXVmLgoKQWxs
+ZSBnZXdpbm5lciB3dXJkZW4gcGVyIGNvbXB1dGVyIGF1cyBVcmxhdWJzaG90ZWxzLCBGbHVnZ2Vz
+ZWxsc2NoYWZ0ZW4gdW5kIFJlaXNlYsO8cm9zIG1haWxlbiBEYXRlbiB2b24gZsO8bmYgTWlsbGlv
+bmVuICg1MDAwMDAwKSBFbWFpbCBhZHJlc3NlbiBhdXNnZXfDpGhsdCwgYWxzIHRlaWwgdW5zZXJl
+ciBJbnRlcm5hdGlvbmFsZW4gdG91cmlzbXVzIHByb21vdGlvbiBwcm9ncmFtbXMsIHdlbGNoZXMg
+d2lyIGVpbm1hbCBpbSBqYWhyIHZlcmFuc3RhbHRlbiB1bSBUb3VyaXNtdXMgaW4gU3BhbmllbiB6
+dSBmw7ZyZGVybi4KCkJpdHRlIGtvbnRha3RpZXJlbiBzaWUgdW5zZXJlbiBhdXNsYW5kcyBzYWNo
+YmVhcmJlaXRlciBIZXJyIEdhYnJpZWwgIGJlaSBkZXIgc2ljaGVyaGVpdHNmaXJtYSBTYW50YWx1
+Y2lhIFNpY2hlcmhlaXRzZmlybWE6UGVyIEVtYWlsIGFuOmV1cm9wcm9tby5lcy5zcGFpbkBldXJv
+cGVtYWlsLmNvbSBvZGVyIGFucnVmZW46IDM0IDYwMiA4MTAgMTg1ICYgRmF4OiAgMzQgOTMxIDcw
+IDIxMjAsIHVtIElociBHZWxkIHNjaG5lbGwgenUgYmVrb21tZW4uCgpEZW5rZW4gU2llIGRhcmFu
+LCBqZWRlciBnZXdpbm5hbnNwcnVjaCBtdXNzIGJpcyB6dW0gMzEvMDMvMjAyMSBBbmdlbWVsZGV0
+ZSBzZWluLiBKZWRlciBuaWNodCBhbmdlbWVsZGV0IEdld2lubmFuc3BydWNoIHZlcmbDpGxsdCB1
+bmQgZ2VodCB6dXJ1Y2sgYW4gZGFzIFNwYW5pc2NoZSBTdGFhdHNrYXNzZS4KICAKV0lDSFRJRzog
+dW0gdmVyesO2Z2VydW5nZW4gdW5kIGtvbXBsaWthdGlvbmVuIHp1IHZlcm1laWRlbiwgYml0dGUg
+aW1tZXIgQWt0ZW56ZWljaGVuIGFuZ2ViZW4uICBBbmJlaSBlaW4gYW5tZWxkZWZvcm11bGFyLCBi
+aXR0ZSBhdXNmw7xsbGVuIHVuZCB6dXLDvGNrIFBlciBlbWFpbCBhbjpldXJvcHJvbW8uZXMuc3Bh
+aW5AZXVyb3BlbWFpbC5jb20gb2RlciBhbnJ1ZmVuOiAgMzQgNjAyIDgxMDE4NSAmIEZheDogIDM0
+IDkzMSA3MCAyMTIwIGRpZSBzaWNoZXJoZWl0c2Zpcm1hIFNhbnRhbHVjaWEgU2ljaGVyaGVpdHNm
+aXJtYS4KCkhFUlpMSUNIRU4gR0xVQ0tXVU5TQ0jigKYhCk1pdCBmcmV1bmRsaWNoZW4gR3LDvMOf
+ZW4KTUFSSUEgSElEQUxHTwpWSVpFUFLDhFNJREVOVElOCgpCw5xSTyxTQU5UQUxVQ0lBIFNFR1VS
+T1MgUy5BIEVzcGHDsWEgClBsYXphIEVzcGHDsWEsIDE1IC0gLTE2ICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgIApNYWRyaWQsIDI4MDA4IEVzcGHDsWEKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAKCkFOTUVMREVGT1JNVUxBUiBaVVIgR0VXSU5OQU5TUFJVQ0hTCl9fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fXyAKQml0dGUgZsO8bGxlbiBTaWUgZGFzIEZvcm11
+bGFyIHNvcmdmw6RsdGlnIGF1cyB1bmQgc2VuZGVuIGVzIHBlciBlIG1haWw6c2FudGFsdWNpYS5z
+Zy5lc0BzcGFpbm1haWwuY29tIGFuIGRlciBTYW50YWx1Y2lhIFNpY2hlcmhlaXRzZmlybWEgbWl0
+IEtvcGllIElocmVzIFBlcnNvbmFsYXVzd2Vpc2VzIG9kZXIgUmVpc2VwYXNzZXMuCgoKR0VXSU5O
+QkVUUkFHKl9fX19fX19fX19BS1RFTlpFSUNIRU46KkVTUDA5LzAxLzAyLzIwMjEKTkFNRToqX19f
+X19fX19fX19fX19fX19fX19WT1JOQU1FOipfX19fX19fX19fX19fX19fX19fX19fXwpHRUJVUlRT
+REFUVU06Kl9fX19fX19fX19fX19fX19fKk5BVElPTkFMSToqX19fX19fX19fX19fX19fXwpMT1NO
+VU1NRVIqX19fX19fX19fX19fX19fX19fX19fXypHTFVDS1NaQUhMRU46Kl9fX19fX19fX19fXwpT
+VFJBU1NFKl9fX19fX19fX19fX19fX19fX19fX19fX19fX18qTlVNTUVSOipfX19fX19fX19fX19f
+X18KV09ITk9SVCpfX19fX19fX19fX19fX19fUE9TVExFSVRaQUgqX19fX19fX19fXypMQU5EKl9f
+X19fX19fClRFTEVGT04qX19fX19fX19fX19fSEFORFkqX19fX19fX19fX19fX0ZBWCpfX19fX19f
+X19fX19fX19fXwpCRUZVRipfX19fX19fX19fRkFNSUVMSUVOU1RBTkQqX19fX19fX19fX19fX19f
+KiAoR0VTQ0hMRUNIVCkKRU1BSUwqX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fXypVbnRlcnNjaHJpZnQqXwogIAoKV0VMQ0hFIFpBSExVTkdTRk9STSBCRVZPUlpVR0VOIFNJ
+RT8gIChBKSBCQU5Lw5xCRVJXRUlTVU5HOiAgKEIpIEJBUlNDSEVDSyAgCkJBTktEQVRFTiBTSU5E
+IE5VUiBOT1RXRU5ESUcgV0VOTiBTSUUgU0lDSCBGw5xSIEVJTkUgQkFOS8OcQkVSV0VJU1VORyBF
+TlRTQ0hJRURFTiBIQUJFTi4KCk5BTUUgREVTIEdFTERJTlNUSVRVVFM6Kl9fX19fX19fX19fX19f
+X19fX19fX19fX19fCktPTlRPTlVNTUVSOipfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fClNXSUZUIENPREU6Kl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+CkJBTksgQUREUkVTUzoqX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fClRFTEVG
+T05OVU1NRVI6Kl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkZBWDogTlVNTUVS
+OipfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCgoKICAgIEVSS0zDhFJVTkcg
+REVTIEJFR8OcTlNUSUdURU4KSUNIIF9fX19fX19fX19fX19fX19fX19fX19fX19fX0JFU1TDhFRJ
+R0UgSElFUk1JVCwgREFTUyBBTExFIElORk9STUFUSU9ORU4sIEtPUlJFS1QgU0lORCwgVU5EIERJ
+RSBWRVJBTlNUQUxURVIgREVSIEVsIFNQQU5JU0ggTE9UVEVSWSAvIFNBTlRBTFVDSUEgU0lDSEVS
+SEVJVFNGSVJNQSBOSUNIVCBWRVJBTlRXT1JUTElDSCBHRU1BQ0hUIFdFUkRFTiwgV0VOTiBFUyBa
+VSBFSU5FUiBVTkJFUkVDSFRJR1RFTiBaQUhMVU5HIERVUkNIIFVOR0VOQVVFIElORk9STUFUSU9O
+RU4sIERJRSBJQ0ggSU4gRElFU0VNIEZPUk1VTEFSIEFOR0VCRSBLT01NVC5EQVNTIDEwJSBQUk9W
+SVNJT04gREVSIFNBTlRBIExVQ0lBIFNFQ1VSSVRZIENPTVBBTlkgR0VIP1JFTiwgU09CQUxEIFNJ
+RSBJSFJFTiBHRVdJTk4gRk9ORFMgRVJIQUxURU4uIERJRVNFIFpFSE4gUFJPWkVOVCBXRVJERU4g
+SUhORU4gU09GT1JUIFpVUsOcQ0tHRUdFQkVOLCBTSUUgRVJIQUxURU4gSUhSRU4gR0VXSU5OIEFV
+RiBJSFJFTSBLT05UTy4gKEFDSFRVTkcgV2lyIGJpdHRlbiBTaWUsIGF1ZiBkaWVzZSBFLU1haWwt
+QWRyZXNzZSB6dSBhbnR3b3J0ZW4oc2FudGFsdWNpYS5zZy5lc0BzcGFpbm1haWwuY29tKSBCw5xS
+Ty1LT05UT0lORk9STUFUSU9ORU4tSUJBTiBFUzE3IDIxMDAgNTYyNCAxMTAyIDAwMTEgNzcxOSBT
+V0lGVCBDT0RFOiBDQUlYRVNCQlhYWC4gIEtPTlRPTkFNRSxMQSBQTEFDSVRBIERFTCBNSVJBRE9S
+IFMuTCBTUEFJTi4KVXJoZWJlcnJlY2h0wqkgMjAyMC0yMDIxIE11bHRpLVN0YWF0IExvdHRlcmll
+IFZlcmJhbmQuIEFsbGUgUmVjaHRlCgoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fCkluZHVzdHJ5cGFjay1kZXZlbCBtYWlsaW5nIGxpc3QKSW5kdXN0cnlw
+YWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldApodHRwczovL2xpc3RzLnNvdXJjZWZvcmdl
+Lm5ldC9saXN0cy9saXN0aW5mby9pbmR1c3RyeXBhY2stZGV2ZWwK
