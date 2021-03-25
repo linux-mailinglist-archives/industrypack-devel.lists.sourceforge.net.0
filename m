@@ -2,75 +2,66 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0F9A9348307
-	for <lists+industrypack-devel@lfdr.de>; Wed, 24 Mar 2021 21:41:14 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
+	by mail.lfdr.de (Postfix) with ESMTPS id 31DD434996D
+	for <lists+industrypack-devel@lfdr.de>; Thu, 25 Mar 2021 19:24:19 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lPAJS-00045N-Tb
-	for lists+industrypack-devel@lfdr.de; Wed, 24 Mar 2021 20:41:10 +0000
+	id 1lPUeX-0003MM-VG
+	for lists+industrypack-devel@lfdr.de; Thu, 25 Mar 2021 18:24:17 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- (envelope-from <office2@gmail.com>) id 1lPAJR-00045F-2l
- for industrypack-devel@lists.sourceforge.net; Wed, 24 Mar 2021 20:41:09 +0000
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <office2@gmail.com>) id 1lPUeW-0003ME-6N
+ for industrypack-devel@lists.sourceforge.net; Thu, 25 Mar 2021 18:24:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=ZOO5cqyU/y/2DwdGH9CpQV094WqYM4QazTz22d5j7KI=; b=WrlPi/ux3/sfPxkPh0JVzij12/
- gh8okU1lLuwK0ITdP+AWDEOrdn3RBPy8E0Y7r/itsYrrexamTi80KglkUZLLeX1+PFMrBI4X9qFwY
- mV3PucyYBfbqO7vgB9GT3h3b9orGYsFRUPzbUKTwa5b3Vnxk/xBFYHV5T1tsam9olUMc=;
+ bh=ZWGgJmm6IGuAQ37jBPJFICxquStIKc0ONlf4crAJZBo=; b=QNUeSMCkBfqYSgvmp9lQQZxrSh
+ lPk5ZUf2+B65NvIKXhKQwyPXf2v4i1HdjFewr+1p6THfSmlwOzAJMc9FD8uXdIsIGIEddodz4giz4
+ VyDdUubYF9P6EqNKLMHjIXkUqLROIBsFYWvPM4MDpIBdSkrQBFtadGZIciur/Y9io1GE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=ZOO5cqyU/y/2DwdGH9CpQV094WqYM4QazTz22d5j7KI=; b=B
- z5weywFeCDhiFTJLdfFGhISyvkIwN9Q4zlRZEQOm8xsAeSBSk2srRev+UA4jWmmw4BY6mvmlBsZsI
- SZ+NBfD3uuP/HY/XllzUrZlORvT0W46rKWfaqlfgV484qZHP5e+pRIarrUerWF/KdsYevW/QFXqnh
- Ch0FLA1BpgNvNyTc=;
-Received: from ik1-420-42439.vs.sakura.ne.jp ([153.127.45.193]
- helo=mail.paralell-carrer.co.jp)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
- id 1lPAJI-0008Iz-OY
- for industrypack-devel@lists.sourceforge.net; Wed, 24 Mar 2021 20:41:08 +0000
+ List-Owner:List-Archive; bh=ZWGgJmm6IGuAQ37jBPJFICxquStIKc0ONlf4crAJZBo=; b=W
+ R1siNHrnGW7Fd/EjntJlVZKB+lFprBocNMTKI4PqkJvu77tL7aaYaRhTeZvod0oZuiNQD+Ou7bh0W
+ an3OyEsWuq7vaKWyR7iIHErcMcnY4PFu8IypKIg/4EKR99t7BF4K6lpR1kxrJ+BB6eECTrXCgO87l
+ jLhc3LRoIyta3TDw=;
+Received: from [172.245.92.212] (helo=lord1.com)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.2)
+ id 1lPUeB-00AmKA-VD
+ for industrypack-devel@lists.sourceforge.net; Thu, 25 Mar 2021 18:24:16 +0000
 Received: from gmail.com (unknown [77.247.110.190])
- by mail.paralell-carrer.co.jp (Postfix) with ESMTPA id A7468284D4
+ (Authenticated sender: info)
+ by lord1.com (Postfix) with ESMTPA id 143494309B
  for <industrypack-devel@lists.sourceforge.net>;
- Thu, 25 Mar 2021 05:38:25 +0900 (JST)
+ Thu, 25 Mar 2021 13:23:54 -0500 (CDT)
 From: "FWS BHC" <office2@gmail.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 24 Mar 2021 21:38:24 +0100
-Message-ID: <20210324213824.E9C77EDD4EBAB762@gmail.com>
+Date: 25 Mar 2021 19:23:49 +0100
+Message-ID: <20210325192349.05D4D66B7305FF67@gmail.com>
 MIME-Version: 1.0
-X-Spam-Score: 6.5 (++++++)
+X-Spam-Score: 0.3 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.5 RCVD_IN_PSBL           RBL: Received via a relay in PSBL
- [77.247.110.190 listed in psbl.surriel.com]
- 0.0 RCVD_IN_MSPIKE_L3      RBL: Low reputation (-3)
- [153.127.45.193 listed in bl.mailspike.net]
  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
  (office2[at]gmail.com)
+ 0.0 RCVD_IN_SORBS_DUL      RBL: SORBS: sent directly from dynamic IP address
+ [172.245.92.212 listed in dnsbl.sorbs.net]
  0.0 DKIM_ADSP_CUSTOM_MED   No valid author signature, adsp_override is
  CUSTOM_MED
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends in
  digit (office2[at]gmail.com)
- 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
- 0.0 LOTS_OF_MONEY          Huge... sums of money
- 0.6 MONEY_NOHTML           Lots of money in plain text
- 1.2 NML_ADSP_CUSTOM_MED    ADSP custom_med hit, and not from a mailing list
- 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
- 1.6 SPOOFED_FREEMAIL       No description available.
- 0.0 SPOOF_GMAIL_MID        From Gmail but it doesn't seem to be...
-X-Headers-End: 1lPAJI-0008Iz-OY
-Subject: [Industrypack-devel] You promise getting back to me?
+ 0.0 TIME_LIMIT_EXCEEDED    Exceeded time limit / deadline
+X-Headers-End: 1lPUeB-00AmKA-VD
+Subject: Re: [Industrypack-devel] Can we discuss?
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -87,16 +78,16 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-You promise getting back to me but i wonder why i have not 
-receive your investment plan in area of Investment: Oil & Gas, 
-Agriculture, Aviation, Tourism, Retail, Real Estate & 
-Construction, IT & Communications, Engineering, Utilities, 
-Telecoms, Mining, Maritime Sector and Entertainment industries.
+I want to discuss a business with you. I am having your business 
+complementary card. Can we discuss?
+We are politician and we don't have time to invest. we are 
+willing to invest $10 Million to $50 million in area of 
+Investment interest: Oil & Gas, Agriculture, Aviation, Tourism, 
+Retail, Real Estate & Construction, IT & Communications, 
+Engineering, Utilities, Telecoms, Mining, Maritime Sector and 
+Entertainment industries.
 Purpose of Funds: LONG TERM INVESTMENT ( at least for a period of 
-10 years ) I have $50 million to invest. I am politician and i 
-don't have time to invest. I am having your business 
-complementary card. 
- 
+10 years )
 Thanks
 Miller
 
