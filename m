@@ -2,67 +2,83 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C678A37C9EA
-	for <lists+industrypack-devel@lfdr.de>; Wed, 12 May 2021 18:50:11 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id BA5A538D646
+	for <lists+industrypack-devel@lfdr.de>; Sat, 22 May 2021 17:11:33 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lgs3l-0004I5-VO
-	for lists+industrypack-devel@lfdr.de; Wed, 12 May 2021 16:50:09 +0000
+	id 1lkTHm-0001Qy-6H
+	for lists+industrypack-devel@lfdr.de; Sat, 22 May 2021 15:11:30 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <postmaster@kipenann.com>) id 1lgs3k-0004Hb-0L
- for industrypack-devel@lists.sourceforge.net; Wed, 12 May 2021 16:50:08 +0000
+ (envelope-from <rdunlap@infradead.org>) id 1lkTHd-0001Py-2m
+ for industrypack-devel@lists.sourceforge.net; Sat, 22 May 2021 15:11:21 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Gpmaf8ScoEPUh46s59SRJ4eJ1fSd4bHTC+wqx96PsZM=; b=MUgPvfEA6tbUrHo0eH8GDnDbq5
- QOqd8N3FP0tDNNWyMzES67grktseicOUu+rwq4SMLOP8dgnDr68tvN+U4h4rYLCug0CQnm1nfRoms
- pz3P3HXEvEt8PH+cjqaRdrNDEedEdedpAXirf/A6O4GL4mT8kuRA1pkXV6hFqnRnbgs4=;
+ bh=fU4ucyA1aSCWI5PJ4vpM9CLBWWAQ+TAcqRAfBrYNkmk=; b=cmkaqle9VgMzTYekRCiXhvWaXR
+ g10LvIjSvvtnhDMnaY2kM/s5nWOrH+FwvUwmRujWV2SBx+lHRX/9uBwOwX3ZtM3jXR7wdAvp8xvie
+ b7YQ1f2xQWakTI1DXogGt0M7ODQAChTxiB59hTjOr4bpJYGf7Mtk0mx05mrs8wsENHjE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Gpmaf8ScoEPUh46s59SRJ4eJ1fSd4bHTC+wqx96PsZM=; b=c
- XGAA3Ck8LiSDRhV2tib9n58lDQD144POfciHwIi4mQMvSnHWkEeMAskPRdLVH3PCiuTR+W062Ar92
- Kerrkj8QrdXAT9EXdYnW5TKMh7NBiukEjQdwS1e6zntYIet5g1bo+Chl9UMDSoz43+mnGp8Qi5475
- MVTyPTtOVegSUqkQ=;
-Received: from ja.javawidget.live ([5.180.123.3])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1lgs3Y-0007LN-9J
- for industrypack-devel@lists.sourceforge.net; Wed, 12 May 2021 16:50:07 +0000
-From: Email Admin<postmaster@kipenann.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 12 May 2021 09:49:43 -0700
-Message-ID: <20210512094943.2D1C42D517CEC1B4@kipenann.com>
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
+ Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=fU4ucyA1aSCWI5PJ4vpM9CLBWWAQ+TAcqRAfBrYNkmk=; b=Tp0PmN5+KfeIiKLHwAcVT4FMWo
+ 40vYCQCwx5Q1h9GNNr//dl97+/gdPExeL66XBXYHdveW76m4uxz829dAYb68DMLD6yoHp6iJjb3oY
+ M9lVwYE6ERs34Wu50sHGeZpg7q6Gy/LKYTUr6jzCdT6o/ALpg3xItYCUNzG60qlLg2zE=;
+Received: from bombadil.infradead.org ([198.137.202.133])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
+ id 1lkTHT-00269D-OD
+ for industrypack-devel@lists.sourceforge.net; Sat, 22 May 2021 15:11:19 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=infradead.org; s=bombadil.20210309; h=Content-Transfer-Encoding:
+ Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:
+ Subject:Sender:Reply-To:Content-ID:Content-Description;
+ bh=fU4ucyA1aSCWI5PJ4vpM9CLBWWAQ+TAcqRAfBrYNkmk=; b=dmmuWxhTbOgfYg8hIYxH//TfQ8
+ TVY1RQ+7v2UCk0I4Y0o8qjZ8lrjjpq24WjVKpXmtebUp6twCxhtZPxviFaJ840CXla0P7SutbJNKQ
+ EwIuHtvghMj4aooK6QdLosqgxg4N8p37n3zJ7cJAxuB0LJWMfx6/WrMvM0IkXCD5KklxYcEUB91vz
+ /pIvxfgEVtnPEMk74iY+BJMnV3KCd6IY4Juq3XrcZa/zdCoaXFu90mRy2oPji6EFYWLLdXeDHCufz
+ pitSG5xX2vm+2d3j/+r73fuvuufYT/dWwzujfQcgu93cq2lnV6cLikGeBFfZUKTlEIDbwCrybscGD
+ bAbvTJBw==;
+Received: from [2601:1c0:6280:3f0::7376]
+ by bombadil.infradead.org with esmtpsa (Exim 4.94 #2 (Red Hat Linux))
+ id 1lkTHC-0008b1-Tc; Sat, 22 May 2021 15:10:55 +0000
+To: Aditya Srivastava <yashsri421@gmail.com>, siglesias@igalia.com
+References: <20210522121944.11182-1-yashsri421@gmail.com>
+From: Randy Dunlap <rdunlap@infradead.org>
+Message-ID: <750267be-966b-e165-7c19-ee1872498e1e@infradead.org>
+Date: Sat, 22 May 2021 08:10:54 -0700
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
+ Thunderbird/78.10.0
 MIME-Version: 1.0
-X-Spam-Score: 7.0 (+++++++)
+In-Reply-To: <20210522121944.11182-1-yashsri421@gmail.com>
+Content-Language: en-US
+X-Spam-Score: -0.1 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.9 URIBL_ABUSE_SURBL Contains an URL listed in the ABUSE SURBL blocklist
- [URIs: lorika.firebaseapp.com]
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 MIME_HTML_MOSTLY       BODY: Multipart message mostly text/html MIME
- 1.0 HTML_MESSAGE           BODY: HTML included in message
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: lorika.firebaseapp.com]
- 0.0 RCVD_IN_MSPIKE_L4      RBL: Bad reputation (-4)
- [5.180.123.3 listed in bl.mailspike.net]
- 3.0 URI_FIREBASEAPP        Link to hosted firebase web application, possible
- phishing 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
-X-Headers-End: 1lgs3Y-0007LN-9J
-Subject: [Industrypack-devel] We detected 7 Undelivered-Pending Messages -
- Your Action Is Required
+ for more information. [URIs: infradead.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.0 NICE_REPLY_A           Looks like a legit reply (A)
+X-Headers-End: 1lkTHT-00269D-OD
+Subject: Re: [Industrypack-devel] [PATCH] ipac: ipoctal: fix kernel-doc
+ syntax and remove filename from file headers
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -74,142 +90,83 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============1792933886678685179=="
+Cc: linux-doc@vger.kernel.org, gregkh@linuxfoundation.org,
+ jens.taprogge@taprogge.org, linux-kernel@vger.kernel.org,
+ industrypack-devel@lists.sourceforge.net, lukas.bulwahn@gmail.com,
+ linux-kernel-mentees@lists.linuxfoundation.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
+On 5/22/21 5:19 AM, Aditya Srivastava wrote:
+> The opening comment mark '/**' is used for highlighting the beginning of
+> kernel-doc comments.
+> The header for drivers/ipack/devices/ipoctal follows this syntax, but the
+> content inside does not comply with kernel-doc.
+> 
+> This line was probably not meant for kernel-doc parsing, but is parsed
+> due to the presence of kernel-doc like comment syntax(i.e, '/**'), which
+> causes unexpected warning from kernel-doc.
+> 
+> For e.g., running scripts/kernel-doc -none on
+> drivers/ipack/devices/ipoctal.h emits:
+> warning: This comment starts with '/**', but isn't a kernel-doc comment. Refer Documentation/doc-guide/kernel-doc.rst
+>  * ipoctal.h
+> 
+> Provide a simple fix by replacing this occurrence with general comment
+> format, i.e. '/*', to prevent kernel-doc from parsing it.
+> 
+> Also remove the redundant file name from the comment headers.
+> 
+> Signed-off-by: Aditya Srivastava <yashsri421@gmail.com>
 
---===============1792933886678685179==
-Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0012_8E37D327.7A21EE3F"
+Acked-by: Randy Dunlap <rdunlap@infradead.org>
 
+Thanks.
 
-------=_NextPart_000_0012_8E37D327.7A21EE3F
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
-
-Dear, industrypack-devel
-------=_NextPart_000_0012_8E37D327.7A21EE3F
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.19963"></HEAD>
-<BODY>
-<DIV style=3D'FONT-SIZE: 17px; BORDER-TOP: 0px; FONT-FAMILY: "Segoe UI", "S=
-egoe UI Light", "Segoe WP Light", "Segoe UI", "Segoe WP", Segoe, Tahoma, "M=
-icrosoft Sans Serif", Verdana, sans-serif, serif, EmojiFont; WHITE-SPACE: n=
-ormal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rg=
-b(0,120,215); PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; MARGIN: 0px 0px 10px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px;=20
-BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligature=
-s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-style: initial; text-decoration-color: initial; text-decoration-=
-thickness: initial'>
-<DIV style=3D"BORDER-TOP: 0px; POSITION: static !important; PADDING-TOP: 0p=
-x; CLEAR: both"><FONT color=3D#000000>Dear industrypack-devel<BR></FONT><BR=
-></DIV></DIV>
-<DIV style=3D'FONT-SIZE: 12px; FONT-FAMILY: "Segoe UI", Tahoma; WHITE-SPACE=
-: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR:=
- rgb(102,102,102); PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0p=
-x; PADDING-LEFT: 0px; MARGIN: 0px 120px 30px 0px; ORPHANS: 2; WIDOWS: 2; LE=
-TTER-SPACING: normal; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px; BACKGROUND-COL=
-OR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; fon=
-t-variant-caps: normal; -webkit-text-stroke-width:=20
-0px; text-decoration-style: initial; text-decoration-color: initial; text-d=
-ecoration-thickness: initial'>
-<SPAN style=3D'FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", "Segoe UI Web (Wes=
-t European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helve=
-tica Neue", sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSF=
-ORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: no=
-rmal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: no=
-rmal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-li=
-gatures: normal; font-variant-caps: normal;=20
--webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decora=
-tion-color: initial'>
-This message was created automatically by mail delivery software. <SPAN sty=
-le=3D'FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", "Segoe UI Web (West Europea=
-n)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue=
-", sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none=
-; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORP=
-HANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BAC=
-KGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px;=20
-font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
-oke-width: 0px; text-decoration-style: initial; text-decoration-color: init=
-ial'>Undelivered/Pending messages are awaiting your approval to be delivere=
-d.<BR></SPAN></SPAN><BR><BR>
-<A style=3D'FONT-SIZE: 14px; TEXT-DECORATION: none; FONT-FAMILY: "Segoe UI"=
-, "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystem=
-Font, Roboto, "Helvetica Neue", sans-serif; BACKGROUND: rgb(0,120,212); WHI=
-TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400=
-; COLOR: rgb(255,255,255); PADDING-BOTTOM: 10px; FONT-STYLE: normal; TEXT-A=
-LIGN: left; PADDING-TOP: 10px; PADDING-LEFT: 10px; ORPHANS: 2; WIDOWS: 2; L=
-ETTER-SPACING: normal; PADDING-RIGHT: 10px;=20
-TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal=
-; -webkit-text-stroke-width: 0px; border-radius: 2px' href=3D"https://lorik=
-a.firebaseapp.com/01lorika.html#iuser=3Dindustrypack-devel@lists.sourceforg=
-e.net" rel=3D"" target=3D_blank>View/Authorize Delivery for pending mails</=
-A>
-<SPAN style=3D'FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", "Segoe UI Web (Wes=
-t European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helve=
-tica Neue", sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSF=
-ORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: no=
-rmal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; =
-LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0p=
-x; font-variant-ligatures: normal;=20
-font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-=
-style: initial; text-decoration-color: initial'><SPAN>&nbsp;</SPAN></SPAN><=
-BR><BR><BR><EM><FONT color=3D#838282 size=3D2>Message Encrypted by&nbsp;lis=
-ts.sourceforge.net</FONT></EM>
-<SPAN style=3D'FONT-SIZE: 11px; FONT-FAMILY: "Segoe UI", "Segoe UI Web (Wes=
-t European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helve=
-tica Neue", sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSF=
-ORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(131,130,130); FONT-STY=
-LE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACI=
-NG: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-vari=
-ant-ligatures: normal; font-variant-caps: normal;=20
--webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decora=
-tion-color: initial'>&nbsp;</SPAN>
-<EM style=3D'FONT-SIZE: 11px; FONT-FAMILY: "Segoe UI", "Segoe UI Web (West =
-European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
-ca Neue", sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFOR=
-M: none; FONT-WEIGHT: 400; COLOR: rgb(131,130,130); ORPHANS: 2; WIDOWS: 2; =
-LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0p=
-x; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
-stroke-width: 0px; text-decoration-style: initial;=20
-text-decoration-color: initial'>&copy; All Rights Reserved.</EM>
-<SPAN style=3D'FONT-SIZE: 11px; FONT-FAMILY: "Segoe UI", "Segoe UI Web (Wes=
-t European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helve=
-tica Neue", sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSF=
-ORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(131,130,130); FONT-STY=
-LE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACI=
-NG: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-vari=
-ant-ligatures: normal; font-variant-caps: normal;=20
--webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decora=
-tion-color: initial'><SPAN>&nbsp;</SPAN>| If you do not wish to recieve thi=
-s message</SPAN></DIV></BODY></HTML>
-------=_NextPart_000_0012_8E37D327.7A21EE3F--
+> ---
+>  drivers/ipack/devices/ipoctal.c | 4 +---
+>  drivers/ipack/devices/ipoctal.h | 6 ++----
+>  2 files changed, 3 insertions(+), 7 deletions(-)
+> 
+> diff --git a/drivers/ipack/devices/ipoctal.c b/drivers/ipack/devices/ipoctal.c
+> index 3940714e4397..2a3a94f72dfb 100644
+> --- a/drivers/ipack/devices/ipoctal.c
+> +++ b/drivers/ipack/devices/ipoctal.c
+> @@ -1,7 +1,5 @@
+>  // SPDX-License-Identifier: GPL-2.0-only
+> -/**
+> - * ipoctal.c
+> - *
+> +/*
+>   * driver for the GE IP-OCTAL boards
+>   *
+>   * Copyright (C) 2009-2012 CERN (www.cern.ch)
+> diff --git a/drivers/ipack/devices/ipoctal.h b/drivers/ipack/devices/ipoctal.h
+> index 75f83ba774a4..773dc41bd667 100644
+> --- a/drivers/ipack/devices/ipoctal.h
+> +++ b/drivers/ipack/devices/ipoctal.h
+> @@ -1,9 +1,7 @@
+>  /* SPDX-License-Identifier: GPL-2.0-only */
+> -/**
+> - * ipoctal.h
+> - *
+> +/*
+>   * driver for the IPOCTAL boards
+> -
+> + *
+>   * Copyright (C) 2009-2012 CERN (www.cern.ch)
+>   * Author: Nicolas Serafini, EIC2 SA
+>   * Author: Samuel Iglesias Gonsalvez <siglesias@igalia.com>
+> 
 
 
---===============1792933886678685179==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+-- 
+~Randy
 
 
---===============1792933886678685179==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============1792933886678685179==--
-
