@@ -2,83 +2,98 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7950738D649
-	for <lists+industrypack-devel@lfdr.de>; Sat, 22 May 2021 17:11:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7544F38E361
+	for <lists+industrypack-devel@lfdr.de>; Mon, 24 May 2021 11:32:37 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:Cc:
+	Reply-To:From:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Subject:MIME-Version:Message-Id:Date:To:Sender:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=oIQxgtyRsFeODgRRofkvSN/h4NvTt+EkjzJwAZ2ABEU=; b=bBSH0+6NPYegQtUcaBYJBqpucT
+	0Z6sVgTkP7LcrL2CxuTNSZNEHOgM6JSp3zkUCWmzxQQxjGC9svpthqrew02CXP8/P9cyHqVwAh2jx
+	zNjaHpD1hLWvAYidb1Caqp+dRC95Zhy9sJ0RAwwyGdytjeuKng1ZlG7zV9/8QCCl68ts=;
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lkTIA-0005yT-Ih
-	for lists+industrypack-devel@lfdr.de; Sat, 22 May 2021 15:11:54 +0000
+	id 1ll6wt-00087t-HA
+	for lists+industrypack-devel@lfdr.de; Mon, 24 May 2021 09:32:35 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <rdunlap@infradead.org>) id 1lkTI8-0005xr-BO
- for industrypack-devel@lists.sourceforge.net; Sat, 22 May 2021 15:11:52 +0000
+ (envelope-from <lyl2019@mail.ustc.edu.cn>) id 1ll6wq-00086f-GD
+ for industrypack-devel@lists.sourceforge.net; Mon, 24 May 2021 09:32:32 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
- MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:Message-Id:
+ Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=aHoWqS6wBA7auWs741xKAHDKHGtZ/8QwNVQ3vHvVUzU=; b=E5ytqF+gf8WivlkptljNpIJCnQ
- DQ3jnnFh9FViz3XWjgTDGk6Ri/rpdppnWv61VoEnFUf9R1IZPMHiN+i+1oV0I0C0HfQdIlXRqA3Hc
- f2LbhaQz0TuMR2Tq/IXJ5G61CHK8ISUozFaybMFs2RJC5fzHuCWab8JVTU2yBFjWj89k=;
+ bh=8QYGljFb5EAOcfFXhgSb6txhlNcsv6mgPjDeDUMQExc=; b=iBX8Xu8DfMoIEkBixXulAlzuB+
+ 59mB80xpCmPKI66lciilgIGd41MPeK4kDgMVx7hfqKtu4tcrOyJX4bUVibsPS9NBpbdximOAdFnh5
+ GKSffc2W7pkiAilOLY+UzffIVI4+uH2q3hdC93OwqEwNJYSSt9ngf6VLDcTyYYHV9fVw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:
- Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=aHoWqS6wBA7auWs741xKAHDKHGtZ/8QwNVQ3vHvVUzU=; b=l2AnIByg6AOPofnkvWWdGVBJjK
- Vw4sANbqG01uVJB5blXeoJiKnc4rYlMs7efu6zn76FAg66sa9YI5+PQ6nIkZW/xd6Gz6JqC8hcC3e
- rFEP3dn2xi7DAbh2FZPt5yVOcZQsNKm5bhWExqt7/Ko1JFC+hu3/U8TL7VuVL6CSvN7A=;
-Received: from bombadil.infradead.org ([198.137.202.133])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1lkTI0-0026DK-R8
- for industrypack-devel@lists.sourceforge.net; Sat, 22 May 2021 15:11:52 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=bombadil.20210309; h=Content-Transfer-Encoding:
- Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:
- Subject:Sender:Reply-To:Content-ID:Content-Description;
- bh=aHoWqS6wBA7auWs741xKAHDKHGtZ/8QwNVQ3vHvVUzU=; b=0DHTjS7S9U1aCaxLl0zaAQ+GZi
- gkqH0xt5ITJJJproyTzuKh0voqLTDx706Afp/xjqt0WrLtQhQgpJDzaRYFpdg7+EbV49nfVab+gPW
- lGytLrSM/EKenAQLWXlfa+CrMe4P99Ou2Pei7coiJg6oTGe4BYSzGVA1m8DFSdHXB98AW0k0kaPqm
- hkRpchh+bLeVfX6FHHeQq98PMYlRVJHwnnsJ+YJXtjDit8B6QeKbHIsBBtSMqnZOWJ4KqVAu2yor2
- tDKg6X7rWB2iWkd6wxuQs7zoeaZN1f19r2/k99JeKxpgPChvCgZCliOixelQOFZJ/7S8Z2x/sPkmT
- MWsElMdQ==;
-Received: from [2601:1c0:6280:3f0::7376]
- by bombadil.infradead.org with esmtpsa (Exim 4.94 #2 (Red Hat Linux))
- id 1lkTHv-0008c4-C4; Sat, 22 May 2021 15:11:39 +0000
-To: Aditya Srivastava <yashsri421@gmail.com>, siglesias@igalia.com
-References: <20210522124051.12540-1-yashsri421@gmail.com>
-From: Randy Dunlap <rdunlap@infradead.org>
-Message-ID: <a6e13d99-d08c-cc4d-d159-6aba5a2dca09@infradead.org>
-Date: Sat, 22 May 2021 08:11:38 -0700
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101
- Thunderbird/78.10.0
+ h=Content-Transfer-Encoding:MIME-Version:Message-Id:Date:Subject:Cc:To:From
+ :Sender:Reply-To:Content-Type:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=8QYGljFb5EAOcfFXhgSb6txhlNcsv6mgPjDeDUMQExc=; b=g
+ ExTKsIoINXaGcz/j772a5U9JIeQfrFrBRKCJ0yqXK+olGByxJQcqW5paq3q1EvImRTCNm0Y4kD7qn
+ YKhcxZRZWUy/sq6pFwJafKCZaSnAacunVQjhAsBALUhREIfU74lX1Fao80spI3A8EAUk4uyfCXDYc
+ Rex8PTHX/UhUeVUw=;
+Received: from smtp2.ustc.edu.cn ([202.38.64.46] helo=ustc.edu.cn)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
+ id 1ll6wi-0004bu-EQ
+ for industrypack-devel@lists.sourceforge.net; Mon, 24 May 2021 09:32:32 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mail.ustc.edu.cn; s=dkim; h=Received:From:To:Cc:Subject:Date:
+ Message-Id:MIME-Version:Content-Transfer-Encoding; bh=8QYGljFb5E
+ AOcfFXhgSb6txhlNcsv6mgPjDeDUMQExc=; b=QI6rL/1AG/Nr3fR+4Xu7eSpmJX
+ kDTi8rM3zUdlUXSS64u5EhHRpjtmVFL0AHTfmCh35ueGhqFQUgrtSsqjZp5SremW
+ rX+5gHzDOJx7LQ7R/tJuq4gJskoxZ89xbuPX2QS9ZPnz3JvUV4XrW8EQQxznBjR+
+ vcs+5Bx2q/ZfCaFI8=
+Received: from ubuntu.localdomain (unknown [202.38.69.14])
+ by newmailweb.ustc.edu.cn (Coremail) with SMTP id
+ LkAmygA3OoKfcqtgS0gKAA--.1158S4; 
+ Mon, 24 May 2021 17:32:15 +0800 (CST)
+To: siglesias@igalia.com, jens.taprogge@taprogge.org,
+ gregkh@linuxfoundation.org
+Date: Mon, 24 May 2021 02:32:05 -0700
+Message-Id: <20210524093205.8333-1-lyl2019@mail.ustc.edu.cn>
+X-Mailer: git-send-email 2.25.1
 MIME-Version: 1.0
-In-Reply-To: <20210522124051.12540-1-yashsri421@gmail.com>
-Content-Language: en-US
+X-CM-TRANSID: LkAmygA3OoKfcqtgS0gKAA--.1158S4
+X-Coremail-Antispam: 1UD129KBjvJXoW7ZFyDWw48ur4fKryfGw4rZrb_yoW8GrWUpF
+ 45A345Gr9xXa4rCF4IvFWDZF15Cw48t3sYk3yIk3y3ZFs3Wr1jkFs3AFyUXF48tw4rGF1x
+ XF1kt34UXF4UJwUanT9S1TB71UUUUUUqnTZGkaVYY2UrUUUUjbIjqfuFe4nvWSU5nxnvy2
+ 9KBjDU0xBIdaVrnRJUUUvm14x267AKxVW8JVW5JwAFc2x0x2IEx4CE42xK8VAvwI8IcIk0
+ rVWrJVCq3wAFIxvE14AKwVWUJVWUGwA2ocxC64kIII0Yj41l84x0c7CEw4AK67xGY2AK02
+ 1l84ACjcxK6xIIjxv20xvE14v26w1j6s0DM28EF7xvwVC0I7IYx2IY6xkF7I0E14v26F4j
+ 6r4UJwA2z4x0Y4vEx4A2jsIE14v26rxl6s0DM28EF7xvwVC2z280aVCY1x0267AKxVW0oV
+ Cq3wAac4AC62xK8xCEY4vEwIxC4wAS0I0E0xvYzxvE52x082IY62kv0487Mc02F40EFcxC
+ 0VAKzVAqx4xG6I80ewAv7VC0I7IYx2IY67AKxVWUJVWUGwAv7VC2z280aVAFwI0_Jr0_Gr
+ 1lOx8S6xCaFVCjc4AY6r1j6r4UM4x0Y48IcxkI7VAKI48JM4x0x7Aq67IIx4CEVc8vx2IE
+ rcIFxwCY02Avz4vE14v_GFWl42xK82IYc2Ij64vIr41l4I8I3I0E4IkC6x0Yz7v_Jr0_Gr
+ 1lx2IqxVAqx4xG67AKxVWUJVWUGwC20s026x8GjcxK67AKxVWUGVWUWwC2zVAF1VAY17CE
+ 14v26r126r1DMIIYrxkI7VAKI48JMIIF0xvE2Ix0cI8IcVAFwI0_Jr0_JF4lIxAIcVC0I7
+ IYx2IY6xkF7I0E14v26r1j6r4UMIIF0xvE42xK8VAvwI8IcIk0rVWrZr1j6s0DMIIF0xvE
+ x4A2jsIE14v26r1j6r4UMIIF0xvEx4A2jsIEc7CjxVAFwI0_Jr0_GrUvcSsGvfC2KfnxnU
+ UI43ZEXa7VUjAsqPUUUUU==
+X-CM-SenderInfo: ho1ojiyrz6zt1loo32lwfovvfxof0/
 X-Spam-Score: -0.1 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
- See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: infradead.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
- -0.0 NICE_REPLY_A           Looks like a legit reply (A)
-X-Headers-End: 1lkTI0-0026DK-R8
-Subject: Re: [Industrypack-devel] [PATCH] ipac: tpci200: fix kernel-doc
- syntax and remove filename from file header
+X-Headers-End: 1ll6wi-0004bu-EQ
+Subject: [Industrypack-devel] [PATCH] ipack/carriers/tpci200: Fix a double
+ free in tpci200_pci_probe
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -90,76 +105,53 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Cc: linux-doc@vger.kernel.org, gregkh@linuxfoundation.org,
- jens.taprogge@taprogge.org, linux-kernel@vger.kernel.org,
- industrypack-devel@lists.sourceforge.net, lukas.bulwahn@gmail.com,
- linux-kernel-mentees@lists.linuxfoundation.org
+From: Lv Yunlong via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: Lv Yunlong <lyl2019@mail.ustc.edu.cn>
+Cc: Lv Yunlong <lyl2019@mail.ustc.edu.cn>, linux-kernel@vger.kernel.org,
+ industrypack-devel@lists.sourceforge.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-On 5/22/21 5:40 AM, Aditya Srivastava wrote:
-> The opening comment mark '/**' is used for highlighting the beginning of
-> kernel-doc comments.
-> The header for drivers/ipack/carriers/tpci200 follows this syntax, but the
-> content inside does not comply with kernel-doc.
-> 
-> This line was probably not meant for kernel-doc parsing, but is parsed
-> due to the presence of kernel-doc like comment syntax(i.e, '/**'), which
-> causes unexpected warning from kernel-doc.
-> 
-> For e.g., running scripts/kernel-doc -none on
-> drivers/ipack/carriers/tpci200.c emits:
-> warning: This comment starts with '/**', but isn't a kernel-doc comment. Refer Documentation/doc-guide/kernel-doc.rst
->  * tpci200.c
-> 
-> Provide a simple fix by replacing this occurrence with general comment
-> format, i.e. '/*', to prevent kernel-doc from parsing it.
-> 
-> Also remove the redundant file name from the comment headers.
-> 
-> Signed-off-by: Aditya Srivastava <yashsri421@gmail.com>
+In the out_err_bus_register error branch of tpci200_pci_probe,
+tpci200->info->cfg_regs is freed by tpci200_uninstall()->
+tpci200_unregister()->pci_iounmap(..,tpci200->info->cfg_regs)
+in the first time.
 
-Acked-by: Randy Dunlap <rdunlap@infradead.org>
+But later, iounmap() is called to free tpci200->info->cfg_regs
+again.
 
-Thanks.
+My patch sets tpci200->info->cfg_regs to NULL after tpci200_uninstall()
+to avoid the double free.
 
-> ---
->  drivers/ipack/carriers/tpci200.c | 4 +---
->  drivers/ipack/carriers/tpci200.h | 4 +---
->  2 files changed, 2 insertions(+), 6 deletions(-)
-> 
-> diff --git a/drivers/ipack/carriers/tpci200.c b/drivers/ipack/carriers/tpci200.c
-> index ec71063fff76..a867906777bd 100644
-> --- a/drivers/ipack/carriers/tpci200.c
-> +++ b/drivers/ipack/carriers/tpci200.c
-> @@ -1,7 +1,5 @@
->  // SPDX-License-Identifier: GPL-2.0-only
-> -/**
-> - * tpci200.c
-> - *
-> +/*
->   * driver for the TEWS TPCI-200 device
->   *
->   * Copyright (C) 2009-2012 CERN (www.cern.ch)
-> diff --git a/drivers/ipack/carriers/tpci200.h b/drivers/ipack/carriers/tpci200.h
-> index 2619f827e33f..e79ac64abcff 100644
-> --- a/drivers/ipack/carriers/tpci200.h
-> +++ b/drivers/ipack/carriers/tpci200.h
-> @@ -1,7 +1,5 @@
->  /* SPDX-License-Identifier: GPL-2.0-only */
-> -/**
-> - * tpci200.h
-> - *
-> +/*
->   * driver for the carrier TEWS TPCI-200
->   *
->   * Copyright (C) 2009-2012 CERN (www.cern.ch)
-> 
+Fixes: cea2f7cdff2af ("Staging: ipack/bridges/tpci200: Use the TPCI200 in big endian mode")
+Signed-off-by: Lv Yunlong <lyl2019@mail.ustc.edu.cn>
+---
+ drivers/ipack/carriers/tpci200.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
-
+diff --git a/drivers/ipack/carriers/tpci200.c b/drivers/ipack/carriers/tpci200.c
+index ec71063fff76..e1822e87ec3d 100644
+--- a/drivers/ipack/carriers/tpci200.c
++++ b/drivers/ipack/carriers/tpci200.c
+@@ -596,8 +596,11 @@ static int tpci200_pci_probe(struct pci_dev *pdev,
+ 
+ out_err_bus_register:
+ 	tpci200_uninstall(tpci200);
++	/* tpci200->info->cfg_regs is unmapped in tpci200_uninstall */
++	tpci200->info->cfg_regs = NULL;
+ out_err_install:
+-	iounmap(tpci200->info->cfg_regs);
++	if (tpci200->info->cfg_regs)
++		iounmap(tpci200->info->cfg_regs);
+ out_err_ioremap:
+ 	pci_release_region(pdev, TPCI200_CFG_MEM_BAR);
+ out_err_pci_request:
 -- 
-~Randy
+2.25.1
+
+
 
 
 
