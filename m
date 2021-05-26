@@ -2,83 +2,77 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3D08E38FD3B
-	for <lists+industrypack-devel@lfdr.de>; Tue, 25 May 2021 10:53:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8BBAD391500
+	for <lists+industrypack-devel@lfdr.de>; Wed, 26 May 2021 12:36:02 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1llSom-0001TO-8t
-	for lists+industrypack-devel@lfdr.de; Tue, 25 May 2021 08:53:40 +0000
+	id 1llqtM-00061C-D7
+	for lists+industrypack-devel@lfdr.de; Wed, 26 May 2021 10:36:00 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <postmaster@glopror.com>) id 1llSol-0001Sh-7v
- for industrypack-devel@lists.sourceforge.net; Tue, 25 May 2021 08:53:39 +0000
+ (envelope-from <siglesias@igalia.com>) id 1llqtK-00060r-Uq
+ for industrypack-devel@lists.sourceforge.net; Wed, 26 May 2021 10:35:58 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=MIME-Version:Content-Type:References:In-Reply-To:
+ Date:Cc:To:From:Subject:Message-ID:Sender:Reply-To:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=sleRCRGR6LZJueWjpKKnz0D8AMKHliJI+1A9IUC3YT4=; b=nTNcpQ/7fNPHHJ1eNCFyBFqzCe
- BU08qwTpe1qcxIVPKpc0N0xdZGVXnWSP1tn2MJZWtXkp01IkNPssZc6R3DQ+uneyMqWJ0akzHhBR9
- EwwDBSIdfWSwtrnuYYDRS+RzXcWmTQY7Ozw7TP4ub2MOMPL1SWqskZa1zYyWca09r8vY=;
+ bh=11rVPzFnJkl/p+9EOEW+pvbWPdKb5D/ypNLYBEtv/0k=; b=E3mjBtZ+Vf+DL/ek63fyR83Z/n
+ 3sYHSe2Xwpd7S7nZ9N8NkkwRJOXX3dGpO4NYA3n9TtqjKMIUeojnq7cpRhGUNg2FCnG4B++I6N/GF
+ Z+Tp8SbbMzpIvGIw8+Rf/DTbOEulj1ZbMHW4KOLqx//a6L31ftma9cRjtkLEWmLjXRRI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=sleRCRGR6LZJueWjpKKnz0D8AMKHliJI+1A9IUC3YT4=; b=T
- 9C+xBmoHNcbs/scB1aCO+cY2yVPvCXPQf2tQFgD/N5HkcBCYKx3AFor95Fy11oImrt3XLMHJmDFr1
- uWu13Luk2kCQEKJhXjqjtKUJt0JE9jHmdb573eTpIuCUM4Zjk6H4+q/Ny6GQEYKrqKgSzgZEIZtNF
- g8AJFMd95CRvZz/Q=;
-Received: from slot0.glopror.com ([195.133.40.186])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.2)
- id 1llSoc-0056k9-5u
- for industrypack-devel@lists.sourceforge.net; Tue, 25 May 2021 08:53:39 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=glopror.com;
- h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
- i=postmaster@glopror.com; bh=EuZrTo2yZR35lrtHTqGpDpJwobA=;
- b=JuD81tdhCb3rkAra9TPL9XlkPqOTpqyyeYOrobg7j4KpdIiwGrckzjiRG2byb7YRcB/aJSCB8OaQ
- DN/DgxLmBFuaDvgeWDAWYzjmlh0ftRyCUi5mQnSEtBp4ZzFrF4B1XTfBSxNHNrl4d/q4B8A/Rrs+
- gu7Ps+2Cgku6b/p0ivXb7u3OqTLvtqHR35C77zGNo9wp6LG0CYBTwN2abIjK7UcLBgT12w/LcEUH
- JHsl7/aPjxBgsZEWM2tAkZmhZcbEka9XO02ZFIrw0TSVQpOmDNeolkTesO2SudXIVuQKhAfSLqNh
- LVUSCKdF6Xj7RhWzRs6IybGwGp77NIz92HVzqQ==
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=glopror.com;
- b=Vm8j4FU5MK5yEEHT4FOsxy854UD6Kh7oJ9hTuugJR1srT13QJhysRV1Uc3ZUkyq858P+w0zbSxbM
- 3URgUb+6yGTH8eTFfmKDNoxPjyeaUUvWjzhjs46KDDUN5QW5TWqQXXs17POkee4gC+N2BXgRMWfS
- a0blgqK5xBhoG2y5aqHSV32+btB3wBZazGFtcTnAQe7jDhUWpFAkuffhq5Rj+hDmbEQIl6U65O8x
- az2IhknA9VGL/tgTofmBgeb5UAEEocK0WWO7aGGjM5URu6pS8fc5pwkead79V8uZBnvlZ+T939sz
- hjh3GZjoq5DPTWokU19d1EcnlWbe6u9IsAVZ/w==;
-From: Lenirus - PM Dklaos <postmaster@glopror.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 25 May 2021 01:51:16 -0700
-Message-ID: <20210525015116.6C519F9A46FA4FCF@glopror.com>
+ h=MIME-Version:Content-Type:References:In-Reply-To:Date:Cc:To:From:Subject:
+ Message-ID:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=11rVPzFnJkl/p+9EOEW+pvbWPdKb5D/ypNLYBEtv/0k=; b=GLLYcvx7+mM0C09obc1P9TjCKr
+ 9ufC9lZHDHw+Zjtff9K8iOLPNJd90c0AnQ9aH7pFKFKmqHcL0Voj+TMMh+fn6KP5gvZwlRNQiwQ0s
+ n5HmJqA5wP9yepRegwVrPPCz8i0dN81/jmTQsC5P6/2B5emisIXGE7FjEEsd8ZqZinR8=;
+Received: from fanzine.igalia.com ([178.60.130.6])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
+ id 1llqtC-0008W0-4R
+ for industrypack-devel@lists.sourceforge.net; Wed, 26 May 2021 10:35:58 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=igalia.com;
+ s=20170329; 
+ h=MIME-Version:Content-Type:References:In-Reply-To:Date:Cc:To:From:Subject:Message-ID;
+ bh=11rVPzFnJkl/p+9EOEW+pvbWPdKb5D/ypNLYBEtv/0k=; 
+ b=mAXd47xPAuFxPUDV6llZq9Fc9F+lsHY9d4QicB9DBsIT3+DYV/crMl1IaaenTopvjIN+YPC9LOiZsVugUZTZQGPbwtiDNjJncMsPu6KE+hF03HRXMfOX+4qHeX1zKE4QxNas/Aslp0IuikQdOu9S7qb8nzaSKU3HTSoGdYpciaADBKOud9ic1Um5M6B7yDdDTiklkM3bi6Wf0ZAtzdzGbLicgjyvLvn2H4oRFTA9jHQTrPW+g5siKcHHMFOt+S/9mYP4XZbfXRgjQEr4IpL8ow6IyNkNjzhhPxOGhEBrhQiG0skvzFS9tRhkIKAc5PpB5N+72QTsPSo0JDNf4ZDyUg==;
+Received: from 1.pool85-50-22.dynamic.orange.es ([85.50.22.1]
+ helo=[192.168.1.120]) by fanzine.igalia.com with esmtpsa 
+ (Cipher TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim)
+ id 1llqPA-0002rB-Kj; Wed, 26 May 2021 12:04:49 +0200
+Message-ID: <c00938c1e634340663e145b51c5989bd4a20f326.camel@igalia.com>
+From: Samuel Iglesias =?ISO-8859-1?Q?Gons=E1lvez?= <siglesias@igalia.com>
+To: Lv Yunlong <lyl2019@mail.ustc.edu.cn>, jens.taprogge@taprogge.org, 
+ gregkh@linuxfoundation.org
+Date: Wed, 26 May 2021 12:04:28 +0200
+In-Reply-To: <20210524093205.8333-1-lyl2019@mail.ustc.edu.cn>
+References: <20210524093205.8333-1-lyl2019@mail.ustc.edu.cn>
+User-Agent: Evolution 3.38.3-1 
 MIME-Version: 1.0
-X-Spam-Score: 8.0 (++++++++)
+X-Spam-Score: -0.1 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [195.133.40.186 listed in zen.spamhaus.org]
- 0.0 RCVD_IN_MSPIKE_L5      RBL: Very bad reputation (-5)
- [195.133.40.186 listed in bl.mailspike.net]
- 1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
- https://senderscore.org/blocklistlookup/
- [195.133.40.186 listed in bl.score.senderscore.com]
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: igalia.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 HTML_MESSAGE           BODY: HTML included in message
- 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
- 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
-X-Headers-End: 1llSoc-0056k9-5u
-Subject: [Industrypack-devel] New Project Order
+X-Headers-End: 1llqtC-0008W0-4R
+Subject: Re: [Industrypack-devel] [PATCH] ipack/carriers/tpci200: Fix a
+ double free in tpci200_pci_probe
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -90,249 +84,117 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: lenirus.pm@dkloas.com
-Content-Type: multipart/mixed; boundary="===============5716973946364218364=="
+Cc: linux-kernel@vger.kernel.org, industrypack-devel@lists.sourceforge.net
+Content-Type: multipart/mixed; boundary="===============8326284076201071091=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============5716973946364218364==
-Content-Type: text/html;
-	charset="iso-8859-1"
+
+--===============8326284076201071091==
+Content-Type: multipart/signed; micalg="pgp-sha512";
+	protocol="application/pgp-signature"; boundary="=-DLbZsM2hAwmpALcT3MJO"
+
+
+--=-DLbZsM2hAwmpALcT3MJO
+Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
+Hi Lv,
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.16438"></HEAD>
-<body style=3D"MARGIN: 0.5em">
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-GB style=3D"FONT-SIZE: 1=
-2pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optima,sans-serif; BORDER-RIGHT:=
- 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(12,100,192);=
- PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BOR=
-DER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">Hi,</SPAN>
-<SPAN lang=3DEN-GB style=3D"FONT-SIZE: 10pt; BORDER-TOP: 0px; FONT-FAMILY: =
-Arial,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTO=
-M: 0px; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
-0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inher=
-it"></SPAN></P>
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-GB style=3D"FONT-SIZE: 1=
-0pt; BORDER-TOP: 0px; FONT-FAMILY: Arial,sans-serif; BORDER-RIGHT: 0px; VER=
-TICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PA=
-DDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-R=
-IGHT: 0px; font-stretch: inherit">
-<SPAN style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optim=
-a,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0=
-px; COLOR: rgb(12,100,192); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch:=
- inherit"></SPAN></SPAN>&nbsp;</P>
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-GB style=3D"FONT-SIZE: 1=
-2pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optima,sans-serif; BORDER-RIGHT:=
- 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(12,100,192);=
- PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BOR=
-DER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">
-I got the contact info. From your website. We are interested in your produc=
-ts, Pls forward this email to your related Sales account,</SPAN><BR><SPAN l=
-ang=3DEN-GB style=3D"FONT-SIZE: 10.5pt; BORDER-TOP: 0px; FONT-FAMILY: inher=
-it; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR:=
- ; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; B=
-ORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit"></SPAN></P>
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-GB style=3D"FONT-SIZE: 1=
-0.5pt; BORDER-TOP: 0px; FONT-FAMILY: inherit; BORDER-RIGHT: 0px; VERTICAL-A=
-LIGN: baseline; BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-T=
-OP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0=
-px; font-stretch: inherit"><BR></SPAN></P>
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-GB style=3D"FONT-SIZE: 1=
-2pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optima,sans-serif; BORDER-RIGHT:=
- 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(12,100,192);=
- PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BOR=
-DER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">Could you</SPAN>
-<SPAN lang=3DEN-GB style=3D"FONT-SIZE: 10pt; BORDER-TOP: 0px; FONT-FAMILY: =
-Arial,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTO=
-M: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
-MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">
-<SPAN style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optim=
-a,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0=
-px; COLOR: rgb(12,100,192); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch:=
- inherit">&nbsp;</SPAN>
-<SPAN style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optim=
-a,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0=
-px; COLOR: rgb(12,100,192); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch:=
- inherit">please share with us your latest company presentation and product=
- roadmap?&nbsp; </SPAN></SPAN></P>
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-US style=3D"FONT-SIZE: 1=
-0.5pt; BORDER-TOP: 0px; FONT-FAMILY: inherit; BORDER-RIGHT: 0px; VERTICAL-A=
-LIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(31,73,125); PADDING-BOTTOM: =
-0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PA=
-DDING-RIGHT: 0px; font-stretch: inherit">
-<SPAN style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optim=
-a,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0=
-px; COLOR: rgb(12,100,192); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch:=
- inherit"></SPAN></SPAN>&nbsp;</P>
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-GB style=3D"FONT-SIZE: 1=
-2pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optima,sans-serif; BORDER-RIGHT:=
- 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(12,100,192);=
- PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BOR=
-DER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">Look forward</SPA=
-N>
-<SPAN lang=3DEN-GB style=3D"FONT-SIZE: 10pt; BORDER-TOP: 0px; FONT-FAMILY: =
-Arial,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTO=
-M: 0px; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
-0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inher=
-it">
-<SPAN style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optim=
-a,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0=
-px; COLOR: rgb(12,100,192); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch:=
- inherit">&nbsp;</SPAN></SPAN>
-<SPAN lang=3DEN-GB style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: =
-Candara,Optima,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BOR=
-DER-BOTTOM: 0px; COLOR: rgb(12,100,192); PADDING-BOTTOM: 0px; PADDING-TOP: =
-0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; =
-font-stretch: inherit">to your feedback.</SPAN>
-<SPAN lang=3DEN-GB style=3D"FONT-SIZE: 10pt; BORDER-TOP: 0px; FONT-FAMILY: =
-Arial,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTO=
-M: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
-MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">
-<SPAN style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optim=
-a,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0=
-px; COLOR: rgb(12,100,192); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch:=
- inherit">&nbsp;</SPAN>
-<SPAN style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Candara,Optim=
-a,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0=
-px; COLOR: rgb(12,100,192); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch:=
- inherit">&nbsp;Thanks.</SPAN>
-<SPAN style=3D"BORDER-TOP: 0px; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline=
-; BORDER-BOTTOM: 0px; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
-PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px"></SPA=
-N></SPAN></P>
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-GB style=3D"FONT-SIZE: 1=
-0pt; BORDER-TOP: 0px; FONT-FAMILY: Arial,sans-serif; BORDER-RIGHT: 0px; VER=
-TICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: black; PADDING-BOTTOM: 0p=
-x; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADD=
-ING-RIGHT: 0px; font-stretch: inherit"></SPAN>&nbsp;</P>
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-GB style=3D"FONT-SIZE: 1=
-0pt; BORDER-TOP: 0px; FONT-FAMILY: Arial,sans-serif; BORDER-RIGHT: 0px; VER=
-TICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: black; PADDING-BOTTOM: 0p=
-x; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADD=
-ING-RIGHT: 0px; font-stretch: inherit"></SPAN>&nbsp;</P>
-<P class=3DMsoNormal style=3D"FONT-SIZE: 12pt; FONT-FAMILY: SimSun; COLOR: =
-rgb(0,0,128); MARGIN: 0cm 0cm 0pt"><SPAN lang=3DEN-GB style=3D'FONT-SIZE: 8=
-pt; BORDER-TOP: 0px; FONT-FAMILY: "Arial Black",Arial,sans-serif; BORDER-RI=
-GHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: black; PADDI=
-NG-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LE=
-FT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit'>Kind regards,</SPAN>
-<SPAN lang=3DEN-US style=3D"FONT-SIZE: 10pt; BORDER-TOP: 0px; FONT-FAMILY: =
-Arial,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTO=
-M: 0px; COLOR: black; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
-0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inher=
-it"><BR></SPAN></P>
-<DIV style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Calibri,Helvet=
-ica,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM:=
- 0px; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
-T: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: in=
-herit; font-variant-numeric: inherit">
-<SPAN style=3D'FONT-SIZE: 8pt; BORDER-TOP: 0px; FONT-FAMILY: "Arial Black",=
-Arial,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTO=
-M: 0px; COLOR: rgb(32,31,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDIN=
-G-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretc=
-h: inherit'>&nbsp;Lenirus&nbsp;</SPAN><BR></DIV>
-<DIV style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Calibri,Helvet=
-ica,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM:=
- 0px; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
-T: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: in=
-herit; font-variant-numeric: inherit"><BR style=3D"FONT-SIZE: 15px; COLOR: =
-rgb(32,31,30)">
-<SPAN style=3D'FONT-SIZE: 15px; BORDER-TOP: 0px; FONT-FAMILY: "Arial Black"=
-,Arial,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTT=
-OM: 0px; COLOR: rgb(147,69,17); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADD=
-ING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stre=
-tch: inherit'><B><I><U>DK LAO TRADING SOLE CO., LTD</U></I></B></SPAN><BR s=
-tyle=3D"FONT-SIZE: 15px; COLOR: rgb(32,31,30)"><U style=3D"FONT-SIZE: 14px"=
->
-<SPAN style=3D"FONT-SIZE: 8pt; BORDER-TOP: 0px; FONT-FAMILY: inherit; BORDE=
-R-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(32,3=
-1,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0p=
-x; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">Unit 24, Ka=
-mphaengmeuang Road, Ban Nonghai, Hatxayfong District. Loas</SPAN><BR style=
-=3D"FONT-SIZE: 15px; COLOR: rgb(32,31,30)"><BR style=3D"FONT-SIZE: 15px; CO=
-LOR: rgb(32,31,30)">
-<SPAN style=3D"FONT-SIZE: 8pt; BORDER-TOP: 0px; FONT-FAMILY: inherit; BORDE=
-R-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(32,3=
-1,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0p=
-x; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">&nbsp;* &nb=
-sp; +85620 2802 3338</SPAN><BR style=3D"FONT-SIZE: 15px; COLOR: rgb(32,31,3=
-0)">
-<SPAN style=3D"FONT-SIZE: 8pt; BORDER-TOP: 0px; FONT-FAMILY: inherit; BORDE=
-R-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(32,3=
-1,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0p=
-x; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">&nbsp;* &nb=
-sp; +85621 480 248</SPAN><BR style=3D"FONT-SIZE: 15px; COLOR: rgb(32,31,30)=
-">
-<SPAN style=3D"FONT-SIZE: 8pt; BORDER-TOP: 0px; FONT-FAMILY: inherit; BORDE=
-R-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(32,3=
-1,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0p=
-x; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">&nbsp;* &nb=
-sp; +85621 480 249</SPAN><BR style=3D"FONT-SIZE: 15px; COLOR: rgb(32,31,30)=
-">
-<SPAN style=3D"FONT-SIZE: 8pt; BORDER-TOP: 0px; FONT-FAMILY: inherit; BORDE=
-R-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(32,3=
-1,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0p=
-x; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">&nbsp;* &nb=
-sp; Monday &#8211; Friday 8:00 to 17:00</SPAN><BR style=3D"FONT-SIZE: 15px;=
- COLOR: rgb(32,31,30)">
-<SPAN style=3D"FONT-SIZE: 8pt; BORDER-TOP: 0px; FONT-FAMILY: inherit; BORDE=
-R-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(32,3=
-1,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0p=
-x; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">&nbsp;* &nb=
-sp; Saturday 8:00 to 12:00</SPAN></U></DIV>
-<DIV style=3D"FONT-SIZE: 12pt; BORDER-TOP: 0px; FONT-FAMILY: Calibri,Helvet=
-ica,sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM:=
- 0px; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
-T: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: in=
-herit; font-variant-numeric: inherit">
-<SPAN style=3D"FONT-SIZE: 8pt; BORDER-TOP: 0px; FONT-FAMILY: inherit; BORDE=
-R-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(32,3=
-1,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0p=
-x; BORDER-LEFT: 0px; PADDING-RIGHT: 0px; font-stretch: inherit"><A href=3D"=
-mailto:Lenirus.pm@dkloas.com" target=3D_blank>Lenirus.pm@dkloas.com</A></SP=
-AN></DIV>
-<P><BR style=3D"FONT-SIZE: 16px; FONT-FAMILY: Calibri,Helvetica,sans-serif;=
- COLOR: rgb(0,0,0)"><I style=3D"FONT-SIZE: 16px; FONT-FAMILY: Calibri,Helve=
-tica,sans-serif; COLOR: rgb(0,0,0)"><SPAN lang=3DEN-US style=3D"FONT-SIZE: =
-8pt; BORDER-TOP: 0px; FONT-FAMILY: Arial,sans-serif; BORDER-RIGHT: 0px; VER=
-TICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP=
-: 0px; PADDING-LEFT: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-RIGHT: 0px=
-; font-stretch: inherit">
-This message is for the sole use of the intended recipient(s) and may conta=
-in trade secrets or other confidential and privileged information. Any unau=
-thorized use, copy, disclosure or distribution is prohibited. If you are no=
-t the intended recipient, please inform us immediately by reply email and d=
-elete this message, including any attachment or copies thereof, from your s=
-ystem.</SPAN></I></P></BODY></HTML>
+Thanks for the patch!
+
+Patch is,
+
+Acked-by: Samuel Iglesias Gonsalvez <siglesias@igalia.com>
+
+Greg, Would you mind picking this patch series through your char-misc
+tree?
+
+Thanks!
+
+Sam
+
+On Mon, 2021-05-24 at 02:32 -0700, Lv Yunlong wrote:
+> In the out_err_bus_register error branch of tpci200_pci_probe,
+> tpci200->info->cfg_regs is freed by tpci200_uninstall()->
+> tpci200_unregister()->pci_iounmap(..,tpci200->info->cfg_regs)
+> in the first time.
+>=20
+> But later, iounmap() is called to free tpci200->info->cfg_regs
+> again.
+>=20
+> My patch sets tpci200->info->cfg_regs to NULL after
+> tpci200_uninstall()
+> to avoid the double free.
+>=20
+> Fixes: cea2f7cdff2af ("Staging: ipack/bridges/tpci200: Use the
+> TPCI200 in big endian mode")
+> Signed-off-by: Lv Yunlong <lyl2019@mail.ustc.edu.cn>
+> ---
+> =C2=A0drivers/ipack/carriers/tpci200.c | 5 ++++-
+> =C2=A01 file changed, 4 insertions(+), 1 deletion(-)
+>=20
+> diff --git a/drivers/ipack/carriers/tpci200.c
+> b/drivers/ipack/carriers/tpci200.c
+> index ec71063fff76..e1822e87ec3d 100644
+> --- a/drivers/ipack/carriers/tpci200.c
+> +++ b/drivers/ipack/carriers/tpci200.c
+> @@ -596,8 +596,11 @@ static int tpci200_pci_probe(struct pci_dev
+> *pdev,
+> =C2=A0
+> =C2=A0out_err_bus_register:
+> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0tpci200_uninstall(tpci200=
+);
+> +=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0/* tpci200->info->cfg_regs is =
+unmapped in tpci200_uninstall
+> */
+> +=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0tpci200->info->cfg_regs =3D NU=
+LL;
+> =C2=A0out_err_install:
+> -=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0iounmap(tpci200->info->cfg_reg=
+s);
+> +=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0if (tpci200->info->cfg_regs)
+> +=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0iounmap(tpci200->info->cfg_regs);
+> =C2=A0out_err_ioremap:
+> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0pci_release_region(pdev, =
+TPCI200_CFG_MEM_BAR);
+> =C2=A0out_err_pci_request:
 
 
---===============5716973946364218364==
+--=-DLbZsM2hAwmpALcT3MJO
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEQP+ZAvaXWkfuKXiEf/S6MvF9w0MFAmCuHSwACgkQf/S6MvF9
+w0POUxAAn3hUK31LPLBVYo0S2O7LHtXeXErQtheZq94fgacZBX4P4zkDwneQ5pA6
+dn/913TZXl2Mw4jmjp8MjUduRNzjVSuFlu1XeHa/z35f5X3OlLrP/aePVCVyNf30
+vwohnegHeHs6Dx4Lx20Puj9YGlJ3i2OWKe9C+GRPQKnlOJEXWrbfwlGFwAFJJMrN
+wBD3PwcL0fqUqbjw6qFWl6nVTBvsNbGUh5A2SUY4VhWWJ7hrgUuAPRkL1FbragyV
+wyx6yZgAsEGNiGGmflkwle9SkiwXd/oC14ewhcz3l3Qnwle4VqvtlmIRAM3c4MPr
+GmNAPt9udg3i+R9H784GYJOjkIzTP7JoCmKr6NsstWQ16hzjHtZB6ddJk1Cui7GQ
+3N2pvxMwGZwrOJAspnhtC2s6D80JhBPPOQU+oJkZwe7KAwzSzr3N+ez0GLBRFzTp
+x+JiKogHZHlxXsO0o3Ba0uUhjFKi0ejEusjHSRQsPkh/4Vxvv6ht9LDtCJLyttLk
+I2xMQBIurNEC98NYKvKGMdJpIRd/YcxMJNgStNXUXvBLiT9CXR9mMLUsFlQdWlgT
+TlPYhpiPSWXFKC0s530smkmw+FVYHZd4YukLUK70eDJcGkxnPyBIaRz+PZCs517O
+Qnc8aTrSbYx1fAbPQvbEn0/EzzMGX5FlsjNgRkgUOB3jtN+EDqE=
+=D2sN
+-----END PGP SIGNATURE-----
+
+--=-DLbZsM2hAwmpALcT3MJO--
+
+
+
+--===============8326284076201071091==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5716973946364218364==
+--===============8326284076201071091==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -343,4 +205,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5716973946364218364==--
+--===============8326284076201071091==--
+
+
