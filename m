@@ -2,64 +2,61 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 507CB3974CE
-	for <lists+industrypack-devel@lfdr.de>; Tue,  1 Jun 2021 16:01:11 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id F171C398260
+	for <lists+industrypack-devel@lfdr.de>; Wed,  2 Jun 2021 09:00:44 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lo4xB-0005i2-5E
-	for lists+industrypack-devel@lfdr.de; Tue, 01 Jun 2021 14:01:09 +0000
+	id 1loKrq-0007TI-GW
+	for lists+industrypack-devel@lfdr.de; Wed, 02 Jun 2021 07:00:42 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <zzokxj@gentaurshop.com>) id 1lo4x5-0005h8-ET
- for industrypack-devel@lists.sourceforge.net; Tue, 01 Jun 2021 14:01:03 +0000
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ (envelope-from <epvfskzq@jcb.co.jp>) id 1loKrn-0007T9-OR
+ for industrypack-devel@lists.sourceforge.net; Wed, 02 Jun 2021 07:00:39 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Subject:From:To:Date:List-id:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Date:Subject:To:From:
+ Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Help:List-Unsubscribe:
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=nQNg+aZk/VClBSVR72WDyANCu1OSHFaqAtJrYdftU7g=; b=GY7zOFzht4hyuGLMs1X38wNxwZ
- 2PLcYeP3bmO/7xKdtIoRpw4TRmN9HK09qT5M2vTqvKqUgJYz+pOAAVyjvrSE8YeyYfwGZo4NrtvVM
- 35ac0XiK9LWjH57EYxBiwE5YWJQTkworJ/6YeVW4TcZY1OzlhWwTAlblxdVV7DMRgTw0=;
+ bh=pR3co14hA3FXs9Gk1LRZfcIGR8cyNQg3lYLF/FiytFY=; b=Q36bjYCsS3xI+I7Msan9OW0NV1
+ ex1KN2tHe9wsHs3yKs1hFkL8sM0rJEVWsABCcoKorz+q3aw7PE74Hb5ACPaKgudt7YOGuD/UDxv2Q
+ WiFkaazcrn0JdGtxaYmSRNQt7SzVchmzNjZLsA4sdrtfT/R0tZyq3GTrpKSw7XRJD7mE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Subject:
- From:To:Date:List-id:Sender:Reply-To:Cc:Content-ID:Content-Description:
- Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
- In-Reply-To:References:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=nQNg+aZk/VClBSVR72WDyANCu1OSHFaqAtJrYdftU7g=; b=O
- VGr+7mqfRUeKV3cpgL/NUdiyTlNLNFoNOFR80yJ7n3kK1f+CdEWA22K6CT46cTv/7zquM64qOcSTl
- bZ2PvHnYtutJyr1qymxPbvpb5jYvkOy/Aoe+rAlk9oU2rj9PKWW7xVfbQ2pw5UdvX+AXRQFueUXqB
- YmlJv8THgba/9d/E=;
-Received: from [167.99.206.187] (helo=gentaurshop.com)
+ h=Content-Type:Mime-Version:Date:Subject:To:From:Message-ID:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=pR3co14hA3FXs9Gk1LRZfcIGR8cyNQg3lYLF/FiytFY=; b=Q
+ Z4vi7oJCXMk+VMwoo+hCfMIv3tiW+L4g+fy4W+t7kEelS/RkZSDR+7b812TOCKw+yQjx+ZNij7DtA
+ 3Q/K/el26qLbJl7+I+jNLtZlVeqs0cH5w/AZ1pISYk/naVCpkOvcoAcuKl/rblhD7S8VkJBoKcWOl
+ CwrV0PAZP3Xsraj8=;
+Received: from [116.85.65.186] (helo=jcb.co.jp)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
- id 1lo4wx-0003qW-9T
- for industrypack-devel@lists.sourceforge.net; Tue, 01 Jun 2021 14:01:03 +0000
-Date: Tue, 1 Jun 2021 13:41:10 +0000
-To: industrypack-devel@lists.sourceforge.net
-From: =?utf-8?Q?Miles=20=26=20More?= <news-@gentaurshop.com>
-Message-ID: <5d1135360bfc09ad66fd299e57c44280@167.99.206.187>
+ id 1loKrY-0006hW-OV
+ for industrypack-devel@lists.sourceforge.net; Wed, 02 Jun 2021 07:00:40 +0000
+Message-ID: <84F0A69E9D1406FF1D26A8735A09B3FE@jcb.co.jp>
+From: =?utf-8?B?5qCq5byP5Lya56S+44K444Kn44O844K344O844OT44O8?= <info@jcb.co.jp>
+To: <industrypack-devel@lists.sourceforge.net>
+Date: Wed, 2 Jun 2021 15:00:16 +0800
+Mime-Version: 1.0
 X-Priority: 3
-MIME-Version: 1.0
-X-mailer: Cabestan DMS
-X-Spam-Score: 7.9 (+++++++)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 6.00.2900.5512
+X-MimeOLE: Produced By Microsoft MimeOLE V10.0.17763.1
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.9 SPF_HELO_SOFTFAIL      SPF: HELO does not match SPF record (softfail)
- 0.0 HTML_OBFUSCATE_05_10   BODY: Message is 5% to 10% HTML obfuscation
- 1.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_FONT_SIZE_HUGE    BODY: HTML font size is huge
- 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
- background
- 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
- 1.8 NORDNS_LOW_CONTRAST    No rDNS + hidden text
-X-Headers-End: 1lo4wx-0003qW-9T
-Subject: [Industrypack-devel] =?utf-8?q?Damit_Sie_weiterhin_online_bezahle?=
- =?utf-8?b?biBrw7ZubmVu?=
+ 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+ See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: my-jcb-jp.cc]
+ 0.0 TIME_LIMIT_EXCEEDED    Exceeded time limit / deadline
+X-Headers-End: 1loKrY-0006hW-OV
+Subject: [Industrypack-devel] =?utf-8?b?44CQ6YeN6KaB44Gq44GK55+l44KJ44Gb?=
+	=?utf-8?b?44CR44CQTXlKQ0LjgJHjgZTliKnnlKjnorroqo3jga7jgYrpoZjjgYQ=?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -71,122 +68,278 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============2167800688228623227=="
+Content-Type: multipart/mixed; boundary="===============4022014255947650020=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============2167800688228623227==
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: 8bit
+This is a multi-part message in MIME format.
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-  <meta content="text/html; charset=ISO-8859-1"
- http-equiv="content-type">
-  <title></title>
-</head>
-<body>
-<span style="color: rgb(51, 0, 51);"></span>
-<h5
- style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;"><big
- style="color: rgb(0, 0, 94);"><big><big><big><big><span
- style="font-weight: bold;">Miles & More</span></big></big></big></big></big><br>
-</h5>
-<h5
- style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;"><br>
-</h5>
-<h5
- style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;"><b
- style="font-weight: bold; line-height: inherit;">Damit Sie
-weiterhin online bezahlen können</b></h5>
-<br
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
-<span
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">Aufgrund
-der EU-Richtlinie PSD2 müssen Sie Online-Zahlungen mit Ihrer
-Lufthansa Miles & More Credit Card immer häufiger
-freigeben. Aktivieren Sie dazu ab sofort eines unserer zwei
-Mastercard® Identity Check™ Verfahren:</span><br
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
-<br
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
-<span
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">1)
-Freigabe über die<span> </span></span><strong
- style="font-family: Verdana; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-weight: bold; line-height: inherit; color: rgb(80, 80, 80);">Miles
-& More Credit Card-App</strong><br
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
-<span
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">2)
-Freigabe über<span> </span></span><strong
- style="font-family: Verdana; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-weight: bold; line-height: inherit; color: rgb(80, 80, 80);">smsTAN<span> </span></strong><span
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">und</span><strong
- style="font-family: Verdana; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-weight: bold; line-height: inherit; color: rgb(80, 80, 80);"><span> </span>Sicherheitsfrage</strong><br
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
-<br
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
-<span
- style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">Aktivieren
-Sie jetzt das Verfahren Ihrer Wahl, um auch zukünftig online
-bezahlen zu können.<br>
-<br>
-</span><a class="button right"
- href="https://nicheparfumerie.cz/BERU/"
- onclick="parent.phx.event.mailUrlClicked('https://www.domoticatechnology.com/domotica/'); return true;"
- target="_blank"
- style="margin: 0px auto 20px; padding: 15px 20px; background: rgb(15, 40, 110) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; line-height: 18px; color: rgb(255, 255, 255); text-decoration: underline; cursor: pointer; vertical-align: middle;">Jetzt
-aktivieren</a><br
- style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
-<br
- style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
-<br
- style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
-<br
- style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
-<span
- style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; vertical-align: inherit;">Viele
-Grüße von </span><br
- style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
-<span
- style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; vertical-align: inherit;">Ihrem<span> </span></span><strong
- style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Miles
-& More-Team<br>
-</strong><br>
-<br>
-<br>
-<br>
-<span
- style="font-family: Arial,Helvetica,sans-serif; font-size: small; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none; color: rgb(204, 255, 255);">To
-change the email you use to sign in to DigitalOcean, confirm your email
-address by clicking this link:<span> </span></span><a
- href="https://cloud.digitalocean.com/settings/change_email/confirm/WyJtYWppZGFsYWluNDFAZ21haWwuY29tIiwxNjIxNjQxODQ0MjIzOTUxNTc2XQ==--d54daf4bcc5729a6aa813ca6f6826b165a8da38a"
- rel="noreferrer" target="_blank"
- data-saferedirecturl="https://www.google.com/url?q=https://cloud.digitalocean.com/settings/change_email/confirm/WyJtYWppZGFsYWluNDFAZ21haWwuY29tIiwxNjIxNjQxODQ0MjIzOTUxNTc2XQ%3D%3D--d54daf4bcc5729a6aa813ca6f6826b165a8da38a&source=gmail&ust=1621724646766000&usg=AFQjCNFgMTrl6t0KCaTXH18dYogeetiROA"
- style="font-family: Arial,Helvetica,sans-serif; font-size: small; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">https://cloud.digitalocean.com<wbr>/settings/change_email/confirm<wbr>/WyJtYWppZGFsYWluNDFAZ21haWwuY<wbr>29tIiwxNjIxNjQxODQ0MjIzOTUxNTc<wbr>2XQ==--d54daf4bcc5729a6aa813ca<wbr>6f6826b165a8da38a</a><br
- style="font-family: Arial,Helvetica,sans-serif; font-size: small; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">
-<br
- style="font-family: Arial,Helvetica,sans-serif; font-size: small; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">
-<span
- style="font-family: Arial,Helvetica,sans-serif; font-size: small; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none; color: rgb(204, 255, 255);">The
-request came from the IP address 192.248.189.209. This link expires in
-1 hour. If you need to re-request this change, visit your Account
-Profile page:<span> </span></span><a
- href="https://cloud.digitalocean.com/account/profile?i=52fdb1"
- rel="noreferrer" target="_blank"
- data-saferedirecturl="https://www.google.com/url?q=https://cloud.digitalocean.com/account/profile?i%3D52fdb1&source=gmail&ust=1621724646766000&usg=AFQjCNGyI3C3XAKXZOxs7XYGTft1m9HJSA"
- style="font-family: Arial,Helvetica,sans-serif; font-size: small; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">https://cloud.digitalocean.com<wbr>/account/profile?i=52fdb1</a><br>
-</body>
-</html>
+--===============4022014255947650020==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0779_0198E102.18B78C70"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0779_0198E102.18B78C70
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+44CQTXlKQ0Ljgqvjg7zjg4njgJHliKnnlKjjgYTjgZ/jgaDjgY3jgIHjgYLjgorjgYzjgajjgYbj
+gZTjgZbjgYTjgb7jgZnjgIINCuOBk+OBruOBn+OBs+OAgeOBlOacrOS6uuanmOOBruOBlOWIqeeU
+qOOBi+OBqeOBhuOBi+OCkueiuuiqjeOBleOBm+OBpuOBhOOBn+OBoOOBjeOBn+OBhOOBiuWPluW8
+leOBjOOBguOCiuOBvuOBl+OBn+OBruOBp+OAgeiqoOOBq+WLneaJi+OBquOBjOOCieOAgeOCq+OD
+vOODieOBruOBlOWIqeeUqOOCkuS4gOmDqOWItumZkOOBleOBm+OBpuOBhOOBn+OBoOOBjeOAgeOB
+lOmAo+e1oeOBleOBm+OBpuOBhOOBn+OBoOOBjeOBvuOBl+OBn+OAgg0K44Gk44GN44G+44GX44Gm
+44Gv44CB5Lul5LiL44G444Ki44Kv44K744K544Gu5LiK44CB44Kr44O844OJ44Gu44GU5Yip55So
+56K66KqN44Gr44GU5Y2U5Yqb44KS44GK6aGY44GE6Ie044GX44G+44GZ44CCDQog44GK5a6i5qeY
+44Gr44Gv44GU6L+35oOR44CB44GU5b+D6YWN44KS44GK5o6b44GR44GX44CB6Kqg44Gr55Sz44GX
+6Kiz44GU44GW44GE44G+44Gb44KT44CCDQrkvZXljZLjgZTnkIbop6PjgYTjgZ/jgaDjgY3jgZ/j
+gY/jgYrpoZjjgYTnlLPjgZfjgYLjgZLjgb7jgZnjgIINCuOBlOWbnuetlOOCkuOBhOOBn+OBoOOB
+keOBquOBhOWgtOWQiOOAgeOCq+ODvOODieOBruOBlOWIqeeUqOWItumZkOOBjOe2mee2muOBleOC
+jOOCi+OBk+OBqOOCguOBlOOBluOBhOOBvuOBmeOBruOBp+OAgeS6iOOCgeOBlOS6huaJv+S4i+OB
+leOBhOOAgg0K4pag44GU5Yip55So56K66KqN44Gv44GT44Gh44KJDQoNCuW8iuekvuOBr+OAgeOC
+pOODs+OCv+ODvOODjeODg+ODiOS4iuOBruS4jeato+ihjOeCuuOBrumYsuatouODu+aKkeWItuOB
+ruims+eCueOBi+OCieOCteOCpOODiOOBqOOBl+OBpuOBruS/oemgvOaAp+ODu+ato+W9k+aAp+OC
+kumrmOOCgeOCi+OBn+OCgeOAgQ0K5aSn5aSJ44GK5omL5pWw44Gn44Gv44GU44GW44GE44G+44GZ
+44GM44CB5LiL6KiY77y177yy77ys44GL44KJ44Ot44Kw44Kk44Oz44GE44Gf44Gg44GN44CBDQrj
+gZTkuI3kvr/jgajjgZTlv4PphY3jgpLjgYrjgYvjgZHjgZfjgb7jgZfjgaboqqDjgavnlLPjgZfo
+qLPjgZTjgZbjgYTjgb7jgZvjgpPjgYzjgIENCuS9leOBqOOBnuOBlOeQhuino+iznOOCiuOBn+OB
+j+OBiumhmOOBhOeUs+OBl+OBguOBkuOBvuOBmeOAgg0K4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
+4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
+4pSA4pSA4pSA4pSA4pSA4pSA4pSADQrmoKrlvI/kvJrnpL7jgrjjgqfjg7zjgrfjg7zjg5Pjg7wN
+CuKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgQ0K4pag55m66KGM
+6ICF4pagDQrmoKrlvI/kvJrnpL7jgrjjgqfjg7zjgrfjg7zjg5Pjg7wNCuadseS6rOmDvea4r+WM
+uuWNl+mdkuWxsTUtMS0yMg0K4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
+4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
+4pSA4pSADQrCqUpDQiBDby4sIEx0ZC4gMjAwMA0K54Sh5pat6Lui6LyJ44GK44KI44Gz5YaN6YWN
+5biD44KS56aB44GY44G+44GZ44CC
+
+------=_NextPart_000_0779_0198E102.18B78C70
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxodG1sIHhtbG5zOm8gPSAidXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTpvZmZpY2U6
+b2ZmaWNlIj48aGVhZD4NCjxtZXRhIGNvbnRlbnQ9InRleHQvaHRtbDsgY2hhcnNldD11dGYtOCIg
+aHR0cC1lcXVpdj1Db250ZW50LVR5cGU+DQo8L2hlYWQ+DQo8Ym9keT4NCjxkaXYgY2xhc3M9Z3Mg
+DQpzdHlsZT0iRk9OVC1TSVpFOiBtZWRpdW07IEZPTlQtRkFNSUxZOiBSb2JvdG8sIFJvYm90b0Ry
+YWZ0LCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmOyBXSURUSDogODAzcHg7IFdISVRFLVNQ
+QUNFOiBub3JtYWw7IFdPUkQtU1BBQ0lORzogMHB4OyBURVhULVRSQU5TRk9STTogbm9uZTsgRk9O
+VC1XRUlHSFQ6IDQwMDsgQ09MT1I6IHJnYigzNCwzNCwzNCk7IFBBRERJTkctQk9UVE9NOiAyMHB4
+OyBGT05ULVNUWUxFOiBub3JtYWw7IFBBRERJTkctVE9QOiAwcHg7IFBBRERJTkctTEVGVDogMHB4
+OyBPUlBIQU5TOiAyOyBXSURPV1M6IDI7IE1BUkdJTjogMHB4OyBMRVRURVItU1BBQ0lORzogbm9y
+bWFsOyBQQURESU5HLVJJR0hUOiAwcHg7IEJBQ0tHUk9VTkQtQ09MT1I6IHJnYigyNTUsMjU1LDI1
+NSk7IFRFWFQtSU5ERU5UOiAwcHg7IGZvbnQtdmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9u
+dC12YXJpYW50LWNhcHM6IG5vcm1hbDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0
+ZXh0LWRlY29yYXRpb24tc3R5bGU6IGluaXRpYWw7IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5p
+dGlhbCI+DQo8ZGl2Pg0KPGRpdiBpZD06MjQ5IGNsYXNzPSJpaSBndCIgDQpzdHlsZT0iUE9TSVRJ
+T046IHJlbGF0aXZlOyBQQURESU5HLUJPVFRPTTogMHB4OyBESVJFQ1RJT046IGx0cjsgUEFERElO
+Ry1UT1A6IDBweDsgUEFERElORy1MRUZUOiAwcHg7IE1BUkdJTjogOHB4IDBweCAwcHg7IFBBRERJ
+TkctUklHSFQ6IDBweCI+DQo8ZGl2IGlkPToyMzcgY2xhc3M9ImEzcyBhWGpDSCAiIA0Kc3R5bGU9
+Ik9WRVJGTE9XOiBoaWRkZW47IEZPTlQ6IHNtYWxsLzEuNSBBcmlhbCwgSGVsdmV0aWNhLCBzYW5z
+LXNlcmlmIj4NCjxwIGNsYXNzPU1zb05vcm1hbCANCnN0eWxlPSJWRVJUSUNBTC1BTElHTjogYmFz
+ZWxpbmU7IEJBQ0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFBBRERJTkctQk9UVE9NOiAwcHQ7
+IFRFWFQtQUxJR046IGxlZnQ7IFBBRERJTkctVE9QOiAwcHQ7IFBBRERJTkctTEVGVDogMHB0OyBN
+QVJHSU46IDBwdDsgTElORS1IRUlHSFQ6IDE1Ljc1cHQ7IFBBRERJTkctUklHSFQ6IDBwdDsgVEVY
+VC1JTkRFTlQ6IDBwdDsgbXNvLXBhZ2luYXRpb246IHdpZG93LW9ycGhhbiI+PHNwYW4gDQpzdHls
+ZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsg
+QkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9S
+OiByZ2IoMCwwLDApOyBMRVRURVItU1BBQ0lORzogMHB0OyBtc28tc3BhY2VydW46ICd5ZXMnOyBt
+c28tZm9udC1rZXJuaW5nOiAwLjAwMDBwdDsgbXNvLXNoYWRpbmc6IHJnYigyNTUsMjU1LDI1NSki
+Pjxmb250IA0KZmFjZT0iTWljcm9zb2Z0IFlhSGVpIFVJIj7jgJA8YSANCmhyZWY9Imh0dHBzOi8v
+d3d3Lm15LWpjYi1qcC5jYy8iPk15SkNC44Kr44O844OJPC9hPjwvZm9udD48Zm9udCANCmZhY2U9
+Ik1pY3Jvc29mdCBZYUhlaSBVSSI+PGZvbnQgY29sb3I9IzIyMjIyMiBzaXplPTMgDQpmYWNlPUFy
+aWFsPjwvZm9udD7jgJHliKnnlKjjgYTjgZ/jgaDjgY3jgIHjgYLjgorjgYzjgajjgYbjgZTjgZbj
+gYTjgb7jgZnjgII8L2ZvbnQ+PC9zcGFuPjxzcGFuIA0Kc3R5bGU9IkZPTlQtU0laRTogMTAuNXB0
+OyBGT05ULUZBTUlMWTogJ01pY3Jvc29mdCBZYUhlaSBVSSc7IEJBQ0tHUk9VTkQ6IHJnYigyNTUs
+MjU1LDI1NSk7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDAsMCwwKTsgTEVUVEVS
+LVNQQUNJTkc6IDBwdDsgbXNvLXNwYWNlcnVuOiAneWVzJzsgbXNvLWZvbnQta2VybmluZzogMC4w
+MDAwcHQ7IG1zby1zaGFkaW5nOiByZ2IoMjU1LDI1NSwyNTUpIj48YnI+PC9zcGFuPjxzcGFuIA0K
+c3R5bGU9IkZPTlQtU0laRTogMTAuNXB0OyBGT05ULUZBTUlMWTogJ01pY3Jvc29mdCBZYUhlaSBV
+SSc7IEJBQ0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBD
+T0xPUjogcmdiKDAsMCwwKTsgTEVUVEVSLVNQQUNJTkc6IDBwdDsgbXNvLXNwYWNlcnVuOiAneWVz
+JzsgbXNvLWZvbnQta2VybmluZzogMC4wMDAwcHQ7IG1zby1zaGFkaW5nOiByZ2IoMjU1LDI1NSwy
+NTUpIj48Zm9udCANCmZhY2U9Ik1pY3Jvc29mdCBZYUhlaSBVSSI+44GT44Gu44Gf44Gz44CB44GU
+5pys5Lq65qeY44Gu44GU5Yip55So44GL44Gp44GG44GL44KS56K66KqN44GV44Gb44Gm44GE44Gf
+44Gg44GN44Gf44GE44GK5Y+W5byV44GM44GC44KK44G+44GX44Gf44Gu44Gn44CB6Kqg44Gr5Yud
+5omL44Gq44GM44KJ44CB44Kr44O844OJ44Gu44GU5Yip55So44KS5LiA6YOo5Yi26ZmQ44GV44Gb
+44Gm44GE44Gf44Gg44GN44CB44GU6YCj57Wh44GV44Gb44Gm44GE44Gf44Gg44GN44G+44GX44Gf
+44CCPC9mb250Pjwvc3Bhbj48c3BhbiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsgRk9OVC1G
+QU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6
+IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQ7IG1zby1zcGFjZXJ1bjogJ3llcyc7IG1z
+by1mb250LWtlcm5pbmc6IDEuMDAwMHB0Ij48bzpwPjwvbzpwPjwvc3Bhbj48L3A+DQo8cCBjbGFz
+cz1Nc29Ob3JtYWwgDQpzdHlsZT0iVkVSVElDQUwtQUxJR046IGJhc2VsaW5lOyBCQUNLR1JPVU5E
+OiByZ2IoMjU1LDI1NSwyNTUpOyBQQURESU5HLUJPVFRPTTogMHB0OyBURVhULUFMSUdOOiBsZWZ0
+OyBQQURESU5HLVRPUDogMHB0OyBQQURESU5HLUxFRlQ6IDBwdDsgTUFSR0lOOiAwcHQ7IExJTkUt
+SEVJR0hUOiAxNS43NXB0OyBQQURESU5HLVJJR0hUOiAwcHQ7IFRFWFQtSU5ERU5UOiAwcHQ7IG1z
+by1wYWdpbmF0aW9uOiB3aWRvdy1vcnBoYW4iPjxzcGFuIA0Kc3R5bGU9IkZPTlQtU0laRTogMTAu
+NXB0OyBGT05ULUZBTUlMWTogJ01pY3Jvc29mdCBZYUhlaSBVSSc7IEJBQ0tHUk9VTkQ6IHJnYigy
+NTUsMjU1LDI1NSk7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDAsMCwwKTsgTEVU
+VEVSLVNQQUNJTkc6IDBwdDsgbXNvLXNwYWNlcnVuOiAneWVzJzsgbXNvLWZvbnQta2VybmluZzog
+MC4wMDAwcHQ7IG1zby1zaGFkaW5nOiByZ2IoMjU1LDI1NSwyNTUpIj48Zm9udCANCmZhY2U9Ik1p
+Y3Jvc29mdCBZYUhlaSBVSSI+44Gk44GN44G+44GX44Gm44Gv44CB5Lul5LiL44G444Ki44Kv44K7
+44K544Gu5LiK44CB44Kr44O844OJ44Gu44GU5Yip55So56K66KqN44Gr44GU5Y2U5Yqb44KS44GK
+6aGY44GE6Ie044GX44G+44GZ44CCPC9mb250Pjwvc3Bhbj48c3BhbiANCnN0eWxlPSJGT05ULVNJ
+WkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5E
+OiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAs
+MCk7IExFVFRFUi1TUEFDSU5HOiAwcHQ7IG1zby1zcGFjZXJ1bjogJ3llcyc7IG1zby1mb250LWtl
+cm5pbmc6IDAuMDAwMHB0OyBtc28tc2hhZGluZzogcmdiKDI1NSwyNTUsMjU1KSI+PGJyPjwvc3Bh
+bj48c3BhbiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3Nv
+ZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULVRSQU5TRk9S
+TTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQ7IG1zby1zcGFj
+ZXJ1bjogJ3llcyc7IG1zby1mb250LWtlcm5pbmc6IDAuMDAwMHB0OyBtc28tc2hhZGluZzogcmdi
+KDI1NSwyNTUsMjU1KSI+PGZvbnQgDQpmYWNlPSJNaWNyb3NvZnQgWWFIZWkgVUkiPiZuYnNwO+OB
+iuWuouanmOOBq+OBr+OBlOi/t+aDkeOAgeOBlOW/g+mFjeOCkuOBiuaOm+OBkeOBl+OAgeiqoOOB
+q+eUs+OBl+ios+OBlOOBluOBhOOBvuOBm+OCk+OAgjwvZm9udD48L3NwYW4+PHNwYW4gDQpzdHls
+ZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsg
+QkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9S
+OiByZ2IoMCwwLDApOyBMRVRURVItU1BBQ0lORzogMHB0OyBtc28tc3BhY2VydW46ICd5ZXMnOyBt
+c28tZm9udC1rZXJuaW5nOiAwLjAwMDBwdDsgbXNvLXNoYWRpbmc6IHJnYigyNTUsMjU1LDI1NSki
+Pjxicj48L3NwYW4+PHNwYW4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZ
+OiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsgVEVY
+VC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDApOyBMRVRURVItU1BBQ0lORzogMHB0
+OyBtc28tc3BhY2VydW46ICd5ZXMnOyBtc28tZm9udC1rZXJuaW5nOiAwLjAwMDBwdDsgbXNvLXNo
+YWRpbmc6IHJnYigyNTUsMjU1LDI1NSkiPjxmb250IA0KZmFjZT0iTWljcm9zb2Z0IFlhSGVpIFVJ
+Ij7kvZXljZLjgZTnkIbop6PjgYTjgZ/jgaDjgY3jgZ/jgY/jgYrpoZjjgYTnlLPjgZfjgYLjgZLj
+gb7jgZnjgII8L2ZvbnQ+PC9zcGFuPjxzcGFuIA0Kc3R5bGU9IkZPTlQtU0laRTogMTAuNXB0OyBG
+T05ULUZBTUlMWTogJ01pY3Jvc29mdCBZYUhlaSBVSSc7IEJBQ0tHUk9VTkQ6IHJnYigyNTUsMjU1
+LDI1NSk7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDAsMCwwKTsgTEVUVEVSLVNQ
+QUNJTkc6IDBwdDsgbXNvLXNwYWNlcnVuOiAneWVzJzsgbXNvLWZvbnQta2VybmluZzogMC4wMDAw
+cHQ7IG1zby1zaGFkaW5nOiByZ2IoMjU1LDI1NSwyNTUpIj48YnI+PC9zcGFuPjxzcGFuIA0Kc3R5
+bGU9IkZPTlQtU0laRTogMTAuNXB0OyBGT05ULUZBTUlMWTogJ01pY3Jvc29mdCBZYUhlaSBVSSc7
+IEJBQ0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xP
+UjogcmdiKDAsMCwwKTsgTEVUVEVSLVNQQUNJTkc6IDBwdDsgbXNvLXNwYWNlcnVuOiAneWVzJzsg
+bXNvLWZvbnQta2VybmluZzogMC4wMDAwcHQ7IG1zby1zaGFkaW5nOiByZ2IoMjU1LDI1NSwyNTUp
+Ij48Zm9udCANCmZhY2U9Ik1pY3Jvc29mdCBZYUhlaSBVSSI+44GU5Zue562U44KS44GE44Gf44Gg
+44GR44Gq44GE5aC05ZCI44CB44Kr44O844OJ44Gu44GU5Yip55So5Yi26ZmQ44GM57aZ57aa44GV
+44KM44KL44GT44Go44KC44GU44GW44GE44G+44GZ44Gu44Gn44CB5LqI44KB44GU5LqG5om/5LiL
+44GV44GE44CCPC9mb250Pjwvc3Bhbj48c3BhbiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsg
+Rk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBURVhULVRSQU5TRk9STTogbm9uZTsg
+Q09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQ7IG1zby1zcGFjZXJ1bjogJ3ll
+cyc7IG1zby1mb250LWtlcm5pbmc6IDEuMDAwMHB0Ij48bzpwPjwvbzpwPjwvc3Bhbj48L3A+DQo8
+cCBjbGFzcz1Nc29Ob3JtYWwgDQpzdHlsZT0iVkVSVElDQUwtQUxJR046IGJhc2VsaW5lOyBCQUNL
+R1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBQQURESU5HLUJPVFRPTTogMHB0OyBURVhULUFMSUdO
+OiBsZWZ0OyBQQURESU5HLVRPUDogMHB0OyBQQURESU5HLUxFRlQ6IDBwdDsgTUFSR0lOOiAwcHQ7
+IExJTkUtSEVJR0hUOiAxNS43NXB0OyBQQURESU5HLVJJR0hUOiAwcHQ7IFRFWFQtSU5ERU5UOiAw
+cHQ7IG1zby1wYWdpbmF0aW9uOiB3aWRvdy1vcnBoYW4iPjxzcGFuIA0Kc3R5bGU9IkZPTlQtU0la
+RTogMTAuNXB0OyBGT05ULUZBTUlMWTogJ01pY3Jvc29mdCBZYUhlaSBVSSc7IEJBQ0tHUk9VTkQ6
+IHJnYigyNTUsMjU1LDI1NSk7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDAsMCww
+KTsgTEVUVEVSLVNQQUNJTkc6IDBwdDsgbXNvLXNwYWNlcnVuOiAneWVzJzsgbXNvLWZvbnQta2Vy
+bmluZzogMC4wMDAwcHQ7IG1zby1zaGFkaW5nOiByZ2IoMjU1LDI1NSwyNTUpIj48Zm9udCANCnNp
+emU9MyBmYWNlPSJNaWNyb3NvZnQgWWFIZWkgVUkiPjxhIA0KaHJlZj0iaHR0cHM6Ly93d3cubXkt
+amNiLWpwLmNjLyI+4pag44GU5Yip55So56K66KqN44Gv44GT44Gh44KJPC9hPjwvZm9udD48L3Nw
+YW4+PHNwYW4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9z
+b2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZP
+Uk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDApOyBMRVRURVItU1BBQ0lORzogMHB0OyBtc28tc3Bh
+Y2VydW46ICd5ZXMnOyBtc28tZm9udC1rZXJuaW5nOiAwLjAwMDBwdDsgbXNvLXNoYWRpbmc6IHJn
+YigyNTUsMjU1LDI1NSkiPjxicj48L3NwYW4+PC9wPg0KPHAgY2xhc3M9TXNvTm9ybWFsIA0Kc3R5
+bGU9IlZFUlRJQ0FMLUFMSUdOOiBiYXNlbGluZTsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1
+KTsgUEFERElORy1CT1RUT006IDBwdDsgVEVYVC1BTElHTjogbGVmdDsgUEFERElORy1UT1A6IDBw
+dDsgUEFERElORy1MRUZUOiAwcHQ7IE1BUkdJTjogMHB0OyBMSU5FLUhFSUdIVDogMTUuNzVwdDsg
+UEFERElORy1SSUdIVDogMHB0OyBURVhULUlOREVOVDogMHB0OyBtc28tcGFnaW5hdGlvbjogd2lk
+b3ctb3JwaGFuIj48c3BhbiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6
+ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhU
+LVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQ7
+IG1zby1zcGFjZXJ1bjogJ3llcyc7IG1zby1mb250LWtlcm5pbmc6IDAuMDAwMHB0OyBtc28tc2hh
+ZGluZzogcmdiKDI1NSwyNTUsMjU1KSI+PGZvbnQgDQpmYWNlPSJNaWNyb3NvZnQgWWFIZWkgVUki
+PuW8iuekvuOBr+OAgeOCpOODs+OCv+ODvOODjeODg+ODiOS4iuOBruS4jeato+ihjOeCuuOBrumY
+suatouODu+aKkeWItuOBruims+eCueOBi+OCieOCteOCpOODiOOBqOOBl+OBpuOBruS/oemgvOaA
+p+ODu+ato+W9k+aAp+OCkumrmOOCgeOCi+OBn+OCgeOAgTwvZm9udD48L3NwYW4+PHNwYW4gDQpz
+dHlsZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJ
+JzsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENP
+TE9SOiByZ2IoMCwwLDApOyBMRVRURVItU1BBQ0lORzogMHB0OyBtc28tc3BhY2VydW46ICd5ZXMn
+OyBtc28tZm9udC1rZXJuaW5nOiAwLjAwMDBwdDsgbXNvLXNoYWRpbmc6IHJnYigyNTUsMjU1LDI1
+NSkiPjxicj48L3NwYW4+PHNwYW4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZPTlQtRkFN
+SUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsg
+VEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDApOyBMRVRURVItU1BBQ0lORzog
+MHB0OyBtc28tc3BhY2VydW46ICd5ZXMnOyBtc28tZm9udC1rZXJuaW5nOiAwLjAwMDBwdDsgbXNv
+LXNoYWRpbmc6IHJnYigyNTUsMjU1LDI1NSkiPjxmb250IA0KZmFjZT0iTWljcm9zb2Z0IFlhSGVp
+IFVJIj7lpKflpInjgYrmiYvmlbDjgafjga/jgZTjgZbjgYTjgb7jgZnjgYzjgIHkuIvoqJjvvLXv
+vLLvvKzjgYvjgonjg63jgrDjgqTjg7PjgYTjgZ/jgaDjgY3jgIE8L2ZvbnQ+PC9zcGFuPjwvcD4N
+CjxwIGNsYXNzPU1zb05vcm1hbCANCnN0eWxlPSJWRVJUSUNBTC1BTElHTjogYmFzZWxpbmU7IEJB
+Q0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFBBRERJTkctQk9UVE9NOiAwcHQ7IFRFWFQtQUxJ
+R046IGxlZnQ7IFBBRERJTkctVE9QOiAwcHQ7IFBBRERJTkctTEVGVDogMHB0OyBNQVJHSU46IDBw
+dDsgTElORS1IRUlHSFQ6IDE1Ljc1cHQ7IFBBRERJTkctUklHSFQ6IDBwdDsgVEVYVC1JTkRFTlQ6
+IDBwdDsgbXNvLXBhZ2luYXRpb246IHdpZG93LW9ycGhhbiI+PHNwYW4gDQpzdHlsZT0iRk9OVC1T
+SVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VO
+RDogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCww
+LDApOyBMRVRURVItU1BBQ0lORzogMHB0OyBtc28tc3BhY2VydW46ICd5ZXMnOyBtc28tZm9udC1r
+ZXJuaW5nOiAwLjAwMDBwdDsgbXNvLXNoYWRpbmc6IHJnYigyNTUsMjU1LDI1NSkiPjxmb250IA0K
+ZmFjZT0iTWljcm9zb2Z0IFlhSGVpIFVJIj7jgZTkuI3kvr/jgajjgZTlv4PphY3jgpLjgYrjgYvj
+gZHjgZfjgb7jgZfjgaboqqDjgavnlLPjgZfoqLPjgZTjgZbjgYTjgb7jgZvjgpPjgYzjgIE8L2Zv
+bnQ+PC9zcGFuPjxzcGFuIA0Kc3R5bGU9IkZPTlQtU0laRTogMTAuNXB0OyBGT05ULUZBTUlMWTog
+J01pY3Jvc29mdCBZYUhlaSBVSSc7IEJBQ0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFRFWFQt
+VFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDAsMCwwKTsgTEVUVEVSLVNQQUNJTkc6IDBwdDsg
+bXNvLXNwYWNlcnVuOiAneWVzJzsgbXNvLWZvbnQta2VybmluZzogMC4wMDAwcHQ7IG1zby1zaGFk
+aW5nOiByZ2IoMjU1LDI1NSwyNTUpIj48YnI+PC9zcGFuPjxzcGFuIA0Kc3R5bGU9IkZPTlQtU0la
+RTogMTAuNXB0OyBGT05ULUZBTUlMWTogJ01pY3Jvc29mdCBZYUhlaSBVSSc7IEJBQ0tHUk9VTkQ6
+IHJnYigyNTUsMjU1LDI1NSk7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDAsMCww
+KTsgTEVUVEVSLVNQQUNJTkc6IDBwdDsgbXNvLXNwYWNlcnVuOiAneWVzJzsgbXNvLWZvbnQta2Vy
+bmluZzogMC4wMDAwcHQ7IG1zby1zaGFkaW5nOiByZ2IoMjU1LDI1NSwyNTUpIj48Zm9udCANCmZh
+Y2U9Ik1pY3Jvc29mdCBZYUhlaSBVSSI+5L2V44Go44Ge44GU55CG6Kej6LOc44KK44Gf44GP44GK
+6aGY44GE55Sz44GX44GC44GS44G+44GZ44CCPC9mb250Pjwvc3Bhbj48c3BhbiANCnN0eWxlPSJG
+T05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNL
+R1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJn
+YigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQ7IG1zby1zcGFjZXJ1bjogJ3llcyc7IG1zby1m
+b250LWtlcm5pbmc6IDAuMDAwMHB0OyBtc28tc2hhZGluZzogcmdiKDI1NSwyNTUsMjU1KSI+PGJy
+Pjwvc3Bhbj48c3BhbiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdN
+aWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULVRS
+QU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQ7IG1z
+by1zcGFjZXJ1bjogJ3llcyc7IG1zby1mb250LWtlcm5pbmc6IDAuMDAwMHB0OyBtc28tc2hhZGlu
+ZzogcmdiKDI1NSwyNTUsMjU1KSI+PGZvbnQgDQpjb2xvcj0jMjIyMjIyIHNpemU9MyANCmZhY2U9
+QXJpYWw+4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
+4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAPC9mb250
+Pjwvc3Bhbj48c3BhbiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdN
+aWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULVRS
+QU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQ7IG1z
+by1zcGFjZXJ1bjogJ3llcyc7IG1zby1mb250LWtlcm5pbmc6IDAuMDAwMHB0OyBtc28tc2hhZGlu
+ZzogcmdiKDI1NSwyNTUsMjU1KSI+PGJyPjwvc3Bhbj48c3BhbiANCnN0eWxlPSJGT05ULVNJWkU6
+IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiBy
+Z2IoMjU1LDI1NSwyNTUpOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7
+IExFVFRFUi1TUEFDSU5HOiAwcHQ7IG1zby1zcGFjZXJ1bjogJ3llcyc7IG1zby1mb250LWtlcm5p
+bmc6IDAuMDAwMHB0OyBtc28tc2hhZGluZzogcmdiKDI1NSwyNTUsMjU1KSI+PGZvbnQgDQpjb2xv
+cj0jMjIyMjIyIHNpemU9MyBmYWNlPUFyaWFsPjxhIA0KaHJlZj0iaHR0cHM6Ly93d3cubXktamNi
+LWpwLmNjLyI+5qCq5byP5Lya56S+44K444Kn44O844K344O844OT44O8PC9hPjwvZm9udD48L3Nw
+YW4+PC9wPg0KPHAgY2xhc3M9TXNvTm9ybWFsIA0Kc3R5bGU9IlZFUlRJQ0FMLUFMSUdOOiBiYXNl
+bGluZTsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsgUEFERElORy1CT1RUT006IDBwdDsg
+VEVYVC1BTElHTjogbGVmdDsgUEFERElORy1UT1A6IDBwdDsgUEFERElORy1MRUZUOiAwcHQ7IE1B
+UkdJTjogMHB0OyBMSU5FLUhFSUdIVDogMTUuNzVwdDsgUEFERElORy1SSUdIVDogMHB0OyBURVhU
+LUlOREVOVDogMHB0OyBtc28tcGFnaW5hdGlvbjogd2lkb3ctb3JwaGFuIj48c3BhbiANCnN0eWxl
+PSJGT05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBC
+QUNLR1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6
+IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQ7IG1zby1zcGFjZXJ1bjogJ3llcyc7IG1z
+by1mb250LWtlcm5pbmc6IDAuMDAwMHB0OyBtc28tc2hhZGluZzogcmdiKDI1NSwyNTUsMjU1KSI+
+PC9zcGFuPuKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgTxicj7i
+lqDnmbrooYzogIXilqA8L3A+PC9kaXY+DQo8ZGl2IGNsYXNzPWlYIA0Kc3R5bGU9Ik9WRVJGTE9X
+OiBoaWRkZW47IEZPTlQ6IHNtYWxsLzEuNSBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIj4N
+CjxkaXYgZGlyPWx0cj48c3BhbiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1J
+TFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBU
+RVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAw
+cHQ7IG1zby1zcGFjZXJ1bjogJ3llcyc7IG1zby1mb250LWtlcm5pbmc6IDAuMDAwMHB0OyBtc28t
+c2hhZGluZzogcmdiKDI1NSwyNTUsMjU1KSI+PGZvbnQgDQpjb2xvcj0jMjIyMjIyIHNpemU9MyBm
+YWNlPUFyaWFsPjxhIA0KaHJlZj0iaHR0cHM6Ly93d3cubXktamNiLWpwLmNjLyI+5qCq5byP5Lya
+56S+44K444Kn44O844K344O844OT44O8PC9hPjwvZm9udD48L3NwYW4+PC9kaXY+DQo8ZGl2IGRp
+cj1sdHI+5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGxNS0xLTIyPC9kaXY+DQo8ZGl2IGRpcj1sdHI+
+4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
+4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAPGJyPsKpPGEgDQpo
+cmVmPSJodHRwczovL3d3dy5teS1qY2ItanAuY2MvIj5KQ0IgQ28uLCBMdGQuIA0KMjAwMDxicj7n
+hKHmlq3ou6LovInjgYrjgojjgbPlho3phY3luIPjgpLnpoHjgZjjgb7jgZnjgII8L2E+PC9kaXY+
+PC9kaXY+PC9kaXY+PC9kaXY+PC9kaXY+PGJyIA0KY2xhc3M9QXBwbGUtaW50ZXJjaGFuZ2UtbmV3
+bGluZT48L2JvZHk+PC9odG1sPg0K
+
+------=_NextPart_000_0779_0198E102.18B78C70--
 
 
---===============2167800688228623227==
+
+--===============4022014255947650020==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2167800688228623227==
+--===============4022014255947650020==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -197,4 +350,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2167800688228623227==--
+--===============4022014255947650020==--
+
+
