@@ -2,85 +2,81 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 93A5E399950
-	for <lists+industrypack-devel@lfdr.de>; Thu,  3 Jun 2021 06:49:47 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:Message-Id:
-	Date:MIME-Version:To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=XU4WS+HVlgpW24XwIosUmcWzDcGEgRHeXeRfzHBY9dA=; b=cZo3sLfHTE4dnajgNyVmDfBgwQ
-	BR9nl0Rs+1m3nrhVGkW8/v5oSJu3o2BpVp0NfVx3IjyxwxPXyfHN4fx7Wz4NUfIqyfkgoBXoOReI9
-	7BbjUusgdLcZSrW6Xgg07/0og7UFVnUcZt3ePFIv4SiVzN/ONTCXBfbch/gnauDHmMLA=;
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0B78D39E9E9
+	for <lists+industrypack-devel@lfdr.de>; Tue,  8 Jun 2021 01:07:49 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lofIe-0004Qj-5K
-	for lists+industrypack-devel@lfdr.de; Thu, 03 Jun 2021 04:49:44 +0000
+	id 1lqOLS-0004M3-Dm
+	for lists+industrypack-devel@lfdr.de; Mon, 07 Jun 2021 23:07:46 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <info@fusedefence.live>) id 1lofIc-0004QX-SA
- for industrypack-devel@lists.sourceforge.net; Thu, 03 Jun 2021 04:49:42 +0000
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ (envelope-from <mayumi-y@pop13.odn.ne.jp>) id 1lqOLQ-0004Lr-M7
+ for industrypack-devel@lists.sourceforge.net; Mon, 07 Jun 2021 23:07:44 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
- Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=wQo6+7w3IKRPpBH32e0aWirAZtzXrIbesefUykxg01A=; b=ZbQcwmdM2IojHC+mDi/pa2kYfM
- EsvvUO6YEKgop7LQq4ruR4VEvjTJeEBnwxDY9h/eEG6Nu9/eQ84XvPnXdUV6y1dklrdeJAfdnu74t
- wizZIE5grGZiniEG6EEiOjSZUzG35np/4QHTDvKRp37QXCHly8TsdkCXU736PQBkx6LM=;
+ bh=QHWn1Si9ZLa/2Ul6SCbevIbTlh0t4YKo7O2swgw5Dp8=; b=Ade/6XG2OcxYBAtdIViO3XMCAf
+ Q4cMUF66DJGuBpSUIxL0MDjK8ukuCPhKzR8mQlcWWxZCy7Kn5MJXO2jeRYcloOvNpe/sSaszO1faO
+ UtXa4MSKy0kw3jTMs9UeeIoswO5C4zYEyrKJqSNX20Xc4MsFGxZiTWjSmUEYHrdngLvY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
+ h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=wQo6+7w3IKRPpBH32e0aWirAZtzXrIbesefUykxg01A=; b=b
- cPHypdggAI94euLSbHmOe0bDYQB8ZDHToqDAgEtCiRO/cP7Svp+brkmqFey2/n5cm6dURXhAl6WWq
- L6FT5zKbl7VmL24GaiKznSla3vEbrRNVLwxeczs6Jj7KP8oaACJgG6dP91aL5Sk6Df825WktuUl2L
- TJRaXtrmpWpGVjtg=;
-Received: from fu.fusedefence.live ([45.95.168.112])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1lofIX-008URe-C4
- for industrypack-devel@lists.sourceforge.net; Thu, 03 Jun 2021 04:49:43 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fu; d=fusedefence.live;
- h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id;
- i=info@fusedefence.live;
- bh=wQo6+7w3IKRPpBH32e0aWirAZtzXrIbesefUykxg01A=;
- b=LDwG8RIxsvSxASw+tlSc1uVyfKFqH0V86Tif4Tw0kO++crmLtmRGIDukmXmsKhT8tJ4SYc+fNbXL
- B6Sapqhw0Zb8asZSzeprgfAKSnO1Tm32a4YvfvAxBD1aaTSeqf367U6JRfiPZlgAxU01bL91zkZU
- tmArgpNOyM6mWDquRNLK/0E9qwQG5styP+YX/OMKyPL/AkXx/dK8+3FKQi+mem0b6wVg4aBZm9Nq
- O3+UCTvcxxPckHSFFT/u1BiRSF3sPWNmD+t1HY6/RXhQeTxkWxF02I52rQo+sp5WrAfTbmNYjTZz
- QUE1+ai+yIW/VLCDQ+s2dbWSJ+eSdVf1Xq0WgQ==
+ List-Owner:List-Archive; bh=QHWn1Si9ZLa/2Ul6SCbevIbTlh0t4YKo7O2swgw5Dp8=; b=a
+ xu9Xc6qsoeRGWYU1MRAuJlL3h1oJd+mmzp1EmNpwJCNWWjZ+2j2WmNEQde34ziKZUGaLT1wxwcUoO
+ oQc/LP35vYclCqn4bh9pSMbE7OZZT2AELaXJ8HGR+EftluzPm82bkMJLBilQzMragTZ2zQHNHULSI
+ d5zBBSzbrHf/QY00=;
+Received: from mta103.odn.ne.jp ([143.90.14.67] helo=cmta103.odn.ne.jp)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
+ id 1lqOLI-00GfSh-6B
+ for industrypack-devel@lists.sourceforge.net; Mon, 07 Jun 2021 23:07:46 +0000
+Received: from vmsa104.odn.ne.jp by cmsa104.odn.ne.jp with ESMTP
+ id <20210607225314075.BJXL.22338.cmsa104.odn.ne.jp@msa104.odn.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 8 Jun 2021 07:53:14 +0900
+Received: from msrg1041.rgserv.odn.ne.jp by vmsa104.odn.ne.jp with ESMTP
+ id <20210607225314071.BXUN.20023.vmsa104.odn.ne.jp@msa104.odn.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 8 Jun 2021 07:53:14 +0900
+Received: from 263.net (45.117.101.250) by msrg1041.rgserv.odn.ne.jp (5.8.426)
+ id 604EF195003F781D for industrypack-devel@lists.sourceforge.net;
+ Tue, 8 Jun 2021 07:53:14 +0900
+Date: Tue, 8 Jun 2021 06:53:08 +0800
+From: "Mr Lai" <electroplating001@163.com>
 To: <industrypack-devel@lists.sourceforge.net>
-MIME-Version: 1.0
-Date: Wed, 2 Jun 2021 21:29:24 -0700
-Message-Id: <02232021062921F435F60A15$240593683A@WINQTKPFEH>
-X-Spam-Score: 4.6 (++++)
+Message-ID: <20210608065313241566@pop13.odn.ne.jp>
+X-mailer: Foxmail 6, 13, 102, 15 [cn]
+Mime-Version: 1.0
+X-Spam-Score: 6.8 (++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 2.5 URIBL_DBL_ABUSE_PHISH  Contains an abused phishing URL listed in the
- Spamhaus DBL blocklist [URIs: short.gy]
  1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?45.95.168.112>]
- 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
- See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: short.gy]
+ [Blocked - see <https://www.spamcop.net/bl.shtml?45.117.101.250>]
+ 1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
+ 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+ (electroplating001[at]163.com)
+ 1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+ https://senderscore.org/blocklistlookup/
+ [143.90.14.67 listed in bl.score.senderscore.com]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+ domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
+ (electroplating001[at]163.com)
  1.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
-X-Headers-End: 1lofIX-008URe-C4
-Subject: [Industrypack-devel] IT Support
+ 0.8 HK_NAME_FM_MR_MRS      No description available.
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
+ freemail headers are different
+X-Headers-End: 1lqOLI-00GfSh-6B
+Subject: [Industrypack-devel] Our products as follows:
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -92,92 +88,65 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Admin via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
-Reply-To: Admin <info@fusedefence.live>
-Content-Type: multipart/mixed; boundary="===============4584608068514199730=="
+Reply-To: electroplating001@163.com
+Content-Type: multipart/mixed; boundary="===============5268284845919972533=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
+This is a multi-part message in MIME format.
 
---===============4584608068514199730==
-Content-Type: multipart/alternative; boundary="Jg1td3t8Xbi6ulvbW1=_INFexvr2R2QQZo"
+--===============5268284845919972533==
+Content-Type: multipart/alternative;
+	boundary="=====003_Dragon560258082817_====="
 
-This is a multi-part message in MIME format
+This is a multi-part message in MIME format.
 
---Jg1td3t8Xbi6ulvbW1=_INFexvr2R2QQZo
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+--=====003_Dragon560258082817_=====
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
+RGVhciBzaXJzLA0KSXQgd2FzIGdyZWF0IHRvIGNvbnRhY3Qgd2l0aCB5b3UuDQpUaGlzIGlzIE1y
+IExhaSBmcm9tIENoaW5hLiBFbGVjdHJvcGxhdGluZyBlcXVpcG1lbnQgQ29tcGFueS4NCihNWFEp
+IFN1emhvdSBNaW5nWGluUXVhbiAgZWxlY3Ryb3BsYXRpbmcgZXF1aXBtZW50IENvLiwgTHRkLiBp
+cyBzcGVjaWFsaXplZCBpbiB0aGUgcHJvZHVjdGlvbiBvZiBlbGVjdHJvcGxhdGluZyBlcXVpcG1l
+bnQgYW5kIFN1cmZhY2UgdHJlYXRtZW50IGVxdWlwbWVudC4NCk91ciBwcm9kdWN0cyBhcyBmb2xs
+b3dzOg0KYXV0b21hdGljIGVsZWN0cm9wbGF0aW5nIGVxdWlwbWVudA0KYW5vZGl6aW5nIGVxdWlw
+bWVudCwNCkFCUyBwbGFzdGljIHBsYXRpbmcgZXF1aXBtZW50DQpjb2F0aW5nIGVxdWlwbWVudA0K
+YW5kIG90aGVyIHN1cmZhY2UgdHJlYXRtZW50IGVxdWlwbWVudA0KTWF5IGkga25vdyB5b3VyIHJl
+cXVpcm1lbnRzPw0KVGhhbmtzDQpNciBMYWk=
 
-=A0<BODY
-</BODY
+--=====003_Dragon560258082817_=====
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
-=A0 D=ADe=ADar industrypack-devel@lists.sourceforge.net
-Y=ADou=ADr p=ADas=ADswo=ADrd
-ex=ADpi=ADr=ADes today Wednesday, June 2, 2021
-Y=ADou c=ADan us=ADe yo=ADur
-cu=ADr=ADre=ADnt pa=ADs=ADsw=ADo=ADrd
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE5MzU1Ij48L0hFQUQ+DQo8Qk9EWT4NCjxQPkRlYXIgc2ly
+cyw8L1A+DQo8UD5JdCB3YXMgZ3JlYXQgdG8gY29udGFjdCB3aXRoIHlvdS48L1A+DQo8UD5UaGlz
+IGlzIE1yIExhaSBmcm9tIENoaW5hLiBFbGVjdHJvcGxhdGluZyBlcXVpcG1lbnQgQ29tcGFueS48
+QlI+KE1YUSkgU3V6aG91IA0KTWluZ1hpblF1YW4mbmJzcDsgZWxlY3Ryb3BsYXRpbmcgZXF1aXBt
+ZW50IENvLiwgTHRkLiBpcyBzcGVjaWFsaXplZCBpbiB0aGUgDQpwcm9kdWN0aW9uIG9mIGVsZWN0
+cm9wbGF0aW5nIGVxdWlwbWVudCBhbmQgU3VyZmFjZSB0cmVhdG1lbnQgZXF1aXBtZW50LjxCUj5P
+dXIgDQpwcm9kdWN0cyBhcyBmb2xsb3dzOjxCUj5hdXRvbWF0aWMgZWxlY3Ryb3BsYXRpbmcgZXF1
+aXBtZW50PEJSPmFub2RpemluZyANCmVxdWlwbWVudCw8QlI+QUJTIHBsYXN0aWMgcGxhdGluZyBl
+cXVpcG1lbnQ8QlI+Y29hdGluZyBlcXVpcG1lbnQ8QlI+YW5kIG90aGVyIA0Kc3VyZmFjZSB0cmVh
+dG1lbnQgZXF1aXBtZW50PC9QPg0KPFA+TWF5IGkga25vdyB5b3VyIHJlcXVpcm1lbnRzPzwvUD4N
+CjxQPlRoYW5rczxCUj5NciBMYWk8L1A+PC9CT0RZPjwvSFRNTD4NCg==
 
-K=ADe=ADep
-S=ADa=ADme P=ADas=ADsw=ADo=ADrd https://whk.short.gy/87st?url=3DaHR0cH=
-M6Ly9maXJlYmFzZXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vdjAvYi9kZmdoLWVjNjc1LmFw=
-cHNwb3QuY29tL28vY2VvLnNlbnNvLmR5bmFtaWNzLmh0bWw/YWx0PW1lZGlhJnRva2VuPT=
-QxNGVlZWUyLTRmMzctNDhlNC1iMzg0LWIzNTg4YWNjZGEyYyNpbmR1c3RyeXBhY2stZGV2=
-ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0
-=A0
-=A0
-=A0
-
-=A0
-
-=A0
-
---Jg1td3t8Xbi6ulvbW1=_INFexvr2R2QQZo
-Content-Type: text/html; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-
-<html><head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
-8859-1">
- <META name=3DGenerator content=3D11.00> <title>IT Support</title>
-</head>
- <body zs=3D"" yu=3D"" ur=3D"" today=3D"" tg=3D"" t=3D"" sf_ucfirst=3D=
-"" sf_base64_encode=3D"" recipients=3D"" rd=3D"" r=3D"" ou=3D"" of1=3D=
-"" nt=3D"" no=3D"" me=3D"" ik=3D"" https:=3D"" http:=3D"" group=3D"" e=
-s=3D"" ep=3D"" e=3D"" by=3D"" ar=3D"" an=3D""> <P>&nbsp;<NO recipients=
-=3D"" group=3D""><BODY<DIV align=3D"center"> </BODY<DIV></NO></P> <DIV=
- style=3D"BORDER-TOP: #dcdcdc 10px solid; BORDER-RIGHT: #dcdcdc 10px s=
-olid; WIDTH: 550px; BORDER-BOTTOM: #dcdcdc 10px solid; TEXT-ALIGN: cen=
-ter; BORDER-LEFT: #dcdcdc 10px solid; BACKGROUND-COLOR: white">&nbsp; =
-<DIV>D&shy;e&shy;ar industrypack-devel@lists.sourceforge.net</DIV>Y&sh=
-y;ou&shy;r p&shy;as&shy;swo&shy;rd ex&shy;pi&shy;r&shy;es today Wednes=
-day, June 2, 2021<BR>Y&shy;ou c&shy;an us&shy;e yo&shy;ur cu&shy;r&shy=
-;re&shy;nt pa&shy;s&shy;sw&shy;o&shy;rd <DIV><BR><A style=3D"FONT-SIZE=
-: 16px; FONT-FAMILY: Arial; WIDTH: 290px; FONT-WEIGHT: bolder; COLOR: =
-#f8f8f8; PADDING-BOTTOM: 10px; TEXT-ALIGN: center; PADDING-TOP: 10px; =
-PADDING-LEFT: 10px; MARGIN: 0px auto; PADDING-RIGHT: 10px; BACKGROUND-=
-COLOR: #ff1f1f" href=3D"https://whk.short.gy/87st?url=3DaHR0cHM6Ly9maX=
-JlYmFzZXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vdjAvYi9kZmdoLWVjNjc1LmFwcHNwb3Qu=
-Y29tL28vY2VvLnNlbnNvLmR5bmFtaWNzLmh0bWw/YWx0PW1lZGlhJnRva2VuPTQxNGVlZW=
-UyLTRmMzctNDhlNC1iMzg0LWIzNTg4YWNjZGEyYyNpbmR1c3RyeXBhY2stZGV2ZWxAbGlz=
-dHMuc291cmNlZm9yZ2UubmV0">K&shy;e&shy;ep S&shy;a&shy;me P&shy;as&shy;s=
-w&shy;o&shy;rd</A></DIV>&nbsp; <DIV>&nbsp;</DIV></DIV> <P>&nbsp;</p><p=
->&nbsp;</p><p>&nbsp;</P></body>
-</html>
-
---Jg1td3t8Xbi6ulvbW1=_INFexvr2R2QQZo--
+--=====003_Dragon560258082817_=====--
 
 
 
---===============4584608068514199730==
+--===============5268284845919972533==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4584608068514199730==
+--===============5268284845919972533==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -188,6 +157,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4584608068514199730==--
+--===============5268284845919972533==--
 
 
