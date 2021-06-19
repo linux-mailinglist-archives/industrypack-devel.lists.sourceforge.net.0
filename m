@@ -2,70 +2,96 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33B683A7C2A
-	for <lists+industrypack-devel@lfdr.de>; Tue, 15 Jun 2021 12:38:59 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
-	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lt6TA-0002Nl-9b
-	for lists+industrypack-devel@lfdr.de; Tue, 15 Jun 2021 10:38:56 +0000
-Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- (envelope-from <enquiry@elitecommunications.com.au>)
- id 1lt6T8-0002Ne-H9
- for industrypack-devel@lists.sourceforge.net; Tue, 15 Jun 2021 10:38:54 +0000
+	by mail.lfdr.de (Postfix) with ESMTPS id 7FA653AD700
+	for <lists+industrypack-devel@lfdr.de>; Sat, 19 Jun 2021 05:24:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Message-ID:Reply-To:Date:From:To:
- MIME-Version:Content-Type:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
+	MIME-Version:Date:To:Message-ID:Sender:Cc:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=RqFfSU8pcjoROWcwC0Iya2g4D5i//Y8B4vcTEP0fpIY=; b=HUYlDTCKEoAIt7j4OsDhkbZRLO
+	vPoQyQINXq8/g/L9V/ZLu8zpd5PrlsQn5l1i1dhtxqlVpxgXMqC+Wtk0XfWwEUoIeZKPy1d6dLmv7
+	9OTv4x6ynvnSoVWmkNF/LSBSOdoJDmwHcO4BG+qf75VZDNutMjP2bWibB8pJM2U4PlEI=;
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
+	id 1luRaw-0003Mu-8G
+	for lists+industrypack-devel@lfdr.de; Sat, 19 Jun 2021 03:24:30 +0000
+Received: from [172.30.20.202] (helo=mx.sourceforge.net)
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <service@2cp9jw.cn>) id 1luRau-0003Mm-T0
+ for industrypack-devel@lists.sourceforge.net; Sat, 19 Jun 2021 03:24:28 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Subject:To:From:
+ Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=oREDI5fJSNpkgMzNQkxyr2C2BCP1fkilittshxux4As=; b=gSx+rTBooxK19yVfqWYHHXbTh0
- tHAZEu4XsB0QORUoVLGR1X15e2QbWAtebkGXGGGBM4ZYyNuLf3N4q2Fw+FkknnDGXzJRAikkF3fv+
- Q5YU9KSLulf0sBrtqI6sFpQhBcCVasqTZjwWC/yW88LRIbeRJOiirHC2GdZGBKUXpx+w=;
+ bh=k4V1iypeOZdTJq1fjIt7xd3oLR04uArhMV4TpAE+Dj8=; b=QI94s6I0XnEwV2ZMlT68h5earF
+ kPsLW9Wasu6YLEYsC8Ex10nJQw9YwBzXvFNipdL42tXofr9nkjTR7h1v78cXZohnv1ug7TBgHuymK
+ 5JpkgOK6Y09bApi4MRp2Qtz3Ii0c564Gv8nuptFGvM8DJN5YWLUA/q1CExfBZhsle1OA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Message-ID:Reply-To:Date:From:To:MIME-Version:Content-Type:Sender
+ h=Content-Type:MIME-Version:Date:Subject:To:From:Message-ID:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=oREDI5fJSNpkgMzNQkxyr2C2BCP1fkilittshxux4As=; b=P
- RuEjFm0113Zq5iXOvSOfeyRzHdURR9tOdGY5vV6xLBM2AoOQmOf6PuHTV7+13W8ZZbIE2xenhTX3Z
- Cz/sfDRZuEgzCGk360UKecKR70Oh88rQCsI3KH8TCX5G0wps5+1WCnOQlLCjhXahA/Iak8+pF729+
- 4wGhg/8Ga8f0nTbc=;
-Received: from server002.ntshosting.com.au ([223.252.8.33])
+ List-Owner:List-Archive; bh=k4V1iypeOZdTJq1fjIt7xd3oLR04uArhMV4TpAE+Dj8=; b=d
+ BtGqdZwidFuQreOSw3jaibmxeiwNGNqsujbhNctjpML3xPX8GjWlgUIfNIlOswjWpWJgB01+tYRFB
+ 0DhHh/O8pv3ofrRmjwMwA/Dw4BsdyBCuvFxWU3CScl0vEPHjwcYJ85sWq61IWwbn4UzOv5dFluR/C
+ ATEInPYtCLz72Fsk=;
+Received: from 2cp9jw.cn ([106.75.253.28])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-SHA384:256) (Exim 4.92.3)
- id 1lt6T0-00AXG1-EH
- for industrypack-devel@lists.sourceforge.net; Tue, 15 Jun 2021 10:38:56 +0000
-Received: from IP-220-111.dataclub.eu ([46.183.220.111]) by
- server002.ntshosting.com.au with
- MailEnable ESMTPA; Tue, 15 Jun 2021 20:38:33 +1000
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1luRaq-00G5QY-9M
+ for industrypack-devel@lists.sourceforge.net; Sat, 19 Jun 2021 03:24:32 +0000
+Received: from wgc (unknown [115.238.228.221])
+ by 2cp9jw.cn (Postfix) with ESMTPA id 3CF4060CF7C
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sat, 19 Jun 2021 10:59:31 +0800 (CST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 2cp9jw.cn 3CF4060CF7C
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=2cp9jw.cn;
+ s=default; t=1624071571;
+ bh=k4V1iypeOZdTJq1fjIt7xd3oLR04uArhMV4TpAE+Dj8=;
+ h=From:To:Subject:Date:From;
+ b=IRkCms7QEKu6mNBYVeC1wVPsqjj/+2XzUEMz1xSXqtxbY9dkX8IvukSjSjVMZjtGC
+ +t7bbtfn70J5O+NiMswlpi/UAz6Fk/vpeWZ5sgtdmb/8N2bEzlcqbxNAgzFoeinv84
+ nOPLCaJnr8Se4irtCTAnXca5GBsO6Un101nLjvbs=
+Message-ID: <20210619105930377000@2cp9jw.cn>
+To: <industrypack-devel@lists.sourceforge.net>
+Date: Sat, 19 Jun 2021 10:59:23 +0800
 MIME-Version: 1.0
-To: industrypack-devel@lists.sourceforge.net
-From: "Spark Simon" <enquiry@elitecommunications.com.au>
-Date: Tue, 15 Jun 2021 13:38:29 +0300
-Message-ID: <778E684B6E7E4094AB87953B2A4E620B.MAI@server002.ntshosting.com.au>
-X-Spam-Score: 8.6 (++++++++)
+X-mailer: Okzlzi 6
+X-Spam-Score: 6.4 (++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.5 RCVD_IN_SORBS_WEB      RBL: SORBS: sender is an abusable web server
- [46.183.220.111 listed in dnsbl.sorbs.net]
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [46.183.220.111 listed in zen.spamhaus.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+ [URIs: 2pii.top]
+ 1.9 URIBL_ABUSE_SURBL Contains an URL listed in the ABUSE SURBL blocklist
+ [URIs: 2pii.top]
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: deref-mail.com]
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1lt6T0-00AXG1-EH
-Subject: [Industrypack-devel] [SPAM] Order Inquiry:-Australia.
+ for more information. [URIs: 2pii.top]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [106.75.253.28 listed in zen.spamhaus.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 1.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+ background
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 0.0 AMAZON_IMG_NOT_RCVD_AMZN Amazon hosted image but message not from
+ Amazon
+X-Headers-End: 1luRaq-00G5QY-9M
+Subject: [Industrypack-devel] =?iso-2022-jp?b?GyRCPUVNVyVSJXMlSCEnJCobKEI=?=
+ =?iso-2022-jp?b?GyRCO1lKJyQkSn1LISROPnBKcyRyOTk/NxsoQg==?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -77,250 +103,197 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: spark_simon@aol.com
-Content-Type: multipart/mixed; boundary="===============1873326362698509760=="
+From: =?iso-2022-jp?B?QW1hem9uLhskQiQqNVJNTRsoQg==?= via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: =?iso-2022-jp?B?QW1hem9uLhskQiQqNVJNTRsoQg==?= <service@2cp9jw.cn>
+Content-Type: multipart/mixed; boundary="===============6864643432146032906=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-You will not see this in a MIME-aware mail reader.
---===============1873326362698509760==
-Content-Type: multipart/alternative; boundary="===============0034875972=="
+This is a multi-part message in MIME format.
 
-You will not see this in a MIME-aware mail reader.
---===============0034875972==
-Content-Type: text/plain; charset="iso-8859-1"
-MIME-Version: 1.0
-Content-Transfer-Encoding: quoted-printable
-Content-Description: Mail message body
+--===============6864643432146032906==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_052B_015FCDFD.14421140"
 
+This is a multi-part message in MIME format.
 
-Hello,
- =
+------=_NextPart_000_052B_015FCDFD.14421140
+Content-Type: text/plain;
+	charset="iso-2022-jp"
+Content-Transfer-Encoding: base64
 
-I am Spark Simon, import manager of Elite Telecom Trades Ltd located in Aus=
-tralia. We have a great interest in your products.
- =
+QW1hem9uLmNvLmpwIBskQiRLJDRFUE8/JE4lIiUrJSYlcyVIIUpMPkEwISIlUSU5JW8hPCVJISIk
+PSROQj44RD9NPnBKcyFLJE4zTkcnGyhCLi4NCiANCg0KICAgDQogGyRCJyEbKEJtYXpvbiAbJEIk
+KjVSTU0bKEIgICBbUkVDRUlWRVJfQUREUkVTU10NCg0KDQobJEInIRsoQm1hem9uIBskQiRLRVBP
+PyQkJD8kQCQkJD8kKjVSTU0kSyEiJyEbKEJtYXpvbiAbJEIlIiUrJSYlcyVIJE4+cEpzOTk/NyRy
+JCpGTyQxJDckXiQ5ISMbKEINChskQjtERzAkSiQsJGkhIichGyhCbWF6b24gGyRCJE4lIiUrJSYl
+cyVIJHI5OT83JEckLSReJDskcyRHJDckPyEjGyhCDQobJEI6IzJzJE8hIiUrITwlSSQsNHw4QkBa
+JGwkSyRKJEMkRiRrJCshIkBBNWFAaD07PWokLEpROTkkNSRsJD8kSiRJISIkNSReJDYkXiRKTX1N
+MyRHJSshPCVJJE4+cEpzJHI5OT83JEckLSReJDskcyRHJDckPyEjGyhCDQobJEIlIiUrJSYlcyVI
+PnBKcyROMGxJdCQsOG0kQyRGJCQkazhOJEshIiQqNVJNTSROJSIlKyUmJXMlSCRyMF07fSQ5JGsk
+PyRhGyhCIBskQichGyhCbWF6b24gGyRCJSIlKyUmJXMlSCROGyhCIBskQj5wSnMkcjNORyckOSRr
+SSxNVyQsJCIkaiReJDkhIzI8JCskaSUiJSslJiVzJUgkciVtJTAlJCVzJDchIj5wSnMkcjk5Pzck
+NyRGJC8kQCQ1JCQhIxsoQg0KGyRCJyEbKEJtYXpvbiAbJEIlbSUwJSQlcxsoQiAbJEIkSiQqISIb
+KEIyNBskQjt+NFYwSkZiJEskNDNORyckLCRKJCQ+bDlnISJAPyRLPz0kN0x1JDQkNiQkJF4kOyRz
+ISIkKjVSTU0kTjBCQTQkTjBZISIlIiUrJSYlcyVIJE5NeE1RQCk4QiRyJDUkOyRGJCQkPyRAJC0k
+XiQ5JE4kRyEiTT0kYSQ0Tjs+NSQvJEAkNSQkISMbKEINChskQiUiJSslJiVzJUgkS0VQTz8kThso
+QkUbJEIlYSE8JWslIiVJJWwlOSRLJSIlLyU7JTkkRyQtJEokJD5sOWcbKEINChskQiQqTGQkJDln
+JG8kOyEnGyhCIEFtYXpvbhskQiUrJTklPyVeITwlNSE8JVMlOSEjGyhCDQoNChskQiQqQ04kaSQ7
+GyhCOiANChskQiVRJTklbyE8JUkkT0MvJEskYjY1JCgkSiQkJEckLyRAJDUkJCEjGyhCIA0KGyRC
+OEQ/TT5wSnMkSDRYNzgkLCRKJC8hIj9kQiwkNyRLJC8kJCVRJTklbyE8JUkkcjpuQC4kNyRGJC8k
+QCQ1JCQhI0JnSjg7eiRIPi5KODt6ISI/dDt6ISIkKiRoJFM1LTlmJHJJLCQ6O0hNUSQ3JEYkLyRA
+JDUkJCEjGyhCIA0KGyRCJSolcyVpJSQlcyUiJSslJiVzJUgkNCRIJEshIjBbJEokayVRJTklbyE8
+JUkkcjtITVEkNyRGJC8kQCQ1JCQhIxsoQg0KDQoNChskQiRJJCYkPiRoJG0kNyQvJCo0aiQkJCQk
+PyQ3JF4kOSEjGyhCIA0KGyRCJyEbKEJtYXpvbiBpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291
+cmNlZm9yZ2UubmV0DQogDQoNCg0KW1JBTkRfVEVYVC1MT1dfMzJfMzJdIFtSQU5EX1RFWFQtTE9X
+XzMyXzMyXQ0KW0RBVEVfTF1bVElNRV0NCg0KIA==
 
-First  we will place a trial order to test run your products in our market =
-and subsequently place bulk orders on a quarter basis with a view to becomi=
-ng prospective business partners.
-  =
+------=_NextPart_000_052B_015FCDFD.14421140
+Content-Type: text/html;
+	charset="iso-2022-jp"
+Content-Transfer-Encoding: base64
 
-Our trial order is in the preparatory phase, we will be submitting our tria=
-l order with your company before the end of June. But we need your detailed=
- product catalogue and price list if available.
- =
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PWlz
+by0yMDIyLWpwIiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxTVFlMRSB0eXBlPXRleHQvY3Nz
+Pg0KLmJ1dHRvbiB7DQogICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmYzQzNTsNCiAgICBib3JkZXI6
+IG5vbmU7DQogICAgY29sb3I6IHdoaXRlOw0KICAgIHBhZGRpbmc6IDE1cHggMzJweDsNCiAgICB0
+ZXh0LWFsaWduOiBjZW50ZXI7DQogICAgdGV4dC1kZWNvcmF0aW9uOiBub25lOw0KICAgIGRpc3Bs
+YXk6IGlubGluZS1ibG9jazsNCiAgICBmb250LXNpemU6IDE2cHg7DQogICAgbWFyZ2luOiAxNHB4
+IDEycHg7DQogICAgY3Vyc29yOiBwb2ludGVyOw0KICAgIGJvcmRlci1yYWRpdXM6IDhweDsNCn0N
+CjwvU1RZTEU+DQoNCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRlbnQ9Ik1TSFRNTCAxMC4wMC45
+MjAwLjE2Mzg0Ij48L0hFQUQ+DQo8Qk9EWT4NCjxESVYgaWQ9eXVpXzNfMl8wXzFfMTUzNzU2NDgw
+MzM1OTM2NzggY2xhc3M9Im1zZy1ib2R5IGlubmVyIHVuZG9yZXNldCI+DQo8RElWIGlkPXlpdjIx
+NDU4NzM4MDM+DQo8RElWIGlkPXl1aV8zXzJfMF8xXzE1Mzc1NjQ4MDMzNTkzNjc3Pg0KPERJViBz
+dHlsZT0iRk9OVC1TSVpFOiAxcHQ7IENPTE9SOiAjZmZmOyBESVNQTEFZOiBub25lIj5BbWF6b24u
+Y28uanAgDQobJEIkSyQ0RVBPPyROJSIlKyUmJXMlSCFKTD5BMCEiJVElOSVvITwlSSEiJD0kTkI+
+OEQ/TT5wSnMhSyROM05HJxsoQi4uPC9ESVY+DQo8VEFCTEUgaWQ9eXVpXzNfMl8wXzFfMTUzNzU2
+NDgwMzM1OTM2NzYgY2xhc3M9eWl2MjE0NTg3MzgwM21hcmdpbkZpeCANCmNlbGxTcGFjaW5nPTAg
+Y2VsbFBhZGRpbmc9MCB3aWR0aD0iMTAwJSIgYm9yZGVyPTA+DQogIDxUQk9EWSBpZD15dWlfM18y
+XzBfMV8xNTM3NTY0ODAzMzU5MzY3NT4NCiAgPFRSIGlkPXl1aV8zXzJfMF8xXzE1Mzc1NjQ4MDMz
+NTkzNjc0Pg0KICAgIDxURCBpZD15dWlfM18yXzBfMV8xNTM3NTY0ODAzMzU5MzY4NCBjbGFzcz15
+aXYyMTQ1ODczODAzbW9iTWFyZ2luIA0KICAgIHN0eWxlPSJGT05ULVNJWkU6IDBweCIgYmdDb2xv
+cj0jZjJmMmYyPiZuYnNwOzwvVEQ+DQogICAgPFREIGlkPXl1aV8zXzJfMF8xXzE1Mzc1NjQ4MDMz
+NTkzNjczIGNsYXNzPXlpdjIxNDU4NzM4MDNtb2JDb250ZW50IA0KICAgIGJnQ29sb3I9I2ZmZmZm
+ZiB3aWR0aD02NjAgYWxpZ249Y2VudGVyPg0KICAgICAgPFRBQkxFIGlkPXl1aV8zXzJfMF8xXzE1
+Mzc1NjQ4MDMzNTkzNjcyIGNlbGxTcGFjaW5nPTAgY2VsbFBhZGRpbmc9MCANCiAgICAgIHdpZHRo
+PSIxMDAlIiBib3JkZXI9MD4NCiAgICAgICAgPFRCT0RZIGlkPXl1aV8zXzJfMF8xXzE1Mzc1NjQ4
+MDMzNTkzNjcxPg0KICAgICAgICA8VFIgaWQ9eXVpXzNfMl8wXzFfMTUzNzU2NDgwMzM1OTM2NzA+
+DQogICAgICAgICAgPFREIGlkPXl1aV8zXzJfMF8xXzE1Mzc1NjQ4MDMzNTkzNjY5IHZBbGlnbj10
+b3Agd2lkdGg9NjAwIA0KYWxpZ249Y2VudGVyPg0KICAgICAgICAgICAgPFRBQkxFIGlkPXl1aV8z
+XzJfMF8xXzE1Mzc1NjQ4MDMzNTkzNjY4IGNlbGxTcGFjaW5nPTAgY2VsbFBhZGRpbmc9MCANCiAg
+ICAgICAgICAgIHdpZHRoPSIxMDAlIiBib3JkZXI9MD4NCiAgICAgICAgICAgICAgPFRCT0RZIGlk
+PXl1aV8zXzJfMF8xXzE1Mzc1NjQ4MDMzNTkzNjY3Pg0KICAgICAgICAgICAgICA8VFIgY2xhc3M9
+eWl2MjE0NTg3MzgwM25vX21vYmlsZV9waG9uZT4NCiAgICAgICAgICAgICAgICA8VEQgc3R5bGU9
+IlBBRERJTkctVE9QOiAxMHB4IiBiZ0NvbG9yPSNmMmYyZjI+PC9URD48L1RSPg0KICAgICAgICAg
+ICAgICA8VFI+DQogICAgICAgICAgICAgICAgPFREIHN0eWxlPSJQQURESU5HLVRPUDogMTBweCIg
+YmdDb2xvcj0jZjJmMmYyPjwvVEQ+PC9UUj4NCiAgICAgICAgICAgICAgPFRSIGlkPXl1aV8zXzJf
+MF8xXzE1Mzc1NjQ4MDMzNTkzNjY2Pg0KICAgICAgICAgICAgICAgIDxURCBpZD15dWlfM18yXzBf
+MV8xNTM3NTY0ODAzMzU5MzY2NSBiZ0NvbG9yPSNmZmZmZmYgdkFsaWduPXRvcCANCiAgICAgICAg
+ICAgICAgICBhbGlnbj1jZW50ZXI+DQogICAgICAgICAgICAgICAgICA8VEFCTEUgc3R5bGU9Ik1B
+UkdJTi1CT1RUT006IDEwcHgiIGNlbGxTcGFjaW5nPTAgY2VsbFBhZGRpbmc9MCANCiAgICAgICAg
+ICAgICAgICAgIHdpZHRoPSIxMDAlIiBib3JkZXI9MD4NCiAgICAgICAgICAgICAgICAgICAgPFRC
+T0RZPg0KICAgICAgICAgICAgICAgICAgICA8VFIgdkFsaWduPWJvdHRvbT4NCiAgICAgICAgICAg
+ICAgICAgICAgICA8VEQgdkFsaWduPXRvcCB3aWR0aD0yMCBhbGlnbj1jZW50ZXI+Jm5ic3A7PC9U
+RD4NCiAgICAgICAgICAgICAgICAgICAgICA8VEQgaGVpZ2h0PTY0IGFsaWduPWxlZnQ+PElNRyAN
+CiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSJNSU4tSEVJR0hUOiA0NnB4OyBXSURUSDog
+MTEzcHgiIGJvcmRlcj0wIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3JjPSJodHRwOi8vZy1l
+YzIuaW1hZ2VzLWFtYXpvbi5jb20vaW1hZ2VzL0cvMDEvZS1tYWlsL2xvZ29zL2FfanBfcHJpbWVf
+bG9nb180OC5naWYiIA0KICAgICAgICAgICAgICAgICAgICAgICAgd2lkdGg9MTEzIGhlaWdodD00
+Nj4gPC9URD4NCiAgICAgICAgICAgICAgICAgICAgICA8VEQgdkFsaWduPXRvcCB3aWR0aD0yMCAN
+CiAgICAgICAgICAgICAgICAgIGFsaWduPWNlbnRlcj4mbmJzcDs8L1REPjwvVFI+PC9UQk9EWT48
+L1RBQkxFPg0KICAgICAgICAgICAgICAgICAgPFRBQkxFIGlkPXl1aV8zXzJfMF8xXzE1Mzc1NjQ4
+MDMzNTkzNjY0IA0KICAgICAgICAgICAgICAgICAgc3R5bGU9Ik1BUkdJTi1CT1RUT006IDIwcHg7
+IFBBRERJTkctQk9UVE9NOiAxMHB4OyBQQURESU5HLVRPUDogMTBweCIgDQogICAgICAgICAgICAg
+ICAgICBjZWxsU3BhY2luZz0wIGNlbGxQYWRkaW5nPTAgd2lkdGg9IjEwMCUiIGJvcmRlcj0wPg0K
+ICAgICAgICAgICAgICAgICAgICA8VEJPRFkgaWQ9eXVpXzNfMl8wXzFfMTUzNzU2NDgwMzM1OTM2
+NjM+DQogICAgICAgICAgICAgICAgICAgIDxUUiBpZD15dWlfM18yXzBfMV8xNTM3NTY0ODAzMzU5
+MzY2MiB2QWxpZ249Ym90dG9tPg0KICAgICAgICAgICAgICAgICAgICAgIDxURCB2QWxpZ249dG9w
+IHdpZHRoPTIwIGFsaWduPWNlbnRlcj4mbmJzcDs8L1REPg0KICAgICAgICAgICAgICAgICAgICAg
+IDxURCBpZD15dWlfM18yXzBfMV8xNTM3NTY0ODAzMzU5MzY2MSANCiAgICAgICAgICAgICAgICAg
+ICAgICBjbGFzcz15aXYyMTQ1ODczODAzcHBzYW5zIA0KICAgICAgICAgICAgICAgICAgICAgIHN0
+eWxlPSJGT05ULVNJWkU6IDE1cHg7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBUcmVidWNoZXQsIEFy
+aWFsLCBzYW5zIHNlcmlmOyBDT0xPUjogIzMzMzMzMzsgTElORS1IRUlHSFQ6IDIycHgiIA0KICAg
+ICAgICAgICAgICAgICAgICAgIHZBbGlnbj10b3A+GyRCJyEbKEJtYXpvbiAbJEIkKjVSTU0bKEIm
+bmJzcDsmbmJzcDsgPEZPTlQgDQogICAgICAgICAgICAgICAgICAgICAgICBjb2xvcj13aGl0ZT5b
+UkVDRUlWRVJfQUREUkVTU108QlI+PC9GT05UPjxCUj48U1BBTiANCiAgICAgICAgICAgICAgICAg
+ICAgICAgIGlkPXl1aV8zXzJfMF8xXzE1Mzc1NjQ4MDMzNTkzNjk2IA0Kc3R5bGU9IkRJU1BMQVk6
+IGlubGluZSI+DQogICAgICAgICAgICAgICAgICAgICAgICA8UD4bJEInIRsoQm1hem9uIBskQiRL
+RVBPPyQkJD8kQCQkJD8kKjVSTU0kSyEiJyEbKEJtYXpvbiANCiAgICAgICAgICAgICAgICAgICAg
+ICAgIBskQiUiJSslJiVzJUgkTj5wSnM5OT83JHIkKkZPJDEkNyReJDkhIxsoQjxCUj4bJEI7REcw
+JEokLCRpISInIRsoQm1hem9uIA0KICAgICAgICAgICAgICAgICAgICAgICAgGyRCJE4lIiUrJSYl
+cyVIJHI5OT83JEckLSReJDskcyRHJDckPyEjGyhCPEJSPhskQjojMnMkTyEiJSshPCVJJCw0fDhC
+QFokbCRLJEokQyRGJGskKyEiQEE1YUBoPTs9aiQsSlE5OSQ1JGwkPyRKJEkhIiQ1JF4kNiReJEpN
+fU0zJEclKyE8JUkkTj5wSnMkcjk5PzckRyQtJF4kOyRzJEckNyQ/ISMbKEI8L1A+DQogICAgICAg
+ICAgICAgICAgICAgICAgICA8UD48Rk9OVCBjb2xvcj0jMzMzMzMzPjxTUEFOIA0KICAgICAgICAg
+ICAgICAgICAgICAgICAgc3R5bGU9IkZPTlQtU0laRTogMTRweCI+GyRCJSIlKyUmJXMlSD5wSnMk
+TjBsSXQkLDhtJEMkRiQkJGs4TiRLISIkKjVSTU0kTiUiJSslJiVzJUgkcjBdO30kOSRrJD8kYRso
+QiANCiAgICAgICAgICAgICAgICAgICAgICAgIDxGT05UIHNpemU9Mz4bJEInIRsoQm1hem9uIDwv
+Rk9OVD4bJEIlIiUrJSYlcyVIJE4bKEIgDQogICAgICAgICAgICAgICAgICAgICAgICAbJEI+cEpz
+JHIzTkcnJDkka0ksTVckLCQiJGokXiQ5ISMyPCQrJGklIiUrJSYlcyVIJHIlbSUwJSQlcyQ3ISI+
+cEpzJHI5OT83JDckRiQvJEAkNSQkISMbKEI8L1NQQU4+PC9GT05UPjxGT05UIA0KICAgICAgICAg
+ICAgICAgICAgICAgICAgY29sb3I9IzMzMzMzMz48QlI+PEEgY2xhc3M9YnV0dG9uIA0KICAgICAg
+ICAgICAgICAgICAgICAgICAgaHJlZj0iaHR0cHM6Ly9qcC1hbWF6b24uMnBpaS50b3AvIiANCiAg
+ICAgICAgICAgICAgICAgICAgICAgIHRhcmdldD1fYmxhbms+PFNUUk9ORz48Rk9OVCBjb2xvcj1i
+bGFjaz4bJEInIRsoQm1hem9uIBskQiVtJTAlJCVzGyhCIA0KICAgICAgICAgICAgICAgICAgICAg
+ICAgPC9GT05UPjwvU1RST05HPjwvQT48L1A+DQogICAgICAgICAgICAgICAgICAgICAgICA8UD48
+U1BBTiANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE0cHgiPjxC
+PhskQiRKJCohIhsoQjI0GyRCO340VjBKRmIkSyQ0M05HJyQsJEokJD5sOWchIkA/JEs/PSQ3THUk
+NCQ2JCQkXiQ7JHMhIiQqNVJNTSROMEJBNCROMFkhIiUiJSslJiVzJUgkTk14TVFAKThCJHIkNSQ7
+JEYkJCQ/JEAkLSReJDkkTiRHISJNPSRhJDROOz41JC8kQCQ1JCQhIxsoQjwvQj48L1NQQU4+PC9Q
+Pg0KICAgICAgICAgICAgICAgICAgICAgICAgPFA+GyRCJSIlKyUmJXMlSCRLRVBPPyROGyhCRRsk
+QiVhITwlayUiJUklbCU5JEslIiUvJTslOSRHJC0kSiQkPmw5ZxsoQjxCUj4bJEIkKkxkJCQ5ZyRv
+JDshJxsoQiANCiAgICAgICAgICAgICAgICAgICAgICAgIEFtYXpvbhskQiUrJTklPyVeITwlNSE8
+JVMlOSEjGyhCPC9QPjxCUj48L1NQQU4+DQogICAgICAgICAgICAgICAgICAgICAgICA8VEFCTEUg
+Y2xhc3M9eWl2MjE0NTg3MzgwM3RpcHMgDQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0i
+Qk9SREVSLVRPUDogI2VlZSAxcHggc29saWQ7IEJPUkRFUi1SSUdIVDogI2VlZSAxcHggc29saWQ7
+IEJPUkRFUi1CT1RUT006ICNlZWUgMXB4IHNvbGlkOyBGT05UOiAxMXB4IENhbGlicmksIFRyZWJ1
+Y2hldCwgQXJpYWwsIHNhbnMgc2VyaWYsIHNhbnMtc2VyaWY7IEJPUkRFUi1MRUZUOiAjZWVlIDFw
+eCBzb2xpZCIgDQogICAgICAgICAgICAgICAgICAgICAgICBjZWxsU3BhY2luZz0wIGNlbGxQYWRk
+aW5nPTEwPg0KICAgICAgICAgICAgICAgICAgICAgICAgICA8VEJPRFk+DQogICAgICAgICAgICAg
+ICAgICAgICAgICAgIDxUUj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8VEQgDQogICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9IkNPTE9SOiAjMzMzOyBGT05UOiAxMXB4IENh
+bGlicmksIFRyZWJ1Y2hldCwgQXJpYWwsIHNhbnMgc2VyaWYsIHNhbnMtc2VyaWY7IE1BUkdJTjog
+MHB4Ij4bJEIkKkNOJGkkOxsoQjogDQoNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxV
+TD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExJPjxTUEFOIA0KICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0iRElTUExBWTogaW5saW5lIj4bJEIlUSU5JW8h
+PCVJJE9DLyRLJGI2NSQoJEokJCRHJC8kQCQ1JCQhIxsoQjwvU1BBTj4gDQoNCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgPExJPhskQjhEP00+cEpzJEg0WDc4JCwkSiQvISI/ZEIsJDck
+SyQvJCQlUSU5JW8hPCVJJHI6bkAuJDckRiQvJEAkNSQkISNCZ0o4O3okSD4uSjg7eiEiP3Q7eiEi
+JCokaCRTNS05ZiRySSwkOjtITVEkNyRGJC8kQCQ1JCQhIxsoQiANCg0KICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICA8TEk+GyRCJSolcyVpJSQlcyUiJSslJiVzJUgkNCRIJEshIjBbJEok
+ayVRJTklbyE8JUkkcjtITVEkNyRGJC8kQCQ1JCQhIxsoQjwvTEk+PC9VTD48L1REPjwvVFI+PC9U
+Qk9EWT48L1RBQkxFPjxCUj4bJEIkSSQmJD4kaCRtJDckLyQqNGokJCQkJD8kNyReJDkhIxsoQiAN
+CiAgICAgICAgICAgICAgICAgICAgICAgIDxCUj4bJEInIRsoQm1hem9uIGluZHVzdHJ5cGFjay1k
+ZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXQ8QlI+PFNQQU4gDQogICAgICAgICAgICAgICAgICAg
+ICAgICBzdHlsZT0iRk9OVC1XRUlHSFQ6IGJvbGQ7IENPTE9SOiAjNDQ0Ij48L1NQQU4+PFNQQU4+
+PC9TUEFOPjwvRk9OVD48L1REPg0KICAgICAgICAgICAgICAgICAgICAgIDxURCB2QWxpZ249dG9w
+IHdpZHRoPTIwIA0KICAgICAgICAgICAgICAgICAgYWxpZ249Y2VudGVyPiZuYnNwOzwvVEQ+PC9U
+Uj48L1RCT0RZPjwvVEFCTEU+PC9URD48L1RSPjwvVEJPRFk+PC9UQUJMRT4NCiAgICAgICAgICAg
+IDxQIGFsaWduPXJpZ2h0PjxGT05UIGNvbG9yPXdoaXRlPltSQU5EX1RFWFQtTE9XXzMyXzMyXSAN
+CiAgICAgICAgICAgIFtSQU5EX1RFWFQtTE9XXzMyXzMyXTwvRk9OVD48L1A+PC9URD48L1RSPjwv
+VEJPRFk+PC9UQUJMRT4NCiAgICAgIDxUQUJMRSBjZWxsU3BhY2luZz0wIGNlbGxQYWRkaW5nPTAg
+d2lkdGg9IjEwMCUiIGJvcmRlcj0wPg0KICAgICAgICA8VEJPRFk+DQogICAgICAgIDxUUj4NCiAg
+ICAgICAgICA8VEQgdkFsaWduPXRvcCB3aWR0aD02MDAgYWxpZ249Y2VudGVyPg0KICAgICAgICAg
+ICAgPFAgYWxpZ249cmlnaHQ+PEZPTlQgDQogICAgICAgIGNvbG9yPXdoaXRlPltEQVRFX0xdW1RJ
+TUVdPC9GT05UPjwvUD48L1REPjwvVFI+PC9UQk9EWT48L1RBQkxFPg0KICAgICAgPFAgYWxpZ249
+cmlnaHQ+PEZPTlQgY29sb3I9YmxhY2s+PC9GT05UPiZuYnNwOzwvUD48L1REPg0KICAgIDxURCBj
+bGFzcz15aXYyMTQ1ODczODAzbW9iTWFyZ2luIHN0eWxlPSJGT05ULVNJWkU6IDBweCIgDQogICAg
+YmdDb2xvcj0jZjJmMmYyPiZuYnNwOzwvVEQ+PC9UUj48L1RCT0RZPjwvVEFCTEU+PC9ESVY+PC9E
+SVY+PC9ESVY+PC9CT0RZPjwvSFRNTD4NCg==
 
-We would also like to know the following;
- =
-
-(1) MOQ.
-(2) Payment terms(FOB).
-(3) Lead time.
-  =
-
-Kindly get back to me with the above details timely so we can place the ord=
-er without any further delays
- =
-
-Waiting for your reply.
-  =
-
- =
-
- =
-
-     =
-
-     =
-
-	   =
-
-    Spark Simon
-
-   Import Manager
-
-    =
-
-    Phone:
-	  61-4961058
-
- =
-
-   =
-
-	 =
-
-         =
-
-
-
-
---===============0034875972==
-Content-Type: text/html; charset="iso-8859-1"
-MIME-Version: 1.0
-Content-Transfer-Encoding: quoted-printable
-Content-Description: Mail message body
-
-<HTML><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
-=3Diso-8859-1"/></head><BODY><DIV><PRE style=3D"WHITE-SPACE: pre-wrap"><SPA=
-N lang=3DEN-US><FONT face=3D"tahoma, sans-serif">Hello,</FONT></SPAN></PRE>=
-</DIV>
-<DIV><PRE style=3D"WHITE-SPACE: pre-wrap"><SPAN lang=3DEN-US><FONT face=3D"=
-tahoma, sans-serif">I am&nbsp;Spark Simon, import manager of&nbsp;Elite Tel=
-ecom Trades Ltd located in Australia. We have a great interest in your prod=
-ucts.</FONT></SPAN></PRE></DIV>
-<DIV><PRE style=3D"WHITE-SPACE: pre-wrap"><SPAN lang=3DEN-US><FONT face=3D"=
-tahoma, sans-serif">First&nbsp; we will place a trial order to&nbsp;test ru=
-n&nbsp;your products in our market and subsequently&nbsp;place bulk orders =
-on a quarter&nbsp;basis with a view to becoming prospective&nbsp;business p=
-artners.</FONT></SPAN></PRE></DIV>
-<DIV>
-<DIV><PRE style=3D"WHITE-SPACE: pre-wrap"><SPAN lang=3DEN-US><FONT face=3D"=
-tahoma, sans-serif">Our trial order is in the preparatory phase, we will be=
- submitting our trial order with your company before the end of June. But w=
-e need your detailed product catalogue and price list if available.</FONT><=
-/SPAN></PRE></DIV>
-<DIV><PRE style=3D"WHITE-SPACE: pre-wrap"><SPAN lang=3DEN-US><FONT face=3D"=
-tahoma, sans-serif">We would also like to know the following;</FONT></SPAN>=
-</PRE></DIV>
-<DIV><PRE style=3D"WHITE-SPACE: pre-wrap"><SPAN lang=3DEN-US><FONT face=3D"=
-tahoma, sans-serif">(1) MOQ.<BR>(2) Payment terms(FOB).<BR>(3) Lead time.</=
-FONT></SPAN></PRE></DIV>
-<DIV>
-<DIV><PRE style=3D"WHITE-SPACE: pre-wrap"><SPAN lang=3DEN-US><FONT face=3D"=
-tahoma, sans-serif">Kindly get back to me with the above details timely so =
-we can place the order without any further delays</FONT></SPAN></PRE></DIV>
-<DIV><PRE style=3D"WHITE-SPACE: pre-wrap"><SPAN lang=3DEN-US><FONT face=3D"=
-tahoma, sans-serif">Waiting for your reply.</FONT></SPAN></PRE></DIV></DIV>=
-</DIV>
-<P>&nbsp;</P>
-<P><BR class=3DApple-interchange-newline>
-<TABLE style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif=
-; WIDTH: 929px; BACKGROUND: white; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: n=
-ormal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; font-variant-ligature=
-s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-thickness: initial; text-decoration-style: initial; text-decorat=
-ion-color: initial" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=
-=3D0>
-<TBODY>
-<TR>
-<TD style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; MARGIN: 0px; PA=
-DDING-RIGHT: 0cm" vAlign=3Dtop>
-<DIV align=3Dright>
-<TABLE style=3D"WIDTH: 0cm" cellSpacing=3D0 cellPadding=3D0 border=3D0>
-<TBODY>
-<TR>
-<TD style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 11.25pt; MARGIN: 0px=
-; PADDING-RIGHT: 0cm" vAlign=3Dtop>
-<P style=3D"unicode-bidi: embed; DIRECTION: rtl; TEXT-ALIGN: right" dir=3Dr=
-tl><SPAN dir=3Drtl></SPAN><SPAN dir=3Drtl></SPAN><SPAN lang=3DAR-SA><SPAN d=
-ir=3Drtl></SPAN><SPAN dir=3Drtl></SPAN></SPAN><SPAN dir=3Dltr></SPAN>&nbsp;=
-</P></TD>
-<TD style=3D"BORDER-TOP: medium none; FONT-FAMILY: Roboto, RobotoDraft, Hel=
-vetica, Arial, sans-serif; BORDER-RIGHT: rgb(21,55,235) 2.25pt solid; BORDE=
-R-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT:=
- 0cm; MARGIN: 0px; BORDER-LEFT: medium none; PADDING-RIGHT: 11.25pt; border=
--image: initial">
-<DIV align=3Dright>
-<TABLE cellSpacing=3D0 cellPadding=3D0 border=3D0>
-<TBODY>
-<TR>
-<TD style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; PADDING-BOTTOM: 3.75pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; MARGIN: 0px;=
- PADDING-RIGHT: 0cm" colSpan=3D2>
-<P style=3D"unicode-bidi: embed; DIRECTION: rtl; TEXT-ALIGN: right" dir=3Dr=
-tl><B><SPAN style=3D"FONT-SIZE: 13.5pt; FONT-FAMILY: sans-serif; COLOR: rgb=
-(21,55,235)" dir=3Dltr>Spark Simon</SPAN></B></P></TD></TR>
-<TR>
-<TD style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; PADDING-BOTTOM: 5.65pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; MARGIN: 0px;=
- PADDING-RIGHT: 0cm" colSpan=3D2>
-<P style=3D"unicode-bidi: embed; DIRECTION: rtl; TEXT-ALIGN: right; LINE-HE=
-IGHT: 12pt" dir=3Drtl><B><SPAN style=3D"FONT-SIZE: 10.5pt; FONT-FAMILY: san=
-s-serif" dir=3Dltr>Import Manager</SPAN></B><SPAN dir=3Dltr></SPAN></P></TD=
-></TR>
-<TR>
-<TD style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; MARGIN: 0px; PA=
-DDING-RIGHT: 0cm">
-<DIV align=3Dright>
-<TABLE cellSpacing=3D0 cellPadding=3D0 border=3D0>
-<TBODY>
-<TR>
-<TD style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; PADDING-BOTTOM: 3.75pt; PADDING-TOP: 0cm; PADDING-LEFT: 3pt; MARGIN: 0px;=
- PADDING-RIGHT: 0cm" vAlign=3Dtop>
-<P style=3D"unicode-bidi: embed; DIRECTION: rtl; TEXT-ALIGN: right; LINE-HE=
-IGHT: 12pt" dir=3Drtl><SPAN style=3D"FONT-SIZE: 10pt; FONT-FAMILY: sans-ser=
-if" dir=3Dltr>Phone</SPAN><SPAN dir=3Drtl></SPAN><SPAN dir=3Drtl></SPAN><SP=
-AN lang=3DAR-SA style=3D"FONT-SIZE: 10pt; FONT-FAMILY: sans-serif"><SPAN di=
-r=3Drtl></SPAN><SPAN dir=3Drtl></SPAN>:</SPAN><SPAN lang=3DAR-SA></SPAN></P=
-></TD>
-<TD style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; PADDING-BOTTOM: 3.75pt; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; MARGIN: 0px;=
- PADDING-RIGHT: 0cm" vAlign=3Dtop>
-<P style=3D"unicode-bidi: embed; DIRECTION: rtl; TEXT-ALIGN: right; LINE-HE=
-IGHT: 12pt" dir=3Drtl><SPAN lang=3DAR-SA style=3D"FONT-SIZE: 10pt; FONT-FAM=
-ILY: sans-serif; COLOR: black">61-4961058</SPAN><SPAN lang=3DAR-SA></SPAN><=
-/P></TD></TR></TBODY></TABLE></DIV>
-<P style=3D"TEXT-ALIGN: right" align=3Dright></P>
-<DIV align=3Dright>&nbsp;</DIV>
-<P style=3D"TEXT-ALIGN: right" align=3Dright><SPAN lang=3DAR-SA dir=3Drtl><=
-/SPAN></P></TD>
-<TD style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; MARGIN: 0px; PA=
-DDING-RIGHT: 0cm"></TD></TR>
-<TR>
-<TD style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; PADDING-BOTTOM: 0cm; PADDING-TOP: 5.65pt; PADDING-LEFT: 0cm; MARGIN: 0px;=
- PADDING-RIGHT: 0cm" colSpan=3D2>
-<P style=3D"unicode-bidi: embed; DIRECTION: rtl; TEXT-ALIGN: right" dir=3Dr=
-tl><A style=3D"COLOR: rgb(17,85,204)" href=3D"https://deref-mail.com/mail/c=
-lient/NIr5skke_5M/dereferrer/?redirectUrl=3Dhttps%3A%2F%2Fwww.facebook.com%=
-2FMyUbi1%2F%3Ffref%3Dts" rel=3D"noreferrer noopener" target=3D_blank data-s=
-aferedirecturl=3D"https://www.google.com/url?q=3Dhttps://deref-mail.com/mai=
-l/client/NIr5skke_5M/dereferrer/?redirectUrl%3Dhttps%253A%252F%252Fwww.face=
-book.com%252FMyUbi1%252F%253Ffref%253Dts&amp;source=3Dgmail&amp;ust=3D16233=
-19371718000&amp;usg=3DAFQjCNEUkHREk0xuP82rVPBFsiXRZr07mg"><SPAN lang=3DEN-U=
-S style=3D"TEXT-DECORATION: none; BORDER-TOP: windowtext 1pt; BORDER-RIGHT:=
- windowtext 1pt; BORDER-BOTTOM: windowtext 1pt; COLOR: rgb(74,74,74); PADDI=
-NG-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: windowtex=
-t 1pt; PADDING-RIGHT: 0cm" dir=3Dltr></SPAN></A><SPAN dir=3Drtl></SPAN><SPA=
-N dir=3Drtl></SPAN><SPAN lang=3DAR-SA><SPAN dir=3Drtl></SPAN><SPAN dir=3Drt=
-l></SPAN>&nbsp;&nbsp;</SPAN><A style=3D"COLOR: rgb(17,85,204)" href=3D"http=
-s://deref-mail.com/mail/client/vUILxkJjFRE/dereferrer/?redirectUrl=3Dhttps%=
-3A%2F%2Fwww.instagram.com%2Fmyubi_il%2F" rel=3D"noreferrer noopener" target=
-=3D_blank data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://de=
-ref-mail.com/mail/client/vUILxkJjFRE/dereferrer/?redirectUrl%3Dhttps%253A%2=
-52F%252Fwww.instagram.com%252Fmyubi_il%252F&amp;source=3Dgmail&amp;ust=3D16=
-23319371718000&amp;usg=3DAFQjCNGZyv8buz4ur-znr4LcJgZph1fBxQ"><SPAN lang=3DE=
-N-US style=3D"TEXT-DECORATION: none; BORDER-TOP: windowtext 1pt; BORDER-RIG=
-HT: windowtext 1pt; BORDER-BOTTOM: windowtext 1pt; COLOR: rgb(74,74,74); PA=
-DDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-LEFT: window=
-text 1pt; PADDING-RIGHT: 0cm" dir=3Dltr></SPAN></A><SPAN dir=3Drtl></SPAN><=
-SPAN dir=3Drtl></SPAN><SPAN lang=3DAR-SA><SPAN dir=3Drtl></SPAN><SPAN dir=
-=3Drtl></SPAN>&nbsp;&nbsp;</SPAN><SPAN style=3D"BORDER-TOP: windowtext 1pt;=
- BORDER-RIGHT: windowtext 1pt; BORDER-BOTTOM: windowtext 1pt; COLOR: rgb(74=
-,74,74); PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 0cm; BORDER-L=
-EFT: windowtext 1pt; PADDING-RIGHT: 0cm" dir=3Dltr></SPAN><SPAN dir=3Drtl><=
-/SPAN><SPAN dir=3Drtl></SPAN><SPAN lang=3DAR-SA><SPAN dir=3Drtl></SPAN><SPA=
-N dir=3Drtl></SPAN>&nbsp;&nbsp;</SPAN><SPAN dir=3Dltr></SPAN></P></TD></TR>=
-</TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></T=
-ABLE></P></BODY></HTML>
---===============0034875972==--
+------=_NextPart_000_052B_015FCDFD.14421140--
 
 
---===============1873326362698509760==
+
+--===============6864643432146032906==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============1873326362698509760==
+--===============6864643432146032906==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -331,5 +304,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============1873326362698509760==--
+--===============6864643432146032906==--
+
 
