@@ -2,79 +2,80 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5F76E3B1F3D
-	for <lists+industrypack-devel@lfdr.de>; Wed, 23 Jun 2021 19:08:04 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA1B23B2FD3
+	for <lists+industrypack-devel@lfdr.de>; Thu, 24 Jun 2021 15:12:18 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lw6M5-0002eX-2l
-	for lists+industrypack-devel@lfdr.de; Wed, 23 Jun 2021 17:08:01 +0000
+	id 1lwP9R-000674-Q6
+	for lists+industrypack-devel@lfdr.de; Thu, 24 Jun 2021 13:12:13 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <dave@ch4d.com>) id 1lw6M3-0002eD-SN
- for industrypack-devel@lists.sourceforge.net; Wed, 23 Jun 2021 17:07:59 +0000
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ (envelope-from <simon@cablenits.com>) id 1lwP9Q-00065p-3U
+ for industrypack-devel@lists.sourceforge.net; Thu, 24 Jun 2021 13:12:12 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Type:Mime-Version:To:Reply-To:From:
- Sender:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Message-ID:Reply-To:Date:From:To:Subject:
+ MIME-Version:Content-Type:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=lMykxGVVonZJY1oc118qc75BVMc30AbG8YHNH29IDvQ=; b=bVBOYEGkXjJ6N19EvdrlLzTL1r
- BawWoyicu1wQaNWe1D7uabRHDjwl5rk4gAX3g9n/R7S+WxWm93odrAQ5Bbw3+Mu0HkkPlcbiKTgmo
- pr6YEaNlR/DqOuLqXWo/QbF0Eze0yCSG7AXi0W3xrTJcjuT6H38NLpNNv+c6OWdpi/MY=;
+ bh=DQeIRNmDuVOjFTTw/mW8bFZnydvpGLapwzi4W64I7i8=; b=eZH9agZKrXAs/2EDruv7uIToA8
+ SlX2zqFfKOViBD8oOPMEXvJ2iZTAzDC9+FyKEmAgzV+vrMWy0cvuKVm4IZSJ1L8d4NE6bTHVU2zqT
+ XUKJsHqiEiyYUAqFVV6/dbX0Wdnx6T5bOhanJA7lSA9gBxEoB/QzTiwhOpTc5XkV4LFQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Type:Mime-Version:To:Reply-To:From:Sender:Date:Message-ID
+ h=Message-ID:Reply-To:Date:From:To:Subject:MIME-Version:Content-Type:Sender
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=lMykxGVVonZJY1oc118qc75BVMc30AbG8YHNH29IDvQ=; b=S
- /aN8448xhs9cVIlXkUdl5eMwY1JwPefl64H9xJYkEQHRSouHWcl1bcpX1uP/ZB3MoPzE22b+zKz1K
- 9gAxW0FcKhGhfHzByGQytc4NkmLGeIFsA7tpPl2WqLuJfPN3d+BfI22Q4tpMSu0qNzZUeYDCb/LtD
- a4QTC0rENU3Bsm7E=;
-Received: from cp2.mx-serv.live ([198.12.83.84])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=DQeIRNmDuVOjFTTw/mW8bFZnydvpGLapwzi4W64I7i8=; b=B
+ arfWCxdFUvzSXortAfjfn9CfFik0tRDD+tjuDy97tEDD4USPex5oxPNqVkcZjZPLAqaYL8g6T42az
+ ERilYiBOwK1twxoHfholQ3hfDp/bnKIILhKeIUNY2jLhgLkxkR7enG4lZ3hBZOrxcq/FjHfjXx6K+
+ 72Ys57uKUzthAuEg=;
+Received: from slot0.cablenits.com ([195.133.18.100])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1lw6Lz-009Xdd-4t
- for industrypack-devel@lists.sourceforge.net; Wed, 23 Jun 2021 17:08:01 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dkim; d=ch4d.com;
- h=From:Reply-To:To:Subject:Mime-Version:Content-Type; i=dave@ch4d.com;
- bh=lMykxGVVonZJY1oc118qc75BVMc30AbG8YHNH29IDvQ=;
- b=m6HEplEUvt7a0iNACqzL5z0tlNEWfaWcoHh6hCKBdfweWIhtoMBCCBjCGpbSYkMzXmy+qdWKcL7u
- lpPtdlNAYKHBGlDTTL9jEru1nzeOJl2zANfB8ykiXKDG04B/3B9xd+ZAcDvwNOA+E4xGecl9pPAm
- 123NEq3Wlab2VA+9dd4=
-From: =?utf-8?B?RmFuY2VyYSB3aGl0ZWU=?= <dave@ch4d.com>
+ id 1lwP9E-0006Kh-Rz
+ for industrypack-devel@lists.sourceforge.net; Thu, 24 Jun 2021 13:12:12 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=cablenits.com;
+ h=Content-Type:MIME-Version:Subject:To:From:Date:Reply-To:Message-ID;
+ i=simon@cablenits.com; bh=SisepVsWKuo7UNogoWVqRErjN8Q=;
+ b=QrQ7Nrab9k3pQV0xZ1z3nq9sIqy8q4W8A4U9I7iCtbP1XCOTDffNd8PWWsFKalH+HI37EunRN1O6
+ 2zltizXIgVZUeyXM5NDKuTA4jAhfEE9x+TZ3kLQy7kuJjQCePPnD/XtELtxhr34pFDHTZKnXWCgo
+ ooaRpr+u9DqRnoZpNopbPRdARHnAkqsSi06yFJ7rY4umPre+ZbUmHnoKSQIIIPHWMMmOsYWdePRj
+ pDGOjw+zRzaoAYmTlfoRNlPRI7Qd/04+BqXC3FcCCfSr5ZEd7SCBVflRvGYyAv7zi5rBEr3bn2e+
+ +qOeWrOGCmufNZNTe+NkODIezXe9SXnrmhe6mg==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=cablenits.com;
+ b=isPPOBRD1o2zxIME2r8Fu13861MwRm97fNUSCObYkIsy2uksG8UCLgCyEqj4l5/5r3/iEDNKnSo5
+ Fj7Ch4xFiNTWVZO247rRqjtAvcBLOk1DYn8b3aUqxGGFSJz7CHp4GCdk1AUmmKelGQarHjG4rGRU
+ 7V4LLWYm3ptbycmGqiZAR4bXVWwq/2UVH4KRvLk5mlB02eB8ebtLNZvjr834SsmzpUqB95T7x+E0
+ omuoSQ44fUxB6iIX/8A5UcIoK1Vlh3ZOZxYCCVAp4PXDTjzXO9rFoFY2Ei6MMvj0/LlXJB8Jm3CI
+ Osvt4ZEWgW3PDR+zOEFsdWX0oPZyZdJV5jTEnQ==;
+MIME-Version: 1.0
 To: industrypack-devel@lists.sourceforge.net
-X-Priority: 3
-X-Mailer: MailSender [version 2.0.3]
-Mime-Version: 1.0
-Content-Type: multipart/mixed; boundary="4B48ED0277D942A394881A0B29022059"
-X-Spam-Score: 8.6 (++++++++)
+From: "Jessie Simon"<simon@cablenits.com>
+Date: Thu, 24 Jun 2021 15:11:55 +0200
+Message-ID: <0.0.4.785.1D768FA81DBF606.0@slot0.cablenits.com>
+X-Spam-Score: 7.0 (+++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.5 RCVD_IN_PSBL           RBL: Received via a relay in PSBL
- [198.12.83.84 listed in psbl.surriel.com]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_FONT_SIZE_HUGE    BODY: HTML font size is huge
- 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
- 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
- See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: alfagroup.org]
- 1.0 MISSING_MID            Missing Message-Id: header
- 0.0 FROM_EXCESS_BASE64     From: base64 encoded unnecessarily
- 0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
- 0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
- 2.0 MISSING_DATE           Missing Date: header
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1lw6Lz-009Xdd-4t
-Subject: [Industrypack-devel] [SPAM] Alfa Products Enquiry
+ 0.0 RCVD_IN_MSPIKE_L3      RBL: Low reputation (-3)
+ [195.133.18.100 listed in bl.mailspike.net]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [195.133.18.100 listed in zen.spamhaus.org]
+ 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+X-Headers-End: 1lwP9E-0006Kh-Rz
+Subject: Re: [Industrypack-devel] Payment Confirmation
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -86,81 +87,60 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: sales@alfaqroup.com
+Reply-To: Jessie Simon <jessiesimonssimon@gmail.com>
+Content-Type: multipart/mixed; boundary="===============6971673376617430059=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
-Message-Id: <E1lw6M5-0002eX-2l@sfs-ml-1.v29.lw.sourceforge.com>
-Date: Wed, 23 Jun 2021 17:08:01 +0000
 
---4B48ED0277D942A394881A0B29022059
-Content-Type: text/html; charset="utf-8"
-Content-Transfer-Encoding: base64
+You will not see this in a MIME-aware mail reader.
+--===============6971673376617430059==
+Content-Type: multipart/alternative; boundary="===============0881729879=="
 
-PEhFQUQ+DQo8TUVUQSBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYX
-JzZXQ9dXRmLTgiIGh0dHAtZXF1aXY9Q29udGVudC10eXBlPg0K
-PFNUWUxFPmJvZHl7Zm9udDogQXJpYWwsIFRhaG9tYSwgVmVyZG
-FuYSwgU2Fucy1TZXJpZjttYXJnaW46IDIgYXV0bztwYWRkaW5n
-OiAycHg7fWRpdixwLHVsLG9sIHttYXJnaW46IDAgYXV0bztwYW
-RkaW5nOiAycHg7fTwvU1RZTEU+DQoNCjxNRVRBIG5hbWU9R0VO
-RVJBVE9SIGNvbnRlbnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE2ND
-M4Ij48L0hFQUQ+DQo8Qk9EWT48U1BBTiBsYW5nPUVOPg0KPFAg
-YWxpZ249bGVmdD5IZWxsbyE8L1A+DQo8UCBhbGlnbj1sZWZ0Pi
-ZuYnNwOzwvUD48Rk9OVCBjb2xvcj0jMmMzNjNhIHNpemU9MiBm
-YWNlPVZlcmRhbmEsVmVyZGFuYT48Rk9OVCBjb2xvcj0jMmMzNj
-NhIHNpemU9MiBmYWNlPVZlcmRhbmEsVmVyZGFuYT48Rk9OVCBj
-b2xvcj0jMmMzNjNhIHNpemU9MiBmYWNlPVZlcmRhbmEsVmVyZG
-FuYT4NCjxQIGFsaWduPWxlZnQ+PC9QPjwvRk9OVD48L0ZPTlQ+
-PC9GT05UPjxGT05UIHNpemU9MiBmYWNlPVZlcmRhbmEsVmVyZG
-FuYT48Rk9OVCBzaXplPTIgZmFjZT1WZXJkYW5hLFZlcmRhbmE+
-DQo8UCBhbGlnbj1sZWZ0PldlIHdpc2ggdG8gcGxhY2UgYSBuZX
-cgT3JkZXIuPC9QPg0KPFAgYWxpZ249bGVmdD5DYW4geW91IGhh
-dmUgc29tZW9uZSBpbiBzYWxlcyBjb250YWN0IHVzIGluIHJldH
-VybiBtYWlsLjwvUD4NCjxQIGFsaWduPWxlZnQ+S2luZGx5IGFk
-dmlzZSB5b3VyIEVURCBpZiBvcmRlciBpcyBzZW50IHRvIHlvdS
-BlYXJseSBuZXh0IHdlZWsuJm5ic3A7SSB3aWxsIGhhdmUgdG8g
-Zm9yd2FyZCBvdXIgUE8gYW5kIHNwZWNpZmljYXRpb25zIGltbW
-VkaWF0ZWx5Jm5ic3A7dG8gcGxhY2UgYSB0cmlhbCBvcmRlci48
-L1A+DQo8UCBhbGlnbj1sZWZ0PjwvUD4NCjxQIGFsaWduPWxlZn
-Q+PC9GT05UPjwvRk9OVD48Rk9OVCBzaXplPTIgZmFjZT1WZXJk
-YW5hLFZlcmRhbmE+PEZPTlQgc2l6ZT0yIGZhY2U9VmVyZGFuYS
-xWZXJkYW5hPiZuYnNwOzwvUD4NCjxQIGFsaWduPWxlZnQ+PC9Q
-Pg0KPFAgYWxpZ249bGVmdD7jgIA8L1A+DQo8UCBhbGlnbj1sZW
-Z0PkF3YWl0aW5nIHlvdXIgZmVlZGJhY2sgdG8gcHJvY2VlZC48
-L1A+DQo8UCBhbGlnbj1sZWZ0PjwvUD4NCjxQIGFsaWduPWxlZn
-Q+44CAPC9QPg0KPFAgYWxpZ249bGVmdD5UaGFua3MgJCBSZWdh
-cmRzLjwvUD4NCjxQIGFsaWduPWxlZnQ+RmFuY2VyYSB3aGl0ZW
-U8L1A+PC9GT05UPjwvRk9OVD48Rk9OVCBjb2xvcj0jMmMzNjNh
-IHNpemU9MiBmYWNlPVZlcmRhbmEsVmVyZGFuYT48Rk9OVCBjb2
-xvcj0jMmMzNjNhIHNpemU9MiBmYWNlPVZlcmRhbmEsVmVyZGFu
-YT48Rk9OVCBjb2xvcj0jMmMzNjNhIHNpemU9MiBmYWNlPVZlcm
-RhbmEsVmVyZGFuYT4NCjxQIGFsaWduPWxlZnQ+PC9QPjwvRk9O
-VD48L0ZPTlQ+PC9GT05UPjxCPjxVPjxGT05UIGNvbG9yPSMwMD
-IwNjAgc2l6ZT03IGZhY2U9Vml2YWxkaSxWaXZhbGRpPjxGT05U
-IGNvbG9yPSMwMDIwNjAgc2l6ZT03IGZhY2U9Vml2YWxkaSxWaX
-ZhbGRpPjxGT05UIGNvbG9yPSMwMDIwNjAgc2l6ZT03IGZhY2U9
-Vml2YWxkaSxWaXZhbGRpPjxFTT4NCjxQIGFsaWduPWxlZnQ+QW
-xmYWdyb3VwIFJ1c3NpYTwvUD48L1U+PC9GT05UPjwvRk9OVD48
-L0ZPTlQ+PEZPTlQgY29sb3I9IzNkODVjNiBmYWNlPUFyaWFsLE
-FyaWFsPjxGT05UIGNvbG9yPSMzZDg1YzYgZmFjZT1BcmlhbCxB
-cmlhbD4NCjxQPlRlbC46ICs3ICg0OTUpIDc4Ny0wMC03PC9QPg
-0KPFA+RmF4OiArNyAoNDk1KSA3OTItNTItMzU8L1A+DQo8UD5T
-YWxlcyAmYW1wOyBQdXJjaGFzaW5nIE1hbmFnZXI8L1A+DQo8UD
-5Db21wYW55IHJlZ2lzdHJhdGlvbiBudW1iZXI6IDIzMzQ2Mjwv
-UD4NCjxQPlZBVCBudW1iZXI6IDIzMjQ1NzI4MDwvUD48L0I+PC
-9GT05UPjwvRk9OVD48L0VNPjxGT05UIHNpemU9Mj4NCjxQPjwv
-Rk9OVD48L1NQQU4+PEEgaHJlZj0iaHR0cDovL3d3dy5hbGZhZ3
-JvdXAub3JnL2Fib3V0LXVzIj48Qj48Rk9OVCBmYWNlPUFyaWFs
-LEFyaWFsPjxTUEFOIGxhbmc9RU4+d3d3LmFsZmFncm91cC5vcm
-cvYWJvdXQtdXM8L0I+PC9GT05UPjwvU1BBTj48L0E+PC9QPjwv
-Qk9EWT4=
+You will not see this in a MIME-aware mail reader.
+--===============0881729879==
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
 
---4B48ED0277D942A394881A0B29022059
+
+Good Day,
+ I made reservations at your hotel for upcoming dates next week's event, pa=
+yment has been made through my credit and i have received a payment confirm=
+ation. It's been over 2 days now , I noticed my reservation was cancelled, =
+Please i need you to rectify this issue . I have attached my credit card fr=
+ont and back , ID and both payment confirmation and reservation confirmatio=
+n,also that of the people i made a reservation for upon check in.
+ Please i still await a response back from you.
+ Thanks
+Jessie Simon
+
+--===============0881729879==
+Content-Type: text/html; charset="iso-8859-1"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Diso-8859-1"/></head><p><br />Good Day,</p>
+<p>I made reservations at your hotel for upcoming dates next week's event, =
+payment has been made through my credit and i have received a payment confi=
+rmation. It's been over 2 days now , I noticed my reservation was cancelled=
+, Please i need you to rectify this issue . I have attached my credit card =
+front and back , ID and both payment confirmation and reservation confirmat=
+ion,also that of the people i made a reservation for upon check in.</p>
+<p>Please i still await a response back from you.</p>
+<p>Thanks<br />Jessie Simon</p></html>
+--===============0881729879==--
+
+
+--===============6971673376617430059==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---4B48ED0277D942A394881A0B29022059
+--===============6971673376617430059==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -171,5 +151,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---4B48ED0277D942A394881A0B29022059--
+--===============6971673376617430059==--
 
