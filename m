@@ -2,68 +2,66 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D9223B5721
-	for <lists+industrypack-devel@lfdr.de>; Mon, 28 Jun 2021 04:09:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1833C3B58FE
+	for <lists+industrypack-devel@lfdr.de>; Mon, 28 Jun 2021 08:12:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Date:Message-Id:Cc:Reply-To:From:
 	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
 	Subject:Content-Type:Mime-Version:To:Sender:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=wmMhZtl/gW59yFOmDOhHhduOlqHf7PWomGO4bfx6gG0=; b=F7THAYYF8VM2ORiXqDdsE1EzCE
-	hsrhUuMXNn8epcQSgYx5+psL7ipINwILPFM0gsrE0v5SgyOMMUdSCfKhmQC9TxMZvfZdtwfHdVL6q
-	e3bXTBoOJcGd9pK5ToDSWkp9NVhP+qjIFxBATop+G4rN+zSJObnxTmObdIbTW6I+HCOA=;
+	bh=JFYnxKI1+LfCzYBQXQ8E6e2sl08QachZzjDUjuVBAuE=; b=FsU/JNbP21Td1+wxiDRfGwe0PO
+	8dwFzLE9l2WCK/AcFehaIlqQcPmIYP+8bZkqGExCHu7+5mA50WRoAz7d/CMZ0SXhHBMjldox0t0vm
+	zxFAAHRyYwwmCRQFTG6zQrjAxQQmIlCPRzrjE93NNLlKgLLL69WdmkvVvxfdiNb30jvg=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lxgiG-0001Mf-JE
-	for lists+industrypack-devel@lfdr.de; Mon, 28 Jun 2021 02:09:28 +0000
+	id 1lxkVL-0000KG-0A
+	for lists+industrypack-devel@lfdr.de; Mon, 28 Jun 2021 06:12:23 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <info@mx-serv.live>) id 1lxgiF-0001MY-4h
- for industrypack-devel@lists.sourceforge.net; Mon, 28 Jun 2021 02:09:27 +0000
+ (envelope-from <info@mx-serv.live>) id 1lxkVI-0000K0-Ro
+ for industrypack-devel@lists.sourceforge.net; Mon, 28 Jun 2021 06:12:20 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Type:Mime-Version:To:Reply-To:From:
+ d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Subject:To:Reply-To:From:
  Sender:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=/8MeN4v3Fm+6vRp6ng7g0QlClv1ZC9dabuBetsxl7hY=; b=nTieKqHbzQJgrxHl/7wssEi7gl
- GaA9dVJWfnzYMCGqxu6Q3zjN+MAh8qJVfyNp+bX12dYniS/dhBwF0+sr1avywmpFxqUK9BtJSv2be
- 2eB48Ibcz9XwwLyK6yc2SzQ4xS19wED/xflD2H+2nH+8X5OH1YgrXZR/s7IOQmxsZNDM=;
+ bh=xYkSQ5SgNnEJuT2SlhqeLinFnXek2k95T2AlThZ3jCc=; b=LPocstoSp8Ho1vTatkM3tUSiJO
+ diLY6Y/5HyS0jTEw6L+pNb0RPMPD9zwJB+EF+/QbMaG56ZM5CjK/khklBPibEA31iDLkVL5q34ybl
+ 5ltxPlhGXViCbZ9BDrgqESuVyvwmxpGjhU+rt7krcvTpIQaL3tKKFfqWHolnzpzqy9PQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Type:Mime-Version:To:Reply-To:From:Sender:Date:Message-ID
+ h=Content-Type:Mime-Version:Subject:To:Reply-To:From:Sender:Date:Message-ID
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=/8MeN4v3Fm+6vRp6ng7g0QlClv1ZC9dabuBetsxl7hY=; b=h
- 8zfSg2oCdUXIRWf1kjB5RoLBBNM5RJusFf7QSibDqzArhvpVnKZgyxY95XlMrGv9rzfvb6WLkONoT
- p5nJSlPAWJbLV1YlyufirWmbFP7dLDGOh/i/JyYlW4XISVdd09HRb+anTSugD7nFgHQcJdGb2ygbr
- Yn5L0GWAVLfeWGqg=;
-Received: from cp2.mx-serv.live ([198.12.83.84])
+ List-Owner:List-Archive; bh=xYkSQ5SgNnEJuT2SlhqeLinFnXek2k95T2AlThZ3jCc=; b=W
+ qPrWrOUqE1/dJZwxjM6zBU2GfBqsckn0rgxsJbz+JWd8wOcSwKuqlkrIFPoNe7bycRt9PKi4erlFX
+ lqhbgITKYhPNcJXdcABF6ei+281tthb0OhiiKq6+rSDfH1CHrY1Pxj8/voaRq8GNAOljWWsEFs1TM
+ FOLVjtPxUM8J2Ksw=;
+Received: from cp.mx-serv.live ([198.12.83.82])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1lxgiC-001EgG-03
- for industrypack-devel@lists.sourceforge.net; Mon, 28 Jun 2021 02:09:31 +0000
+ id 1lxkVD-001SVR-CB
+ for industrypack-devel@lists.sourceforge.net; Mon, 28 Jun 2021 06:12:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dkim; d=mx-serv.live; 
  h=From:Reply-To:To:Subject:Mime-Version:Content-Type;
  i=info@mx-serv.live; 
- bh=/8MeN4v3Fm+6vRp6ng7g0QlClv1ZC9dabuBetsxl7hY=;
- b=SVFfUVSSGgvZMx2sde5my2TgQeesPYuDPgGRvFBAgSErWh6ZW7k8VS4CCLkN+bv7PhvaqzHaCmBH
- I8UHQcLPfYgts5x31olt/U87PU0gndKyIapMhK8W69a/S75GG2NuriA7wYmd0RgOP4ytp6YWs9s5
- F15fV2SDp8d7n/2Xdvg=
+ bh=xYkSQ5SgNnEJuT2SlhqeLinFnXek2k95T2AlThZ3jCc=;
+ b=kwI9xYP0ZW1ctWG0Iw8T/vI3oEMUYobc44sjXIrDOClMNVeTKfnjm5vmTr6gBKoqMK7cqJiSur1t
+ NtqQhLXhNLcteF9FXWcX3xSUcnyes1cg7mM+jzsmbHxQ8bRQXA+BVtvYfUUnf/pxYYKnzSUqfjHO
+ HbbL5u+0Le+RCbKtt3w=
 To: industrypack-devel@lists.sourceforge.net
 X-Priority: 3
 X-Mailer: MailSender [version 2.0.3]
 Mime-Version: 1.0
-Content-Type: multipart/mixed; boundary="22188EC3B11A4C538B1F27B68017A0AB"
-X-Spam-Score: 8.8 (++++++++)
+Content-Type: multipart/mixed; boundary="5343A02A79B54968A5E2C838513B678D"
+X-Spam-Score: 7.3 (+++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- 1.5 RCVD_IN_PSBL           RBL: Received via a relay in PSBL
- [198.12.83.84 listed in psbl.surriel.com]
  0.5 SUBJ_ALL_CAPS          Subject is all capitals
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -78,10 +76,8 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  0.0 FROM_EXCESS_BASE64     From: base64 encoded unnecessarily
  0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
  2.0 MISSING_DATE           Missing Date: header
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1lxgiC-001EgG-03
-Subject: [Industrypack-devel] [SPAM] PRODUCTS ENQUIRY
+X-Headers-End: 1lxkVD-001SVR-CB
+Subject: [Industrypack-devel] =?utf-8?q?PRODUCTS_ENQUIRY?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -98,10 +94,10 @@ From: =?utf-8?B?TGVuaXJ1cyAtIFBNIERrbGFvcw==?= via Industrypack-devel
 Reply-To: lenirus.pm@dkloas.com
 Cc: =?utf-8?B?TGVuaXJ1cyAtIFBNIERrbGFvcw==?= <info@mx-serv.live>
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
-Message-Id: <E1lxgiG-0001Mf-JE@sfs-ml-4.v29.lw.sourceforge.com>
-Date: Mon, 28 Jun 2021 02:09:28 +0000
+Message-Id: <E1lxkVL-0000KG-0A@sfs-ml-4.v29.lw.sourceforge.com>
+Date: Mon, 28 Jun 2021 06:12:23 +0000
 
---22188EC3B11A4C538B1F27B68017A0AB
+--5343A02A79B54968A5E2C838513B678D
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -503,14 +499,14 @@ aXMgbWVzc2FnZSwgaW5jbHVkaW5nIGFueSBhdHRhY2htZW50IG
 9yIGNvcGllcyB0aGVyZW9mLCBmcm9tIHlvdXIgc3lzdGVtLjwv
 U1BBTj48L0k+PC9CT0RZPg==
 
---22188EC3B11A4C538B1F27B68017A0AB
+--5343A02A79B54968A5E2C838513B678D
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---22188EC3B11A4C538B1F27B68017A0AB
+--5343A02A79B54968A5E2C838513B678D
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -521,5 +517,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---22188EC3B11A4C538B1F27B68017A0AB--
+--5343A02A79B54968A5E2C838513B678D--
 
