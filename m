@@ -2,75 +2,73 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 381203CA08B
-	for <lists+industrypack-devel@lfdr.de>; Thu, 15 Jul 2021 16:19:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A10693CA102
+	for <lists+industrypack-devel@lfdr.de>; Thu, 15 Jul 2021 16:56:41 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1m42DI-0003lY-0K
-	for lists+industrypack-devel@lfdr.de; Thu, 15 Jul 2021 14:19:44 +0000
+	id 1m42n2-0002ay-E9
+	for lists+industrypack-devel@lfdr.de; Thu, 15 Jul 2021 14:56:40 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
  (envelope-from <claire.steffanie@reachtargetleads.com>)
- id 1m42DG-0003lA-Kv
- for industrypack-devel@lists.sourceforge.net; Thu, 15 Jul 2021 14:19:42 +0000
+ id 1m42n0-0002ab-Mv
+ for industrypack-devel@lists.sourceforge.net; Thu, 15 Jul 2021 14:56:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=MIME-Version:Content-Type:In-Reply-To:References:
- Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=VAUQtGK1I9drMSEfyYzWnAKMfHlKdgC81oGPdnuDZzo=; b=J8rM2e8YqbE7iPVxNOivhlXXQO
- N/HV5cMKigT62kgAkp8N2oEKGB7H/lvgOnccrUuLjAW8OTfVJw7/kmlU2W+l/XyYsrx4zwvh5o6PM
- vbdNE6LOlq+50XuAuRLhlthFInt8o7l5uxR9LwzvZQYKUUifDYXwwqlFjdvTEiRAGpmM=;
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
- ;
- h=MIME-Version:Content-Type:In-Reply-To:References:Message-ID:Date:Subject:
+ d=sourceforge.net; s=x; h=MIME-Version:Content-Type:Message-ID:Date:Subject:
  To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=VAUQtGK1I9drMSEfyYzWnAKMfHlKdgC81oGPdnuDZzo=; b=e9rKiRUuQhAZHkYj7LOhh0VNKQ
- 4U8MsP9hBxijI4Y5UQzDzLilJBlmmDd4Wfu9QP1z72JfaCSPYgUAwKW2skYbNrrasUUqDwrxAAB/m
- FWgBHzWqEX1pYxCS0aY8u2Ck/DN94iHtUS8r8m6M4WsjiR2CRJcmkK5ZQ0UuERVB10g0=;
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=kJF9/EYjg8JyBFobw90+vXJzM0t21cuw2ClKciHlICU=; b=BvNrpD7DcTCyjLrc83dZzQ46gk
+ DmP6dL0ZtEv4KBAMus6wzzOMU96zqmxCA7qqs+q+xqoYR6Hyy/F7Q35iXyj0jXuufLDmhiZBUOzvv
+ gc4syIYu2oXHxYDczH8FOWpT92IQpAmCHmPmQyovB1tdsqGYr26/DXFHUX+Q8xiMd788=;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
+ ;
+ h=MIME-Version:Content-Type:Message-ID:Date:Subject:To:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=kJF9/EYjg8JyBFobw90+vXJzM0t21cuw2ClKciHlICU=; b=C
+ w6ol1KbxNd4cOAKnsmpiLakL1gbcJda3Tcx/EZVgKLXbAWMDhcf1mI5+lJCA7JUEHDo9taQdN7DKK
+ h+XG4w2Wb7/aJdQJJwLqKy0kYpZOXLbGxllE7wIQ6UrWoabArdk1fpXggY9rrRCpo94DUnRnCMhTg
+ jaFEnth4j+pgeVHo=;
 Received: from mail-eopbgr1390131.outbound.protection.outlook.com
  ([40.107.139.131] helo=IND01-BO1-obe.outbound.protection.outlook.com)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1m42DF-009K4W-9P
- for industrypack-devel@lists.sourceforge.net; Thu, 15 Jul 2021 14:19:42 +0000
+ id 1m42mz-009M3J-0B
+ for industrypack-devel@lists.sourceforge.net; Thu, 15 Jul 2021 14:56:38 +0000
 ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=Hzbi8FRCML8hY/QvmBgQNUwYvF7DrhP13rkpzLkWVrbT4n2+9RIdsp8wNaoDhNGzhYgsbcmA+d6Z67sSsDsKyMlN97cnGnbLv12Aay27gqQNc1L34AFL4I3d7w5Bk9ASIk5ONqtPIC1nN8NufOwIwi2h5o81895ZrpX2IYgfXNdRLkGmbtI66E2ElP3U4rHucpwjSW5/3XSOYLwYZ9Ak4Ks32qzJVoOLFZkAGfIHnBNsXcn9DW+JwFLcfJ7nGycmlr3t3GdxKQH9P5jKyHeCgJ4z6vt1q4kaZ3T71qV2cPEh6MooJ0mV4ww+YMmPhDgT8sc1m4+M78g1f8OZgXSudg==
+ b=ZPGkkGRPw/29t+O8r9IK4QR0Hw9Wl9mMZudnS5Y3NoEzkuGqlqNzQLZKDrXg1HrT438kzoZncUqWhud9+DTl9h4nwXD79YQf+szD6z4yegz9boeaNcldEWHKWkNhUreF6DczU0mYyxDsGiUkUIjm0lIznpXZGJ3GxBaiA/qXk3kkPBKVsconofHBsFkKDj0PEkGmihXj92Rkxo0bz8m5Eo9ISn48K8UUvvncOWYMfYiUXvE9HabjtuVpyYcTuTssKx+D0N6XEXhq5Ktqqv5BkRylZjFK8eGgbMo7wwfkcku1uebckaoiiRigcnkMrRjBo70aoZ5OE0QkU9Yx5KViMg==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
  s=arcselector9901;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=VAUQtGK1I9drMSEfyYzWnAKMfHlKdgC81oGPdnuDZzo=;
- b=B30eHF1FQ/0Bv01n6XL0n+XLheyKF47rrVJjgriacjjR2Qlb8cNWpcNUGbp+6BVkB2rtj8EqO5YxPJU/mi8j6QGByZ2hO5OVF/0lIhMiZwvpjU9TfB3pScmprJ7lUlP/E6NkVgbIdpY280hfzpCyRLs8eze7km82R9jvLx3HL8ecoGE7yEyE1YCkqyEJW81+VcBLTz9Jq08K4HDN0z8FXdajlKAd0iSMjNxk5f+3LxcS+FMKA9btUyr5jPaT9apouLhgQSm2yzU9rw1UEYlDn+7JucSMGt/3UzRvGlj39xq2XUuuxnj0mE8aJhwDdxRoTBuQc4V4Vpxvnb5JNLCdpg==
+ bh=kJF9/EYjg8JyBFobw90+vXJzM0t21cuw2ClKciHlICU=;
+ b=U6Whq/vaJApsOH4Zzg2NVG664HZVu9Uqk/PAM4zTB0hvBDRgSh6gVHiMFcN9c8X89GnEgDXNq/m1jPmj8Kwp/m7TwPCox/AAg3q+WFl9fd11T8QtD+ZXo1uOEL/ot672HzSFhYzfBsAGQfn9Xr4me1OJ1jpb746yc18HJSW/43BffA0BNNAYqtVb/uUJJsosm7m/oQHVqOtoF8hQpwzVjemSTHXJXgsRmhObw+W5LkfyHnhVg/bAVRUtQjLzO2lXshXegvkwDyX2n8ZXrDafmsZRsxhHUfE/iE6htO+TSsuWkrTk767Gcq0hzore12Fg8GXEzzBJYQtUdqcf5V8BcA==
 ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
  smtp.mailfrom=reachtargetleads.com; dmarc=pass action=none
  header.from=reachtargetleads.com; dkim=pass header.d=reachtargetleads.com;
  arc=none
 Received: from PN2PR01MB4762.INDPRD01.PROD.OUTLOOK.COM (2603:1096:c01:28::9)
- by PN2PR01MB5032.INDPRD01.PROD.OUTLOOK.COM (2603:1096:c01:40::12) with
+ by PNZPR01MB4526.INDPRD01.PROD.OUTLOOK.COM (2603:1096:c01:2a::9) with
  Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4331.23; Thu, 15 Jul
- 2021 14:19:27 +0000
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4308.23; Thu, 15 Jul
+ 2021 14:56:23 +0000
 Received: from PN2PR01MB4762.INDPRD01.PROD.OUTLOOK.COM
  ([fe80::5d12:1c0f:7a9f:ce6f]) by PN2PR01MB4762.INDPRD01.PROD.OUTLOOK.COM
  ([fe80::5d12:1c0f:7a9f:ce6f%7]) with mapi id 15.20.4308.027; Thu, 15 Jul 2021
- 14:19:27 +0000
+ 14:56:23 +0000
 From: Claire Steffanie <claire.steffanie@reachtargetleads.com>
 To: "industrypack-devel@lists.sourceforge.net"
  <industrypack-devel@lists.sourceforge.net>
-Thread-Topic: Trained medical professional.
-Thread-Index: Add3J4EpWzNVaKvKR2OlN1aioZIs9QAAAEvgAAAAKzAAAWCWsAAAnKowADP80uAAAAAnAAAvuzQQAAJuDWAAAAAbYAAAACigAAAAK9AALxWBYA==
+Thread-Topic: Highly-targeted healthcare executive.
+Thread-Index: AddpCcU5AWwJIdWVLkWSuwzc1mPGHQAAAIdwAAAAvBAD8GX74AAvhORQAAAAGiAAAAAkYA==
 Importance: high
 X-Priority: 1
-Date: Thu, 15 Jul 2021 14:19:27 +0000
-Message-ID: <PN2PR01MB4762499C73FB9724A6BD150AF9129@PN2PR01MB4762.INDPRD01.PROD.OUTLOOK.COM>
-References: <BMXPR01MB47601B7B0502635D7C18AD8FF9139@BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM>
-In-Reply-To: <BMXPR01MB47601B7B0502635D7C18AD8FF9139@BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM>
+Date: Thu, 15 Jul 2021 14:55:45 +0000
+Message-ID: <PN2PR01MB47625D14EE6BA9DBF0BA42DAF9129@PN2PR01MB4762.INDPRD01.PROD.OUTLOOK.COM>
 Accept-Language: en-US
 Content-Language: en-US
 X-MS-Has-Attach: 
@@ -80,55 +78,55 @@ authentication-results: lists.sourceforge.net; dkim=none (message not signed)
  dmarc=none action=none
  header.from=reachtargetleads.com;
 x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: aa9d4e05-7447-4368-7015-08d9479b8dc6
-x-ms-traffictypediagnostic: PN2PR01MB5032:
-x-microsoft-antispam-prvs: <PN2PR01MB503285D6D05A989223769B22F9129@PN2PR01MB5032.INDPRD01.PROD.OUTLOOK.COM>
-x-ms-oob-tlc-oobclassifiers: OLM:5236;
+x-ms-office365-filtering-correlation-id: d3ab4bde-c633-4adb-5ee8-08d947a0b6e6
+x-ms-traffictypediagnostic: PNZPR01MB4526:
+x-microsoft-antispam-prvs: <PNZPR01MB452650A02E91069A0C684DACF9129@PNZPR01MB4526.INDPRD01.PROD.OUTLOOK.COM>
+x-ms-oob-tlc-oobclassifiers: OLM:3968;
 x-ms-exchange-senderadcheck: 1
 x-ms-exchange-antispam-relay: 0
 x-microsoft-antispam: BCL:0;
-x-microsoft-antispam-message-info: W5+JJ+qRAg116HQXAvNOSOCzFPo3X6hqkW/7wH3CdFg2r8nxpouglEPr7PdePnZ8WAc58sFtB8iEgTuDV2Id8C+nXmGspTipX1uXx3VZIiMo29dkKSYQ8lF6tA5MqApAVlEydbBy1GEPPTcExRNLqN+Gi7mNZoik/vKtKB8ao0Ck8PXiTqPVn67bh52W6bzhSlqfTRHUyVtaI+RK3CZdRLYyOYyKoAOQNl1Ul8RWZ1xsqGqZgk6AQa8IP14gCXL/GeDi+gKeR5TQicg5fIO74tCGeG8+5v5/Cvw+2Avm5A3H7omkwIQ7Mmx8ZQN7n+OkqUIvz5eMFmwnN1EYmi2sS+uRerxROUsp8vvCbSs/kk4s+3dZ371+cvpiJQWiPV2v/D+1Xs4CEUaNIiR0Tg61siN9Jf6gS+CTdLJnUCxCd3iOOuhUZ4q+L+SznFsx5t5o4tLmk/dQfHnN7SAHw8pP0MhjdCyNoN+X5RwrGz4GmIhxnpA7U4i0ImbzXdteMPnHDEMNPM4aKOHVt9cd8I+nB0n+srIBmtCBiSma2xzf0yf9YdSzeRpDHOQrrtJrgo57w6CwvDl+DyhcD7QwGPh08t+pU4PUZOVTNNRLWtNuu6Ytpr4ZFf7oJ5bMWz4uCwJ6Bj/ix/i2ug+VHF0jIvDsIg==
+x-microsoft-antispam-message-info: f8P6drJg9b1Mj9GBov7CRx4cZw7PRN4OpGQcF1UXOaldEJGL4BkMrYV6HEBE5lrlDxIkjlfHuJBYr2YmWH66LSjtXThqezeG3QbrxK+KAzCnngPR8W4Yl786KTstKqssUIbDBrLM9PKEnd5ofJ42ATZ1FGmq+ViGV/kprjuzJ6LzBfu0lZPTvReh0m/XHIcHgW1EnESW3bJm77JEye34XVbwSiLGuXEccrP67cunZktc4fVGBtWjHcFjgrBMlCi2lkLINbyL27ONptlbsuIanPRhNgTO2nCrQ+vFVp7g/CH0mQlSucRcYzx8LD8TTPymCUizAoGJYOlTah1CteUcNX5YYWYvJvva8MggFJ3ncwc/WQxipIbikw0bMpX1Go4jRCAflvH+HYvfu9dk1cofme1ySGq4n72/8tIj/A+nz6j2Uw9IdM+fxKrgJX+u7IgSV0Sft5aL2ymjaoFBsYhq1uhUO9TG166QRInlZOnZ5AALMxydxhS05s2Kx4MRQ85q6BpoVWlCk3m2VW/x8OyZQbq+rUjEF77aeQbHXzEBPbF8w9LOg4spUPjADgbW0f1m/3ZWv5sNqgYt1ioHzEcZm7CILUeYRKHqs5Q8x8GR82tfLKIk2NkzWpc9l2JFPkSC/zNoF0ZC1X9R6n1Mv9yWYw==
 x-forefront-antispam-report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
  IPV:NLI; SFV:NSPM; H:PN2PR01MB4762.INDPRD01.PROD.OUTLOOK.COM; PTR:; CAT:NONE;
- SFS:(136003)(39850400004)(396003)(346002)(366004)(376002)(66476007)(66946007)(66556008)(55016002)(8676002)(8936002)(316002)(7116003)(38100700002)(122000001)(52536014)(6916009)(5660300002)(88996005)(71200400001)(66446008)(2906002)(64756008)(44832011)(9686003)(86362001)(478600001)(33656002)(3480700007)(83380400001)(53546011)(186003)(6506007)(7696005);
+ SFS:(376002)(396003)(346002)(39850400004)(366004)(136003)(186003)(66446008)(66556008)(66946007)(64756008)(2906002)(33656002)(316002)(44832011)(66476007)(4744005)(8676002)(88996005)(8936002)(71200400001)(7696005)(122000001)(6506007)(52536014)(6666004)(6916009)(3480700007)(9326002)(5660300002)(86362001)(478600001)(55016002)(9686003)(38100700002);
  DIR:OUT; SFP:1102; 
 x-ms-exchange-antispam-messagedata-chunkcount: 1
-x-ms-exchange-antispam-messagedata-0: =?us-ascii?Q?9SwAflL8AJ+iEOafyvBN4dvD/O7wO4E0vq/G/IHqXKeOfN4Hv+h/1r6vtj5s?=
- =?us-ascii?Q?lbF4Z7tgryN6Y2tkZOYsvJT95d4B1gBMSWAWcQSf+1IQE4TrvGjn6Cck9/XT?=
- =?us-ascii?Q?Q9aV9JueCT/jJ9b6UVyt6qMHrQjIX0Rc4FCQj+1SuGIQuqJfJSekKdKQXFt4?=
- =?us-ascii?Q?tj2YFkZ8mJK2YIwLBnvkq3VAki+0IiutJumV2ixWRV+Y9y+gboOAhJXfK+DB?=
- =?us-ascii?Q?CoBuRh55fXiNDh/3OHUcukgU7YN9JJqJaUyLIbpQnOCAJ9a+wKXJ+UeDJ4yX?=
- =?us-ascii?Q?2bIbXipBwKGYJeG3Pr/tR7YEDWxNFFeTKymV6a85/wjIDlzsIjxC1p3KoyYs?=
- =?us-ascii?Q?fbAOWc301yEcRwIleD8J/ll+87r6DKmIkqbivHkmoQ+hKF1TyUhsmPY3Sm/t?=
- =?us-ascii?Q?kFuMyibjt7k0d/umShcLbzecXGXmz3No1NMQeW4jKkPg/eu7HI/qOnawICkS?=
- =?us-ascii?Q?DjpGz40tYU5bhzMsvFz00u3oK+uYQWPCUQy8Ug01UZAOcACGYYbDXW/EfhAZ?=
- =?us-ascii?Q?N17pux/OUCne7I/xaLPw+lQkd3cL3dHa2sE9iOII8+7N+G8JSuFfCYYPuOGF?=
- =?us-ascii?Q?e9ANpRxu6RcqmVtUcozpCS04HuIDB5Q2k9ueodvDzEBg/F7gkmoqFAlil3YL?=
- =?us-ascii?Q?xnapojV/xf5dKdQevmtibqZS6M12ZC0fd5ijPzIqjb/DNi6Sxm5t0iYIsLvt?=
- =?us-ascii?Q?6kBPgI+5AEeLchjXu2ePUBlmWHagwyBGWU4ajSx4ucK558J62eDYEaHrZ3Kd?=
- =?us-ascii?Q?j3qZD+yCfbuJTiIJ5heEtWrp90WSrv2g0O3cB3KxxFr+HtRF2fU800EBq6rQ?=
- =?us-ascii?Q?5hEitdtTczztriEJrJddlxYOyQXPnyu1cGERQsYg/sxd8jnh7YrWYhx5P88e?=
- =?us-ascii?Q?a3e60xEEAcpkqWJqwiR9sFg15SWe5aN3tNKhhkYZ5k3f6JyeZ40ho2C3aNhI?=
- =?us-ascii?Q?KTwTa6ogWTFedNrSNlnJMAcALO181PkDYN8qsz/rW/U8sNdR4F62wOC6bkGh?=
- =?us-ascii?Q?aunEBxXnBseJKQprCBz7xrmGBS42fUvTeUj9EIxG4yepgxZKxju1sJLEi77J?=
- =?us-ascii?Q?PHPkbSIR4OINXuHV79GNb+F8iWcp+4iCnEINDO81937Ana6c1VyJs95M7dFx?=
- =?us-ascii?Q?idN816mTcrkPwLk8/ZcNqq96pVnq5QrVxAcG4UZNpkkAXQw0skjnuyJo/7AS?=
- =?us-ascii?Q?c3xh+xbvBuXtXcvY8FgENLMZMenxivYIX2m6Z1JAnzHZYsXuGwVD3nU0OLoc?=
- =?us-ascii?Q?hhn73Iqe5CF+H+9mKkEtz+1uaWlEMuPCckz026YGAIQXe6iP5f/boDbgatBv?=
- =?us-ascii?Q?Hfc0Dt08Zdy/vFevCYB4uyjQfeErgQehc8X9Z7XbR31/A3z0csFd4kpR04DH?=
- =?us-ascii?Q?Y6QohZA=3D?=
+x-ms-exchange-antispam-messagedata-0: =?us-ascii?Q?r9PyBTCnDkvbKvB/8Lp4kPCypd670GizYeCWWdMXyWW6FxpP35JjijGOvsEz?=
+ =?us-ascii?Q?/qP7Q5k7GSfZFuRK4FDd4l7UO02XjWIdy5bXmwq2R7kLqyt7pkets1GLDGVY?=
+ =?us-ascii?Q?K9k1uy8WqZ9x3JoJyDYvqEnuH0CzaAsyU6A8glQx4/HaZs1dwl81AIlAUqeB?=
+ =?us-ascii?Q?Vpvrro0qIkiDLDI7ncW/uQmAv/cVFtE1AL10xqwAv1+29KyUbp8geJ18bMRV?=
+ =?us-ascii?Q?5jWK059IgwTmHF8lT063m69kdi5dKZ4Nq81BFyjyRlseG17dGdCRRBdjwEtA?=
+ =?us-ascii?Q?Bk81XG+ybuVdBW6xb9f8Q5OfBgxaFJFfSLGS7mmU9TsFQ/oGNYbMmIInycUS?=
+ =?us-ascii?Q?jMHjr7lhBkAjKQFfxC8wCeJq7bLyTqMeKj1oV0YQJeI5N+m4Qbj/tkD1Yz6G?=
+ =?us-ascii?Q?5Sf5HLpLPBSrt/GHfLaoL89AW/E+nVQDDc7K1wUtW4+gtpBghT9Wd4Vh768Z?=
+ =?us-ascii?Q?31elucHag9/ycdFu5RTmXyTirm2Swz4YGDEKERMujbGZK1l4rJ6feSaDX2Ky?=
+ =?us-ascii?Q?QgX7BcJew/59dgKlCSusrgecHl2I/lTXRNlYfLobupF6UtZKoa7hNn/ne7S3?=
+ =?us-ascii?Q?+jS8ALEMKZxE4MNcLXCaNeE8Dfi0Y5iJAzc7Jiq17AqI/igw1M2k9YSf6qYW?=
+ =?us-ascii?Q?E6C4Yy0VMG/rzlqeu5BUMWzazbfQ6Itwb3PC4ndsD9CiXBwKWRPg+zsSG/J7?=
+ =?us-ascii?Q?Abp1E1IQFGMC1qBX640iKZ7uyUtrhO3Z+WeQjbV2VhooQyVnEHbHlJhYgkdB?=
+ =?us-ascii?Q?lbSqrxnwkTag+MmxBtP+Idx14NArOxtDVcTdLUXxSSFqgtgqifaLkRngu6mM?=
+ =?us-ascii?Q?y7+4BwQSI/dIsydsmp9fN8o5TU8rX8+A0O1pWB1C4tImdVcYvZ8T06a+WpJ5?=
+ =?us-ascii?Q?cWwLW5izXZphw57pWIiQZA91/bMUmYsBTd8CLqjHku/EXP5AqzJGUZ+jRUqh?=
+ =?us-ascii?Q?l80odtqWOrp0MVB/cgpzNIFwDY0pbpNHIVuv8zYXp+vK1lzE2RHz5Gk1k8zL?=
+ =?us-ascii?Q?U1ub4hQv1HCKQElE6jwZSPUmO2AW6mwDojH99Z6JFLabbOG60kA9ILTZAGiT?=
+ =?us-ascii?Q?mhf+NQ1gGvOJKK9EX4wxFLKGW5RTWoBJ4TotVJjN7lGcRJMRWW0Co/vSIRHY?=
+ =?us-ascii?Q?jHyCmtpnNNJutosf8ddmckzdieqn2SuS+LnSeBBbCESs2qQ4q57byxcUBTUN?=
+ =?us-ascii?Q?0M/NexIhsi7XIzK9gZa+E3iG/owrQbQhjkYOJQ776/ZPwGEYKk4d5RmpMVry?=
+ =?us-ascii?Q?Z9HGl2JiqmQEYnI/ok+JeOIINzblgkB0lPms9zo7oWjSgVZ5urEUdWWca8rp?=
+ =?us-ascii?Q?6iei6T3VPBWtZlGYMF2+znV9Jk1hBix8Bl6lbMeSC/f7zkHxFNDEriOVicmC?=
+ =?us-ascii?Q?DSSJRFw=3D?=
 x-ms-exchange-transport-forked: True
 MIME-Version: 1.0
 X-OriginatorOrg: reachtargetleads.com
 X-MS-Exchange-CrossTenant-AuthAs: Internal
 X-MS-Exchange-CrossTenant-AuthSource: PN2PR01MB4762.INDPRD01.PROD.OUTLOOK.COM
-X-MS-Exchange-CrossTenant-Network-Message-Id: aa9d4e05-7447-4368-7015-08d9479b8dc6
-X-MS-Exchange-CrossTenant-originalarrivaltime: 15 Jul 2021 14:19:27.3301 (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: d3ab4bde-c633-4adb-5ee8-08d947a0b6e6
+X-MS-Exchange-CrossTenant-originalarrivaltime: 15 Jul 2021 14:55:45.5679 (UTC)
 X-MS-Exchange-CrossTenant-fromentityheader: Hosted
 X-MS-Exchange-CrossTenant-id: 74a4c3fd-5db9-4800-aa5a-b3c31cd03cc0
 X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: 5cfH4hHKtRZ2ozrnBy9L3XAPBZA5knX+hAbyb10+AOPs1UHSMUP3ovNeuhWT78QuFJ/w/zKM7KAp+x8zxMCXsLJ9ji1Px9g7lSSHnMn2dkp7c0nYMAfA0QwM/BkZYbBe
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: PN2PR01MB5032
+X-MS-Exchange-CrossTenant-userprincipalname: Jyk/f+oPJ9375o172v0cejX2CdLmMKOWIUcB2cXiLJ/c3WablJ5BSEjsGpO60sQcpM366vuyIn4WmwHdOXWzu4IL7dC2VEofQo72V1Ahg9KoE1dpIjz61i75mrOPEDXs
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PNZPR01MB4526
 X-Spam-Score: 1.0 (+)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
@@ -137,8 +135,8 @@ X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  1.0 HTML_MESSAGE           BODY: HTML included in message
-X-Headers-End: 1m42DF-009K4W-9P
-Subject: Re: [Industrypack-devel] Trained medical professional.
+X-Headers-End: 1m42mz-009M3J-0B
+Subject: [Industrypack-devel] Highly-targeted healthcare executive.
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -150,52 +148,44 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============2591159951853879299=="
+Content-Type: multipart/mixed; boundary="===============2922178833862400537=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============2591159951853879299==
+--===============2922178833862400537==
 Content-Language: en-US
 Content-Type: multipart/alternative;
-	boundary="_000_PN2PR01MB4762499C73FB9724A6BD150AF9129PN2PR01MB4762INDP_"
+	boundary="_000_PN2PR01MB47625D14EE6BA9DBF0BA42DAF9129PN2PR01MB4762INDP_"
 
---_000_PN2PR01MB4762499C73FB9724A6BD150AF9129PN2PR01MB4762INDP_
+--_000_PN2PR01MB47625D14EE6BA9DBF0BA42DAF9129PN2PR01MB4762INDP_
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
 Hi,
 
-Define me your Target audience that you wish to reach, So that I will get b=
-ack with samples and Counts to check the quality for your review?
+I just ran across your website and I thought you might be interested in acq=
+uiring information of Hospital & Health Care Contacts List? Email list of d=
+octors and health professionals helps you to find and connect with them bas=
+ed on specialty.
 
-Thanks,
-Claire.
+Like: Radiologist, Oncologists, Nurses, Physician, Diagnostic, Cardiologist=
+, Allergy & Immunology, Endocrinologist, Geriatrist, Orthopaedists, Family =
+Practice, Neurology, Otolaryngology, Physical Medicine & Rehabilitation, On=
+cology, Ophthalmologist, Obstetrics and Gynaecologists, Pathologist, Anaest=
+hesiologists, Emergency Medicine, Urologists, Surgeons, Obstetrician, Embry=
+ologists, Mental Health Professionals, Lab Technicians, Hospitals, Clinics,=
+ and many more.
 
-From: Claire Steffanie
-Sent: Wednesday, July 14, 2021 11:51 AM
-To: industrypack-devel@lists.sourceforge.net
-Subject: Trained medical professional.
-Importance: High
-
-Hi,
-
-Had a chance to review your company profile and thought you might be intere=
-sted in acquiring Addiction Professionals Mailing List?
-
-You can also reach :- Mental health centres, Addiction treatment counsellor=
-s, Substance Abuse Disorder, Social workers, therapists, physicians, nurses=
-, and interventionists as well as the executive leadership of addiction tre=
-atment centres, behavioural healthcare organizations, and community and all=
- manner of people involved in aspects of business health industry and many =
-more across US/UK/CANADA, Europe and all over the world.
-
-Kindly let me know your interest. So that I could come up with more informa=
-tion for your review.
+Kindly let me know your required target criteria. So that I can send you co=
+unts and more information for your review.
 
 Regards,
 Claire Steffanie,
 Marketing Coordinator.
 
---_000_PN2PR01MB4762499C73FB9724A6BD150AF9129PN2PR01MB4762INDP_
+
+
+
+--_000_PN2PR01MB47625D14EE6BA9DBF0BA42DAF9129PN2PR01MB4762INDP_
 Content-Type: text/html; charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
@@ -231,16 +221,14 @@ a:visited, span.MsoHyperlinkFollowed
 	color:#954F72;
 	text-decoration:underline;}
 span.EmailStyle17
-	{mso-style-type:personal;
+	{mso-style-type:personal-compose;
 	font-family:"Calibri","sans-serif";
 	color:windowtext;}
-span.EmailStyle18
-	{mso-style-type:personal-reply;
-	font-family:"Calibri","sans-serif";
-	color:#1F497D;}
 .MsoChpDefault
 	{mso-style-type:export-only;
-	font-size:10.0pt;}
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
 @page WordSection1
 	{size:8.5in 11.0in;
 	margin:1.0in 1.0in 1.0in 1.0in;}
@@ -255,73 +243,48 @@ div.WordSection1
 </head>
 <body lang=3D"EN-IN" link=3D"#0563C1" vlink=3D"#954F72">
 <div class=3D"WordSection1">
-<p class=3D"MsoNormal"><a name=3D"_MailEndCompose"><span style=3D"color:#1F=
-497D;mso-fareast-language:EN-IN">Hi,<o:p></o:p></span></a></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Define me your
-<b>Target audience</b> that you wish to reach, So that I will get back with=
- <b>samples and Counts to check the quality
-</b>for your review?<b><o:p></o:p></b></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Thanks,
-<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Claire.<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<div>
-<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
-0in 0in">
-<p class=3D"MsoNormal"><b><span lang=3D"EN-US" style=3D"mso-fareast-languag=
-e:EN-IN">From:</span></b><span lang=3D"EN-US" style=3D"mso-fareast-language=
-:EN-IN"> Claire Steffanie
-<br>
-<b>Sent:</b> Wednesday, July 14, 2021 11:51 AM<br>
-<b>To:</b> industrypack-devel@lists.sourceforge.net<br>
-<b>Subject:</b> Trained medical professional.<br>
-<b>Importance:</b> High<o:p></o:p></span></p>
-</div>
-</div>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
 <p class=3D"MsoNormal">Hi,<o:p></o:p></p>
 <p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">Had a chance to review your company profile and thou=
-ght you might be interested in acquiring
-<b>Addiction Professionals Mailing List? <o:p></o:p></b></p>
+<p class=3D"MsoNormal">I just ran across your website and I thought you mig=
+ht be interested in acquiring information of
+<b>Hospital &amp; Health Care Contacts List?</b> <u>Email list of doctors a=
+nd health professionals helps you to find and connect with them based on sp=
+ecialty.<o:p></o:p></u></p>
 <p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal"><u>You can also reach</u> :- Mental health centres, =
-Addiction treatment counsellors, Substance Abuse Disorder, Social workers, =
-therapists, physicians, nurses, and interventionists as well as the executi=
-ve leadership of addiction treatment
- centres, behavioural healthcare organizations, and community and all manne=
-r of people involved in aspects of business health industry and many more a=
-cross US/UK/CANADA, Europe and all over the world.<o:p></o:p></p>
+<p class=3D"MsoNormal"><b>Like:</b> Radiologist, Oncologists, Nurses, Physi=
+cian, Diagnostic, Cardiologist, Allergy &amp; Immunology, Endocrinologist, =
+Geriatrist, Orthopaedists, Family Practice, Neurology, Otolaryngology, Phys=
+ical Medicine &amp; Rehabilitation, Oncology,
+ Ophthalmologist, Obstetrics and Gynaecologists, Pathologist, Anaesthesiolo=
+gists, Emergency Medicine, Urologists, Surgeons, Obstetrician, Embryologist=
+s, Mental Health Professionals, Lab Technicians, Hospitals, Clinics, and ma=
+ny more.<o:p></o:p></p>
 <p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">Kindly let me know your interest. So that I could co=
-me up with more information for your review.<o:p></o:p></p>
+<p class=3D"MsoNormal">Kindly let me know your required target criteria. So=
+ that I can send you counts and more information for your review.<o:p></o:p=
+></p>
 <p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
 <p class=3D"MsoNormal">Regards,<o:p></o:p></p>
 <p class=3D"MsoNormal"><b>Claire Steffanie,<o:p></o:p></b></p>
 <p class=3D"MsoNormal">Marketing Coordinator.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
 </div>
 </body>
 </html>
 
---_000_PN2PR01MB4762499C73FB9724A6BD150AF9129PN2PR01MB4762INDP_--
+--_000_PN2PR01MB47625D14EE6BA9DBF0BA42DAF9129PN2PR01MB4762INDP_--
 
 
---===============2591159951853879299==
+--===============2922178833862400537==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2591159951853879299==
+--===============2922178833862400537==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -332,5 +295,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2591159951853879299==--
+--===============2922178833862400537==--
 
