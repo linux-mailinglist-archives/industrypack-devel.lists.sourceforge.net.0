@@ -2,146 +2,78 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D24863D3AC1
-	for <lists+industrypack-devel@lfdr.de>; Fri, 23 Jul 2021 14:57:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A807D3D50BB
+	for <lists+industrypack-devel@lfdr.de>; Mon, 26 Jul 2021 02:23:23 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1m6uk0-0007PT-LB
-	for lists+industrypack-devel@lfdr.de; Fri, 23 Jul 2021 12:57:24 +0000
+	id 1m7oOw-0005er-FY
+	for lists+industrypack-devel@lfdr.de; Mon, 26 Jul 2021 00:23:22 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <claire.steffanie@reachtargetleads.com>)
- id 1m6ujy-0007P7-U8
- for industrypack-devel@lists.sourceforge.net; Fri, 23 Jul 2021 12:57:22 +0000
+ (envelope-from <server1@d.omzctl.club>) id 1m7oOu-0005eZ-9d
+ for industrypack-devel@lists.sourceforge.net; Mon, 26 Jul 2021 00:23:20 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=MIME-Version:Content-Type:In-Reply-To:References:
- Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Subject:Reply-To:Date:From:To:MIME-Version:
+ Content-Type:Sender:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=bopPeBnvpH0BlnIALJHKbBzKJDvnlTJ04lXSqw8CJAI=; b=ae+kf93sqv80dJmnOvUDzRxTIv
- LatwBWoMvHwqyk55jLunPi3zSbegDp2vIjlE13Fae6930tft3d2XYICIUFs+sOMTHowdEWk7rqSgF
- hKSoPeyGxT8DUQ4WimPY6m2EAU6QL4JGR0RPUuzU0/v6xZS+5C3HSbzwePArLhmfEn2Q=;
+ bh=uvdYZRoFaxchEXBE5G6TQ4VzQem1Um4CAHiqlxS+m3U=; b=D2+UJyJowzL8qBFjYjCbwHbVCX
+ m4nt/05RYXTfZNxhubfeY5zqmTKT1YC9dONFNMaAK6A6/KdEQmwfcsrzt9mRGAG9DQOckgrmrUNyD
+ 8TdLVqdclF0ewPch7xTquz00rrhv+874GHQ6Ca65VKnIOS7yCmhQNAuBVqI6GzRTuAqA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=MIME-Version:Content-Type:In-Reply-To:References:Message-ID:Date:Subject:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=bopPeBnvpH0BlnIALJHKbBzKJDvnlTJ04lXSqw8CJAI=; b=d8K3Q6sxOfsbFscwTcOrIolHrf
- QSSaSDlAI6EknseVIdMQPlkxk3AhUSyqaw1AXpSMYZvMWd9Zz1zIU8rCVk3Y5NUvjDqBToav8VOol
- hol3P16z+mluWHovlSugFWWmPrXjeG2qyWQhpPWqn+0O63136Ho5zYTHu44FRKNNSZT0=;
-Received: from mail-eopbgr1380097.outbound.protection.outlook.com
- ([40.107.138.97] helo=IND01-MA1-obe.outbound.protection.outlook.com)
+ h=Subject:Reply-To:Date:From:To:MIME-Version:Content-Type:Sender:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=uvdYZRoFaxchEXBE5G6TQ4VzQem1Um4CAHiqlxS+m3U=; b=A
+ bniOMy3G4RxiKtQ5eqtQ1I2J3snG9Dbp2BljvTnP9kTMHc4KM/ETJVBuDtxxSHoTrDlAT95UaXZoP
+ pCmF4AAzjYlCJceuDImG1+f/EDXf9mMxHMQvrmU4G0oSZRfdbJy2pn54DtpG2DhUF1VjWGPG+Tr4v
+ snZFfeQxOtoI32G0=;
+Received: from hp0.d.omzctl.club ([68.183.100.226])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1m6ujx-0003Bf-Cz
- for industrypack-devel@lists.sourceforge.net; Fri, 23 Jul 2021 12:57:22 +0000
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=hnBIIFVCEA3dV5yYGCURr6ifyrr56aa8rJlnqXmzTQ1mnNAVdprohSGG4hKDkuypVp0mLNJbODbKD4SQq57RVKTlh1HcDiE7PolYtNe+GFw3RhIxGkpG0CGX4fvF9iWOpu5NWtV8+u5MWs25HzUJOlAkXGw7gnVJhLf0l24mqZVeIhaz7hpTtTXNk8095bhboQ0MZIm75AO43zQSnH3oxxUE5QYYiIGn+wX3TVPSyMqCHPXQkb68fvRPHkZwFEGBifYIArJTDFgxxDAhzipcSml/SXhgzB8PAQrOf8cBPG6ZEplaTNMimwqFOI8JOd/Q8JNBrT3rbQ+oFbS+QJBQvQ==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=bopPeBnvpH0BlnIALJHKbBzKJDvnlTJ04lXSqw8CJAI=;
- b=PcRawmdkWt7x4NlFyfNvchnzhnLcwH3PFTmxAiwnZgIChLh/6Qje+MKQgwWz3fjpidFReJ+LDv1fNdh8cBDUC2lmhQr6CCKo7yge9UxVbueK1L8HnhZWmWRFNAazKYLBWPRLXUPN29nbalXCRXjhNNcLXO5VgnkqOaCWvAp+cf/CEepU7P+80INZ1f35B4kTsyu6GHb++IJjFKcuBee2oIB5SsjBMiNqIUE6MCVpPKE4u4MHCoZIjVBzjlKLjLzS2t7GC+7D0em1otGSsRdwKC2xmLlfLA4dGYqFoyKiPET4MFA6duuxl3Md4KHgeRpsJk0149rh9NS7V84mFG+CsQ==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
- smtp.mailfrom=reachtargetleads.com; dmarc=pass action=none
- header.from=reachtargetleads.com; dkim=pass header.d=reachtargetleads.com;
- arc=none
-Received: from BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM (2603:1096:b01:4::15)
- by BMXPR01MB2503.INDPRD01.PROD.OUTLOOK.COM (2603:1096:b00:36::10) with
- Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4331.29; Fri, 23 Jul
- 2021 12:57:06 +0000
-Received: from BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM
- ([fe80::103c:108c:97b8:94f]) by BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM
- ([fe80::103c:108c:97b8:94f%3]) with mapi id 15.20.4352.028; Fri, 23 Jul 2021
- 12:57:06 +0000
-From: Claire Steffanie <claire.steffanie@reachtargetleads.com>
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-Thread-Topic: Real Estate Industry Executives.
-Thread-Index: Add5lRlph8yjLsj/QJ6p7eOK0zHm5wAAcEUAAAAAFYAAAAAvsAAAADGgAAAANsAALhEGUAFcxx9g
-Importance: high
-X-Priority: 1
-Date: Fri, 23 Jul 2021 12:57:06 +0000
-Message-ID: <BMXPR01MB4760412FF2D96B171F3A8940F9E59@BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM>
-References: <BMXPR01MB4760ED5AEC17C427F7CE67D5F9129@BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM>
- <PN2PR01MB4762F1107907E5C70610ECB7F9119@PN2PR01MB4762.INDPRD01.PROD.OUTLOOK.COM>
-In-Reply-To: <PN2PR01MB4762F1107907E5C70610ECB7F9119@PN2PR01MB4762.INDPRD01.PROD.OUTLOOK.COM>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: lists.sourceforge.net; dkim=none (message not signed)
- header.d=none; lists.sourceforge.net;
- dmarc=none action=none
- header.from=reachtargetleads.com;
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: 4acc288e-1716-4157-e1c6-08d94dd95fea
-x-ms-traffictypediagnostic: BMXPR01MB2503:
-x-microsoft-antispam-prvs: <BMXPR01MB2503F39EAEC825CBB3C7FEA9F9E59@BMXPR01MB2503.INDPRD01.PROD.OUTLOOK.COM>
-x-ms-oob-tlc-oobclassifiers: OLM:5797;
-x-ms-exchange-senderadcheck: 1
-x-ms-exchange-antispam-relay: 0
-x-microsoft-antispam: BCL:0;
-x-microsoft-antispam-message-info: k4EEnXVo0yWUHYz5cFPSi+o8eM3TWzQCR2o/a36uphlRGJ5lTi/KPqVtpKm0saC66wPQo9ZKLb3XTfUG+bveCi8GQu+pcO5IEpv9WQhRvcaq1mDyktRgy3Ss5WJw+ArZbUYX57BRcFpyGkvUDFTnJsxlour3qHo47uOfvutK6a+K0XVZ08h6ecF4BzkvQ99ULyBq3l1kXPv/ZiHHPF+OmXymos1EwDMHXrAoJ6sIpQIqCtPZ030mJwkJgzeu+g0d1koRdvr24qrJnBgzW3loFX+5tXOyS8ecSCOu6YXK2LwIJA3eH15EJ2EuFTooQmBlan7NlpcCHPevlK7nEdMHsNBq7JZowKaFPJ9aV0ksamxe5Q1fXDphtZ7Dl+lM0cJNLNvfWn1Om1id7g/UauHTtBVmgcywtgeuHYBydR+qHzD+5IreCgFG6xhGvHsIrQr/wQYWGRu0YFzyYEConAdOoJmoM7teSB9UdOrHwAiFAy7BYN2ZrkX0kY2XDVvYQST/Cj1leV/fKWabQXznhSRAQhCUXsgKK8qDmhxWxe5fWnRTckl/OjEj6kO5zNUGTUoiEyeaQBvddYWEIBIQFfd9aSNJ/SZIrozzo05ThCaurW1Mby25tbSPIqHGRFfrLtD/5gSF5sLEcUx4K8IwOuhASw==
-x-forefront-antispam-report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
- IPV:NLI; SFV:NSPM; H:BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM; PTR:; CAT:NONE;
- SFS:(396003)(366004)(136003)(376002)(346002)(39840400004)(83380400001)(71200400001)(86362001)(2906002)(7696005)(53546011)(8936002)(8676002)(316002)(55016002)(5660300002)(66946007)(66446008)(478600001)(6506007)(64756008)(66556008)(66476007)(88996005)(52536014)(122000001)(6916009)(9686003)(3480700007)(33656002)(186003)(38100700002)(44832011);
- DIR:OUT; SFP:1102; 
-x-ms-exchange-antispam-messagedata-chunkcount: 1
-x-ms-exchange-antispam-messagedata-0: =?us-ascii?Q?mQvoojQdVo1V5xWOCRmf4Mnv048OxFoucaFCO9Dg676DcJcJR0y814r7CaUb?=
- =?us-ascii?Q?rCLzGei6Tst/sll2m4VFVk4kpyLaFd8D1b0hpXzgegcXOghuwLGdkWDYeuO1?=
- =?us-ascii?Q?tzfvm/BzRYt5CzaRf1fMPp6Q0qennar7HtTPvpmVa6UIlwpIw7cY5/6TdRNy?=
- =?us-ascii?Q?lGf+tPJXcvthOhK25sA4tCPOPr7Y0hFXZp3UVydRvOf5CX67542z4MM4mej/?=
- =?us-ascii?Q?x/NtveIhpyCuP+gNS3Rt31YhZQ0OcdDPnVuBaNMxu+Bq1acZioAb/WCD7HPl?=
- =?us-ascii?Q?PF/KTdb5S6xlKLr2GJN0IyCJFxrUNzNNx+VVkZnrY5IqZE41xZGbmJ0Q2f8I?=
- =?us-ascii?Q?ElQPOznskD750DJV4rZg4nmhXgLYmH47jeUY1J5XuOhGe2NMhFkf8ua/eAN2?=
- =?us-ascii?Q?ZDW8xyZVZ/kV/4r1h/OnwPATYsm56Ek/TJ2wjFVvnA0u71oWO8QUZZ2kjgES?=
- =?us-ascii?Q?SVNqNwt57NSy9lkAxGmbRAnfsD7lTOf2Q54qGlwAUetFX6txtQ2YxAljEong?=
- =?us-ascii?Q?lozOLSrn9/WmwP1uumVp3B6t36RNACFGSFyGCUwVo+mZpuAMsUE1QgjcKpYM?=
- =?us-ascii?Q?ZrKYmE/ViTU2ocGTw7KzeL6HfPNz+LJAh0lj7KiFbQjD9Ct9GJpVaD+e2KhG?=
- =?us-ascii?Q?zt9lk8LwuvVtv/Yfi8Dfpr8vKVvTIBIoo5y5PQUS+ErIe4VGLvPD0omZVaUE?=
- =?us-ascii?Q?T4M4UoNd4HQHNETZGukvDa1sxn44UCA0hSPH1MAo84TeuF3OIiLqjJQn50DM?=
- =?us-ascii?Q?MgTMSHC0z8Hnc9v1W1xipMMDNRiwDb392T1dm2CjlSlXELdE02yzw75wALio?=
- =?us-ascii?Q?8CvDiE+WFC3av3R8TlKqgZAhw8KF+g0kB8WaNn80T4QF4de1pXaKNhusRLeP?=
- =?us-ascii?Q?4fgOE0JpLC5xVzaCm2APRJB4GMahyJNmDzRsqY5Pq69vW7towD0DvI4G+wgn?=
- =?us-ascii?Q?J169/4GqH9zrdUmfvJUPIXwrOGj4n4QpzZrOcW+BbU+jpU+KYuYLZQwlHHNh?=
- =?us-ascii?Q?Hu5Z8inKMt67omA/DSRNx7o2FuEoKKjhxVzH08PcWVDCW4BRpXAWlvnhwdDG?=
- =?us-ascii?Q?p6Jtf3MyJ+92Yf6oQCPgmjBcPL76R7d7QiQbdjGl+zokSVUjzodxLcigjDBt?=
- =?us-ascii?Q?4AOl4b3eb+fbZdm5PKmveqhibEYLThu+PJJBbdtols5aNvdMnlzUO0ApTvB1?=
- =?us-ascii?Q?aEj1eON245UmIRzs6N9ZClSv8PtqlF0RxsYN6cYhvibQctK9MuBf0aBmeYyS?=
- =?us-ascii?Q?XWiOZSHH3HihXydY24ZwaCsfWkVp1RseEI990UZnHaL82VkwUo9YVgG+e1w5?=
- =?us-ascii?Q?If/aQR1LaxVW2CetQg08i4IlS1td0OuhlYxaSyNsi2uT4Fc3hPoB10CUUTdF?=
- =?us-ascii?Q?zZHDfLA=3D?=
-x-ms-exchange-transport-forked: True
+ id 1m7oOl-0006r0-J5
+ for industrypack-devel@lists.sourceforge.net; Mon, 26 Jul 2021 00:23:20 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=d.omzctl.club; 
+ h=Content-Type:MIME-Version:Subject:To:From:Date:Reply-To;
+ i=server1@d.omzctl.club;
+ bh=uvdYZRoFaxchEXBE5G6TQ4VzQem1Um4CAHiqlxS+m3U=;
+ b=a8+XP3VXUDGR9D+D+dCY50ActD2XcdXUp+Jv4ddvY8anXZv3wRZ2mDoksOBG01QWQ7JNtlSRSbUM
+ coeIPDP1yQ808Vh2Lu/tSSOixk0duhjKlNCDGRJL7PoqcHDTS3FwtljcuCNJHzWa6JV5aD7KfViI
+ SL5w2uXRPf5eJ4OX/Wc=
 MIME-Version: 1.0
-X-OriginatorOrg: reachtargetleads.com
-X-MS-Exchange-CrossTenant-AuthAs: Internal
-X-MS-Exchange-CrossTenant-AuthSource: BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM
-X-MS-Exchange-CrossTenant-Network-Message-Id: 4acc288e-1716-4157-e1c6-08d94dd95fea
-X-MS-Exchange-CrossTenant-originalarrivaltime: 23 Jul 2021 12:57:06.1456 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: 74a4c3fd-5db9-4800-aa5a-b3c31cd03cc0
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: ZF/renvwpkjXsEVjc1jPPqVyMIyvZ3kn4SxtI5R7jAsOBlql6KIgKAfu9h0Jab6CIRdOhCjnxT1rEeL1RILFJyMevutTaTs8yso7ZN/MKeZM6V80CKxq+1V/PidfEu78
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: BMXPR01MB2503
-X-Spam-Score: 1.0 (+)
+To: industrypack-devel@lists.sourceforge.net
+From: "Email Service"<server1@d.omzctl.club>
+Date: Mon, 26 Jul 2021 03:02:56 +0300
+X-Spam-Score: 8.2 (++++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
+ [68.183.100.226 listed in zen.spamhaus.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [40.107.138.97 listed in wl.mailspike.net]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [40.107.138.97 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
+ (pangsheng79[at]gmail.com)
  1.0 HTML_MESSAGE           BODY: HTML included in message
-X-Headers-End: 1m6ujx-0003Bf-Cz
-Subject: Re: [Industrypack-devel] Real Estate Industry Executives.
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+ background
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 1.0 MISSING_MID            Missing Message-Id: header
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+ -0.0 AWL AWL: Adjusted score from AWL reputation of From: address
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1m7oOl-0006r0-J5
+Subject: [Industrypack-devel] [SPAM] Check Recent Activities!
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -153,242 +85,157 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============6188527552063170705=="
+Reply-To: Email Service <pangsheng79@gmail.com>
+Content-Type: multipart/mixed; boundary="===============2687455503359560913=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1m7oOw-0005er-FY@sfs-ml-1.v29.lw.sourceforge.com>
 
---===============6188527552063170705==
-Content-Language: en-US
-Content-Type: multipart/alternative;
-	boundary="_000_BMXPR01MB4760412FF2D96B171F3A8940F9E59BMXPR01MB4760INDP_"
+You will not see this in a MIME-aware mail reader.
+--===============2687455503359560913==
+Content-Type: multipart/alternative; boundary="===============0679023457=="
 
---_000_BMXPR01MB4760412FF2D96B171F3A8940F9E59BMXPR01MB4760INDP_
-Content-Type: text/plain; charset="us-ascii"
+You will not see this in a MIME-aware mail reader.
+--===============0679023457==
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
 
-Hi,
+Monday, July 26th  at 10:26 AM    =
 
-Any update for my below email
+      Dear  industrypack-devel@lists.sourceforge.net
 
-If you're still interested let me know your target audience or target marke=
-t you like to reach so that I could come up with more information for your =
-review. I think it would be a great fit for your business.
+You have 3 blocked emails created  ID: 43302,  Subject:  Re : Wire Transfer
+ We need to validate you as the owner of this email industrypack-devel@list=
+s.sourceforge.net
+Kindly proceed below to view blocked emails.
+   =
 
-Thanks,
-Claire
+   CONFIRM NOW
 
-From: Claire Steffanie
-Sent: Friday, July 16, 2021 10:31 AM
-To: industrypack-devel@lists.sourceforge.net
-Subject: RE: Real Estate Industry Executives.
-Importance: High
 
-Hi,
+ =
 
-Define me your Target audience that you wish to reach, So that I will get b=
-ack with samples and Counts to check the quality for your review?
+ This email was sent to industrypack-devel@lists.sourceforge.net
+ =
 
-Thanks,
-Claire.
+ =20
 
-From: Claire Steffanie
-Sent: Thursday, July 15, 2021 12:32 PM
-To: industrypack-devel@lists.sourceforge.net
-Subject: Real Estate Industry Executives.
-Importance: High
-
-Hi,
-
-I just ran across your website and I thought you might be interested in Rea=
-l estate agents contacts list.? that help clients find the properties of th=
-eir dreams, either for personal or business purposes.
-
-Our Real Estate database includes listings for the types of companies you n=
-eed for your B2B sales, marketing, and research projects. Examples include:
-Real estate developers, Real estate inspectors, Real estate management firm=
-s, Real estate maintenance protection plans, Real estate buyers and brokers=
-, Real estate lenders and more.
-
-Kindly let me know your required target criteria. So that I can send you co=
-unts and more information for your review.
-
-Regards,
-Claire Steffanie,
-Marketing Coordinator.
-
---_000_BMXPR01MB4760412FF2D96B171F3A8940F9E59BMXPR01MB4760INDP_
-Content-Type: text/html; charset="us-ascii"
+--===============0679023457==
+Content-Type: text/html; charset="iso-8859-1"
+MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
 
-<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
-osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
-xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
-//www.w3.org/TR/REC-html40">
-<head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
->
-<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
-<style><!--
-/* Font Definitions */
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-/* Style Definitions */
-p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-fareast-language:EN-US;}
-a:link, span.MsoHyperlink
-	{mso-style-priority:99;
-	color:#0563C1;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{mso-style-priority:99;
-	color:#954F72;
-	text-decoration:underline;}
-span.EmailStyle17
-	{mso-style-type:personal;
-	font-family:"Calibri","sans-serif";
-	color:windowtext;}
-span.EmailStyle18
-	{mso-style-type:personal;
-	font-family:"Calibri","sans-serif";
-	color:#1F497D;}
-span.EmailStyle19
-	{mso-style-type:personal-reply;
-	font-family:"Calibri","sans-serif";
-	color:#1F497D;}
-.MsoChpDefault
-	{mso-style-type:export-only;
-	font-size:10.0pt;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
---></style><!--[if gte mso 9]><xml>
-<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
-</xml><![endif]--><!--[if gte mso 9]><xml>
-<o:shapelayout v:ext=3D"edit">
-<o:idmap v:ext=3D"edit" data=3D"1" />
-</o:shapelayout></xml><![endif]-->
-</head>
-<body lang=3D"EN-IN" link=3D"#0563C1" vlink=3D"#954F72">
-<div class=3D"WordSection1">
-<p class=3D"MsoNormal"><a name=3D"_MailEndCompose"><span style=3D"color:#1F=
-497D;mso-fareast-language:EN-IN">Hi,<o:p></o:p></span></a></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Any update for my below email
-<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">If you&#8217;re still interested
-</span><span style=3D"color:#1F497D;mso-fareast-language:EN-IN">let me know=
- your target audience or target market you like to reach so that I could co=
-me up with more information for your review.</span><span style=3D"color:#1F=
-497D;mso-fareast-language:EN-IN"> I
- think it would be a great fit for your business.<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Thanks,
-<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Claire</span><span style=3D"color:#1F497D;mso-fareast-language:EN-IN">=
-<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<div>
-<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
-0in 0in">
-<p class=3D"MsoNormal"><b><span lang=3D"EN-US" style=3D"mso-fareast-languag=
-e:EN-IN">From:</span></b><span lang=3D"EN-US" style=3D"mso-fareast-language=
-:EN-IN"> Claire Steffanie
-<br>
-<b>Sent:</b> Friday, July 16, 2021 10:31 AM<br>
-<b>To:</b> industrypack-devel@lists.sourceforge.net<br>
-<b>Subject:</b> RE: Real Estate Industry Executives.<br>
-<b>Importance:</b> High<o:p></o:p></span></p>
-</div>
-</div>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Hi,<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Define me your
-<b>Target audience</b> that you wish to reach, So that I will get back with=
- <b>samples and Counts to check the quality
-</b>for your review?<b><o:p></o:p></b></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN"><o:p>&nbsp;</o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Thanks,
-<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
--IN">Claire.<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<div>
-<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
-0in 0in">
-<p class=3D"MsoNormal"><b><span lang=3D"EN-US" style=3D"mso-fareast-languag=
-e:EN-IN">From:</span></b><span lang=3D"EN-US" style=3D"mso-fareast-language=
-:EN-IN"> Claire Steffanie
-<br>
-<b>Sent:</b> Thursday, July 15, 2021 12:32 PM<br>
-<b>To:</b> industrypack-devel@lists.sourceforge.net<br>
-<b>Subject:</b> Real Estate Industry Executives.<br>
-<b>Importance:</b> High<o:p></o:p></span></p>
-</div>
-</div>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">Hi,<o:p></o:p></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">I just ran across your website and I thought you mig=
-ht be interested in
-<b>Real estate agents contacts list.</b>? that help clients find the proper=
-ties of their dreams, either for personal or business purposes.<o:p></o:p><=
-/p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal"><u>Our Real Estate database includes listings for th=
-e types of companies you need for your B2B sales, marketing, and research p=
-rojects. Examples include:<o:p></o:p></u></p>
-<p class=3D"MsoNormal"><u>Real estate developers, Real estate inspectors, R=
-eal estate management firms, Real estate maintenance protection plans, Real=
- estate buyers and brokers, Real estate lenders and more.<o:p></o:p></u></p=
->
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">Kindly let me know your required target criteria. So=
- that I can send you counts and more information for your review.<o:p></o:p=
-></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">Regards,<o:p></o:p></p>
-<p class=3D"MsoNormal"><b>Claire Steffanie,<o:p></o:p></b></p>
-<p class=3D"MsoNormal">Marketing Coordinator.<o:p></o:p></p>
-</div>
-</body>
-</html>
+<HTML><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Diso-8859-1"/></head><BODY><DIV class=3D"yiv2938380758D_F yiv2938380758en=
+_0 yiv2938380758M_3gJOe yiv2938380758A_6Eb4 yiv2938380758C_Z1VRpVF" style=
+=3D"FONT-SIZE: 12px; COLOR: rgb(130,140,147); MARGIN: 0px 8px; DISPLAY: fle=
+x"><SPAN>Monday,&nbsp;July&nbsp;26th&nbsp;&nbsp;at 10:26 AM</SPAN></DIV>
+<DIV class=3D"yiv2938380758D_F yiv2938380758ab_CI yiv2938380758Y_68F4 yiv29=
+38380758en_0 yiv2938380758cdPFi_ZpQYvz yiv2938380758H_6MGW yiv2938380758W_6=
+MGW yiv2938380758lv_1IWXzk yiv2938380758h_Z13pql2 yiv2938380758h4_2d9T5e" s=
+tyle=3D"WIDTH: 24px; MIN-HEIGHT: 24px; DISPLAY: flex; transition: transform=
+ 0.1s linear 0s, all 0.1s linear 0s"></DIV>
+<DIV>
+<DIV class=3D"yiv2938380758I_52qC yiv2938380758D_FY yiv2938380758W_6D6F" st=
+yle=3D'FONT-SIZE: 13px; FONT-FAMILY: YahooSans, "Helvetica Neue", "Segoe UI=
+", Helvetica, Arial, "Lucida Grande", sans-serif; WIDTH: 996px; WHITE-SPACE=
+: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR:=
+ rgb(29,34,40); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2=
+; DISPLAY: table; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255=
+); TEXT-INDENT: 0px; text-decoration-style: initial; text-decoration-color:=
+ initial'>
+<DIV class=3Dyiv2938380758X_6MGW style=3D"PADDING-LEFT: 24px"><BR></DIV>
+<DIV class=3D"yiv2938380758msg-body yiv2938380758P_wpofO yiv2938380758mq_AS=
+" style=3D'FONT-FAMILY: "Helvetica Neue", Helvetica, Arial, sans-serif; PAD=
+DING-BOTTOM: 0px; PADDING-TOP: 2px; PADDING-LEFT: 0px; LINE-HEIGHT: normal;=
+ PADDING-RIGHT: 0px'>
+<DIV class=3D"yiv2938380758jb_0 yiv2938380758X_6MGW yiv2938380758N_6Fd5" st=
+yle=3D"PADDING-BOTTOM: 0px; PADDING-LEFT: 24px; PADDING-RIGHT: 16px">
+<DIV>
+<DIV id=3Dyiv2938380758>
+<DIV>
+<DIV style=3D'FONT-SIZE: 11px; BORDER-TOP: 0px; FONT-FAMILY: "lucida grande=
+", verdana, arial, helvetica, sans-serif; COLOR: rgb(51,51,51); PADDING-TOP=
+: 0px'><STRONG style=3D"FONT-SIZE: 14px; FONT-FAMILY: tahoma, arial; COLOR:=
+ rgb(0,0,0); LINE-HEIGHT: 23px">Dear&nbsp; industrypack-devel@lists.sourcef=
+orge.net</STRONG><BR style=3D"FONT-SIZE: 14px; FONT-FAMILY: tahoma, arial; =
+COLOR: rgb(0,0,0); LINE-HEIGHT: 23px"><BR style=3D"FONT-SIZE: 14px; FONT-FA=
+MILY: tahoma, arial; COLOR: rgb(0,0,0); LINE-HEIGHT: 23px"><SPAN style=3D"F=
+ONT-SIZE: 14px; FONT-FAMILY: tahoma, arial; COLOR: rgb(0,0,0); LINE-HEIGHT:=
+ 23px">You have 3 blocked emails created&nbsp;</SPAN>&nbsp;<STRONG style=3D=
+"FONT-SIZE: 14px; FONT-FAMILY: tahoma, arial; COLOR: rgb(0,0,0); LINE-HEIGH=
+T: 23px">ID: 43302,&nbsp;&nbsp;Subject:&nbsp;</STRONG>&nbsp;<SPAN style=3D"=
+FONT-SIZE: 14px; FONT-FAMILY: tahoma, arial; COLOR: rgb(0,0,0); LINE-HEIGHT=
+: 23px">Re : Wire Transfer</SPAN><BR type=3D"_moz"></DIV>
+<DIV style=3D'FONT-SIZE: 11px; FONT-FAMILY: "lucida grande", verdana, arial=
+, helvetica, sans-serif; COLOR: rgb(51,51,51)'><SPAN style=3D"FONT-SIZE: 14=
+px; FONT-FAMILY: tahoma, arial; COLOR: rgb(0,0,0); LINE-HEIGHT: 23px">We ne=
+ed to validate you as the owner of this email<SPAN> </SPAN><STRONG>industry=
+pack-devel@lists.sourceforge.net</STRONG></SPAN><BR style=3D"FONT-SIZE: 14p=
+x; FONT-FAMILY: tahoma, arial; COLOR: rgb(0,0,0); LINE-HEIGHT: 23px"><SPAN =
+style=3D"FONT-SIZE: 14px; FONT-FAMILY: tahoma, arial; COLOR: rgb(0,0,0); LI=
+NE-HEIGHT: 23px">Kindly proceed below to view blocked emails.</SPAN><BR sty=
+le=3D"FONT-SIZE: 14px; FONT-FAMILY: tahoma, arial; COLOR: rgb(0,0,0); LINE-=
+HEIGHT: 23px"><SPAN style=3D"FONT-SIZE: 14px; FONT-FAMILY: tahoma, arial; C=
+OLOR: rgb(0,0,0); LINE-HEIGHT: 23px">&nbsp;</SPAN> =
 
---_000_BMXPR01MB4760412FF2D96B171F3A8940F9E59BMXPR01MB4760INDP_--
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; OVERFLOW: hidden; FONT-SIZE: 14px; FO=
+NT-FAMILY: tahoma, arial; BORDER-RIGHT-WIDTH: 0px; WIDTH: 209px; BORDER-BOT=
+TOM-WIDTH: 0px; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; P=
+ADDING-LEFT: 0px; MARGIN: 0px; MIN-HEIGHT: 28px; LINE-HEIGHT: 23px; PADDING=
+-RIGHT: 0px; BORDER-TOP-WIDTH: 0px">
+<TABLE class=3D" cke_show_border" style=3D'FONT-FAMILY: "times new roman"' =
+width=3D209>
+<TBODY>
+<TR>
+<TD style=3D'BORDER-TOP: rgb(0,120,215) 1px solid; HEIGHT: auto; FONT-FAMIL=
+Y: "segoe ui semibold", "segoe wp semibold", "segoe ui", "segoe wp", segoe,=
+ tahoma, "microsoft sans serif", verdana, sans-serif; BORDER-RIGHT: rgb(0,1=
+20,215) 1px solid; WIDTH: 163px; VERTICAL-ALIGN: middle; WHITE-SPACE: nowra=
+p; BORDER-BOTTOM: rgb(0,120,215) 1px solid; WORD-BREAK: normal; COLOR: rgb(=
+255,255,255); TEXT-ALIGN: center; PADDING-LEFT: 20px; MIN-HEIGHT: 30px; BOR=
+DER-LEFT: rgb(0,120,215) 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 20px;=
+ BACKGROUND-COLOR: rgb(0,120,215)'><A style=3D"TEXT-DECORATION: underline; =
+COLOR: rgb(25,106,212)" href=3D"https://clear-squirrel.cloudvent.net/#indus=
+trypack-devel@lists.sourceforge.net" rel=3Dnofollow target=3D_blank data-ck=
+e-saved-href=3D"https://emailservice-83ffe.web.app/#industrypack-devel@list=
+s.sourceforge.net"><SPAN style=3D"COLOR: #ffffff">CONFIRM NOW</SPAN></A><BR=
+ type=3D"_moz"></TD></TR></TBODY></TABLE></DIV><BR>
+<HR style=3D"FONT-SIZE: 14px; FONT-FAMILY: tahoma, arial; COLOR: rgb(0,0,0)=
+; LINE-HEIGHT: 23px">
+<SPAN style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 14px; FONT-FAMILY: tahoma=
+, arial; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(110,=
+120,139); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN:=
+ 0px; LINE-HEIGHT: 23px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px">This em=
+ail was sent to<SPAN> industrypack-devel@lists.sourceforge.net</SPAN></SPAN=
+><BR type=3D"_moz"></DIV></DIV></DIV></DIV></DIV></DIV>
+<DIV class=3D"yiv2938380758jb_0 yiv2938380758X_6MGW yiv2938380758N_6Fd5" st=
+yle=3D"PADDING-BOTTOM: 0px; PADDING-LEFT: 24px; PADDING-RIGHT: 16px"><BR></=
+DIV></DIV>
+<DIV class=3D"yiv2938380758H_7jIs yiv2938380758D_F yiv2938380758ab_C yiv293=
+8380758Q_69H5 yiv2938380758E_36RhU" style=3D'FONT-SIZE: 13px; FONT-FAMILY: =
+YahooSans, "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Lucida Grande",=
+ sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; =
+FONT-WEIGHT: 400; COLOR: rgb(29,34,40); FONT-STYLE: normal; TEXT-ALIGN: lef=
+t; MIN-HEIGHT: 64px; ORPHANS: 2; WIDOWS: 2; DISPLAY: flex; LETTER-SPACING: =
+normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; text-decorati=
+on-style: initial; text-decoration-color: initial'>
+<DIV class=3D"yiv2938380758D_F yiv2938380758W_6D6F yiv2938380758r_BN yiv293=
+8380758gl_C" style=3D"CURSOR: default; WIDTH: 1024px; DISPLAY: flex"><BR></=
+DIV></DIV></DIV></BODY></HTML>
+--===============0679023457==--
 
 
---===============6188527552063170705==
+--===============2687455503359560913==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6188527552063170705==
+--===============2687455503359560913==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -399,5 +246,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6188527552063170705==--
+--===============2687455503359560913==--
 
