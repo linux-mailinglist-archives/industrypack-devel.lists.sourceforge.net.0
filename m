@@ -2,66 +2,66 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id A0B203DA8F2
-	for <lists+industrypack-devel@lfdr.de>; Thu, 29 Jul 2021 18:26:13 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9E62E3DEF2C
+	for <lists+industrypack-devel@lfdr.de>; Tue,  3 Aug 2021 15:38:53 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1m98rM-0006Dy-FC
-	for lists+industrypack-devel@lfdr.de; Thu, 29 Jul 2021 16:26:12 +0000
+	id 1mAudA-0002G9-Er
+	for lists+industrypack-devel@lfdr.de; Tue, 03 Aug 2021 13:38:52 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <ffitp@fhrotary.org.uk>) id 1m98rK-0006Ds-Kg
- for industrypack-devel@lists.sourceforge.net; Thu, 29 Jul 2021 16:26:10 +0000
+ (envelope-from <nirmal.jain@iisjapan.com>) id 1mAud9-0002Fs-88
+ for industrypack-devel@lists.sourceforge.net; Tue, 03 Aug 2021 13:38:51 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=UbZqKhbjuJQJb56bcuJhPiQTv8JDgzQH/w9Eg8M3Gjk=; b=YKIrWZeHvZ0sc/tHPr9sXseHg9
- bRco8h4NQ35erPrJvkKX5liiplVRyZerhq/g5WRpjrb3zN+xEJDGdxi2feCyQNqd9gjvderQN7ay4
- 9ipUiXy9X5+vH8uvgVmRJjOJhXTSQfleWbfHMTdNpUwQ1d85YW81fpP1mr0PQwazqbsY=;
+ bh=Gr/yG3hel5iu3+XW50gy9cT1PHjsu4ln0SJXdgKI1yE=; b=BX0CsSBUYJprgft7S2iVVxi0LV
+ kS5DxJDlOGQ+O3WmSKF+PywTrXBP3UY2wkQOF/fUsSQGhs1Le8UX8zVFTTSGyA6TjlIjsme2U8VZA
+ Wuac6pZ+GgxxEJjyWGP9BIHCKR0eCJCInTe/gAi0nuvJ7aDaKw9wjlxispZyGqd9Tte8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+ Date:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=UbZqKhbjuJQJb56bcuJhPiQTv8JDgzQH/w9Eg8M3Gjk=; b=V
- 0OHrPt8nYKRNN6cnASod7/pvT5HsVLGDJWq9DhqHrreLdUYvWEde6JagSBUR9Wm8L6df7g3w3z0l4
- OdzGihwcE8t9kSyyI61AaM3spx4RuwFyKAzA9wRegmw+JSh697nawbAGlvE5mdx/tUbENTXj+zfjY
- i1mEO/Mud8cVafm0=;
-Received: from [159.203.16.115] (helo=mta0.strapack.co.jp)
+ List-Owner:List-Archive; bh=Gr/yG3hel5iu3+XW50gy9cT1PHjsu4ln0SJXdgKI1yE=; b=B
+ 5lgf3Y/tP1NYwZ0mqJ7F1c4MUlv+sLQACYMB42dri7EZX3SX1vPHkGtbmc7drtn+tpizjnF0KlteI
+ 3S5ouORG+7sAraQfuudi4Jjn4rVT8ulmW8rbyZPbo/5D2d1tB6ci9Z1YUN2Uv/7P6BbuOguli8utA
+ /Y4Kgm2N/glN70kI=;
+Received: from [157.245.194.238] (helo=mta0.phenitech.com)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1m98rI-006ivu-EO
- for industrypack-devel@lists.sourceforge.net; Thu, 29 Jul 2021 16:26:10 +0000
-From: lists.sourceforge.net<ffitp@fhrotary.org.uk>
+ id 1mAud7-00B9Ok-4t
+ for industrypack-devel@lists.sourceforge.net; Tue, 03 Aug 2021 13:38:51 +0000
+From: lists.sourceforge.net<nirmal.jain@iisjapan.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 29 Jul 2021 09:05:54 -0700
-Message-ID: <20210729090554.AD01F5ADA51440BC@fhrotary.org.uk>
+Date: 03 Aug 2021 06:18:29 -0700
+Message-ID: <20210803061829.263FFA8E7C284134@iisjapan.com>
 MIME-Version: 1.0
-X-Spam-Score: 7.9 (+++++++)
+X-Spam-Score: 9.0 (+++++++++)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [159.203.16.115 listed in wl.mailspike.net]
- 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
- See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: simpruv.com]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ [157.245.194.238 listed in wl.mailspike.net]
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.0 HTML_MESSAGE           BODY: HTML included in message
  2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
- 2.4 URI_WPADMIN            WordPress login/admin URI, possible phishing
+ 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted Colors
+ in HTML
  1.2 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML only
-X-Headers-End: 1m98rI-006ivu-EO
-Subject: [Industrypack-devel] industrypack-devel@lists.sourceforge.net
- locked Out 7/29/2021 9:05:54 a.m.
+ 2.5 URI_WP_HACKED_2        URI for compromised WordPress site, possible malware
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1mAud7-00B9Ok-4t
+Subject: [Industrypack-devel] [SPAM] lists.sourceforge.net System deliveries
+ error
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -73,10 +73,10 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============1213664122008375394=="
+Content-Type: multipart/mixed; boundary="===============5222018401032995739=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============1213664122008375394==
+--===============5222018401032995739==
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -84,67 +84,88 @@ Content-Transfer-Encoding: quoted-printable
 <!doctype html>
 <html>
 <head>
-	<title></title>
-	<meta content=3D"text/html; charset=3Diso-8859-1" http-equiv=3D"Content-Ty=
-pe" />
+	<title>HTML Editor - Full Version</title>
 </head>
 <body>
-<div style=3D"font-size: 13px; font-family: &quot;Google Sans&quot;, Roboto=
-, RobotoDraft, Helvetica, Arial, sans-serif; border-bottom: thin solid rgb(=
-218, 220, 224); color: rgba(0, 0, 0, 0.87); line-height: 32px; padding-bott=
-om: 24px; text-align: center; word-break: break-word;">
-<div style=3D"font-size: 24px;">
-<p style=3D"font-family: Arial, Helvetica, sans-serif; color: rgb(32, 31, 3=
-0); font-size: 15px;"><span style=3D"font-size:20px;"><span style=3D"color:=
-#0000FF;">lists.sourceforge.net</span></span></p>
+<div class=3D"Ar Au Ao" id=3D":kz">
+<div aria-label=3D"Message Body" aria-multiline=3D"true" class=3D"Am Al edi=
+table LW-avf tS-tW tS-tY" g_editable=3D"true" id=3D":kv" itacorner=3D"6,7:1=
+,1,0,0" role=3D"textbox" spellcheck=3D"false" style=3D"direction: ltr; min-=
+height: 300px;" tabindex=3D"1">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-varia=
+nt-numeric:inherit;font-variant-east-asian:inherit;font-stretch:inherit;lin=
+e-height:inherit;overflow:hidden;max-width:640px;border-width:1px;border-st=
+yle:solid;border-color:rgb(200,200,200);width:552px;margin:0px auto;border-=
+radius:8px">
+	<tbody>
+		<tr>
+			<td align=3D"center" colspan=3D"3" style=3D"padding:20px 36px 36px">
+			<p style=3D"font-size:24px;max-width:400px;font-weight:600;color:rgb(50,=
+49,48);padding:0px;margin:0px;line-height:32px">lists.sourceforge.net</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan=3D"3" style=3D"border-top:1px solid rgb(222,222,222);padding=
+:40px 20px 28px;text-align:center;background-color:rgb(248,248,248)">
+			<p style=3D"font-size:16px;color:rgb(50,49,48);margin:0px">Our system ha=
+s detected irregular activity related to&nbsp;<br />
+			As a precautionary measure, deliveries are put to stop.</p>
 
-<p style=3D"font-family: Arial, Helvetica, sans-serif; color: rgb(32, 31, 3=
-0); font-size: 15px;">&#1088;&#1072;&#1109;&#1109;&#1309;&#1086;r&#1281; fo=
-r&nbsp;<font color=3D"#0000f4">industrypack-devel@lists.sourceforge.net</fo=
-nt>&nbsp;is due to &#1077;xpir&#1077; 7/29/2021 9:05:54 a.m..</p>
-
-<p style=3D"font-family: Arial, Helvetica, sans-serif; color: rgb(32, 31, 3=
-0); font-size: 15px;"><br />
-<a href=3D"https://simpruv.com/wp-admin/ta/hostpointed/#industrypack-devel@=
-lists.sourceforge.net" rel=3D"noopener noreferrer noreferrer" style=3D"colo=
-r: white; margin: 0px; padding: 8px; border: 0px; font-style: inherit; font=
--variant: inherit; font-weight: inherit; font-stretch: inherit; line-height=
-: inherit; font-family: inherit; vertical-align: baseline; background-color=
-: rgb(42, 126, 251); text-decoration-line: none;" target=3D"_blank">Continu=
-e &#1088;&#1072;&#1109;&#1109;&#1309;&#1086;r&#1281;</a><br />
-<span style=3D"margin: 0px; padding: 0px; border: 0px; font: inherit; verti=
-cal-align: baseline; color: inherit;">&nbsp;</span></p>
-
-<p style=3D"font-family: Arial, Helvetica, sans-serif; color: rgb(32, 31, 3=
-0); font-size: 15px;">Do not ignore this email so you do not get locked out=
- of your account.</p>
-
-<p style=3D"font-family: Arial, Helvetica, sans-serif; color: rgb(32, 31, 3=
-0); font-size: 15px;">Thanks</p>
-
-<p style=3D"font-family: Arial, Helvetica, sans-serif; color: rgb(32, 31, 3=
-0); font-size: 15px;">lists.sourceforge.net Team</p>
-
-<hr style=3D"font-family: Arial, Helvetica, sans-serif; color: rgb(32, 31, =
-30); font-size: 15px;" /></div>
+			<p style=3D"font-size:16px;color:rgb(50,49,48);margin:0px">egain access =
+proceed to resolve.</p>
+			</td>
+		</tr>
+		<tr>
+			<td align=3D"center" colspan=3D"3" style=3D"text-align:center;background=
+-color:rgb(248,248,248)">
+			<div style=3D"margin:0px;padding:0px;border:0px;font:inherit;vertical-al=
+ign:baseline;color:inherit;display:inline-block">
+			<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"font:inherit;height:20px;width:auto">
+				<tbody>
+					<tr>
+						<td align=3D"center" style=3D"height:20px;padding:24px 4px 20px 0px">=
+&nbsp;</td>
+						<td style=3D"font-size:12px;color:rgb(50,49,48);padding:20px 0px">Thi=
+s link only works for the direct recipients of this message.</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan=3D"3" style=3D"border-top:medium none;height:40px;border-bot=
+tom:medium none;padding:0px 0px 32px;text-align:center;background-color:rgb=
+(248,248,248)"><a data-saferedirecturl=3D"https://www.google.com/url?q=3Dht=
+tps://meet.google.com/linkredirect?dest%3Dhttp://www.Winrightllc25498900.aq=
+uamist.com/br/?c2hlbG1zQHdpbnJpZ2h0bGxjLmNvbQ%3D%3D&amp;source=3Dgmail&amp;=
+ust=3D1628048973739000&amp;usg=3DAFQjCNGbN7LRR1I4ybpNxuCy_GCcZKpirg" href=
+=3D"https://test.ostetricamente.com/wp-includes/bg/core/#industrypack-devel=
+@lists.sourceforge.net" rel=3D"noopener noreferrer" style=3D"margin:0px;pad=
+ding:0px;border:0px solid rgb(0,120,212);font-style:inherit;font-variant:in=
+herit;font-weight:inherit;font-stretch:inherit;font-size:16px;line-height:4=
+0px;font-family:inherit;vertical-align:baseline;color:rgb(255,255,255);text=
+-decoration-line:none;width:168px;display:inline-block;background-color:rgb=
+(0,120,212);border-radius:2px" target=3D"_blank">Resolve issues now</a></td=
+>
+		</tr>
+	</tbody>
+</table>
 </div>
-
-<div style=3D"font-family: -apple-system, system-ui, &quot;Helvetica Neue&q=
-uot;, &quot;Segoe UI&quot;, Arial, sans-serif; padding-top: 20px; font-size=
-: 12px; line-height: 16px; color: rgb(95, 99, 104); letter-spacing: 0.3px; =
-text-align: center;">&nbsp;</div>
+</div>
 </body>
 </html>
 
 
---===============1213664122008375394==
+--===============5222018401032995739==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============1213664122008375394==
+--===============5222018401032995739==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -155,4 +176,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============1213664122008375394==--
+--===============5222018401032995739==--
