@@ -2,66 +2,75 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E62E3DEF2C
-	for <lists+industrypack-devel@lfdr.de>; Tue,  3 Aug 2021 15:38:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 78EBB3E149B
+	for <lists+industrypack-devel@lfdr.de>; Thu,  5 Aug 2021 14:20:37 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mAudA-0002G9-Er
-	for lists+industrypack-devel@lfdr.de; Tue, 03 Aug 2021 13:38:52 +0000
+	id 1mBcMW-0007ue-9K
+	for lists+industrypack-devel@lfdr.de; Thu, 05 Aug 2021 12:20:36 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <nirmal.jain@iisjapan.com>) id 1mAud9-0002Fs-88
- for industrypack-devel@lists.sourceforge.net; Tue, 03 Aug 2021 13:38:51 +0000
+ (envelope-from <gregkh@linuxfoundation.org>) id 1mBcMT-0007uK-HM
+ for industrypack-devel@lists.sourceforge.net; Thu, 05 Aug 2021 12:20:33 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=In-Reply-To:Content-Type:MIME-Version:References:
+ Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Gr/yG3hel5iu3+XW50gy9cT1PHjsu4ln0SJXdgKI1yE=; b=BX0CsSBUYJprgft7S2iVVxi0LV
- kS5DxJDlOGQ+O3WmSKF+PywTrXBP3UY2wkQOF/fUsSQGhs1Le8UX8zVFTTSGyA6TjlIjsme2U8VZA
- Wuac6pZ+GgxxEJjyWGP9BIHCKR0eCJCInTe/gAi0nuvJ7aDaKw9wjlxispZyGqd9Tte8=;
+ bh=mLyX5PNumG5qUiyfihEETmXp4hL5flllAROEbt1+A4E=; b=VWTzztgFd9iIaJO504i6CWZvF+
+ 24e3BU6XvXM9gTRney+ewAdKE6abD21dkhN3f230n0C3sKrmXQqkSkIK+ioGj3qg/OL2dpNMjflD2
+ InL4x1vi28xQYKeIOD4U+DcZczWuV5Oou5rr5sRRaB3xBp9lkmZURsarGkyQvjyoA3eg=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
- Date:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Gr/yG3hel5iu3+XW50gy9cT1PHjsu4ln0SJXdgKI1yE=; b=B
- 5lgf3Y/tP1NYwZ0mqJ7F1c4MUlv+sLQACYMB42dri7EZX3SX1vPHkGtbmc7drtn+tpizjnF0KlteI
- 3S5ouORG+7sAraQfuudi4Jjn4rVT8ulmW8rbyZPbo/5D2d1tB6ci9Z1YUN2Uv/7P6BbuOguli8utA
- /Y4Kgm2N/glN70kI=;
-Received: from [157.245.194.238] (helo=mta0.phenitech.com)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ h=In-Reply-To:Content-Type:MIME-Version:References:Message-ID:Subject:Cc:To
+ :From:Date:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=mLyX5PNumG5qUiyfihEETmXp4hL5flllAROEbt1+A4E=; b=LeWcODSb9iKDRpph0ojNut2oSk
+ zQAORjl6JWhMGTVXFAHWW8y/RUwLVuBt5FsS9LAIslVIEYgJzBSv/d0lB+tgKAMeUPhsMWofqtNAf
+ 4YHtEuEF5yhtihUD78xYJBifojEl6/jaoRgHbRWb3YLzkgVrNYmn917FXMd/5K4MshTE=;
+Received: from mail.kernel.org ([198.145.29.99])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mAud7-00B9Ok-4t
- for industrypack-devel@lists.sourceforge.net; Tue, 03 Aug 2021 13:38:51 +0000
-From: lists.sourceforge.net<nirmal.jain@iisjapan.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 03 Aug 2021 06:18:29 -0700
-Message-ID: <20210803061829.263FFA8E7C284134@iisjapan.com>
+ id 1mBcMM-0008Ra-7A
+ for industrypack-devel@lists.sourceforge.net; Thu, 05 Aug 2021 12:20:33 +0000
+Received: by mail.kernel.org (Postfix) with ESMTPSA id 64B2E61131;
+ Thu,  5 Aug 2021 12:20:15 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=linuxfoundation.org;
+ s=korg; t=1628166016;
+ bh=hltNOYGNq9IKaszUFsVAUaSkYIfIAlRCI0OZn9UjbPM=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=ng5EwiERXnof1DEYvU2hmUZ0O245fpm2i1omaHOWCQTfKFo5/N2+oUKJzqq6yO1gQ
+ /AJJ3OuLPv8uZnauzfKJdk5PmMUv5+tXnUSdZh9OCxxJTf700R4l/yY0HITtmj+X5f
+ 0UyeVKkZ9J8YSKfypse8EfcpyYZ/1jx7/g+5APZ4=
+Date: Thu, 5 Aug 2021 14:20:13 +0200
+From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+To: Dongliang Mu <mudongliangabcd@gmail.com>
+Message-ID: <YQvXfQ4A04cy5MEA@kroah.com>
+References: <20210721111137.1523229-1-mudongliangabcd@gmail.com>
+ <20210721111137.1523229-2-mudongliangabcd@gmail.com>
 MIME-Version: 1.0
-X-Spam-Score: 9.0 (+++++++++)
+Content-Disposition: inline
+In-Reply-To: <20210721111137.1523229-2-mudongliangabcd@gmail.com>
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
  See http://spamassassin.org/tag/ for more details.
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [157.245.194.238 listed in wl.mailspike.net]
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 HTML_MESSAGE           BODY: HTML included in message
- 2.3 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 1.0 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted Colors
- in HTML
- 1.2 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML only
- 2.5 URI_WP_HACKED_2        URI for compromised WordPress site, possible malware
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1mAud7-00B9Ok-4t
-Subject: [Industrypack-devel] [SPAM] lists.sourceforge.net System deliveries
- error
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ -0.7 DKIMWL_WL_HIGH         DKIMwl.org - High trust sender
+ 0.1 AWL AWL: Adjusted score from AWL reputation of From: address
+X-Headers-End: 1mBcMM-0008Ra-7A
+Subject: Re: [Industrypack-devel] [PATCH 2/3] ipack: tpci200: fix many
+ double free issues in tpci200_pci_probe
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -73,107 +82,45 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============5222018401032995739=="
+Cc: Aditya Srivastava <yashsri421@gmail.com>,
+ Samuel Iglesias Gonsalvez <siglesias@igalia.com>,
+ Randy Dunlap <rdunlap@infradead.org>,
+ Jens Taprogge <jens.taprogge@taprogge.org>, linux-kernel@vger.kernel.org,
+ Lv Yunlong <lyl2019@mail.ustc.edu.cn>,
+ industrypack-devel@lists.sourceforge.net
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============5222018401032995739==
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+On Wed, Jul 21, 2021 at 07:11:31PM +0800, Dongliang Mu wrote:
+> The function tpci200_register called by tpci200_install and
+> tpci200_unregister called by tpci200_uninstall are in pair. However,
+> tpci200_unregister has some cleanup operations not in the
+> tpci200_register. So the error handling code of tpci200_pci_probe has
+> many different double free issues.
+> 
+> Fix this problem by moving those cleanup operations out of
+> tpci200_unregister, into tpci200_pci_remove and reverting
+> the previous commit 9272e5d0028d
+> 
+> Reported-by: Dongliang Mu <mudongliangabcd@gmail.com>
+> Fixes: 9272e5d0028d ("ipack/carriers/tpci200: Fix a double free in tpci200_pci_probe")
+> Signed-off-by: Dongliang Mu <mudongliangabcd@gmail.com>
+> ---
+>  drivers/ipack/carriers/tpci200.c | 35 ++++++++++++++++----------------
+>  1 file changed, 17 insertions(+), 18 deletions(-)
 
-<!doctype html>
-<html>
-<head>
-	<title>HTML Editor - Full Version</title>
-</head>
-<body>
-<div class=3D"Ar Au Ao" id=3D":kz">
-<div aria-label=3D"Message Body" aria-multiline=3D"true" class=3D"Am Al edi=
-table LW-avf tS-tW tS-tY" g_editable=3D"true" id=3D":kv" itacorner=3D"6,7:1=
-,1,0,0" role=3D"textbox" spellcheck=3D"false" style=3D"direction: ltr; min-=
-height: 300px;" tabindex=3D"1">
-<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-varia=
-nt-numeric:inherit;font-variant-east-asian:inherit;font-stretch:inherit;lin=
-e-height:inherit;overflow:hidden;max-width:640px;border-width:1px;border-st=
-yle:solid;border-color:rgb(200,200,200);width:552px;margin:0px auto;border-=
-radius:8px">
-	<tbody>
-		<tr>
-			<td align=3D"center" colspan=3D"3" style=3D"padding:20px 36px 36px">
-			<p style=3D"font-size:24px;max-width:400px;font-weight:600;color:rgb(50,=
-49,48);padding:0px;margin:0px;line-height:32px">lists.sourceforge.net</p>
-			</td>
-		</tr>
-		<tr>
-			<td colspan=3D"3" style=3D"border-top:1px solid rgb(222,222,222);padding=
-:40px 20px 28px;text-align:center;background-color:rgb(248,248,248)">
-			<p style=3D"font-size:16px;color:rgb(50,49,48);margin:0px">Our system ha=
-s detected irregular activity related to&nbsp;<br />
-			As a precautionary measure, deliveries are put to stop.</p>
+This needs to be applied to the tree now, and should not depend on your
+patch 1/3 here as it is a bugfix.  Please redo this series and send 2,
+one to be merged for 5.14-final and to go to the stable kernels, and a
+separate "clean up things" series that can wait until 5.15-rc1.
 
-			<p style=3D"font-size:16px;color:rgb(50,49,48);margin:0px">egain access =
-proceed to resolve.</p>
-			</td>
-		</tr>
-		<tr>
-			<td align=3D"center" colspan=3D"3" style=3D"text-align:center;background=
--color:rgb(248,248,248)">
-			<div style=3D"margin:0px;padding:0px;border:0px;font:inherit;vertical-al=
-ign:baseline;color:inherit;display:inline-block">
-			<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
- style=3D"font:inherit;height:20px;width:auto">
-				<tbody>
-					<tr>
-						<td align=3D"center" style=3D"height:20px;padding:24px 4px 20px 0px">=
-&nbsp;</td>
-						<td style=3D"font-size:12px;color:rgb(50,49,48);padding:20px 0px">Thi=
-s link only works for the direct recipients of this message.</td>
-					</tr>
-				</tbody>
-			</table>
-			</div>
-			</td>
-		</tr>
-		<tr>
-			<td colspan=3D"3" style=3D"border-top:medium none;height:40px;border-bot=
-tom:medium none;padding:0px 0px 32px;text-align:center;background-color:rgb=
-(248,248,248)"><a data-saferedirecturl=3D"https://www.google.com/url?q=3Dht=
-tps://meet.google.com/linkredirect?dest%3Dhttp://www.Winrightllc25498900.aq=
-uamist.com/br/?c2hlbG1zQHdpbnJpZ2h0bGxjLmNvbQ%3D%3D&amp;source=3Dgmail&amp;=
-ust=3D1628048973739000&amp;usg=3DAFQjCNGbN7LRR1I4ybpNxuCy_GCcZKpirg" href=
-=3D"https://test.ostetricamente.com/wp-includes/bg/core/#industrypack-devel=
-@lists.sourceforge.net" rel=3D"noopener noreferrer" style=3D"margin:0px;pad=
-ding:0px;border:0px solid rgb(0,120,212);font-style:inherit;font-variant:in=
-herit;font-weight:inherit;font-stretch:inherit;font-size:16px;line-height:4=
-0px;font-family:inherit;vertical-align:baseline;color:rgb(255,255,255);text=
--decoration-line:none;width:168px;display:inline-block;background-color:rgb=
-(0,120,212);border-radius:2px" target=3D"_blank">Resolve issues now</a></td=
->
-		</tr>
-	</tbody>
-</table>
-</div>
-</div>
-</body>
-</html>
+thanks,
 
+greg k-h
 
---===============5222018401032995739==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============5222018401032995739==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============5222018401032995739==--
