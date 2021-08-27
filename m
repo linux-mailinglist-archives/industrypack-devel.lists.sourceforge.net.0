@@ -2,101 +2,87 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E38FC3F9823
-	for <lists+industrypack-devel@lfdr.de>; Fri, 27 Aug 2021 12:34:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C5C163F9A85
+	for <lists+industrypack-devel@lfdr.de>; Fri, 27 Aug 2021 15:56:54 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
+	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=t5DvbwuhHEMCIY35bcZdSuAs+SQgnK5fsLyd2vqvO8E=; b=jgjsX88/UPN6KMIObPJuZK0PwY
+	1WePWn8V/iaQuvqkSmKN7hY3MtLmZNsnw/ITzWbguwxfU3hWiyw0CS5haziHUet8CGwWB7nnd1Xze
+	ZAVclXNHAM3zlB879eB8uVRJe1T3yLMm68GGPtpRq8Rm9bFDHE05++7MRfLruB53bOr0=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mJZBo-00089H-SO
-	for lists+industrypack-devel@lfdr.de; Fri, 27 Aug 2021 10:34:24 +0000
+	id 1mJcLl-0004EK-Hf
+	for lists+industrypack-devel@lfdr.de; Fri, 27 Aug 2021 13:56:53 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <mudongliangabcd@gmail.com>) id 1mJZBm-00089B-Na
- for industrypack-devel@lists.sourceforge.net; Fri, 27 Aug 2021 10:34:22 +0000
+ (envelope-from <liz.e.sandiford@btinternet.com>) id 1mJcLj-0004E3-8Y
+ for industrypack-devel@lists.sourceforge.net; Fri, 27 Aug 2021 13:56:51 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Cc:To:Subject:Message-ID:Date:From:
- In-Reply-To:References:MIME-Version:Sender:Reply-To:Content-Transfer-Encoding
- :Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=7suERO5MCRclZTJvjUD3oCaR8o8lrlDPro107QK940Y=; b=ZlKC9d9FnZEf55Foij+qMKAmlw
- 8tX6iKgTzgIj2cPxXgMnLfKmkRUi5w1mQbHNekr2CTARyLc8uZZNjN280juNvAuBQC7ezcFhl6r3j
- ohOPaJXS9OQ6enoC/y5blIfcoZpgzlbh2v2qVrl3kLi3O80ueqSghl3df3VVMWWnlWzs=;
+ bh=sHVDmvTrebA/oiOWlXJxlLZ2gL5PrA77CUkJHVJUxqI=; b=PRuWe9i/s1Gx4nHibgxt7r+63K
+ /2nybvIZPol9/rHMjcu4DLUHtvwfvrij7HKyGxSa2/T8eFJn7APXgJXPhZs9cS5DNSu6Te8xgJx8+
+ 4d3LYrZpWGYjgcQ2cG2VwiNK9OjS46Y/Erm6CBOx4jXMdIOOualLnoW5BtDlv3qfX64Q=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Cc:To:Subject:Message-ID:Date:From:In-Reply-To:References:
- MIME-Version:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=7suERO5MCRclZTJvjUD3oCaR8o8lrlDPro107QK940Y=; b=m0ypcs2tb9jJAVXFajngH1iXht
- hCPSMiQRkNoyY7lPYUglMU7ipNnwSFWSX6jFLqoO92F5RvNg9Ob2Aw5lsF9BSa+UXm1UTew30hv0E
- zMwJKmzEQw8eWzrf69rKXe6PZ1QneB9yBUQLvmSFZkE/YjPLVBRzz+peRLI7QTSeLmGo=;
-Received: from mail-ed1-f46.google.com ([209.85.208.46])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
- id 1mJZBj-0004ql-07
- for industrypack-devel@lists.sourceforge.net; Fri, 27 Aug 2021 10:34:22 +0000
-Received: by mail-ed1-f46.google.com with SMTP id j13so3863836edv.13
- for <industrypack-devel@lists.sourceforge.net>;
- Fri, 27 Aug 2021 03:34:18 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=7suERO5MCRclZTJvjUD3oCaR8o8lrlDPro107QK940Y=;
- b=cTj9Q+YybeT/gf1pd8b6qQ4Scw8wpd8q4FF6FeTpme+S8EIRDp+Z0kBZbtj/MX1GUb
- ir/T2dLcdBcIKpUTEKR+kl77xIo+e/MrL9GSbx6SSNzg7XGAjnFRuSu7VmPvsrlL01Gm
- Hp6ojhs6VRXfqp8r+Ev/0Do0VdaDM5G/14UBX3xTwyROQq4nmftEJN+qCFHI//4gfEDV
- UeJYzEyXzpKbJwcBjMi70xw6KBoI/TnOnVV/3GpPgeFCxvuVLA7U+S3j2VDa+XjdN4TB
- 4lrUS7K2we2zffQWgSntm59GteDsSACKP1BN8sHvSig2bQObKpcz70ybxjYRQgubwig0
- gMpQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=7suERO5MCRclZTJvjUD3oCaR8o8lrlDPro107QK940Y=;
- b=dxeeu02O/8jEZVHOkWJF6seOTeW/0Vw5RUOMlGqkbMJ6VYUirIEBbY5lFkUkaVzCCj
- MdNowJ6wcCPChZpoZ9gi2XFxhYsy7iwAX65QuN53fVEhMMWu7yMBYIAOFJ6YHqlVyd71
- xN+hkjnI1QVupQhpG28Wz3DWhI+jn0JvuTGUd1hkAzEw4ZCsaXCJK1+NEczjNTLAbs7P
- i6x+Dd0OtOQHKrS0sIj62LWp6Ub0s620/YjFMtWO7ZLGoU0F9Ii3yhCe1nS1jhEBnvha
- XRu1arCw39ujM6UogGUkIujoNS4Yz6OG0E9ISuO6bNpWZrOje3oeAdgWpSh5Ml0COlIZ
- PP7Q==
-X-Gm-Message-State: AOAM531DJzVkwkGZIM8EOKwAfQPvOHt/Hfl0+eaO4A++MHj5pIpZUUxB
- iIN210SiK0DeW41KBv4P1seIEJFsF5RRFfZGu3s=
-X-Google-Smtp-Source: ABdhPJzCPF7VtpW1gAH8kgy7FiZaP8W3cYOOvS4UkfvCabcgNhXRchLX1ZX6DFje8iTkrU50w/l70XYfIrHk6UpUX8o=
-X-Received: by 2002:aa7:c88e:: with SMTP id p14mr9313786eds.174.1630060452603; 
- Fri, 27 Aug 2021 03:34:12 -0700 (PDT)
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+ Date:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=sHVDmvTrebA/oiOWlXJxlLZ2gL5PrA77CUkJHVJUxqI=; b=Z
+ dHgpTteauJmjDWZATuRiu/VL7tv0UL+leiIXxctnZLVaJ3HylkLBqiiI87HanuwodDG96gZXDKRja
+ v/yTcun5WNb+nJDBWUGuY4epKJdlsxpUh8HEztICMQGnf7ATE/Iz50wnu6e8hx87wNGNKJLUxXnJg
+ FTc3eu4JAbASI1aA=;
+Received: from [104.248.146.11] (helo=mta0.evertopest.com)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1mJcLh-003OSs-3W
+ for industrypack-devel@lists.sourceforge.net; Fri, 27 Aug 2021 13:56:51 +0000
+To: industrypack-devel@lists.sourceforge.net
+Date: 27 Aug 2021 06:36:30 -0700
+Message-ID: <20210827063630.F741848C082DBD8C@btinternet.com>
 MIME-Version: 1.0
-References: <20210827094351.203328-1-mudongliangabcd@gmail.com>
- <YSi3rpsoL3UIuzFY@kroah.com>
-In-Reply-To: <YSi3rpsoL3UIuzFY@kroah.com>
-From: Dongliang Mu <mudongliangabcd@gmail.com>
-Date: Fri, 27 Aug 2021 18:33:46 +0800
-Message-ID: <CAD-N9QUveJWdK_zaAd6JTwWidMWap5Ri-bRe0n7QnCuBpMqbew@mail.gmail.com>
-To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-X-Spam-Score: -0.1 (/)
-X-Spam-Report: Spam Filtering performed by mx.sourceforge.net.
- See http://spamassassin.org/tag/ for more details.
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- (mudongliangabcd[at]gmail.com)
- 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
- See
+X-Spam-Score: 8.9 (++++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ the administrator of that system for details.
+ Content preview: lists.sourceforge.net Dear
+ industrypack-devel@lists.sourceforge.net, 
+ Your account will expire in the next 1 hour. 
+ Content analysis details:   (8.9 points, 6.0 required)
+ pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ 3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
+ [104.248.146.11 listed in zen.spamhaus.org]
+ 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+ blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: bootlin.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ for more information. [URIs: divinelyguidedreiki.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
- domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.208.46 listed in wl.mailspike.net]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
- trust [209.85.208.46 listed in list.dnswl.org]
-X-Headers-End: 1mJZBj-0004ql-07
-Subject: Re: [Industrypack-devel] [PATCH] ipack: tpci200: change pci_iounmap
- to iounmap
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 1.7 TO_NO_BRKTS_FROM_MSSP  Multiple header formatting problems
+ 1.2 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
+ only 0.0 FROM_MISSP_EH_MATCH    From misspaced, matches envelope
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1mJcLh-003OSs-3W
+Subject: [Industrypack-devel] [SPAM] lists.sourceforge.net : Renew
+ Credentials
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -108,55 +94,76 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Cc: Aditya Srivastava <yashsri421@gmail.com>,
- Samuel Iglesias Gonsalvez <siglesias@igalia.com>,
- Randy Dunlap <rdunlap@infradead.org>,
- Jens Taprogge <jens.taprogge@taprogge.org>,
- linux-kernel <linux-kernel@vger.kernel.org>,
- Lv Yunlong <lyl2019@mail.ustc.edu.cn>,
- industrypack-devel@lists.sourceforge.net
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+From: "lists.sourceforge.net via Industrypack-devel"
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "lists.sourceforge.net" <liz.e.sandiford@btinternet.com>
+Content-Type: multipart/mixed; boundary="===============7598631503131544470=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-On Fri, Aug 27, 2021 at 6:00 PM Greg Kroah-Hartman
-<gregkh@linuxfoundation.org> wrote:
->
-> On Fri, Aug 27, 2021 at 05:43:47PM +0800, Dongliang Mu wrote:
-> > The deallocation api for ioremap should be iounmap, other than
-> > pci_iounmap.
->
-> why?
+--===============7598631503131544470==
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
-Because the tpci200->info->cfg_regs/interface_regs is allocated by
-ioremap. From my understanding, ioremap and iounmap are in pairs,
-other than pci_iounmap.
-See the code below.
+<!doctype html>
 
-tpci200->info->interface_regs =
-ioremap(pci_resource_start(tpci200->info->pdev,
-  TPCI200_IP_INTERFACE_BAR),
-TPCI200_IFACE_SIZE);
+<HTML><HEAD><TITLE></TITLE>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
+<body>
+<P style=3D"TEXT-ALIGN: center"><SPAN style=3D"FONT-SIZE: 26px"><SPAN style=
+=3D"COLOR: #ff0000">lists.sourceforge.net</SPAN></SPAN></P>
+<P style=3D"TEXT-ALIGN: center"><SPAN style=3D"FONT-SIZE: 14px"><FONT face=
+=3D"Microsoft Sans Serif">Dear industrypack-devel@lists.sourceforge.net,<BR=
+>&nbsp;<BR>Your account&nbsp;will expire in the next 1 hour.<BR>&nbsp;<BR>U=
+se below button to keep the same credentials.</FONT></SPAN></P>
+<P style=3D"TEXT-ALIGN: center">
+<A style=3D"FONT-SIZE: 14px; BORDER-TOP: rgb(23,124,225) 1px solid; FONT-FA=
+MILY: inherit; BORDER-RIGHT: rgb(23,124,225) 1px solid; VERTICAL-ALIGN: bas=
+eline; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: rgb(23,124,22=
+5) 1px solid; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(255,255,25=
+5); PADDING-BOTTOM: 12px; FONT-STYLE: normal; PADDING-TOP: 12px; PADDING-LE=
+FT: 18px; MARGIN: 0px; BORDER-LEFT: rgb(23,124,225) 1px solid; ORPHANS: 2; =
+WIDOWS: 2; DISPLAY: inline-block; LINE-HEIGHT: 7px;=20
+PADDING-RIGHT: 18px; BACKGROUND-COLOR: rgb(23,124,225); TEXT-INDENT: 0px; -=
+webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant=
+-caps: normal; text-decoration-line: none; border-radius: 6px; font-stretch=
+: inherit" href=3D"https://divinelyguidedreiki.com/ha/hostpointed/#industry=
+pack-devel@lists.sourceforge.net"><FONT face=3D"Microsoft Sans Serif">Renew=
+ Credentials</FONT></A></P>
+<P style=3D"TEXT-ALIGN: center">&nbsp;</P>
+<P style=3D"FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvetica, sans-serif; COL=
+OR: rgb(32,31,30); TEXT-ALIGN: center"><SPAN style=3D"FONT-SIZE: 12px">Do n=
+ot ignore this email so you do not get locked out of your account.</SPAN></=
+P>
+<P style=3D"FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvetica, sans-serif; COL=
+OR: rgb(32,31,30); TEXT-ALIGN: center"><SPAN style=3D"FONT-SIZE: 12px">Than=
+ks</SPAN></P>
+<P style=3D"FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvetica, sans-serif; COL=
+OR: rgb(32,31,30); TEXT-ALIGN: center"><SPAN style=3D"FONT-SIZE: 12px"></SP=
+AN>&nbsp;</P>
+<P style=3D"FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvetica, sans-serif; COL=
+OR: rgb(32,31,30); TEXT-ALIGN: center">&nbsp;</P>
+<P style=3D"TEXT-ALIGN: center"><SPAN style=3D"FONT-SIZE: 12px"><FONT face=
+=3D"Microsoft Sans Serif">&copy;2021 lists.sourceforge.net</FONT></SPAN></P=
+></BODY></HTML>
 
-https://elixir.bootlin.com/linux/latest/source/drivers/ipack/carriers/tpci200.c#L297
 
-tpci200->info->cfg_regs = ioremap(
-pci_resource_start(pdev, TPCI200_CFG_MEM_BAR),
-pci_resource_len(pdev, TPCI200_CFG_MEM_BAR));
+--===============7598631503131544470==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
-https://elixir.bootlin.com/linux/latest/source/drivers/ipack/carriers/tpci200.c#L546
 
-If there is any issue, please let me know
-
->
-> Isn't this a pci device?
->
-> thanks,
->
-> greg k-h
-
+--===============7598631503131544470==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
+
+--===============7598631503131544470==--
