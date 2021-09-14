@@ -2,86 +2,102 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33FDD40CF38
-	for <lists+industrypack-devel@lfdr.de>; Thu, 16 Sep 2021 00:07:44 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id B524B40DCFB
+	for <lists+industrypack-devel@lfdr.de>; Thu, 16 Sep 2021 16:39:21 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mQd4A-0004os-Lv
-	for lists+industrypack-devel@lfdr.de; Wed, 15 Sep 2021 22:07:42 +0000
+	id 1mQsXo-0008T4-HE
+	for lists+industrypack-devel@lfdr.de; Thu, 16 Sep 2021 14:39:20 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- id 1mQd48-0004ol-Vq
- for industrypack-devel@lists.sourceforge.net; Wed, 15 Sep 2021 22:07:40 +0000
+ (envelope-from <daihoda@cmb.co.kr>) id 1mQsXo-0008Su-2I
+ for industrypack-devel@lists.sourceforge.net; Thu, 16 Sep 2021 14:39:20 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Message-Id:Reply-To:Date:From:To:
+ MIME-Version:Content-Type:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=WTdUX6+aO/iswfM85E57I0e4LjYDuvFkd3ZxvF+DUtc=; b=XE3cdM3srzsIVBrWoR7pifnlFp
- eAlZ6tKUzuFDdn/w52ySg1xQ57G2kjHRVPcs1RQrLc9LWOZXHAJH92dXdlHmAOsK7xEmTQxWZe9VV
- DaKQnA59ZWGlcDZI4elQiMdhG/3se5WzVBY0Wsyz3qIOcD5W7S0rqmcr/eF2FhzZYAEs=;
+ bh=DdxhQKwhoe4/Kiizt2ZFcAiL7xmG8YhGlioGoOuWvDY=; b=Hb8zZ33eLQsE3w6BROd81kJAjo
+ DavTP8cVfyz2P28uj2Xe/yhfNPEOSVBrqSRPJ+jttTJwfdXT7ED8057a9Mu4LquhwiZFG/igQq8sj
+ i6ik9GGuMaE0mO+fIcg/VnDArqFzC15a+WGeIacMUSgxP6Pk/kE5NUja6iLvE7kNclFw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Subject:Message-Id:Reply-To:Date:From:To:MIME-Version:Content-Type:Sender
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=WTdUX6+aO/iswfM85E57I0e4LjYDuvFkd3ZxvF+DUtc=; b=F
- sIpUcn5R+4H34UGJZ1rCU25dfeYas5zKP+Hg3aT2IsF7f5reLBp4qK0jHt8d7a7fm5zEGkSVGmhux
- L5SQlEwF001jJrrTmrGtlKEWBJIPN3+2yd/pGYW6w11pz68ZA8jIgGBAokC7FvoKaWdu4IbL0wrej
- zpgqdVLhI7BSrJS0=;
-Received: from [178.128.87.210] (helo=bizcloud-valuevalves.com.tw)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
- id 1mQd48-0002oF-4d
- for industrypack-devel@lists.sourceforge.net; Wed, 15 Sep 2021 22:07:40 +0000
-Received: from 127.0.0.1 (bizcloud-valuevalves.com.tw [IPv6:::1])
- by bizcloud-valuevalves.com.tw (Postfix) with ESMTP id 34E711E7DE0
+ List-Owner:List-Archive; bh=DdxhQKwhoe4/Kiizt2ZFcAiL7xmG8YhGlioGoOuWvDY=; b=R
+ v6OnxbAxdkie6pwSnNRNfCEfEE3CEGtFr5vJa22owlMlrfPgrhuWSB1UQLo6cSYxJcgEOs7b2+nCi
+ y1x8yi6WtZYAwAQpugbQW+V8W2j/Lw/McXvvoGg89hnThclv+SEFx3Nk/UiEvt9dKG6bdeWaBrn6K
+ Ls2YvvHChubGupC4=;
+Received: from [200.90.157.143] (helo=mail.gruponetpc.com)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1mQsXn-00Cr2B-CV
+ for industrypack-devel@lists.sourceforge.net; Thu, 16 Sep 2021 14:39:20 +0000
+Received: from localhost (localhost [127.0.0.1])
+ by mail.gruponetpc.com (Postfix) with ESMTP id 03365B95B11
  for <industrypack-devel@lists.sourceforge.net>;
- Wed, 15 Sep 2021 21:31:59 +0000 (UTC)
-From: lists.sourceforge.net-IT@bizcloud-valuevalves.com.tw
-To: industrypack-devel@lists.sourceforge.net
-Date: 15 Sep 2021 14:32:00 -0700
-Message-ID: <20210915143159.4D5DAB7066F45643@from.header.has.no.domain>
+ Wed, 15 Sep 2021 23:15:45 -0500 (-05)
+Received: from mail.gruponetpc.com ([127.0.0.1])
+ by localhost (mail.gruponetpc.com [127.0.0.1]) (amavisd-new, port 10032)
+ with ESMTP id eqq64PaAr7gW
+ for <industrypack-devel@lists.sourceforge.net>;
+ Wed, 15 Sep 2021 23:15:44 -0500 (-05)
+Received: from localhost (localhost [127.0.0.1])
+ by mail.gruponetpc.com (Postfix) with ESMTP id 5C08EBD2B4D
+ for <industrypack-devel@lists.sourceforge.net>;
+ Wed, 15 Sep 2021 05:11:57 -0500 (-05)
+X-Virus-Scanned: amavisd-new at gruponetpc.com
+Received: from mail.gruponetpc.com ([127.0.0.1])
+ by localhost (mail.gruponetpc.com [127.0.0.1]) (amavisd-new, port 10026)
+ with ESMTP id K7esm-cCQwPa
+ for <industrypack-devel@lists.sourceforge.net>;
+ Wed, 15 Sep 2021 05:11:57 -0500 (-05)
+Received: from [212.162.150.123] (unknown [212.162.150.123])
+ by mail.gruponetpc.com (Postfix) with ESMTPSA id 8F31ACEDB08
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 14 Sep 2021 16:38:02 -0500 (-05)
 MIME-Version: 1.0
-X-Spam-Score: 4.8 (++++)
+To: industrypack-devel@lists.sourceforge.net
+From: "Manon Grace" <daihoda@cmb.co.kr>
+Date: Tue, 14 Sep 2021 14:38:01 -0700
+Message-Id: <20210914213803.8F31ACEDB08@mail.gruponetpc.com>
+X-Spam-Score: 8.6 (++++++++)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  您的帳戶已被暫時阻止和限制 industrypack-devel@lists.sourceforge.net
-    您的帳戶已被暫時阻止和限制發送和接收電子郵件點擊下面的連結來
-    修復帳戶。 驗證帳戶 
+ Content preview:  V�Een� majiteli e -mailu, laskavB potvrFte vlastnictv�
+   sv�ho e -mailu industrypack-devel@lists.sourceforge.net. Byl n�hodnB vybr�n
+    po losov�n� elektronick�ho poD�taDe Spinball, aby obdrEel dar [...] 
  
- Content analysis details:   (4.8 points, 6.0 required)
+ Content analysis details:   (8.6 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
-                             blocked.  See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URIs: webnode.com]
-  0.0 RCVD_IN_SORBS_DUL      RBL: SORBS: sent directly from dynamic IP
-                             address
-                             [178.128.87.210 listed in dnsbl.sorbs.net]
-  0.8 DKIM_ADSP_NXDOMAIN     No valid author signature and domain not in
-                             DNS
+  0.5 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+                             [200.90.157.143 listed in dnsbl-1.uceprotect.net]
+  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
   0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [178.128.87.210 listed in wl.mailspike.net]
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                            [200.90.157.143 listed in bl.score.senderscore.com]
   1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  1.2 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
-                             only
-  1.4 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
-X-Headers-End: 1mQd48-0002oF-4d
-Subject: [Industrypack-devel] =?utf-8?b?55S15a2Q6YKu5Lu26aqM6K+B?=
+  0.0 LOTS_OF_MONEY          Huge... sums of money
+  2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+  2.0 MONEY_FREEMAIL_REPTO   Lots of money from someone using free
+                             email?
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1mQsXn-00Cr2B-CV
+Subject: [Industrypack-devel] [SPAM]
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -93,111 +109,63 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============5217988855933827626=="
+Reply-To: gracemanonfoundation@aol.com
+Content-Type: multipart/mixed; boundary="===============5906906217570008777=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============5217988855933827626==
-Content-Type: text/html;
-	charset="iso-8859-1"
+You will not see this in a MIME-aware mail reader.
+--===============5906906217570008777==
+Content-Type: multipart/alternative; boundary="===============1697402000=="
+
+You will not see this in a MIME-aware mail reader.
+--===============1697402000==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.18792"></HEAD>
-<body>
-<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WH=
-ITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 40=
-0; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-=
-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-var=
-iant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thicknes=
-s: initial; text-decoration-style: initial; text-decoration-color: initial"=
->&nbsp; &nbsp;</P>
-<table lang=3D"en" style=3D"FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvetica,=
- sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; MIN-WIDTH: 348px; TEXT=
--TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(32,31,30); FONT-STYLE: norma=
-l; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-thickness: initial; text-decoration-style: initial; text-decoration-=
-color: initial; font-variant-numeric: inherit;=20
-font-variant-east-asian: inherit; font-stretch: inherit" cellspacing=3D"0" =
-cellpadding=3D"0" width=3D"100%" border=3D"0">
-<TBODY>
-<TR align=3Dcenter>
-<td style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; MARGIN: 0px"><BR>
-<table style=3D"MAX-WIDTH: 516px; MIN-WIDTH: 220px; PADDING-BOTTOM: 20px" c=
-ellspacing=3D"0" cellpadding=3D"0" border=3D"0">
-<TBODY>
-<TR>
-<td style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; WIDTH: 8px; MARGIN: 0px" width=3D"8">&nbsp;</TD>
-<td style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; MARGIN: 0px">
-<DIV style=3D"BORDER-TOP: rgb(218,220,224) thin solid; BORDER-RIGHT: rgb(21=
-8,220,224) thin solid; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: rgb(218,220=
-,224) thin solid; PADDING-BOTTOM: 40px; PADDING-TOP: 40px; PADDING-LEFT: 20=
-px; MARGIN: 0px; BORDER-LEFT: rgb(218,220,224) thin solid; PADDING-RIGHT: 2=
-0px; border-radius: 8px" align=3Dcenter>
-<DIV style=3D'BORDER-LEFT-WIDTH: 0px; FONT-FAMILY: "", Roboto, RobotoDraft,=
- Helvetica, Arial, sans-serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: bas=
-eline; BORDER-BOTTOM: rgb(218,220,224) thin solid; PADDING-BOTTOM: 24px; PA=
-DDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 32px; PADDING-=
-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; font-stretch: inherit'>
-<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 24px; FONT-FAMILY: inherit=
-; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0=
-px; PADDING-BOTTOM: 10px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=
- PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; font-stretch: inherit"><BR>&#24=
-744;&#30340;&#24115;&#25142;&#24050;&#34987;&#26283;&#26178;&#38459;&#27490=
-;&#21644;&#38480;&#21046;</DIV>
-<table style=3D"MARGIN-TOP: 8px" align=3D"center">
-<TBODY>
-<TR style=3D"LINE-HEIGHT: normal">
-<td style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; MARGIN: 0px"><STRONG>industrypack-devel@lists.sourceforge.net</STRONG></T=
-D></TR></TBODY></TABLE></DIV>
-<DIV style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALI=
-GN: baseline; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0=
-px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0=
-px">&#24744;&#30340;&#24115;&#25142;&#24050;&#34987;&#26283;&#26178;&#38459=
-;&#27490;&#21644;&#38480;&#21046;&#30332;&#36865;&#21644;&#25509;&#25910;&#=
-38651;&#23376;&#37109;&#20214;&#40670;&#25802;&#19979;&#38754;&#30340;&#368=
-99;&#32080;&#20358;<WBR>
-&#20462;&#24489;&#24115;&#25142;&#12290;
-<DIV style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALI=
-GN: baseline; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 10px; PADDING-TOP: =
-32px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH:=
- 0px">
-<A style=3D'BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 14px; FONT-FAMILY: "", Robot=
-o, RobotoDraft, Helvetica, Arial, sans-serif; BORDER-RIGHT-WIDTH: 0px; VERT=
-ICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; MIN-WIDTH: 90px; COLOR: rgb=
-(255,255,255); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 24px;=
- MARGIN: 0px; DISPLAY: inline-block; LINE-HEIGHT: 16px; PADDING-RIGHT: 24px=
-; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR: rgb(65,132,243); font-stretch: i=
-nherit; border-radius: 5px; text-decoration-line:=20
-none' href=3D"http://dapo5.webnode.com/contact/" rel=3D"noopener noreferrer=
-" target=3D_blank data-saferedirecturl=3D"https://www.google.com/url?q=3Dht=
-tps://google.com&amp;source=3Dgmail&amp;ust=3D1631731554350000&amp;usg=3DAF=
-QjCNEIC2bGweqbfQ4TR8ihpQE2jAFrAw">&#39511;&#35657;&#24115;&#25142;</A></DIV=
->
-<P style=3D"MARGIN-BOTTOM: 1em; COLOR: red"><STRONG>&#27880;&#24847;&#65306=
-;&#22914;&#26524;&#24744;&#19981;&#39511;&#35657;&#24744;&#30340;&#24115;&#=
-25142;&#36039;&#35338;&#65292;&#23559;&#22312;&#24190;&#22825;&#20839;&#210=
-34;&#38500;&#24115;&#25142;</STRONG></P></DIV></DIV></TD>
-<td style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; WIDTH: 8px; MARGIN: 0px" width=3D"8">&nbsp;</TD></TR></TBODY></TABLE></TD=
-></TR>
-<TR style=3D"HEIGHT: 32px">
-<td style=3D"FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif=
-; MARGIN: 0px"><BR></TD></TR></TBODY></TABLE></BODY></HTML>
+V=E1=17Een=FD majiteli e -mailu, laskav=11B potvr=10Fte vlastnictv=ED sv=E9=
+ho e -mailu industrypack-devel@lists.sourceforge.net. Byl n=E1hodn=11B vybr=
+=E1n po losov=E1n=ED elektronick=E9ho po=10D=EDta=10De Spinball, aby obdr=
+=17Eel dar 1 200 000,00 USD od Manon Grace Therrien. Dal=161=ED podrobnosti=
+ po=161lete potvrzovac=ED e -mail na adresu gracemanonfoundation@aol.com
+ Dear Email Owner Kindly confirm ownership of your email industrypack-devel=
+@lists.sourceforge.net. It was randomly selected after an electronic comput=
+er Spinball draw, to receive a donation of $1,200,000.00 USD from Manon Gra=
+ce Therrien. Send a confirmation Email to gracemanonfoundation@aol.com for =
+more details
+
+--===============1697402000==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
+
+<HTML><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dutf-8"/></head><BODY><P>V=C3=A1=C5=BEen=C3=BD majiteli e -mailu, laskav=
+=C4=9B potvr=C4=8Fte vlastnictv=C3=AD sv=C3=A9ho e -mailu industrypack-deve=
+l@lists.sourceforge.net. Byl n=C3=A1hodn=C4=9B vybr=C3=A1n po losov=C3=A1n=
+=C3=AD elektronick=C3=A9ho po=C4=8D=C3=ADta=C4=8De Spinball, aby obdr=C5=BE=
+el dar 1 200 000,00 USD od Manon Grace Therrien. Dal=C5=A1=C3=AD podrobnost=
+i po=C5=A1lete potvrzovac=C3=AD e -mail na adresu <A href=3D"mailto:gracema=
+nonfoundation@aol.com">gracemanonfoundation@aol.com</A></P>
+<P>Dear Email Owner Kindly confirm ownership of your email industrypack-dev=
+el@lists.sourceforge.net. It was randomly selected after an electronic comp=
+uter Spinball draw, to receive a donation of $1,200,000.00 USD from Manon G=
+race Therrien. Send a confirmation Email to <A href=3D"mailto:gracemanonfou=
+ndation@aol.com">gracemanonfoundation@aol.com</A> for more details</P></BOD=
+Y></HTML>
+--===============1697402000==--
 
 
---===============5217988855933827626==
+--===============5906906217570008777==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5217988855933827626==
+--===============5906906217570008777==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -208,4 +176,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5217988855933827626==--
+--===============5906906217570008777==--
+
