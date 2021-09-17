@@ -2,102 +2,92 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id B524B40DCFB
-	for <lists+industrypack-devel@lfdr.de>; Thu, 16 Sep 2021 16:39:21 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6B50A40F6E0
+	for <lists+industrypack-devel@lfdr.de>; Fri, 17 Sep 2021 13:50:28 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mQsXo-0008T4-HE
-	for lists+industrypack-devel@lfdr.de; Thu, 16 Sep 2021 14:39:20 +0000
+	id 1mRCNv-0001Hy-6N
+	for lists+industrypack-devel@lfdr.de; Fri, 17 Sep 2021 11:50:27 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <daihoda@cmb.co.kr>) id 1mQsXo-0008Su-2I
- for industrypack-devel@lists.sourceforge.net; Thu, 16 Sep 2021 14:39:20 +0000
+ (envelope-from <johan@kernel.org>) id 1mRCNk-0001Hk-Gt
+ for industrypack-devel@lists.sourceforge.net; Fri, 17 Sep 2021 11:50:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Message-Id:Reply-To:Date:From:To:
- MIME-Version:Content-Type:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:Message-Id:
+ Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=DdxhQKwhoe4/Kiizt2ZFcAiL7xmG8YhGlioGoOuWvDY=; b=Hb8zZ33eLQsE3w6BROd81kJAjo
- DavTP8cVfyz2P28uj2Xe/yhfNPEOSVBrqSRPJ+jttTJwfdXT7ED8057a9Mu4LquhwiZFG/igQq8sj
- i6ik9GGuMaE0mO+fIcg/VnDArqFzC15a+WGeIacMUSgxP6Pk/kE5NUja6iLvE7kNclFw=;
+ bh=f6JqyFod1BsqdKDeNwJIl1IA62r/0xEMIf1Ww1Drpc4=; b=iy0elhyfmwMDOgBNZ/1bo/PsY2
+ fxWK0U1JJStONsDGJjY6agVKRd0mU5KgOBgYMUy/UzeMERy7nbidwT+RFCJnYcYSrjwYloyx0/eEh
+ V4qEdgMF6NywU6YHEu9PrV2WC0p2h716pnDtOwlRvGJiWXFENQQlWitkIQUeN8sDMf94=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Message-Id:Reply-To:Date:From:To:MIME-Version:Content-Type:Sender
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Content-Transfer-Encoding:MIME-Version:Message-Id:Date:Subject:Cc:To:From
+ :Sender:Reply-To:Content-Type:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=DdxhQKwhoe4/Kiizt2ZFcAiL7xmG8YhGlioGoOuWvDY=; b=R
- v6OnxbAxdkie6pwSnNRNfCEfEE3CEGtFr5vJa22owlMlrfPgrhuWSB1UQLo6cSYxJcgEOs7b2+nCi
- y1x8yi6WtZYAwAQpugbQW+V8W2j/Lw/McXvvoGg89hnThclv+SEFx3Nk/UiEvt9dKG6bdeWaBrn6K
- Ls2YvvHChubGupC4=;
-Received: from [200.90.157.143] (helo=mail.gruponetpc.com)
+ List-Owner:List-Archive; bh=f6JqyFod1BsqdKDeNwJIl1IA62r/0xEMIf1Ww1Drpc4=; b=U
+ etNGEfUpOqGS12hdGoD6ltML4o7hBCdLAnJqVn+aU72sr66c0oD6uqiq1ZBFsrYDDk3SYa0s1d17F
+ 0QgnJ3H63CBqvBH6WLRvKPjZ50aqzaSHvxirKN71a4E8eXyH26Xa5Tny5083IaiYtPx49JoBmt30g
+ OQP9dXkBQ5B1qMQU=;
+Received: from mail.kernel.org ([198.145.29.99])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mQsXn-00Cr2B-CV
- for industrypack-devel@lists.sourceforge.net; Thu, 16 Sep 2021 14:39:20 +0000
-Received: from localhost (localhost [127.0.0.1])
- by mail.gruponetpc.com (Postfix) with ESMTP id 03365B95B11
- for <industrypack-devel@lists.sourceforge.net>;
- Wed, 15 Sep 2021 23:15:45 -0500 (-05)
-Received: from mail.gruponetpc.com ([127.0.0.1])
- by localhost (mail.gruponetpc.com [127.0.0.1]) (amavisd-new, port 10032)
- with ESMTP id eqq64PaAr7gW
- for <industrypack-devel@lists.sourceforge.net>;
- Wed, 15 Sep 2021 23:15:44 -0500 (-05)
-Received: from localhost (localhost [127.0.0.1])
- by mail.gruponetpc.com (Postfix) with ESMTP id 5C08EBD2B4D
- for <industrypack-devel@lists.sourceforge.net>;
- Wed, 15 Sep 2021 05:11:57 -0500 (-05)
-X-Virus-Scanned: amavisd-new at gruponetpc.com
-Received: from mail.gruponetpc.com ([127.0.0.1])
- by localhost (mail.gruponetpc.com [127.0.0.1]) (amavisd-new, port 10026)
- with ESMTP id K7esm-cCQwPa
- for <industrypack-devel@lists.sourceforge.net>;
- Wed, 15 Sep 2021 05:11:57 -0500 (-05)
-Received: from [212.162.150.123] (unknown [212.162.150.123])
- by mail.gruponetpc.com (Postfix) with ESMTPSA id 8F31ACEDB08
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 14 Sep 2021 16:38:02 -0500 (-05)
+ id 1mRCNi-00DkKf-DH
+ for industrypack-devel@lists.sourceforge.net; Fri, 17 Sep 2021 11:50:16 +0000
+Received: by mail.kernel.org (Postfix) with ESMTPSA id 14BF361241;
+ Fri, 17 Sep 2021 11:50:04 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=k20201202; t=1631879404;
+ bh=19iJui3Wb9/G6Xw/hWHtbTl0GlH1HsEhxOEVYM8MrZw=;
+ h=From:To:Cc:Subject:Date:From;
+ b=kRa0K618nTe0qm9rF4hUUiGNPYy89r5aZNgKA0ROnqJV4t2QW8PlxhmVHJs0UgdEB
+ Vzxvh4VuWAwRgrmAJZzdUdGpw+eNLDjCSsgbY5rQC/qghKVk/Nq3rRTMppPsnw8xzw
+ IrWvGoF8F/kqAYzck5LfrvyHLgVtdixmy6tX1rrE0iP2ntlxI/Wdi/r4mZp1LKGHwD
+ IWZ99Q5KHJeQNsEN3W7pn7JYUbnwQSqhjS3sKJrG5yHGugPaCPQUgTnynjqZacYQbX
+ lGRn4QODA7bEXPJDlPf/Q5X/xqrKqhxp5Jj4Blzt6fl+nGbAwvMNMCfgSbroH7IEV8
+ elmLVWVofGl4w==
+Received: from johan by xi.lan with local (Exim 4.94.2)
+ (envelope-from <johan@kernel.org>)
+ id 1mRCNZ-0001RN-Go; Fri, 17 Sep 2021 13:50:05 +0200
+From: Johan Hovold <johan@kernel.org>
+To: Samuel Iglesias Gonsalvez <siglesias@igalia.com>,
+ Jens Taprogge <jens.taprogge@taprogge.org>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+Date: Fri, 17 Sep 2021 13:46:16 +0200
+Message-Id: <20210917114622.5412-1-johan@kernel.org>
+X-Mailer: git-send-email 2.32.0
 MIME-Version: 1.0
-To: industrypack-devel@lists.sourceforge.net
-From: "Manon Grace" <daihoda@cmb.co.kr>
-Date: Tue, 14 Sep 2021 14:38:01 -0700
-Message-Id: <20210914213803.8F31ACEDB08@mail.gruponetpc.com>
-X-Spam-Score: 8.6 (++++++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has identified this incoming email as possible spam.  The original
+X-Spam-Score: -5.6 (-----)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  VáEený majiteli e -mailu, laskavB potvrFte vlastnictví
-   svého e -mailu industrypack-devel@lists.sourceforge.net. Byl náhodnB vybrán
-    po losování elektronického poDítaDe Spinball, aby obdrEel dar [...] 
- 
- Content analysis details:   (8.6 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  This series fixes a stack info leak and a number of other
+ bugs all found through inspection. Included is also a related cleanup. Note
+ that the series has only been compile tested. Johan 
+ Content analysis details:   (-5.6 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.5 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
-                             [200.90.157.143 listed in dnsbl-1.uceprotect.net]
-  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
-                             https://senderscore.org/blocklistlookup/
-                            [200.90.157.143 listed in bl.score.senderscore.com]
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  0.0 LOTS_OF_MONEY          Huge... sums of money
-  2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
-  2.0 MONEY_FREEMAIL_REPTO   Lots of money from someone using free
-                             email?
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1mQsXn-00Cr2B-CV
-Subject: [Industrypack-devel] [SPAM]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid -0.4 DKIMWL_WL_HIGH         DKIMwl.org - High trust sender
+X-Headers-End: 1mRCNi-00DkKf-DH
+Subject: [Industrypack-devel] [PATCH 0/6] ipack: ipoctal: fix info leak and
+ other bugs
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -109,72 +99,37 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: gracemanonfoundation@aol.com
-Content-Type: multipart/mixed; boundary="===============5906906217570008777=="
+Cc: linux-kernel@vger.kernel.org, industrypack-devel@lists.sourceforge.net,
+ Johan Hovold <johan@kernel.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-You will not see this in a MIME-aware mail reader.
---===============5906906217570008777==
-Content-Type: multipart/alternative; boundary="===============1697402000=="
+This series fixes a stack info leak and a number of other bugs all found
+through inspection. Included is also a related cleanup.
 
-You will not see this in a MIME-aware mail reader.
---===============1697402000==
-Content-Type: text/plain; charset="utf-8"
-MIME-Version: 1.0
-Content-Transfer-Encoding: quoted-printable
-Content-Description: Mail message body
+Note that the series has only been compile tested.
 
-V=E1=17Een=FD majiteli e -mailu, laskav=11B potvr=10Fte vlastnictv=ED sv=E9=
-ho e -mailu industrypack-devel@lists.sourceforge.net. Byl n=E1hodn=11B vybr=
-=E1n po losov=E1n=ED elektronick=E9ho po=10D=EDta=10De Spinball, aby obdr=
-=17Eel dar 1 200 000,00 USD od Manon Grace Therrien. Dal=161=ED podrobnosti=
- po=161lete potvrzovac=ED e -mail na adresu gracemanonfoundation@aol.com
- Dear Email Owner Kindly confirm ownership of your email industrypack-devel=
-@lists.sourceforge.net. It was randomly selected after an electronic comput=
-er Spinball draw, to receive a donation of $1,200,000.00 USD from Manon Gra=
-ce Therrien. Send a confirmation Email to gracemanonfoundation@aol.com for =
-more details
-
---===============1697402000==
-Content-Type: text/html; charset="utf-8"
-MIME-Version: 1.0
-Content-Transfer-Encoding: quoted-printable
-Content-Description: Mail message body
-
-<HTML><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
-=3Dutf-8"/></head><BODY><P>V=C3=A1=C5=BEen=C3=BD majiteli e -mailu, laskav=
-=C4=9B potvr=C4=8Fte vlastnictv=C3=AD sv=C3=A9ho e -mailu industrypack-deve=
-l@lists.sourceforge.net. Byl n=C3=A1hodn=C4=9B vybr=C3=A1n po losov=C3=A1n=
-=C3=AD elektronick=C3=A9ho po=C4=8D=C3=ADta=C4=8De Spinball, aby obdr=C5=BE=
-el dar 1 200 000,00 USD od Manon Grace Therrien. Dal=C5=A1=C3=AD podrobnost=
-i po=C5=A1lete potvrzovac=C3=AD e -mail na adresu <A href=3D"mailto:gracema=
-nonfoundation@aol.com">gracemanonfoundation@aol.com</A></P>
-<P>Dear Email Owner Kindly confirm ownership of your email industrypack-dev=
-el@lists.sourceforge.net. It was randomly selected after an electronic comp=
-uter Spinball draw, to receive a donation of $1,200,000.00 USD from Manon G=
-race Therrien. Send a confirmation Email to <A href=3D"mailto:gracemanonfou=
-ndation@aol.com">gracemanonfoundation@aol.com</A> for more details</P></BOD=
-Y></HTML>
---===============1697402000==--
+Johan
 
 
---===============5906906217570008777==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Johan Hovold (6):
+  ipack: ipoctal: fix stack information leak
+  ipack: ipoctal: fix tty registration race
+  ipack: ipoctal: fix tty-registration error handling
+  ipack: ipoctal: fix missing allocation-failure check
+  ipack: ipoctal: fix module reference leak
+  ipack: ipoctal: rename tty-driver pointer
+
+ drivers/ipack/devices/ipoctal.c | 101 +++++++++++++++++++++-----------
+ 1 file changed, 66 insertions(+), 35 deletions(-)
+
+-- 
+2.32.0
 
 
---===============5906906217570008777==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============5906906217570008777==--
-
