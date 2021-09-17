@@ -2,27 +2,27 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D07A40F6E2
-	for <lists+industrypack-devel@lfdr.de>; Fri, 17 Sep 2021 13:50:29 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
+	by mail.lfdr.de (Postfix) with ESMTPS id 92F8340F6DD
+	for <lists+industrypack-devel@lfdr.de>; Fri, 17 Sep 2021 13:50:26 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mRCNw-0002qb-4N
-	for lists+industrypack-devel@lfdr.de; Fri, 17 Sep 2021 11:50:28 +0000
+	id 1mRCNt-0001Aw-3n
+	for lists+industrypack-devel@lfdr.de; Fri, 17 Sep 2021 11:50:25 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- (envelope-from <johan@kernel.org>) id 1mRCNk-0002q0-JE
- for industrypack-devel@lists.sourceforge.net; Fri, 17 Sep 2021 11:50:17 +0000
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <johan@kernel.org>) id 1mRCNk-00019Z-Ha
+ for industrypack-devel@lists.sourceforge.net; Fri, 17 Sep 2021 11:50:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:MIME-Version:References:
  In-Reply-To:Message-Id:Date:Subject:Cc:To:From:Sender:Reply-To:Content-Type:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=hV20EAmGfF8d0blBjAgPj2QuR9iNy0zG8g6EF9JkdEU=; b=CYJKU2v5yErosJmoyWAvSexB/F
- Se0OCRS8mFk3zHKZdfa2YWwDkEt4VcS5V+WlV2wkVmFQhT5IJr78tVqbGnXZGpQtHAlIrDOvQ8I1Q
- mrHxEYUEizrTWFqNiMVroeTiEsVPG/SWwVfIAMrhf6s/3YJdim+Ywp+OSHzXTGo8QCrc=;
+ bh=AjIBQ7s1gSmJa1Per2mte24h75HUGgx028hlU0NZmJY=; b=NE7NqjSV8VnhS0skKTn4ytT878
+ hecwu9UKlkw7TMMTJ+6aPeHk8/UQP3+0iMe34e37Q747afV+QsPt8K39hBhggrqEWxUtQ9ylwoLbO
+ CSqGbkoqNlgDFjBUPqiRFeOxeU53cHB/JOEqaObW+ujY2JT4eUQ1e5iCC+6cUmnIxMWM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:MIME-Version:References:In-Reply-To:Message-Id:
@@ -30,35 +30,35 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=hV20EAmGfF8d0blBjAgPj2QuR9iNy0zG8g6EF9JkdEU=; b=nF9Bqzr0dIht71SPXH3dGQQINp
- hloaF30157PMM/NLno8KTDBzXy8UWgx4Z2PzicZgfHxpCoaPZSamscMJ8wat5NvMx5y9fD7hZDCcL
- GRcu4Sa+RlxIu0+gaDkmz3nyGFGDpLm2jvlBh30kqDu/DRR79Cv2I61mc/giqzW1NShY=;
+ bh=AjIBQ7s1gSmJa1Per2mte24h75HUGgx028hlU0NZmJY=; b=gajSUu64QF0pu8qUYutKufeiLS
+ dzg+/cvQZ2mhmU53gDX0y9E5florl6loPpGMWKw1CtiSQp1BexnLqnLs3sQpDUN5veSsmTnrXdE1Y
+ 7E+ARogrkCi89/+nk+kEahQVwN3gyeoTedlSIacLNuo2hrv7RR5C9nRMRPYXmn5vgnHI=;
 Received: from mail.kernel.org ([198.145.29.99])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mRCNi-00DkKe-D6
+ id 1mRCNi-00DkKg-DT
  for industrypack-devel@lists.sourceforge.net; Fri, 17 Sep 2021 11:50:16 +0000
-Received: by mail.kernel.org (Postfix) with ESMTPSA id 197C761246;
+Received: by mail.kernel.org (Postfix) with ESMTPSA id 1746361244;
  Fri, 17 Sep 2021 11:50:04 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
  s=k20201202; t=1631879404;
- bh=jM5pVI7ArVyFMw54FNFbCHZZ1zuQegYsQ5VqBu/O4W8=;
+ bh=wgx2hpsJswsOfqwTAmGNgmWN+DwrHT6ApDtd6++mkV8=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=paVYw5QIoeE0qULSIDqORHEkt+mRy2Bt3QZL7D8QVXaBroyuCcaJynr6CFMyF0WP2
- iXSEXR4HoKXre1q0lLcUTweB06b4ddmy/rQg9KMK23SXUHxf2MgTuez0YP3MWVS6oU
- H1Z9PSL1zxWYSOdXBHtzLe5FuJdZrMpcfpd5eQljT4I//k/f/+lFmVHdbbpKx08nlV
- nLmmPZjb4gShMaKHqADopOVswYaPXZP5lg1x/VUY929+c+1HfRf9H239yLv8FmtpZG
- lQJXfgDq9yzNBYzSgbZviQHXu9sLrtMovlX/GtsDFz/Ccd6OJspZIhCOy3TcDhnQHB
- nRe9uAnfzUGcw==
+ b=a8fDqfVlMpM6zshNkanpae2JAcG9BuDFRQJj6F8xgxOtzIqYNbtxKtNqE8kq39u7t
+ Get2TELq5gsg3oRL1f04XJvGAbyVVGvymHPOQcMXHdAVwtKLy0fktEU3w/z7fdcf4D
+ gQnoffiQcl5KAJLze6ukemMgjP1/cgYDQmfsuMIQb8Bxfm3CgLtalrCYmEQkFra+7c
+ a4wXAXInAhonqz7kmm47ZtiDO74R0URdowlPet6dhr7PE+f7LVShWyf8Cy9REBAIiX
+ 3w8MFzl+yPAtgl0NsKBkJHQ5Hgup43m57WT17wUjHmDKYAhsoo58rAd8CXZQcwsMf+
+ J1KKD3icCtX+A==
 Received: from johan by xi.lan with local (Exim 4.94.2)
  (envelope-from <johan@kernel.org>)
- id 1mRCNZ-0001RP-Ki; Fri, 17 Sep 2021 13:50:05 +0200
+ id 1mRCNZ-0001RR-NK; Fri, 17 Sep 2021 13:50:05 +0200
 From: Johan Hovold <johan@kernel.org>
 To: Samuel Iglesias Gonsalvez <siglesias@igalia.com>,
  Jens Taprogge <jens.taprogge@taprogge.org>,
  Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-Date: Fri, 17 Sep 2021 13:46:17 +0200
-Message-Id: <20210917114622.5412-2-johan@kernel.org>
+Date: Fri, 17 Sep 2021 13:46:18 +0200
+Message-Id: <20210917114622.5412-3-johan@kernel.org>
 X-Mailer: git-send-email 2.32.0
 In-Reply-To: <20210917114622.5412-1-johan@kernel.org>
 References: <20210917114622.5412-1-johan@kernel.org>
@@ -70,13 +70,13 @@ X-Spam-Report: Spam detection software,
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: The tty driver name is used also after registering the driver
- and must specifically not be allocated on the stack to avoid leaking
- information
- to user space (or triggering an oops). Drivers should not try to encode
- topology
- information in the tty device name but this one snuck in through staging
- without anyone noticing and another driver has since copied this malpractice.
+ Content preview: Make sure to set the tty class-device driver data before
+ registering
+ the tty to avoid having a racing open() dereference a NULL pointer. Fixes:
+ 9c1d784afc6f ("Staging: ipack/devices/ipoctal: Get rid of ipoctal_list.")
+ Cc: stable@vger.kernel.org # 3.7 Signed-off-by: Johan Hovold
+ <johan@kernel.org>
+ --- drivers/ipack/devices/ipoctal.c | 4 [...] 
  Content analysis details:   (-5.6 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
@@ -91,9 +91,9 @@ X-Spam-Report: Spam detection software,
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid -0.4 DKIMWL_WL_HIGH         DKIMwl.org - High trust sender
-X-Headers-End: 1mRCNi-00DkKe-D6
-Subject: [Industrypack-devel] [PATCH 1/6] ipack: ipoctal: fix stack
- information leak
+X-Headers-End: 1mRCNi-00DkKg-DT
+Subject: [Industrypack-devel] [PATCH 2/6] ipack: ipoctal: fix tty
+ registration race
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -111,82 +111,36 @@ Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-The tty driver name is used also after registering the driver and must
-specifically not be allocated on the stack to avoid leaking information
-to user space (or triggering an oops).
+Make sure to set the tty class-device driver data before registering the
+tty to avoid having a racing open() dereference a NULL pointer.
 
-Drivers should not try to encode topology information in the tty device
-name but this one snuck in through staging without anyone noticing and
-another driver has since copied this malpractice.
-
-Fixing the ABI is a separate issue, but this at least plugs the security
-hole.
-
-Fixes: ba4dc61fe8c5 ("Staging: ipack: add support for IP-OCTAL mezzanine board")
-Cc: stable@vger.kernel.org      # 3.5
+Fixes: 9c1d784afc6f ("Staging: ipack/devices/ipoctal: Get rid of ipoctal_list.")
+Cc: stable@vger.kernel.org      # 3.7
 Signed-off-by: Johan Hovold <johan@kernel.org>
 ---
- drivers/ipack/devices/ipoctal.c | 19 ++++++++++++++-----
- 1 file changed, 14 insertions(+), 5 deletions(-)
+ drivers/ipack/devices/ipoctal.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/ipack/devices/ipoctal.c b/drivers/ipack/devices/ipoctal.c
-index c14e65a5d38f..c62fec75987c 100644
+index c62fec75987c..262451343127 100644
 --- a/drivers/ipack/devices/ipoctal.c
 +++ b/drivers/ipack/devices/ipoctal.c
-@@ -264,7 +264,6 @@ static int ipoctal_inst_slot(struct ipoctal *ipoctal, unsigned int bus_nr,
- 	int res;
- 	int i;
- 	struct tty_driver *tty;
--	char name[20];
- 	struct ipoctal_channel *channel;
- 	struct ipack_region *region;
- 	void __iomem *addr;
-@@ -355,8 +354,11 @@ static int ipoctal_inst_slot(struct ipoctal *ipoctal, unsigned int bus_nr,
- 	/* Fill struct tty_driver with ipoctal data */
- 	tty->owner = THIS_MODULE;
- 	tty->driver_name = KBUILD_MODNAME;
--	sprintf(name, KBUILD_MODNAME ".%d.%d.", bus_nr, slot);
--	tty->name = name;
-+	tty->name = kasprintf(GFP_KERNEL, KBUILD_MODNAME ".%d.%d.", bus_nr, slot);
-+	if (!tty->name) {
-+		res = -ENOMEM;
-+		goto err_put_driver;
-+	}
- 	tty->major = 0;
- 
- 	tty->minor_start = 0;
-@@ -371,8 +373,7 @@ static int ipoctal_inst_slot(struct ipoctal *ipoctal, unsigned int bus_nr,
- 	res = tty_register_driver(tty);
- 	if (res) {
- 		dev_err(&ipoctal->dev->dev, "Can't register tty driver.\n");
--		tty_driver_kref_put(tty);
--		return res;
-+		goto err_free_name;
+@@ -392,13 +392,13 @@ static int ipoctal_inst_slot(struct ipoctal *ipoctal, unsigned int bus_nr,
+ 		spin_lock_init(&channel->lock);
+ 		channel->pointer_read = 0;
+ 		channel->pointer_write = 0;
+-		tty_dev = tty_port_register_device(&channel->tty_port, tty, i, NULL);
++		tty_dev = tty_port_register_device_attr(&channel->tty_port, tty,
++							i, NULL, channel, NULL);
+ 		if (IS_ERR(tty_dev)) {
+ 			dev_err(&ipoctal->dev->dev, "Failed to register tty device.\n");
+ 			tty_port_destroy(&channel->tty_port);
+ 			continue;
+ 		}
+-		dev_set_drvdata(tty_dev, channel);
  	}
  
- 	/* Save struct tty_driver for use it when uninstalling the device */
-@@ -409,6 +410,13 @@ static int ipoctal_inst_slot(struct ipoctal *ipoctal, unsigned int bus_nr,
- 				       ipoctal_irq_handler, ipoctal);
- 
- 	return 0;
-+
-+err_free_name:
-+	kfree(tty->name);
-+err_put_driver:
-+	tty_driver_kref_put(tty);
-+
-+	return res;
- }
- 
- static inline int ipoctal_copy_write_buffer(struct ipoctal_channel *channel,
-@@ -696,6 +704,7 @@ static void __ipoctal_remove(struct ipoctal *ipoctal)
- 	}
- 
- 	tty_unregister_driver(ipoctal->tty_drv);
-+	kfree(ipoctal->tty_drv->name);
- 	tty_driver_kref_put(ipoctal->tty_drv);
- 	kfree(ipoctal);
- }
+ 	/*
 -- 
 2.32.0
 
