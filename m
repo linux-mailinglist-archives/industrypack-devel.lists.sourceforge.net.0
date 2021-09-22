@@ -2,84 +2,95 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D47B414182
-	for <lists+industrypack-devel@lfdr.de>; Wed, 22 Sep 2021 08:06:05 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
-	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mSvOO-0002bG-5F
-	for lists+industrypack-devel@lfdr.de; Wed, 22 Sep 2021 06:06:04 +0000
-Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <siglesias@igalia.com>) id 1mSvOK-0002ax-66
- for industrypack-devel@lists.sourceforge.net; Wed, 22 Sep 2021 06:06:00 +0000
+	by mail.lfdr.de (Postfix) with ESMTPS id B1DC541431D
+	for <lists+industrypack-devel@lfdr.de>; Wed, 22 Sep 2021 09:59:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=MIME-Version:Content-Type:References:In-Reply-To:
- Date:Cc:To:From:Subject:Message-ID:Sender:Reply-To:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
+	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=ExLcOyQtLaCRbsyCPG0euswl6rGijtXFwQfRWdv02JU=; b=Y1mi35NNQ/8q6wzxjS4a6L8mU3
+	GVy54YooBUkCxQ39gx9LPGtl1i/QIjvPi+TnxkoQ0capobM07upX8WgTbpYA+HbdVUhO2tCjH9HKZ
+	s6QFfShyPV2P7yZki716cK9Yt+qNjGFZOq+QKNcVuBiyhcjNIzkDWTTKo3l0MapuUJZ0=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
+	id 1mSx9p-0005zT-HS
+	for lists+industrypack-devel@lfdr.de; Wed, 22 Sep 2021 07:59:09 +0000
+Received: from [172.30.20.202] (helo=mx.sourceforge.net)
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <support@aaacarqo.com>) id 1mSx9n-0005zH-Va
+ for industrypack-devel@lists.sourceforge.net; Wed, 22 Sep 2021 07:59:07 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=yXcPbo8Zymmfv4sqpIjMg8iY0k2cKSJFduh1ALnwUzE=; b=ddlkOF3SY54AisJEUtMYQbPQ9Z
- it6iJQyQJAOmLq5alAAn9YiuS95gF+qZpAi6qlY6aGUZvlyqfy0mktfS5wM0YBi+qlXGw53I2yAHj
- bO1B/IMUkYUKCJqnAV0/fgaXOacDQ+74Gk74SMvWfmB8UOFR+ISoSU3NALEJeTVkx8U8=;
+ bh=wkJeaRqBYZyZ5pBZlbANTZon0/oz28Ip8fZwvwWPy2A=; b=WSpC1CFaXSlFgYFlivlDJUlL3Y
+ LlVQ8/0SfzrcCzigpiJSh/fBqfhHDUK1E9L3UQ1ZC2yRPQ8BE7lABtGhFDrcVN5FdOyHPBj108X8b
+ 7bE84fTQxrUIpSl8Z/zyte578N6Xv10hyc7mYxjr0VhfUab2mbtNsnxF6dUlmUVxvf4M=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=MIME-Version:Content-Type:References:In-Reply-To:Date:Cc:To:From:Subject:
- Message-ID:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=yXcPbo8Zymmfv4sqpIjMg8iY0k2cKSJFduh1ALnwUzE=; b=hJhGbmJrab2oVIJt0lrRfFxMcU
- CpMXIecDIhei9FsdXckBfct6jpC/MeQ3c2wbyT+Wy6/QgVjNIu+GKV5GQydpYZw1ZFyUbz/xXfgl2
- zGZ+cbyAM1ohemNjLtavLxHR5BAE2bmOrTpyfMfTp8tJ8VZhoj75OBi8ToNJMvycJA1Y=;
-Received: from fanzine.igalia.com ([178.60.130.6])
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=wkJeaRqBYZyZ5pBZlbANTZon0/oz28Ip8fZwvwWPy2A=; b=b
+ Je/2jnjmoQ9yfDlrYYPjT7OBB9eSTFwvTv7hzYIgqbo9Y90rPCy9WTlpspFMbVMRPCF7Dd0JlCxqD
+ 0C+gAxrADk7UPmnR++u9VZedHTaSXq/PZoqEsxxCSJgSnqUmigKlf2ALhaNks+OW6CWfO61sruR9i
+ KGtbRM8t5o8/kcII=;
+Received: from bizcloud-mxmail0.aaacarqo.com ([134.209.93.125])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
- id 1mSvOG-0007cN-Mu
- for industrypack-devel@lists.sourceforge.net; Wed, 22 Sep 2021 06:05:58 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=igalia.com;
- s=20170329; 
- h=MIME-Version:Content-Type:References:In-Reply-To:Date:Cc:To:From:Subject:Message-ID;
- bh=yXcPbo8Zymmfv4sqpIjMg8iY0k2cKSJFduh1ALnwUzE=; 
- b=CzZlYoYi2y0wJlB9EBXlMdOEnoWGLhQ2uUP5XqNK5VC7HnSsrGzsCmigKxKwbUY5XFahMFu0JLyRJjV7ldHr6pBj3TV1F4WG5Fq9SIygSajbRmJkDyOcqsxCexJNx5+ojVXVNR9rpSri9EGYWSN3f59ZJs3RlpkOaGKbJyQb8zKAhowo/mc6cOxAnhn5Bcwmw5eQ5jYDga2kgBWHNdU6wHBSHuLayG6ssESp/XJmFHxvzUcyPr4TbaPboDcgFYlwsE++6XebLUqPyaFpipRpCXRzoRHe9R855snJFGnBBvVuEJvEGO5RnRG8vL4/33+NF9OcZ0oSdTam+EVfsJhzEw==;
-Received: from 101.red-88-4-142.dynamicip.rima-tde.net ([88.4.142.101]
- helo=[192.168.2.252]) by fanzine.igalia.com with esmtpsa 
- (Cipher TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim)
- id 1mSv8l-0003Ma-JN; Wed, 22 Sep 2021 07:49:55 +0200
-Message-ID: <259e8411270f663352829e8df9af627d6fba4d1b.camel@igalia.com>
-From: Samuel Iglesias =?ISO-8859-1?Q?Gons=E1lvez?= <siglesias@igalia.com>
-To: Johan Hovold <johan@kernel.org>, Jens Taprogge
- <jens.taprogge@taprogge.org>,  Greg Kroah-Hartman
- <gregkh@linuxfoundation.org>
-Date: Wed, 22 Sep 2021 07:49:45 +0200
-In-Reply-To: <20210917114622.5412-1-johan@kernel.org>
-References: <20210917114622.5412-1-johan@kernel.org>
-User-Agent: Evolution 3.40.4 (3.40.4-1.fc34) 
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1mSx9m-0003tN-1d
+ for industrypack-devel@lists.sourceforge.net; Wed, 22 Sep 2021 07:59:07 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=aaacarqo.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=support@aaacarqo.com;
+ bh=wkJeaRqBYZyZ5pBZlbANTZon0/oz28Ip8fZwvwWPy2A=;
+ b=k1hzNZQvC5o1lwTtSpTvFuK9OW5+MqRHlJ3Jtl6e4XweUCpWRFfwVfQZxUn5sHY0O2aWpgZFPh+i
+ FZHDV9w4snzxzlD9tfiJVgIrErSy9JF8dF0ej0nuDqGGiddpejhWJsg929EnOQKkNSILCjYoy6BW
+ BqJvYyhXEfEpiTvCXwE=
+To: industrypack-devel@lists.sourceforge.net
+Date: 22 Sep 2021 07:58:57 +0000
+Message-ID: <20210922075856.4F7392CF2CFA470E@aaacarqo.com>
 MIME-Version: 1.0
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 2.4 (++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hi Johan, Thanks for the patch series! Patch series is, 
- Content analysis details:   (-0.2 points, 6.0 required)
+ Content preview:  lists.sourceforge.net Dear industrypack-devel, You have [12]
+ undelivered mails on (9/22/2021 7:58:56 a.m.).. This was caused due to a
+ system delay, Rectify Below: 
+ Content analysis details:   (2.4 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+ identical to background
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
-X-Headers-End: 1mSvOG-0007cN-Mu
-Subject: Re: [Industrypack-devel] [PATCH 0/6] ipack: ipoctal: fix info leak
- and other bugs
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 1.7 URIBL_BLACK            Contains an URL listed in the URIBL blacklist
+ [URIs: aaacarqo.com]
+ 0.8 FROM_FMBLA_NEWDOM28    From domain was registered in last 14-28
+ days
+X-Headers-End: 1mSx9m-0003tN-1d
+Subject: [Industrypack-devel] You have undelivered mails on
+ industrypack-devel@lists.sourceforge.net
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,93 +102,108 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Cc: linux-kernel@vger.kernel.org, industrypack-devel@lists.sourceforge.net
-Content-Type: multipart/mixed; boundary="===============0779978996067536416=="
+From: admin via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
+Reply-To: admin <support@aaacarqo.com>
+Content-Type: multipart/mixed; boundary="===============0514614613117549858=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-
---===============0779978996067536416==
-Content-Type: multipart/signed; micalg="pgp-sha256";
-	protocol="application/pgp-signature"; boundary="=-zl7qek+jvUMhi9k9cYqT"
-
-
---=-zl7qek+jvUMhi9k9cYqT
-Content-Type: text/plain; charset="UTF-8"
+--===============0514614613117549858==
+Content-Type: text/html;
+	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
-Hi Johan,
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
-Thanks for the patch series!
+<html><head>
+  <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DISO-885=
+9-1">
+  <title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<br class=3D"Apple-interchange-newline">
+<table width=3D"520" align=3D"center" style=3D"border: 1px dotted rgb(211, =
+211, 211); border-image: none; text-align: left; color: rgb(0, 0, 0); text-=
+transform: none; line-height: 1.2; text-indent: 0px; letter-spacing: normal=
+; font-family: Helvetica,Arial,Tahoma,Verdana,sans-serif; font-size: 15px; =
+font-style: normal; font-weight: 400; word-spacing: 0px; white-space: norma=
+l; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);" border=3D"=
+1" cellspacing=3D"0" cellpadding=3D"0">
+  <tbody>
+    <tr style=3D"min-height: 90px;">
+      <td height=3D"90" style=3D"border: 1px dotted rgb(211, 211, 211); bor=
+der-image: none; min-height: 90px;">
+      <table width=3D"100%" style=3D"border: 1px dotted rgb(211, 211, 211);=
+ border-image: none; line-height: 1.2; font-family: Arial,Helvetica; font-s=
+ize: 14px; border-collapse: collapse; min-height: 90px;" bgcolor=3D"#0078d7=
+" border=3D"1" cellspacing=3D"0" cellpadding=3D"0">
+        <tbody>
+          <tr style=3D"min-height: 90px;">
+            <td height=3D"90" style=3D"border: 1px dotted rgb(211, 211, 211=
+); border-image: none; min-height: 90px;" bgcolor=3D"#0078d7">
+            <div style=3D'margin: 0px 30px; padding: 0px; font-family: "UI =
+WP Helvetica",Arial,serif,EmojiFont; font-size: 18px;'>
+            <div style=3D"margin: 0px 0px 0px 10px; padding: 0px; font-size=
+: 28px;"><a rel=3D"nofollow"><font color=3D"#ffffff">lists.sourceforge.net<=
+/font></a></div>
+            </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td style=3D"border: 1px dotted rgb(211, 211, 211); border-image: non=
+e;">
+      <div style=3D"margin: 0px 0px 0px 120px; padding: 0px; line-height: 2=
+0px; direction: ltr;">
+      <div style=3D"margin: 20px 120px 30px 0px; padding: 0px; color: rgb(5=
+1, 51, 51); line-height: 20px; font-family: Segoe,Tahoma,sans-serif,serif,E=
+mojiFont;">&nbsp;</div>
+      <div style=3D"margin: 0px 120px 30px 0px; padding: 0px; color: rgb(10=
+2, 102, 102); line-height: 20px; font-size: 12px;"><strong>Dear&nbsp;
+industrypack-devel,</strong><br>
+      <br>
+You have [12] undelivered mails on (9/22/2021 7:58:56 a.m.).. This was caus=
+ed due
+to a system delay, Rectify Below:<br>
+      <br>
+industrypack-devel@lists.sourceforge.net<br>
+      </div>
+      <div style=3D"margin: 0px 120px 30px 0px; padding: 0px; color: rgb(10=
+2, 102, 102); line-height: 20px; font-size: 12px;"><a style=3D"padding: 5px=
+; color: white; text-decoration: underline; display: block; background-imag=
+e: none; background-repeat: repeat; background-color: rgb(0, 120, 215);" hr=
+ef=3D"https://tristaffcorp.com/asjhdjsew/wtyuewjkas/ewyfeikasd/yeruisjjkasj=
+98.html#industrypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"=
+nofollow"><strong>&nbsp;Click
+Here To Release Pending Messages Inbox</strong></a><br>
+      <br>
+lists.sourceforge.net</div>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p style=3D'text-align: left; color: rgb(0, 0, 0); text-transform: none; te=
+xt-indent: 0px; letter-spacing: normal; font-family: "Helvetica Neue",Helve=
+tica,Arial,sans-serif; font-size: 14px; font-style: normal; font-weight: 40=
+0; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; backgroun=
+d-color: rgb(255, 255, 255);'>&nbsp;</p>
 
-Patch series is,
 
-Acked-by: Samuel Iglesias Gonsalvez <siglesias@igalia.com>
-
-Greg, Would you mind picking this patch series through your char-misc
-tree?
-
-Thanks!
-
-Sam
-
-On Fri, 2021-09-17 at 13:46 +0200, Johan Hovold wrote:
-> This series fixes a stack info leak and a number of other bugs all
-> found
-> through inspection. Included is also a related cleanup.
->=20
-> Note that the series has only been compile tested.
->=20
-> Johan
->=20
->=20
-> Johan Hovold (6):
-> =C2=A0 ipack: ipoctal: fix stack information leak
-> =C2=A0 ipack: ipoctal: fix tty registration race
-> =C2=A0 ipack: ipoctal: fix tty-registration error handling
-> =C2=A0 ipack: ipoctal: fix missing allocation-failure check
-> =C2=A0 ipack: ipoctal: fix module reference leak
-> =C2=A0 ipack: ipoctal: rename tty-driver pointer
->=20
-> =C2=A0drivers/ipack/devices/ipoctal.c | 101 +++++++++++++++++++++--------=
----
-> =C2=A01 file changed, 66 insertions(+), 35 deletions(-)
->=20
+</body></html>
 
 
---=-zl7qek+jvUMhi9k9cYqT
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAABCAAdFiEEQP+ZAvaXWkfuKXiEf/S6MvF9w0MFAmFKw/kACgkQf/S6MvF9
-w0O60RAAg+oSvmEdmbF25U/ZcccJoEuf3JpkRTHkQpTXBEFYn45Ps1J40PkuAr59
-1TA8oWTJtBVUvbiToNdRfLOVPhL1JoeeJBzFhaC/Rj3YQ0NtZMrsmstvin66Nh4B
-qvuR3nIgmAB+qtvYw7xyNXbCRBddCbUDDJHSnjkBcsA7G11vj9scKiD1akNVO47r
-m3KxWwk2b4Zjg8iYFsWbK+PHOnN9At9M8JGMOZw+pancGIeFrdVuutQRlP4d6FJs
-x0UGR8A4qMtQfVkYltxGKOchg1VloP0V1W5O6TaTwHSGRLpXoGr5uzAoD5e7R8FA
-1R0uMZgN19E7c+oN0TiqK7Jw++loUxe3JBWe6u7KtrtC7uHf/2oPlVei2gbG21lg
-P7TgBIjz82nKn/f6EkKvFnHzTQvDUShD5hAfYJArpa+dZJVB8/Pd2ogV+0EhO4e7
-+R+ZJNcYUFrZuShg6HXJR/UVzw5ErgtkrpON+DRH7jBI9F8T7wnjuyvYdcsnqqQB
-djTr4nanBeTbzQrTwt51Y2qf2LV+bteGi2XGWb3xVXUNV+lrBZR4TJLg0t4RNDgI
-jsi+47pSNTXfUN1rSLQtuK7N5EDHB1nz43Qqs/n0mLTgxIohaKcySRD/+7hv8qAz
-fwNoFCPRjtl351KlBxGmu7e29mX0ds31g2497WPsjUzw+J2VySE=
-=EGCx
------END PGP SIGNATURE-----
-
---=-zl7qek+jvUMhi9k9cYqT--
-
-
-
---===============0779978996067536416==
+--===============0514614613117549858==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0779978996067536416==
+--===============0514614613117549858==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -188,6 +214,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0779978996067536416==--
-
-
+--===============0514614613117549858==--
