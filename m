@@ -2,102 +2,92 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7EEBF41B7ED
-	for <lists+industrypack-devel@lfdr.de>; Tue, 28 Sep 2021 22:03:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B5B3141BA74
+	for <lists+industrypack-devel@lfdr.de>; Wed, 29 Sep 2021 00:33:07 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
+	Mime-Version:Message-ID:To:Date:Sender:Cc:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=SRmrxIu6yR2OICzbkYmlzaxuMopzXAxjg9+V93k8BHE=; b=UQGnHQMBdRscGdKjnbUiL0/1uv
+	gEEj2Qo1syH4pzozodiHpwthiRAxLkvJJkDs3gIWCasyqbn1I08HhD4vhRV7ZiNUIqiIAqhKlC8ny
+	n0LXMqMvDjTOrW3lrkOsreFrBUUai3RUKypiHZzxVgHCsKw3wbb3zQ3cOINM6BKhvce4=;
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mVJK3-0004Vg-38
-	for lists+industrypack-devel@lfdr.de; Tue, 28 Sep 2021 20:03:27 +0000
+	id 1mVLes-0001Ak-Ha
+	for lists+industrypack-devel@lfdr.de; Tue, 28 Sep 2021 22:33:06 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- (envelope-from
- <bounce_lpiaep_n-industrypack+2Ddevel=lists.sourceforge.net@me-ss2-t13wql.mailengine1.com>)
- id 1mVJK1-0004VN-A0
- for industrypack-devel@lists.sourceforge.net; Tue, 28 Sep 2021 20:03:25 +0000
+ (envelope-from <urszqd@amazon.server.co.jp>) id 1mVLel-0001AP-Qs
+ for industrypack-devel@lists.sourceforge.net; Tue, 28 Sep 2021 22:32:59 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Reply-To:From:To:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=X1tWkbPDTPTBd1g2vaR3AhiuesHrKLUGusaeRYzeX/o=; b=TjGnxZCdclI2eWEqb5WQE8qfPM
- bqNABveIwaelYa/4dPYcUhoesTrN308kJ30vuYfOQDQB7AJtjYAW0HqVmYTuSoOq9cSMrBsR25zsF
- ceTQAH01Pf9jxzCobKu0A+UgRgDVMmv4sfO8uTw2TDi7iJQTtORVAHI4vzjMlTnusL+I=;
+ d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=LaSsl/1Tcw4LJ+NZd5HCIdf/MCl/NaYgI7hEaJP3njU=; b=L2ra/1Yt/k2iEE62BJYg+QiAcw
+ 0YRbQ9myHLlaoTzbb1VTRyLtDnZkbYU06PssLUv8Wad0TiziM4p25cgRTUYBcd97LrJnST+BcENr2
+ RW6t+pz0sPKcgs5aT8weEKNi7r/uNUryJMzCweWLEclKdptG8AlQVfiBGLHy4japjyNQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Type:MIME-Version:Reply-To:From:To:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=X1tWkbPDTPTBd1g2vaR3AhiuesHrKLUGusaeRYzeX/o=; b=N53QMpa47tNmTOSJNjNJmY6PW5
- IVxOX11RrrT/XA4CrzAGYM+aWKtDCQp9KfNUNiGPTa5I6Ct7U1zVsbxcNp8xpdJ4Y7BYempwLn2KF
- kasoQLvmG8cZiju464fzmdepLFj2t6QP8YRXNl99ar6xCxcIunwDNoHgg++tTw3LSxhk=;
-Received: from me-ss2-t13wql.mailengine1.com ([72.19.203.120])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mVJJz-0005yC-H7
- for industrypack-devel@lists.sourceforge.net; Tue, 28 Sep 2021 20:03:24 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=k1; d=mailengine4.com; 
- h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type; bh=X1tWkbPDTPTBd1g2vaR3AhiuesHrKLUGusaeRYzeX/o=;
- b=f7TDMbqZIB2EierQOVtF5KsBa6peBD/Nv2Dluwsh8avhU/TaTUK+u1KxVDXdHRS+Geo3/r5zzMIF
- Fxh7svCV9U8x8ZEQlEQc4kpp3lhM1kUXQa4D2M/4Nd8JrciUPbLw7EPh1XplIsx97C85v3exIeWQ
- oUf1tkHnxS9uc6rHTOc=
-Received: by me-ss2-t13wql.mailengine1.com id hadqgm2r99cv for
- <industrypack-devel@lists.sourceforge.net>;
- Tue, 28 Sep 2021 16:03:03 -0400 (envelope-from
- <bounce_lpiaep_n-industrypack+2Ddevel=lists.sourceforge.net@me-ss2-t13wql.mailengine1.com>)
-X-Campaign-Shard: 2
-Bounces-To: bounce_nsrji_bjfoutc_n@me-ss2-t13wql.mailengine1.com
-Message-ID: <1632859367738.201079505.4225760.264616562@me-ss2-t13wql.mailengine1.com>
-X-Campaign: 201079505/4225760/264616562
-Date: Tue, 28 Sep 2021 16:03:03 -0400
+ h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=LaSsl/1Tcw4LJ+NZd5HCIdf/MCl/NaYgI7hEaJP3njU=; b=h
+ ZX+p9G4bAq4C/5ToXKuzcngR8C00xU4oGQ7JBY7ySOiuWySqLnUlt4uIL8ZC9VNn0FuheDl4bAYjp
+ gv0SQs98/vRrhdtNR2caJFFUVwiB09/151e2gWnL2y5unO4Rq+McAGWFp7nJBqIum2kfIiBZBeNCR
+ C+OMjN0DE/dJbaOA=;
+Received: from [101.36.64.74] (helo=amazon.server.co.jp)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
+ id 1mVLek-0003Dt-Pe
+ for industrypack-devel@lists.sourceforge.net; Tue, 28 Sep 2021 22:32:59 +0000
+Date: Wed, 29 Sep 2021 06:32:46 +0800
 To: <industrypack-devel@lists.sourceforge.net>
-From: "ECP Solutions" <titangroup@deliveryman.com>
-MIME-Version: 1.0
-X-Spam-Score: 8.5 (++++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+Message-ID: <20210929063251453653@amazon.server.co.jp>
+X-Priority: 1 (Highest)
+X-mailer: Foxmail 6, 13, 102, 15 [cn]
+Mime-Version: 1.0
+X-Spam-Score: 6.9 (++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: https://www.ecpsolutionsllc.com/apply
- (http://go2.mailengine1.com/click/gctb-2ikm8-1eplk-4djng29/)https://www.ecpsolutionsllc.com/apply
- (http://go2.mailengine1.com/click/gctb-2ikm8-1epll-4djng20/) A r [...] 
- Content analysis details:   (8.5 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  平素は Amazon.co.jp をご利用いただき、誠にありがとうございます。
+    ご利用の Amazon アカウントで異常な活動が検出されたため、アカウントを一時保留
+    [...] 
+ 
+ Content analysis details:   (6.9 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
- blocklist [URIs: ecpsolutionsllc.com]
- 2.0 URIBL_DBL_ABUSE_SPAM   Contains an abused spamvertized URL listed
- in the Spamhaus DBL blocklist [URIs: mailengine1.com]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [72.19.203.120 listed in list.dnswl.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [titangroup[at]deliveryman.com]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.0 HTML_IMAGE_RATIO_02    BODY: HTML has a low ratio of text to image
- area 0.0 HTML_MESSAGE           BODY: HTML included in message
- 1.5 MPART_ALT_DIFF_COUNT   BODY: HTML and text parts are different
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid 2.0 PYZOR_CHECK            Listed in Pyzor
- (https://pyzor.readthedocs.io/en/latest/)
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1mVJJz-0005yC-H7
-Subject: [Industrypack-devel] [SPAM] Line of credit offer
+  0.5 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+                             [101.36.64.74 listed in dnsbl-1.uceprotect.net]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+  1.8 DKIM_ADSP_DISCARD      No valid author signature, domain signs all
+                             mail and suggests discarding the rest
+  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+                             blocklist
+                             [URIs: 9bahb8.cn]
+  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+                             [URIs: 9bahb8.cn]
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                             [101.36.64.74 listed in bl.score.senderscore.com]
+  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+X-Headers-End: 1mVLek-0003Dt-Pe
+Subject: [Industrypack-devel] =?utf-8?b?44GU5Yip55So44GuIEFtYXpvbiDjgqI=?=
+	=?utf-8?b?44Kr44Km44Oz44OI44KS5LiA5pmC5L+d55WZ44GE44Gf44GX44G+44GX?=
+	=?utf-8?b?44Gf?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -109,152 +99,89 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: ECP Solutions <titangroup@deliveryman.com>
-Content-Type: multipart/mixed; boundary="===============7481642620266459371=="
+From: "Amazon.co.jp via Industrypack-devel"
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "Amazon.co.jp" <account-update@amazon.co.jp>
+Content-Type: multipart/mixed; boundary="===============3077496082233593791=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-<!-- X-Campaign: 201079505/4225760/264616562 -->
---===============7481642620266459371==
-Content-Type: multipart/alternative; boundary="----=_Part_1018036799.1632859362535"
+This is a multi-part message in MIME format.
 
-<!-- X-Campaign: 201079505/4225760/264616562 -->
-------=_Part_1018036799.1632859362535
-Content-Type: text/plain;charset=UTF-8
+--===============3077496082233593791==
+Content-Type: multipart/alternative;
+	boundary="=====003_Dragon113216485462_====="
 
-https://www.ecpsolutionsllc.com/apply (http://go2.mailengine1.com/click/gctb-2ikm8-1eplk-4djng29/)https://www.ecpsolutionsllc.com/apply (http://go2.mailengine1.com/click/gctb-2ikm8-1epll-4djng20/)
-A revolving line of credit is a flexible method of business financing. Rather than borrowing a fixed amount of money once with a term loan, a revolving line of credit gives your business the ability to borrow however much you need (up to a certain pre-approved limit), as many times as you need to, without having to reapply.
+This is a multi-part message in MIME format.
 
-PLEASE REVIEW YOUR LINE OF CREDIT OFFER BELOW:https://www.ecpsolutionsllc.com/apply (http://go2.mailengine1.com/click/gctb-2ikm8-1eplm-4djng21/)
-*Each draw is treated separately, with its own payment schedule and
-amortization schedule.
+--=====003_Dragon113216485462_=====
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
-**interest is based on your outstanding principal balance and is
-charged on a weekly basis.
+5bmz57Sg44GvIEFtYXpvbi5jby5qcCDjgpLjgZTliKnnlKjjgYTjgZ/jgaDjgY3jgIHoqqDjgavj
+gYLjgorjgYzjgajjgYbjgZTjgZbjgYTjgb7jgZnjgIINCuOBlOWIqeeUqOOBriBBbWF6b24g44Ki
+44Kr44Km44Oz44OI44Gn55Ww5bi444Gq5rS75YuV44GM5qSc5Ye644GV44KM44Gf44Gf44KB44CB
+44Ki44Kr44Km44Oz44OI44KS5LiA5pmC5L+d55WZ44Gr44GX44CB5L+d55WZ5Lit44Gu44GU5rOo
+5paH44KE44K144OW44K544Kv44Oq44OX44K344On44Oz44KS44Kt44Oj44Oz44K744Or44GE44Gf
+44GX44G+44GX44Gf44CCDQrjgqLjgqvjgqbjg7Pjg4jjgbjjga7jgqLjgq/jgrvjgrnjgpLlho3p
+lovjgZnjgovjgavjga/jgIHjgrXjgqTjg7PjgqTjg7PjgZfjgabnlLvpnaLjga7mjIfnpLrjgavl
+vpPjgaPjgabjgY/jgaDjgZXjgYTjgILlv4XopoHjgarmg4XloLHjgpLjgZTmj5DkvpvjgYTjgZ/j
+gaDjgYTjgZ/jgonjgIHlvZPjgrXjgqTjg4jjgafoqr/mn7vjga7kuIrjgIEyNCDmmYLplpPku6Xl
+hoXjgavov5Tkv6HjgYTjgZ/jgZfjgb7jgZnjgIINCuacrOS7tuOBq+OBpOOBhOOBpuOBlOi/t+aD
+keOCkuOBiuOBi+OBkeOBl+OBvuOBl+OBn+OBk+OBqOOCkuOBiuipq+OBs+eUs+OBl+S4iuOBkuOB
+vuOBmeOAgg0K5Ye65ZOB55So44Ki44Kr44Km44Oz44OI44KS44GK5oyB44Gh44Gu5aC05ZCI44Gv
+44CB44GU5Yip55So44Gr44Gq44KM44G+44Gb44KT44Gu44Gn44GU5rOo5oSP44GP44Gg44GV44GE
+44CCRkJBIOWcqOW6q+OChOazqOaWh+OBuOOBruWvvuW/nOOBquOBqeOAgeWHuuWTgeeUqOOCouOC
+q+OCpuODs+ODiOOBq+mWouOBmeOCi+OBlOizquWVj+OBjOOBguOCi+WgtOWQiOOBr+OAgeODhuOC
+r+ODi+OCq+ODq+OCteODneODvOODiOOBq+OBiuWVj+OBhOWQiOOCj+OBm+OBj+OBoOOBleOBhOOA
+gg0K5L2V5Y2S44CB44KI44KN44GX44GP44GK6aGY44GE55Sz44GX5LiK44GS44G+44GZ44CCDQrj
+gqLjgqvjgqbjg7Pjg4jjgrnjg5rjgrfjg6Pjg6rjgrnjg4gNCmh0dHBzOi8vd3d3LmFtYXpvbi5j
+by5qcA0KPT09PT09PT09PT09PT09PQ==
 
-By paying your draw off early you are eligible for interest savings.Receive Funding Here (http://go2.mailengine1.com/click/gctb-2ikm8-1epln-4djng22/)
+--=====003_Dragon113216485462_=====
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
-https://www.facebook.com/ecpsolutionsllc (http://go2.mailengine1.com/click/gctb-2ikm8-1eplo-4djng23/)https://www.linkedin.com/company/executive-commercial-principal (http://go2.mailengine1.com/click/gctb-2ikm8-1eplp-4djng24/)
-110 West Main St.Lexington KY 40504
-underwriting@                    ecpsolutionsinc.com (mailto:underwriting@ecpsolutionsinc.com) (mailto:ecpsolutions@fastservice.com)
-859-549-5158
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE4Njk4Ij48L0hFQUQ+DQo8Qk9EWT4NCjxQPuW5s+e0oOOB
+ryA8QSBocmVmPSJodHRwczovL2FyZXVlYW9tLjliYWhiOC5jbi8iPkFtYXpvbi5jby5qcDwvQT4g
+DQrjgpLjgZTliKnnlKjjgYTjgZ/jgaDjgY3jgIHoqqDjgavjgYLjgorjgYzjgajjgYbjgZTjgZbj
+gYTjgb7jgZnjgII8L1A+DQo8UD7jgZTliKnnlKjjga4gQW1hem9uIA0K44Ki44Kr44Km44Oz44OI
+44Gn55Ww5bi444Gq5rS75YuV44GM5qSc5Ye644GV44KM44Gf44Gf44KB44CB44Ki44Kr44Km44Oz
+44OI44KS5LiA5pmC5L+d55WZ44Gr44GX44CB5L+d55WZ5Lit44Gu44GU5rOo5paH44KE44K144OW
+44K544Kv44Oq44OX44K344On44Oz44KS44Kt44Oj44Oz44K744Or44GE44Gf44GX44G+44GX44Gf
+44CCPC9QPg0KPFA+44Ki44Kr44Km44Oz44OI44G444Gu44Ki44Kv44K744K544KS5YaN6ZaL44GZ
+44KL44Gr44Gv44CB44K144Kk44Oz44Kk44Oz44GX44Gm55S76Z2i44Gu5oyH56S644Gr5b6T44Gj
+44Gm44GP44Gg44GV44GE44CC5b+F6KaB44Gq5oOF5aCx44KS44GU5o+Q5L6b44GE44Gf44Gg44GE
+44Gf44KJ44CB5b2T44K144Kk44OI44Gn6Kq/5p+744Gu5LiK44CBMjQgDQrmmYLplpPku6XlhoXj
+gavov5Tkv6HjgYTjgZ/jgZfjgb7jgZnjgII8L1A+DQo8UD7mnKzku7bjgavjgaTjgYTjgabjgZTo
+v7fmg5HjgpLjgYrjgYvjgZHjgZfjgb7jgZfjgZ/jgZPjgajjgpLjgYroqavjgbPnlLPjgZfkuIrj
+gZLjgb7jgZnjgII8L1A+DQo8UD7lh7rlk4HnlKjjgqLjgqvjgqbjg7Pjg4jjgpLjgYrmjIHjgaHj
+ga7loLTlkIjjga/jgIHjgZTliKnnlKjjgavjgarjgozjgb7jgZvjgpPjga7jgafjgZTms6jmhI/j
+gY/jgaDjgZXjgYTjgIJGQkEgDQrlnKjluqvjgoTms6jmlofjgbjjga7lr77lv5zjgarjganjgIHl
+h7rlk4HnlKjjgqLjgqvjgqbjg7Pjg4jjgavplqLjgZnjgovjgZTos6rllY/jgYzjgYLjgovloLTl
+kIjjga/jgIHjg4bjgq/jg4vjgqvjg6vjgrXjg53jg7zjg4jjgavjgYrllY/jgYTlkIjjgo/jgZvj
+gY/jgaDjgZXjgYTjgII8L1A+DQo8UD7kvZXljZLjgIHjgojjgo3jgZfjgY/jgYrpoZjjgYTnlLPj
+gZfkuIrjgZLjgb7jgZnjgII8L1A+DQo8UD7jgqLjgqvjgqbjg7Pjg4jjgrnjg5rjgrfjg6Pjg6rj
+grnjg4g8QlI+PEEgDQpocmVmPSJodHRwczovL2FyZXVlYW9tLjliYWhiOC5jbi8iPmh0dHBzOi8v
+d3d3LmFtYXpvbi5jby5qcDwvQT48QlI+PT09PT09PT09PT09PT09PTwvUD48L0JPRFk+PC9IVE1M
+Pg0K
 
-©2021 BY ECP SOLUTIONS, LLC.
-ECP Solutions, LLC
-110 West Main St.
-Lexington KY 40508
-United States
-
-You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://go2.mailengine1.com/form?2ikm8--eism-4djng27&sl=4eq&t=1&ac=gctb or unsubscribe http://go2.mailengine1.com/form?2ikm8--eism-4djng27&sl=4eq&t=5&ac=gctb. 
-Powered by Campaigner
-------=_Part_1018036799.1632859362535
-Content-Type: text/html;charset=UTF-8
-
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head><!--[if gte mso 15]>
-			<xml>
-				<o:OfficeDocumentSettings>
-				<o:AllowPNG/>
-				<o:PixelsPerInch>96</o:PixelsPerInch>
-				</o:OfficeDocumentSettings>
-			</xml>
-			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
-    margin:0;
-    padding:0;
-    background: rgb(255,255,255);
-}
-table td, table th {
-    border-spacing: 0;
-    border-collapse: collapse;
-    border: 0 none;
-    mso-table-lspace: 0pt;
-    mso-table-rspace: 0pt;
-}
-.fusionResponsiveColumn {
-    font-weight: normal;
-    text-align:left;
-}
-/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
-@media only screen and (max-width: 620px) {
-    .fusionResponsiveContent {
-        width: 100%!important;
-    }
-    .fusionResponsiveColumn {
-        width: auto!important;
-        display:block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100%!important;
-    }
-    .fusionResponsiveImageTable {
-        padding-bottom: 0!important;
-    }
-    .fusionResponsiveCanvas {
-        padding-top: 0px!important;
-        padding-bottom: 0px!important;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .fusionResponsiveContent {
-        width: 100%!important;
-    }
-    .fusionResponsiveColumn {
-        width: auto!important;
-        display:block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100%!important;
-    }
-    .fusionResponsiveCanvas {
-        padding-top: 0px!important;
-        padding-bottom: 0px!important;
-    }
-}</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Arial:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
-<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style='width:100%;padding-top:25px;padding-bottom:25px;background-color:rgb(246,239,225);background-image:url("https://media.campaigner.com/editorassets/themes/soak-it-up/content-background.png");background-repeat:repeat;background-position:center top;font-family:Arial, sans-serif;'>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:25px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:560px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><a href="http://go2.mailengine1.com/click/gctb-2ikm8-1eplq-4djng25/" name="httpsecpsolutionsllccomapply" title="" style="" id="auto_assign_link_num_1">
-<img src="https://media.campaigner.com/media/76/763103/offer.png?id=i69ibfk" class="fusionResponsiveImage" alt="" width="560" height="auto" style="width:560px;display:block;height:auto;margin:auto;background-color:transparent;" /></a></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:25px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:270px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/763103/Person.png?id=m2ym8nw" class="fusionResponsiveImage" alt="" width="270" height="auto" style="width:270px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:270px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(44,44,44);font-family:Arial, sans-serif;font-size:16px;text-align:left;">
-<p style="margin-top:0px;margin-bottom:0px;"><strong>ECP Solutions</strong> - Funding Specialist</p>
-<p style="margin-top:16px;margin-bottom:0px;"><strong>Email:</strong></p>
-<p style="margin-top:16px;margin-bottom:0px;">edwardp@ecpsolutionsinc.com</p>
-<p style="margin-top:16px;margin-bottom:0px;"><strong>Phone:</strong></p>
-<p style="margin-top:16px;margin-bottom:0px;">(859) 549-5158</p>
-<p style="margin-top:16px;margin-bottom:0px;"><strong>Website:</strong></p>
-<p style="margin-top:16px;margin-bottom:0px;">ecpsolutionsllc.com</p>
-</div></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-</td></tr></tbody></table></body>
-</html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-ECP Solutions, LLC<br/>110 West Main St.<br/>Lexington KY 40508<br/>United States
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://go2.mailengine1.com/form?2ikm8--eism-4djng27&sl=4eq&t=1&ac=gctb' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://go2.mailengine1.com/form?2ikm8--eism-4djng27&sl=4eq&t=5&ac=gctb' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<br><div align="center"><a href="http://www.campaigner.com/?utm_source=campaigner&utm_medium=email&utm_campaign=deliveryfooter" style="cursor: pointer;"><img src="http://media.campaigner.com/app/poweredby.gif" alt="delivered by Campaigner" border="0" style="cursor: pointer;"></a></div>
-<img src="http://go2.mailengine1.com/open/gctb-2ikm8--4djng22/img.gif" width="0" height="0" alt="">
-------=_Part_1018036799.1632859362535--
+--=====003_Dragon113216485462_=====--
 
 
---===============7481642620266459371==
+
+--===============3077496082233593791==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7481642620266459371==
+--===============3077496082233593791==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -265,5 +192,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7481642620266459371==--
+--===============3077496082233593791==--
+
 
