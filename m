@@ -2,109 +2,158 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0EBF541BA8F
-	for <lists+industrypack-devel@lfdr.de>; Wed, 29 Sep 2021 00:48:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5DBF141C4EF
+	for <lists+industrypack-devel@lfdr.de>; Wed, 29 Sep 2021 14:46:24 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mVLtZ-0003uT-K9
-	for lists+industrypack-devel@lfdr.de; Tue, 28 Sep 2021 22:48:17 +0000
+	id 1mVYyd-00057I-5R
+	for lists+industrypack-devel@lfdr.de; Wed, 29 Sep 2021 12:46:23 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from
- <bounces+17461769-b3e7-industrypack-devel=lists.sourceforge.net@em8882.fastfundinggroup.net>)
- id 1mVLtY-0003uF-8d
- for industrypack-devel@lists.sourceforge.net; Tue, 28 Sep 2021 22:48:16 +0000
+ (envelope-from <claire.steffanie@reachtargetleads.com>)
+ id 1mVYyc-000576-Hv
+ for industrypack-devel@lists.sourceforge.net; Wed, 29 Sep 2021 12:46:22 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=To:References:In-Reply-To:From:Content-Type:Subject
- :Message-Id:Date:MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:
+ d=sourceforge.net; s=x; h=MIME-Version:Content-Type:In-Reply-To:References:
+ Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=SJvds/DqGAAHXSZYpLixf+IGo3KKWm3spvNTmIeA7tA=; b=Kd3EGbtWa15KY5NyKdQWHGgHKh
- oAEWXR1Ppm9Mc5SX4yT1kgEsors5LydiaiE9ZZGNjAR7B0fF1pskPFGWFKj/FMVtSVC4a+kL06GGh
- AKdxRj3NQY6QEB09K++XuHeXSmtt6z7YIkSNEMOHupacN7Obe74YBnAWlYQQmAd1qMr4=;
+ bh=jmIOpEUursMorLx+nrSCZ50q4HgqGxSxopVvkPSLtYc=; b=mEkbgEeHRkSeo1jKn1CTcw5+En
+ /AwdZDYqpS7I4qhgL0RfTFpPrLSGq4FcuBdfqEuzd9+LCdyvr7W6Qr1ARAQerdHtwixnFquhTNtE/
+ ieokptD8vfxRPdFUR1QPlkdSCmk//1EzDraaO2nNhSg+NePcha0LuC3JSNUDqriWULDo=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=To:References:In-Reply-To:From:Content-Type:Subject:Message-Id:Date:
- MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ h=MIME-Version:Content-Type:In-Reply-To:References:Message-ID:Date:Subject:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=SJvds/DqGAAHXSZYpLixf+IGo3KKWm3spvNTmIeA7tA=; b=gJrmIOLtwVagJq+oUNI/VnM+AE
- m0GPFYY4d1w4eGqqb9zoSTnPcTN1fB+S0Tk+V2vzRBf9lkYc1nAe2Afdy/0vUvymdacevzE3OiyYI
- ryMAX5Jyxk2mDGFJdgY02sLz/YCtKdsWaJsZyO87xMPreVu1V8bsuOyv+APQE8NOpibE=;
-Received: from wrqvdxtc.outbound-mail.sendgrid.net ([149.72.218.124])
+ bh=jmIOpEUursMorLx+nrSCZ50q4HgqGxSxopVvkPSLtYc=; b=A9vbF20D5Lz1DMPbJpaMqwq9Mr
+ cy8TGdmIGZRekh0vnrI0ESwpJQ82sclqgI2jVT+OxzJoxtfYKTAl5Ox0trMOCByH4b7Vi3rYVgSKa
+ xcY6d630UT3nPc2MB9cSyAkvvTXngHWitTZswZs+7DooXJqtkrzzLbA6LVz6fRBh5JBA=;
+Received: from mail-eopbgr1390098.outbound.protection.outlook.com
+ ([40.107.139.98] helo=IND01-BO1-obe.outbound.protection.outlook.com)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92.3)
- id 1mVLtS-0004jS-4c
- for industrypack-devel@lists.sourceforge.net; Tue, 28 Sep 2021 22:48:16 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fastfundinggroup.net; 
- h=mime-version:subject:content-type:from:in-reply-to:references:to; 
- s=s1; bh=SJvds/DqGAAHXSZYpLixf+IGo3KKWm3spvNTmIeA7tA=;
- b=N5b03YR0tvif91sVcrGEku4MI8DBAAnwaxJw9iqEc0Yh+jI5xnRTDA5urG4KlRgGZcMu
- pRHXTprL7rPIlw3ZAZhc77rVFXxhu07HFgD9GJOMv4lPsu6aDALzlt4oBWUSfOu+3uJYiB
- CWiZxHbmvHMcnnFpG5lKTiIXvX3LQvI7nm8kJPQFHSoAzibh3TA09e0aQnRFxnsxmz0JRC
- 5oofXPBDn8VhpQUvYeSd9USgCfF8ByPl1XiScnbISjAcGuYalGI6/cD2IKKRuHDfwsGZCH
- va9GtMRousOwQwrK0VNvEmHOaKPAa74L9uQb62qY7IceB+H9IKWkYcDlh0kuKQiA==
-Received: by filterdrecv-58c44f8fdf-pxdbf with SMTP id
- filterdrecv-58c44f8fdf-pxdbf-1-61539B9F-26
- 2021-09-28 22:47:59.294902194 +0000 UTC m=+2334423.255082610
-Received: from [172.31.5.232] (unknown)
- by ismtpd0052p1las1.sendgrid.net (SG) with ESMTP id R1WoV6E5QMKpYlv8CYyqTA
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 28 Sep 2021 22:47:59.227 +0000 (UTC)
-Received: from 776393159873 named unknown by gmailapi.google.com with HTTPREST;
- Tue, 28 Sep 2021 08:34:07 -0700
-Received: from 776393159873 named unknown by gmailapi.google.com with HTTPREST;
- Wed, 22 Sep 2021 13:45:58 -0700
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1mVYyY-00062U-14
+ for industrypack-devel@lists.sourceforge.net; Wed, 29 Sep 2021 12:46:22 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=IiYhEPTJky0sQHHC9J9h+Fqq8bWwM/4g4uuB6qAAmEYLwuXuH6xn1H5rd8hhj/bwX0rQMhcr+ugWl7MqoiQ4pxLVFlwuBRZNw0V8opf3s+37R0WJK6rblGRleq/XhEs4z5/yf/Khn/K6yJnMDmBJ1wiWQhd48K54jE9vLbllUvuz9bntI2A0Xre83MPC9WJ1NukrzLJETRScMM4SVsb/JsU43dk98ByYMbe/hf0Pb9gHG35pdtBvyapGP/j3ejmqrKiJOxflpC5jYHnBBNxMOH6xet5paOobT2W2B0Q3nMl4i3EGv0ew0f2usRhGAPWdTQm/Glc2MRCw+7KA0vOFVg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version; 
+ bh=jmIOpEUursMorLx+nrSCZ50q4HgqGxSxopVvkPSLtYc=;
+ b=MwDDf7mK/I8W6gJIOnW1V9qsNOT0mws5YKWt3FWyVvorIIZGdd8s4rcae8mSeB/RvLyxiGMcm5eLCXj3E16a8Tzt46Rg7W1thEoU1MRlD+hnndRW5W0C3V/W10DTj4xLc6SdvdE1d6TAp4NNd1DwJ3jFYZijRG3qR3R0m4U/yDu/SRu0zHLab9vJa8LI0Khsk/D89RzFSajtZejAZpkUpiJS2G5kfOXAGDTI29hc+IUDkvxoCIzr7SrCviKLhncdwKXc5teHqKjbzYtOMf54KgeKfIMWpjn49pLWdutrWYyYJWpPAKupEzChM23GNw6Tqxk6tdJmkyR4aqvfE0+Neg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=reachtargetleads.com; dmarc=pass action=none
+ header.from=reachtargetleads.com; dkim=pass header.d=reachtargetleads.com;
+ arc=none
+Received: from BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM (2603:1096:b01:4::15)
+ by BMXPR01MB1096.INDPRD01.PROD.OUTLOOK.COM (2603:1096:b00:e::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4544.19; Wed, 29 Sep
+ 2021 12:46:06 +0000
+Received: from BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM
+ ([fe80::e909:f7e8:4649:e6d1]) by BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM
+ ([fe80::e909:f7e8:4649:e6d1%7]) with mapi id 15.20.4544.022; Wed, 29 Sep 2021
+ 12:46:06 +0000
+From: Claire Steffanie <claire.steffanie@reachtargetleads.com>
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+Thread-Topic: Reach Dental Assistants & Dental Radiographers
+Thread-Index: AdeVHPWAENxAEg8VLUm8jiNoBp4GlgAy+FTgAV0boHAE5zs+YAAAABLQAAAAJPAAAAAj4AAAAChAAAAAJdAALyh2UAFeSE6A
+Importance: high
+X-Priority: 1
+Date: Wed, 29 Sep 2021 12:46:06 +0000
+Message-ID: <BMXPR01MB4760336808CE7596815F4476F9A99@BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM>
+References: <BMXPR01MB4760BFCA6068836D74AA4961F9A19@BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM>
+ <BMXPR01MB476039F2C1EC5403D9C6D46DF9A29@BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM>
+In-Reply-To: <BMXPR01MB476039F2C1EC5403D9C6D46DF9A29@BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+authentication-results: lists.sourceforge.net; dkim=none (message not signed)
+ header.d=none; lists.sourceforge.net;
+ dmarc=none action=none
+ header.from=reachtargetleads.com;
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: be9917c0-99e2-4920-8879-08d983471acf
+x-ms-traffictypediagnostic: BMXPR01MB1096:
+x-microsoft-antispam-prvs: <BMXPR01MB109603EE4C054DF21508A434F9A99@BMXPR01MB1096.INDPRD01.PROD.OUTLOOK.COM>
+x-ms-oob-tlc-oobclassifiers: OLM:4502;
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: RdtnJa7QDKHciOcREiu5XUgvrHYiv3Qspk75GL53XoUt0y1x5Dhla42X+0ChD7VFAq2PECkle9yzkVFHNa4revWXzo6z9RRzTYujMN6HAvA53W6n3PX+8goTVaD3XUZfn80as/cxdfDy64qfpzZ8kim34ZooutXUPIOTNyG48LNaZzApblbHDVJdtJH6xf++UDZ3FWTklfBrGCNByCL64OIBETtoNhxUXSQ4pxEFdVjhcyufWPXfCs8/UWA8YbKN/USiXXav8vhgVZNftJ8uU6Mk/Rji8Uqf/3da/4CYoyF/lBGEeLg6mWhAhIrJyJ+idjyOqXCekalLzYRQ6oGxDhVlgeddKHgqwhwrBS/6QN2MgLG6WfzyQDAnS3G8yleMN93p8AgblMDZ+6d3ny6HRdyosVRVON47tMBYYwEVLPrsGkCJbwu5ajEIfTeCGACsDNKOnS/rD5JAXUNZYIWnSxQXrlT/4aTTXGHY/mF++ooBES8Yu6d/2wvEZ7gMKqyGSG7ya3BoGuieJPsumBX11tlWzcRo5magr1z/zmNf5PQ7YgNI5SqSqk7nrRG1Hv2IWc8Fe/oqBZUviTiiuFOhLVoN/2i2/Ae8Irilg3ewx75JukhEBzmoe2gfjAlJxdvO9jwtqL+9NFl/JF11RvHgRl0eK8e1NA1M701vNAsEH518Q/UD6cvpa0sjQdNMfEBS
+x-forefront-antispam-report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
+ IPV:NLI; SFV:NSPM; H:BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM; PTR:; CAT:NONE;
+ SFS:(366004)(376002)(396003)(136003)(346002)(39850400004)(508600001)(71200400001)(6916009)(88996005)(33656002)(122000001)(9686003)(66446008)(8936002)(86362001)(316002)(52536014)(66556008)(7696005)(5660300002)(55016002)(53546011)(6506007)(83380400001)(38100700002)(2906002)(64756008)(44832011)(66946007)(66476007)(186003)(8676002)(504514002);
+ DIR:OUT; SFP:1102; 
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: =?us-ascii?Q?u4VrZoaDYPDwUXMyJWaLH97KcWjH6mAQybC65KXQPewdstQHgmrEUzT0DJqV?=
+ =?us-ascii?Q?pfjuQqltzpDXy8PeVoNSuPdg9yOmccW89SUI+9oWSMHns6G/4w8mCCyAhLrI?=
+ =?us-ascii?Q?cAyELtSubd7RmuNInGznDPsC8uFp0cAHbEk53Es21MdPnXfz7spd5680hnV7?=
+ =?us-ascii?Q?K2Fi4pc76zc3ooNnIImCgA+cDZE6gTT2jpG39H9TzsdfO7JRXttzJDi0dBr9?=
+ =?us-ascii?Q?YZDLgSddxFUOwpv9dvn927ORbEwQNyAOwComP+8Lia/wnF3QdhqXl7F025UE?=
+ =?us-ascii?Q?OhwrVOBpB5rUi73JSuI/IeITp3P5VPY5vhjogVFBggtgbnt41H6RcoB+CWuK?=
+ =?us-ascii?Q?adZXCWBNULDbybRwQpLHvM9uY97GRhMkTvzGQG+Qrvv//ObityiwO1jBXpg1?=
+ =?us-ascii?Q?nQHD5FZawLF1HcGCsc4vLg+bl7JcS57eNE8nMV++Zj9XRRw6yj6zqaSJgfca?=
+ =?us-ascii?Q?0tWqW2r32rGBZO/uPyMryhdHfc8PTEUsflowccOL7ZmGgupiRAUofx1FoIb3?=
+ =?us-ascii?Q?mbAY9H6glAAFcKlYsPMmpc9JilLXavXEaP7L+OdYhQZHKdxdPZwt/4UOOJ4f?=
+ =?us-ascii?Q?zv/w+71I5TdjJGgPMP8A6G6EcczgfGbWorSCTrpOweXIKslPSWLnIkaQX4SM?=
+ =?us-ascii?Q?dtbaTUytoK3fVdbq83rvX9L81ev2QQut81ONhPVfsqyG/SZMyEdWlf03IDAs?=
+ =?us-ascii?Q?UoZIDm+Qh6s3Asc6yc7M5GC+Qd8V0BU5uxnDUkbiiixmtehxDt7PaMb09iYG?=
+ =?us-ascii?Q?qHFwSjAHnVKFfcFV9g0UW4kZq0U63Jx1eHg2anxwi767sW/4D457gE/WdbBC?=
+ =?us-ascii?Q?u/8Ti70dL1oW4/rASg2AimkEIeemK3GQNONlyuq9mkkUqpoffeiSm/dQtA10?=
+ =?us-ascii?Q?1mhAtYPA/dNna6rPSweMi1vm/TpRtACUKqlqshDtgk9rkBwC+n3uwn+PiD9S?=
+ =?us-ascii?Q?8H/VJ48b7UhrqoPvyAaRKVO8C6LYQEWz36dcw6qb/+M62Yr/d8azjnY98O/5?=
+ =?us-ascii?Q?SVm5BGJS6tsM1jCX68DuAqfV3oDTnGupVVwKgieimd5eduFF3bEQAJO6iNge?=
+ =?us-ascii?Q?tdsC8FLZxGiVWOeqh86Rs7OpFvsELu7Cer0Ogby0BviD7SUiqLQyH9KSlWBE?=
+ =?us-ascii?Q?scJ2VWXrA4V+l3krQ0Q/YAfqvXqTUc8FP7nC/5jUZZpyGYdbITCYRFg8ISu8?=
+ =?us-ascii?Q?xMYhr9usB2zlD+c0GzduGCh6WC/8mOT6FLN4Y1RRCXfq+dYDzE5UOhAGnc+B?=
+ =?us-ascii?Q?sSxnfsW8qp7zpNS7qg2SueCMofs5acvVeo3YZWJsSo7HCcLWgCmYizswK+br?=
+ =?us-ascii?Q?pf16jpUyxvlHByiDYeDUOVebeBNmApLotaTNH/rZVk2jiP78+Ds7gBcRfZhP?=
+ =?us-ascii?Q?6tyKxd4=3D?=
+x-ms-exchange-transport-forked: True
 MIME-Version: 1.0
-Date: Tue, 28 Sep 2021 22:47:59 +0000 (UTC)
-Message-Id: <fa6e55b87e164c67878c7cf970691890_CAHtXQSNRwcTYD-mLQNfFAL1WSq1D-+LejJmhe3s--u6UWDdxxA@mail.gmail.com>
-From: Ron Michaels <underwriting@fastfundinggroup.net>
-In-Reply-To: <ba4562413f624f408da18986b42f2757_CAHtXQSM18pQEqTcu2xfyniGEaF1Uor2TfrxS3DO42xe7ztW22A@mail.gmail.com>
-References: <4d6b4ba6bfde44aa876356efb49db33c_CAHtXQSPtfYkWXbHo98wwJ4pgZK1neHSHVoA9PYdivmwO+M2vJA@mail.gmail.com>
- <923aa96c8b214aa9843068b2c1836ac5_CAHtXQSNOnQjV=RkZ7FW2PMLYN07QE4c2D-HhqLi+FYeQQfLEDw@mail.gmail.com>
- <ba4562413f624f408da18986b42f2757_CAHtXQSM18pQEqTcu2xfyniGEaF1Uor2TfrxS3DO42xe7ztW22A@mail.gmail.com>
-X-SG-EID: =?us-ascii?Q?aVQykaPryv=2FvgHutWGk3angG8gEn3d1yBXNMlmyW3ym8kEtTl3IPMaCerxg6OO?=
- =?us-ascii?Q?wxwmNsmXUIv41APfJv9S+fooEu5vLudUK=2F3m9Cg?=
- =?us-ascii?Q?wMMEnBbH=2FTuyzhTRN9Kdtz=2FIgonRLypW9u5t7Mx?=
- =?us-ascii?Q?kLBpfO+XrPR9cgr5SPDXcWjBj4yWRVFW9k9BBTT?=
- =?us-ascii?Q?Y++cqUVAq6iJj9OUZ4K7Rb71CS3R6Js0lL1A3m5?=
- =?us-ascii?Q?qW+q7DPqR4qSz0AlUP2O4R6oV1pJuFLP5JN5C6C?=
- =?us-ascii?Q?2RDSabFy+Z+ych3vGXUhcQzXmjzB7Leg1FBfZ83?= =?us-ascii?Q?SA8=3D?=
-To: industrypack-devel@lists.sourceforge.net
-X-Entity-ID: /PhzgDtEoGxZCUSeVQe5nQ==
-X-Spam-Score: 0.9 (/)
+X-OriginatorOrg: reachtargetleads.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: BMXPR01MB4760.INDPRD01.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: be9917c0-99e2-4920-8879-08d983471acf
+X-MS-Exchange-CrossTenant-originalarrivaltime: 29 Sep 2021 12:46:06.3881 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 74a4c3fd-5db9-4800-aa5a-b3c31cd03cc0
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: Y6CskJXtlffhC2LtLWXlZ6mWCmx4o6dU3n4NcT+/nHRex4WjYRT9UGTTeRlopC6UbtmqWmSl4/ji4pNckNwchv9aL12Z1uzKkG4CDxXko34HBOb+KcKv4u5U+V1MO7BG
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BMXPR01MB1096
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  I'm sure you're busy, but I'd appreciate if you can respond
- to my email below, so I can cross this off my to do list. On Sunday, September
- 26, 2021 at 8:03 PM, Ron Michaels <underwriting@fastfundinggroup.net> wrote:
- > I've reached out a couple times, but I haven't heard back. I'd appreciate
- a response to my email bel [...] 
- Content analysis details:   (0.9 points, 6.0 required)
+ Content preview:  Hi,
+ Any update for my below email? We can help you to increase
+ sales, engagement, conversion and more through our mailing list. Let me know
+ your target audience or target market you like to reach 
+ Content analysis details:   (-0.0 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [40.107.139.98 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [40.107.139.98 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid 1.1 SENDGRID_REDIR         Redirect URI via Sendgrid
-X-Headers-End: 1mVLtS-0004jS-4c
-Subject: Re: [Industrypack-devel] Direct Lender here... Largest lender on
- the east coast. I can and will get you funded. Even if you just got
- funded....
+X-Headers-End: 1mVYyY-00062U-14
+Subject: Re: [Industrypack-devel] Reach Dental Assistants & Dental
+ Radiographers
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -116,433 +165,245 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============8264731382055088669=="
+Content-Type: multipart/mixed; boundary="===============2223422811893730934=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============8264731382055088669==
-Content-Type: multipart/alternative; boundary="000000000000522f9705cc9b989c"
+--===============2223422811893730934==
+Content-Language: en-US
+Content-Type: multipart/alternative;
+	boundary="_000_BMXPR01MB4760336808CE7596815F4476F9A99BMXPR01MB4760INDP_"
 
---000000000000522f9705cc9b989c
-Content-Type: text/plain; charset=utf-8
+--_000_BMXPR01MB4760336808CE7596815F4476F9A99BMXPR01MB4760INDP_
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
-I'm sure you're busy, but I'd appreciate if you can respond to my email bel=
-ow, so I can cross this off my to do list.
+Hi,
 
-On Sunday, September 26, 2021 at 8:03 PM, Ron Michaels <underwriting@fastfu=
-ndinggroup.net> wrote:
-> I've reached out a couple times, but I haven't heard back. I'd appreciate=
- a response to my email below. I'm your guy! I'll get you the business fund=
-ing you need..
->  If you would like to be proactive, please complete the application here =
-online and return the last 4 months business bank statements.=20
->=20
->  I will pledge to you, in advance, that my rates and terms will be the be=
-st in the industry. We=E2=80=99re a total financial warehouse with every si=
-ngle financial option available for business owners.
->=20
->=20
->=20
-> Upon receiving that information, I will immediately activate your firm ap=
-provals.=20
->=20
-> As soon as I have options for you, I will give you a call to discuss.
->=20
-> Usually within 3 or 4 hours.....
->=20
-> =20
->=20
->  application here online =20
->=20
-> --
->=20
-> Ron Michaels
->=20
-> Managing Director/ Lead  Underwriter
->=20
-> Omega Capital Funding
->=20
-> www.omegacapfund.com
->=20
-> Call 1-877-282-1214 1-877-282-1214 =E2=80=93 Toll Free
->=20
-> Call 1-631-714-6801 1-631-714-6801 =E2=80=93 Main
->=20
-> Call 1-631-730-8115 1-631-730-8115 - Fax
->=20
->=20
->=20
-> On Sunday, September 26, 2021 at 6:35 PM, Ron Michaels <underwriting@fast=
-fundinggroup.net> wrote:
-> > Just making sure you saw this.
-> >=20
-> > On Friday, September 24, 2021 at 5:54 PM, Ron Michaels <underwriting@fa=
-stfundinggroup.net> wrote:
-> > >=20
-> > >=20
-> > > Even if you were funded recently, I can and will buy the loan at a lo=
-wer=20
-> > > cost. If you're in need of funding for your business. I am a DIRECT L=
-ENDER!=20
-> > > We own 4 lending platforms outright and I have access to 80 additiona=
-l=20
-> > > banks. I fund in-house within 8 hours. NO BROKERS OR FEE'S! NO LIES!!=
-!!!
-> > >=20
-> > > Complete the following Application=20
-> > > <https://u17461769.ct.sendgrid.net/ls/click?upn=3DjntoTxyaQ8kc-2B-2BB=
-hHZcrIL5dRSLuKVcbWnUs8kFN-2FBwiH9mBf0mDL9H26AQY4XTY9VlQt8-2BzOweBrrjDa-2B8g=
-M4mPTcydQr126kMBsEs-2FA9qYfYqCwxQKpFBTBNlKI3iOncGYQ0cFIR8sDYFZLHzOLyimYgIde=
-t0m64H8YCnCJGAu2QdiegP1Vg9INGd1i5tq9KEG_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-=
-2FIgBqvapSAsR-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EG0zzb6lqpzmMqiBOcioYH1dG0YUKM-2BYZ=
-NSCA6qzLrno4FAaSNR-2FaSOU1wwtlCJwB0i9T4BxLP76y69LWkyRKsHxJGs34jYcT4MexjfOx4=
-w1DbfK2lrvNXVgrCjE0pK5hZT1f06rVF6l5Miv6LtsG-2BM4CPXFQGKkwYB55hnSBkxfv-2BYkF=
-5sQUx5gIgjhBdl30> and=20
-> > > receive the terms you deserve.
-> > >=20
-> > > -Bridge loans 2-24 months
-> > > -No fees deducted after the funds are deposited (no brokers needed)
-> > > -Term loans up to 25 years 2.7% above prime
-> > > -Lines of credit
-> > > -TRUE consolidations=20
-> > > -Equipment Financing
-> > >=20
-> > > -Merchant Cash Advances
-> > >=20
-> > >=20
-> > > =20
-> > >=20
-> > >           If you would like to be proactive, please complete the appl=
-ication=20
-> > > here online=20
-> > > <https://u17461769.ct.sendgrid.net/ls/click?upn=3DjntoTxyaQ8kc-2B-2BB=
-hHZcrIL5dRSLuKVcbWnUs8kFN-2FBwiH9mBf0mDL9H26AQY4XTY9VlQt8-2BzOweBrrjDa-2B8g=
-M4mPTcydQr126kMBsEs-2FA9qYfYqCwxQKpFBTBNlKI3iOncGYQ0cFIR8sDYFZLHzOLyimYgIde=
-t0m64H8YCnCJGAu2QdiegP1Vg9INGd1i5tq23c2_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-=
-2FIgBqvapSAsR-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EG0zzb6lqpzmMqiBOcioYH1dG0YUKM-2BYZ=
-NSCA6qzLrnrDN4vssFz-2BWbeolQj-2Bnnk1EaxwGqyYwmclo1Az1DJjwmYEm0eyJ8nzpm5oieP=
-FUQQ55442doguWr7PWNZ85lEZUBd2jolwFqA5OD0UcLlp-2BCPZ5bc-2B7Pc9hToAjYQRxkiDSq=
-xWq14vxh7fHcJQCceC> and=20
-> > > return the last 4 months business bank statements.=20
-> > >=20
-> > >  *I will pledge to you, in advance, that my rates and terms will be t=
-he=20
-> > > best in the industry. We=E2=80=99re a total financial warehouse with =
-every single=20
-> > > financial option available for business owners.*
-> > >=20
-> > >=20
-> > > Upon receiving that information, I will immediately activate your fir=
-m=20
-> > > approvals.=20
-> > >=20
-> > > As soon as I have options for you, I will give you a call to discuss.
-> > >=20
-> > > Usually within 3 or 4 hours.....
-> > >=20
-> > > =20
-> > >=20
-> > >  application here online=20
-> > > <https://u17461769.ct.sendgrid.net/ls/click?upn=3DjntoTxyaQ8kc-2B-2BB=
-hHZcrIL5dRSLuKVcbWnUs8kFN-2FBwiH9mBf0mDL9H26AQY4XTY9VlQt8-2BzOweBrrjDa-2B8g=
-M4mPTcydQr126kMBsEs-2FA9qYfYqCwxQKpFBTBNlKI3iOncGYQ0cFIR8sDYFZLHzOLyimYgIde=
-t0m64H8YCnCJGAu2QdiegP1Vg9INGd1i5tqV-1O_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-=
-2FIgBqvapSAsR-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EG0zzb6lqpzmMqiBOcioYH1dG0YUKM-2BYZ=
-NSCA6qzLrnoM9-2F4JcZmItiMggmgOd-2BeHfbwwKpbSq1vRljJYoOyVe-2FAIzUs0IOoaxycMY=
--2BnoyDkEDSwyFf2H2RDMSZuUsYQjtaXdg9Oafi1pw8dy0M8iqWCIi8q8OXIXmTv21-2BwkvZoC=
-xsIzdosJkbspRV4nB-2FQD>
-> > >  =20
-> > >=20
-> > > --
-> > >=20
-> > > *Ron Michaels*
-> > >=20
-> > > Managing Director/ Lead  Underwriter
-> > >=20
-> > > *Omega Capital Funding*
-> > >=20
-> > > www.omegacapfund.com
-> > >=20
-> > > 1-877-282-1214 =E2=80=93 Toll Free
-> > >=20
-> > > 1-631-714-6801 =E2=80=93 Main
-> > >=20
-> > > 1-631-730-8115 - Fax
-> > >=20
-> > > You may unsubscribe <https://u17461769.ct.sendgrid.net/ls/click?upn=
-=3D0mogsfw379VW7NOF7LqlEo-2FxCzy-2FKWmP-2BOlbLKXGTezZIQiKjAtXuXFg7VeLCzsiNz=
-AavT5Rbmvb0Byc2r3kup2UW29q-2BaiBLmea1KRYhAIV9RqC0kSkCPFok8-2BcWHlVknHsrDdou=
-GLUJ209hDvJDQ-3D-3DX2aH_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-2FIgBqvapSAsR-2F=
-NHq4iJ-2Fm-2F9gWJ8sHThO3EG0zzb6lqpzmMqiBOcioYH1dG0YUKM-2BYZNSCA6qzLrnqXOa9S=
-6InhZm77FVoKbM5AgRaYdX94kKzcHrTdTQ2PPmd29uzzvdEBu4MWloB2ft7iULitPs8gL0-2Bpx=
-pu14-2B1pg3F2q6fb86E87dbFOHX-2FbhPVrABspWiAflC7I6NUfs2YUizfuqc2KNFYNraFA-2B=
--2F2> to stop=20
-> > > receiving our emails.
-> > >=20
-> >=20
->=20
+Any update for my below email?
 
---000000000000522f9705cc9b989c
-Content-Type: text/html; charset=utf-8
+We can help you to increase sales, engagement, conversion and more through =
+our mailing list. Let me know your target audience or target market you lik=
+e to reach
+
+Thanks,
+Claire.
+
+From: Claire Steffanie
+Sent: Wednesday, September 22, 2021 9:36 AM
+To: industrypack-devel@lists.sourceforge.net
+Subject: RE: Reach Dental Assistants & Dental Radiographers
+Importance: High
+
+Hi,
+
+Let me know your Target audience you wish to reach, So that I will get back=
+ with samples and Counts to check the quality for your review?
+
+Thanks,
+Claire.
+
+From: Claire Steffanie
+Sent: Tuesday, September 21, 2021 11:06 AM
+To: industrypack-devel@lists.sourceforge.net
+Subject: Reach Dental Assistants & Dental Radiographers
+Importance: High
+
+HI,
+
+I had a chance to review your company profile and thought you might be inte=
+rested in acquiring a list of Contacts of Dentist Dental Technicians Orthop=
+edist, Transplant Surgeon, Orthodontist and many more across the Globe. Rea=
+ch out the dental clinics, dental hospitals, Decision makers in dental indu=
+stry.
+
+You can Reach: Allergy & Immunology, Dentists, Dermatologists, Diabetologis=
+ts, Diagnostic Radiology, Emergency physicians, Endocrinologists, Family Pr=
+actice, Gastroenterologists, General practitioners, Geriatrics, Gynaecologi=
+sts, Hematologists, Hygienists, Immunologists, Nephrologists, Neurologists,=
+ Neurosurgeons, Obstetrics, Oncologists, Ophthalmologists, Osteopathic phys=
+icians, Otolaryngology, Pathologists, Pediatricians, Physical Medicine, Pla=
+stic Surgery, Psychiatrists, Pulmonologists, Surgeons, Traumatologists, Uro=
+logists.
+
+Kindly let me know your interest. So that I could come up with more informa=
+tion for your review.
+
+Regards,
+Claire Steffanie,
+Marketing Coordinator.
+
+--_000_BMXPR01MB4760336808CE7596815F4476F9A99BMXPR01MB4760INDP_
+Content-Type: text/html; charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
-I'm sure you're busy, but I'd appreciate if you can respond to my email bel=
-ow, so I can cross this off my to do list.
-<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Sunday, Septem=
-ber 26, 2021 at 8:03 PM, Ron Michaels &lt;underwriting@fastfundinggroup.net=
-&gt; wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex=
-;border-left:1px #ccc solid;padding-left:1ex">I've reached out a couple tim=
-es, but I haven't heard back. I'd appreciate a response to my email below. =
-I'm your guy! I'll get you the business funding you need..<br> If you would=
- like to be proactive, please complete the application here online and retu=
-rn the last 4 months business bank statements. <br><br> I will pledge to yo=
-u, in advance, that my rates and terms will be the best in the industry. We=
-=E2=80=99re a total financial warehouse with every single financial option =
-available for business owners.<br><br><br><br>Upon receiving that informati=
-on, I will immediately activate your firm approvals. <br><br>As soon as I h=
-ave options for you, I will give you a call to discuss.<br><br>Usually with=
-in 3 or 4 hours.....<br><br> <br><br> application here online  <br><br>--<b=
-r><br>Ron Michaels<br><br>Managing Director/ Lead  Underwriter<br><br>Omega=
- Capital Funding<br><br>www.omegacapfund.com<br><br>Call 1-877-282-1214 1-8=
-77-282-1214 =E2=80=93 Toll Free<br><br>Call 1-631-714-6801 1-631-714-6801 =
-=E2=80=93 Main<br><br>Call 1-631-730-8115 1-631-730-8115 - Fax<br><br>
-<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Sunday, Septem=
-ber 26, 2021 at 6:35 PM, Ron Michaels &lt;underwriting@fastfundinggroup.net=
-&gt; wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex=
-;border-left:1px #ccc solid;padding-left:1ex">Just making sure you saw this=
-.
-<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Friday, Septem=
-ber 24, 2021 at 5:54 PM, Ron Michaels &lt;underwriting@fastfundinggroup.net=
-&gt; wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex=
-;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div dir=3D"=
-ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><d=
-iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
-=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
-"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div =
-dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"=
-ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><p class=3D"MsoNorm=
-al" style=3D"margin:0in 0in 0.0001pt;font-size:11pt;font-family:Calibri,san=
-s-serif"><span style=3D"font-size:13.5pt;font-family:&quot;Times New Roman&=
-quot;,serif;color:black">Even if you were funded recently, I can and will b=
-uy the loan at a lower cost. If you&#39;re in need of funding for your busi=
-ness. I am a DIRECT LENDER! We own 4 lending=C2=A0platforms outright and I =
-have access to 80 additional banks. I fund in-house within 8 hours. NO BROK=
-ERS OR FEE&#39;S! NO LIES!!!!!</span><span style=3D"font-size:12pt"></span>=
-</p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;font-size:11pt;=
-font-family:Calibri,sans-serif"><span style=3D"font-size:13.5pt;font-family=
-:&quot;Times New Roman&quot;,serif;color:black">Complete the following=C2=
-=A0<span style=3D"color:rgb(17,85,204)"><a href=3D"https://u17461769.ct.sen=
-dgrid.net/ls/click?upn=3D0mogsfw379VW7NOF7LqlEo-2FxCzy-2FKWmP-2BOlbLKXGTezZ=
-IQiKjAtXuXFg7VeLCzsiNzAavT5Rbmvb0Byc2r3kuhiBr2tTO1nRN9tXYi5xBCwTqjR6jIw8-2F=
-ULJrVSpzn-2FYG8pyqTgIo-2BCjiwpQXa8415-2FjWAJMUCNgFGzlMLc5HkxZq1wsA-2B-2BQWA=
-7wskSEgY2rWg8YgZgct4w0zRH-2B6aHRBQ-3D-3DWGB8_suNG2qtLSqbrFLBKR-2BLLnf-2BtmR=
-aan0-2FIgBqvapSAsR-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EG0zzb6lqpzmMqiBOcioYH1dG0YUKM=
--2BYZNSCA6qzLrnrFWWLuIfGQyX4e5VcGSNeVqydBKWXDxjBsaKsP-2BUL-2FesfaQI9b8MVeVw=
-pkMCyNuzXZ9Mb0tgnoyM4bK3tryYBDdO-2BL7jq9qJ5MZB37fQfmohlHyWJrL-2BcRosutwgy3c=
-AcR-2FE-2B-2F1I0ct2KIksdFKi1i" target=3D"_blank">Application</a></span>=C2=
-=A0and receive the terms you deserve.<br><br>-Bridge loans 2-24 months<br>-=
-No fees deducted after the funds are deposited (no brokers needed)<br>-Term=
- loans up to 25 years 2.7% above prime<br>-Lines of credit<br>-TRUE consoli=
-dations=C2=A0<br></span><span style=3D"color:black;font-family:&quot;Times =
-New Roman&quot;,serif;font-size:13.5pt">-Equipment Financing</span><span st=
-yle=3D"font-size:13.5pt;font-family:&quot;Times New Roman&quot;,serif;color=
-:black"><br></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.000=
-1pt;font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"color:bla=
-ck;font-family:&quot;Times New Roman&quot;,serif;font-size:13.5pt">-Merchan=
-t Cash Advances</span><br></p><p class=3D"MsoNormal" style=3D"margin:0in 0i=
-n 0.0001pt;font-size:11pt;font-family:Calibri,sans-serif"><br></p><p class=
-=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;font-size:11pt;font-family:=
-Calibri,sans-serif"><span style=3D"font-size:12pt">=C2=A0</span></p><p clas=
-s=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;font-size:11pt;font-family=
-:Calibri,sans-serif"><span style=3D"font-size:13.5pt;font-family:&quot;Time=
-s New Roman&quot;,serif;color:black">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 If =
-you would like to be proactive, please complete the=C2=A0</span><span style=
-=3D"font-size:12pt"><span style=3D"font-size:13.5pt;font-family:&quot;Times=
- New Roman&quot;,serif;color:rgb(17,85,204)"><a href=3D"https://u17461769.c=
-t.sendgrid.net/ls/click?upn=3D0mogsfw379VW7NOF7LqlEo-2FxCzy-2FKWmP-2BOlbLKX=
-GTezZIQiKjAtXuXFg7VeLCzsiNzAavT5Rbmvb0Byc2r3kuhiBr2tTO1nRN9tXYi5xBCwTqjR6jI=
-w8-2FULJrVSpzn-2FYG8pyqTgIo-2BCjiwpQXa8415-2FjWAJMUCNgFGzlMLc5HkxZq1wsA-2B-=
-2BQWA7wskSEgY2rWg8YgZgct4w0zRH-2B6aHRBQ-3D-3DIJhX_suNG2qtLSqbrFLBKR-2BLLnf-=
-2BtmRaan0-2FIgBqvapSAsR-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EG0zzb6lqpzmMqiBOcioYH1dG=
-0YUKM-2BYZNSCA6qzLrnq62ZYg9OLxebA9ZcpYbu3Pb3v-2FDUDtKvDtgRCgHp6QAqtzq4ncldd=
-n6RNHZApzAvf3D90UHRlhjMTPJd5zuVoTMTAVjTYnX2QHMPuFvfy4NS-2B4CHZILUzEJUr5KOH-=
-2FAKr0jJmrowd3uOrICCCZ6LoW" target=3D"_blank">application here online</a></=
-span></span><span style=3D"font-size:13.5pt;font-family:&quot;Times New Rom=
-an&quot;,serif;color:black">=C2=A0and return the last 4 months business ban=
-k statements.=C2=A0</span><span style=3D"font-size:12pt"></span></p><p clas=
-s=3D"MsoNormal" style=3D"margin:0in;background-image:initial;background-pos=
-ition:initial;background-size:initial;background-repeat:initial;background-=
-origin:initial;background-clip:initial;font-size:11pt;font-family:Calibri,s=
-ans-serif"><span style=3D"font-size:12pt;color:rgb(33,33,33)">=C2=A0<i>I wi=
-ll pledge to you, in advance, that my rates and terms will be the best in t=
-he industry.=C2=A0<span style=3D"background:yellow">We=E2=80=99re a total f=
-inancial warehouse with every single financial option available for busines=
-s owners</span>.</i></span><span style=3D"color:rgb(33,33,33)"></span></p><=
-p class=3D"MsoNormal" style=3D"margin:0in;background-image:initial;backgrou=
-nd-position:initial;background-size:initial;background-repeat:initial;backg=
-round-origin:initial;background-clip:initial;font-size:11pt;font-family:Cal=
-ibri,sans-serif"><span style=3D"font-size:12pt;color:rgb(33,33,33)"><i><br>=
-</i></span></p><p class=3D"MsoNormal" style=3D"margin:0in;font-size:11pt;fo=
-nt-family:Calibri,sans-serif"><span style=3D"font-size:12pt;color:rgb(38,40=
-,42)">Upon receiving that information, I will immediately activate your fir=
-m approvals.=C2=A0</span><span style=3D"font-size:12pt;color:rgb(33,33,33)"=
-></span></p><p class=3D"MsoNormal" style=3D"margin:0in;font-size:11pt;font-=
-family:Calibri,sans-serif"><span style=3D"color:rgb(38,40,42);font-size:12p=
-t">As soon as I have options for you, I will give you a call to discuss.</s=
-pan></p><p class=3D"MsoNormal" style=3D"margin:0in;font-size:11pt;font-fami=
-ly:Calibri,sans-serif"><span style=3D"color:rgb(38,40,42);font-size:12pt">U=
-sually within 3 or 4 hours.....</span></p><p class=3D"MsoNormal" style=3D"m=
-argin:0in 0in 0.0001pt;font-size:11pt;font-family:Calibri,sans-serif"><p cl=
-ass=3D"MsoNormal" style=3D"margin:0in;background-image:initial;background-p=
-osition:initial;background-size:initial;background-repeat:initial;backgroun=
-d-origin:initial;background-clip:initial;font-size:11pt;font-family:Calibri=
-,sans-serif"><span style=3D"font-size:12pt;color:rgb(33,33,33)">=C2=A0</spa=
-n><span style=3D"color:rgb(33,33,33)"></span></p><div></div><p class=3D"Mso=
-Normal" style=3D"margin:0in;font-size:11pt;font-family:Calibri,sans-serif">=
-<span style=3D"font-size:13.5pt;font-family:&quot;Times New Roman&quot;,ser=
-if;color:black">=C2=A0</span><span style=3D"font-family:Arial,Helvetica,san=
-s-serif;font-size:12pt"><span style=3D"font-size:13.5pt;font-family:&quot;T=
-imes New Roman&quot;,serif;color:rgb(17,85,204)"><a href=3D"https://u174617=
-69.ct.sendgrid.net/ls/click?upn=3D0mogsfw379VW7NOF7LqlEo-2FxCzy-2FKWmP-2BOl=
-bLKXGTezZIQiKjAtXuXFg7VeLCzsiNzAavT5Rbmvb0Byc2r3kuhiBr2tTO1nRN9tXYi5xBCwTqj=
-R6jIw8-2FULJrVSpzn-2FYG8pyqTgIo-2BCjiwpQXa8415-2FjWAJMUCNgFGzlMLc5HkxZq1wsA=
--2B-2BQWA7wskSEgY2rWg8YgZgct4w0zRH-2B6aHRBQ-3D-3DsrDg_suNG2qtLSqbrFLBKR-2BL=
-Lnf-2BtmRaan0-2FIgBqvapSAsR-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EG0zzb6lqpzmMqiBOcioY=
-H1dG0YUKM-2BYZNSCA6qzLrnpacAKR2vdiF3Fz6ao4lABPkx1GEv1JU3rTYA7JriX-2BicV2ZX8=
-Gju07p-2FYB4egvN2HQdbabS-2F1vdlUbqrvGXdRbn4dhCmqYzGil7FNwbgImF-2F-2BgHgHdEO=
-L0i6PLQFigDR7AeSnRtq9qKiDbYhMBorX7" target=3D"_blank">application here onli=
-ne</a></span></span>=C2=A0=C2=A0<br></p><p class=3D"MsoNormal" style=3D"mar=
-gin:0in 0in 0.0001pt;font-size:11pt;font-family:Calibri,sans-serif">--<br><=
-/p><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><table border=3D"0" c=
-ellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse"><tbod=
-y><tr><td style=3D"padding:0in 0in 0in 9pt"><p class=3D"MsoNormal" style=3D=
-"margin:0in;font-size:11pt;font-family:Calibri,sans-serif"><b><span style=
-=3D"font-size:16pt;font-family:&quot;Bookman Old Style&quot;,serif;color:rg=
-b(0,112,192)">Ron
-Michaels</span></b></p><p class=3D"MsoNormal" style=3D"margin:0in;font-size=
-:11pt;font-family:Calibri,sans-serif"><span style=3D"font-family:&quot;Bask=
-erville Old Face&quot;,serif">Managing Director/ Lead=C2=A0 Underwriter</sp=
-an></p><p class=3D"MsoNormal" style=3D"margin:0in;font-size:11pt;font-famil=
-y:Calibri,sans-serif"><b><span style=3D"font-size:14pt;font-family:&quot;Bo=
-okman Old Style&quot;,serif">Omega Capital
-Funding</span></b></p><p class=3D"MsoNormal" style=3D"margin:0in;font-size:=
-11pt;font-family:Calibri,sans-serif"><a href=3D"https://u17461769.ct.sendgr=
-id.net/ls/click?upn=3D0mogsfw379VW7NOF7LqlEo-2FxCzy-2FKWmP-2BOlbLKXGTezZIQi=
-KjAtXuXFg7VeLCzsiNzAavT5Rbmvb0Byc2r3kuhiBr2tTO1nRN9tXYi5xBCw8pm-2BKSdp1Cju4=
-o-2BO-2F-2Fed7WrE1nvURUGoEaz1FtSMkMyYr8Xi0K3ZwDgnwZoJyxhVFAOC-2FZsVDE7q2uqg=
-Ws5mLDnAM4hVBIxdgLrpQHeyuYQ-3D-3D0maC_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-2F=
-IgBqvapSAsR-2FNHq4iJ-2Fm-2F9gWJ8sHThO3EG0zzb6lqpzmMqiBOcioYH1dG0YUKM-2BYZNS=
-CA6qzLrnqyHjvxpYiATizW0-2BWgME58xj2-2B5DK-2BhHMhEqTrJ820b5MR1FkEE9zLp7ktwQ8=
-XrTf4ON5DAphmOXUAsl1LiaCi0JVdqMeA7ErYMrHvEp2EZbFC1oskfm-2FNpTl5tzZttwHi7UVY=
-89Yg2JXWoZvot2FP" style=3D"color:blue">www.omegacapfund.com</a><span style=
-=3D"color:rgb(0,112,192)"></span></p><p class=3D"MsoNormal" style=3D"margin=
-:0in;font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-fam=
-ily:&quot;Bookman Old Style&quot;,serif"><span class=3D"gmail-__dt"><span c=
-lass=3D"__dt"> <img class=3D"kixie-click-image-c2c" id=3D"telephone_number_=
-160" src=3D"chrome-extension://bmdpeakaalmaaflnkckhjcojpemlkjig/images/dt_p=
-hone.png" style=3D"cursor:pointer;width:14px;height:13px" title=3D"Call 1-8=
-77-282-1214" span=3D"kixie-click-image"> 1-877-282-1214 =E2=80=93
-Toll Free</span></span></span></p><p class=3D"MsoNormal" style=3D"margin:0i=
-n;font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"font-family=
-:&quot;Bookman Old Style&quot;,serif"><span class=3D"gmail-__dt"><span clas=
-s=3D"__dt"> <img class=3D"kixie-click-image-c2c" id=3D"telephone_number_161=
-" src=3D"chrome-extension://bmdpeakaalmaaflnkckhjcojpemlkjig/images/dt_phon=
-e.png" style=3D"cursor:pointer;width:14px;height:13px" title=3D"Call 1-631-=
-714-6801" span=3D"kixie-click-image"> 1-631-714-6801 =E2=80=93
-Main</span></span></span></p><p class=3D"MsoNormal" style=3D"margin:0in;fon=
-t-size:11pt;font-family:Calibri,sans-serif">
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+span.EmailStyle18
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-IN" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><a name=3D"_MailEndCompose"><span style=3D"color:#1F=
+497D;mso-fareast-language:EN-IN">Hi,<o:p></o:p></span></a></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN">Any update for my below email?<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN">We can help you to increase sales, engagement, conversion and more thr=
+ough our mailing list.</span><span style=3D"color:#1F497D;mso-fareast-langu=
+age:EN-IN"> Let me know your target audience
+ or target market you like to reach<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN">Thanks,
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN">Claire.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span lang=3D"EN-US" style=3D"mso-fareast-languag=
+e:EN-IN">From:</span></b><span lang=3D"EN-US" style=3D"mso-fareast-language=
+:EN-IN"> Claire Steffanie
+<br>
+<b>Sent:</b> Wednesday, September 22, 2021 9:36 AM<br>
+<b>To:</b> industrypack-devel@lists.sourceforge.net<br>
+<b>Subject:</b> RE: Reach Dental Assistants &amp; Dental Radiographers<br>
+<b>Importance:</b> High<o:p></o:p></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN">Hi,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN">Let me know your
+<b>Target audience</b> you wish to reach, So that I will get back with <b>s=
+amples and Counts to check the quality
+</b>for your review?<b><o:p></o:p></b></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN">Thanks,
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D;mso-fareast-language:EN=
+-IN">Claire.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
+n></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span lang=3D"EN-US" style=3D"mso-fareast-languag=
+e:EN-IN">From:</span></b><span lang=3D"EN-US" style=3D"mso-fareast-language=
+:EN-IN"> Claire Steffanie
+<br>
+<b>Sent:</b> Tuesday, September 21, 2021 11:06 AM<br>
+<b>To:</b> industrypack-devel@lists.sourceforge.net<br>
+<b>Subject:</b> Reach Dental Assistants &amp; Dental Radiographers<br>
+<b>Importance:</b> High<o:p></o:p></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">HI,<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">I had a chance to review your company profile and th=
+ought you might be interested in acquiring a list of
+<b>Contacts of Dentist Dental Technicians Orthopedist, Transplant Surgeon, =
+Orthodontist and many more across the Globe.
+</b>Reach out the dental clinics, dental hospitals, Decision makers in dent=
+al industry.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><b>You can Reach</b>: Allergy &amp; Immunology, Dent=
+ists, Dermatologists, Diabetologists, Diagnostic Radiology, Emergency physi=
+cians, Endocrinologists, Family Practice, Gastroenterologists, General prac=
+titioners, Geriatrics, Gynaecologists,
+ Hematologists, Hygienists, Immunologists, Nephrologists, Neurologists, Neu=
+rosurgeons, Obstetrics, Oncologists, Ophthalmologists, Osteopathic physicia=
+ns, Otolaryngology, Pathologists, Pediatricians, Physical Medicine, Plastic=
+ Surgery, Psychiatrists, Pulmonologists,
+ Surgeons, Traumatologists, Urologists.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Kindly let me know your interest. So that I could co=
+me up with more information for your review.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Regards,<o:p></o:p></p>
+<p class=3D"MsoNormal"><b>Claire Steffanie,<o:p></o:p></b></p>
+<p class=3D"MsoNormal">Marketing Coordinator.<o:p></o:p></p>
+</div>
+</body>
+</html>
+
+--_000_BMXPR01MB4760336808CE7596815F4476F9A99BMXPR01MB4760INDP_--
 
 
-
-
-
-
-
-
-
-
-
-</p><p class=3D"MsoNormal" style=3D"margin:0in;font-size:11pt;font-family:C=
-alibri,sans-serif"><span style=3D"font-family:&quot;Bookman Old Style&quot;=
-,serif"><span class=3D"gmail-__dt"><span class=3D"__dt"> <img class=3D"kixi=
-e-click-image-c2c" id=3D"telephone_number_162" src=3D"chrome-extension://bm=
-dpeakaalmaaflnkckhjcojpemlkjig/images/dt_phone.png" style=3D"cursor:pointer=
-;width:14px;height:13px" title=3D"Call 1-631-730-8115" span=3D"kixie-click-=
-image"> 1-631-730-8115 -
-Fax</span></span></span></p></td></tr></tbody></table></div></div></div><di=
-v dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><br></div><div dir=3D"ltr">=
-You may <a href=3D"https://u17461769.ct.sendgrid.net/ls/click?upn=3D0mogsfw=
-379VW7NOF7LqlEo-2FxCzy-2FKWmP-2BOlbLKXGTezZIQiKjAtXuXFg7VeLCzsiNzAavT5Rbmvb=
-0Byc2r3kup2UW29q-2BaiBLmea1KRYhAIV9RqC0kSkCPFok8-2BcWHlVknHsrDdouGLUJ209hDv=
-JDQ-3D-3DBG9l_suNG2qtLSqbrFLBKR-2BLLnf-2BtmRaan0-2FIgBqvapSAsR-2FNHq4iJ-2Fm=
--2F9gWJ8sHThO3EG0zzb6lqpzmMqiBOcioYH1dG0YUKM-2BYZNSCA6qzLrnq0IDpRqBKp10nR0O=
-8mXxKhnOLaIsM6wrTI7NshxfjjDWU1sYIUBQvGdkxcNVmS0bKG818eIcUJDlg42Jcde2YXAQAuD=
-6OkV6-2BXpqJIMlyQlF5YItfUFXZ7If4xuKjx9z0-2FMJt2htyvbsH1qZgmcNV-2F" target=
-=3D"_blank">unsubscribe</a> to stop receiving our emails.<br></div></div></=
-div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<img src=3D"http://ec2-52-13-70-23.us-west-2.compute.amazonaws.com/z0Th6OAJ=
-ooO6kUWmP3WzYBvO_2YJ1Z38HIGL0D008lIcxBir6XrTCTNgUXl6IL2qwqLfN-egXIUSElj5fHa=
-TKlM0f89n4t-2p6QMkzoT_YVfplogl9VxlHCOCsaCuEcj50wgdk30rED-Y2xhrT9uOU2mwmgCWj=
-neKKOIPUztAcQpRCNs8FDQ2qcsLuKBkXHnMvz_67_p4xGByaiz"></blockquote></div><br>=
-</div><img src=3D"http://ec2-52-13-70-23.us-west-2.compute.amazonaws.com/8q=
-gP5gV7y27zzReOgfR4JRkvbRuBzE8JRk_5-HgH4M56O8G25hK39oriK27aFc3-UdQACorHdT58q=
-sSwLup04WW-aJlHZqauHuQAa5sv2ELaXu_faCal4S2OXnGeWz0ShvLLse3iHNgokgzDhQwj0vGM=
-cF_VfmEnx2FDdh8x7dAsVFWBHOHaRIODGHKbvwVQ2VwZb6h37cIEVcNNI1rlZ33H"></blockqu=
-ote></div><br></div><img src=3D"http://ec2-52-13-70-23.us-west-2.compute.am=
-azonaws.com/F9y6-v3HrB2jCS8zN8W8V34VqnrfDqqvTSdNhXtTNFUNOG-nzU5xNccU9RA1bHp=
--Px-RJoVsAP8jTz4YLRbqfOhEXtSi8HxGTsq0BngGQtjVOg129_6YotphoLhmbRfvNa7meyvTh_=
-YcN0nCj7ESl4RV5iNAv0d2mH1rnCq-F40sWacvGBXt-yjpkBfe34Gqc23A03Ddswrv"></block=
-quote></div><br></div><img src=3D"http://ec2-52-13-70-23.us-west-2.compute.=
-amazonaws.com/d8I7pBRrJuxaIwZfRUDtnPVwIyGsnoiNXUGUXT2U9tSmt9K-tzZB1kx_8zMWi=
-vE80MDjnMBCo-_BoVuMfyLQlrLqPOVhTZapm0LSshSpMjIdb_XKSfp8gkDggiG_tcRp3yMwVbT4=
-VnqGZR5ZpwP-RrGRmJlycaZKgSDGPxleSvYSb2OtT5-inRGptGNJUHuxUPMK91lPXmBQ78-CeK8=
-v6YcJzaJy8t9QQ"><img src=3D"https://u17461769.ct.sendgrid.net/wf/open?upn=
-=3DS3KlKLKqUh-2B5l9sYcP7GRGOjZ-2Fr-2FBZ-2BFdLRbLyIML6Sig2-2BhBDiuMD2JQ7Tb-2=
-BAF3Z1KD5OYg-2BZXigzUNSiNk62-2BM45DeINo-2FrkHJ-2BA5xz0SlIFm4EluYhaMGZEWv6AC=
-aNGyWv-2BK06kYWy6kQbDtAhC6Zs3euC0sFQi7MtZkPh4W-2BLqC-2Fejusss4bCpRAiDJCgILE=
-uLWxBTJ3qJ8zeWUqNoF8XVdxDze70P53xohxy8pBmY7mm6cIDpZozMmaAkX0" alt=3D"" widt=
-h=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px =
-!important;border-width:0 !important;margin-top:0 !important;margin-bottom:=
-0 !important;margin-right:0 !important;margin-left:0 !important;padding-top=
-:0 !important;padding-bottom:0 !important;padding-right:0 !important;paddin=
-g-left:0 !important;"/>
---000000000000522f9705cc9b989c--
-
-
---===============8264731382055088669==
+--===============2223422811893730934==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8264731382055088669==
+--===============2223422811893730934==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -553,5 +414,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8264731382055088669==--
+--===============2223422811893730934==--
 
