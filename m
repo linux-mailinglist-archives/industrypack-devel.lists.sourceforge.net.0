@@ -2,66 +2,66 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0988E43C05C
-	for <lists+industrypack-devel@lfdr.de>; Wed, 27 Oct 2021 04:54:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D19C843C24E
+	for <lists+industrypack-devel@lfdr.de>; Wed, 27 Oct 2021 07:44:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
 	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=iET0noxXSUQaaueykNen2entrUujUBc1Il3sqr2+b1Y=; b=GM2jA4a1j8/+n1K+9iIe7r3Fs5
-	MUCBiCxSTssEC3JW0taMlzNpjMXJ0+yFaUnjQ5lFwAlB2yKZoe30p4Xg5rZoGQAaSSBOzxG/N55oR
-	2GQ2hi94+yRaawbPW2Oo7SVrBzWgwwgszPt/yjozFDs8lADHxEx+er2mm6lYRp22jOp8=;
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.92.3)
+	bh=IBCax6Ybu3NZk1sddbKj/05rtFYZddUsBOhv5Hoc27g=; b=iRieppaALJhAw43wo9hrQG+AQL
+	U6/O+mqjKONLw7FJpkSuu+fsGViMSN93EiwEebs6dIRBv+u766VxiJdp44WAl7bHe2NAooUuF1cC6
+	S1knHZpN9esOtRVlg2y2jnx7z/m+ppgKaAFdJlkg+KoSm3ZGapfvyMgQ+xCBjpOiMH4Q=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mfZ4w-0003YX-Nr
-	for lists+industrypack-devel@lfdr.de; Wed, 27 Oct 2021 02:54:14 +0000
+	id 1mfbjq-00039u-FH
+	for lists+industrypack-devel@lfdr.de; Wed, 27 Oct 2021 05:44:38 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- (envelope-from <contacts@robertwalters.co.jp>) id 1mfZ4v-0003YM-0l
- for industrypack-devel@lists.sourceforge.net; Wed, 27 Oct 2021 02:54:13 +0000
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
+ (envelope-from <contacts@robertwalters.co.jp>) id 1mfbjo-00039g-Vq
+ for industrypack-devel@lists.sourceforge.net; Wed, 27 Oct 2021 05:44:36 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=pqhby/TOmPwEO8vbSWD183r083by9qQDhHRocuCf7qY=; b=K91FhniLJ4AR/QL1HH0RdEtrn7
- gE574xyANupzoRP9zJL2uv5X4caYculdZPS5mLIU/xIJRNZBpg8vAAeNo274k1bV8yfjOEOF/HFnJ
- L5ertfhcTS+2YHySUjK24OD+SH7sZCKoHxMhwttTSqtRvblWsz7ewhKNYxCg9xFAouQM=;
+ bh=pqhby/TOmPwEO8vbSWD183r083by9qQDhHRocuCf7qY=; b=iKFYjRqOwqku+JQoe/sWHXsGWz
+ l1dQYue+QiaAZE5robOz/kPUMP+1Tk2SXXPm4PZuZmuDHiFnDi0V8gK9BrcGca66ZpKakjVssDtfr
+ 33F7u6dkVClHN+cAcgyvV2zptxFgtAz2DHyX+80TW15KsYTL0rGNYubmqxa1MMe5vSP4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=pqhby/TOmPwEO8vbSWD183r083by9qQDhHRocuCf7qY=; b=P
- 3V+AdxLJLFAgkNQ/qX2JtFzdWax++Gd4QM2PfCy/FZkOLQs5TlGZ4DermvzQgWGe3xEeIAGHJtjy1
- MXX+DmJQbuhcIj2aIiqR6yd0dmXZkYJIML28ZnVzlFMLRuEvVrr86aw9NsiE/oPZQiPj7areeGGsC
- 467RyVouj+95C+5U=;
+ List-Owner:List-Archive; bh=pqhby/TOmPwEO8vbSWD183r083by9qQDhHRocuCf7qY=; b=K
+ w2k5vJ+G+zsbHNsxS84DvPveyfI2NYl2zTnoAK1JGmJiw2Liw9kD6xTo6TrLq2KUAy6Xmx8Ql1WOb
+ yZqgmlXWmgH6oJKntiET29VcF8oN21YAVJgEYmF3pTHrPN679TL9pI6IcPPxjbamMFDuRPRXw+tUZ
+ rjuOYq8vcBpoApdU=;
 Received: from [104.248.1.211] (helo=mail0.robertwalters.co.jp)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mfZ4Q-000UXD-Sb
- for industrypack-devel@lists.sourceforge.net; Wed, 27 Oct 2021 02:54:12 +0000
+ id 1mfbjK-00054n-Qh
+ for industrypack-devel@lists.sourceforge.net; Wed, 27 Oct 2021 05:44:36 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
  d=robertwalters.co.jp; 
  h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
  Content-Transfer-Encoding; i=contacts@robertwalters.co.jp;
  bh=pqhby/TOmPwEO8vbSWD183r083by9qQDhHRocuCf7qY=;
- b=WoON3c1eoKTVQHf3zuM80qPDDROsrj2K3x5dSzD5+c7e9Fr3B+1WdpG6W/66E4rji8T7tC8AMpWM
- hPBWtFd8gPZJvv2AWoFXqrmWF6qLqaL69g+8D/sR28wj1aWt30atDF5adpJAIB+qF49xMHOkU+PH
- S3z9KcICX1H/avICZJw=
+ b=DmR+dLHlLktSD13g4nTpHvClyfe7upkT7OmUIwbBnX+7xab7ra/9nctj+P+9M4vXRxyhQSMkDwgA
+ 2ajnhEcOOdW53O2Bdyhm7pmb+F/1SoEHDE2Gf34pLRyLGVi5+CIRFnkJ1I8jqZGUj3Ko4EP12Gts
+ O9ISh8kKmgiK+O81F9s=
 To: industrypack-devel@lists.sourceforge.net
-Date: 26 Oct 2021 18:44:58 -0700
-Message-ID: <20211026184458.B041E7F3CEDDB0E2@robertwalters.co.jp>
+Date: 26 Oct 2021 22:00:11 -0700
+Message-ID: <20211026220011.1EF78F3C3618DDFF@robertwalters.co.jp>
 MIME-Version: 1.0
-X-Headers-End: 1mfZ4Q-000UXD-Sb
+X-Headers-End: 1mfbjK-00054n-Qh
 Subject: [Industrypack-devel] Authentication error in
- industrypack-devel@lists.sourceforge.net on 10/26/2021 6:44:58 p.m.
+ industrypack-devel@lists.sourceforge.net on 10/26/2021 10:00:11 p.m.
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -76,10 +76,10 @@ List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 From: "lists.sourceforge.net via Industrypack-devel"
  <industrypack-devel@lists.sourceforge.net>
 Reply-To: "lists.sourceforge.net" <contacts@robertwalters.co.jp>
-Content-Type: multipart/mixed; boundary="===============9077391297788630111=="
+Content-Type: multipart/mixed; boundary="===============3454756573698998945=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============9077391297788630111==
+--===============3454756573698998945==
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -244,14 +244,14 @@ t</A> Inc.</SPAN></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
 <P><BR></P></BODY></HTML>
 
 
---===============9077391297788630111==
+--===============3454756573698998945==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============9077391297788630111==
+--===============3454756573698998945==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -262,4 +262,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============9077391297788630111==--
+--===============3454756573698998945==--
