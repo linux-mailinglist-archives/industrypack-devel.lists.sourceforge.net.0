@@ -2,66 +2,89 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D19C843C24E
-	for <lists+industrypack-devel@lfdr.de>; Wed, 27 Oct 2021 07:44:39 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
-	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
-	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=IBCax6Ybu3NZk1sddbKj/05rtFYZddUsBOhv5Hoc27g=; b=iRieppaALJhAw43wo9hrQG+AQL
-	U6/O+mqjKONLw7FJpkSuu+fsGViMSN93EiwEebs6dIRBv+u766VxiJdp44WAl7bHe2NAooUuF1cC6
-	S1knHZpN9esOtRVlg2y2jnx7z/m+ppgKaAFdJlkg+KoSm3ZGapfvyMgQ+xCBjpOiMH4Q=;
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.90_1)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7F21A441AB3
+	for <lists+industrypack-devel@lfdr.de>; Mon,  1 Nov 2021 12:32:28 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mfbjq-00039u-FH
-	for lists+industrypack-devel@lfdr.de; Wed, 27 Oct 2021 05:44:38 +0000
+	id 1mhVYA-00058n-VS
+	for lists+industrypack-devel@lfdr.de; Mon, 01 Nov 2021 11:32:26 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.90_1)
- (envelope-from <contacts@robertwalters.co.jp>) id 1mfbjo-00039g-Vq
- for industrypack-devel@lists.sourceforge.net; Wed, 27 Oct 2021 05:44:36 +0000
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
+ (envelope-from <yamasakura@nyc.odn.ne.jp>) id 1mhVY9-00058Y-Er
+ for industrypack-devel@lists.sourceforge.net; Mon, 01 Nov 2021 11:32:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=pqhby/TOmPwEO8vbSWD183r083by9qQDhHRocuCf7qY=; b=iKFYjRqOwqku+JQoe/sWHXsGWz
- l1dQYue+QiaAZE5robOz/kPUMP+1Tk2SXXPm4PZuZmuDHiFnDi0V8gK9BrcGca66ZpKakjVssDtfr
- 33F7u6dkVClHN+cAcgyvV2zptxFgtAz2DHyX+80TW15KsYTL0rGNYubmqxa1MMe5vSP4=;
+ bh=c5u2NGSusfLKgHAwqsP9G3ZjplPp60VUTt3xLkkIQmE=; b=QbCLYt9RSe6P3b1f/ovEDhKNpU
+ Cvgj9RsfGTw4I5J+zUYPpbmVRxoSZldaQ3DWnz8bwwgxWKatvt1Wfwot76bzwXxbsJZ+sVjtqBmPa
+ V5BIJ704lMx+pmhww5Zhm2Amo2B4Dz8MQrYuX3bK9qZfARzIxatM7XAwnT15e3kCYjZI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=pqhby/TOmPwEO8vbSWD183r083by9qQDhHRocuCf7qY=; b=K
- w2k5vJ+G+zsbHNsxS84DvPveyfI2NYl2zTnoAK1JGmJiw2Liw9kD6xTo6TrLq2KUAy6Xmx8Ql1WOb
- yZqgmlXWmgH6oJKntiET29VcF8oN21YAVJgEYmF3pTHrPN679TL9pI6IcPPxjbamMFDuRPRXw+tUZ
- rjuOYq8vcBpoApdU=;
-Received: from [104.248.1.211] (helo=mail0.robertwalters.co.jp)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mfbjK-00054n-Qh
- for industrypack-devel@lists.sourceforge.net; Wed, 27 Oct 2021 05:44:36 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
- d=robertwalters.co.jp; 
- h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
- Content-Transfer-Encoding; i=contacts@robertwalters.co.jp;
- bh=pqhby/TOmPwEO8vbSWD183r083by9qQDhHRocuCf7qY=;
- b=DmR+dLHlLktSD13g4nTpHvClyfe7upkT7OmUIwbBnX+7xab7ra/9nctj+P+9M4vXRxyhQSMkDwgA
- 2ajnhEcOOdW53O2Bdyhm7pmb+F/1SoEHDE2Gf34pLRyLGVi5+CIRFnkJ1I8jqZGUj3Ko4EP12Gts
- O9ISh8kKmgiK+O81F9s=
-To: industrypack-devel@lists.sourceforge.net
-Date: 26 Oct 2021 22:00:11 -0700
-Message-ID: <20211026220011.1EF78F3C3618DDFF@robertwalters.co.jp>
-MIME-Version: 1.0
-X-Headers-End: 1mfbjK-00054n-Qh
-Subject: [Industrypack-devel] Authentication error in
- industrypack-devel@lists.sourceforge.net on 10/26/2021 10:00:11 p.m.
+ List-Owner:List-Archive; bh=c5u2NGSusfLKgHAwqsP9G3ZjplPp60VUTt3xLkkIQmE=; b=I
+ pvFDR5NwgW9r+kR9NHn82K2Np21bg49th18+LPx6PnXSdRKZyRWHrrPM9w0lvYNAQTlmcnxRhZSCj
+ 4hOYz/YXILfQdc5faQIjy62Dn49uAHFYonyD4GRCblhen2WrJl9HFzHbzRNkm6QC4XEQMv/UKmTl3
+ pROKFfPiW52UdeBc=;
+Received: from mta101.odn.ne.jp ([143.90.14.65] helo=cmta101.odn.ne.jp)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
+ id 1mhVY3-00BRue-ED
+ for industrypack-devel@lists.sourceforge.net; Mon, 01 Nov 2021 11:32:25 +0000
+Received: from vmsa105.odn.ne.jp by cmsa105.odn.ne.jp with ESMTP
+ id <20211101112239916.ITUI.71279.cmsa105.odn.ne.jp@msa105.odn.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Mon, 1 Nov 2021 20:22:39 +0900
+Received: from msrg1051.rgserv.odn.ne.jp by vmsa105.odn.ne.jp with ESMTP
+ id <20211101112239912.TTSP.68922.vmsa105.odn.ne.jp@msa105.odn.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Mon, 1 Nov 2021 20:22:39 +0900
+X-Odn-Service: VIRUS-CHECKED
+Received: from 139.com (45.142.155.33) by msrg1051.rgserv.odn.ne.jp (5.8.426)
+ id 604EF3280C510F8B for industrypack-devel@lists.sourceforge.net;
+ Mon, 1 Nov 2021 20:22:39 +0900
+Date: Mon, 1 Nov 2021 19:17:13 +0800
+From: "Yaya" <deepmould@163.com>
+To: <industrypack-devel@lists.sourceforge.net>
+Message-ID: <20211101191718211140@nyc.odn.ne.jp>
+X-mailer: Foxmail 6, 13, 102, 15 [cn]
+Mime-Version: 1.0
+X-Spam-Score: 5.1 (+++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ the administrator of that system for details.
+ Content preview:  Dear friend, Nice day! Do you need to customize different
+ plastic projects? We are a professional mold tooling and prototype maker in
+ Dongguan,China. We can provide one stop service from part design t [...] 
+ Content analysis details:   (5.1 points, 6.0 required)
+ pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [143.90.14.65 listed in wl.mailspike.net]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [deepmould[at]163.com]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 2.6 DEAR_FRIEND            BODY: Dear Friend? That's not very dear!
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+X-Headers-End: 1mhVY3-00BRue-ED
+Subject: Re: [Industrypack-devel] 1hib3eku
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -73,185 +96,67 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: "lists.sourceforge.net via Industrypack-devel"
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: "lists.sourceforge.net" <contacts@robertwalters.co.jp>
-Content-Type: multipart/mixed; boundary="===============3454756573698998945=="
+Reply-To: deepmould@163.com
+Content-Type: multipart/mixed; boundary="===============9196589883682304845=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3454756573698998945==
+This is a multi-part message in MIME format.
+
+--===============9196589883682304845==
+Content-Type: multipart/alternative;
+	boundary="=====003_Dragon012512155502_====="
+
+This is a multi-part message in MIME format.
+
+--=====003_Dragon012512155502_=====
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+RGVhciBmcmllbmQsDQpOaWNlIGRheSENCkRvIHlvdSBuZWVkIHRvIGN1c3RvbWl6ZSBkaWZmZXJl
+bnQgcGxhc3RpYyBwcm9qZWN0cz8NCldlIGFyZSBhIHByb2Zlc3Npb25hbCBtb2xkIHRvb2xpbmcg
+YW5kIHByb3RvdHlwZSBtYWtlciBpbiBEb25nZ3VhbixDaGluYS4NCldlIGNhbiBwcm92aWRlIG9u
+ZSBzdG9wIHNlcnZpY2UgZnJvbSBwYXJ0IGRlc2lnbiB0byBwYXJ0IGFzc2VtYmxpbmcuDQpQbGVh
+c2UgbGV0IHVzIGtub3cgaWYgd2UgY291bGQgaGF2ZSBhIGNoYW5jZSB0byB3b3JrIHdpdGggeW91
+ciB0ZWFtLg0KVGhhbmtzIGZvciB5b3VyIHZhbHVhYmxlIHRpbWUgJiBiZXN0IHJlZ2FyZHMuIA0K
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX18NCkRlZXAgTW91bGQgQ28uLExURA0KWWF5YSBI
+d2FuZw0KU2FsZXMgU3VwZXJ2aXNvcg0KU2t5cGU6IERlZXBtb3VsZA0KQWRkOiBCIEJsb2NrLE5v
+IDIxLE5hbnhpbmcgVGhyZWUgU3RyZWV0LE5hbmZhbmcgSW5kdXN0cmlhbCBQYXJrLEJlaWNlLEh1
+bWVuLERvbmdndWFuLENoaW5hLg==
+
+--=====003_Dragon012512155502_=====
 Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.19699"></HEAD>
-<body>
-<table style=3D"FONT-SIZE: 11px; FONT-FAMILY: &quot;Open Sans&quot;, Verdan=
-a, Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TE=
-XT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); FONT-STYLE: nor=
-mal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(2=
-45,246,246); font-variant-ligatures: normal; font-variant-caps: normal; -we=
-bkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoratio=
-n-color: initial; text-decoration-thickness: initial" cellspacing=3D"0" cel=
-lpadding=3D"0" width=3D"100%" bgcolor=3D"#f5f6f6" border=3D"0">
-<TBODY>
-<TR>
-<td style=3D"PADDING-LEFT: 0px; PADDING-RIGHT: 0px" align=3D"center">
-<table class=3D"w100percent" cellspacing=3D"0" cellpadding=3D"0" width=3D"6=
-08" border=3D"0">
-<TBODY>
-<TR>
-<td style=3D"PADDING-BOTTOM: 25px; PADDING-TOP: 29px" align=3D"center"><BR>=
-</TD></TR>
-<TR>
-<td>
-<table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
-<TBODY>
-<TR>
-<td style=3D"FONT-SIZE: 2px; HEIGHT: 2px; LINE-HEIGHT: 2px" height=3D"2"><i=
-mg class=3D"w100percent" style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDT=
-H: 0px; BORDER-BOTTOM-WIDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; bo=
-rder-image: none" src=3D"https://api.identityguard.com/cms/notifications/em=
-ail/chrome/shadow-top.jpg?brand=3Didguard&amp;=3Dnull" width=3D"608" height=
-=3D"2"></TD></TR>
-<TR>
-<td>
-<table class=3D"w100percent" style=3D"WIDTH: 608px" cellspacing=3D"0" cellp=
-adding=3D"0" width=3D"608" border=3D"0">
-<TBODY>
-<TR>
-<td style=3D"WIDTH: 1px" bgcolor=3D"#f1f2f3" valign=3D"top" width=3D"1"><im=
-g style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-W=
-IDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; border-image: none" src=
-=3D"https://api.identityguard.com/cms/notifications/email/chrome/spacer.gif=
-?brand=3Didguard&amp;=3Dnull" width=3D"1"></TD>
-<td style=3D"WIDTH: 1px" bgcolor=3D"#eeeff0" valign=3D"top" width=3D"1"><im=
-g style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-W=
-IDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; border-image: none" src=
-=3D"https://api.identityguard.com/cms/notifications/email/chrome/spacer.gif=
-?brand=3Didguard&amp;=3Dnull" width=3D"1"></TD>
-<td style=3D"WIDTH: 1px" bgcolor=3D"#e9e9ea" valign=3D"top" width=3D"1"><im=
-g style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-W=
-IDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; border-image: none" src=
-=3D"https://api.identityguard.com/cms/notifications/email/chrome/spacer.gif=
-?brand=3Didguard&amp;=3Dnull" width=3D"1"></TD>
-<td style=3D"WIDTH: 1px" bgcolor=3D"#e0e1e2" valign=3D"top" width=3D"1"><im=
-g style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-W=
-IDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; border-image: none" src=
-=3D"https://api.identityguard.com/cms/notifications/email/chrome/spacer.gif=
-?brand=3Didguard&amp;=3Dnull" width=3D"1"></TD>
-<td class=3D"w100percent" style=3D"WIDTH: 600px" bgcolor=3D"#ffffff" valign=
-=3D"top" width=3D"600">
-<table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
-<TBODY>
-<TR>
-<td style=3D"FONT-SIZE: 18px; FONT-FAMILY: Hind, sans-serif; FONT-WEIGHT: 7=
-00; COLOR: rgb(233,149,104); PADDING-TOP: 25px; PADDING-LEFT: 30px; LINE-HE=
-IGHT: 28px; PADDING-RIGHT: 30px" align=3D"left">Login Session Authenticatio=
-n<BR></TD></TR>
-<TR>
-<td style=3D"FONT-SIZE: 14px; FONT-FAMILY: Hind, sans-serif; COLOR: rgb(54,=
-68,73); PADDING-BOTTOM: 30px; PADDING-TOP: 30px; PADDING-LEFT: 30px; LINE-H=
-EIGHT: 16px; PADDING-RIGHT: 30px" align=3D"left">
-<P class=3DsalutationText style=3D"FONT-SIZE: 14px; FONT-FAMILY: Hind, sans=
--serif; FONT-WEIGHT: 500 !important; PADDING-BOTTOM: 0px !important; PADDIN=
-G-TOP: 0px !important; PADDING-LEFT: 0px !important; MARGIN: 0px; PADDING-R=
-IGHT: 0px !important">This notification is addressed to your e-mail industr=
-ypack-devel@lists.sourceforge.net</P>
-<P class=3DsalutationText style=3D"FONT-SIZE: 14px; FONT-FAMILY: Hind, sans=
--serif; FONT-WEIGHT: 500 !important; PADDING-BOTTOM: 0px !important; PADDIN=
-G-TOP: 0px !important; PADDING-LEFT: 0px !important; MARGIN: 0px; PADDING-R=
-IGHT: 0px !important"><BR></P><BR>
-<P style=3D"FONT-SIZE: 14px; FONT-FAMILY: Hind, sans-serif; PADDING-BOTTOM:=
- 0px !important; PADDING-TOP: 0px !important; PADDING-LEFT: 0px !important;=
- MARGIN: 0px; PADDING-RIGHT: 0px !important" align=3Djustify>You have pendi=
-ng e-mails, (9) stuck on the server.</P>
-<P style=3D"FONT-SIZE: 14px; FONT-FAMILY: Hind, sans-serif; PADDING-BOTTOM:=
- 0px !important; PADDING-TOP: 0px !important; PADDING-LEFT: 0px !important;=
- MARGIN: 0px; PADDING-RIGHT: 0px !important" align=3Djustify><BR></P>
-<P style=3D"FONT-SIZE: 14px; FONT-FAMILY: Hind, sans-serif; PADDING-BOTTOM:=
- 0px !important; PADDING-TOP: 0px !important; PADDING-LEFT: 0px !important;=
- MARGIN: 0px; PADDING-RIGHT: 0px !important" align=3Djustify>An error occur=
-red while authenticating the current session.</P><BR>
-<P class=3DsignatureText style=3D"FONT-SIZE: 14px; FONT-FAMILY: Hind, sans-=
-serif; FONT-WEIGHT: 500 !important; PADDING-BOTTOM: 0px !important; PADDING=
--TOP: 0px !important; PADDING-LEFT: 0px !important; MARGIN: 0px; PADDING-RI=
-GHT: 0px !important">Authenticate your session below to receive pending ema=
-ils (9).<BR><BR></P></TD></TR>
-<TR>
-<td style=3D"PADDING-BOTTOM: 30px" align=3D"center">
-<table height=3D"34" cellpadding=3D"0" width=3D"227" border=3D"0">
-<TBODY>
-<TR>
-<td style=3D"FONT-SIZE: 12px; HEIGHT: 30px; FONT-FAMILY: Hind, sans-serif; =
-WHITE-SPACE: nowrap; PADDING-LEFT: 50px; LINE-HEIGHT: 16px; PADDING-RIGHT: =
-50px" bgcolor=3D"#e99568" height=3D"30" valign=3D"middle" align=3D"center">=
-<FONT color=3D#ffffff><B><A style=3D"COLOR: rgb(0,105,166)" href=3D"https:/=
-/rebrand.ly/8d520bfvaqujw/?email=3Dindustrypack-devel@lists.sourceforge.net=
-" rel=3Dnoreferrer target=3D_blank>SESSION AUTHENTICATION</A> </B></FONT></=
-TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
-<td style=3D"WIDTH: 1px" bgcolor=3D"#e0e1e2" valign=3D"top" width=3D"1"><im=
-g style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-W=
-IDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; border-image: none" src=
-=3D"https://api.identityguard.com/cms/notifications/email/chrome/spacer.gif=
-?brand=3Didguard&amp;=3Dnull" width=3D"1"></TD>
-<td style=3D"WIDTH: 1px" bgcolor=3D"#e9e9ea" valign=3D"top" width=3D"1"><im=
-g style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-W=
-IDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; border-image: none" src=
-=3D"https://api.identityguard.com/cms/notifications/email/chrome/spacer.gif=
-?brand=3Didguard&amp;=3Dnull" width=3D"1"></TD>
-<td style=3D"WIDTH: 1px" bgcolor=3D"#eeeff0" valign=3D"top" width=3D"1"><im=
-g style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-W=
-IDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; border-image: none" src=
-=3D"https://api.identityguard.com/cms/notifications/email/chrome/spacer.gif=
-?brand=3Didguard&amp;=3Dnull" width=3D"1"></TD>
-<td style=3D"WIDTH: 1px" bgcolor=3D"#f1f2f3" valign=3D"top" width=3D"1"><im=
-g style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-W=
-IDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; border-image: none" src=
-=3D"https://api.identityguard.com/cms/notifications/email/chrome/spacer.gif=
-?brand=3Didguard&amp;=3Dnull" width=3D"1"></TD></TR></TBODY></TABLE></TD></=
-TR>
-<TR>
-<td style=3D"FONT-SIZE: 5px; HEIGHT: 5px; LINE-HEIGHT: 5px" height=3D"5"><i=
-mg class=3D"w100percent" style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDT=
-H: 0px; BORDER-BOTTOM-WIDTH: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; bo=
-rder-image: none" src=3D"https://api.identityguard.com/cms/notifications/em=
-ail/chrome/shadow-bottom.jpg?brand=3Didguard&amp;=3Dnull" width=3D"608" hei=
-ght=3D"5"></TD></TR></TBODY></TABLE></TD></TR>
-<TR>
-<td style=3D"FONT-SIZE: 11px; FONT-FAMILY: Hind, sans-serif; COLOR: rgb(160=
-,171,175); PADDING-BOTTOM: 10px; PADDING-TOP: 30px; PADDING-LEFT: 5px; PADD=
-ING-RIGHT: 5px" align=3D"left">
-<P><SPAN style=3D"FONT-FAMILY: Hind, sans-serif; FONT-WEIGHT: normal; COLOR=
-: rgb(160,171,175); TEXT-ALIGN: left">
-This email has been sent to industrypack-devel@lists.sourceforge.net becaus=
-e it contains important information about your account. If you previously u=
-nsubscribed from Identity Guard&reg;&#65039; marketing emails, you will no =
-longer receive special offers, but will continue to receive emails related =
-to your account. If you believe you received this email in error, please se=
-nd it to our customer service team at industrypack-devel@lists.sourceforge.=
-net</SPAN></P>
-<P><SPAN style=3D"FONT-FAMILY: Hind, sans-serif; FONT-WEIGHT: normal; COLOR=
-: rgb(160,171,175); TEXT-ALIGN: left">We will never ask you for personal in=
-formation in an e-mail. We respect your privacy. If you no longer wish to r=
-eceive Identity Guard&reg;&#65039; marketing emails, you can unsubscribe at=
- any time.</SPAN></P>
-<P><SPAN style=3D"FONT-FAMILY: Hind, sans-serif; FONT-WEIGHT: normal; COLOR=
-: rgb(160,171,175); TEXT-ALIGN: left">&copy;&#65039; 2021&nbsp;<A href=3D"m=
-ailto:anna.piotrowska@wtorsteel.pl">industrypack-devel@lists.sourceforge.ne=
-t</A> Inc.</SPAN></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
-<P><BR></P></BODY></HTML>
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZPg0KPFA+RGVhciBmcmll
+bmQsPEJSPk5pY2UgZGF5ITwvUD4NCjxQPkRvIHlvdSBuZWVkIHRvIGN1c3RvbWl6ZSBkaWZmZXJl
+bnQgcGxhc3RpYyBwcm9qZWN0cz88QlI+V2UgYXJlIGEgcHJvZmVzc2lvbmFsIA0KbW9sZCB0b29s
+aW5nIGFuZCBwcm90b3R5cGUgbWFrZXIgaW4gRG9uZ2d1YW4sQ2hpbmEuPEJSPldlIGNhbiBwcm92
+aWRlIG9uZSBzdG9wIA0Kc2VydmljZSBmcm9tIHBhcnQgZGVzaWduIHRvIHBhcnQgYXNzZW1ibGlu
+Zy48L1A+DQo8UD5QbGVhc2UgbGV0IHVzIGtub3cmbmJzcDtpZiB3ZSBjb3VsZCBoYXZlIGEgY2hh
+bmNlIHRvIHdvcmsgd2l0aCB5b3VyIHRlYW0uPC9QPg0KPFA+VGhhbmtzIGZvciB5b3VyIHZhbHVh
+YmxlIHRpbWUgJmFtcDsgYmVzdCANCnJlZ2FyZHMuJm5ic3A7PEJSPl9fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fPC9QPg0KPFA+RGVlcCZuYnNwO01vdWxkIENvLixMVEQ8QlI+WWF5YSBId2Fu
+ZzxCUj5TYWxlcyBTdXBlcnZpc29yPEJSPlNreXBlOiANCkRlZXBtb3VsZDxCUj5BZGQ6IEImbmJz
+cDtCbG9jayxObyAyMSxOYW54aW5nIFRocmVlIFN0cmVldCxOYW5mYW5nIEluZHVzdHJpYWwgDQpQ
+YXJrLEJlaWNlLEh1bWVuLERvbmdndWFuLENoaW5hLjwvUD48L0JPRFk+PC9IVE1MPg0K
+
+--=====003_Dragon012512155502_=====--
 
 
---===============3454756573698998945==
+
+--===============9196589883682304845==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3454756573698998945==
+--===============9196589883682304845==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -262,4 +167,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3454756573698998945==--
+--===============9196589883682304845==--
+
+
