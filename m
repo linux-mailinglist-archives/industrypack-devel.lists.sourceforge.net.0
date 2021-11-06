@@ -2,83 +2,98 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6E373446B8D
-	for <lists+industrypack-devel@lfdr.de>; Sat,  6 Nov 2021 01:23:09 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 775DA446DE2
+	for <lists+industrypack-devel@lfdr.de>; Sat,  6 Nov 2021 13:14:29 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mj9UB-0006Oe-HB
-	for lists+industrypack-devel@lfdr.de; Sat, 06 Nov 2021 00:23:07 +0000
+	id 1mjKaa-00010Y-FA
+	for lists+industrypack-devel@lfdr.de; Sat, 06 Nov 2021 12:14:27 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <export@taurucsraco.com>) id 1mj9UA-0006OY-P0
- for industrypack-devel@lists.sourceforge.net; Sat, 06 Nov 2021 00:23:06 +0000
+ (envelope-from <basil552@zah.att.ne.jp>) id 1mjKaY-00010I-Hs
+ for industrypack-devel@lists.sourceforge.net; Sat, 06 Nov 2021 12:14:26 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:Date:To:From:Reply-To:Sender:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=/f7gU1GEHpr22OsttaoXpPL8KZO6k+mXbCOA0GCzMyA=; b=DZBryeoPUab/tw3YtZOT+E7A/u
- fjTFPbnduLWUBxf19VO/SseaEQxG+KpzucLlfcM0LX/7ujLogqawh3E8CktjdAp7F3t08BJzQ1/yL
- QD5HqeOtpOR3HUcI67txaUTtdlXRuMk1aVoyvuDM2Zf7BLQe2hLTE6N31yZYWiEbrZW0=;
+ bh=9hPNQxaa8GJQNTbrUvlMDRhOiFv6Xc3dXi4Y4s3EApg=; b=fVJZFbNZEgcAYdb3u0WvmHlRIW
+ MUYmyr9vU/PgAaLBE8AEB3chvwzatLo5JE7pY/mTseNwS7yPUZEDp8p996LURD2lyAI+wLg+K/Lij
+ MQ3ONwQGN+ZLnpCNgkFSv61cCuuQcWz7SFgE2ejag+FhzVd6ImcUdwvgJoR91R2PPnV8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
- Date:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
+ h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=/f7gU1GEHpr22OsttaoXpPL8KZO6k+mXbCOA0GCzMyA=; b=m
- bCcx1PL56VS0ronQLS1GERbTFnj9KxCe1dbdAw1Nr4bcelCsyd4J67e8yFZqckofFunVA4Gqm+FGO
- tJeIehYfwl8QxhhM/sa18gUgBUR2USQoVWAzVhQypZt+QFcGqWwrJukFWp5khYT3mDJQfRAyyWorm
- CmyoyR97z5c1oDf8=;
-Received: from [139.59.46.209] (helo=bizcloud-server.japan-retail.or.jp)
+ List-Owner:List-Archive; bh=9hPNQxaa8GJQNTbrUvlMDRhOiFv6Xc3dXi4Y4s3EApg=; b=h
+ EcDTQefjV7d8Er+9VE68X5ik2RRpJVI4MNtBRlG3pP0lQlMt4Z8dwYadFV4u1N0C3r78Df5yi2Aso
+ ExOXPSLC4Jm4dr0V2mRvMsmf+RT3dxRW1im6OWypaIHoLZ0LO/ishW9SugW/Rjb9Dkb7NNAWZGRn1
+ T951fws8wSwbVD9U=;
+Received: from msa206.att.ne.jp ([143.90.14.12] helo=cmsa206.att.ne.jp)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
- id 1mj9U9-003ETa-O6
- for industrypack-devel@lists.sourceforge.net; Sat, 06 Nov 2021 00:23:06 +0000
-Received: from taurucsraco.com (bizcloud-server.japan-retail.or.jp [IPv6:::1])
- by bizcloud-server.japan-retail.or.jp (Postfix) with ESMTP id
- 458CCD1322C for <industrypack-devel@lists.sourceforge.net>;
- Fri,  5 Nov 2021 15:13:11 +0000 (UTC)
-From: Mr. Kyle<export@taurucsraco.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 05 Nov 2021 08:13:15 -0700
-Message-ID: <20211105081315.2FCCAA20EDA6CC2A@taurucsraco.com>
-MIME-Version: 1.0
-X-Spam-Score: 8.5 (++++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+ id 1mjKaW-003ryz-Hh
+ for industrypack-devel@lists.sourceforge.net; Sat, 06 Nov 2021 12:14:25 +0000
+Received: from vmsa206.att.ne.jp by cmsa206.att.ne.jp with ESMTP
+ id <20211106121418701.OUMD.13686.cmsa206.att.ne.jp@msa206.att.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sat, 6 Nov 2021 21:14:18 +0900
+Received: from msrg2061.rgserv.att.ne.jp by vmsa206.att.ne.jp with ESMTP
+ id <20211106121418698.REHI.13702.vmsa206.att.ne.jp@msa206.att.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sat, 6 Nov 2021 21:14:18 +0900
+Received: from ficnet.net (185.202.103.254) by msrg2061.rgserv.att.ne.jp
+ (5.8.426)
+ id 611DE89203638DE4 for industrypack-devel@lists.sourceforge.net;
+ Sat, 6 Nov 2021 21:14:18 +0900
+Date: Sat, 6 Nov 2021 20:14:58 +0800
+From: "philip" <philipbearings02@163.com>
+To: <industrypack-devel@lists.sourceforge.net>
+Message-ID: <20211106201504046841@zah.att.ne.jp>
+X-mailer: Foxmail 6, 13, 102, 15 [cn]
+Mime-Version: 1.0
+X-Spam-Score: 5.7 (+++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Dear "industrypack-devel", We have inquiry about your product,
- Please this is my second mail to this your email:
- "industrypack-devel@lists.sourceforge.net"
- Kindly send us your company latest catalogue and Your prices list, We may
- place an urgent order 
- Content analysis details:   (8.5 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  Hi sir,☺ Do you have any Bearings requirments? SKF,NSK,FAG,NTN,TIMKEN,KOYO,INA,NACHI,FYH,ASAHI.
+    Free samples if interest. Best regards! Philip Skype;philip214wang Bearings
+    Factory China. Hi sir,☺ 
+ 
+ Content analysis details:   (5.7 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 2.7 RCVD_IN_PSBL           RBL: Received via a relay in PSBL
- [139.59.46.209 listed in psbl.surriel.com]
- 0.5 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [139.59.46.209 listed in dnsbl-1.uceprotect.net]
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 HK_NAME_MR_MRS         No description available.
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 1.2 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
- only
- 1.7 TO_NO_BRKTS_FROM_MSSP  Multiple header formatting problems
- 0.0 FROM_MISSP_EH_MATCH    From misspaced, matches envelope
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1mj9U9-003ETa-O6
-Subject: [Industrypack-devel] [SPAM] Product  and order  inquiry,
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [143.90.14.12 listed in wl.mailspike.net]
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [philipbearings02[at]163.com]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
+                             digit
+                             [philipbearings02[at]163.com]
+  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+                             in digit
+                             [basil552[at]zah.att.ne.jp]
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  2.0 PYZOR_CHECK            Listed in Pyzor
+                             (https://pyzor.readthedocs.io/en/latest/)
+  2.7 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+                             EnvelopeFrom freemail headers are
+                             different
+X-Headers-End: 1mjKaW-003ryz-Hh
+Subject: Re: [Industrypack-devel] Bearings Supplier 2021
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -90,181 +105,55 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: wlove@taurucsraco.com
-Content-Type: multipart/mixed; boundary="===============7830156673801324504=="
+Reply-To: philipbearings02@163.com
+Content-Type: multipart/mixed; boundary="===============0977512721710648045=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============7830156673801324504==
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
+This is a multi-part message in MIME format.
 
-<!DOCTYPE HTML>
+--===============0977512721710648045==
+Content-Type: multipart/alternative;
+	boundary="=====003_Dragon431147451135_====="
 
-<html><head><title></title>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body style=3D"margin: 0.4em;">
-<pre style=3D"border-width: 0px; margin: 0px 0cm 7.5pt; border-radius: 0px;=
- text-align: left; color: rgb(0, 0, 0); text-transform: none; text-indent: =
-0px; letter-spacing: normal; font-family: &#26032;&#32048;&#26126;&#39636;,=
- serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacing=
-: 0px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(25=
-5, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -w=
-ebkit-text-stroke-width: 0px;=20
-text-decoration-style: initial; text-decoration-color: initial;"><span styl=
-e=3D'color: rgb(53, 28, 117); font-family: "Arial Black", sans-serif; font-=
-size: 10.5pt;'><span style=3D"color: rgb(60, 115, 170); font-family: Verdan=
-a, sans-serif;"><span style=3D'color: rgb(53, 28, 117); font-family: "arial=
- black", sans-serif;'><span style=3D"color: black; font-family: Verdana, sa=
-ns-serif; font-size: 10pt;">
-<pre style=3D"background: white; border-width: 0px; margin: 0px 0cm 7.5pt; =
-border-radius: 0px; text-align: left; color: rgb(0, 0, 0); text-transform: =
-none; text-indent: 0px; letter-spacing: normal; font-family: &#26032;&#3204=
-8;&#26126;&#39636;, serif; font-size: 12pt; font-style: normal; font-weight=
-: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-=
-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-w=
-idth: 0px; text-decoration-style: initial;=20
-text-decoration-color: initial;"><span style=3D'color: rgb(53, 28, 117); fo=
-nt-family: "Arial Black", sans-serif; font-size: 10.5pt;'><span style=3D"co=
-lor: rgb(60, 115, 170); font-family: Verdana, sans-serif;"><span style=3D'c=
-olor: rgb(53, 28, 117); font-family: "arial black", sans-serif;'><span styl=
-e=3D"color: black; font-family: Verdana, sans-serif; font-size: 10pt;">Dear=
-<span>&nbsp;"industrypack-devel",</span></span></span></span></span></pre><=
-/span></span></span></span></pre>
-<pre style=3D"border-width: 0px; margin: 0px 0cm 12pt; border-radius: 0px; =
-text-align: left; color: rgb(0, 0, 0); text-transform: none; text-indent: 0=
-px; letter-spacing: normal; font-family: &#26032;&#32048;&#26126;&#39636;, =
-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacing:=
- 0px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255=
-, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -we=
-bkit-text-stroke-width: 0px; text-decoration-style:=20
-initial; text-decoration-color: initial;"><span style=3D"font-family: Verda=
-na, sans-serif; font-size: 10pt;">We have inquiry about your product, Pleas=
-e<span>&nbsp;</span><span style=3D"font-family: Verdana, sans-serif; font-s=
-ize: 10pt;">this is my second mail to this your email:<span>&nbsp;<font col=
-or=3D"#5825da">"industrypack-devel@lists.sourceforge.net"</font></span></sp=
-an></span></pre>
-<pre style=3D"border-width: 0px; margin: 0px 0cm 12pt; border-radius: 0px; =
-text-align: left; color: rgb(0, 0, 0); text-transform: none; text-indent: 0=
-px; letter-spacing: normal; font-family: &#26032;&#32048;&#26126;&#39636;, =
-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacing:=
- 0px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255=
-, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -we=
-bkit-text-stroke-width: 0px; text-decoration-style:=20
-initial; text-decoration-color: initial;"><span style=3D"font-family: Verda=
-na, sans-serif; font-size: 10pt;">Kindly send us your company latest catalo=
-gue and&nbsp;Your prices list, We may place an urgent order<span style=3D"f=
-ont-family: Verdana, sans-serif; font-size: 10pt;"><div style=3D'color: rgb=
-(29, 34, 40); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; =
-font-size: 16px;'>&nbsp;</div>
-<div style=3D'color: rgb(29, 34, 40); font-family: "Helvetica Neue", Helvet=
-ica, Arial, sans-serif; font-size: 16px;'>
-<span style=3D"font-family: arial, sans-serif;">Thanks &amp; <br><br>
-Best &nbsp;Regards&#8230;<span style=3D"color: rgb(0, 0, 0); text-transform=
-: none; text-indent: 0px; letter-spacing: normal; font-family: verdana, san=
-s-serif; font-size: large; font-style: normal; font-weight: 400; word-spaci=
-ng: 0px; float: none; display: inline !important; white-space: normal; orph=
-ans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligat=
-ures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; te=
-xt-decoration-style: initial;=20
-text-decoration-color: initial; text-decoration-thickness: initial;"><font =
-size=3D"3">
-<p style=3D'color: rgb(29, 34, 40); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: small; font-style: normal; font-weight: 400; word-spa=
-cing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatur=
-es: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text=
--decoration-style: initial; text-decoration-color: initial; text-decoration=
--thickness: initial;'><strong>Kyle Roseneck</strong>
-</p><p style=3D'color: rgb(29, 34, 40); text-transform: none; text-indent: =
-0px; letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Aria=
-l, sans-serif; font-size: small; font-style: normal; font-weight: 400; word=
--spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-lig=
-atures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; =
-text-decoration-style: initial; text-decoration-color: initial; text-decora=
-tion-thickness: initial;'>Sales Representative</p>
-<p style=3D'color: rgb(29, 34, 40); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: small; font-style: normal; font-weight: 400; word-spa=
-cing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatur=
-es: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text=
--decoration-style: initial; text-decoration-color: initial; text-decoration=
--thickness: initial;'>
-<span style=3D"color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-=
-serif;"><b>TAURUS CRACO MACHINERY INC</b></span></p>
-<p style=3D'color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: 13px; font-style: normal; font-weight: 400; word-spac=
-ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
-s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-style: initial; text-decoration-color: initial; text-decoration-=
-thickness: initial;'>
-282 Orenda Rd, Brampton,&nbsp;<br>ON L6T 4X6, Canada<span style=3D"color: r=
-gb(153, 0, 0); font-family: arial, sans-serif; font-size: large;"><font siz=
-e=3D"5"><font color=3D"#9d626f"><font><font><span style=3D"font-family: Ver=
-dana, sans-serif;"><font face=3D"Arial"><font style=3D"font-family: monospa=
-ce;"><font><font color=3D"#444444" face=3D"verdana, sans-serif"><br class=
-=3D"Apple-interchange-newline"></font></font></font></font></span></font></=
-font><br><br><strong>
-</strong></font></font></span></p></font>
-<p style=3D'color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: 13px; font-style: normal; font-weight: 400; word-spac=
-ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
-s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-style: initial; text-decoration-color: initial; text-decoration-=
-thickness: initial;'><br></p></span>
-<p style=3D'color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: 13px; font-style: normal; font-weight: 400; word-spac=
-ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
-s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-style: initial; text-decoration-color: initial; text-decoration-=
-thickness: initial;'><br></p></span>
-<p style=3D'color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: 13px; font-style: normal; font-weight: 400; word-spac=
-ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
-s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-style: initial; text-decoration-color: initial; text-decoration-=
-thickness: initial;'><br></p></div>
-<p style=3D'color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: 13px; font-style: normal; font-weight: 400; word-spac=
-ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
-s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-style: initial; text-decoration-color: initial; text-decoration-=
-thickness: initial;'><br></p></span>
-<p style=3D'color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: 13px; font-style: normal; font-weight: 400; word-spac=
-ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
-s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-style: initial; text-decoration-color: initial; text-decoration-=
-thickness: initial;'><br></p></span>
-<p style=3D'color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: 13px; font-style: normal; font-weight: 400; word-spac=
-ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
-s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-style: initial; text-decoration-color: initial; text-decoration-=
-thickness: initial;'><br></p></pre>
-<div style=3D'color: rgb(29, 34, 40); font-family: "Helvetica Neue", Helvet=
-ica, Arial, sans-serif; font-size: 16px;'><br></div><p>
-</p>
+This is a multi-part message in MIME format.
+
+--=====003_Dragon431147451135_=====
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+SGkgc2lyLOKYug0KRG8geW91IGhhdmUgYW55IEJlYXJpbmdzIHJlcXVpcm1lbnRzPw0KU0tGLE5T
+SyxGQUcsTlROLFRJTUtFTixLT1lPLElOQSxOQUNISSxGWUgsQVNBSEkuDQpGcmVlIHNhbXBsZXMg
+aWYgaW50ZXJlc3QuDQpCZXN0IHJlZ2FyZHMhDQpQaGlsaXANClNreXBlO3BoaWxpcDIxNHdhbmcN
+CkJlYXJpbmdzIEZhY3RvcnkgQ2hpbmEu
+
+--=====003_Dragon431147451135_=====
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZPg0KPFA+SGkgc2lyLOKY
+ujwvUD4NCjxQPkRvIHlvdSBoYXZlIGFueSBCZWFyaW5ncyByZXF1aXJtZW50cz88L1A+DQo8UD5T
+S0YsTlNLLEZBRyxOVE4sVElNS0VOLEtPWU8sSU5BLE5BQ0hJLEZZSCxBU0FISS48L1A+DQo8UD5G
+cmVlIHNhbXBsZXMgaWYgaW50ZXJlc3QuPC9QPg0KPFA+QmVzdCByZWdhcmRzITxCUj5QaGlsaXA8
+L1A+DQo8UD5Ta3lwZTtwaGlsaXAyMTR3YW5nPEJSPkJlYXJpbmdzIEZhY3RvcnkgQ2hpbmEuPC9Q
+PjwvQk9EWT48L0hUTUw+DQo=
+
+--=====003_Dragon431147451135_=====--
 
 
-</body></html>
 
-
---===============7830156673801324504==
+--===============0977512721710648045==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7830156673801324504==
+--===============0977512721710648045==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -275,4 +164,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7830156673801324504==--
+--===============0977512721710648045==--
+
+
