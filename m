@@ -2,81 +2,97 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 59F3844A76E
-	for <lists+industrypack-devel@lfdr.de>; Tue,  9 Nov 2021 08:13:20 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9766844E9F8
+	for <lists+industrypack-devel@lfdr.de>; Fri, 12 Nov 2021 16:23:12 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mkLJm-0000HT-RB
-	for lists+industrypack-devel@lfdr.de; Tue, 09 Nov 2021 07:13:18 +0000
+	id 1mlYOV-0003Xe-76
+	for lists+industrypack-devel@lfdr.de; Fri, 12 Nov 2021 15:23:11 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <zzokxj@fla.de>) id 1mkLJl-0000HI-IA
- for industrypack-devel@lists.sourceforge.net; Tue, 09 Nov 2021 07:13:17 +0000
+ (envelope-from <gucchi@tkf.att.ne.jp>) id 1mlYOM-0003XM-AT
+ for industrypack-devel@lists.sourceforge.net; Fri, 12 Nov 2021 15:23:02 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Subject:From:To:Date:List-id:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Help:List-Unsubscribe:
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=A9IvrPkFVcvKkaRp5mEnZSRQeZ6V233sRa+B4t7uZeE=; b=fSmhPclsCgke6n8ZQnMquKf0Vv
- BoLDc/0pAFGeaB6WvJroRoa1H/X0TuNbiLHAqVBCukOTVlY3IuF9mXbzDf0e8k2UyPbb687pb0ie1
- Ef3sjCQEOcLLU+2hG5beepVH3VPmH/ZY6uNicp/wRAccSBTMEr3bG9JzvEKsTtC1AoCM=;
+ bh=cLe4/LlJc1VJaZ8Smg/WsELefpZ4l+8Vgel965fk35k=; b=TaFHaSnUlA3vRryKSuhdBiw/XR
+ S0f9jKbCWJa6g3KfRYQmhx1Vfs5GO69ur2Aeh1OvhduE0xSI63DrvZ9iBB8tzhuYtqoNB5BTVPsi3
+ EkhNd6dan5O/LXLR+DW5aY0mHLJtDKO0supLVbsuhkvloleKrH5iH3uDhl9MrHVvlnkU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Subject:
- From:To:Date:List-id:Sender:Reply-To:Cc:Content-ID:Content-Description:
- Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
- In-Reply-To:References:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=A9IvrPkFVcvKkaRp5mEnZSRQeZ6V233sRa+B4t7uZeE=; b=H
- z+rx/q14nTtnmmimtz53rG3XWKo5tVA/7su810slHiH/jrylRwhMue7aXtrPfNVMe33ffN3hLWm/g
- CDW4fMPSTqKhheQu0Bd8QvtVdL4JZIbGXq2n+h0hbYWP4ldgh1S0L572rXIGmKIxJOrTgMxykbWUq
- zzP3Vrzq3XmApn0A=;
-Received: from [83.229.84.78] (helo=fla.de)
+ h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=cLe4/LlJc1VJaZ8Smg/WsELefpZ4l+8Vgel965fk35k=; b=F
+ bZEKxPS+OmRmtydEFBD3gy+43uImIRcBnobfvnyLje0BxuwdCqqy3RGUdtCkT6sg7Wy6/pwIBWLCa
+ T8e5ZO6MKXOlvABVoYYSVPXn6nN1DkQAMUDeZvO4D1YKuejosh7avVNxHczLZnDUv8hApoHe/OHra
+ MXYuECsRz3UzAt54=;
+Received: from msa205.att.ne.jp ([143.90.14.11] helo=cmsa205.att.ne.jp)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
- id 1mkLJk-006vBc-CZ
- for industrypack-devel@lists.sourceforge.net; Tue, 09 Nov 2021 07:13:17 +0000
-Date: Tue, 9 Nov 2021 06:54:43 +0000
-To: industrypack-devel@lists.sourceforge.net
-From: =?utf-8?Q?Miles=20=26=20More?= <wdxfv-fsdv@fla.de>
-Message-ID: <7dee135e33db04c7260ee69ea6d8d8a4@83.229.84.78>
-X-Priority: 3
-MIME-Version: 1.0
-X-mailer: Cabestan DMS
-X-Spam-Score: 5.2 (+++++)
+ id 1mlYOL-00AuxP-8R
+ for industrypack-devel@lists.sourceforge.net; Fri, 12 Nov 2021 15:23:02 +0000
+Received: from vmsa205.att.ne.jp by cmsa205.att.ne.jp with ESMTP
+ id <20211112152255333.OUTF.86854.cmsa205.att.ne.jp@msa205.att.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sat, 13 Nov 2021 00:22:55 +0900
+Received: from msrg2051.rgserv.att.ne.jp by vmsa205.att.ne.jp with ESMTP
+ id <20211112152255329.SFGA.84877.vmsa205.att.ne.jp@msa205.att.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sat, 13 Nov 2021 00:22:55 +0900
+Received: from mail.com (185.202.103.254) by msrg2051.rgserv.att.ne.jp
+ (5.8.426)
+ id 604F04740777FAF7 for industrypack-devel@lists.sourceforge.net;
+ Sat, 13 Nov 2021 00:22:55 +0900
+Date: Fri, 12 Nov 2021 23:23:30 +0800
+From: "philip" <philipbearings02@163.com>
+To: <industrypack-devel@lists.sourceforge.net>
+Message-ID: <20211112232341523834@tkf.att.ne.jp>
+X-mailer: Foxmail 6, 13, 102, 15 [cn]
+Mime-Version: 1.0
+X-Spam-Score: 5.9 (+++++)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  Miles & More Sehr geehrter Kunde, Heute möchten wir Sie über
-    eine bevorstehende Änderung bei Online-Zahlungen informieren: Visa Secure
-    und Mastercard® Identity CheckTM sind eine Weiterentwicklung von Verified
-    by Visa und Mastercar [...] 
+ Content preview:  Hi sir,☺ Do you have any Bearings requirments? SKF,NSK,FAG,NTN,TIMKEN,KOYO,INA,NACHI,FYH,ASAHI.
+    Free samples if interest. Best regards! Philip Skype;philip214wang Bearings
+    Factory China. Hi sir,☺ 
  
- Content analysis details:   (5.2 points, 6.0 required)
+ Content analysis details:   (5.9 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [143.90.14.11 listed in wl.mailspike.net]
   0.5 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
-                             [83.229.84.78 listed in dnsbl-1.uceprotect.net]
-  0.0 SPF_HELO_FAIL          SPF: HELO does not match SPF record (fail)
- [SPF failed: Please see http://www.openspf.org/Why?s=helo;id=fla.de;ip=83.229.84.78;r=util-spamd-1.v13.lw.sourceforge.com]
-  0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
- [SPF failed: Please see http://www.openspf.org/Why?s=mfrom;id=zzokxj%40fla.de;ip=83.229.84.78;r=util-spamd-1.v13.lw.sourceforge.com]
-  0.0 HTML_FONT_SIZE_HUGE    BODY: HTML font size is huge
+                             [143.90.14.11 listed in dnsbl-1.uceprotect.net]
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [gucchi[at]tkf.att.ne.jp]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
+                             digit
+                             [philipbearings02[at]163.com]
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
   0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
-                             identical to background
-  2.4 URI_WPADMIN            WordPress login/admin URI, possible phishing
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
-X-Headers-End: 1mkLJk-006vBc-CZ
-Subject: [Industrypack-devel] =?utf-8?q?Wichtig_=3ARegistrieren_3D_Secure?=
- =?utf-8?q?=2E?=
+  2.0 PYZOR_CHECK            Listed in Pyzor
+                             (https://pyzor.readthedocs.io/en/latest/)
+  2.7 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+                             EnvelopeFrom freemail headers are
+                             different
+X-Headers-End: 1mlYOL-00AuxP-8R
+Subject: [Industrypack-devel] Do you deal bearings?
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,196 +104,55 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============2715383433217063042=="
+Reply-To: philipbearings02@163.com
+Content-Type: multipart/mixed; boundary="===============7966223819456100664=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============2715383433217063042==
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: 8bit
+This is a multi-part message in MIME format.
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-  <meta http-equiv="Content-Type"
- content="text/html; charset=utf-8">
-  <meta name="viewport" content="initial-scale=1.0">
-  <meta name="GENERATOR" content="MSHTML 11.00.9600.20139">
-</head>
-<body topmargin="0" leftmargin="0"
- style="margin: 0px; padding: 3px 0px; background-color: rgb(235, 235, 235); font-family: Helvetica,Arial,sans-serif;"
- marginheight="0" marginwidth="0">
-<p
- style="margin: 0px 0px 1em; color: rgb(0, 0, 0); text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;"><span
- style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; vertical-align: baseline; font-stretch: inherit;"><span
- style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; font-size: 18px; vertical-align: baseline; font-stretch: inherit;"><span
- style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; vertical-align: baseline; font-stretch: inherit;"><span
- style="margin: 0px; padding: 0px;"><strong><font
- color="#0000a0" size="7">Miles &amp; More</font></strong></span></span></span></span></p>
-<p
- style="margin: 0px 0px 1em; color: rgb(0, 0, 0); text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;"><span
- style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; vertical-align: baseline; font-stretch: inherit;"><span
- style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; font-size: 18px; vertical-align: baseline; font-stretch: inherit;"><span
- style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; vertical-align: baseline; font-stretch: inherit;"><span
- style="margin: 0px; padding: 0px;"><strong></strong><br
- class="Apple-interchange-newline">
-Sehr geehrter Kunde,</span></span></span></span></p>
-<p
- style="margin: 0px 0px 1em; color: rgb(32, 31, 30); text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Arial,Tahoma,Verdana,sans-serif; font-size: 15px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;"><span
- style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; font-size: 14px; vertical-align: baseline; font-stretch: inherit;"><span
- style="margin: 0px; padding: 0px;">Heute m&ouml;chten
-wir Sie &uuml;ber eine bevorstehende &Auml;nderung bei
-Online-Zahlungen informieren:<br style="line-height: normal;">
-Visa Secure und Mastercard&reg; Identity<span
- style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; vertical-align: baseline; font-stretch: inherit;">
-</span><span
- style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); line-height: normal; font-family: inherit; vertical-align: baseline; font-stretch: inherit;">CheckTM</span><span
- style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; vertical-align: baseline; font-stretch: inherit;">
-</span>sind
-eine Weiterentwicklung von Verified by Visa und Mastercard&reg;
-SecureCodeTM. Mit den Namen &auml;ndern sich auch die Logos. Am
-09.11.2021 tritt die Zweite Zahlungsdiensterichtlinie der
-Europ&auml;ischen Union (Payment Service Directive 2 &ndash;
-PSD2) in Kraft. Stellen Sie sicher, dass Sie auch in Zukunft bequem
-online einkaufen k&ouml;nnen. Registrieren Sie sich jetzt in
-wenigen Schritten f&uuml;r die neuen Sicherheitsverfahren Visa
-Secure und Mastercard&reg; Identity CheckTM</span></span></p>
-<p
- style="margin: 0px 0px 1em; color: rgb(32, 31, 30); text-transform: none; line-height: normal; text-indent: 0px; letter-spacing: normal; font-family: Arial,Tahoma,Verdana,sans-serif; font-size: 15px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;"><span
- style="color: rgb(80, 80, 80); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;"><a
- class="button right"
- style="margin: 0px auto 20px; padding: 15px 20px; background: rgb(15, 40, 110) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; color: rgb(255, 255, 255); text-transform: none; line-height: 18px; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; text-decoration: underline; word-spacing: 0px; vertical-align: middle; white-space: normal; cursor: pointer; orphans: 2; widows: 2;"
- href="https://ftxcs.com/wp-admin/maint/" target="_blank">Jetzt
-aktivieren</a><br
- style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;">
-<br
- style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;">
-<br
- style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;">
-<br
- style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;">
-<span
- style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; vertical-align: inherit; white-space: normal; orphans: 2; widows: 2;">Viele
-Gr&uuml;&szlig;e von </span><br
- style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2;">
-<span
- style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; vertical-align: inherit; white-space: normal; orphans: 2; widows: 2;">Ihrem</span></span></p>
-<p><br>
-</p>
-<p><br>
-</p>
-<p><font color="#80ffff">-</font></p>
-<p><font color="#80ffff">-</font></p>
-<p><font color="#80ffff">-</font></p>
-<p><font color="#80ffff"><br>
-</font></p>
-<p><font color="#80ffff">-</font></p>
-<p><font color="#80ffff">-</font></p>
-<p><font color="#80ffff">-</font></p>
-<p><font color="#80ffff">-</font></p>
-<p><font color="#80ffff">-</font></p>
-<p><font color="#80ffff">-</font></p>
-<p><font color="#80ffff">-</font><br>
-</p>
-<p><br>
-</p>
-<table class="ui-meta grid"
- style="text-transform: none; letter-spacing: normal; font-family: arial,helvetica,sans-serif; word-spacing: 0px; orphans: 2; widows: 2; background-color: rgb(237, 237, 233); color: rgb(204, 255, 255);"
- border="0" cellpadding="0" cellspacing="0"
- width="100%">
-  <tbody>
-    <tr>
-      <td class="ui-meta-content text"
- style="line-height: 14px;" open="" sans="" ,=""
- helvetica="" neue="" ,arial,sans-serif=""
- font-size="" 12px="" align="center">Du
-m&ouml;chtest keine weiteren E-Mails
-dieser Art bekommen? Klicke zum Abbestellen bitte<span> </span><a
- style="line-height: 14px; color: rgb(204, 255, 255);" open=""
- sans="" ,="" helvetica="" neue=""
- ,arial,sans-serif="" font-size="" 12px=""
- font-weight="" bold="" text-decoration="" none=""
- color="" rgb(204="" 255=""
- href="https://nebenan.de/profile/settings/email/new_post_from_neightbour?token=cTVJYVFUb2kwU1FTNWppREtQYnJGY29Lbzlvdm9Eb0FRVDAyWWFJU2JJTFNJSE5VTlZLeVpHbFUyQkkyU0U1R0NIZHFuVzlZaWo3cGd6SnFDZnNnVUZDcms1RWxVMDN4bjAxMldDd1RRU3luVC9XMmJYNnJBOUdwL1ZkbEpFM0NVWWdUa3UycnhMb1BweXZ0VU5STEJ3bDFIbml4dDBBZGJHeFRtMVR4eXF4cDIvVTdPODFwQjVVQndCSnorbVN1WjI0cTczbmQ4bWEwVDZ4a01aekZUK2hYMmpNT01wOTVjMHVPREpRSWRBQnN4Wmp6TVgrbWZ2WW9QZUJ1K203U2loajcwYnVERGp3Z0VCYWpxZFVtcGVOakhGS1hMU0w3N3RaNk1vaDd0YlhUYldpajRyUXV4K1pESjRwcUMyNmlxN0xVM0lEZm8vd1dMVkphZ3A5Qnl3PT0tLW4rOGpkcmsyYnFwcjd1dUh6cFpHUFE9PQ==--40c0c3bd77d2555e7187bbfaf22008a8d8fa5d8f&amp;utm_source=POST_NEW&amp;utm_medium=email&amp;utm_campaign=Notifications"
- target="_blank">hier</a>.
-      <p class="text-center" style="margin: 0px;"
- align="center">Oder passe deine E-Mail Einstellungen<span>
-      </span><a
- style="line-height: 14px; color: rgb(204, 255, 255);" open=""
- sans="" ,="" helvetica="" neue=""
- ,arial,sans-serif="" font-size="" 12px=""
- font-weight="" bold="" text-decoration="" none=""
- color="" rgb(204="" 255=""
- href="https://nebenan.de/profile/settings/email?token=cTVJYVFUb2kwU1FTNWppREtQYnJGY29Lbzlvdm9Eb0FRVDAyWWFJU2JJTFNJSE5VTlZLeVpHbFUyQkkyU0U1R0NIZHFuVzlZaWo3cGd6SnFDZnNnVUZDcms1RWxVMDN4bjAxMldDd1RRU3luVC9XMmJYNnJBOUdwL1ZkbEpFM0NVWWdUa3UycnhMb1BweXZ0VU5STEJ3bDFIbml4dDBBZGJHeFRtMVR4eXF4cDIvVTdPODFwQjVVQndCSnorbVN1WjI0cTczbmQ4bWEwVDZ4a01aekZUK2hYMmpNT01wOTVjMHVPREpRSWRBQnN4Wmp6TVgrbWZ2WW9QZUJ1K203U2loajcwYnVERGp3Z0VCYWpxZFVtcGVOakhGS1hMU0w3N3RaNk1vaDd0YlhUYldpajRyUXV4K1pESjRwcUMyNmlxN0xVM0lEZm8vd1dMVkphZ3A5Qnl3PT0tLW4rOGpkcmsyYnFwcjd1dUh6cFpHUFE9PQ==--40c0c3bd77d2555e7187bbfaf22008a8d8fa5d8f&amp;utm_source=POST_NEW&amp;utm_medium=email&amp;utm_campaign=Notifications"
- target="_blank">hier</a><span> </span>an.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<table class="c-footer grid"
- style="text-transform: none; letter-spacing: normal; font-family: arial,helvetica,sans-serif; word-spacing: 0px; orphans: 2; widows: 2; background-color: rgb(237, 237, 233);"
- border="0" cellpadding="0" cellspacing="0"
- width="100%">
-  <tbody>
-    <tr>
-      <td class="grid-space"
- style="line-height: 15px; font-size: 15px;" height="15">
-      </td>
-    </tr>
-    <tr style="color: rgb(204, 255, 255);">
-      <td class="c-footer-links text"
- style="line-height: 14px;" open="" sans="" ,=""
- helvetica="" neue="" ,arial,sans-serif=""
- font-size="" 12px="" align="center"><a
- style="line-height: 14px; color: rgb(204, 255, 255);" open=""
- sans="" ,="" helvetica="" neue=""
- ,arial,sans-serif="" font-size="" 12px=""
- font-weight="" bold="" text-decoration="" none=""
- color="" rgb(204="" 255=""
- href="https://lnk.nebenan.de/11taQhMz7" target="_blank">nebenan.de</a><span>
-      </span>|<span> </span><a
- style="line-height: 14px; color: rgb(204, 255, 255);" open=""
- sans="" ,="" helvetica="" neue=""
- ,arial,sans-serif="" font-size="" 12px=""
- font-weight="" bold="" text-decoration="" none=""
- color="" rgb(204="" 255=""
- href="https://nebenan.zendesk.com/hc/de/requests/new"
- target="_blank">Kontakt</a><span> </span>|<span>
-      </span><a
- style="line-height: 14px; color: rgb(204, 255, 255);" open=""
- sans="" ,="" helvetica="" neue=""
- ,arial,sans-serif="" font-size="" 12px=""
- font-weight="" bold="" text-decoration="" none=""
- color="" rgb(204="" 255=""
- href="https://lnk.nebenan.de/KENCJfnJ" target="_blank">Datenschutz</a><span>
-      </span>|<span> </span><a
- style="line-height: 14px; color: rgb(204, 255, 255);" open=""
- sans="" ,="" helvetica="" neue=""
- ,arial,sans-serif="" font-size="" 12px=""
- font-weight="" bold="" text-decoration="" none=""
- color="" rgb(204="" 255=""
- href="https://lnk.nebenan.de/iT7aKhy4" target="_blank">Nutzungsbedingungen</a><span>
-      </span>|<span> </span><a
- style="line-height: 14px; color: rgb(204, 255, 255);" open=""
- sans="" ,="" helvetica="" neue=""
- ,arial,sans-serif="" font-size="" 12px=""
- font-weight="" bold="" text-decoration="" none=""
- color="" rgb(204="" 255=""
- href="https://lnk.nebenan.de/1chzwEbNg" target="_blank">Impressum</a></td>
-    </tr>
-  </tbody>
-</table>
-</body>
-</html>
+--===============7966223819456100664==
+Content-Type: multipart/alternative;
+	boundary="=====003_Dragon542526380433_====="
+
+This is a multi-part message in MIME format.
+
+--=====003_Dragon542526380433_=====
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+SGkgc2lyLOKYug0KRG8geW91IGhhdmUgYW55IEJlYXJpbmdzIHJlcXVpcm1lbnRzPw0KU0tGLE5T
+SyxGQUcsTlROLFRJTUtFTixLT1lPLElOQSxOQUNISSxGWUgsQVNBSEkuDQpGcmVlIHNhbXBsZXMg
+aWYgaW50ZXJlc3QuDQpCZXN0IHJlZ2FyZHMhDQpQaGlsaXANClNreXBlO3BoaWxpcDIxNHdhbmcN
+CkJlYXJpbmdzIEZhY3RvcnkgQ2hpbmEu
+
+--=====003_Dragon542526380433_=====
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZPg0KPFA+SGkgc2lyLOKY
+ujwvUD4NCjxQPkRvIHlvdSBoYXZlIGFueSBCZWFyaW5ncyByZXF1aXJtZW50cz88L1A+DQo8UD5T
+S0YsTlNLLEZBRyxOVE4sVElNS0VOLEtPWU8sSU5BLE5BQ0hJLEZZSCxBU0FISS48L1A+DQo8UD5G
+cmVlIHNhbXBsZXMgaWYgaW50ZXJlc3QuPC9QPg0KPFA+QmVzdCByZWdhcmRzITxCUj5QaGlsaXA8
+L1A+DQo8UD5Ta3lwZTtwaGlsaXAyMTR3YW5nPEJSPkJlYXJpbmdzIEZhY3RvcnkgQ2hpbmEuPC9Q
+PjwvQk9EWT48L0hUTUw+DQo=
+
+--=====003_Dragon542526380433_=====--
 
 
---===============2715383433217063042==
+
+--===============7966223819456100664==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2715383433217063042==
+--===============7966223819456100664==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -288,4 +163,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2715383433217063042==--
+--===============7966223819456100664==--
+
+
