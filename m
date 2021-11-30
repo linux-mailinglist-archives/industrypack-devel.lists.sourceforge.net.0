@@ -2,71 +2,104 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 51693462BF0
-	for <lists+industrypack-devel@lfdr.de>; Tue, 30 Nov 2021 06:12:16 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id DA2ED463273
+	for <lists+industrypack-devel@lfdr.de>; Tue, 30 Nov 2021 12:32:47 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mrvR7-0001He-Qs
-	for lists+industrypack-devel@lfdr.de; Tue, 30 Nov 2021 05:12:14 +0000
+	id 1ms1NO-0004Hx-GE
+	for lists+industrypack-devel@lfdr.de; Tue, 30 Nov 2021 11:32:46 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <bounce-1268-12229844-1268-248@sooncoo.cn>)
- id 1mrvR3-0001H5-LH
- for industrypack-devel@lists.sourceforge.net; Tue, 30 Nov 2021 05:12:10 +0000
+ (envelope-from <unkempt-10@dearsammy.com>) id 1ms1NN-0004Hp-Jr
+ for industrypack-devel@lists.sourceforge.net; Tue, 30 Nov 2021 11:32:45 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
- :List-Unsubscribe:Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=m+HlsLym/DUKRy1DaApWNsgGMDZcbrCXb8BmVcXHHP0=; b=cj1c9nWG1/ZqGqlRA6SaPc7x+T
- /hQW3yApaeHKusyzspHEb3Q3W8Q2XPpOlCw1auBTIzxDfEB36gsYcl3nAzUpKuc8E5sQ6R41dSJkE
- ao4e3LjSQvVYm1t9pio8uE+CbVuGE6FzhBHn6wJO+FyZuSdke06Rt+g2/96sAHfTxbRw=;
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=M+U7OKNqCpCEaVeRMJjrnYDjW5Q84WaQTSehEqaajlI=; b=kVDGWU7hCObwlb0hbWbSz9rulk
+ efzzcap8JxPccCZt5uqEQ7X7CPGxjsrmola+pVDwvubL/CiYFUP1kDKyWpUPWqhb2Yf8DiIH78Pfy
+ utgex8xAKqWSAK2kMracsq2XhP2S1zruCknYqLqCtHcjqtwrWoe9wsevxNB4G+mkBAWc=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Content-Transfer-Encoding:MIME-Version:List-Unsubscribe:
- Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=m+HlsLym/DUKRy1DaApWNsgGMDZcbrCXb8BmVcXHHP0=; b=lb5uwnTrxGKcfX+pWH7A4O4GA4
- QzYPwLhVsSJuFaRsoKbwl69I7q+BT43yJ7mLat+IIxjq8pSbHp9/0erncmDZ+Dt7dK6ex/CwVz9xq
- wEGoDVKM4bL57QLUdmkIi1/UHLtuasqtq0y9J8QCN7AdseB2aq3zPld+i61vL2u7b1JU=;
-Received: from [164.155.77.135] (helo=sooncoo.cn)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
- id 1mrvQa-00FOEB-GU
- for industrypack-devel@lists.sourceforge.net; Tue, 30 Nov 2021 05:12:10 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=sooncoo; d=sooncoo.cn;
- h=Date:To:From:Reply-to:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Transfer-Encoding:Content-Type;
- i=tiger@sooncoo.cn; bh=rRZ8fF+LtPW17NUNMlzJOfLSlYE=;
- b=Zr5UDgWCP73qcMGLcajvTpGl0b8T7G1MFHxpXgzmjh72h1YJd9Xkg+MD4dxMDRc2bg4/N/iTbfHD
- 6K2H+LlWeUUdRqcn2/AXA3TAjQlAGs7bFf7EJ3GT5W0rsOi+eOBeuXg+0ldrvLkBRx6yyx/8Yrg8
- 51K2tmNScPK2Dj07FO8=
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=sooncoo; d=sooncoo.cn;
- b=Me8ae6ErwAepi23TCGqWx7J+mNs9nU1CRPqaPW1kAb0In0oKpftu+QvKqrZrZjeeO8wsnX17+q5Y
- UyfaUMzsMFr8SLDQ/q5oxHK3hcoJedmmOJ1OA1rJQL5BC7aYohvUP3TUNUWqgRqvgDVdfazvDZRR
- wfyqGBJKLopOMVlUI/w=;
-Received: by sooncoo.cn id hkmp8o0e97cm for
- <industrypack-devel@lists.sourceforge.net>;
- Mon, 29 Nov 2021 21:20:41 -0500 (envelope-from
- <bounce-1268-12229844-1268-248@sooncoo.cn>)
-Date: Tue, 30 Nov 2021 02:20:41 +0000
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-From: =?utf-8?B?5LyB5Lia6JC95Zyw5ZKo6K+i?= <tiger@sooncoo.cn>
-Message-ID: <c9ea2851b28c2876ce8e9f7cbc4bd235@164.155.77.135>
-X-Priority: 3
-X-Mailer: Email Sending System
-X-Complaints-To: test@test.com
-X-MessageID: Nnx8fHw1OTk1MHx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDZ8fHx8MXx8fHww
-X-Report-Abuse: <http://164.155.77.135/oem/report_abuse.php?mid=Nnx8fHw1OTk1MHx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDZ8fHx8MXx8fHww>
+ h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=M+U7OKNqCpCEaVeRMJjrnYDjW5Q84WaQTSehEqaajlI=; b=d
+ ekjyXEHeNBZhb//hkH7zybsSTQhBbivczetcNzezdnhQlQiOlrqYRake1Wp7EO0W6fWnbGM1J8sEy
+ MEEGoXFCGhcd0r9BGEo2c8MbpWhawirfHxCp4kM2pjAhVqlhL5AQAGA3ySn/Blcof5eyauPzgOmEg
+ MJh0QP/PQdW6UaUg=;
+Received: from [152.32.219.211] (helo=mail.dearsammy.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
+ id 1ms1NH-0004Kp-8i
+ for industrypack-devel@lists.sourceforge.net; Tue, 30 Nov 2021 11:32:45 +0000
+Received: from fkh (unknown [207.148.115.110])
+ by mail.dearsammy.com (Postfix) with ESMTPA id D399B3C69AE
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 30 Nov 2021 19:06:56 +0800 (+08)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dearsammy.com;
+ s=default; t=1638270418;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:mime-version:mime-version:content-type:content-type;
+ bh=M+U7OKNqCpCEaVeRMJjrnYDjW5Q84WaQTSehEqaajlI=;
+ b=CAAEwj7US0lD9oW6EvznlqNEKe+aPr5Doy37bdXnHs7TMWoDdRq0oRb2X3Flj7Ff6/6w6M
+ cH535snNvWKIyX8ovAT/N6agSrvm/YPMx5PuASIT44vhl8OMSCoeLgmL+fs3gyIMTMRCYJ
+ n/ZtpxlPjw+lP7G4hRmJrHemDecoybM=
+To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
+Date: Tue, 30 Nov 2021 11:06:46 +000
+Message-ID: <000b4bf01da4$dbb5f613$92897ffb$@fkh>
 MIME-Version: 1.0
-X-Headers-End: 1mrvQa-00FOEB-GU
-Subject: [Industrypack-devel] =?utf-8?b?MuWkqTHmmZogfCDljY7kuIDkuJbnuqo=?=
- =?utf-8?b?44CK6IKh5p2D5r+A5Yqx5pW05L2T6Kej5Yaz5pa55qGI44CL5a6e5oiY5oC7?=
- =?utf-8?b?6KOB54+t5LmL5pa55qGI5a+85YWl54+t?=
+X-Mailer: Microsoft Outlook 16.0
+X-Spam: Yes
+X-Spam-Score: 7.9 (+++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+ has identified this incoming email as possible spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ the administrator of that system for details.
+ 
+ Content preview:  いつもメルカリをご利用いただきありがとうございます。
+    すぐに3000円のポイントを受け取ります。 下記URLをクリックして受け取ります。
+    
+ 
+ Content analysis details:   (7.9 points, 6.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: dearsammy.com]
+  0.5 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+                             [152.32.219.211 listed in dnsbl-1.uceprotect.net]
+  2.6 RCVD_IN_SBL            RBL: Received via a relay in Spamhaus SBL
+                             [152.32.219.211 listed in zen.spamhaus.org]
+  0.4 INVALID_DATE           Invalid Date: header (not RFC 2822)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  1.2 HTML_OBFUSCATE_10_20   BODY: Message is 10% to 20% HTML
+                             obfuscation
+  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  2.0 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
+X-Headers-End: 1ms1NH-0004Kp-8i
+Subject: [Industrypack-devel] =?utf-8?b?44CQ44Oh44Or44Kr44Oq44CR44GK6LK3?=
+	=?utf-8?b?44GE54mp44Gn5L2/44GI44KLMzAwMOWGhuWIhuODneOCpOODs+ODiA==?=
+	=?utf-8?b?5b+F44Ga44KC44KJ44GI44KL77yB?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -78,524 +111,319 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: =?utf-8?B?5LyB5Lia6JC95Zyw5ZKo6K+i?= <1678655209@qq.com>
-Content-Type: multipart/mixed; boundary="===============0495081060923134101=="
+From: =?utf-8?B?44Oh44Or44Kr44Oq?= via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: =?utf-8?B?44Oh44Or44Kr44Oq?= <unkempt-10@dearsammy.com>
+Content-Type: multipart/mixed; boundary="===============7244554841180915615=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============0495081060923134101==
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html; charset="utf-8"
+This is a multi-part message in MIME format.
 
-<html><head>
+--===============7244554841180915615==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0D60_013CFD19.121F3510"
 
-=09
-=09=09<title></title>
-=09=09<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
--8">
-=09=09<meta http-equiv=3D"Content-Language" content=3D"en-us">
-=09=09<style type=3D"text/css" media=3D"screen">
-=09=09</style>
-=09</head><body class=3D"element-selected" style=3D"" marginwidth=3D"0" mar=
-ginheight=3D"0">
-<div id=3D"BodyNewsletter" style=3D"margin: 0px auto; width: 610px;">
-<table id=3D"ViewInBrowser" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
-" style=3D"width: 610px;">
-<tr>
-<td class=3D"iguana iguana-rich-editable" style=3D"font-family: Helvetica,A=
-rial,sans-serif;">
-<p style=3D"text-align: center; font-size: 12px; color: #666666;">You are r=
-eceiving this email because the email address industrypack-devel@lists.sour=
-ceforge.net was subscribed to our email list. Having trouble reading this e=
-mail? <a href=3D"http://164.155.77.135/oem/wb.php?p=3Dry/ry/rs/1b12/ry/rs">=
-View it on your browser</a>.</p>
-</td>
-</tr>
-</table>
-<table id=3D"NewsletterHeader" border=3D"0" cellpadding=3D"0" cellspacing=
-=3D"0" style=3D"width: 610px;">
-<tr>
-<td style=3D"color: #ffffff; background: none repeat scroll 0% 0% #4779dc; =
-font-family: Helvetica,Arial,sans-serif; padding: 18px 18px 0pt;" height=3D=
-"90">
-<h1 class=3D"iguana iguana-single-editable" style=3D"font-size: 30px; margi=
-n: 0px; padding: 0px; text-align: center;">2=E5=A4=A91=E6=99=9A | =E5=8D=8E=
-=E4=B8=80=E4=B8=96=E7=BA=AA=E3=80=8A=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E6=
-=95=B4=E4=BD=93=E8=A7=A3=E5=86=B3=E6=96=B9=E6=A1=88=E3=80=8B=E5=AE=9E=E6=88=
-=98=E6=80=BB=E8=A3=81=E7=8F=AD=E4=B9=8B=E6=96=B9=E6=A1=88=E5=AF=BC=E5=85=A5=
-=E7=8F=AD</h1>
-</td>
-</tr>
-<tr>
-<td style=3D"font-family: Helvetica,Arial,sans-serif; padding: 0px 18px; ba=
-ckground-color: #4779dc;">
-<p style=3D"font-size: 14px; padding: 9px 18px; background: none repeat scr=
-oll 0% 0% #3c5da4; color: #ffffff;"><span class=3D"iguana iguana-single-edi=
-table" id=3D"Date" style=3D"float: right;">&nbsp;</span> <span class=3D"igu=
-ana iguana-single-editable">&nbsp;</span></p>
-</td>
-</tr>
-</table>
-<table id=3D"BorderTable" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
-style=3D"width: 610px;">
-<tr>
-<td style=3D"background: none repeat scroll 0% 0% #4779dc; padding: 0px 18p=
-x 18px;">
-<table id=3D"NewsletterBody" style=3D"background-color: #ffffff; width: 100=
-%;" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
-<tr>
-<td style=3D"font-family: Helvetica,Arial,sans-serif; padding: 9px 18px;">
-<div class=3D"iguana iguana-duplicatable">
-<h2 class=3D"iguana iguana-single-editable" style=3D"text-align: center; fo=
-nt-size: 20px; color: #666666;">=E5=AD=A6=E4=B9=A0=E8=82=A1=E6=9D=83 =E5=B0=
-=B1=E6=89=BE=E5=8D=8E=E4=B8=80=E4=B8=96=E7=BA=AA</h2>
-<div class=3D"iguana iguana-rich-editable" style=3D"font-size: 14px; line-h=
-eight: 18px; color: #666666; text-align: justify;">
-<p><span style=3D"font-size: 16px;"><strong>=E3=80=8A=E8=B4=A2=E5=AF=8C=E3=
-=80=8B=E6=9D=82=E5=BF=97</strong>=E7=9A=84=E6=95=B0=E6=8D=AE=E8=A1=A8=E6=98=
-=8E=EF=BC=8C20=E4=B8=96=E7=BA=AA=E4=BB=A5=E6=9D=A5=EF=BC=8C=E5=9C=A8=E7=BE=
-=8E=E5=9B=BD=E6=8E=92=E5=90=8D=E5=89=8D=E4=B8=80=E5=8D=83=E4=BD=8D=E7=9A=84=
-=E5=85=AC=E5=8F=B8=E4=B8=AD=EF=BC=8C=E7=BB=9D=E5=A4=A7=E5=A4=9A=E6=95=B0=E5=
-=85=AC=E5=8F=B8=E5=AF=B9=E6=A0=B8=E5=BF=83=E7=AE=A1=E7=90=86=E4=BA=BA=E5=91=
-=98=E3=80=81=E6=8A=80=E6=9C=AF=E9=AA=A8=E5=B9=B2=E7=AD=89=E5=85=B3=E7=B3=BB=
-=E5=88=B0=E4=BC=81=E4=B8=9A=E5=8F=91=E5=B1=95=E5=A4=A7=E8=AE=A1=E7=9A=84=E5=
-=91=98=E5=B7=A5=E9=83=BD=E5=AE=9E=E8=A1=8C=E4=BA=86=E8=82=A1=E6=9D=83=E6=BF=
-=80=E5=8A=B1=E3=80=82</span></p>
-<p><span style=3D"font-size: 16px;">=E6=AF=94=E5=A6=82=E5=BE=AE=E8=BD=AF=E3=
-=80=81=E6=B2=83=E5=B0=94=E7=8E=9B=E3=80=81IBM=E3=80=81=E6=88=B4=E5=B0=94=E3=
-=80=81=E8=81=94=E6=83=B3=E3=80=81=E9=98=BF=E9=87=8C=E5=B7=B4=E5=B7=B4=E3=80=
-=81=E5=8D=8E=E4=B8=BA=E7=AD=89=EF=BC=8C=E9=83=BD=E6=98=AF=E5=9C=A8=E8=82=A1=
-=E6=9D=83=E6=BF=80=E5=8A=B1=E4=B8=8B=E5=BF=AB=E9=80=9F=E6=88=90=E9=95=BF=E8=
-=B5=B7=E6=9D=A5=E7=9A=84=E3=80=82=E8=B6=8A=E6=9D=A5=E8=B6=8A=E5=A4=9A=E7=9A=
-=84=E4=BA=8B=E4=BE=8B=E8=A1=A8=E6=98=8E=EF=BC=8C=E8=82=A1=E6=9D=83=E6=BF=80=
-=E5=8A=B1=E5=B7=B2=E7=BB=8F=E6=88=90=E4=B8=BA=E7=8E=B0=E4=BB=A3=E4=BC=81=E4=
-=B8=9A=E6=8F=90=E5=8D=87=E7=BB=A9=E6=95=88=EF=BC=8C=E5=AE=9E=E6=96=BD=E4=BA=
-=BA=E6=89=8D=E6=88=98=E7=95=A5=E4=B8=8D=E5=8F=AF=E6=88=96=E7=BC=BA=E7=9A=84=
-=E7=AE=A1=E7=90=86=E5=B7=A5=E5=85=B7=E3=80=82</span></p>
-<p><span style=3D"font-size: 16px;">=E6=AF=8F=E4=B8=AA=E5=88=9B=E4=B8=9A=E8=
-=80=81=E6=9D=BF=E9=83=BD=E6=9C=89=E4=B8=80=E4=B8=AA=E8=8B=B1=E9=9B=84=E6=A2=
-=A6=EF=BC=8C=E9=83=BD=E8=AE=A4=E4=B8=BA=E7=BB=8F=E8=BF=87=E8=87=AA=E5=B7=B1=
-=E7=9A=84=E5=8A=AA=E5=8A=9B=EF=BC=8C=E5=8F=AF=E4=BB=A5=E6=8A=8A=E4=BC=81=E4=
-=B8=9A=E5=81=9A=E5=A4=A7=E5=81=9A=E5=BC=BA=EF=BC=8C=E5=9C=A8=E8=80=81=E6=9D=
-=BF=E7=9A=84=E5=BF=83=E4=B8=AD=E8=82=A1=E6=9D=83=E6=98=AF=E5=80=BC=E9=92=B1=
-=E7=9A=84=EF=BC=8C=E8=82=A1=E6=9D=83=E6=98=AF=E7=A8=80=E7=BC=BA=E8=B5=84=E6=
-=BA=90=EF=BC=8C=E8=83=BD=E4=B8=8D=E5=88=86=E5=B0=B1=E4=B8=8D=E5=88=86=EF=BC=
-=8C=E5=A6=82=E6=9E=9C=E4=B8=8D=E5=88=86=EF=BC=8C=E5=91=98=E5=B7=A5=E8=BF=98=
-=E8=83=BD=E5=A5=BD=E5=A5=BD=E5=B9=B2=EF=BC=8C=E6=9C=80=E5=A5=BD=E5=B0=B1=E4=
-=B8=8D=E5=88=86=E8=82=A1=E6=9D=83=EF=BC=8C=E5=A6=82=E6=9E=9C=E8=82=A1=E6=9D=
-=83=E5=AE=9E=E5=9C=A8=E4=B8=8D=E5=88=86=E4=B8=8D=E8=A1=8C=EF=BC=8C=E9=82=A3=
-=E5=B0=B1=E5=8F=AA=E6=9C=89=E5=88=86=E8=82=A1=E6=9D=83=EF=BC=8C=E8=BF=99=E5=
-=8F=AF=E8=83=BD=E6=98=AF=E5=A4=A7=E9=83=A8=E5=88=86=E8=80=81=E6=9D=BF=E7=9A=
-=84=E6=83=B3=E6=B3=95=E3=80=82</span></p>
-<p><br /><span style=3D"font-size: 16px;">=E5=85=A8=E4=B8=96=E7=95=8C=E7=9A=
-=84=E8=80=81=E6=9D=BF=E6=9C=89=E4=B8=A4=E7=B1=BB=EF=BC=8C=E7=AC=AC=E4=B8=80=
-=E7=B1=BB=E8=80=81=E6=9D=BF=E4=BB=80=E4=B9=88=E9=83=BD=E5=B0=91=EF=BC=8C=E5=
-=B0=B1=E8=82=A1=E6=9D=83=E5=A4=9A=EF=BC=8C=E7=AC=AC=E4=BA=8C=E7=B1=BB=E8=80=
-=81=E6=9D=BF=E4=BB=80=E4=B9=88=E9=83=BD=E5=A4=9A=EF=BC=8C=E5=B0=B1=E8=82=A1=
-=E6=9D=83=E5=B0=91=E3=80=82</span></p>
-<p><span style=3D"font-size: 16px;">=E5=8F=AA=E6=9C=89=E4=B8=BA=E6=95=B0=E4=
-=B8=8D=E5=A4=9A=E7=9A=84=E8=80=81=E6=9D=BF=E8=83=BD=E5=A4=9F=E7=9C=8B=E9=80=
-=8F=E8=82=A1=E6=9D=83=E7=9A=84=E4=BB=B7=E5=80=BC=EF=BC=8C=E6=84=BF=E6=84=8F=
-=E5=92=8C=E5=91=98=E5=B7=A5=E7=9C=9F=E6=AD=A3=E5=85=B1=E4=BA=AB=E8=82=A1=E6=
-=9D=83=E7=9A=84=E6=88=90=E6=9E=9C=E3=80=82</span></p>
-<p><br /><span style=3D"font-size: 16px;">=E9=82=A3=E4=B9=88=E4=BC=81=E4=B8=
-=9A=E5=AF=BC=E5=85=A5=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E6=9C=89=E4=BB=80=
-=E4=B9=88=E5=A5=BD=E5=A4=84=E5=91=A2=EF=BC=9F=EF=BC=9A<br />=E2=91=A0=E5=AF=
-=B9=E9=9D=9E=E4=B8=8A=E5=B8=82=E5=85=AC=E5=8F=B8=E6=9D=A5=E8=AE=B2=EF=BC=8C=
-=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E6=9C=89=E5=88=A9=E4=BA=8E=E7=BC=93=E8=
-=A7=A3=E5=85=AC=E5=8F=B8=E9=9D=A2=E4=B8=B4=E7=9A=84=E8=96=AA=E9=85=AC=E5=8E=
-=8B=E5=8A=9B=E3=80=82=E7=94=B1=E4=BA=8E=E7=BB=9D=E5=A4=A7=E5=A4=9A=E6=95=B0=
-=E9=9D=9E=E4=B8=8A=E5=B8=82=E5=85=AC=E5=8F=B8=E9=83=BD=E5=B1=9E=E4=BA=8E=E4=
-=B8=AD=E5=B0=8F=E5=9E=8B=E4=BC=81=E4=B8=9A=EF=BC=8C=E6=99=AE=E9=81=8D=E9=9D=
-=A2=E4=B8=B4=E8=B5=84=E9=87=91=E7=9F=AD=E7=BC=BA=E7=9A=84=E9=97=AE=E9=A2=98=
-=E3=80=82=E5=9B=A0=E6=AD=A4=EF=BC=8C=E9=80=9A=E8=BF=87=E8=82=A1=E6=9D=83=E6=
-=BF=80=E5=8A=B1=E7=9A=84=E6=96=B9=E5=BC=8F=EF=BC=8C=E5=85=AC=E5=8F=B8=E8=83=
-=BD=E5=A4=9F=E9=80=82=E5=BD=93=E5=9C=B0=E9=99=8D=E4=BD=8E=E7=BB=8F=E8=90=A5=
-=E6=88=90=E6=9C=AC=EF=BC=8C=E5=87=8F=E5=B0=91=E7=8E=B0=E9=87=91=E6=B5=81=E5=
-=87=BA=E3=80=82=E4=B8=8E=E6=AD=A4=E5=90=8C=E6=97=B6=EF=BC=8C=E4=B9=9F=E5=8F=
-=AF=E4=BB=A5=E6=8F=90=E9=AB=98=E5=85=AC=E5=8F=B8=E7=BB=8F=E8=90=A5=E4=B8=9A=
-=E7=BB=A9=EF=BC=8C=E7=95=99=E4=BD=8F=E7=BB=A9=E6=95=88=E9=AB=98=E3=80=81=E8=
-=83=BD=E5=8A=9B=E5=BC=BA=E7=9A=84=E6=A0=B8=E5=BF=83=E4=BA=BA=E6=89=8D=E3=80=
-=82</span></p>
-<p><span style=3D"font-size: 16px;">=E2=91=A1=E5=AF=B9=E5=8E=9F=E6=9C=89=E8=
-=82=A1=E4=B8=9C=E6=9D=A5=E8=AE=B2=EF=BC=8C=E5=AE=9E=E8=A1=8C=E8=82=A1=E6=9D=
-=83=E6=BF=80=E5=8A=B1=E6=9C=89=E5=88=A9=E4=BA=8E=E9=99=8D=E4=BD=8E=E8=81=8C=
-=E4=B8=9A=E7=BB=8F=E7=90=86=E4=BA=BA=E7=9A=84&ldquo;=E9=81=93=E5=BE=B7=E9=
-=A3=8E=E9=99=A9&rdquo;=EF=BC=8C=E4=BB=8E=E8=80=8C=E5=AE=9E=E7=8E=B0=E6=89=
-=80=E6=9C=89=E6=9D=83=E4=B8=8E=E7=BB=8F=E8=90=A5=E6=9D=83=E7=9A=84=E5=88=86=
-=E7=A6=BB=E3=80=82=E9=9D=9E=E4=B8=8A=E5=B8=82=E5=85=AC=E5=8F=B8=E5=BE=80=E5=
-=BE=80=E5=AD=98=E5=9C=A8=E4=B8=80=E8=82=A1=E7=8B=AC=E5=A4=A7=E7=9A=84=E7=8E=
-=B0=E8=B1=A1=EF=BC=8C=E5=85=AC=E5=8F=B8=E7=9A=84=E6=89=80=E6=9C=89=E6=9D=83=
-=E4=B8=8E=E7=BB=8F=E8=90=A5=E6=9D=83=E9=AB=98=E5=BA=A6=E7=BB=9F=E4=B8=80=EF=
-=BC=8C=E5=AF=BC=E8=87=B4=E5=85=AC=E5=8F=B8=E7=9A=84&ldquo;=E4=B8=89=E4=BC=
-=9A&rdquo;=E5=88=B6=E5=BA=A6=E7=AD=89=E5=9C=A8=E5=BE=88=E5=A4=9A=E6=83=85=
-=E5=86=B5=E4=B8=8B=E5=BD=A2=E5=90=8C=E8=99=9A=E8=AE=BE=E3=80=82=E9=9A=8F=E7=
-=9D=80=E4=BC=81=E4=B8=9A=E7=9A=84=E5=8F=91=E5=B1=95=E3=80=81=E5=A3=AE=E5=A4=
-=A7=EF=BC=8C=E5=85=AC=E5=8F=B8=E7=9A=84=E7=BB=8F=E8=90=A5=E6=9D=83=E5=B0=86=
-=E9=80=90=E6=B8=90=E5=90=91=E8=81=8C=E4=B8=9A=E7=BB=8F=E7=90=86=E4=BA=BA=E8=
-=BD=AC=E7=A7=BB=E3=80=82=E7=94=B1=E4=BA=8E=E8=82=A1=E4=B8=9C=E5=92=8C=E7=BB=
-=8F=E7=90=86=E4=BA=BA=E8=BF=BD=E6=B1=82=E7=9A=84=E7=9B=AE=E6=A0=87=E6=98=AF=
-=E4=B8=8D=E4=B8=80=E8=87=B4=E7=9A=84=EF=BC=8C=E8=82=A1=E4=B8=9C=E5=92=8C=E7=
-=BB=8F=E7=90=86=E4=BA=BA=E4=B9=8B=E9=97=B4=E5=AD=98=E5=9C=A8&ldquo;=E9=81=
-=93=E5=BE=B7=E9=A3=8E=E9=99=A9&rdquo;=EF=BC=8C=E9=9C=80=E8=A6=81=E9=80=9A=
-=E8=BF=87=E6=BF=80=E5=8A=B1=E5=92=8C=E7=BA=A6=E6=9D=9F=E6=9C=BA=E5=88=B6=E6=
-=9D=A5=E5=BC=95=E5=AF=BC=E5=92=8C=E9=99=90=E5=88=B6=E7=BB=8F=E7=90=86=E4=BA=
-=BA=E8=A1=8C=E4=B8=BA=E3=80=82</span></p>
-<p><span style=3D"font-size: 16px;">=E2=91=A2=E5=AF=B9=E5=85=AC=E5=8F=B8=E5=
-=91=98=E5=B7=A5=E6=9D=A5=E8=AE=B2=EF=BC=8C=E5=AE=9E=E8=A1=8C=E8=82=A1=E6=9D=
-=83=E6=BF=80=E5=8A=B1=E6=9C=89=E5=88=A9=E4=BA=8E=E6=BF=80=E5=8F=91=E5=91=98=
-=E5=B7=A5=E7=9A=84=E7=A7=AF=E6=9E=81=E6=80=A7=EF=BC=8C=E5=AE=9E=E7=8E=B0=E8=
-=87=AA=E8=BA=AB=E4=BB=B7=E5=80=BC=E3=80=82=E4=B8=AD=E5=B0=8F=E4=BC=81=E4=B8=
-=9A=E9=9D=A2=E4=B8=B4=E7=9A=84=E6=9C=80=E5=A4=A7=E9=97=AE=E9=A2=98=E4=B9=8B=
-=E4=B8=80=E5=B0=B1=E6=98=AF=E4=BA=BA=E6=89=8D=E7=9A=84=E6=B5=81=E5=8A=A8=E9=
-=97=AE=E9=A2=98=E3=80=82=E7=94=B1=E4=BA=8E=E5=BE=85=E9=81=87=E5=B7=AE=E8=B7=
-=9D=EF=BC=8C=E5=BE=88=E5=A4=9A=E4=B8=AD=E5=B0=8F=E4=BC=81=E4=B8=9A=E5=BE=88=
-=E9=9A=BE=E5=90=B8=E5=BC=95=E5=92=8C=E7=95=99=E4=BD=8F=E9=AB=98=E7=B4=A0=E8=
-=B4=A8=E7=AE=A1=E7=90=86=E5=92=8C=E7=A7=91=E7=A0=94=E4=BA=BA=E6=89=8D=E3=80=
-=82=E5=AE=9E=E8=B7=B5=E8=AF=81=E6=98=8E=EF=BC=8C=E5=AE=9E=E6=96=BD=E8=82=A1=
-=E6=9D=83=E6=BF=80=E5=8A=B1=E8=AE=A1=E5=88=92=E5=90=8E=EF=BC=8C=E7=94=B1=E4=
-=BA=8E=E5=91=98=E5=B7=A5=E7=9A=84=E9=95=BF=E6=9C=9F=E4=BB=B7=E5=80=BC=E8=83=
-=BD=E5=A4=9F=E9=80=9A=E8=BF=87=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E5=BE=97=
-=E5=88=B0=E4=BD=93=E7=8E=B0=EF=BC=8C=E5=91=98=E5=B7=A5=E7=9A=84=E5=B7=A5=E4=
-=BD=9C=E7=A7=AF=E6=9E=81=E6=80=A7=E4=BC=9A=E5=A4=A7=E5=B9=85=E6=8F=90=E9=AB=
-=98=EF=BC=8C=E5=90=8C=E6=97=B6=EF=BC=8C=E7=94=B1=E4=BA=8E=E8=82=A1=E6=9D=83=
-=E6=BF=80=E5=8A=B1=E7=9A=84=E7=BA=A6=E6=9D=9F=E4=BD=9C=E7=94=A8=EF=BC=8C=E5=
-=91=98=E5=B7=A5=E5=AF=B9=E5=85=AC=E5=8F=B8=E7=9A=84=E5=BF=A0=E8=AF=9A=E5=BA=
-=A6=E4=B9=9F=E4=BC=9A=E6=9C=89=E6=89=80=E5=A2=9E=E5=BC=BA=E3=80=82</span></=
-p>
-<p>&nbsp;</p>
-<p><span style=3D"font-size: 16px;">=E6=97=B6=E8=87=B3=E4=BB=8A=E6=97=A5=EF=
-=BC=8C=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E7=9A=84=E9=87=8D=E8=A6=81=E6=80=
-=A7=E5=B7=B2=E7=BB=8F=E4=B8=8D=E5=AE=B9=E5=BF=BD=E8=A7=86=E3=80=82=E5=9C=A8=
-=E9=92=88=E5=AF=B9=E4=BC=81=E4=B8=9A=E7=9A=84=E6=AF=8F=E4=B8=AA=E9=98=B6=E6=
-=AE=B5=E8=BF=9B=E8=A1=8C=E7=BB=86=E8=87=B4=E7=9A=84=E5=88=86=E6=9E=90=E5=92=
-=8C=E6=A2=B3=E7=90=86=E4=B9=8B=E5=90=8E=EF=BC=8C=E6=88=91=E4=BB=AC=E7=BB=88=
-=E4=BA=8E=E5=BE=97=E5=87=BA=E4=B8=80=E4=B8=AA=E7=BB=93=E8=AE=BA=EF=BC=8C=E9=
-=82=A3=E5=B0=B1=E6=98=AF=EF=BC=9A&ldquo;=E4=BC=81=E4=B8=9A=E5=9C=A8=E4=BB=
-=BB=E4=BD=95=E6=97=B6=E5=80=99=E9=83=BD=E9=9C=80=E8=A6=81=E5=BC=80=E5=B1=95=
-=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=EF=BC=8C=E8=80=8C=E4=B8=94=E4=BC=81=E4=
-=B8=9A=E8=B6=8A=E5=B0=8F=E8=B6=8A=E8=A6=81=E5=81=9A=E8=82=A1=E6=9D=83=E6=BF=
-=80=E5=8A=B1=E3=80=82&rdquo;<br />=E7=8E=B0=E5=9C=A8=E4=B8=8D=E6=98=AF&ldqu=
-o;=E9=85=92=E9=A6=99=E4=B8=8D=E6=80=95=E5=B7=B7=E5=AD=90=E6=B7=B1&rdquo;=E7=
-=9A=84=E6=97=B6=E4=BB=A3=E4=BA=86=EF=BC=8C=E5=B8=82=E9=9D=A2=E4=B8=8A=E7=9A=
-=84=E4=BA=BA=E6=89=8D=E5=B0=B1=E9=82=A3=E4=B9=88=E5=A4=9A=EF=BC=8C=E4=BD=A0=
-=E4=B8=8D=E5=8E=BB=E6=8E=A2=E5=AF=BB=EF=BC=8C=E5=BE=97=E5=88=B0=E5=90=8E=E5=
-=8F=88=E4=B8=8D=E7=8F=8D=E6=83=9C=EF=BC=8C=E4=BC=98=E7=A7=80=E7=9A=84=E4=BA=
-=BA=E6=89=8D=E8=87=AA=E7=84=B6=E4=B8=8D=E4=BC=9A=E7=95=99=E5=9C=A8=E4=BC=81=
-=E4=B8=9A=E9=87=8C=E3=80=82<br />=E8=82=A1=E6=9D=83=E8=B6=8A=E5=9C=A8=E5=90=
-=8E=E9=9D=A2=E7=94=A8=EF=BC=8C=E6=88=90=E6=9C=AC=E8=B6=8A=E9=AB=98=EF=BC=8C=
-=E6=82=A8=E4=B8=8D=E6=87=82=E8=82=A1=E6=9D=83=E4=BD=86=E6=98=AF=E6=8F=90=E5=
-=89=8D=E7=94=A8=EF=BC=8C=E4=BC=9A=E6=AD=BB=E5=BE=97=E6=9B=B4=E5=BF=AB=EF=BC=
-=9B=E4=B8=8D=E7=BB=99=E8=82=A1=E6=9D=83=EF=BC=8C=E6=82=A8=E4=B8=80=E4=B8=AA=
-=E4=BA=BA=E5=B9=B2=E5=88=B0=E7=B4=AF=E6=AD=BB=EF=BC=8C=E5=91=98=E5=B7=A5=E9=
-=83=BD=E6=97=A0=E6=89=80=E8=B0=93=EF=BC=8C=E5=9B=A0=E4=B8=BA=E9=87=8D=E6=96=
-=B0=E6=89=BE=E4=B8=80=E5=AE=B6=E5=85=AC=E5=8F=B8=E5=B0=B1=E5=A5=BD=E4=BA=86=
-=E3=80=82</span></p>
-<p><span style=3D"font-size: 16px;">=E6=94=BE=E7=9C=BC=E7=8E=B0=E4=BB=8A=E7=
-=9A=84=E5=90=84=E5=A4=A7=E4=BC=81=E4=B8=9A=EF=BC=8C=E6=B2=A1=E6=9C=89=E5=93=
-=AA=E4=B8=80=E5=AE=B6=E6=98=AF=E7=94=B1=E5=88=9B=E5=A7=8B=E4=BA=BA=E7=8B=AC=
-=E6=8E=8C=E7=99=BE=E5=88=86=E4=B9=8B=E7=99=BE=E8=82=A1=E6=9D=83=E7=9A=84</s=
-pan></p>
-<p><span style=3D"font-size: 16px;">=E5=9C=A8=E4=BC=81=E4=B8=9A=E4=B8=8D=E5=
-=90=8C=E7=9A=84=E5=8F=91=E5=B1=95=E9=98=B6=E6=AE=B5=EF=BC=8C=E9=9D=A2=E5=AF=
-=B9=E4=B8=8D=E5=90=8C=E7=9A=84=E5=AF=B9=E8=B1=A1=EF=BC=8C=E8=82=A1=E6=9D=83=
-=E6=BF=80=E5=8A=B1=E7=9A=84=E7=9B=AE=E7=9A=84=E6=98=AF=E4=B8=8D=E4=B8=80=E6=
-=A0=B7=E7=9A=84=E3=80=82=E6=9C=89=E7=9A=84=E6=97=B6=E5=80=99=E6=98=AF=E4=B8=
-=BA=E4=BA=86=E7=95=99=E4=BD=8F=E4=BA=BA=E6=89=8D=EF=BC=8C=E6=9C=89=E7=9A=84=
-=E6=97=B6=E5=80=99=E6=98=AF=E4=B8=BA=E4=BA=86=E6=8F=90=E5=8D=87=E4=B8=9A=E7=
-=BB=A9=EF=BC=8C=E6=9C=89=E7=9A=84=E6=97=B6=E5=80=99=E6=98=AF=E4=B8=BA=E4=BA=
-=86=E7=BA=A6=E6=9D=9F=E5=92=8C=E8=A7=84=E8=8C=83=E7=AE=A1=E7=90=86=E8=80=85=
-=E7=9A=84=E7=9F=AD=E6=9C=9F=E8=A1=8C=E4=B8=BA=EF=BC=8C=E6=9C=89=E7=9A=84=E6=
-=97=B6=E5=80=99=E6=98=AF=E5=9B=9E=E6=8A=A5=E8=80=81=E5=91=98=E5=B7=A5=EF=BC=
-=8C=E6=9C=89=E7=9A=84=E6=97=B6=E5=80=99=E6=98=AF=E4=B8=BA=E4=BA=86=E8=82=A1=
-=E6=9D=83=E9=87=8A=E5=85=B5=E6=9D=83=EF=BC=8C=E4=B9=9F=E6=9C=89=E7=9A=84=E6=
-=97=B6=E5=80=99=E6=98=AF=E6=9F=90=E5=87=A0=E4=B8=AA=E7=9B=AE=E7=9A=84=E7=9A=
-=84=E7=BB=84=E5=90=88=E3=80=82</span></p>
-<p><span style=3D"font-size: 16px;">=E5=BE=88=E5=A4=9A=E8=80=81=E6=9D=BF=E5=
-=BE=88=E6=9C=89=E6=A0=BC=E5=B1=80=E6=83=B3=E5=88=86=E4=BD=86=E4=B8=8D=E6=95=
-=A2=E5=88=86=EF=BC=8C=E5=9B=A0=E4=B8=BA=E4=B8=8D=E6=87=82=E7=9C=9F=E6=AD=A3=
-=E7=9A=84=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=EF=BC=8C=E5=AF=BC=E8=87=B4=E8=
-=A1=8C=E4=B8=9A=E5=86=85=E4=BA=BA=E6=89=8D=E9=9A=BE=E5=90=B8=E5=BC=95=EF=BC=
-=8C=E5=91=98=E5=B7=A5=E6=B2=A1=E5=8A=A8=E5=8A=9B=E5=B0=8F=E5=AF=8C=E5=8D=B3=
-=E5=AE=89=EF=BC=8C=E6=A0=B8=E5=BF=83=E4=BA=BA=E6=89=8D=E8=B7=B3=E6=A7=BD=E6=
-=88=96=E5=8D=95=E5=B9=B2=EF=BC=8C=E8=80=81=E6=9D=BF=E8=BA=AB=E5=BF=83=E7=96=
-=B2=E6=83=AB=EF=BC=8C=E4=B8=80=E4=B8=AA=E4=BA=BA=E6=93=8D=E5=BF=83=EF=BC=8C=
-=E8=B5=9A=E7=82=B9=E5=B0=8F=E9=92=B1=EF=BC=8C=E4=BD=86=E8=A2=AB=E4=BA=8B=E4=
-=B8=9A=E7=BB=91=E6=9E=B6=EF=BC=81</span></p>
-<p><br /><span style=3D"font-size: 16px;">=E5=A6=82=E4=BD=95=E5=81=9A=E5=A5=
-=BD=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E5=91=A2=EF=BC=9F</span></p>
-<p><span style=3D"font-size: 16px;">=E3=80=90=E6=BF=80=E5=8A=B1=E5=8F=8A=E6=
-=97=B6=E3=80=91=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E7=9A=84=E8=AE=BE=E8=AE=
-=A1=E4=B8=80=E5=AE=9A=E8=A6=81=E5=8F=8A=E6=97=B6=EF=BC=8C=E4=B8=8D=E8=A6=81=
-=E7=AD=89=E5=88=B0=E4=BA=BA=E6=89=8D=E6=B5=81=E5=A4=B1=E6=89=8D=E6=83=B3=E5=
-=8E=BB=E5=AD=A6=EF=BC=81</span></p>
-<p><span style=3D"font-size: 16px;">=E3=80=90=E6=A0=87=E5=87=86=E6=8B=89=E5=
-=8A=A8=E3=80=91=E6=B2=A1=E6=9C=89=E6=A0=87=E5=87=86=E5=8C=96=E8=80=83=E6=A0=
-=B8=EF=BC=8C=E5=91=98=E5=B7=A5=E4=B8=8D=E7=9F=A5=E4=BD=95=E6=97=B6=E6=99=8B=
-=E5=8D=87=E6=B6=A8=E5=B7=A5=E8=B5=84=E6=8B=BF=E8=82=A1=E4=BB=BD=EF=BC=8C=E4=
-=BD=A0=E6=8B=8D=E8=84=91=E8=A2=8B=E7=BB=99=E8=82=A1=E4=BB=BD=EF=BC=8C=E8=82=
-=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E6=88=90=E8=82=A1=E6=9D=83=E7=A6=8F=E5=88=A9=
-=EF=BC=81</span></p>
-<p><span style=3D"font-size: 16px;">=E3=80=90=E8=B5=84=E6=9C=AC=E6=8E=A8=E5=
-=8A=A8=E3=80=91=E6=B2=A1=E6=9C=89=E8=B5=84=E6=9C=AC=E6=8E=A8=E5=8A=A8=EF=BC=
-=8C=E4=BC=81=E4=B8=9A=E4=B8=8D=E5=80=BC=E9=92=B1=EF=BC=8C=E5=91=98=E5=B7=A5=
-=E4=B8=8D=E6=83=B3=E8=A6=81=E4=BD=A0=E7=9A=84=E8=82=A1=E4=BB=BD=EF=BC=81</s=
-pan></p>
-<p><span style=3D"font-size: 16px;">=E3=80=90=E5=86=85=E5=A4=96=E5=B9=B3=E8=
-=A1=A1=E3=80=91=E5=A6=82=E6=9E=9C=E4=BD=A0=E6=97=A2=E8=A6=81=E5=81=9A=E5=86=
-=85=E9=83=A8=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=EF=BC=8C=E5=8F=88=E6=83=B3=
-=E9=80=9A=E8=BF=87=E8=82=A1=E6=9D=83=E6=95=B4=E5=90=88=E4=B8=8A=E4=B8=8B=E6=
-=B8=B8=EF=BC=8C=E5=8A=A0=E7=9B=9F=E5=95=86=EF=BC=81=E5=A6=82=E4=BD=95=E5=B9=
-=B3=E8=A1=A1=EF=BC=9F=EF=BC=9F</span></p>
-<p><span style=3D"font-size: 16px;">=E3=80=90=E5=A6=82=E4=BD=95=E8=90=BD=E5=
-=9C=B0=E3=80=91=E8=82=A1=E6=9D=83=E8=A6=81=E6=83=B3=E7=9C=9F=E6=AD=A3=E8=B5=
-=B7=E5=88=B0=E6=BF=80=E5=8A=B1=E6=95=88=E6=9E=9C=EF=BC=8C=E4=B8=8D=E4=BB=85=
-=E8=A6=81=E8=80=83=E8=99=91=E6=80=8E=E4=B9=88=E8=AE=BE=E8=AE=A1=E7=9A=84=E9=
-=97=AE=E9=A2=98=EF=BC=8C=E8=BF=98=E9=9C=80=E8=A6=81=E8=80=83=E8=99=91=E4=BD=
-=A0=E7=9A=84=E8=82=A1=E6=9D=83=E6=80=8E=E4=B9=88=E6=A0=B7=E5=81=9A=E6=89=8D=
-=E8=83=BD=E8=AE=A9=E5=AE=83=E6=9B=B4=E5=85=B7=E6=9C=89=E4=BB=B7=E5=80=BC=EF=
-=BC=8C=E6=9B=B4=E5=85=AC=E5=B9=B3=E5=90=88=E7=90=86=EF=BC=81</span></p>
-<p><br /><span style=3D"font-size: 16px;">=E5=8D=8E=E4=B8=80=E4=B8=96=E7=BA=
-=AA=E3=80=8A=E5=85=AC=E5=8F=B8=E6=8E=A7=E5=88=B6=E6=9D=83=E4=B8=8E=E8=82=A1=
-=E6=9D=83=E6=BF=80=E5=8A=B1=E3=80=8B=E4=B8=A4=E5=A4=A9=E4=B8=80=E5=A4=9C=E7=
-=8E=B0=E5=9C=BA=E7=BB=99=E6=82=A8=E7=AD=94=E6=A1=88<br />=E6=95=A2=E5=88=86=
-=E9=92=B1=E6=98=AF=E4=B8=80=E7=A7=8D=E6=A0=BC=E2=80=AC=E5=B1=80=EF=BC=8C=E9=
-=92=B1=E4=BC=9A=E2=80=AC=E5=88=86=E6=98=AF=E4=B8=80=E7=A7=8D=E6=99=BA=E6=85=
-=A7=E2=80=AC=EF=BC=81=E4=BC=98=E7=A7=80=E7=9A=84=E8=80=81=E6=9D=BF=EF=BC=8C=
-=E4=B8=80=E5=AE=9A=E2=80=AC=E6=98=AF=E5=88=86=E9=92=B1=E7=9A=84=E9=AB=98=E6=
-=89=8B=E2=80=AC=EF=BC=8C=E4=B8=80=E5=AE=9A=E7=94=A8=E6=98=AF=E2=80=AC=E8=BF=
-=90=E8=82=A1=E6=9D=83=E7=9A=84=E6=BF=80=E5=8A=B1=E2=80=AC=E9=AB=98=E6=89=8B=
-=EF=BC=81<br />=E5=8D=8E=E4=B8=80=E4=B8=96=E7=BA=AA=E3=80=8A=E5=85=AC=E5=8F=
-=B8=E6=8E=A7=E5=88=B6=E6=9D=83=E4=B8=8E=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=
-=E3=80=8B=E6=96=B9=E6=A1=88=E5=AF=BC=E5=85=A5=E7=8F=AD=EF=BC=9A=E6=88=91=E4=
-=BB=AC=E4=B8=A4=E5=A4=A9=E4=B8=80=E5=A4=9C=E9=83=BD=E6=98=AF=E7=94=B1=E5=90=
-=8C=E4=B8=80=E4=B8=AA=E8=80=81=E5=B8=88=E4=B8=BB=E8=AE=B2=EF=BC=8C=E4=B8=80=
-=E5=AF=B9=E4=B8=80=E5=92=A8=E8=AF=A2=E8=A7=A3=E7=AD=94=EF=BC=9B<br />=E3=80=
-=90=E7=AC=AC=E4=B8=80=E5=A4=A9=E3=80=91=EF=BC=9A=E6=82=A8=E5=B0=86=E5=AD=A6=
-=E4=BC=9A=E4=B8=80=E5=A5=97=E5=A6=82=E4=BD=95=E5=9C=A8=E4=BC=81=E4=B8=9A=E5=
-=AF=BC=E5=85=A5=E4=B8=80=E5=A5=97=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E6=9C=
-=BA=E5=88=B6=EF=BC=8C=E5=90=B8=E5=BC=95=E5=92=8C=E7=95=99=E4=BD=8F=E7=AE=A1=
-=E7=90=86=E4=BA=BA=E6=89=8D=E3=80=81=E8=90=A5=E9=94=80=E4=BA=BA=E6=89=8D=E3=
-=80=81=E6=8A=80=E6=9C=AF=E4=BA=BA=E6=89=8D=E3=80=81=E8=AE=A9=E5=91=98=E5=B7=
-=A5=E5=8F=91=E8=87=AA=E5=86=85=E5=BF=83=E7=9A=84=E5=BF=A0=E8=AF=9A=E4=BA=8E=
-=E5=85=AC=E5=8F=B8=EF=BC=8C=E5=92=8C=E5=85=AC=E5=8F=B8=E5=BD=A2=E6=88=90=E5=
-=88=A9=E7=9B=8A=E3=80=81=E4=BA=8B=E4=B8=9A=E7=9A=84=E5=85=B1=E5=90=8C=E4=BD=
-=93=EF=BC=8C=E6=8F=90=E9=AB=98=E5=91=98=E5=B7=A5=E7=A7=AF=E6=9E=81=E6=80=A7=
-=E3=80=82=E7=AC=AC=E4=B8=80=E5=A4=A9=E7=9A=84=E5=AD=A6=E4=B9=A0=E4=B8=BB=E8=
-=A6=81=E9=92=88=E5=AF=B9=E5=85=AC=E5=8F=B8=E5=86=85=E9=83=A8=E5=91=98=E5=B7=
-=A5=E8=BF=9B=E8=A1=8C=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=EF=BC=8C=E9=92=88=
-=E5=AF=B9=E4=B8=8D=E5=90=8C=E7=9A=84=E5=8F=91=E5=B1=95=E9=98=B6=E6=AE=B5=E4=
-=B8=8D=E5=90=8C=E8=A7=84=E6=A8=A1=E7=9A=84=E4=BC=81=E4=B8=9A=EF=BC=8C=E5=AF=
-=B9=E4=B8=8D=E5=90=8C=E7=B1=BB=E5=9E=8B=E7=9A=84=E4=BA=BA=E9=87=87=E7=94=A8=
-=E4=B8=8D=E5=90=8C=E7=9A=84=E6=BF=80=E5=8A=B1=E6=A8=A1=E5=BC=8F=EF=BC=8C=E8=
-=B6=85=E9=A2=9D=E6=BF=80=E5=8A=B1=EF=BC=8C=E5=9C=A8=E8=81=8C=E5=88=86=E7=BA=
-=A2=EF=BC=8C=E6=B3=A8=E5=86=8C=E8=82=A1=E6=BF=80=E5=8A=B1=E6=B3=95=E7=AD=89=
-=2E..</span></p>
-<p><span style=3D"font-size: 16px;">=E3=80=90=E7=AC=AC=E4=BA=8C=E5=A4=A9=E3=
-=80=91=EF=BC=9A=E6=82=A8=E5=B0=86=E5=AD=A6=E4=BC=9A=E5=9F=BA=E4=BA=8E=E6=9C=
-=AA=E6=9D=A5=E5=8F=91=E5=B1=95=E5=81=9A=E5=A5=BD=E8=82=A1=E6=9D=83=E5=B8=83=
-=E5=B1=80=EF=BC=8C=E8=82=A1=E6=9D=83=E5=88=86=E9=85=8D=EF=BC=81=E4=BC=98=E5=
-=8C=96=E5=92=8C=E8=B0=83=E6=95=B4=E7=9B=AE=E5=89=8D=E7=9A=84=E8=82=A1=E6=9D=
-=83=E8=AE=BE=E7=BD=AE=EF=BC=81=E5=81=9A=E5=A5=BD=E8=82=A1=E6=9D=83=E5=B8=83=
-=E5=B1=80=E4=B9=8B=E5=90=8E=E6=89=8D=E8=83=BD=E5=81=9A=E8=82=A1=E6=9D=83=E8=
-=9E=8D=E8=B5=84=EF=BC=8C=E8=B5=84=E6=BA=90=E6=95=B4=E5=90=88=EF=BC=8C=E5=AE=
-=9E=E7=8E=B0=E4=BC=81=E4=B8=9A=E8=A3=82=E5=8F=98=EF=BC=8C=E6=95=B4=E5=90=88=
-=E6=9C=89=E8=B5=84=E9=87=91=EF=BC=8C=E6=9C=89=E8=B5=84=E6=BA=90=E7=9A=84=E4=
-=BA=BA=E4=B8=BA=E6=82=A8=E6=89=80=E7=94=A8=EF=BC=81=E7=AC=AC=E4=BA=8C=E5=A4=
-=A9=E7=9A=84=E5=AD=A6=E4=B9=A0=E4=B8=BB=E8=A6=81=E9=92=88=E5=AF=B9=E4=BC=81=
-=E4=B8=9A=E5=A4=96=E9=83=A8=E6=95=B4=E5=90=88=E8=B5=84=E6=BA=90=EF=BC=8C=E9=
-=80=9A=E8=BF=87=E8=82=A1=E6=9D=83=E5=8E=BB=E6=95=B4=E5=90=88=E4=BC=81=E4=B8=
-=9A=E4=B8=8A=E4=B8=8B=E6=B8=B8=EF=BC=8C=E5=AD=A6=E4=BC=9A=E5=90=88=E7=90=86=
-=E5=AF=B9=E5=90=88=E4=BC=99=E4=BA=BA=E8=82=A1=E6=9D=83=E5=88=86=E9=85=8D=EF=
-=BC=8C=E5=85=AC=E5=8F=B8=E6=8E=A7=E5=88=B6=E6=9D=83=EF=BC=8C=E5=85=AC=E5=8F=
-=B8=E9=A1=B6=E5=B1=82=E8=AE=BE=E8=AE=A1=EF=BC=8C=E8=BF=9B=E8=A1=8C=E8=82=A1=
-=E6=9D=83=E5=B8=83=E5=B1=80=E5=92=8C=E8=82=A1=E6=9D=83=E8=9E=8D=E8=B5=84=E7=
-=AD=89...</span></p>
-<p><span style=3D"font-size: 16px;">&nbsp;<br />=E5=8D=8E=E4=B8=80=E4=B8=96=
-=E7=BA=AA=E6=98=AF=E5=9B=BD=E5=AE=B6=E5=B7=A5=E4=BF=A1=E9=83=A8=E9=A6=96=E6=
-=89=B9=E6=8E=A8=E8=8D=90=E7=9A=84=E4=BC=81=E4=B8=9A=E7=AE=A1=E7=90=86=E5=92=
-=A8=E8=AF=A2=E6=9C=BA=E6=9E=84=EF=BC=8C=E8=82=A1=E6=9D=83=E9=A2=86=E5=9F=9F=
-=E6=98=AF=E5=94=AF=E4=B8=80=E7=9A=84=E4=B8=80=E5=AE=B6=EF=BC=9A<br />=E2=91=
-=A0=E5=8D=8E=E4=B8=80=E4=B8=96=E7=BA=AA=EF=BC=9A=E6=98=AF=E4=B8=80=E5=AE=B6=
-=E9=9B=86=E4=BC=81=E4=B8=9A=E7=AE=A1=E7=90=86=E5=9F=B9=E8=AE=AD=E3=80=81=E4=
-=BC=81=E4=B8=9A=E9=AB=98=E7=AB=AF=E5=AE=9A=E5=88=B6=E5=92=A8=E8=AF=A2=E4=BA=
-=8E=E4=B8=80=E4=BD=93=E7=9A=84=E7=9F=A5=E5=90=8D=E5=95=86=E5=AD=A6=E5=B9=B3=
-=E5=8F=B0=E3=80=82=E5=85=AC=E5=8F=B8=E4=BA=A7=E5=93=81=E4=BB=A5=E8=82=A1=E6=
-=9D=83=E6=BF=80=E5=8A=B1=E3=80=81=E9=A1=B6=E5=B1=82=E8=AE=BE=E8=AE=A1=E3=80=
-=81=E5=85=AC=E5=8F=B8=E6=B2=BB=E7=90=86=E4=B8=BA=E6=A0=B8=E5=BF=83=EF=BC=8C=
-=E5=BB=B6=E4=BC=B8=E5=88=B0=E4=B8=BA=E4=BC=81=E4=B8=9A=E6=8F=90=E4=BE=9B=E6=
-=88=98=E7=95=A5=E8=A7=84=E5=88=92=E3=80=81=E5=9B=A2=E9=98=9F=E5=BB=BA=E8=AE=
-=BE=E3=80=81=E8=B4=A2=E5=8A=A1=E7=A8=8E=E5=8A=A1=E3=80=81=E5=B8=82=E5=9C=BA=
-=E8=90=A5=E9=94=80=E3=80=81=E8=BF=90=E8=90=A5=E7=AE=A1=E6=8E=A7=E7=AD=89&ld=
-quo;=E4=BC=81=E4=B8=9A=E5=85=A8=E7=94=9F=E5=91=BD=E5=91=A8=E6=9C=9F&rdquo;=
-=E6=95=B4=E4=BD=93=E8=A7=A3=E5=86=B3=E6=96=B9=E6=A1=88=E3=80=82</span></p>
-<p><span style=3D"font-size: 16px;">=E2=91=A1=E5=8D=8E=E4=B8=80=E4=B8=96=E7=
-=BA=AA=EF=BC=9A=E6=98=AF=E6=B7=B1=E5=9C=B3=E5=B8=82=E7=AE=A1=E7=90=86=E5=92=
-=A8=E8=AF=A2=E8=A1=8C=E4=B8=9A=E5=8D=8F=E4=BC=9A=E4=BC=9A=E9=95=BF=E5=8D=95=
-=E4=BD=8D=E3=80=81=E4=B8=AD=E5=9B=BD=E4=B8=AD=E5=B0=8F=E4=BC=81=E4=B8=9A=E5=
-=8D=8F=E4=BC=9A=E5=89=AF=E4=BC=9A=E9=95=BF=E5=8D=95=E4=BD=8D=E3=80=81=E5=B9=
-=BF=E4=B8=9C=E7=9C=81=E7=AE=A1=E7=90=86=E5=92=A8=E8=AF=A2=E8=A1=8C=E4=B8=9A=
-=E5=8D=8F=E4=BC=9A=E5=89=AF=E4=BC=9A=E9=95=BF=E5=8D=95=E4=BD=8D=E3=80=82<br=
- />=E7=9B=AE=E5=89=8D=E6=8B=A5=E6=9C=8918=E5=AE=B6=E7=9B=B4=E8=90=A5=E5=88=
-=86=E5=AD=90=E5=85=AC=E5=8F=B8=EF=BC=8C200=E5=A4=9A=E5=AE=B6=E5=90=88=E4=BD=
-=9C=E6=9C=BA=E6=9E=84=EF=BC=9B=E5=91=98=E5=B7=A5800=E5=A4=9A=E5=90=8D=EF=BC=
-=9B=E6=AF=8F=E6=9C=88=E5=85=A8=E5=9B=BD=E5=90=84=E5=9C=B0=E5=9D=87=E6=9C=89=
-=E5=BC=80=E8=AF=BE100=E5=A4=9A=E5=9C=BA=EF=BC=8C=E8=BE=85=E5=AF=BC=E8=BF=87=
-=E7=9A=84=E4=BC=81=E4=B8=9A=E8=BE=BE=E5=8D=81=E4=B8=87=E5=A4=9A=E5=AE=B6=EF=
-=BC=9B=E5=85=B6=E4=B8=AD=E4=B8=8D=E4=B9=8F=E4=B8=80=E4=BA=9B=E4=B8=8A=E5=B8=
-=82=E5=85=AC=E5=8F=B8=EF=BC=9B=E5=A4=A7=E5=9E=8B=E9=9B=86=E5=9B=A2=E5=85=AC=
-=E5=8F=B8=EF=BC=9B=E7=8B=AC=E8=A7=92=E5=85=BD=E4=BC=81=E4=B8=9A=E3=80=82</s=
-pan></p>
-<p><span style=3D"font-size: 16px;">=E2=91=A2=E5=8D=8E=E4=B8=80=E4=B8=96=E7=
-=BA=AA=EF=BC=9A=E6=9C=8D=E5=8A=A1=E8=B6=85=E8=BF=87300=E4=B8=AA=E8=A1=8C=E4=
-=B8=9A=EF=BC=8C=E5=85=AC=E5=8F=B8=E8=A7=84=E6=A8=A1=E4=BB=8E=E6=9C=AA=E6=88=
-=90=E7=AB=8B=E5=88=B0=E4=B8=8A=E5=8D=83=E4=BA=BF=E4=B8=8D=E7=AD=89=EF=BC=8C=
-=E8=AE=B8=E5=A4=9A=E4=B8=9A=E5=86=85=E7=9A=84=E9=BE=99=E5=A4=B4=E4=BC=81=E4=
-=B8=9A=E5=9D=87=E6=98=AF=E5=8D=8E=E4=B8=80=E7=9A=84=E6=98=8E=E6=98=9F=E5=AD=
-=A6=E5=91=98</span></p>
-<p><span style=3D"font-size: 16px;">=E5=A6=82=EF=BC=9A<strong><span style=
-=3D"color: #ff0000;">=EF=BC=88=E5=8D=8E=E6=B6=A6 =E6=AC=A7=E6=B4=BE =E7=BE=
-=8E=E7=9A=84 =E6=9E=97=E6=B0=8F=E6=9C=A8=E4=B8=9A =E5=9B=BD=E7=BE=8E=E7=94=
-=B5=E5=99=A8 =E6=96=B9=E6=AD=A3=E9=9B=86=E5=9B=A2 =E6=AD=A3=E6=98=8C=E9=9B=
-=86=E5=9B=A2 =E5=8D=8E=E4=B8=BA =E8=8B=8F=E5=AE=81 =E5=88=9B=E7=BB=B4 =E9=
-=A1=BA=E4=B8=B0=E9=80=9F=E8=BF=90 =E6=8B=9B=E5=95=86=E9=93=B6=E8=A1=8C=EF=
-=BC=89<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =EF=BC=88=E4=B8=9C=E9=B9=8F=E9=
-=A5=AE=E6=96=99 =E8=B6=85=E5=A8=81=E7=94=B5=E6=B1=A0 =E9=87=91=E7=A7=91=E5=
-=9C=B0=E4=BA=A7 =E8=88=AA=E5=A4=A9=E4=BF=A1=E6=81=AF =E4=B8=89=E6=B5=A6=E8=
-=BD=A6=E5=BA=93 =E4=B8=B0=E6=B3=B0=E5=8C=85=E8=A3=85 =E4=B8=89=E4=B8=80=E9=
-=87=8D=E5=B7=A5 =E6=B0=91=E7=94=9F=E8=8D=AF=E4=B8=9A =E4=B8=AD=E7=A7=91=E9=
-=9B=86=E5=9B=A2=EF=BC=89<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =EF=BC=88=E4=
-=B8=AD=E5=9B=BD=E5=8D=97=E8=BD=A6 =E5=8D=8E=E5=B3=B0 =E4=BE=A8=E5=88=A9=E5=
-=AE=B6=E5=85=B7 =E4=B8=83=E5=BD=A9=E5=AD=94=E9=9B=80 =E4=B8=AD=E5=9B=BD=E6=
-=B5=B7=E8=BF=AA =E5=B9=BF=E4=B8=9C=E5=8D=8E=E8=81=94 =E6=B5=B7=E8=88=AA=E9=
-=9B=86=E5=9B=A2.....=E7=AD=89=EF=BC=89</span></strong></span></p>
-<p><span style=3D"font-size: 16px;">=E8=AF=9A=E9=82=80=E6=82=A8=E5=8F=82=E5=
-=8A=A0=E7=94=B1=E4=B8=AD=E5=9B=BD=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E7=A0=
-=94=E7=A9=B6=E9=99=A2&mdash;&mdash;=E5=8D=8E=E4=B8=80=E4=B8=96=E7=BA=AA=E4=
-=B8=BE=E5=8A=9E=E7=9A=84=E3=80=8A=E5=85=AC=E5=8F=B8=E6=8E=A7=E5=88=B6=E6=9D=
-=83=E4=B8=8E=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E3=80=8B=E6=96=B9=E6=A1=88=
-=E5=AF=BC=E5=85=A5=E7=8F=AD&mdash;&mdash;=E3=80=90=E4=B8=BA=E4=BC=81=E4=B8=
-=9A=E7=B3=BB=E7=BB=9F=E8=A7=A3=E5=86=B3=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=
-=E3=80=81=E8=82=A1=E6=9D=83=E5=88=86=E9=85=8D=E3=80=81=E8=82=A1=E6=9D=83=E6=
-=9E=B6=E6=9E=84=E3=80=81=E8=82=A1=E6=9D=83=E8=9E=8D=E8=B5=84=E3=80=81=E9=A1=
-=B6=E5=B1=82=E8=AE=BE=E8=AE=A1=E3=80=81=E8=82=A1=E6=9D=83=E5=B8=83=E5=B1=80=
-=E3=80=81=E7=BB=A9=E6=95=88=E8=96=AA=E9=85=AC=E3=80=81=E5=95=86=E4=B8=9A=E6=
-=A8=A1=E5=BC=8F=E5=88=9B=E6=96=B0=E3=80=91<br />=E5=85=A8=E5=9B=BD=E5=9C=B0=
-=E5=8C=BA=E9=83=A8=E5=88=86=E6=9C=80=E6=96=B0=E8=AF=BE=E7=A8=8B=E6=97=B6=E9=
-=97=B4:<br /><span style=3D"color: #e74c3c;"><strong>11=E6=9C=8827-28=E5=8F=
-=B7 =E6=B7=B1=E5=9C=B3 =E6=9D=AD=E5=B7=9E =E5=90=88=E8=82=A5 =E6=98=86=E6=
-=98=8E =E5=8D=97=E9=80=9A =E6=AD=A6=E6=B1=89 =E8=A5=BF=E5=AE=89 =E4=B8=9C=
-=E8=8E=9E....<br />11=E6=9C=8829-30=E5=8F=B7 =E7=A6=8F=E5=B7=9E =E5=B9=BF=
-=E5=B7=9E =E6=88=90=E9=83=BD =E4=BD=9B=E5=B1=B1 =E4=B8=AD=E5=B1=B1<br />12=
-=E6=9C=8801-02=E5=8F=B7 =E4=B8=8A=E6=B5=B7 =E9=82=AF=E9=83=B8<br />12=E6=9C=
-=8805-06=E5=8F=B7 =E6=B7=B1=E5=9C=B3 =E5=93=88=E5=B0=94=E6=BB=A8<br />12=E6=
-=9C=8807-08=E5=8F=B7 =E5=8C=97=E4=BA=AC =E4=B8=9C=E8=8E=9E =E5=8D=97=E5=AE=
-=81 =E5=91=BC=E5=92=8C=E6=B5=A9=E7=89=B9 =E9=83=91=E5=B7=9E<br />12=E6=9C=
-=8808-09=E5=8F=B7 =E9=9D=92=E5=B2=9B =E5=8D=97=E6=98=8C =E9=95=BF=E6=B2=99<=
-br />12=E6=9C=8809-10=E5=8F=B7 =E6=88=90=E9=83=BD =E6=9D=AD=E5=B7=9E =E5=8D=
-=97=E4=BA=AC<br />12=E6=9C=8810-11=E5=8F=B7 =E6=AD=A6=E6=B1=89<br />12=E6=
-=9C=8811-12=E5=8F=B7 =E5=B9=BF=E5=B7=9E =E5=90=88=E8=82=A5 =E9=87=8D=E5=BA=
-=86 =E7=94=98=E8=82=83 =E4=B8=B4=E6=B2=82 =E6=B7=B1=E5=9C=B3 =E5=A4=A7=E8=
-=BF=9E<br />12=E6=9C=8814-15=E5=8F=B7 =E8=A5=BF=E5=AE=89 =E6=97=A0=E9=94=A1=
- =E6=B5=8E=E5=8D=97 =E7=BB=B5=E9=98=B3 =E5=A4=AA=E5=8E=9F<br />12=E6=9C=881=
-5-16=E5=8F=B7 =E4=B8=8A=E6=B5=B7 =E6=98=86=E6=98=8E =E7=9F=B3=E5=AE=B6=E5=
-=BA=84 =E6=B7=84=E5=8D=9A =E9=83=91=E5=B7=9E<br />12=E6=9C=8816-17=E5=8F=B7=
- =E6=88=90=E9=83=BD =E9=95=BF=E6=B2=99</strong></span></span></p>
-<p><span style=3D"font-size: 16px;">=E3=80=90=E8=AE=B2=E5=BA=A7=E5=BD=A2=E5=
-=BC=8F=E3=80=91=EF=BC=9A=E4=B8=93=E4=B8=9A=E7=9F=A5=E8=AF=86=EF=BC=8B=E5=AE=
-=9E=E6=93=8D=E6=A1=88=E4=BE=8B=E8=A7=A3=E6=9E=90=EF=BC=8B=E5=B7=A5=E5=85=B7=
-=EF=BC=8B=E6=96=B9=E6=B3=95=EF=BC=8B=E7=8E=B0=E5=9C=BA=E4=B8=80=E5=AF=B9=E4=
-=B8=80=E5=92=A8=E8=AF=A2 =EF=BC=8C=E8=AE=A9=E6=82=A8=E5=B8=A6=E7=9D=80=E5=
-=9B=B0=E6=83=91=E6=9D=A5=EF=BC=8C=E6=8B=BF=E7=9D=80=E6=96=B9=E6=A1=88=E8=B5=
-=B0=EF=BC=9B<br />=E3=80=90=E5=8F=82=E4=BC=9A=E8=B4=B9=E7=94=A8=E3=80=91=EF=
-=BC=9A1280/=E4=BA=BA=EF=BC=88=E5=8C=85=E5=90=AB=E5=9C=BA=E5=9C=B0=E8=B4=B9=
-=EF=BC=8C=E8=B5=84=E6=96=99=E8=B4=B9=EF=BC=8C=E8=8C=B6=E7=82=B9=E8=B4=B9=E7=
-=94=A8=EF=BC=89=EF=BC=8C=E6=8F=90=E5=89=8D=E6=8A=A5=E5=90=8D=E5=8F=AF=E5=B0=
-=8A=E4=BA=AB=E4=BC=98=E6=83=A0=E4=BB=B7<span style=3D"color: #c0392b;"><str=
-ong>980=E5=85=83/=E4=BA=BA</strong></span>=EF=BC=9B=E3=80=90=E7=89=B9=E5=88=
-=AB=E6=8F=90=E9=86=92=E3=80=91=EF=BC=9A=E5=A1=AB=E5=86=99=E6=8A=A5=E5=90=8D=
-=E4=BF=A1=E6=81=AF=E6=8F=90=E4=BA=A4=E5=90=8E=E4=BA=8E=E5=BC=80=E8=AF=BE=E5=
-=89=8D=E5=8A=9E=E7=90=86=E8=B4=B9=E7=94=A8=E5=8F=AF=E9=A2=84=E7=95=99=E5=B8=
-=AD=E4=BD=8D=E3=80=82<br />=E3=80=90=E8=AF=A6=E7=BB=86=E5=9C=B0=E5=9D=80=E3=
-=80=91=EF=BC=9A=E5=85=A8=E5=9B=BD=E5=90=84=E5=9C=B0=E5=9D=87=E6=9C=89=E5=BC=
-=80=E8=AF=BE=EF=BC=8C=E8=AF=A6=E7=BB=86=E5=9C=B0=E5=9D=80=E9=80=9A=E8=BF=87=
-=E5=BE=AE=E4=BF=A1=E5=8F=91=E9=80=81=EF=BC=9B<br />=E3=80=90=E6=8A=A5=E5=90=
-=8D=E5=92=A8=E8=AF=A2=E3=80=91=EF=BC=9A=E5=8D=8E=E4=B8=80=E4=B8=96=E7=BA=AA=
-=E5=8C=BA=E8=80=81=E5=B8=88=E5=BE=AE=E4=BF=A1=EF=BC=9A<span style=3D"color:=
- #c0392b;"><strong>13556126750</strong></span>=EF=BC=88=E7=94=B5=E8=AF=9D=
-=E5=BE=AE=E4=BF=A1=E5=90=8C=E6=AD=A5=EF=BC=89<br />=E3=80=90=E4=BA=86=E8=A7=
-=A3=E8=AF=BE=E7=A8=8B=E8=AF=A6=E6=83=85=E8=AF=B7=E7=82=B9=E5=87=BB=E3=80=91=
-=EF=BC=9A<a href=3D"http://164.155.77.135/oem/tl.php?p=3Dry/ry/rs/1b12/ry/r=
-s//https%3A%2F%2Fjinshuju.net%2Ff%2FTBw4Kw" data-cke-saved-href=3D"http://1=
-64.155.77.135/oem/tl.php?p=3Dry/ry/rs/1b12/ry/rs//https%3A%2F%2Fjinshuju.ne=
-t%2Ff%2FTBw4Kw">https://jinshuju.net/f/TBw4Kw</a></span></p>
-<p>&nbsp;</p>
-<p><span style=3D"font-size: 16px;">=E6=8A=A5=E5=90=8D=E7=BA=BF=E4=B8=8B=E8=
-=AF=BE=E7=A8=8B=E9=99=90=E9=87=8F=E8=B5=A0=E9=80=81=E5=8D=8E=E4=B8=80=E4=B8=
-=96=E7=BA=AA=E5=85=A8=E5=9B=BD=E9=A6=96=E5=8F=91=E3=80=8A=E4=B8=AD=E5=9B=BD=
-=E8=82=A1=E6=9D=83=E6=BF=80=E5=8A=B1=E7=99=BD=E7=9A=AE=E4=B9=A6=E3=80=8B=E3=
-=80=82=E7=99=BD=E7=9A=AE=E4=B9=A6=E6=98=AF=E6=94=BF=E5=BA=9C=E6=88=96=E8=AE=
-=AE=E4=BC=9A=E6=AD=A3=E5=BC=8F=E5=8F=91=E8=A1=A8=E7=9A=84=E4=BB=A5=E7=99=BD=
-=E8=89=B2=E5=B0=81=E9=9D=A2=E8=A3=85=E5=B8=A7=E7=9A=84=E9=87=8D=E8=A6=81=E6=
-=96=87=E4=BB=B6=E6=88=96=E6=8A=A5=E5=91=8A=E4=B9=A6=E7=9A=84=E5=88=AB=E7=A7=
-=B0=E3=80=82=E4=BD=9C=E4=B8=BA=E4=B8=80=E7=A7=8D=E5=AE=98=E6=96=B9=E6=96=87=
-=E4=BB=B6=EF=BC=8C=E4=BB=A3=E8=A1=A8=E6=94=BF=E5=BA=9C=E7=AB=8B=E5=9C=BA=EF=
-=BC=8C=E8=AE=B2=E7=A9=B6=E4=BA=8B=E5=AE=9E=E6=B8=85=E6=A5=9A=E3=80=81=E7=AB=
-=8B=E5=9C=BA=E6=98=8E=E7=A1=AE=E3=80=81=E8=A1=8C=E6=96=87=E8=A7=84=E8=8C=83=
-=E3=80=81=E6=96=87=E5=AD=97=E7=AE=80=E7=BB=83=EF=BC=8C=E6=B2=A1=E6=9C=89=E6=
-=96=87=E5=AD=A6=E8=89=B2=E5=BD=A9=E3=80=82</span></p>
-<p><br /><span style=3D"font-size: 16px;"><strong>=E6=8E=A8=E8=8D=90=E6=9C=
-=8B=E5=8F=8B=E6=8A=A5=E5=90=8D=E5=AD=A6=E4=B9=A0=E9=99=90=E6=97=B6=E9=99=90=
-=E9=87=8F=E8=B5=A0=E9=80=81=E4=BB=B7=E5=80=BC29800=E5=85=83=E6=95=B4=E5=A5=
-=97=E3=80=8A=E8=82=A1=E6=9D=83=E5=AE=9E=E6=88=98=E8=90=BD=E5=9C=B0=E5=AE=9D=
-=E5=85=B8=E3=80=8B=EF=BC=9A=E6=95=B4=E5=A5=9720=E6=9C=AC=E5=8D=8F=E8=AE=AE=
-=E7=94=B1=E5=8D=8E=E4=B8=80=E4=B8=96=E7=BA=AA=E8=81=94=E5=90=88=E6=B3=95=E5=
-=8A=A1=E9=83=A8=E5=87=BA=E7=89=88=EF=BC=8C=E6=89=80=E6=9C=89=E5=8D=8F=E8=AE=
-=AE=E5=B7=B2=E9=80=9A=E8=BF=87=E5=AE=A1=E6=A0=B8=EF=BC=8C=E5=8D=B3=E4=BF=9D=
-=E8=AF=81=E4=BA=86=E5=AE=9E=E7=94=A8=E6=80=A7=E5=8F=88=E8=A7=84=E9=81=BF=E4=
-=BA=86=E6=B3=95=E5=BE=8B=E9=A3=8E=E9=99=A9=E3=80=82=E5=A6=82=E6=9C=89=E7=96=
-=91=E8=99=91=EF=BC=8C=E6=94=B6=E5=88=B0=E5=90=8E=E5=8F=AF=E6=8B=BF=E7=BB=99=
-=E5=BE=8B=E5=B8=88=E5=AE=A1=E6=A0=B8=E3=80=82</strong></span></p>
-<p><br /><span style=3D"font-size: 16px;">&nbsp;&nbsp;&nbsp; =E6=84=9F=E6=
-=81=A9=E8=87=B3=E4=B8=8A=EF=BC=81=E6=9C=9F=E5=BE=85=E4=B8=8E=E6=82=A8=E7=BA=
-=BF=E4=B8=8B=E8=A7=81=E9=9D=A2=EF=BC=81=EF=BC=81</span></p>
-<p><span style=3D"font-size: 16px;"><span style=3D"color: #ff0000;">2021-11=
--30</span></span></p>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<table id=3D"NewsletterFooter" border=3D"0" cellpadding=3D"0" cellspacing=
-=3D"0" style=3D"width: 610px;">
-<tr>
-<td class=3D"iguana iguana-rich-editable" style=3D"font-family: Helvetica,A=
-rial,sans-serif; padding: 9px 18px;">
-<p style=3D"text-align: center; font-size: 12px; color: #666666;">&iuml;&iq=
-uest;&frac12;2007 Abc Company, Street address. <a href=3D"http://164.155.77=
-=2E135/oem/u.php?p=3Dry/rs/1b12/ry/ry/rs">Unsubscribe from this newsletter<=
-/a>.</p>
-</td>
-</tr>
-</table>
-</div>
+This is a multi-part message in MIME format.
 
-<img src=3D"http://164.155.77.135/oem/to.php?p=3Dry/ry/rs/1b12/ry/rs" width=
-=3D"5" height=3D"2" alt=3D".">
+------=_NextPart_000_0D60_013CFD19.121F3510
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
-</body></html>
+DQrjgYTjgaTjgoLjg6Hjg6vjgqvjg6rjgpLjgZTliKnnlKjjgYTjgZ/jgaDjgY3jgYLjgorjgYzj
+gajjgYbjgZTjgZbjgYTjgb7jgZnjgIINCg0KIA0KDQrjgZnjgZDjgaszMDAw5YaG44Gu44Od44Kk
+44Oz44OI44KS5Y+X44GR5Y+W44KK44G+44GZ44CCDQoNCiANCg0K5LiL6KiYVVJM44KS44Kv44Oq
+44OD44Kv44GX44Gm5Y+X44GR5Y+W44KK44G+44GZ44CCDQoNCmh0dHBzOi8vd3d3Lm1lcmNhcmku
+Y29tL2pwLzMwMDBKUFkvY29kZT89ampBSHpGeE90U3VWZ3pSbVNzdWINCg0KIA0KDQrilIDilIDi
+lIDilIDilIDilIDilIDilIDilIDilIANCg0KIA0KDQrjgJAxMS8yOX4xMi8wNeOAkeaLm+W+heOB
+l+OBn+S6uuOCguOBleOCjOOBn+S6uuOCgu+8geOBiuiyt+OBhOeJqeOBp+S9v+OBiOOCizEwMDDl
+hobliIbjg53jgqTjg7Pjg4jlv4XjgZrjgoLjgonjgYjjgovvvIENCg0KIA0KDQrnj77lnKjjg6Hj
+g6vjgqvjg6rjgafjga/jgIzjgIoxMeaciOaLm+W+heOCreODo+ODs+ODmuODvOODs+OAi+aLm+W+
+heOBl+OBn+S6uuOCguOBleOCjOOBn+S6uuOCgu+8geOBiuiyt+OBhOeJqeOBp+S9v+OBiOOCizEw
+MDDlhobliIbjg53jgqTjg7Pjg4jlv4XjgZrjgoLjgonjgYjjgovvvIHjgI3jgpLplovlgqzkuK3j
+gafjgZnvvIENCg0KIA0KDQrvvLzlrrbml4/jg7vlj4vpgZTjgpLjg6Hjg6vjgqvjg6rjgavmi5vl
+voXjgZfjgabmrLLjgZfjgYvjgaPjgZ/llYblk4HjgpLjgYrlvpfjgavosrfjgYTjgb7jgZvjgpPj
+gYvvvJ/vvI8NCg0KIA0KDQox5Lq65oub5b6F44GZ44KL44GU44Go44Gr44CBMTAwMOWGhuWIhuOB
+ruODneOCpOODs+ODiOOBjOW/heOBmuOCguOCieOBiOOCi++8ge+8iFAxMDAw44KC44KJ44GI44KL
+44Gu44Gv5pyA5aSnM+S6uuOBvuOBp++8iQ0KDQogDQoNCjLkurrmi5vlvoXjgacyMDAw5YaG5YiG
+44CBM+S6uuaLm+W+heOBpzMwMDDlhobliIbjgpJHRVTjgafjgY3jgovjg4Hjg6Pjg7PjgrnvvIEN
+Cg0KIA0KDQrigLsx5Lq644Gu5oub5b6F44Gr44Gk44GN44CBUDEwMDDjga7jgYbjgaFQNTAw44Gv
+44CM5oub5b6F44GX44Gf5Lq644CN44Gu44Ko44Oz44OI44Oq44O85Y+K44Gz44CM5oub5b6F44GV
+44KM44Gf5Lq644CN44GM5paw6KaP5Lya5ZOh55m76Yyy44KS5a6M5LqG44GX44Gf5pmC54K544Gn
+5LuY5LiO44GV44KM44CB5q6L44KK44GuUDUwMOOBr+OAjOaLm+W+heOBleOCjOOBn+S6uuOAjeOB
+ruaWsOimj+S8muWToeeZu+mMsuW+jOOAkDHpgLHplpPku6XlhoXjgJHjgavku5jkuI7jgZXjgozj
+gb7jgZkNCg0K4oC7NOS6uuebruS7pemZjeOBruaLm+W+heOBq+OBpOOBhOOBpuOBr+OAgeOAjOaL
+m+W+heOBl+OBn+S6uuOAjeOBruOCqOODs+ODiOODquODvOWPiuOBs+OAjOaLm+W+heOBleOCjOOB
+n+S6uuOAjeOBjOaWsOimj+S8muWToeeZu+mMsuOCkuWujOS6huOBl+OBn+aZgueCueOBp1A1MDDj
+ga7jgb/ku5jkuI7jgZXjgozjgIHlvozml6Xjga5QNTAw44Gu5LuY5LiO44Gv44GU44GW44GE44G+
+44Gb44KTDQoNCuKAu+acrOOCreODo+ODs+ODmuODvOODs+OBruWPguWKoOOBq+OBr+OCouODl+OD
+quWGheOCreODo+ODs+ODmuODvOODs+ODmuODvOOCuOOBi+OCieOCqOODs+ODiOODquODvOOBjOW/
+heimgeOBp+OBmQ0K44GT44Gu5qmf5Lya44Gr44CB44G+44Gg44Oh44Or44Kr44Oq44KS44Gv44GY
+44KB44Gm44GE44Gq44GE5a625peP44O75Y+L6YGU44KS44Oh44Or44Kr44Oq44Gr5oub5b6F44GX
+44Gm44CB44GK5b6X44Gr6LK344GE54mp44GX44KI44GG77yBDQoNCiANCg0K4pSA4pSA4pSA4pSA
+4pSA4pSA4pSA4pSA4pSA4pSAIA0KDQrlr77osaHmnaHku7bjgoTjgq3jg6Pjg7Pjg5rjg7zjg7Pj
+gavplqLjgZnjgovoqbPntLDjga/jgIHkuIvoqJjjga7jgq3jg6Pjg7Pjg5rjg7zjg7PnibnoqK3j
+g5rjg7zjgrjjgpLjgZTnorroqo3jgY/jgaDjgZXjgYTjgIINCg0KaHR0cHM6Ly9qcC1uZXdzLm1l
+cmNhcmkuY29tL2FydGljbGVzLzIwMjEvMTEvMTEvaW52aXRlY3BuLw0KDQogDQoNCiANCg0K5LuK
+5b6M44Go44KC44CB44Oh44Or44Kr44Oq44KS44KI44KN44GX44GP44GK6aGY44GE44GE44Gf44GX
+44G+44GZ44CCDQogDQogDQoNCg0KDQoNCg==
+
+------=_NextPart_000_0D60_013CFD19.121F3510
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY2hhcnNldD11dGYtOD4NCjxNRVRBIG5hbWU9R0VO
+RVJBVE9SIGNvbnRlbnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjIwMDkxIj48bWV0YSBjb250ZW50PSJ0
+ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgiIGh0dHAtZXF1aXY9Q29udGVudC1UeXBlPg0KPC9oZWFk
+Pg0KPEJPRFk+DQo8VEFCTEUgd2lkdGg9IjEwMCUiPg0KICA8VEJPRFk+DQogIDxUUj4NCiAgICA8
+VEQgc3R5bGU9IldJRFRIOiAxMDAlIj4NCiAgICAgIDxDRU5URVI+DQogICAgICA8VEFCTEUgY2xh
+c3M9Y29udGVudC13cmFwIHN0eWxlPSJXSURUSDogNjAwcHg7IE1BUkdJTjogMHB4IGF1dG8iPg0K
+ICAgICAgICA8VEJPRFk+DQogICAgICAgIDxUUj4NCiAgICAgICAgICA8VEQgDQogICAgICAgICAg
+c3R5bGU9Ik9WRVJGTE9XOiBoaWRkZW47IEJPUkRFUi1UT1A6IHJnYigyMzgsMjM4LDIzOCkgMHB4
+IGRvdHRlZDsgQk9SREVSLVJJR0hUOiByZ2IoMjM4LDIzOCwyMzgpIDBweCBkb3R0ZWQ7IEJPUkRF
+Ui1CT1RUT006IHJnYigyMzgsMjM4LDIzOCkgMHB4IGRvdHRlZDsgUEFERElORy1CT1RUT006IDBw
+eDsgUEFERElORy1UT1A6IDBweDsgUEFERElORy1MRUZUOiAwcHg7IE1BUkdJTjogMHB4IGF1dG87
+IEJPUkRFUi1MRUZUOiByZ2IoMjM4LDIzOCwyMzgpIDBweCBkb3R0ZWQ7IFBBRERJTkctUklHSFQ6
+IDBweCI+PCEtLS0tPg0KICAgICAgICAgICAgPERJViBjbGFzcz1mdWxsIHN0eWxlPSJNQVgtV0lE
+VEg6IDYwMHB4OyBNQVJHSU46IDBweCBhdXRvIiANCiAgICAgICAgICAgIHRpbmRleD0iMSI+DQog
+ICAgICAgICAgICA8VEFCTEUgY2xhc3M9ZnVsbFRhYmxlIHN0eWxlPSJXSURUSDogNjAwcHgiIGNl
+bGxTcGFjaW5nPTAgDQogICAgICAgICAgICBjZWxsUGFkZGluZz0wIGFsaWduPWNlbnRlciBib3Jk
+ZXI9MD4NCiAgICAgICAgICAgICAgPFRCT0RZPg0KICAgICAgICAgICAgICA8VFI+DQogICAgICAg
+ICAgICAgICAgPFREIGNsYXNzPWZ1bGxUZCANCiAgICAgICAgICAgICAgICBzdHlsZT0iRk9OVC1T
+SVpFOiAwcHg7IFdJRFRIOiA2MDBweDsgVkVSVElDQUwtQUxJR046IHRvcDsgQkFDS0dST1VORC1J
+TUFHRTogbm9uZTsgQkFDS0dST1VORC1SRVBFQVQ6IG5vLXJlcGVhdDsgQkFDS0dST1VORC1QT1NJ
+VElPTjogMTAlIDUwJTsgUEFERElORy1CT1RUT006IDBweDsgRElSRUNUSU9OOiBsdHI7IFRFWFQt
+QUxJR046IGNlbnRlcjsgYmFja2dyb3VuZC1zaXplOiAxMDBweCI+DQogICAgICAgICAgICAgICAg
+ICA8VEFCTEUgc3R5bGU9IlZFUlRJQ0FMLUFMSUdOOiB0b3AiIGNlbGxTcGFjaW5nPTAgY2VsbFBh
+ZGRpbmc9MCANCiAgICAgICAgICAgICAgICAgIHdpZHRoPSIxMDAlIiBib3JkZXI9MD4NCiAgICAg
+ICAgICAgICAgICAgICAgPFRCT0RZPg0KICAgICAgICAgICAgICAgICAgICA8VFI+DQogICAgICAg
+ICAgICAgICAgICAgICAgPFREIA0KICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJ
+WkU6IDBweDsgUEFERElORy1CT1RUT006IDBweDsgUEFERElORy1UT1A6IDBweDsgUEFERElORy1M
+RUZUOiAxMHB4OyBQQURESU5HLVJJR0hUOiAxMHB4IiANCiAgICAgICAgICAgICAgICAgICAgICBh
+bGlnbj1sZWZ0Pg0KICAgICAgICAgICAgICAgICAgICAgICAgPERJViBjbGFzcz10ZXh0IA0KICAg
+ICAgICAgICAgICAgICAgICAgICAgc3R5bGU9J0ZPTlQtU0laRTogMTRweDsgRk9OVC1GQU1JTFk6
+IOW+rui9r+mbhem7kSwgIk1pY3Jvc29mdCBZYUhlaSI7IEZPTlQtV0VJR0hUOiBub3JtYWw7IENP
+TE9SOiByZ2IoMCwwLDApOyBURVhULUFMSUdOOiBsZWZ0OyBNQVJHSU46IDBweDsgTElORS1IRUlH
+SFQ6IDEuNjsgb3ZlcmZsb3ctd3JhcDogYnJlYWstd29yZCc+DQogICAgICAgICAgICAgICAgICAg
+ICAgICA8RElWPg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAgDQogICAgICAgICAgICAgICAg
+ICAgICAgICBzdHlsZT0nRk9OVC1TSVpFOiAxNHB4OyBGT05ULUZBTUlMWTog5b6u6L2v6ZuF6buR
+LCAiTWljcm9zb2Z0IFlhSGVpIjsgTUFSR0lOOiAwcHg7IExJTkUtSEVJR0hUOiAxLjY7IHRleHQt
+c2l6ZS1hZGp1c3Q6IG5vbmUnPjxTUEFOIA0KICAgICAgICAgICAgICAgICAgICAgICAgaWQ9IjFw
+YmQxIHdtMmt2IiANCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzPSJjdWNycG9pM3RrIHZq
+bmtoLXRoYiI+44GE44Gk44KC44Oh44OrPC9TUEFOPjxTUEFOIA0KICAgICAgICAgICAgICAgICAg
+ICAgICAgaWQ9InhxbmhjIDR4dGRuIiANCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzPSI2
+NWF4cGxvMGUyIHRtbzN1LXoxcyI+44Kr44Oq44KS44GU5Yip55So44GEPC9TUEFOPjxTUEFOIA0K
+ICAgICAgICAgICAgICAgICAgICAgICAgaWQ9InRubG9yIG1odzdvIiANCiAgICAgICAgICAgICAg
+ICAgICAgICAgIGNsYXNzPSJ0emFla3pub2JzIHhsejNvLXZuZCI+44Gf44Gg44GN44GC44KKPC9T
+UEFOPjxTUEFOIA0KICAgICAgICAgICAgICAgICAgICAgICAgaWQ9ImhlcnpnIDRmd2F5IiANCiAg
+ICAgICAgICAgICAgICAgICAgICAgIGNsYXNzPSJyM2hwNzB0eG54IHJyamk2LTlmZyI+44GM44Go
+44GG44GU44GWPC9TUEFOPjxTUEFOIA0KICAgICAgICAgICAgICAgICAgICAgICAgaWQ9ImMzcG5k
+IGUxbGJoIiANCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzPSJpaHVtMm55cWl2IGlsZXp6
+LTZociI+44GE44G+44GZ44CCPC9TUEFOPjwvUD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxQ
+IA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9J0ZPTlQtU0laRTogMTRweDsgRk9OVC1G
+QU1JTFk6IOW+rui9r+mbhem7kSwgIk1pY3Jvc29mdCBZYUhlaSI7IE1BUkdJTjogMHB4OyBMSU5F
+LUhFSUdIVDogMS42OyB0ZXh0LXNpemUtYWRqdXN0OiBub25lJz4mbmJzcDs8L1A+DQogICAgICAg
+ICAgICAgICAgICAgICAgICA8UCANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSdGT05U
+LVNJWkU6IDE0cHg7IEZPTlQtRkFNSUxZOiDlvq7ova/pm4Xpu5EsICJNaWNyb3NvZnQgWWFIZWki
+OyBNQVJHSU46IDBweDsgTElORS1IRUlHSFQ6IDEuNjsgdGV4dC1zaXplLWFkanVzdDogbm9uZSc+
+PFNQQU4gDQogICAgICAgICAgICAgICAgICAgICAgICBpZD0iaG16bGEgdjZkcXYiIA0KICAgICAg
+ICAgICAgICAgICAgICAgICAgY2xhc3M9Im16cjhuaHY2cXIgbGQzcGctdGt4Ij7jgZnjgZDjgasz
+MDwvU1BBTj48U1BBTiANCiAgICAgICAgICAgICAgICAgICAgICAgIGlkPSJzbnlydiBwczltbCIg
+DQogICAgICAgICAgICAgICAgICAgICAgICBjbGFzcz0ibXI5cW54bHdtdCAxbmhsYS1uN20iPjAw
+5YaG44Gu44Od44Kk44Oz44OIPC9TUEFOPjxTUEFOIA0KICAgICAgICAgICAgICAgICAgICAgICAg
+aWQ9InM4eHc0IG1hcnFsIiANCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzPSJmb3Vlc3Jx
+dHhuIDdybGp3LWswciI+44KS5Y+X44GRPC9TUEFOPjxTUEFOIA0KICAgICAgICAgICAgICAgICAg
+ICAgICAgaWQ9InExZmZ1IGR1bXd0IiANCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzPSJq
+aGduamp3bHl4IGs5ZmZyLXIzNiI+5Y+W44KK44G+44GZ44CCPC9TUEFOPjwvUD4NCiAgICAgICAg
+ICAgICAgICAgICAgICAgIDxQIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9J0ZPTlQt
+U0laRTogMTRweDsgRk9OVC1GQU1JTFk6IOW+rui9r+mbhem7kSwgIk1pY3Jvc29mdCBZYUhlaSI7
+IE1BUkdJTjogMHB4OyBMSU5FLUhFSUdIVDogMS42OyB0ZXh0LXNpemUtYWRqdXN0OiBub25lJz4m
+bmJzcDs8L1A+DQogICAgICAgICAgICAgICAgICAgICAgICA8UCANCiAgICAgICAgICAgICAgICAg
+ICAgICAgIHN0eWxlPSdGT05ULVNJWkU6IDE0cHg7IEZPTlQtRkFNSUxZOiDlvq7ova/pm4Xpu5Es
+ICJNaWNyb3NvZnQgWWFIZWkiOyBNQVJHSU46IDBweDsgTElORS1IRUlHSFQ6IDEuNjsgdGV4dC1z
+aXplLWFkanVzdDogbm9uZSc+PFNQQU4gDQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0i
+Q09MT1I6ICMwNjA2MDYiPuS4i+iomFVSPC9TUEFOPjxTUEFOIA0KICAgICAgICAgICAgICAgICAg
+ICAgICAgaWQ9ImZ5d2FlIGt0aTl4IiANCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzPSJk
+a2twbGdqbWZjIDdwYzVlLTQwcyIgDQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0iQ09M
+T1I6ICMwNjA2MDYiPkzjgpLjgq/jg6rjg4Pjgq/jgZfjgablj5c8L1NQQU4+PFNQQU4gDQogICAg
+ICAgICAgICAgICAgICAgICAgICBzdHlsZT0iQ09MT1I6ICMwNjA2MDYiPuOBkeWPluOCiuOBvuOB
+meOAgjwvU1BBTj48L1A+DQogICAgICAgICAgICAgICAgICAgICAgICA8UCANCiAgICAgICAgICAg
+ICAgICAgICAgICAgIHN0eWxlPSdGT05ULVNJWkU6IDE0cHg7IEZPTlQtRkFNSUxZOiDlvq7ova/p
+m4Xpu5EsICJNaWNyb3NvZnQgWWFIZWkiOyBNQVJHSU46IDBweDsgTElORS1IRUlHSFQ6IDEuNjsg
+dGV4dC1zaXplLWFkanVzdDogbm9uZSc+PEEgDQogICAgICAgICAgICAgICAgICAgICAgICB0aXRs
+ZT1tY2NkZnQ5cnlsIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9IlRFWFQtREVDT1JB
+VElPTjogdW5kZXJsaW5lOyBGT05ULVdFSUdIVDogbm9ybWFsIiANCiAgICAgICAgICAgICAgICAg
+ICAgICAgIGhyZWY9Imh0dHBzOi8vb3V0Z29pbmcuZXN0aGVyZmlndWVyYXMuY29tL2RhbWFnZWQi
+IHJlbD1ub29wZW5lciANCiAgICAgICAgICAgICAgICAgICAgICAgIHRhcmdldD1fYmxhbms+aHR0
+cHM6Ly93d3cubWVyPFNQQU4gDQogICAgICAgICAgICAgICAgICAgICAgICBpZD0ib2t6ZjkgcDNi
+Z28iIA0KICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3M9IjdtZXNra3Q1ZXYgdnRmaTMtZWRj
+Ij5jYXJpLmNvbS9qcC8zMDA8L1NQQU4+MEpQWS9jb2RlPz1qakFIekZ4T3RTdVZnelJtU3N1Yjwv
+QT48L1A+DQogICAgICAgICAgICAgICAgICAgICAgICA8UCANCiAgICAgICAgICAgICAgICAgICAg
+ICAgIHN0eWxlPSdGT05ULVNJWkU6IDE0cHg7IEZPTlQtRkFNSUxZOiDlvq7ova/pm4Xpu5EsICJN
+aWNyb3NvZnQgWWFIZWkiOyBNQVJHSU46IDBweDsgTElORS1IRUlHSFQ6IDEuNjsgdGV4dC1zaXpl
+LWFkanVzdDogbm9uZSc+Jm5ic3A7PC9QPg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAgDQog
+ICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0nRk9OVC1TSVpFOiAxNHB4OyBGT05ULUZBTUlM
+WTog5b6u6L2v6ZuF6buRLCAiTWljcm9zb2Z0IFlhSGVpIjsgTUFSR0lOOiAwcHg7IExJTkUtSEVJ
+R0hUOiAxLjY7IHRleHQtc2l6ZS1hZGp1c3Q6IG5vbmUnPuKUgOKUgOKUgOKUgOKUgOKUgOKUgOKU
+gOKUgOKUgDwvUD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxQIA0KICAgICAgICAgICAgICAg
+ICAgICAgICAgc3R5bGU9J0ZPTlQtU0laRTogMTRweDsgRk9OVC1GQU1JTFk6IOW+rui9r+mbhem7
+kSwgIk1pY3Jvc29mdCBZYUhlaSI7IE1BUkdJTjogMHB4OyBMSU5FLUhFSUdIVDogMS42OyB0ZXh0
+LXNpemUtYWRqdXN0OiBub25lJz4mbmJzcDs8L1A+DQogICAgICAgICAgICAgICAgICAgICAgICA8
+UCANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSdGT05ULVNJWkU6IDE0cHg7IEZPTlQt
+RkFNSUxZOiDlvq7ova/pm4Xpu5EsICJNaWNyb3NvZnQgWWFIZWkiOyBNQVJHSU46IDBweDsgTElO
+RS1IRUlHSFQ6IDEuNjsgdGV4dC1zaXplLWFkanVzdDogbm9uZSc+PFNQQU4gDQogICAgICAgICAg
+ICAgICAgICAgICAgICBzdHlsZT0iRk9OVC1TSVpFOiAxNHB4OyBDT0xPUjogIzAwMDAwMCI+44CQ
+MTEvMjl+MTIvMDXjgJHmi5vlvoXjgZfjgZ/kurrjgoLjgZXjgozjgZ/kurrjgoLvvIHjgYrosrfj
+gYTnianjgafkvb/jgYjjgosxMDAw5YaG5YiG44Od44Kk44Oz44OI5b+F44Ga44KC44KJ44GI44KL
+77yBPC9TUEFOPjwvUD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxQIA0KICAgICAgICAgICAg
+ICAgICAgICAgICAgc3R5bGU9J0ZPTlQtU0laRTogMTRweDsgRk9OVC1GQU1JTFk6IOW+rui9r+mb
+hem7kSwgIk1pY3Jvc29mdCBZYUhlaSI7IE1BUkdJTjogMHB4OyBMSU5FLUhFSUdIVDogMS42OyB0
+ZXh0LXNpemUtYWRqdXN0OiBub25lJz4mbmJzcDs8L1A+DQogICAgICAgICAgICAgICAgICAgICAg
+ICA8UCANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSdGT05ULVNJWkU6IDE0cHg7IEZP
+TlQtRkFNSUxZOiDlvq7ova/pm4Xpu5EsICJNaWNyb3NvZnQgWWFIZWkiOyBNQVJHSU46IDBweDsg
+TElORS1IRUlHSFQ6IDEuNjsgdGV4dC1zaXplLWFkanVzdDogbm9uZSc+54++5Zyo44Oh44Or44Kr
+44Oq44Gn44Gv44CM44CKMTHmnIjmi5vlvoXjgq3jg6Pjg7Pjg5rjg7zjg7PjgIvmi5vlvoXjgZfj
+gZ/kurrjgoLjgZXjgozjgZ/kurrjgoLvvIHjgYrosrfjgYTnianjgafkvb/jgYjjgosxMDAw5YaG
+5YiG44Od44Kk44Oz44OI5b+F44Ga44KC44KJ44GI44KL77yB44CN44KS6ZaL5YKs5Lit44Gn44GZ
+77yBPC9QPg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAgDQogICAgICAgICAgICAgICAgICAg
+ICAgICBzdHlsZT0nRk9OVC1TSVpFOiAxNHB4OyBGT05ULUZBTUlMWTog5b6u6L2v6ZuF6buRLCAi
+TWljcm9zb2Z0IFlhSGVpIjsgTUFSR0lOOiAwcHg7IExJTkUtSEVJR0hUOiAxLjY7IHRleHQtc2l6
+ZS1hZGp1c3Q6IG5vbmUnPiZuYnNwOzwvUD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxQIA0K
+ICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9J0ZPTlQtU0laRTogMTRweDsgRk9OVC1GQU1J
+TFk6IOW+rui9r+mbhem7kSwgIk1pY3Jvc29mdCBZYUhlaSI7IE1BUkdJTjogMHB4OyBMSU5FLUhF
+SUdIVDogMS42OyB0ZXh0LXNpemUtYWRqdXN0OiBub25lJz48U1BBTiANCiAgICAgICAgICAgICAg
+ICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE0cHg7IENPTE9SOiAjMDAwMDAwIj7vvLzlrrbm
+l4/jg7vlj4vpgZTjgpLjg6Hjg6vjgqvjg6rjgavmi5vlvoXjgZfjgabmrLLjgZfjgYvjgaPjgZ/l
+lYblk4HjgpLjgYrlvpfjgavosrfjgYTjgb7jgZvjgpPjgYvvvJ/vvI88L1A+DQogICAgICAgICAg
+ICAgICAgICAgICAgICA8UCANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSdGT05ULVNJ
+WkU6IDE0cHg7IEZPTlQtRkFNSUxZOiDlvq7ova/pm4Xpu5EsICJNaWNyb3NvZnQgWWFIZWkiOyBN
+QVJHSU46IDBweDsgTElORS1IRUlHSFQ6IDEuNjsgdGV4dC1zaXplLWFkanVzdDogbm9uZSc+Jm5i
+c3A7PC9QPg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAgDQogICAgICAgICAgICAgICAgICAg
+ICAgICBzdHlsZT0nRk9OVC1TSVpFOiAxNHB4OyBGT05ULUZBTUlMWTog5b6u6L2v6ZuF6buRLCAi
+TWljcm9zb2Z0IFlhSGVpIjsgTUFSR0lOOiAwcHg7IExJTkUtSEVJR0hUOiAxLjY7IHRleHQtc2l6
+ZS1hZGp1c3Q6IG5vbmUnPjHkurrmi5vlvoXjgZnjgovjgZTjgajjgavjgIExMDAw5YaG5YiG44Gu
+44Od44Kk44Oz44OI44GM5b+F44Ga44KC44KJ44GI44KL77yB77yIUDEwMDDjgoLjgonjgYjjgovj
+ga7jga/mnIDlpKcz5Lq644G+44Gn77yJPC9QPg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAg
+DQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0nRk9OVC1TSVpFOiAxNHB4OyBGT05ULUZB
+TUlMWTog5b6u6L2v6ZuF6buRLCAiTWljcm9zb2Z0IFlhSGVpIjsgTUFSR0lOOiAwcHg7IExJTkUt
+SEVJR0hUOiAxLjY7IHRleHQtc2l6ZS1hZGp1c3Q6IG5vbmUnPiZuYnNwOzwvUD4NCiAgICAgICAg
+ICAgICAgICAgICAgICAgIDxQIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9J0ZPTlQt
+U0laRTogMTRweDsgRk9OVC1GQU1JTFk6IOW+rui9r+mbhem7kSwgIk1pY3Jvc29mdCBZYUhlaSI7
+IE1BUkdJTjogMHB4OyBMSU5FLUhFSUdIVDogMS42OyB0ZXh0LXNpemUtYWRqdXN0OiBub25lJz4y
+5Lq65oub5b6F44GnMjAwMOWGhuWIhuOAgTPkurrmi5vlvoXjgaczMDAw5YaG5YiG44KSR0VU44Gn
+44GN44KL44OB44Oj44Oz44K577yBPC9QPg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAgDQog
+ICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0nRk9OVC1TSVpFOiAxNHB4OyBGT05ULUZBTUlM
+WTog5b6u6L2v6ZuF6buRLCAiTWljcm9zb2Z0IFlhSGVpIjsgTUFSR0lOOiAwcHg7IExJTkUtSEVJ
+R0hUOiAxLjY7IHRleHQtc2l6ZS1hZGp1c3Q6IG5vbmUnPiZuYnNwOzwvUD4NCiAgICAgICAgICAg
+ICAgICAgICAgICAgIDxQIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9J0ZPTlQtU0la
+RTogMTRweDsgRk9OVC1GQU1JTFk6IOW+rui9r+mbhem7kSwgIk1pY3Jvc29mdCBZYUhlaSI7IE1B
+UkdJTjogMHB4OyBMSU5FLUhFSUdIVDogMS42OyB0ZXh0LXNpemUtYWRqdXN0OiBub25lJz48U1BB
+TiANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE0cHg7IENPTE9S
+OiAjMDAwMDAwIj7igLsx5Lq644Gu5oub5b6F44Gr44Gk44GN44CBUDEwMDDjga7jgYbjgaFQNTAw
+44Gv44CM5oub5b6F44GX44Gf5Lq644CN44Gu44KoPFNQQU4+44Oz44OI44Oq44O85Y+K44Gz44CM
+5oub5b6F44GV44KM44Gf5Lq644CN44GMPC9TUEFOPuaWsOimj+S8muWToeeZu+mMsuOCkuWujOS6
+huOBl+OBn+aZgueCueOBp+S7mOS4juOBleOCjOOAgeaui+OCiuOBrlA1MDDjga/jgIzmi5vlvoXj
+gZXjgozjgZ/kurrjgI3jga7mlrDopo/kvJrlk6HnmbvpjLLlvozjgJAx6YCx6ZaT5Lul5YaF44CR
+44Gr5LuY5LiO44GV44KM44G+44GZPC9TUEFOPjxCUj48QlIgDQogICAgICAgICAgICAgICAgICAg
+ICAgICBzdHlsZT0iQk9YLVNJWklORzogYm9yZGVyLWJveDsgQk9SREVSLVRPUDogMHB4IHNvbGlk
+OyBCT1JERVItUklHSFQ6IDBweCBzb2xpZDsgQk9SREVSLUJPVFRPTTogMHB4IHNvbGlkOyBCT1JE
+RVItTEVGVDogMHB4IHNvbGlkIj48U1BBTiANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxl
+PSJGT05ULVNJWkU6IDE0cHg7IENPTE9SOiAjMDAwMDAwIj7igLs05Lq655uu5Lul6ZmN44Gu5oub
+5b6F44Gr44Gk44GE44Gm44Gv44CB44CM5oubPFNQQU4+5b6F44GX44Gf5Lq644CN44GuPC9TUEFO
+PuOCqOODs+ODiOODquODvOWPiuOBs+OAjOaLm+W+heOBleOCjOOBn+S6uuOAjeOBjOaWsOimj+S8
+muWToeeZu+mMsuOCkuWujOS6huOBl+OBn+aZgueCueOBp1A1MDDjga7jgb/ku5jkuI7jgZXjgozj
+gIHlvozml6Xjga5QNTAw44Gu5LuY5LiO44Gv44GU44GW44GE44G+44Gb44KTPC9TUEFOPjxCUj48
+QlIgDQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0iQk9YLVNJWklORzogYm9yZGVyLWJv
+eDsgQk9SREVSLVRPUDogMHB4IHNvbGlkOyBCT1JERVItUklHSFQ6IDBweCBzb2xpZDsgQk9SREVS
+LUJPVFRPTTogMHB4IHNvbGlkOyBCT1JERVItTEVGVDogMHB4IHNvbGlkIj48U1BBTiANCiAgICAg
+ICAgICAgICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE0cHg7IENPTE9SOiAjMDAwMDAw
+Ij7igLvmnKzjgq3jg6Pjg7Pjg5rjg7zjg7Pjga7lj4LliqDjgavjga/jgqLjg5fjg6rlhoXjgq3j
+g6Pjg7Pjg5rjg7zjg7Pjg5rjg7zjgrjjgYvjgonjgqjjg7Pjg4jjg6rjg7zjgYzlv4XopoHjgafj
+gZk8L1NQQU4+PEJSIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9IkJPWC1TSVpJTkc6
+IGJvcmRlci1ib3g7IEJPUkRFUi1UT1A6IDBweCBzb2xpZDsgQk9SREVSLVJJR0hUOiAwcHggc29s
+aWQ7IEJPUkRFUi1CT1RUT006IDBweCBzb2xpZDsgQk9SREVSLUxFRlQ6IDBweCBzb2xpZCI+PFNQ
+QU4gDQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0iRk9OVC1TSVpFOiAxNHB4OyBDT0xP
+UjogIzAwMDAwMCI+44GT44Gu5qmf5Lya44Gr44CB44G+44Gg44Oh44Or44Kr44Oq44KS44Gv44GY
+44KB44Gm44GE44Gq44GE5a625peP44O75Y+L6YGU44KS44Oh44Or44Kr44Oq44Gr5oub5b6F44GX
+44Gm44CB44GK5b6X44Gr6LK344GE54mp44GX44KI44GG77yBPC9TUEFOPjwvUD4NCiAgICAgICAg
+ICAgICAgICAgICAgICAgIDxQIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9J0ZPTlQt
+U0laRTogMTRweDsgRk9OVC1GQU1JTFk6IOW+rui9r+mbhem7kSwgIk1pY3Jvc29mdCBZYUhlaSI7
+IE1BUkdJTjogMHB4OyBMSU5FLUhFSUdIVDogMS42OyB0ZXh0LXNpemUtYWRqdXN0OiBub25lJz4m
+bmJzcDs8L1A+DQogICAgICAgICAgICAgICAgICAgICAgICA8UCANCiAgICAgICAgICAgICAgICAg
+ICAgICAgIHN0eWxlPSdGT05ULVNJWkU6IDE0cHg7IEZPTlQtRkFNSUxZOiDlvq7ova/pm4Xpu5Es
+ICJNaWNyb3NvZnQgWWFIZWkiOyBNQVJHSU46IDBweDsgTElORS1IRUlHSFQ6IDEuNjsgdGV4dC1z
+aXplLWFkanVzdDogbm9uZSc+4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAJm5ic3A7PC9Q
+Pg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAgDQogICAgICAgICAgICAgICAgICAgICAgICBz
+dHlsZT0nRk9OVC1TSVpFOiAxNHB4OyBGT05ULUZBTUlMWTog5b6u6L2v6ZuF6buRLCAiTWljcm9z
+b2Z0IFlhSGVpIjsgTUFSR0lOOiAwcHg7IExJTkUtSEVJR0hUOiAxLjY7IHRleHQtc2l6ZS1hZGp1
+c3Q6IG5vbmUnPuWvvuixoeadoeS7tuOChOOCreODo+ODs+ODmuODvOODs+OBq+mWouOBmeOCi+ip
+s+e0sOOBr+OAgeS4i+iomOOBruOCreODo+ODs+ODmuODvOODs+eJueioreODmuODvOOCuOOCkuOB
+lOeiuuiqjeOBj+OBoOOBleOBhOOAgjwvUD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxQIA0K
+ICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9J0ZPTlQtU0laRTogMTRweDsgRk9OVC1GQU1J
+TFk6IOW+rui9r+mbhem7kSwgIk1pY3Jvc29mdCBZYUhlaSI7IE1BUkdJTjogMHB4OyBMSU5FLUhF
+SUdIVDogMS42OyB0ZXh0LXNpemUtYWRqdXN0OiBub25lJz48QSANCiAgICAgICAgICAgICAgICAg
+ICAgICAgIHRpdGxlPWJtZ3VhbmJka3ggDQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0i
+VEVYVC1ERUNPUkFUSU9OOiB1bmRlcmxpbmU7IEZPTlQtV0VJR0hUOiBub3JtYWwiIA0KICAgICAg
+ICAgICAgICAgICAgICAgICAgaHJlZj0iaHR0cHM6Ly9vdXRnb2luZy5lc3RoZXJmaWd1ZXJhcy5j
+b20vZGFtYWdlZCIgcmVsPW5vb3BlbmVyIA0KICAgICAgICAgICAgICAgICAgICAgICAgdGFyZ2V0
+PV9ibGFuaz5odHRwczovL2pwLW5ld3MubWVyYzxTUEFOPmFyaS5jPC9TUEFOPm9tL2FydGljbGVz
+LzIwMjEvMTEvMTEvaW52aXRlY3BuLzwvQT48L1A+DQogICAgICAgICAgICAgICAgICAgICAgICA8
+UCANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSdGT05ULVNJWkU6IDE0cHg7IEZPTlQt
+RkFNSUxZOiDlvq7ova/pm4Xpu5EsICJNaWNyb3NvZnQgWWFIZWkiOyBNQVJHSU46IDBweDsgTElO
+RS1IRUlHSFQ6IDEuNjsgdGV4dC1zaXplLWFkanVzdDogbm9uZSc+Jm5ic3A7PC9QPg0KICAgICAg
+ICAgICAgICAgICAgICAgICAgPFAgDQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0nRk9O
+VC1TSVpFOiAxNHB4OyBGT05ULUZBTUlMWTog5b6u6L2v6ZuF6buRLCAiTWljcm9zb2Z0IFlhSGVp
+IjsgTUFSR0lOOiAwcHg7IExJTkUtSEVJR0hUOiAxLjY7IHRleHQtc2l6ZS1hZGp1c3Q6IG5vbmUn
+PiZuYnNwOzwvUD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxQIA0KICAgICAgICAgICAgICAg
+ICAgICAgICAgc3R5bGU9J0ZPTlQtU0laRTogMTRweDsgRk9OVC1GQU1JTFk6IOW+rui9r+mbhem7
+kSwgIk1pY3Jvc29mdCBZYUhlaSI7IE1BUkdJTjogMHB4OyBMSU5FLUhFSUdIVDogMS42OyB0ZXh0
+LXNpemUtYWRqdXN0OiBub25lJz7ku4rlvozjgajjgoLjgIHjg6Hjg6s8U1BBTiANCiAgICAgICAg
+ICAgICAgICAgICAgICAgIGlkPSJkZmF4MiBzaXB5eiIgDQogICAgICAgICAgICAgICAgICAgICAg
+ICBjbGFzcz0idGlmZWVmd2ptZCBnOXVrZC1tengiPuOCq+ODquOCkuOCiOOCjeOBl+OBj+OBijwv
+U1BBTj7poZjjgYTjgYTjgZ/jgZfjgb7jgZnjgII8L1A+DQogICAgICAgICAgICAgICAgICAgICAg
+ICA8RElWIHN0eWxlPSJMSU5FLUhFSUdIVDogMTAwJSIgYWxpZ249Y2VudGVyPiZuYnNwOzxJTUcg
+DQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0iSEVJR0hUOiAyMHB4OyBXSURUSDogMTUx
+cHgiIGJvcmRlcj0wIGhzcGFjZT0wIA0KICAgICAgICAgICAgICAgICAgICAgICAgYWx0PSIiIA0K
+ICAgICAgICAgICAgICAgICAgICAgICAgc3JjPSJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3
+MEtHZ29BQUFBTlNVaEVVZ0FBQUI0QUFBQWVDQVlBQUFBN01LNmlBQUFCeDBsRVFWUklTOFdXYTFF
+RFFSQ0V1eFZBRkJBSGdBS0NBc0JCb2dCUUFEakFBVUVCb0FDaUFPSWdVVUJRTUZSWDdWM3Q3U043
+eGUwVisrZCtaTFBmUEh1R3FIVE1iQTdnQXNDYTVIM3BXWll1bEg0M3MwTUFMd0JtN3U3RDZHQUhm
+UWR3NGhtNElMa3NHVHpJWXpOVFNPODh5SmJrdEFUVjcwUEJPd0FISHVpYzVNZW9ZRE5UVGhWbW5S
+OEFOMzFDM0JqMVo0OGRXS0grQXJBa3FXL3ZVd1E3d0psN1VhRjlKcWx2ZTh4TWVWVXJLUXFxOGcw
+QWhmd3R2RnYwT0ZFNFBrdFZLdzhGdVF5cTJyOG5BMjlUS1lnOFR2Umw3L0R0dVJpMVdBcXNFRFdo
+clFIVkd3cTVJdE9lRHRqSjNsTXRtbnRITlNFNTdad1FIUGJsVUJ0V0pCc3BUWU9Edmh3S2JQNS9S
+ZkkxOVZqcnNaa3BCeEw3YW9ka3RsMTljS2k3Z3czNEwvQ081Q1JudmUreEtxOTJSVStLeWpWU2NX
+Vm5zKyt4NU85N2NHSzdEMGl6VDFOZWgzMHMvVDJ1RE5ma1dwUUU1QkhBZFdXd25wTkRHaGJ0a2hC
+NnJOM3Bjd1J3cE5lcElhRzhISTBBNzZ4RktmQVliUlV0Z1VsSk03UGFSUll0Z1Rsd3pWeEhzMWhw
+eklwNHBkbXM3WE5hN09Pd29NeHNYM3R0M1ZLWDIxWUVuZVcyeno1YnBzYWxKcGVFWlFWQTgxV2kw
+RzZhVG01VmxNMTZvMzZkNTNSYUR2NEM3R1N2SCtsMUoxWUFBQUFBU1VWT1JLNUNZSUk9IiANCiAg
+ICAgICAgICAgICAgICAgICAgICAgIHdpZHRoPTI1NSBhbGlnbj1iYXNlbGluZSBoZWlnaHQ9NDA+
+PC9ESVY+DQogICAgICAgICAgICAgICAgICAgICAgICA8UCANCiAgICAgICAgICAgICAgICAgICAg
+ICAgIHN0eWxlPSdCT1gtU0laSU5HOiBib3JkZXItYm94OyBGT05ULVNJWkU6IDE0cHg7IEJPUkRF
+Ui1UT1A6IDBweCBzb2xpZDsgRk9OVC1GQU1JTFk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lz
+dGVtRm9udCwgIkhlbHZldGljYSBOZXVlIiwgIll1IEdvdGhpYyIsIFl1R290aGljLCBWZXJkYW5h
+LCBNZWlyeW8sICJNKyAxcCIsIHNhbnMtc2VyaWY7IEJPUkRFUi1SSUdIVDogMHB4IHNvbGlkOyBX
+T1JELVNQQUNJTkc6IDFweDsgQk9SREVSLUJPVFRPTTogMHB4IHNvbGlkOyBDT0xPUjogcmdiKDM0
+LDM0LDM0KTsgTUFSR0lOOiAwcHg7IEJPUkRFUi1MRUZUOiAwcHggc29saWQ7IExJTkUtSEVJR0hU
+OiAxLjY7IHRleHQtc2l6ZS1hZGp1c3Q6IG5vbmUnPiZuYnNwOzwvUD48L0RJVj48L0RJVj48L1NQ
+QU4+PC9URD48L1RSPjwvVEJPRFk+PC9UQUJMRT48L1REPjwvVFI+PC9UQk9EWT48L1RBQkxFPjwv
+RElWPjwvVEQ+PC9UUj48L1RCT0RZPjwvVEFCTEU+PC9DRU5URVI+PC9URD48L1RSPjwvVEJPRFk+
+PC9UQUJMRT48IS0tLS0+PC9CT0RZPjwvSFRNTD4NCg==
+
+------=_NextPart_000_0D60_013CFD19.121F3510--
 
 
---===============0495081060923134101==
+
+--===============7244554841180915615==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0495081060923134101==
+--===============7244554841180915615==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -606,4 +434,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0495081060923134101==--
+--===============7244554841180915615==--
+
+
