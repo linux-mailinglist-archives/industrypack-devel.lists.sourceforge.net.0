@@ -2,49 +2,49 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id BDCF7464B7F
+	by mail.lfdr.de (Postfix) with ESMTPS id BB47E464B7E
 	for <lists+industrypack-devel@lfdr.de>; Wed,  1 Dec 2021 11:20:54 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1msMjN-0004GY-Bv
+	id 1msMjN-0004GU-AP
 	for lists+industrypack-devel@lfdr.de; Wed, 01 Dec 2021 10:20:53 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <customal4321@outlook.com>) id 1msMjL-0004GK-7L
- for Industrypack-devel@lists.sourceforge.net; Wed, 01 Dec 2021 10:20:51 +0000
+ (envelope-from <customal4321@outlook.com>) id 1msMjK-0004GE-FG
+ for Industrypack-devel@lists.sourceforge.net; Wed, 01 Dec 2021 10:20:50 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Message-ID:Date:
  To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=RcIWIRHh96tT+tC0KbuibV+zsxRRxP5pIaU7XutJP54=; b=FRrP+C6BvdXTElMN8y+afQ+tkZ
- a77N/G0YFingioO0YN6Yc4Fh9T7tNOZLdJmnW4OKZVP2qjIHjFHP02y1aw7nFcsDx/KFITfSMVrzd
- E+Limkr2AKvcG6hqUed8KOP8aSx9JDPWbHSRZCxi1haq51TN/vAwTeg0VVegWEMIINWY=;
+ bh=/Fj0LLiuAgbiKdJxSm42COahEOEg//78XYHFtCxVG5I=; b=QA57wpYIZAYFRs6CCxplE5N00r
+ vYQdFKCZY2+dMUCjrXR3qH28qYUI6KJ/nrJp33mSXfzFQGSFj6jTGYoObYcW1YLRUwCWIVE2hm34f
+ EQpFGSopGvObUkAv4fvKx2RAQSqua7XJdp7/1HM/dmnPcp4dS1BCddTpOWMnyKLLBTVw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Subject:Content-Type:MIME-Version:Message-ID:Date:To:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=RcIWIRHh96tT+tC0KbuibV+zsxRRxP5pIaU7XutJP54=; b=V
- AmKNxgetfa7QF+Ef2BclySaTw744xu+MZ4Id7su3cyRhTkrBdOHlU20uESFW0ZbdTNLmRxsqid2BB
- qim9qKG08RXFyPDo17MgVl4mCkG9TcL1c7MyY2oUISu1AFUqvgRijNr37FQC10ppcA+XNA57DntD1
- 3mIKcFngi47QRFZE=;
+ List-Owner:List-Archive; bh=/Fj0LLiuAgbiKdJxSm42COahEOEg//78XYHFtCxVG5I=; b=R
+ lZyc8gTBr3od/aVuNMRz6EmfSEmasVLRaqck9Iu8QrAxYLWPbH5YQ1sRsgaIpzBzQBd16xN5DYydJ
+ KbEe8dFVcd91Sb4jsPpt5xno3u9KgL9Pssn4/BQ6+S/fwA8lb7S7VB+tzAnvpQv0LY7ZUy/7ZFf9o
+ h07H4HmPhN8YnzDs=;
 Received: from [159.89.51.212] (helo=mail0.cyborgit.net)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1msMjK-000AY8-K3
- for Industrypack-devel@lists.sourceforge.net; Wed, 01 Dec 2021 10:20:51 +0000
+ id 1msMjJ-000AY8-KM
+ for Industrypack-devel@lists.sourceforge.net; Wed, 01 Dec 2021 10:20:50 +0000
 From: Industrypack-devel  <customal4321@outlook.com>
 To: Industrypack-devel@lists.sourceforge.net
-Date: 01 Dec 2021 02:00:29 -0800
-Message-ID: <20211201020029.107BC91C7A5FF4F3@outlook.com>
+Date: 01 Dec 2021 02:20:32 -0800
+Message-ID: <20211201022032.9120CC5C1EEB6197@outlook.com>
 MIME-Version: 1.0
 Content-Type: multipart/mixed;
- boundary="----=_NextPart_000_0012_08BEAF42.E9549C65"
+ boundary="----=_NextPart_000_0012_DD46EDED.FCC1D740"
 X-Spam-Score: 8.2 (++++++++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
@@ -60,9 +60,9 @@ X-Spam-Report: Spam detection software,
  blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
  for more information. [URIs: gyazo.com]
- 3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
- [159.89.51.212 listed in zen.spamhaus.org]
  0.7 RCVD_IN_XBL            RBL: Received via a relay in Spamhaus XBL
+ [159.89.51.212 listed in zen.spamhaus.org]
+ 3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
@@ -80,7 +80,7 @@ X-Spam-Report: Spam detection software,
  0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
 X-VA-Spam-Flag: YES
 X-Spam-Flag: YES
-X-Headers-End: 1msMjK-000AY8-K3
+X-Headers-End: 1msMjJ-000AY8-KM
 Subject: [Industrypack-devel] [SPAM] RV: Fwd: PO NO 375
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -97,7 +97,7 @@ Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
 
-------=_NextPart_000_0012_08BEAF42.E9549C65
+------=_NextPart_000_0012_DD46EDED.FCC1D740
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -121,7 +121,7 @@ text-decoration-style: initial; text-decoration-color: initial">Pls find at=
 tached PO</SPAN></P>
 <P>--</P>
 <P>&nbsp;</P></BODY></HTML>
-------=_NextPart_000_0012_08BEAF42.E9549C65
+------=_NextPart_000_0012_DD46EDED.FCC1D740
 Content-Type: text/html; name="ORDER.HTML"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="ORDER.HTML"
@@ -294,14 +294,14 @@ CQ0KCQ0KCQ0KCQ0KCQ0KCQ0KCTx0cj48dGQgc3R5bGU9ImhlaWdodDoxNXB4OyI+PC90ZD48
 L3RyPg0KCQ0KCTwvdGFibGU+DQoJDQogIA0KPC9kaXY+DQoNCjwvYm9keT4NCjwvaHRtbD4=
 
 
-------=_NextPart_000_0012_08BEAF42.E9549C65
+------=_NextPart_000_0012_DD46EDED.FCC1D740
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
-------=_NextPart_000_0012_08BEAF42.E9549C65
+------=_NextPart_000_0012_DD46EDED.FCC1D740
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -312,6 +312,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
-------=_NextPart_000_0012_08BEAF42.E9549C65--
+------=_NextPart_000_0012_DD46EDED.FCC1D740--
 
 
