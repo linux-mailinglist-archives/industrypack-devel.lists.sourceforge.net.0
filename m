@@ -2,87 +2,101 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8366C4662C9
-	for <lists+industrypack-devel@lfdr.de>; Thu,  2 Dec 2021 12:53:42 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 799EC4662F1
+	for <lists+industrypack-devel@lfdr.de>; Thu,  2 Dec 2021 12:59:10 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mskei-0006v9-1n
-	for lists+industrypack-devel@lfdr.de; Thu, 02 Dec 2021 11:53:41 +0000
+	id 1mskk1-0004wI-3E
+	for lists+industrypack-devel@lfdr.de; Thu, 02 Dec 2021 11:59:09 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <manager1@nervion.com.mx>) id 1mskef-0006ug-N2
- for industrypack-devel@lists.sourceforge.net; Thu, 02 Dec 2021 11:53:38 +0000
+ (envelope-from <dul.pip@pspwan.com>) id 1mskk0-0004wC-2f
+ for industrypack-devel@lists.sourceforge.net; Thu, 02 Dec 2021 11:59:08 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=26qmO936y6xn7cJTSPXAF+yYuPGcG18PJfBJ34Ip8DQ=; b=B/0ovIa0tqbNgfKLODOpj0z8SE
- iYBguQQzfUK8iYzLXualgrSBatdtnZmN/Y2750rFaoLeiYFJxf72ZbzN7fMnmDutxkQgdwQWGBcGh
- xki9lzIyhBy9g2l7kjeaNEzNSfNQ/Ka7zlXh473nUzb2yrkC9kbn20xZhhvZZojCyZqI=;
+ bh=9z35BXlzz7ynt2j9dXrq5jlT0KQfbEE/lGxt+fg7ER4=; b=RZXRJThErxBOsLlaPxALtBsY9A
+ 9c2cEOD2mgOQvrEx+sIrzvGyfZW2FDkYfk9kr4TAHrpjM9dc4mGnGNxqffyEkzqaLtbnnkBtb7f08
+ 3hR5DEA2mPW3lDgjz7hqNrMxbDz98FVCvVtWhuFo5ISYgZ4Ip7pNA+hqvZhRL3e6JciU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=26qmO936y6xn7cJTSPXAF+yYuPGcG18PJfBJ34Ip8DQ=; b=f
- UiGzVcZm6vfA5XTGiDvoNBolPWNEGmvHmfEcaPQJOgD3zil0M4WnPoZIdkdn+1g+lALbAxy66cA1/
- UTVW3VW6ImWlocX8Ndt55ohb4/8O06gSRWHxorfcQLsgOcYHqJu/8PdnILmY5G4GK5mV2IJJ5ItkH
- 5cBXJhxkmWsoTmoY=;
-Received: from [143.244.139.23] (helo=mta0.nervion.com.mx)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=9z35BXlzz7ynt2j9dXrq5jlT0KQfbEE/lGxt+fg7ER4=; b=Q
+ f2yKbOiciXKKcl5tbwvTsf9wrS5yhEk2dLOpvtrNlbHgHCspiV/O1g6mkEabHTCHNOobVrHd7rsSc
+ PlvmgNZeSK/+vlmwpU4UrzIf3xtDju1g7Kh8tYK94WMpiN74cPcEvXUTOrk1fPr4AyESRQfyyWBN7
+ DhzAY4YIHt45eeRE=;
+Received: from slot0.pspwan.com ([194.99.46.154])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mskee-0002Rh-4m
- for industrypack-devel@lists.sourceforge.net; Thu, 02 Dec 2021 11:53:38 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
- d=nervion.com.mx; 
- h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
- Content-Transfer-Encoding; i=manager1@nervion.com.mx;
- bh=26qmO936y6xn7cJTSPXAF+yYuPGcG18PJfBJ34Ip8DQ=;
- b=fPJxiQdESFL+ogS4VHVweAi8tJ5b167FLLbA8W/fXmov5niaCwHn5kS3gMKvuDcpD74VMZDpZTqx
- UW3kr709MCPEFBQmgAOwtK0cqukWT9kQ7F29LGQDvL1f1fdtWpl3+5gdI3/BZVAXEUxWD6KjabDU
- PsyLno7TwJzhDA8WsTk=
-From: Adminstrator-Support <manager1@nervion.com.mx>
+ id 1mskjz-001RWI-9S
+ for industrypack-devel@lists.sourceforge.net; Thu, 02 Dec 2021 11:59:07 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=pspwan.com;
+ h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=dul.pip@pspwan.com; bh=zeh3FCbzkzX1QoeD1LB9q4UDvrE=;
+ b=jY8wANN7SvxATr90K0kSf4Yzifhm1J5AC/lCrtXPH+itOpna/NCd3wSOWBaqLg9BsmAnFW7tRCBu
+ 9QsRLhy+1FwuE9wOoP2VXyhWwaWnJgRMY1oOKxcfCCyBkrhl+3yV5ZMD21rEF47JIJDft+i0O5QG
+ SZZ2ALFyuF3IYsLXx5xI1Sy9bzhrGtRqOA5IQ1v6NmAstCiBNqaetgm68a2kXnoZjMrfn+sA9JyC
+ C+bBnXaJgngYnM1gp1UOrDOjEX7klNXQvcGpFroY0+6PpHB0yZULp7hbVZ8wOYVOPJoJUJ1Z1I+Y
+ Cl0/2GbASJFr79hGKFFp4lOkc2NMUTf9R6VJmw==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=pspwan.com;
+ b=S4Iy9l6tTOSZEXNkdtkbXLeZFeHcNi0uCVAh21u2V8zLnNwmkX8ys2SFh8KiZ3cvhyqgyldya45v
+ AXzbfLCJ0uH4oD0Rj4xWTOTkzZ2HnKlIecfdG4XQzEYky5c0mhSwM6KCaI1+Jp3kfF2XM1O0T5u1
+ whuUY8vIXZpguvOfLsf/zf0gTWbWpFh1WVNEXoKd6uWOspj8umAxjApjuoJ2OntdCc2lGzMcTqNZ
+ RAatnlVoJYCb0/26xYdipnZHqkHL9s/4MdZaGOcPd22Es2ji41IjIpQbuqIt35kgEmENx1zmLiGk
+ jXC7CQa7zaQkGBma1GVm9jd5+p9fPCfGOGbAPQ==;
+From: Bio pharm <dul.pip@pspwan.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 02 Dec 2021 03:33:07 -0800
-Message-ID: <20211202033307.15D4CD90E3D94347@nervion.com.mx>
+Date: 02 Dec 2021 12:58:22 +0100
+Message-ID: <20211202125822.30A58233A3A1FA44@pspwan.com>
 MIME-Version: 1.0
-X-Spam-Score: 2.2 (++)
+X-Spam-Score: 6.7 (++++++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hello industrypack-devel You are about exceeding your free
- data volume. Avoid mail subscrition suspention, and email retrival malfunction,
- by following below reference 
- Content analysis details:   (2.2 points, 6.0 required)
+ Content preview:  Good Day industrypack-devel@lists.sourceforge.net, Thank you
+ for taking your time to read this offer. My name is Leonidas Akylas. I'm
+ Assistant Scientist with one of the leading Bio pharmaceutical company, I
+ have a profitable and genuine business proposal I wish to share with you.
+ This may not be your [...] 
+ Content analysis details:   (6.7 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
  blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: stavcsm.ru]
+ for more information. [URIs: pspwan.com]
+ 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
+ blocklist [URIs: pspwan.com]
+ 0.5 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [194.99.46.154 listed in dnsbl-1.uceprotect.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 HTML_MESSAGE           BODY: HTML included in message
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+ https://senderscore.org/blocklistlookup/
+ [194.99.46.154 listed in bl.score.senderscore.com]
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- 0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML
- tag
-X-Headers-End: 1mskee-0002Rh-4m
-Subject: [Industrypack-devel]
- =?UTF-8?B?4pyFIFNIVVQgRG93biBOT1RJQ0UhISEgIA==?=lists.sourceforge.net
- (industrypack-devel@lists.sourceforge.net)) 12/2/2021 3:33:07 a.m.. Verify
- .
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+X-Headers-End: 1mskjz-001RWI-9S
+Subject: Re: [Industrypack-devel] Partnership Proposal
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -94,43 +108,40 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============1245075478096966519=="
+Reply-To: Leonidas Akylas <leonidas.akyla@gmail.com>
+Content-Type: multipart/mixed; boundary="===============1231366384010298400=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============1245075478096966519==
+--===============1231366384010298400==
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
-Hello industrypack-devel <br>
-                                <br>
-                              You are about exceeding your free data volume=
-=2E <br>
-                              <br>
-                              Avoid mail subscrition suspention, and email =
-retrival malfunction, by following below reference <br>
-                              <br>
-                              <a href=3D"http://nova.stavcsm.ru/ss/index.ph=
-p?i=3Di&0=3Dindustrypack-devel@lists.sourceforge.net" style=3D"text-decorat=
-ion:none">ALLOCATE MORE DATA TO industrypack-devel@lists.sourceforge.net</a=
-> <br>
-                              <br>
-                              We will not be responsible for any subscritio=
-n suspention or email retrival malfunction if after this warning no respons=
-e from you. <br>
-                              <br>
-                              lists.sourceforge.net IT-Support Mail.
-                              <br>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<BODY style=3D"MARGIN: 0.5em">
+<P>Good Day industrypack-devel@lists.sourceforge.net,<BR><BR>Thank you for =
+taking your time to read this offer.</P>
+<P>My name is Leonidas Akylas. I'm Assistant Scientist with one of the lead=
+ing Bio pharmaceutical company, I have a profitable and genuine business pr=
+oposal I wish to share with you. This may not be your area of specializatio=
+n; but it will be another income generating business out of your specialty.=
+ Let me know if you are open to discussion for more details.<BR><BR>Best re=
+gards,<BR>Leonidas Akylas<BR>Assistant Scientist</P>
+<P>&nbsp;</P></BODY></HTML>
 
 
---===============1245075478096966519==
+--===============1231366384010298400==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============1245075478096966519==
+--===============1231366384010298400==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -141,4 +152,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============1245075478096966519==--
+--===============1231366384010298400==--
