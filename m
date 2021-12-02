@@ -2,86 +2,78 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id BB47E464B7E
-	for <lists+industrypack-devel@lfdr.de>; Wed,  1 Dec 2021 11:20:54 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2DADB466005
+	for <lists+industrypack-devel@lfdr.de>; Thu,  2 Dec 2021 09:55:04 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1msMjN-0004GU-AP
-	for lists+industrypack-devel@lfdr.de; Wed, 01 Dec 2021 10:20:53 +0000
+	id 1mshrq-0005ZA-Pi
+	for lists+industrypack-devel@lfdr.de; Thu, 02 Dec 2021 08:55:02 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <customal4321@outlook.com>) id 1msMjK-0004GE-FG
- for Industrypack-devel@lists.sourceforge.net; Wed, 01 Dec 2021 10:20:50 +0000
+ (envelope-from <wsrf@mocal.org>) id 1mshro-0005Yu-Sy
+ for industrypack-devel@lists.sourceforge.net; Thu, 02 Dec 2021 08:55:00 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Message-ID:Date:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:From:Date:Subject:To:List-id:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ :Resent-Message-ID:In-Reply-To:References:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=/Fj0LLiuAgbiKdJxSm42COahEOEg//78XYHFtCxVG5I=; b=QA57wpYIZAYFRs6CCxplE5N00r
- vYQdFKCZY2+dMUCjrXR3qH28qYUI6KJ/nrJp33mSXfzFQGSFj6jTGYoObYcW1YLRUwCWIVE2hm34f
- EQpFGSopGvObUkAv4fvKx2RAQSqua7XJdp7/1HM/dmnPcp4dS1BCddTpOWMnyKLLBTVw=;
+ bh=l0d65BCwrXM1jmXl8mCQRZYP4dME/8kXIRy5J0TIcec=; b=ZTgLovWUDU8vaD5u9Hra3xFLQ2
+ vjqir0cga7DGh9EUHVcvqulYMfe39GW9wBBcAZBi6Q+3RbyHQAK0YlrguR1h8VDZcuQMD2Y7/HoK3
+ jdASYrQ2Kma+tso+9PzyHeDqwnEQmSmbvBFOosAvGh3edBIAoRLFhb+GaExO0Ki71ifg=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Type:MIME-Version:Message-ID:Date:To:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=/Fj0LLiuAgbiKdJxSm42COahEOEg//78XYHFtCxVG5I=; b=R
- lZyc8gTBr3od/aVuNMRz6EmfSEmasVLRaqck9Iu8QrAxYLWPbH5YQ1sRsgaIpzBzQBd16xN5DYydJ
- KbEe8dFVcd91Sb4jsPpt5xno3u9KgL9Pssn4/BQ6+S/fwA8lb7S7VB+tzAnvpQv0LY7ZUy/7ZFf9o
- h07H4HmPhN8YnzDs=;
-Received: from [159.89.51.212] (helo=mail0.cyborgit.net)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1msMjJ-000AY8-KM
- for Industrypack-devel@lists.sourceforge.net; Wed, 01 Dec 2021 10:20:50 +0000
-From: Industrypack-devel  <customal4321@outlook.com>
-To: Industrypack-devel@lists.sourceforge.net
-Date: 01 Dec 2021 02:20:32 -0800
-Message-ID: <20211201022032.9120CC5C1EEB6197@outlook.com>
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:From:Date:
+ Subject:To:List-id:Sender:Reply-To:Cc:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=l0d65BCwrXM1jmXl8mCQRZYP4dME/8kXIRy5J0TIcec=; b=F
+ aASpB+swTziUPfci2FraOg8KIyEX+Cf0C0edIXfuyftGy1IX0lUXGtPF2L5LKwFKPCZvDrpb3V+Vr
+ Mn4VmVZd3OenIKtQAKxhQrxI7MkzkrNrbPPwYE6WcCY29OiUvMLdfKSq0FAz19yIttHsL2uGrRSoh
+ 4sj+0gvK9Adx/vgo=;
+Received: from [70.34.208.206] (helo=mocal.org)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
+ id 1mshrn-001HoK-Hq
+ for industrypack-devel@lists.sourceforge.net; Thu, 02 Dec 2021 08:55:00 +0000
+To: industrypack-devel@lists.sourceforge.net
+X-PHP-Originating-Script: 0:index.php
+Date: Thu, 2 Dec 2021 08:32:44 +0000
+From: Miles & More <info@mocal.org>
+Message-ID: <00f669183c978f401f7b6832561aac03@mocal.org>
 MIME-Version: 1.0
-Content-Type: multipart/mixed;
- boundary="----=_NextPart_000_0012_DD46EDED.FCC1D740"
-X-Spam-Score: 8.2 (++++++++)
+X-mailer: Cabestan DMS
+X-Spam-Score: 3.1 (+++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Industrypack-devel@lists.sourceforge.net, Pls find attached
- PO -- Content analysis details:   (8.2 points, 6.0 required)
+ Content preview:  Miles &amp; More Damit Sie weiterhin online bezahlen k&ouml;
+ nnen
+ Aufgrund der EU-Richtlinie PSD2 m&uuml;ssen Sie Online-Zahlungen mit Ihrer
+ Miles &amp; More Credit Card immer h&auml;ufiger freigeben. Aktivieren Sie
+ dazu ab sofort eines unserer zwei Visa card&reg; I [...] 
+ Content analysis details:   (3.1 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
  blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: gyazo.com]
- 0.7 RCVD_IN_XBL            RBL: Received via a relay in Spamhaus XBL
- [159.89.51.212 listed in zen.spamhaus.org]
- 3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
+ for more information. [URIs: onliveserver.com]
  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [customal4321[at]outlook.com]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [customal4321[at]outlook.com]
+ 0.9 SPF_HELO_SOFTFAIL      SPF: HELO does not match SPF record (softfail)
  0.0 HTML_MESSAGE           BODY: HTML included in message
  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
  identical to background
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_FONT_SIZE_HUGE    BODY: HTML font size is huge
  1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 T_HTML_ATTACH          HTML attachment to bypass scanning?
- 0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
- 1.3 SPOOFED_FREEMAIL       No description available.
  0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1msMjJ-000AY8-KM
-Subject: [Industrypack-devel] [SPAM] RV: Fwd: PO NO 375
+X-Headers-End: 1mshrn-001HoK-Hq
+Subject: [Industrypack-devel] =?utf-8?q?Damit_Sie_weiterhin_online_bezahle?=
+ =?utf-8?b?biBrw7ZubmVu?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -93,215 +85,197 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
+Content-Type: multipart/mixed; boundary="===============6998724094871007910=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
 
-------=_NextPart_000_0012_DD46EDED.FCC1D740
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+--===============6998724094871007910==
+Content-Type: multipart/alternative;
+	boundary="17b4764b62e6ec87d765758157a7b08d6"
+Content-Transfer-Encoding: 8bit
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
+This is a multi-part message in MIME format.
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
-<body style=3D"MARGIN: 0.5em">
-<P>Industrypack-devel@lists.sourceforge.net,</P>
-<P>
-<SPAN style=3D"FONT-SIZE: 13px; FONT-FAMILY: Verdana, Arial, Helvetica, san=
-s-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOA=
-T: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; TEXT-A=
-LIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACI=
-NG: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-vari=
-ant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width=
-: 0px; text-decoration-thickness: initial;=20
-text-decoration-style: initial; text-decoration-color: initial">Pls find at=
-tached PO</SPAN></P>
-<P>--</P>
-<P>&nbsp;</P></BODY></HTML>
-------=_NextPart_000_0012_DD46EDED.FCC1D740
-Content-Type: text/html; name="ORDER.HTML"
-Content-Transfer-Encoding: base64
-Content-Disposition: attachment; filename="ORDER.HTML"
-
-PCFET0NUWVBFIGh0bWw+DQo8c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0Ij5kb2N1bWVu
-dC53cml0ZSggdW5lc2NhcGUoICclM0MlNjglNzQlNkQlNkMlM0UlMEElM0MlNjglNjUlNjEl
-NjQlM0UlMEElM0MlNkQlNjUlNzQlNjElMjAlNkUlNjElNkQlNjUlM0QlMjIlNzYlNjklNjUl
-NzclNzAlNkYlNzIlNzQlMjIlMjAlNjMlNkYlNkUlNzQlNjUlNkUlNzQlM0QlMjIlNzclNjkl
-NjQlNzQlNjglM0QlNjQlNjUlNzYlNjklNjMlNjUlMkQlNzclNjklNjQlNzQlNjglMkMlMjAl
-NjklNkUlNjklNzQlNjklNjElNkMlMkQlNzMlNjMlNjElNkMlNjUlM0QlMzElMjIlM0UlMEEl
-M0MlNzQlNjklNzQlNkMlNjUlM0UlNDUlNzglNjMlNjUlNkMlN0MlMjAlNDIlNzUlNzMlNjkl
-NkUlNjUlNzMlNzMlMjAlNDklNkUlNzYlNjklNzQlNjElNzQlNjklNkYlNkUlM0MlMkYlNzQl
-NjklNzQlNkMlNjUlM0UlMEElM0MlNkQlNjUlNzQlNjElMjAlNjMlNjglNjElNzIlNzMlNjUl
-NzQlM0QlMjIlNzUlNzQlNjYlMkQlMzglMjIlMjAlMkYlM0UlMEElM0MlNkMlNjklNkUlNkIl
-MjAlNzIlNjUlNkMlM0QlMjIlNjklNjMlNkYlNkUlMjIlMjAlNjglNzIlNjUlNjYlM0QlMjIl
-NjglNzQlNzQlNzAlNzMlM0ElMkYlMkYlNzclNzclNzclMkUlNzQlNjUlNjMlNjglNjElNjQl
-NzYlNjklNzMlNkYlNzIlMkUlNjMlNkYlNkQlMkYlNjMlNkQlNzMlNjQlNjElNzQlNjElMkYl
-NjYlNjUlNjElNzQlNzUlNzIlNjUlNzMlMkYlMzMlMzYlMzglMzklMzYlMzAlMzAlMkYlNjgl
-NkYlNzclNzQlNkYlNjclNjUlNzQlNjUlNzglNjMlNjUlNkMlNjYlNkYlNzIlNjYlNzIlNjUl
-NjUlMzElNUYlNzQlNjglNzUlNkQlNjIlMzglMzAlMzAlMkUlNzAlNkUlNjclMjIlM0UlMEEl
-MEElMEElM0MlNzMlNzQlNzklNkMlNjUlM0UlMEElNjIlNkYlNjQlNzklMkMlMjAlNjglNzQl
-NkQlNkMlMjAlN0IlMEElMjAlMjAlNjglNjUlNjklNjclNjglNzQlM0ElMjAlMzElMzAlMzAl
-MjUlM0IlMEElMjAlMjAlNkQlNjElNzIlNjclNjklNkUlM0ElMjAlMzAlM0IlMEElMjAlMjAl
-NjYlNkYlNkUlNzQlMkQlNjYlNjElNkQlNjklNkMlNzklM0ElMjAlNDElNzIlNjklNjElNkMl
-MkMlMjAlNDglNjUlNkMlNzYlNjUlNzQlNjklNjMlNjElMkMlMjAlNzMlNjElNkUlNzMlMkQl
-NzMlNjUlNzIlNjklNjYlM0IlMEElN0QlMEElMEElMkElMjAlN0IlMEElMjAlMjAlNjIlNkYl
-NzglMkQlNzMlNjklN0ElNjklNkUlNjclM0ElMjAlNjIlNkYlNzIlNjQlNjUlNzIlMkQlNjIl
-NkYlNzglM0IlMEElN0QlMEElMEElMkUlNjIlNjclMkQlNjklNkQlNjElNjclNjUlMjAlN0Il
-MEElMjAlMjAlMkYlMkElMjAlNTQlNjglNjUlMjAlNjklNkQlNjElNjclNjUlMjAlNzUlNzMl
-NjUlNjQlMjAlMkElMkYlMEElMjAlMjAlNjIlNjElNjMlNkIlNjclNzIlNkYlNzUlNkUlNjQl
-MkQlNjklNkQlNjElNjclNjUlM0ElMjAlNzUlNzIlNkMlMjglMjIlNjglNzQlNzQlNzAlNzMl
-M0ElMkYlMkYlNjklMkUlNjclNzklNjElN0ElNkYlMkUlNjMlNkYlNkQlMkYlMzklNjElMzQl
-NjElMzglNjIlMzQlNjUlNjElMzIlMzUlNjYlNjUlMzElNjMlMzklMzMlMzMlMzglMzglNjEl
-NjYlMzUlNjQlMzMlNjIlMzglMzMlMzglNjQlNjQlMzElMkUlNzAlNkUlNjclMjIlMjklM0Il
-MEElMjAlMjAlMEElMjAlMjAlMkYlMkElMjAlNDElNjQlNjQlMjAlNzQlNjglNjUlMjAlNjIl
-NkMlNzUlNzIlMjAlNjUlNjYlNjYlNjUlNjMlNzQlMjAlMkElMkYlMEElMjAlMjAlNjYlNjkl
-NkMlNzQlNjUlNzIlM0ElMjAlNjIlNkMlNzUlNzIlMjglMzQlNzAlNzglMjklM0IlMEElMjAl
-MjAlMkQlNzclNjUlNjIlNkIlNjklNzQlMkQlNjYlNjklNkMlNzQlNjUlNzIlM0ElMjAlNjIl
-NkMlNzUlNzIlMjglMzQlNzAlNzglMjklM0IlMEElMjAlMjAlMEElMjAlMjAlMkYlMkElMjAl
-NDYlNzUlNkMlNkMlMjAlNjglNjUlNjklNjclNjglNzQlMjAlMkElMkYlMEElMjAlMjAlNjgl
-NjUlNjklNjclNjglNzQlM0ElMjAlMzElMzAlMzAlMjUlM0IlMjAlMEElMjAlMjAlMEElMjAl
-MjAlMkYlMkElMjAlNDMlNjUlNkUlNzQlNjUlNzIlMjAlNjElNkUlNjQlMjAlNzMlNjMlNjEl
-NkMlNjUlMjAlNzQlNjglNjUlMjAlNjklNkQlNjElNjclNjUlMjAlNkUlNjklNjMlNjUlNkMl
-NzklMjAlMkElMkYlMEElMjAlMjAlNjIlNjElNjMlNkIlNjclNzIlNkYlNzUlNkUlNjQlMkQl
-NzAlNkYlNzMlNjklNzQlNjklNkYlNkUlM0ElMjAlNjMlNjUlNkUlNzQlNjUlNzIlM0IlMEEl
-MjAlMjAlNjIlNjElNjMlNkIlNjclNzIlNkYlNzUlNkUlNjQlMkQlNzIlNjUlNzAlNjUlNjEl
-NzQlM0ElMjAlNkUlNkYlMkQlNzIlNjUlNzAlNjUlNjElNzQlM0IlMEElMjAlMjAlNjIlNjEl
-NjMlNkIlNjclNzIlNkYlNzUlNkUlNjQlMkQlNzMlNjklN0ElNjUlM0ElMjAlNjMlNkYlNzYl
-NjUlNzIlM0IlMEElN0QlMEElMEElMkYlMkElMjAlNTAlNkYlNzMlNjklNzQlNjklNkYlNkUl
-MjAlNzQlNjUlNzglNzQlMjAlNjklNkUlMjAlNzQlNjglNjUlMjAlNkQlNjklNjQlNjQlNkMl
-NjUlMjAlNkYlNjYlMjAlNzQlNjglNjUlMjAlNzAlNjElNjclNjUlMkYlNjklNkQlNjElNjcl
-NjUlMjAlMkElMkYlMEElMkUlNjIlNjclMkQlNzQlNjUlNzglNzQlMjAlN0IlMEElMjAlMjAl
-NjIlNjElNjMlNkIlNjclNzIlNkYlNzUlNkUlNjQlMkQlNjMlNkYlNkMlNkYlNzIlM0ElMjAl
-NzIlNjclNjIlMjglMzAlMkMlMzAlMkMlMzAlMjklM0IlMjAlMkYlMkElMjAlNDYlNjElNkMl
-NkMlNjIlNjElNjMlNkIlMjAlNjMlNkYlNkMlNkYlNzIlMjAlMkElMkYlMEElMjAlMjAlNjIl
-NjElNjMlNkIlNjclNzIlNkYlNzUlNkUlNjQlMkQlNjMlNkYlNkMlNkYlNzIlM0ElMjAlNzIl
-NjclNjIlNjElMjglMzAlMkMlMjAlMzclMzclMkMlMjAlMzAlMkMlMjAlMzAlMkUlMzglMjkl
-M0IlMjAlMkYlMkElMjAlNDIlNkMlNjElNjMlNkIlMjAlNzclMkYlNkYlNzAlNjElNjMlNjkl
-NzQlNzklMkYlNzMlNjUlNjUlMkQlNzQlNjglNzIlNkYlNzUlNjclNjglMjAlMkElMkYlMEEl
-MjAlMjAlNjMlNkYlNkMlNkYlNzIlM0ElMjAlNzclNjglNjklNzQlNjUlM0IlMEElMjAlMjAl
-NjYlNkYlNkUlNzQlMkQlNzclNjUlNjklNjclNjglNzQlM0ElMjAlNjIlNkYlNkMlNjQlM0Il
-MEElMjAlMjAlNjIlNkYlNzIlNjQlNjUlNzIlM0ElMjAlMzElNzAlNzglMjAlNzMlNkYlNkMl
-NjklNjQlMjAlMjMlMzAlNDYlNDYlNDYlNDYlNDYlNDYlM0IlMEElMjAlMjAlNzAlNkYlNzMl
-NjklNzQlNjklNkYlNkUlM0ElMjAlNjElNjIlNzMlNkYlNkMlNzUlNzQlNjUlM0IlMEElMjAl
-MjAlNzQlNkYlNzAlM0ElMjAlMzUlMzAlMjUlM0IlMEElMjAlMjAlNkMlNjUlNjYlNzQlM0El
-MjAlMzUlMzAlMjUlM0IlMEElMjAlMjAlNzQlNzIlNjElNkUlNzMlNjYlNkYlNzIlNkQlM0El
-MjAlNzQlNzIlNjElNkUlNzMlNkMlNjElNzQlNjUlMjglMkQlMzUlMzAlMjUlMkMlMjAlMkQl
-MzUlMzAlMjUlMjklM0IlMEElMjAlMjAlNjIlNkYlNzIlNjQlNjUlNzIlMkQlNzIlNjElNjQl
-NjklNzUlNzMlM0ElMjAlMzElMzAlNzAlNzglMjAlMzMlMzAlNzAlNzglM0IlMEElMjAlMjAl
-N0ElMkQlNjklNkUlNjQlNjUlNzglM0ElMjAlMzIlM0IlMEElMjAlMjAlNzclNjklNjQlNzQl
-NjglM0ElMjAlMzQlMzAlMzAlNzAlNzglM0IlMEElMjAlMjAlNjglNjUlNjklNjclNjglNzQl
-M0ElMjAlMzMlMzIlMzAlNzAlNzglM0IlMEElMjAlMjAlNzAlNjElNjQlNjQlNjklNkUlNjcl
-M0ElMjAlMzIlMzAlNzAlNzglM0IlMEElMjAlMjAlNzQlNjUlNzglNzQlMkQlNjElNkMlNjkl
-NjclNkUlM0ElMjAlNjMlNjUlNkUlNzQlNjUlNzIlM0IlMEElMjAlMjAlMkQlNzclNjUlNjIl
-NkIlNjklNzQlMkQlNjIlNkYlNzglMkQlNzMlNjglNjElNjQlNkYlNzclM0ElMjAlMzUlNzAl
-NzglMjAlMzUlNzAlNzglMjAlMzclNzAlNzglMjAlMzQlNzAlNzglMjAlNzIlNjclNjIlNjEl
-MjglMzAlMkMlMzAlMkMlMzAlMkMlMzAlMkUlMzclMzElMjklM0IlMjAlMEElMjAlMjAlNjIl
-NkYlNzglMkQlNzMlNjglNjElNjQlNkYlNzclM0ElMjAlMzUlNzAlNzglMjAlMzUlNzAlNzgl
-MjAlMzclNzAlNzglMjAlMzQlNzAlNzglMjAlNzIlNjclNjIlNjElMjglMzAlMkMlMzAlMkMl
-MzAlMkMlMzAlMkUlMzclMzElMjklM0IlMEElN0QlMEElM0MlMkYlNzMlNzQlNzklNkMlNjUl
-M0UlMEElM0MlMkYlNjglNjUlNjElNjQlM0UlMEElM0MlNjIlNkYlNjQlNzklM0UlMEElMEEl
-M0MlNjQlNjklNzYlMjAlNjMlNkMlNjElNzMlNzMlM0QlMjIlNjIlNjclMkQlNjklNkQlNjEl
-NjclNjUlMjIlM0UlM0MlMkYlNjQlNjklNzYlM0UlMEElMEElM0MlNjQlNjklNzYlMjAlNjMl
-NkMlNjElNzMlNzMlM0QlMjIlNjIlNjclMkQlNzQlNjUlNzglNzQlMjIlM0UlMEElMEElMDkl
-M0MlNzQlNjElNjIlNkMlNjUlMjAlNjElNkMlNjklNjclNkUlM0QlMjIlNjMlNjUlNkUlNzQl
-NjUlNzIlMjIlMjAlNzMlNzQlNzklNkMlNjUlM0QlMjIlNzclNjklNjQlNzQlNjglM0ElMzMl
-MzQlMzAlNzAlNzglM0IlMjIlMjAlNjMlNjUlNkMlNkMlNzMlNzAlNjElNjMlNjklNkUlNjcl
-M0QlMjIlMzAlMjIlM0UlMEElMDklMEElMDklM0MlNzQlNzIlM0UlM0MlNzQlNjQlMjAlNzMl
-NzQlNzklNkMlNjUlM0QlMjIlNjglNjUlNjklNjclNjglNzQlM0ElMzElMzUlNzAlNzglM0Il
-MjIlM0UlM0MlMkYlNzQlNjQlM0UlM0MlMkYlNzQlNzIlM0UlMEElMDklMEElMDklM0MlNzQl
-NzIlM0UlM0MlNzQlNjQlM0UlMEElMDklMEElMDklMDklM0MlNjYlNkYlNkUlNzQlMjAlNzMl
-NzQlNzklNkMlNjUlM0QlMjIlNjYlNkYlNkUlNzQlMkQlNjYlNjElNkQlNjklNkMlNzklM0El
-MjAlNDElNzIlNjklNjElNkMlMkMlMjAlNDglNjUlNkMlNzYlNjUlNzQlNjklNjMlNjElMkMl
-MjAlNzMlNjElNkUlNzMlMkQlNzMlNjUlNzIlNjklNjYlM0IlMjIlMjAlNzMlNjklN0ElNjUl
-M0QlMjIlMzQlMjIlMjAlNjMlNkYlNkMlNkYlNzIlM0QlMjIlMjMlNDYlNDYlNDYlNDYlNDYl
-NDYlMjIlM0UlMEElMDklMDklNTMlNjUlNjMlNzUlNzIlNjUlMjAlNDUlNzglNjMlNjUlNkMl
-M0ElMkQlMjAlNTAlNzUlNzIlNjMlNjglNjElNzMlNjUlMjAlNEYlNzIlNjQlNjUlNzIlMjEl
-MEElMDklMDklM0MlMkYlNjYlNkYlNkUlNzQlM0UlMEElMDklMDklMEElMDklMDklMEElMDkl
-MDklM0MlNjIlNzIlM0UlMEElMDklMDklMEElMDklMDklM0MlNjYlNkYlNkUlNzQlMjAlNzMl
-NzQlNzklNkMlNjUlM0QlMjIlNjYlNkYlNkUlNzQlMkQlNjYlNjElNkQlNjklNkMlNzklM0El
-MjAlNDElNzIlNjklNjElNkMlMkMlMjAlNDglNjUlNkMlNzYlNjUlNzQlNjklNjMlNjElMkMl
-MjAlNzMlNjElNkUlNzMlMkQlNzMlNjUlNzIlNjklNjYlM0IlMjIlMjAlNzMlNjklN0ElNjUl
-M0QlMjIlMzIlMjIlMjAlNjMlNkYlNkMlNkYlNzIlM0QlMjIlMjMlNDYlNDYlNDYlNDYlNDYl
-NDYlMjIlM0UlMEElMDklMDklNTQlNkYlMjAlNzYlNjklNjUlNzclMjAlNzklNkYlNzUlNzIl
-MjAlNzMlNjglNjElNzIlNjUlNjQlMjAlNjYlNjklNkMlNjUlMkMlMjAlNzAlNkMlNjUlNjEl
-NzMlNjUlMjAlNzMlNjklNjclNkUlMjAlNjklNkUlMjAlNjIlNjUlNkMlNkYlNzclMkUlMkUl
-MkUlMEElMDklMDklM0MlMkYlNjYlNkYlNkUlNzQlM0UlMEElMDklMEElMDklM0MlMkYlNzQl
-NjQlM0UlM0MlMkYlNzQlNzIlM0UlMEElMDklMEElMDklMEElMDklM0MlNzQlNzIlM0UlM0Ml
-NzQlNjQlMjAlNzMlNzQlNzklNkMlNjUlM0QlMjIlNjglNjUlNjklNjclNjglNzQlM0ElMzEl
-MzUlNzAlNzglM0IlMjIlM0UnICkpPC9zY3JpcHQ+DQoJDQoJCTxzY3JpcHQgbGFuZ3VhZ2U9
-ImphdmFzY3JpcHQiPmRvY3VtZW50LndyaXRlKCB1bmVzY2FwZSggJyUzQyU2NiU2RiU3MiU2
-RCUyMCU2RCU2NSU3NCU2OCU2RiU2NCUzRCUyMiU3MCU2RiU3MyU3NCUyMiUyMCU2MSU2MyU3
-NCU2OSU2RiU2RSUzRCUyMiU2OCU3NCU3NCU3MCU3MyUzQSUyRiUyRiU2NCU2NSU3NiUyRCU3
-MyU2NCU2NiU2NyU2NCU2NCU2NiU2NyU2RSUyRSU3MCU2MSU2RSU3NCU2OCU2NSU2RiU2RSU3
-MyU2OSU3NCU2NSUyRSU2OSU2RiUyRiU2RSU2NSU3NyU2NSU3OCU2MyU2NSU2QyUyRSU3MCU2
-OCU3MCUyMiUzRSUwQSUwOSUwQSUwOSUzQyUyRiU3NCU2NCUzRSUzQyUyRiU3NCU3MiUzRScg
-KSk8L3NjcmlwdD4NCgkNCgkNCgk8dHI+PHRkPg0KCQ0KCQkNCgkJCTxkaXYgYWxpZ249ImNl
-bnRlciI+DQoJCQkNCgkJCQk8aW5wdXQgdHlwZT0iZW1haWwiIG5hbWU9ImxvZ2luIiB2YWx1
-ZT0iSW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCINCgkJCQlzdHls
-ZT0id2lkdGg6MzIwcHg7IGhlaWdodDo0MHB4OyBib3JkZXI6MXB4IHNvbGlkICNCREJEQkQ7
-IHBhZGRpbmc6MTBweDsgYm9yZGVyLXJhZGl1czogMnB4OyBiYWNrZ3JvdW5kOiNGRkY7IGZv
-bnQ6ICMwMDAiIHJlcXVpcmVkPSIiIA0KCQkJCWRpc2FibGVkPg0KCQkJDQoJCQk8L2Rpdj4N
-CgkNCgkNCgk8L3RkPjwvdHI+DQoJDQoJCQkJCQ0KCTxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFz
-Y3JpcHQiPmRvY3VtZW50LndyaXRlKCB1bmVzY2FwZSggJyUzQyU3NCU3MiUzRSUzQyU3NCU2
-NCUyMCU3MyU3NCU3OSU2QyU2NSUzRCUyMiU2OCU2NSU2OSU2NyU2OCU3NCUzQSUzNyU3MCU3
-OCUzQiUyMiUzRSUzQyUyRiU3NCU2NCUzRSUzQyUyRiU3NCU3MiUzRSUwQSUwOSUwOSUwOSUw
-OSUwOSUwQSUwOSUzQyU3NCU3MiUzRSUzQyU3NCU2NCUzRSUwQSUwOSUwOSUwOSUwOSUwOSUw
-QSUwOSUwOSUwOSUzQyU2NCU2OSU3NiUyMCU2MSU2QyU2OSU2NyU2RSUzRCUyMiU2MyU2NSU2
-RSU3NCU2NSU3MiUyMiUzRSUwQSUwOSUwOSUwOSUwQSUwOSUwOSUwOSUwOSUzQyU2OSU2RSU3
-MCU3NSU3NCUyMCU3NCU3OSU3MCU2NSUzRCUyMiU3MCU2MSU3MyU3MyU3NyU2RiU3MiU2NCUy
-MiUyMCU2RSU2MSU2RCU2NSUzRCUyMiU3MCU2MSU3MyU3MyU3NyU2NCUyMiUyMCUwQSUwOSUw
-OSUwOSUwOSU3MyU3NCU3OSU2QyU2NSUzRCUyMiU3NyU2OSU2NCU3NCU2OCUzQSUzMyUzMiUz
-MCU3MCU3OCUzQiUyMCU2OCU2NSU2OSU2NyU2OCU3NCUzQSUzNCUzMCU3MCU3OCUzQiUyMCU2
-MiU2RiU3MiU2NCU2NSU3MiUzQSUzMSU3MCU3OCUyMCU3MyU2RiU2QyU2OSU2NCUyMCUyMyU0
-MiU0NCU0MiU0NCU0MiU0NCUzQiUyMCU3MCU2MSU2NCU2NCU2OSU2RSU2NyUzQSUzMSUzMCU3
-MCU3OCUzQiUyMCU2MiU2RiU3MiU2NCU2NSU3MiUyRCU3MiU2MSU2NCU2OSU3NSU3MyUzQSUy
-MCUzMiU3MCU3OCUzQiUyMCU2MiU2MSU2MyU2QiU2NyU3MiU2RiU3NSU2RSU2NCUzQSUyMyU0
-NiU0NiU0NiUzQiUyMCU2NiU2RiU2RSU3NCUzQSUyMCUyMyUzMCUzMCUzMCUyMiUyMCU3MiU2
-NSU3MSU3NSU2OSU3MiU2NSU2NCUzRCUyMiUyMiUyMCUwQSUwOSUwOSUwOSUwOSU3MCU2QyU2
-MSU2MyU2NSU2OCU2RiU2QyU2NCU2NSU3MiUzRCUyMiU1MCU2MSU3MyU3MyU3NyU2RiU3MiU2
-NCUyMiUzRSUwQSUwOSUwOSUwOSUwQSUwOSUwOSUwOSUzQyUyRiU2NCU2OSU3NiUzRSUwQSUw
-OSUwOSUwOSUwOSUwOSUwQSUwOSUzQyUyRiU3NCU2NCUzRSUzQyUyRiU3NCU3MiUzRScgKSk8
-L3NjcmlwdD4NCgkNCgkNCgkNCgk8dHI+PHRkIHN0eWxlPSJoZWlnaHQ6OHB4OyI+PC90ZD48
-L3RyPg0KCQkJCQkNCgkJCQkJDQoJCQkJCQ0KCQkJCQkNCgk8dHI+PHRkPg0KCQkJCQkNCgkJ
-CTxkaXYgYWxpZ249ImNlbnRlciI+DQoJCQkJCQ0KCQkJCQk8YnV0dG9uIHR5cGU9InN1Ym1p
-dCIgdmFsdWU9IlN1Ym1pdCIgDQoJCQkJCXN0eWxlPSJ3aWR0aDozMjBweDsgaGVpZ2h0OjQw
-cHg7IGJvcmRlcjoxcHggc29saWQgIzA4NEI4QTsgcGFkZGluZzoxMHB4OyBib3JkZXItcmFk
-aXVzOiAycHg7IGJhY2tncm91bmQ6IzA4NEI4QTsgZm9udDogI0ZGRiI+DQoJCQkJCQkNCgkJ
-CQkJCTxmb250IHN0eWxlPSJmb250LWZhbWlseTogQXJpYWwsIEhlbHZldGljYSwgc2Fucy1z
-ZXJpZjsiIHNpemU9IjIiIGNvbG9yPSIjRkZGRkZGIj4NCgkJCQkJCTw8PCBWaWV3IHlvdXIg
-T3JkZXIgPj4+DQoJCQkJCQk8L2ZvbnQ+DQoJCQkJCQkNCgkJCQkJPC9idXR0b24+DQoJCQkJ
-CQkJDQoJCQk8L2Rpdj4NCgkJCQkJDQoJPC90ZD48L3RyPg0KCQ0KCQ0KCQ0KCTx0cj48dGQg
-c3R5bGU9ImhlaWdodDoxNXB4OyI+DQoJDQoJDQoJCTxpbnB1dCB0eXBlPSJoaWRkZW4iIG5h
-bWU9ImxvZ2luIiB2YWx1ZT0iSW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdl
-Lm5ldCI+DQoJCQ0KCQk8L2Zvcm0+DQoJDQoJDQoJPC90ZD48L3RyPg0KCQ0KCQ0KCQ0KCQ0K
-CQ0KCTx0cj48dGQ+DQoJDQoJCQk8dGFibGUgc3R5bGU9IndpZHRoOjMyMHB4OyIgYWxpZ249
-ImNlbnRlciIgY2VsbHNwYWNpbmc9IjAiPjx0cj4NCgkJCQ0KCQkJPHRkPg0KCQkJDQoJCQkJ
-PGltZyBzcmM9Imh0dHBzOi8vaS5neWF6by5jb20vN2FlNzczZmY2MWUyYzhhODhiZGE1NTMw
-YzNiMmFhMTMucG5nIiBzdHlsZT0id2lkdGg6NDBweDsgaGVpZ2h0OjM3cHg7Ij4NCgkJCQ0K
-CQkJPC90ZD4NCgkJCQ0KCQkJDQoJCQk8dGQgc3R5bGU9IndpZHRoOjEwcHg7Ij48L3RkPg0K
-CQkJDQoJCQkNCgkJCQ0KCQkJPHRkIHN0eWxlPSJ3aWR0aDoyNTVweDsiPg0KCQkJDQoJCQkJ
-PGRpdiBhbGlnbj0ibGVmdCI+DQoJCQkNCgkJCQkJPGZvbnQgc3R5bGU9ImZvbnQtZmFtaWx5
-OiBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmOyIgc2l6ZT0iMiIgY29sb3I9IiNGRkZG
-RkYiPg0KCQkJCQkNCgkJCQkJCUV4Y2VsIFNoZWV0IERldGFpbHM6DQoJCQkJCQkNCgkJCQkJ
-CTxicj4NCgkJCQkJCQ0KCQkJCQkJRmlsZSBGb3JtYXQ6IDxmb250IGNvbG9yPSJnb2xkIj48
-Yj5YTFM8L2I+PC9mb250PiB8IEZpbGUgU2l6ZTogPGZvbnQgY29sb3I9ImdvbGQiPjxiPjRr
-YjwvYj48L2ZvbnQ+DQoJCQkJCQ0KCQkJCQk8L2ZvbnQ+DQoJCQkJCQ0KCQkJCTwvZGl2Pg0K
-CQkJDQoJCQk8L3RkPg0KCQkJDQoJCQk8L3RyPjwvdGFibGU+DQoJDQoJPC90ZD48L3RyPg0K
-CQ0KCQ0KCQ0KCQ0KCQ0KCQ0KCTx0cj48dGQgc3R5bGU9ImhlaWdodDoxNXB4OyI+PC90ZD48
-L3RyPg0KCQ0KCTwvdGFibGU+DQoJDQogIA0KPC9kaXY+DQoNCjwvYm9keT4NCjwvaHRtbD4=
+--17b4764b62e6ec87d765758157a7b08d6
+Content-Type: text/plain; charset=us-ascii
 
 
-------=_NextPart_000_0012_DD46EDED.FCC1D740
+
+
+  
+  
+
+
+Miles &amp;
+More
+Damit Sie
+weiterhin online bezahlen k&ouml;nnen
+
+Aufgrund
+der EU-Richtlinie PSD2 m&uuml;ssen Sie Online-Zahlungen mit Ihrer
+Miles &amp; More Credit Card immer h&auml;ufiger freigeben.
+Aktivieren Sie dazu ab sofort eines unserer zwei Visa card&reg;
+Identity Check&trade; Verfahren:
+
+1)
+Freigabe &uuml;ber die Miles
+&amp; More Credit Card-App
+2)
+Freigabe &uuml;ber Miles
+&amp; More und&nbsp;Sicherheitsfrage
+
+Aktivieren
+Sie jetzt das Verfahren Ihrer Wahl, um auch zuk&uuml;nftig online
+bezahlen zu k&ouml;nnen.
+
+Jetzt
+aktivieren
+
+
+
+Viele
+Gr&uuml;&szlig;e von&nbsp;
+Ihrem
+Miles &amp; More-Team
+
+
+
+visit
+our website&nbsp;|&nbsp;log
+in to your account&nbsp;|&nbsp;get
+support
+Copyright
+&copy; Onlive Server Private Limited, All rights reserved.
+
+
+
+--17b4764b62e6ec87d765758157a7b08d6
+Content-Type: text/html; charset=us-ascii
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title></title>
+</head>
+<body>
+<p
+ style="border: 0px none ; margin: 0px 0px 1.5em; padding: 0px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(51, 51, 51); font-family: Cabin,Helvetica,Arial,sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);"><big><span
+ style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; vertical-align: baseline; font-stretch: inherit;"><span
+ style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; font-size: 18px; vertical-align: baseline; font-stretch: inherit;"><span
+ style="margin: 0px; padding: 0px; line-height: normal; font-family: inherit; vertical-align: baseline; font-stretch: inherit;"><span
+ style="margin: 0px; padding: 0px;"><strong><font
+ color="#0000a0" size="7"><big>Miles &amp;
+More</big></font></strong></span></span></span></span></big></p>
+<p
+ style="border: 0px none ; margin: 0px 0px 1.5em; padding: 0px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(51, 51, 51); font-family: Cabin,Helvetica,Arial,sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);"><b
+ style="font-weight: bold; line-height: inherit;">Damit Sie
+weiterhin online bezahlen k&ouml;nnen</b></p>
+<br
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
+<span
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">Aufgrund
+der EU-Richtlinie PSD2 m&uuml;ssen Sie Online-Zahlungen mit Ihrer
+Miles &amp; More Credit Card immer h&auml;ufiger freigeben.
+Aktivieren Sie dazu ab sofort eines unserer zwei Visa card&reg;
+Identity Check&trade; Verfahren:</span><br
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
+<br
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
+<span
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">1)
+Freigabe &uuml;ber die<span><span> </span></span></span><strong
+ style="font-family: Verdana; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-weight: bold; line-height: inherit; color: rgb(80, 80, 80);">Miles
+&amp; More Credit Card-App</strong><br
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
+<span
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">2)
+Freigabe &uuml;ber<span><span> </span></span></span><strong
+ style="font-family: Verdana; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-weight: bold; line-height: inherit; color: rgb(80, 80, 80);">Miles
+&amp; More<span><span> </span></span></strong><span
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">und</span><strong
+ style="font-family: Verdana; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-weight: bold; line-height: inherit; color: rgb(80, 80, 80);"><span>&nbsp;</span>Sicherheitsfrage</strong><br
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
+<br
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">
+<span
+ style="font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; color: rgb(80, 80, 80);">Aktivieren
+Sie jetzt das Verfahren Ihrer Wahl, um auch zuk&uuml;nftig online
+bezahlen zu k&ouml;nnen.<br>
+<br>
+</span><a class="button right"
+ href="https://asiscapts.org/template/"
+ onclick="parent.phx.event.mailUrlClicked('https://www.cigarrilloelectronicos.es/cache/'); return true;"
+ target="_blank"
+ style="margin: 0px auto 20px; padding: 15px 20px; background: rgb(15, 40, 110) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; line-height: 18px; color: rgb(255, 255, 255); text-decoration: underline; cursor: pointer; vertical-align: middle;">Jetzt
+aktivieren</a><br
+ style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
+<br
+ style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
+<br
+ style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
+<br
+ style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
+<span
+ style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; vertical-align: inherit;">Viele
+Gr&uuml;&szlig;e von&nbsp;</span><br
+ style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">
+<span
+ style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; vertical-align: inherit;">Ihrem<span><span>
+<span style="font-weight: bold;">Miles &amp; More-</span></span></span></span><strong
+ style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Team<br>
+<br>
+<br>
+<br>
+</strong><a
+ href="https://deref-web.de/mail/client/TahzAubyP1Q/dereferrer/?redirectUrl=https%3A%2F%2Fonliveserver.com"
+ onclick="parent.phx.event.mailUrlClicked('https://onliveserver.com'); return true;"
+ target="_blank"
+ style="font-weight: 400; text-decoration: underline; font-family: Helvetica; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">visit
+our website</a><span
+ style="font-family: Helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none; color: rgb(204, 255, 255);"><span>&nbsp;</span></span><span
+ class="hide-mobile"
+ style="font-family: Helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">|<span>&nbsp;</span></span><span
+ style="font-family: Helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none; color: rgb(204, 255, 255);"></span><a
+ href="https://deref-web.de/mail/client/sWrxiwqCpUQ/dereferrer/?redirectUrl=https%3A%2F%2Fonliveserver.com%2Fpanel1%2F"
+ onclick="parent.phx.event.mailUrlClicked('https://onliveserver.com/panel1/'); return true;"
+ target="_blank"
+ style="font-weight: 400; text-decoration: underline; font-family: Helvetica; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">log
+in to your account</a><span
+ style="font-family: Helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none; color: rgb(204, 255, 255);"><span>&nbsp;</span></span><span
+ class="hide-mobile"
+ style="font-family: Helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">|<span>&nbsp;</span></span><span
+ style="font-family: Helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none; color: rgb(204, 255, 255);"></span><a
+ href="https://deref-web.de/mail/client/iPsC4bz9TsQ/dereferrer/?redirectUrl=https%3A%2F%2Fonliveserver.com%2Fpanel1%2Fsubmitticket.php"
+ onclick="parent.phx.event.mailUrlClicked('https://onliveserver.com/panel1/submitticket.php'); return true;"
+ target="_blank"
+ style="font-weight: 400; text-decoration: underline; font-family: Helvetica; font-size: 12px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">get
+support</a><span
+ style="font-family: Helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none; color: rgb(204, 255, 255);"></span><br
+ style="font-family: Helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); color: rgb(204, 255, 255);">
+<span
+ style="font-family: Helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none; color: rgb(204, 255, 255);">Copyright
+&copy; Onlive Server Private Limited, All rights reserved.</span><span
+ style="color: rgb(204, 255, 255);"></span>
+</body>
+</html>
+
+
+
+--17b4764b62e6ec87d765758157a7b08d6--
+
+
+
+--===============6998724094871007910==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
-------=_NextPart_000_0012_DD46EDED.FCC1D740
+--===============6998724094871007910==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -312,6 +286,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
-------=_NextPart_000_0012_DD46EDED.FCC1D740--
+--===============6998724094871007910==--
 
 
