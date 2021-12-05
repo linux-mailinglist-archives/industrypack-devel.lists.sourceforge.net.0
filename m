@@ -2,19 +2,19 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F7444700C6
-	for <lists+industrypack-devel@lfdr.de>; Fri, 10 Dec 2021 13:37:10 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1F3844700AE
+	for <lists+industrypack-devel@lfdr.de>; Fri, 10 Dec 2021 13:29:03 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mvf99-0002SJ-Nz
-	for lists+industrypack-devel@lfdr.de; Fri, 10 Dec 2021 12:37:08 +0000
+	id 1mvf1J-0000lK-NR
+	for lists+industrypack-devel@lfdr.de; Fri, 10 Dec 2021 12:29:01 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
  (envelope-from <LifePointsResearchInc@outlook.com>)
- id 1mvf99-0002SD-3j
- for industrypack-devel@lists.sourceforge.net; Fri, 10 Dec 2021 12:37:08 +0000
+ id 1mvf1I-0000l5-HG
+ for industrypack-devel@lists.sourceforge.net; Fri, 10 Dec 2021 12:29:00 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Message-Id:Content-Transfer-Encoding:Content-Type:
  Subject:Date:To:From:MIME-Version:Sender:Reply-To:Cc:Content-ID:
@@ -37,8 +37,8 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
 Received: from [117.27.143.36] (helo=fontke.com)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mvf98-0001Rf-BR
- for industrypack-devel@lists.sourceforge.net; Fri, 10 Dec 2021 12:37:08 +0000
+ id 1mvf1E-00016V-L9
+ for industrypack-devel@lists.sourceforge.net; Fri, 10 Dec 2021 12:29:00 +0000
 MIME-Version: 1.0
 From: "LifePoints Research, Inc" <LifePointsResearchInc@outlook.com>
 To: industrypack-devel@lists.sourceforge.net
@@ -82,7 +82,7 @@ X-Spam-Report: Spam detection software,
  0.0 T_FILL_THIS_FORM_SHORT Fill in a short form with personal
  information
  0.0 FORM_FRAUD             Fill a form and a fraud phrase
-X-Headers-End: 1mvf98-0001Rf-BR
+X-Headers-End: 1mvf1E-00016V-L9
 Subject: [Industrypack-devel] [Alert]: ASSIGNMENT ($500)
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
