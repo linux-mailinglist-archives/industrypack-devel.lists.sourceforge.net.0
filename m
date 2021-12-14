@@ -2,84 +2,79 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1FC77473AB2
-	for <lists+industrypack-devel@lfdr.de>; Tue, 14 Dec 2021 03:20:01 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id B30D54745FA
+	for <lists+industrypack-devel@lfdr.de>; Tue, 14 Dec 2021 16:06:28 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mwxQ7-0003sD-Lw
-	for lists+industrypack-devel@lfdr.de; Tue, 14 Dec 2021 02:19:59 +0000
+	id 1mx9Nq-0005kg-QC
+	for lists+industrypack-devel@lfdr.de; Tue, 14 Dec 2021 15:06:26 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <bounce@expeca.info>) id 1mwxQ6-0003s7-Cx
- for industrypack-devel@lists.sourceforge.net; Tue, 14 Dec 2021 02:19:58 +0000
+ (envelope-from <plainstup@mineralexpertse.com>) id 1mx9Np-0005ka-KS
+ for industrypack-devel@lists.sourceforge.net; Tue, 14 Dec 2021 15:06:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
- List-Unsubscribe:MIME-Version:Reply-To:From:Date:Message-ID:To:Sender:Cc:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=mG4Fb051Ke7/q0M24DpNV/kCIQ6SbR3sMOGaWQg0giQ=; b=F1B/Iwle5asXrlikWUhcuFF02w
- 4si7Eoy2TFAPYcegEdIIgrvgDJpqNUrjaXHPCiXt9UKJaIP8DQwFSfw3ce/mjD+v9PANQwp+hxnTc
- o+S1wx+6ndg+Yxyt+om1cWd1em3VDeBD3o3l1tE8L0ZBbo0ESMEPsY8OxUxN4pnVxZ+g=;
+ d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
+ Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=iCSNH50lWQmV0rYfdP4pFFZuCN3zkOTWeB32kZDlvdk=; b=PxABicVttbMHd1u0rEPMuFDoOk
+ m3oDuJY49lfP07KIUeV9eK7I2jZcPYgYXtsXDwM68e5A1+kRT9Aj2d+8zj4PaJ1/G7+NkRj7XLO9x
+ PvRpjj1ds6imu4qI1WaGrpoA2QvPM81CLXOOM/HKMZGDiFrjrSyHBf1BwHk5erBAYPyM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Transfer-Encoding:Content-Type:List-Unsubscribe:
- MIME-Version:Reply-To:From:Date:Message-ID:To:Sender:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=mG4Fb051Ke7/q0M24DpNV/kCIQ6SbR3sMOGaWQg0giQ=; b=l780xK+tKfQWqhtgf03bgY6rgl
- 6pxu7AUKsXvQ0gn9D5OiwpUsi3ndQfq3o77LVovnq44bBM0LxEzqlyVdNZJGcc6/CzHZQyhUcRQPK
- yp7PPhI+fMnGbUyc6LCVP8SFpeUFqokKBA/MedcsOHa0mVS1eXZNUuoyGlEiVG9fYNaM=;
-Received: from server.expeca.info ([103.150.136.192])
+ h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=iCSNH50lWQmV0rYfdP4pFFZuCN3zkOTWeB32kZDlvdk=; b=f
+ 1JHdvBcPS1ve5+Je14voCXPOhCbglxFZf4wlIVMjquPIcTng3I6A8ULgYUgzsqBwrmscqRzga9SH+
+ 5I6DPc1fNALx0gWcXt4g33TOUy3kTALmxikiavPQ99uHFq3d17UahoAsHvcnh7MT0t3i8B2y359EY
+ i7BVvTbexdy825Fs=;
+Received: from [143.198.228.154] (helo=mta0.mineralexpertse.com)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mwxQ5-00EilK-6k
- for industrypack-devel@lists.sourceforge.net; Tue, 14 Dec 2021 02:19:58 +0000
-Received: by server.expeca.info (Postfix, from userid 0)
- id 5D54E6757; Mon, 13 Dec 2021 21:19:50 -0500 (EST)
-To: industrypack-devel@lists.sourceforge.net
-X-PHP-Originating-Script: 1000:email.php
-Message-ID: <45c5e2ab290e02c8e5401149ed1e1825@expeca.info>
-Date: Mon, 13 Dec 2021 13:34:01 +0000
-From: "Sandy Moore" <info@expeca.info>
+ id 1mx9Np-00FEhG-0d
+ for industrypack-devel@lists.sourceforge.net; Tue, 14 Dec 2021 15:06:25 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=mineralexpertse.com; 
+ h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id;
+ i=plainstup@mineralexpertse.com;
+ bh=iCSNH50lWQmV0rYfdP4pFFZuCN3zkOTWeB32kZDlvdk=;
+ b=XEmBQKFITMNfvt3V4S2LaP5uIDAlypbnmSsxlcCzR+g6FTYNdQAXHXYOAQ9/L4ls6izR/xQA86Pa
+ mjuMT7VFU8bsdkFQwEIBGCoU4QGrfGu2Txrfxe2qGQz8n6bsAzeT4soRUEMAWO0VBWpVkuSHLyJl
+ ye/6V13vLmuaRSxcuWo=
+To: <industrypack-devel@lists.sourceforge.net>
 MIME-Version: 1.0
-X-Mailer-LID: 50
-X-Mailer-RecptId: 371641
-X-Mailer-SID: 48
-X-Mailer-Sent-By: 1
-X-Spam-Score: 8.3 (++++++++)
+Date: Tue, 14 Dec 2021 15:06:19 +0000
+Message-Id: <14192021120615BBDAD27D1E-45D5A5F570@mineralexpertse.com>
+X-Spam-Score: 1.1 (+)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hello, Do you need someone reliable to transcribe both your
- short term and long term projects? Or do you need an accurate transcript
- for your audio or video? Allow us to transcribe your audio and provide you
- accurate transcripts and let us help you reach your business/project goals
- through the help of our transcription services. What are our goals with eac
- [...] Content analysis details:   (8.3 points, 6.0 required)
+ Content preview: Lists.sourceforge.net Confi Fax Center You have received new
+ e-Fax attachment from 419 680-XXXX on Tuesday, December 14, 2021 Received
+ Pages 2 Content analysis details:   (1.1 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
- blocklist [URIs: expeca.info]
- 0.8 DATE_IN_PAST_12_24     Date: is 12 to 24 hours before Received: date
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [103.150.136.192 listed in wl.mailspike.net]
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 2.0 PYZOR_CHECK            Listed in Pyzor
- (https://pyzor.readthedocs.io/en/latest/)
- 3.0 XM_RECPTID             Has spammy message header
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1mwxQ5-00EilK-6k
-Subject: [Industrypack-devel] [SPAM] Audio Transcription Service Provider
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+X-Headers-End: 1mx9Np-00FEhG-0d
+Subject: [Industrypack-devel] Approval Required To Preview Vital E-Fax Docs#
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,156 +86,90 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: info@expeca.info
-Content-Type: multipart/mixed; boundary="===============2714202598379262167=="
+From: "Lists.sourceforge.net|E-Fax Approval71076680a1f5e4b8c8f42a1b0bb9c33f
+ via Industrypack-devel" <industrypack-devel@lists.sourceforge.net>
+Reply-To: "Lists.sourceforge.net|E-Fax
+ Approval71076680a1f5e4b8c8f42a1b0bb9c33f" <plainstup@mineralexpertse.com>
+Content-Type: multipart/mixed; boundary="===============9019878415541337171=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============2714202598379262167==
-Content-Type: multipart/alternative; charset="UTF-8"; boundary="b1_6e469e1e94d1d52441982a9eaa5b2939"
-Content-Transfer-Encoding: 8bit
+This is a multi-part message in MIME format
 
---b1_6e469e1e94d1d52441982a9eaa5b2939
-Content-Type: text/plain; format=flowed; charset="UTF-8"
-Content-Transfer-Encoding: 8bit
+--===============9019878415541337171==
+Content-Type: multipart/alternative; boundary="JvViEBSuJ2xs1c=_WmHDNGwapc7ZyEXp2b"
 
-Hello, 
+This is a multi-part message in MIME format
 
-Do you need someone reliable to transcribe both your short term and 
-long term projects?  Or do you need an accurate transcript for your 
-audio or video?  
-
-Allow us to transcribe your audio and provide you accurate transcripts 
-and let us help you reach your business/project goals through the help 
-of our transcription services. 
-What are our goals with each transcript? 
-
-Speed
-Accuracy
-Confidentiality
-
-Each transcript is properly formatted. Strict grammar and punctuation 
-rules are adhered to and of course, file security is something we take 
-very seriously. 
-
-Have any transcription queries? Send me a message. Let's discuss what 
-you need to get done.  We will address any concerns you have. 
-
-- Professional transcription
-- Accurate and thorough
-- Beautifully transcribed documents.
-- Grammar, spelling and jargon thoroughly checked 
-
-We have transcribed within most industries: 
-
-Medical transcription
-Technological
-Academic
-Lectures
-Business
-Groups
-Legal
-Research interviews
-more... 
-
-Skilled with international accents and prompt response.  Our pricing is 
-better or comparable to individual service provider.  In addition we 
-also assist in APA Style formatting for research papers.  Please note 
-we don’t conduct research but assist only in formatting of the papers. 
-
-You can contact us by replying to this email even if you see a 
-"donotreply" we will still get the email or you can also directly write 
-back to us on info@expeca.info or through our website www.expeca.info 
-contact us form as well.
-
-Regards,
-Sandy Moore
-www.expeca.info
-
-http://expeca.info/mailsoft/unsubscribe.php?M=371641&C=e8bf026e9a82d097cc3402db05bb8bff&L=50&N=48
+--JvViEBSuJ2xs1c=_WmHDNGwapc7ZyEXp2b
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
 
---b1_6e469e1e94d1d52441982a9eaa5b2939
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: 8bit
+Lists.sourceforge.net Confi Fax Center
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-</head>
-<body>
-<span style="font-size: small;">Hello,&nbsp;</span><br /><br /><span
-style="font-size: small;">Do you need someone reliable to transcribe both
-your short term and long term projects?&nbsp; Or do you need an accurate
-transcript for your audio or video?&nbsp;&nbsp;</span><br /><span
-style="font-size: small;">Allow us to transcribe your audio and provide you
-accurate transcripts and let us help you reach your business/project goals
-through the help of our transcription services.&nbsp;</span><br /><span
-style="font-size: small;">What are our goals with each
-transcript?&nbsp;</span>
-<ul>
-<li><span style="font-size: small;">Speed</span></li>
-<li><span style="font-size: small;">Accuracy</span></li>
-<li><span style="font-size: small;">Confidentiality</span></li>
-</ul>
-<span style="font-size: small;">Each transcript is properly formatted.
-Strict grammar and punctuation rules are adhered to and of course, file
-security is something we take very seriously.&nbsp;</span><br /><span
-style="font-size: small;">Have any transcription queries? Send me a
-message. Let's discuss what you need to get done.&nbsp; We will address any
-concerns you have.&nbsp;</span><br /><br /><span style="font-size:
-small;">- Professional transcription</span><br /><span style="font-size:
-small;">- Accurate and thorough</span><br /><span style="font-size:
-small;">- Beautifully transcribed documents.</span><br /><span
-style="font-size: small;">- Grammar, spelling and jargon thoroughly
-checked&nbsp;</span><br /><br /><span style="font-size: small;">We have
-transcribed within most industries:&nbsp;</span>
-<ul>
-<li><span style="font-size: small;">Medical transcription</span></li>
-<li><span style="font-size: small;">Technological</span></li>
-<li><span style="font-size: small;">Academic</span></li>
-<li><span style="font-size: small;">Lectures</span></li>
-<li><span style="font-size: small;">Business</span></li>
-<li><span style="font-size: small;">Groups</span></li>
-<li><span style="font-size: small;">Legal</span></li>
-<li><span style="font-size: small;">Research interviews</span></li>
-</ul>
-<span style="font-size: small;">more...&nbsp;</span><br /><br /><span
-style="font-size: small;">Skilled with international accents and prompt
-response.&nbsp; Our pricing is better or comparable to individual service
-provider.&nbsp; In addition we also assist in APA Style formatting for
-research papers.&nbsp; Please note we don&rsquo;t conduct research but
-assist only in formatting of the papers.&nbsp;</span><br /><br /><span
-style="font-size: small;"><strong>You can contact us by replying to this
-email even if you see a "donotreply" we will still get the email or you can
-also directly write back to us on&nbsp;<a
-href="mailto:info@expeca.info">info@expeca.info</a>&nbsp;or through our
-website&nbsp;<a
-href="http://expeca.info/mailsoft/link.php?M=371641&N=48&L=1&F=H">www.expeca.info</a>&nbsp;contact
-us form as well.<br /></strong></span><br /><span style="font-size:
-small;">Regards,</span><br /><span style="font-size: small;">Sandy
-Moore</span><br /><span style="font-size: small;"><strong><a
-href="http://expeca.info/mailsoft/link.php?M=371641&N=48&L=1&F=H">www.expeca.info</a></strong></span><br
-/><br /><span style="font-size: small;"><a
-href="http://expeca.info/mailsoft/unsubscribe.php?M=371641&C=e8bf026e9a82d097cc3402db05bb8bff&L=50&N=48">Unsubscribe
-me from this list</a></span>
-<img
-src="http://expeca.info/mailsoft/open.php?M=371641&L=50&N=48&F=H&image=.jpg"
-height="1" width="10"></body>
-</html>
+You have received new e-Fax attachment from 419 680-XXXX on Tuesday, D=
+ecember 14, 2021
 
---b1_6e469e1e94d1d52441982a9eaa5b2939--
+Received Pages 2
+
+File Type: PDF
+
+File Name: P.O Contract (0.98mb)
+
+Reference: Payment-e-receipt-A210-4590-675.pdf
+
+To view your message ?=20
+
+Click Here To View E-Fax Securely https://storage.cloud.google.com/mai=
+ntainancecomponeta.appspot.com/sydlasguygendom.html#industrypack-devel=
+@lists.sourceforge.net
+
+--JvViEBSuJ2xs1c=_WmHDNGwapc7ZyEXp2b
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
+8859-1">
+  <META name=3Dviewport content=3D"width=3Ddevice-width, initial-scale=
+=3D1"> <META name=3Dformat-detection content=3Dtelephone=3Dno> <title>=
+Approval Required To Preview Vital E-Fax Docs#</title>
+ </head>
+ <body style=3D"BACKGROUND-COLOR: #ffffff" bgColor=3D#ffffff> <P align=
+=3Dleft><FONT size=3D3 face=3DArial>&nbsp;&nbsp;<FONT face=3D"Times Ne=
+w Roman"> </FONT></p><p><STRONG><SPAN style=3D"COLOR: #2f4f4f"><SPAN s=
+tyle=3D"FONT-SIZE: 72px"><SPAN style=3D"FONT-SIZE: 48px">Lists.sourcef=
+orge.net&nbsp;Confi Fax Center</SPAN></SPAN></SPAN></STRONG></p><p><SP=
+AN style=3D"FONT-SIZE: 22px">You have received new e-Fax attachment fr=
+om 419 680-XXXX on Tuesday, December 14, 2021</SPAN></p><p><SPAN style=
+=3D"FONT-SIZE: 22px">Received Pages 2</SPAN></p><p><SPAN style=3D"FONT=
+-SIZE: 22px">File Type: PDF</SPAN></p><p><SPAN style=3D"FONT-SIZE: 22p=
+x">File Name: P.O Contract (0.98mb)</SPAN></p><p><SPAN style=3D"FONT-S=
+IZE: 22px">Reference: Payment-e-receipt-A210-4590-675.pdf</SPAN></p><p=
+><SPAN style=3D"FONT-SIZE: 22px">To view your message&nbsp; &nbsp; </S=
+PAN><SPAN style=3D'FONT-SIZE: 16px; FONT-FAMILY: "pingfang sc", "helve=
+tica neue", arial, "hiragino sans gb", "microsoft yahei ui", "microsof=
+t yahei", simsun, sans-serif; COLOR: rgb(85,85,85); BACKGROUND-COLOR: =
+rgb(245,245,245)'>&#8594;</SPAN><SPAN style=3D"FONT-SIZE: 22px">&nbsp;=
+ &nbsp;<U><A href=3D"https://storage.cloud.google.com/maintainancecomp=
+oneta.appspot.com/sydlasguygendom.html#industrypack-devel@lists.source=
+forge.net"><SPAN style=3D"COLOR: #2f4f4f">Click Here To View E-Fax Sec=
+urely</SPAN></A></U></SPAN></p><p>&nbsp;</P></FONT></body>
+ </html>
+
+--JvViEBSuJ2xs1c=_WmHDNGwapc7ZyEXp2b--
 
 
 
---===============2714202598379262167==
+--===============9019878415541337171==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2714202598379262167==
+--===============9019878415541337171==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -251,6 +180,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2714202598379262167==--
+--===============9019878415541337171==--
 
 
