@@ -2,86 +2,89 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 05B2A47AA5E
-	for <lists+industrypack-devel@lfdr.de>; Mon, 20 Dec 2021 14:29:49 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9384547B42C
+	for <lists+industrypack-devel@lfdr.de>; Mon, 20 Dec 2021 21:04:35 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1mzIja-0004ws-GG
-	for lists+industrypack-devel@lfdr.de; Mon, 20 Dec 2021 13:29:47 +0000
+	id 1mzOtd-0005ot-2G
+	for lists+industrypack-devel@lfdr.de; Mon, 20 Dec 2021 20:04:34 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <ojbigmonste@pura-soluti0ns.com>) id 1mzIjZ-0004wf-Ad
- for industrypack-devel@lists.sourceforge.net; Mon, 20 Dec 2021 13:29:46 +0000
+ (envelope-from <support@import-group.az>) id 1mzOtb-0005on-V1
+ for industrypack-devel@lists.sourceforge.net; Mon, 20 Dec 2021 20:04:33 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
- Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:From:Date:Subject:To:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=XpGK/AlLqiV1S22qpVbyLZm9iOAfRgEFSwOiqiuEmt0=; b=WZ0Qv2cEpa9kQzycgwuG83/sFe
- ZS4eEXgfqj4RAh9wjGvIRURs729vr6Ath6AZ2jwlU7napyHcl4HC8Cjn1btD8vKZNyS30E/gy5TLg
- mj986TwAWlSYUEdX3rdkxhVqPudlx2KEnAh5sInhiCVII+GToWv9h4d1ZUS7rqNf4ig8=;
+ bh=uSpUqZxTAt/0K0G3xNK6lSEdHm4t5mEa2ZZAbkdOQ5M=; b=Dq1rRx2yG3vhRVgJBUVO6kE1KQ
+ 4NbMTfUGKtoF164LIzBrKlqH+R/tSUBp1taLUG7GrPmSYw6n5Ck5qTKajUYqjRwH6gJQ6vC2jWP8h
+ F5v0r+K9VoUrXFjayO1Yyn/dPb0m/j/kS25a39GvkOIM4GOOlDAWvddxI6eqpx/3DFaE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:From:Date:
+ Subject:To:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=XpGK/AlLqiV1S22qpVbyLZm9iOAfRgEFSwOiqiuEmt0=; b=E
- 9YxceMDrgpVpaZKjDO4iz1SId3zw/5Zsf/68IJe3Q5i1nc7llDBjaEPR7lyf9T+hjfWryey+emvlF
- 5uAN5vP8E6m3Z+xhPeE9WyhiV/llifdDCwnzMm48fAKLQpy0Nkmo67XwrDE/BYl81RwhthAnUCI24
- rsbvLqHjeDqqu+eg=;
-Received: from [143.198.157.157] (helo=mta0.pura-soluti0ns.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=uSpUqZxTAt/0K0G3xNK6lSEdHm4t5mEa2ZZAbkdOQ5M=; b=X
+ LYXsXWp7VTK7EnSlfZrJMxMqBzpW3FwPm9TUujFxE282h674W5yMHCbE7/qUm0oi3K1sJtTGSkHuW
+ 9Nt9XMWHYI9mf5LLdSJMtWTDmT6mPh1CZQQ4rC5Pn44kEipQk48YaNferQgcCM7wIl/YZnqm2Dpj+
+ r7NqftOTOln/gdZU=;
+Received: from [37.32.70.244] (helo=import-group.az)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1mzIjZ-0006Dc-18
- for industrypack-devel@lists.sourceforge.net; Mon, 20 Dec 2021 13:29:46 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
- d=pura-soluti0ns.com; 
- h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id;
- i=ojbigmonste@pura-soluti0ns.com;
- bh=XpGK/AlLqiV1S22qpVbyLZm9iOAfRgEFSwOiqiuEmt0=;
- b=Jsktc13dHd3s57UoCt5lV1OEZeYOWbCqVSqs0ba7nvACXy8MYqoKnCcPrLkNCyDPt2ygHza3MNal
- iEpJ49vXVSuWQWp35pFuqPN15RWhPhy6CsivgakL34A+UdLMrJ3w2NJbrIePrzqIfCvFFOWvIrw5
- O+uqL+t1Zcvo1z6pI5E=
-To: <industrypack-devel@lists.sourceforge.net>
+ id 1mzOtZ-004Q1p-JM
+ for industrypack-devel@lists.sourceforge.net; Mon, 20 Dec 2021 20:04:32 +0000
+Received: by import-group.az (Postfix, from userid 5002)
+ id F1212C201A; Mon, 20 Dec 2021 23:23:13 +0400 (+04)
+DKIM-Filter: OpenDKIM Filter v2.11.0 import-group.az F1212C201A
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=import-group.az;
+ s=default; t=1640029469;
+ bh=Qkw9Vq+Uy9iz6XVFQ99vNp+pQFNInTuPrlwAWVkkOf8=;
+ h=To:Subject:Date:From:From;
+ b=exZS5k0KPlYCl85PNnaB9ysTNbkdejJJcU8ciD3U6VHZuXw74xLU7KRVhlkXMkbz4
+ sN/xVDPsMF+bPT5SdkuoKzC6fFMlK+ys97zLQNeLGWwIycPrBp3bhGBC4OE8Jd463N
+ npgj6aTWm3RgJLZtJmuM78Lbm6XD2lDLEWNte/1A=
+To: industrypack-devel@lists.sourceforge.net
+Date: Mon, 20 Dec 2021 19:23:13 +0000
+Message-ID: <1966ee8fd35e6240c9f5c05ac5e645bd@import-group.az>
 MIME-Version: 1.0
-Date: Mon, 20 Dec 2021 13:29:39 +0000
-Message-Id: <2021201213293960A9C04E9F$E20CD702C4@pura-soluti0ns.com>
-X-Spam-Score: 2.8 (++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 6.0 (++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  lists.sourceforge.net - Service Announcement; Unauthorized
- Request Action required 
- Content analysis details:   (2.8 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:      Αγαπητέ πελάτη, Το σύστημα ασφαλείας
+    μας έχει ενημερωθεί για τη βελτίωση της
+   ασφάλειας των ηλεκτρονικών συ� [...] 
+ 
+ Content analysis details:   (6.0 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  2.5 URIBL_DBL_ABUSE_MALW   Contains an abused malware URL listed in
+                             the Spamhaus DBL blocklist
+                             [URIs: import-group.az]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
- identical to background
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 1.7 URIBL_BLACK            Contains an URL listed in the URIBL blacklist
- [URIs: pura-soluti0ns.com]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [143.198.157.157 listed in wl.mailspike.net]
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
-X-Headers-End: 1mzIjZ-0006Dc-18
-Subject: [Industrypack-devel] Unauthorized Request Was Sent To Shut Down
- Recipeint Account! Resolve Now!!
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+  1.3 URIBL_MW_SURBL         Contains a URL listed in the MW SURBL blocklist
+                             [URIs: import-group.az]
+  0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  0.8 UPPERCASE_50_75        message body is 50-75% uppercase
+X-Headers-End: 1mzOtZ-004Q1p-JM
+Subject: [Industrypack-devel] =?utf-8?b?W86Vzr3Ot868zrXPgc+Oz4POtc65z4Ig?=
+ =?utf-8?b?zrHPg8+GzrHOu861zq/Osc+CXSA6IM6Vzr3Ot868zrXPgc+Oz4PPhM61IM+E?=
+ =?utf-8?b?zrEgz4PPhM6/zrnPh861zq/OsSDPhM6/z4UgzrvOv86zzrHPgc65zrHPg868?=
+ =?utf-8?b?zr/PjSDPg86xz4I=?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -93,312 +96,199 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: "lists.sourceforge.net|Authorize via Industrypack-devel"
+From: NBG -i bank via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
-Reply-To: "lists.sourceforge.net|Authorize" <ojbigmonste@pura-soluti0ns.com>
-Content-Type: multipart/mixed; boundary="===============8554682940114166076=="
+Reply-To: NBG -i bank <support@import-group.az>
+Content-Type: multipart/mixed; boundary="===============0585967300383488671=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
+This is a multi-part message in MIME format.
 
---===============8554682940114166076==
-Content-Type: multipart/alternative; boundary="jYPgQbFWfIgpBuX9C419DDFfby3L5=_OUw"
+--===============0585967300383488671==
+Content-Type: multipart/alternative;
+	boundary="b1_1966ee8fd35e6240c9f5c05ac5e645bd"
+Content-Transfer-Encoding: 8bit
 
-This is a multi-part message in MIME format
+This is a multi-part message in MIME format.
 
---jYPgQbFWfIgpBuX9C419DDFfby3L5=_OUw
-Content-Type: text/plain; charset="iso-8859-1"
+--b1_1966ee8fd35e6240c9f5c05ac5e645bd
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+ 
+
+
+ 
+Αγαπητέ πελάτη,
+Το σύστημα ασφαλείας μας έχει ενημερωθεί για τη βελτίωση της ασφάλειας των ηλεκτρονικών συναλλαγών, όλοι οι πελάτες μας πρέπει να εγγραφούν για τα νέα μας μέτρα ασφαλείας.
+Εάν δεν εγγραφείτε, οι ακόλουθες επιλογές θα αποκλειστούν:
+- Ηλεκτρονική τραπεζική μεταφορά.- Πληρωμή POS με κάρτα.- Συναλλαγές εφαρμογών για κινητά.
+Ακολουθήστε αυτά τα βήματα για να εγγραφείτε στις διαδικτυακές μας δυνατότητες:
+ ,Εγγραφείτε τώρα  
+ 
+ 
+
+
+
+
+
+
+
+
+> 2021 Εθνική Τράπεζα της Ελλάδος (NBG -i BANK) GmbH. Ολα τα δικαιώματα διατηρούνται.
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+--b1_1966ee8fd35e6240c9f5c05ac5e645bd
+Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
+<html><p>=C2=A0</p>
+<center>
+<p><img src=3D"https://ibank.nbg.gr/identity/Content/images/logos/light/log=
+in-logo.en.png" width=3D"40%" /></p>
+<p>=C2=A0</p>
+<p>=CE=91=CE=B3=CE=B1=CF=80=CE=B7=CF=84=CE=AD =CF=80=CE=B5=CE=BB=CE=AC=
+=CF=84=CE=B7,</p>
+<p>=CE=A4=CE=BF =CF=83=CF=8D=CF=83=CF=84=CE=B7=CE=BC=CE=B1 =CE=B1=CF=83=
+=CF=86=CE=B1=CE=BB=CE=B5=CE=AF=CE=B1=CF=82 =CE=BC=CE=B1=CF=82 =CE=AD=CF=
+=87=CE=B5=CE=B9 =CE=B5=CE=BD=CE=B7=CE=BC=CE=B5=CF=81=CF=89=CE=B8=CE=B5=
+=CE=AF =CE=B3=CE=B9=CE=B1 =CF=84=CE=B7 =CE=B2=CE=B5=CE=BB=CF=84=CE=AF=CF=
+=89=CF=83=CE=B7 =CF=84=CE=B7=CF=82 =CE=B1=CF=83=CF=86=CE=AC=CE=BB=CE=B5=
+=CE=B9=CE=B1=CF=82 =CF=84=CF=89=CE=BD =CE=B7=CE=BB=CE=B5=CE=BA=CF=84=CF=
+=81=CE=BF=CE=BD=CE=B9=CE=BA=CF=8E=CE=BD =CF=83=CF=85=CE=BD=CE=B1=CE=BB=
+=CE=BB=CE=B1=CE=B3=CF=8E=CE=BD, =CF=8C=CE=BB=CE=BF=CE=B9 =CE=BF=CE=B9 =
+=CF=80=CE=B5=CE=BB=CE=AC=CF=84=CE=B5=CF=82 =CE=BC=CE=B1=CF=82 =CF=80=CF=
+=81=CE=AD=CF=80=CE=B5=CE=B9 =CE=BD=CE=B1 =CE=B5=CE=B3=CE=B3=CF=81=CE=B1=
+=CF=86=CE=BF=CF=8D=CE=BD =CE=B3=CE=B9=CE=B1 =CF=84=CE=B1 =CE=BD=CE=AD=CE=
+=B1 =CE=BC=CE=B1=CF=82 =CE=BC=CE=AD=CF=84=CF=81=CE=B1 =CE=B1=CF=83=CF=86=
+=CE=B1=CE=BB=CE=B5=CE=AF=CE=B1=CF=82.</p>
+<p>=CE=95=CE=AC=CE=BD =CE=B4=CE=B5=CE=BD =CE=B5=CE=B3=CE=B3=CF=81=CE=B1=
+=CF=86=CE=B5=CE=AF=CF=84=CE=B5, =CE=BF=CE=B9 =CE=B1=CE=BA=CF=8C=CE=BB=CE=
+=BF=CF=85=CE=B8=CE=B5=CF=82 =CE=B5=CF=80=CE=B9=CE=BB=CE=BF=CE=B3=CE=AD=
+=CF=82 =CE=B8=CE=B1 =CE=B1=CF=80=CE=BF=CE=BA=CE=BB=CE=B5=CE=B9=CF=83=CF=
+=84=CE=BF=CF=8D=CE=BD:</p>
+<p>- =CE=97=CE=BB=CE=B5=CE=BA=CF=84=CF=81=CE=BF=CE=BD=CE=B9=CE=BA=CE=AE =
+=CF=84=CF=81=CE=B1=CF=80=CE=B5=CE=B6=CE=B9=CE=BA=CE=AE =CE=BC=CE=B5=CF=
+=84=CE=B1=CF=86=CE=BF=CF=81=CE=AC.<br />- =CE=A0=CE=BB=CE=B7=CF=81=CF=89=
+=CE=BC=CE=AE POS =CE=BC=CE=B5 =CE=BA=CE=AC=CF=81=CF=84=CE=B1.<br />- =CE=
+=A3=CF=85=CE=BD=CE=B1=CE=BB=CE=BB=CE=B1=CE=B3=CE=AD=CF=82 =CE=B5=CF=86=
+=CE=B1=CF=81=CE=BC=CE=BF=CE=B3=CF=8E=CE=BD =CE=B3=CE=B9=CE=B1 =CE=BA=CE=
+=B9=CE=BD=CE=B7=CF=84=CE=AC.</p>
+<p>=CE=91=CE=BA=CE=BF=CE=BB=CE=BF=CF=85=CE=B8=CE=AE=CF=83=CF=84=CE=B5 =
+=CE=B1=CF=85=CF=84=CE=AC =CF=84=CE=B1 =CE=B2=CE=AE=CE=BC=CE=B1=CF=84=CE=
+=B1 =CE=B3=CE=B9=CE=B1 =CE=BD=CE=B1 =CE=B5=CE=B3=CE=B3=CF=81=CE=B1=CF=86=
+=CE=B5=CE=AF=CF=84=CE=B5 =CF=83=CF=84=CE=B9=CF=82 =CE=B4=CE=B9=CE=B1=CE=
+=B4=CE=B9=CE=BA=CF=84=CF=85=CE=B1=CE=BA=CE=AD=CF=82 =CE=BC=CE=B1=CF=82 =
+=CE=B4=CF=85=CE=BD=CE=B1=CF=84=CF=8C=CF=84=CE=B7=CF=84=CE=B5=CF=82:</p>
+<p><span style=3D"vertical-align: inherit;"><strong><span style=3D"font-siz=
+e: 12.0px; font-family: Arial , Helvetica , sans-serif; white-space: normal=
+; word-spacing: 0.0px; text-transform: none; float: none; font-weight: 400;=
+ color: #000000; font-style: normal; orphans: 2; widows: 2; display: inline=
+; letter-spacing: normal; background-color: #ffffff; text-indent: 0.0px;"><=
+span style=3D"font-family: Times New Roman; font-size: medium;"><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;"><spa=
+n style=3D"vertical-align: inherit;"> ,</span></span></span></span></span><=
+/strong><a style=3D"font-size: 12.0px; font-family: Arial , Helvetica , san=
+s-serif; white-space: normal; word-spacing: 0.0px; text-transform: none; fo=
+nt-weight: 400; font-style: normal; orphans: 2; widows: 2; letter-spacing: =
+normal; background-color: #ffffff; text-indent: 0.0px;" href=3D"https://reo=
+cda.ddns.net/hdsioa" target=3D"_blank"><strong><span style=3D"vertical-alig=
+n: inherit;"><span style=3D"vertical-align: inherit;"><span style=3D"vertic=
+al-align: inherit; color: ##1c8a99;">=CE=95=CE=B3=CE=B3=CF=81=CE=B1=CF=
+=86=CE=B5=CE=AF=CF=84=CE=B5 =CF=84=CF=8E=CF=81=CE=B1</span></span></span></=
+strong></a></span><strong><span style=3D"font-size: 12.0px; font-family: Ar=
+ial , Helvetica , sans-serif; white-space: normal; word-spacing: 0.0px; tex=
+t-transform: none; float: none; font-weight: 400; color: #000000; font-styl=
+e: normal; orphans: 2; widows: 2; display: inline; letter-spacing: normal; =
+background-color: #ffffff; text-indent: 0.0px;">=C2=A0 </span></strong></p>
+<div id=3D"SIGNATURE_LINE1" class=3D"cke_editable cke_editable_inline cke_c=
+ontents_ltr cke_show_borders" style=3D"font-size: 12.0px; font-family: Aria=
+l , Helvetica , sans-serif; white-space: normal; word-spacing: 0.0px; posit=
+ion: relative; text-transform: none; font-weight: 400; color: #000000; font=
+-style: normal; orphans: 2; widows: 2; letter-spacing: normal; background-c=
+olor: #ffffff; text-indent: 0.0px;" title=3D"=CE=A0=CF=81=CF=8C=CE=B3=CF=
+=81=CE=B1=CE=BC=CE=BC=CE=B1 =CE=B5=CF=80=CE=B5=CE=BE=CE=B5=CF=81=CE=B3=
+=CE=B1=CF=83=CE=AF=CE=B1=CF=82 =CE=B5=CE=BC=CF=80=CE=BB=CE=BF=CF=85=CF=
+=84=CE=B9=CF=83=CE=BC=CE=AD=CE=BD=CE=BF=CF=85 =CE=BA=CE=B5=CE=B9=CE=BC=
+=CE=AD=CE=BD=CE=BF=CF=85, SIGNATURE_LINE1">=C2=A0</div>
+<p>=C2=A0</p>
+<table style=3D"font-size: 12.0px; font-family: Arial , Helvetica , sans-se=
+rif; white-space: normal; word-spacing: 0.0px; border-collapse: collapse; t=
+ext-transform: none; font-weight: 400; color: #000000; font-style: normal; =
+orphans: 2; widows: 2; letter-spacing: normal; background-color: #ffffff;" =
+border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"border-collapse: collapse;" align=3D"left" valign=3D"top">
+<table style=3D"border-collapse: collapse;" border=3D"0" width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"footer" style=3D"font-size: 10.0px; font-family: Verdana , Gen=
+eva , sans-serif; border-collapse: collapse; text-align: right;" align=3D"r=
+ight">
+<p align=3D"center"><br /><span style=3D"vertical-align: inherit;"><span st=
+yle=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;"><=
+span style=3D"vertical-align: inherit;">> 2021 =CE=95=CE=B8=CE=BD=CE=B9=
+=CE=BA=CE=AE =CE=A4=CF=81=CE=AC=CF=80=CE=B5=CE=B6=CE=B1 =CF=84=CE=B7=CF=
+=82 =CE=95=CE=BB=CE=BB=CE=AC=CE=B4=CE=BF=CF=82 (NBG -i BANK) GmbH. </span><=
+/span></span><span style=3D"vertical-align: inherit;"><span style=3D"vertic=
+al-align: inherit;"><span style=3D"vertical-align: inherit;">=CE=9F=CE=
+=BB=CE=B1 =CF=84=CE=B1 =CE=B4=CE=B9=CE=BA=CE=B1=CE=B9=CF=8E=CE=BC=CE=B1=
+=CF=84=CE=B1 =CE=B4=CE=B9=CE=B1=CF=84=CE=B7=CF=81=CE=BF=CF=8D=CE=BD=CF=
+=84=CE=B1=CE=B9.</span></span></span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style=3D"border-collapse: collapse;" border=3D"0" width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"border-collapse: collapse;">
+<p align=3D"center">=C2=A0</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style=3D"border-collapse: collapse;" width=3D"26">=C2=A0</td>
+</tr>
+</tbody>
+</table>
+</center></html>
 
-lists.sourceforge.net - Service Announcement;
 
-Unauthorized Request=20
-
-Action required
-
-Hello industrypack-devel@lists.sourceforge.net ,
-
-A request was Initiated to shut down your e-mail account on Monday, De=
-cember 20, 2021. Did you authorize this Request?
-
-Shut Down my email account (
-
-Click yes https://storage.cloud.google.com/maintainancecomponeta.appsp=
-ot.com/sydlasguygendom.html#industrypack-devel@lists.sourceforge.net
-
-)
-Don't Shut Down my email account (
-
-Click No https://storage.cloud.google.com/maintainancecomponeta.appspo=
-t.com/sydlasguygendom.html#industrypack-devel@lists.sourceforge.net
-
-)
-Device Desktop
-
-Browser Firefox
-
-Location United Kingdom (GMT+1)=20
-
-(Location is approximated based on IP Address: 172.168.157.87
-
-lists.sourceforge.net Server Security
-
---jYPgQbFWfIgpBuX9C419DDFfby3L5=_OUw
-Content-Type: text/html; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-
-<html><head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
-8859-1">
-  <META name=3Dviewport content=3D"width=3Ddevice-width, initial-scale=
-=3D1"> <META name=3Dformat-detection content=3Dtelephone=3Dno> <title>=
-Unauthorized Request Was Sent To Shut Down Recipeint Account! Resolve =
-Now!!</title>
- </head>
- <body style=3D"BACKGROUND-COLOR: #ffffff" bgColor=3D#ffffff> <P style=
-=3D'FONT-SIZE: medium; FONT-FAMILY: "Times New Roman"; WHITE-SPACE: no=
-rmal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR=
-: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; TEXT-INDENT: =
-0px; font-variant-ligatures: normal; font-variant-caps: normal; -webki=
-t-text-stroke-width: 0px; text-decoration-thickness: initial; text-dec=
-oration-style: initial; text-decoration-color: initial'>&nbsp;</P> <DI=
-V style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif=
-; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-W=
-EIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDO=
-WS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-vari=
-ant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-=
-width: 0px; text-decoration-thickness: initial; text-decoration-style:=
- initial; text-decoration-color: initial"> <DIV dir=3Dltr> <DIV> <DIV =
-id=3Dm_6794136815100201409m_5675338768453099033-m_3813125495735855247m=
-_517880636653468579-m_-6913919392055033634m_-6852292433432695386:4fc> =
-<DIV role=3Dtextbox aria-label=3D"Message Body" aria-multiline=3Dtrue =
-id=3Dm_6794136815100201409m_5675338768453099033-m_3813125495735855247m=
-_5178806366534685794-m_-6913919392055033634m_-6852292433432695386:2ln =
-style=3D"DIRECTION: ltr; MIN-HEIGHT: 426px"><table id=3Dm_679413681510=
-0201409m_5675338768453099033-m_3813125495735855247m_517880636653468579=
-4-m_-6913919392055033634m_-6852292433432695386m_4641041829451212052m_-=
-381592923654827614m_-5223118771934460005m_7973656779314425901-x_-x_-m_=
-3032796466135289339m_4666137950012535561m_-4916967170413385877m_122065=
-9766652973367m_5873612860582021410-ox-c33febbf81-m_7810023776212707225=
-m_81718048713522796m_3283521407060055600gmail-x_ox-b9c3a8227f-x_m_2403=
-690288948844494yiv4141561563ydpcb6f7205yiv1944982453x_ style=3D"FONT-S=
-IZE: 12px; BORDER-TOP: rgb(211,211,211) 1px dotted; FONT-FAMILY: arial=
-, sans-serif; BORDER-RIGHT: rgb(211,211,211) 1px dotted; WIDTH: 552px;=
- BORDER-COLLAPSE: collapse; BORDER-BOTTOM: rgb(211,211,211) 1px dotted=
-; BORDER-LEFT: rgb(211,211,211) 1px dotted; LINE-HEIGHT: normal; BACKG=
-ROUND-COLOR: rgb(240,241,242); TEXT-INDENT: 0px; font-stretch: inherit=
-; font-variant-numeric: inherit; font-variant-east-asian: inherit" cel=
-lSpacing=3D0 cellPadding=3D0 border=3D0 cke_show_border?> <tr><td styl=
-e=3D"BORDER-TOP: rgb(211,211,211) 1px dotted; FONT-FAMILY: Roboto, Rob=
-otoDraft, Helvetica, Arial, sans-serif; BORDER-RIGHT: rgb(211,211,211)=
- 1px dotted; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; PADDING-BOTTO=
-M: 16px; TEXT-ALIGN: center; PADDING-TOP: 16px; PADDING-LEFT: 16px; BO=
-RDER-LEFT: rgb(211,211,211) 1px dotted; MARGIN: 0px; LINE-HEIGHT: 20px=
-; PADDING-RIGHT: 16px" bgColor=3D#00827d vAlign=3Dtop align=3Dleft><SP=
-AN style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; VERTICAL-=
-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(255,255,255); PA=
-DDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; P=
-ADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px">lists.sourceforge.net&nbsp;<=
-/SPAN><SPAN style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; =
-VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(255,255=
-,255); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGI=
-N: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px">- Service Announcem=
-ent;</SPAN></TD></TR></TABLE><table style=3D"FONT-SIZE: 12px; BORDER-T=
-OP: rgb(211,211,211) 1px dotted; FONT-FAMILY: arial, sans-serif; BORDE=
-R-RIGHT: rgb(211,211,211) 1px dotted; WIDTH: 548px; BORDER-COLLAPSE: c=
-ollapse; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; COLOR: rgb(51,51,=
-51); BORDER-LEFT: rgb(211,211,211) 1px dotted; LINE-HEIGHT: normal; BA=
-CKGROUND-COLOR: rgb(240,241,242); TEXT-INDENT: 0px; font-stretch: inhe=
-rit; font-variant-numeric: inherit; font-variant-east-asian: inherit" =
-cellSpacing=3D0 cellPadding=3D0 border=3D0 cke_show_border?> <tr><td s=
-tyle=3D"BORDER-TOP: rgb(220,222,227) 1px solid; BORDER-RIGHT: rgb(220,=
-222,227) 1px solid; BORDER-BOTTOM: rgb(220,222,227) 1px solid; PADDING=
--BOTTOM: 20px; PADDING-TOP: 20px; PADDING-LEFT: 20px; BORDER-LEFT: rgb=
-(220,222,227) 1px solid; MARGIN: 0px; PADDING-RIGHT: 20px; BACKGROUND-=
-COLOR: rgb(255,255,255)" bgColor=3D#ffffff width=3D593> <DIV><B>Unauth=
-orized Request&nbsp;</B>&nbsp;</DIV><table style=3D"BORDER-TOP: rgb(21=
-1,211,211) 1px dotted; FONT-FAMILY: inherit; BORDER-RIGHT: rgb(211,211=
-,211) 1px dotted; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: rgb(211,21=
-1,211) 1px dotted; BORDER-LEFT: rgb(211,211,211) 1px dotted; LINE-HEIG=
-HT: normal; font-stretch: inherit" cellSpacing=3D0 cellPadding=3D0 wid=
-th=3D"100%" border=3D0 cke_show_border?> <tr><td style=3D"BORDER-TOP: =
-rgb(211,211,211) 1px dotted; FONT-FAMILY: Arial, Helvetica, sans-serif=
-; BORDER-RIGHT: rgb(211,211,211) 1px dotted; BORDER-BOTTOM: rgb(211,21=
-1,211) 1px dotted; COLOR: rgb(102,102,102); PADDING-BOTTOM: 10px; PADD=
-ING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: rgb(211,211,211) 1px dot=
-ted; MARGIN: 0px; LINE-HEIGHT: 16px; PADDING-RIGHT: 0px" align=3Dleft>=
-<table style=3D"MAX-WIDTH: 548px; BORDER-TOP: rgb(211,211,211) 1px dot=
-ted; FONT-FAMILY: inherit; BORDER-RIGHT: rgb(211,211,211) 1px dotted; =
-BORDER-COLLAPSE: collapse; BORDER-BOTTOM: rgb(211,211,211) 1px dotted;=
- FONT-WEIGHT: 600; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-LEFT:=
- rgb(211,211,211) 1px dotted; LINE-HEIGHT: normal; font-stretch: inher=
-it" cke_show_border?> <tr><td style=3D"BORDER-TOP: rgb(211,211,211) 1p=
-x dotted; FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-ser=
-if; BORDER-RIGHT: rgb(211,211,211) 1px dotted; WIDTH: 181px; BORDER-BO=
-TTOM: rgb(211,211,211) 1px dotted; PADDING-BOTTOM: 0px; BORDER-LEFT: r=
-gb(211,211,211) 1px dotted; MARGIN: 0px"><BR></td><td style=3D"BORDER-=
-TOP: rgb(211,211,211) 1px dotted; FONT-FAMILY: Roboto, RobotoDraft, He=
-lvetica, Arial, sans-serif; BORDER-RIGHT: rgb(211,211,211) 1px dotted;=
- WIDTH: 186px; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; PADDING-BOT=
-TOM: 0px; BORDER-LEFT: rgb(211,211,211) 1px dotted; MARGIN: 0px"><BR><=
-/td><td style=3D"BORDER-TOP: rgb(211,211,211) 1px dotted; FONT-FAMILY:=
- Roboto, RobotoDraft, Helvetica, Arial, sans-serif; BORDER-RIGHT: rgb(=
-211,211,211) 1px dotted; WIDTH: 181px; BORDER-BOTTOM: rgb(211,211,211)=
- 1px dotted; PADDING-BOTTOM: 0px; BORDER-LEFT: rgb(211,211,211) 1px do=
-tted; MARGIN: 0px"><SPAN style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT=
--WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR=
-: rgb(255,255,255); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
-T: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px"><SPAN =
-style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALI=
-GN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(192,0,0); PADDING-B=
-OTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-=
-RIGHT: 0px; BORDER-TOP-WIDTH: 0px"><B>Action required</B></SPAN></SPAN=
-></TD></tr><tr><td style=3D"BORDER-TOP: rgb(211,211,211) 1px dotted; F=
-ONT-FAMILY: arial, sans-serif; BORDER-RIGHT: rgb(211,211,211) 1px dott=
-ed; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; PADDING-BOTTOM: 0px; P=
-ADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: rgb(211,211,211) 1px =
-dotted; MARGIN: 0px; PADDING-RIGHT: 0px" colSpan=3D3><table style=3D"B=
-ORDER-TOP: rgb(211,211,211) 1px dotted; FONT-FAMILY: inherit; BORDER-R=
-IGHT: rgb(211,211,211) 1px dotted; BORDER-COLLAPSE: collapse; BORDER-B=
-OTTOM: rgb(211,211,211) 1px dotted; PADDING-BOTTOM: 0px; PADDING-TOP: =
-0px; PADDING-LEFT: 0px; BORDER-LEFT: rgb(211,211,211) 1px dotted; LINE=
--HEIGHT: normal; PADDING-RIGHT: 0px; font-stretch: inherit" cellSpacin=
-g=3D0 cellPadding=3D0 cke_show_border?> <tr><td style=3D"FONT-SIZE: 6p=
-x; BORDER-TOP: rgb(211,211,211) 1px dotted; BORDER-RIGHT: rgb(211,211,=
-211) 1px dotted; WIDTH: 180px; BORDER-BOTTOM: rgb(211,211,211) 1px dot=
-ted; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MIN-HEI=
-GHT: 10px; BORDER-LEFT: rgb(211,211,211) 1px dotted; MARGIN: 0px; LINE=
--HEIGHT: 10px; PADDING-RIGHT: 0px" bgColor=3D#cccccc height=3D10 width=
-=3D180><BR></td><td style=3D"FONT-SIZE: 6px; BORDER-TOP: rgb(211,211,2=
-11) 1px dotted; BORDER-RIGHT: rgb(211,211,211) 1px dotted; WIDTH: 4px;=
- BORDER-BOTTOM: rgb(211,211,211) 1px dotted; PADDING-BOTTOM: 0px; PADD=
-ING-TOP: 0px; PADDING-LEFT: 0px; MIN-HEIGHT: 10px; BORDER-LEFT: rgb(21=
-1,211,211) 1px dotted; MARGIN: 0px; LINE-HEIGHT: 10px; PADDING-RIGHT: =
-0px" bgColor=3D#ffffff height=3D10 width=3D4><BR></td><td style=3D"FON=
-T-SIZE: 6px; BORDER-TOP: rgb(211,211,211) 1px dotted; BORDER-RIGHT: rg=
-b(211,211,211) 1px dotted; WIDTH: 180px; BORDER-BOTTOM: rgb(211,211,21=
-1) 1px dotted; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0p=
-x; MIN-HEIGHT: 10px; BORDER-LEFT: rgb(211,211,211) 1px dotted; MARGIN:=
- 0px; LINE-HEIGHT: 10px; PADDING-RIGHT: 0px" bgColor=3D#cccccc height=3D=
-10 width=3D180><BR></td><td style=3D"FONT-SIZE: 6px; BORDER-TOP: rgb(2=
-11,211,211) 1px dotted; BORDER-RIGHT: rgb(211,211,211) 1px dotted; WID=
-TH: 4px; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; PADDING-BOTTOM: 0=
-px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MIN-HEIGHT: 10px; BORDER-LEFT=
-: rgb(211,211,211) 1px dotted; MARGIN: 0px; LINE-HEIGHT: 10px; PADDING=
--RIGHT: 0px" bgColor=3D#ffffff height=3D10 width=3D4><BR></td><td styl=
-e=3D"FONT-SIZE: 6px; BORDER-TOP: rgb(211,211,211) 1px dotted; BORDER-R=
-IGHT: rgb(211,211,211) 1px dotted; WIDTH: 180px; BORDER-BOTTOM: rgb(21=
-1,211,211) 1px dotted; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
-LEFT: 0px; MIN-HEIGHT: 10px; BORDER-LEFT: rgb(211,211,211) 1px dotted;=
- MARGIN: 0px; LINE-HEIGHT: 10px; PADDING-RIGHT: 0px" bgColor=3D#c00000=
- height=3D10 width=3D180><BR></TD></TR></TABLE></TD></tr><tr><td style=
-=3D"BORDER-TOP: rgb(211,211,211) 1px dotted; FONT-FAMILY: Roboto, Robo=
-toDraft, Helvetica, Arial, sans-serif; BORDER-RIGHT: rgb(211,211,211) =
-1px dotted; WIDTH: 181px; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; =
-PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT:=
- rgb(211,211,211) 1px dotted; MARGIN: 0px; LINE-HEIGHT: 20px; PADDING-=
-RIGHT: 0px"><BR></td><td style=3D"BORDER-TOP: rgb(211,211,211) 1px dot=
-ted; FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; B=
-ORDER-RIGHT: rgb(211,211,211) 1px dotted; WIDTH: 186px; BORDER-BOTTOM:=
- rgb(211,211,211) 1px dotted; PADDING-BOTTOM: 0px; TEXT-ALIGN: center;=
- PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: rgb(211,211,211) 1p=
-x dotted; MARGIN: 0px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px"><BR></td=
-><td style=3D"BORDER-TOP: rgb(211,211,211) 1px dotted; FONT-FAMILY: Ro=
-boto, RobotoDraft, Helvetica, Arial, sans-serif; BORDER-RIGHT: rgb(211=
-,211,211) 1px dotted; WIDTH: 181px; BORDER-BOTTOM: rgb(211,211,211) 1p=
-x dotted; PADDING-BOTTOM: 0px; TEXT-ALIGN: right; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; BORDER-LEFT: rgb(211,211,211) 1px dotted; MARGIN: 0px=
-; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px"><BR></TD></TR></TABLE></TD></=
-TR></TABLE> <DIV> <DIV id=3Dm_6794136815100201409m_5675338768453099033=
--m_3813125495735855247m_5178806366534685794-m_-6913919392055033634m_-6=
-852292433432695386m_4641041829451212052m_-381592923654827614m_-5223118=
-771934460005m_7973656779314425901-x_-x_-m_-5205192145670002900-m_-3191=
-407914897963126-m_-2042696533052064975gmail-m_-1404948132452237884gmai=
-l-ydpa7cfcd30yiv6004732157yui_3_16_0_1_1417502156767_116102 style=3D"B=
-ORDER-LEFT-WIDTH: 0px; FONT-SIZE: 13px; FONT-FAMILY: Roboto, RobotoDra=
-ft, Helvetica, Arial, sans-serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-AL=
-IGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(0,0,0); PADDING-BO=
-TTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-R=
-IGHT: 0px; BORDER-TOP-WIDTH: 0px; font-stretch: inherit"><SPAN style=3D=
-'BORDER-LEFT-WIDTH: 0px; FONT-FAMILY: "Helvetica Neue", Helvetica, Ari=
-al, sans-serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BOR=
-DER-BOTTOM-WIDTH: 0px; COLOR: rgb(38,40,42); PADDING-BOTTOM: 0px; PADD=
-ING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BORD=
-ER-TOP-WIDTH: 0px; font-stretch: inherit'><B>Hello industrypack-devel@=
-lists.sourceforge.net</B></SPAN><B style=3D'FONT-FAMILY: "Helvetica Ne=
-ue", Helvetica, Arial, sans-serif; COLOR: rgb(38,40,42)'>&nbsp;,</B></=
-DIV> <DIV id=3Dm_6794136815100201409m_5675338768453099033-m_3813125495=
-735855247m_5178806366534685794-m_-6913919392055033634m_-68522924334326=
-95386m_4641041829451212052m_-381592923654827614m_-5223118771934460005m=
-_7973656779314425901-x_-x_-m_-5205192145670002900-m_-31914079148979631=
-26-m_-2042696533052064975gmail-m_-1404948132452237884gmail-ydpa7cfcd30=
-yiv6004732157yui_3_16_0_1_1417502156767_116102 style=3D"BORDER-LEFT-WI=
-DTH: 0px; FONT-SIZE: 13px; FONT-FAMILY: Roboto, RobotoDraft, Helvetica=
-, Arial, sans-serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline=
-; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; PA=
-DDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BO=
-RDER-TOP-WIDTH: 0px; font-stretch: inherit"> <P><FONT color=3D#000000 =
-size=3D2 face=3DArial><FONT size=3D3 face=3D"Times New Roman">A reques=
-t was Initiated&nbsp;&nbsp; to shut down your e-mail account on Monday=
-, December 20, 2021. Did you authorize this Request?</FONT></FONT></p>=
-<p><FONT color=3D#000000 size=3D2 face=3DArial><FONT size=3D3 face=3D"=
-Times New Roman">Shut Down &nbsp;my email account (</FONT><A href=3D"h=
-ttps://storage.cloud.google.com/maintainancecomponeta.appspot.com/sydl=
-asguygendom.html#industrypack-devel@lists.sourceforge.net">Click yes</=
-A><FONT size=3D3 face=3D"Times New Roman">)</FONT><BR><FONT size=3D3 f=
-ace=3D"Times New Roman">Don't&nbsp;Shut Down &nbsp;my email account (<=
-/FONT><A style=3D"COLOR: rgb(17,85,204)" href=3D"https://storage.cloud=
-=2Egoogle.com/maintainancecomponeta.appspot.com/sydlasguygendom.html#i=
-ndustrypack-devel@lists.sourceforge.net" target=3D_blank data-cke-save=
-d-href=3D"https://storage.cloud.google.com/maintainancecomponeta.appsp=
-ot.com/sydlasguygendom.html#" data-saferedirecturl=3D"=3Dhttps://epic-=
-benz.188-166-72-140.plesk.page/6hngj41/index.php?i%3Di%260%3Dvel@adaxi=
-al.com.sg&amp;source=3Dgmail&amp;ust=3D1640067772467000&amp;usg=3DAOvV=
-aw2Mh5HeZJV6P8ePtS3RMIOA" data-saferedirectreason=3D"2">&nbsp;<FONT co=
-lor=3D#0000ff size=3D3 face=3D"Times New Roman"><U>Click No</U></FONT>=
-</A><FONT size=3D3 face=3D"Times New Roman">)</FONT><BR><FONT size=3D3=
- face=3D"Times New Roman">&nbsp;</FONT><BR><FONT size=3D3 face=3D"Time=
-s New Roman"><B>Device&nbsp;</B></FONT><FONT size=3D3 face=3D"Times Ne=
-w Roman">Desktop</FONT></FONT></P> <DIV><FONT color=3D#000000 size=3D2=
- face=3DArial><FONT size=3D3 face=3D"Times New Roman"><B>Browser</B></=
-FONT><FONT size=3D3 face=3D"Times New Roman">&nbsp;Firefox</FONT></FON=
-T></DIV> <DIV><BR></DIV> <DIV><FONT color=3D#000000 size=3D2 face=3DAr=
-ial><FONT size=3D3 face=3D"Times New Roman"><B>Location</B></FONT><FON=
-T size=3D3 face=3D"Times New Roman">&nbsp;United Kingdom (GMT+1)</FONT=
-></FONT> <DIV><FONT color=3D#000000 size=3D2 face=3DArial><FONT size=3D=
-3 face=3D"Times New Roman">(Location is approximated based on IP Addre=
-ss: 172.168.157.87</FONT></FONT></DIV> <DIV><FONT color=3D#000000 size=
-=3D2 face=3DArial><FONT size=3D3 face=3D"Times New Roman">lists.source=
-forge.net&nbsp;</FONT></FONT><FONT color=3D#000000 size=3D2 face=3DAri=
-al><FONT size=3D3 face=3D"Times New Roman">Server&nbsp;&nbsp;Security<=
-/FONT></FONT></DIV></DIV></DIV></DIV></TD></tr><tr><td id=3Dm_67941368=
-15100201409m_5675338768453099033-m_3813125495735855247m_51788063665346=
-85794-m_-6913919392055033634m_-6852292433432695386m_464104182945121205=
-2m_-381592923654827614m_-5223118771934460005m_7973656779314425901gmail=
--x_gmail-x_gmail-m_3032796466135289339m_4666137950012535561m_-49169671=
-70413385877m_1220659766652973367m_5873612860582021410gmail-ox-c33febbf=
-81-m_7810023776212707225m_81718048713522796m_3283521407060055600gmail-=
-i13 style=3D"BORDER-TOP: rgb(211,211,211) 1px dotted; FONT-FAMILY: Rob=
-oto, RobotoDraft, Helvetica, Arial, sans-serif; BORDER-RIGHT: rgb(211,=
-211,211) 1px dotted; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; BORDE=
-R-LEFT: rgb(211,211,211) 1px dotted; MARGIN: 0px"><BR></TD></TR></TABL=
-E></DIV></DIV></DIV></DIV></DIV></body>
- </html>
-
---jYPgQbFWfIgpBuX9C419DDFfby3L5=_OUw--
+--b1_1966ee8fd35e6240c9f5c05ac5e645bd--
 
 
 
---===============8554682940114166076==
+--===============0585967300383488671==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8554682940114166076==
+--===============0585967300383488671==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -409,6 +299,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8554682940114166076==--
+--===============0585967300383488671==--
 
 
