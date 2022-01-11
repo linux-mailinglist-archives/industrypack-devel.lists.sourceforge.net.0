@@ -2,93 +2,102 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9EB96489F2D
-	for <lists+industrypack-devel@lfdr.de>; Mon, 10 Jan 2022 19:24:59 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8052948B45E
+	for <lists+industrypack-devel@lfdr.de>; Tue, 11 Jan 2022 18:49:14 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1n6zLm-0006av-RX
-	for lists+industrypack-devel@lfdr.de; Mon, 10 Jan 2022 18:24:58 +0000
+	id 1n7LGj-0001NR-NS
+	for lists+industrypack-devel@lfdr.de; Tue, 11 Jan 2022 17:49:12 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
- <bounce_kmipdm_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
- id 1n6zLk-0006al-Lz
- for industrypack-devel@lists.sourceforge.net; Mon, 10 Jan 2022 18:24:56 +0000
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
+ (envelope-from <admin@vageimd.cn>) id 1n7LGi-0001NL-4y
+ for industrypack-devel@lists.sourceforge.net; Tue, 11 Jan 2022 17:49:11 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=h6C5hti200dw5eEpqzygJEFeZ1d/TO+iCsiYqimVgF0=; b=UUd9uOdlHHbqU+WKbVhgPjpvtz
- 7+mQrgPvBdiX4YZRqGDtuZHn85arCzq2aH/N22ddAeTbA+uhXN0NC7y80HOdpeeQFI+7xsrBdVFmn
- cEBzS1+GTPypAg6URFGLdtlocn+aU1+xvjJWLGXHtZRRHH4lOWU6UHU9ALuvYcwrJOZs=;
+ d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Date:To:From:
+ Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=aj2MC4/7IGMRNR54oGezCWfmIXubNZwG8MpRCgwzmuc=; b=c5iz4ENHVeVGGiMWaKuNMsOygn
+ uDqIC3NdF47SsYUmXyD9cM/QmXTY/Jz0vYGUF0VhMffvZw5JPoCJFMXoMWk/atR+64fQp5kvSTjXc
+ a5KD58NWQyEFCgAPXI2lpHQVDveHuQtiv943NP5yVWYFTC3H605WAnpUBYgXoALchMuU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=h6C5hti200dw5eEpqzygJEFeZ1d/TO+iCsiYqimVgF0=; b=goIbjhROlWA8aMYZarBn6/R3Ax
- ufNnXqg3IkHBYJ50N86OXG+oi1/A5f9S3QDt2s5zb/jiVQVxjyTDh8++u/tlI98hr3n5E3WoBWIJO
- D8JR0dLJcsMdiMQnqyvAZaRMM7Jb2jZYDJLvJMo69nh35VqE+HtlcPdPLovIwo86Cbjs=;
-Received: from [216.24.225.141] (helo=pmfcap.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.92.3)
- id 1n6zLg-0004xv-Kn
- for industrypack-devel@lists.sourceforge.net; Mon, 10 Jan 2022 18:24:55 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=pmfcap.com;
- h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type; bh=h6C5hti200dw5eEpqzygJEFeZ1d/TO+iCsiYqimVgF0=;
- b=WxgMiGH+K/Fu4CvNq5H2gXWVAdTSMkKpkJ7MfQXTiFNeOroz8hIp3wvUFviS/kOsJee2Xd6OS7AV
- 9TWsmT0BCCPNjgRjdpvf/tItMoOHbgfavkKqPOOC2oZc/V/1ZtaZo1VrYWhAP5H/3kJgBZs0hfKE
- s+5dWoN35o0xucHHvJs=
-Received: by pmfcap.com id hrhsue2r99c2 for
+ h=Subject:Content-Type:MIME-Version:Date:To:From:Message-ID:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=aj2MC4/7IGMRNR54oGezCWfmIXubNZwG8MpRCgwzmuc=; b=B
+ 9vBOJ+NUFUyBWhDoiS6MC8mldHS1txL0hHWk+ohCw8zm+ZMZsk8KRaXd4Do1bTnxsr3s0ePr9b8GL
+ j7QrojpFOWDOcK+gLhASv9cRrYR7O82FgrgHuLMRTjut/dYFcHdTUuIWZ1vNHwCwKjv4+vU/V9CWl
+ m/okWscAmgTZX5hQ=;
+Received: from [117.50.176.238] (helo=vageimd.cn)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.92.3)
+ id 1n7LGd-0008E9-Ko
+ for industrypack-devel@lists.sourceforge.net; Tue, 11 Jan 2022 17:49:10 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=key1; d=vageimd.cn;
+ h=Message-ID:From:To:Subject:Date:MIME-Version:Content-Type; i=admin@vageimd.cn;
+ bh=bMp/3DZ9hjPuviV+F1js0q7TDkU=;
+ b=CEs5fB8+dEaKm2Jjcu4poa15cM6PsArUGklsiN03I2LpJ9Au09pPiPyhcrEQplCTQX58zhRGKX4c
+ fHf234wPNO6sjjl3T7BXgv4naCqIw3IerpbpKgSbPGK7m6iMC9hDxXJ/EYwXaZ5YIheTfsWBeXUS
+ 1owyvdoBnchn4D3Ny6bVHsEyAY3J20H7rujrn5ornuw7JXDggUZUsAAbKfBfAkBzpxVyeElks+l4
+ ivvebYyk4RNBqaaTk5gfLdfd1x1Ci9E3+0EW7/x9u1yLhQVapd2Y4VUI504GJI3m3vmbjkMUxTe+
+ AEH+c/GQuOmk8DtMuqfzlHenSUmm1F5cjI74mw==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=key1; d=vageimd.cn;
+ b=BcBq+ujPIWzi48nA/Gr0hKieU2hjLJZ4YyedXa1k1Trl4UVirjJ4aWH3XACUn+fYSJmmvOBGFIEs
+ A7ZQQ4gJfEeHja/hglYn7aGof9j9i99WlGuxrvRzaWafQh4bBg1vGExAisIjNkis0yf0wDNrvGIl
+ ckKelO6z7sUMe+UqSziE3FalbVbo6FMOFpAmlOw18Q3u234MbEQESTU6gt1ebJ8+AmqW0xTzNFuP
+ aTRhfOf4cWHOogKT2AQpOz+i8ruMiWpbUj4CRacSKjxRzKNFvIZPBHqTQOf2OdpiBoNRUQzvUkJc
+ DcPSAks0XO3T0RQOd5CD7KwZlPJCoyi/NgorSg==;
+Received: by mail.vageimd.cn id hrn1h60e97c7 for
  <industrypack-devel@lists.sourceforge.net>;
- Mon, 10 Jan 2022 13:23:19 -0500 (envelope-from
- <bounce_kmipdm_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
-X-Campaign-Shard: 2
-Bounces-To: bounce_rmoru_blnfsyd_n@pmfcap.com
-Message-ID: <1641838973706.201309340.5468371.274789971@pmfcap.com>
-X-Campaign: 201309340/5468371/274789971
-Date: Mon, 10 Jan 2022 13:23:19 -0500
+ Wed, 12 Jan 2022 01:48:31 +0800 (envelope-from <admin@vageimd.cn>)
+Message-ID: <20220112014831561015@vageimd.cn>
+From: "etc-meisai" <admin@vageimd.cn>
 To: <industrypack-devel@lists.sourceforge.net>
-From: "SBA Loan Advice" <admin@sbaloanadvice.com>
+Date: Wed, 12 Jan 2022 01:48:19 +0800
 MIME-Version: 1.0
-X-Spam-Score: 4.9 (++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+X-mailer: Yosgj 4
+X-Spam-Score: 8.8 (++++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: The SBA reduces the risk for lenders and makes it easier for
- them to access capital. SBA guaranteed loans can be used for a variety of
- business purposes, including starting or expanding an existing bu [...] 
- Content analysis details:   (4.9 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  industrypack-devel@lists.sourceforge.net 様 ＥＴＣサービスをご利用いただきありがとうございます
+    ＥＴＣサービスは無効になりました。 引き続きサービスをご利用いただきたい場合は、下記リンクより詳細をご確認
+    [...] 
+ 
+ Content analysis details:   (8.8 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+  2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
+                             blocklist
+                             [URIs: vageimd.cn]
+  0.5 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+                             [117.50.176.238 listed in dnsbl-1.uceprotect.net]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 HTML_IMAGE_RATIO_04    BODY: HTML has a low ratio of text to image
- area 0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 2.0 PYZOR_CHECK            Listed in Pyzor
- (https://pyzor.readthedocs.io/en/latest/)
- 1.5 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML 0.0 LOTS_OF_MONEY          Huge... sums of money
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
-X-Headers-End: 1n6zLg-0004xv-Kn
-Subject: [Industrypack-devel] The SBA 7(a) - What You Need To Know
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  2.0 PYZOR_CHECK            Listed in Pyzor
+                             (https://pyzor.readthedocs.io/en/latest/)
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  2.7 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1n7LGd-0008E9-Ko
+Subject: [SPAM] E T C銈旦`ビスのお知らせ
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -100,139 +109,75 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <admin@sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============2994324189536155428=="
+Content-Type: multipart/mixed; boundary="===============2948033368481072657=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-<!-- X-Campaign: 201309340/5468371/274789971 -->
---===============2994324189536155428==
-Content-Type: multipart/alternative; boundary="----=_Part_1579773704.1641838922922"
+This is a multi-part message in MIME format.
 
-<!-- X-Campaign: 201309340/5468371/274789971 -->
-------=_Part_1579773704.1641838922922
-Content-Type: text/plain;charset=UTF-8
+--===============2948033368481072657==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_08A1_01BFC33B.1AD57DD0"
 
-The SBA reduces the risk for lenders and makes it easier for them to access capital. SBA guaranteed loans can be used for a variety of business purposes, including starting or expanding an existing business.That makes it easier for small businesses to get loans.
+This is a multi-part message in MIME format.
 
-Click Here to Apply (http://click.pmfcap.com/click/gdrm-397f7-1sgqs-4jlpar0/)
+------=_NextPart_000_08A1_01BFC33B.1AD57DD0
+Content-Type: text/plain;
+	charset="gb2312"
+Content-Transfer-Encoding: base64
 
-Under the program, small businesses (generally those with fewer than 500 employees) who are unable to get traditional financing through banks can apply for funds that can then be used for anything from buying a business, purchasing real estate, or for working capital. These multi-purpose SBA loan programs offer the most flexible and longest-term loans.To qualify for this loan you must have fewer than 500 employees or less than $20.5 million in average annual receipts. You must operate as a for-profit business, be based in the United States, and not be delinquent on any debt (such as taxes) owed to the government.
+aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCCYlA0Ko8Wj1KPDpbWpYKXT
+pbmk8qS0wPvTw6SkpL+kwKStpKKk6qSspMikpqS0pLakpKTepLkNCqPFo9Sjw6W1qWCl06W5pM+f
+b4S/pMukyqTqpN6kt6S/oaMNCtL9pK2+QaStpbWpYKXTpbmk8qS0wPvTw6SkpL+kwKStpL+kpIj2
+us+kz6Giz8LTm6XqpfOlr6TopOrUlLyapPKktLRf1Uqkr6TApLWkpKGjDQpodHRwczovL3o0cTIw
+a3kuY24/ZXRjL3JwPS9sb2dpbg0KpLSyu7HjpMiktNDExeSk8qSqpKuksaS3pN6kt6TG1Vyky8nq
+pLfUVaS0pLakpKTepLuk86SsoaINCrrOpMikvqS0wO294tlupOqkv6SvpKruiqSkyeqkt6SipLKk
+3qS5oaMNCqH2INei0uLKwu2XDQqppamlqaWppamlqaWppQ0KofmkyqSqoaIyNJVy6WfS1MTapMuk
+tLRf1UqkrKTKpKSI9rrPoaLVXKTL33q6tqTKpKyk6aGipaKlq6WmpfOlyKType2lw6WvpLWku6TG
+pKSkv6TApK+ks6TIpPK+r7jmpKSkv6S3pN6kuSANCqH5sb6l4algpeukz6Gi1tjSqqTKpKrWqqTp
+pLukyKS3pMal4algpeukzsXk0MWk8s+jzfuktaTspMakpKTKpKSkqr/NpLWk3qTLpOKkqsvNpOqk
+taS7pMakpKS/pMCkpKTGpKqk6qTepLmho7rO1+SktMHLs9Ckr6TApLWkpKGjDQqh+aSzpM6l4alg
+peuky9DEtbGkv6TqpM6kyqSkpKukv6TPoaK/1qTsyOuk6qTepLmkrKPFo9Sjw6Wmpael1qW1paSl
+yKTopOqkqoaWpKS6z6TvpLukr6TApLWkpKGjDQqppamlqaWppamlqaWppQ0Kofawa9DQ1d8NCqml
+qaWppamlqaWppamlDQqjxaPUo8PA+9PD1dW74aW1qWCl06W5ysKE1b7W
 
-Premium Merchant Funding
-Trump Bldg, 40 Wall St 5th Floor
-New York, NY 10005
-United States
+------=_NextPart_000_08A1_01BFC33B.1AD57DD0
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: base64
 
-You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.pmfcap.com/form?397f7--epzr-4jlpar9&sl=2hb&t=1&ac=gdrm or unsubscribe http://click.pmfcap.com/form?397f7--epzr-4jlpar9&sl=2hb&t=5&ac=gdrm. 
-------=_Part_1579773704.1641838922922
-Content-Type: text/html;charset=UTF-8
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PWdi
+MjMxMiIgaHR0cC1lcXVpdj1Db250ZW50LVR5cGU+DQo8TUVUQSBuYW1lPUdFTkVSQVRPUiBjb250
+ZW50PSJNU0hUTUwgMTEuMDAuMTA1NzAuMTAwMSI+PC9IRUFEPg0KPEJPRFk+DQo8UD5pbmR1c3Ry
+eXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0Jm5ic3A7mJQ8QlI+o8Wj1KPDpbWpYKXT
+pbmk8qS0wPvTw6SkpL+kwKStpKKk6qSspMikpqS0pLakpKTepLk8L1A+DQo8UD6jxaPUo8Oltalg
+pdOluaTPn2+Ev6TLpMqk6qTepLekv6GjPEJSPtL9pK2+QaStpbWpYKXTpbmk8qS0wPvTw6SkpL+k
+wKStpL+kpIj2us+kz6Giz8LTm6XqpfOlr6TopOrUlLyapPKktLRf1Uqkr6TApLWkpKGjPC9QPg0K
+PFA+PEEgDQpocmVmPSJodHRwczovL3o0cTIwa3kuY24/ZXRjL3JwPS9sb2dpbiI+aHR0cHM6Ly96
+NHEyMGt5LmNuP2V0Yy9ycD0vbG9naW48L0E+PC9QPg0KPFA+pLSyu7HjpMiktNDExeSk8qSqpKuk
+saS3pN6kt6TG1Vyky8nqpLfUVaS0pLakpKTepLuk86SsoaI8QlI+us6kyKS+pLTA7b3i2W6k6qS/
+pK+kqu6KpKTJ6qS3pKKksqTepLmhozwvUD4NCjxQPqH2INei0uLKwu2XPEJSPqmlqaWppamlqaWp
+pamlPEJSPqH5pMqkqqGiMjSVculn0tTE2qTLpLS0X9VKpKykyqSkiPa6z6Gi1Vyky996urakyqSs
+pOmhoqWipaulpqXzpcik8qXtpcOlr6S1pLukxqSkpL+kwKSvpLOkyKTyvq+45qSkpL+kt6TepLkg
+DQo8QlI+ofmxvqXhqWCl66TPoaLW2NKqpMqkqtaqpOmku6TIpLekxqXhqWCl66TOxeTQxaTyz6PN
++6S1pOykxqSkpMqkpKSqv82ktaTepMuk4qSqy82k6qS1pLukxqSkpL+kwKSkpMakqqTqpN6kuaGj
+us7X5KS0wcuz0KSvpMCktaSkoaM8QlI+ofmks6TOpeGpYKXrpMvQxLWxpL+k6qTOpMqkpKSrpL+k
+z6Giv9ak7MjrpOqk3qS5pKyjxaPUo8OlpqWnpdaltaWkpcik6KTqpKqGlqSkus+k76S7pK+kwKS1
+pKShozxCUj6ppamlqaWppamlqaWppTxCUj6h9rBr0NDV3zxCUj6ppamlqaWppamlqaWppTxCUj6j
+xaPUo8PA+9PD1dW74aW1qWCl06W5ysKE1b7WPC9QPjwvQk9EWT48L0hUTUw+DQo=
 
-<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">Get Approved In 24 - 48 Hours!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head><!--[if gte mso 15]>
-			<xml>
-				<o:OfficeDocumentSettings>
-				<o:AllowPNG/>
-				<o:PixelsPerInch>96</o:PixelsPerInch>
-				</o:OfficeDocumentSettings>
-			</xml>
-			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
-    margin:0;
-    padding:0;
-    background: rgb(255,255,255);
-}
-table td, table th {
-    border-spacing: 0;
-    border-collapse: collapse;
-    border: 0 none;
-    mso-table-lspace: 0pt;
-    mso-table-rspace: 0pt;
-}
-.fusionResponsiveColumn {
-    font-weight: normal;
-    text-align:left;
-}
-/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
-@media only screen and (max-width: 620px) {
-    .fusionResponsiveContent {
-        width: 100%!important;
-    }
-    .fusionResponsiveColumn {
-        width: auto!important;
-        display:block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100%!important;
-    }
-    .fusionResponsiveImageTable {
-        padding-bottom: 0!important;
-    }
-    .fusionResponsiveCanvas {
-        padding-top: 0px!important;
-        padding-bottom: 0px!important;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .fusionResponsiveContent {
-        width: 100%!important;
-    }
-    .fusionResponsiveColumn {
-        width: auto!important;
-        display:block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100%!important;
-    }
-    .fusionResponsiveCanvas {
-        padding-top: 0px!important;
-        padding-bottom: 0px!important;
-    }
-}</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Arvo:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lora:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
-<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style='width:100%;padding-top:15px;padding-bottom:15px;background-color:rgb(145,185,222);background-image:url("https://media.campaigner.com/editorassets/white-gradient.png");background-repeat:no-repeat;background-position:center top;font-family:Arvo, serif;'>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="LogoContainer" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:1px 8px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:8px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:568px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 1px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:solid;border-width:3px;"><img src="https://media.campaigner.com/media/76/764338/SBA image.jpg?id=lln8u0h" class="fusionResponsiveImage" alt="" width="562" height="auto" style="width:562px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:8px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="Unpadded" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:3px 11px 3px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:558px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
-<div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:5px 0px 6px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:51%;"><tbody><tr><td style="text-align:center;background:rgb(4,107,162);border-radius:30px;border-color:rgb(255,255,255);border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.pmfcap.com/click/gdrm-397f7-1sgqt-4jlpar1/" style="text-decoration:none;color:rgb(255,255,255);font-family:Lora, serif;font-size:16px;" id="auto_assign_link_num_1" name="pmfus ben">Click Here to Apply</a></td></tr></tbody></table></td></tr></tbody></table></div>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(131,99,99);font-family:Arvo, serif;font-size:15px;text-align:left;"><p style="mso-line-height-rule:exactly;line-height:14px;margin-top:0px;margin-bottom:0px;"><span style='font-family:"Open Sans", sans-serif;color:rgb(27, 30, 41);'>The SBA reduces the risk for lenders and makes it easier for them to access capital.聽</span><span style='font-family:"Open Sans", sans-serif;color:rgb(85, 85, 85);'>SBA guaranteed loans can be used for a variety of business purposes, including starting or expanding an existing business.</span><span style='font-family:"Open Sans", sans-serif;color:rgb(27, 30, 41);'>聽</span>
-<strong style='font-family:"Open Sans", sans-serif;color:rgb(27, 30, 41);'>That makes it easier for small businesses to get loans.</strong></p></div></td></tr></tbody></table>
-<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:8px 0px 2px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:solid;border-width:3px;"><img src="https://media.campaigner.com/media/76/764338/7(a).jpg?id=6gnljar" class="fusionResponsiveImage" alt="" width="552" height="auto" style="width:552px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(131,99,99);font-family:Arvo, serif;font-size:15px;text-align:left;"><ul style="margin-top:0px;margin-bottom:0px;">
-<li>
-<span style='font-family:"Open Sans", sans-serif;color:rgb(18, 18, 18);'>Under the program, small businesses (generally those with fewer than 500 employees) who are unable to get traditional financing through banks can apply for funds that can then be used for anything from buying a business, purchasing real estate, or for working capital.聽</span><span style='font-family:"Open Sans", sans-serif;color:black;'>These multi-purpose SBA loan programs offer the most flexible and longest-term loans.</span>
-</li>
-<li><span style='font-family:"Open Sans", sans-serif;color:rgb(0, 0, 0);'>To qualify for this loan you聽must have fewer than 500 employees or less than $20.5 million in average annual receipts. You must operate as a for-profit business, be based in the United States, and not be delinquent on any debt (such as taxes) owed to the government.</span></li>
-</ul></div></td></tr></tbody></table>
-<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 0px 100px;"><table align="right" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:solid;border-width:3px;"><img src="https://media.campaigner.com/media/76/764338/BBB.png?id=536uhgd" class="fusionResponsiveImage" alt="" width="121" height="auto" style="width:121px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-</td></tr></tbody></table></body>
-</html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-Premium Merchant Funding<br/>Trump Bldg, 40 Wall St 5th Floor<br/>New York, NY 10005<br/>United States
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.pmfcap.com/form?397f7--epzr-4jlpar9&sl=2hb&t=1&ac=gdrm' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.pmfcap.com/form?397f7--epzr-4jlpar9&sl=2hb&t=5&ac=gdrm' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.pmfcap.com/open/gdrm-397f7--4jlpar5/img.gif" width="0" height="0" alt="">
-------=_Part_1579773704.1641838922922--
+------=_NextPart_000_08A1_01BFC33B.1AD57DD0--
 
 
---===============2994324189536155428==
+
+--===============2948033368481072657==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2994324189536155428==
+--===============2948033368481072657==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -243,5 +188,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2994324189536155428==--
+--===============2948033368481072657==--
+
 
