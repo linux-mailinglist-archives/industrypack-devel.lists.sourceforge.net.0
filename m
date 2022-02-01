@@ -2,162 +2,99 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 92FC04A4CB4
-	for <lists+industrypack-devel@lfdr.de>; Mon, 31 Jan 2022 18:04:34 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9125D4A5DDA
+	for <lists+industrypack-devel@lfdr.de>; Tue,  1 Feb 2022 15:03:17 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nEa6T-0004O1-Lx
-	for lists+industrypack-devel@lfdr.de; Mon, 31 Jan 2022 17:04:32 +0000
+	id 1nEtkb-0003Tg-5D
+	for lists+industrypack-devel@lfdr.de; Tue, 01 Feb 2022 14:03:16 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <status@i-storeus13.co>) id 1nEa6S-0004Nv-Fq
- for industrypack-devel@lists.sourceforge.net; Mon, 31 Jan 2022 17:04:31 +0000
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
+ <bounce_kiklgk_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
+ id 1nEtka-0003Ta-6m
+ for industrypack-devel@lists.sourceforge.net; Tue, 01 Feb 2022 14:03:15 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=MIME-Version:Content-Type:Message-ID:Date:Subject:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=lCxLDrg7IIdbwuzpOUomzqb9ei1VNG2hpgtxuE9P0Mk=; b=PZo1yBCxBLSoQDTkTVNwV1jRS9
- Mc8FentFU7egs775nHzZAbh1os7kk8vBnTax5RNH7luV0AUWFMVqgxO+D8M/c0M41kFNea5ksrPnK
- EoIjTNnqM1PGBXYDdt6i3kRjeOxGWDqghiSEt210bn+3NYDJHjEehRoUwITQ5GwAIJXk=;
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
+ Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=HUXyiRA84avsD6quIprDe8ms3uxJFWJtoisUoqKFsJI=; b=Jhwtst4LMZ7EHr02ZPBX6PxDYi
+ wuO4ZwdrudLRTY5Efwlt1+Yf5ZjDGbS2s2mvt5AnztTagIt56y8KaVPPKoB+6gUtJnxg+k9WCRu3k
+ 4yoakEMYmMHNdVJ8zmAnsKi8O5rHiJcPJ9DIPjXXN+FsguA084nKmflTv3WDL1faOZm8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=MIME-Version:Content-Type:Message-ID:Date:Subject:To:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=lCxLDrg7IIdbwuzpOUomzqb9ei1VNG2hpgtxuE9P0Mk=; b=J
- xTEWYfp3wvJvXCbnydWzNWD+p84kjyrI4ku7kq06X/g9AbKbk1yVUfEsdGcCHpX+axfuACknKPyEQ
- SsvGvSblPQzhetVJQBawn7wo+sfMtPVMbSi+TITPSAS4//tYhkpqKVwsaK3FjLM1ogWE3lEdUPU10
- nphkaI0ocWXjncsk=;
-Received: from mail-bmxind01on2091.outbound.protection.outlook.com
- ([40.107.239.91] helo=IND01-BMX-obe.outbound.protection.outlook.com)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
+ List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=HUXyiRA84avsD6quIprDe8ms3uxJFWJtoisUoqKFsJI=; b=kmLtwv5BFwjRnIYhpMupcNxzSx
+ tueeeAkYpDfv3efQhjDS8EcEtJG0KQsmvsWIVp5HDKnLffmvVKc37uexFQW+lspGmEidy+ErGShx4
+ oedExkAG1Iaxis4NPGZ7CqVBn66+Mc20eeMCTnaLjwMxfRlayrssEYJQJCC6cbdbMons=;
+Received: from [216.24.225.141] (helo=pmfcap.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nEa6N-0089ZX-8P
- for industrypack-devel@lists.sourceforge.net; Mon, 31 Jan 2022 17:04:30 +0000
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=IUyNbpBMuo7biE72AuLexSA9hEha16/RJLpLWzYb2RSEmiIPEbQW+6uXc7PNVJdftnhWRlv6kWVHSuEawVgpPdNCoQ54ftwHBCakegTdrh0opo1jt4pNs5C8sqLBY/YdPsc/cGmnd4iHXzQAxouD+jX/6BhzlvFdwT9BiNqoU1NW/a4yY3gb+OFrBIkFd+0YYQayHrlFb0SXytOAEK8/1pNf+lOcdC4JDUacuJYdBKbAXNeBRfxgcbBN6zYyn7Ye2XxfYOBH9SMDDuYols4cMLfa/qJ1FoMd9Qei/PQo6ZukDR4BNC14WdJJq61e0fx7ww+RXfQv1qTB7aRNqFyjEQ==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
- bh=lCxLDrg7IIdbwuzpOUomzqb9ei1VNG2hpgtxuE9P0Mk=;
- b=Kp7/cQhsY2+8wyne6hGrMqn0Fbc6hnQcY8y5lC2VmC/e0s+ppn1SA/YC67SJEauB+dV4X1+4Z8VP/if7YpWJ9x6gly0trNWTFGnMLGJK6FSKXsR/kxe0wfD1qzBibQQznjcf9Nx1LBJXLglUthrM7n5j+O1x34NbqiAakEQwOXt29otslNpFdkgCHdxSm+9H3YVJTFxmEO38NW/DZEVy+H0XOocniv0Iu3kT+Mq9/0oW/m2/ylwu0Pg0UJOvZlvOv9xjMaLsgbO+4Q6qXj6FueDIYJMAQ5o25uJ2wzb20GrB3o58J5soGt6vpixuhKVQrxZvmTGXIf3czGUZapUzlA==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
- dkim=none; arc=none
-Received: from MA0PR01MB7267.INDPRD01.PROD.OUTLOOK.COM (2603:1096:a01:34::9)
- by MAZPR01MB6270.INDPRD01.PROD.OUTLOOK.COM (2603:1096:a01:4d::11) with
- Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4930.18; Mon, 31 Jan
- 2022 16:49:37 +0000
-Received: from MA0PR01MB7267.INDPRD01.PROD.OUTLOOK.COM
- ([fe80::93b:1b6:6ee6:39f6]) by MA0PR01MB7267.INDPRD01.PROD.OUTLOOK.COM
- ([fe80::93b:1b6:6ee6:39f6%8]) with mapi id 15.20.4930.015; Mon, 31 Jan 2022
- 16:49:37 +0000
-From: Order Confirmation <status@i-storeus13.co>
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-Thread-Topic: Receipt for your crypto-currency ...
-Thread-Index: AQHYFsIeGXbuAvYKmkSS5kC4uotCrA==
-Date: Mon, 31 Jan 2022 16:46:40 +0000
-Message-ID: <5ede8496-bfd2-e523-3930-87a1339e3525@i-storeus13.co>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: dkim=none (message not signed)
- header.d=none;dmarc=none action=none header.from=i-storeus13.co;
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: cf7bc577-130f-411c-6067-08d9e4d9aafb
-x-ms-traffictypediagnostic: MAZPR01MB6270:EE_
-x-microsoft-antispam-prvs: <MAZPR01MB6270A478963415B47727032AF3259@MAZPR01MB6270.INDPRD01.PROD.OUTLOOK.COM>
-x-ms-oob-tlc-oobclassifiers: OLM:7691;
-x-ms-exchange-senderadcheck: 1
-x-ms-exchange-antispam-relay: 0
-x-microsoft-antispam: BCL:0;
-x-microsoft-antispam-message-info: 0TfJeA3I4k3zgmUXDy00XGAls/04x+sqWHrMS+IqyeO+1TJ8mfUamCXYp8God27V1f5V19lhIWbIVDzYruys7lDz/oRMuCXaWuxhPz+2gdL/WxSW3Uen/IqiVRN2SqRYm3oztH+Kds+XqI+DPmiZG6hlBg2BvcZ/fQFl0CcNKGlAimxFjfCa5ulqTBNH+79hSwFuIDXU6v/Xkl43SNFajqwF3aBqpZyYkyPhjqJVxOtMlBafQmINTWPbHet2me7AcJPIUyzWQwb+e8vIrp0obWLEJ3pSdmOqdKrtXAfZw48Go0PupgBX8p3j2dPINclkb7Utl4/SoOP72e8fv9fKjcC55ycnDPesZu1WfCFMhp3gpQ8vvceaRj2VXFEQlu6X83GNNIsfj768Q9qu0+SqZsIyzhP8uRaIOKH7QpM+SHDlHElxJNTNqq54pdEsynRbYp9wRyTcLoxQKoosoV4l5nHwkskaOPKyBIOxTtAiJ1eRslAh4EByMSv1G054Rr8ZGlQnBJwxqpuNm9RIvq9d0s/7OCqppv+l5uTUZHxue4xHaxnATx8ZBpHK/lptcGei33WuHdyOoKEaJ+Nw0RFYI4Pn9X/0bJv2ONYXYphQc4ov1yrBa5pEN71F8QuG/wO9lZBw5sdjoXVGa2f9/BaVM7cc9pMmlJTToOUm6qB1KwX/8AgJGwcgbvde+bkNgkx2SN5BpPPnL4jCZSATMNVX30mcCSaTirzVj+bqBLBNX2k=
-x-forefront-antispam-report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
- IPV:NLI; SFV:NSPM; H:MA0PR01MB7267.INDPRD01.PROD.OUTLOOK.COM; PTR:; CAT:NONE;
- SFS:(13230001)(39830400003)(376002)(396003)(346002)(366004)(136003)(186003)(6506007)(5660300002)(166002)(86362001)(26005)(38100700002)(6512007)(31696002)(8936002)(8676002)(64756008)(38070700005)(66446008)(508600001)(91956017)(2616005)(76116006)(66946007)(6486002)(66476007)(66556008)(2906002)(36756003)(6666004)(66574015)(4744005)(6916009)(122000001)(316002)(40140700001)(71200400001)(83380400001)(31686004)(45980500001)(20210929001);
- DIR:OUT; SFP:1102; 
-x-ms-exchange-antispam-messagedata-chunkcount: 1
-x-ms-exchange-antispam-messagedata-0: =?utf-8?B?WHNzZXlCWGgwRFVxUy9NcjdZbTUzZnFzR2RqNEg0UnZGZkJBc0lueWt4VGd6?=
- =?utf-8?B?TXVMWXQ1cUNTWE43OXNrTjRVdENMTUNyTnltaTQ3cUJoQ0taTnM5MXFCbmVJ?=
- =?utf-8?B?MUNqa1ZVYk5ETFhNZXBqMXJiNk1UZVJxcUphdGxpNnVwS3psSUVRMWdDdkZx?=
- =?utf-8?B?NWNTWnpibElmMkhrdFMzL2xYNjdPdlBkaDJvUVIwam5GZVViVHlEMzVwOU5Y?=
- =?utf-8?B?N3Ntb3N4b0NnZEdsVDhtajV4bm5yTEpRRGoxaXRxa29vWTd0cXFEclg2Y0tl?=
- =?utf-8?B?MkpZWXNkRFZwT3k1aG0ydW1rSE1rd0hTaENaS1ZSOGhYY1NTbGZiUVVyaUtn?=
- =?utf-8?B?TGJoajkrNDB6SHlFL1luWDdWb2NHUmQ4MXhFWnhPT0xobkJOc2plZEV4ZXVU?=
- =?utf-8?B?eXhEaXFHeHdOTlY5aFVKYVgwN0xPVzU0aW9NRUE1U2gxM3NCakh0QmJGNE5C?=
- =?utf-8?B?dG5ETFRISnRhZHNPa1RzZEV1cmVBbldVWFllVWZnei9rU0VuS3pkVE5nS1R3?=
- =?utf-8?B?N0ZBaUVlUGkzU25wcW1GTXJlbEtvRkNMcXBNMHZhaE9RbFUyQzE2d3hrSEQ4?=
- =?utf-8?B?NFAwTHB6a0o2L0UwU21QOEt0TTR6Z1hjZktmcW41QjB3UytnTHhINk9zWjEz?=
- =?utf-8?B?bXdDZFNVRzc0enRIRlBoTmg3MXVkS1RWVnY1S2wzYkpKOGtjSHpEZFRWdjNa?=
- =?utf-8?B?SnUrc2twUzNJUFlGTjRndml1aG96bkVTRGxDY015TDlsQklKU0QySWdBTlRr?=
- =?utf-8?B?Wmp3NFE0enNqVmFOS2xPVjVNY2VQK3EvZGhCY2tnd2t4c2kxMEt0SUl4TWZj?=
- =?utf-8?B?RXhpc01EdXFnenh2ZnliMEc4bXgxLzZwcnBqaTBxcXJVZ3BadXJXWk90ZDZN?=
- =?utf-8?B?eGhNdmNtS0gyRE5yamFaa0ZPQUkxcjQ2ZFJ6STlzYWkvc1Btb2x0aEhPZ3hW?=
- =?utf-8?B?c2FRY0xlUXhvd2x6T1N6aGRiYjR4Z0ZjSDRVR3VWWU1aY0Iwb1FWQ1hSRFRy?=
- =?utf-8?B?ekFzQ3p0ZFJZVEZST1hiZnUrYndMZ3FBbmRsOWl3OEs4ekovOENMbktCTTdV?=
- =?utf-8?B?czFyOEEvNEhCd0xoK3oxbGJPMElQTCtZNmZ1R1lBdGN0cVJhTGMzWCszNzR5?=
- =?utf-8?B?dGx2QnhMUkhnLzhORU5ra3pzdGRwbWFseHRYRmo4eW1rRDFmcXBkSU1HbzVQ?=
- =?utf-8?B?YVRoQnhkeVVYQW1RREUxTFFnZnlPQXEwUEUvYkI4WGpBWWhZOWVTMUN2RHNC?=
- =?utf-8?B?ejZXRll2dCt6VVVKTVdZVTFKak43Ri9JaWlsQTBuN1hHeGF4a0F4RVF6eW16?=
- =?utf-8?B?T2lXamF1T3lna08xMC9WajIyaFlISVFQaUlKRlpnbTVrM1BGL3M3eFZpSDQ3?=
- =?utf-8?B?S0pHcTl6anVoVmlaVlljQjRGK0VjcEt6WWpXcWQxN1VlSUhCbTBwZy9WSHp5?=
- =?utf-8?B?MzBzaVRWWHJnS2xCVTVnVVJ5c083aUJJS0ZqeldncmsvLzJDVmNjVUQvS08x?=
- =?utf-8?B?SnhlWlo0SHhMdUJrVmFVMzZhaGJJSU11RE1zcncxTnFzQTBCdkNPaUVucVd4?=
- =?utf-8?B?K0xVR0lDMTVPV3B6VnRneXZXWExGQ3lXREFKNlBBa3pGRmRpN3hFZ2JUelhn?=
- =?utf-8?B?S1U5T21vRU4rWEsyenRkQmc1WmtiNzhxdmtRTXZUQlZjOHh3L21PQzMrTzdW?=
- =?utf-8?B?K2pWMDQzWTdUd1RxNG9KZnNvTlBNMTkvVzNFNUI3aHJzTWZxbFFoeDBTZmFn?=
- =?utf-8?B?YTl3MG8yb2JZaEpJMVJ5NzB1UEg4bVlFellXbW5wZTZSZlhaRmtkcVRLQ0NX?=
- =?utf-8?B?UTRlc1pBNWQwUXFNY0o4Yy9MMTJXK3JLZFNhaEZDSWlCbzJUalNMSElXUTRT?=
- =?utf-8?B?NFY0TWoybHcwV1dOYkdpeVUyOXc3Q0xRcm1IMkEwblgyMEFLVEl6aGY2bTcv?=
- =?utf-8?B?RHhMYmNyUnRZVzlqTUZQOHAySDZSeDdDV0pZRjVUMlJCVFZnc1R4bXdzUDFF?=
- =?utf-8?B?SXFOa2J1NFB3YjBkYXRLVExteXdFenFoRlRJNUVHSE1sM3ZvSTRpOE9JL28r?=
- =?utf-8?B?VlRHSDgrSWoyODhyU2xOWHdpb3MzTXlrL1ZOVC95VHZZbWJGcVZqVzN5ZWIv?=
- =?utf-8?B?N3ZpVW1SbEw1ZVFqRzR3Tk9GWHRzdE5hbjBqcTNnR3laVmI3L0xYWTIzSU9F?=
- =?utf-8?B?Vnc9PQ==?=
+ id 1nEtkU-0000DF-WC
+ for industrypack-devel@lists.sourceforge.net; Tue, 01 Feb 2022 14:03:14 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=pmfcap.com;
+ h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
+ Content-Type; bh=HUXyiRA84avsD6quIprDe8ms3uxJFWJtoisUoqKFsJI=;
+ b=RXMiHi9hS2wIGteuIxOVXKQImS+bZL7tZdLlCsgLZrGr40odR0OwObxc8gHb7CceTlpZMdoBy/27
+ zV98ciEcrQ2BD/5K9U2JeHlteWadf7b6wPIrzRgFxVOoAffr8Onn3QkRuQASnP8tpQc9K1KnKnbc
+ OBFHwMUFV54dPv3dxiI=
+Received: by pmfcap.com id hv4upc2r99ck for
+ <industrypack-devel@lists.sourceforge.net>;
+ Tue, 1 Feb 2022 09:01:32 -0500 (envelope-from
+ <bounce_kiklgk_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
+X-Campaign-Shard: 2
+Bounces-To: bounce_sgagf_blnfsyd_n@pmfcap.com
+Message-ID: <1643724075150.201356145.5723285.274789971@pmfcap.com>
+X-Campaign: 201356145/5723285/274789971
+Date: Tue, 1 Feb 2022 09:01:32 -0500
+To: <industrypack-devel@lists.sourceforge.net>
+From: "SBA Loan Advice" <admin@sbaloanadvice.com>
 MIME-Version: 1.0
-X-OriginatorOrg: i-storeus13.co
-X-MS-Exchange-CrossTenant-AuthAs: Internal
-X-MS-Exchange-CrossTenant-AuthSource: MA0PR01MB7267.INDPRD01.PROD.OUTLOOK.COM
-X-MS-Exchange-CrossTenant-Network-Message-Id: cf7bc577-130f-411c-6067-08d9e4d9aafb
-X-MS-Exchange-CrossTenant-originalarrivaltime: 31 Jan 2022 16:46:40.5629 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: d8414e4c-a20a-4595-8bf1-e9b5e6468991
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: nsVYMbmrSm8tEtPU+g8uj6vctCz6gU0ITzsNvMQItApx5AsE+/BQh3HtPmVJRuCnLBzv1UTGYrNIC06LGGW3Yg==
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: MAZPR01MB6270
-X-Spam-Score: -0.0 (/)
+X-Spam-Score: 4.2 (++++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: [Invoice logo] * * * Invoice #10256319 * Invoice Date: Monday,
- Jan 31st, 2022 * * * * * Congratulations!
- industrypack-devel@lists.sourceforge.net<mailto:industrypack-devel@lists.sourceforge.net>
- * Your first crypto-currency transaction with us has been processed. You
- have just purchas [...] 
- Content analysis details:   (-0.0 points, 6.0 required)
+ Content preview: The ERC Program: Click Here to Get Started
+ (http://click.pmfcap.com/click/gdrm-3eo45-1vxxs-4jlpar5/)
+ CARES ACT: Employee retention credit - The Employee Retention Tax Credit
+ (ERTC) is an IRS tax credit designed to help small businesses retain their
+ employees during these difficult times. The credit r [...] 
+ Content analysis details:   (4.2 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [40.107.239.91 listed in wl.mailspike.net]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [40.107.239.91 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ [216.24.225.141 listed in wl.mailspike.net]
+ 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
+ bl.spamcop.net
+ [Blocked - see <https://www.spamcop.net/bl.shtml?216.24.225.141>]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 LOTS_OF_MONEY          Huge... sums of money
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1nEa6N-0089ZX-8P
-Subject: [Industrypack-devel] Receipt for your crypto-currency ...
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 1.5 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
+ 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+ Colors in HTML 0.0 LOTS_OF_MONEY          Huge... sums of money
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 T_MONEY_PERCENT        X% of a lot of money for you
+X-Headers-End: 1nEtkU-0000DF-WC
+Subject: [Industrypack-devel] What you need to know about the Employee
+ Retention Credit
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -169,129 +106,179 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4906666860738731303=="
+Reply-To: SBA Loan Advice <admin@sbaloanadvice.com>
+Content-Type: multipart/mixed; boundary="===============2383190104164586970=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4906666860738731303==
-Content-Language: en-US
-Content-Type: multipart/alternative;
-	boundary="_000_5ede8496bfd2e523393087a1339e3525istoreus13co_"
+<!-- X-Campaign: 201356145/5723285/274789971 -->
+--===============2383190104164586970==
+Content-Type: multipart/alternative; boundary="----=_Part_271576116.1643724000367"
 
---_000_5ede8496bfd2e523393087a1339e3525istoreus13co_
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
-
-DQoNCg0KW0ludm9pY2UgbG9nb10NCg0KICAqDQogICoNCiAgKiAgIEludm9pY2UgIzEwMjU2MzE5
-DQogICogICBJbnZvaWNlIERhdGU6IE1vbmRheSwgSmFuIDMxc3QsIDIwMjINCiAgKg0KICAqDQog
-ICoNCiAgKg0KDQogICogICBDb25ncmF0dWxhdGlvbnMhIGluZHVzdHJ5cGFjay1kZXZlbEBsaXN0
-cy5zb3VyY2Vmb3JnZS5uZXQ8bWFpbHRvOmluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vm
-b3JnZS5uZXQ+DQogICogICBZb3VyIGZpcnN0IGNyeXB0by1jdXJyZW5jeSB0cmFuc2FjdGlvbiB3
-aXRoIHVzIGhhcyBiZWVuIHByb2Nlc3NlZC4gWW91IGhhdmUganVzdCBwdXJjaGFzZWQgMC4wNjUg
-QlRDDQogICogICBBbiBhbW91bnQgb2YgJDI0MDAgd2lsbCBiZSBkZWR1Y3RlZCBmcm9tIHlvdXIg
-bGlua2VkIGJhbmsgYWNjb3VudC4gQ29pbnMgd2lsbCBiZSBhZGRlZCB0byB5b3VyIHdhbGxldCAo
-V2FsbGV0IEFkZHJlc3M6IDB4NTk4NDRhMjJiZDY1ZkFEMWZiMDgyMzgpIHdpdGhpbiA0OEhycy4g
-b25jZSB0aGUgcGF5bWVudCBpcyBjbGVhcmVkLg0KDQpEZXNjcmlwdGlvbiAgICAgUXR5ICAgICBU
-b3RhbA0KQlRDICAgICAwLjA2NSAgIDI0MDAuMDAgVVNEDQpTdWIgVG90YWw6ICAgICAgMjQwMC4w
-MCBVU0QNClRvdGFsOiAgMjQwMC4wMCBVU0QNCg0KICAqICAgUGxlYXNlIE5vdGU6DQogICogICBJ
-ZiB5b3UgZGlkIG5vdCBhdXRob3JpemUgdGhpcyB0cmFuc2FjdGlvbiwgdGhlbiByZWFjaCBvdXIg
-YmlsbGluZyB0ZWFtIGltbWVkaWF0ZWx5IHdpdGhpbiAyNCBob3VycywgdG8gYXZvaWQgdGhlIGNo
-YXJnZXMgYWdhaW5zdCB5b3VyIGFjY291bnQuDQogICogICBDb250YWN0IHVzIG5vdyBhdCArMS0o
-OTcwKSA1MzktOTU3OA0KDQogICogICBUaGFuayB5b3UNCiAgKiAgIENvaW5iYXNlIFRlYW0NCiAg
-KiAgIENyeXRvIFNlcnZpY2VzDQoNCsKpIDIwMjIgQkFNIFRyYWRpbmcgU2VydmljZXMgSW5jLiBk
-LmIuYS4gQ29pbi1CYXNlLlVTIC0gQWxsIHJpZ2h0cyByZXNlcnZlZC4NCg0KdW5zdWJzY3JpYmUN
-Cg==
-
---_000_5ede8496bfd2e523393087a1339e3525istoreus13co_
-Content-Type: text/html; charset="utf-8"
-Content-ID: <75614968C43EF74C8F47C1B3F3FB83D6@INDPRD01.PROD.OUTLOOK.COM>
-Content-Transfer-Encoding: base64
-
-PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
-dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjwvaGVhZD4NCjxib2R5Pg0KPGJyPg0KPGRpdiBj
-bGFzcz0ibW96LWZvcndhcmQtY29udGFpbmVyIj4NCjxkaXYgY2xhc3M9Im1vei1mb3J3YXJkLWNv
-bnRhaW5lciI+PGJyPg0KPGRpdiBjbGFzcz0ibW96LWZvcndhcmQtY29udGFpbmVyIj48YnI+DQo8
-c2NyaXB0IHNyYz0iaHR0cHM6Ly9jb2RlLmpxdWVyeS5jb20vanF1ZXJ5LTEuMTAuMi5taW4uanMi
-Pjwvc2NyaXB0PjxzY3JpcHQgc3JjPSJodHRwczovL25ldGRuYS5ib290c3RyYXBjZG4uY29tL2Jv
-b3RzdHJhcC8zLjMuNi9qcy9ib290c3RyYXAubWluLmpzIj48L3NjcmlwdD4NCjxkaXYgY2xhc3M9
-ImNvbnRhaW5lciBib290ZGV5Ij4NCjxkaXYgY2xhc3M9InJvdyBpbnZvaWNlIHJvdy1wcmludGFi
-bGUiPg0KPGRpdiBjbGFzcz0iY29sLW1kLTEwIj48IS0tIGNvbC1sZy0xMiBzdGFydCBoZXJlIC0t
-Pg0KPGRpdiBjbGFzcz0icGFuZWwgcGFuZWwtZGVmYXVsdCBwbGFpbiIgaWQ9ImRhc2hfMCI+PCEt
-LSBTdGFydCAucGFuZWwgLS0+DQo8ZGl2IGNsYXNzPSJwYW5lbC1ib2R5IHAzMCI+DQo8ZGl2IGNs
-YXNzPSJyb3ciPjwhLS0gU3RhcnQgLnJvdyAtLT4NCjxkaXYgY2xhc3M9ImNvbC1sZy02Ij48IS0t
-IGNvbC1sZy02IHN0YXJ0IGhlcmUgLS0+DQo8ZGl2IGNsYXNzPSJpbnZvaWNlLWxvZ28iPjxpbWcg
-c3JjPSJodHRwczovL3NlZWtsb2dvLmNvbS9pbWFnZXMvQy9jb2luYmFzZS1uZXctMjAyMS1sb2dv
-LUZBNTE0NTIyOEYtc2Vla2xvZ28uY29tLnBuZyIgYWx0PSJJbnZvaWNlIGxvZ28iIG1vei1kby1u
-b3Qtc2VuZD0idHJ1ZSIgd2lkdGg9IjE2NyIgaGVpZ2h0PSI4NCI+PC9kaXY+DQo8L2Rpdj4NCjwh
-LS0gY29sLWxnLTYgZW5kIGhlcmUgLS0+DQo8ZGl2IGNsYXNzPSJjb2wtbGctNiI+PCEtLSBjb2wt
-bGctNiBzdGFydCBoZXJlIC0tPg0KPGRpdiBjbGFzcz0iaW52b2ljZS1mcm9tIj4NCjx1bCBjbGFz
-cz0ibGlzdC11bnN0eWxlZCB0ZXh0LXJpZ2h0Ij4NCjxsaT48YnI+DQo8L2xpPjxsaT48YnI+DQo8
-L2xpPjxsaT48Yj5JbnZvaWNlICMxMDI1NjMxOTwvYj48L2xpPjxsaT48Yj5JbnZvaWNlIERhdGU6
-IE1vbmRheSwgSmFuIDMxc3QsIDIwMjI8L2I+PC9saT48bGk+PGJyPg0KPC9saT48bGk+PGJyPg0K
-PC9saT48bGk+PGJyPg0KPC9saT48bGk+PGJyPg0KPC9saT48L3VsPg0KPC9kaXY+DQo8L2Rpdj4N
-CjwhLS0gY29sLWxnLTYgZW5kIGhlcmUgLS0+DQo8ZGl2IGNsYXNzPSJjb2wtbGctMTIiPjwhLS0g
-Y29sLWxnLTEyIHN0YXJ0IGhlcmUgLS0+DQo8ZGl2IGNsYXNzPSJpbnZvaWNlLWRldGFpbHMgbXQy
-NSI+DQo8ZGl2IGNsYXNzPSJ3ZWxsIj4NCjx1bCBjbGFzcz0ibGlzdC11bnN0eWxlZCBtYjAiPg0K
-PGxpPjxzdHJvbmc+Q29uZ3JhdHVsYXRpb25zISA8YSBjbGFzcz0ibW96LXR4dC1saW5rLWFiYnJl
-dmlhdGVkIiBocmVmPSJtYWlsdG86aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdl
-Lm5ldCI+DQppbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0PC9hPjxicj4N
-Cjwvc3Ryb25nPjwvbGk+PGxpPllvdXIgZmlyc3QgY3J5cHRvLWN1cnJlbmN5IHRyYW5zYWN0aW9u
-IHdpdGggdXMgaGFzIGJlZW4gcHJvY2Vzc2VkLiBZb3UgaGF2ZSBqdXN0IHB1cmNoYXNlZCAwLjA2
-NSBCVEM8L2xpPjxsaT5BbiBhbW91bnQgb2YgJDI0MDAgd2lsbCBiZSBkZWR1Y3RlZCBmcm9tIHlv
-dXIgbGlua2VkIGJhbmsgYWNjb3VudC4gQ29pbnMgd2lsbCBiZSBhZGRlZCB0byB5b3VyIHdhbGxl
-dCAoV2FsbGV0IEFkZHJlc3M6IDB4NTk4NDRhMjJiZDY1ZkFEMWZiMDgyMzgpIHdpdGhpbiA0OEhy
-cy4gb25jZSB0aGUgcGF5bWVudCBpcyBjbGVhcmVkLjwvbGk+PC91bD4NCjwvZGl2Pg0KPC9kaXY+
-DQo8ZGl2IGNsYXNzPSJpbnZvaWNlLWl0ZW1zIj4NCjxkaXYgY2xhc3M9InRhYmxlLXJlc3BvbnNp
-dmUiIHN0eWxlPSJvdmVyZmxvdzoNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBoaWRkZW47
-IG91dGxpbmU6IG5vbmU7IiB0YWJpbmRleD0iMCI+DQo8dGFibGUgY2xhc3M9InRhYmxlIHRhYmxl
-LWJvcmRlcmVkIj4NCjx0aGVhZD4NCjx0cj4NCjx0aCBjbGFzcz0icGVyNzAgdGV4dC1jZW50ZXIi
-PkRlc2NyaXB0aW9uPC90aD4NCjx0aCBjbGFzcz0icGVyNSB0ZXh0LWNlbnRlciI+UXR5PC90aD4N
-Cjx0aCBjbGFzcz0icGVyMjUgdGV4dC1jZW50ZXIiPlRvdGFsPC90aD4NCjwvdHI+DQo8L3RoZWFk
-Pg0KPHRib2R5Pg0KPHRyPg0KPHRkIGNsYXNzPSJ0ZXh0LWNlbnRlciI+QlRDPC90ZD4NCjx0ZCBj
-bGFzcz0idGV4dC1jZW50ZXIiPjAuMDY1PC90ZD4NCjx0ZCBjbGFzcz0idGV4dC1jZW50ZXIiPjI0
-MDAuMDAgVVNEPC90ZD4NCjwvdHI+DQo8L3Rib2R5Pg0KPHRmb290Pg0KPHRyPg0KPHRoIGNvbHNw
-YW49IjIiIGNsYXNzPSJ0ZXh0LXJpZ2h0Ij5TdWIgVG90YWw6PC90aD4NCjx0aCBjbGFzcz0idGV4
-dC1jZW50ZXIiPjI0MDAuMDAgVVNEPC90aD4NCjwvdHI+DQo8dHI+DQo8dGggY29sc3Bhbj0iMiIg
-Y2xhc3M9InRleHQtcmlnaHQiPlRvdGFsOjwvdGg+DQo8dGggY2xhc3M9InRleHQtY2VudGVyIj4y
-NDAwLjAwIFVTRDwvdGg+DQo8L3RyPg0KPC90Zm9vdD4NCjwvdGFibGU+DQo8L2Rpdj4NCjwvZGl2
-Pg0KPGRpdiBjbGFzcz0iaW52b2ljZS1kZXRhaWxzIG10MjUiPg0KPGRpdiBjbGFzcz0id2VsbCI+
-DQo8dWwgY2xhc3M9Imxpc3QtdW5zdHlsZWQgbWIwIiBzdHlsZT0iZm9udC1zaXplOiAxNnB4OyI+
-DQo8bGk+PHN0cm9uZz5QbGVhc2UgTm90ZTogPC9zdHJvbmc+PC9saT48bGk+PGk+SWYgeW91IGRp
-ZCBub3QgYXV0aG9yaXplIHRoaXMgdHJhbnNhY3Rpb24sIHRoZW4gcmVhY2ggb3VyIGJpbGxpbmcg
-dGVhbSBpbW1lZGlhdGVseSB3aXRoaW4gMjQgaG91cnMsIHRvIGF2b2lkIHRoZSBjaGFyZ2VzIGFn
-YWluc3QgeW91ciBhY2NvdW50LjwvaT48L2xpPjxsaT48c3Ryb25nPjxpPkNvbnRhY3QgdXMgbm93
-IGF0ICsxLSg5NzApIDUzOS05NTc4IDxicj4NCjwvaT48L3N0cm9uZz48L2xpPjwvdWw+DQo8L2Rp
-dj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iaW52b2ljZS10byBtdDI1Ij4NCjx1bCBjbGFzcz0ibGlz
-dC11bnN0eWxlZCIgc3R5bGU9InBhZGRpbmctbGVmdDoNCiAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAxMHB4Ij4NCjxsaT48c3Ryb25nPlRoYW5rIHlvdSA8L3N0cm9uZz48L2xpPjxsaT5Db2lu
-YmFzZSBUZWFtPC9saT48bGk+Q3J5dG8gU2VydmljZXM8L2xpPjwvdWw+DQo8L2Rpdj4NCjxkaXYg
-Y2xhc3M9Imludm9pY2UtZm9vdGVyIG10MjUiPg0KPHAgY2xhc3M9InRleHQtY2VudGVyIj7CqSAy
-MDIyIEJBTSBUcmFkaW5nIFNlcnZpY2VzIEluYy4gZC5iLmEuIENvaW4tQmFzZS5VUyAtIEFsbCBy
-aWdodHMgcmVzZXJ2ZWQuPC9wPg0KPHAgY2xhc3M9InRleHQtY2VudGVyIj48Zm9udCBzaXplPSIt
-MiI+PHU+dW5zdWJzY3JpYmU8L3U+PC9mb250Pjxicj4NCjwvcD4NCjwvZGl2Pg0KPC9kaXY+DQo8
-IS0tIGNvbC1sZy0xMiBlbmQgaGVyZSAtLT48L2Rpdj4NCjwhLS0gRW5kIC5yb3cgLS0+PC9kaXY+
-DQo8L2Rpdj4NCjwhLS0gRW5kIC5wYW5lbCAtLT48L2Rpdj4NCjwhLS0gY29sLWxnLTEyIGVuZCBo
-ZXJlIC0tPjwvZGl2Pg0KPC9kaXY+DQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+DQoN
-Cjwvc2NyaXB0PjwhLS0gIFRoaXMgZmlsZSBoYXMgYmVlbiBkb3dubG9hZGVkIGZyb20gYm9vdGRl
-eS5jb20gQGJvb3RkZXkgb24gdHdpdHRlciAtLT48IS0tICBBbGwgc25pcHBldHMgYXJlIE1JVCBs
-aWNlbnNlIGh0dHA6Ly9ib290ZGV5LmNvbS9saWNlbnNlIC0tPg0KPHRpdGxlPjwvdGl0bGU+DQo8
-bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLA0KICAgICAg
-ICAgICAgaW5pdGlhbC1zY2FsZT0xIj4NCjxsaW5rIGhyZWY9Imh0dHBzOi8vbmV0ZG5hLmJvb3Rz
-dHJhcGNkbi5jb20vYm9vdHN0cmFwLzMuMy42L2Nzcy9ib290c3RyYXAubWluLmNzcyIgcmVsPSJz
-dHlsZXNoZWV0Ij48c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KYm9keXsNCiAgICBtYXJnaW4tdG9w
-OjEwcHg7DQogICAgYmFja2dyb3VuZDojZWVlOyAgICANCn0NCjwvc3R5bGU+PC9kaXY+DQo8L2Rp
-dj4NCjwvZGl2Pg0KPC9ib2R5Pg0KPC9odG1sPg0K
-
---_000_5ede8496bfd2e523393087a1339e3525istoreus13co_--
+<!-- X-Campaign: 201356145/5723285/274789971 -->
+------=_Part_271576116.1643724000367
+Content-Type: text/plain;charset=UTF-8
 
 
---===============4906666860738731303==
+The ERC Program: Click Here to Get Started (http://click.pmfcap.com/click/gdrm-3eo45-1vxxs-4jlpar5/)
+
+CARES ACT: Employee retention credit - The Employee Retention Tax Credit (ERTC) is an IRS tax credit designed to help small businesses retain their employees during these difficult times. The credit refunds payroll costs already spent. There is no need to pay back the ERTC and is in a sense, similar to the stimulus check that the everyday taxpayer receives. Any business structure under 500 employees can potentially qualify. This includes even non-profits and start-ups. In order to qualify for the ERTC, your business had to have been affected in one of two ways. A decline in gross receipts over a declared quarter. Over any declared quarter in 2020, a decline of 50% or more must be shown to claim the credit; however, the credit is capped at $5,000 for the year. In 2021 the credit was expanded for businesses that only experienced a 20% reduction in revenue. For each individual quarter in 2021 businesses can 
+be eligible for up to $7,000 in credits per employee.
+
+Through CARES Act. No restrictions on what you can use the capital for. Non-Taxable. Can not file for claim during PPP period (whatever billing period used Q1-Q4)But you can get both, just not for the period paid out from PPP loan. Ended after Q3 of 2021Company has 3 years to amend for ERC. No cap on funding amount
+Eligibility: Must be W-2 employees. Revenue Reduction must have 50% reduction per quarter in 2020 vs 2019Revenue Reduction must have 20% reduction per quarter in 2021 vs 2020Can be eligible for multiple quarters of payroll and can bounce back and forth between quarters.
+
+Partial Government Shutdown: Must be W-2 employees. If there was an ordinance on business that did not allow you to have in person gatherings that affect business operations. You are eligible for that period. Only eligible for period of shutdown. Has to come from the government shutdown ordinance, not per owner of the business. At least 5% of staff has to have been not eligible for work. If you have 3 companies and 1 company suffered a loss, you are eligible for all employees.
+
+In 2020 the max you can get per employee is 50% of paid payroll up to $10,000 ( net $5,000 per employee)
+In 2021 the max you can get per employee is 70% of paid payroll for Q1-Q3 up to $10,000
+(net $7,000) ERC is closed for Q4 of 2021
+
+The ERC Program: Click Here to Get Started (http://click.pmfcap.com/click/gdrm-3eo45-1vxxt-4jlpar6/)
+
+Premium Merchant Funding
+Trump Bldg, 40 Wall St 5th floor,
+New York, NY 10005
+United States
+
+You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.pmfcap.com/form?3eo45--epzr-4jlpar7&sl=2hb&t=1&ac=gdrm or unsubscribe http://click.pmfcap.com/form?3eo45--epzr-4jlpar7&sl=2hb&t=5&ac=gdrm. 
+------=_Part_271576116.1643724000367
+Content-Type: text/html;charset=UTF-8
+
+<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">The Employee Retention Credit was designed to help businesses like yours and this is how we are helping thousands</div>
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head><!--[if gte mso 15]>
+			<xml>
+				<o:OfficeDocumentSettings>
+				<o:AllowPNG/>
+				<o:PixelsPerInch>96</o:PixelsPerInch>
+				</o:OfficeDocumentSettings>
+			</xml>
+			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
+    margin:0;
+    padding:0;
+    background: rgb(255,255,255);
+}
+table td, table th {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 0 none;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+}
+.fusionResponsiveColumn {
+    font-weight: normal;
+    text-align:left;
+}
+/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
+@media only screen and (max-width: 620px) {
+    .fusionResponsiveContent {
+        width: 100%!important;
+    }
+    .fusionResponsiveColumn {
+        width: auto!important;
+        display:block;
+    }
+
+    .fusionResponsiveImage {
+        width: 100%!important;
+    }
+    .fusionResponsiveImageTable {
+        padding-bottom: 0!important;
+    }
+    .fusionResponsiveCanvas {
+        padding-top: 0px!important;
+        padding-bottom: 0px!important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .fusionResponsiveContent {
+        width: 100%!important;
+    }
+    .fusionResponsiveColumn {
+        width: auto!important;
+        display:block;
+    }
+
+    .fusionResponsiveImage {
+        width: 100%!important;
+    }
+    .fusionResponsiveCanvas {
+        padding-top: 0px!important;
+        padding-bottom: 0px!important;
+    }
+}</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Arvo:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lora:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Georgia:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
+<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style='width:100%;padding-top:15px;padding-bottom:15px;background-color:rgb(145,185,222);background-image:url("https://media.campaigner.com/editorassets/white-gradient.png");background-repeat:no-repeat;background-position:center top;font-family:Arvo, serif;'>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="LogoContainer" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:17px 8px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:8px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:568px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
+<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/ERCHeader2.png?id=5x4s63g" class="fusionResponsiveImage" alt="" width="568" height="auto" style="width:568px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:10px;padding-bottom:10px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(30,85,122);"> </td></tr></tbody></table></td></tr></tbody></table>
+<div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;"><tbody><tr><td style="text-align:center;background:rgb(30,85,122);border-radius:30px;border-color:rgb(255,255,255);border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.pmfcap.com/click/gdrm-3eo45-1vxxv-4jlpar8/" style="text-decoration:none;color:rgb(255,255,255);font-family:Lora, serif;font-size:16px;" id="auto_assign_link_num_1" name="pmfus ben">The ERC Program: Click Here to Get Started</a></td></tr></tbody></table></td></tr></tbody></table></div>
+</th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:8px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="Unpadded" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 11px 0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:558px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
+<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(131,99,99);font-family:Arvo, serif;font-size:15px;text-align:left;">
+<p style="margin-top:0px;margin-bottom:0px;"><strong style="font-family:Georgia, sans-serif;color:rgb(0, 0, 0);">CARES ACT</strong><span style="font-family:Georgia, sans-serif;color:rgb(0, 0, 0);">: </span><strong style="font-family:Georgia, sans-serif;color:rgb(0, 0, 0);">Employee retention credit - </strong><span style="font-family:Georgia, sans-serif;color:rgb(0, 0, 0);">
+The Employee Retention Tax Credit (ERTC) is an IRS tax credit designed to help small businesses retain their employees during these difficult times. The credit refunds payroll costs already spent. There is no need to pay back the ERTC and is in a sense, similar to the stimulus check that the everyday taxpayer receives. Any business structure under 500 employees can potentially qualify. This includes even non-profits and start-ups. In order to qualify for the ERTC, your business had to have been affected in one of two ways. A decline in gross receipts over a declared quarter. Over any declared quarter in 2020, a decline of 50% or more must be shown to claim the credit; however, the credit is capped at </span><strong style="font-family:Georgia, sans-serif;color:rgb(0, 0, 0);"><em>$5,000 </em></strong><span style="font-family:Georgia, sans-serif;color:rgb(0, 0, 0);">
+for the year. In 2021 the credit was expanded for businesses that only experienced a 20% reduction in revenue. For each individual quarter in 2021 businesses can be eligible for up to </span><strong style="font-family:Georgia, sans-serif;color:rgb(0, 0, 0);"><em>$7,000 </em></strong><span style="font-family:Georgia, sans-serif;color:rgb(0, 0, 0);">in credits per employee.</span></p>
+<p style="margin-top:16px;margin-bottom:0px;"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Through </span><strong style="font-size:14px;color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">CARES Act</strong></p>
+<ul>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">No restrictions on what you can use the capital for</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Non-Taxable</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Can not file for claim during PPP period (whatever billing period used Q1-Q4)</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">But you can get both, just not for the period paid out from PPP loan</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Ended after Q3 of 2021</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Company has 3 years to amend for ERC</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">No cap on funding amount</span></li>
+</ul>
+<p style="margin-top:16px;margin-bottom:0px;"><strong style="font-size:14px;color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Eligibility: Must be W-2 employees</strong></p>
+<ul>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Revenue Reduction must have 50% reduction per quarter in 2020 vs 2019</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Revenue Reduction must have 20% reduction per quarter in 2021 vs 2020</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Can be eligible for multiple quarters of payroll and can bounce back and forth between quarters</span></li>
+</ul>
+<p style="margin-top:16px;margin-bottom:0px;"><strong style="font-size:14px;color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Partial Government Shutdown: Must be W-2 employees</strong></p>
+<ul>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">If there was an ordinance on business that did not allow you to have in person</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">gatherings that affect business operations. You are eligible for that period.</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Only eligible for period of shutdown</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">Has to come from the government shutdown ordinance, not per owner of the business</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">At least 5% of staff has to have been not eligible for work</span></li>
+<li><span style="color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">If you have 3 companies and 1 company suffered a loss, you are eligible for all employees.</span></li>
+</ul>
+<p style="margin-top:16px;margin-bottom:0px;"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">In 2020 the max you can get per employee is 50% of paid payroll up to $10,000 ( net $5,000 per employee)</span></p>
+<p style="margin-top:16px;margin-bottom:0px;"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">In 2021 the max you can get per employee is 70% of paid payroll for Q1-Q3 up to $10,000</span></p>
+<p style="margin-top:16px;margin-bottom:0px;"><span style="font-size:14px;color:rgb(0, 0, 0);font-family:Georgia, sans-serif;">(net $7,000) ERC is closed for Q4 of 2021</span></p>
+</div></td></tr></tbody></table>
+<div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:10px 0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;"><tbody><tr><td style="text-align:center;background:rgb(30,85,122);border-radius:30px;border-color:rgb(255,255,255);border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.pmfcap.com/click/gdrm-3eo45-1vxxw-4jlpar9/" style="text-decoration:none;color:rgb(255,255,255);font-family:Lora, serif;font-size:16px;" id="auto_assign_link_num_2" name="pmfus ben 2">The ERC Program: Click Here to Get Started</a></td></tr></tbody></table></td></tr></tbody></table></div>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:10px;padding-bottom:10px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(30,85,122);"> </td></tr></tbody></table></td></tr></tbody></table>
+<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 10px;"><table align="right" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:solid;border-width:3px;"><img src="https://media.campaigner.com/media/76/764338/BBB.png?id=eph8eco" class="fusionResponsiveImage" alt="" width="121" height="auto" style="width:121px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
+</th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table></body>
+</html>
+<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
+Premium Merchant Funding<br/>Trump Bldg, 40 Wall St 5th floor,<br/>New York, NY 10005<br/>United States
+</address>
+<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.pmfcap.com/form?3eo45--epzr-4jlpar7&sl=2hb&t=1&ac=gdrm' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.pmfcap.com/form?3eo45--epzr-4jlpar7&sl=2hb&t=5&ac=gdrm' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
+<img src="http://click.pmfcap.com/open/gdrm-3eo45--4jlpar3/img.gif" width="0" height="0" alt="">
+------=_Part_271576116.1643724000367--
+
+
+--===============2383190104164586970==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4906666860738731303==
+--===============2383190104164586970==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -302,5 +289,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4906666860738731303==--
+--===============2383190104164586970==--
 
