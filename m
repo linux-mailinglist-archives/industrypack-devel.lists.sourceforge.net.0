@@ -2,85 +2,97 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5436E4BCFDD
-	for <lists+industrypack-devel@lfdr.de>; Sun, 20 Feb 2022 17:30:59 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id DC8A34BDA10
+	for <lists+industrypack-devel@lfdr.de>; Mon, 21 Feb 2022 15:03:08 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nLp6x-0001Q9-2L
-	for lists+industrypack-devel@lfdr.de; Sun, 20 Feb 2022 16:30:57 +0000
+	id 1nM9HQ-0004uu-L3
+	for lists+industrypack-devel@lfdr.de; Mon, 21 Feb 2022 14:03:07 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <support-amazon.jp@sgnagw.cn>) id 1nLp6w-0001Q3-A1
- for industrypack-devel@lists.sourceforge.net; Sun, 20 Feb 2022 16:30:57 +0000
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
+ <bounce_kadeae_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
+ id 1nM9HO-0004uo-TV
+ for industrypack-devel@lists.sourceforge.net; Mon, 21 Feb 2022 14:03:05 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=g1wj5Z99RLbC+JD+pXCL7TYPLDFowwYhDvA3qhgrnOg=; b=SM1Npd8VuIDagJk7rJTNR6aqOC
- RAQ2QgKsuD/a9NEtMYWaezdMAnSQUPBUOVPu/au1SppEBpNe950r+C5ODM5sRb+vEEXn6P4xx7Y96
- wzeCXxyIlCA8qkfLBf3kWXUUA/eIF9n0cRqfHgg4fz5OLcoLY612xFiGZjIAZsMq+pJU=;
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
+ Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=3mZ2LZNguNwvGFBIFSlh6qkt/b4Tmb8dChbmyedCTuU=; b=C15NVLd3f8/e2EmB87bHiJOe3v
+ /dJaN9KFHDmOMMPPyx1jD4pUKqvC3hXFE4QP7HSoWsaH0JOa+ufwB9IGGY7W48x7cLKy8j73kqunA
+ XAAg6htkI9sovltZhn5WgGP3YUHNyS5HMuW8/FQO0GvIGVlhHkHgeymwAhCtiBloirYQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=g1wj5Z99RLbC+JD+pXCL7TYPLDFowwYhDvA3qhgrnOg=; b=E
- RoyDAnP+eRUe/9y7BmIsKxiCVM2iv34wgBA2LhTqZP7RpOjBCoGoA3iZT2CUjAqQDoSGFt3FiRlPY
- y5K91o3WdhckEj4oYrAOFeOJLOKHM/TOeP/drRpgXCxNTiwph/jDgR7Czydc3bGVOARpTQudIvkQn
- N2/XG4TAIkN2O9L8=;
-Received: from [139.198.117.90] (helo=mail.sgnagw.cn)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
+ List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=3mZ2LZNguNwvGFBIFSlh6qkt/b4Tmb8dChbmyedCTuU=; b=hM00y1Sm9xRCKp1lKAK0TNnEaF
+ K1oVGgrOLxyhlGV7MVtA/iIT5t1YjMHHLvds2LHk8PgdMS+Lq9LSm5hznxd8JCWh4FdLFmVDCXiWL
+ skuDWthT+1dwDDfUlOZcJV9CP9bBSnBKYncVsRh3j+Bk0zP7CKhBuX7RFFHE8GJIGF3A=;
+Received: from [216.24.225.141] (helo=pmfcap.com)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nLp6s-0007ap-Qa
- for industrypack-devel@lists.sourceforge.net; Sun, 20 Feb 2022 16:30:56 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=sgnagw.cn; 
- h=Date:From:To:Subject:Message-ID:Mime-Version:Content-Type;
- i=support-amazon.jp@sgnagw.cn;
- bh=g1wj5Z99RLbC+JD+pXCL7TYPLDFowwYhDvA3qhgrnOg=;
- b=zncgqsAFBgnmMFYYmFLFqS2TJeg/UpPVXIHHQPm1M0nAM5exodHn9b6SeVS3hg6hrxW1LemJEdei
- MGir3//PKoYuTfQiXiumi9LrqyxHISLGA0zpuoMY9xHORyIW2JeTlS3CCKGDGLhYv6lBnSMwSDE2
- lvX7vW/MKA+Bdqt8vKw=
-Date: Mon, 21 Feb 2022 00:17:38 +0800
-From: "Amazon" <support-amazon.jp@sgnagw.cn>
+ id 1nM9HJ-00A1eb-6y
+ for industrypack-devel@lists.sourceforge.net; Mon, 21 Feb 2022 14:03:05 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=pmfcap.com;
+ h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
+ Content-Type; bh=3mZ2LZNguNwvGFBIFSlh6qkt/b4Tmb8dChbmyedCTuU=;
+ b=eb1lvX1TwsWMOP+sLmZNq8Q5X/ta/F5PnUc4vpnaT/eG1TN/1LO4zPBpm8zhqBhqoMjkDPNQVt8u
+ glW0+jP/YNZpeQmzGFfRpFbV6HajaOXro+Pi1SWxsOyri0A2h6NEu1XLaaeTqaVV6odVGl8din1S
+ bSaxvYLDXXpPBr4lvKc=
+Received: by pmfcap.com id h2edoo2r99c5 for
+ <industrypack-devel@lists.sourceforge.net>;
+ Mon, 21 Feb 2022 09:01:53 -0500 (envelope-from
+ <bounce_kadeae_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
+X-Campaign-Shard: 2
+Bounces-To: bounce_sytzg_blnfsyd_n@pmfcap.com
+Message-ID: <1645452085894.201406950.5955246.274789971@pmfcap.com>
+X-Campaign: 201406950/5955246/274789971
+Date: Mon, 21 Feb 2022 09:01:53 -0500
 To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20220221001746476536@sgnagw.cn>
-Mime-Version: 1.0
-X-Spam-Score: 1.1 (+)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+From: "SBA Loan Advice" <admin@sbaloanadvice.com>
+MIME-Version: 1.0
+X-Spam-Score: 4.3 (++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Amazon お客様 平素は Amazon.co.jpをご利用いただき、誠にありがとうございます。
-    ご利用の Amazon.co.jpアカウントで異常な活動が検出されたため、アカウ
-    [...] 
- 
- Content analysis details:   (1.1 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview: Click Here To Get Streamlined
+ (http://click.pmfcap.com/click/gdrm-3jn3i-1zbuv-4jlpar2/)
+ Need request for increase, reconsideration, or appeal on your EIDL? How have
+ we been helping thousands get funded faster, request for an increase,
+ reconsiderations, and appeals: 
+ Content analysis details:   (4.3 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.0 HTML_FONT_FACE_BAD     BODY: HTML font face is not a word
-  0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 HTML_IMAGE_RATIO_04    BODY: HTML has a low ratio of text to image
+ area 0.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-X-Headers-End: 1nLp6s-0007ap-Qa
-Subject: [Industrypack-devel] =?utf-8?b?44CQQW1hem9u44CR44Ki44Kr44Km44Oz?=
-	=?utf-8?b?44OI44Gu5Yip55So54q25rOB44KS44GU56K66KqN44GP44Gg44GV44GE?=
-	=?utf-8?b?44CC?=
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+ Colors in HTML
+ 0.9 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
+X-Headers-End: 1nM9HJ-00A1eb-6y
+Subject: [Industrypack-devel] =?utf-8?q?Act_now_if_you_are_still_waiting_f?=
+ =?utf-8?q?or_your_EIDL_Funds=3F_=C2=AE?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -92,343 +104,157 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============6580173807692328055=="
+Reply-To: SBA Loan Advice <admin@sbaloanadvice.com>
+Content-Type: multipart/mixed; boundary="===============7801082258101965990=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+<!-- X-Campaign: 201406950/5955246/274789971 -->
+--===============7801082258101965990==
+Content-Type: multipart/alternative; boundary="----=_Part_577457794.1645452001068"
 
---===============6580173807692328055==
-Content-Type: multipart/alternative;
-	boundary="=====003_Dragon118145160235_====="
+<!-- X-Campaign: 201406950/5955246/274789971 -->
+------=_Part_577457794.1645452001068
+Content-Type: text/plain;charset=UTF-8
 
-This is a multi-part message in MIME format.
+Click Here To Get Streamlined  (http://click.pmfcap.com/click/gdrm-3jn3i-1zbuv-4jlpar2/)
 
---=====003_Dragon118145160235_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+Need request for increase, reconsideration, or appeal on your EIDL?
 
-DQoNCg0KDQpBbWF6b24g44GK5a6i5qeYDQrlubPntKDjga8gQW1hem9uLmNvLmpw44KS44GU5Yip
-55So44GE44Gf44Gg44GN44CB6Kqg44Gr44GC44KK44GM44Go44GG44GU44GW44GE44G+44GZ44CC
-DQrjgZTliKnnlKjjga4gQW1hem9uLmNvLmpw44Ki44Kr44Km44Oz44OI44Gn55Ww5bi444Gq5rS7
-5YuV44GM5qSc5Ye644GV44KM44Gf44Gf44KB44CB44Ki44Kr44Km44Oz44OI44KS5LiA5pmC5L+d
-55WZ44Gr44GX44CB5L+d55WZ5Lit44Gu44GU5rOo5paH44KE44K144OW44K544Kv44Oq44OX44K3
-44On44Oz44KS44Kt44Oj44Oz44K744Or44GE44Gf44GX44G+44GX44Gf44CCDQrjgq/jg6zjgrjj
-g4Pjg4jjgqvjg7zjg4njga7nm5fpm6PjgpLpmLLjgZDjgZ/jgoHjgIHjg63jgrDjgqTjg7Plvozj
-gZnjgZDjgavmg4XloLHjgpLmm7TmlrDjgZfjgabjgY/jgaDjgZXjgYTjgIINCuOBguOBquOBn+OB
-jDI05pmC6ZaT5Lul5YaF44Gr56K66KqN44Gn44GN44Gq44GE5aC05ZCI44Gv55Sz44GX6Kiz44GC
-44KK44G+44Gb44KT44CC44GC44Gq44Gf44Gu6LKh55Sj44Gu5a6J5YWo44Gu44Gf44KB44Gr44CB
-44GT44Gu44Ki44Kr44Km44Oz44OI44Gu5L2/55So44KS5Yi26ZmQ44GX44G+44GZ44CC44GC44KJ
-44GL44GY44KB44GU55CG6Kej44GP44Gg44GV44GE44CCDQrmnKzku7bjgavjgaTjgYTjgabjgZTo
-v7fmg5HjgpLjgYrjgYvjgZHjgZfjgb7jgZfjgZ/jgZPjgajjgpLjgYroqavjgbPnlLPjgZfkuIrj
-gZLjgb7jgZnjgIINCuS9leWNkuOAgeOCiOOCjeOBl+OBj+OBiumhmOOBhOeUs+OBl+S4iuOBkuOB
-vuOBmeOAgg0KDQrjgYrlrqLmp5jjga4gQW1hem9uIOOCouOCq+OCpuODs+ODiA0KQW1hem9u44OB
-44O844Og44Gv44GC44Gq44Gf44Gu44Ki44Kr44Km44Oz44OI44Gu54q25oWL44GM55Ww5bi444Gn
-44GC44KL44GT44Go44KS55m66KaL44GX44G+44GX44Gf44CC44Ki44Kr44Km44Oz44OI5omA5pyJ
-5qip44Gu6Ki85piO44KS44GU6Ieq6Lqr44Gn6KGM44GG5aC05ZCI44Gv44CBQW1hem9uIOeuoeeQ
-huOCs+ODs+OCveODvOODq+OBq+ODreOCsOOCpOODs+OBl+OAgeaJgOWumuOBruaJi+mghuOBp+OB
-iuaJi+e2muOBjeOBj+OBoOOBleOBhOOAgg0K54q25oWLOiANCueVsOW4uOOBr+abtOaWsOW+heOB
-oeOBp+OBmQ0K44Ki44Kr44Km44Oz44OI44KS56K66KqN44GZ44KLDQoNCg0KDQoNCg0KDQoNCkFt
-YXpvbi5jby5qcOOBruOBvuOBn+OBruOBlOWIqeeUqOOCkuOBiuW+heOBoeOBl+OBpuOBiuOCiuOB
-vuOBmeOAgg0KDQoNCg0KDQrCqSAxOTk2LTIwMjIsIEFtYXpvbi4gSW5jLiBvciBpdHMgYWZmaWxp
-YXRlcw==
+How have we been helping thousands get funded faster, request for an increase, reconsiderations, and appeals:
 
---=====003_Dragon118145160235_=====
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+We are a preferred partner of the SBA. We manage everything for you from start to finish. We have a dedicated team to get those funds into your account faster. We overcome unverifiable information, unsatisfactory credit history, and withdrawn applications. Helped increase the amount for the EIDL with our customers.
 
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZIGJnQ29sb3I9d2hpdGU+
-DQo8VEFCTEUgDQpzdHlsZT0iTElORS1IRUlHSFQ6IDE7IE1BUkdJTjogMHB4IGF1dG87IEJPUkRF
-Ui1TUEFDSU5HOiAwcHg7IFdJRFRIOiA1NjhweDsgTUFYLVdJRFRIOiA2MDBweDsgSEVJR0hUOiA4
-NTJweCIgDQpjbGFzcz1jb250ZW50cyBib3JkZXI9MCBjZWxsU3BhY2luZz0wIGNlbGxQYWRkaW5n
-PTAgd2lkdGg9NTY4Pg0KICA8VEJPRFk+DQogIDxUUj4NCiAgICA8VEQgY2xhc3M9c3Atd2lkZS1w
-YWRkaW5nIGJnQ29sb3I9I2ZmZmZmZiB3aWR0aD0yMD4NCiAgICAgIDxQPiZuYnNwOzwvUD48L1RE
-Pg0KICAgIDxURCBiZ0NvbG9yPSNmZmZmZmYgYWxpZ249bGVmdD48U1BBTiBzdHlsZT0iRk9OVC1T
-SVpFOiA5cHgiPg0KICAgICAgPFAgDQogICAgICBzdHlsZT0iV0lET1dTOiAxOyBURVhULVRSQU5T
-Rk9STTogbm9uZTsgQkFDS0dST1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1JTkRF
-TlQ6IDBweDsgRk9OVDogMTRweCDlvq7ova/pm4Xvv70sIFRhaG9tYTsgV0hJVEUtU1BBQ0U6IG5v
-cm1hbDsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYigwLDAsMCk7IFdPUkQtU1BB
-Q0lORzogMHB4OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IGZvbnQtc3RyZXRjaDog
-bm9ybWFsIiANCiAgICAgIGFsaWduPWNlbnRlcj48SU1HIA0KICAgICAgc3R5bGU9IkJPUkRFUi1C
-T1RUT006IG1lZGl1bSBub25lOyBCT1JERVItTEVGVDogbWVkaXVtIG5vbmU7IFZFUlRJQ0FMLUFM
-SUdOOiBtaWRkbGU7IEJPUkRFUi1UT1A6IG1lZGl1bSBub25lOyBCT1JERVItUklHSFQ6IG1lZGl1
-bSBub25lIiANCiAgICAgIGFsdD0iIiBzcmM9Imh0dHBzOi8vczEuYXgxeC5jb20vMjAyMC8xMS8w
-NS9CUldJaHQuZ2lmIj48L1A+DQogICAgICA8UCANCiAgICAgIHN0eWxlPSJXSURPV1M6IDE7IFRF
-WFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBU
-RVhULUlOREVOVDogMHB4OyBGT05UOiAxNHB4IOW+rui9r+mbhe+/vSwgVGFob21hOyBXSElURS1T
-UEFDRTogbm9ybWFsOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDAsMCwwKTsg
-V09SRC1TUEFDSU5HOiAwcHg7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgZm9udC1z
-dHJldGNoOiBub3JtYWwiIA0KICAgICAgYWxpZ249bGVmdD48L1A+DQogICAgICA8SFI+DQoNCiAg
-ICAgIDxQPjwvUD4NCiAgICAgIDxQIA0KICAgICAgc3R5bGU9IldJRE9XUzogMTsgVEVYVC1UUkFO
-U0ZPUk06IG5vbmU7IEJBQ0tHUk9VTkQtQ09MT1I6IHJnYigyNTUsMjU1LDI1NSk7IFRFWFQtSU5E
-RU5UOiAwcHg7IEZPTlQ6IDE0cHgg5b6u6L2v6ZuF77+9LCBUYWhvbWE7IFdISVRFLVNQQUNFOiBu
-b3JtYWw7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENPTE9SOiByZ2IoMCwwLDApOyBXT1JELVNQ
-QUNJTkc6IDBweDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyBmb250LXN0cmV0Y2g6
-IG5vcm1hbCIgDQogICAgICBhbGlnbj1sZWZ0PjxTUEFOIHN0eWxlPSJGT05ULVNJWkU6IDE1cHgi
-PjxTUEFOIA0KICAgICAgc3R5bGU9IkZPTlQtU0laRTogMTRweCI+PEZPTlQgc2l6ZT00IGZhY2U9
-5b6u6L2v6ZuF6buRPjxTVFJPTkc+QW1hem9uIA0KICAgICAg44GK5a6i5qeYPC9TVFJPTkc+PC9G
-T05UPjwvUD4NCiAgICAgIDxESVYgDQogICAgICBzdHlsZT0iV0lET1dTOiAxOyBURVhULVRSQU5T
-Rk9STTogbm9uZTsgQkFDS0dST1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1JTkRF
-TlQ6IDBweDsgRk9OVDogMTRweCDlvq7ova/pm4Xvv70sIFRhaG9tYTsgV0hJVEUtU1BBQ0U6IG5v
-cm1hbDsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYigwLDAsMCk7IFdPUkQtU1BB
-Q0lORzogMHB4OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IGZvbnQtc3RyZXRjaDog
-bm9ybWFsIj48U1BBTiANCiAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE0cHgiPjwvU1BBTj48U1BB
-TiBzdHlsZT0iRk9OVC1TSVpFOiAxNHB4Ij4NCiAgICAgIDxQIA0KICAgICAgc3R5bGU9IlBBRERJ
-TkctQk9UVE9NOiAwcHg7IExJTkUtSEVJR0hUOiAyNHB4OyBNQVJHSU46IDBweCAwcHggMTZweDsg
-UEFERElORy1MRUZUOiAwcHg7IFBBRERJTkctUklHSFQ6IDBweDsgRk9OVC1GQU1JTFk6IFJvYm90
-bywgSGVsdmV0aWNhLCBBcmlhbCwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYig2MCw2NCw2Nyk7IEZP
-TlQtU0laRTogMTRweDsgRk9OVC1XRUlHSFQ6IDQwMDsgUEFERElORy1UT1A6IDBweCI+PFNQQU4g
-DQogICAgICBzdHlsZT0iRk9OVC1TSVpFOiAxNHB4Ij48Rk9OVCBjb2xvcj0jMDAwMDAwIGZhY2U9
-5b6u6L2v6ZuF6buRPuW5s+e0oOOBryANCiAgICAgIEFtYXpvbi5jby5qcOOCkuOBlOWIqeeUqOOB
-hOOBn+OBoOOBjeOAgeiqoOOBq+OBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBmeOAgjxCUj7j
-gZTliKnnlKjjga4gDQogICAgICBBbWF6b24uY28uanDjgqLjgqvjgqbjg7Pjg4jjgafnlbDluLjj
-garmtLvli5XjgYzmpJzlh7rjgZXjgozjgZ/jgZ/jgoHjgIHjgqLjgqvjgqbjg7Pjg4jjgpLkuIDm
-mYLkv53nlZnjgavjgZfjgIHkv53nlZnkuK3jga7jgZTms6jmlofjgoTjgrXjg5bjgrnjgq/jg6rj
-g5fjgrfjg6fjg7PjgpLjgq3jg6Pjg7Pjgrvjg6vjgYTjgZ/jgZfjgb7jgZfjgZ/jgII8QlI+44Kv
-44Os44K444OD44OI44Kr44O844OJ44Gu55uX6Zuj44KS6Ziy44GQ44Gf44KB44CB44Ot44Kw44Kk
-44Oz5b6M44GZ44GQ44Gr5oOF5aCx44KS5pu05paw44GX44Gm44GP44Gg44GV44GE44CCPEJSPuOB
-guOBquOBn+OBjDI05pmC6ZaT5Lul5YaF44Gr56K66KqN44Gn44GN44Gq44GE5aC05ZCI44Gv55Sz
-44GX6Kiz44GC44KK44G+44Gb44KT44CC44GC44Gq44Gf44Gu6LKh55Sj44Gu5a6J5YWo44Gu44Gf
-44KB44Gr44CB44GT44Gu44Ki44Kr44Km44Oz44OI44Gu5L2/55So44KS5Yi26ZmQ44GX44G+44GZ
-44CC44GC44KJ44GL44GY44KB44GU55CG6Kej44GP44Gg44GV44GE44CCPEJSPuacrOS7tuOBq+OB
-pOOBhOOBpuOBlOi/t+aDkeOCkuOBiuOBi+OBkeOBl+OBvuOBl+OBn+OBk+OBqOOCkuOBiuipq+OB
-s+eUs+OBl+S4iuOBkuOBvuOBmeOAgjxCUj7kvZXljZLjgIHjgojjgo3jgZfjgY/jgYrpoZjjgYTn
-lLPjgZfkuIrjgZLjgb7jgZnjgII8QlI+PC9GT05UPjwvU1BBTj48L1A+DQogICAgICA8UCANCiAg
-ICAgIHN0eWxlPSJQQURESU5HLUJPVFRPTTogMHB4OyBMSU5FLUhFSUdIVDogMjRweDsgTUFSR0lO
-OiAwcHggMHB4IDE2cHg7IFBBRERJTkctTEVGVDogMHB4OyBQQURESU5HLVJJR0hUOiAwcHg7IEZP
-TlQtRkFNSUxZOiBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7IENPTE9SOiBy
-Z2IoNjAsNjQsNjcpOyBGT05ULVNJWkU6IDE0cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFBBRERJTkct
-VE9QOiAwcHgiPjxTUEFOIA0KICAgICAgc3R5bGU9IkZPTlQtU0laRTogMTRweCI+PC9TUEFOPjxT
-UEFOIA0KICAgICAgc3R5bGU9IkZPTlQtU0laRTogMTRweCI+PC9QPjwvU1BBTj48L1NQQU4+PC9T
-UEFOPjwvU1BBTj48L0RJVj4NCiAgICAgIDxESVYgDQogICAgICBzdHlsZT0iV0lET1dTOiAxOyBU
-RVhULVRSQU5TRk9STTogbm9uZTsgQkFDS0dST1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsg
-VEVYVC1JTkRFTlQ6IDBweDsgRk9OVDogMTRweCDlvq7ova/pm4Xvv70sIFRhaG9tYTsgV0hJVEUt
-U1BBQ0U6IG5vcm1hbDsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYigwLDAsMCk7
-IFdPUkQtU1BBQ0lORzogMHB4OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IGZvbnQt
-c3RyZXRjaDogbm9ybWFsIj4NCiAgICAgIDxUQUJMRSANCiAgICAgIHN0eWxlPSJQQURESU5HLUJP
-VFRPTTogMHB4OyBQQURESU5HLUxFRlQ6IDBweDsgQk9SREVSLVNQQUNJTkc6IDBweDsgV0lEVEg6
-IDQ5NXB4OyBQQURESU5HLVJJR0hUOiAwcHg7IEJPUkRFUi1DT0xMQVBTRTogY29sbGFwc2U7IE1B
-UkdJTi1CT1RUT006IDEycHg7IEJBQ0tHUk9VTkQ6IHJnYigyNDMsMjQzLDI0Myk7IEhFSUdIVDog
-Mjc2cHg7IFZFUlRJQ0FMLUFMSUdOOiB0b3A7IFBBRERJTkctVE9QOiAwcHgiIA0KICAgICAgY2xh
-c3M9YWNjb3VudGluZm8+DQogICAgICAgIDxUQk9EWT4NCiAgICAgICAgPFRSIA0KICAgICAgICBz
-dHlsZT0iUEFERElORy1CT1RUT006IDBweDsgUEFERElORy1MRUZUOiAwcHg7IFBBRERJTkctUklH
-SFQ6IDBweDsgVkVSVElDQUwtQUxJR046IHRvcDsgUEFERElORy1UT1A6IDBweCI+DQogICAgICAg
-ICAgPFRIIA0KICAgICAgICAgIHN0eWxlPSJQQURESU5HLUJPVFRPTTogMHB4OyBNQVJHSU46IDBw
-eDsgUEFERElORy1MRUZUOiAzMnB4OyBQQURESU5HLVJJR0hUOiAzMnB4OyBGT05ULUZBTUlMWTog
-Um9ib3RvLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDYwLDY0LDY3
-KTsgRk9OVC1TSVpFOiAxNHB4OyBQQURESU5HLVRPUDogMTZweCIgDQogICAgICAgICAgY2xhc3M9
-YWNjb3VudGluZm8+DQogICAgICAgICAgICA8SDMgDQogICAgICAgICAgICBzdHlsZT0iVEVYVC1B
-TElHTjogY2VudGVyOyBQQURESU5HLUJPVFRPTTogMHB4OyBMSU5FLUhFSUdIVDogMjZweCAhaW1w
-b3J0YW50OyBNQVJHSU46IDBweCAwcHggMTJweDsgUEFERElORy1MRUZUOiAwcHg7IFBBRERJTkct
-UklHSFQ6IDBweDsgRk9OVC1GQU1JTFk6ICdHb29nbGUgU2FucycsIEhlbHZldGljYSwgQXJpYWws
-IHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoNjAsNjQsNjcpOyBGT05ULVNJWkU6IDE2cHg7IEZPTlQt
-V0VJR0hUOiBib2xkOyBQQURESU5HLVRPUDogMHB4OyBvdmVyZmxvdy13cmFwOiBub3JtYWwiIA0K
-ICAgICAgICAgICAgY2xhc3M9YWNjb3VudGluZm8+PEZPTlQgZmFjZT3lvq7ova/pm4Xpu5E+44GK
-5a6i5qeY44GuIEFtYXpvbiANCuOCouOCq+OCpuODs+ODiDwvRk9OVD48L0gzPjwvVEg+PC9UUj4N
-CiAgICAgICAgPFRSIA0KICAgICAgICBzdHlsZT0iUEFERElORy1CT1RUT006IDBweDsgUEFERElO
-Ry1MRUZUOiAwcHg7IFBBRERJTkctUklHSFQ6IDBweDsgVkVSVElDQUwtQUxJR046IHRvcDsgUEFE
-RElORy1UT1A6IDBweCI+DQogICAgICAgICAgPFREIA0KICAgICAgICAgIHN0eWxlPSJQQURESU5H
-LUJPVFRPTTogMHB4OyBNQVJHSU46IDBweDsgUEFERElORy1MRUZUOiAzMnB4OyBQQURESU5HLVJJ
-R0hUOiAzMnB4OyBCT1JERVItQ09MTEFQU0U6IGNvbGxhcHNlICFpbXBvcnRhbnQ7IEZPTlQtRkFN
-SUxZOiBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoNjAs
-NjQsNjcpOyBGT05ULVNJWkU6IDE0cHg7IFZFUlRJQ0FMLUFMSUdOOiB0b3A7IEZPTlQtV0VJR0hU
-OiA0MDA7IFBBRERJTkctVE9QOiAwcHgiIA0KICAgICAgICAgIGNsYXNzPWFjY291bnRpbmZvPg0K
-ICAgICAgICAgICAgPFAgDQogICAgICAgICAgICBzdHlsZT0iUEFERElORy1CT1RUT006IDBweDsg
-TElORS1IRUlHSFQ6IDI0cHg7IE1BUkdJTjogMHB4IDBweCAxNnB4OyBQQURESU5HLUxFRlQ6IDBw
-eDsgUEFERElORy1SSUdIVDogMHB4OyBGT05ULUZBTUlMWTogUm9ib3RvLCBIZWx2ZXRpY2EsIEFy
-aWFsLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDYwLDY0LDY3KTsgRk9OVC1TSVpFOiAxNHB4OyBG
-T05ULVdFSUdIVDogNDAwOyBQQURESU5HLVRPUDogMHB4Ij48Rk9OVCANCiAgICAgICAgICAgIGZh
-Y2U95b6u6L2v6ZuF6buRPkFtYXpvbuODgeODvOODoOOBr+OBguOBquOBn+OBruOCouOCq+OCpuOD
-s+ODiOOBrueKtuaFi+OBjOeVsOW4uOOBp+OBguOCi+OBk+OBqOOCkueZuuimi+OBl+OBvuOBl+OB
-n+OAguOCouOCq+OCpuODs+ODiOaJgOacieaoqeOBruiovOaYjuOCkuOBlOiHqui6q+OBp+ihjOOB
-huWgtOWQiOOBr+OAgUFtYXpvbiANCiAgICAgICAgICAgIOeuoeeQhuOCs+ODs+OCveODvOODq+OB
-q+ODreOCsOOCpOODs+OBl+OAgeaJgOWumuOBruaJi+mghuOBp+OBiuaJi+e2muOBjeOBj+OBoOOB
-leOBhOOAgjwvRk9OVD48L1A+DQogICAgICAgICAgICA8UCANCiAgICAgICAgICAgIHN0eWxlPSJQ
-QURESU5HLUJPVFRPTTogMHB4OyBMSU5FLUhFSUdIVDogMjBweDsgTUFSR0lOOiAwcHggMHB4IDE2
-cHg7IFBBRERJTkctTEVGVDogMHB4OyBQQURESU5HLVJJR0hUOiAwcHg7IEZPTlQtRkFNSUxZOiBS
-b2JvdG8sIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoNjAsNjQsNjcp
-OyBGT05ULVNJWkU6IDE0cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFBBRERJTkctVE9QOiAwcHgiIA0K
-ICAgICAgICAgICAgY2xhc3M9YWNjb3VudGluZm8+PC9QPjwvVEQ+PC9UUj4NCiAgICAgICAgPFRS
-IA0KICAgICAgICBzdHlsZT0iUEFERElORy1CT1RUT006IDBweDsgUEFERElORy1MRUZUOiAwcHg7
-IFBBRERJTkctUklHSFQ6IDBweDsgVkVSVElDQUwtQUxJR046IHRvcDsgUEFERElORy1UT1A6IDBw
-eCI+DQogICAgICAgICAgPFREIA0KICAgICAgICAgIHN0eWxlPSJQQURESU5HLUJPVFRPTTogMHB4
-OyBNQVJHSU46IDBweDsgUEFERElORy1MRUZUOiAzMnB4OyBQQURESU5HLVJJR0hUOiAzMnB4OyBC
-T1JERVItQ09MTEFQU0U6IGNvbGxhcHNlICFpbXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBSb2JvdG8s
-IEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoNjAsNjQsNjcpOyBGT05U
-LVNJWkU6IDE0cHg7IFZFUlRJQ0FMLUFMSUdOOiB0b3A7IEZPTlQtV0VJR0hUOiA0MDA7IFBBRERJ
-TkctVE9QOiAwcHgiIA0KICAgICAgICAgIGNsYXNzPWFjY291bnRpbmZvPg0KICAgICAgICAgICAg
-PFAgDQogICAgICAgICAgICBzdHlsZT0iUEFERElORy1CT1RUT006IDBweDsgTElORS1IRUlHSFQ6
-IDIwcHg7IE1BUkdJTjogMHB4OyBQQURESU5HLUxFRlQ6IDBweDsgUEFERElORy1SSUdIVDogMHB4
-OyBGT05ULUZBTUlMWTogUm9ib3RvLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmOyBDT0xP
-UjogcmdiKDYwLDY0LDY3KTsgRk9OVC1TSVpFOiAxNHB4OyBGT05ULVdFSUdIVDogNDAwOyBQQURE
-SU5HLVRPUDogMHB4IiANCiAgICAgICAgICAgIGNsYXNzPWFjY291bnRpbmZvPjxGT05UIGZhY2U9
-5b6u6L2v6ZuF6buRPueKtuaFizombmJzcDs8L0ZPTlQ+PC9QPg0KICAgICAgICAgICAgPFAgDQog
-ICAgICAgICAgICBzdHlsZT0iUEFERElORy1CT1RUT006IDBweDsgTElORS1IRUlHSFQ6IDIwcHg7
-IE1BUkdJTjogMHB4IDBweCAxNnB4OyBQQURESU5HLUxFRlQ6IDBweDsgUEFERElORy1SSUdIVDog
-MHB4OyBGT05ULUZBTUlMWTogUm9ib3RvLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmOyBD
-T0xPUjogcmdiKDYwLDY0LDY3KTsgRk9OVC1TSVpFOiAxNHB4OyBGT05ULVdFSUdIVDogNDAwOyBQ
-QURESU5HLVRPUDogMHB4IiANCiAgICAgICAgICAgIGNsYXNzPWFjY291bnRpbmZvPjxBIA0KICAg
-ICAgICAgICAgc3R5bGU9IlBBRERJTkctQk9UVE9NOiAwcHg7IE1BUkdJTjogMHB4OyBQQURESU5H
-LUxFRlQ6IDBweDsgUEFERElORy1SSUdIVDogMHB4OyBGT05ULUZBTUlMWTogaW5oZXJpdDsgQ09M
-T1I6IHJnYigzMSwzMSwzMSk7IFRFWFQtREVDT1JBVElPTjogbm9uZTsgUEFERElORy1UT1A6IDBw
-eCIgDQogICAgICAgICAgICBjbGFzcz1ub2NsaWNrPjxGT05UIGZhY2U95b6u6L2v6ZuF6buRPueV
-sOW4uOOBr+abtOaWsOW+heOBoeOBp+OBmTwvRk9OVD48L0E+PC9QPjwvVEQ+PC9UUj4NCiAgICAg
-ICAgPFRSIA0KICAgICAgICBzdHlsZT0iUEFERElORy1CT1RUT006IDBweDsgUEFERElORy1MRUZU
-OiAwcHg7IFBBRERJTkctUklHSFQ6IDBweDsgVkVSVElDQUwtQUxJR046IHRvcDsgUEFERElORy1U
-T1A6IDBweCI+DQogICAgICAgICAgPFREIA0KICAgICAgICAgIHN0eWxlPSJQQURESU5HLUJPVFRP
-TTogMHB4OyBNQVJHSU46IDBweDsgUEFERElORy1MRUZUOiAzMnB4OyBQQURESU5HLVJJR0hUOiAz
-MnB4OyBCT1JERVItQ09MTEFQU0U6IGNvbGxhcHNlICFpbXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBS
-b2JvdG8sIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoNjAsNjQsNjcp
-OyBGT05ULVNJWkU6IDE0cHg7IFZFUlRJQ0FMLUFMSUdOOiB0b3A7IEZPTlQtV0VJR0hUOiA0MDA7
-IFBBRERJTkctVE9QOiAwcHgiIA0KICAgICAgICAgIGNsYXNzPWFjY291bnRpbmZvPg0KICAgICAg
-ICAgICAgPFRBQkxFIA0KICAgICAgICAgICAgc3R5bGU9IlBBRERJTkctQk9UVE9NOiAwcHg7IExJ
-TkUtSEVJR0hUOiAwOyBNQVJHSU46IDlweCAwcHggMjRweDsgUEFERElORy1MRUZUOiAwcHg7IEJP
-UkRFUi1TUEFDSU5HOiAwcHg7IFdJRFRIOiA0MTNweDsgUEFERElORy1SSUdIVDogMHB4OyBESVNQ
-TEFZOiBpbmxpbmUtYmxvY2s7IEJPUkRFUi1DT0xMQVBTRTogY29sbGFwc2U7IE1BWC1XSURUSDog
-MTAwJTsgSEVJR0hUOiA0MHB4OyBWRVJUSUNBTC1BTElHTjogdG9wOyBQQURESU5HLVRPUDogMHB4
-OyBib3JkZXItcmFkaXVzOiAzcHgiIA0KICAgICAgICAgICAgY2xhc3M9ImJ1dHRvbiByYWRpdXMg
-dGh1bWJuYWlsIj4NCiAgICAgICAgICAgICAgPFRCT0RZPg0KICAgICAgICAgICAgICA8VFIgDQog
-ICAgICAgICAgICAgIHN0eWxlPSJQQURESU5HLUJPVFRPTTogMHB4OyBQQURESU5HLUxFRlQ6IDBw
-eDsgUEFERElORy1SSUdIVDogMHB4OyBWRVJUSUNBTC1BTElHTjogdG9wOyBQQURESU5HLVRPUDog
-MHB4Ij4NCiAgICAgICAgICAgICAgICA8VEQgDQogICAgICAgICAgICAgICAgc3R5bGU9IlBBRERJ
-TkctQk9UVE9NOiAwcHg7IE1BUkdJTjogMHB4OyBQQURESU5HLUxFRlQ6IDBweDsgUEFERElORy1S
-SUdIVDogMHB4OyBCT1JERVItQ09MTEFQU0U6IGNvbGxhcHNlICFpbXBvcnRhbnQ7IEZPTlQtRkFN
-SUxZOiBSb2JvdG8sIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoNjAs
-NjQsNjcpOyBGT05ULVNJWkU6IDE0cHg7IFZFUlRJQ0FMLUFMSUdOOiB0b3A7IEZPTlQtV0VJR0hU
-OiA0MDA7IFBBRERJTkctVE9QOiAwcHgiPg0KICAgICAgICAgICAgICAgICAgPFRBQkxFIA0KICAg
-ICAgICAgICAgICAgICAgc3R5bGU9IlBBRERJTkctQk9UVE9NOiAwcHg7IFBBRERJTkctTEVGVDog
-MHB4OyBCT1JERVItU1BBQ0lORzogMHB4OyBXSURUSDogMTE2cHg7IFBBRERJTkctUklHSFQ6IDBw
-eDsgQk9SREVSLUNPTExBUFNFOiBjb2xsYXBzZTsgVkVSVElDQUwtQUxJR046IHRvcDsgUEFERElO
-Ry1UT1A6IDBweCI+DQogICAgICAgICAgICAgICAgICAgIDxUQk9EWT4NCiAgICAgICAgICAgICAg
-ICAgICAgPFRSIA0KICAgICAgICAgICAgICAgICAgICBzdHlsZT0iUEFERElORy1CT1RUT006IDBw
-eDsgUEFERElORy1MRUZUOiAwcHg7IFBBRERJTkctUklHSFQ6IDBweDsgVkVSVElDQUwtQUxJR046
-IHRvcDsgUEFERElORy1UT1A6IDBweCI+DQogICAgICAgICAgICAgICAgICAgICAgPFREIA0KICAg
-ICAgICAgICAgICAgICAgICAgIHN0eWxlPSJQQURESU5HLUJPVFRPTTogMHB4OyBNQVJHSU46IDBw
-eDsgUEFERElORy1MRUZUOiAwcHg7IFBBRERJTkctUklHSFQ6IDBweDsgQk9SREVSLUNPTExBUFNF
-OiBjb2xsYXBzZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogUm9ib3RvLCBIZWx2ZXRpY2EsIEFy
-aWFsLCBzYW5zLXNlcmlmOyBCQUNLR1JPVU5EOiByZ2IoMjU1LDE5Niw1Myk7IENPTE9SOiByZ2Io
-MjU1LDI1NSwyNTUpOyBGT05ULVNJWkU6IDE0cHg7IFZFUlRJQ0FMLUFMSUdOOiB0b3A7IEZPTlQt
-V0VJR0hUOiA0MDA7IFBBRERJTkctVE9QOiAwcHg7IGJvcmRlci1yYWRpdXM6IDNweCI+PEEgDQog
-ICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0iQk9SREVSLUJPVFRPTTogI2ZmYzQzNSAwcHgg
-c29saWQ7IEJPUkRFUi1MRUZUOiAjMjk3OWZmIDBweCBzb2xpZDsgUEFERElORy1CT1RUT006IDhw
-eDsgTElORS1IRUlHSFQ6IDI0cHg7IE1BUkdJTjogMHB4OyBQQURESU5HLUxFRlQ6IDE2cHg7IFdJ
-RFRIOiA0NTBweDsgUEFERElORy1SSUdIVDogMTZweDsgRElTUExBWTogaW5saW5lLWJsb2NrOyBG
-T05ULUZBTUlMWTogUm9ib3RvLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmOyBIRUlHSFQ6IDQw
-cHg7IENPTE9SOiAjMzAzOTQyOyBGT05ULVNJWkU6IDE0cHg7IEJPUkRFUi1UT1A6ICNmZmM0MzUg
-MHB4IHNvbGlkOyBGT05ULVdFSUdIVDogNTAwOyBCT1JERVItUklHSFQ6ICNmZmM0MzUgMHB4IHNv
-bGlkOyBURVhULURFQ09SQVRJT046IG5vbmU7IFBBRERJTkctVE9QOiA4cHg7IGJvcmRlci1yYWRp
-dXM6IDNweCIgDQogICAgICAgICAgICAgICAgICAgICAgICBocmVmPSJodHRwczovL3d3dy5qcC5j
-by5hYm5wZXZiLmNuLyI+DQogICAgICAgICAgICAgICAgICAgICAgICA8RElWIGFsaWduPWNlbnRl
-cj48Rk9OVCBzaXplPTMgDQogICAgICAgICAgICAgICAgICAgICAgICBmYWNlPeW+rui9r+mbhem7
-kT7jgqLjgqvjgqbjg7Pjg4jjgpLnorroqo3jgZnjgos8L0ZPTlQ+PC9ESVY+PC9BPjwvVEQ+PC9U
-Uj48L1RCT0RZPjwvVEFCTEU+PC9URD48L1RSPjwvVEJPRFk+PC9UQUJMRT48L1REPjwvVFI+PC9U
-Qk9EWT48L1RBQkxFPjwvRElWPg0KICAgICAgPERJViANCiAgICAgIHN0eWxlPSJXSURPV1M6IDE7
-IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUp
-OyBURVhULUlOREVOVDogMHB4OyBGT05UOiAxNHB4IOW+rui9r+mbhe+/vSwgVGFob21hOyBXSElU
-RS1TUEFDRTogbm9ybWFsOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDAsMCww
-KTsgV09SRC1TUEFDSU5HOiAwcHg7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgZm9u
-dC1zdHJldGNoOiBub3JtYWwiPjxGT05UIA0KICAgICAgZmFjZT3lvq7ova/pm4Xpu5E+PC9GT05U
-PiZuYnNwOzwvRElWPg0KICAgICAgPERJViANCiAgICAgIHN0eWxlPSJXSURPV1M6IDE7IFRFWFQt
-VFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhU
-LUlOREVOVDogMHB4OyBGT05UOiAxNHB4IOW+rui9r+mbhe+/vSwgVGFob21hOyBXSElURS1TUEFD
-RTogbm9ybWFsOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDAsMCwwKTsgV09S
-RC1TUEFDSU5HOiAwcHg7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgZm9udC1zdHJl
-dGNoOiBub3JtYWwiPiZuYnNwOzwvRElWPjwvU1BBTj48U1BBTiANCiAgICAgIHN0eWxlPSJGT05U
-LUZBTUlMWTogVGFob21hOyBGT05ULVNJWkU6IDE0cHgiIA0KICAgICAgY2xhc3M9QXBwbGUtY29u
-dmVydGVkLXNwYWNlPjxTUEFOIA0KICAgICAgc3R5bGU9IldJRE9XUzogMjsgVEVYVC1UUkFOU0ZP
-Uk06IG5vbmU7IEZPTlQtU1RZTEU6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6IDBweDsgRElTUExBWTog
-aW5saW5lICFpbXBvcnRhbnQ7IFdISVRFLVNQQUNFOiBub3JtYWw7IE9SUEhBTlM6IDI7IEZMT0FU
-OiBub25lOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDUxLDUxLDUxKTsgRk9O
-VC1XRUlHSFQ6IDcwMDsgV09SRC1TUEFDSU5HOiAwcHg7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lk
-dGg6IDBweDsgZm9udC12YXJpYW50LWxpZ2F0dXJlczogbm9ybWFsIj48U1BBTiANCiAgICAgIHN0
-eWxlPSJGT05ULVNJWkU6IDEwcHgiPg0KICAgICAgPERJViANCiAgICAgIHN0eWxlPSJXSURPV1M6
-IDE7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwy
-NTUpOyBURVhULUlOREVOVDogMHB4OyBGT05UOiAxNHB4IOW+rui9r+mbhe+/vSwgVGFob21hOyBX
-SElURS1TUEFDRTogbm9ybWFsOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDAs
-MCwwKTsgV09SRC1TUEFDSU5HOiAwcHg7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsg
-Zm9udC1zdHJldGNoOiBub3JtYWwiPiZuYnNwOzwvRElWPg0KICAgICAgPERJViANCiAgICAgIHN0
-eWxlPSJXSURPV1M6IDE7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiBy
-Z2IoMjU1LDI1NSwyNTUpOyBURVhULUlOREVOVDogMHB4OyBGT05UOiAxNHB4IOW+rui9r+mbhe+/
-vSwgVGFob21hOyBXSElURS1TUEFDRTogbm9ybWFsOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBD
-T0xPUjogcmdiKDAsMCwwKTsgV09SRC1TUEFDSU5HOiAwcHg7IC13ZWJraXQtdGV4dC1zdHJva2Ut
-d2lkdGg6IDBweDsgZm9udC1zdHJldGNoOiBub3JtYWwiPiZuYnNwOzwvRElWPg0KICAgICAgPERJ
-ViANCiAgICAgIHN0eWxlPSJXSURPV1M6IDE7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JP
-VU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULUlOREVOVDogMHB4OyBGT05UOiAxNHB4
-IOW+rui9r+mbhe+/vSwgVGFob21hOyBXSElURS1TUEFDRTogbm9ybWFsOyBMRVRURVItU1BBQ0lO
-Rzogbm9ybWFsOyBDT0xPUjogcmdiKDAsMCwwKTsgV09SRC1TUEFDSU5HOiAwcHg7IC13ZWJraXQt
-dGV4dC1zdHJva2Utd2lkdGg6IDBweDsgZm9udC1zdHJldGNoOiBub3JtYWwiPjxGT05UIA0KICAg
-ICAgZmFjZT3lvq7ova/pm4Xpu5E+QW1hem9uLmNvLmpw44Gu44G+44Gf44Gu44GU5Yip55So44KS
-44GK5b6F44Gh44GX44Gm44GK44KK44G+44GZ44CCPC9GT05UPjwvRElWPg0KICAgICAgPERJViAN
-CiAgICAgIHN0eWxlPSJXSURPV1M6IDE7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5E
-LUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULUlOREVOVDogMHB4OyBGT05UOiAxNHB4IOW+
-rui9r+mbhe+/vSwgVGFob21hOyBXSElURS1TUEFDRTogbm9ybWFsOyBMRVRURVItU1BBQ0lORzog
-bm9ybWFsOyBDT0xPUjogcmdiKDAsMCwwKTsgV09SRC1TUEFDSU5HOiAwcHg7IC13ZWJraXQtdGV4
-dC1zdHJva2Utd2lkdGg6IDBweDsgZm9udC1zdHJldGNoOiBub3JtYWwiPg0KICAgICAgPEhSPg0K
-ICAgICAgPC9ESVY+DQogICAgICA8RElWIA0KICAgICAgc3R5bGU9IldJRE9XUzogMTsgVEVYVC1U
-UkFOU0ZPUk06IG5vbmU7IEJBQ0tHUk9VTkQtQ09MT1I6IHJnYigyNTUsMjU1LDI1NSk7IFRFWFQt
-SU5ERU5UOiAwcHg7IEZPTlQ6IDE0cHgg5b6u6L2v6ZuF77+9LCBUYWhvbWE7IFdISVRFLVNQQUNF
-OiBub3JtYWw7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENPTE9SOiByZ2IoMCwwLDApOyBXT1JE
-LVNQQUNJTkc6IDBweDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyBmb250LXN0cmV0
-Y2g6IG5vcm1hbCI+PFNQQU4gDQogICAgICBjbGFzcz0iYS1zaXplLW1pbmkgYS1jb2xvci1zZWNv
-bmRhcnkiPjxTUEFOIA0KICAgICAgc3R5bGU9IkJPWC1TSVpJTkc6IGJvcmRlci1ib3g7IExJTkUt
-SEVJR0hUOiAxLjQ2NSAhaW1wb3J0YW50OyBDT0xPUjogcmdiKDg1LDg1LDg1KSAhaW1wb3J0YW50
-OyBGT05ULVNJWkU6IDExcHggIWltcG9ydGFudCIgDQogICAgICBjbGFzcz0iYS1zaXplLW1pbmkg
-YS1jb2xvci1zZWNvbmRhcnkiPjxTUEFOIA0KICAgICAgc3R5bGU9IkJPWC1TSVpJTkc6IGJvcmRl
-ci1ib3g7IExJTkUtSEVJR0hUOiAxLjQ2NSAhaW1wb3J0YW50OyBDT0xPUjogcmdiKDg1LDg1LDg1
-KSAhaW1wb3J0YW50OyBGT05ULVNJWkU6IDExcHggIWltcG9ydGFudCIgDQogICAgICBjbGFzcz0i
-YS1zaXplLW1pbmkgYS1jb2xvci1zZWNvbmRhcnkiPjwvU1BBTj48L1NQQU4+PC9TUEFOPiZuYnNw
-OzwvRElWPg0KICAgICAgPERJViANCiAgICAgIHN0eWxlPSJXSURPV1M6IDE7IFRFWFQtVFJBTlNG
-T1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULUlOREVO
-VDogMHB4OyBGT05UOiAxNHB4IOW+rui9r+mbhe+/vSwgVGFob21hOyBXSElURS1TUEFDRTogbm9y
-bWFsOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDAsMCwwKTsgV09SRC1TUEFD
-SU5HOiAwcHg7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgZm9udC1zdHJldGNoOiBu
-b3JtYWwiIA0KICAgICAgYWxpZ249Y2VudGVyPjxTUEFOIGNsYXNzPSJhLXNpemUtbWluaSBhLWNv
-bG9yLXNlY29uZGFyeSI+PFNQQU4gDQogICAgICBzdHlsZT0iQk9YLVNJWklORzogYm9yZGVyLWJv
-eDsgTElORS1IRUlHSFQ6IDEuNDY1ICFpbXBvcnRhbnQ7IENPTE9SOiByZ2IoODUsODUsODUpICFp
-bXBvcnRhbnQ7IEZPTlQtU0laRTogMTFweCAhaW1wb3J0YW50IiANCiAgICAgIGNsYXNzPSJhLXNp
-emUtbWluaSBhLWNvbG9yLXNlY29uZGFyeSI+PFNQQU4gDQogICAgICBzdHlsZT0iQk9YLVNJWklO
-RzogYm9yZGVyLWJveDsgTElORS1IRUlHSFQ6IDEuNDY1ICFpbXBvcnRhbnQ7IENPTE9SOiByZ2Io
-ODUsODUsODUpICFpbXBvcnRhbnQ7IEZPTlQtU0laRTogMTFweCAhaW1wb3J0YW50IiANCiAgICAg
-IGNsYXNzPSJhLXNpemUtbWluaSBhLWNvbG9yLXNlY29uZGFyeSI+wqkgPC9TUEFOPjE5OTYtMjAy
-MiwgQW1hem9uLiBJbmMuIG9yIA0KICAgICAgaXRzIGFmZmlsaWF0ZXM8L1NQQU4+PC9TUEFOPjwv
-U1BBTj48L1NQQU4+PC9TUEFOPjxCUj48L0RJVj48L1REPg0KICAgIDxURCBjbGFzcz1zcC13aWRl
-LXBhZGRpbmcgYmdDb2xvcj0jZmZmZmZmIHdpZHRoPTIwPjwvVEQ+PC9UUj4NCiAgPFRSPg0KICAg
-IDxURCBzdHlsZT0iTElORS1IRUlHSFQ6IDE7IEZPTlQtU0laRTogNTBweCIgYmdDb2xvcj0jZmZm
-ZmZmIGNvbFNwYW49Mz4NCiAgICAgIDxQIGFsaWduPWNlbnRlcj48U1BBTiANCiAgICAgIHN0eWxl
-PSJURVhULUFMSUdOOiBsZWZ0OyBXSURPV1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNL
-R1JPVU5ELUNPTE9SOiByZ2IoMTEzLDExMiwxMTIpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQt
-SU5ERU5UOiAwcHg7IERJU1BMQVk6IGlubGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogJ+KA
-mEhpcmFnaW5vIEtha3UgR290aGljIFByb07igJknLCAn4oCY44OS44Op44Ku44OO6KeS44K0IFBy
-b07igJknLCBNZWlyeW8sIOODoeOCpOODquOCqiwgc2Fucy1zZXJpZjsgV0hJVEUtU1BBQ0U6IG5v
-cm1hbDsgT1JQSEFOUzogMjsgRkxPQVQ6IG5vbmU7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENP
-TE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBGT05ULVNJWkU6IDExcHg7IEZPTlQtV0VJR0hUOiA0MDA7
-IFdPUkQtU1BBQ0lORzogMHB4OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IGZvbnQt
-dmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNhcHM6IG5vcm1hbDsgdGV4
-dC1kZWNvcmF0aW9uLXN0eWxlOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6IGluaXRp
-YWw7IHRleHQtZGVjb3JhdGlvbi10aGlja25lc3M6IGluaXRpYWwiPiZuYnNwOzwvUD48L1NQQU4+
-PC9URD48L1RSPjwvVEJPRFk+PC9UQUJMRT4NCjxUQUJMRSANCnN0eWxlPSJMSU5FLUhFSUdIVDog
-MTsgTUFSR0lOOiAwcHggYXV0bzsgQk9SREVSLVNQQUNJTkc6IDBweDsgV0lEVEg6IDYwMHB4OyBN
-QVgtV0lEVEg6IDYwMHB4IiANCmNsYXNzPWNvbnRlbnRzIGJvcmRlcj0wIGNlbGxTcGFjaW5nPTAg
-Y2VsbFBhZGRpbmc9MCB3aWR0aD0iMTAwJSIgDQpiZ0NvbG9yPSNlZmVmZWY+DQogIDxUQk9EWT48
-L1RCT0RZPjwvVEFCTEU+DQo8RElWIGNsYXNzPWZvb3Rlcj4mbmJzcDs8L0RJVj48L0JPRFk+PC9I
-VE1MPg0K
+Premium Merchant Funding
+Trump Bldg, 40 Wall St 5th floor,
+New York, NY 10005
+United States
 
---=====003_Dragon118145160235_=====--
+You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.pmfcap.com/form?3jn3i--epzr-4jlpar2&sl=2hb&t=1&ac=gdrm or unsubscribe http://click.pmfcap.com/form?3jn3i--epzr-4jlpar2&sl=2hb&t=5&ac=gdrm. 
+------=_Part_577457794.1645452001068
+Content-Type: text/html;charset=UTF-8
+
+<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">As a preferred partner we have helped thousands. Let us help you!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head><!--[if gte mso 15]>
+			<xml>
+				<o:OfficeDocumentSettings>
+				<o:AllowPNG/>
+				<o:PixelsPerInch>96</o:PixelsPerInch>
+				</o:OfficeDocumentSettings>
+			</xml>
+			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
+    margin:0;
+    padding:0;
+    background: rgb(255,255,255);
+}
+table td, table th {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 0 none;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+}
+.fusionResponsiveColumn {
+    font-weight: normal;
+    text-align:left;
+}
+/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
+@media only screen and (max-width: 620px) {
+    .fusionResponsiveContent {
+        width: 100%!important;
+    }
+    .fusionResponsiveColumn {
+        width: auto!important;
+        display:block;
+    }
+
+    .fusionResponsiveImage {
+        width: 100%!important;
+    }
+    .fusionResponsiveImageTable {
+        padding-bottom: 0!important;
+    }
+    .fusionResponsiveCanvas {
+        padding-top: 0px!important;
+        padding-bottom: 0px!important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .fusionResponsiveContent {
+        width: 100%!important;
+    }
+    .fusionResponsiveColumn {
+        width: auto!important;
+        display:block;
+    }
+
+    .fusionResponsiveImage {
+        width: 100%!important;
+    }
+    .fusionResponsiveCanvas {
+        padding-top: 0px!important;
+        padding-bottom: 0px!important;
+    }
+}</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Arial:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Georgia:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
+<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style='width:100%;padding-top:25px;padding-bottom:25px;background-color:rgb(246,239,225);background-image:url("https://media.campaigner.com/editorassets/themes/soak-it-up/content-background.png");background-repeat:repeat;background-position:center top;font-family:Arial, sans-serif;'>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(0,125,189);"><tbody><tr><td style="background-color:rgb(0,125,189);padding:0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:560px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/EIDL2.jpg?id=3imd10q" class="fusionResponsiveImage" alt="" width="560" height="auto" style="width:560px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(0,125,189);"><tbody><tr><td style="background-color:rgb(0,125,189);padding:10px 0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:300px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;"><tbody><tr><td style="text-align:center;background:rgb(21,171,29);border-radius:5px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.pmfcap.com/click/gdrm-3jn3i-1zbv6-4jlpar9/" style="text-decoration:none;color:rgb(255,255,255);font-family:Georgia, sans-serif;font-size:16px;" id="auto_assign_link_num_1" name="sbaloanadvice ben">Click Here To Get Streamlined </a></td></tr>
+</tbody></table></td></tr></tbody></table></div></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:300px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(44,44,44);font-family:Arial, sans-serif;font-size:16px;text-align:left;"><p style="margin-top:0px;margin-bottom:0px;"><span style="color:rgb(255, 255, 255);font-size:18px;">﻿Need request for increase, reconsideration, or appeal on your EIDL?</span></p></div></td></tr></tbody></table></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(0,125,189);"><tbody><tr><td style="background-color:rgb(0,125,189);padding:0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:560px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:15px 0px 0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(44,44,44);font-family:Arial, sans-serif;font-size:16px;text-align:left;"><p style="text-align:center;margin-top:0px;margin-bottom:0px;"><strong style="color:rgb(255, 255, 255);">How have we been helping thousands get funded faster, request for an increase, reconsiderations, and appeals:</strong></p></div></td></tr></tbody></table></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(0,125,189);"><tbody><tr><td style="background-color:rgb(0,125,189);padding:0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:560px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;padding:0px;"><table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="margin:0px auto;width:560px;table-layout:fixed;background-color:transparent;"><tbody><tr><td style="background-color:transparent;padding:0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;"><tbody><tr>
+<th valign="center" class="fusionResponsiveColumn" data-fusion-class="" style="width:25%;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="fusionResponsiveImageTable" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/image3.png?id=e42yd23" class="fusionResponsiveImage" alt="" width="140" height="auto" style="width:140px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
+<th valign="center" class="fusionResponsiveColumn" data-fusion-class="" style="width:75%;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px 10px 5px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(44,44,44);font-family:Arial, sans-serif;font-size:16px;text-align:left;">
+<p style="mso-line-height-rule:exactly;line-height:18px;margin-top:0px;margin-bottom:0px;"><br></p>
+<ul>
+<li style="mso-line-height-rule:exactly;line-height:18px;"><span style="font-size:16px;color:rgb(255, 255, 255);">﻿We are a preferred partner of the SBA </span></li>
+<li><span style="font-size:16px;color:rgb(255, 255, 255);">We manage everything for you from start to finish </span></li>
+<li><span style="font-size:16px;color:rgb(255, 255, 255);">We have a dedicated team to get those funds into your account faster</span></li>
+<li><span style="color:rgb(255, 255, 255);">We overcome unverifiable information, unsatisfactory credit history, and withdrawn applications </span></li>
+<li><span style="color:rgb(255, 255, 255);">Helped increase the amount for the EIDL with our customers</span></li>
+</ul>
+<p style="margin-top:16px;margin-bottom:0px;"><br></p>
+</div></td></tr></tbody></table></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:560px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:10px 0px;"><table align="right" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/BBB.png?id=2mfqvb6" class="fusionResponsiveImage" alt="" width="121" height="auto" style="width:121px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table></body>
+</html>
+<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
+Premium Merchant Funding<br/>Trump Bldg, 40 Wall St 5th floor,<br/>New York, NY 10005<br/>United States
+</address>
+<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.pmfcap.com/form?3jn3i--epzr-4jlpar2&sl=2hb&t=1&ac=gdrm' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.pmfcap.com/form?3jn3i--epzr-4jlpar2&sl=2hb&t=5&ac=gdrm' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
+<img src="http://click.pmfcap.com/open/gdrm-3jn3i--4jlpar8/img.gif" width="0" height="0" alt="">
+------=_Part_577457794.1645452001068--
 
 
-
---===============6580173807692328055==
+--===============7801082258101965990==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6580173807692328055==
+--===============7801082258101965990==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -439,6 +265,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6580173807692328055==--
-
+--===============7801082258101965990==--
 
