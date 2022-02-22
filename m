@@ -2,100 +2,121 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id A53FC4BFA19
-	for <lists+industrypack-devel@lfdr.de>; Tue, 22 Feb 2022 15:03:01 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id EB5324C0239
+	for <lists+industrypack-devel@lfdr.de>; Tue, 22 Feb 2022 20:46:15 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nMVkr-0000rw-BI
-	for lists+industrypack-devel@lfdr.de; Tue, 22 Feb 2022 14:03:00 +0000
+	id 1nMb71-0002AN-O8
+	for lists+industrypack-devel@lfdr.de; Tue, 22 Feb 2022 19:46:14 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
- <bounce_kbpaog_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
- id 1nMVko-0000rp-32
- for industrypack-devel@lists.sourceforge.net; Tue, 22 Feb 2022 14:02:56 +0000
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
+ (envelope-from <felicity.gabriel@technocoresolutions.com>)
+ id 1nMb70-0002AH-OU
+ for industrypack-devel@lists.sourceforge.net; Tue, 22 Feb 2022 19:46:13 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=X3krMUca83VohmZEiMVH1G6UP7J66q36D09QidRg22E=; b=A5ipkBapfMIEHidOTldcDMMTdl
- AzUDY2RyIwRmKHm9+3xbiSFXBSGCtfQtPdWQfNbghUlV7gWe7B/qQzAOdGAW5cOkCTLPKtAhtjuyl
- 7cYg7pFcoFf1ERIkTBq42085zcaMKlYAjEJKYm5XI0MDr0ieHI4jgwSF9trW5e1urJGg=;
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=QMzTgJVi9xQ1tpLohwsIOjQ/z8vRzBv6HOaj37gI2o0=; b=G79kyyugNvudVtx6n3HokWsB8u
+ 5mQfM59SAPJke1N39KSCX5j6ugy+2hYqk8vxvYkN2cO8aw+UPhed3cXgekGOVEsSxMD8edmqYgJdO
+ 4zFWAqGpO1/+4sZqB2P+OgLAFvbZJ3hgEfU+p8EpC1xMgQNO86aXZBLP8XMRl4dgZ0TA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=X3krMUca83VohmZEiMVH1G6UP7J66q36D09QidRg22E=; b=mjR394r3LNZfENmHCkZuDARTVp
- q3JG2QaQ+jhtcSRf00zwqmSe616Ry4XuWSJZzr1YDoF1GGjTY4Nrh7kus17KsULT6Iz06b25ysiYC
- u29MXJFW047dPXL/zzq089L7J2x264UhElfVwbTKbBQGkW1CSg/ls2UkeCBWMOHPDLJQ=;
-Received: from [216.24.225.141] (helo=pmfcap.com)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=QMzTgJVi9xQ1tpLohwsIOjQ/z8vRzBv6HOaj37gI2o0=; b=Y
+ XR6FT+O2lIrZE+r8lQN6YRWbM9gE/cKqOsfsnViXJw3AVCNdsKMTdubZziDUiLadl0/RYVtEHHv3K
+ HJRJPXu99fEADqmgV/dVurXPkVEITa1v5sKhh1CVv2G2B1XRhGXzuslIBAOgUwifa3sqehMbdyUel
+ RtjtG7KfVBq7UuEM=;
+Received: from mail-pf1-f195.google.com ([209.85.210.195])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nMVkj-00BLZE-FO
- for industrypack-devel@lists.sourceforge.net; Tue, 22 Feb 2022 14:02:56 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=pmfcap.com;
- h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type; bh=X3krMUca83VohmZEiMVH1G6UP7J66q36D09QidRg22E=;
- b=fj0BB9PRS0a1QryCGSmLIQ6/dSJtLalI05I94gs7itXU0cbGxzlAeqwCOlXorozmjxG6FHTJ9fwx
- or9t8epTWy9uk1fWV7bH6IlnOYNYCZJ6pxbkxSPqAwz/BxI7vEk9228IsLhDbCjWWkX+4cYYsRxa
- qJtPZc/Hgt94Gt0jWtE=
-Received: by pmfcap.com id h2jmgc2r99cv for
- <industrypack-devel@lists.sourceforge.net>;
- Tue, 22 Feb 2022 09:01:08 -0500 (envelope-from
- <bounce_kbpaog_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
-X-Campaign-Shard: 2
-Bounces-To: bounce_szpgj_blnfsyd_n@pmfcap.com
-Message-ID: <1645538439587.201409860.5966361.274789971@pmfcap.com>
-X-Campaign: 201409860/5966361/274789971
-Date: Tue, 22 Feb 2022 09:01:08 -0500
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.94.2)
+ id 1nMb6s-00BeeT-2I
+ for industrypack-devel@lists.sourceforge.net; Tue, 22 Feb 2022 19:46:13 +0000
+Received: by mail-pf1-f195.google.com with SMTP id p8so13129790pfh.8
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 22 Feb 2022 11:46:06 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=technocoresolutions.com; s=google;
+ h=return-receipt-to:from:to:subject:date:message-id:mime-version
+ :content-transfer-encoding:thread-index:content-language;
+ bh=QMzTgJVi9xQ1tpLohwsIOjQ/z8vRzBv6HOaj37gI2o0=;
+ b=TSLUMIkxmOV/WfmGLbTBAHcdwCTlAx8Wku60zF7jJ+X0yOBKctv/N6rVkayETfpQGD
+ +MWhm4f3aDWeRAEKUVfVnuSgaFV5aF0uPmU8CfH5BAjg0ZF4/4Lsx2Z4YG8SB4LOTPwd
+ R+nOMmWduziJGSRVk+NI1ieAmuxV99k+JvY3HmNT3++pXUaNQ2rkIBbkv22rys26s2K0
+ 34wovGGp/oNTUvw0jE0bJ3XpjmjEf/+UccykfQQOq0kywqTlx9xaPt6Tg4M83LANxR9k
+ KZJDUsihbVo5iER0r6P8JlZv0Lhz3CfwfBnHqm+1JhwUYYppb8N+gBqaTKBTI43UuBKZ
+ a+Ew==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20210112;
+ h=x-gm-message-state:return-receipt-to:from:to:subject:date
+ :message-id:mime-version:content-transfer-encoding:thread-index
+ :content-language;
+ bh=QMzTgJVi9xQ1tpLohwsIOjQ/z8vRzBv6HOaj37gI2o0=;
+ b=jMWcfC46jUx9xCFKgJ0pFBN2ejsze/Xf64goiLxynRnJ47mtWImiJcJr4KrffWiCoY
+ HAoe4C2uVDqQXU3P8pEmOkL/jzcmpeydPG0rdF1GXsQOWlzNBRV+Tv9qYAOpm8SGHTkk
+ Vv+5mM+Ajtpl+TpdAS/VXs7+4MbJfO1utxGEsQjlW4B+jxLRvn8d+2To5Xh5sT2wDgOf
+ oLzrljwFleE0xmI7ITQpafyOnoRDKAZhgt4ctxYCkru9fMNCg68AxEoVjB147hRDG/GW
+ YuQhwvq2DIwMHlhCs2ili2sLsxymswv1B7xJQn4KZA2ne2wfkbhrf4k8xT/NZpLKnQ5I
+ RPOw==
+X-Gm-Message-State: AOAM530Ui7XkzIn9zuvWPzm6CH9p//qPupTVThHG02oM1CHNloDtx44h
+ sovTN4mDUN2RDqvw/eREhg9Koq4ZjSwO6w==
+X-Google-Smtp-Source: ABdhPJyjeSp7W2LZd6aydOQZu3G6iUp6TXa9r4oyLa0l3hy+mHUlXr6XxxHr9zZRy1onfRAx/78ZOA==
+X-Received: by 2002:a63:2115:0:b0:373:7f7c:8699 with SMTP id
+ h21-20020a632115000000b003737f7c8699mr20480759pgh.156.1645557585749; 
+ Tue, 22 Feb 2022 11:19:45 -0800 (PST)
+Received: from DESKTOPACB2T4O ([49.207.193.18])
+ by smtp.gmail.com with ESMTPSA id 84sm16678583pfx.181.2022.02.22.11.19.44
+ for <industrypack-devel@lists.sourceforge.net>
+ (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+ Tue, 22 Feb 2022 11:19:45 -0800 (PST)
+From: "Felicity Gabriel" <felicity.gabriel@technocoresolutions.com>
 To: <industrypack-devel@lists.sourceforge.net>
-From: "SBA Loan Advice" <admin@sbaloanadvice.com>
+Date: Tue, 22 Feb 2022 14:19:45 -0500
+Message-ID: <!&!AAAAAAAAAAAYAAAAAAAAAFcKUKRf+chImcrZRQQt0crCgAAAGAAAAAAAAABXClCkX/nISJnK2UUELdHKhOk8AAEAAAAA@technocoresolutions.com>
 MIME-Version: 1.0
-X-Spam-Score: 5.5 (+++++)
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AdgoISaMEAZX+1mRS6iOoHqspQuwTQ==
+Content-Language: en-us
+X-Antivirus: Avast (VPS 220222-2, 2/22/2022), Outbound message
+X-Antivirus-Status: Clean
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Click Here To Get Streamlined
- (http://click.pmfcap.com/click/gdrm-3jvo9-1zh2y-4jlpar4/)
- Need request for increase, reconsideration, or appeal on your EIDL? How have
- we been helping thousands get funded faster, request for an increase,
- reconsiderations, and appeals: 
- Content analysis details:   (5.5 points, 6.0 required)
+ Content preview:  Hi, Would you like to acquire verified emails and contact
+ details of companies using various HR Software? We do have a list of all
+ customers
+ of HR Software such as Bamboo HR, Workday HCM, Oracle HCM, ADP Workforce,
+ PeopleSoft HCM, SAP Success Factors. 
+ Content analysis details:   (-0.2 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
- bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?216.24.225.141>]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_IMAGE_RATIO_04    BODY: HTML has a low ratio of text to image
- area
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.195 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.210.195 listed in list.dnswl.org]
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid 2.0 PYZOR_CHECK            Listed in Pyzor
- (https://pyzor.readthedocs.io/en/latest/)
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML
- 0.8 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
-X-Headers-End: 1nMVkj-00BLZE-FO
-Subject: [Industrypack-devel] =?utf-8?q?Act_now_if_you_are_still_waiting_f?=
- =?utf-8?b?b3IgeW91ciBFSURMIEZ1bmRzP/CfkrA=?=
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Headers-End: 1nMb6s-00BeeT-2I
+Subject: Re: [Industrypack-devel] Data File for Your Company
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -107,166 +128,34 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <admin@sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============0060087706830163309=="
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-<!-- X-Campaign: 201409860/5966361/274789971 -->
---===============0060087706830163309==
-Content-Type: multipart/alternative; boundary="----=_Part_650493555.1645538401479"
+Hi,
 
-<!-- X-Campaign: 201409860/5966361/274789971 -->
-------=_Part_650493555.1645538401479
-Content-Type: text/plain;charset=UTF-8
+Would you like to acquire verified emails and contact details of companies
+using various HR Software?
 
-Click Here To Get Streamlined  (http://click.pmfcap.com/click/gdrm-3jvo9-1zh2y-4jlpar4/)
+We do have a list of all customers of HR Software such as Bamboo HR, Workday
+HCM, Oracle HCM, ADP Workforce, PeopleSoft HCM, SAP Success Factors.
 
-Need request for increase, reconsideration, or appeal on your EIDL?
+Titles: HR Decision Makers and many more.
 
-How have we been helping thousands get funded faster, request for an increase, reconsiderations, and appeals:
+Would you like to get more information regarding these lists? If you have
+any specific criteria do let me know.
 
-We are a preferred partner of the SBA. We manage everything for you from start to finish. We have a dedicated team to get those funds into your account faster. We overcome unverifiable information, unsatisfactory credit history, and withdrawn applications. Helped increase the amount for the EIDL with our customers.
+Upon your interest I can send across 5 - 10 samples for you to review.
 
-Premium Merchant Funding
-Trump Bldg, 40 Wall St 5th floor,
-New York, NY 10005
-United States
+Best Regards
+Felicity Gabriel
+Marketing Manager
 
-You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.pmfcap.com/form?3jvo9--epzr-4jlpar2&sl=2hb&t=1&ac=gdrm or unsubscribe http://click.pmfcap.com/form?3jvo9--epzr-4jlpar2&sl=2hb&t=5&ac=gdrm. 
-------=_Part_650493555.1645538401479
-Content-Type: text/html;charset=UTF-8
-
-<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">As a preferred partner we have helped thousands. Let us help you!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head><!--[if gte mso 15]>
-			<xml>
-				<o:OfficeDocumentSettings>
-				<o:AllowPNG/>
-				<o:PixelsPerInch>96</o:PixelsPerInch>
-				</o:OfficeDocumentSettings>
-			</xml>
-			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
-    margin:0;
-    padding:0;
-    background: rgb(255,255,255);
-}
-table td, table th {
-    border-spacing: 0;
-    border-collapse: collapse;
-    border: 0 none;
-    mso-table-lspace: 0pt;
-    mso-table-rspace: 0pt;
-}
-.fusionResponsiveColumn {
-    font-weight: normal;
-    text-align:left;
-}
-/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
-@media only screen and (max-width: 620px) {
-    .fusionResponsiveContent {
-        width: 100%!important;
-    }
-    .fusionResponsiveColumn {
-        width: auto!important;
-        display:block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100%!important;
-    }
-    .fusionResponsiveImageTable {
-        padding-bottom: 0!important;
-    }
-    .fusionResponsiveCanvas {
-        padding-top: 0px!important;
-        padding-bottom: 0px!important;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .fusionResponsiveContent {
-        width: 100%!important;
-    }
-    .fusionResponsiveColumn {
-        width: auto!important;
-        display:block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100%!important;
-    }
-    .fusionResponsiveCanvas {
-        padding-top: 0px!important;
-        padding-bottom: 0px!important;
-    }
-}</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Arial:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Georgia:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
-<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style='width:100%;padding-top:25px;padding-bottom:25px;background-color:rgb(246,239,225);background-image:url("https://media.campaigner.com/editorassets/themes/soak-it-up/content-background.png");background-repeat:repeat;background-position:center top;font-family:Arial, sans-serif;'>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(0,125,189);"><tbody><tr><td style="background-color:rgb(0,125,189);padding:0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:560px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/EIDL2.jpg?id=3imd10q" class="fusionResponsiveImage" alt="" width="560" height="auto" style="width:560px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(0,125,189);"><tbody><tr><td style="background-color:rgb(0,125,189);padding:10px 0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:300px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;"><tbody><tr><td style="text-align:center;background:rgb(21,171,29);border-radius:5px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.pmfcap.com/click/gdrm-3jvo9-1zh2z-4jlpar5/" style="text-decoration:none;color:rgb(255,255,255);font-family:Georgia, sans-serif;font-size:16px;" id="auto_assign_link_num_1" name="sbaloanadvice ben">Click Here To Get Streamlined </a></td></tr>
-</tbody></table></td></tr></tbody></table></div></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:300px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(44,44,44);font-family:Arial, sans-serif;font-size:16px;text-align:left;"><p style="margin-top:0px;margin-bottom:0px;"><span style="color:rgb(255, 255, 255);font-size:18px;">﻿Need request for increase, reconsideration, or appeal on your EIDL?</span></p></div></td></tr></tbody></table></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(0,125,189);"><tbody><tr><td style="background-color:rgb(0,125,189);padding:0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:560px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:15px 0px 0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(44,44,44);font-family:Arial, sans-serif;font-size:16px;text-align:left;"><p style="text-align:center;margin-top:0px;margin-bottom:0px;"><strong style="color:rgb(255, 255, 255);">How have we been helping thousands get funded faster, request for an increase, reconsiderations, and appeals:</strong></p></div></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(0,125,189);"><tbody><tr><td style="background-color:rgb(0,125,189);padding:0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:560px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;padding:0px;"><table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="margin:0px auto;width:560px;table-layout:fixed;background-color:transparent;"><tbody><tr><td style="background-color:transparent;padding:0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;"><tbody><tr>
-<th valign="center" class="fusionResponsiveColumn" data-fusion-class="" style="width:25%;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="fusionResponsiveImageTable" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/image3.png?id=e42yd23" class="fusionResponsiveImage" alt="" width="140" height="auto" style="width:140px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th valign="center" class="fusionResponsiveColumn" data-fusion-class="" style="width:75%;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px 10px 5px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(44,44,44);font-family:Arial, sans-serif;font-size:16px;text-align:left;">
-<p style="mso-line-height-rule:exactly;line-height:18px;margin-top:0px;margin-bottom:0px;"><br></p>
-<ul>
-<li style="mso-line-height-rule:exactly;line-height:18px;"><span style="font-size:16px;color:rgb(255, 255, 255);">﻿We are a preferred partner of the SBA </span></li>
-<li><span style="font-size:16px;color:rgb(255, 255, 255);">We manage everything for you from start to finish </span></li>
-<li><span style="font-size:16px;color:rgb(255, 255, 255);">We have a dedicated team to get those funds into your account faster</span></li>
-<li><span style="color:rgb(255, 255, 255);">We overcome unverifiable information, unsatisfactory credit history, and withdrawn applications </span></li>
-<li><span style="color:rgb(255, 255, 255);">Helped increase the amount for the EIDL with our customers</span></li>
-</ul>
-<p style="margin-top:16px;margin-bottom:0px;"><br></p>
-</div></td></tr></tbody></table></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:560px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:10px 0px;"><table align="right" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/BBB.png?id=2mfqvb6" class="fusionResponsiveImage" alt="" width="121" height="auto" style="width:121px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-</td></tr></tbody></table></body>
-</html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-Premium Merchant Funding<br/>Trump Bldg, 40 Wall St 5th floor,<br/>New York, NY 10005<br/>United States
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.pmfcap.com/form?3jvo9--epzr-4jlpar2&sl=2hb&t=1&ac=gdrm' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.pmfcap.com/form?3jvo9--epzr-4jlpar2&sl=2hb&t=5&ac=gdrm' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.pmfcap.com/open/gdrm-3jvo9--4jlpar8/img.gif" width="0" height="0" alt="">
-------=_Part_650493555.1645538401479--
+If you are not interested to receive mails from us reply with "Leave Out"
 
 
---===============0060087706830163309==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============0060087706830163309==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============0060087706830163309==--
-
