@@ -2,104 +2,105 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id DBE224CD21F
-	for <lists+industrypack-devel@lfdr.de>; Fri,  4 Mar 2022 11:12:17 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8F2FB4CD5FB
+	for <lists+industrypack-devel@lfdr.de>; Fri,  4 Mar 2022 15:11:28 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nQ4v3-0006y4-KV
-	for lists+industrypack-devel@lfdr.de; Fri, 04 Mar 2022 10:12:16 +0000
+	id 1nQ8eW-00054L-9m
+	for lists+industrypack-devel@lfdr.de; Fri, 04 Mar 2022 14:11:27 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <say.mci@jazziebean.com>) id 1nQ4v2-0006xy-0f
- for industrypack-devel@lists.sourceforge.net; Fri, 04 Mar 2022 10:12:14 +0000
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
+ <bounce_kcbgeg_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
+ id 1nQ8eU-00054F-T0
+ for industrypack-devel@lists.sourceforge.net; Fri, 04 Mar 2022 14:11:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=smKgMcssf/iR2s5CyG/y98yEB/utoRgU3847MtYXiSc=; b=Qh38kPGh4HN8pWtoajyyDVecq0
- SovRC0mNA9kfFunVG8vtxisErnotRue7TCo5v64t1TCNllphCFuK6kSZiltT1JUcip539ZO8zj7BA
- BDBJc3kFrIvlo01FwzjYkz2LsMaT0fzfDPisU9Y1XXl8ZVjCMiT4AwcfcjwWm8LUTk9M=;
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
+ Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=0rXByyrm4natxIJinL4ptqdnruSwGsVTFb5x9ObWzvs=; b=RfwO20VZrgqZ+wr8YdDpQq1HWl
+ wzWcsnTsPhRGz6nbzWJD61+DQO3oUJ8ELZF1wpyPkAgMvbOcu6pGjywQPftLmX9xRh1vUfI1oQzY0
+ UaVx3uVFxWgZIxQyT3yGhTsbDt4s4s+LD1WS5q+f2KsQcSNPuJEdJdquR8DZwXNoDjbM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=smKgMcssf/iR2s5CyG/y98yEB/utoRgU3847MtYXiSc=; b=l
- MB+YZp/oBmYzboyzdUepedmzJrBc+4ypTwtm30H36rfJLjmIW3uXLOlPGlLbmS+mSpkMZTdsM5STn
- 5VtLBJfKQTwzTn436YxJ7/XTLO92NEpW8P6eucftwU23Tlu1eB8Qjo1J65dwrPy9JxiTUgc52WjDt
- +Kun3jMCCpx5uq3A=;
-Received: from slot0.jazziebean.com ([185.102.170.110])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
+ List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=0rXByyrm4natxIJinL4ptqdnruSwGsVTFb5x9ObWzvs=; b=Tq6/83dqzBaIsU3Rd3cbFqsvIU
+ WpxHr02axy8qo8Nri4r8FFyq0OO4BsI0LGBiJw2GPIcf/7lI+pAvf86JtZj9ygW3vJNl+t5up9Cy0
+ DOW8jC3fRCglxD+4FqkUUDFJggmqVIU49Cfk48NCGWV1/CYS/7flhVsMhgYjuSKFu7tk=;
+Received: from [216.24.225.141] (helo=pmfcap.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nQ4uy-004dWv-On
- for industrypack-devel@lists.sourceforge.net; Fri, 04 Mar 2022 10:12:14 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=jazziebean.com; 
- h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
- i=say.mci@jazziebean.com; bh=upawWiueD6PaRByvpRNZsNkNO6M=;
- b=KE318aB8EZDJ4Iu/qYOiJ8rgz3yLcWgu59VyfoC4Jq/9EfcX5nGH2V14g25oJ5OJU3qda3zv2yGE
- qjd5e+w1kxnWZs57+dn52Yjgcy0BUvDy1R66qyMZTErSZczOiuzNdJ45dMFRns0UG9ziw7x42bqM
- T3/pXrYIXglOe5K8b8Woad7XEUKGdoGe5YmC3D2csvoRr5kYzEs3k3BF4x8in3R84pMz4C5+FALw
- 8bqlsikwN9KYNfnMaRz0v9C7Co4pu7ososPltHq6VIwJn93p+344BObCK49IfIRE5Jm8mWAi0AYW
- /Ebs3SR7grCMAHMsdHSqlTpHp46XYuv+J1YZrg==
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=jazziebean.com;
- b=pptvLTFpl5fY0ZEQvFfsFZru8Ze+tKv7lFuWQQoz526OSqI+xClOsV5m0ad+te9F3/f75/aaTMBF
- GwSjo2PLiO0MtWpKHQHNLY9kQMoNwNgpshRu9bft18OKy/uSZ+qJtspE2GWBCHFq5g6hTg7RkbS/
- 7aI4A7AuC16XKz9jDsuCkn/htQS/XTL3QiLf/D5argvEjgBiqnTF6HY9DT8EPObEFM+LV0TPYkrD
- +prhRum38F1/s2WNrzmExjOfEa3Vr+mtWlfH8k3cmolNatfRf/j/kFQvG/c2Dtez99hbQBWZIX1A
- Y5D2XIj31iZrK+w4+/AiZ+09zFvedMrqhsmvBw==;
-From: Administrator  lists.sourceforge.net    <say.mci@jazziebean.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 04 Mar 2022 11:12:05 +0100
-Message-ID: <20220304111205.2003CADB7E26B8F3@jazziebean.com>
+ id 1nQ8eQ-0007sE-HZ
+ for industrypack-devel@lists.sourceforge.net; Fri, 04 Mar 2022 14:11:25 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=pmfcap.com;
+ h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
+ Content-Type; i=ben@pmfcap.com;
+ bh=0rXByyrm4natxIJinL4ptqdnruSwGsVTFb5x9ObWzvs=;
+ b=RNV7C5kQsAEei5DrT1kYBBudnjy3qT6Q4nZ9Js143mFRFN+HDl2UPtkv1lLrZaYInSw1+Jn6ugxq
+ ZrzUmxXLhHr1rS1hNsKYYNoF+tZrQsItaG+QtZJvxm/dDqn9dmT99fZdwSqMyr1JLKh7rhOOb1xk
+ y6NuVXmDKWrSBpWfkeg=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=pmfcap.com;
+ h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
+ Content-Type; bh=0rXByyrm4natxIJinL4ptqdnruSwGsVTFb5x9ObWzvs=;
+ b=ctltDHeTpaHLiKWicLf06W10depb/cRc+58JPr1oxzE9YyNvnHsYtow+ejNpfM7rgQrMdzz+7ZlH
+ fKZnhTGZ10K9yEFVWdp7XWFKo1D9bq6aVnl4/lsCZtpg5EEP2lWpLYoBU3j6+mMv6f/itv29DHeO
+ ASvybp8xuv5LwuOr1oY=
+Received: by pmfcap.com id h48evs2r99c5 for
+ <industrypack-devel@lists.sourceforge.net>;
+ Fri, 4 Mar 2022 09:10:48 -0500 (envelope-from
+ <bounce_kcbgeg_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
+X-Campaign-Shard: 2
+Bounces-To: bounce_thpej_blnfsyd_n@pmfcap.com
+Message-ID: <1646403024947.201441645.6076905.274789971@pmfcap.com>
+X-Campaign: 201441645/6076905/274789971
+Date: Fri, 4 Mar 2022 09:10:48 -0500
+To: <industrypack-devel@lists.sourceforge.net>
+From: "Premium Merchant Funding" <ben@pmfcap.com>
 MIME-Version: 1.0
-X-Spam-Score: 7.8 (+++++++)
+X-Spam-Score: 3.8 (+++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Support - industrypack-devel@lists.sourceforge.net Mailbox
- Dear industrypack-devel, Your lists.sourceforge.net mailbox password will
- expire within 48 hours, Go to Email Account Settings below to confirm using
- the same password! 
- Content analysis details:   (7.8 points, 6.0 required)
+ Content preview: Speak with our loan specialist Click Here to Get Started
+ (http://click.pmfcap.com/click/gdrm-3m8yx-21cu8-4jlpar3/)
+ Revolving Line of Credit: How it benefits you and your company 
+ Content analysis details:   (3.8 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 2.5 URIBL_DBL_MALWARE      Contains a malware URL listed in the Spamhaus
- DBL blocklist [URIs: jazziebean.com]
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [185.102.170.110 listed in zen.spamhaus.org]
- 0.1 URIBL_CSS_A Contains URL's A record listed in the Spamhaus CSS
- blocklist [URIs: jazziebean.com]
- 0.5 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [185.102.170.110 listed in dnsbl-1.uceprotect.net]
  1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
  bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?185.102.170.110>]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ [Blocked - see <https://www.spamcop.net/bl.shtml?216.24.225.141>]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.0 RCVD_IN_MSPIKE_L3      RBL: Low reputation (-3)
+ [216.24.225.141 listed in bl.mailspike.net]
+ 0.0 HTML_IMAGE_RATIO_06    BODY: HTML has a low ratio of text to image
+ area 0.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 RCVD_IN_MSPIKE_L4      RBL: Bad reputation (-4)
- [185.102.170.110 listed in bl.mailspike.net]
+ 1.5 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
  0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1nQ4uy-004dWv-On
-Subject: [Industrypack-devel] E-mail Account Notification For
- industrypack-devel@lists.sourceforge.net !!!
+ 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+ Colors in HTML
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+X-Headers-End: 1nQ8eQ-0007sE-HZ
+Subject: [Industrypack-devel] =?utf-8?q?Who_says_you_can=27t_afford_a_line?=
+ =?utf-8?q?_of_credit_=C2=AE?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -111,123 +112,208 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============2819629295163949510=="
+Reply-To: Premium Merchant Funding <ben@pmfcap.com>
+Content-Type: multipart/mixed; boundary="===============7592128175645010937=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============2819629295163949510==
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+<!-- X-Campaign: 201441645/6076905/274789971 -->
+--===============7592128175645010937==
+Content-Type: multipart/alternative; boundary="----=_Part_1717639019.1646403000690"
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
-<body>
-<P>
-<table lang=3D"en" style=3D"FONT-SIZE: medium; FONT-FAMILY: &quot;Segoe UI&=
-quot;, &quot;Lucida Sans&quot;, sans-serif; BORDER-RIGHT: rgb(227,227,227) =
-1px solid; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FO=
-NT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; BORDER-LEFT: rgb(227=
-,227,227) 1px solid; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGRO=
-UND-COLOR: rgb(252,253,254); font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial" di=
-r=3D"ltr" cellspacing=3D"0" cellpadding=3D"0" width=3D"640" border=3D"0">
-<TBODY>
-<TR style=3D"BACKGROUND-COLOR: rgb(0,114,198)">
-<td style=3D"BORDER-TOP: rgb(227,227,227) 1px solid; BORDER-BOTTOM: rgb(227=
-,227,227) 1px solid; PADDING-BOTTOM: 12px; PADDING-TOP: 12px; PADDING-LEFT:=
- 0px; PADDING-RIGHT: 0px" valign=3D"middle" width=3D"310">
-<H1 style=3D'FONT-SIZE: 15pt; FONT-FAMILY: "segoe ui light"; FONT-WEIGHT: n=
-ormal; COLOR: rgb(255,255,255); LINE-HEIGHT: 20pt'><SPAN id=3Dx_HeaderPlace=
-holder_UserVerificationEmailHeader><FONT color=3D#ffffff>&nbsp;&nbsp;Suppor=
-t - industrypack-devel@lists.sourceforge.net Mailbox</FONT></SPAN></H1></TD=
->
-<td style=3D"BORDER-TOP: rgb(227,227,227) 1px solid; BORDER-BOTTOM: rgb(227=
-,227,227) 1px solid" width=3D"24">&nbsp;</TD></TR></TBODY></TABLE>
-<table lang=3D"en" style=3D"FONT-SIZE: medium; FONT-FAMILY: &quot;Segoe UI&=
-quot;, &quot;Lucida Sans&quot;, sans-serif; WHITE-SPACE: normal; WORD-SPACI=
-NG: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-ST=
-YLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLO=
-R: rgb(252,253,254); font-variant-ligatures: normal; font-variant-caps: nor=
-mal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; te=
-xt-decoration-style: initial; text-decoration-color: initial" dir=3D"ltr" c=
-ellspacing=3D"0" cellpadding=3D"0" width=3D"640" border=3D"0">
-<TBODY>
-<TR>
-<td style=3D"BACKGROUND: rgb(227,227,227)" width=3D"1"></TD>
-<td width=3D"24">&nbsp;</TD>
-<td id=3D"x_PageBody" style=3D"BORDER-BOTTOM: rgb(227,227,227) 1px solid; P=
-ADDING-BOTTOM: 20px; PADDING-TOP: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0=
-px" valign=3D"top" width=3D"640" colspan=3D"2">
-<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
-<TBODY>
-<TR>
-<td style=3D"FONT-SIZE: 10pt; COLOR: rgb(0,0,0); LINE-HEIGHT: 13pt" width=
-=3D"630">
-<table lang=3D"en" dir=3D"ltr" cellspacing=3D"0" cellpadding=3D"0" width=3D=
-"100%" border=3D"0">
-<TBODY>
-<TR>
-<td>
-<DIV style=3D'FONT-SIZE: 14px; FONT-FAMILY: "segoe ui", tahoma, sans-serif;=
- COLOR: rgb(51,51,51)'><SPAN id=3Dx_BodyPlaceholder_UserVerificationEmailBo=
-dySentence1>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
-sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
-sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SP=
-AN>&nbsp;</SPAN>Dear industrypack-devel,<BR><BR>
-Your lists.sourceforge.net mailbox password will expire within 48 hours, Go=
- to Email Account Settings<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
-sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
-sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
-&nbsp;below to confirm using the same password!</SPAN></DIV><BR><BR></TD></=
-TR>
-<TR>
-<td style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADD=
-ING-RIGHT: 0px" align=3D"center">
-<table class=3D"m_-7257559470588763933auto-height" style=3D"BACKGROUND-COLO=
-R: rgb(0,120,215)" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" bor=
-der=3D"0">
-<TBODY>
-<TR>
-<td class=3D"m_-7257559470588763933font-size-18 m_-7257559470588763933line-=
-height-24 m_-7257559470588763933padding-top-12 m_-7257559470588763933paddin=
-g-right-24 m_-7257559470588763933padding-bottom-12 m_-7257559470588763933pa=
-dding-left-24" style=3D"FONT-SIZE: 16px; BORDER-TOP: rgb(0,120,215) 1px sol=
-id; FONT-FAMILY: &quot;segoe ui&quot;, &quot;segoe wp&quot;, wf_segoe-ui_se=
-mibold, tahoma, arial, sans-serif; BORDER-RIGHT: rgb(0,120,215) 1px solid; =
-BORDER-BOTTOM: rgb(0,120,215) 1px solid; FONT-WEIGHT: 600; COLOR:=20
-rgb(0,120,215); PADDING-BOTTOM: 13px; TEXT-ALIGN: center; PADDING-TOP: 13px=
-; PADDING-LEFT: 24px; BORDER-LEFT: rgb(0,120,215) 1px solid; LINE-HEIGHT: 1=
-0px; PADDING-RIGHT: 24px; BACKGROUND-COLOR: rgb(0,120,215)" align=3D"center=
-"><SPAN role=3Dlink id=3DOBJ_PREFIX_DWT151_com_zimbra_url class=3DObject st=
-yle=3D"CURSOR: pointer; TEXT-DECORATION: none; COLOR: rgb(68,101,111)"><SPA=
-N role=3Dlink id=3DOBJ_PREFIX_DWT152_com_zimbra_url class=3DObject style=3D=
-"CURSOR: pointer; TEXT-DECORATION: none; COLOR: rgb(68,101,111)">
-<A style=3D"CURSOR: pointer; TEXT-DECORATION: none; COLOR: rgb(255,255,255)=
-" href=3D"https://nataldobem.ong.br/nataldobem/ss-imp007-refyupdates/#indus=
-trypack-devel@lists.sourceforge.net" target=3D_blank>Email Account Settings=
-</A></SPAN></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><=
-BR>
-<DIV style=3D'FONT-SIZE: 14px; FONT-FAMILY: "segoe ui", tahoma, sans-serif;=
- COLOR: rgb(51,51,51)'>Sincerely,</DIV>
-<DIV style=3D'FONT-SIZE: 14px; FONT-FAMILY: "segoe ui", tahoma, sans-serif;=
- COLOR: rgb(51,51,51); FONT-STYLE: italic'>lists.sourceforge.net Automated =
-Message!</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></P></BOD=
-Y></HTML>
+<!-- X-Campaign: 201441645/6076905/274789971 -->
+------=_Part_1717639019.1646403000690
+Content-Type: text/plain;charset=UTF-8
 
 
---===============2819629295163949510==
+
+Speak with our loan specialist
+
+Click Here to Get Started (http://click.pmfcap.com/click/gdrm-3m8yx-21cu8-4jlpar3/)
+
+Revolving Line of Credit: How it benefits you and your company 
+
+Lines of Credit up to $150KRepay over 12 or 24 weeks. Available credit goes back up as you pay. No repayment penalty.
+
+Lump-sum business loans up to $150kRepay over 24 - 52 weeks. No origination fees. No repayment penalty.
+
+Access total cash balance across accounts. Customized predictions and alerts about your cashflow.
+
+Click Here To Get Started (http://click.pmfcap.com/click/gdrm-3m8yx-21cu9-4jlpar4/)
+
+How it Works
+Applying for and using your revolving line of credit is easy. 
+1. Sign Up Online. Enter your email and phone number, and your past 3 months of your business bank statements.
+2. Get a Decision Quickly. Connect to our loan specialist who works solely with lines of credit.
+3. Get Funds Right Away. If approved, draw funds anytime. Funds arrive as soon as the next business day.
+
+Premium Merchant Funding
+Trump Bldg, 40 Wall St 5th floor,
+New York, NY 10005
+United States
+
+You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.pmfcap.com/form?3m8yx--epzr-4jlpar6&sl=2hb&t=1&ac=gdrm or unsubscribe http://click.pmfcap.com/form?3m8yx--epzr-4jlpar6&sl=2hb&t=5&ac=gdrm. 
+------=_Part_1717639019.1646403000690
+Content-Type: text/html;charset=UTF-8
+
+<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">Talk with our loans specialists and once approved have funds the next day in your account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head><!--[if gte mso 15]>
+			<xml>
+				<o:OfficeDocumentSettings>
+				<o:AllowPNG/>
+				<o:PixelsPerInch>96</o:PixelsPerInch>
+				</o:OfficeDocumentSettings>
+			</xml>
+			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
+    margin:0;
+    padding:0;
+    background: rgb(255,255,255);
+}
+table td, table th {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 0 none;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+}
+.fusionResponsiveColumn {
+    font-weight: normal;
+    text-align:left;
+}
+/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
+@media only screen and (max-width: 620px) {
+    .fusionResponsiveContent {
+        width: 100%!important;
+    }
+    .fusionResponsiveColumn {
+        width: auto!important;
+        display:block;
+    }
+
+    .fusionResponsiveImage {
+        width: 100%!important;
+    }
+    .fusionResponsiveImageTable {
+        padding-bottom: 0!important;
+    }
+    .fusionResponsiveCanvas {
+        padding-top: 0px!important;
+        padding-bottom: 0px!important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .fusionResponsiveContent {
+        width: 100%!important;
+    }
+    .fusionResponsiveColumn {
+        width: auto!important;
+        display:block;
+    }
+
+    .fusionResponsiveImage {
+        width: 100%!important;
+    }
+    .fusionResponsiveCanvas {
+        padding-top: 0px!important;
+        padding-bottom: 0px!important;
+    }
+}</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Arvo:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lora:400,400,500,500i,700,700i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Georgia:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
+<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style='width:100%;padding-top:15px;padding-bottom:15px;background-color:rgb(145,185,222);background-image:url("https://media.campaigner.com/editorassets/white-gradient.png");background-repeat:no-repeat;background-position:center top;font-family:Arvo, serif;'>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:5px 11px 5px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:268px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
+<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px 0px 10px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(131,99,99);font-family:Arvo, serif;font-size:15px;text-align:left;"><p style="text-align:center;margin-top:0px;margin-bottom:0px;"><strong style="font-size:24px;font-family:sans-serif;color:rgb(51, 51, 51);">Speak with our loan specialist</strong></p></div></td></tr></tbody></table>
+<div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;"><tbody><tr><td style="text-align:center;background:rgb(0,126,188);border-radius:10px;border-color:rgb(255,255,255);border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.pmfcap.com/click/gdrm-3m8yx-21cua-4jlpar4/" style="text-decoration:none;color:rgb(255,255,255);font-family:Lora, serif;font-size:16px;" id="auto_assign_link_num_1" name="tracking fundbox aff_c offer_id 65 amp aff_id">Click Here to Get Started</a></td></tr></tbody></table></td></tr></tbody></table></div>
+</th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="center" class="fusionResponsiveColumn" data-fusion-class="" style="width:268px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;width:100%;"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/Premium_Merhcant_Funding_Logo_1.jpg?id=byh7and" class="fusionResponsiveImage" alt="" width="268" height="auto" style="width:268px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr><th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:600px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;">
+<tbody><tr><td style="padding-top:15px;padding-bottom:15px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:90%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(135,129,121);"> </td></tr></tbody></table></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 4px 0px 3px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:4px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:586px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(131,99,99);font-family:Arvo, serif;font-size:15px;text-align:left;"><p style="text-align:center;margin-top:0px;margin-bottom:0px;"><strong style="font-size:20px;color:rgb(51, 51, 51);font-family:Georgia, sans-serif;">Revolving Line of Credit: How it benefits you and your company </strong></p></div></td></tr></tbody></table></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:3px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px 11px 15px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:171px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
+<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/lineimage.png?id=pouvasj" class="fusionResponsiveImage" alt="" width="104" height="auto" style="width:104px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
+<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(131,99,99);font-family:Arvo, serif;font-size:15px;text-align:left;"><ul style="margin-top:0px;margin-bottom:0px;">
+<li><span style="font-size:14px;background-color:transparent;color:rgb(0, 0, 0);">Lines of Credit up to $150K</span></li>
+<li><span style="font-size:14px;background-color:transparent;color:rgb(0, 0, 0);">Repay over 12 or 24 weeks</span></li>
+<li><span style="font-size:14px;background-color:transparent;color:rgb(0, 0, 0);">Available credit goes back up as you pay</span></li>
+<li><span style="font-size:14px;background-color:transparent;color:rgb(0, 0, 0);">No repayment penalty</span></li>
+</ul></div></td></tr></tbody></table>
+</th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:171px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
+<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/termloanimage.png?id=lev4bh9" class="fusionResponsiveImage" alt="" width="102" height="auto" style="width:102px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
+<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(131,99,99);font-family:Arvo, serif;font-size:15px;text-align:left;"><ul style="margin-top:0px;margin-bottom:0px;">
+<li><span style="color:rgb(0, 0, 0);font-size:14px;">Lump-sum business loans up to $150k</span></li>
+<li><span style="color:rgb(0, 0, 0);font-size:14px;">Repay over 24 - 52 weeks</span></li>
+<li><span style="color:rgb(0, 0, 0);font-size:14px;">No origination fees</span></li>
+<li><span style="color:rgb(0, 0, 0);font-size:14px;">No repayment penalty</span></li>
+</ul></div></td></tr></tbody></table>
+</th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:171px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
+<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/insightsimage.png?id=x8qer49" class="fusionResponsiveImage" alt="" width="102" height="auto" style="width:102px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
+<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(131,99,99);font-family:Arvo, serif;font-size:15px;text-align:left;"><ul style="margin-top:0px;margin-bottom:0px;">
+<li><span style="color:rgb(0, 0, 0);font-size:14px;">Access total cash balance across accounts</span></li>
+<li><span style="color:rgb(0, 0, 0);font-size:14px;">Customized predictions and alerts about your cashflow</span></li>
+</ul></div></td></tr></tbody></table>
+</th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 11px 0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:558px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
+<div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:90%;"><tbody><tr><td style="text-align:center;background:rgb(0,126,188);border-radius:10px;border-color:rgb(255,255,255);border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.pmfcap.com/click/gdrm-3m8yx-21cub-4jlpar5/" style="text-decoration:none;color:rgb(255,255,255);font-family:Georgia, sans-serif;font-size:16px;" id="auto_assign_link_num_2" name="tracking fundbox aff_c offer_id 65 amp aff_id 2">Click Here To Get Started</a></td></tr></tbody></table></td></tr></tbody></table></div>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:5px;padding-bottom:10px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:90%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(135,129,121);"> </td></tr></tbody></table></td></tr></tbody></table>
+</th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 11px 0px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:558px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(131,99,99);font-family:Arvo, serif;font-size:15px;text-align:left;">
+<p style="text-align:center;margin-top:0px;margin-bottom:0px;"><strong style="font-size:18px;font-family:Georgia, sans-serif;color:rgb(46, 47, 47);">How it Works</strong></p>
+<p style="text-align:center;margin-top:16px;margin-bottom:0px;"><strong style="font-family:Georgia, sans-serif;color:rgb(46, 47, 47);">Applying for and using your revolving line of credit is easy. </strong></p>
+<p style="margin-top:16px;margin-bottom:0px;"><strong style="font-family:Georgia, sans-serif;color:rgb(46, 47, 47);">1. Sign Up Online.</strong><span style="font-family:Georgia, sans-serif;color:rgb(46, 47, 47);"> Enter your email and phone number, and your past 3 months of your business bank statements.</span></p>
+<p style="margin-top:16px;margin-bottom:0px;"><strong style="font-family:Georgia, sans-serif;color:rgb(46, 47, 47);">2. Get a Decision Quickly.</strong><span style="font-family:Georgia, sans-serif;color:rgb(46, 47, 47);"> Connect to our loan specialist who works solely with lines of credit.</span></p>
+<p style="margin-top:16px;margin-bottom:0px;"><strong style="font-family:Georgia, sans-serif;color:rgb(46, 47, 47);">3. Get Funds Right Away.</strong><span style="font-family:Georgia, sans-serif;color:rgb(46, 47, 47);"> If approved, draw funds anytime. Funds arrive as soon as the next business day.</span></p>
+</div></td></tr></tbody></table></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:2px 11px 2px 10px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:11px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:558px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="right" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td style="border-color:rgb(240,240,240);border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/BBB.png?id=fjgs7mi" class="fusionResponsiveImage" alt="" width="121" height="auto" style="width:121px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:10px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table></body>
+</html>
+<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
+Premium Merchant Funding<br/>Trump Bldg, 40 Wall St 5th floor,<br/>New York, NY 10005<br/>United States
+</address>
+<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.pmfcap.com/form?3m8yx--epzr-4jlpar6&sl=2hb&t=1&ac=gdrm' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.pmfcap.com/form?3m8yx--epzr-4jlpar6&sl=2hb&t=5&ac=gdrm' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
+<img src="http://click.pmfcap.com/open/gdrm-3m8yx--4jlpar2/img.gif" width="0" height="0" alt="">
+------=_Part_1717639019.1646403000690--
+
+
+--===============7592128175645010937==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2819629295163949510==
+--===============7592128175645010937==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -238,4 +324,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2819629295163949510==--
+--===============7592128175645010937==--
+
