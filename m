@@ -2,106 +2,120 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 925D14D9BBB
-	for <lists+industrypack-devel@lfdr.de>; Tue, 15 Mar 2022 14:03:38 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 29B194D9E7A
+	for <lists+industrypack-devel@lfdr.de>; Tue, 15 Mar 2022 16:17:30 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nU6hx-0006Ih-Dj
-	for lists+industrypack-devel@lfdr.de; Tue, 15 Mar 2022 13:03:37 +0000
+	id 1nU8vQ-0004D9-Sq
+	for lists+industrypack-devel@lfdr.de; Tue, 15 Mar 2022 15:17:27 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
- <bounce_keapnd_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
- id 1nU6hv-0006IU-CJ
- for industrypack-devel@lists.sourceforge.net; Tue, 15 Mar 2022 13:03:35 +0000
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
+ (envelope-from <rachelspratt@findkeeplove.online>)
+ id 1nU8uG-0004Bs-60
+ for industrypack-devel@lists.sourceforge.net; Tue, 15 Mar 2022 15:16:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Qe5S9O3PyhAd7LUFyS9tNwV6KzbJIJDpf4nNWFUQzA4=; b=e5c58VDftncot1BGaIsMXYkfuu
- QJc+SneuZ9XJmdCIJ7QjAHSdR+dM4a8kfc9XCLPP3ZGYBnjTAVBCTqeZdsskwG/iVGemXPjG1eUc4
- KbAMkm++aFY1zIUyugWS5l3IM4kNKHVf5z0rsdk72n8eRz/aLeR9HF7owioyD1sx918E=;
+ d=sourceforge.net; s=x; h=Content-Type:To:Subject:Message-ID:Date:
+ MIME-Version:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=l7vMpm3z3ptgmooqjTVkX84DKa/19EGb40sMODMD1T0=; b=m1Ah3cvFUXserbwQXuQB/iiAY+
+ tQZ2ylBeLEfez5sGW2vnwJ8r5P/b4qNNKpeO6GOrLGiWOjc5fUMmcmZDNPR42c9aieJXoRawk/wGF
+ 0DpjHiE+h65sQNZJgFnYdYgIJpbB1xER3Pb0D9Tv47uQQMLZ8zpq+N2/Wq8XFc5I6W/E=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=Qe5S9O3PyhAd7LUFyS9tNwV6KzbJIJDpf4nNWFUQzA4=; b=h6AEh/Ikc6YpOxRvGQGwxFBww0
- u3q+A+SCyKFRDzVTVUKpniD8ltkSQL3aPRJ4lmndBcv/BlsVaDSahI4uBgWabgpRhuM4QGvyHkeZW
- dSoOpRPwxJhWNioGaviBjwE2GRv0nnwT5Jir/eI+20UnbolOXaVWFBIiaV7rb73oSU3Y=;
-Received: from [216.24.225.141] (helo=pmfcap.com)
+ h=Content-Type:To:Subject:Message-ID:Date:MIME-Version:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=l7vMpm3z3ptgmooqjTVkX84DKa/19EGb40sMODMD1T0=; b=J
+ TeXpIE04r78VzS3Ge8Y8BNQAGlYLTk3Ol/04WvVwlP04ScllcBaTbUWehwc9KCOA08WsaoSNz3bbT
+ S1FG9VT5baBE1lwJooZ0H1j6Ejb0i//gsyzZD7Yp+ptCSawtz1TvNF2xwwmCMKoiuFq2sug0PR5tz
+ aoJiXdBvg2tM/Rnc=;
+Received: from mail-lj1-f173.google.com ([209.85.208.173])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nU6pq-00Gtqo-2A
- for industrypack-devel@lists.sourceforge.net; Tue, 15 Mar 2022 13:03:34 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type:Date:Subject:From:To:CC; x=1647435814; i=admin@sbaloanadvice.com; 
- bh=Qe5S9O3PyhAd7LUFyS9tNwV6KzbJIJDpf4nNWFUQzA4=;
- b=JvZ3U2iUApzIFdUDAj87IUIfIK4t3GzmmcMD2Zh33tQVG45hVZ1E1Atjd9elU8hyjFsQ4GFJFB0B
- xw6zBHO42PEQIFvvcyd3vBSuZRBMc4MKtQM7R6TVJDWe//dBFcQTVy5hlSe5ULgqZBPUGTTH980e
- Dk6ufDg2O1Fo9u2OdbI=
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=pmfcap.com;
- h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type:Date:Subject:From:To:CC;
- bh=Qe5S9O3PyhAd7LUFyS9tNwV6KzbJIJDpf4nNWFUQzA4=;
- b=ISaKMCUAoOXg7cHCWVvCpkC/6q9MyGH/D17FmxeItoACEw+nG6NpkYVvtwMYrI4Bp8/UIO7F3lA7
- GjEimauk4PV/KeRkHAqbW6enbAbReKgpkIk5L61SzhOgNuxsr571F2CrVyU0MCaxPKu1wv4ZkO/C
- lrzqo79wwtLS+86E8B8=
-Received: by pmfcap.com id h627aa2r99c7 for
- <industrypack-devel@lists.sourceforge.net>;
- Tue, 15 Mar 2022 09:01:19 -0400 (envelope-from
- <bounce_keapnd_n-industrypack+2Ddevel=lists.sourceforge.net@pmfcap.com>)
-X-Campaign-Shard: 2
-Bounces-To: bounce_trphf_blnfsyd_n@pmfcap.com
-Message-ID: <1647349258392.201474005.6201389.274789971@pmfcap.com>
-X-Campaign: 201474005/6201389/274789971
-Date: Tue, 15 Mar 2022 09:01:19 -0400
-To: <industrypack-devel@lists.sourceforge.net>
-From: "SBA Loan Advice" <admin@sbaloanadvice.com>
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.94.2)
+ id 1nU8u8-00HDLR-92
+ for industrypack-devel@lists.sourceforge.net; Tue, 15 Mar 2022 15:16:14 +0000
+Received: by mail-lj1-f173.google.com with SMTP id 25so26930500ljv.10
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 15 Mar 2022 08:16:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=findkeeplove.online; s=google;
+ h=from:mime-version:date:message-id:subject:to;
+ bh=l7vMpm3z3ptgmooqjTVkX84DKa/19EGb40sMODMD1T0=;
+ b=nqbmSmTuUb5qvxFqzhv70N5v29+a4W3uUIwqVpZHVoCOjMShW89BMHhRy50ySkSCgc
+ 46v3a042y/teN2UFvJEKGAV+BAqF4cSthjyfQx2hv1ozMsekCdn0LViCjFkS8oBwzVT1
+ AiSzvxIRrqieitRd6o88epRCpyCbAgMErc/H/a5uyIEZVi8il7UT6vamuHvEpdhSpdnJ
+ dqdukcTJyFip4AUwprv1CEW7lgT5vbueU2E592JNx979Sy8v4Oob6y7qMQvXdkWtYXBj
+ OgkoRuJjg1hdNC9eq46Z6waO5f3PsCcWApnMRy3msKdYeYIhSBjxRWWV+TSCJ0Zi7/TK
+ bZMQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20210112;
+ h=x-gm-message-state:from:mime-version:date:message-id:subject:to;
+ bh=l7vMpm3z3ptgmooqjTVkX84DKa/19EGb40sMODMD1T0=;
+ b=Pi27RNbWYMPJVfR8zGLH9w6kKqZUyWdiIsimxPWkV+n0DfYvuWV6sORqaQYA8Fx2Tg
+ B+FwRtOlCwR5wBapl7+mbYOLxo3232pYC6DM6BlT+pTuY3CDe+o21PmopadfdkAKN5LV
+ 9S8eIqV0rz54ioDXZ2t5/71ZLXICE4Gzpf70shmZakQE9TTJJ+DCB2rXBEWHQxXjerLE
+ ZHRjil1K+DQhQ3F/OutLtSI4M8741n9M+mAYOLOa06LaaEqdzQ5N0rnsCqbq0lssFIII
+ tcdnGRLG0GY23a3k/CobXeZD9n/sLKKxQU2wtX+pdBP7nneTGOsEaZPwILOd8InLRYly
+ sXTg==
+X-Gm-Message-State: AOAM531UjaklhChHMBg12xPpfZ72LVYD64hehP4nVyiyGVswOSWvTpMF
+ SD4si+MJmYwiL8Jqf26yX4yXTqMi13rQfagLYR6heznJRbM=
+X-Google-Smtp-Source: ABdhPJyEtIEN0D5rB65YZ2WBxH9LcXoqXjNSjiq7lAS/aDVoPAtMlkZIrJTD8KoZH95x0/uzcqeOF7F7W2+Kdy9vznw=
+X-Received: by 2002:a2e:b0f6:0:b0:246:e95:c4ce with SMTP id
+ h22-20020a2eb0f6000000b002460e95c4cemr17687382ljl.142.1647357361437; Tue, 15
+ Mar 2022 08:16:01 -0700 (PDT)
+Received: from 968012905573 named unknown by gmailapi.google.com with
+ HTTPREST; Tue, 15 Mar 2022 15:15:59 +0000
+From: Rachel Spratt <rachelspratt@findkeeplove.online>
 MIME-Version: 1.0
-X-Spam-Score: 6.8 (++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+Date: Tue, 15 Mar 2022 15:15:59 +0000
+Message-ID: <CAEwnVD9vYAF8=kZBoY4tvS6+2mcjxLmeddjO4C_mOxzo0zv=yA@mail.gmail.com>
+To: there <industrypack-devel@lists.sourceforge.net>
+X-Spam-Score: 3.2 (+++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Speak with our loan specialist Click Here To Get Started
- (http://sbaloanadvice.com/ben)
- The SBA 7(A) Program and Credit Lines 
- Content analysis details:   (6.8 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  Source email list inquiry Hi there, I was researching Source,
+    and think your branding is amazing! With such a beautiful site, I’d love
+    to help you get Source in front of massive audiences. 
+ 
+ Content analysis details:   (3.2 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 RCVD_IN_MSPIKE_L3      RBL: Low reputation (-3)
- [216.24.225.141 listed in bl.mailspike.net]
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.9 SPF_HELO_SOFTFAIL      SPF: HELO does not match SPF record (softfail)
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_IMAGE_RATIO_08    BODY: HTML has a low ratio of text to image
- area
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
+                             [URI: findkeeplove.online (online)]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.208.173 listed in wl.mailspike.net]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 HTML_IMAGE_ONLY_32     BODY: HTML: images with 2800-3200 bytes of
+                             words
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 2.0 PYZOR_CHECK            Listed in Pyzor
- (https://pyzor.readthedocs.io/en/latest/)
- 1.5 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
- 0.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML 0.0 LOTS_OF_MONEY          Huge... sums of money
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
-X-Headers-End: 1nU6pq-00Gtqo-2A
-Subject: [Industrypack-devel] =?utf-8?q?How_the_SBA_7=28A=29_has_help_thou?=
- =?utf-8?q?sands_and_how_it_can_help_you_=C2=AE?=
+                             author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+                              no trust
+                             [209.85.208.173 listed in list.dnswl.org]
+  0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
+  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+                             Colors in HTML
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+  0.9 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+X-Headers-End: 1nU8u8-00HDLR-92
+Subject: [Industrypack-devel] Source email list inquiry
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -113,217 +127,137 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <admin@sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============4524228179302249899=="
+Content-Type: multipart/mixed; boundary="===============5086769944669395909=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-<!-- X-Campaign: 201474005/6201389/274789971 -->
---===============4524228179302249899==
-Content-Type: multipart/alternative; boundary="----=_Part_194555150.1647349203198"
+--===============5086769944669395909==
+Content-Type: multipart/alternative; boundary="00000000000058cf7d05da434634"
 
-<!-- X-Campaign: 201474005/6201389/274789971 -->
-------=_Part_194555150.1647349203198
-Content-Type: text/plain;charset=UTF-8
+--00000000000058cf7d05da434634
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-Speak with our loan specialist
+ Source email list inquiry
 
-Click Here To Get Started (http://sbaloanadvice.com/ben)
+Hi there,
 
-The SBA 7(A) Program and Credit Lines
+I was researching Source, and think your branding is amazing! With such a
+beautiful site, I=E2=80=99d love to help you get Source in front of massive
+audiences.
 
-The SBA reduces the risk for lenders and makes it easier for them to access capital. SBA guaranteed loans can be used for a variety of business purposes, including starting or expanding an existing business. That makes it easier for small businesses to get loans.
+We work with Peet=E2=80=99s Coffee, Frommer=E2=80=99s, Joes Jeans, TRX, and=
+ 8,000+ more
+best-in-class brands, and it would be such an honor to add Source to our
+brand ecosystem.
 
-SBA Credit Line Features
-Quicker turnaround time. Single-digit APR Loan decision in 24-48 hours. Funding in 3-5 days.
+We=E2=80=99d love to help you *grow your email list by 5k-25k consumers per
+campaign* to acquire more customers for a fraction of the cost of major
+advertising channels like facebook and google.
 
-SBA 7(A) Program Features
-Low rates: 3.75% - 6.25%Financing terms up to 25 years. Pre-Qualification in 36 hours, funding in 4-6 weeks.
+Customers spend 60-80% less acquiring customers via FindKeep.Love compared
+to other advertising channels, and I=E2=80=99d love to get you a compliment=
+ary
+trial of our services. Based on your traffic, I think you might qualify for
+a comped trial. I need to connect on a quick call to qualify you and verify
+some details.
 
-Advantages
-Relaxed requirements vs. traditional banks. Lower down payments. Longer repayment terms. New and established businesses can apply.
+If so, we=E2=80=99d love for you to try out our services to grow your email=
+ and SMS
+lists. Our online giveaways *reach 600k to 1M+ consumers*.
 
-Click Here to Get Started (http://sbaloanadvice.com/ben)
+*Are you interested in connecting on a quick call?*
 
-Under the program, small businesses (generally those with fewer than 500 employees) who are unable to get traditional financing through banks can apply for funds that can then be used for anything from buying a business, purchasing real estate, or for working capital. These multi-purpose SBA loan programs offer the most flexible and longest-term loans.
-To qualify for this loan you must have fewer than 500 employees or less than $20.5 million in average annual receipts. You must operate as a for-profit business, be based in the United States, and not be delinquent on any debt (such as taxes) owed to the government.
+Can=E2=80=99t wait to chat with you!
 
-Premium Merchant Funding
-55 Water Street 50th Floor,
-New York, NY 10041
+Best,
+Rachel
+
+T:DS-P2-GENV1
+
+
+Rachel Spratt
+Operations Manager
+FindKeep.Love
+
+PO Box 33006
+Los Gatos, CA 95031
 United States
+Unsubscribe
+<http://w1.mslat.net/prod/unsubscribe-confirm/1c4a88be-db25-439e-914b-92657=
+959/industrypack-devel%40lists.sourceforge.net/70d39809-bed1-4470-9f08-da7f=
+7c95847b>
 
-You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.pmfcap.com/form?3ox0t--epzr-4jlpar5&sl=2hb&t=1&ac=gdrm or unsubscribe http://click.pmfcap.com/form?3ox0t--epzr-4jlpar5&sl=2hb&t=5&ac=gdrm. 
-------=_Part_194555150.1647349203198
-Content-Type: text/html;charset=UTF-8
-
-<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">As a preferred partner speak with our funding specialist and get approved in 24-48 hours!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head><!--[if gte mso 15]>
-			<xml>
-				<o:OfficeDocumentSettings>
-				<o:AllowPNG/>
-				<o:PixelsPerInch>96</o:PixelsPerInch>
-				</o:OfficeDocumentSettings>
-			</xml>
-			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
-    margin:0;
-    padding:0;
-    background: rgb(255,255,255);
-}
-table td, table th {
-    border-spacing: 0;
-    border-collapse: collapse;
-    border: 0 none;
-    mso-table-lspace: 0pt;
-    mso-table-rspace: 0pt;
-}
-.fusionResponsiveColumn {
-    font-weight: normal;
-    text-align:left;
-}
-/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
-@media only screen and (max-width: 620px) {
-    .fusionResponsiveContent {
-        width: 100%!important;
-    }
-    .fusionResponsiveColumn {
-        width: auto!important;
-        display:block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100%!important;
-    }
-    .fusionResponsiveImageTable {
-        padding-bottom: 0!important;
-    }
-    .fusionResponsiveCanvas {
-        padding-top: 0px!important;
-        padding-bottom: 0px!important;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .fusionResponsiveContent {
-        width: 100%!important;
-    }
-    .fusionResponsiveColumn {
-        width: auto!important;
-        display:block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100%!important;
-    }
-    .fusionResponsiveCanvas {
-        padding-top: 0px!important;
-        padding-bottom: 0px!important;
-    }
-}</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
-<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style="width:100%;padding-top:15px;padding-bottom:15px;background-color:rgb(246,246,246);background-repeat:no-repeat;font-family:sans-serif;">
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:5px 15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:10px 0px 0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h2 style="text-align:center;color:rgb(51,51,51);font-size:24px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;">Speak with our loan specialist</h2></div></td></tr></tbody></table>
-<div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:15px 0px 0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;"><tbody><tr><td style="text-align:center;background:rgb(0,126,188);border-radius:10px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.pmfcap.com/click/gdrm-3ox0t-23ard-4jlpar3/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_1" name="sbaloanadvice ben">Click Here To Get Started</a></td></tr></tbody></table></td></tr></tbody></table></div>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/grow-a-business_crop.png?id=6bic5es" class="fusionResponsiveImage" alt="" width="255" height="auto" style="width:255px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:5px;padding-bottom:5px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(136,136,136);"> </td></tr></tbody></table></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h3 style="text-align:center;color:rgb(51,51,51);font-size:12px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><strong style="font-family:sans-serif;font-size:18px;color:rgb(0, 126, 188);">The SBA 7(A) Program and Credit Lines</strong></h3></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:5px 0px 0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><p style="text-align:center;margin-top:0px;margin-bottom:0px;">The SBA reduces the risk for lenders and makes it easier for them to access capital. SBA guaranteed loans can be used for a variety of business purposes, including starting or expanding an existing business. That makes it easier for small businesses to get loans.</p></div></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:5px 15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:159px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
-<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/express.png?id=mw5rf1t" class="fusionResponsiveImage" alt="" width="159" height="auto" style="width:159px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h3 style="text-align:center;color:rgb(51,51,51);font-size:12px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><strong style="font-size:16px;font-family:sans-serif;">SBA Credit Line Features</strong></h3></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><ul style="margin-top:0px;margin-bottom:0px;">
-<li style="text-align:left;"><span style="font-family:sans-serif;font-size:14px;">Quicker turnaround time</span></li>
-<li style="text-align:left;"><span style="font-family:sans-serif;font-size:14px;">Single-digit APR</span></li>
-<li style="text-align:left;"><span style="font-family:sans-serif;font-size:14px;">Loan decision in 24-48 hours</span></li>
-<li style="text-align:left;"><span style="font-family:sans-serif;font-size:14px;">Funding in 3-5 days</span></li>
-</ul></div></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:159px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
-<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;width:67%;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/fillerimage3.jpg?id=df9gg94" class="fusionResponsiveImage" alt="" width="106" height="auto" style="width:106px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h3 style="text-align:center;color:rgb(51,51,51);font-size:12px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><strong style="font-size:16px;font-family:sans-serif;">SBA 7(A) Program Features</strong></h3></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><ul style="margin-top:0px;margin-bottom:0px;">
-<li style="text-align:left;"><span style="font-family:sans-serif;font-size:14px;">Low rates: 3.75% - 6.25%</span></li>
-<li style="text-align:left;"><span style="font-family:sans-serif;font-size:14px;">Financing terms up to 25 years</span></li>
-<li style="text-align:left;"><span style="font-family:sans-serif;font-size:14px;">Pre-Qualification in 36 hours, funding in 4-6 weeks</span></li>
-</ul></div></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:159px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
-<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 20px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;width:86%;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/fillerimage2.png?id=il8bxlk" class="fusionResponsiveImage" alt="" width="136" height="auto" style="width:136px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h3 style="text-align:center;color:rgb(51,51,51);font-size:12px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><strong style="font-family:sans-serif;font-size:18px;">Advantages</strong></h3></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><ul style="margin-top:0px;margin-bottom:0px;">
-<li><span style="font-size:14px;font-family:sans-serif;">Relaxed requirements vs. traditional banks</span></li>
-<li><span style="font-size:14px;font-family:sans-serif;">Lower down payments</span></li>
-<li><span style="font-size:14px;font-family:sans-serif;">Longer repayment terms</span></li>
-<li><span style="font-size:14px;font-family:sans-serif;">New and established businesses can apply</span></li>
-</ul></div></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;">
-<div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="text-align:center;background:rgb(0,126,188);border-radius:4px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.pmfcap.com/click/gdrm-3ox0t-23are-4jlpar4/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_2" name="sbaloanadvice ben 2">Click Here to Get Started</a></td></tr></tbody></table></td></tr></tbody></table></div>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:5px;padding-bottom:5px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(136,136,136);"> </td></tr></tbody></table></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;">
-<p style="margin-top:0px;margin-bottom:0px;"><span style="font-family:sans-serif;font-size:14px;">Under the program, small businesses (generally those with fewer than 500 employees) who are unable to get traditional financing through banks can apply for funds that can then be used for anything from buying a business, purchasing real estate, or for working capital. These multi-purpose SBA loan programs offer the most flexible and longest-term loans.</span></p>
-<p style="margin-top:16px;margin-bottom:0px;"><span style="font-family:sans-serif;font-size:14px;">To qualify for this loan you must have fewer than 500 employees or less than $20.5 million in average annual receipts. You must operate as a for-profit business, be based in the United States, and not be delinquent on any debt (such as taxes) owed to the government.</span></p>
-</div></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(0,126,188);"><tbody><tr><td style="background-color:rgb(0,126,188);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"></div></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:5px 0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr><th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:600px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;">
-<table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="right" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/764338/BBB.png?id=5lwt0qs" class="fusionResponsiveImage" alt="" width="121" height="auto" style="width:121px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-</td></tr></tbody></table></body>
-</html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-Premium Merchant Funding<br/>55 Water Street 50th Floor,<br/>New York, NY 10041<br/>United States
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.pmfcap.com/form?3ox0t--epzr-4jlpar5&sl=2hb&t=1&ac=gdrm' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.pmfcap.com/form?3ox0t--epzr-4jlpar5&sl=2hb&t=5&ac=gdrm' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.pmfcap.com/open/gdrm-3ox0t--4jlpar1/img.gif" width="0" height="0" alt="">
-------=_Part_194555150.1647349203198--
+--00000000000058cf7d05da434634
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
 
---===============4524228179302249899==
+      <html>
+      <head>
+        <title>Source email list inquiry</title>
+        <meta content=3D"text/html;" charset=3D"utf-8" http-equiv=3D"Conten=
+t-Type">
+      </head>
+      <body><p>Hi there,</p>
+<p>I was researching Source, and think your branding is amazing! With such =
+a beautiful site, I=E2=80=99d love to help you get Source in front of massi=
+ve audiences.</p>
+<p>We work with Peet=E2=80=99s Coffee, Frommer=E2=80=99s, Joes Jeans, TRX, =
+and 8,000+ more best-in-class brands, and it would be such an honor to add =
+Source to our brand ecosystem.</p>
+<p>We=E2=80=99d love to help you <strong>grow your email list by 5k-25k con=
+sumers per campaign</strong> to acquire more customers for a fraction of th=
+e cost of major advertising channels like facebook and google.=C2=A0</p>
+<p>Customers spend 60-80% less acquiring customers via FindKeep.Love compar=
+ed to other advertising channels, and I=E2=80=99d love to get you a complim=
+entary trial of our services. Based on your traffic, I think you might qual=
+ify for a comped trial. I need to connect on a quick call to qualify you an=
+d verify some details.=C2=A0</p>
+<p>If so, we=E2=80=99d love for you to try out our services to grow your em=
+ail and SMS lists. Our online giveaways <strong>reach 600k to 1M+ consumers=
+</strong>.=C2=A0</p>
+<p><strong>Are you interested in connecting on a quick call?</strong> =C2=
+=A0</p>
+<p>Can=E2=80=99t wait to chat with you!</p>
+<p style=3D"line-height:1.38;margin-top:10pt;margin-bottom:10pt"><span styl=
+e=3D"font-size:10pt;font-family:Arial;font-variant-numeric:normal;font-vari=
+ant-east-asian:normal;vertical-align:baseline;white-space:pre-wrap">Best,=
+=C2=A0<br><span style=3D"font-family:arial,sans-serif;font-size:13px;white-=
+space:normal">Rachel</span><br></span></p>
+<div><span style=3D"font-size:11pt;font-family:Arial;background-color:trans=
+parent;font-variant-numeric:normal;font-variant-east-asian:normal;vertical-=
+align:baseline;white-space:pre-wrap"><br><span style=3D"font-size:3px"><spa=
+n style=3D"color:#000000">T:DS-P2-GENV1</span><br></span><br></span></div><=
+br><div style=3D"box-sizing:border-box">Rachel Spratt<br style=3D"box-sizin=
+g:border-box">Operations Manager<br style=3D"box-sizing:border-box">FindKee=
+p.Love</div>
+<div style=3D"box-sizing:border-box">
+<div style=3D"box-sizing:border-box">
+<p style=3D"box-sizing:border-box;font-size:13px;padding:0px;letter-spacing=
+:0px">PO Box 33006<br style=3D"box-sizing:border-box">Los Gatos, CA 95031<b=
+r style=3D"box-sizing:border-box">United States</p>
+</div>
+<div style=3D"box-sizing:border-box"><a style=3D"box-sizing:border-box;back=
+ground-color:transparent" href=3D"http://w1.mslat.net/prod/unsubscribe-conf=
+irm/1c4a88be-db25-439e-914b-92657959/industrypack-devel%40lists.sourceforge=
+.net/70d39809-bed1-4470-9f08-da7f7c95847b" target=3D"_blank" rel=3D"noopene=
+r">Unsubscribe</a></div>
+</div><img alt width=3D"1" height=3D"1" class=3D"beacon-o" src=3D"http://w1=
+.mslat.net/prod/open/70d39809-bed1-4470-9f08-da7f7c95847b" style=3D"float:l=
+eft;margin-left:-1px;position:absolute;"></body>
+      </html>
+
+--00000000000058cf7d05da434634--
+
+
+--===============5086769944669395909==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4524228179302249899==
+--===============5086769944669395909==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -334,5 +268,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4524228179302249899==--
+--===============5086769944669395909==--
 
