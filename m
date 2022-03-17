@@ -2,120 +2,98 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 29B194D9E7A
-	for <lists+industrypack-devel@lfdr.de>; Tue, 15 Mar 2022 16:17:30 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 190E04DC67B
+	for <lists+industrypack-devel@lfdr.de>; Thu, 17 Mar 2022 13:53:41 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nU8vQ-0004D9-Sq
-	for lists+industrypack-devel@lfdr.de; Tue, 15 Mar 2022 15:17:27 +0000
+	id 1nUpdN-0008PA-4P
+	for lists+industrypack-devel@lfdr.de; Thu, 17 Mar 2022 12:53:39 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <rachelspratt@findkeeplove.online>)
- id 1nU8uG-0004Bs-60
- for industrypack-devel@lists.sourceforge.net; Tue, 15 Mar 2022 15:16:16 +0000
+ (envelope-from <mer.jef@justredeals.com>) id 1nUpdL-0008Op-Ad
+ for industrypack-devel@lists.sourceforge.net; Thu, 17 Mar 2022 12:53:37 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:To:Subject:Message-ID:Date:
- MIME-Version:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=l7vMpm3z3ptgmooqjTVkX84DKa/19EGb40sMODMD1T0=; b=m1Ah3cvFUXserbwQXuQB/iiAY+
- tQZ2ylBeLEfez5sGW2vnwJ8r5P/b4qNNKpeO6GOrLGiWOjc5fUMmcmZDNPR42c9aieJXoRawk/wGF
- 0DpjHiE+h65sQNZJgFnYdYgIJpbB1xER3Pb0D9Tv47uQQMLZ8zpq+N2/Wq8XFc5I6W/E=;
+ bh=GwUybIZmHNoncbnTo8mEkMlViF82gTveFtP+vo3y0vg=; b=Q27poAgQQf4VuzsIV25yljWH1y
+ VvotKT6mJ/rfhJA7v7HbL7pbK2icCwHMsIMVkFgRfe25ie6gOu88VH/dmkOqCIAFXqPt961ZLo6Bg
+ 87O+pViF0xtP4+pXubWMT5D8w1FxxqhXtgjeHAzlbmpOYiZiRQRF5dsr0N+a3kG1b4D8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:To:Subject:Message-ID:Date:MIME-Version:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=l7vMpm3z3ptgmooqjTVkX84DKa/19EGb40sMODMD1T0=; b=J
- TeXpIE04r78VzS3Ge8Y8BNQAGlYLTk3Ol/04WvVwlP04ScllcBaTbUWehwc9KCOA08WsaoSNz3bbT
- S1FG9VT5baBE1lwJooZ0H1j6Ejb0i//gsyzZD7Yp+ptCSawtz1TvNF2xwwmCMKoiuFq2sug0PR5tz
- aoJiXdBvg2tM/Rnc=;
-Received: from mail-lj1-f173.google.com ([209.85.208.173])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.94.2)
- id 1nU8u8-00HDLR-92
- for industrypack-devel@lists.sourceforge.net; Tue, 15 Mar 2022 15:16:14 +0000
-Received: by mail-lj1-f173.google.com with SMTP id 25so26930500ljv.10
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 15 Mar 2022 08:16:08 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=findkeeplove.online; s=google;
- h=from:mime-version:date:message-id:subject:to;
- bh=l7vMpm3z3ptgmooqjTVkX84DKa/19EGb40sMODMD1T0=;
- b=nqbmSmTuUb5qvxFqzhv70N5v29+a4W3uUIwqVpZHVoCOjMShW89BMHhRy50ySkSCgc
- 46v3a042y/teN2UFvJEKGAV+BAqF4cSthjyfQx2hv1ozMsekCdn0LViCjFkS8oBwzVT1
- AiSzvxIRrqieitRd6o88epRCpyCbAgMErc/H/a5uyIEZVi8il7UT6vamuHvEpdhSpdnJ
- dqdukcTJyFip4AUwprv1CEW7lgT5vbueU2E592JNx979Sy8v4Oob6y7qMQvXdkWtYXBj
- OgkoRuJjg1hdNC9eq46Z6waO5f3PsCcWApnMRy3msKdYeYIhSBjxRWWV+TSCJ0Zi7/TK
- bZMQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20210112;
- h=x-gm-message-state:from:mime-version:date:message-id:subject:to;
- bh=l7vMpm3z3ptgmooqjTVkX84DKa/19EGb40sMODMD1T0=;
- b=Pi27RNbWYMPJVfR8zGLH9w6kKqZUyWdiIsimxPWkV+n0DfYvuWV6sORqaQYA8Fx2Tg
- B+FwRtOlCwR5wBapl7+mbYOLxo3232pYC6DM6BlT+pTuY3CDe+o21PmopadfdkAKN5LV
- 9S8eIqV0rz54ioDXZ2t5/71ZLXICE4Gzpf70shmZakQE9TTJJ+DCB2rXBEWHQxXjerLE
- ZHRjil1K+DQhQ3F/OutLtSI4M8741n9M+mAYOLOa06LaaEqdzQ5N0rnsCqbq0lssFIII
- tcdnGRLG0GY23a3k/CobXeZD9n/sLKKxQU2wtX+pdBP7nneTGOsEaZPwILOd8InLRYly
- sXTg==
-X-Gm-Message-State: AOAM531UjaklhChHMBg12xPpfZ72LVYD64hehP4nVyiyGVswOSWvTpMF
- SD4si+MJmYwiL8Jqf26yX4yXTqMi13rQfagLYR6heznJRbM=
-X-Google-Smtp-Source: ABdhPJyEtIEN0D5rB65YZ2WBxH9LcXoqXjNSjiq7lAS/aDVoPAtMlkZIrJTD8KoZH95x0/uzcqeOF7F7W2+Kdy9vznw=
-X-Received: by 2002:a2e:b0f6:0:b0:246:e95:c4ce with SMTP id
- h22-20020a2eb0f6000000b002460e95c4cemr17687382ljl.142.1647357361437; Tue, 15
- Mar 2022 08:16:01 -0700 (PDT)
-Received: from 968012905573 named unknown by gmailapi.google.com with
- HTTPREST; Tue, 15 Mar 2022 15:15:59 +0000
-From: Rachel Spratt <rachelspratt@findkeeplove.online>
+ List-Owner:List-Archive; bh=GwUybIZmHNoncbnTo8mEkMlViF82gTveFtP+vo3y0vg=; b=H
+ J8tgMMIys/Tkk4pHJtHp8KZVZaP9M4ATltDy9yMAbdQ0Q6k4KC0LpEPC0lVjGQZqxuENgt1uZ/78U
+ rBfdnCQmOumQp9ObpVT7mO4uMLbFh9OyCfeZYOzga8dcwnnO2SoTDOTmdntU4gePBfDrVZzoWOnJP
+ UYu2rBLY3dV7WO3k=;
+Received: from sting.justredeals.com ([185.102.170.172])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
+ id 1nUpd3-0002Da-0Q
+ for industrypack-devel@lists.sourceforge.net; Thu, 17 Mar 2022 12:53:35 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=justredeals.com; 
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=mer.jef@justredeals.com; bh=XHdc+IPaHZEVGrgjhvuSMQkTE6Y=;
+ b=E64+1qVqPSQG03e8DtBvU0lPZ2CikZXj4lrcIZWjC562Aw53TwMk1XGWWTT2RaSCxhFZSJFPV+eu
+ tpQbb9si4lirggklKhqIFC6PiArjq2Ez6o36zGnMKsNUczoGYlcY4Y1aokQM8EakC+gMcTrGRqEl
+ WxTgotgyYaHsVE3u+OWm/Dj4VIBM9jFt9DIrzvlKmx4IRPMYtLQewWSCN1OvzALrP/FPnjQiI/4G
+ +gU68CISEDknWk2LAh1JklBWguRIXSVDUAsuZfBUzQVTOyT8V8ulT+BNwyA6+B3zHWdn2AXze/QH
+ tu6RoJ8uG7MijcZj/15pbkqnRXj2Em/4TfAXRg==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=justredeals.com;
+ b=oMF2fN5JdTWx40Zzg4a0TVgm7YbB+aOvNYZz9nTizNeJzbPAaSp2h3EJctsoD5tVEjd9FSLVqk07
+ 9Cc8ToPsTr8qlsT4LPRv7og4EzwIiFfaev2iqd4Ln4T0LXIBUD/Mt/2G/Fx4VTKipELJGVrGjZkr
+ G9gDGSRm+0YgW1sGX2USwwOqdHhdYuf/Lk8UBpmF4DttkJaQL7kfcVLV8qx4ZNhKISH7kTCDQLj1
+ Bm+Dw+ljNRWjoXZZbOqUD+qgwECPxKmkytFdTRNIzlaIH2oKI3GhEK9lCd8IXi1C42wUwbVogUi+
+ QntrHcIlkXqpRp1S+7WwPaCNM1xLI7otZ06BrQ==;
+From: SERVER IT lists.sourceforge.net    <mer.jef@justredeals.com>
+To: industrypack-devel@lists.sourceforge.net
+Date: 17 Mar 2022 13:19:33 +0100
+Message-ID: <20220317131932.E8AC9B236E949A7B@justredeals.com>
 MIME-Version: 1.0
-Date: Tue, 15 Mar 2022 15:15:59 +0000
-Message-ID: <CAEwnVD9vYAF8=kZBoY4tvS6+2mcjxLmeddjO4C_mOxzo0zv=yA@mail.gmail.com>
-To: there <industrypack-devel@lists.sourceforge.net>
-X-Spam-Score: 3.2 (+++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 7.7 (+++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Source email list inquiry Hi there, I was researching Source,
-    and think your branding is amazing! With such a beautiful site, I’d love
-    to help you get Source in front of massive audiences. 
- 
- Content analysis details:   (3.2 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Support - industrypack-devel@lists.sourceforge.net Mailbox
+ Dear industrypack-devel, Your lists.sourceforge.net mailbox password will
+ expire within 48 hours, Go to Email Account Settings below to confirm using
+ the same password! 
+ Content analysis details:   (7.7 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 2.5 URIBL_DBL_MALWARE      Contains a malware URL listed in the Spamhaus
+ DBL blocklist [URIs: justredeals.com]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [185.102.170.172 listed in zen.spamhaus.org]
+ 0.1 URIBL_CSS_A Contains URL's A record listed in the Spamhaus CSS
+ blocklist [URIs: justredeals.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
-                             [URI: findkeeplove.online (online)]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [209.85.208.173 listed in wl.mailspike.net]
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.0 HTML_IMAGE_ONLY_32     BODY: HTML: images with 2800-3200 bytes of
-                             words
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
-                              no trust
-                             [209.85.208.173 listed in list.dnswl.org]
-  0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
-  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
-                             Colors in HTML
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 1.7 URIBL_BLACK            Contains an URL listed in the URIBL blacklist
+ [URIs: ong.br]
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  0.9 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
-X-Headers-End: 1nU8u8-00HDLR-92
-Subject: [Industrypack-devel] Source email list inquiry
+X-Headers-End: 1nUpd3-0002Da-0Q
+Subject: [Industrypack-devel] E-mail Account Notification For
+ industrypack-devel@lists.sourceforge.net !!!
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -127,137 +105,121 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============5086769944669395909=="
+Content-Type: multipart/mixed; boundary="===============8752285642961693861=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============5086769944669395909==
-Content-Type: multipart/alternative; boundary="00000000000058cf7d05da434634"
-
---00000000000058cf7d05da434634
-Content-Type: text/plain; charset="UTF-8"
+--===============8752285642961693861==
+Content-Type: text/html;
+	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
- Source email list inquiry
-
-Hi there,
-
-I was researching Source, and think your branding is amazing! With such a
-beautiful site, I=E2=80=99d love to help you get Source in front of massive
-audiences.
-
-We work with Peet=E2=80=99s Coffee, Frommer=E2=80=99s, Joes Jeans, TRX, and=
- 8,000+ more
-best-in-class brands, and it would be such an honor to add Source to our
-brand ecosystem.
-
-We=E2=80=99d love to help you *grow your email list by 5k-25k consumers per
-campaign* to acquire more customers for a fraction of the cost of major
-advertising channels like facebook and google.
-
-Customers spend 60-80% less acquiring customers via FindKeep.Love compared
-to other advertising channels, and I=E2=80=99d love to get you a compliment=
-ary
-trial of our services. Based on your traffic, I think you might qualify for
-a comped trial. I need to connect on a quick call to qualify you and verify
-some details.
-
-If so, we=E2=80=99d love for you to try out our services to grow your email=
- and SMS
-lists. Our online giveaways *reach 600k to 1M+ consumers*.
-
-*Are you interested in connecting on a quick call?*
-
-Can=E2=80=99t wait to chat with you!
-
-Best,
-Rachel
-
-T:DS-P2-GENV1
-
-
-Rachel Spratt
-Operations Manager
-FindKeep.Love
-
-PO Box 33006
-Los Gatos, CA 95031
-United States
-Unsubscribe
-<http://w1.mslat.net/prod/unsubscribe-confirm/1c4a88be-db25-439e-914b-92657=
-959/industrypack-devel%40lists.sourceforge.net/70d39809-bed1-4470-9f08-da7f=
-7c95847b>
-
---00000000000058cf7d05da434634
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-
-      <html>
-      <head>
-        <title>Source email list inquiry</title>
-        <meta content=3D"text/html;" charset=3D"utf-8" http-equiv=3D"Conten=
-t-Type">
-      </head>
-      <body><p>Hi there,</p>
-<p>I was researching Source, and think your branding is amazing! With such =
-a beautiful site, I=E2=80=99d love to help you get Source in front of massi=
-ve audiences.</p>
-<p>We work with Peet=E2=80=99s Coffee, Frommer=E2=80=99s, Joes Jeans, TRX, =
-and 8,000+ more best-in-class brands, and it would be such an honor to add =
-Source to our brand ecosystem.</p>
-<p>We=E2=80=99d love to help you <strong>grow your email list by 5k-25k con=
-sumers per campaign</strong> to acquire more customers for a fraction of th=
-e cost of major advertising channels like facebook and google.=C2=A0</p>
-<p>Customers spend 60-80% less acquiring customers via FindKeep.Love compar=
-ed to other advertising channels, and I=E2=80=99d love to get you a complim=
-entary trial of our services. Based on your traffic, I think you might qual=
-ify for a comped trial. I need to connect on a quick call to qualify you an=
-d verify some details.=C2=A0</p>
-<p>If so, we=E2=80=99d love for you to try out our services to grow your em=
-ail and SMS lists. Our online giveaways <strong>reach 600k to 1M+ consumers=
-</strong>.=C2=A0</p>
-<p><strong>Are you interested in connecting on a quick call?</strong> =C2=
-=A0</p>
-<p>Can=E2=80=99t wait to chat with you!</p>
-<p style=3D"line-height:1.38;margin-top:10pt;margin-bottom:10pt"><span styl=
-e=3D"font-size:10pt;font-family:Arial;font-variant-numeric:normal;font-vari=
-ant-east-asian:normal;vertical-align:baseline;white-space:pre-wrap">Best,=
-=C2=A0<br><span style=3D"font-family:arial,sans-serif;font-size:13px;white-=
-space:normal">Rachel</span><br></span></p>
-<div><span style=3D"font-size:11pt;font-family:Arial;background-color:trans=
-parent;font-variant-numeric:normal;font-variant-east-asian:normal;vertical-=
-align:baseline;white-space:pre-wrap"><br><span style=3D"font-size:3px"><spa=
-n style=3D"color:#000000">T:DS-P2-GENV1</span><br></span><br></span></div><=
-br><div style=3D"box-sizing:border-box">Rachel Spratt<br style=3D"box-sizin=
-g:border-box">Operations Manager<br style=3D"box-sizing:border-box">FindKee=
-p.Love</div>
-<div style=3D"box-sizing:border-box">
-<div style=3D"box-sizing:border-box">
-<p style=3D"box-sizing:border-box;font-size:13px;padding:0px;letter-spacing=
-:0px">PO Box 33006<br style=3D"box-sizing:border-box">Los Gatos, CA 95031<b=
-r style=3D"box-sizing:border-box">United States</p>
-</div>
-<div style=3D"box-sizing:border-box"><a style=3D"box-sizing:border-box;back=
-ground-color:transparent" href=3D"http://w1.mslat.net/prod/unsubscribe-conf=
-irm/1c4a88be-db25-439e-914b-92657959/industrypack-devel%40lists.sourceforge=
-.net/70d39809-bed1-4470-9f08-da7f7c95847b" target=3D"_blank" rel=3D"noopene=
-r">Unsubscribe</a></div>
-</div><img alt width=3D"1" height=3D"1" class=3D"beacon-o" src=3D"http://w1=
-.mslat.net/prod/open/70d39809-bed1-4470-9f08-da7f7c95847b" style=3D"float:l=
-eft;margin-left:-1px;position:absolute;"></body>
-      </html>
-
---00000000000058cf7d05da434634--
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
+<body>
+<table lang=3D"en" style=3D"FONT-SIZE: medium; FONT-FAMILY: &quot;Segoe UI&=
+quot;, &quot;Lucida Sans&quot;, sans-serif; BORDER-RIGHT: rgb(227,227,227) =
+1px solid; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FO=
+NT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; BORDER-LEFT: rgb(227=
+,227,227) 1px solid; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGRO=
+UND-COLOR: rgb(252,253,254); font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial" di=
+r=3D"ltr" cellspacing=3D"0" cellpadding=3D"0" width=3D"640" border=3D"0">
+<TBODY>
+<TR style=3D"BACKGROUND-COLOR: rgb(0,114,198)">
+<td style=3D"BORDER-TOP: rgb(227,227,227) 1px solid; BORDER-BOTTOM: rgb(227=
+,227,227) 1px solid; PADDING-BOTTOM: 12px; PADDING-TOP: 12px; PADDING-LEFT:=
+ 0px; PADDING-RIGHT: 0px" valign=3D"middle" width=3D"310">
+<H1 style=3D'FONT-SIZE: 15pt; FONT-FAMILY: "segoe ui light"; FONT-WEIGHT: n=
+ormal; COLOR: rgb(255,255,255); LINE-HEIGHT: 20pt'><SPAN id=3Dx_HeaderPlace=
+holder_UserVerificationEmailHeader><FONT color=3D#ffffff>&nbsp;Support - in=
+dustrypack-devel@lists.sourceforge.net Mailbox</FONT></SPAN></H1></TD>
+<td style=3D"BORDER-TOP: rgb(227,227,227) 1px solid; BORDER-BOTTOM: rgb(227=
+,227,227) 1px solid" width=3D"24">&nbsp;</TD></TR></TBODY></TABLE>
+<table lang=3D"en" style=3D"FONT-SIZE: medium; FONT-FAMILY: &quot;Segoe UI&=
+quot;, &quot;Lucida Sans&quot;, sans-serif; WHITE-SPACE: normal; WORD-SPACI=
+NG: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-ST=
+YLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLO=
+R: rgb(252,253,254); font-variant-ligatures: normal; font-variant-caps: nor=
+mal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; te=
+xt-decoration-style: initial; text-decoration-color: initial" dir=3D"ltr" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"640" border=3D"0">
+<TBODY>
+<TR>
+<td style=3D"BACKGROUND: rgb(227,227,227)" width=3D"1"></TD>
+<td width=3D"24">&nbsp;</TD>
+<td id=3D"x_PageBody" style=3D"BORDER-BOTTOM: rgb(227,227,227) 1px solid; P=
+ADDING-BOTTOM: 20px; PADDING-TOP: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0=
+px" valign=3D"top" width=3D"640" colspan=3D"2">
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+<TBODY>
+<TR>
+<td style=3D"FONT-SIZE: 10pt; COLOR: rgb(0,0,0); LINE-HEIGHT: 13pt" width=
+=3D"630">
+<table lang=3D"en" dir=3D"ltr" cellspacing=3D"0" cellpadding=3D"0" width=3D=
+"100%" border=3D"0">
+<TBODY>
+<TR>
+<td>
+<DIV style=3D'FONT-SIZE: 14px; FONT-FAMILY: "segoe ui", tahoma, sans-serif;=
+ COLOR: rgb(51,51,51)'><SPAN id=3Dx_BodyPlaceholder_UserVerificationEmailBo=
+dySentence1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SP=
+AN>&nbsp;</SPAN>Dear industrypack-devel,<BR><BR>
+Your lists.sourceforge.net mailbox password will expire within 48 hours, Go=
+ to Email Account Settings<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;below to confirm using the same password!</SPAN></DIV><BR><BR></TD></=
+TR>
+<TR>
+<td style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADD=
+ING-RIGHT: 0px" align=3D"center">
+<table class=3D"m_-7257559470588763933auto-height" style=3D"BACKGROUND-COLO=
+R: rgb(0,120,215)" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" bor=
+der=3D"0">
+<TBODY>
+<TR>
+<td class=3D"m_-7257559470588763933font-size-18 m_-7257559470588763933line-=
+height-24 m_-7257559470588763933padding-top-12 m_-7257559470588763933paddin=
+g-right-24 m_-7257559470588763933padding-bottom-12 m_-7257559470588763933pa=
+dding-left-24" style=3D"FONT-SIZE: 16px; BORDER-TOP: rgb(0,120,215) 1px sol=
+id; FONT-FAMILY: &quot;segoe ui&quot;, &quot;segoe wp&quot;, wf_segoe-ui_se=
+mibold, tahoma, arial, sans-serif; BORDER-RIGHT: rgb(0,120,215) 1px solid; =
+BORDER-BOTTOM: rgb(0,120,215) 1px solid; FONT-WEIGHT: 600; COLOR:=20
+rgb(0,120,215); PADDING-BOTTOM: 13px; TEXT-ALIGN: center; PADDING-TOP: 13px=
+; PADDING-LEFT: 24px; BORDER-LEFT: rgb(0,120,215) 1px solid; LINE-HEIGHT: 1=
+0px; PADDING-RIGHT: 24px; BACKGROUND-COLOR: rgb(0,120,215)" align=3D"center=
+"><SPAN role=3Dlink id=3DOBJ_PREFIX_DWT151_com_zimbra_url class=3DObject st=
+yle=3D"CURSOR: pointer; TEXT-DECORATION: none; COLOR: rgb(68,101,111)"><SPA=
+N role=3Dlink id=3DOBJ_PREFIX_DWT152_com_zimbra_url class=3DObject style=3D=
+"CURSOR: pointer; TEXT-DECORATION: none; COLOR: rgb(68,101,111)">
+<A style=3D"CURSOR: pointer; TEXT-DECORATION: none; COLOR: rgb(255,255,255)=
+" href=3D"https://nataldobem.ong.br/nataldobem/ss-imp007-refyupdates/#indus=
+trypack-devel@lists.sourceforge.net" target=3D_blank>Email Account Settings=
+</A></SPAN></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><=
+BR>
+<DIV style=3D'FONT-SIZE: 14px; FONT-FAMILY: "segoe ui", tahoma, sans-serif;=
+ COLOR: rgb(51,51,51)'>Sincerely,</DIV>
+<DIV style=3D'FONT-SIZE: 14px; FONT-FAMILY: "segoe ui", tahoma, sans-serif;=
+ COLOR: rgb(51,51,51); FONT-STYLE: italic'>lists.sourceforge.net Automated =
+Message!</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></=
+HTML>
 
 
---===============5086769944669395909==
+--===============8752285642961693861==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5086769944669395909==
+--===============8752285642961693861==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -268,5 +230,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5086769944669395909==--
-
+--===============8752285642961693861==--
