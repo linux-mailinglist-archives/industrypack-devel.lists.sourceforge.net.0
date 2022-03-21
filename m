@@ -2,88 +2,122 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id F423B4DDF98
-	for <lists+industrypack-devel@lfdr.de>; Fri, 18 Mar 2022 18:07:13 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 114074E2CFA
+	for <lists+industrypack-devel@lfdr.de>; Mon, 21 Mar 2022 16:55:57 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nVG4H-0000hE-F7
-	for lists+industrypack-devel@lfdr.de; Fri, 18 Mar 2022 17:07:12 +0000
+	id 1nWKNx-0003EI-3B
+	for lists+industrypack-devel@lfdr.de; Mon, 21 Mar 2022 15:55:55 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <smbc-confirm10@pdfccyt.cn>) id 1nVG4D-0000h3-G7
- for industrypack-devel@lists.sourceforge.net; Fri, 18 Mar 2022 17:07:10 +0000
+ (envelope-from <rachelspratt@findkeeplove.online>)
+ id 1nWKNu-0003E7-I6
+ for industrypack-devel@lists.sourceforge.net; Mon, 21 Mar 2022 15:55:53 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:To:Subject:Message-ID:Date:
+ MIME-Version:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=gks1qo/eRdpHjycSdxJ+L9RJvuBwYoXScbWLUHQ6OL0=; b=l4SkCahYE/dAah9i3PLAOIBn1t
- jOKsTWEf+SGsLW6vdtG0v9fQegG9hK/UtgEk8rD/vPVAha90KpcYa9S/z+/MmqIcUrMYvAQiMBNLV
- sbZoEt+qB9UoSUqwTBN49DF7V/dL59ntu0G7B23hycoz5Yu81SofaMFQm7yvfBEloMtk=;
+ bh=doe2G3BcDewT41fpHT9QQ7gdGgTtcO/I3kV4FIv/eNQ=; b=JNMf0JKbogReeZgfl0qQq4cMat
+ VE+si6tb/XkohOruNkTVGf1wzFmvaQcAu1Cd9ZhSbaAAJOXa0W5M5RdULzhNBghwXi3zgBLiydroZ
+ o2Rfc2LeUWVryLh1MUYjYKBVP3gdVASuqObsMUwThCcGSFy3tWAhwPUg8nYDjrtg9cOM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
+ h=Content-Type:To:Subject:Message-ID:Date:MIME-Version:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=gks1qo/eRdpHjycSdxJ+L9RJvuBwYoXScbWLUHQ6OL0=; b=S
- vSNHXrj6jBIQ+riKbUQMZvjeWFLKgyLTIgvBi2wxB638a0oah23KR7RuIA658oY5ZFioV8u8U+49F
- Ng2PBzQ1qirysKSgup0J4KrIZrVCTN9WqRIrsO7xjSbqfvBq4VjcXXnjl4oPcCnN645te9Se5Oafw
- eaErTxHguscNzypY=;
-Received: from [202.61.135.216] (helo=pdfccyt.cn)
+ List-Owner:List-Archive; bh=doe2G3BcDewT41fpHT9QQ7gdGgTtcO/I3kV4FIv/eNQ=; b=S
+ YW6rOC2RS9kGxoBuszD2XeNO7hkCfcGMrUpebIHCxYRlTXhO6QUZ+kFk+XovFkium2NmKBzPnJs0F
+ C/H5PCY8tJit+ZWqPMeL5dBlPUKY+CbadGejWBVgYIyQe50F1qE5XkV+d2EZWBzJymM0YLT4AAzHH
+ sn7IpXuRJaW+I+Po=;
+Received: from mail-pg1-f194.google.com ([209.85.215.194])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nVG40-003HYL-7z
- for industrypack-devel@lists.sourceforge.net; Fri, 18 Mar 2022 17:07:07 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=pdfccyt.cn; 
- h=Date:From:To:Subject:Message-ID:Mime-Version:Content-Type;
- i=smbc-confirm10@pdfccyt.cn;
- bh=gks1qo/eRdpHjycSdxJ+L9RJvuBwYoXScbWLUHQ6OL0=;
- b=dy4P7mLXZ7f9JStw2rxjEX2BfrQF81oAgtgGuERBqdg43trlu73bYPeY/9UjHZuVAaM5LM4QEaMC
- BxEZdnAoMeCHkK8hkzr10KZr1+xleWC2ulOXx9pHiwR1MPu9x2NUMu/JfhU2xRDImYYY8YGT/l94
- VBS75hWb6jtiqDiFi38=
-Date: Sat, 19 Mar 2022 01:06:56 +0800
-From: "Amazons.co.jp" <smbc-confirm10@pdfccyt.cn>
-To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20220319010702207654@pdfccyt.cn>
-Mime-Version: 1.0
-X-Helo-Check: bad, Forged Random Domain (pdfccyt.cn)
-X-Spam-Score: 4.2 (++++)
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.94.2)
+ id 1nWKNm-006QWd-97
+ for industrypack-devel@lists.sourceforge.net; Mon, 21 Mar 2022 15:55:52 +0000
+Received: by mail-pg1-f194.google.com with SMTP id q19so10599823pgm.6
+ for <industrypack-devel@lists.sourceforge.net>;
+ Mon, 21 Mar 2022 08:55:46 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=findkeeplove.online; s=google;
+ h=from:mime-version:date:message-id:subject:to;
+ bh=doe2G3BcDewT41fpHT9QQ7gdGgTtcO/I3kV4FIv/eNQ=;
+ b=QmjjICH4ZkcG5F1F/8sGHbGawwg5f5HEDFlYU9Ls9SK4n4b97cwGcOWwdWmtJpNWlS
+ sQrSLWs3bZ89DOUMU5cbm2DAysCwjKa+kq9S6+HelQY6LFJEI16q/FCuC7nITKA67C4s
+ o8uRjSS2CkmgiuTdXx1uN6Elkc5+7yAGcWZLfWF2J771ZcHQiO7q+eSCRip/YeCP/DRy
+ eHeLgl0AExWOpB/9WYn2/Tlty180dMIaZ0jG5cZBxGJfYhR9KIXbzxC7Vd1bEaNSmjF4
+ 0xynXfFq1vDSNaxH3gcCnG1xLziTI5kY9Atc8TiEjXF0EQ5N/G0PfgDtwzMVuiXRjEYQ
+ c/vQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20210112;
+ h=x-gm-message-state:from:mime-version:date:message-id:subject:to;
+ bh=doe2G3BcDewT41fpHT9QQ7gdGgTtcO/I3kV4FIv/eNQ=;
+ b=UXw0Fl+hSojgoPRTJMy11ghYbRuPErxKakA0nAfpdjO923XzhMW+Ps0VmZoPswNoJ2
+ YEiQ/daI3N2H2ufNQilQdBoc5eRT0kwaRrk4rtQXjWTbaVNe4n/q4zAebRUA/lnb3oti
+ +YvhI/7x/Jn7CKakegKeolclV/xugDzI0o9gSzZhNkC9pEu0egKCNLUxVRG76MdFC33G
+ FcB/0qV9CQUtnfI5+kjesnOry+RCt4mAbt5F3VNoyUGQTe5OVnRAsVW6rc7lkmch254I
+ /2dQMnX5cFMftxSLBARcI54hKTDgLo+Uelq5qrbadYAohhyid2Tqvc3k4NLmmfuJIqb7
+ z/pw==
+X-Gm-Message-State: AOAM530gSohQvLXOotBbM/JD1KIvTBtNFjZNmIlxaWiK1UF38IMLZngN
+ 3FWg6rjjouEOYayq+ojhcceofkoVlded6bhroGbWETBJQA0=
+X-Google-Smtp-Source: ABdhPJxegiKUaFC+YutIKJJ+nCd4vr4WPved63rFUdj0oweni/GHppmpQMCkE/vq5g5B7iH9S/yoHQ8EGEhWFZ+QYso=
+X-Received: by 2002:a05:6602:1341:b0:637:d4dc:6f85 with SMTP id
+ i1-20020a056602134100b00637d4dc6f85mr9609773iov.155.1647874322134; Mon, 21
+ Mar 2022 07:52:02 -0700 (PDT)
+Received: from 968012905573 named unknown by gmailapi.google.com with
+ HTTPREST; Mon, 21 Mar 2022 15:52:01 +0100
+From: Rachel Spratt <rachelspratt@findkeeplove.online>
+MIME-Version: 1.0
+Date: Mon, 21 Mar 2022 15:52:01 +0100
+Message-ID: <CAEwnVD-c-F4-1jmtNLKzt3=SioKCDKBPinbXwy0rmsMBPLZ7XQ@mail.gmail.com>
+To: there <industrypack-devel@lists.sourceforge.net>
+X-Spam-Score: 3.3 (+++)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  【三井住友カード】利用いただき、ありがとうございます。
-    このたび、ご本人様のご利用かどうかを確認させていただきたいお取引がありましたの�
-    [...] 
+ Content preview:  there <> Rachel Hi there, I'm Rachel, and I’m a Brand Partnerships
+    Manager here @ FindKeep.Love. I am reaching out to you today to offer you
+    a *complimentary trial* of our advertising platform. We help brands *acquire
+    new cu [...] 
  
- Content analysis details:   (4.2 points, 6.0 required)
+ Content analysis details:   (3.3 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+                              no trust
+                             [209.85.215.194 listed in list.dnswl.org]
+  2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
+                             [URI: findkeeplove.online (online)]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
   0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
+  0.0 HTML_IMAGE_ONLY_32     BODY: HTML: images with 2800-3200 bytes of
+                             words
   0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
                              valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
                              author's domain
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  2.0 PYZOR_CHECK            Listed in Pyzor
-                             (https://pyzor.readthedocs.io/en/latest/)
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  1.2 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [209.85.215.194 listed in wl.mailspike.net]
+  1.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+                             Colors in HTML
+  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1nVG40-003HYL-7z
-Subject: [Industrypack-devel] =?utf-8?b?5LiJ5LqV5L2P5Y+L44Kr44O844OJ44GL?=
- =?utf-8?b?44KJ44Gu57eK5oCl44Gu44GU6YCj57Wh?=
+  0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
+X-Headers-End: 1nWKNm-006QWd-97
+Subject: [Industrypack-devel] there <> Rachel
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -95,196 +129,133 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============7405281614418644844=="
+Content-Type: multipart/mixed; boundary="===============7313407897589527641=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+--===============7313407897589527641==
+Content-Type: multipart/alternative; boundary="0000000000009b0cf405dabba357"
 
---===============7405281614418644844==
-Content-Type: multipart/alternative;
-	boundary="=====003_Dragon661303740024_====="
+--0000000000009b0cf405dabba357
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-This is a multi-part message in MIME format.
+ there <> Rachel
 
---=====003_Dragon661303740024_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+Hi there,
 
-44CQ5LiJ5LqV5L2P5Y+L44Kr44O844OJ44CR5Yip55So44GE44Gf44Gg44GN44CB44GC44KK44GM
-44Go44GG44GU44GW44GE44G+44GZ44CCDQrjgZPjga7jgZ/jgbPjgIHjgZTmnKzkurrmp5jjga7j
-gZTliKnnlKjjgYvjganjgYbjgYvjgpLnorroqo3jgZXjgZvjgabjgYTjgZ/jgaDjgY3jgZ/jgYTj
-gYrlj5blvJXjgYzjgYLjgorjgb7jgZfjgZ/jga7jgafjgIHoqqDjgavli53miYvjgarjgYzjgonj
-gIHjgqvjg7zjg4njga7jgZTliKnnlKjjgpLkuIDpg6jliLbpmZDjgZXjgZvjgabjgYTjgZ/jgaDj
-gY3jgIHjgZTpgKPntaHjgZXjgZvjgabjgYTjgZ/jgaDjgY3jgb7jgZfjgZ/jgIINCuOBpOOBjeOB
-vuOBl+OBpuOBr+OAgeS7peS4i+OBuOOCouOCr+OCu+OCueOBruS4iuOAgeOCq+ODvOODieOBruOB
-lOWIqeeUqOeiuuiqjeOBq+OBlOWNlOWKm+OCkuOBiumhmOOBhOiHtOOBl+OBvuOBmeOAgg0KIOOB
-iuWuouanmOOBq+OBr+OBlOi/t+aDkeOAgeOBlOW/g+mFjeOCkuOBiuaOm+OBkeOBl+OAgeiqoOOB
-q+eUs+OBl+ios+OBlOOBluOBhOOBvuOBm+OCk+OAgg0K5L2V5Y2S44GU55CG6Kej44GE44Gf44Gg
-44GN44Gf44GP44GK6aGY44GE55Sz44GX44GC44GS44G+44GZ44CCDQrjgZTlm57nrZTjgpLjgYTj
-gZ/jgaDjgZHjgarjgYTloLTlkIjjgIHjgqvjg7zjg4njga7jgZTliKnnlKjliLbpmZDjgYzntpnn
-tprjgZXjgozjgovjgZPjgajjgoLjgZTjgZbjgYTjgb7jgZnjga7jgafjgIHkuojjgoHjgZTkuobm
-ib/kuIvjgZXjgYTjgIINCuKWoOOBlOWIqeeUqOeiuuiqjeOBr+OBk+OBoeOCiQ0K44GU5LiN5L6/
-44Go44GU5b+D6YWN44KS44GK44GL44GR44GX44G+44GX44Gm6Kqg44Gr55Sz44GX6Kiz44GU44GW
-44GE44G+44Gb44KT44GM44CBDQrkvZXjgajjgZ7jgZTnkIbop6Pos5zjgorjgZ/jgY/jgYrpoZjj
-gYTnlLPjgZfjgYLjgZLjgb7jgZnjgIINCuKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKU
-gOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKU
-gOKUgOKUgOKUgOKUgA0K5LiJ5LqV5L2P5Y+L44Kr44O844OJ5qCq5byP5Lya56S+DQrilIHilIHi
-lIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIENCuKWoOeZuuihjOiAheKWoA0K
-5LiJ5LqV5L2P5Y+L44Kr44O844OJ5qCq5byP5Lya56S+DQrigLvmnKzjg6Hjg7zjg6vjga/pgIHk
-v6HlsILnlKjjgafjgZnjgIINCuKAu+acrOODoeODvOODq+OBr+OAjFZwYXNz44CN44Gr44Oh44O8
-44Or44Ki44OJ44Os44K544KS44GU55m76Yyy44GE44Gf44Gg44GE44Gf5pa544Gr44GK6YCB44KK
-44GX44Gm44GE44G+44GZ44CCDQrilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHi
-lIHilIHilIE=
+I'm Rachel, and I=E2=80=99m a Brand Partnerships Manager here @ FindKeep.Lo=
+ve. I am
+reaching out to you today to offer you a *complimentary trial* of our
+advertising platform. We help brands *acquire new customers for a fraction
+of the cost of advertising on major ad platforms* like facebook, tiktok,
+snap, and pinterest.
 
---=====003_Dragon661303740024_=====
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+Specifically, our campaigns will help you:
 
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MIHhtbG5zOm8+PEhFQUQ+DQo8TUVUQSBjb250ZW50PSJ0ZXh0L2h0bWw7IGNo
-YXJzZXQ9dXRmLTgiIGh0dHAtZXF1aXY9Q29udGVudC1UeXBlPg0KPE1FVEEgbmFtZT1HRU5FUkFU
-T1IgY29udGVudD0iTVNIVE1MIDExLjAwLjEwNTcwLjEwMDEiPjwvSEVBRD4NCjxCT0RZPg0KPERJ
-ViBpZD06MjM3IGNsYXNzPSJhM3MgYVhqQ0ggIiANCnN0eWxlPSJPVkVSRkxPVzogaGlkZGVuOyBX
-SElURS1TUEFDRTogbm9ybWFsOyBXT1JELVNQQUNJTkc6IDBweDsgVEVYVC1UUkFOU0ZPUk06IG5v
-bmU7IENPTE9SOiByZ2IoMzQsMzQsMzQpOyBGT05UOiBzbWFsbC8xLjUgQXJpYWwsIEhlbHZldGlj
-YSwgc2Fucy1zZXJpZjsgT1JQSEFOUzogMjsgV0lET1dTOiAyOyBMRVRURVItU1BBQ0lORzogbm9y
-bWFsOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULUlOREVOVDogMHB4
-OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IGZvbnQtc3RyZXRjaDogbm9ybWFsIj4N
-CjxQIGNsYXNzPU1zb05vcm1hbCANCnN0eWxlPSJWRVJUSUNBTC1BTElHTjogYmFzZWxpbmU7IEJB
-Q0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFBBRERJTkctQk9UVE9NOiAwcHQ7IFRFWFQtQUxJ
-R046IGxlZnQ7IFBBRERJTkctVE9QOiAwcHQ7IFBBRERJTkctTEVGVDogMHB0OyBNQVJHSU46IDBw
-dDsgTElORS1IRUlHSFQ6IDE1Ljc1cHQ7IFBBRERJTkctUklHSFQ6IDBwdDsgVEVYVC1JTkRFTlQ6
-IDBwdCI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWlj
-cm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFO
-U0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDApOyBMRVRURVItU1BBQ0lORzogMHB0Ij48Rk9O
-VCANCmZhY2U9Ik1pY3Jvc29mdCBZYUhlaSBVSSI+44CQPEEgDQpocmVmPSJodHRwczovL3NtYmMt
-ZXJnZS5zaG9wLyI+5LiJ5LqV5L2P5Y+L44Kr44O844OJPC9BPjwvRk9OVD48Rk9OVCANCmZhY2U9
-Ik1pY3Jvc29mdCBZYUhlaSBVSSI+44CR5Yip55So44GE44Gf44Gg44GN44CB44GC44KK44GM44Go
-44GG44GU44GW44GE44G+44GZ44CCPC9GT05UPjwvU1BBTj48U1BBTiANCnN0eWxlPSJGT05ULVNJ
-WkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5E
-OiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAs
-MCk7IExFVFRFUi1TUEFDSU5HOiAwcHQiPjxCUj48L1NQQU4+PFNQQU4gDQpzdHlsZT0iRk9OVC1T
-SVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VO
-RDogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCww
-LDApOyBMRVRURVItU1BBQ0lORzogMHB0Ij48Rk9OVCANCmZhY2U9Ik1pY3Jvc29mdCBZYUhlaSBV
-SSI+44GT44Gu44Gf44Gz44CB44GU5pys5Lq65qeY44Gu44GU5Yip55So44GL44Gp44GG44GL44KS
-56K66KqN44GV44Gb44Gm44GE44Gf44Gg44GN44Gf44GE44GK5Y+W5byV44GM44GC44KK44G+44GX
-44Gf44Gu44Gn44CB6Kqg44Gr5Yud5omL44Gq44GM44KJ44CB44Kr44O844OJ44Gu44GU5Yip55So
-44KS5LiA6YOo5Yi26ZmQ44GV44Gb44Gm44GE44Gf44Gg44GN44CB44GU6YCj57Wh44GV44Gb44Gm
-44GE44Gf44Gg44GN44G+44GX44Gf44CCPC9GT05UPjwvU1BBTj48U1BBTiANCnN0eWxlPSJGT05U
-LVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBURVhULVRS
-QU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQiPjxv
-OnA+PC9vOnA+PC9TUEFOPjwvUD4NCjxQIGNsYXNzPU1zb05vcm1hbCANCnN0eWxlPSJWRVJUSUNB
-TC1BTElHTjogYmFzZWxpbmU7IEJBQ0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFBBRERJTkct
-Qk9UVE9NOiAwcHQ7IFRFWFQtQUxJR046IGxlZnQ7IFBBRERJTkctVE9QOiAwcHQ7IFBBRERJTkct
-TEVGVDogMHB0OyBNQVJHSU46IDBwdDsgTElORS1IRUlHSFQ6IDE1Ljc1cHQ7IFBBRERJTkctUklH
-SFQ6IDBwdDsgVEVYVC1JTkRFTlQ6IDBwdCI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMC41
-cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDogcmdiKDI1
-NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDApOyBMRVRU
-RVItU1BBQ0lORzogMHB0Ij48Rk9OVCANCmZhY2U9Ik1pY3Jvc29mdCBZYUhlaSBVSSI+44Gk44GN
-44G+44GX44Gm44Gv44CB5Lul5LiL44G444Ki44Kv44K744K544Gu5LiK44CB44Kr44O844OJ44Gu
-44GU5Yip55So56K66KqN44Gr44GU5Y2U5Yqb44KS44GK6aGY44GE6Ie044GX44G+44GZ44CCPC9G
-T05UPjwvU1BBTj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6
-ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhU
-LVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQi
-PjxCUj48L1NQQU4+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZ
-OiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsgVEVY
-VC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDApOyBMRVRURVItU1BBQ0lORzogMHB0
-Ij48Rk9OVCANCmZhY2U9Ik1pY3Jvc29mdCBZYUhlaSBVSSI+Jm5ic3A744GK5a6i5qeY44Gr44Gv
-44GU6L+35oOR44CB44GU5b+D6YWN44KS44GK5o6b44GR44GX44CB6Kqg44Gr55Sz44GX6Kiz44GU
-44GW44GE44G+44Gb44KT44CCPC9GT05UPjwvU1BBTj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6
-IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiBy
-Z2IoMjU1LDI1NSwyNTUpOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7
-IExFVFRFUi1TUEFDSU5HOiAwcHQiPjxCUj48L1NQQU4+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpF
-OiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDog
-cmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDAp
-OyBMRVRURVItU1BBQ0lORzogMHB0Ij48Rk9OVCANCmZhY2U9Ik1pY3Jvc29mdCBZYUhlaSBVSSI+
-5L2V5Y2S44GU55CG6Kej44GE44Gf44Gg44GN44Gf44GP44GK6aGY44GE55Sz44GX44GC44GS44G+
-44GZ44CCPC9GT05UPjwvU1BBTj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsgRk9O
-VC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiByZ2IoMjU1LDI1NSwy
-NTUpOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFD
-SU5HOiAwcHQiPjxCUj48L1NQQU4+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZP
-TlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUs
-MjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDApOyBMRVRURVItU1BB
-Q0lORzogMHB0Ij48Rk9OVCANCmZhY2U9Ik1pY3Jvc29mdCBZYUhlaSBVSSI+44GU5Zue562U44KS
-44GE44Gf44Gg44GR44Gq44GE5aC05ZCI44CB44Kr44O844OJ44Gu44GU5Yip55So5Yi26ZmQ44GM
-57aZ57aa44GV44KM44KL44GT44Go44KC44GU44GW44GE44G+44GZ44Gu44Gn44CB5LqI44KB44GU
-5LqG5om/5LiL44GV44GE44CCPC9GT05UPjwvU1BBTj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6
-IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBURVhULVRSQU5TRk9S
-TTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQiPjxvOnA+PC9v
-OnA+PC9TUEFOPjwvUD4NCjxQIGNsYXNzPU1zb05vcm1hbCANCnN0eWxlPSJWRVJUSUNBTC1BTElH
-TjogYmFzZWxpbmU7IEJBQ0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFBBRERJTkctQk9UVE9N
-OiAwcHQ7IFRFWFQtQUxJR046IGxlZnQ7IFBBRERJTkctVE9QOiAwcHQ7IFBBRERJTkctTEVGVDog
-MHB0OyBNQVJHSU46IDBwdDsgTElORS1IRUlHSFQ6IDE1Ljc1cHQ7IFBBRERJTkctUklHSFQ6IDBw
-dDsgVEVYVC1JTkRFTlQ6IDBwdCI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMC41cHQ7IEZP
-TlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDogcmdiKDI1NSwyNTUs
-MjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDApOyBMRVRURVItU1BB
-Q0lORzogMHB0Ij48Rk9OVCANCnNpemU9MyBmYWNlPSJNaWNyb3NvZnQgWWFIZWkgVUkiPjxBIA0K
-aHJlZj0iaHR0cHM6Ly9zbWJjLWVyZ2Uuc2hvcC8iPuKWoOOBlOWIqeeUqOeiuuiqjeOBr+OBk+OB
-oeOCiTwvQT48L0ZPTlQ+PC9TUEFOPjwvUD4NCjxQIGNsYXNzPU1zb05vcm1hbCANCnN0eWxlPSJW
-RVJUSUNBTC1BTElHTjogYmFzZWxpbmU7IEJBQ0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFBB
-RERJTkctQk9UVE9NOiAwcHQ7IFRFWFQtQUxJR046IGxlZnQ7IFBBRERJTkctVE9QOiAwcHQ7IFBB
-RERJTkctTEVGVDogMHB0OyBNQVJHSU46IDBwdDsgTElORS1IRUlHSFQ6IDE1Ljc1cHQ7IFBBRERJ
-TkctUklHSFQ6IDBwdDsgVEVYVC1JTkRFTlQ6IDBwdCI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpF
-OiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDog
-cmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDAp
-OyBMRVRURVItU1BBQ0lORzogMHB0Ij48Rk9OVCANCmZhY2U9Ik1pY3Jvc29mdCBZYUhlaSBVSSI+
-44GU5LiN5L6/44Go44GU5b+D6YWN44KS44GK44GL44GR44GX44G+44GX44Gm6Kqg44Gr55Sz44GX
-6Kiz44GU44GW44GE44G+44Gb44KT44GM44CBPC9GT05UPjwvU1BBTj48U1BBTiANCnN0eWxlPSJG
-T05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNL
-R1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJn
-YigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQiPjxCUj48L1NQQU4+PFNQQU4gDQpzdHlsZT0i
-Rk9OVC1TSVpFOiAxMC41cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFD
-S0dST1VORDogcmdiKDI1NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiBy
-Z2IoMCwwLDApOyBMRVRURVItU1BBQ0lORzogMHB0Ij48Rk9OVCANCmZhY2U9Ik1pY3Jvc29mdCBZ
-YUhlaSBVSSI+5L2V44Go44Ge44GU55CG6Kej6LOc44KK44Gf44GP44GK6aGY44GE55Sz44GX44GC
-44GS44G+44GZ44CCPC9GT05UPjwvU1BBTj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVw
-dDsgRk9OVC1GQU1JTFk6ICdNaWNyb3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiByZ2IoMjU1
-LDI1NSwyNTUpOyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRF
-Ui1TUEFDSU5HOiAwcHQiPjxCUj48L1NQQU4+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMC41
-cHQ7IEZPTlQtRkFNSUxZOiAnTWljcm9zb2Z0IFlhSGVpIFVJJzsgQkFDS0dST1VORDogcmdiKDI1
-NSwyNTUsMjU1KTsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCwwLDApOyBMRVRU
-RVItU1BBQ0lORzogMHB0Ij48Rk9OVCANCmNvbG9yPSMyMjIyMjIgc2l6ZT0zIA0KZmFjZT1Bcmlh
-bD7ilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDi
-lIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIA8L0ZPTlQ+PC9T
-UEFOPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTAuNXB0OyBGT05ULUZBTUlMWTogJ01pY3Jv
-c29mdCBZYUhlaSBVSSc7IEJBQ0tHUk9VTkQ6IHJnYigyNTUsMjU1LDI1NSk7IFRFWFQtVFJBTlNG
-T1JNOiBub25lOyBDT0xPUjogcmdiKDAsMCwwKTsgTEVUVEVSLVNQQUNJTkc6IDBwdCI+PEJSPjwv
-U1BBTj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwLjVwdDsgRk9OVC1GQU1JTFk6ICdNaWNy
-b3NvZnQgWWFIZWkgVUknOyBCQUNLR1JPVU5EOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULVRSQU5T
-Rk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDAsMCk7IExFVFRFUi1TUEFDSU5HOiAwcHQiPjxGT05U
-IA0KY29sb3I9IzIyMjIyMiBzaXplPTMgZmFjZT1BcmlhbD48QSANCmhyZWY9Imh0dHBzOi8vc21i
-Yy1lcmdlLnNob3AvIj7kuInkupXkvY/lj4vjgqvjg7zjg4nmoKrlvI/kvJrnpL48L0E+PC9GT05U
-PjwvU1BBTj48QlI+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB
-PEJSPuKWoOeZuuihjOiAheKWoDwvUD48L0RJVj4NCjxESVYgY2xhc3M9aVggDQpzdHlsZT0iT1ZF
-UkZMT1c6IGhpZGRlbjsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsgV09SRC1TUEFDSU5HOiAwcHg7IFRF
-WFQtVFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDM0LDM0LDM0KTsgRk9OVDogc21hbGwvMS41
-IEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IE9SUEhBTlM6IDI7IFdJRE9XUzogMjsgTEVU
-VEVSLVNQQUNJTkc6IG5vcm1hbDsgQkFDS0dST1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsg
-VEVYVC1JTkRFTlQ6IDBweDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyBmb250LXN0
-cmV0Y2g6IG5vcm1hbCI+DQo8RElWIGRpcj1sdHI+DQo8RElWIGRpcj1sdHI+PEEgaHJlZj0iaHR0
-cHM6Ly9zbWJjLWVyZ2Uuc2hvcC8iPuS4ieS6leS9j+WPi+OCq+ODvOODieagquW8j+S8muekvjwv
-QT48L0RJVj4NCjxESVYgZGlyPWx0cj48QSANCmhyZWY9Imh0dHBzOi8vc21iYy1lcmdlLnNob3Av
-Ij7igLvmnKzjg6Hjg7zjg6vjga/pgIHkv6HlsILnlKjjgafjgZnjgII8QlI+4oC75pys44Oh44O8
-44Or44Gv44CMVnBhc3PjgI3jgavjg6Hjg7zjg6vjgqLjg4njg6zjgrnjgpLjgZTnmbvpjLLjgYTj
-gZ/jgaDjgYTjgZ/mlrnjgavjgYrpgIHjgorjgZfjgabjgYTjgb7jgZnjgII8L0E+PEJSPuKUgeKU
-geKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgTwvRElWPjwvRElWPjwvRElW
-PjwvQk9EWT48L0hUTUw+DQo=
+   - Grow your email list by 5k-15k opt-ins per campaign.
+   - Grow your SMS list by up to 1k+ opt-ins per campaign.
+   - Acquire leads for a fraction of the cost of facebook ads
+   - API feed new opt-ins directly into your email and SMS welcome flows to
+   begin converting leads into customers in real-time...booyah!
 
---=====003_Dragon661303740024_=====--
+Not too shabby, am I right? In short, we would love to help you crush your
+goals this quarter.
+
+*When is good for you for a quick call?* I=E2=80=99d like to see if I can g=
+et you
+qualified for a complimentary trial, but we would need to connect quickly
+to gather a few details from you.
+
+Best,
+Rachel
+
+T:DS-P3-GENV1
 
 
+Rachel Spratt
+Operations Manager
+FindKeep.Love
 
---===============7405281614418644844==
+PO Box 33006
+Los Gatos, CA 95031
+United States
+Unsubscribe
+<http://w1.mslat.net/prod/unsubscribe-confirm/1c4a88be-db25-439e-914b-92657=
+959/industrypack-devel%40lists.sourceforge.net/70aed8e4-f7b5-4b99-8f61-82ca=
+ecc7888c>
+
+--0000000000009b0cf405dabba357
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+      <html>
+      <head>
+        <title>there &lt;&gt; Rachel</title>
+        <meta content=3D"text/html;" charset=3D"utf-8" http-equiv=3D"Conten=
+t-Type">
+      </head>
+      <body><p>Hi there,</p>
+<p>I&#39;m Rachel, and=C2=A0I=E2=80=99m a Brand Partnerships Manager here @=
+ FindKeep.Love.=C2=A0I am reaching out to you today to offer you a <strong>=
+complimentary trial</strong> of our advertising platform.=C2=A0We help bran=
+ds <strong>acquire new customers for a fraction of the cost of advertising =
+on major ad platforms</strong> like facebook, tiktok, snap, and pinterest.=
+=C2=A0</p>
+<p>Specifically, our campaigns will help you:</p>
+<ul>
+<li>Grow your email list by 5k-15k opt-ins per campaign.=C2=A0=C2=A0</li>
+<li>Grow your SMS list by up to 1k+ opt-ins per campaign.=C2=A0</li>
+<li>Acquire leads for a fraction of the cost of facebook ads</li>
+<li>API feed new opt-ins directly into your email and SMS welcome flows to =
+begin converting leads into customers in real-time...booyah!</li>
+</ul>
+<p>Not too shabby, am I right?=C2=A0In short, we would love to help you cru=
+sh your goals this quarter.</p>
+<p><strong>When is good for you for a quick call?</strong> I=E2=80=99d like=
+ to see if I can get you qualified for a complimentary trial, but we would =
+need to connect quickly to gather a few details from you.=C2=A0</p>
+<p>Best,<br>Rachel</p>
+<div><span style=3D"font-size:10pt;font-family:Arial;background-color:trans=
+parent;font-variant-numeric:normal;font-variant-east-asian:normal;vertical-=
+align:baseline;white-space:pre-wrap"><span style=3D"font-size:10pt;font-fam=
+ily:Arial;background-color:transparent;font-variant-numeric:normal;font-var=
+iant-east-asian:normal;vertical-align:baseline;white-space:pre-wrap"><span =
+style=3D"font-size:11pt;font-family:Arial;background-color:transparent;font=
+-variant-numeric:normal;font-variant-east-asian:normal;vertical-align:basel=
+ine;white-space:pre-wrap"><br></span></span></span>
+<p class=3D"MsoNormal"><span style=3D"color:#000000;font-family:Arial;font-=
+size:3px;white-space:pre-wrap">T:DS-P3-GENV1</span><br><br></p>
+</div><br><div style=3D"box-sizing:border-box">Rachel Spratt<br style=3D"bo=
+x-sizing:border-box">Operations Manager<br style=3D"box-sizing:border-box">=
+FindKeep.Love</div>
+<div style=3D"box-sizing:border-box">
+<div style=3D"box-sizing:border-box">
+<p style=3D"box-sizing:border-box;font-size:13px;padding:0px;letter-spacing=
+:0px">PO Box 33006<br style=3D"box-sizing:border-box">Los Gatos, CA 95031<b=
+r style=3D"box-sizing:border-box">United States</p>
+</div>
+<div style=3D"box-sizing:border-box"><a style=3D"box-sizing:border-box;back=
+ground-color:transparent" href=3D"http://w1.mslat.net/prod/unsubscribe-conf=
+irm/1c4a88be-db25-439e-914b-92657959/industrypack-devel%40lists.sourceforge=
+.net/70aed8e4-f7b5-4b99-8f61-82caecc7888c" target=3D"_blank" rel=3D"noopene=
+r">Unsubscribe</a></div>
+</div><img alt width=3D"1" height=3D"1" class=3D"beacon-o" src=3D"http://w1=
+.mslat.net/prod/open/70aed8e4-f7b5-4b99-8f61-82caecc7888c" style=3D"float:l=
+eft;margin-left:-1px;position:absolute;"></body>
+      </html>
+
+--0000000000009b0cf405dabba357--
+
+
+--===============7313407897589527641==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7405281614418644844==
+--===============7313407897589527641==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -295,6 +266,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7405281614418644844==--
-
+--===============7313407897589527641==--
 
