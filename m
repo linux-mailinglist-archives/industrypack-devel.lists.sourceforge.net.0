@@ -2,86 +2,79 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 765074E3C0D
-	for <lists+industrypack-devel@lfdr.de>; Tue, 22 Mar 2022 10:58:56 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id B6CEA4E48DA
+	for <lists+industrypack-devel@lfdr.de>; Tue, 22 Mar 2022 23:05:11 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nWbHz-0004yt-R2
-	for lists+industrypack-devel@lfdr.de; Tue, 22 Mar 2022 09:58:54 +0000
+	id 1nWmcp-0006AU-Oi
+	for lists+industrypack-devel@lfdr.de; Tue, 22 Mar 2022 22:05:10 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <info@castlerfoods.com>) id 1nWbHy-0004yi-0n
- for industrypack-devel@lists.sourceforge.net; Tue, 22 Mar 2022 09:58:52 +0000
+ (envelope-from <no-reply1@bbcwy.cn>) id 1nWmco-0006AN-DN
+ for industrypack-devel@lists.sourceforge.net; Tue, 22 Mar 2022 22:05:09 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
- Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Date:To:From:
+ Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=/XoiD3rlinLCBVwDE/O7LsvRVnRC81PGvesjZTNOYIo=; b=UyMIkzmPIzF29nfrONX+Dh0h8E
- sS0Zu2Bu3TgWWVe21fwY3u2tesoPqLNucdlRkpouRfm8Rgfhl0HZie087EFZACfAzwctrlgX3MLsW
- S+Zf5F74ASjAaZj6sk4ye2UU5AvMEsah+OeqkxRI9z5/4PGVPzlfFGIkq2PSMrLCFgnA=;
+ bh=dSHf7LjKOb6SydeA7gIk6u9Ec6WZsJOvqvayJf/58xw=; b=DfA4gyzPaDG0XO9ghUKfQ21ox6
+ dHWNOKXcplsqf+jjaD58ZGj6YrcX8LYISPllDdgQmJ4SeWHooUEKBGKYfC1L/XLMU+1fJbZZ6npQO
+ GiPsedEwwf4dPhF0N67FVaZH/jmqpQRUccxakxet8ijU3oWw+ZD2/rBBS78M1qv/DNq0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
+ h=Subject:Content-Type:MIME-Version:Date:To:From:Message-ID:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=/XoiD3rlinLCBVwDE/O7LsvRVnRC81PGvesjZTNOYIo=; b=X
- qkn27s7rBy6AhY7jKh2YEQcJ5YCR5a8tovdTAG32UthPBvy4y+4bDFVwGD2cGzUySi6OQWPL2ILNR
- ElvlpSKtTF4A4YYB2JzGJocBj4Wf2nRKWNmC8DLDyIEW2KUCqEvy3aiEoP6V1RRtdBJwdZEovBmxv
- FQcob/pd8MKbsyHs=;
-Received: from power0.castlerfoods.com ([159.203.59.35])
+ List-Owner:List-Archive; bh=dSHf7LjKOb6SydeA7gIk6u9Ec6WZsJOvqvayJf/58xw=; b=k
+ VHS0Dad7pe+gkrzxU5VaizdTI0sTSW3s1jQYx62SEy6iC/ezy4ac+0rH/tcA5VGI6RG5ERs9FYc6e
+ cvfnu5UjOCiTd6C4M8y9HzvaXAscwHdcyiqsxugex6QbFANXdDdaziO2nsfTrtAxg8K51ZY1HF8kN
+ l8iWiRXFHjN/JAVM=;
+Received: from an4an0.shop ([117.50.178.166] helo=mail.bbcwy.cn)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nWbHv-008S8G-WE
- for industrypack-devel@lists.sourceforge.net; Tue, 22 Mar 2022 09:58:52 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
- d=castlerfoods.com; 
- h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id;
- i=info@castlerfoods.com;
- bh=/XoiD3rlinLCBVwDE/O7LsvRVnRC81PGvesjZTNOYIo=;
- b=lMRoVE0g6WJ5e2itblIZC3HjOEuV0dt3RqLb9LcG3SDaB9LFRqhjeYQii91odd5MnNsDPlpbGkPN
- PQHqgO/XmPXa/Lbxm4xw2r3PrgynISWED9Fn0gfOkE4VLZ76QAAsAfkebA7HTQO7wFHA13rT7cs/
- RNHHtQQW11paS7pfb3A=
-To: <industrypack-devel@lists.sourceforge.net>
+ id 1nWmck-008tz6-Kl
+ for industrypack-devel@lists.sourceforge.net; Tue, 22 Mar 2022 22:05:08 +0000
+Received: from iscxbls (unknown [58.62.32.207])
+ by mail.bbcwy.cn (Postfix) with ESMTPA id AF031377BF1
+ for <industrypack-devel@lists.sourceforge.net>;
+ Wed, 23 Mar 2022 05:42:46 +0800 (CST)
+Message-ID: <C5CF1A8AA0FC27694B9006A9D5BED622@iscxbls>
+To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
+Date: Wed, 23 Mar 2022 05:42:32 +0800
 MIME-Version: 1.0
-Date: Tue, 22 Mar 2022 09:49:37 +0000
-Message-Id: <223720220349094426903FE8-485576863D@castlerfoods.com>
-X-Spam-Score: 2.8 (++)
+X-Priority: 3
+X-Mailer: Supmailer 37.0.0
+X-Spam-Score: 8.3 (++++++++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: You have new held messages You can release all of your held
- messages and permit or block future emails from the senders, or manage messages
- individually. Release all
- https://paykasasatinal.net/web.app.mail/pends.html#industrypack-devel@lists.sourceforge.net
- Content analysis details:   (2.8 points, 6.0 required)
+ Content preview:  96 * { box-sizing: border-box; } body { margin: 0; padding:
+ 0; } a[x-apple-data-detectors] { color: inherit !important; text-decoration:
+ inherit !important; } #MessageViewBody a { color: inherit; text [...] 
+ Content analysis details:   (8.3 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [159.203.59.35 listed in wl.mailspike.net]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [117.50.178.166 listed in zen.spamhaus.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain 2.0 PYZOR_CHECK            Listed in Pyzor
+ 2.0 PYZOR_CHECK            Listed in Pyzor
  (https://pyzor.readthedocs.io/en/latest/)
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML
- 1.0 FROM_FMBLA_NEWDOM14    From domain was registered in last 7-14 days
-X-Headers-End: 1nWbHv-008S8G-WE
-Subject: [Industrypack-devel] You Have New Held Messages
+ 2.7 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1nWmck-008tz6-Kl
+Subject: [SPAM] =?utf-8?B?44CQ44Oh44Or44Kr44Oq44CRMzAwMOWGhuWIhuODneOCpOODs+ODiOW/heOBmuOCguOCiQ==?=
+	える！
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -93,245 +86,227 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Mailbox via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
-Reply-To: Mailbox <info@castlerfoods.com>
-Content-Type: multipart/mixed; boundary="===============7926260764603511300=="
+From: =?utf-8?B?44Oh44Or44Kr44Oq?= via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: =?utf-8?B?44Oh44Or44Kr44Oq?= <no-reply1@bbcwy.cn>
+Content-Type: multipart/mixed; boundary="===============0818666661006151703=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
+This is a multi-part message in MIME format.
 
---===============7926260764603511300==
-Content-Type: multipart/alternative; boundary="k80UIOG2gWof=_pLxj1OkqN7u3UF1pF37F"
+--===============0818666661006151703==
+Content-Type: multipart/alternative;
+	boundary="----=_001_471e749a32ada687_=----"
 
-This is a multi-part message in MIME format
+This is a multi-part message in MIME format.
 
---k80UIOG2gWof=_pLxj1OkqN7u3UF1pF37F
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+------=_001_471e749a32ada687_=----
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
+OTYgKiB7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IH0gYm9keSB7IG1hcmdpbjogMDsgcGFkZGlu
+ZzogMDsgfSBhW3gtYXBwbGUtZGF0YS1kZXRlY3RvcnNdIHsgY29sb3I6IGluaGVyaXQgIWltcG9y
+dGFudDsgdGV4dC1kZWNvcmF0aW9uOiBpbmhlcml0ICFpbXBvcnRhbnQ7IH0gI01lc3NhZ2VWaWV3
+Qm9keSBhIHsgY29sb3I6IGluaGVyaXQ7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsgfSBwIHsgbGlu
+ZS1oZWlnaHQ6IGluaGVyaXQgfSBAbWVkaWEgKG1heC13aWR0aDo1MjBweCkgeyAucm93LWNvbnRl
+bnQgeyB3aWR0aDogMTAwJSAhaW1wb3J0YW50OyB9IC5jb2x1bW4gLmJvcmRlciB7IGRpc3BsYXk6
+IG5vbmU7IH0gLnN0YWNrIC5jb2x1bW4geyB3aWR0aDogMTAwJTsgZGlzcGxheTogYmxvY2s7IH0g
+fQ0K44GE44Gk44KC44Oh44Or44Kr44Oq44KS44GU5Yip55So44GE44Gf44Gg44GN44GC44KK44GM
+44Go44GG44GU44GW44GE44G+44GZ44CCDQoNCg0K4peP5Lya5ZOhSUTvvIjjg6Hjg7zjg6vjgqLj
+g4njg6zjgrnvvIkNCuOAgGluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXQN
+Cg0K44GZ44GQ44GrMzAwMOWGhuOBruODneOCpOODs+ODiOOCkuWPl+OBkeWPluOCiuOBvuOBmeOA
+gg0KDQrilrzkuIvoqJhVUkzjgpLjgq/jg6rjg4Pjgq/jgZfjgablj5fjgZHlj5bjgorjgb7jgZnj
+gIINCg0KaHR0cHM6Ly93d3cubWVyY2FyaS5jb20vanAvMzAwMEpQWS9jb2RlPz0ybFN4Q2Rnc2pP
+dU1CT2NQejEzSg0KDQoNCuOCreODo+ODs+ODmuODvOODs+acn+mWkw0KMjAyMi8zLzQo6YeRKSAw
+MDowMCB+IDIwMjIvMy8yOCjmnIgpIDIzOjU5DQoNCg0KIOOBiuW+l++8muWjsuS4iumHkeOBjOWu
+n+izquacgOWkpzPlgI3jgavjgarjgovvvIHvvJ8NCuWHuuWTgeOBmeOCi+OBquOCieS7iuOBjOOD
+geODo+ODs+OCue+8geOAgOacn+mWk+S4reOBq+aWsOOBn+OBq+WHuuWTgeOBl+OBpuWjsuOCjOOB
+n+S6uuOBruS4reOBi+OCieaKvemBuOOBp+ODoeODq+OCq+ODquODneOCpOODs+ODiOOBjOW9k+OB
+n+OCi++8gQ0KDQrjgJDkuIDnrYnjgIDlo7LkuIrph5HjgYzlrp/os6oz5YCN44CANTAw5ZCN44CR
+DQoNCuacn+mWk+S4reOBruWjsuS4iumHkee3j+mhjeOBrjLlgI3liIbjga7jg53jgqTjg7Pjg4jj
+gYzjgoLjgonjgYjjgovjg4Hjg6Pjg7PjgrnvvIENCg0K44CQ5LqM562J44CA5aOy5LiK6YeR44GM
+5a6f6LOqMuWAjeOAgDIsNTAw5ZCN44CRDQoNCuacn+mWk+S4reOBruWjsuS4iumHkee3j+mhjeWI
+huOBruODneOCpOODs+ODiOOBjOOCguOCieOBiOOCi+ODgeODo+ODs+OCue+8gQ0KDQrigLvjgYrk
+uIDkurrjgZXjgb7jgavku5jkuI7jgZnjgovjg53jgqTjg7Pjg4jjga/jganjgaHjgonjgoLkuIrp
+mZBQMTAwLDAwMOOBp+OBmQ0KDQrigLvmir3pgbjjgYrjgojjgbPjg53jgqTjg7Pjg4jku5jkuI7j
+ga/jgq3jg6Pjg7Pjg5rjg7zjg7PntYLkuoblvozjgavooYzjgYTjgb7jgZkNCg0KDQrjgZPjga7j
+g6Hjg7zjg6vjga/jgIHphY3kv6HlsILnlKjjga7jgqLjg4njg6zjgrnjgafphY3kv6HjgZXjgozj
+gabjgYTjgb7jgZnjgIINCiDCqTIwMjEgTWVyY2FyaSwgSW5jLg0KDQoNCg0KDQo=
 
-You have new held messages
+------=_001_471e749a32ada687_=----
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
-You can release all of your held messages and permit or block future e=
-mails from the senders, or manage messages individually.
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPjxUSVRMRT48L1RJVExFPg0KPE1FVEEgY29udGVudD0idGV4dC9o
+dG1sOyBjaGFyc2V0PXV0Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9
+dmlld3BvcnQgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+
+PCEtLVtpZiBtc29dPjx4bWw+PG86T2ZmaWNlRG9jdW1lbnRTZXR0aW5ncz48bzpQaXhlbHNQZXJJ
+bmNoPjk2PC9vOlBpeGVsc1BlckluY2g+PG86QWxsb3dQTkcvPjwvbzpPZmZpY2VEb2N1bWVudFNl
+dHRpbmdzPjwveG1sPjwhW2VuZGlmXS0tPg0KPFNUWUxFPg0KCQkqIHsNCgkJCWJveC1zaXppbmc6
+IGJvcmRlci1ib3g7DQoJCX0NCg0KCQlib2R5IHsNCgkJCW1hcmdpbjogMDsNCgkJCXBhZGRpbmc6
+IDA7DQoJCX0NCg0KCQlhW3gtYXBwbGUtZGF0YS1kZXRlY3RvcnNdIHsNCgkJCWNvbG9yOiBpbmhl
+cml0ICFpbXBvcnRhbnQ7DQoJCQl0ZXh0LWRlY29yYXRpb246IGluaGVyaXQgIWltcG9ydGFudDsN
+CgkJfQ0KDQoJCSNNZXNzYWdlVmlld0JvZHkgYSB7DQoJCQljb2xvcjogaW5oZXJpdDsNCgkJCXRl
+eHQtZGVjb3JhdGlvbjogbm9uZTsNCgkJfQ0KDQoJCXAgew0KCQkJbGluZS1oZWlnaHQ6IGluaGVy
+aXQNCgkJfQ0KDQoJCUBtZWRpYSAobWF4LXdpZHRoOjUyMHB4KSB7DQoJCQkucm93LWNvbnRlbnQg
+ew0KCQkJCXdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7DQoJCQl9DQoNCgkJCS5jb2x1bW4gLmJvcmRl
+ciB7DQoJCQkJZGlzcGxheTogbm9uZTsNCgkJCX0NCg0KCQkJLnN0YWNrIC5jb2x1bW4gew0KCQkJ
+CXdpZHRoOiAxMDAlOw0KCQkJCWRpc3BsYXk6IGJsb2NrOw0KCQkJfQ0KCQl9DQoJPC9TVFlMRT4N
+Cg0KPE1FVEEgbmFtZT1HRU5FUkFUT1IgY29udGVudD0iTVNIVE1MIDExLjAwLjEwNTcwLjEwMDEi
+PjwvSEVBRD4NCjxCT0RZIA0Kc3R5bGU9IlBBRERJTkctQk9UVE9NOiAwcHg7IFBBRERJTkctVE9Q
+OiAwcHg7IFBBRERJTkctTEVGVDogMHB4OyBNQVJHSU46IDBweDsgUEFERElORy1SSUdIVDogMHB4
+OyBCQUNLR1JPVU5ELUNPTE9SOiAjZmZmZmZmOyAtd2Via2l0LXRleHQtc2l6ZS1hZGp1c3Q6IG5v
+bmU7IHRleHQtc2l6ZS1hZGp1c3Q6IG5vbmUiPg0KPFRBQkxFIHJvbGU9cHJlc2VudGF0aW9uIGNs
+YXNzPW5sLWNvbnRhaW5lciANCnN0eWxlPSJCQUNLR1JPVU5ELUNPTE9SOiAjZmZmZmZmOyBtc28t
+dGFibGUtbHNwYWNlOiAwcHQ7IG1zby10YWJsZS1yc3BhY2U6IDBwdCIgDQpjZWxsU3BhY2luZz0w
+IGNlbGxQYWRkaW5nPTAgd2lkdGg9IjEwMCUiIGJvcmRlcj0wPg0KICA8VEJPRFk+DQogIDxUUj4N
+CiAgICA8VEQ+DQogICAgICA8VEFCTEUgcm9sZT1wcmVzZW50YXRpb24gY2xhc3M9InJvdyByb3ct
+MSIgDQogICAgICBzdHlsZT0ibXNvLXRhYmxlLWxzcGFjZTogMHB0OyBtc28tdGFibGUtcnNwYWNl
+OiAwcHQiIGNlbGxTcGFjaW5nPTAgDQogICAgICBjZWxsUGFkZGluZz0wIHdpZHRoPSIxMDAlIiBh
+bGlnbj1jZW50ZXIgYm9yZGVyPTA+DQogICAgICAgIDxUQk9EWT4NCiAgICAgICAgPFRSPg0KICAg
+ICAgICAgIDxURD4NCiAgICAgICAgICAgIDxUQUJMRSByb2xlPXByZXNlbnRhdGlvbiBjbGFzcz0i
+cm93LWNvbnRlbnQgc3RhY2siIA0KICAgICAgICAgICAgc3R5bGU9IldJRFRIOiA1MDBweDsgQ09M
+T1I6ICMwMDAwMDA7IG1zby10YWJsZS1sc3BhY2U6IDBwdDsgbXNvLXRhYmxlLXJzcGFjZTogMHB0
+IiANCiAgICAgICAgICAgIGNlbGxTcGFjaW5nPTAgY2VsbFBhZGRpbmc9MCB3aWR0aD01MDAgYWxp
+Z249Y2VudGVyIGJvcmRlcj0wPg0KICAgICAgICAgICAgICA8VEJPRFk+DQogICAgICAgICAgICAg
+IDxUUj4NCiAgICAgICAgICAgICAgICA8VEQgY2xhc3M9ImNvbHVtbiBjb2x1bW4tMSIgDQogICAg
+ICAgICAgICAgICAgc3R5bGU9IkJPUkRFUi1UT1A6IDBweDsgQk9SREVSLVJJR0hUOiAwcHg7IFZF
+UlRJQ0FMLUFMSUdOOiB0b3A7IEJPUkRFUi1CT1RUT006IDBweDsgRk9OVC1XRUlHSFQ6IDQwMDsg
+UEFERElORy1CT1RUT006IDVweDsgVEVYVC1BTElHTjogbGVmdDsgUEFERElORy1UT1A6IDVweDsg
+Qk9SREVSLUxFRlQ6IDBweDsgbXNvLXRhYmxlLWxzcGFjZTogMHB0OyBtc28tdGFibGUtcnNwYWNl
+OiAwcHQiIA0KICAgICAgICAgICAgICAgIHdpZHRoPSIxMDAlIj4NCiAgICAgICAgICAgICAgICAg
+IDxUQUJMRSByb2xlPXByZXNlbnRhdGlvbiBjbGFzcz10ZXh0X2Jsb2NrIA0KICAgICAgICAgICAg
+ICAgICAgc3R5bGU9Im1zby10YWJsZS1sc3BhY2U6IDBwdDsgbXNvLXRhYmxlLXJzcGFjZTogMHB0
+IiANCiAgICAgICAgICAgICAgICAgIGNlbGxTcGFjaW5nPTAgY2VsbFBhZGRpbmc9MTAgd2lkdGg9
+IjEwMCUiIGJvcmRlcj0wPg0KICAgICAgICAgICAgICAgICAgICA8VEJPRFk+DQogICAgICAgICAg
+ICAgICAgICAgIDxUUj4NCiAgICAgICAgICAgICAgICAgICAgICA8VEQ+DQogICAgICAgICAgICAg
+ICAgICAgICAgICA8RElWIHN0eWxlPSJGT05ULUZBTUlMWTogc2Fucy1zZXJpZiI+DQogICAgICAg
+ICAgICAgICAgICAgICAgICA8RElWIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9IkZP
+TlQtU0laRTogMTRweDsgRk9OVC1GQU1JTFk6IEFyaWFsLCBIZWx2ZXRpY2EgTmV1ZSwgSGVsdmV0
+aWNhLCBzYW5zLXNlcmlmOyBDT0xPUjogIzAwMDAwMDsgTElORS1IRUlHSFQ6IDEuMjsgbXNvLWxp
+bmUtaGVpZ2h0LWFsdDogMTYuOHB4Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxQIHN0eWxl
+PSJGT05ULVNJWkU6IDE0cHg7IE1BUkdJTjogMHB4Ij48U1BBTiANCiAgICAgICAgICAgICAgICAg
+ICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE0cHgiPuOBhOOBpOOCguODoeODq+OCq+ODquOCkuOB
+lOWIqeeUqOOBhOOBn+OBoOOBjeOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBmeOAgjwvU1BB
+Tj48L1A+PC9ESVY+PC9ESVY+PC9URD48L1RSPjwvVEJPRFk+PC9UQUJMRT4NCiAgICAgICAgICAg
+ICAgICAgIDxUQUJMRSByb2xlPXByZXNlbnRhdGlvbiBjbGFzcz10ZXh0X2Jsb2NrIA0KICAgICAg
+ICAgICAgICAgICAgc3R5bGU9Im1zby10YWJsZS1sc3BhY2U6IDBwdDsgbXNvLXRhYmxlLXJzcGFj
+ZTogMHB0IiANCiAgICAgICAgICAgICAgICAgIGNlbGxTcGFjaW5nPTAgY2VsbFBhZGRpbmc9MTAg
+d2lkdGg9IjEwMCUiIGJvcmRlcj0wPg0KICAgICAgICAgICAgICAgICAgICA8VEJPRFk+DQogICAg
+ICAgICAgICAgICAgICAgIDxUUj4NCiAgICAgICAgICAgICAgICAgICAgICA8VEQ+DQogICAgICAg
+ICAgICAgICAgICAgICAgICA8RElWIHN0eWxlPSJGT05ULUZBTUlMWTogc2Fucy1zZXJpZiI+DQog
+ICAgICAgICAgICAgICAgICAgICAgICA8RElWIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5
+bGU9IkZPTlQtU0laRTogMTRweDsgRk9OVC1GQU1JTFk6IEFyaWFsLCBIZWx2ZXRpY2EgTmV1ZSwg
+SGVsdmV0aWNhLCBzYW5zLXNlcmlmOyBDT0xPUjogIzAwMDAwMDsgTElORS1IRUlHSFQ6IDEuMjsg
+bXNvLWxpbmUtaGVpZ2h0LWFsdDogMTYuOHB4Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxQ
+IHN0eWxlPSJGT05ULVNJWkU6IDE1cHg7IE1BUkdJTjogMHB4Ij48U1BBTiANCiAgICAgICAgICAg
+ICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE1cHgiPuKXj+S8muWToUlE77yI44Oh44O8
+44Or44Ki44OJ44Os44K577yJPC9TUEFOPjxCUj48U1BBTiANCiAgICAgICAgICAgICAgICAgICAg
+ICAgIHN0eWxlPSJGT05ULVNJWkU6IDE1cHgiPuOAgGluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5z
+b3VyY2Vmb3JnZS5uZXQ8L1NQQU4+PC9QPg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAgc3R5
+bGU9IkZPTlQtU0laRTogMTVweDsgTUFSR0lOOiAwcHgiPjxTUEFOIA0KICAgICAgICAgICAgICAg
+ICAgICAgICAgc3R5bGU9IkZPTlQtU0laRTogMTVweCI+44GZ44GQ44GrMzAwMOWGhuOBruODneOC
+pOODs+ODiOOCkuWPl+OBkeWPluOCiuOBvuOBmeOAgjwvU1BBTj48L1A+DQogICAgICAgICAgICAg
+ICAgICAgICAgICA8UCBzdHlsZT0iRk9OVC1TSVpFOiAxNXB4OyBNQVJHSU46IDBweCI+PFNQQU4g
+DQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0iRk9OVC1TSVpFOiAxNXB4Ij7ilrzkuIvo
+qJhVUkzjgpLjgq/jg6rjg4Pjgq/jgZfjgablj5fjgZHlj5bjgorjgb7jgZnjgII8L1NQQU4+PC9Q
+Pg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAgc3R5bGU9IkZPTlQtU0laRTogMTVweDsgTUFS
+R0lOOiAwcHgiPjxBIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9IlRFWFQtREVDT1JB
+VElPTjogdW5kZXJsaW5lOyBDT0xPUjogIzhhM2I4ZiIgDQogICAgICAgICAgICAgICAgICAgICAg
+ICBocmVmPSJodHRwczovL3RlcnJpZmljLm5tcWUuY24vc2hhdmUiIHJlbD1ub29wZW5lciB0YXJn
+ZXQ9X2JsYW5rPjxTUEFOIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9IkZPTlQtU0la
+RTogMTVweCI+aHR0cHM6Ly93d3cubWVyY2FyaS5jb20vanAvMzAwMEpQWS9jb2RlPz0ybFN4Q2Rn
+c2pPdU1CT2NQejEzSjwvU1BBTj48L0E+PC9QPjwvRElWPjwvRElWPjwvVEQ+PC9UUj48L1RCT0RZ
+PjwvVEFCTEU+DQogICAgICAgICAgICAgICAgICA8VEFCTEUgcm9sZT1wcmVzZW50YXRpb24gY2xh
+c3M9dGV4dF9ibG9jayANCiAgICAgICAgICAgICAgICAgIHN0eWxlPSJtc28tdGFibGUtbHNwYWNl
+OiAwcHQ7IG1zby10YWJsZS1yc3BhY2U6IDBwdCIgDQogICAgICAgICAgICAgICAgICBjZWxsU3Bh
+Y2luZz0wIGNlbGxQYWRkaW5nPTEwIHdpZHRoPSIxMDAlIiBib3JkZXI9MD4NCiAgICAgICAgICAg
+ICAgICAgICAgPFRCT0RZPg0KICAgICAgICAgICAgICAgICAgICA8VFI+DQogICAgICAgICAgICAg
+ICAgICAgICAgPFREPg0KICAgICAgICAgICAgICAgICAgICAgICAgPERJViBzdHlsZT0iRk9OVC1G
+QU1JTFk6IHNhbnMtc2VyaWYiPg0KICAgICAgICAgICAgICAgICAgICAgICAgPERJViANCiAgICAg
+ICAgICAgICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE0cHg7IEZPTlQtRkFNSUxZOiBB
+cmlhbCwgSGVsdmV0aWNhIE5ldWUsIEhlbHZldGljYSwgc2Fucy1zZXJpZjsgQ09MT1I6ICMwMDAw
+MDA7IExJTkUtSEVJR0hUOiAxLjI7IG1zby1saW5lLWhlaWdodC1hbHQ6IDE2LjhweCI+DQogICAg
+ICAgICAgICAgICAgICAgICAgICA8UCBzdHlsZT0iRk9OVC1TSVpFOiAxNHB4OyBNQVJHSU46IDBw
+eCI+PFNQQU4gDQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0iRk9OVC1TSVpFOiAxM3B4
+Ij7jgq3jg6Pjg7Pjg5rjg7zjg7PmnJ/plpM8L1NQQU4+PEJSPjxTUEFOIA0KICAgICAgICAgICAg
+ICAgICAgICAgICAgc3R5bGU9IkZPTlQtU0laRTogMTNweCI+MjAyMi8zLzQo6YeRKSAwMDowMCB+
+IDIwMjIvMy8yOCjmnIgpIA0KICAgICAgICAgICAgICAgICAgICAgICAgMjM6NTk8L1NQQU4+PC9Q
+PjwvRElWPjwvRElWPjwvVEQ+PC9UUj48L1RCT0RZPjwvVEFCTEU+DQogICAgICAgICAgICAgICAg
+ICA8VEFCTEUgcm9sZT1wcmVzZW50YXRpb24gY2xhc3M9dGV4dF9ibG9jayANCiAgICAgICAgICAg
+ICAgICAgIHN0eWxlPSJtc28tdGFibGUtbHNwYWNlOiAwcHQ7IG1zby10YWJsZS1yc3BhY2U6IDBw
+dCIgDQogICAgICAgICAgICAgICAgICBjZWxsU3BhY2luZz0wIGNlbGxQYWRkaW5nPTEwIHdpZHRo
+PSIxMDAlIiBib3JkZXI9MD4NCiAgICAgICAgICAgICAgICAgICAgPFRCT0RZPg0KICAgICAgICAg
+ICAgICAgICAgICA8VFI+DQogICAgICAgICAgICAgICAgICAgICAgPFREPg0KICAgICAgICAgICAg
+ICAgICAgICAgICAgPERJViBzdHlsZT0iRk9OVC1GQU1JTFk6IHNhbnMtc2VyaWYiPg0KICAgICAg
+ICAgICAgICAgICAgICAgICAgPERJViANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSJG
+T05ULVNJWkU6IDE0cHg7IEZPTlQtRkFNSUxZOiBBcmlhbCwgSGVsdmV0aWNhIE5ldWUsIEhlbHZl
+dGljYSwgc2Fucy1zZXJpZjsgQ09MT1I6ICMwMjAyMDI7IExJTkUtSEVJR0hUOiAxLjI7IG1zby1s
+aW5lLWhlaWdodC1hbHQ6IDE2LjhweCI+DQogICAgICAgICAgICAgICAgICAgICAgICA8UCBzdHls
+ZT0iRk9OVC1TSVpFOiAxM3B4OyBNQVJHSU46IDBweCI+PFNQQU4gDQogICAgICAgICAgICAgICAg
+ICAgICAgICBzdHlsZT0iRk9OVC1TSVpFOiAxM3B4Ij4mbmJzcDvjgYrlvpfvvJrlo7LkuIrph5Hj
+gYzlrp/os6rmnIDlpKcz5YCN44Gr44Gq44KL77yB77yfPC9TUEFOPjxCUj48U1BBTiANCiAgICAg
+ICAgICAgICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDEzcHgiPuWHuuWTgeOBmeOCi+OB
+quOCieS7iuOBjOODgeODo+ODs+OCue+8geOAgOacn+mWk+S4reOBq+aWsOOBn+OBq+WHuuWTgeOB
+l+OBpuWjsuOCjOOBn+S6uuOBruS4reOBi+OCieaKvemBuOOBp+ODoeODq+OCq+ODquODneOCpOOD
+s+ODiOOBjOW9k+OBn+OCi++8gTwvU1BBTj48L1A+DQogICAgICAgICAgICAgICAgICAgICAgICA8
+UCBzdHlsZT0iRk9OVC1TSVpFOiAxM3B4OyBNQVJHSU46IDBweCI+PFNQQU4gDQogICAgICAgICAg
+ICAgICAgICAgICAgICBzdHlsZT0iRk9OVC1TSVpFOiAxM3B4Ij7jgJDkuIDnrYnjgIDlo7LkuIrp
+h5HjgYzlrp/os6oz5YCN44CANTAw5ZCN44CRPC9TUEFOPjwvUD4NCiAgICAgICAgICAgICAgICAg
+ICAgICAgIDxQIHN0eWxlPSJGT05ULVNJWkU6IDEzcHg7IE1BUkdJTjogMHB4Ij48U1BBTiANCiAg
+ICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDEzcHgiPuacn+mWk+S4reOB
+ruWjsuS4iumHkee3j+mhjeOBrjLlgI3liIbjga7jg53jgqTjg7Pjg4jjgYzjgoLjgonjgYjjgovj
+g4Hjg6Pjg7PjgrnvvIE8L1NQQU4+PC9QPg0KICAgICAgICAgICAgICAgICAgICAgICAgPFAgc3R5
+bGU9IkZPTlQtU0laRTogMTNweDsgTUFSR0lOOiAwcHgiPjxTUEFOIA0KICAgICAgICAgICAgICAg
+ICAgICAgICAgc3R5bGU9IkZPTlQtU0laRTogMTNweCI+44CQ5LqM562J44CA5aOy5LiK6YeR44GM
+5a6f6LOqMuWAjeOAgDIsNTAw5ZCN44CRPC9TUEFOPjwvUD4NCiAgICAgICAgICAgICAgICAgICAg
+ICAgIDxQIHN0eWxlPSJGT05ULVNJWkU6IDEzcHg7IE1BUkdJTjogMHB4Ij48U1BBTiANCiAgICAg
+ICAgICAgICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDEzcHgiPuacn+mWk+S4reOBruWj
+suS4iumHkee3j+mhjeWIhuOBruODneOCpOODs+ODiOOBjOOCguOCieOBiOOCi+ODgeODo+ODs+OC
+ue+8gTwvU1BBTj48L1A+DQogICAgICAgICAgICAgICAgICAgICAgICA8UCBzdHlsZT0iRk9OVC1T
+SVpFOiAxM3B4OyBNQVJHSU46IDBweCI+PFNQQU4gDQogICAgICAgICAgICAgICAgICAgICAgICBz
+dHlsZT0iRk9OVC1TSVpFOiAxM3B4Ij7igLvjgYrkuIDkurrjgZXjgb7jgavku5jkuI7jgZnjgovj
+g53jgqTjg7Pjg4jjga/jganjgaHjgonjgoLkuIrpmZBQMTAwLDAwMOOBp+OBmTwvU1BBTj48L1A+
+DQogICAgICAgICAgICAgICAgICAgICAgICA8UCBzdHlsZT0iRk9OVC1TSVpFOiAxM3B4OyBNQVJH
+SU46IDBweCI+PFNQQU4gDQogICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT0iRk9OVC1TSVpF
+OiAxM3B4Ij7igLvmir3pgbjjgYrjgojjgbPjg53jgqTjg7Pjg4jku5jkuI7jga/jgq3jg6Pjg7Pj
+g5rjg7zjg7PntYLkuoblvozjgavooYzjgYTjgb7jgZk8L1NQQU4+PC9QPjwvRElWPjwvRElWPjwv
+VEQ+PC9UUj48L1RCT0RZPjwvVEFCTEU+DQogICAgICAgICAgICAgICAgICA8VEFCTEUgcm9sZT1w
+cmVzZW50YXRpb24gY2xhc3M9dGV4dF9ibG9jayANCiAgICAgICAgICAgICAgICAgIHN0eWxlPSJt
+c28tdGFibGUtbHNwYWNlOiAwcHQ7IG1zby10YWJsZS1yc3BhY2U6IDBwdCIgDQogICAgICAgICAg
+ICAgICAgICBjZWxsU3BhY2luZz0wIGNlbGxQYWRkaW5nPTEwIHdpZHRoPSIxMDAlIiBib3JkZXI9
+MD4NCiAgICAgICAgICAgICAgICAgICAgPFRCT0RZPg0KICAgICAgICAgICAgICAgICAgICA8VFI+
+DQogICAgICAgICAgICAgICAgICAgICAgPFREPg0KICAgICAgICAgICAgICAgICAgICAgICAgPERJ
+ViBzdHlsZT0iRk9OVC1GQU1JTFk6IHNhbnMtc2VyaWYiPg0KICAgICAgICAgICAgICAgICAgICAg
+ICAgPERJViANCiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE0cHg7
+IEZPTlQtRkFNSUxZOiBBcmlhbCwgSGVsdmV0aWNhIE5ldWUsIEhlbHZldGljYSwgc2Fucy1zZXJp
+ZjsgQ09MT1I6ICMwMDAwMDA7IExJTkUtSEVJR0hUOiAxLjI7IG1zby1saW5lLWhlaWdodC1hbHQ6
+IDE2LjhweCI+DQogICAgICAgICAgICAgICAgICAgICAgICA8UCANCiAgICAgICAgICAgICAgICAg
+ICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDE0cHg7IFRFWFQtQUxJR046IGNlbnRlcjsgTUFSR0lO
+OiAwcHgiPjxTUEFOIA0KICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9IkZPTlQtU0laRTog
+MTJweCI+44GT44Gu44Oh44O844Or44Gv44CB6YWN5L+h5bCC55So44Gu44Ki44OJ44Os44K544Gn
+6YWN5L+h44GV44KM44Gm44GE44G+44GZ44CCPC9TUEFOPjxCUj48U1BBTiANCiAgICAgICAgICAg
+ICAgICAgICAgICAgIHN0eWxlPSJGT05ULVNJWkU6IDEycHgiPiZuYnNwO8KpMjAyMSBNZXJjYXJp
+LCANCiAgICAgICAgICAgICAgICAgICAgICAgIEluYy48L1NQQU4+PC9QPjwvRElWPjwvRElWPjwv
+VEQ+PC9UUj48L1RCT0RZPjwvVEFCTEU+PC9URD48L1RSPjwvVEJPRFk+PC9UQUJMRT48L1REPjwv
+VFI+PC9UQk9EWT48L1RBQkxFPjwvVEQ+PC9UUj48L1RCT0RZPjwvVEFCTEU+PCEtLSBFbmQgLS0+
+PC9CT0RZPjwvSFRNTD4NCg==
 
-Release all https://paykasasatinal.net/web.app.mail/pends.html#industr=
-ypack-devel@lists.sourceforge.net
-
-Permit all https://paykasasatinal.net/web.app.mail/pends.html#industry=
-pack-devel@lists.sourceforge.net
-
-Block all https://paykasasatinal.net/web.app.mail/pends.html#industryp=
-ack-devel@lists.sourceforge.net
-
-You can also manage held messages in your=20
-
-Personal Portal https://paykasasatinal.net/web.app.mail/pends.html#ind=
-ustrypack-devel@lists.sourceforge.net
-
-=2E
-
---k80UIOG2gWof=_pLxj1OkqN7u3UF1pF37F
-Content-Type: text/html; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-
-<html><head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
-8859-1">
-  <META http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"> <META na=
-me=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"> <=
-META name=3D"format-detection" content=3D"telephone=3Dno"> <title>You =
-Have New Held Messages</title>
- </head>
- <body bgcolor=3D"#ffffff"> <P><BR></P><table align=3D"center" style=3D=
-"background: 0% 50% rgb(255, 255, 255); margin: 0px auto; padding: 0px=
-; width: 600px; text-align: center; text-transform: none; line-height:=
- normal; font-family: Helvetica, Arial, sans-serif; word-spacing: 0px;=
- vertical-align: top; float: none; border-collapse: collapse; table-la=
-yout: auto; border-spacing: 0px; orphans: 2; widows: 2; -webkit-text-s=
-troke-width: 0px; text-decoration-thickness: initial; text-decoration-=
-style: initial; text-decoration-color: initial;" mc-e-float-center"=3D=
-""><tbody style=3D"line-height: normal;"> <TR style=3D"padding: 0px; t=
-ext-align: left; line-height: normal; vertical-align: top;"> <TD style=
-=3D"margin: 0px; padding: 0px; text-align: left; color: rgb(51, 51, 51=
-); line-height: 1.428; font-family: Helvetica, Arial, sans-serif; font=
--size: 13px; font-weight: 400; vertical-align: top; border-collapse: c=
-ollapse !important;"><table align=3D"center" style=3D"padding: 0px; wi=
-dth: 600px; text-align: left; line-height: normal; margin-bottom: 0px;=
- vertical-align: top; border-collapse: collapse; table-layout: auto; b=
-order-spacing: 0px; background-color: rgb(87, 107, 124);" mc-e-header"=
-=3D""><tbody style=3D"line-height: normal;"> <TR style=3D"padding: 0px=
-; text-align: left; line-height: normal; vertical-align: top;"> <TD st=
-yle=3D"margin: 0px; padding: 0px 30px; text-align: left; color: rgb(51=
-, 51, 51); line-height: 1.428; font-family: Helvetica, Arial, sans-ser=
-if; font-size: 13px; font-weight: 400; vertical-align: top; border-col=
-lapse: collapse !important;"><table style=3D"padding: 0px; width: 540p=
-x; text-align: left; line-height: normal; margin-bottom: 0px; vertical=
--align: top; display: table; border-collapse: collapse; position: rela=
-tive; table-layout: auto; border-spacing: 0px; background-color: trans=
-parent;" mc-e-collapse"=3D""><tbody style=3D"line-height: normal;"> <T=
-R style=3D"padding: 0px; text-align: left; line-height: normal; vertic=
-al-align: top;"> <TH style=3D"margin: 0px auto; padding: 0px; width: 6=
-15px; text-align: left; color: rgb(51, 51, 51); line-height: 1.428; fo=
-nt-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight:=
- 400;" mc-e-last"=3D"" mc-e-first=3D"" mc-e-columns=3D"" mc-e-large-12=
-=3D""><table style=3D"padding: 0px; width: 540px; text-align: left; li=
-ne-height: normal; margin-bottom: 0px; vertical-align: top; border-col=
-lapse: collapse; table-layout: auto; border-spacing: 0px; background-c=
-olor: transparent;"><tbody style=3D"line-height: normal;"> <TR style=3D=
-"padding: 0px; text-align: left; line-height: normal; vertical-align: =
-top;"> <TH style=3D"margin: 0px; padding: 0px !important; width: 0px; =
-text-align: left; color: rgb(51, 51, 51); line-height: 1.428; font-fam=
-ily: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400; =
-visibility: hidden;"><BR style=3D"line-height: normal;"></TH></TR></TA=
-BLE></TH></TR></TABLE></TD></TR></TABLE></TD></TR></TABLE><table align=
-=3D"center" style=3D"background: 0% 50% rgb(255, 255, 255); margin: 0p=
-x auto; padding: 0px; width: 600px; text-align: center; text-transform=
-: none; line-height: normal; font-family: Helvetica, Arial, sans-serif=
-; word-spacing: 0px; vertical-align: top; float: none; border-collapse=
-: collapse; table-layout: auto; border-spacing: 0px; orphans: 2; widow=
-s: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initi=
-al; text-decoration-style: initial; text-decoration-color: initial;" m=
-c-e-float-center"=3D"" mc-e-main-container=3D""><tbody style=3D"line-h=
-eight: normal;"> <TR style=3D"padding: 0px; text-align: left; line-hei=
-ght: normal; vertical-align: top;"> <TD style=3D"margin: 0px; padding:=
- 0px; text-align: left; color: rgb(51, 51, 51); line-height: 1.428; fo=
-nt-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight:=
- 400; vertical-align: top; border-collapse: collapse !important;"><tab=
-le style=3D"padding: 0px; width: 600px; text-align: left; line-height:=
- normal; margin-bottom: 0px; vertical-align: top; display: table; bord=
-er-collapse: collapse; position: relative; table-layout: auto; border-=
-spacing: 0px; background-color: transparent;"><tbody style=3D"line-hei=
-ght: normal;"> <TR style=3D"padding: 0px; text-align: left; line-heigh=
-t: normal; vertical-align: top;"> <TH style=3D"margin: 0px auto; paddi=
-ng: 0px 30px; width: 570px; text-align: left; color: rgb(51, 51, 51); =
-line-height: 1.428; font-family: Helvetica, Arial, sans-serif; font-si=
-ze: 13px; font-weight: 400;" mc-e-last"=3D"" mc-e-first=3D"" mc-e-colu=
-mns=3D"" mc-e-large-12=3D""><table style=3D"padding: 0px; width: 540px=
-; text-align: left; line-height: normal; margin-bottom: 0px; vertical-=
-align: top; border-collapse: collapse; table-layout: auto; border-spac=
-ing: 0px; background-color: transparent;"><tbody style=3D"line-height:=
- normal;"> <TR style=3D"padding: 0px; text-align: left; line-height: n=
-ormal; vertical-align: top;"> <TH style=3D"margin: 0px; padding: 0px; =
-text-align: left; color: rgb(51, 51, 51); line-height: 1.428; font-fam=
-ily: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 400;"=
-><table style=3D"padding: 0px; width: 540px; text-align: left; line-he=
-ight: normal; margin-bottom: 0px; vertical-align: top; border-collapse=
-: collapse; table-layout: auto; border-spacing: 0px; background-color:=
- transparent;"><tbody style=3D"line-height: normal;"> <TR style=3D"pad=
-ding: 0px; text-align: left; line-height: normal; vertical-align: top;=
-"> <TD height=3D"30" style=3D"margin: 0px; padding: 0px; text-align: l=
-eft; color: rgb(51, 51, 51); line-height: 30px; font-family: Helvetica=
-, Arial, sans-serif; font-size: 30px; font-weight: 400; vertical-align=
-: top; border-collapse: collapse !important;">&nbsp;</TD></TR></TABLE>=
- <H1>You have new held messages</H1> <P style=3D"margin: 0px 0px 10px;=
- padding: 0px; text-align: left; color: rgb(51, 51, 51); line-height: =
-1.428; font-family: Helvetica, Arial, sans-serif; font-size: 13px; fon=
-t-weight: 400;">You can release all of your held messages and permit o=
-r block future emails from the senders, or manage messages individuall=
-y.</P></TH> <TH style=3D"margin: 0px; padding: 0px !important; width: =
-0px; text-align: left; color: rgb(51, 51, 51); line-height: 1.428; fon=
-t-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: =
-400; visibility: hidden;"><BR style=3D"line-height: normal;"></TH></TR=
-></TABLE></TH></TR></TABLE><table style=3D"padding: 0px; width: 600px;=
- text-align: left; line-height: normal; margin-bottom: 0px; vertical-a=
-lign: top; display: table; border-collapse: collapse; position: relati=
-ve; table-layout: auto; border-spacing: 0px; background-color: transpa=
-rent;"><tbody style=3D"line-height: normal;"> <TR style=3D"padding: 0p=
-x; text-align: left; line-height: normal; vertical-align: top;"> <TH s=
-tyle=3D"margin: 0px auto; padding: 0px 30px; width: 570px; text-align:=
- left; color: rgb(51, 51, 51); line-height: 1.428; font-family: Helvet=
-ica, Arial, sans-serif; font-size: 13px; font-weight: 400;" mc-e-last"=
-=3D"" mc-e-first=3D"" mc-e-columns=3D"" mc-e-large-12=3D""><table styl=
-e=3D"padding: 0px; width: 540px; text-align: left; line-height: normal=
-; margin-bottom: 0px; vertical-align: top; border-collapse: collapse; =
-table-layout: auto; border-spacing: 0px; background-color: transparent=
-;"><tbody style=3D"line-height: normal;"> <TR style=3D"padding: 0px; t=
-ext-align: left; line-height: normal; vertical-align: top;"> <TH style=
-=3D"margin: 0px; padding: 0px; text-align: left; color: rgb(51, 51, 51=
-); line-height: 1.428; font-family: Helvetica, Arial, sans-serif; font=
--size: 13px; font-weight: 400;"> <DIV style=3D"line-height: normal;"><=
-A style=3D"margin: 0px; padding: 0px; text-align: left; color: rgb(239=
-, 100, 33); line-height: 1.428; font-family: Helvetica, Arial, sans-se=
-rif; font-weight: 400; text-decoration: underline; cursor: pointer; ou=
-tline-width: 0px !important; outline-style: none !important; backgroun=
-d-color: transparent;" href=3D"https://paykasasatinal.net/web.app.mail=
-/pends.html#industrypack-devel@lists.sourceforge.net" target=3D"_blank=
-" rel=3D"noreferrer nofollow noopener">Release all</A>&nbsp;&nbsp;&nbs=
-p;<SPAN style=3D"line-height: normal;">&nbsp;</SPAN>&nbsp;<A style=3D"=
-margin: 0px; padding: 0px; text-align: left; color: rgb(239, 100, 33);=
- line-height: 1.428; font-family: Helvetica, Arial, sans-serif; font-w=
-eight: 400; text-decoration: underline; cursor: pointer; outline-width=
-: 0px !important; outline-style: none !important; background-color: tr=
-ansparent;" href=3D"https://paykasasatinal.net/web.app.mail/pends.html=
-#industrypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"no=
-referrer nofollow noopener">Permit all</A>&nbsp;&nbsp;&nbsp;<SPAN styl=
-e=3D"line-height: normal;">&nbsp;&nbsp;</SPAN>&nbsp;<A class=3D"mc-e-b=
-randed" style=3D"margin: 0px; padding: 0px; text-align: left; color: r=
-gb(239, 100, 33); line-height: 1.428; font-family: Helvetica, Arial, s=
-ans-serif; font-weight: 400; text-decoration: underline; cursor: point=
-er; outline-width: 0px !important; outline-style: none !important; bac=
-kground-color: transparent;" href=3D"https://paykasasatinal.net/web.ap=
-p.mail/pends.html#industrypack-devel@lists.sourceforge.net" target=3D"=
-_blank" rel=3D"noreferrer nofollow noopener">Block all</A>&nbsp;&nbsp;=
-&nbsp;</DIV></TH> <TH style=3D"margin: 0px; padding: 0px !important; w=
-idth: 0px; text-align: left; color: rgb(51, 51, 51); line-height: 1.42=
-8; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-we=
-ight: 400; visibility: hidden;"><BR style=3D"line-height: normal;"></T=
-H></TR></TABLE></TH></TR></TABLE><table style=3D"padding: 0px; width: =
-600px; text-align: left; line-height: normal; margin-bottom: 0px; vert=
-ical-align: top; border-collapse: collapse; table-layout: auto; border=
--spacing: 0px; background-color: transparent;"><tbody style=3D"line-he=
-ight: normal;"> <TR style=3D"padding: 0px; text-align: left; line-heig=
-ht: normal; vertical-align: top;"> <TD height=3D"10" style=3D"margin: =
-0px; padding: 0px; text-align: left; color: rgb(51, 51, 51); line-heig=
-ht: 10px; font-family: Helvetica, Arial, sans-serif; font-size: 10px; =
-font-weight: 400; vertical-align: top; border-collapse: collapse !impo=
-rtant;">&nbsp;</TD></TR></TABLE><table style=3D"padding: 0px; width: 6=
-00px; text-align: left; line-height: normal; margin-bottom: 0px; verti=
-cal-align: top; display: table; border-collapse: collapse; position: r=
-elative; table-layout: auto; border-spacing: 0px; background-color: tr=
-ansparent;"><tbody style=3D"line-height: normal;"> <TR style=3D"paddin=
-g: 0px; text-align: left; line-height: normal; vertical-align: top;"> =
-<TH style=3D"margin: 0px auto; padding: 0px 30px; width: 570px; text-a=
-lign: left; color: rgb(51, 51, 51); line-height: 1.428; font-family: H=
-elvetica, Arial, sans-serif; font-size: 13px; font-weight: 400;" mc-e-=
-last"=3D"" mc-e-first=3D"" mc-e-columns=3D"" mc-e-large-12=3D""><table=
- style=3D"padding: 0px; width: 540px; text-align: left; line-height: n=
-ormal; margin-bottom: 0px; vertical-align: top; border-collapse: colla=
-pse; table-layout: auto; border-spacing: 0px; background-color: transp=
-arent;"><tbody style=3D"line-height: normal;"> <TR style=3D"padding: 0=
-px; text-align: left; line-height: normal; vertical-align: top;"> <TH =
-style=3D"margin: 0px; padding: 0px; text-align: left; color: rgb(51, 5=
-1, 51); line-height: 1.428; font-family: Helvetica, Arial, sans-serif;=
- font-size: 13px; font-weight: 400;"> <P style=3D"margin: 0px 0px 10px=
-; padding: 0px; text-align: left; color: rgb(51, 51, 51); line-height:=
- 1.428; font-family: Helvetica, Arial, sans-serif; font-size: 13px; fo=
-nt-weight: 400;">You can also manage held messages in your<SPAN style=3D=
-"line-height: normal;">&nbsp;</SPAN>&nbsp;<A style=3D"margin: 0px; pad=
-ding: 0px; text-align: left; color: rgb(239, 100, 33); line-height: 1.=
-428; font-family: Helvetica, Arial, sans-serif; font-weight: 400; text=
--decoration: underline; cursor: pointer; outline-width: 0px !important=
-; outline-style: none !important; background-color: transparent;" href=
-=3D"https://paykasasatinal.net/web.app.mail/pends.html#industrypack-de=
-vel@lists.sourceforge.net" target=3D"_blank" rel=3D"noreferrer nofollo=
-w noopener">Personal Portal</A>.</P></TH></TR></TABLE></TH></TR></TABL=
-E></TD></TR></TABLE></body>
- </html>
-
---k80UIOG2gWof=_pLxj1OkqN7u3UF1pF37F--
+------=_001_471e749a32ada687_=------
 
 
 
---===============7926260764603511300==
+--===============0818666661006151703==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7926260764603511300==
+--===============0818666661006151703==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -342,6 +317,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7926260764603511300==--
+--===============0818666661006151703==--
 
 
