@@ -2,28 +2,28 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6A3AA5028E7
-	for <lists+industrypack-devel@lfdr.de>; Fri, 15 Apr 2022 13:37:25 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4AA3C5028E5
+	for <lists+industrypack-devel@lfdr.de>; Fri, 15 Apr 2022 13:35:53 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nfKGQ-00053P-UU
-	for lists+industrypack-devel@lfdr.de; Fri, 15 Apr 2022 11:37:24 +0000
+	id 1nfKEy-0005LM-LB
+	for lists+industrypack-devel@lfdr.de; Fri, 15 Apr 2022 11:35:51 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
  (envelope-from <bounce-452-23080196-452-248@a.nandayang.cc>)
- id 1nfKGO-00053F-To
- for industrypack-devel@lists.sourceforge.net; Fri, 15 Apr 2022 11:37:21 +0000
+ id 1nfKEx-0005L5-A0
+ for industrypack-devel@lists.sourceforge.net; Fri, 15 Apr 2022 11:35:50 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
  :List-Unsubscribe:Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=hKKTK+XmrrXqLXOhWrUdz0ZAXGetlSVTAbb/2XwsBvw=; b=IFqq/1Ju/jMUgpRWmI3nAsT9XP
- UOWlvWLEF83kG5UPoOSNmRiG45IhddJaYIXCPqzlsIz6aaajrvvOYemGHSW3cxxdrv/IxTlTbCTTK
- cwckNcbB3Y8JhPReZTozJtlaIkMgiuL5d+mPOeqy4j1DgrDZh0++L7da6Cq9+SM11mlk=;
+ bh=hKKTK+XmrrXqLXOhWrUdz0ZAXGetlSVTAbb/2XwsBvw=; b=lQHrHJkfdWgSu0zug0HoXyIBcm
+ uEzcusN4PAE7VHiQep1Ayo771D67HeR3uqNZCEjN+xvigo7sQjQyLj0pHUecjfJTseatCTsQ7+wZl
+ Agaw7jN5arMoo5O64uiz7YDAR5OG9ZXGxtczzc2j1cD0BLlpRJfukfDSc3PkGpD4eqyI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:Content-Transfer-Encoding:MIME-Version:List-Unsubscribe:
@@ -31,30 +31,30 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=hKKTK+XmrrXqLXOhWrUdz0ZAXGetlSVTAbb/2XwsBvw=; b=c3QPKzSSp70/OYuGRDWEH3SfRO
- UuBkn5ihJj9dJWduXBTlQl02d+z6m8/haa7chSiI29iSPpQbYBdCE25Ac2Q3oTy1tC37SAjF6bnGU
- s4SkdHL33ZP6/NhOKxz6YjX4ivqGpashdcFR6DLymm4Wzx1Gwvy8avv33LsPHmeUhIoo=;
+ bh=hKKTK+XmrrXqLXOhWrUdz0ZAXGetlSVTAbb/2XwsBvw=; b=W7Egig3xZPIL4UcNmN88O/4piv
+ VZ0M6OBTJY11vUMGKzz/WUA0rns4frsCexWFPq9X3I6LtW145ltkYwLgSBQ8RYE/TZpv6qvdBce3R
+ yz7Bl3SPhhooPN6nT289xUSpd/SBiLNiThT2WILNdQTVkajX2k7QyPPZkUnc4qPBiGrA=;
 Received: from [180.215.126.109] (helo=a.nandayang.cc)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.94.2)
- id 1nfKFB-0001TA-Md
- for industrypack-devel@lists.sourceforge.net; Fri, 15 Apr 2022 11:37:21 +0000
-Received: by a.nandayang.cc id hb5caq0e97cf for
+ id 1nfKEe-0001TA-R6
+ for industrypack-devel@lists.sourceforge.net; Fri, 15 Apr 2022 11:35:50 +0000
+Received: by a.nandayang.cc id hb5c7g0e97c8 for
  <industrypack-devel@lists.sourceforge.net>;
- Fri, 15 Apr 2022 19:09:47 +0800 (envelope-from
+ Fri, 15 Apr 2022 19:09:46 +0800 (envelope-from
  <bounce-452-23080196-452-248@a.nandayang.cc>)
 Date: Fri, 15 Apr 2022 11:09:43 +0000
 To: "industrypack-devel@lists.sourceforge.net"
  <industrypack-devel@lists.sourceforge.net>
 From: gui <sunsesoftkd@163.com>
-Message-ID: <91ba5718822e530e8b292aa9181177bb@180.215.126.109>
+Message-ID: <cbc56ba87c830a1cd2e16ec828bebe51@180.215.126.109>
 X-Priority: 3
 X-Mailer: Email Sending System
 X-Complaints-To: test@test.com
 X-MessageID: Mnx8fHwxMTMxMzh8fHx8aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldHx8fHwyfHx8fDF8fHx8MA%3D%3D
 X-Report-Abuse: <http://180.215.126.109/oem/report_abuse.php?mid=Mnx8fHwxMTMxMzh8fHx8aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldHx8fHwyfHx8fDF8fHx8MA%3D%3D>
 MIME-Version: 1.0
-X-Spam-Score: 6.2 (++++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+X-Spam-Score: 6.4 (++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -63,34 +63,35 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.
  Content preview:  Untitled document 外贸社媒获客 通过全球各大社交媒体平台开发您的目标客户
     
  
- Content analysis details:   (6.2 points, 6.0 required)
+ Content analysis details:   (6.4 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
   1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
                              [180.215.126.109 listed in dnsbl-1.uceprotect.net]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
   0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
                              provider
                              [sunsesoftkd[at]163.com]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
   0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
   0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
                               address
-  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
   0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.0 HTML_MESSAGE           BODY: HTML included in message
   0.0 URI_TRUNCATED          BODY: Message contained a URI which was truncated
+  0.0 HTML_MESSAGE           BODY: HTML included in message
   2.0 PYZOR_CHECK            Listed in Pyzor
                              (https://pyzor.readthedocs.io/en/latest/)
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
   0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
                              EnvelopeFrom freemail headers are
                              different
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
   0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
-  1.3 SPOOFED_FREEMAIL       No description available.
-X-Headers-End: 1nfKFB-0001TA-Md
+  1.6 SPOOFED_FREEMAIL       No description available.
+X-Headers-End: 1nfKEe-0001TA-R6
 Subject: Re: [Industrypack-devel] FW:
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -104,10 +105,10 @@ List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: gui <sunsesoftkd@163.com>
-Content-Type: multipart/mixed; boundary="===============8335882804281458713=="
+Content-Type: multipart/mixed; boundary="===============6498492138045553173=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============8335882804281458713==
+--===============6498492138045553173==
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="utf-8"
 
@@ -486,14 +487,14 @@ h=3D"5" height=3D"2" alt=3D".">
 </html>
 
 
---===============8335882804281458713==
+--===============6498492138045553173==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8335882804281458713==
+--===============6498492138045553173==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -504,4 +505,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8335882804281458713==--
+--===============6498492138045553173==--
