@@ -2,101 +2,74 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A56E50513B
-	for <lists+industrypack-devel@lfdr.de>; Mon, 18 Apr 2022 14:32:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4D6B750681E
+	for <lists+industrypack-devel@lfdr.de>; Tue, 19 Apr 2022 11:56:11 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1ngQY6-0007lp-D7
-	for lists+industrypack-devel@lfdr.de; Mon, 18 Apr 2022 12:32:09 +0000
+	id 1ngkag-0004dM-2n
+	for lists+industrypack-devel@lfdr.de; Tue, 19 Apr 2022 09:56:08 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
- <bounce_jldipe_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
- id 1ngQY4-0007lj-K4
- for industrypack-devel@lists.sourceforge.net; Mon, 18 Apr 2022 12:32:07 +0000
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
+ (envelope-from <info@skyrim-tips.com>) id 1ngkae-0004dG-PZ
+ for industrypack-devel@lists.sourceforge.net; Tue, 19 Apr 2022 09:56:07 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=GEcP8/6r8FJTMhYzZKg3yeB86EQYjrOsCDntct7lSkI=; b=R3GjoGDBj8/BB3iZMMJOMu5Ubr
- HsSWu+IDL3CYOSipELdeGp5pnk1YtHc3RybQeiD87C13SvAIjBVtjF997wnS4chHzqKXywavGqS/O
- 3Sry5A9OE09QTJkrAyrIHYwHL6M7jiF58taXzQQzwVdaJAUno40YN0bb0OCj14RpbKl0=;
+ d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Date:To:From:
+ Message-ID:Reply-To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=AUpeGAWwRH8hwpxKaNdzTX5yH+PzysfSS5cktmesYEQ=; b=UwhliziACyYR+mZYasnlDyvVWN
+ xrTKk3785K4JLdzUk2yPph8TE/B0outvAkGlEWIUd7BMhUy+4O/rkyTqF3ALKsPaHdWaKlRQpz9XR
+ c65cguFZlmUNvpI79VWyQ4Qkgu2DpETN6jjWt5SiF0RJXUJEWAOKtr0U8+EcfrqejbRk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=GEcP8/6r8FJTMhYzZKg3yeB86EQYjrOsCDntct7lSkI=; b=fc1o+HN7OSrDSwV1i03LyO2D3U
- VHzu5pVpQmtQXLZ+WmIh7TX7XzU60BQRcvmdutnMHcn5ujm61BLDwL44YQ6N95NrZL1SuLduVoaQq
- ox/HVqYmA3voHOQBNB9Y6PJIm1+T9Nt7jSTA1dH48l14g+4K/kH+c/RD+qtbQyx6kXA8=;
-Received: from em.sbaloanadvice.com ([216.24.225.131])
+ h=Subject:Content-Type:MIME-Version:Date:To:From:Message-ID:Reply-To:Sender
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=AUpeGAWwRH8hwpxKaNdzTX5yH+PzysfSS5cktmesYEQ=; b=g
+ 29iIC/VLXhIPOOJfE7fOZPTKbdlCWLCfjUwpGPHgZ4I0ylmscn0SLOGhjWTyLX0NUgRGVtzY1Al49
+ 5Wa/VGCN/RswS4JhYa0XM31QID7DU5ZX232BUdnSEg9lHxUl/RMQcS4dsedx8eXPTZKWuUIpcdhX3
+ aWOMrP+jNdm1PMS0=;
+Received: from [112.92.78.235] (helo=mail.skyrim-tips.com)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1ngQXw-000298-2v
- for industrypack-devel@lists.sourceforge.net; Mon, 18 Apr 2022 12:32:06 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type:Date:Subject:From:To:CC; x=1650371520; i=admin@sbaloanadvice.com; 
- bh=GEcP8/6r8FJTMhYzZKg3yeB86EQYjrOsCDntct7lSkI=;
- b=Fz6h6hK5gSCWzXWZgjOx/0k9ULRMZMxkCTyElv2Fgd3edbkaBHhSOIdFzgLSLZBR7Sbknm7eGWm2
- oLFt9DOpy7JS4Rdxl9ZO7bNQdWvIlyAxlxdFaDQH0HaRa9HzqLhVsUxPFmPGC0b6M7WkoNP8yLo+
- qPdbpyJgrkwLTcjQeIM=
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type:Date:Subject:From:To:CC; x=1650371520;
- bh=GEcP8/6r8FJTMhYzZKg3yeB86EQYjrOsCDntct7lSkI=;
- b=rxP+ClolDc8frnAe6Iv2Kt2jErAr1oysyW32f0BSn61l8B59+XQBB8uLY9YPVcfJqGpBtxp29m2L
- a2Tbu2Se1SajNYrmQ7uH4EXEinL9mKVq+bFNQXP8VND7eUXVoSrf+0s2WvtxujXySQdhVcEQW+6K
- 4Kn1z3Si2sMNz7t8XSs=
-Received: by em.sbaloanadvice.com id hbld342r99cg for
- <industrypack-devel@lists.sourceforge.net>;
- Mon, 18 Apr 2022 08:31:18 -0400 (envelope-from
- <bounce_jldipe_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
-X-Campaign-Shard: 2
-Bounces-To: bounce_uybip_cezqcnf_n@em.sbaloanadvice.com
-Message-ID: <1650285062689.201578675.6608654.421896101@em.sbaloanadvice.com>
-X-Campaign: 201578675/6608654/421896101
-Date: Mon, 18 Apr 2022 08:31:18 -0400
+ id 1ngkaY-0003ea-HH
+ for industrypack-devel@lists.sourceforge.net; Tue, 19 Apr 2022 09:56:07 +0000
+Message-ID: <20220419172220182248@skyrim-tips.com>
 To: <industrypack-devel@lists.sourceforge.net>
-From: "SBA Loan Advice" <admin@sbaloanadvice.com>
+Date: Tue, 19 Apr 2022 17:22:14 +0800
 MIME-Version: 1.0
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: 8.2 (++++++++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  How we are helping small business increase EIDL funds,
- reconsiderations, 
- and appeals Need request for increase, reconsideration, or appeal on your
- EIDL? Click Here To Get Streamlined *Please provide your last 4 months bank
- statements for cashflow analysis* 
- Content analysis details:   (0.0 points, 6.0 required)
+ Content preview: Hi We're specializing in Email promotion. If you do not get
+ the order for a long time and have no idea how to do it now, let us help
+ you show your products in selected countries of the company. We not [...] 
+ Content analysis details:   (8.2 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.1 HK_RANDOM_REPLYTO      Reply-To username looks random
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
+ [112.92.78.235 listed in zen.spamhaus.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML
-X-Headers-End: 1ngQXw-000298-2v
-Subject: [Industrypack-devel] EIDL Funds are running low. Have you requested
- an increase?
+ 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 1.4 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1ngkaY-0003ea-HH
+Subject: [Industrypack-devel] [SPAM] Over 100 companies using the promotion
+ method
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -108,446 +81,76 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <reply_uybip_cezqcnf_n@em.sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============3039857841778132315=="
+From: Alistar via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
+Reply-To: alistar@skyrim-tips.com
+Cc: Alistar <info@skyrim-tips.com>
+Content-Type: multipart/mixed; boundary="===============3422216216745226587=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3039857841778132315==
-Content-Type: text/html;charset=UTF-8
+This is a multi-part message in MIME format.
 
-<!-- X-Campaign: 201578675/6608654/421896101 -->
-<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">How we are helping small business increase EIDL funds, reconsiderations, and appeals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head style="line-height: inherit">
-        <!--[if gte mso 9]>
-<xml>
-  <o:OfficeDocumentSettings>
-    <o:AllowPNG/>
-    <o:PixelsPerInch>96</o:PixelsPerInch>
-  </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" style="line-height: inherit">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" style="line-height: inherit">
-        <meta name="x-apple-disable-message-reformatting" style="line-height: inherit">
-        <!--[if !mso]><!-->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" style="line-height: inherit"><!--<![endif]-->
-        <title style="line-height: inherit"></title>
-        <style type="text/css" style="line-height: inherit">
-            @media only screen and (min-width: 620px) {
-            .u-row {
-            width: 600px !important;
-            }
-            .u-row .u-col {
-            vertical-align: top;
-            }
-            .u-row .u-col-33p33 {
-            width: 199.98px !important;
-            }
-            .u-row .u-col-100 {
-            width: 600px !important;
-            }
-            }
-            @media (max-width: 620px) {
-            .u-row-container {
-            max-width: 100% !important;
-            padding-left: 0px !important;
-            padding-right: 0px !important;
-            }
-            .u-row .u-col {
-            min-width: 320px !important;
-            max-width: 100% !important;
-            display: block !important;
-            }
-            .u-row {
-            width: calc(100% - 40px) !important;
-            }
-            .u-col {
-            width: 100% !important;
-            }
-            .u-col > div {
-            margin: 0 auto;
-            }
-            }
-            body {
-            margin: 0;
-            padding: 0;
-            }
-            table,
-            tr,
-            td {
-            vertical-align: top;
-            border-collapse: collapse;
-            }
-            p {
-            margin: 0;
-            }
-            .ie-container table,
-            .mso-container table {
-            table-layout: fixed;
-            }
-            * {
-            line-height: inherit;
-            }
-            a[x-apple-data-detectors='true'] {
-            color: inherit !important;
-            text-decoration: none !important;
-            }
-            table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } @media (max-width: 480px) { #u_content_heading_5 .v-font-size { font-size: 20px !important; } }
-        </style>
-    </head>
-    <body class="clean-body u_body" style="line-height: inherit;margin: 0px;padding: 0px;text-size-adjust: 100%;color: #000000" bgcolor="#e7e7e7" data-new-gr-c-s-check-loaded="14.1056.0">
-        <!--[if IE]><div class="ie-container"><![endif]-->
-        <!--[if mso]><div class="mso-container"><![endif]-->
-        <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;table-layout: fixed;border-spacing: 0px;min-width: 320px;margin: 0px auto" cellpadding="0" cellspacing="0" width="100%" bgcolor="#e7e7e7">
-            <tbody style="line-height: inherit">
-                <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                    <td style="line-height: inherit;vertical-align: top;border-collapse: collapse !important;color: #000000;word-break: break-word">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #e7e7e7;"><![endif]-->
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="600" style="background-color: #ffffff;width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;background-color: #ffffff;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px;font-family: arial,helvetica,sans-serif" align="left">
-                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000">
-                                    <tbody style="line-height: inherit">
-                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                            <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;padding-right: 0px;padding-left: 0px" align="center">
-                                            <img src="https://images.unlayer.com/projects/71061/1648137880554-EIDL1.png" alt="EIDL" title="EIDL" style="line-height: inherit;outline: none;text-decoration: none;clear: both;border: none;max-width: 321px;display: inline-block !important" width="100%">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="6%" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-top: 1px solid #ffffff;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                    <tbody style="line-height: inherit">
-                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                            <td style="line-height: 0px;vertical-align: top;border-collapse: collapse !important;color: #000000;word-break: break-word;font-size: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                            <span style="line-height: inherit" id="email_" name="email_">&#160;</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table id="u_content_heading_5" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 1px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #0a3759;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 22px">
-                                Need request for increase, reconsideration, or appeal on your EIDL?&#160;
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <div style="line-height: inherit;text-align: center">
-                                <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;font-family:arial,helvetica,sans-serif;"><tr><td style="font-family:arial,helvetica,sans-serif;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.sbaloanadvice.com/ben" style="height:37px; v-text-anchor:middle; width:520px;" arcsize="11%" strokecolor="#0a3759" strokeweight="1px" fillcolor="#3AAEE0"><w:anchorlock/><center style="color:#FFFFFF;font-family:arial,helvetica,sans-serif;"><![endif]-->
-                                <a href="http://click.sbaloanadvice.com/click/gfka-3xn9q-29m2j-6z6p458/" target="_blank" style="line-height: inherit;color: #FFFFFF;text-decoration: none;border: 1px solid #0a3759;box-sizing: border-box;display: inline-block;font-family: arial,helvetica,sans-serif;-webkit-text-size-adjust: none;text-align: center;background-color: #3AAEE0;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;width: 90%;max-width: 100%;overflow-wrap: break-word;word-break: break-word;word-wrap: break-word;mso-border-alt: none" id="auto_assign_link_num_1" name="https   sbaloanadvice ben"> <span style="line-height: 120%;display: block;padding: 10px 20px" id="email_2" name="email_2"><strong style="line-height: inherit"><span style="line-height: 16.8px;font-size: 14px" id="email_3" name="email_3">Click Here To Get Streamlined&nbsp;</span></strong>
-</span> </a>
-                                <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
-                                </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px 10px 10px;font-family: arial, helvetica, sans-serif;text-align: center" align="left">
-                                <strong style="line-height: inherit;font-family: arial, helvetica, sans-serif;text-align: center;background-color: #ffffff"><span id="email_4" name="email_4" style="line-height: inherit;font-size: 14px">*Please provide your last 4 months bank statements for cashflow analysis*</span></strong>
-                                <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-top: 1px solid #0a3759;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                    <tbody style="line-height: inherit">
-                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                            <td style="line-height: 0px;vertical-align: top;border-collapse: collapse !important;color: #000000;word-break: break-word;font-size: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                            <span style="line-height: inherit" id="email_5" name="email_5">&#160;</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
-                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px;-moz-border-radius: 0px">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border-radius: 0px;-webkit-border-radius: 0px;-moz-border-radius: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <div style="line-height: 140%;color: #e03e2d;text-align: left;word-wrap: break-word">
-                                <p style="line-height: 140%;margin: 0;font-size: 14px;text-align: center"><span style="line-height: 22.4px;font-size: 16px" id="email_6" name="email_6"><strong style="line-height: inherit">COVID-19 EIDL funds are expected to be exhausted in mid-April 2022, so if you would like to request an increase in the amount of your COVID-19 EIDL, you are advised to do so now. </strong></span></p>
-                                </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px 6px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #0a3759;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 21px">
-                                How we have been helping thousands get funded faster, request for an increase, reconsiderations, and appeals:
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <div style="line-height: 140%;text-align: right;word-wrap: break-word">
-                                <ul style="line-height: inherit">
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">We are a preferred partner of the SBA</li>
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">We manage everything for you from start to finish</li>
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">A dedicated team to get those funds into your account faster</li>
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">Our team overcomes unverifiable information, unsatisfactory credit history, and withdrawn applications with the SBA</li>
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">Helped increase the amount for the EIDL with our customers</li>
-                                </ul>
-                                </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #0a3759">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #0a3759;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-33p33" style="line-height: inherit;max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 30px">
-                                1000+
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 14px">
-                                EIDL &amp; Reconsiderations
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-33p33" style="line-height: inherit;max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 30px">
-                                1000+
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 14px">
-                                Happy Clients
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-33p33" style="line-height: inherit;max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 30px">
-                                60+
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 14px">
-                                Tech Experts
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <div style="line-height: 140%;text-align: left;word-wrap: break-word">
-                                <p style="line-height: 140%;margin: 0;font-size: 14px;text-align: center"><a rel="noopener" href="mailto:admin@sbaloanadvice.com" target="_blank" style="line-height: inherit;color: #0000ee;text-decoration: underline">admin@sbaloanadvice.com</a></p>
-                                </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000">
-                                    <tbody style="line-height: inherit">
-                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                            <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;padding-right: 0px;padding-left: 0px" align="center">
-                                            <img alt="" src="https://images.unlayer.com/projects/71061/1649074864718-BBB.png" style="line-height: inherit;outline: none;text-decoration: none;clear: both;border: none;max-width: 121px;display: inline-block !important" width="100%">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <!--[if mso]></div><![endif]-->
-        <!--[if IE]></div><![endif]-->
-    
-    <grammarly-desktop-integration data-grammarly-shadow-root="true" style="line-height: inherit"></grammarly-desktop-integration>
-</body></html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-SBA Loan Advice<br/>3000 Town Center, STE 1805<br/>Royal Oak Michigan  48076<br/>United States
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?3xn9q--f920-6z6p458&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?3xn9q--f920-6z6p458&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.sbaloanadvice.com/open/gfka-3xn9q--6z6p456/img.gif" width="0" height="0" alt="">
+--===============3422216216745226587==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0BF9_014BC7B6.1EE0EF20"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0BF9_014BC7B6.1EE0EF20
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+SGkgDQpXZSdyZSBzcGVjaWFsaXppbmcgaW4gRW1haWwgcHJvbW90aW9uLg0KSWYgeW91IGRvIG5v
+dCBnZXQgdGhlIG9yZGVyIGZvciBhIGxvbmcgdGltZSBhbmQgaGF2ZSBubyBpZGVhIGhvdyB0byBk
+byBpdCBub3csIGxldCB1cyBoZWxwIHlvdSBzaG93IHlvdXIgcHJvZHVjdHMgaW4gc2VsZWN0ZWQg
+Y291bnRyaWVzIG9mIHRoZSBjb21wYW55LiANCldlIG5vdCBvbmx5IGxldCB5b3Ugc3VjY2Vzc2Z1
+bGx5IGdldCBhbiBvcmRlciwgYnV0IGFsc28gbGV0IHlvdXIgc2hvcCBnZXQgbW9yZSBzaXRlIHRy
+YWZmaWMgaWYgeW91IGhhdmUgYW4gZS1jb21tZXJjZSBzaXRlLg0KVGhpcyBpcyBBbGlzdGFyIGZy
+b20gQk9ULUNMT1VEIENvLiwgTHRkLCBvdmVyIDEwIHllYXJzIGluIHRoZSBFbWFpbCBwcm9tb3Rp
+b24gZmllbGQuIA0KV2UgaGF2ZSBhbHJlYWR5IGZpeGVkIGh1bmRyZWRzIG9mIGNvbXBhbmllcycg
+cGVyZm9ybWFuY2UgcHJvYmxlbXMsIGZvciBnb29kIHByb2R1Y3RzIHRoYXQgbm9ib2R5IGtub3dz
+Lg0KSWYgeW91IGhhdmUgYW55IHF1ZXN0aW9ucyBhbmQgd2FudCB0byBsZWFybiBtb3JlIGRldGFp
+bHMsICBjb250YWN0IG1lLg0KQWxsIHRoZSBiZXN0LA0KQWxpc3RhciANCkJvdC1DbG91ZCBDby4s
+IEx0ZA0KRS1NYWlsOiBBbGlzdGFyQGJvdC1jbG91ZC5jb20NClRFTDorODYgMTMxNjA2ODM5MjIo
+V2hhdHNBcHApDQpTa3lwZTprdWVueWU4ODg=
+
+------=_NextPart_000_0BF9_014BC7B6.1EE0EF20
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCAxMS4wMC4xMDU3MC4xMDAxIj48L0hFQUQ+DQo8Qk9EWT4NCjxQPkhpIDwvUD4N
+CjxQPldlJ3JlIHNwZWNpYWxpemluZyBpbiBFbWFpbCBwcm9tb3Rpb24uPEJSPklmIHlvdSBkbyBu
+b3QgZ2V0IHRoZSBvcmRlciBmb3IgYSANCmxvbmcgdGltZSBhbmQgaGF2ZSBubyBpZGVhIGhvdyB0
+byBkbyBpdCBub3csIGxldCB1cyBoZWxwIHlvdSBzaG93IHlvdXIgcHJvZHVjdHMgDQppbiBzZWxl
+Y3RlZCBjb3VudHJpZXMgb2YgdGhlIGNvbXBhbnkuIDxCUj5XZSBub3Qgb25seSBsZXQgeW91IHN1
+Y2Nlc3NmdWxseSBnZXQgDQphbiBvcmRlciwgYnV0IGFsc28gbGV0IHlvdXIgc2hvcCBnZXQgbW9y
+ZSBzaXRlIHRyYWZmaWMgaWYgeW91IGhhdmUgYW4gZS1jb21tZXJjZSANCnNpdGUuPC9QPg0KPFA+
+VGhpcyBpcyBBbGlzdGFyIGZyb20gQk9ULUNMT1VEIENvLiwgTHRkLCBvdmVyIDEwIHllYXJzIGlu
+IHRoZSBFbWFpbCBwcm9tb3Rpb24gDQpmaWVsZC4gPEJSPldlIGhhdmUgYWxyZWFkeSBmaXhlZCBo
+dW5kcmVkcyBvZiBjb21wYW5pZXMnIHBlcmZvcm1hbmNlIHByb2JsZW1zLCANCmZvciBnb29kIHBy
+b2R1Y3RzIHRoYXQgbm9ib2R5IGtub3dzLjwvUD4NCjxQPklmIHlvdSBoYXZlIGFueSBxdWVzdGlv
+bnMgYW5kIHdhbnQgdG8gbGVhcm4gbW9yZSBkZXRhaWxzLCZuYnNwOyBjb250YWN0IA0KbWUuPC9Q
+Pg0KPFA+QWxsIHRoZSBiZXN0LDwvUD4NCjxQPkFsaXN0YXIgPEJSPkJvdC1DbG91ZCBDby4sIEx0
+ZDxCUj5FLU1haWw6IDxBIA0KaHJlZj0ibWFpbHRvOkFsaXN0YXJAYm90LWNsb3VkLmNvbSI+QWxp
+c3RhckBib3QtY2xvdWQuY29tPC9BPjxCUj5URUw6Kzg2IA0KMTMxNjA2ODM5MjIoV2hhdHNBcHAp
+PEJSPlNreXBlOmt1ZW55ZTg4ODwvUD48L0JPRFk+PC9IVE1MPg0K
+
+------=_NextPart_000_0BF9_014BC7B6.1EE0EF20--
 
 
---===============3039857841778132315==
+
+--===============3422216216745226587==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3039857841778132315==
+--===============3422216216745226587==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -558,4 +161,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3039857841778132315==--
+--===============3422216216745226587==--
+
+
