@@ -2,28 +2,28 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5FCBE50A07E
-	for <lists+industrypack-devel@lfdr.de>; Thu, 21 Apr 2022 15:14:17 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id BB9E250B806
+	for <lists+industrypack-devel@lfdr.de>; Fri, 22 Apr 2022 15:14:02 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nhWdS-0006FX-Uk
-	for lists+industrypack-devel@lfdr.de; Thu, 21 Apr 2022 13:14:16 +0000
+	id 1nht6o-0000EP-5g
+	for lists+industrypack-devel@lfdr.de; Fri, 22 Apr 2022 13:14:01 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
- <bounce_jkjnef_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
- id 1nhWdR-0006FR-Be
- for industrypack-devel@lists.sourceforge.net; Thu, 21 Apr 2022 13:14:14 +0000
+ <bounce_jkgneo_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
+ id 1nht6m-0000E0-2k
+ for industrypack-devel@lists.sourceforge.net; Fri, 22 Apr 2022 13:13:59 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
  Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=iUnaVSlYvsHTpTgSd8phyNmNxuDzSRU6PmW0qWiwWkk=; b=moUI5YHeST58V462u0vAe+/EKU
- G/ZJLHVpCiBmJHgJxyusctSFmmEIBv1xFx2wvMrTEVkVZ+fQChLr7sOrpd2Sb3cBI8r9dZh0Ia52D
- gEJfbCmWHK7cPRiy9QXvbfw5XdjcSwjpjeB0uuVXxd0QkUFv2Hgrh8enj/ChGX7WxDeY=;
+ bh=G155FptnVdy8RPBDi+PBXcnJbtyvAMj/fd0LbdLjXbw=; b=OzDzKoBk0+aqWoTTqI0CZ+HTUu
+ 7mfbZt+cHZ5v8FGMxKn0Jk82ULx6PmnLHb6WEhDgXQrelfve4sOdXIRTuP6DcNpoUp3awP8CDn7b0
+ y3RVPUwASgCuOrJvXIirFxu/9vGp8Vc3DtqxWJXY2MA4OBqO52ThupqLorD0HpBeHuZk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
@@ -31,43 +31,43 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=iUnaVSlYvsHTpTgSd8phyNmNxuDzSRU6PmW0qWiwWkk=; b=YtRqkjc8gXOnLkfLWT2jXFuz/t
- UyOIyGE9grJ7qQgdzKfSzV0YKQZSrY7lCk4xMd0MMBdvvR5QiNhrHAdlSpLDJeN62VeFozXysuwWO
- osGoZoReLZBu25n0i5oy4ZnnXd8sjJPhuQ+32DpkIb9Bc+YoHuPXxkgMA1UCxKNGOOts=;
+ bh=G155FptnVdy8RPBDi+PBXcnJbtyvAMj/fd0LbdLjXbw=; b=cbEE27RVBnS31jSPIMvI+PaP9S
+ /cZQ+RHV2efQ6UjDz0fbcxrfQ8UPCMwqHr4x+P0iRcuKdhxlqG3nD08nufQ6MRJLt4EEFtBObCC+s
+ o2qcFk45Q1N2gy55V+z5UN3hSZT5XXOTnmWE3/MVUHloj/FGvmxW/kRSuUiuMzNUVTi0=;
 Received: from em.sbaloanadvice.com ([216.24.225.131])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nhWdK-005b8Q-77
- for industrypack-devel@lists.sourceforge.net; Thu, 21 Apr 2022 13:14:14 +0000
+ id 1nht6j-006ZG4-1f
+ for industrypack-devel@lists.sourceforge.net; Fri, 22 Apr 2022 13:13:59 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
  h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type:Date:Subject:From:To:CC; x=1650633246; i=admin@sbaloanadvice.com; 
- bh=iUnaVSlYvsHTpTgSd8phyNmNxuDzSRU6PmW0qWiwWkk=;
- b=hMP6nnhXwn1btgaQyw1DfhgX2KgbasMLqWTbFGDhfiLseDXQhZBq3cz7EC/j1Or6IA5kOJErMtkG
- pwkCDMSU8aI9ZLODAANnZpSQZvEZhiw6RDL23pdwm6GXxTzWxoz8nNxD47pTa5sUb7z0+TGSf8uM
- 0pyGQdUM4+k2/AKhUYM=
+ Content-Type:Date:Subject:From:To:CC; x=1650719637; i=admin@sbaloanadvice.com; 
+ bh=G155FptnVdy8RPBDi+PBXcnJbtyvAMj/fd0LbdLjXbw=;
+ b=SSnCOP426tS1rLyRmGQAZfBgMxHI0NUNcyeHVZeHYMEPtmCBjoNkR8mIvhaPfq9FGhXnEe8vcsPa
+ kgmELT8GiFF2DWeC4nfv9KU+8Sl02Db65dRHrfVoIDgM74g8zt9HYPRrcUwhhcEVqTMHL8aZChFf
+ uKA3RUi/2JEmsiKvYsA=
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
  h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type:Date:Subject:From:To:CC; x=1650633246;
- bh=iUnaVSlYvsHTpTgSd8phyNmNxuDzSRU6PmW0qWiwWkk=;
- b=F4poBTJJuhQ9WnAUXNRxfSWnXNNCouNUPh3KOebCFMYYFjB8v+DWMF4R2W+v1P20Zvu+Xdp9QlYC
- hWZ6kQBbeMkr5Kr7pXVnveupAAj8yTnRoyd5rtvkREwp5HwebseS5XUqtj1tuyammYNrvUXdo6WP
- 56OWUyoRSBFrQHNwiPM=
-Received: by em.sbaloanadvice.com id hc5c982r99c0 for
+ Content-Type:Date:Subject:From:To:CC; x=1650719637;
+ bh=G155FptnVdy8RPBDi+PBXcnJbtyvAMj/fd0LbdLjXbw=;
+ b=g5hiLpcrUmhh4696BtxcoNMiffbtREY16lVTv4yYGraKaD2olt5O3haw5krCSv4AsPEJHgAw+yAz
+ OzQ7L9dzgLO+N/LY+63Q/tj6mqmKBWJq0lwkth3ikg0UD/88wCi66deAIaroROza+9HBrNgxlpt0
+ ja9vhVT4ff4CV4rbQpg=
+Received: by em.sbaloanadvice.com id hcal082r99cv for
  <industrypack-devel@lists.sourceforge.net>;
- Thu, 21 Apr 2022 09:11:13 -0400 (envelope-from
- <bounce_jkjnef_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
+ Fri, 22 Apr 2022 09:11:06 -0400 (envelope-from
+ <bounce_jkgneo_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
 X-Campaign-Shard: 2
-Bounces-To: bounce_vaqnq_cezqcnf_n@em.sbaloanadvice.com
-Message-ID: <1650546648052.201590390.6644463.421896101@em.sbaloanadvice.com>
-X-Campaign: 201590390/6644463/421896101
-Date: Thu, 21 Apr 2022 09:11:13 -0400
+Bounces-To: bounce_vbnvb_cezqcnf_n@em.sbaloanadvice.com
+Message-ID: <1650633039863.201592595.6656737.421896101@em.sbaloanadvice.com>
+X-Campaign: 201592595/6656737/421896101
+Date: Fri, 22 Apr 2022 09:11:06 -0400
 To: <industrypack-devel@lists.sourceforge.net>
 From: "SBA Loan Advice" <admin@sbaloanadvice.com>
 MIME-Version: 1.0
-X-Spam-Score: 0.9 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -77,24 +77,24 @@ X-Spam-Report: Spam detection software,
  and appeals Need request for increase, reconsideration, or appeal on your
  EIDL? Click Here To Get Streamlined *Please provide your last 4 months bank
  statements for cashflow analysis* 
- Content analysis details:   (0.9 points, 6.0 required)
+ Content analysis details:   (0.0 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.0 HK_RANDOM_REPLYTO      Reply-To username looks random
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 HK_RANDOM_REPLYTO      Reply-To username looks random
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
  Colors in HTML
-X-Headers-End: 1nhWdK-005b8Q-77
+X-Headers-End: 1nht6j-006ZG4-1f
 Subject: [Industrypack-devel] EIDL Funds are running low. Have you requested
  an increase?
 X-BeenThere: industrypack-devel@lists.sourceforge.net
@@ -108,14 +108,14 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <reply_vaqnq_cezqcnf_n@em.sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============0113540617095710238=="
+Reply-To: SBA Loan Advice <reply_vbnvb_cezqcnf_n@em.sbaloanadvice.com>
+Content-Type: multipart/mixed; boundary="===============4760977399459230182=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============0113540617095710238==
+--===============4760977399459230182==
 Content-Type: text/html;charset=UTF-8
 
-<!-- X-Campaign: 201590390/6644463/421896101 -->
+<!-- X-Campaign: 201592595/6656737/421896101 -->
 <style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">How we are helping small business increase EIDL funds, reconsiderations, and appeals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head style="line-height: inherit">
         <!--[if gte mso 9]>
@@ -263,7 +263,7 @@ Content-Type: text/html;charset=UTF-8
                                 <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
                                 <div style="line-height: inherit;text-align: center">
                                 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;font-family:arial,helvetica,sans-serif;"><tr><td style="font-family:arial,helvetica,sans-serif;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.sbaloanadvice.com/ben" style="height:37px; v-text-anchor:middle; width:520px;" arcsize="11%" strokecolor="#0a3759" strokeweight="1px" fillcolor="#3AAEE0"><w:anchorlock/><center style="color:#FFFFFF;font-family:arial,helvetica,sans-serif;"><![endif]-->
-                                <a href="http://click.sbaloanadvice.com/click/gfka-3yewf-2agwn-6z6p458/" target="_blank" style="line-height: inherit;color: #FFFFFF;text-decoration: none;border: 1px solid #0a3759;box-sizing: border-box;display: inline-block;font-family: arial,helvetica,sans-serif;-webkit-text-size-adjust: none;text-align: center;background-color: #3AAEE0;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;width: 90%;max-width: 100%;overflow-wrap: break-word;word-break: break-word;word-wrap: break-word;mso-border-alt: none" id="auto_assign_link_num_1" name="https   sbaloanadvice ben"> <span style="line-height: 120%;display: block;padding: 10px 20px" id="email_2" name="email_2"><strong style="line-height: inherit"><span style="line-height: 16.8px;font-size: 14px" id="email_3" name="email_3">Click Here To Get Streamlined&nbsp;</span></strong>
+                                <a href="http://click.sbaloanadvice.com/click/gfka-3yodd-2aqid-6z6p453/" target="_blank" style="line-height: inherit;color: #FFFFFF;text-decoration: none;border: 1px solid #0a3759;box-sizing: border-box;display: inline-block;font-family: arial,helvetica,sans-serif;-webkit-text-size-adjust: none;text-align: center;background-color: #3AAEE0;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;width: 90%;max-width: 100%;overflow-wrap: break-word;word-break: break-word;word-wrap: break-word;mso-border-alt: none" id="auto_assign_link_num_1" name="https   sbaloanadvice ben"> <span style="line-height: 120%;display: block;padding: 10px 20px" id="email_2" name="email_2"><strong style="line-height: inherit"><span style="line-height: 16.8px;font-size: 14px" id="email_3" name="email_3">Click Here To Get Streamlined&nbsp;</span></strong>
 </span> </a>
                                 <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
                                 </div>
@@ -536,18 +536,18 @@ Content-Type: text/html;charset=UTF-8
 <address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
 SBA Loan Advice<br/>3000 Town Center, STE 1805<br/>Royal Oak Michigan  48076<br/>United States
 </address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?3yewf--f920-6z6p451&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?3yewf--f920-6z6p451&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.sbaloanadvice.com/open/gfka-3yewf--6z6p459/img.gif" width="0" height="0" alt="">
+<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?3yodd--f920-6z6p450&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?3yodd--f920-6z6p450&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
+<img src="http://click.sbaloanadvice.com/open/gfka-3yodd--6z6p458/img.gif" width="0" height="0" alt="">
 
 
---===============0113540617095710238==
+--===============4760977399459230182==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0113540617095710238==
+--===============4760977399459230182==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -558,4 +558,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0113540617095710238==--
+--===============4760977399459230182==--
