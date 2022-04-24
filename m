@@ -2,101 +2,105 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id BB9E250B806
-	for <lists+industrypack-devel@lfdr.de>; Fri, 22 Apr 2022 15:14:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C81CB50D4E4
+	for <lists+industrypack-devel@lfdr.de>; Sun, 24 Apr 2022 21:40:28 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1nht6o-0000EP-5g
-	for lists+industrypack-devel@lfdr.de; Fri, 22 Apr 2022 13:14:01 +0000
+	id 1nii5r-0006TT-T5
+	for lists+industrypack-devel@lfdr.de; Sun, 24 Apr 2022 19:40:27 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
- <bounce_jkgneo_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
- id 1nht6m-0000E0-2k
- for industrypack-devel@lists.sourceforge.net; Fri, 22 Apr 2022 13:13:59 +0000
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
+ (envelope-from <eki-info@keyymbb.cn>) id 1nii5p-0006TN-Rp
+ for industrypack-devel@lists.sourceforge.net; Sun, 24 Apr 2022 19:40:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=G155FptnVdy8RPBDi+PBXcnJbtyvAMj/fd0LbdLjXbw=; b=OzDzKoBk0+aqWoTTqI0CZ+HTUu
- 7mfbZt+cHZ5v8FGMxKn0Jk82ULx6PmnLHb6WEhDgXQrelfve4sOdXIRTuP6DcNpoUp3awP8CDn7b0
- y3RVPUwASgCuOrJvXIirFxu/9vGp8Vc3DtqxWJXY2MA4OBqO52ThupqLorD0HpBeHuZk=;
+ d=sourceforge.net; s=x; h=Subject:Content-Type:Mime-Version:Message-ID:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=byxztUwzOoOy3rIi12LzCzCA5p268VhMFU+zW4ggato=; b=NmGyjoCTyGOWu95wyP/6WiyfXt
+ tMwLLTSBMFWyP+QrxHrIXz7rMEoY9CXP9ZjzE2MEGcTDYbmHIS+mQ8tzhZXMrahJOORMVxmBDIsPQ
+ 3lekmTcUcOOseLRFI/eYgoAEFbNIFZYQ8CSwOKHUo+CWODc2uh9sfMkTgtza8IvuHAGk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=G155FptnVdy8RPBDi+PBXcnJbtyvAMj/fd0LbdLjXbw=; b=cbEE27RVBnS31jSPIMvI+PaP9S
- /cZQ+RHV2efQ6UjDz0fbcxrfQ8UPCMwqHr4x+P0iRcuKdhxlqG3nD08nufQ6MRJLt4EEFtBObCC+s
- o2qcFk45Q1N2gy55V+z5UN3hSZT5XXOTnmWE3/MVUHloj/FGvmxW/kRSuUiuMzNUVTi0=;
-Received: from em.sbaloanadvice.com ([216.24.225.131])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ h=Subject:Content-Type:Mime-Version:Message-ID:To:From:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=byxztUwzOoOy3rIi12LzCzCA5p268VhMFU+zW4ggato=; b=U
+ u424u80WidDfHip7czzj34K4LjJ13TsL3B70EKR7ceg9F2TP4NIuFQe0PBxkMf5WQDWzmAFITY+TF
+ J7motJ2cDt4i5GuDA9TEhTeCIF8A6rrHazLIb9RWrO7KeZPKZXpl7FtN7EwYNpI9QsFZ+O5G1wG6V
+ IGToeQXTnrY708F8=;
+Received: from [134.122.146.2] (helo=keyymbb.cn)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1nht6j-006ZG4-1f
- for industrypack-devel@lists.sourceforge.net; Fri, 22 Apr 2022 13:13:59 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type:Date:Subject:From:To:CC; x=1650719637; i=admin@sbaloanadvice.com; 
- bh=G155FptnVdy8RPBDi+PBXcnJbtyvAMj/fd0LbdLjXbw=;
- b=SSnCOP426tS1rLyRmGQAZfBgMxHI0NUNcyeHVZeHYMEPtmCBjoNkR8mIvhaPfq9FGhXnEe8vcsPa
- kgmELT8GiFF2DWeC4nfv9KU+8Sl02Db65dRHrfVoIDgM74g8zt9HYPRrcUwhhcEVqTMHL8aZChFf
- uKA3RUi/2JEmsiKvYsA=
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
- Content-Type:Date:Subject:From:To:CC; x=1650719637;
- bh=G155FptnVdy8RPBDi+PBXcnJbtyvAMj/fd0LbdLjXbw=;
- b=g5hiLpcrUmhh4696BtxcoNMiffbtREY16lVTv4yYGraKaD2olt5O3haw5krCSv4AsPEJHgAw+yAz
- OzQ7L9dzgLO+N/LY+63Q/tj6mqmKBWJq0lwkth3ikg0UD/88wCi66deAIaroROza+9HBrNgxlpt0
- ja9vhVT4ff4CV4rbQpg=
-Received: by em.sbaloanadvice.com id hcal082r99cv for
- <industrypack-devel@lists.sourceforge.net>;
- Fri, 22 Apr 2022 09:11:06 -0400 (envelope-from
- <bounce_jkgneo_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
-X-Campaign-Shard: 2
-Bounces-To: bounce_vbnvb_cezqcnf_n@em.sbaloanadvice.com
-Message-ID: <1650633039863.201592595.6656737.421896101@em.sbaloanadvice.com>
-X-Campaign: 201592595/6656737/421896101
-Date: Fri, 22 Apr 2022 09:11:06 -0400
+ id 1nii5o-0001nT-1m
+ for industrypack-devel@lists.sourceforge.net; Sun, 24 Apr 2022 19:40:24 +0000
+Received: from eki-co.jp (unknown [137.220.235.107])
+ by keyymbb.cn (Postfix) with ESMTPA id 679643CA27AC
+ for <industrypack-devel@lists.sourceforge.net>;
+ Mon, 25 Apr 2022 03:40:17 +0800 (CST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 keyymbb.cn 679643CA27AC
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=keyymbb.cn;
+ s=default; t=1650829218;
+ bh=byxztUwzOoOy3rIi12LzCzCA5p268VhMFU+zW4ggato=;
+ h=Date:From:To:Subject:From;
+ b=JFsmg98l42q9+DbCjhcw2rWS6TsyYh5OJHHu1ud08jGJtYmOcWLqqkXzYR1WbAeM4
+ XPo80ZhDF+Tg5X7sxPQkKZgQdRn0zOF+mOqqwps1nsaPLUVkynhYoh4/K967aHp5x5
+ A9NDobK9yi2rIbgN0eZLA3WsehRDbtgKKG88ukQM=
+Date: Mon, 25 Apr 2022 03:40:12 +0800
 To: <industrypack-devel@lists.sourceforge.net>
-From: "SBA Loan Advice" <admin@sbaloanadvice.com>
-MIME-Version: 1.0
-X-Spam-Score: 0.0 (/)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+Message-ID: <20220425034017161053@keyymbb.cn>
+X-mailer: Foxmail 6, 13, 102, 15 [cn]
+Mime-Version: 1.0
+X-Helo-Check: bad, Forged Random Domain (keyymbb.cn)
+X-Spam-Score: 8.5 (++++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  How we are helping small business increase EIDL funds,
- reconsiderations, 
- and appeals Need request for increase, reconsideration, or appeal on your
- EIDL? Click Here To Get Streamlined *Please provide your last 4 months bank
- statements for cashflow analysis* 
- Content analysis details:   (0.0 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  日頃より「えきねっと」をご利用いただきありがとうございます。
+    「えきねっと」のアカウントは制限されています。「えきねっと」は
+    2022 年 2月 0 [...] 
+ 
+ Content analysis details:   (8.5 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.1 HK_RANDOM_REPLYTO      Reply-To username looks random
+  2.5 URIBL_DBL_PHISH        Contains a Phishing URL listed in the Spamhaus
+                             DBL blocklist
+                             [URIs: keyymbb.cn]
+  0.0 URIBL_RED              Contains an URL listed in the URIBL redlist
+                             [URIs: vqunkse.cn]
+  1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
+                             bl.spamcop.net
+               [Blocked - see <https://www.spamcop.net/bl.shtml?134.122.146.2>]
+  3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+                             [134.122.146.2 listed in zen.spamhaus.org]
+  0.1 URIBL_CSS_A            Contains URL's A record listed in the Spamhaus CSS
+                             blocklist
+                             [URIs: keyymbb.cn]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 HTML_FONT_FACE_BAD     BODY: HTML font face is not a word
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML
-X-Headers-End: 1nht6j-006ZG4-1f
-Subject: [Industrypack-devel] EIDL Funds are running low. Have you requested
- an increase?
+                             author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1nii5o-0001nT-1m
+Subject: [SPAM] =?utf-8?B?44CQ6YeN6KaB44CR44GI44GN44Gt44Gj44Go44Ki44Kr44Km44Oz44OI44Gu6Ieq5YuV6YCA5Lya5Yem?=
+	理について！番号：0148581761
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -108,446 +112,420 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <reply_vbnvb_cezqcnf_n@em.sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============4760977399459230182=="
+From: eki-customer via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: eki-customer <eki-info@keyymbb.cn>
+Content-Type: multipart/mixed; boundary="===============7566477978126036895=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4760977399459230182==
-Content-Type: text/html;charset=UTF-8
+This is a multi-part message in MIME format.
 
-<!-- X-Campaign: 201592595/6656737/421896101 -->
-<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">How we are helping small business increase EIDL funds, reconsiderations, and appeals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head style="line-height: inherit">
-        <!--[if gte mso 9]>
-<xml>
-  <o:OfficeDocumentSettings>
-    <o:AllowPNG/>
-    <o:PixelsPerInch>96</o:PixelsPerInch>
-  </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" style="line-height: inherit">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" style="line-height: inherit">
-        <meta name="x-apple-disable-message-reformatting" style="line-height: inherit">
-        <!--[if !mso]><!-->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" style="line-height: inherit"><!--<![endif]-->
-        <title style="line-height: inherit"></title>
-        <style type="text/css" style="line-height: inherit">
-            @media only screen and (min-width: 620px) {
-            .u-row {
-            width: 600px !important;
-            }
-            .u-row .u-col {
-            vertical-align: top;
-            }
-            .u-row .u-col-33p33 {
-            width: 199.98px !important;
-            }
-            .u-row .u-col-100 {
-            width: 600px !important;
-            }
-            }
-            @media (max-width: 620px) {
-            .u-row-container {
-            max-width: 100% !important;
-            padding-left: 0px !important;
-            padding-right: 0px !important;
-            }
-            .u-row .u-col {
-            min-width: 320px !important;
-            max-width: 100% !important;
-            display: block !important;
-            }
-            .u-row {
-            width: calc(100% - 40px) !important;
-            }
-            .u-col {
-            width: 100% !important;
-            }
-            .u-col > div {
-            margin: 0 auto;
-            }
-            }
-            body {
-            margin: 0;
-            padding: 0;
-            }
-            table,
-            tr,
-            td {
-            vertical-align: top;
-            border-collapse: collapse;
-            }
-            p {
-            margin: 0;
-            }
-            .ie-container table,
-            .mso-container table {
-            table-layout: fixed;
-            }
-            * {
-            line-height: inherit;
-            }
-            a[x-apple-data-detectors='true'] {
-            color: inherit !important;
-            text-decoration: none !important;
-            }
-            table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } @media (max-width: 480px) { #u_content_heading_5 .v-font-size { font-size: 20px !important; } }
-        </style>
-    </head>
-    <body class="clean-body u_body" style="line-height: inherit;margin: 0px;padding: 0px;text-size-adjust: 100%;color: #000000" bgcolor="#e7e7e7" data-new-gr-c-s-check-loaded="14.1056.0">
-        <!--[if IE]><div class="ie-container"><![endif]-->
-        <!--[if mso]><div class="mso-container"><![endif]-->
-        <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;table-layout: fixed;border-spacing: 0px;min-width: 320px;margin: 0px auto" cellpadding="0" cellspacing="0" width="100%" bgcolor="#e7e7e7">
-            <tbody style="line-height: inherit">
-                <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                    <td style="line-height: inherit;vertical-align: top;border-collapse: collapse !important;color: #000000;word-break: break-word">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #e7e7e7;"><![endif]-->
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="600" style="background-color: #ffffff;width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;background-color: #ffffff;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px;font-family: arial,helvetica,sans-serif" align="left">
-                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000">
-                                    <tbody style="line-height: inherit">
-                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                            <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;padding-right: 0px;padding-left: 0px" align="center">
-                                            <img src="https://images.unlayer.com/projects/71061/1648137880554-EIDL1.png" alt="EIDL" title="EIDL" style="line-height: inherit;outline: none;text-decoration: none;clear: both;border: none;max-width: 321px;display: inline-block !important" width="100%">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="6%" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-top: 1px solid #ffffff;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                    <tbody style="line-height: inherit">
-                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                            <td style="line-height: 0px;vertical-align: top;border-collapse: collapse !important;color: #000000;word-break: break-word;font-size: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                            <span style="line-height: inherit" id="email_" name="email_">&#160;</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table id="u_content_heading_5" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 1px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #0a3759;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 22px">
-                                Need request for increase, reconsideration, or appeal on your EIDL?&#160;
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <div style="line-height: inherit;text-align: center">
-                                <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;font-family:arial,helvetica,sans-serif;"><tr><td style="font-family:arial,helvetica,sans-serif;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.sbaloanadvice.com/ben" style="height:37px; v-text-anchor:middle; width:520px;" arcsize="11%" strokecolor="#0a3759" strokeweight="1px" fillcolor="#3AAEE0"><w:anchorlock/><center style="color:#FFFFFF;font-family:arial,helvetica,sans-serif;"><![endif]-->
-                                <a href="http://click.sbaloanadvice.com/click/gfka-3yodd-2aqid-6z6p453/" target="_blank" style="line-height: inherit;color: #FFFFFF;text-decoration: none;border: 1px solid #0a3759;box-sizing: border-box;display: inline-block;font-family: arial,helvetica,sans-serif;-webkit-text-size-adjust: none;text-align: center;background-color: #3AAEE0;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;width: 90%;max-width: 100%;overflow-wrap: break-word;word-break: break-word;word-wrap: break-word;mso-border-alt: none" id="auto_assign_link_num_1" name="https   sbaloanadvice ben"> <span style="line-height: 120%;display: block;padding: 10px 20px" id="email_2" name="email_2"><strong style="line-height: inherit"><span style="line-height: 16.8px;font-size: 14px" id="email_3" name="email_3">Click Here To Get Streamlined&nbsp;</span></strong>
-</span> </a>
-                                <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
-                                </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px 10px 10px;font-family: arial, helvetica, sans-serif;text-align: center" align="left">
-                                <strong style="line-height: inherit;font-family: arial, helvetica, sans-serif;text-align: center;background-color: #ffffff"><span id="email_4" name="email_4" style="line-height: inherit;font-size: 14px">*Please provide your last 4 months bank statements for cashflow analysis*</span></strong>
-                                <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-top: 1px solid #0a3759;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                    <tbody style="line-height: inherit">
-                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                            <td style="line-height: 0px;vertical-align: top;border-collapse: collapse !important;color: #000000;word-break: break-word;font-size: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                            <span style="line-height: inherit" id="email_5" name="email_5">&#160;</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
-                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px;-moz-border-radius: 0px">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border-radius: 0px;-webkit-border-radius: 0px;-moz-border-radius: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <div style="line-height: 140%;color: #e03e2d;text-align: left;word-wrap: break-word">
-                                <p style="line-height: 140%;margin: 0;font-size: 14px;text-align: center"><span style="line-height: 22.4px;font-size: 16px" id="email_6" name="email_6"><strong style="line-height: inherit">COVID-19 EIDL funds are expected to be exhausted in mid-April 2022, so if you would like to request an increase in the amount of your COVID-19 EIDL, you are advised to do so now. </strong></span></p>
-                                </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px 6px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #0a3759;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 21px">
-                                How we have been helping thousands get funded faster, request for an increase, reconsiderations, and appeals:
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <div style="line-height: 140%;text-align: right;word-wrap: break-word">
-                                <ul style="line-height: inherit">
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">We are a preferred partner of the SBA</li>
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">We manage everything for you from start to finish</li>
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">A dedicated team to get those funds into your account faster</li>
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">Our team overcomes unverifiable information, unsatisfactory credit history, and withdrawn applications with the SBA</li>
-                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">Helped increase the amount for the EIDL with our customers</li>
-                                </ul>
-                                </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #0a3759">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #0a3759;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-33p33" style="line-height: inherit;max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 30px">
-                                1000+
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 14px">
-                                EIDL &amp; Reconsiderations
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-33p33" style="line-height: inherit;max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 30px">
-                                1000+
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 14px">
-                                Happy Clients
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-33p33" style="line-height: inherit;max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 30px">
-                                60+
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 14px">
-                                Tech Experts
-                                </h1>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
-                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
-                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
-                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
-                    <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
-                    <div style="line-height: inherit;width: 100% !important">
-                    <!--[if (!mso)&(!IE)]><!-->
-                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <div style="line-height: 140%;text-align: left;word-wrap: break-word">
-                                <p style="line-height: 140%;margin: 0;font-size: 14px;text-align: center"><a rel="noopener" href="mailto:admin@sbaloanadvice.com" target="_blank" style="line-height: inherit;color: #0000ee;text-decoration: underline">admin@sbaloanadvice.com</a></p>
-                                </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                        <tbody style="line-height: inherit">
-                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
-                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000">
-                                    <tbody style="line-height: inherit">
-                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
-                                            <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;padding-right: 0px;padding-left: 0px" align="center">
-                                            <img alt="" src="https://images.unlayer.com/projects/71061/1649074864718-BBB.png" style="line-height: inherit;outline: none;text-decoration: none;clear: both;border: none;max-width: 121px;display: inline-block !important" width="100%">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if (!mso)&(!IE)]><!--></div>
-                    <!--<![endif]-->
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td><![endif]-->
-                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-                    </div>
-                    </div>
-                    </div>
-                    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <!--[if mso]></div><![endif]-->
-        <!--[if IE]></div><![endif]-->
-    
-    <grammarly-desktop-integration data-grammarly-shadow-root="true" style="line-height: inherit"></grammarly-desktop-integration>
-</body></html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-SBA Loan Advice<br/>3000 Town Center, STE 1805<br/>Royal Oak Michigan  48076<br/>United States
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?3yodd--f920-6z6p450&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?3yodd--f920-6z6p450&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.sbaloanadvice.com/open/gfka-3yodd--6z6p458/img.gif" width="0" height="0" alt="">
+--===============7566477978126036895==
+Content-Type: multipart/related;
+	type="multipart/alternative";
+	boundary="=====003_Dragon247886736718_====="
+
+This is a multi-part message in MIME format.
+
+--=====003_Dragon247886736718_=====
+Content-Type: multipart/alternative;
+	boundary="=====002_Dragon247886736718_====="
+
+--=====002_Dragon247886736718_=====
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+DQrml6XpoIPjgojjgorjgIzjgYjjgY3jga3jgaPjgajjgI3jgpLjgZTliKnnlKjjgYTjgZ/jgaDj
+gY3jgYLjgorjgYzjgajjgYbjgZTjgZbjgYTjgb7jgZnjgIIgDQrjgIzjgYjjgY3jga3jgaPjgajj
+gI3jga7jgqLjgqvjgqbjg7Pjg4jjga/liLbpmZDjgZXjgozjgabjgYTjgb7jgZnjgILjgIzjgYjj
+gY3jga3jgaPjgajjgI3jga8gMjAyMiDlubQgMuaciCAwNiDml6Uo5pelKeOBq+OCteODvOODk+OC
+ueOCkuODquODi+ODpeODvOOCouODq+OBhOOBn+OBl+OBvuOBl+OBn+OAguOBk+OCjCDjgavkvLTj
+gYTjgIHjgIzjgYjjgY3jga3jgaPjgajjgI3liKnnlKjopo/ntITjg7vkvJrlk6Hopo/ntITjgpLl
+pInmm7TjgZfjgIHmnIDlvozjgavjg63jgrDjgqTjg7PjgpLjgZfjgZ/ml6Xjgojjgorotbfnrpfj
+gZcg44Gm77yS5bm05Lul5LiK44CM44GI44GN44Gt44Gj44Go44CN44Gu44GU5Yip55So77yI44Ot
+44Kw44Kk44Oz77yJ44GM56K66KqN44Gn44GN44Gq44GE44CM44GI44GN44Gt44Gj44Go44CN44Ki
+44Kr44Km44Oz44OIIOOBr+OAgeiHquWLleeahOOBq+mAgOS8muWHpueQhuOBleOBm+OBpuOBhOOB
+n+OBoOOBj+OBk+OBqOOBqOOBhOOBn+OBl+OBvuOBl+OBn+OAguOBquOBiuOAgeWvvuixoeOCouOC
+q+OCpuODs+ODiOOBruiHquWLlemAgOS8muWHpueQhuOCkuOAgeacrOimj+e0hOOBq+WfuuOBpeOB
+jeOAgTIwMjIg5bm0IDIg5pyIIDIwIOaXpSjmnIgp44KI44KK6aCG5qyh44CB5a6f5pa944GV44Gb
+44Gm44GE44Gf44Gg44GN44G+44GZ44CCDQrvvJLlubTku6XkuIrjg63jgrDjgqTjg7PjgZfjgabj
+gYTjgarjgYTjgYrlrqLjgZXjgb7jgafjgIHku4rlvozjgoLjgIzjgYjjgY3jga3jgaPjgajjgI3j
+gpLjgZTliKnnlKjjgYTjgZ/jgaDjgZHjgovloLTlkIgg44Gv44CBMjAyMiDlubQgNCDmnIggMjQg
+5pelKOaXpSnjgojjgorjgoLliY3jgavjgIHkuIDluqbjg63jgrDjgqTjg7Pmk43kvZzjgpLjgYrp
+oZjjgYTjgYTjgZ/jgZfjgb7jgZnjgIIgDQrih5Ljg63jgrDjgqTjg7Pjga/jgZPjgaHjgokNCuKA
+u+OBiOOBjeOBreOBo+OBqOODiOODg+ODl+ODmuODvOOCuOWPs+S4iuOBruODreOCsOOCpOODs+OD
+nOOCv+ODs+OCiOOCiuODreOCsOOCpOODs+OBl+OBpuOBj+OBoOOBleOBhOOAgg0K44GK5ZWP44GE
+5ZCI44KP44Gb5YWIDQrjgYjjgY3jga3jgaPjgajjgrXjg53jg7zjg4jjgrvjg7Pjgr/jg7wNClRF
+TCAwNTAtMjAxNi01MDAwDQrlj5fku5jmmYLplpMgOOaZgjAw5YiG772eMjLmmYIwMOWIhg0K44K1
+44Kk44OI6YGL5Za244O7566h55CGDQpKUuadseaXpeacrOODjeODg+ODiOOCueODhuODvOOCt+OD
+p+ODsw0KLS0tLS0tLS0tLS0tLS0tLS0tLS0NCuOBk+OBruODoeODvOODq+OBr+OAjOOBiOOBjeOB
+reOBo+OBqOOAjeOCiOOCiuiHquWLlemFjeS/oeOBleOCjOOBpuOBhOOBvuOBmeOAgg0K6L+U5L+h
+44GE44Gf44Gg44GN44G+44GX44Gm44KC5a++5b+c6Ie044GX44GL44Gt44G+44GZ44Gu44Gn44CB
+44GC44KJ44GL44GY44KB44GU5LqG5om/44GP44Gg44GV44GE44CCDQrjgYrlv4PlvZPjgZ/jgorj
+ga7jgarjgYTmlrnjga/jgIHoqqDjgavmgZDjgozlhaXjgorjgb7jgZnjgYzjgZPjga7jg6Hjg7zj
+g6vjga7liYrpmaTjgpLjgYrpoZjjgYTjgYTjgZ/jgZfjgb7jgZnjgILjgZTkuI3mmI7jgarngrnj
+ga7jgYLjgovmlrnjga/jgIHjgIzjgYjjgY3jga3jgaPjgajjgI3jgrXjg53jg7zjg4jjgrvjg7Pj
+gr/jg7zjgb7jgafjgZTpgKPntaHjgY/jgaDjgZXjgYTjgIINCg0KQ29weXJpZ2h0IMKpIEpSIEVh
+c3QgTmV0IFN0YXRpb24gQ28uLEx0ZC4gQWxsIFJpZ2h0cyBSZXNlcnZlZA==
+
+--=====002_Dragon247886736718_=====
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZPg0KPFAgYWxpZ249bGVm
+dD48U1BBTiANCnN0eWxlPSJXSURPV1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JP
+VU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQtSU5E
+RU5UOiAwcHg7IERJU1BMQVk6IGlubGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogQ2FsaWJy
+aSwgVHJlYnVjaGV0LCBBcmlhbCwgJ3NhbnMgc2VyaWYnOyBXSElURS1TUEFDRTogbm9ybWFsOyBP
+UlBIQU5TOiAyOyBGTE9BVDogbm9uZTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJn
+Yig1MSw1MSw1MSk7IEZPTlQtU0laRTogMTVweDsgRk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1TUEFD
+SU5HOiAwcHg7IGZvbnQtdmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNh
+cHM6IG5vcm1hbDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29yYXRp
+b24tc3R5bGU6IGluaXRpYWw7IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbCI+PEZPTlQg
+DQpzaXplPTMgZmFjZT3lvq7ova/pm4Xpu5E+PC9GT05UPjwvU1BBTj48L1A+DQo8UCBhbGlnbj1s
+ZWZ0PjxTUEFOIA0Kc3R5bGU9IldJRE9XUzogMjsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IEJBQ0tH
+Uk9VTkQtQ09MT1I6IHJnYigyNTUsMjU1LDI1NSk7IEZPTlQtU1RZTEU6IG5vcm1hbDsgVEVYVC1J
+TkRFTlQ6IDBweDsgRElTUExBWTogaW5saW5lICFpbXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBDYWxp
+YnJpLCBUcmVidWNoZXQsIEFyaWFsLCAnc2FucyBzZXJpZic7IFdISVRFLVNQQUNFOiBub3JtYWw7
+IE9SUEhBTlM6IDI7IEZMT0FUOiBub25lOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjog
+cmdiKDUxLDUxLDUxKTsgRk9OVC1TSVpFOiAxNXB4OyBGT05ULVdFSUdIVDogNDAwOyBXT1JELVNQ
+QUNJTkc6IDBweDsgZm9udC12YXJpYW50LWxpZ2F0dXJlczogbm9ybWFsOyBmb250LXZhcmlhbnQt
+Y2Fwczogbm9ybWFsOyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IHRleHQtZGVjb3Jh
+dGlvbi1zdHlsZTogaW5pdGlhbDsgdGV4dC1kZWNvcmF0aW9uLWNvbG9yOiBpbml0aWFsIj48SU1H
+IA0KYm9yZGVyPTAgaHNwYWNlPTAgYWx0PSIiIGFsaWduPWJhc2VsaW5lIA0Kc3JjPSJjaWQ6MDAw
+NEU2M0Q0REIyXzAyREMwREEwXzBBQkE5REQ0Ij48L1NQQU4+PC9QPg0KPFAgYWxpZ249bGVmdD48
+U1BBTiANCnN0eWxlPSJXSURPV1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5E
+LUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQtSU5ERU5U
+OiAwcHg7IERJU1BMQVk6IGlubGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwg
+VHJlYnVjaGV0LCBBcmlhbCwgJ3NhbnMgc2VyaWYnOyBXSElURS1TUEFDRTogbm9ybWFsOyBPUlBI
+QU5TOiAyOyBGTE9BVDogbm9uZTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYig1
+MSw1MSw1MSk7IEZPTlQtU0laRTogMTVweDsgRk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1TUEFDSU5H
+OiAwcHg7IGZvbnQtdmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNhcHM6
+IG5vcm1hbDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29yYXRpb24t
+c3R5bGU6IGluaXRpYWw7IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbCI+PEZPTlQgDQpz
+aXplPTMgZmFjZT3lrovkvZM+5pel6aCD44KI44KK44CM44GI44GN44Gt44Gj44Go44CN44KS44GU
+5Yip55So44GE44Gf44Gg44GN44GC44KK44GM44Go44GG44GU44GW44GE44G+44GZ44CCIDwvRk9O
+VD48L1NQQU4+PC9QPg0KPFAgYWxpZ249bGVmdD48U1BBTiANCnN0eWxlPSJXSURPV1M6IDI7IFRF
+WFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBG
+T05ULVNUWUxFOiBub3JtYWw7IFRFWFQtSU5ERU5UOiAwcHg7IERJU1BMQVk6IGlubGluZSAhaW1w
+b3J0YW50OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgVHJlYnVjaGV0LCBBcmlhbCwgJ3NhbnMgc2Vy
+aWYnOyBXSElURS1TUEFDRTogbm9ybWFsOyBPUlBIQU5TOiAyOyBGTE9BVDogbm9uZTsgTEVUVEVS
+LVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYig1MSw1MSw1MSk7IEZPTlQtU0laRTogMTVweDsg
+Rk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1TUEFDSU5HOiAwcHg7IGZvbnQtdmFyaWFudC1saWdhdHVy
+ZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNhcHM6IG5vcm1hbDsgLXdlYmtpdC10ZXh0LXN0cm9r
+ZS13aWR0aDogMHB4OyB0ZXh0LWRlY29yYXRpb24tc3R5bGU6IGluaXRpYWw7IHRleHQtZGVjb3Jh
+dGlvbi1jb2xvcjogaW5pdGlhbCI+PEZPTlQgDQpzaXplPTM+PEZPTlQgZmFjZT3lrovkvZM+44CM
+44GI44GN44Gt44Gj44Go44CN44Gu44Ki44Kr44Km44Oz44OI44Gv5Yi26ZmQ44GV44KM44Gm44GE
+44G+44GZ44CCPFNQQU4gDQpzdHlsZT0iV0lET1dTOiAyOyBURVhULVRSQU5TRk9STTogbm9uZTsg
+QkFDS0dST1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsgRk9OVC1TVFlMRTogbm9ybWFsOyBU
+RVhULUlOREVOVDogMHB4OyBESVNQTEFZOiBpbmxpbmUgIWltcG9ydGFudDsgRk9OVC1GQU1JTFk6
+IENhbGlicmksIFRyZWJ1Y2hldCwgQXJpYWwsICdzYW5zIHNlcmlmJzsgV0hJVEUtU1BBQ0U6IG5v
+cm1hbDsgT1JQSEFOUzogMjsgRkxPQVQ6IG5vbmU7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENP
+TE9SOiByZ2IoNTEsNTEsNTEpOyBGT05ULVNJWkU6IDE1cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFdP
+UkQtU1BBQ0lORzogMHB4OyBmb250LXZhcmlhbnQtbGlnYXR1cmVzOiBub3JtYWw7IGZvbnQtdmFy
+aWFudC1jYXBzOiBub3JtYWw7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgdGV4dC1k
+ZWNvcmF0aW9uLXN0eWxlOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6IGluaXRpYWwi
+PjxGT05UIA0Kc2l6ZT0zPuOAjOOBiOOBjeOBreOBo+OBqOOAjeOBryAyMDIyIOW5tCAy5pyIIDA2
+IOaXpSjml6Up44Gr44K144O844OT44K544KS44Oq44OL44Ol44O844Ki44Or44GE44Gf44GX44G+
+44GX44Gf44CC44GT44KMIA0K44Gr5Ly044GE44CB44CM44GI44GN44Gt44Gj44Go44CN5Yip55So
+6KaP57SE44O75Lya5ZOh6KaP57SE44KS5aSJ5pu044GX44CB5pyA5b6M44Gr44Ot44Kw44Kk44Oz
+44KS44GX44Gf5pel44KI44KK6LW3566X44GXIA0K44Gm77yS5bm05Lul5LiK44CM44GI44GN44Gt
+44Gj44Go44CN44Gu44GU5Yip55So77yI44Ot44Kw44Kk44Oz77yJ44GM56K66KqN44Gn44GN44Gq
+44GE44CM44GI44GN44Gt44Gj44Go44CN44Ki44Kr44Km44Oz44OIIA0K44Gv44CB6Ieq5YuV55qE
+44Gr6YCA5Lya5Yem55CG44GV44Gb44Gm44GE44Gf44Gg44GP44GT44Go44Go44GE44Gf44GX44G+
+44GX44Gf44CC44Gq44GK44CB5a++6LGh44Ki44Kr44Km44Oz44OI44Gu6Ieq5YuV6YCA5Lya5Yem
+55CG44KS44CB5pys6KaP57SE44Gr5Z+644Gl44GN44CBMjAyMiDlubQgMiDmnIggMjAgDQrml6Uo
+5pyIKeOCiOOCiumghuasoeOAgeWun+aWveOBleOBm+OBpuOBhOOBn+OBoOOBjeOBvuOBmeOAgjwv
+Rk9OVD48L1NQQU4+PC9GT05UPjwvRk9OVD48L1NQQU4+PC9QPg0KPFAgYWxpZ249bGVmdD48U1BB
+TiANCnN0eWxlPSJXSURPV1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNP
+TE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQtSU5ERU5UOiAw
+cHg7IERJU1BMQVk6IGlubGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgVHJl
+YnVjaGV0LCBBcmlhbCwgJ3NhbnMgc2VyaWYnOyBXSElURS1TUEFDRTogbm9ybWFsOyBPUlBIQU5T
+OiAyOyBGTE9BVDogbm9uZTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYig1MSw1
+MSw1MSk7IEZPTlQtU0laRTogMTVweDsgRk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1TUEFDSU5HOiAw
+cHg7IGZvbnQtdmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNhcHM6IG5v
+cm1hbDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29yYXRpb24tc3R5
+bGU6IGluaXRpYWw7IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbCI+PFNQQU4gDQpzdHls
+ZT0iV0lET1dTOiAyOyBURVhULVRSQU5TRk9STTogbm9uZTsgQkFDS0dST1VORC1DT0xPUjogcmdi
+KDI1NSwyNTUsMjU1KTsgRk9OVC1TVFlMRTogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyBESVNQ
+TEFZOiBpbmxpbmUgIWltcG9ydGFudDsgRk9OVC1GQU1JTFk6IENhbGlicmksIFRyZWJ1Y2hldCwg
+QXJpYWwsICdzYW5zIHNlcmlmJzsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsgT1JQSEFOUzogMjsgRkxP
+QVQ6IG5vbmU7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENPTE9SOiByZ2IoNTEsNTEsNTEpOyBG
+T05ULVNJWkU6IDE1cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFdPUkQtU1BBQ0lORzogMHB4OyBmb250
+LXZhcmlhbnQtbGlnYXR1cmVzOiBub3JtYWw7IGZvbnQtdmFyaWFudC1jYXBzOiBub3JtYWw7IC13
+ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgdGV4dC1kZWNvcmF0aW9uLXN0eWxlOiBpbml0
+aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6IGluaXRpYWwiPjxGT05UIA0Kc2l6ZT0zIGZhY2U9
+5a6L5L2TPu+8kuW5tOS7peS4iuODreOCsOOCpOODs+OBl+OBpuOBhOOBquOBhOOBiuWuouOBleOB
+vuOBp+OAgeS7iuW+jOOCguOAjOOBiOOBjeOBreOBo+OBqOOAjeOCkuOBlOWIqeeUqOOBhOOBn+OB
+oOOBkeOCi+WgtOWQiCDjga/jgIEyMDIyIOW5tCA0IOaciCAyNCANCuaXpSjml6Up44KI44KK44KC
+5YmN44Gr44CB5LiA5bqm44Ot44Kw44Kk44Oz5pON5L2c44KS44GK6aGY44GE44GE44Gf44GX44G+
+44GZ44CCIDwvRk9OVD48L1NQQU4+PC9TUEFOPjwvUD4NCjxQIGFsaWduPWxlZnQ+PFNQQU4gDQpz
+dHlsZT0iV0lET1dTOiAyOyBURVhULVRSQU5TRk9STTogbm9uZTsgQkFDS0dST1VORC1DT0xPUjog
+cmdiKDI1NSwyNTUsMjU1KTsgRk9OVC1TVFlMRTogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyBE
+SVNQTEFZOiBpbmxpbmUgIWltcG9ydGFudDsgRk9OVC1GQU1JTFk6IENhbGlicmksIFRyZWJ1Y2hl
+dCwgQXJpYWwsICdzYW5zIHNlcmlmJzsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsgT1JQSEFOUzogMjsg
+RkxPQVQ6IG5vbmU7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENPTE9SOiByZ2IoNTEsNTEsNTEp
+OyBGT05ULVNJWkU6IDE1cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFdPUkQtU1BBQ0lORzogMHB4OyBm
+b250LXZhcmlhbnQtbGlnYXR1cmVzOiBub3JtYWw7IGZvbnQtdmFyaWFudC1jYXBzOiBub3JtYWw7
+IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgdGV4dC1kZWNvcmF0aW9uLXN0eWxlOiBp
+bml0aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6IGluaXRpYWwiPjxGT05UIA0Kc2l6ZT00PjxT
+VFJPTkc+PEZPTlQgZmFjZT3lrovkvZM+4oeSPC9GT05UPjxBIGhyZWY9Imh0dHBzOi8vd3d3LmVr
+aS5jby5qcC52cXVua3NlLmNuLyI+PEZPTlQgDQpmYWNlPeWui+S9kz7jg63jgrDjgqTjg7Pjga/j
+gZPjgaHjgok8L0ZPTlQ+PC9BPjwvU1RST05HPjwvRk9OVD48L1NQQU4+PC9QPg0KPFAgYWxpZ249
+bGVmdD48U1BBTiANCnN0eWxlPSJXSURPV1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNL
+R1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQt
+SU5ERU5UOiAwcHg7IERJU1BMQVk6IGlubGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogQ2Fs
+aWJyaSwgVHJlYnVjaGV0LCBBcmlhbCwgJ3NhbnMgc2VyaWYnOyBXSElURS1TUEFDRTogbm9ybWFs
+OyBPUlBIQU5TOiAyOyBGTE9BVDogbm9uZTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6
+IHJnYig1MSw1MSw1MSk7IEZPTlQtU0laRTogMTVweDsgRk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1T
+UEFDSU5HOiAwcHg7IGZvbnQtdmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50
+LWNhcHM6IG5vcm1hbDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29y
+YXRpb24tc3R5bGU6IGluaXRpYWw7IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbCI+PEZP
+TlQgDQpzaXplPTMgZmFjZT3lrovkvZM+4oC744GI44GN44Gt44Gj44Go44OI44OD44OX44Oa44O8
+44K45Y+z5LiK44Gu44Ot44Kw44Kk44Oz44Oc44K/44Oz44KI44KK44Ot44Kw44Kk44Oz44GX44Gm
+44GP44Gg44GV44GE44CCPC9GT05UPjwvU1BBTj48L1A+DQo8UCBhbGlnbj1sZWZ0PjxTUEFOIA0K
+c3R5bGU9IldJRE9XUzogMjsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IEJBQ0tHUk9VTkQtQ09MT1I6
+IHJnYigyNTUsMjU1LDI1NSk7IEZPTlQtU1RZTEU6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6IDBweDsg
+RElTUExBWTogaW5saW5lICFpbXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBUcmVidWNo
+ZXQsIEFyaWFsLCAnc2FucyBzZXJpZic7IFdISVRFLVNQQUNFOiBub3JtYWw7IE9SUEhBTlM6IDI7
+IEZMT0FUOiBub25lOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDUxLDUxLDUx
+KTsgRk9OVC1TSVpFOiAxNXB4OyBGT05ULVdFSUdIVDogNDAwOyBXT1JELVNQQUNJTkc6IDBweDsg
+Zm9udC12YXJpYW50LWxpZ2F0dXJlczogbm9ybWFsOyBmb250LXZhcmlhbnQtY2Fwczogbm9ybWFs
+OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IHRleHQtZGVjb3JhdGlvbi1zdHlsZTog
+aW5pdGlhbDsgdGV4dC1kZWNvcmF0aW9uLWNvbG9yOiBpbml0aWFsIj48Rk9OVCANCnNpemU9MyBm
+YWNlPeWui+S9kz7jgYrllY/jgYTlkIjjgo/jgZvlhYg8QlI+44GI44GN44Gt44Gj44Go44K144Od
+44O844OI44K744Oz44K/44O8PEJSPlRFTCAwNTAtMjAxNi01MDAwPEJSPuWPl+S7mOaZgumWkyAN
+CjjmmYIwMOWIhu+9njIy5pmCMDDliIY8QlI+44K144Kk44OI6YGL5Za244O7566h55CGPEJSPkpS
+5p2x5pel5pys44ON44OD44OI44K544OG44O844K344On44OzPEJSPi0tLS0tLS0tLS0tLS0tLS0t
+LS0tPC9GT05UPjwvU1BBTj48L1A+DQo8UCBhbGlnbj1sZWZ0PjxTUEFOIA0Kc3R5bGU9IldJRE9X
+UzogMjsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IEJBQ0tHUk9VTkQtQ09MT1I6IHJnYigyNTUsMjU1
+LDI1NSk7IEZPTlQtU1RZTEU6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6IDBweDsgRElTUExBWTogaW5s
+aW5lICFpbXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBUcmVidWNoZXQsIEFyaWFsLCAn
+c2FucyBzZXJpZic7IFdISVRFLVNQQUNFOiBub3JtYWw7IE9SUEhBTlM6IDI7IEZMT0FUOiBub25l
+OyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDUxLDUxLDUxKTsgRk9OVC1TSVpF
+OiAxNXB4OyBGT05ULVdFSUdIVDogNDAwOyBXT1JELVNQQUNJTkc6IDBweDsgZm9udC12YXJpYW50
+LWxpZ2F0dXJlczogbm9ybWFsOyBmb250LXZhcmlhbnQtY2Fwczogbm9ybWFsOyAtd2Via2l0LXRl
+eHQtc3Ryb2tlLXdpZHRoOiAwcHg7IHRleHQtZGVjb3JhdGlvbi1zdHlsZTogaW5pdGlhbDsgdGV4
+dC1kZWNvcmF0aW9uLWNvbG9yOiBpbml0aWFsIj48Rk9OVCANCnNpemU9MyBmYWNlPeWui+S9kz7j
+gZPjga7jg6Hjg7zjg6vjga/jgIzjgYjjgY3jga3jgaPjgajjgI3jgojjgoroh6rli5XphY3kv6Hj
+gZXjgozjgabjgYTjgb7jgZnjgII8L0ZPTlQ+PC9TUEFOPjwvUD4NCjxQIGFsaWduPWxlZnQ+PFNQ
+QU4gDQpzdHlsZT0iV0lET1dTOiAyOyBURVhULVRSQU5TRk9STTogbm9uZTsgQkFDS0dST1VORC1D
+T0xPUjogcmdiKDI1NSwyNTUsMjU1KTsgRk9OVC1TVFlMRTogbm9ybWFsOyBURVhULUlOREVOVDog
+MHB4OyBESVNQTEFZOiBpbmxpbmUgIWltcG9ydGFudDsgRk9OVC1GQU1JTFk6IENhbGlicmksIFRy
+ZWJ1Y2hldCwgQXJpYWwsICdzYW5zIHNlcmlmJzsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsgT1JQSEFO
+UzogMjsgRkxPQVQ6IG5vbmU7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENPTE9SOiByZ2IoNTEs
+NTEsNTEpOyBGT05ULVNJWkU6IDE1cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFdPUkQtU1BBQ0lORzog
+MHB4OyBmb250LXZhcmlhbnQtbGlnYXR1cmVzOiBub3JtYWw7IGZvbnQtdmFyaWFudC1jYXBzOiBu
+b3JtYWw7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgdGV4dC1kZWNvcmF0aW9uLXN0
+eWxlOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6IGluaXRpYWwiPjxGT05UIA0Kc2l6
+ZT0zIGZhY2U95a6L5L2TPui/lOS/oeOBhOOBn+OBoOOBjeOBvuOBl+OBpuOCguWvvuW/nOiHtOOB
+l+OBi+OBreOBvuOBmeOBruOBp+OAgeOBguOCieOBi+OBmOOCgeOBlOS6huaJv+OBj+OBoOOBleOB
+hOOAgjwvRk9OVD48L1NQQU4+PC9QPg0KPFAgYWxpZ249bGVmdD48U1BBTiANCnN0eWxlPSJXSURP
+V1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1
+NSwyNTUpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQtSU5ERU5UOiAwcHg7IERJU1BMQVk6IGlu
+bGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgVHJlYnVjaGV0LCBBcmlhbCwg
+J3NhbnMgc2VyaWYnOyBXSElURS1TUEFDRTogbm9ybWFsOyBPUlBIQU5TOiAyOyBGTE9BVDogbm9u
+ZTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYig1MSw1MSw1MSk7IEZPTlQtU0la
+RTogMTVweDsgRk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1TUEFDSU5HOiAwcHg7IGZvbnQtdmFyaWFu
+dC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNhcHM6IG5vcm1hbDsgLXdlYmtpdC10
+ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29yYXRpb24tc3R5bGU6IGluaXRpYWw7IHRl
+eHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbCI+PEZPTlQgDQpzaXplPTMgDQpmYWNlPeWui+S9
+kz7jgYrlv4PlvZPjgZ/jgorjga7jgarjgYTmlrnjga/jgIHoqqDjgavmgZDjgozlhaXjgorjgb7j
+gZnjgYzjgZPjga7jg6Hjg7zjg6vjga7liYrpmaTjgpLjgYrpoZjjgYTjgYTjgZ/jgZfjgb7jgZnj
+gILjgZTkuI3mmI7jgarngrnjga7jgYLjgovmlrnjga/jgIHjgIzjgYjjgY3jga3jgaPjgajjgI3j
+grXjg53jg7zjg4jjgrvjg7Pjgr/jg7zjgb7jgafjgZTpgKPntaHjgY/jgaDjgZXjgYTjgII8L0ZP
+TlQ+PC9TUEFOPjwvUD4NCjxQIGFsaWduPWxlZnQ+PFNQQU4gDQpzdHlsZT0iV0lET1dTOiAyOyBU
+RVhULVRSQU5TRk9STTogbm9uZTsgQkFDS0dST1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsg
+Rk9OVC1TVFlMRTogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyBESVNQTEFZOiBpbmxpbmUgIWlt
+cG9ydGFudDsgRk9OVC1GQU1JTFk6IENhbGlicmksIFRyZWJ1Y2hldCwgQXJpYWwsICdzYW5zIHNl
+cmlmJzsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsgT1JQSEFOUzogMjsgRkxPQVQ6IG5vbmU7IExFVFRF
+Ui1TUEFDSU5HOiBub3JtYWw7IENPTE9SOiByZ2IoNTEsNTEsNTEpOyBGT05ULVNJWkU6IDE1cHg7
+IEZPTlQtV0VJR0hUOiA0MDA7IFdPUkQtU1BBQ0lORzogMHB4OyBmb250LXZhcmlhbnQtbGlnYXR1
+cmVzOiBub3JtYWw7IGZvbnQtdmFyaWFudC1jYXBzOiBub3JtYWw7IC13ZWJraXQtdGV4dC1zdHJv
+a2Utd2lkdGg6IDBweDsgdGV4dC1kZWNvcmF0aW9uLXN0eWxlOiBpbml0aWFsOyB0ZXh0LWRlY29y
+YXRpb24tY29sb3I6IGluaXRpYWwiPjxGT05UIA0Kc2l6ZT0zIGZhY2U95a6L5L2TPjwvRk9OVD48
+L1NQQU4+Jm5ic3A7PC9QPg0KPFAgYWxpZ249Y2VudGVyPjxGT05UIHN0eWxlPSJCQUNLR1JPVU5E
+LUNPTE9SOiAjZjVmNWY1IiBjb2xvcj0jMzMzMzMzIHNpemU9MSANCmZhY2U95a6L5L2TPkNvcHly
+aWdodCDCqSBKUiBFYXN0IE5ldCBTdGF0aW9uIENvLixMdGQuIEFsbCBSaWdodHMgUmVzZXJ2ZWQ8
+L0ZPTlQ+PFNQQU4gDQpzdHlsZT0iV0lET1dTOiAyOyBURVhULVRSQU5TRk9STTogbm9uZTsgQkFD
+S0dST1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsgRk9OVC1TVFlMRTogbm9ybWFsOyBURVhU
+LUlOREVOVDogMHB4OyBESVNQTEFZOiBpbmxpbmUgIWltcG9ydGFudDsgRk9OVC1GQU1JTFk6IENh
+bGlicmksIFRyZWJ1Y2hldCwgQXJpYWwsICdzYW5zIHNlcmlmJzsgV0hJVEUtU1BBQ0U6IG5vcm1h
+bDsgT1JQSEFOUzogMjsgRkxPQVQ6IG5vbmU7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENPTE9S
+OiByZ2IoNTEsNTEsNTEpOyBGT05ULVNJWkU6IDE1cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFdPUkQt
+U1BBQ0lORzogMHB4OyBmb250LXZhcmlhbnQtbGlnYXR1cmVzOiBub3JtYWw7IGZvbnQtdmFyaWFu
+dC1jYXBzOiBub3JtYWw7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgdGV4dC1kZWNv
+cmF0aW9uLXN0eWxlOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6IGluaXRpYWwiPjxT
+UEFOIA0Kc3R5bGU9IldJRE9XUzogMjsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IEJBQ0tHUk9VTkQt
+Q09MT1I6IHJnYigyNTUsMjU1LDI1NSk7IEZPTlQtU1RZTEU6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6
+IDBweDsgRElTUExBWTogaW5saW5lICFpbXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBU
+cmVidWNoZXQsIEFyaWFsLCAnc2FucyBzZXJpZic7IFdISVRFLVNQQUNFOiBub3JtYWw7IE9SUEhB
+TlM6IDI7IEZMT0FUOiBub25lOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDUx
+LDUxLDUxKTsgRk9OVC1TSVpFOiAxNXB4OyBGT05ULVdFSUdIVDogNDAwOyBXT1JELVNQQUNJTkc6
+IDBweDsgZm9udC12YXJpYW50LWxpZ2F0dXJlczogbm9ybWFsOyBmb250LXZhcmlhbnQtY2Fwczog
+bm9ybWFsOyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IHRleHQtZGVjb3JhdGlvbi1z
+dHlsZTogaW5pdGlhbDsgdGV4dC1kZWNvcmF0aW9uLWNvbG9yOiBpbml0aWFsIj48Rk9OVCANCnNp
+emU9Mj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDE0cHgiPjwvUD48L1NQQU4+PC9GT05UPjwv
+U1BBTj48L1NQQU4+PC9CT0RZPjwvSFRNTD4NCg==
+
+--=====002_Dragon247886736718_=====--
+
+--=====003_Dragon247886736718_=====
+Content-Type: image/png;
+	name="logo_ekinet.png"
+Content-Transfer-Encoding: base64
+Content-ID: <0004E63D4DB2_02DC0DA0_0ABA9DD4>
+
+iVBORw0KGgoAAAANSUhEUgAAALoAAAA0CAYAAAA9tCJZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2
+MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv
+IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS
+ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD
+cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0
+YW5jZUlEPSJ4bXAuaWlkOjkyNUI5ODVFRjE1RjExRTg5RjY2QkI1MEU4NjNCNTIxIiB4bXBNTTpE
+b2N1bWVudElEPSJ4bXAuZGlkOjkyNUI5ODVGRjE1RjExRTg5RjY2QkI1MEU4NjNCNTIxIj4gPHht
+cE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTI1Qjk4NUNGMTVGMTFF
+ODlGNjZCQjUwRTg2M0I1MjEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTI1Qjk4NURGMTVG
+MTFFODlGNjZCQjUwRTg2M0I1MjEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94
+OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5HOVB4AAAZqElEQVR42uxdB3wU1dY/CQk1QAKE
+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
+UAAAAABJRU5ErkJggg==
+
+--=====003_Dragon247886736718_=====--
 
 
---===============4760977399459230182==
+
+--===============7566477978126036895==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4760977399459230182==
+--===============7566477978126036895==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -558,4 +536,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4760977399459230182==--
+--===============7566477978126036895==--
+
+
