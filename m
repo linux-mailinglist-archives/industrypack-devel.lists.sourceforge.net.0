@@ -2,85 +2,101 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id A0D5351254D
-	for <lists+industrypack-devel@lfdr.de>; Thu, 28 Apr 2022 00:32:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5750C513463
+	for <lists+industrypack-devel@lfdr.de>; Thu, 28 Apr 2022 15:04:24 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1njqCx-0001Vw-7L
-	for lists+industrypack-devel@lfdr.de; Wed, 27 Apr 2022 22:32:28 +0000
+	id 1nk3oj-0005a0-Sx
+	for lists+industrypack-devel@lfdr.de; Thu, 28 Apr 2022 13:04:22 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <jr-odekake.net@fusrhuv.cn>) id 1njqCv-0001Vm-Sb
- for industrypack-devel@lists.sourceforge.net; Wed, 27 Apr 2022 22:32:26 +0000
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2) (envelope-from
+ <bounce_jjakkj_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
+ id 1nk3oh-0005Zb-8R
+ for industrypack-devel@lists.sourceforge.net; Thu, 28 Apr 2022 13:04:20 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=XCmO96wHBUp61ziXSAYyH9SAILCwHzwqrNhW94P+9Vs=; b=Jw904/xrluM2Ppbflt+zRxQ3OM
- aURfitinJKMw7PSCXS3r4/uQ+aDdNhgSqoE4PQG6EoImX+4SKRnFhs2tEgiR6gGyBn5Br5guTbv7z
- JCp/HuS/KXycUbc7TZNjR+TVB+m7/r6icSpYuY7h2uY0AwKlG0V0AgXqctDrevxwhQ3M=;
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
+ Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=sNJ9rgWI/15jaFLEe+usOawKvFaq3TKvPJeaLsdLuzk=; b=Xlzlme07Vy3Xh6vqqo2w6tY1Wb
+ 6OgBiqXHbuPNDT9ZM3C5FZqEu51iMq46U5Hrp7yxvj4PyjLFzY4p1YfGCNxBgfuOn3P/uqmAV01ig
+ qhLDNubVCPqO7cSUywM0oqMS+MtyhAQiedj7OpgPNkKIuKSfGxkVr+Ech/n4Wjyfrd+E=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=XCmO96wHBUp61ziXSAYyH9SAILCwHzwqrNhW94P+9Vs=; b=f
- IlNP+uNdhYyVlMxtofTeYcPwheb1HL5aRpjv858X9xe0iOOCA71glHpOHcnqDEXXStD2ei5NXD0QM
- NLtw8pz+a93kTkzg8pdvOppqMnm+nQzq3YxWZJx6KoT/E4GLc4OlFaLaRjzPXhVIDvuRswDBcOyhZ
- C6iQ5jpW+m4T90EI=;
-Received: from [134.122.146.35] (helo=mail.fusrhuv.cn)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
+ List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=sNJ9rgWI/15jaFLEe+usOawKvFaq3TKvPJeaLsdLuzk=; b=kV7AeVP/CWuKIoPyqcY/J6meOt
+ IhoaIT/CEGxi/Wfa61j64qUVQOTwjSjKux9ER4m+tJ19VbvSTmuuFqY2xKWDRSWcntIMBLyQa+n7P
+ 39MJKM5VKWMSWBlwZ5z1uLbmfXuod0ogNBFrt/OVGyb8MIXdeBm4CqsU7vdQ3cuZegM0=;
+Received: from em.sbaloanadvice.com ([216.24.225.131])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1njqCv-00C7lD-Um
- for industrypack-devel@lists.sourceforge.net; Wed, 27 Apr 2022 22:32:26 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=fusrhuv.cn; 
- h=Date:From:To:Subject:Message-ID:Mime-Version:Content-Type;
- i=jr-odekake.net@fusrhuv.cn;
- bh=XCmO96wHBUp61ziXSAYyH9SAILCwHzwqrNhW94P+9Vs=;
- b=Hq2Cripp1qKwSQXmehe2GLmvEkOHp8l+jz7Jizej2rJitAb++ihGwkmPK57eXckVp0PJ+d9bxLkn
- ubDX3G7ypk9b82GOCmhHyk5nRDIy8MwWmyLYm0ih+FKmNsCcnJSfXfnEefpB6fnh5UDviSWj8ehx
- bxZGcG1Z7lZUufJsE7I=
-Date: Thu, 28 Apr 2022 05:34:48 +0900
-From: "jr-odekake.net" <jr-odekake.net@fusrhuv.cn>
+ id 1nk3of-0003QN-N4
+ for industrypack-devel@lists.sourceforge.net; Thu, 28 Apr 2022 13:04:19 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
+ h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
+ Content-Type:Date:Subject:From:To:CC; x=1651237457; i=admin@sbaloanadvice.com; 
+ bh=sNJ9rgWI/15jaFLEe+usOawKvFaq3TKvPJeaLsdLuzk=;
+ b=p8vmd4KgawvZZaJYbyCSYNg4f89QrXUA/5D+MxQcJ52H1P4/MlWPEPsN8lg4Cm+xFysMVT3VGv04
+ KME/3n91LqFUvGivi7DZF7gHsC/24Ha4ZhS+gZNKaYMHffA2CBzjqnI7rVop+fzcMCPAw4G7rkbN
+ J0EeGwtOIGvY0IHPw7Q=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
+ h=List-Unsubscribe:Message-ID:Date:Subject:To:From:Reply-To:MIME-Version:
+ Content-Type:Date:Subject:From:To:CC; x=1651237457;
+ bh=sNJ9rgWI/15jaFLEe+usOawKvFaq3TKvPJeaLsdLuzk=;
+ b=j/tqdy9zfq5oMeidVr75P2JknuVQ9R2ZZwpeqXQsKqROrnTflzxNHyx30xikD7LQ0cOkzk+RTx0j
+ 2CBisrRaGIyli8oFRz2Jo3KVdW3YQM0GBYNQOVEAbkbcRwOofiaTj1T7yG4IHEvYUMjHMuYtTjtJ
+ a0IDmtx+7dGLc1qLQTA=
+Received: by em.sbaloanadvice.com id hda8ce2r99c9 for
+ <industrypack-devel@lists.sourceforge.net>;
+ Thu, 28 Apr 2022 09:01:50 -0400 (envelope-from
+ <bounce_jjakkj_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
+X-Campaign-Shard: 2
+Bounces-To: bounce_vgpup_cezqcnf_n@em.sbaloanadvice.com
+Message-ID: <1651150894790.201612365.6726998.421896101@em.sbaloanadvice.com>
+X-Campaign: 201612365/6726998/421896101
+Date: Thu, 28 Apr 2022 09:01:50 -0400
 To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20220428053502253186@fusrhuv.cn>
-Mime-Version: 1.0
-X-Spam-Score: 1.1 (+)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+From: "SBA Loan Advice" <admin@sbaloanadvice.com>
+MIME-Version: 1.0
+X-Spam-Score: 0.9 (/)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  日頃より「JRおでかけネット」をご利用いただきありがとうございます。
-    「JRおでかけネット」のアカウントは制限されています。あなたのアカウン
-    [...] 
- 
- Content analysis details:   (1.1 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  How we are helping small business increase EIDL funds,
+ reconsiderations, 
+ and appeals Need request for increase, reconsideration, or appeal on your
+ EIDL? Click Here To Get Streamlined *Please provide your last 4 months bank
+ statements for cashflow analysis* 
+ Content analysis details:   (0.9 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 1.0 HK_RANDOM_REPLYTO      Reply-To username looks random
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.0 HTML_FONT_FACE_BAD     BODY: HTML font face is not a word
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-X-Headers-End: 1njqCv-00C7lD-Um
-Subject: [Industrypack-devel] =?utf-8?b?44CQSlLjgYrjgafjgYvjgZHjg43jg4M=?=
-	=?utf-8?b?44OI44CR44Ki44Kr44Km44Oz44OI5oOF5aCx44KS44GU56K66KqN44GP?=
-	=?utf-8?b?44Gg44GV44GE77yB55Wq5Y+377yaMDYzNzI0Mjg5MQ==?=
+ author's domain
+ 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+ Colors in HTML
+X-Headers-End: 1nk3of-0003QN-N4
+Subject: [Industrypack-devel] EIDL Funds are running low. Have you requested
+ an increase?
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -92,337 +108,446 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============2176646107762783664=="
+Reply-To: SBA Loan Advice <reply_vgpup_cezqcnf_n@em.sbaloanadvice.com>
+Content-Type: multipart/mixed; boundary="===============7116405091601978843=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+--===============7116405091601978843==
+Content-Type: text/html;charset=UTF-8
 
---===============2176646107762783664==
-Content-Type: multipart/related;
-	type="multipart/alternative";
-	boundary="=====003_Dragon362033537511_====="
+<!-- X-Campaign: 201612365/6726998/421896101 -->
+<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">How we are helping small business increase EIDL funds, reconsiderations, and appeals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head style="line-height: inherit">
+        <!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" style="line-height: inherit">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" style="line-height: inherit">
+        <meta name="x-apple-disable-message-reformatting" style="line-height: inherit">
+        <!--[if !mso]><!-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" style="line-height: inherit"><!--<![endif]-->
+        <title style="line-height: inherit"></title>
+        <style type="text/css" style="line-height: inherit">
+            @media only screen and (min-width: 620px) {
+            .u-row {
+            width: 600px !important;
+            }
+            .u-row .u-col {
+            vertical-align: top;
+            }
+            .u-row .u-col-33p33 {
+            width: 199.98px !important;
+            }
+            .u-row .u-col-100 {
+            width: 600px !important;
+            }
+            }
+            @media (max-width: 620px) {
+            .u-row-container {
+            max-width: 100% !important;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            }
+            .u-row .u-col {
+            min-width: 320px !important;
+            max-width: 100% !important;
+            display: block !important;
+            }
+            .u-row {
+            width: calc(100% - 40px) !important;
+            }
+            .u-col {
+            width: 100% !important;
+            }
+            .u-col > div {
+            margin: 0 auto;
+            }
+            }
+            body {
+            margin: 0;
+            padding: 0;
+            }
+            table,
+            tr,
+            td {
+            vertical-align: top;
+            border-collapse: collapse;
+            }
+            p {
+            margin: 0;
+            }
+            .ie-container table,
+            .mso-container table {
+            table-layout: fixed;
+            }
+            * {
+            line-height: inherit;
+            }
+            a[x-apple-data-detectors='true'] {
+            color: inherit !important;
+            text-decoration: none !important;
+            }
+            table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } @media (max-width: 480px) { #u_content_heading_5 .v-font-size { font-size: 20px !important; } }
+        </style>
+    </head>
+    <body class="clean-body u_body" style="line-height: inherit;margin: 0px;padding: 0px;text-size-adjust: 100%;color: #000000" bgcolor="#e7e7e7" data-new-gr-c-s-check-loaded="14.1056.0">
+        <!--[if IE]><div class="ie-container"><![endif]-->
+        <!--[if mso]><div class="mso-container"><![endif]-->
+        <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;table-layout: fixed;border-spacing: 0px;min-width: 320px;margin: 0px auto" cellpadding="0" cellspacing="0" width="100%" bgcolor="#e7e7e7">
+            <tbody style="line-height: inherit">
+                <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                    <td style="line-height: inherit;vertical-align: top;border-collapse: collapse !important;color: #000000;word-break: break-word">
+                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #e7e7e7;"><![endif]-->
+                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
+                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
+                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
+                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
+                    <!--[if (mso)|(IE)]><td align="center" width="600" style="background-color: #ffffff;width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
+                    <div style="line-height: inherit;background-color: #ffffff;width: 100% !important">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px;font-family: arial,helvetica,sans-serif" align="left">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000">
+                                    <tbody style="line-height: inherit">
+                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                            <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;padding-right: 0px;padding-left: 0px" align="center">
+                                            <img src="https://images.unlayer.com/projects/71061/1648137880554-EIDL1.png" alt="EIDL" title="EIDL" style="line-height: inherit;outline: none;text-decoration: none;clear: both;border: none;max-width: 321px;display: inline-block !important" width="100%">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="6%" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-top: 1px solid #ffffff;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                    <tbody style="line-height: inherit">
+                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                            <td style="line-height: 0px;vertical-align: top;border-collapse: collapse !important;color: #000000;word-break: break-word;font-size: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                            <span style="line-height: inherit" id="email_" name="email_">&#160;</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table id="u_content_heading_5" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 1px;font-family: arial,helvetica,sans-serif" align="left">
+                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #0a3759;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 22px">
+                                Need request for increase, reconsideration, or appeal on your EIDL?&#160;
+                                </h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <div style="line-height: inherit;text-align: center">
+                                <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;font-family:arial,helvetica,sans-serif;"><tr><td style="font-family:arial,helvetica,sans-serif;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.sbaloanadvice.com/ben" style="height:37px; v-text-anchor:middle; width:520px;" arcsize="11%" strokecolor="#0a3759" strokeweight="1px" fillcolor="#3AAEE0"><w:anchorlock/><center style="color:#FFFFFF;font-family:arial,helvetica,sans-serif;"><![endif]-->
+                                <a href="http://click.sbaloanadvice.com/click/gfka-406l2-2bxa9-6z6p459/" target="_blank" style="line-height: inherit;color: #FFFFFF;text-decoration: none;border: 1px solid #0a3759;box-sizing: border-box;display: inline-block;font-family: arial,helvetica,sans-serif;-webkit-text-size-adjust: none;text-align: center;background-color: #3AAEE0;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;width: 90%;max-width: 100%;overflow-wrap: break-word;word-break: break-word;word-wrap: break-word;mso-border-alt: none" id="auto_assign_link_num_1" name="https   sbaloanadvice ben"> <span style="line-height: 120%;display: block;padding: 10px 20px" id="email_2" name="email_2"><strong style="line-height: inherit"><span style="line-height: 16.8px;font-size: 14px" id="email_3" name="email_3">Click Here To Get Streamlined&nbsp;</span></strong>
+</span> </a>
+                                <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
+                                </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px 10px 10px;font-family: arial, helvetica, sans-serif;text-align: center" align="left">
+                                <strong style="line-height: inherit;font-family: arial, helvetica, sans-serif;text-align: center;background-color: #ffffff"><span id="email_4" name="email_4" style="line-height: inherit;font-size: 14px">*Please provide your last 4 months bank statements for cashflow analysis*</span></strong>
+                                <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-top: 1px solid #0a3759;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                    <tbody style="line-height: inherit">
+                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                            <td style="line-height: 0px;vertical-align: top;border-collapse: collapse !important;color: #000000;word-break: break-word;font-size: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+                                            <span style="line-height: inherit" id="email_5" name="email_5">&#160;</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if (!mso)&(!IE)]><!--></div>
+                    <!--<![endif]-->
+                    </div>
+                    </div>
+                    <!--[if (mso)|(IE)]></td><![endif]-->
+                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                    </div>
+                    </div>
+                    </div>
+                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
+                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
+                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
+                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
+                    <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
+                    <div style="line-height: inherit;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px;-moz-border-radius: 0px">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style="line-height: inherit;padding: 0px;border-radius: 0px;-webkit-border-radius: 0px;-moz-border-radius: 0px;border: 0px solid transparent"><!--<![endif]-->
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <div style="line-height: 140%;color: #e03e2d;text-align: left;word-wrap: break-word">
+                                <p style="line-height: 140%;margin: 0;font-size: 14px;text-align: center"><span style="line-height: 22.4px;font-size: 16px" id="email_6" name="email_6"><strong style="line-height: inherit">COVID-19 EIDL funds are expected to be exhausted in mid-April 2022, so if you would like to request an increase in the amount of your COVID-19 EIDL, you are advised to do so now. </strong></span></p>
+                                </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if (!mso)&(!IE)]><!--></div>
+                    <!--<![endif]-->
+                    </div>
+                    </div>
+                    <!--[if (mso)|(IE)]></td><![endif]-->
+                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                    </div>
+                    </div>
+                    </div>
+                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
+                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
+                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
+                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
+                    <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
+                    <div style="line-height: inherit;width: 100% !important">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px 6px;font-family: arial,helvetica,sans-serif" align="left">
+                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #0a3759;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 21px">
+                                How we have been helping thousands get funded faster, request for an increase, reconsiderations, and appeals:
+                                </h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 0px 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <div style="line-height: 140%;text-align: right;word-wrap: break-word">
+                                <ul style="line-height: inherit">
+                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">We are a preferred partner of the SBA</li>
+                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">We manage everything for you from start to finish</li>
+                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">A dedicated team to get those funds into your account faster</li>
+                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">Our team overcomes unverifiable information, unsatisfactory credit history, and withdrawn applications with the SBA</li>
+                                    <li style="line-height: 19.6px;font-size: 14px;text-align: left">Helped increase the amount for the EIDL with our customers</li>
+                                </ul>
+                                </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if (!mso)&(!IE)]><!--></div>
+                    <!--<![endif]-->
+                    </div>
+                    </div>
+                    <!--[if (mso)|(IE)]></td><![endif]-->
+                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                    </div>
+                    </div>
+                    </div>
+                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
+                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #0a3759">
+                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
+                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #0a3759;"><![endif]-->
+                    <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+                    <div class="u-col u-col-33p33" style="line-height: inherit;max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top">
+                    <div style="line-height: inherit;width: 100% !important">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 30px">
+                                1000+
+                                </h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 14px">
+                                EIDL &amp; Reconsiderations
+                                </h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if (!mso)&(!IE)]><!--></div>
+                    <!--<![endif]-->
+                    </div>
+                    </div>
+                    <!--[if (mso)|(IE)]></td><![endif]-->
+                    <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+                    <div class="u-col u-col-33p33" style="line-height: inherit;max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top">
+                    <div style="line-height: inherit;width: 100% !important">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 30px">
+                                1000+
+                                </h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 14px">
+                                Happy Clients
+                                </h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if (!mso)&(!IE)]><!--></div>
+                    <!--<![endif]-->
+                    </div>
+                    </div>
+                    <!--[if (mso)|(IE)]></td><![endif]-->
+                    <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+                    <div class="u-col u-col-33p33" style="line-height: inherit;max-width: 320px;min-width: 200px;display: table-cell;vertical-align: top">
+                    <div style="line-height: inherit;width: 100% !important">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 30px">
+                                60+
+                                </h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <h1 class="v-font-size" style="line-height: 140%;margin: 0px;color: #ffffff;text-align: center;word-wrap: break-word;font-weight: normal;font-family: arial black,avant garde,arial;font-size: 14px">
+                                Tech Experts
+                                </h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if (!mso)&(!IE)]><!--></div>
+                    <!--<![endif]-->
+                    </div>
+                    </div>
+                    <!--[if (mso)|(IE)]></td><![endif]-->
+                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                    </div>
+                    </div>
+                    </div>
+                    <div class="u-row-container" style="line-height: inherit;padding: 0px;background-color: transparent">
+                    <div class="u-row" style="line-height: inherit;margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff">
+                    <div style="line-height: inherit;border-collapse: collapse;display: table;width: 100%;background-color: transparent">
+                    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #ffffff;"><![endif]-->
+                    <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+                    <div class="u-col u-col-100" style="line-height: inherit;max-width: 320px;min-width: 600px;display: table-cell;vertical-align: top">
+                    <div style="line-height: inherit;width: 100% !important">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style="line-height: inherit;padding: 0px;border: 0px solid transparent"><!--<![endif]-->
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <div style="line-height: 140%;text-align: left;word-wrap: break-word">
+                                <p style="line-height: 140%;margin: 0;font-size: 14px;text-align: center"><a rel="noopener" href="mailto:admin@sbaloanadvice.com" target="_blank" style="line-height: inherit;color: #0000ee;text-decoration: underline">admin@sbaloanadvice.com</a></p>
+                                </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;font-family: arial,helvetica,sans-serif" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tbody style="line-height: inherit">
+                            <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: arial,helvetica,sans-serif" align="left">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000">
+                                    <tbody style="line-height: inherit">
+                                        <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse">
+                                            <td style="line-height: inherit;vertical-align: top;border-collapse: collapse;color: #000000;padding-right: 0px;padding-left: 0px" align="center">
+                                            <img alt="" src="https://images.unlayer.com/projects/71061/1649074864718-BBB.png" style="line-height: inherit;outline: none;text-decoration: none;clear: both;border: none;max-width: 121px;display: inline-block !important" width="100%">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if (!mso)&(!IE)]><!--></div>
+                    <!--<![endif]-->
+                    </div>
+                    </div>
+                    <!--[if (mso)|(IE)]></td><![endif]-->
+                    <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                    </div>
+                    </div>
+                    </div>
+                    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--[if mso]></div><![endif]-->
+        <!--[if IE]></div><![endif]-->
+    
+    <grammarly-desktop-integration data-grammarly-shadow-root="true" style="line-height: inherit"></grammarly-desktop-integration>
+</body></html>
+<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
+SBA Loan Advice<br/>3000 Town Center, STE 1805<br/>Royal Oak Michigan  48076<br/>United States
+</address>
+<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?406l2--f920-6z6p459&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?406l2--f920-6z6p459&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
+<img src="http://click.sbaloanadvice.com/open/gfka-406l2--6z6p457/img.gif" width="0" height="0" alt="">
 
-This is a multi-part message in MIME format.
 
---=====003_Dragon362033537511_=====
-Content-Type: multipart/alternative;
-	boundary="=====002_Dragon362033537511_====="
-
---=====002_Dragon362033537511_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-DQrml6XpoIPjgojjgorjgIxKUuOBiuOBp+OBi+OBkeODjeODg+ODiOOAjeOCkuOBlOWIqeeUqOOB
-hOOBn+OBoOOBjeOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBmeOAgiANCuOAjEpS44GK44Gn
-44GL44GR44ON44OD44OI44CN44Gu44Ki44Kr44Km44Oz44OI44Gv5Yi26ZmQ44GV44KM44Gm44GE
-44G+44GZ44CC44GC44Gq44Gf44Gu44Ki44Kr44Km44Oz44OI44Gv5L2/55So5LiN5Y+v44Gr44Gq
-44KK44G+44GX44Gf44CCDQrjgYLjgarjgZ/jga/opIfmlbDlm57plpPpgZXjgYTjga7jg5Hjgrnj
-g6/jg7zjg4njgpLlhaXlipvjgZfjgZ/jga7jgafjgIHku4rjg5Hjgrnjg6/jg7zjg4njga/jgZnj
-gafjgavkvb/nlKjkuI3lj6/jgavjgarjgorjgb7jgZfjgZ/jgILjgrvjgq3jg6Xjg6rjg4bjgqPj
-ga7jgZ/jgoHjgIHnp4HjgZ/jgaHjga/jgYLjgarjgZ/jga7jgqLjgqvjgqbjg7Pjg4jjgpLkvb/n
-lKjkuI3lj6/jgavjgarjgovjgIINCuOCouOCq+OCpuODs+ODiOOBrumAmuW4uOOCkuS9v+eUqOOB
-meOCi+OBn+OCgeOBq+OAgeS9v+eUqOS4jeWPr+OBrueKtuaFi+OCkuWBnOatouOBl+OBpuOAgeWb
-nuW+qeOBmeOCi+OBq+OBr+S7peS4i+OCkuaTjeS9nOOBr+W/heimgeOBp+OBmeOAgg0K4oeS44Ot
-44Kw44Kk44Oz44Gv44GT44Gh44KJDQrjgYLjgarjgZ/jgYwyNOaZgumWk+S7peWGheOBq+eiuuiq
-jeOBp+OBjeOBquOBhOWgtOWQiOOBr+eUs+OBl+ios+OBguOCiuOBvuOBm+OCk+OAguOBguOBquOB
-n+OBruiyoeeUo+OBruWuieWFqOOBruOBn+OCgeOBq+OAgeOBk+OBruOCouOCq+OCpuODs+ODiOOB
-ruS9v+eUqOOCkuWItumZkOOBl+OBvuOBmeOAgg0K4oC744GT44Gu44Oh44O844Or44Gv44CMSlLj
-gYrjgafjgYvjgZHjg43jg4Pjg4jjgI3jgojjgoroh6rli5XphY3kv6HjgZXjgozjgabjgYTjgb7j
-gZnjgIINCuOBiuWVj+OBhOWQiOOCj+OBm+WFiA0KSlLjgYrjgafjgYvjgZHjg43jg4Pjg4jjgrXj
-g53jg7zjg4jjgrvjg7Pjgr/jg7wNClRFTCAwNTAtMjAxNi00ODAwDQrlj5fku5jmmYLplpMgOOaZ
-gjAw5YiG772eMjLmmYIwMOWIhg0K44K144Kk44OI6YGL5Za244O7566h55CGDQpKUuilv+aXpeac
-rOODjeODg+ODiOOCueODhuODvOOCt+ODp+ODsw0KLS0tLS0tLS0tLS0tLS0tLS0tLS0NCui/lOS/
-oeOBhOOBn+OBoOOBjeOBvuOBl+OBpuOCguWvvuW/nOiHtOOBl+OBi+OBreOBvuOBmeOBruOBp+OA
-geOBguOCieOBi+OBmOOCgeOBlOS6huaJv+OBj+OBoOOBleOBhOOAgg0K44GU5LiN5piO44Gq54K5
-44Gu44GC44KL5pa544Gv44CB44CMSlLjgYrjgafjgYvjgZHjg43jg4Pjg4jjgI3jgrXjg53jg7zj
-g4jjgrvjg7Pjgr/jg7zjgb7jgafjgZTpgKPntaHjgY/jgaDjgZXjgYTjgIINCg0KDQogQ29weXJp
-Z2h0IMKpIFdFU1QgSkFSQU4gUkFJTFdBWSBDT01QQU5ZIGFsbCByaWdodHMgcmVzZXJ2ZWQ=
-
---=====002_Dragon362033537511_=====
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZPg0KPFAgYWxpZ249bGVm
-dD48U1BBTiANCnN0eWxlPSJXSURPV1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JP
-VU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQtSU5E
-RU5UOiAwcHg7IERJU1BMQVk6IGlubGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogQ2FsaWJy
-aSwgVHJlYnVjaGV0LCBBcmlhbCwgJ3NhbnMgc2VyaWYnOyBXSElURS1TUEFDRTogbm9ybWFsOyBP
-UlBIQU5TOiAyOyBGTE9BVDogbm9uZTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJn
-Yig1MSw1MSw1MSk7IEZPTlQtU0laRTogMTVweDsgRk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1TUEFD
-SU5HOiAwcHg7IGZvbnQtdmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNh
-cHM6IG5vcm1hbDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29yYXRp
-b24tc3R5bGU6IGluaXRpYWw7IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbCI+PEZPTlQg
-DQpzaXplPTMgZmFjZT3lvq7ova/pm4Xpu5E+PC9GT05UPjwvU1BBTj48L1A+DQo8UCBhbGlnbj1s
-ZWZ0PjxTUEFOIA0Kc3R5bGU9IldJRE9XUzogMjsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IEJBQ0tH
-Uk9VTkQtQ09MT1I6IHJnYigyNTUsMjU1LDI1NSk7IEZPTlQtU1RZTEU6IG5vcm1hbDsgVEVYVC1J
-TkRFTlQ6IDBweDsgRElTUExBWTogaW5saW5lICFpbXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBDYWxp
-YnJpLCBUcmVidWNoZXQsIEFyaWFsLCAnc2FucyBzZXJpZic7IFdISVRFLVNQQUNFOiBub3JtYWw7
-IE9SUEhBTlM6IDI7IEZMT0FUOiBub25lOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjog
-cmdiKDUxLDUxLDUxKTsgRk9OVC1TSVpFOiAxNXB4OyBGT05ULVdFSUdIVDogNDAwOyBXT1JELVNQ
-QUNJTkc6IDBweDsgZm9udC12YXJpYW50LWxpZ2F0dXJlczogbm9ybWFsOyBmb250LXZhcmlhbnQt
-Y2Fwczogbm9ybWFsOyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IHRleHQtZGVjb3Jh
-dGlvbi1zdHlsZTogaW5pdGlhbDsgdGV4dC1kZWNvcmF0aW9uLWNvbG9yOiBpbml0aWFsIj48Rk9O
-VCANCnNpemU9MyBmYWNlPeetiee6vz48SU1HIGJvcmRlcj0wIGhzcGFjZT0wIGFsdD0iIiBhbGln
-bj1iYXNlbGluZSANCnNyYz0iY2lkOjAwMDU0ODQzOTE5N18wNDA1RUQwNF8wNzQ5RTBGRiI+PC9G
-T05UPjwvU1BBTj48L1A+DQo8UCBhbGlnbj1sZWZ0PjxTUEFOIA0Kc3R5bGU9IldJRE9XUzogMjsg
-VEVYVC1UUkFOU0ZPUk06IG5vbmU7IEJBQ0tHUk9VTkQtQ09MT1I6IHJnYigyNTUsMjU1LDI1NSk7
-IEZPTlQtU1RZTEU6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6IDBweDsgRElTUExBWTogaW5saW5lICFp
-bXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBUcmVidWNoZXQsIEFyaWFsLCAnc2FucyBz
-ZXJpZic7IFdISVRFLVNQQUNFOiBub3JtYWw7IE9SUEhBTlM6IDI7IEZMT0FUOiBub25lOyBMRVRU
-RVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDUxLDUxLDUxKTsgRk9OVC1TSVpFOiAxNXB4
-OyBGT05ULVdFSUdIVDogNDAwOyBXT1JELVNQQUNJTkc6IDBweDsgZm9udC12YXJpYW50LWxpZ2F0
-dXJlczogbm9ybWFsOyBmb250LXZhcmlhbnQtY2Fwczogbm9ybWFsOyAtd2Via2l0LXRleHQtc3Ry
-b2tlLXdpZHRoOiAwcHg7IHRleHQtZGVjb3JhdGlvbi1zdHlsZTogaW5pdGlhbDsgdGV4dC1kZWNv
-cmF0aW9uLWNvbG9yOiBpbml0aWFsIj48Rk9OVCANCnNpemU9MyBmYWNlPeW+rui9r+mbhem7kT7m
-l6XpoIPjgojjgorjgIxKUuOBiuOBp+OBi+OBkeODjeODg+ODiOOAjeOCkuOBlOWIqeeUqOOBhOOB
-n+OBoOOBjeOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBmeOAgiA8L0ZPTlQ+PC9TUEFOPjwv
-UD4NCjxQIGFsaWduPWxlZnQ+PFNQQU4gDQpzdHlsZT0iV0lET1dTOiAyOyBURVhULVRSQU5TRk9S
-TTogbm9uZTsgQkFDS0dST1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsgRk9OVC1TVFlMRTog
-bm9ybWFsOyBURVhULUlOREVOVDogMHB4OyBESVNQTEFZOiBpbmxpbmUgIWltcG9ydGFudDsgRk9O
-VC1GQU1JTFk6IENhbGlicmksIFRyZWJ1Y2hldCwgQXJpYWwsICdzYW5zIHNlcmlmJzsgV0hJVEUt
-U1BBQ0U6IG5vcm1hbDsgT1JQSEFOUzogMjsgRkxPQVQ6IG5vbmU7IExFVFRFUi1TUEFDSU5HOiBu
-b3JtYWw7IENPTE9SOiByZ2IoNTEsNTEsNTEpOyBGT05ULVNJWkU6IDE1cHg7IEZPTlQtV0VJR0hU
-OiA0MDA7IFdPUkQtU1BBQ0lORzogMHB4OyBmb250LXZhcmlhbnQtbGlnYXR1cmVzOiBub3JtYWw7
-IGZvbnQtdmFyaWFudC1jYXBzOiBub3JtYWw7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBw
-eDsgdGV4dC1kZWNvcmF0aW9uLXN0eWxlOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6
-IGluaXRpYWwiPjxGT05UIA0Kc2l6ZT0zIA0KZmFjZT3lvq7ova/pm4Xpu5E+44CMSlLjgYrjgafj
-gYvjgZHjg43jg4Pjg4jjgI3jga7jgqLjgqvjgqbjg7Pjg4jjga/liLbpmZDjgZXjgozjgabjgYTj
-gb7jgZnjgILjgYLjgarjgZ/jga7jgqLjgqvjgqbjg7Pjg4jjga/kvb/nlKjkuI3lj6/jgavjgarj
-gorjgb7jgZfjgZ/jgII8QlI+44GC44Gq44Gf44Gv6KSH5pWw5Zue6ZaT6YGV44GE44Gu44OR44K5
-44Ov44O844OJ44KS5YWl5Yqb44GX44Gf44Gu44Gn44CB5LuK44OR44K544Ov44O844OJ44Gv44GZ
-44Gn44Gr5L2/55So5LiN5Y+v44Gr44Gq44KK44G+44GX44Gf44CC44K744Kt44Ol44Oq44OG44Kj
-44Gu44Gf44KB44CB56eB44Gf44Gh44Gv44GC44Gq44Gf44Gu44Ki44Kr44Km44Oz44OI44KS5L2/
-55So5LiN5Y+v44Gr44Gq44KL44CCPEJSPuOCouOCq+OCpuODs+ODiOOBrumAmuW4uOOCkuS9v+eU
-qOOBmeOCi+OBn+OCgeOBq+OAgeS9v+eUqOS4jeWPr+OBrueKtuaFi+OCkuWBnOatouOBl+OBpuOA
-geWbnuW+qeOBmeOCi+OBq+OBr+S7peS4i+OCkuaTjeS9nOOBr+W/heimgeOBp+OBmeOAgjwvRk9O
-VD48L1NQQU4+PC9QPg0KPFAgYWxpZ249bGVmdD48U1BBTiANCnN0eWxlPSJXSURPV1M6IDI7IFRF
-WFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBG
-T05ULVNUWUxFOiBub3JtYWw7IFRFWFQtSU5ERU5UOiAwcHg7IERJU1BMQVk6IGlubGluZSAhaW1w
-b3J0YW50OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgVHJlYnVjaGV0LCBBcmlhbCwgJ3NhbnMgc2Vy
-aWYnOyBXSElURS1TUEFDRTogbm9ybWFsOyBPUlBIQU5TOiAyOyBGTE9BVDogbm9uZTsgTEVUVEVS
-LVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYig1MSw1MSw1MSk7IEZPTlQtU0laRTogMTVweDsg
-Rk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1TUEFDSU5HOiAwcHg7IGZvbnQtdmFyaWFudC1saWdhdHVy
-ZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNhcHM6IG5vcm1hbDsgLXdlYmtpdC10ZXh0LXN0cm9r
-ZS13aWR0aDogMHB4OyB0ZXh0LWRlY29yYXRpb24tc3R5bGU6IGluaXRpYWw7IHRleHQtZGVjb3Jh
-dGlvbi1jb2xvcjogaW5pdGlhbCI+PEZPTlQgDQpzaXplPTQ+PFNUUk9ORz48Rk9OVCBmYWNlPeW+
-rui9r+mbhem7kT7ih5I8L0ZPTlQ+PEZPTlQgZmFjZT3lvq7ova/pm4Xpu5E+PEEgDQpocmVmPSJo
-dHRwczovL3d3dy5qci1vZGVuZXQuY28uanAuaWlhYmhyYy5jbi8iPuODreOCsOOCpOODs+OBr+OB
-k+OBoeOCiTwvQT48L0ZPTlQ+PC9TVFJPTkc+PC9GT05UPjwvU1BBTj48L1A+DQo8UCBhbGlnbj1s
-ZWZ0PjxTUEFOIA0Kc3R5bGU9IldJRE9XUzogMjsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IEJBQ0tH
-Uk9VTkQtQ09MT1I6IHJnYigyNTUsMjU1LDI1NSk7IEZPTlQtU1RZTEU6IG5vcm1hbDsgVEVYVC1J
-TkRFTlQ6IDBweDsgRElTUExBWTogaW5saW5lICFpbXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBDYWxp
-YnJpLCBUcmVidWNoZXQsIEFyaWFsLCAnc2FucyBzZXJpZic7IFdISVRFLVNQQUNFOiBub3JtYWw7
-IE9SUEhBTlM6IDI7IEZMT0FUOiBub25lOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjog
-cmdiKDUxLDUxLDUxKTsgRk9OVC1TSVpFOiAxNXB4OyBGT05ULVdFSUdIVDogNDAwOyBXT1JELVNQ
-QUNJTkc6IDBweDsgZm9udC12YXJpYW50LWxpZ2F0dXJlczogbm9ybWFsOyBmb250LXZhcmlhbnQt
-Y2Fwczogbm9ybWFsOyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IHRleHQtZGVjb3Jh
-dGlvbi1zdHlsZTogaW5pdGlhbDsgdGV4dC1kZWNvcmF0aW9uLWNvbG9yOiBpbml0aWFsIj48Rk9O
-VCANCnNpemU9MyANCmZhY2U95b6u6L2v6ZuF6buRPuOBguOBquOBn+OBjDI05pmC6ZaT5Lul5YaF
-44Gr56K66KqN44Gn44GN44Gq44GE5aC05ZCI44Gv55Sz44GX6Kiz44GC44KK44G+44Gb44KT44CC
-44GC44Gq44Gf44Gu6LKh55Sj44Gu5a6J5YWo44Gu44Gf44KB44Gr44CB44GT44Gu44Ki44Kr44Km
-44Oz44OI44Gu5L2/55So44KS5Yi26ZmQ44GX44G+44GZ44CCPC9GT05UPjwvU1BBTj48L1A+DQo8
-UCBhbGlnbj1sZWZ0PjxTUEFOIA0Kc3R5bGU9IldJRE9XUzogMjsgVEVYVC1UUkFOU0ZPUk06IG5v
-bmU7IEJBQ0tHUk9VTkQtQ09MT1I6IHJnYigyNTUsMjU1LDI1NSk7IEZPTlQtU1RZTEU6IG5vcm1h
-bDsgVEVYVC1JTkRFTlQ6IDBweDsgRElTUExBWTogaW5saW5lICFpbXBvcnRhbnQ7IEZPTlQtRkFN
-SUxZOiBDYWxpYnJpLCBUcmVidWNoZXQsIEFyaWFsLCAnc2FucyBzZXJpZic7IFdISVRFLVNQQUNF
-OiBub3JtYWw7IE9SUEhBTlM6IDI7IEZMT0FUOiBub25lOyBMRVRURVItU1BBQ0lORzogbm9ybWFs
-OyBDT0xPUjogcmdiKDUxLDUxLDUxKTsgRk9OVC1TSVpFOiAxNXB4OyBGT05ULVdFSUdIVDogNDAw
-OyBXT1JELVNQQUNJTkc6IDBweDsgZm9udC12YXJpYW50LWxpZ2F0dXJlczogbm9ybWFsOyBmb250
-LXZhcmlhbnQtY2Fwczogbm9ybWFsOyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IHRl
-eHQtZGVjb3JhdGlvbi1zdHlsZTogaW5pdGlhbDsgdGV4dC1kZWNvcmF0aW9uLWNvbG9yOiBpbml0
-aWFsIj48Rk9OVCANCnNpemU9Mz48Rk9OVCBmYWNlPeW+rui9r+mbhem7kT7igLvjgZPjga7jg6Hj
-g7zjg6vjga/jgIxKUuOBiuOBp+OBi+OBkeODjeODg+ODiOOAjeOCiOOCiuiHquWLlemFjeS/oeOB
-leOCjOOBpuOBhOOBvuOBmeOAgjwvRk9OVD48L0ZPTlQ+PC9TUEFOPjwvUD4NCjxQIGFsaWduPWxl
-ZnQ+PFNQQU4gDQpzdHlsZT0iV0lET1dTOiAyOyBURVhULVRSQU5TRk9STTogbm9uZTsgQkFDS0dS
-T1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsgRk9OVC1TVFlMRTogbm9ybWFsOyBURVhULUlO
-REVOVDogMHB4OyBESVNQTEFZOiBpbmxpbmUgIWltcG9ydGFudDsgRk9OVC1GQU1JTFk6IENhbGli
-cmksIFRyZWJ1Y2hldCwgQXJpYWwsICdzYW5zIHNlcmlmJzsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsg
-T1JQSEFOUzogMjsgRkxPQVQ6IG5vbmU7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENPTE9SOiBy
-Z2IoNTEsNTEsNTEpOyBGT05ULVNJWkU6IDE1cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFdPUkQtU1BB
-Q0lORzogMHB4OyBmb250LXZhcmlhbnQtbGlnYXR1cmVzOiBub3JtYWw7IGZvbnQtdmFyaWFudC1j
-YXBzOiBub3JtYWw7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgdGV4dC1kZWNvcmF0
-aW9uLXN0eWxlOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6IGluaXRpYWwiPjxGT05U
-IA0Kc2l6ZT0zIGZhY2U95b6u6L2v6ZuF6buRPuOBiuWVj+OBhOWQiOOCj+OBm+WFiDxCUj5KUuOB
-iuOBp+OBi+OBkeODjeODg+ODiOOCteODneODvOODiOOCu+ODs+OCv+ODvDxCUj5URUwgMDUwLTIw
-MTYtNDgwMDxCUj7lj5fku5jmmYLplpMgDQo45pmCMDDliIbvvZ4yMuaZgjAw5YiGPEJSPuOCteOC
-pOODiOmBi+WWtuODu+euoeeQhjxCUj5KUuilv+aXpeacrOODjeODg+ODiOOCueODhuODvOOCt+OD
-p+ODszxCUj4tLS0tLS0tLS0tLS0tLS0tLS0tLTwvRk9OVD48L1NQQU4+PC9QPg0KPFAgYWxpZ249
-bGVmdD48U1BBTiANCnN0eWxlPSJXSURPV1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNL
-R1JPVU5ELUNPTE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQt
-SU5ERU5UOiAwcHg7IERJU1BMQVk6IGlubGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogQ2Fs
-aWJyaSwgVHJlYnVjaGV0LCBBcmlhbCwgJ3NhbnMgc2VyaWYnOyBXSElURS1TUEFDRTogbm9ybWFs
-OyBPUlBIQU5TOiAyOyBGTE9BVDogbm9uZTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6
-IHJnYig1MSw1MSw1MSk7IEZPTlQtU0laRTogMTVweDsgRk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1T
-UEFDSU5HOiAwcHg7IGZvbnQtdmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50
-LWNhcHM6IG5vcm1hbDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29y
-YXRpb24tc3R5bGU6IGluaXRpYWw7IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbCI+PEZP
-TlQgDQpzaXplPTMgZmFjZT3lvq7ova/pm4Xpu5E+6L+U5L+h44GE44Gf44Gg44GN44G+44GX44Gm
-44KC5a++5b+c6Ie044GX44GL44Gt44G+44GZ44Gu44Gn44CB44GC44KJ44GL44GY44KB44GU5LqG
-5om/44GP44Gg44GV44GE44CCPC9GT05UPjwvU1BBTj48L1A+DQo8UCBhbGlnbj1sZWZ0PjxTUEFO
-IA0Kc3R5bGU9IldJRE9XUzogMjsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IEJBQ0tHUk9VTkQtQ09M
-T1I6IHJnYigyNTUsMjU1LDI1NSk7IEZPTlQtU1RZTEU6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6IDBw
-eDsgRElTUExBWTogaW5saW5lICFpbXBvcnRhbnQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBUcmVi
-dWNoZXQsIEFyaWFsLCAnc2FucyBzZXJpZic7IFdISVRFLVNQQUNFOiBub3JtYWw7IE9SUEhBTlM6
-IDI7IEZMT0FUOiBub25lOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBDT0xPUjogcmdiKDUxLDUx
-LDUxKTsgRk9OVC1TSVpFOiAxNXB4OyBGT05ULVdFSUdIVDogNDAwOyBXT1JELVNQQUNJTkc6IDBw
-eDsgZm9udC12YXJpYW50LWxpZ2F0dXJlczogbm9ybWFsOyBmb250LXZhcmlhbnQtY2Fwczogbm9y
-bWFsOyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHg7IHRleHQtZGVjb3JhdGlvbi1zdHls
-ZTogaW5pdGlhbDsgdGV4dC1kZWNvcmF0aW9uLWNvbG9yOiBpbml0aWFsIj48Rk9OVCANCnNpemU9
-MyBmYWNlPeW+rui9r+mbhem7kT7jgZTkuI3mmI7jgarngrnjga7jgYLjgovmlrnjga/jgIHjgIxK
-UuOBiuOBp+OBi+OBkeODjeODg+ODiOOAjeOCteODneODvOODiOOCu+ODs+OCv+ODvOOBvuOBp+OB
-lOmAo+e1oeOBj+OBoOOBleOBhOOAgjxCUj48L0ZPTlQ+PC9TUEFOPjwvUD4NCjxQIGFsaWduPWxl
-ZnQ+PFNQQU4gDQpzdHlsZT0iV0lET1dTOiAyOyBURVhULVRSQU5TRk9STTogbm9uZTsgQkFDS0dS
-T1VORC1DT0xPUjogcmdiKDI1NSwyNTUsMjU1KTsgRk9OVC1TVFlMRTogbm9ybWFsOyBURVhULUlO
-REVOVDogMHB4OyBESVNQTEFZOiBpbmxpbmUgIWltcG9ydGFudDsgRk9OVC1GQU1JTFk6IENhbGli
-cmksIFRyZWJ1Y2hldCwgQXJpYWwsICdzYW5zIHNlcmlmJzsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsg
-T1JQSEFOUzogMjsgRkxPQVQ6IG5vbmU7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENPTE9SOiBy
-Z2IoNTEsNTEsNTEpOyBGT05ULVNJWkU6IDE1cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFdPUkQtU1BB
-Q0lORzogMHB4OyBmb250LXZhcmlhbnQtbGlnYXR1cmVzOiBub3JtYWw7IGZvbnQtdmFyaWFudC1j
-YXBzOiBub3JtYWw7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweDsgdGV4dC1kZWNvcmF0
-aW9uLXN0eWxlOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6IGluaXRpYWwiPjxGT05U
-IA0Kc2l6ZT0zIGZhY2U95b6u6L2v6ZuF6buRPjwvRk9OVD48L1NQQU4+Jm5ic3A7PC9QPg0KPFAg
-YWxpZ249Y2VudGVyPjxGT05UIHN0eWxlPSJCQUNLR1JPVU5ELUNPTE9SOiAjZjVmNWY1IiBjb2xv
-cj0jMzMzMzMzIHNpemU9MSANCmZhY2U9QXJpYWw+PFNQQU4gDQpzdHlsZT0iVEVYVC1BTElHTjog
-Y2VudGVyOyBXSURPV1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9S
-OiByZ2IoMjQ1LDI0NSwyNDUpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQtSU5ERU5UOiAwcHg7
-IERJU1BMQVk6IGlubGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogJ05vdG8gU2VyaWYgSmFw
-YW5lc2UnLCBzYW5zLXNlcmlmOyBXSElURS1TUEFDRTogbm9ybWFsOyBPUlBIQU5TOiAyOyBGTE9B
-VDogbm9uZTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYig1MSw1MSw1MSk7IEZP
-TlQtU0laRTogMTFweDsgRk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1TUEFDSU5HOiAwcHg7IGZvbnQt
-dmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNhcHM6IG5vcm1hbDsgLXdl
-YmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29yYXRpb24tc3R5bGU6IGluaXRp
-YWw7IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbDsgdGV4dC1kZWNvcmF0aW9uLXRoaWNr
-bmVzczogaW5pdGlhbCI+Jm5ic3A7Q29weXJpZ2h0IA0KwqkgV0VTVCBKQVJBTiBSQUlMV0FZIENP
-TVBBTlkmbmJzcDthbGwgcmlnaHRzIHJlc2VydmVkPC9TUEFOPjwvRk9OVD48U1BBTiANCnN0eWxl
-PSJXSURPV1M6IDI7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBCQUNLR1JPVU5ELUNPTE9SOiByZ2Io
-MjU1LDI1NSwyNTUpOyBGT05ULVNUWUxFOiBub3JtYWw7IFRFWFQtSU5ERU5UOiAwcHg7IERJU1BM
-QVk6IGlubGluZSAhaW1wb3J0YW50OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgVHJlYnVjaGV0LCBB
-cmlhbCwgJ3NhbnMgc2VyaWYnOyBXSElURS1TUEFDRTogbm9ybWFsOyBPUlBIQU5TOiAyOyBGTE9B
-VDogbm9uZTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgQ09MT1I6IHJnYig1MSw1MSw1MSk7IEZP
-TlQtU0laRTogMTVweDsgRk9OVC1XRUlHSFQ6IDQwMDsgV09SRC1TUEFDSU5HOiAwcHg7IGZvbnQt
-dmFyaWFudC1saWdhdHVyZXM6IG5vcm1hbDsgZm9udC12YXJpYW50LWNhcHM6IG5vcm1hbDsgLXdl
-YmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29yYXRpb24tc3R5bGU6IGluaXRp
-YWw7IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbCI+PFNQQU4gDQpzdHlsZT0iV0lET1dT
-OiAyOyBURVhULVRSQU5TRk9STTogbm9uZTsgQkFDS0dST1VORC1DT0xPUjogcmdiKDI1NSwyNTUs
-MjU1KTsgRk9OVC1TVFlMRTogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyBESVNQTEFZOiBpbmxp
-bmUgIWltcG9ydGFudDsgRk9OVC1GQU1JTFk6IENhbGlicmksIFRyZWJ1Y2hldCwgQXJpYWwsICdz
-YW5zIHNlcmlmJzsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsgT1JQSEFOUzogMjsgRkxPQVQ6IG5vbmU7
-IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IENPTE9SOiByZ2IoNTEsNTEsNTEpOyBGT05ULVNJWkU6
-IDE1cHg7IEZPTlQtV0VJR0hUOiA0MDA7IFdPUkQtU1BBQ0lORzogMHB4OyBmb250LXZhcmlhbnQt
-bGlnYXR1cmVzOiBub3JtYWw7IGZvbnQtdmFyaWFudC1jYXBzOiBub3JtYWw7IC13ZWJraXQtdGV4
-dC1zdHJva2Utd2lkdGg6IDBweDsgdGV4dC1kZWNvcmF0aW9uLXN0eWxlOiBpbml0aWFsOyB0ZXh0
-LWRlY29yYXRpb24tY29sb3I6IGluaXRpYWwiPjxGT05UIA0Kc2l6ZT0yIGZhY2U95b6u6L2v6ZuF
-6buRPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTRweCI+PC9QPjwvU1BBTj48L0ZPTlQ+PC9T
-UEFOPjwvU1BBTj48L0JPRFk+PC9IVE1MPg0K
-
---=====002_Dragon362033537511_=====--
-
---=====003_Dragon362033537511_=====
-Content-Type: image/gif;
-	name="logo_all.gif"
-Content-Transfer-Encoding: base64
-Content-ID: <000548439197_0405ED04_0749E0FF>
-
-R0lGODlhLgEeAPcAAABqttbW1j+NyeHt9jONyLTT6gBvud7e3pCQkjOKxqXK5rW1tk2ZzRF6v/D2
-+1ec0GNjZWKi026q1nez2p6eoLvW68nJyuDg4HFxc6SkpfLy81JSVN3q9ABuuebm552dnlxcXqCg
-oqfL5q2trVVVWFlZXO7u73h4eu72+lhYWsDAwb/Z7Pz9/uTu99vq9S+FxABsuJbB4YO23GpqbEKQ
-ym1tbg9xu3qx2fX19fDw8Ia43ezs7Bx5v/n7/XCr19ra2oq63oWFhsbe742NjjKHxNLk8o2937Cw
-sefw+GRkZmhoari4ueTk5AZtuTqQyaOjpBN0vX19fpjC4V5eYNHR0eLi4n602pWVlnWt2H+z2yV+
-wvb6/KenqARyuhyAwYuLjT+Syvr8/Wmm1fT4/CqBw0uVzABotmFhY+bw9+rq6+jo6IiIig5wu76+
-vlCbzszMzHt7fHV1duvz+R59wZiYms/i8SGBwkGOyXZ2eIaGh1ye0b29vry8vQltus7Oz+rx+ABm
-tdfm8sXb7ZeXmBh2vqmpqlWe0K3O6I+PkAVruIGBgwJpuMrg8NjY2S2DxHJyc8bGx0SQym5ucJC+
-33iv2CWDw1+k0wt2vCKEw2aq1t3s9oi930SXzPb29/7+/rvZ7d/s9vz8/E+XzVWg0arQ6Lm5uh96
-wJnG4/j4+Mzj8V+g0l6h0K/Q6Pv7+/n5+f39/fr6+g54vfb29mdnaff397q6uwBrt3l5e/7+/8/P
-0NnZ2r+/wMHBwp/H5O3t7s3NzlSaz+/v7+fn59PT1MPDxJO/4eHh4ru7vP3+/jqKx/T4++fx+NfX
-2EyVzOnp6nh4edvb263Q5yeFxOPj5Nrn87S0tZKSk53H49fn9LvY60iTy0iVy7e3t4y738re71yg
-z/Hx8a+vsCyCw+Xl5QBntdLj8QJuuQ90vP7///n5+vP3+/D1+qurrfj4+V2j0s3h8Ovr7O30+e70
-+e3z+X2y2cjIyMvg8Fiez4ODhMPa7N/r9ht/weny+QBotwBxuv///yH/C1hNUCBEYXRhWE1QPD94
-cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1w
-bWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4w
-LWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4
-bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8
-cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBSaWdodHM9Imh0dHA6Ly9ucy5h
-ZG9iZS5jb20veGFwLzEuMC9yaWdodHMvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNv
-bS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9z
-VHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4w
-LyIgeG1wUmlnaHRzOk1hcmtlZD0iRmFsc2UiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1w
-LmRpZDphYzBmZGM1Yi02MGIyLTMwNDEtOTExYS0wZDM3NThjODQ4YWIiIHhtcE1NOkRvY3VtZW50
-SUQ9InhtcC5kaWQ6RTY3RDNBODU5NTE1MTFFNThFRkU5MUU0RkM0NEQ3NUQiIHhtcE1NOkluc3Rh
-bmNlSUQ9InhtcC5paWQ6RTY3RDNBODQ5NTE1MTFFNThFRkU5MUU0RkM0NEQ3NUQiIHhtcDpDcmVh
-dG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2
-ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjQwM2U2NDAtZTk3OS0wMjQ0LTlhODQt
-ZWQ3NTVjZjdlNGRmIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6YTFm
-MDcxMWQtOGRhZC0xMWU1LTliYjktOGQ1Yzc4MWMzY2ZjIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8
-L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy
-8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5
-uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGA
-f359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhH
-RkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8O
-DQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAC4BHgAACP8A/wkcSLCgqH4IEypcqNAGli0FI0qc
-SLGixYsTkVE7JGFbAzv3gKz4g7GkyZMoU6pcybIlyoMMY8ZMMMalzZv/WFRg0AEGjA7+/PmEcYmS
-PpxIkypdylQlTJlQE0poSlXigDI+g2rd6s9WBxkQq4odS7asxKdRoTZxYJbpCnMwuPozQLduUFtE
-5rXdy7cvS7Q2TAkeTFhwooWs/N4sAMCA3C6xIkvuEhTGnHiKM2vejDbLRTk8FMrYvPIdALn+ABha
-xhoJGjQE4gqtFJa07dtUO2P0oXAq7pLqzjmWC8BSRCe2tBb/zby5S90XxSj0YZFWvSMUuFQ70Gqg
-sCWlavH/ydUSGi9UJSecRm2gQYIEROgJRL4VgD2LHnilmSiLWCOCzBxTSykEEshLdwU5swQXH7Cz
-BDgD5VBgeHvwMeEuJo0yCkUoaOLhhyBqclOHA5ESFClKgaKiiixQBN0yK8aoYgFsKNRNRVTUUIIk
-QUSRBAkUDPTGDDPMAsEXLV1Bwg4Y/UEZakEZ4BMg98yXnFYwgOFJRX5sQMxE45DABUEUQJAEkWhG
-4QpBnhwBwhlwBBEHCAcMdAGaRUIAAZ63lJRJA/5kMtEmUGp1CkGa+EMAoopWhIk/Iv7jDyec+JNS
-ootKtBAoLirk2T+HpKVQBRQdkEIc0MDiiSeyNOLMQKHI/9KJLhAg0BIFIJiAkRHrFRoUAKtYyRUM
-aFTkDAiFTJRLClQQlAEES3QirbS0bDnQLiR8AM8ruISigbX/vDLtrBBgYMK0tGCUiT+nnOLPBBIR
-GuKHn7DLKCb3OgrpP4l+Um+kJiWKr6YKcToRdP9gIWo/NtRWECoYQKABRlXUOhG4FeGaQ7iwIBhR
-GAkA5euvwf5DX31GVKTBGUNgPBA3JUDjLARtVBQKHEmkSzEEj6xZkiaVbiIQoZygUBChmSStdNKj
-2DuQwPlS9Gikga57qT8DR7Rppwl9mtMdomJBETMkhFDSBRZHdMAzbxCUzhpDhELmFExAggcESnwh
-TEQciP88cmoln6xVB2AgQ5ErMzwCi0CuoCfQByCoMfMeNt9yRjBn89wJRigQ+i6IE/jTwKEDfbL0
-6UmnItDfQQmd6N+knwQ1wQkZfJanBPETGlRE1DTRESm0jRHatkYUQAk1D4SKEjXIPVCZSeCxwBtH
-TAECPAV5I9vfwAq7lQF29ECRJ3kkMbEreNQAoSdrzCLLzLxY9EYKcEDjskRoP7K5RfVOCiUBovuE
-QFBHQIGM4lFBwYQCEYg1TKAIBQtUoFYiKLSrTQpFBdnawXBHECEcRiFaEAUwJuGwiFgDBFXIXPEK
-cjwVEAQVNcCA8wRCgSlQoB0DgUYK1vAKgkhhONwL3JX/thILkvyjFSMIQQiGMRAuTMEX/4BGCUpQ
-in+E4hZ5wNiz4PCFLnbxCBHhxRRKsIZ6OG4i+dtfRVAwChT5641v/AcpNrQ6AhAwaQCMmkBmN5Gp
-CcRoK3ldUBoAr4Fo8HZdi0gxFgKFo1xEESDA3PDSxsISuFB5MZzhP3AFRYIMogTjIIgVWEcy722l
-C+VgXBSIVEWBWKAEe3vCFz7wCE/AYhZPKMizMHCLXvYyAxIBxy5OkIIZWIAiaVzKpDbBzGY2s1J6
-5BfWIlIvQfnxUU8jZTYdWKmgFHIhQpgICxzBwYLoYSFkYItFhgCCUE5yhQRp4QszSaZcFWQBJfgB
-QSZB/0rAmVIrl2iBQDxBC2l5TIe6gMUZ/OCBFKhBAyCohi5pxqb7wQoacCDBl/CnOYxE8KMR5MRA
-FHXHTORxmwQxkUgL4i6h+XFdGIQgSEGaKWkOTBPrCsonFqEQQkjBdv9AwyGSsZDRRGQM5FSINlpU
-kQyU4BcqlIg8MSnDenZyIG4KAEEEsb2Rdc9kQ4ySF8RHkYZa4AAg+NYM+CCMFBxzZskzCSqiMIWJ
-RSSZF3FmAxrQzAk0M3bLdKYzoTkQFPiDjgIJXQUJ0jQB+tFdhbxa1vhVKU1oISZ9gIIpmiCTAkzE
-BTZYiG8oEgAS5PKdUi1B/AbiCklU9XmRLEg1SDANgv8EoqtdAUCvlCNErnTACT2kiAnOQAE6IOkf
-XLhFKUA5UcqhBBJP5aj+TmLYQtZLgAUh6R1PShFAAWyklvqHHyU1WdlNsyAiWuTCFOIIpkqEFQyJ
-QUVwkIRZ4AC1EWFGCWpBEFko4RGaxJUxCNKKZyThvgPZgh2A6A8GWMINT1LON/7ZFUpYJBQ+AgF5
-/jGOKZwJwQN5VlxNMgJYSleNGJHXQDjRANURJLCCZSZhJaIJAAqqIKG78Xgr5WKU8LEguJDOevvB
-AxdY5AYLWQSpKGIBEiiCSQJ5hTD8cFeLrYogxkjBEIIbjDxMIQ4BnsIMZHbEcGzgGBGxwhBhEM4e
-NMD/b/4wA3VMhltbcOAiuLqcQEKBBxBEQZP/ELFFcJADa4UiFyVAhEXxWpIG3PiPDcAEIAVCKUw0
-gFKYVhSlJDLHoNR0IKkISqTGW6+V+vi8EzmEOESViAjI4SIsoMFCbICNiuwBBFPABx0QcAIQSALQ
-B9DTCU5gtoG8AhEpUMQg1jCDDJwhCR77xxVK8IUzrIEOeCABAoJLEFBsDwBWEIghyKEVA9giG/9Q
-xj7g3AFpuJciI9jAFQiyhw3kISJlqsGw9x0FKNPQz1ewxpzWAOKCBHsG77sIKTbRtFEwjROWntTT
-Ou2PHrvL0aTo8T+appXIEiQVfB3IeP/BiUebt7wS/7GHDsqghQ/2ow9keEAMlmESOQBDFDjHudgq
-kgZuXGEICHhCPexKkB084QkUoAB/CeIKblgDAVzwgCdUoAKMDWMJqJhGBhAxCD4sTiLuuBIM3B3U
-FwACAOSwhQ4E0ovdxtmzFzFGNTxAEBwsgIkFscATQpD0voeA6P/wQDjoAPQM+AHQRX/CCL5uEY4v
-kFJJ2wRM/2FY0U3gu/9IxZ9Q/Y9PEGAUsbvIyFliWMSWZAwoIKtzyIIEWwwHAEAQiDxiIIEbrEAg
-6qhEV2HgBIuu/iYY7LzGJfKJ4aeERL9PPk6iYYYoNeEaElkHA3ZrgC68WvnYd04dItALAXgfGBy4
-gf/3xy8EVZhfFWIYiCPUmf2L8CpKMBBDHQayDhG8gPrmqHX793+bFbwgC83ACqxAA1jACPD1ABHA
-CgPQDwIoBTagADbAUwyzdvw3EegQAwAgMgDQBU7gBgzgBQCwe+dQBBVYgprhfwAogJFAD6pACItA
-CC64gL3QC0BgA5RnA1BAayZIEflgB643FzCgW+xmCwwgUDt4hGVRBjSHglDwAi9gA0CgCsmQDFkQ
-CX2wgBIgARFgA7igCj5gCjJAA6qHhAOhDJMwB7YAA3QRJT0BAzSwAtxGhnLIFIQABHWABVToG1lg
-fjTgAkXgA02wgAIBCjYgAjRwB4lABnpAgXM4EA5EkA9WAAYJ0ABeQABuIAVFMIaNuIk4IQJkYANk
-UAA6YGH/oANioAp9YAOq2A8DoIqqaAotEAYtwANFgAtAxYm4mItKERAAOw==
-
---=====003_Dragon362033537511_=====--
-
-
-
---===============2176646107762783664==
+--===============7116405091601978843==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2176646107762783664==
+--===============7116405091601978843==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -433,6 +558,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2176646107762783664==--
-
-
+--===============7116405091601978843==--
