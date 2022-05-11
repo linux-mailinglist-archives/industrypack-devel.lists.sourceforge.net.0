@@ -2,110 +2,79 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3F7D452186D
-	for <lists+industrypack-devel@lfdr.de>; Tue, 10 May 2022 15:33:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7779B522916
+	for <lists+industrypack-devel@lfdr.de>; Wed, 11 May 2022 03:45:28 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1noPzb-0000r9-M5
-	for lists+industrypack-devel@lfdr.de; Tue, 10 May 2022 13:33:34 +0000
+	id 1nobPr-00039i-Tg
+	for lists+industrypack-devel@lfdr.de; Wed, 11 May 2022 01:45:27 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <christina@leadjugernaut.com>) id 1noPzQ-0000qy-IU
- for industrypack-devel@lists.sourceforge.net; Tue, 10 May 2022 13:33:23 +0000
+ (envelope-from <alexqo@thorocap.com>) id 1nobPq-00039W-5N
+ for industrypack-devel@lists.sourceforge.net; Wed, 11 May 2022 01:45:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:To:Subject:Message-ID:Date:
- MIME-Version:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Reply-To:From:Date:Message-ID:To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=i14FMfDgeLIYUBDr4wzRQDYDM8zfCK70BmERxObCBZc=; b=PgTngBefilp6emYd9lC79R9H8s
- EAW8dC0aj5+BK8gpOTsYz+R/B8zNlmgCol0f3fSCb4CH93Wad16plMsBB9XDKycM4B7Lm3epH9CEp
- 9loKU4O52LsMKnJvyJasLjPHWl6xSKZYw5f5SFxXU4AlMIjBGFWhwlGf0TRWHkWlHj4Q=;
+ bh=tHU2O38YoVQ+SQD/fphoeyZn1OgjBQQZU1t6oDUZjl4=; b=XrfaK0utl03hdApB+p3UhamBSV
+ V4ufShHtxViembLcJGjWxRzdbniBPA2CAnBmuTbYep3g1hUPR1Zc2okVPxIbbxyzMXDpcPwE3Xez+
+ riIg8or+GSuKkFv8YTQL5c5EV25+TGbp22r4kyIJG6vpywS19o40dBP5FmIIL3yyFwSw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:To:Subject:Message-ID:Date:MIME-Version:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Reply-To:From
+ :Date:Message-ID:To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=i14FMfDgeLIYUBDr4wzRQDYDM8zfCK70BmERxObCBZc=; b=P
- K2UhsaqvHk6gckt3o+vdO80jprWltktqLLI3+XInlxqWOK3FP10jYi8/kjJpiLjqq2BCvjqwC39jR
- 2XGCeOvTJxWfvBj6Eg82sJ7ErNPYcOAuYWDZRr8OklvMr2SNPF+uYMaFz8hLKwYe7CNNBMyW50+d4
- WCCvU3Qnl9rDXer4=;
-Received: from mail-qk1-f194.google.com ([209.85.222.194])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.94.2)
- id 1noPzL-0001QO-HE
- for industrypack-devel@lists.sourceforge.net; Tue, 10 May 2022 13:33:23 +0000
-Received: by mail-qk1-f194.google.com with SMTP id 185so3711351qke.7
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 10 May 2022 06:33:19 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=leadjugernaut-com.20210112.gappssmtp.com; s=20210112;
- h=return-receipt-to:from:mime-version:thread-index:importance
- :disposition-notification-to:date:message-id:subject:to;
- bh=i14FMfDgeLIYUBDr4wzRQDYDM8zfCK70BmERxObCBZc=;
- b=wRTtNcYopme8/PV5Uul05Ef2+rZoBnVBhawNZMEMIOPxjUAuCJPgvbqez9TeNnf24Y
- rbsQj1WKdyMYiD8OvcQhgOqyD8GwLhEyRzRWbRMJgUcnNmUgAAxlr+b/R7MkH2kPMUhP
- OcD9udXmD+NyUwHqqCoOx1tBTEDJ9kEd3MufM60jUQHZbhBhnKbHVnAjSS6SxrkM677t
- 1neLrSHjLqqlUyeX1SypBogsuU0QmENiY6eM3SJ3pZqgqiZawv8wvW9XVORp3tUc5Gu1
- 37x3i4O+mBqMSi86GEqQ7u1+15jDevspddGxxw4TGBh+MJfa4ToEeViGrNEJNBgG2nA9
- rjKw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20210112;
- h=x-gm-message-state:return-receipt-to:from:mime-version:thread-index
- :importance:disposition-notification-to:date:message-id:subject:to;
- bh=i14FMfDgeLIYUBDr4wzRQDYDM8zfCK70BmERxObCBZc=;
- b=Eh3qxv6eg/ZhysiJGdNLc6rt0UOCP/K3kqQj2WCRY5td9R4IVt1iO0JqNeDqrmJiUd
- vr6gcu6yCp6OUdEgc1xVqLdtJG7OPtiFe2GrcZ3UPIP5k3o+Sjtk96D73+6xbp61hrLN
- Spjqch9Nn60D3eLUbTBQd59up9gWF6EtmpWqcUQwqB1MWqBiL1WU/rIKYLNNqGXMakDz
- urY1/3tnLPJK679VB4wPwPzJpYPNCSOx7TE8uwEOXXU4Qes4MSfC9r51fbTtS+NkYdWF
- VrYbMKpesk43BJg88PNSxoncQq8gRSpEfglQutS2RT1UdDDG3I0ZPZKqsqPvgq+L3DYR
- Csjw==
-X-Gm-Message-State: AOAM53398/CycdGyLuuUDkiU5HLC+FWVIe2b8CgPcrsMUKETQjZx8tks
- 00nGSFZi9YcXwQ2aDplohT2oac9MbTahsYEU0FIDJmM+dk8=
-X-Google-Smtp-Source: ABdhPJzPgMaa5gS2/o+FolaRoTbViuEGl0CGtS8EY4RiHOVZgWHkBdlzYCjXgrunkEuqH94/7PeZZCA/VRZRezw6mtY=
-X-Received: by 2002:ae9:edd5:0:b0:69f:d773:5327 with SMTP id
- c204-20020ae9edd5000000b0069fd7735327mr15412473qkg.481.1652189593670; Tue, 10
- May 2022 06:33:13 -0700 (PDT)
-From: Christina Silva <christina@leadjugernaut.com>
-MIME-Version: 1.0
-X-Priority: 1 (Highest)
-X-MSMail-Priority: High
-X-Mailer: Microsoft Outlook 14.0
-Thread-Index: AdhkcDah2yr7nu16SfWSYqKO6rULgw==
-Importance: High
-Date: Tue, 10 May 2022 09:16:52 -0400
-Message-ID: <1b0d8a894d4af5d666f53ff95dc7a08c@mail.gmail.com>
+ List-Owner:List-Archive; bh=tHU2O38YoVQ+SQD/fphoeyZn1OgjBQQZU1t6oDUZjl4=; b=X
+ ztfQRLYDOA+nxzwz+/VLDm7/PdxNkbHHhcYp6nompZq0AUny+VlVcN5EIf4fng0ZJ8pZHbkKV+fsh
+ jiCeKbuXd/Is1qWsCntA3O0z+7ocqyOyIHxO6Z2vPrQvTD3wdoRggxhhoUcwdcrg3t1JqPZQzQ716
+ WAVQS33a0XT0PZHk=;
+Received: from static.130.0.88.23.clients.your-server.de ([23.88.0.130]
+ helo=toptechfactory.com)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.94.2)
+ id 1nobPo-008OIR-Ex
+ for industrypack-devel@lists.sourceforge.net; Wed, 11 May 2022 01:45:25 +0000
 To: industrypack-devel@lists.sourceforge.net
-X-Spam-Score: 0.0 (/)
+Message-ID: <3734534993fac1735cb7dca3e43a662f@nashvillebarbike.com>
+Date: Wed, 11 May 2022 02:40:26 +0200
+From: "Alex Dyson" <alexzn@thorocap.com>
+MIME-Version: 1.0
+X-Mailer-Sent-By: 2
+X-Spam-Score: 8.7 (++++++++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hello,
- I was wondering if you would be interested in acquiring
- verified *Church Management Software End Users Opt-In Contact list* across
- your target geography. *Church Management Software Competitors End Users:
- *Text-Em-All, Logos, Breeze, Pushpay, Clearstream, Planning Center Services,
- Churchteams, Text In Church End Users and many more.. 
- Content analysis details:   (0.0 points, 6.0 required)
+ Content preview:  Hi,
+ How is everything going for you? Have you read the information
+ on the RC Quadcopter that was previously provided to you? I'll send you the
+ product's specifics again via email. FPV Image transmission: 5G WiFi Battery:
+ 2850mAh Li-ion battery Flight time: 30 minutes Remote control distance: about
+ 2000m Content analysis details:   (8.7 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.222.194 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [23.88.0.130 listed in dnsbl-1.uceprotect.net]
+ 0.0 SPF_HELO_NEUTRAL       SPF: HELO does not match SPF record (neutral)
+ 0.7 SPF_NEUTRAL            SPF: sender does not match SPF record (neutral)
+ 1.2 DETAILS_OF_PRODUCT     BODY: No description available.
+ 0.6 YOUR_DELIVERY_ADDRESS  BODY: No description available.
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.222.194 listed in wl.mailspike.net]
-X-Headers-End: 1noPzL-0001QO-HE
-Subject: [Industrypack-devel] Updated Churches Contacts
+ 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ 2.7 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1nobPo-008OIR-Ex
+Subject: [Industrypack-devel] [SPAM] take a look at this product
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -117,196 +86,89 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============3521881702509590008=="
+Reply-To: info@701117.com
+Content-Type: multipart/mixed; boundary="===============4447299444514325945=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3521881702509590008==
-Content-Type: multipart/alternative; boundary="000000000000d517da05dea85d43"
-
---000000000000d517da05dea85d43
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-Hello,
-
-
-
-I was wondering if you would be interested in acquiring verified *Church
-Management Software End Users Opt-In Contact list* across your target
-geography.
-
-
-
-*Church Management Software Competitors End Users: *Text-Em-All, Logos,
-Breeze, Pushpay, Clearstream, Planning Center Services, Churchteams, Text
-In Church End Users and many more..
-
-
-
-*We Can Provide: Churches and other religious organizations key decision
-makers contacts or any other job titles as per your requirements.*
-
-
-
-Kindly let me know you are thoughts, so that we can discuss on further
-details about available counts and pricing.
-
-
-
-Awaiting your response
-
-
-
-*Regards,*
-
-*Christina Silva*
-
-*Marketing Manager*
-
-*Our Services: B2B Industry| HealthCare Industry| Technology Users| Data
-Appending| Data Enrichment*
-
-=E2=80=9CIf you are not interested please mention to us as unsubscribe=E2=
-=80=9D
-
---000000000000d517da05dea85d43
+--===============4447299444514325945==
 Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Content-Transfer-Encoding: 8bit
 
-<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
-=3Dus-ascii"><meta name=3D"Generator" content=3D"Microsoft Word 14 (filtere=
-d medium)"><style><!--
-/* Font Definitions */
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-/* Style Definitions */
-p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman","serif";}
-p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
-	{mso-style-priority:1;
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";}
-p.xmsonospacing, li.xmsonospacing, div.xmsonospacing
-	{mso-style-name:x_msonospacing;
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";}
-p.xxmsonospacing, li.xxmsonospacing, div.xxmsonospacing
-	{mso-style-name:x_xmsonospacing;
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman","serif";}
-p.mcntxmsonospacing1, li.mcntxmsonospacing1, div.mcntxmsonospacing1
-	{mso-style-name:mcntxmsonospacing1;
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";}
-p.x-951726203xmsonospacing, li.x-951726203xmsonospacing, div.x-951726203xms=
-onospacing
-	{mso-style-name:x_-951726203xmsonospacing;
-	mso-margin-top-alt:auto;
-	margin-right:0in;
-	mso-margin-bottom-alt:auto;
-	margin-left:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman","serif";}
-span.size
-	{mso-style-name:size;}
-span.apple-converted-space
-	{mso-style-name:apple-converted-space;}
-p.xmsonormal, li.xmsonormal, div.xmsonormal
-	{mso-style-name:x_msonormal;
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman","serif";}
-p.xxxmsonospacing, li.xxxmsonospacing, div.xxxmsonospacing
-	{mso-style-name:x_xxmsonospacing;
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman","serif";}
-p.xx-951726203xmsonospacing, li.xx-951726203xmsonospacing, div.xx-951726203=
-xmsonospacing
-	{mso-style-name:x_x-951726203xmsonospacing;
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman","serif";}
-span.xsize
-	{mso-style-name:x_size;}
-.MsoChpDefault
-	{mso-style-type:export-only;
-	font-family:"Calibri","sans-serif";}
-.MsoPapDefault
-	{mso-style-type:export-only;
-	margin-bottom:10.0pt;
-	line-height:115%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
---></style></head><body lang=3D"EN-US"><div class=3D"WordSection1"><p class=
-=3D"MsoNoSpacing"><span style=3D"color:black;background:#fbfbfb">Hello,</sp=
-an></p><p class=3D"MsoNoSpacing"><span style=3D"font-size:5.0pt">=C2=A0</sp=
-an></p><p class=3D"MsoNoSpacing"><span style=3D"color:black;background:#fbf=
-bfb">I was wondering if you would be interested in acquiring verified <b>Ch=
-urch Management Software End Users Opt-In Contact list</b> across your targ=
-et geography.</span></p><p class=3D"MsoNoSpacing"><span style=3D"font-size:=
-5.0pt;color:black;background:#fbfbfb">=C2=A0</span></p><p class=3D"MsoNoSpa=
-cing"><b><span style=3D"color:black;background:#fbfbfb">Church Management S=
-oftware Competitors End Users: </span></b><span style=3D"color:black;backgr=
-ound:#fbfbfb">Text-Em-All, Logos, Breeze, Pushpay, Clearstream, Planning Ce=
-nter Services, Churchteams, Text In Church End Users and many more..</span>=
-</p><p class=3D"MsoNoSpacing"><span style=3D"font-size:5.0pt">=C2=A0</span>=
-</p><p class=3D"MsoNoSpacing"><b><span style=3D"color:black;background:#fbf=
-bfb">We Can Provide: Churches and other religious organizations key decisio=
-n makers contacts or any other job titles as per your requirements.</span><=
-/b></p><p class=3D"MsoNoSpacing"><span style=3D"font-size:5.0pt">=C2=A0</sp=
-an></p><p class=3D"MsoNoSpacing"><span style=3D"color:black;background:#fbf=
-bfb">Kindly let me know you are thoughts, so that we can discuss on further=
- details about available counts and pricing.</span></p><p class=3D"MsoNoSpa=
-cing"><span style=3D"font-size:5.0pt">=C2=A0</span></p><p class=3D"MsoNoSpa=
-cing"><span style=3D"color:black;background:#fbfbfb">Awaiting your response=
-</span></p><p class=3D"MsoNoSpacing"><span style=3D"font-size:5.0pt">=C2=A0=
-</span></p><p class=3D"MsoNormal" style=3D"background:white"><b><span style=
-=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;=
-;color:#222222">Regards,</span></b></p><p class=3D"MsoNormal"><b><span styl=
-e=3D"font-size:10.5pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot=
-;;color:#222222">Christina Silva</span></b></p><p class=3D"MsoNormal" style=
-=3D"background:white"><b><span style=3D"font-size:11.0pt;font-family:&quot;=
-Calibri&quot;,&quot;sans-serif&quot;;color:#222222">Marketing Manager</span=
-></b></p><p class=3D"MsoNormal" style=3D"background:white"><b><span style=
-=3D"font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;=
-;color:#222222">Our Services: B2B Industry| HealthCare Industry| Technology=
- Users| Data Appending| Data Enrichment</span></b></p><p class=3D"MsoNormal=
-" align=3D"center" style=3D"margin-bottom:8.0pt;text-align:center;line-heig=
-ht:11.55pt;background:white"><span style=3D"font-size:11.0pt;font-family:&q=
-uot;Calibri&quot;,&quot;sans-serif&quot;;color:#d9d9d9">=E2=80=9CIf you are=
- not interested please mention to us as unsubscribe=E2=80=9D</span></p><p c=
-lass=3D"MsoNormal">=C2=A0</p></div></body></html>
-
---000000000000d517da05dea85d43--
+<html>
+<head>
+</head>
+<body>
+Hi,<br /> <br /> How is everything going for you?<br /> Have you read the
+information on the RC Quadcopter that was previously provided to you?<br />
+I'll send you the product's specifics again via email.<br /> <br /> FPV
+Image transmission: 5G WiFi<br /> Battery: 2850mAh Li-ion battery<br />
+Flight time: 30 minutes<br /> Remote control distance: about 2000m<br />
+<br /> Are you interested to take one or two samples at 285.50 each. Send
+your address we will get the shipment ready.<br /> <br /> <img
+src="https://ca.lnwfile.com/_/ca/_raw/5m/j7/vc.jpg" width="600"
+height="399" /><br /> <br /> Introduction of our company:<br /> We start
+demoestic toy business from 2003 and export business from 2015. &nbsp;<br
+/> We are a professional company engaged in the research, development,
+production, sale and service of rc toys and camera products . <br />
+Dedicated to strict quality control and thoughtful customer service, our
+experienced sales team are always available to discuss your requirements
+and ensure full customer satisfaction.<br /> <br /> We welcome any OEM and
+ODM projects . Whether selecting any current product from our catalog or
+seeking engineering assistance for your application, you can talk to our
+customer service center about your sourcing requirements . <br /> We have
+professional &amp; experienced engineer team help to realize all your
+design and even only concept provided .&nbsp;<br /><br />Through
+cooperation with famous university on constant research and development in
+new technologies and products, we are heading toward leader status in the
+e-business industry due to its high-end technology. With rich experience
+and knowledge, we offer competitive and reliable service to promote the
+brand image, which in-turn has a profound influence on the whole industry.
+Innovations in research and development provide the best returns for our
+customers while at the same time providing the inspiration for our further
+development.Through great management, talented and forward-thinking
+engineers, high-quality products and first-class customer service, we aims
+to provide the best vapor experience. To our delight, we have earned a
+reputation all around the world. We believe that based on honest business
+practices and stable development, we can be all you want. Our goal is that
+everyone has a great experience with us, in accordance with our slogan of
+all for your health. Operation Philosophy: Quality and customer service are
+the decisive factors in any enterprise future. With that in mind, we
+implements the policy: Customer first, Quality first. Our forward thinking
+strategy has made us a consistent source of innovation across the industry
+in E-cigarettes and our production flexibility has allowed us to keep pace
+with the changing demands.<br />With strict operating delivery systems in
+place, customers in the UK, Western Europe, and the US no longer need to
+wait a long time for their packages arrival. Currently, we have only some
+of the products available in limited quantities since the warehouses were
+just recently completed. However, more products will be added in the future
+to meet your requirements.We plan to add more countries to the delivery
+list in the future so that most customers can get their packages in a short
+time. We will build more overseas warehouses in the future to speed up
+delivery no matter where you are. Customer Service: As the electronic
+cigarette industry is expanding rapidly in such a short amount of time,
+there is a high demand for certain products that take weeks and even months
+to arrive at the retailer. Our oversea warehouse logistics are here to
+alleviate some of the problems which many Electronic Cigarette retailers
+have such as lead time and Our mostly products are always on hand and we
+have no minimum order quantity. We stand behind everything we sell and make
+it our mission to ensure increased profitability for you. It is often
+difficult to switch suppliers but we will work very hard with you to smooth
+the transition. If you give us the opportunity to claim even a portion of
+your business, we will work hard to earn more of it. <br /><br />Thanks,<br
+/><span>Alex Dyson</span>
+</body>
+</html>
 
 
---===============3521881702509590008==
+
+--===============4447299444514325945==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3521881702509590008==
+--===============4447299444514325945==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -317,5 +179,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3521881702509590008==--
-
+--===============4447299444514325945==--
