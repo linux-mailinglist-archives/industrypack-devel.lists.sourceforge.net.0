@@ -2,74 +2,74 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 881135615F3
-	for <lists+industrypack-devel@lfdr.de>; Thu, 30 Jun 2022 11:17:56 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id A1FA7561075
+	for <lists+industrypack-devel@lfdr.de>; Thu, 30 Jun 2022 07:07:25 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1o6qJ9-0003nM-GK
-	for lists+industrypack-devel@lfdr.de; Thu, 30 Jun 2022 09:17:54 +0000
+	id 1o6mOg-0000iS-ST
+	for lists+industrypack-devel@lfdr.de; Thu, 30 Jun 2022 05:07:23 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <rose.ferrer1@recipientslist.com>) id 1o6qJ3-0003nB-9H
- for industrypack-devel@lists.sourceforge.net; Thu, 30 Jun 2022 09:17:48 +0000
+ (envelope-from <rose.ferrer1@recipientslist.com>) id 1o6mOe-0000iM-RA
+ for industrypack-devel@lists.sourceforge.net; Thu, 30 Jun 2022 05:07:21 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
  To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=4RTDuFNILKzhP2lrOOKRbKMcmMvhqo0kqq/jf5WYYco=; b=JUy8KtrdbIunu2TnsRk9AXqHNa
- 8mEDbvNUYMdvxjHK6Ncado3Y3ES3R1ammJZG+rCg7Zhvgbze4XvKmKbiZ116Sk8t3/RLcCZxDZrJw
- YfKExjTErjSuRbaGLMkpxw2674kIYIc9m7TE7f7UKVWNk1wBP98EnmkRYmJ6IyFfN9P4=;
+ bh=XF6GL4rwnfzSAIp5s40BZsmHh9zWMDTThCPFLj70Gns=; b=Zxd6ifRLG4cHbbR3/w6zecuH+P
+ 1NgBFwI6pPfQlixaHdX8UTF6cL++zUj/H5akr8mZeN1+wgbbX0OM0YoM8TVZBX6j4nxQ1NjJRzssC
+ ZzXM+4yTTblpaurCTSmmCmHvx41lx+gnWiLnv2nzeFqlAJhCZtcS2i2m2xY3fCrFLD1U=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=4RTDuFNILKzhP2lrOOKRbKMcmMvhqo0kqq/jf5WYYco=; b=C
- wCtJkyi4cyAekTnL7GHIivUVNxOSY9uqCu2Rbw0s1W+1cPU8sm9W1Qp+mf9jJlcWPsPrJtguWKsnL
- RrJKRW2m1VWLogbSiblM7MIcGuk3zstE7rRz+ZbMFC5asRqUfJuM1buIN2sPIgd/tLB1n6bGCpDTH
- sazKOCMJC4baWewo=;
+ List-Owner:List-Archive; bh=XF6GL4rwnfzSAIp5s40BZsmHh9zWMDTThCPFLj70Gns=; b=j
+ RBBNdlAIDBIYfYhHN6JpeMfEzT/enr5w/t+Yu4YYVXBShNny0hhN2QK/uMHhdB/0jA+dJKBztPZkU
+ 7qpzve4yOno3RqXau7gQ1rTGXECGCo0dIg8DkvY2qW5WfEIufqq+AfYXua3SDk+qAr2PSyTVtce6/
+ BPqCX75Qc4LwYelI=;
 Received: from server.recipientslist.com ([192.64.83.205])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1o6qJ0-002BtA-04
- for industrypack-devel@lists.sourceforge.net; Thu, 30 Jun 2022 09:17:47 +0000
+ id 1o6mOa-0001oR-NL
+ for industrypack-devel@lists.sourceforge.net; Thu, 30 Jun 2022 05:07:21 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=recipientslist.com; s=x; h=Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=4RTDuFNILKzhP2lrOOKRbKMcmMvhqo0kqq/jf5WYYco=; b=cx6JDHVWe3HMnDfNmsiJ7POfgX
- YFjojnBdo2nxeyYeSQ4lRIVzCYlA9hBNKki8mkXtyIZe47XQDCfhNEo+4YmlcWfEHN1XVBJw1+67O
- YsJI9JBiEHcd+FhbieBqVZ7ssDEp8fwc5u72zNu9tH/Qm7iRnCsSXwfy20ak1gyGm4cjiqDiv9ypX
- 9CVQVmBNN3EHUN0epb6vbGirHf1ZKMlnYSqvq5IrQL/8efJWWssgvmv+Ho56aI0wLJHxXo/mlJqHk
- Y07w2TY+3mu5DFUcQHib/2Q+7rBg4mN4xCs16Tse0k4QXxQiyN8iUnbgdfUvMkGXg1oYyND8SD8Sx
- aZ1kSxhQ==;
-Received: from [116.75.108.119] (helo=DESKTOP6SMTE07)
+ bh=XF6GL4rwnfzSAIp5s40BZsmHh9zWMDTThCPFLj70Gns=; b=YSV67fblwCOfPpvP8Z5vaXRkuK
+ 5lOoUmEUHobkIWKzSYsQBpMjqgmEWOAJOJ07H+L7hDkMHnSKGTt6m8u1C5cUeGuyk+uiiIHgRSwMl
+ HbTtsBnTA+4N3tVL4ExEWvKRfiXSwNbGdHqj4sLUvfEGFzl9lNuMZWBFbLDE/y7uJQm46wKK1qWT3
+ CrBbEd3rWcI8fbJ0M03lTWjyCIgvuLNCYuLsYD2gxFihQ0uPhqHXhXPaYdMFlJ/OXSPDi9ivCwarr
+ rUuPFGeUU2tQUXgUtMTDMXCVUaqHkRjuz4mWFDCCdoNG97eakzlRNJ7y3ZCG7WFloXFeiBWoYKkQa
+ fZf2HSKQ==;
+Received: from [115.99.156.77] (helo=DESKTOP6SMTE07)
  by server.recipientslist.com with esmtpa (Exim 4.96)
- (envelope-from <rose.ferrer1@recipientslist.com>) id 1o6qIs-006P14-2O
+ (envelope-from <rose.ferrer1@recipientslist.com>) id 1o6lGR-0064ai-2t
  for industrypack-devel@lists.sourceforge.net;
- Thu, 30 Jun 2022 05:17:39 -0400
+ Wed, 29 Jun 2022 23:54:48 -0400
 From: "rose.ferrer" <rose.ferrer1@recipientslist.com>
 To: <industrypack-devel@lists.sourceforge.net>
-Date: Thu, 16 Jun 2022 08:12:36 -0400
-Message-ID: <!&!AAAAAAAAAAAYAAAAAAAAAC4a6pCLDaJNvad6z+nujHnCgAAAEAAAAD5/WfxyhUNJiJRn2McL14oBAAAAAA==@recipientslist.com>
+Date: Thu, 16 Jun 2022 15:14:39 -0400
+Message-ID: <!&!AAAAAAAAAAAYAAAAAAAAAC4a6pCLDaJNvad6z+nujHnCgAAAEAAAALClOi+/jcVIo3tpxWpHfU8BAAAAAA==@recipientslist.com>
 MIME-Version: 1.0
 X-Priority: 1 (Highest)
 X-MSMail-Priority: High
 X-Mailer: Microsoft Outlook 15.0
 Importance: High
-Thread-Index: AdiBelkjYKRG5pbZSPKvkHgvB/O4YA==
+Thread-Index: AdiBtSenh21L5vSQS4m17+7FUluhaA==
 Content-Language: en-in
 X-Authenticated-Id: rose.ferrer1@recipientslist.com
 X-Spam-Score: 1.9 (+)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -84,17 +84,16 @@ X-Spam-Report: Spam detection software,
  2.1 DATE_IN_PAST_96_XX     Date: is 96 hours or more before Received:
  date -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1o6qJ0-002BtA-04
+X-Headers-End: 1o6mOa-0001oR-NL
 Subject: [Industrypack-devel] lists.sourceforge.net :SEMICON Southeast Asia
- 2022 Attendee's List
+ Show 2022
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -106,19 +105,19 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============6565446434473073128=="
+Content-Type: multipart/mixed; boundary="===============2184632133581984628=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multipart message in MIME format.
 
---===============6565446434473073128==
+--===============2184632133581984628==
 Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0D40_01D88158.D98B9BA0"
+	boundary="----=_NextPart_000_11A5_01D88193.CF1ED6B0"
 Content-Language: en-in
 
 This is a multipart message in MIME format.
 
-------=_NextPart_000_0D40_01D88158.D98B9BA0
+------=_NextPart_000_11A5_01D88193.CF1ED6B0
 Content-Type: text/plain;
 	charset="us-ascii"
 Content-Transfer-Encoding: 7bit
@@ -158,7 +157,7 @@ Trade Show Specialist.
  
 
 
-------=_NextPart_000_0D40_01D88158.D98B9BA0
+------=_NextPart_000_11A5_01D88193.CF1ED6B0
 Content-Type: text/html;
 	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
@@ -225,8 +224,8 @@ style=3D'text-autospace:none'><span =
 style=3D'mso-fareast-language:EN-IN'>&nbsp;&nbsp;<o:p></o:p></span></p><p=
  class=3DMsoNormal style=3D'text-autospace:none'><span =
 style=3D'mso-fareast-language:EN-IN'>Would you be interested in getting =
-Attendees Email List of <b>SEMICON Southeast Asia 2022&#8230;??</b> =
-<o:p></o:p></span></p><p class=3DMsoNormal =
+<b>Attendees</b> Email List of <b>SEMICON Southeast Asia =
+2022&#8230;??</b> <o:p></o:p></span></p><p class=3DMsoNormal =
 style=3D'text-autospace:none'><span =
 style=3D'mso-fareast-language:EN-IN'>&nbsp;&nbsp;<o:p></o:p></span></p><p=
  class=3DMsoNormal style=3D'text-autospace:none'><b><span =
@@ -255,18 +254,18 @@ style=3D'text-autospace:none'><b><span =
 style=3D'mso-fareast-language:EN-IN'>Trade Show Specialist. =
 <o:p></o:p></span></b></p><p =
 class=3DMsoNormal><o:p>&nbsp;</o:p></p></div></body></html>
-------=_NextPart_000_0D40_01D88158.D98B9BA0--
+------=_NextPart_000_11A5_01D88193.CF1ED6B0--
 
 
 
---===============6565446434473073128==
+--===============2184632133581984628==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6565446434473073128==
+--===============2184632133581984628==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -277,6 +276,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6565446434473073128==--
+--===============2184632133581984628==--
 
 
