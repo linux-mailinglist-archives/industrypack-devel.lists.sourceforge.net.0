@@ -2,84 +2,76 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F85F54D8BD
-	for <lists+industrypack-devel@lfdr.de>; Thu, 16 Jun 2022 05:03:57 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id AA2825512E4
+	for <lists+industrypack-devel@lfdr.de>; Mon, 20 Jun 2022 10:34:55 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1o1fnW-0006sZ-4K
-	for lists+industrypack-devel@lfdr.de; Thu, 16 Jun 2022 03:03:55 +0000
+	id 1o3Cs3-0005Ms-Cl
+	for lists+industrypack-devel@lfdr.de; Mon, 20 Jun 2022 08:34:54 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <info@isetanmitsou07.com>) id 1o1fnU-0006sP-EP
- for industrypack-devel@lists.sourceforge.net; Thu, 16 Jun 2022 03:03:53 +0000
+ (envelope-from <jonathaner@skyhighsports.com>) id 1o3Cs1-0005Mm-Uf
+ for industrypack-devel@lists.sourceforge.net; Mon, 20 Jun 2022 08:34:52 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Subject:To:From:
- Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Reply-To:From:Date:Message-ID:Subject:To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=ZLfmOgKQ/C22rg9uN8jLS5w6UjzyE+sMVMqVV3SyvAk=; b=fbBxb+v7NzvSo84tmAbg1wGwWP
- sAPJ2n4gXWTh1GNK7+cFKJ9lYCLfZesad8p4ZqXqlYfaXGL0MusMo7iyR1LAgcr/FQgoc3NgQEQml
- /qMws6EDjElebEdSU2qjWDafmNWC/M2bQrvSIXjohc7vnjuV7mo87NEHJVNDorI9L0eM=;
+ bh=Df2yoHXxY4Eb5j1t1EiYOifgaqTTnsxF2r8ggzOtOKU=; b=L1DrOIxcO2r/Nh/N8yVAc62o5L
+ FA5jKjIu5oC45ayM/lsqrx8Pgm7k9ocLoga9KGjwpOID1V9FgFCQPjgbHUsd46tMkvSFLd/dtFtfx
+ IfR1kfH9vAvLqBaYC5HBL4aLhMHKRUvTAhDtXnlZRjmO4rWm+6SxM8Xiw8U5SlWIFEu0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Date:Subject:To:From:Message-ID:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Reply-To:From:Date:
+ Message-ID:Subject:To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=ZLfmOgKQ/C22rg9uN8jLS5w6UjzyE+sMVMqVV3SyvAk=; b=e
- 9HTuC0f9fnPwAYB3NJxhuJ5fvZKCjW4aO//e5IoG+KDCovgbxRxCvNLYreq6+IZSaymEINr/HsAvP
- olh/CKVBfs1JUlIDaZEOhp/8diB9MKLNaWbFY90VT2n6PABOkPceAc0AG8nuwp8WTOy2DOuDNkfHi
- XrA7GgFULmeBiI6U=;
-Received: from hwsrv-977713.hostwindsdns.com ([192.236.209.65]
- helo=mial0.isetanmitsou07.com)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1o1fnT-003XBR-89
- for industrypack-devel@lists.sourceforge.net; Thu, 16 Jun 2022 03:03:53 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
- d=isetanmitsou07.com; 
- h=Sender:Message-ID:From:To:Subject:Date:MIME-Version:Content-Type;
- i=info@isetanmitsou07.com;
- bh=ZLfmOgKQ/C22rg9uN8jLS5w6UjzyE+sMVMqVV3SyvAk=;
- b=pDttM3bNTnS078HRm/pLpxZ6gR4+6eOMv66nEkxKmyGd1Q/vrHKeTF+mBhJqlQ2TCNnIgTQjC6Vy
- 6HGAaB990psOEo1xJ6YXXo/cpf30YuVmtdFv8KoLm3GgQc8eJzYN97fj+OTQRg7pAB1PTWtlYuzV
- u5ZJY4EAp7S4XPGeyWc=
-Message-ID: <20220616104902503083@isetanmitsou07.com>
-From: =?utf-8?B?5LiJ6LaK5LyK5Yui5Li5?= <member@isetanmitsukoshi.co.jp>
-To: <industrypack-devel@lists.sourceforge.net>
-Date: Thu, 16 Jun 2022 10:48:57 +0800
+ List-Owner:List-Archive; bh=Df2yoHXxY4Eb5j1t1EiYOifgaqTTnsxF2r8ggzOtOKU=; b=b
+ OV4xp4ORPekS9jiPrtvhnoZedbomxlYBcZZB50SOiSpultyBPfq0T3aDqG885VYRw7Z95eh1Ao6Gt
+ O1zRPH33HnfDDKZbRgJ+9y5iegzbKYhjeE3gY2TPO6ON02wyM/CJpj+olYnVjmDcOPEWy/zPsKSE4
+ EFf4lBYr14B56ILo=;
+Received: from kurashenko.com ([104.160.19.61] helo=smokeysteakranch.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.94.2)
+ id 1o3Cs0-0004s0-0S
+ for industrypack-devel@lists.sourceforge.net; Mon, 20 Jun 2022 08:34:52 +0000
+To: industrypack-devel@lists.sourceforge.net
+Message-ID: <62a3a6c9131114c6dbed142cc56c189e@dronesvilla.com>
+Date: Mon, 20 Jun 2022 05:44:51 +0200
+From: "Jonathan Durham" <jonathanbn@skyhighsports.com>
 MIME-Version: 1.0
-X-Spam-Score: 1.3 (+)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 6.8 (++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  industrypack-devel　様 「三越伊勢丹WEB会員」のアカウントは終了いたしますのでお知らせいたします。
-    カード番号情報を確認してください。 https://www.mi [...] 
- 
- Content analysis details:   (1.3 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Hello, How is everything going with you? Have you received
+ the introduction that we sent you on the little drone-quadcopter that we
+ sent you last week? The drone-quadcopter can fly for 30 minutes nonstop and
+ record video at a frame rate of 25 frames per second. Product dimensions:
+ 45x40x12cm (before folding) 21x11x9cm (after folding) Dual-mode The po [...]
+ Content analysis details:   (6.8 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.4 NO_DNS_FOR_FROM        DNS: Envelope sender has no MX or A DNS records
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
-  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
-  0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
-  0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
-X-Headers-End: 1o1fnT-003XBR-89
-Subject: [Industrypack-devel] =?utf-8?b?44CQ44Ko44Og44Ki44Kk44Kr44O844OJ?=
- =?utf-8?b?44CR6YeN6KaB44Gq44GK55+l44KJ44Gb?=
+ 1.7 URIBL_BLACK            Contains an URL listed in the URIBL blacklist
+ [URIs: 32pt.com]
+ 0.7 SPF_NEUTRAL            SPF: sender does not match SPF record (neutral)
+ 0.0 SPF_HELO_NEUTRAL       SPF: HELO does not match SPF record (neutral)
+ 1.1 DATE_IN_PAST_03_06     Date: is 3 to 6 hours before Received: date
+ 1.2 YOUR_DELIVERY_ADDRESS  BODY: No description available.
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_IMAGE_RATIO_04    BODY: HTML has a low ratio of text to image
+ area 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+ 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+X-Headers-End: 1o3Cs0-0004s0-0S
+Subject: [Industrypack-devel] take a look at this again
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,109 +83,87 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============5985171086938196608=="
+Reply-To: jonathan@zkchji.com
+Content-Type: multipart/mixed; boundary="===============2945900365654205387=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+--===============2945900365654205387==
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
 
---===============5985171086938196608==
-Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0136_01395530.18FABF10"
-
-This is a multi-part message in MIME format.
-
-------=_NextPart_000_0136_01395530.18FABF10
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-aW5kdXN0cnlwYWNrLWRldmVs44CA5qeYDQrjgIzkuInotorkvIrli6LkuLlXRULkvJrlk6HjgI3j
-ga7jgqLjgqvjgqbjg7Pjg4jjga/ntYLkuobjgYTjgZ/jgZfjgb7jgZnjga7jgafjgYrnn6Xjgonj
-gZvjgYTjgZ/jgZfjgb7jgZnjgIINCuOCq+ODvOODieeVquWPt+aDheWgseOCkueiuuiqjeOBl+OB
-puOBj+OBoOOBleOBhOOAgg0KaHR0cHM6Ly93d3cubWlzdG9yZS5qcC9taWd1aWRlL29ubGluZS9h
-Ym91dC5odG1sDQrigLvmnKzjg6Hjg7zjg6vjga/phY3kv6HlsILnlKjjg6Hjg7zjg6vjgqLjg4nj
-g6zjgrnjgYvjgonphY3kv6HjgZfjgabjgYrjgorjgb7jgZnjgIINCuOAgOOBlOi/lOS/oeOBhOOB
-n+OBoOOBhOOBpuOCguWvvuW/nOOBhOOBn+OBl+OBi+OBreOBvuOBmeOBruOBp+OAgeS6iOOCgeOB
-lOS6huaJv+OBj+OBoOOBleOBhOOAgg0K4oC75pys44Oh44O844Or44Gv6YeN6KaB44Gq44GK55+l
-44KJ44Gb44Gu44Gf44KB44CB44Oh44O844Or6YWN5L+h5YGc5q2i6Kit5a6a44KS44GV44KM44Gm
-44GE44KL44GK5a6i44GV44G+44Gr44KC6YWN5L+h44GX44Gm44GK44KK44G+44GZ44CCDQoNCg0K
-KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioNCuS4iei2iuS8iuWLouS4ueOCquOD
-s+ODqeOCpOODs+OCueODiOOCog0KaHR0cDovL3d3dy5taXN0b3JlLmpwLw0KDQrmoKrlvI/kvJrn
-pL7jgIDkuInotorkvIrli6LkuLkNCioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq
-
-------=_NextPart_000_0136_01395530.18FABF10
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCAxMS4wMC4xMDU3MC4xMDAxIj48L0hFQUQ+DQo8Qk9EWT4NCjxQIA0Kc3R5bGU9
-IldISVRFLVNQQUNFOiBub3JtYWw7IFdPUkQtU1BBQ0lORzogMHB4OyBURVhULVRSQU5TRk9STTog
-bm9uZTsgQ09MT1I6IHJnYig0OSw1Myw1OSk7IEZPTlQ6IDE0cHgvMjJweCBWZXJkYW5hLCAnTWlj
-cm9zb2Z0IFlhaGVpJywgU2ltU3VuLCBzYW5zLXNlcmlmOyBXSURPV1M6IDE7IExFVFRFUi1TUEFD
-SU5HOiBub3JtYWw7IFRFWFQtSU5ERU5UOiAwcHg7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6
-IDBweCI+aW5kdXN0cnlwYWNrLWRldmVs44CA5qeYPC9QPg0KPFAgDQpzdHlsZT0iV0hJVEUtU1BB
-Q0U6IG5vcm1hbDsgV09SRC1TUEFDSU5HOiAwcHg7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xP
-UjogcmdiKDQ5LDUzLDU5KTsgRk9OVDogMTRweC8yMnB4IFZlcmRhbmEsICdNaWNyb3NvZnQgWWFo
-ZWknLCBTaW1TdW4sIHNhbnMtc2VyaWY7IFdJRE9XUzogMTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1h
-bDsgVEVYVC1JTkRFTlQ6IDBweDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4Ij7jgIzk
-uInotorkvIrli6LkuLlXRULkvJrlk6HjgI3jga7jgqLjgqvjgqbjg7Pjg4jjga/ntYLkuobjgYTj
-gZ/jgZfjgb7jgZnjga7jgafjgYrnn6XjgonjgZvjgYTjgZ/jgZfjgb7jgZnjgII8L1A+DQo8UCAN
-CnN0eWxlPSJXSElURS1TUEFDRTogbm9ybWFsOyBXT1JELVNQQUNJTkc6IDBweDsgVEVYVC1UUkFO
-U0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoNDksNTMsNTkpOyBGT05UOiAxNHB4LzIycHggVmVyZGFu
-YSwgJ01pY3Jvc29mdCBZYWhlaScsIFNpbVN1biwgc2Fucy1zZXJpZjsgV0lET1dTOiAxOyBMRVRU
-RVItU1BBQ0lORzogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyAtd2Via2l0LXRleHQtc3Ryb2tl
-LXdpZHRoOiAwcHgiPuOCq+ODvOODieeVquWPt+aDheWgseOCkueiuuiqjeOBl+OBpuOBj+OBoOOB
-leOBhOOAgjwvUD4NCjxQIA0Kc3R5bGU9IldISVRFLVNQQUNFOiBub3JtYWw7IFdPUkQtU1BBQ0lO
-RzogMHB4OyBURVhULVRSQU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYig0OSw1Myw1OSk7IEZPTlQ6
-IDE0cHgvMjJweCBWZXJkYW5hLCAnTWljcm9zb2Z0IFlhaGVpJywgU2ltU3VuLCBzYW5zLXNlcmlm
-OyBXSURPV1M6IDE7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IFRFWFQtSU5ERU5UOiAwcHg7IC13
-ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweCI+PC9QPg0KPFAgDQpzdHlsZT0iV0hJVEUtU1BB
-Q0U6IG5vcm1hbDsgV09SRC1TUEFDSU5HOiAwcHg7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xP
-UjogcmdiKDQ5LDUzLDU5KTsgRk9OVDogMTRweC8yMnB4IFZlcmRhbmEsICdNaWNyb3NvZnQgWWFo
-ZWknLCBTaW1TdW4sIHNhbnMtc2VyaWY7IFdJRE9XUzogMTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1h
-bDsgVEVYVC1JTkRFTlQ6IDBweDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4Ij48QSAN
-CmhyZWY9Imh0dHBzOi8vdHRocmVlLmNuLyI+PEZPTlQgDQpzaXplPTM+aHR0cHM6Ly93d3cubWlz
-dG9yZS5qcC9taWd1aWRlL29ubGluZS9hYm91dC5odG1sPC9GT05UPjwvQT48L1A+DQo8UCANCnN0
-eWxlPSJXSElURS1TUEFDRTogbm9ybWFsOyBXT1JELVNQQUNJTkc6IDBweDsgVEVYVC1UUkFOU0ZP
-Uk06IG5vbmU7IENPTE9SOiByZ2IoNDksNTMsNTkpOyBGT05UOiAxNHB4LzIycHggVmVyZGFuYSwg
-J01pY3Jvc29mdCBZYWhlaScsIFNpbVN1biwgc2Fucy1zZXJpZjsgV0lET1dTOiAxOyBMRVRURVIt
-U1BBQ0lORzogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdp
-ZHRoOiAwcHgiPuKAu+acrOODoeODvOODq+OBr+mFjeS/oeWwgueUqOODoeODvOODq+OCouODieOD
-rOOCueOBi+OCiemFjeS/oeOBl+OBpuOBiuOCiuOBvuOBmeOAgjxCUj7jgIDjgZTov5Tkv6HjgYTj
-gZ/jgaDjgYTjgabjgoLlr77lv5zjgYTjgZ/jgZfjgYvjga3jgb7jgZnjga7jgafjgIHkuojjgoHj
-gZTkuobmib/jgY/jgaDjgZXjgYTjgII8QlI+4oC75pys44Oh44O844Or44Gv6YeN6KaB44Gq44GK
-55+l44KJ44Gb44Gu44Gf44KB44CB44Oh44O844Or6YWN5L+h5YGc5q2i6Kit5a6a44KS44GV44KM
-44Gm44GE44KL44GK5a6i44GV44G+44Gr44KC6YWN5L+h44GX44Gm44GK44KK44G+44GZ44CCPC9Q
-PjxCUiANCnN0eWxlPSJXSElURS1TUEFDRTogbm9ybWFsOyBXT1JELVNQQUNJTkc6IDBweDsgVEVY
-VC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoNDksNTMsNTkpOyBGT05UOiAxNHB4LzIycHgg
-VmVyZGFuYSwgJ01pY3Jvc29mdCBZYWhlaScsIFNpbVN1biwgc2Fucy1zZXJpZjsgV0lET1dTOiAx
-OyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyAtd2Via2l0LXRleHQt
-c3Ryb2tlLXdpZHRoOiAwcHgiPg0KPFAgDQpzdHlsZT0iV0hJVEUtU1BBQ0U6IG5vcm1hbDsgV09S
-RC1TUEFDSU5HOiAwcHg7IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDQ5LDUzLDU5
-KTsgRk9OVDogMTRweC8yMnB4IFZlcmRhbmEsICdNaWNyb3NvZnQgWWFoZWknLCBTaW1TdW4sIHNh
-bnMtc2VyaWY7IFdJRE9XUzogMTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6
-IDBweDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4Ij4qKioqKioqKioqKioqKioqKioq
-KioqKioqKioqKioqKioqKjxCUj7kuInotorkvIrli6LkuLnjgqrjg7Pjg6njgqTjg7Pjgrnjg4jj
-gqI8QlI+PEEgDQpocmVmPSJodHRwczovL3R0aHJlZS5jbi8iIHJlbD1ub2ZvbGxvdz48Rk9OVCAN
-CnNpemU9Mz5odHRwOi8vd3d3Lm1pc3RvcmUuanAvPC9GT05UPjwvQT48QlI+PEJSPuagquW8j+S8
-muekvuOAgOS4iei2iuS8iuWLouS4uTxCUj4qKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq
-KioqKjwvUD48L0JPRFk+PC9IVE1MPg0K
-
-------=_NextPart_000_0136_01395530.18FABF10--
+<html>
+<head>
+</head>
+<body>
+<p>Hello,<br /> <br /> How is everything going with you?<br /> Have you
+received the introduction that we sent you on the little drone-quadcopter
+that we sent you last week?<br /> <br /> The drone-quadcopter can fly for
+30 minutes nonstop and record video at a frame rate of 25 frames per
+second.<br /> Product dimensions: 45x40x12cm (before folding) 21x11x9cm
+(after folding)<br /> Dual-mode The positioning system provides GPS
+positioning. Brushless motor model number: 1806.<br /> Remote control
+range: around 3000m<br /> The remote control's height is roughly 120
+meters.<br /> 1-3 meters for gesture recognition shooting Resolution of
+aerial images: 4096 x 3072 (APP)<br /> 2048 x 1080 video resolution
+(APP)<br /> Frame rate of transmission: 25fps<br /> <br /> The auto return
+feature allows you to order the aircraft to take off, land, and even return
+to its original spot with the push of a button.<br /> When summoned, the
+drone-quadcopter will return to the location from which it took off.<br />
+Fixed-point surround: you can now make stunning videos with this
+professional drone-quadcopter without doing any extra work.<br /> <br />
+The following are the cost details for varied quantities:<br /> 1 unit:
+229.90<br /> 2-50 units 209.90 each<br /> 51-100 units 189.90 each<br /><br
+/> Would you be interested in purchasing one or two of these?<br /> Send us
+your location and we will make the appropriate preparations on your behalf
+after contacting the logistics department.<br /><br /><img
+src="https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/D18C49281AF5F7/D18C49281AF5F7-DS_600ef313c100037048a59353_4487-DS_600ef313c100037048a59353-DS_600ef313c100037048a59353_1005002073569910-14%253A200006154%2523GPS-5G-4K%201B%20Foambox%253B200007763%253A201336100/template/thumb.jpg"
+width="640" height="636" /><br /><img
+src="https://media.karousell.com/media/photos/products/2021/3/8/drone_4drc_f9_4k_1615221385_0f7cbce4_progressive.jpg"
+width="585" height="812" /><br /> <br /> The development of optical flow
+occurs from the combination of a fixed point located within the system and
+a GPS position retrieved from outside the system.<br /> When you walk
+through your front door, either the electricity is totally turned off or
+you receive a notification stating that the energy has been turned off.<br
+/> This camera also has a virtual reality mode, as well as the option to
+switch between various lenses, a video/picture panorama, and a
+video/picture panorama.<br /> There are also MV (with a single button to
+return to the home screen), headless, photo/video gestures, and front lens
+adjustment modes. Each of these modes has its own set of capabilities.<br
+/> The GPS and air pressure combination employed in the system for flying
+at a fixed altitude is essentially a hybrid of the two technologies.<br />
+Wind resistance is rated as an 8, and it is measured in meters per
+second.<br /> <br /> <br /> Thanks,<br /> Jonathan Durham<br /> <br /> <br
+/> ======<br /> <br /> Is it necessary to print this email? If you care
+about the environment like we do, please refrain from printing emails. It
+helps to keep the environment forested.<br /> Please consider the
+environment before printing this email. Please do not print this email
+unless it is necessary. Every unprinted email helps the environment.<br />
+If you received this message by mistake, please reply to this message and
+follow with its deletion, so that we can ensure such a mistake does not
+occur in the future.<br /> <br /> Is printing out this email really
+required? If you share the same concern for the environment that we do, we
+kindly ask that you avoid from printing off any emails. It contributes to
+the maintenance of a forest-rich environment.<br /> Before printing this
+email, I ask that you keep in mind its impact on the environment. If
+printing it isn't absolutely required, please refrain from doing so. Every
+email that is not printed out is beneficial to the environment.<br /> If
+you believe that you have got this message in error, please respond to it
+and then delete it so that we can avoid making the same mistake in the
+future. Thank you.</p>
+<br /><br />
+</body>
+</html>
 
 
 
---===============5985171086938196608==
+--===============2945900365654205387==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5985171086938196608==
+--===============2945900365654205387==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -204,6 +174,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5985171086938196608==--
-
-
+--===============2945900365654205387==--
