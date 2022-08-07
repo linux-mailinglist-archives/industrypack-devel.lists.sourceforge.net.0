@@ -2,80 +2,93 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E6F5E58A932
-	for <lists+industrypack-devel@lfdr.de>; Fri,  5 Aug 2022 12:05:48 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
+	by mail.lfdr.de (Postfix) with ESMTPS id CFEAC58BAA4
+	for <lists+industrypack-devel@lfdr.de>; Sun,  7 Aug 2022 13:22:46 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.94.2)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1oJuDC-0005Rt-4C
-	for lists+industrypack-devel@lfdr.de; Fri, 05 Aug 2022 10:05:47 +0000
+	id 1oKeMn-00046n-3l
+	for lists+industrypack-devel@lfdr.de; Sun, 07 Aug 2022 11:22:45 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.94.2)
- (envelope-from <liubo03@inspur.com>) id 1oJuCm-0005RU-6I
- for industrypack-devel@lists.sourceforge.net; Fri, 05 Aug 2022 10:05:21 +0000
+ (envelope-from <sadakane@tka.att.ne.jp>) id 1oKeMm-00046c-5F
+ for industrypack-devel@lists.sourceforge.net; Sun, 07 Aug 2022 11:22:44 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
- CC:To:From:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=DALTtIoDZWwdnU148TyHZgrLTIWygyEGrj+ucmcDxTg=; b=FRD97J880WyMVuq7ACs4+FGMqB
- 3bzYlGRdtzOrQ9e3DAqmosfM3QQPEhYbO/45WKvLaomdvCS9CaSpNKaGbptg/X3FOfz/o4E8nz9XO
- 9247kHpEq7STKbZ7xXyeVPyofRLy5olXJd/MkW2ZYAfmHD+4AnlpfKfVaf44iAoaALBo=;
+ bh=EqamaPsW9R4PXMXDinG267T9hR85ci/9eRm8IdCEoVU=; b=ERNutC7bp4NDDOkKBXYMtBabnL
+ x5Oow3nktfheblGRbviFRVwEpdQfjyzIkp8LvbGdzSeGqhZjyip/qJe8PDDhKxk22zMd76a3K1aKH
+ 1sW+NGka3KOhc1es90m/y4jy8VSYXSu5OVZJ8dZcZqjtp8cAyv+C7NzmBj9yNFYDFGj0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From:Sender:
- Reply-To:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=DALTtIoDZWwdnU148TyHZgrLTIWygyEGrj+ucmcDxTg=; b=A
- 7LJbG2+AM47WB3f+I9W7FG6AYnDjkQm3ANaCsbHaaegqzkVvSdLozctO1VpQtM4i9OTKZGRbKtTTc
- 39/4g1jRcn0oNEeHvEprK+Z4gJ2BjXxNrhtj3uIN1weQgl93kaCH5UPtOMYBjaWCQIGnbw3TKwSbR
- VHHRZif+FFb0YtcQ=;
-Received: from 186.whitelist.crbl.net ([162.243.126.186])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.94.2)
- id 1oJuCg-0005DN-2c
- for industrypack-devel@lists.sourceforge.net; Fri, 05 Aug 2022 10:05:17 +0000
-Received: from ([60.208.111.195])
- by unicom146.biz-email.net ((D)) with ASMTP (SSL) id AJQ00157;
- Fri, 05 Aug 2022 17:10:57 +0800
-Received: from localhost.localdomain (10.200.104.97) by
- jtjnmail201605.home.langchao.com (10.100.2.5) with Microsoft SMTP Server id
- 15.1.2507.9; Fri, 5 Aug 2022 17:10:58 +0800
-From: Bo Liu <liubo03@inspur.com>
-To: <siglesias@igalia.com>, <jens.taprogge@taprogge.org>,
- <gregkh@linuxfoundation.org>
-Date: Fri, 5 Aug 2022 05:10:57 -0400
-Message-ID: <20220805091057.19951-1-liubo03@inspur.com>
-X-Mailer: git-send-email 2.18.2
-MIME-Version: 1.0
-X-Originating-IP: [10.200.104.97]
-tUid: 2022805171057bbe340732a631b8a3cdd0dcdeea3b3fc
-X-Abuse-Reports-To: service@corp-email.com
-Abuse-Reports-To: service@corp-email.com
-X-Complaints-To: service@corp-email.com
-X-Report-Abuse-To: service@corp-email.com
-X-Spam-Score: 0.0 (/)
+ List-Owner:List-Archive; bh=EqamaPsW9R4PXMXDinG267T9hR85ci/9eRm8IdCEoVU=; b=E
+ sJ43wqs16d6rAwLxTPRSo30q79vKBKkpNfpwkQoUIi2CUvA3rgdxs8TCoozdiO3N8QvXnoSNX1BJ7
+ 7mPQMDZwyhtAIReDXxCnKY9/dAaX0YBVSUEDjKoQ1dLg775LNt88t0+qbCiGxO+oVwhVujfTunmpM
+ WlSrQK11L4trFnXo=;
+Received: from msa204.att.ne.jp ([143.90.14.10] helo=cmsa204.att.ne.jp)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.94.2)
+ id 1oKeMk-006gDt-0f
+ for industrypack-devel@lists.sourceforge.net; Sun, 07 Aug 2022 11:22:43 +0000
+Received: from vmsa204.att.ne.jp by cmsa204.att.ne.jp with ESMTP
+ id <20220807112235298.CEIQ.34043.cmsa204.att.ne.jp@msa204.att.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sun, 7 Aug 2022 20:22:35 +0900
+Received: from msrg2041.rgserv.att.ne.jp by vmsa204.att.ne.jp with ESMTP
+ id <20220807112235294.OQLS.32069.vmsa204.att.ne.jp@msa204.att.ne.jp>
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sun, 7 Aug 2022 20:22:35 +0900
+Received: from dongguan.gd.cn (185.202.101.56) by msrg2041.rgserv.att.ne.jp
+ (5.8.426)
+ id 6239306A0692E361 for industrypack-devel@lists.sourceforge.net;
+ Sun, 7 Aug 2022 20:22:35 +0900
+Date: Sun, 7 Aug 2022 19:22:42 +0800
+From: "bruce" <lkmould@lk-tooling.com>
+To: <industrypack-devel@lists.sourceforge.net>
+Message-ID: <20220807192249367582@tka.att.ne.jp>
+X-mailer: Foxmail 6, 13, 102, 15 [cn]
+Mime-Version: 1.0
+X-Spam-Score: 6.1 (++++++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  It's possible that dev_set_name() returns -ENOMEM, catch and
- handle this. Signed-off-by: Bo Liu <liubo03@inspur.com> ---
- drivers/ipack/ipack.c
- | 5 ++++- 1 file changed, 4 insertions(+), 1 deletion(-) 
- Content analysis details:   (0.0 points, 6.0 required)
+ Content preview:  Dear friend, I am bruce from LK-Mould Co.,
+ Ltd. We specialized
+ in design and manufacturing plastic, die casting mould and molded parts,
+ also provide full service for product develop and secondary oper [...] 
+ Content analysis details:   (6.1 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [143.90.14.10 listed in dnsbl-1.uceprotect.net]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [143.90.14.10 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [sadakane[at]tka.att.ne.jp]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
-X-Headers-End: 1oJuCg-0005DN-2c
-Subject: [Industrypack-devel] [PATCH] ipack: Check dev_set_name() return
- value
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 2.6 DEAR_FRIEND            BODY: Dear Friend? That's not very dear!
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+X-Headers-End: 1oKeMk-006gDt-0f
+Subject: Re: [Industrypack-devel] die casting
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -87,42 +100,77 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Cc: Bo Liu <liubo03@inspur.com>, linux-kernel@vger.kernel.org,
- industrypack-devel@lists.sourceforge.net
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Reply-To: lkmould@lk-tooling.com
+Content-Type: multipart/mixed; boundary="===============3282746513818028470=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-It's possible that dev_set_name() returns -ENOMEM, catch and handle this.
+This is a multi-part message in MIME format.
 
-Signed-off-by: Bo Liu <liubo03@inspur.com>
----
- drivers/ipack/ipack.c | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+--===============3282746513818028470==
+Content-Type: multipart/alternative;
+	boundary="=====003_Dragon711612573146_====="
 
-diff --git a/drivers/ipack/ipack.c b/drivers/ipack/ipack.c
-index b1c3198355e7..74d449858a61 100644
---- a/drivers/ipack/ipack.c
-+++ b/drivers/ipack/ipack.c
-@@ -429,8 +429,11 @@ int ipack_device_init(struct ipack_device *dev)
- 	dev->dev.bus = &ipack_bus_type;
- 	dev->dev.release = ipack_device_release;
- 	dev->dev.parent = dev->bus->parent;
--	dev_set_name(&dev->dev,
-+	ret = dev_set_name(&dev->dev,
- 		     "ipack-dev.%u.%u", dev->bus->bus_nr, dev->slot);
-+	if (ret)
-+		return ret;
-+
- 	device_initialize(&dev->dev);
- 
- 	if (dev->bus->ops->set_clockrate(dev, 8))
--- 
-2.27.0
+This is a multi-part message in MIME format.
+
+--=====003_Dragon711612573146_=====
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+RGVhciBmcmllbmQsDQpJIGFtIGJydWNlICBmcm9tIExLLU1vdWxkIENvLiwgTHRkLg0KV2Ugc3Bl
+Y2lhbGl6ZWQgaW4gZGVzaWduIGFuZCBtYW51ZmFjdHVyaW5nIHBsYXN0aWMsIGRpZSBjYXN0aW5n
+IG1vdWxkIGFuZCBtb2xkZWQgcGFydHMsIGFsc28gcHJvdmlkZSBmdWxsIHNlcnZpY2UgZm9yIHBy
+b2R1Y3QgZGV2ZWxvcCBhbmQgc2Vjb25kYXJ5IG9wZXJhdGlvbi5Nb2xkIERlc2lnbixNYW51ZmFj
+dHVyaW5nLFBsYXN0aWMgSW5qZWN0aW9uIE1vbGRpbmcsUHJvamVjdCBNYW5hZ2VtZW50Lg0KRG8g
+eW91IGhhdmUgYW55IHByb2plY3QgaW4gaGFuZD8gY291bGQgeW91IGtpbmRseSBzZW5kIG1lIHlv
+dXIgZHJhd2luZ3M/ICANCkkgYmVsaWV2ZSBvdXIgcHJvZHVjdHMgcXVhbGl0eSBtYWtlIHlvdSAx
+MDAlIHNhdGlzZnkhDQpUaGFua3MNCkJydWNlDQpQcm9mZXNzaW9uYWwgcGxhc3RpYyBtb2xkaW5n
+IGFuZCBkaWUgY2FzdGluZyBtb3VsZCAgU3VwcGxpZXI=
+
+--=====003_Dragon711612573146_=====
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZPg0KPFA+RGVhciBmcmll
+bmQsPC9QPg0KPFA+SSBhbSZuYnNwO2JydWNlICZuYnNwO2Zyb20gTEstTW91bGQgQ28uLCBMdGQu
+PC9QPg0KPFA+V2Ugc3BlY2lhbGl6ZWQgaW4gPFNUUk9ORz48Rk9OVCBzaXplPTQ+ZGVzaWduIGFu
+ZCBtYW51ZmFjdHVyaW5nIHBsYXN0aWMsIGRpZSANCmNhc3RpbmcgbW91bGQgYW5kIG1vbGRlZCBw
+YXJ0cyw8L0ZPTlQ+PC9TVFJPTkc+IGFsc28gcHJvdmlkZSBmdWxsIHNlcnZpY2UgZm9yIA0KcHJv
+ZHVjdCBkZXZlbG9wIGFuZCBzZWNvbmRhcnkgb3BlcmF0aW9uLk1vbGQgRGVzaWduLE1hbnVmYWN0
+dXJpbmcsUGxhc3RpYyANCkluamVjdGlvbiBNb2xkaW5nLFByb2plY3QgTWFuYWdlbWVudC48L1A+
+DQo8UD48U1RST05HPkRvIHlvdSBoYXZlIGFueSBwcm9qZWN0IGluIGhhbmQ/IGNvdWxkIHlvdSBr
+aW5kbHkgc2VuZCBtZSB5b3VyIA0KZHJhd2luZ3M/PC9TVFJPTkc+Jm5ic3A7IDwvUD4NCjxQPkkg
+YmVsaWV2ZSBvdXIgcHJvZHVjdHMgcXVhbGl0eSBtYWtlIHlvdSAxMDAlIHNhdGlzZnkhPC9QPg0K
+PFA+VGhhbmtzPEJSPkJydWNlPC9QPg0KPFA+PFNUUk9ORz5Qcm9mZXNzaW9uYWwgcGxhc3RpYyBt
+b2xkaW5nIGFuZCBkaWUgY2FzdGluZyBtb3VsZCZuYnNwOyANClN1cHBsaWVyPC9TVFJPTkc+PC9Q
+PjwvQk9EWT48L0hUTUw+DQo=
+
+--=====003_Dragon711612573146_=====--
 
 
+
+--===============3282746513818028470==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+
+--===============3282746513818028470==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
+
+--===============3282746513818028470==--
+
+
