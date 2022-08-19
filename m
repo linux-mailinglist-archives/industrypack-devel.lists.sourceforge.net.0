@@ -2,101 +2,98 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id EF42F598EF9
-	for <lists+industrypack-devel@lfdr.de>; Thu, 18 Aug 2022 23:10:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C200E5992FB
+	for <lists+industrypack-devel@lfdr.de>; Fri, 19 Aug 2022 04:13:12 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1oOmmU-0003kv-OM
+	id 1oOrVW-0002y7-CT
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 18 Aug 2022 21:10:22 +0000
+	Fri, 19 Aug 2022 02:13:10 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <notification@nimta-eg.com>) id 1oOmmS-0003kp-Vq
- for industrypack-devel@lists.sourceforge.net;
- Thu, 18 Aug 2022 21:10:20 +0000
+ (envelope-from <bounce-656-1301156-656-248@a.qingqupin.cn>)
+ id 1oOrVU-0002y1-UJ for industrypack-devel@lists.sourceforge.net;
+ Fri, 19 Aug 2022 02:13:08 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
- Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=FHuA4m0G7h7hmrvb2p1xEBOjt0RqEewyRcDHlPgoDUQ=; b=e01k0JEEhaFBKZfwI+OI76AEmH
- /zvlob1vBGPemt/Lt9dsu15a2M/KAuLLMYY8OZ3D8LZwqsaEZQ9Ng9zJQUQ9g7Oopbw30o7kQOB0l
- yfqOrtldQw5R3OH8z9kStI2GrCiRSqsU/WeEQorVRSsNQ2eIMVj7AyY0tkpr2do35iOI=;
+ d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
+ :List-Unsubscribe:Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=1mGnj1LwMX2qiTwCteJPua3/3H1r3oIqYKVD5W9ZonU=; b=OZV242zQJWGXlWkcvhoIC9Js4v
+ qdeCJ2sN9VZIRrtTatcJ3uhZj5YHewxf4EtXFpdcxo9z80i2NLMR/1lUQhP8TQ2qscQIgWE5rVSJ1
+ aM1M7koDTRvsLxjgcnqQb0EsOutQwpa3DksyHRvjanMnwRuqjOvGpGlU25MkdT7sMwrs=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=FHuA4m0G7h7hmrvb2p1xEBOjt0RqEewyRcDHlPgoDUQ=; b=k
- LH0ePaXw3t7CtLDOVZ09gV3BWfIxKTbPMPdCAzClq40OphOOT9H/LT/3qscP9YlNbAk4VBQ0ju5dr
- T4tUdbztMdheDajeRXZSPOHv7NYtrg8t//7ZZiJowuQEdOKZpT/lUR/io/8f/wvTbUoWEP5Vglbwu
- AlZuOmuz/vENHMnU=;
-Received: from [91.228.52.240] (helo=nimta-eg.com)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1oOmmN-008NjR-6L for industrypack-devel@lists.sourceforge.net;
- Thu, 18 Aug 2022 21:10:20 +0000
-Received: from EC2AMAZ-UNF030G
- (ec2-18-118-213-213.us-east-2.compute.amazonaws.com [18.118.213.213])
- by nimta-eg.com (Postfix) with ESMTPSA id F2859442FE
- for <industrypack-devel@lists.sourceforge.net>;
- Thu, 18 Aug 2022 23:08:42 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=nimta-eg.com;
- s=default; t=1660856923;
- bh=FHuA4m0G7h7hmrvb2p1xEBOjt0RqEewyRcDHlPgoDUQ=; h=From:Subject:To;
- b=TfTVUuaDLbhP4J9AyhuyKiAbQB4P2sTp+qasZIzguQYIvCDBdBEo+asaAIgm/oCDL
- kaEBod//VWiXfGGnh5tlv24q8wvYVkYKzJQ+eEywU9HuBm3zrcPz/5fQtkkEHUgf6Y
- FBLhvsw22x0JflWw+eIPSa2GzdrTDHk7UEFDSDvs=
-Authentication-Results: nimta-eg.com;
- spf=pass (sender IP is 18.118.213.213) smtp.mailfrom=notification@nimta-eg.com
- smtp.helo=EC2AMAZ-UNF030G
-Received-SPF: pass (nimta-eg.com: connection is authenticated)
-To: <industrypack-devel@lists.sourceforge.net>
+ h=Content-Type:Content-Transfer-Encoding:MIME-Version:List-Unsubscribe:
+ Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=1mGnj1LwMX2qiTwCteJPua3/3H1r3oIqYKVD5W9ZonU=; b=b3IQRaJ3ScBCfUnoDhTaxz0yPV
+ 4xjr1Cg4RnrEQfRswoNoWGIMMBC/FSHSiNSJ3O8E8biywbrZz2IxkTsHMRIloXni5Doxyz95yt/5X
+ Tr+Umo0ppnocSW8f3u6YlRePX8UAXBQqpiImNXZ4oVnQk/Ow3/B9cj2OLC3+CQlbhPVg=;
+Received: from [92.118.61.43] (helo=a.qingqupin.cn)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1oOrVT-0003ve-UE for industrypack-devel@lists.sourceforge.net;
+ Fri, 19 Aug 2022 02:13:08 +0000
+Received: by a.qingqupin.cn id hvror60e97cs for
+ <industrypack-devel@lists.sourceforge.net>;
+ Thu, 18 Aug 2022 22:12:57 -0400 (envelope-from
+ <bounce-656-1301156-656-248@a.qingqupin.cn>)
+Date: Fri, 19 Aug 2022 02:12:57 +0000
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+From: mxq-qiu <fkaiqiu@163.com>
+Message-ID: <55de44daabba51382a7a159c8742a79e@92.118.61.43>
+X-Priority: 3
+X-Mailer: Email Sending System
+X-Complaints-To: test@test.com
+X-MessageID: M3x8fHw2Mzc4fHx8fGluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXR8fHx8M3x8fHwxfHx8fDA%3D
+X-Report-Abuse: <http://92.118.61.43/oem/report_abuse.php?mid=M3x8fHw2Mzc4fHx8fGluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXR8fHx8M3x8fHwxfHx8fDA%3D>
 MIME-Version: 1.0
-Date: Thu, 18 Aug 2022 21:08:43 +0000
-Message-Id: <184220220808217EB9B2B742$87A89C7A36@nimta-eg.com>
-X-Spam-Score: 3.1 (+++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 7.8 (+++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:      sf_ucfirst(sf_substring(lists.sourceforge.net, 1, 5))
-    Account Password Notification 
+ Content preview:  Untitled document VX perter526531 获取线索 
  
- Content analysis details:   (3.1 points, 6.0 required)
+ Content analysis details:   (7.8 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
+  3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
+                             [92.118.61.43 listed in zen.spamhaus.org]
   1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
-                             [91.228.52.240 listed in dnsbl-1.uceprotect.net]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
-                             identical to background
-  0.0 HTML_FONT_FACE_BAD     BODY: HTML font face is not a word
+                             [92.118.61.43 listed in dnsbl-1.uceprotect.net]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [fkaiqiu[at]163.com]
+  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
+                              address
+  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
   0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  0.0 TVD_PH_BODY_ACCOUNTS_PRE The body matches phrases such as
-                             "accounts suspended", "account credited",
-                             "account verification"
+  0.0 HTML_IMAGE_RATIO_02    BODY: HTML has a low ratio of text to image
+                             area
+  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+                             EnvelopeFrom freemail headers are
+                             different
   1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  0.0 NAME_EMAIL_DIFF        Sender NAME is an unrelated email address
-  1.0 FROM_MULTI_NORDNS      Multiple From addresses + no rDNS
-X-Headers-End: 1oOmmN-008NjR-6L
-Subject: [Industrypack-devel] Password Expiration Notice
+  0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
+  1.3 SPOOFED_FREEMAIL       No description available.
+X-Headers-End: 1oOrVT-0003ve-UE
+Subject: [Industrypack-devel] =?utf-8?b?MzAwMDAr5aSW6LS45LyB5Lia55qE6YCJ?=
+ =?utf-8?b?5oup77yMRURN6JCl6ZSA6L2s5YyW?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -108,308 +105,413 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: admin--- via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: "admin@lists.sourceforge.net" <notification@nimta-eg.com>
-Content-Type: multipart/mixed; boundary="===============9024151075776073755=="
+Reply-To: mxq-qiu <fkaiqiu@163.com>
+Content-Type: multipart/mixed; boundary="===============1428163770398140344=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
-
---===============9024151075776073755==
-Content-Type: multipart/alternative; boundary="ytjuBX=_NBdDGIV1dhRqtTGTS5oGV9grIn"
-
-This is a multi-part message in MIME format
-
---ytjuBX=_NBdDGIV1dhRqtTGTS5oGV9grIn
-Content-Type: text/plain; charset="utf-8"
+--===============1428163770398140344==
 Content-Transfer-Encoding: quoted-printable
-
-
-=C2=A0
-
- =C2=A0
-
- sf_ucfirst(sf_substring(lists.sourceforge.net, 1,
- 5)) Account Password
- Notification
-
-
-
-
-
-
- Account:
- Industrypack-devel@lists.sourceforge.net
-
- Registered Domain:
- sf_ucfirst(sf_substring(lists.sourceforge.net, 1,
- 5))
-
- Notification Purpose:
- Pass word Expires in 24 hours
-
- Date:
- Thursday, August 18, 2022
-
-
- Keep Same Password. https://adclick.g.doubleclick.net/pcs/click?xai=3D=
-AKAOjsuNB9fkUnzdSKCMNvc7k4ilbQLDjtqYxh55Se5SIiE7_Sz6O4BVOpEyALQwilM3YN=
-HJHFqkmqqT8ArqEyOG3nqoDnjG7dyxijqEYVK13iaLydptAurmS3iDTTmwXXbMlNXQFHUw=
-i4AuxeX0VPkWveH8NbkWVaFMGGP3TE-UHQS10LQbw-wf4vbn1FxooWMKiGYhq9rssP9f9Y=
-WeyNmk3xFoLPQENaDU6Pw-zdqShPwUDZIzoYnNa2ZyfBwIKrQEmmArfN4N8-uR17f7Jxn4=
-bbgswNCM91VbHOHvAVsqU3d1FfFTv-NRZzQoSIGHwkxnvHdKoH0EbQDwnW-WEERba2y190=
-QSUoxnj6NEmiezvUgcVDHMHH1rUxHrtA0oX6FDFVy8oY5bcMpJpu4aCtI8qQ9IkWv709if=
-jzpA5CYkdV-umhViZcT_OmQMfjVWAaY75NIUSLhmCMWsCLrUqvddESnj3PaCtiAa2akzR3=
-XNXRUXhDtzteOdNQdJIkPN8w0B2_-XsQ5IWjB5yewwqf0Eom3cUp8wZuiQnp19_YffgZEJ=
-EB_WkZfndO57-S62itG2ps_PaIn7WUqbO9_lWQmg5FAUWYKwXaHRs8u6qbJpt2dNb_Ll-e=
-clk1rvVREJcKLIKYitTa9ZnXCgGldlcaNumqCtyw8P5RJHzV_ergpQ2LjRkvj9n3wyYzmm=
-BtdiTkgUSbm2xBZA3or03jqbj2OUZ70xz9RsAx_1gDV0kvf-qGjFRJ1Q710fPCA7M5b_Rn=
-NcXq0AJ32kjgglnFxPQ0Gv8dCE5ECa7f7xcXq-2ytMWeTn17SthfLVtRDpNX6ckBfPzB8k=
-QR68dgSd_1Lls3q7vnynHmuAs1ZQtMS181z-aOiOVWvRudDnMjjmmj0vRbms4Rs4SXNh8a=
-xZ1U7LeqsfU2gxkdIKh-MFyxr_esK3XLk5D6nVs3NZaJ5tb-aOy1r3-GejXCaRMbuAAAF-=
-232Jtut7oBtNLQRzer7aKhBXwwARGXNDDaHLj0dvu_14NyG-159RIPlDhx_dDJwBzyg0uS=
-WOaE_lUMQeaNvJXXAL-QAYSCRXlbn44MVIwz_k0-7T7ntrzNmWecmhlsI9JU63GpPiPNan=
-T1fxD7QEX94fEAx7aduaUIh7T0CPVWRBv9pp6AdlKgX_su0_O_Mk_Rs&sai=3DAMfl-YTg=
-mC8fWFlyDKmODFOhDlMLXZV2tObY33ijNiNvLvbmkQEagBRrkPF-04TIAUHFpbC0va0XuY=
-y_zt2Jq59gSDIX1LKFWNIM0k_kO7QgBSEmPNvHUoP6YdBny_CCvCXusG1PRHOd0eVnY-RF=
-WWqV87dpTjBUJ0ynQWPkDPW5&sig=3DCg0ArKJSzMXHuNqM-G5z&pr=3D2:2.900839&fb=
-s_aeid=3Dindustrypack-devel@lists.sourceforge.net&urlfix=3D1&nx=3D70&n=
-y=3D208&dim=3D160x600&adurl=3Dhttps://t.myvisualiq.net/click_pixel%3Fe=
-t%3Dc%26ago%3D212%26ao%3D546%26aca%3D26737887%26si%3D7192763%26ci%3D16=
-1117887%26pi%3D317760010%26ad%3D512366295%26sv1%3D%5Bkeyword_id%5D%26a=
-dvt%3D4470646%26chnl%3D-7%26vndr%3D115%26sz%3D6585%26u%3Dred%3Dhttps:/=
-/000bj7ch5m4qct46q4lc14kbtph1tk0dfs64316disugtjreko5ocq8.siasky.net/?a=
-=3Dindustrypack-devel@lists.sourceforge.net=C2=A0=C2=A0=C2=A0=C2=A0
-
- Change New Password. https://adclick.g.doubleclick.net/pcs/click?xai=3D=
-AKAOjsuNB9fkUnzdSKCMNvc7k4ilbQLDjtqYxh55Se5SIiE7_Sz6O4BVOpEyALQwilM3YN=
-HJHFqkmqqT8ArqEyOG3nqoDnjG7dyxijqEYVK13iaLydptAurmS3iDTTmwXXbMlNXQFHUw=
-i4AuxeX0VPkWveH8NbkWVaFMGGP3TE-UHQS10LQbw-wf4vbn1FxooWMKiGYhq9rssP9f9Y=
-WeyNmk3xFoLPQENaDU6Pw-zdqShPwUDZIzoYnNa2ZyfBwIKrQEmmArfN4N8-uR17f7Jxn4=
-bbgswNCM91VbHOHvAVsqU3d1FfFTv-NRZzQoSIGHwkxnvHdKoH0EbQDwnW-WEERba2y190=
-QSUoxnj6NEmiezvUgcVDHMHH1rUxHrtA0oX6FDFVy8oY5bcMpJpu4aCtI8qQ9IkWv709if=
-jzpA5CYkdV-umhViZcT_OmQMfjVWAaY75NIUSLhmCMWsCLrUqvddESnj3PaCtiAa2akzR3=
-XNXRUXhDtzteOdNQdJIkPN8w0B2_-XsQ5IWjB5yewwqf0Eom3cUp8wZuiQnp19_YffgZEJ=
-EB_WkZfndO57-S62itG2ps_PaIn7WUqbO9_lWQmg5FAUWYKwXaHRs8u6qbJpt2dNb_Ll-e=
-clk1rvVREJcKLIKYitTa9ZnXCgGldlcaNumqCtyw8P5RJHzV_ergpQ2LjRkvj9n3wyYzmm=
-BtdiTkgUSbm2xBZA3or03jqbj2OUZ70xz9RsAx_1gDV0kvf-qGjFRJ1Q710fPCA7M5b_Rn=
-NcXq0AJ32kjgglnFxPQ0Gv8dCE5ECa7f7xcXq-2ytMWeTn17SthfLVtRDpNX6ckBfPzB8k=
-QR68dgSd_1Lls3q7vnynHmuAs1ZQtMS181z-aOiOVWvRudDnMjjmmj0vRbms4Rs4SXNh8a=
-xZ1U7LeqsfU2gxkdIKh-MFyxr_esK3XLk5D6nVs3NZaJ5tb-aOy1r3-GejXCaRMbuAAAF-=
-232Jtut7oBtNLQRzer7aKhBXwwARGXNDDaHLj0dvu_14NyG-159RIPlDhx_dDJwBzyg0uS=
-WOaE_lUMQeaNvJXXAL-QAYSCRXlbn44MVIwz_k0-7T7ntrzNmWecmhlsI9JU63GpPiPNan=
-T1fxD7QEX94fEAx7aduaUIh7T0CPVWRBv9pp6AdlKgX_su0_O_Mk_Rs&sai=3DAMfl-YTg=
-mC8fWFlyDKmODFOhDlMLXZV2tObY33ijNiNvLvbmkQEagBRrkPF-04TIAUHFpbC0va0XuY=
-y_zt2Jq59gSDIX1LKFWNIM0k_kO7QgBSEmPNvHUoP6YdBny_CCvCXusG1PRHOd0eVnY-RF=
-WWqV87dpTjBUJ0ynQWPkDPW5&sig=3DCg0ArKJSzMXHuNqM-G5z&pr=3D2:2.900839&fb=
-s_aeid=3Dindustrypack-devel@lists.sourceforge.net&urlfix=3D1&nx=3D70&n=
-y=3D208&dim=3D160x600&adurl=3Dhttps://t.myvisualiq.net/click_pixel%3Fe=
-t%3Dc%26ago%3D212%26ao%3D546%26aca%3D26737887%26si%3D7192763%26ci%3D16=
-1117887%26pi%3D317760010%26ad%3D512366295%26sv1%3D%5Bkeyword_id%5D%26a=
-dvt%3D4470646%26chnl%3D-7%26vndr%3D115%26sz%3D6585%26u%3Dred%3Dhttps:/=
-/000bj7ch5m4qct46q4lc14kbtph1tk0dfs64316disugtjreko5ocq8.siasky.net/?a=
-=3Dindustrypack-devel@lists.sourceforge.net=C2=A0=C2=A0=C2=A0=C2=A0
-
- Decide Later. https://adclick.g.doubleclick.net/pcs/click?xai=3DAKAOj=
-suNB9fkUnzdSKCMNvc7k4ilbQLDjtqYxh55Se5SIiE7_Sz6O4BVOpEyALQwilM3YNHJHFq=
-kmqqT8ArqEyOG3nqoDnjG7dyxijqEYVK13iaLydptAurmS3iDTTmwXXbMlNXQFHUwi4Aux=
-eX0VPkWveH8NbkWVaFMGGP3TE-UHQS10LQbw-wf4vbn1FxooWMKiGYhq9rssP9f9YWeyNm=
-k3xFoLPQENaDU6Pw-zdqShPwUDZIzoYnNa2ZyfBwIKrQEmmArfN4N8-uR17f7Jxn4bbgsw=
-NCM91VbHOHvAVsqU3d1FfFTv-NRZzQoSIGHwkxnvHdKoH0EbQDwnW-WEERba2y190QSUox=
-nj6NEmiezvUgcVDHMHH1rUxHrtA0oX6FDFVy8oY5bcMpJpu4aCtI8qQ9IkWv709ifjzpA5=
-CYkdV-umhViZcT_OmQMfjVWAaY75NIUSLhmCMWsCLrUqvddESnj3PaCtiAa2akzR3XNXRU=
-XhDtzteOdNQdJIkPN8w0B2_-XsQ5IWjB5yewwqf0Eom3cUp8wZuiQnp19_YffgZEJEB_Wk=
-ZfndO57-S62itG2ps_PaIn7WUqbO9_lWQmg5FAUWYKwXaHRs8u6qbJpt2dNb_Ll-eclk1r=
-vVREJcKLIKYitTa9ZnXCgGldlcaNumqCtyw8P5RJHzV_ergpQ2LjRkvj9n3wyYzmmBtdiT=
-kgUSbm2xBZA3or03jqbj2OUZ70xz9RsAx_1gDV0kvf-qGjFRJ1Q710fPCA7M5b_RnNcXq0=
-AJ32kjgglnFxPQ0Gv8dCE5ECa7f7xcXq-2ytMWeTn17SthfLVtRDpNX6ckBfPzB8kQR68d=
-gSd_1Lls3q7vnynHmuAs1ZQtMS181z-aOiOVWvRudDnMjjmmj0vRbms4Rs4SXNh8axZ1U7=
-LeqsfU2gxkdIKh-MFyxr_esK3XLk5D6nVs3NZaJ5tb-aOy1r3-GejXCaRMbuAAAF-232Jt=
-ut7oBtNLQRzer7aKhBXwwARGXNDDaHLj0dvu_14NyG-159RIPlDhx_dDJwBzyg0uSWOaE_=
-lUMQeaNvJXXAL-QAYSCRXlbn44MVIwz_k0-7T7ntrzNmWecmhlsI9JU63GpPiPNanT1fxD=
-7QEX94fEAx7aduaUIh7T0CPVWRBv9pp6AdlKgX_su0_O_Mk_Rs&sai=3DAMfl-YTgmC8fW=
-FlyDKmODFOhDlMLXZV2tObY33ijNiNvLvbmkQEagBRrkPF-04TIAUHFpbC0va0XuYy_zt2=
-Jq59gSDIX1LKFWNIM0k_kO7QgBSEmPNvHUoP6YdBny_CCvCXusG1PRHOd0eVnY-RFWWqV8=
-7dpTjBUJ0ynQWPkDPW5&sig=3DCg0ArKJSzMXHuNqM-G5z&pr=3D2:2.900839&fbs_aei=
-d=3Dindustrypack-devel@lists.sourceforge.net&urlfix=3D1&nx=3D70&ny=3D2=
-08&dim=3D160x600&adurl=3Dhttps://t.myvisualiq.net/click_pixel%3Fet%3Dc=
-%26ago%3D212%26ao%3D546%26aca%3D26737887%26si%3D7192763%26ci%3D1611178=
-87%26pi%3D317760010%26ad%3D512366295%26sv1%3D%5Bkeyword_id%5D%26advt%3=
-D4470646%26chnl%3D-7%26vndr%3D115%26sz%3D6585%26u%3Dred%3Dhttps://000b=
-j7ch5m4qct46q4lc14kbtph1tk0dfs64316disugtjreko5ocq8.siasky.net/?a=3Din=
-dustrypack-devel@lists.sourceforge.net
-
- Thank you for going paper-less.
-
---ytjuBX=_NBdDGIV1dhRqtTGTS5oGV9grIn
 Content-Type: text/html; charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Untitled document</title>
+</head>
+<body>
+<table bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"width: 100%;">
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 800=
+px;">
+<tr>
+<td align=3D"center">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 622=
+px;">
+<tr>
+<td style=3D"line-height: 0pt; font-size: 0pt;"><img src=3Dcid:bf5700559772=
+d8831b3838b12c50a786 /></td>
+<td align=3D"right">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tr>
+<td width=3D"12" style=3D"line-height: 0pt; font-size: 0pt;"><img border=3D=
+"0" height=3D"5" src=3Dcid:07cc702d392c8ed30bd94258dae58537 width=3D"7" /><=
+/td>
+<td style=3D"color: #31a6ce; line-height: 16px; font-family: Arial; font-si=
+ze: 12px;">VX</td>
+<td width=3D"20" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+<td width=3D"12" style=3D"line-height: 0pt; font-size: 0pt;"><img border=3D=
+"0" height=3D"5" src=3Dcid:07cc702d392c8ed30bd94258dae58537 width=3D"7" /><=
+/td>
+<td style=3D"color: #31a6ce; line-height: 16px; font-family: Arial; font-si=
+ze: 12px;">perter526531</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<div style=3D"background: #1886ab; height: 1px; line-height: 0pt; font-size=
+: 0pt;"><img height=3D"1" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=
+=3D"1" style=3D"height: 1px;" /></div>
+<div style=3D"line-height: 0pt; font-size: 0pt;"><img height=3D"558" src=3D=
+cid:143e0f8047213c36f7153d352fd8ac96 width=3D"1237" style=3D"width: 813px; =
+height: 333px;" /></div>
+</td>
+</tr>
+<tr>
+<td>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td align=3D"center">
+<div style=3D"height: 35px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"35" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 35px;" /></div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 622=
+px;">
+<tr>
+<td>
+<div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td valign=3D"top" width=3D"189">
+<div style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td bgcolor=3D"#d9d8d8" width=3D"1" style=3D"line-height: 0pt; font-size: 0=
+pt;">&nbsp;</td>
+<td bgcolor=3D"#f6f6f6">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td width=3D"14" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+<td style=3D"color: #555555; line-height: 18px; font-family: Arial; font-si=
+ze: 12px;">
+<div style=3D"height: 10px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"10" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 10px;" /></div>
+<div>=E8=8E=B7=E5=8F=96=E7=BA=BF=E7=B4=A2<br /><br />=E9=80=9A=E8=BF=87=E5=
+=85=A8=E7=90=83=E6=90=9C=E7=B4=A2=E3=80=81LBS=E5=9C=B0=E5=9B=BE=E5=BC=95=E6=
+=93=8E=E3=80=81 =E6=B5=B7=E5=85=B3=E6=95=B0=E6=8D=AE=E3=80=81=E8=B4=B8=E5=
+=B0=8F=E4=B8=83=E6=99=BA=E8=83=BD=E6=8E=A8=E8=8D=90=EF=BC=8C=E5=B8=AE=E6=82=
+=A8=E6=89=BE=E5=88=B0=E5=85=A8=E7=90=83=E9=87=87=E8=B4=AD=E5=95=86=E8=81=94=
+=E7=B3=BB=E9=82=AE=E7=AE=B1=E3=80=81=E7=94=B5=E8=AF=9D=E3=80=81=E7=A4=BE=E4=
+=BA=A4=E8=81=94=E7=B3=BB=E6=96=B9=E5=BC=8F</div>
+<div style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</div>
+</td>
+<td width=3D"14" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td bgcolor=3D"#d9d8d8" width=3D"1" style=3D"line-height: 0pt; font-size: 0=
+pt;">&nbsp;</td>
+</tr>
+</table>
+<div style=3D"line-height: 0pt; font-size: 0pt;"><img border=3D"0" height=
+=3D"6" src=3Dcid:3800bab8f31c8487511ffc4b794c6f7a width=3D"189" /></div>
+</td>
+<td width=3D"28" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+<td valign=3D"top" width=3D"189">
+<div style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td bgcolor=3D"#d9d8d8" width=3D"1" style=3D"line-height: 0pt; font-size: 0=
+pt;">&nbsp;</td>
+<td bgcolor=3D"#f6f6f6">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td width=3D"14" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+<td style=3D"color: #555555; line-height: 18px; font-family: Arial; font-si=
+ze: 12px;">
+<div style=3D"height: 10px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"10" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 10px;" /></div>
+<div>=E8=90=A5=E9=94=80=E6=8E=A8=E5=B9=BF<br /><br />1.EDM=E9=82=AE=E4=BB=
+=B6=E8=90=A5=E9=94=80=EF=BC=8C=E5=B8=AE=E6=82=A8=E7=B2=BE=E5=87=86=E5=8F=91=
+=E9=80=81=E4=BA=A7=E5=93=81=E8=B5=84=E6=96=99=E6=8E=A8=E9=80=81=E7=BB=99=E6=
+=82=A8=E7=9A=84=E5=AE=A2=E6=88=B7<br />2.Facebook=E8=90=A5=E9=94=80=EF=BC=
+=8C=E5=8D=B3=E6=97=B6=E8=81=94=E7=B3=BBWhatsApp=E8=90=A5=E9=94=80=EF=BC=8C=
+=E7=BE=A4=E5=8F=91=E4=BF=A1=E6=81=AF</div>
+</td>
+<td width=3D"14" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td bgcolor=3D"#d9d8d8" width=3D"1" style=3D"line-height: 0pt; font-size: 0=
+pt;">&nbsp;</td>
+</tr>
+</table>
+<div style=3D"line-height: 0pt; font-size: 0pt;"><img border=3D"0" height=
+=3D"6" src=3Dcid:3800bab8f31c8487511ffc4b794c6f7a width=3D"189" /></div>
+</td>
+<td width=3D"28" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+<td valign=3D"top" width=3D"189">
+<div style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td bgcolor=3D"#d9d8d8" width=3D"1" style=3D"line-height: 0pt; font-size: 0=
+pt;">&nbsp;</td>
+<td bgcolor=3D"#f6f6f6">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td width=3D"14" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+<td style=3D"color: #555555; line-height: 18px; font-family: Arial; font-si=
+ze: 12px;">
+<div style=3D"height: 10px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"10" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 10px;" /></div>
+<div>=E8=BD=AC=E5=8C=96=E7=AE=A1=E7=90=86<br /><br />CRM=E5=AE=A2=E6=88=B7=
+=E7=AE=A1=E7=90=86=EF=BC=8C=E9=9A=8F=E6=97=B6=E6=9F=A5=E7=9C=8B=E5=8E=86=E5=
+=8F=B2=E6=B2=9F=E9=80=9A=E6=83=85=E5=86=B5=EF=BC=8C=E8=AE=BE=E8=AE=A1=E8=B7=
+=9F=E8=BF=9B=E8=AE=A1=E5=88=92=EF=BC=8C=E5=AE=A2=E6=88=B7=E6=B0=B8=E4=B8=8D=
+=E6=B5=81=E5=A4=B1=EF=BC=8C=E4=BA=A7=E5=93=81=E9=A1=B5=EF=BC=8C=E8=8A=82=E6=
+=97=A5=E7=A5=9D=E7=A6=8F=E5=AE=9A=E6=97=B6=E6=8E=A8=E9=80=81=EF=BC=8C=E5=AE=
+=A2=E6=88=B7=E5=85=B3=E6=80=80=E8=AE=A9=E8=AE=A2=E5=8D=95=E6=BA=90=E6=BA=90=
+=E4=B8=8D=E6=96=AD</div>
+<div style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</div>
+</td>
+<td width=3D"14" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td bgcolor=3D"#d9d8d8" width=3D"1" style=3D"line-height: 0pt; font-size: 0=
+pt;">&nbsp;</td>
+</tr>
+</table>
+<div style=3D"line-height: 0pt; font-size: 0pt;"><img border=3D"0" height=
+=3D"6" src=3Dcid:3800bab8f31c8487511ffc4b794c6f7a width=3D"189" /></div>
+</td>
+</tr>
+</table>
+<div style=3D"height: 40px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"40" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 40px;" /></div>
+</div>
+<div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td valign=3D"top" width=3D"294" style=3D"line-height: 0pt; font-size: 0pt;=
+"><img src=3Dcid:5134bba865ce1471a21b38d21fd829cf /></td>
+<td bgcolor=3D"#f6f6f6" valign=3D"top">
+<div style=3D"background: #d9d8d8; height: 1px; line-height: 0pt; font-size=
+: 0pt;"><img height=3D"1" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=
+=3D"1" style=3D"height: 1px;" /></div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td width=3D"32" style=3D"line-height: 0pt; font-size: 0pt;">
+<div style=3D"height: 50px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"50" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 50px;" /></div>
+<div style=3D"height: 50px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"50" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 50px;" /></div>
+<div style=3D"height: 50px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"50" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 50px;" /></div>
+<div style=3D"height: 50px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"50" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 50px;" /></div>
+<div style=3D"height: 21px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"21" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 21px;" /></div>
+</td>
+<td style=3D"color: #555555; line-height: 20px; font-family: Arial; font-si=
+ze: 12px;">
+<div style=3D"line-height: 28px; font-size: 24px; font-weight: bold;">=E7=
+=B3=BB=E7=BB=9F=E6=80=BB=E7=BB=93</div>
+<div style=3D"height: 10px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"10" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 10px;" /></div>
+<div>=E8=B4=B8=E5=B0=8F=E4=B8=83=E9=80=9A=E8=BF=876=E7=A7=8D=E8=8E=B7=E5=AE=
+=A2=E6=96=B9=E5=BC=8F=EF=BC=8C=E5=B0=86=E5=85=A8=E7=90=83=E6=82=A8=E7=9A=84=
+=E7=9B=AE=E6=A0=87=E5=AE=A2=E6=88=B7=E6=94=B6=E9=9B=86=E5=88=B0=E7=BA=BF=E7=
+=B4=A2=E6=B1=A0=E7=BB=9F=E4=B8=80=E7=AE=A1=E7=90=86=EF=BC=8C=E5=B9=B6=E6=8F=
+=90=E4=BE=9B2=E5=A4=A7=E8=90=A5=E9=94=80=E6=A8=A1=E5=9D=97=EF=BC=8C=E9=AB=
+=98=E6=95=88=E8=BD=AC=E5=8C=96=E7=BA=BF=E7=B4=A2=E4=B8=BA=E5=AE=A2=E6=88=B7=
+<br />EDM=E8=90=A5=E9=94=80=EF=BC=9A=E5=8F=AF=E4=BB=A5=E5=88=86=E6=9E=90=E5=
+=AE=A2=E6=88=B7=E7=9A=84=E9=98=85=E8=AF=BB=E8=A1=8C=E4=B8=BA=EF=BC=8C=E6=AF=
+=94=E5=A6=82=E6=98=AF=E5=90=A6=E9=98=85=E8=AF=BB=EF=BC=8C=E9=98=85=E8=AF=BB=
+=E6=AC=A1=E6=95=B0=EF=BC=8C=E6=97=B6=E9=97=B4=EF=BC=8C=E7=82=B9=E5=87=BB=E6=
+=AC=A1=E6=95=B0=E7=AD=89=E7=AD=89.</div>
+<div style=3D"height: 15px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"15" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 15px;" /></div>
+<div style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</div>
+</td>
+<td width=3D"15" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+</tr>
+</table>
+<div style=3D"background: #d9d8d8; height: 1px; line-height: 0pt; font-size=
+: 0pt;"><img height=3D"1" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=
+=3D"1" style=3D"height: 1px;" /></div>
+</td>
+<td valign=3D"top" width=3D"5" style=3D"line-height: 0pt; font-size: 0pt;">=
+<img border=3D"0" height=3D"223" src=3Dcid:de5ca734a10544ef2628572d46f8004a=
+ width=3D"5" /></td>
+</tr>
+</table>
+<div style=3D"height: 40px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"40" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 40px;" /></div>
+</div>
+<div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td valign=3D"top" width=3D"5" style=3D"line-height: 0pt; font-size: 0pt;">=
+<img border=3D"0" height=3D"223" src=3Dcid:ffd00d0cb27b54f383a416db9eb2a9a6=
+ width=3D"5" /></td>
+<td bgcolor=3D"#f6f6f6" valign=3D"top">
+<div style=3D"background: #d9d8d8; height: 1px; line-height: 0pt; font-size=
+: 0pt;"><img height=3D"1" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=
+=3D"1" style=3D"height: 1px;" /></div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td width=3D"15" style=3D"line-height: 0pt; font-size: 0pt;">
+<div style=3D"height: 50px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"50" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 50px;" /></div>
+<div style=3D"height: 50px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"50" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 50px;" /></div>
+<div style=3D"height: 50px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"50" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 50px;" /></div>
+<div style=3D"height: 50px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"50" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 50px;" /></div>
+<div style=3D"height: 21px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"21" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 21px;" /></div>
+</td>
+<td style=3D"color: #555555; line-height: 20px; font-family: Arial; font-si=
+ze: 12px;">
+<div style=3D"line-height: 28px; font-size: 24px; font-weight: bold;">=E7=
+=A4=BE=E4=BA=A4=E8=90=A5=E9=94=80</div>
+<div style=3D"height: 10px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"10" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 10px;" /></div>
+<div>Facebook=EF=BC=9A<br />1.=E4=B8=BB=E9=A1=B5=E6=90=9C=E7=B4=A2=EF=BC=8C=
+=E5=8D=B3=E6=97=B6=E5=9C=A8=E7=BA=BF=E6=B2=9F=E9=80=9A<br />2.FB=E5=BE=AE=
+=E8=AF=A2=E7=9B=98=EF=BC=8C=E8=8E=B7=E5=8F=96FB=E4=B8=8A=E5=AE=A2=E6=88=B7=
+=E7=9A=84=E8=AF=A2=E7=9B=98<br />WhatsApp=EF=BC=9A<br />1.=E6=94=AF=E6=8C=
+=81=E5=A4=9A=E5=BC=80=E8=B4=A6=E5=8F=B7=EF=BC=8C=E7=BE=A4=E5=8F=91=E6=B6=88=
+=E6=81=AF=EF=BC=8C=E7=BB=9F=E4=B8=80=E7=AE=A1=E7=90=86<br />2.=E7=BE=A4=E7=
+=BB=84=E6=90=9C=E7=B4=A2=EF=BC=8C=E8=8E=B7=E5=8F=96=E7=BE=A4=E6=88=90=E5=91=
+=98=E8=81=94=E7=B3=BB</div>
+<div style=3D"height: 15px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"15" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 15px;" /></div>
+<div style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</div>
+</td>
+<td width=3D"32" style=3D"line-height: 0pt; font-size: 0pt;">&nbsp;</td>
+</tr>
+</table>
+<div style=3D"background: #d9d8d8; height: 1px; line-height: 0pt; font-size=
+: 0pt;"><img height=3D"1" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=
+=3D"1" style=3D"height: 1px;" /></div>
+</td>
+<td valign=3D"top" width=3D"294" style=3D"line-height: 0pt; font-size: 0pt;=
+"><img src=3Dcid:6e5ca236d3e2c1066a448d1ae06024a7 /></td>
+</tr>
+</table>
+<div style=3D"height: 40px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"40" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 40px;" /></div>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td align=3D"center">
+<table bgcolor=3D"#217091" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"width: 800px;">
+<tr>
+<td style=3D"text-align: center; color: #8ec8de; line-height: 20px; font-fa=
+mily: Arial; font-size: 11px;">
+<div style=3D"text-align: left; line-height: 0pt; font-size: 0pt;"><img bor=
+der=3D"0" height=3D"15" src=3Dcid:f192b3fe9d59fa24ef4254876120cd36 width=3D=
+"800" /></div>
+<div style=3D"height: 6px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"6" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"heig=
+ht: 6px;" /></div>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 100=
+%;">
+<tr>
+<td align=3D"center">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tr>
+<td width=3D"39" style=3D"text-align: center; line-height: 0pt; font-size: =
+0pt;">&nbsp;</td>
+<td width=3D"39" style=3D"text-align: center; line-height: 0pt; font-size: =
+0pt;"><img src=3Dcid:a57feedbfd61e535d275a46e731b2b99 /></td>
+<td width=3D"39" style=3D"text-align: center; line-height: 0pt; font-size: =
+0pt;">&nbsp;</td>
+<td width=3D"39" style=3D"text-align: center; line-height: 0pt; font-size: =
+0pt;">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div style=3D"height: 20px; line-height: 0pt; font-size: 0pt;"><img height=
+=3D"20" src=3Dcid:820953869868c216b3bc88fff62ebfe5 width=3D"1" style=3D"hei=
+ght: 20px;" /></div>
+<div><span style=3D"font-size: 14px;">=E6=9B=B4=E5=A4=9A=E8=AF=A6=E7=BB=86=
+=E5=92=A8=E8=AF=A2=EF=BC=8C=E8=AF=B7=E8=81=94=E7=B3=BBQ 2377529507 =EF=BC=
+=8CVX13632252031</span><br /><br /><br />&nbsp;</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<img src=3D"http://92.118.61.43/oem/to.php?p=3Drv/rv/rs/5oy/rv/rs" width=3D=
+"5" height=3D"2" alt=3D".">
+
+</body>
+</html>
 
 
-<TABLE style=3D"FONT-SIZE: 13px; FONT-FAMILY: 'Lucida Grande',Verdana,=
-Arial,Helvetica,sans-serif; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: f=
-ixed; COLOR: rgb(0,0,0); MARGIN: 0px auto; BACKGROUND-COLOR: rgb(232,2=
-32,232)" width=3D600 align=3Dcenter> <tr><td style=3D"FONT-SIZE: 14px;=
- BORDER-TOP: green 4px solid; FONT-FAMILY: Arial,Helvetica,sans-serif;=
- BACKGROUND: rgb(255,255,255); COLOR: rgb(102,102,102); PADDING-BOTTOM=
-: 10px; TEXT-ALIGN: center; PADDING-TOP: 10px; PADDING-LEFT: 0px; LINE=
--HEIGHT: 20px; PADDING-RIGHT: 0px" align=3Dcenter>&nbsp; </TD></tr><tr=
-><td style=3D"FONT-SIZE: 14px; FONT-FAMILY: Arial,Helvetica,sans-serif=
-; COLOR: rgb(102,102,102); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADD=
-ING-LEFT: 0px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px"><table cellSpaci=
-ng=3D0 cellPadding=3D0 width=3D"100%"> <tr><td style=3D"FONT-FAMILY: A=
-rial,Helvetica,sans-serif; WIDTH: 10px; PADDING-BOTTOM: 15px; PADDING-=
-TOP: 15px; PADDING-LEFT: 0px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px; B=
-ACKGROUND-COLOR: green" width=3D10>&nbsp;</td><td style=3D"FONT-FAMILY=
-: Arial,Helvetica,sans-serif; WIDTH: 570px; PADDING-BOTTOM: 15px; PADD=
-ING-TOP: 15px; PADDING-LEFT: 10px; LINE-HEIGHT: 20px; PADDING-RIGHT: 1=
-5px; BACKGROUND-COLOR: green" align=3Dleft> <SPAN style=3D"FONT-SIZE: =
-30px; FONT-WEIGHT: bold; COLOR: rgb(255,255,255); LINE-HEIGHT: 36px"> =
-<FONT face=3D"@Microsoft JhengHei"> Lists Account Password Notificatio=
-n</FONT></SPAN></TD></TR></TABLE></TD></tr><tr><td id=3Dm_-13380366205=
-74738674m_-3795171544422781908gmail-m_6182203470375812010m_-2678123843=
-383800905m_-3581932026516380531m_-8809481672570349771m_743638838202010=
-3554gmail-m_6631656027404832872m_-3064810288816714704gmail-v1gmail-mai=
-nCell style=3D"FONT-SIZE: 14px; BORDER-TOP: rgb(232,232,232) 4px solid=
-; FONT-FAMILY: Arial,Helvetica,sans-serif; COLOR: rgb(102,102,102); LI=
-NE-HEIGHT: 22px"><table style=3D"WIDTH: 598px; BORDER-COLLAPSE: collap=
-se; BACKGROUND-COLOR: white" cellSpacing=3D0 cellPadding=3D0 bgColor=3D=
-#ffffff border=3D0> <tr><td style=3D"FONT-FAMILY: Arial,Helvetica,sans=
--serif; LINE-HEIGHT: 22px"><table cellSpacing=3D0 cellPadding=3D0 bgCo=
-lor=3D#ffffff> <tr><td style=3D"FONT-FAMILY: Arial,Helvetica,sans-seri=
-f; LINE-HEIGHT: 22px"><table style=3D"WIDTH: 598px" cellSpacing=3D0 ce=
-llPadding=3D0 align=3Dleft bgColor=3D#ffffff> <tr><td style=3D"FONT-FA=
-MILY: Arial,Helvetica,sans-serif; PADDING-TOP: 20px; PADDING-LEFT: 20p=
-x; LINE-HEIGHT: 22px; PADDING-RIGHT: 20px" vAlign=3Dtop> <UL> <LI> <DI=
-V style=3D"MARGIN: 0px 0px 20px; LINE-HEIGHT: 20px"> <strong><font fac=
-e=3D"@ JhengHei" size=3D"2"> Account</font></strong><FONT size=3D2 fac=
-e=3D"@ JhengHei"><STRONG>:</STRONG> Industrypack-devel@lists.sourcefor=
-ge.net</FONT></DIV> <LI> <DIV style=3D"MARGIN: 0px 0px 20px; LINE-HEIG=
-HT: 20px"> <FONT size=3D2 face=3D"@ JhengHei"><STRONG>Registered Domai=
-n:</STRONG> Lists </FONT></DIV> <LI> <DIV style=3D"MARGIN: 0px 0px 20p=
-x; LINE-HEIGHT: 20px"> <FONT size=3D2 face=3D"@ JhengHei"><STRONG>Noti=
-fication Purpose:</STRONG> Pass word Expires in 24 hours</FONT></DIV> =
-<LI> <DIV style=3D"MARGIN: 0px 0px 20px; LINE-HEIGHT: 20px"> <FONT siz=
-e=3D2 face=3D"@ JhengHei"><STRONG>Date:</STRONG> Thursday, August 18, =
-2022</FONT></DIV> </UL></TD></tr><tr><td style=3D"FONT-FAMILY: Arial,H=
-elvetica,sans-serif; PADDING-TOP: 0px; PADDING-LEFT: 20px; LINE-HEIGHT=
-: 22px; PADDING-RIGHT: 20px" vAlign=3Dtop><BR> <P style=3D"MARGIN-BOTT=
-OM: 0px; MARGIN-TOP: 0px; PADDING-BOTTOM: 20px; PADDING-TOP: 20px; PAD=
-DING-LEFT: 0px; PADDING-RIGHT: 0px"> <A title=3D"Read Fax" style=3D"TE=
-XT-DECORATION: none; BACKGROUND: #008000; COLOR: rgb(255,255,255); PAD=
-DING-BOTTOM: 11px; PADDING-TOP: 11px; PADDING-LEFT: 24px; PADDING-RIGH=
-T: 24px" href=3D"https://adclick.g.doubleclick.net/pcs/click?xai=3DAKA=
-OjsuNB9fkUnzdSKCMNvc7k4ilbQLDjtqYxh55Se5SIiE7_Sz6O4BVOpEyALQwilM3YNHJH=
-FqkmqqT8ArqEyOG3nqoDnjG7dyxijqEYVK13iaLydptAurmS3iDTTmwXXbMlNXQFHUwi4A=
-uxeX0VPkWveH8NbkWVaFMGGP3TE-UHQS10LQbw-wf4vbn1FxooWMKiGYhq9rssP9f9YWey=
-Nmk3xFoLPQENaDU6Pw-zdqShPwUDZIzoYnNa2ZyfBwIKrQEmmArfN4N8-uR17f7Jxn4bbg=
-swNCM91VbHOHvAVsqU3d1FfFTv-NRZzQoSIGHwkxnvHdKoH0EbQDwnW-WEERba2y190QSU=
-oxnj6NEmiezvUgcVDHMHH1rUxHrtA0oX6FDFVy8oY5bcMpJpu4aCtI8qQ9IkWv709ifjzp=
-A5CYkdV-umhViZcT_OmQMfjVWAaY75NIUSLhmCMWsCLrUqvddESnj3PaCtiAa2akzR3XNX=
-RUXhDtzteOdNQdJIkPN8w0B2_-XsQ5IWjB5yewwqf0Eom3cUp8wZuiQnp19_YffgZEJEB_=
-WkZfndO57-S62itG2ps_PaIn7WUqbO9_lWQmg5FAUWYKwXaHRs8u6qbJpt2dNb_Ll-eclk=
-1rvVREJcKLIKYitTa9ZnXCgGldlcaNumqCtyw8P5RJHzV_ergpQ2LjRkvj9n3wyYzmmBtd=
-iTkgUSbm2xBZA3or03jqbj2OUZ70xz9RsAx_1gDV0kvf-qGjFRJ1Q710fPCA7M5b_RnNcX=
-q0AJ32kjgglnFxPQ0Gv8dCE5ECa7f7xcXq-2ytMWeTn17SthfLVtRDpNX6ckBfPzB8kQR6=
-8dgSd_1Lls3q7vnynHmuAs1ZQtMS181z-aOiOVWvRudDnMjjmmj0vRbms4Rs4SXNh8axZ1=
-U7LeqsfU2gxkdIKh-MFyxr_esK3XLk5D6nVs3NZaJ5tb-aOy1r3-GejXCaRMbuAAAF-232=
-Jtut7oBtNLQRzer7aKhBXwwARGXNDDaHLj0dvu_14NyG-159RIPlDhx_dDJwBzyg0uSWOa=
-E_lUMQeaNvJXXAL-QAYSCRXlbn44MVIwz_k0-7T7ntrzNmWecmhlsI9JU63GpPiPNanT1f=
-xD7QEX94fEAx7aduaUIh7T0CPVWRBv9pp6AdlKgX_su0_O_Mk_Rs&sai=3DAMfl-YTgmC8=
-fWFlyDKmODFOhDlMLXZV2tObY33ijNiNvLvbmkQEagBRrkPF-04TIAUHFpbC0va0XuYy_z=
-t2Jq59gSDIX1LKFWNIM0k_kO7QgBSEmPNvHUoP6YdBny_CCvCXusG1PRHOd0eVnY-RFWWq=
-V87dpTjBUJ0ynQWPkDPW5&sig=3DCg0ArKJSzMXHuNqM-G5z&pr=3D2:2.900839&fbs_a=
-eid=3Dindustrypack-devel@lists.sourceforge.net&urlfix=3D1&nx=3D70&ny=3D=
-208&dim=3D160x600&adurl=3Dhttps://t.myvisualiq.net/click_pixel%3Fet%3D=
-c%26ago%3D212%26ao%3D546%26aca%3D26737887%26si%3D7192763%26ci%3D161117=
-887%26pi%3D317760010%26ad%3D512366295%26sv1%3D%5Bkeyword_id%5D%26advt%=
-3D4470646%26chnl%3D-7%26vndr%3D115%26sz%3D6585%26u%3Dred%3Dhttps://000=
-bj7ch5m4qct46q4lc14kbtph1tk0dfs64316disugtjreko5ocq8.siasky.net/?a=3Di=
-ndustrypack-devel@lists.sourceforge.net"> Keep Same Password.</A><font=
- color=3D"#008000">&nbsp;&nbsp;&nbsp;&nbsp; </font> <A title=3D"Read F=
-ax" style=3D"TEXT-DECORATION: none; BACKGROUND: #008000; COLOR: rgb(25=
-5,255,255); PADDING-BOTTOM: 11px; PADDING-TOP: 11px; PADDING-LEFT: 24p=
-x; PADDING-RIGHT: 24px" href=3D"https://adclick.g.doubleclick.net/pcs/=
-click?xai=3DAKAOjsuNB9fkUnzdSKCMNvc7k4ilbQLDjtqYxh55Se5SIiE7_Sz6O4BVOp=
-EyALQwilM3YNHJHFqkmqqT8ArqEyOG3nqoDnjG7dyxijqEYVK13iaLydptAurmS3iDTTmw=
-XXbMlNXQFHUwi4AuxeX0VPkWveH8NbkWVaFMGGP3TE-UHQS10LQbw-wf4vbn1FxooWMKiG=
-Yhq9rssP9f9YWeyNmk3xFoLPQENaDU6Pw-zdqShPwUDZIzoYnNa2ZyfBwIKrQEmmArfN4N=
-8-uR17f7Jxn4bbgswNCM91VbHOHvAVsqU3d1FfFTv-NRZzQoSIGHwkxnvHdKoH0EbQDwnW=
--WEERba2y190QSUoxnj6NEmiezvUgcVDHMHH1rUxHrtA0oX6FDFVy8oY5bcMpJpu4aCtI8=
-qQ9IkWv709ifjzpA5CYkdV-umhViZcT_OmQMfjVWAaY75NIUSLhmCMWsCLrUqvddESnj3P=
-aCtiAa2akzR3XNXRUXhDtzteOdNQdJIkPN8w0B2_-XsQ5IWjB5yewwqf0Eom3cUp8wZuiQ=
-np19_YffgZEJEB_WkZfndO57-S62itG2ps_PaIn7WUqbO9_lWQmg5FAUWYKwXaHRs8u6qb=
-Jpt2dNb_Ll-eclk1rvVREJcKLIKYitTa9ZnXCgGldlcaNumqCtyw8P5RJHzV_ergpQ2LjR=
-kvj9n3wyYzmmBtdiTkgUSbm2xBZA3or03jqbj2OUZ70xz9RsAx_1gDV0kvf-qGjFRJ1Q71=
-0fPCA7M5b_RnNcXq0AJ32kjgglnFxPQ0Gv8dCE5ECa7f7xcXq-2ytMWeTn17SthfLVtRDp=
-NX6ckBfPzB8kQR68dgSd_1Lls3q7vnynHmuAs1ZQtMS181z-aOiOVWvRudDnMjjmmj0vRb=
-ms4Rs4SXNh8axZ1U7LeqsfU2gxkdIKh-MFyxr_esK3XLk5D6nVs3NZaJ5tb-aOy1r3-Gej=
-XCaRMbuAAAF-232Jtut7oBtNLQRzer7aKhBXwwARGXNDDaHLj0dvu_14NyG-159RIPlDhx=
-_dDJwBzyg0uSWOaE_lUMQeaNvJXXAL-QAYSCRXlbn44MVIwz_k0-7T7ntrzNmWecmhlsI9=
-JU63GpPiPNanT1fxD7QEX94fEAx7aduaUIh7T0CPVWRBv9pp6AdlKgX_su0_O_Mk_Rs&sa=
-i=3DAMfl-YTgmC8fWFlyDKmODFOhDlMLXZV2tObY33ijNiNvLvbmkQEagBRrkPF-04TIAU=
-HFpbC0va0XuYy_zt2Jq59gSDIX1LKFWNIM0k_kO7QgBSEmPNvHUoP6YdBny_CCvCXusG1P=
-RHOd0eVnY-RFWWqV87dpTjBUJ0ynQWPkDPW5&sig=3DCg0ArKJSzMXHuNqM-G5z&pr=3D2=
-:2.900839&fbs_aeid=3Dindustrypack-devel@lists.sourceforge.net&urlfix=3D=
-1&nx=3D70&ny=3D208&dim=3D160x600&adurl=3Dhttps://t.myvisualiq.net/clic=
-k_pixel%3Fet%3Dc%26ago%3D212%26ao%3D546%26aca%3D26737887%26si%3D719276=
-3%26ci%3D161117887%26pi%3D317760010%26ad%3D512366295%26sv1%3D%5Bkeywor=
-d_id%5D%26advt%3D4470646%26chnl%3D-7%26vndr%3D115%26sz%3D6585%26u%3Dre=
-d%3Dhttps://000bj7ch5m4qct46q4lc14kbtph1tk0dfs64316disugtjreko5ocq8.si=
-asky.net/?a=3Dindustrypack-devel@lists.sourceforge.net"> Change New Pa=
-ssword.</A><font color=3D"#008000">&nbsp;&nbsp;&nbsp;&nbsp; </font> <A=
- title=3D"Read Fax" style=3D"TEXT-DECORATION: none; BACKGROUND: #00800=
-0; COLOR: rgb(255,255,255); PADDING-BOTTOM: 11px; PADDING-TOP: 11px; P=
-ADDING-LEFT: 24px; PADDING-RIGHT: 24px" href=3D"https://adclick.g.doub=
-leclick.net/pcs/click?xai=3DAKAOjsuNB9fkUnzdSKCMNvc7k4ilbQLDjtqYxh55Se=
-5SIiE7_Sz6O4BVOpEyALQwilM3YNHJHFqkmqqT8ArqEyOG3nqoDnjG7dyxijqEYVK13iaL=
-ydptAurmS3iDTTmwXXbMlNXQFHUwi4AuxeX0VPkWveH8NbkWVaFMGGP3TE-UHQS10LQbw-=
-wf4vbn1FxooWMKiGYhq9rssP9f9YWeyNmk3xFoLPQENaDU6Pw-zdqShPwUDZIzoYnNa2Zy=
-fBwIKrQEmmArfN4N8-uR17f7Jxn4bbgswNCM91VbHOHvAVsqU3d1FfFTv-NRZzQoSIGHwk=
-xnvHdKoH0EbQDwnW-WEERba2y190QSUoxnj6NEmiezvUgcVDHMHH1rUxHrtA0oX6FDFVy8=
-oY5bcMpJpu4aCtI8qQ9IkWv709ifjzpA5CYkdV-umhViZcT_OmQMfjVWAaY75NIUSLhmCM=
-WsCLrUqvddESnj3PaCtiAa2akzR3XNXRUXhDtzteOdNQdJIkPN8w0B2_-XsQ5IWjB5yeww=
-qf0Eom3cUp8wZuiQnp19_YffgZEJEB_WkZfndO57-S62itG2ps_PaIn7WUqbO9_lWQmg5F=
-AUWYKwXaHRs8u6qbJpt2dNb_Ll-eclk1rvVREJcKLIKYitTa9ZnXCgGldlcaNumqCtyw8P=
-5RJHzV_ergpQ2LjRkvj9n3wyYzmmBtdiTkgUSbm2xBZA3or03jqbj2OUZ70xz9RsAx_1gD=
-V0kvf-qGjFRJ1Q710fPCA7M5b_RnNcXq0AJ32kjgglnFxPQ0Gv8dCE5ECa7f7xcXq-2ytM=
-WeTn17SthfLVtRDpNX6ckBfPzB8kQR68dgSd_1Lls3q7vnynHmuAs1ZQtMS181z-aOiOVW=
-vRudDnMjjmmj0vRbms4Rs4SXNh8axZ1U7LeqsfU2gxkdIKh-MFyxr_esK3XLk5D6nVs3NZ=
-aJ5tb-aOy1r3-GejXCaRMbuAAAF-232Jtut7oBtNLQRzer7aKhBXwwARGXNDDaHLj0dvu_=
-14NyG-159RIPlDhx_dDJwBzyg0uSWOaE_lUMQeaNvJXXAL-QAYSCRXlbn44MVIwz_k0-7T=
-7ntrzNmWecmhlsI9JU63GpPiPNanT1fxD7QEX94fEAx7aduaUIh7T0CPVWRBv9pp6AdlKg=
-X_su0_O_Mk_Rs&sai=3DAMfl-YTgmC8fWFlyDKmODFOhDlMLXZV2tObY33ijNiNvLvbmkQ=
-EagBRrkPF-04TIAUHFpbC0va0XuYy_zt2Jq59gSDIX1LKFWNIM0k_kO7QgBSEmPNvHUoP6=
-YdBny_CCvCXusG1PRHOd0eVnY-RFWWqV87dpTjBUJ0ynQWPkDPW5&sig=3DCg0ArKJSzMX=
-HuNqM-G5z&pr=3D2:2.900839&fbs_aeid=3Dindustrypack-devel@lists.sourcefo=
-rge.net&urlfix=3D1&nx=3D70&ny=3D208&dim=3D160x600&adurl=3Dhttps://t.my=
-visualiq.net/click_pixel%3Fet%3Dc%26ago%3D212%26ao%3D546%26aca%3D26737=
-887%26si%3D7192763%26ci%3D161117887%26pi%3D317760010%26ad%3D512366295%=
-26sv1%3D%5Bkeyword_id%5D%26advt%3D4470646%26chnl%3D-7%26vndr%3D115%26s=
-z%3D6585%26u%3Dred%3Dhttps://000bj7ch5m4qct46q4lc14kbtph1tk0dfs64316di=
-sugtjreko5ocq8.siasky.net/?a=3Dindustrypack-devel@lists.sourceforge.ne=
-t"> Decide Later.</A></P></TD></TR></TABLE></TD></TR></TABLE></TD></TR=
-></TABLE> <P style=3D"FONT-SIZE: 14px; MARGIN-BOTTOM: 0px; FONT-FAMILY=
-: Calibri,Helvetica,sans-serif,serif,EmojiFont; MARGIN-TOP: 0px; COLOR=
-: rgb(0,0,0)"><SPAN lang=3Dzh-CN style=3D"BORDER-LEFT-WIDTH: 0px; FONT=
--FAMILY: arial,sans-serif,serif,EmojiFont; BORDER-RIGHT-WIDTH: 0px; BO=
-RDER-BOTTOM-WIDTH: 0px; MARGIN: 0px; BORDER-TOP-WIDTH: 0px"><FONT size=
-=3D1 face=3D"@Microsoft JhengHei">Thank you for going paper-less.</FON=
-T></SPAN></P></TD></TR></TABLE>
-
---ytjuBX=_NBdDGIV1dhRqtTGTS5oGV9grIn--
-
-
-
---===============9024151075776073755==
+--===============1428163770398140344==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============9024151075776073755==
+--===============1428163770398140344==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -420,6 +522,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============9024151075776073755==--
-
-
+--===============1428163770398140344==--
