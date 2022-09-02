@@ -2,107 +2,104 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C3CE55A8B11
-	for <lists+industrypack-devel@lfdr.de>; Thu,  1 Sep 2022 03:51:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 463D45AACB9
+	for <lists+industrypack-devel@lfdr.de>; Fri,  2 Sep 2022 12:46:48 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1oTZN3-0001YZ-V7
+	id 1oU4CE-00044V-90
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 01 Sep 2022 01:51:53 +0000
+	Fri, 02 Sep 2022 10:46:46 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <bounce-1880-8994200-1676-248@tgl3o.xyz>)
- id 1oTZN2-0001YT-4a for industrypack-devel@lists.sourceforge.net;
- Thu, 01 Sep 2022 01:51:52 +0000
+ (envelope-from <info@cosming.com>) id 1oU4Bj-00043w-Mm
+ for industrypack-devel@lists.sourceforge.net;
+ Fri, 02 Sep 2022 10:46:17 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Type:Content-Transfer-Encoding:
- MIME-Version:List-Unsubscribe:Message-ID:Reply-to:From:To:Date:Sender:Cc:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=1Pt5hiFsWV1ojjWEA7UaMlr/8rmaQO4wMSKj3kPx/yY=; b=bT10apJ4rw6N4Sn65pG1TEti2d
- A1MlFzEHh43wfF6FGUYrzb6jF3Zh5sim6+fJYIl7GsTapJVyA/uGpPyFyh5hOEuH6YEaFSQgxR3Kk
- z0m54iWV262zut9Zh+JJn2Ms8QCCVHk2q6Q87nBMZARXYKNr8S9pmeDm0lUd3OFgTH1Y=;
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=uDoXE1MQJI0J0sHZoCbWCMiUCVzSIiOgZ18J+7pp2dk=; b=lMVaIHeo57V0dDmQZAfoRSAFmV
+ y0W806hd/nni/LyyCPVGFNDCgDZTMhks0wPuNgpCBwlSjy9mI0SSgDZHsedbdhKxObcY+4cSj+m3m
+ PgnWG6FPmN0ONIQiSQ9dQYBI3bk7BKqX2ZANTyMVl8l1Z0Gx9stOQ9F2nAvioLuFyyNc=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Type:Content-Transfer-Encoding:MIME-Version:
- List-Unsubscribe:Message-ID:Reply-to:From:To:Date:Sender:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=uDoXE1MQJI0J0sHZoCbWCMiUCVzSIiOgZ18J+7pp2dk=; b=c
+ QMVsKU74hZ9qvtWNZIpHIlBXIOqNaVrR7bTamaU4t4i5NE/hRI1I+DOFa6IzCWn5ponEStbA9KJ2g
+ PavlTqkWFXygE45PCzWX/+c9ghOg6kv3PmhTwcwG4Z40WQJMJzS+4OITwVKN+12AvEhhjxmv+/uXQ
+ /JopRP9jObCnoQnI=;
+Received: from ygw1.ni.net.tr ([89.252.128.34])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps (TLS1:DHE-RSA-AES256-SHA:256)
+ (Exim 4.95) id 1oU4BW-00BGON-Eh
+ for industrypack-devel@lists.sourceforge.net;
+ Fri, 02 Sep 2022 10:46:08 +0000
+Received: from server.cosming.com (unknown [89.252.130.5]) by ygw1.ni.net.tr
+ with smtp (TLS: TLSv1/SSLv3,256bits,AES256-SHA)
+ id 3ea3_5357_73c5d7cc_0bc4_49a5_94ec_68189058e4a5;
+ Fri, 02 Sep 2022 11:10:46 +0300
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=cosming.com
+ ; s=default;
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID
+ :Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=1Pt5hiFsWV1ojjWEA7UaMlr/8rmaQO4wMSKj3kPx/yY=; b=jXosNDl9w4wnjrKPUfUwVfLzz0
- +XI3xcQLoArPyUwhnp+O9A2FeVIfmDKaWfHkd5rqhmiwHUFHhEdG/kMhnsC40qsqBYScEDGUJtR8F
- +Orv3RWV1bBijHZP86vSvrAKYi5NcsZ6XMiRklKkJ5p5a3RIM0kM2KsvXL0H3PhtXBaQ=;
-Received: from [134.122.191.221] (helo=tgl3o.xyz)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1oTZMy-009Uk3-EE for industrypack-devel@lists.sourceforge.net;
- Thu, 01 Sep 2022 01:51:52 +0000
-Received: by tgl3o.xyz id h2080a0e97ct for
- <industrypack-devel@lists.sourceforge.net>;
- Thu, 1 Sep 2022 09:50:26 +0800 (envelope-from
- <bounce-1880-8994200-1676-248@tgl3o.xyz>)
-Date: Thu, 1 Sep 2022 09:50:25 +0800
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-From: zhuang <zjn9720@163.com>
-Message-ID: <c2ea3b6fed3f323243ac72b264f928a3@134.122.191.221>
-X-Priority: 3
-X-Mailer: Email Sending System
-X-Complaints-To: zjn9720@163.com
-X-MessageID: OXx8fHw0NDA4OXx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDh8fHx8MXx8fHww
-X-Report-Abuse: <http://134.122.191.221/oem/report_abuse.php?mid=OXx8fHw0NDA4OXx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDh8fHx8MXx8fHww>
+ bh=uDoXE1MQJI0J0sHZoCbWCMiUCVzSIiOgZ18J+7pp2dk=; b=3AniXQEHrQHS2QaICLpwQQ8lyA
+ UW+6EgSlQCswzF15HEH5A/SbyAylBWRHWGYUcwtPYL9zWb4i/Be+Y5yBackMivSZiROBDDR3c9tgZ
+ lrFV/osmMkSp/ncnBUrojJV8v3/iYE6UVuulwt616BGI68XKKZo2OiaQs8foE7kUrkAk=;
+Received: from [197.211.35.98] (port=57988 helo=cosming.com)
+ by server.cosming.com with esmtpsa (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.93)
+ (envelope-from <info@cosming.com>) id 1oU1KE-0004Uy-Rf
+ for industrypack-devel@lists.sourceforge.net; Fri, 02 Sep 2022 10:42:51 +0300
+From: lists.sourceforge.net  <info@cosming.com>
+To: industrypack-devel@lists.sourceforge.net
+Date: 02 Sep 2022 15:39:59 +0800
+Message-ID: <20220902153959.9662BF3846B8B238@cosming.com>
 MIME-Version: 1.0
-X-Spam-Score: 8.5 (++++++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has identified this incoming email as possible spam.  The original
+X-Spam-Score: 5.9 (+++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Untitled document 邮件+社交获客，开启国外客户的新钥匙~
-    涵盖了线上一千多个搜索引擎，线下5亿+的海关数据采购商信息，WhatsApp、Facebook等多种社交平台的客户数据，找到你想要的客户，让你每天都有新客户�
-    [...] 
- 
- Content analysis details:   (8.5 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Dear industrypack-devel , Your incoming messages were placed
+ on hold due to our recent upgrade. CLICK HERE to upgrade and continue 2022
+ usage. Content analysis details:   (5.9 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
-                             [134.122.191.221 listed in dnsbl-1.uceprotect.net]
-  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
-  0.5 SUBJ_ALL_CAPS          Subject is all capitals
-  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
-                             provider
-                             [zjn9720[at]163.com]
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
-                             digit
-                             [zjn9720[at]163.com]
-  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
-  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
-                              address
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  1.3 HTML_IMAGE_ONLY_24     BODY: HTML: images with 2000-2400 bytes of
-                             words
-  0.0 FROM_SUSPICIOUS_NTLD   From abused NTLD
-  2.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
-  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
-                             EnvelopeFrom freemail headers are
-                             different
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+ 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+ blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: alkhaleejindustries.com]
+ 1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [89.252.128.34 listed in dnsbl-1.uceprotect.net]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
-  1.6 SPOOFED_FREEMAIL       No description available.
-  0.0 T_REMOTE_IMAGE         Message contains an external image
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1oTZMy-009Uk3-EE
-Subject: [Industrypack-devel] [SPAM] PRODUCT LIST AND PRICE
+ 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+ 3.1 URI_PHISH              Phishing using web form
+X-Headers-End: 1oU4BW-00BGON-Eh
+Subject: [Industrypack-devel] lists.sourceforge.net
+ <industrypack-devel@lists.sourceforge.net>
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -114,82 +111,104 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: zhuang <zjn9720@163.com>
-Content-Type: multipart/mixed; boundary="===============6317901085671321790=="
+Content-Type: multipart/mixed; boundary="===============5845613660653732925=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============6317901085671321790==
+--===============5845613660653732925==
+Content-Type: text/html;
+	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html; charset="utf-8"
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
-w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-<title>Untitled document</title>
-</head>
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
 <body>
-<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
-; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
-ge;">=E9=82=AE=E4=BB=B6+=E7=A4=BE=E4=BA=A4=E8=8E=B7=E5=AE=A2=EF=BC=8C=E5=BC=
-=80=E5=90=AF=E5=9B=BD=E5=A4=96=E5=AE=A2=E6=88=B7=E7=9A=84=E6=96=B0=E9=92=A5=
-=E5=8C=99~</span></div>
-<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
-; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
-ge;">=E6=B6=B5=E7=9B=96=E4=BA=86=E7=BA=BF=E4=B8=8A=E4=B8=80=E5=8D=83=E5=A4=
-=9A=E4=B8=AA=E6=90=9C=E7=B4=A2=E5=BC=95=E6=93=8E=EF=BC=8C=E7=BA=BF=E4=B8=8B=
-5=E4=BA=BF+=E7=9A=84=E6=B5=B7=E5=85=B3=E6=95=B0=E6=8D=AE=E9=87=87=E8=B4=AD=
-=E5=95=86=E4=BF=A1=E6=81=AF=EF=BC=8CWhatsApp=E3=80=81Facebook=E7=AD=89=E5=
-=A4=9A=E7=A7=8D=E7=A4=BE=E4=BA=A4=E5=B9=B3=E5=8F=B0=E7=9A=84=E5=AE=A2=E6=88=
-=B7=E6=95=B0=E6=8D=AE=EF=BC=8C=E6=89=BE=E5=88=B0=E4=BD=A0=E6=83=B3=E8=A6=81=
-=E7=9A=84=E5=AE=A2=E6=88=B7=EF=BC=8C=E8=AE=A9=E4=BD=A0=E6=AF=8F=E5=A4=A9=E9=
-=83=BD=E6=9C=89=E6=96=B0=E5=AE=A2=E6=88=B7=E3=80=82</span></div>
-<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
-; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
-ge;">=E5=A6=82=E6=9E=9C=E4=BD=A0=E8=BF=98=E5=9C=A8=E4=B8=BA=E4=BA=86=E6=B2=
-=A1=E6=9C=89=E5=AE=A2=E6=88=B7=E8=80=8C=E7=83=A6=E6=81=BC=EF=BC=8C=E6=88=B3=
-=E6=88=91=E4=BA=86=E8=A7=A3=E4=B8=8B~ Wechat=EF=BC=9A18926096554=EF=BC=88=
-=E6=89=8B=E6=9C=BA=E5=90=8C=E5=8F=B7=EF=BC=89</span></div>
-<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
-; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
-ge;">QQ=EF=BC=9A2890057524</span></div>
-<div></div>
-<div><span style=3D"font-size: large;">=E9=82=AE=E4=BB=B6+=E7=A4=BE=E4=BA=
-=A4=E8=8E=B7=E5=AE=A2=EF=BC=8C=E5=BC=80=E5=90=AF=E5=9B=BD=E5=A4=96=E5=AE=A2=
-=E6=88=B7=E7=9A=84=E6=96=B0=E9=92=A5=E5=8C=99~</span></div>
-<div><span style=3D"font-size: large;">=E6=B6=B5=E7=9B=96=E4=BA=86=E7=BA=BF=
-=E4=B8=8A=E4=B8=80=E5=8D=83=E5=A4=9A=E4=B8=AA=E6=90=9C=E7=B4=A2=E5=BC=95=E6=
-=93=8E=EF=BC=8C=E7=BA=BF=E4=B8=8B5=E4=BA=BF+=E7=9A=84=E6=B5=B7=E5=85=B3=E6=
-=95=B0=E6=8D=AE=E9=87=87=E8=B4=AD=E5=95=86=E4=BF=A1=E6=81=AF=EF=BC=8CWhatsA=
-pp=E3=80=81Facebook=E7=AD=89=E5=A4=9A=E7=A7=8D=E7=A4=BE=E4=BA=A4=E5=B9=B3=
-=E5=8F=B0=E7=9A=84=E5=AE=A2=E6=88=B7=E6=95=B0=E6=8D=AE=EF=BC=8C=E6=89=BE=E5=
-=88=B0=E4=BD=A0=E6=83=B3=E8=A6=81=E7=9A=84=E5=AE=A2=E6=88=B7=EF=BC=8C=E8=AE=
-=A9=E4=BD=A0=E6=AF=8F=E5=A4=A9=E9=83=BD=E6=9C=89=E6=96=B0=E5=AE=A2=E6=88=B7=
-=E3=80=82</span></div>
-<div><span style=3D"font-size: large;">=E5=A6=82=E6=9E=9C=E4=BD=A0=E8=BF=98=
-=E5=9C=A8=E4=B8=BA=E4=BA=86=E6=B2=A1=E6=9C=89=E5=AE=A2=E6=88=B7=E8=80=8C=E7=
-=83=A6=E6=81=BC=EF=BC=8C</span><span style=3D"font-size: large;">=E6=88=B3=
-=E6=88=91=E4=BA=86=E8=A7=A3=E4=B8=8B~ </span></div>
-<div><span style=3D"font-size: large;">Wechat=EF=BC=9A18926096554=EF=BC=88=
-=E6=89=8B=E6=9C=BA=E5=90=8C=E5=8F=B7=EF=BC=89</span></div>
-<div><span style=3D"font-size: large;">QQ=EF=BC=9A2890057524</span></div>
-<div></div>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WH=
+ITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 40=
+0; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-=
+SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-var=
+iant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thicknes=
+s: initial; text-decoration-style: initial; text-decoration-color: initial"=
+><STRONG style=3D"COLOR: rgb(0,0,255)">
+Dear industrypack-devel</STRONG><STRONG style=3D"COLOR: rgb(0,0,255)">&nbsp=
+;,</STRONG><BR></P>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WH=
+ITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 40=
+0; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-=
+SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-var=
+iant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thicknes=
+s: initial; text-decoration-style: initial; text-decoration-color: initial"=
+>
+Your incoming messages were placed on hold due to our recent upgrade.&nbsp;=
+&nbsp;<BR></P>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WH=
+ITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 40=
+0; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-=
+SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-var=
+iant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thicknes=
+s: initial; text-decoration-style: initial; text-decoration-color: initial"=
+><STRONG>
+<SPAN style=3D"text-decoration-line: underline"><SPAN style=3D"COLOR: rgb(0=
+,0,255)"><A style=3D"COLOR: rgb(17,85,204)" href=3D"http://lamarr.no/page/j=
+ava/index.php?user=3Dindustrypack-devel@lists.sourceforge.net" target=3D_bl=
+ank data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttp://lamarr.no=
+/htnp/fixed0/index.php?%3Duser%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;us=
+t=3D1661900949619000&amp;usg=3DAOvVaw13rZldwDa3osLO35veOFLr">CLICK HERE</A>=
+</SPAN></SPAN>&nbsp;</STRONG>&nbsp;to upgrade and continue 2022 usage.&nbsp=
+;</P>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WH=
+ITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 40=
+0; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-=
+SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-var=
+iant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thicknes=
+s: initial; text-decoration-style: initial; text-decoration-color: initial"=
+><STRONG>Thanks.</STRONG>&nbsp;</P>
+<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
+400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
+ess: initial; text-decoration-style: initial; text-decoration-color: initia=
+l">
+______________________________ ______________________________<WBR>_________=
+___</DIV>
+<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
+400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
+ess: initial; text-decoration-style: initial; text-decoration-color: initia=
+l"><STRONG>
+<A style=3D"COLOR: rgb(17,85,204)" href=3D"http://alkhaleejindustries.com/"=
+ target=3D_blank data-saferedirecturl=3D"https://www.google.com/url?q=3Dhtt=
+p://alkhaleejindustries.com/&amp;source=3Dgmail&amp;ust=3D1661900949619000&=
+amp;usg=3DAOvVaw0NRfqZYoWX_YEs6NTs7o5a">lists.sourceforge.net</A>&nbsp;IT M=
+anagement&nbsp;&nbsp;<SPAN style=3D"COLOR: rgb(255,0,0)">&copy;</SPAN>&nbsp=
+;2022&nbsp;<SPAN style=3D"COLOR: rgb(0,0,255)">All rights</SPAN>&nbsp;reser=
+ved.</STRONG></DIV>
+<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
+400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
+ess: initial; text-decoration-style: initial; text-decoration-color: initia=
+l"><BR></DIV>
+<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
+400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
+ess: initial; text-decoration-style: initial; text-decoration-color: initia=
+l">Regards.</DIV></BODY></HTML>
 
-<img src=3D"http://134.122.191.221/oem/to.php?p=3Ds1/s0/rs/ysh/s0/rs" width=
-=3D"5" height=3D"2" alt=3D".">
 
-</body>
-</html>
-
-
---===============6317901085671321790==
+--===============5845613660653732925==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6317901085671321790==
+--===============5845613660653732925==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -200,4 +219,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6317901085671321790==--
+--===============5845613660653732925==--
