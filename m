@@ -2,98 +2,97 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0283F5F48F5
-	for <lists+industrypack-devel@lfdr.de>; Tue,  4 Oct 2022 19:54:20 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9D60A5F8299
+	for <lists+industrypack-devel@lfdr.de>; Sat,  8 Oct 2022 04:55:28 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1ofm7W-0003wi-1Q
+	id 1ogzzq-0007pn-N1
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 04 Oct 2022 17:54:18 +0000
+	Sat, 08 Oct 2022 02:55:26 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
- <errors-industrypack+2Ddevel=lists.sourceforge.net@a.sc00.rmdlvry.com>)
- id 1ofm7T-0003wc-Ss for industrypack-devel@lists.sourceforge.net;
- Tue, 04 Oct 2022 17:54:15 +0000
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <bounce-1064-10138028-1064-248@rucmsi.xyz>)
+ id 1ogzzp-0007pg-Be for industrypack-devel@lists.sourceforge.net;
+ Sat, 08 Oct 2022 02:55:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Date:Content-Transfer-Encoding:Content-Type:
- MIME-Version:List-Unsubscribe:Message-ID:Subject:Reply-To:To:From:Sender:Cc:
+ d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
+ :List-Unsubscribe:Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Vd5utoYE9HpMxUmQstFeQ4iQSN9tqL81SS4K3sS8EnY=; b=IddW41xhh+wBzcktZ1DIkOoNLS
- 7kMyJlFFgzbVOGYlVWkJG1vvvkrgkmA2GmrKphTw94Bzl1ZqdLPDBiDa0YAXrRMrTefCzHk5MvQzr
- ZiVf20p+/M+7hPY77ey/Sd82X01oWixr/bKOraiYSYtPN+/Nz0AB0o/6UUIKMdhUSe1A=;
+ bh=7hvA1uAdqzgRnuBRpfpEFemy4TQbpymQGvGO1xU14tg=; b=ODUQeZIy5OlA2P6tQMq6O4NmTe
+ zWK1Gg/8SNDIIVcZAgGaOU9/eN+hGNcgvE/0mxtMlIY58htW7ItvZUl1U0dIMumvb5PF89rdvjk3a
+ pMwwrIFIIYPQwTeRItgnmiWj7GwMxqgQiNmp0du/eKFsFhWUyquWbZbo1DOAXq5NbBuk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Date:Content-Transfer-Encoding:Content-Type:MIME-Version:List-Unsubscribe
- :Message-ID:Subject:Reply-To:To:From:Sender:Cc:Content-ID:Content-Description
- :Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
- In-Reply-To:References:List-Id:List-Help:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=Vd5utoYE9HpMxUmQstFeQ4iQSN9tqL81SS4K3sS8EnY=; b=XPfK+s1yj4ml
- LjrCOiSW7tmHix9eOlG0AxBCyiVtRn8HwW7lSuyEMzuzRDnSBnSkeU0h/FIHwcOTU1OIumFOcSetc
- BA+Kl9H40coGdUUg8JtVxlIn8w9Qy9kg2dgHMwyJyjTdNXx6BaMw/ZpltBs/R2DHcjr0fPSAI8hEo
- Gj77c=;
-Received: from mail-3-171.rch001.net ([52.124.3.171])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ofm7S-00Ce6J-QU for industrypack-devel@lists.sourceforge.net;
- Tue, 04 Oct 2022 17:54:15 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=k1; d=sc00.rmdlvry.com;
- h=From:To:Reply-To:Subject:Message-ID:List-Unsubscribe:List-Unsubscribe-Post:
- MIME-Version:Content-Type:Content-Transfer-Encoding:Date;
- bh=Vd5utoYE9HpMxUmQstFeQ4iQSN9tqL81SS4K3sS8EnY=;
- b=IPF+qL1DUUQ0NVAgs7Da7CzCKRWXBx8cnI7YsKVi66I0ZLr7jnYyEnpuKqrZARI5mukKUNKjnD17
- SUM+/DgZy4elwDOpsVfuyVe07SFWapSAV41fjQpI9YHyPebhd2FnSUQxqI+OfOfS86QsseZFKxtQ
- s4E3lBfWwbRFRwJyugM=
-From: "Caroline" <info@cdlcall.com>
+ h=Content-Type:Content-Transfer-Encoding:MIME-Version:List-Unsubscribe:
+ Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=7hvA1uAdqzgRnuBRpfpEFemy4TQbpymQGvGO1xU14tg=; b=RNTcNXWxQlcRm5CEO7OBYQN4+8
+ dVPXjAp2IGj/C9wkc4peoCjuh9UpmR6TNEARi58A1MNs6P2grrS2l/v8LOghH+MH5lWD0/cOFn34T
+ yaZWWjYCMimNnQuqA3Tspyaee/G0wXqr+9F9oxgmtek4G0+f9zwRR+5o2A18oeHImVWI=;
+Received: from [45.153.131.158] (helo=rucmsi.xyz)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1ogzzo-00GMN8-Nj for industrypack-devel@lists.sourceforge.net;
+ Sat, 08 Oct 2022 02:55:25 +0000
+Received: by rucmsi.xyz id h83j9o0e97ck for
+ <industrypack-devel@lists.sourceforge.net>;
+ Sat, 8 Oct 2022 02:55:18 +0000 (envelope-from
+ <bounce-1064-10138028-1064-248@rucmsi.xyz>)
+Date: Sat, 8 Oct 2022 02:55:18 +0000
 To: "industrypack-devel@lists.sourceforge.net"
  <industrypack-devel@lists.sourceforge.net>
-X-BPS1: 8158395
-Feedback-ID: 2727345:8cd63eb8dbd041c980a0ae6b0147c397:marketing:reachmail
-X-BPS2: 3891
-Message-ID: <eda3f28f-5d2e-43c1-b855-4e09bc0cbbcd@a.sc00.rmdlvry.com>
-List-Unsubscribe-Post: List-Unsubscribe=One-Click
-X-Mailer: RM Mailer (v5.4.1414.0)
+From: Mr Liang <p1l7d_1@163.com>
+Message-ID: <6924f8003de2b971eb3b7fd6a135b51f@45.153.131.158>
+X-Priority: 3
+X-Mailer: Email Sending System
+X-Complaints-To: test@test.com
+X-MessageID: NXx8fHw0OTY5Nnx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDV8fHx8MXx8fHww
+X-Report-Abuse: <http://45.153.131.158/oem/report_abuse.php?mid=NXx8fHw0OTY5Nnx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDV8fHx8MXx8fHww>
 MIME-Version: 1.0
-Date: Tue, 4 Oct 2022 13:54:14 -0400
-X-Spam-Score: 0.5 (/)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+X-Spam-Score: 4.1 (++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-    ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
-    ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ [...] 
+ Content preview:  Untitled document 你好 抱歉打扰到你了~ 今年您的客户开发工作是否顺利呢？
+    
  
- Content analysis details:   (0.5 points, 6.0 required)
+ Content analysis details:   (4.1 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
-                              no trust
-                             [52.124.3.171 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
   0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
                              mail domains are different
- -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
-  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [p1l7d_1[at]163.com]
+  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
+                             digit
+                             [p1l7d_1[at]163.com]
+  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
+                              address
+  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
   0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
-                             identical to background
-  0.0 HTML_IMAGE_RATIO_04    BODY: HTML has a low ratio of text to image
-                             area
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 PLING_QUERY            Subject has exclamation mark and question mark
-X-Headers-End: 1ofm7S-00Ce6J-QU
-Subject: [Industrypack-devel] =?utf-8?b?IPCfmYvwn5mL8J+Zi0RvIExhZGllcyBE?=
- =?utf-8?q?rive_Trucks=3F_Yes=2C_they_do=2C_with_really_well_as_successful?=
- =?utf-8?q?!?=
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  2.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+  0.0 FROM_SUSPICIOUS_NTLD   From abused NTLD
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+                             EnvelopeFrom freemail headers are
+                             different
+  0.0 T_HK_NAME_FM_MR_MRS    No description available.
+X-Headers-End: 1ogzzo-00GMN8-Nj
+Subject: [Industrypack-devel] =?utf-8?b?5Zu95bqG5YGH5pyf5LiA6L+H77yM5rKh?=
+ =?utf-8?b?5a6i5oi377yM6K6p5oiR5p2l5biu5oKo44CC?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -105,800 +104,124 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: info@cdlcall.com
-Content-Type: multipart/mixed; boundary="===============5602031120212121098=="
+Reply-To: Mr Liang <p1l7d_1@163.com>
+Content-Type: multipart/mixed; boundary="===============6430733099363650660=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============5602031120212121098==
-Content-Type: text/html; charset=utf-8
+--===============6430733099363650660==
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:/=
-/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:schemas-mi=
-crosoft-com:office:office" style=3D"font-family:arial, 'helvetica neue=
-', helvetica, sans-serif">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
 <head>
-<meta charset=3D"UTF-8">
-<meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"view=
-port">
-<meta name=3D"x-apple-disable-message-reformatting">
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-<meta content=3D"telephone=3Dno" name=3D"format-detection">
-<title></title><!--[if (mso 16)]>
-<style type=3D"text/css">
-a {text-decoration: none;}
-</style>
-<![endif]--><!--[if gte mso 9]><style>sup { font-size: 100% !important=
-; }</style><![endif]--><!--[if gte mso 9]>
-<xml>
-<o:OfficeDocumentSettings>
-<o:AllowPNG></o:AllowPNG>
-<o:PixelsPerInch>96</o:PixelsPerInch>
-</o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
-<style type=3D"text/css">
-#outlook a {
-padding:0;
-}
-.es-button {
-mso-style-priority:100!important;
-text-decoration:none!important;
-}
-a[x-apple-data-detectors] {
-color:inherit!important;
-text-decoration:none!important;
-font-size:inherit!important;
-font-family:inherit!important;
-font-weight:inherit!important;
-line-height:inherit!important;
-}
-.es-desk-hidden {
-display:none;
-float:left;
-overflow:hidden;
-width:0;
-max-height:0;
-line-height:0;
-mso-hide:all;
-}
-[data-ogsb] .es-button {
-border-width:0!important;
-padding:10px 20px 10px 20px!important;
-}
-.es-button-border:hover a.es-button, .es-button-border:hover button.es=
--button {
-background:#56d66b!important;
-border-color:#56d66b!important;
-}
-.es-button-border:hover {
-border-color:#42d159 #42d159 #42d159 #42d159!important;
-background:#56d66b!important;
-}
-@media only screen and (max-width:600px) {p, ul li, ol li, a { line-he=
-ight:150%!important } h1, h2, h3, h1 a, h2 a, h3 a { line-height:120% =
-} h1 { font-size:18px!important; text-align:center } h2 { font-size:24=
-px!important; text-align:left } h3 { font-size:20px!important; text-al=
-ign:left } .es-header-body h1 a, .es-content-body h1 a, .es-footer-bod=
-y h1 a { font-size:18px!important; text-align:center } .es-header-body=
- h2 a, .es-content-body h2 a, .es-footer-body h2 a { font-size:24px!im=
-portant; text-align:left } .es-header-body h3 a, .es-content-body h3 a=
-, .es-footer-body h3 a { font-size:20px!important; text-align:left } .=
-es-menu td a { font-size:14px!important } .es-header-body p, .es-heade=
-r-body ul li, .es-header-body ol li, .es-header-body a { font-size:14p=
-x!important } .es-content-body p, .es-content-body ul li, .es-content-=
-body ol li, .es-content-body a { font-size:14px!important } .es-footer=
--body p, .es-footer-body ul li, .es-footer-body ol li, .es-footer-body=
- a {=20
-font-size:14px!important } .es-infoblock p, .es-infoblock ul li, .es-i=
-nfoblock ol li, .es-infoblock a { font-size:12px!important } *[class=3D=
-"gmail-fix"] { display:none!important } .es-m-txt-c, .es-m-txt-c h1, .=
-es-m-txt-c h2, .es-m-txt-c h3 { text-align:center!important } .es-m-tx=
-t-r, .es-m-txt-r h1, .es-m-txt-r h2, .es-m-txt-r h3 { text-align:right=
-!important } .es-m-txt-l, .es-m-txt-l h1, .es-m-txt-l h2, .es-m-txt-l =
-h3 { text-align:left!important } .es-m-txt-r img, .es-m-txt-c img, .es=
--m-txt-l img { display:inline!important } .es-button-border { display:=
-inline-block!important } a.es-button, button.es-button { font-size:18p=
-x!important; display:inline-block!important } .es-adaptive table, .es-=
-left, .es-right { width:100%!important } .es-content table, .es-header=
- table, .es-footer table, .es-content, .es-footer, .es-header { width:=
-100%!important; max-width:600px!important } .es-adapt-td { display:blo=
-ck!important; width:100%!important } .adapt-img { width:100%!important=
-;=20
-height:auto!important } .es-m-p0 { padding:0px!important } .es-m-p0r {=
- padding-right:0px!important } .es-m-p0l { padding-left:0px!important =
-} .es-m-p0t { padding-top:0px!important } .es-m-p0b { padding-bottom:0=
-!important } .es-m-p20b { padding-bottom:20px!important } .es-mobile-h=
-idden, .es-hidden { display:none!important } tr.es-desk-hidden, td.es-=
-desk-hidden, table.es-desk-hidden { width:auto!important; overflow:vis=
-ible!important; float:none!important; max-height:inherit!important; li=
-ne-height:inherit!important } tr.es-desk-hidden { display:table-row!im=
-portant } table.es-desk-hidden { display:table!important } td.es-desk-=
-menu-hidden { display:table-cell!important } .es-menu td { width:1%!im=
-portant } table.es-table-not-adapt, .esd-block-html table { width:auto=
-!important } table.es-social { display:inline-block!important } table.=
-es-social td { display:inline-block!important } .es-desk-hidden { disp=
-lay:table-row!important; width:auto!important; overflow:visible!import=
-ant;=20
-max-height:inherit!important } }
-</style>
+<title>Untitled document</title>
 </head>
-<body data-new-gr-c-s-loaded=3D"14.1073.0" style=3D"width:100%;font-fa=
-mily:arial, 'helvetica neue', helvetica, sans-serif;-webkit-text-size-=
-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
-<div style=3D'display: none; max-height: 0px; overflow:=20
-hidden;'>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
-nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
-;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
-nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
-zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp=
-;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
-sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
-nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
-;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
-nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
-zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp=
-;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
-sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
-nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
-;&nbsp;&zwnj;&nbsp;
-&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
-p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
-bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
-&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
-j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
-wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
-&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
-p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&n=
-bsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
-&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
-j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
-wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
-<img src=3D"https://img.i.imgcaa.com/open/P-RzQDFPLC_gJhecXdwj-g2/imag=
-e.gif" height=3D"1" width=3D"1" border=3D"0" alt=3D"" style=3D"height:=
-1px !important; width:1px !important;"><br>
+<body>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;">=E4=BD=A0=E5=A5=BD =E6=8A=B1=E6=AD=
+=89=E6=89=93=E6=89=B0=E5=88=B0=E4=BD=A0=E4=BA=86~</span></b></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;"><br /></span></b></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;">=E4=BB=8A=E5=B9=B4=E6=82=A8=E7=9A=
+=84=E5=AE=A2=E6=88=B7=E5=BC=80=E5=8F=91=E5=B7=A5=E4=BD=9C=E6=98=AF=E5=90=A6=
+=E9=A1=BA=E5=88=A9=E5=91=A2=EF=BC=9F</span></b></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;"><br /></span></b></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;">=E6=88=91=E4=BB=AC=E8=BF=99=E8=BE=
+=B9=E6=98=AF=E5=81=9A=E4=B8=80=E6=AC=BE=E5=A4=96=E8=B4=B8=E8=8E=B7=E5=AE=A2=
+=E8=90=A5=E9=94=80=E7=B3=BB=E7=BB=9F=E7=9A=84=EF=BC=8C1=E5=88=86=E9=92=9F=
+=E8=8E=B7=E5=8F=96=E5=9B=BD=E5=A4=96=E9=87=87=E8=B4=AD=E5=95=86=E4=BF=A1=E6=
+=81=AF=EF=BC=8C=E6=B7=B1=E6=8C=96=E5=87=BA=E5=AE=A2=E6=88=B7=E7=9A=84=E9=87=
+=87=E8=B4=AD=E8=B4=9F=E8=B4=A3=E4=BA=BA=E8=81=94=E7=B3=BB=E9=82=AE=E7=AE=B1=
+=EF=BC=8C=E7=A4=BE=E4=BA=A4=E5=B9=B3=E5=8F=B0=EF=BC=8C=E7=94=B5=E8=AF=9D=E7=
+=AD=89=E4=BF=A1=E6=81=AF=EF=BC=8C=E9=80=9A=E8=BF=87=E9=82=AE=E4=BB=B6+Whats=
+App=E6=96=B9=E5=BC=8F=EF=BC=8C=E5=8F=8C=E7=AE=A1=E9=BD=90=E4=B8=8B=EF=BC=8C=
+=E7=B2=BE=E5=87=86=E8=A7=A6=E8=BE=BE=E6=AF=8F=E4=B8=80=E4=B8=AA=E5=AE=A2=E6=
+=88=B7=E3=80=82</span></b></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;"><br /></span></b></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;">=E6=9C=89=E5=85=B4=E8=B6=A3=E8=AF=
+=B7=E8=81=94=E7=B3=BB=EF=BC=9A</span></b></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;">QQ=EF=BC=9A391460554</span></b></s=
+pan></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;">WeChat=EF=BC=9A13360070851</span><=
+/b></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;">&nbsp;</span></b></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><b><span style=3D"font-size: large;">&nbsp;=E9=A1=BA=E7=A5=9D=E5=95=86=
+=E7=A5=BA</span></b></span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+=E4=BD=A0=E5=A5=BD =E6=8A=B1=E6=AD=89=E6=89=93=E6=89=B0=E5=88=B0=E4=BD=A0=
+=E4=BA=86~</span></b></span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+<br /></span></b></span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+=E4=BB=8A=E5=B9=B4=E6=82=A8=E7=9A=84=E5=AE=A2=E6=88=B7=E5=BC=80=E5=8F=91=E5=
+=B7=A5=E4=BD=9C=E6=98=AF=E5=90=A6=E9=A1=BA=E5=88=A9=E5=91=A2=EF=BC=9F</span=
+></b></span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+<br /></span></b></span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+=E6=88=91=E4=BB=AC=E8=BF=99=E8=BE=B9=E6=98=AF=E5=81=9A=E4=B8=80=E6=AC=BE=E5=
+=A4=96=E8=B4=B8=E8=8E=B7=E5=AE=A2=E8=90=A5=E9=94=80=E7=B3=BB=E7=BB=9F=E7=9A=
+=84=EF=BC=8C1=E5=88=86=E9=92=9F=E8=8E=B7=E5=8F=96=E5=9B=BD=E5=A4=96=E9=87=
+=87=E8=B4=AD=E5=95=86=E4=BF=A1=E6=81=AF=EF=BC=8C=E6=B7=B1=E6=8C=96=E5=87=BA=
+=E5=AE=A2=E6=88=B7=E7=9A=84=E9=87=87=E8=B4=AD=E8=B4=9F=E8=B4=A3=E4=BA=BA=E8=
+=81=94=E7=B3=BB=E9=82=AE=E7=AE=B1=EF=BC=8C=E7=A4=BE=E4=BA=A4=E5=B9=B3=E5=8F=
+=B0=EF=BC=8C=E7=94=B5=E8=AF=9D=E7=AD=89=E4=BF=A1=E6=81=AF=EF=BC=8C=E9=80=9A=
+=E8=BF=87=E9=82=AE=E4=BB=B6+WhatsApp=E6=96=B9=E5=BC=8F=EF=BC=8C=E5=8F=8C=E7=
+=AE=A1=E9=BD=90=E4=B8=8B=EF=BC=8C=E7=B2=BE=E5=87=86=E8=A7=A6=E8=BE=BE=E6=AF=
+=8F=E4=B8=80=E4=B8=AA=E5=AE=A2=E6=88=B7=E3=80=82</span></b></span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+<br /></span></b></span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+=E6=9C=89=E5=85=B4=E8=B6=A3=E8=AF=B7=E8=81=94=E7=B3=BB=EF=BC=9A</span></b><=
+/span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+QQ=EF=BC=9A<span style=3D"color: #ff6600;">391460554</span></span></b></spa=
+n></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+WeChat=EF=BC=9A<span style=3D"color: #ff6600;">13360070851</span></span></b=
+></span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+&nbsp;</span></b></span></div>
+<div><span style=3D"font-size: 10px;"><b><span style=3D"font-size: large;">=
+=E9=A1=BA=E7=A5=9D=E5=95=86=E7=A5=BA</span></b></span></div>
 
-<div class=3D"es-wrapper-color" style=3D"background-color: #ffffff;"><=
-!--[if gte mso 9]> <![endif]-->
-<table class=3D"es-wrapper" width=3D"100%" cellspacing=3D"0" cellpaddi=
-ng=3D"0" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border=
--collapse: collapse; border-spacing: 0px; padding: 0; margin: 0; width=
-: 100%; height: 100%; background-repeat: repeat; background-position: =
-center top; background-color: #ffffff;">
-<tbody>
-<tr>
-<td valign=3D"top" style=3D"padding: 0; margin: 0;">
-<table class=3D"es-header" cellspacing=3D"0" cellpadding=3D"0" align=3D=
-"center" style=3D"border-collapse: collapse; border-spacing: 0px; widt=
-h: 86.8805%; background-color: transparent; background-repeat: repeat;=
- background-position: center top; table-layout: fixed !important;" hei=
-ght=3D"307">
-<tbody>
-<tr>
-<td align=3D"center" style=3D"padding: 0px; margin: 0px; width: 1065px=
-;">
-<table class=3D"es-header-body" cellspacing=3D"0" cellpadding=3D"0" bg=
-color=3D"#ffffff" align=3D"center" style=3D"mso-table-lspace: 0pt; mso=
--table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; ba=
-ckground-color: #ffffff; width: 600px;">
-<tbody>
-<tr>
-<td align=3D"left" style=3D"padding: 0; margin: 0;">
-<table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"mso=
--table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; =
-border-spacing: 0px;">
-<tbody>
-<tr>
-<td align=3D"left" style=3D"padding: 0; margin: 0; width: 600px;"><img=
- style=3D"width: 600px; height: 200px;" src=3D"https://img.i.imgcaa.co=
-m/client_files/cdlschooltexas/images/stamp-ready-women-1.jpg" alt=3D"s=
-tamp-ready-women-1.jpg" width=3D"600" height=3D"200" /></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<div>
-<h1 class=3D"elementor-heading-title elementor-size-default"><span sty=
-le=3D"color: #808000; background-color: #ffff00;">Do Ladies Drive Truc=
-ks? Yes, they do, with really well as successful!</span></h1>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-<table class=3D"es-content" cellspacing=3D"0" cellpadding=3D"0" align=3D=
-"center" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border=
--collapse: collapse; border-spacing: 0px; table-layout: fixed !importa=
-nt; width: 100%;">
-<tbody>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0;">
-<table class=3D"es-content-body" cellspacing=3D"0" cellpadding=3D"0" b=
-gcolor=3D"#ffffff" align=3D"center" style=3D"mso-table-lspace: 0pt; ms=
-o-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; b=
-ackground-color: #ffffff; width: 600px;">
-<tbody>
-<tr>
-<td align=3D"left" style=3D"padding: 0; margin: 0;"><img style=3D"widt=
-h: 600px; height: 372px;" src=3D"https://img.i.imgcaa.com/client_files=
-/cdlschooltexas/images/800x600-cdl-truck-training_.jpg" alt=3D"Women d=
-rive trucks" width=3D"600" height=3D"372" /></td>
-</tr>
-<tr>
-<td align=3D"left" style=3D"padding: 0; margin: 0;">
-<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"mso=
--table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; =
-border-spacing: 0px;">
-<tbody>
-<tr>
-<td valign=3D"top" align=3D"center" style=3D"padding: 0; margin: 0; wi=
-dth: 600px;">
-<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"pres=
-entation" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; borde=
-r-collapse: collapse; border-spacing: 0px;">
-<tbody>
-<tr>
-<td align=3D"center" bgcolor=3D"#d1234a" style=3D"padding: 20px; margi=
-n: 0;">
-<h1 style=3D"margin: 0; line-height: 29px; mso-line-height-rule: exact=
-ly; font-family: arial, 'helvetica neue', helvetica, sans-serif; font-=
-size: 24px; font-style: normal; font-weight: bold; color: #ffe349;">SP=
-ANISH - ENGLISH</h1>
-<div>
-<h1 style=3D"margin: 0; line-height: 29px; mso-line-height-rule: exact=
-ly; font-family: arial, 'helvetica neue', helvetica, sans-serif; font-=
-size: 24px; font-style: normal; font-weight: bold; color: #ffe349;"><s=
-pan style=3D"color: #000000;">CDL TRUCK TRAINING COST IS ONLY $2300&nb=
-sp;</span></h1>
-</div>
-</td>
-</tr>
-<tr>
-<td bgcolor=3D"#5906ca" style=3D"margin: 0px; padding: 10px 20px; text=
--align: left;" align=3D"left">
-<h1 style=3D"margin: 0; line-height: 29px; mso-line-height-rule: exact=
-ly; font-family: arial, 'helvetica neue', helvetica, sans-serif; font-=
-size: 24px; font-style: normal; font-weight: bold; color: #ffe349;">CD=
-L LICENSE IMPROVE FAMILY SUPPORT</h1>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">&nbsp;</p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">Qualified commercial drivers are needed all over the=
- country, and the demand for specialized drivers grows constantly, so =
-if you&acute;re looking for a steady career, great benefits, and a pay=
-check that provides a comfortable life for you and your family, commer=
-cial driving is an opportunity worth your consideration.</p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">&nbsp;</p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;"><span style=3D"color: #000000; background-color: #ff=
-ff00; font-size: 26pt;"><strong><span style=3D"background-color: #ffff=
-00;"><a style=3D"color: #000000; background-color: #ffff00;" title=3D"=
-CDLSchool Texas" href=3D"http://link.rm0005.net/go/P-RzQLME0Yedb1fY4iY=
-aMA2/">WWW.CDLSCHOOLTEXAS.COM</a></span></strong></span></p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">&nbsp;</p>
-<h2 style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-=
-adjust: none; mso-line-height-rule: exactly; font-family: arial, 'helv=
-etica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff;=
- font-size: 14px;"><span style=3D"background-color: #ffff00; color: #0=
-00000;">Who doesn&acute;t like money?</span></h2>
-<div>&nbsp;</div>
-<div><strong><span style=3D"background-color: #ffff00;">THE CDL LICENS=
-E IS MONEY IN YOUR POCKET!</span></strong></div>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">&nbsp;</p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;"><span style=3D"font-size: 16pt;">832-706-6368 - 210-=
-946-9841 - 817-789-9823</span></p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">&nbsp;</p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;"><span style=3D"font-size: 16pt;">HOUSTON - SAN ANTON=
-IO -DALLAS</span></p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">&nbsp;</p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;"><span style=3D"font-size: 16pt;">SPANISH ENGLISH</sp=
-an><br /><br />The cost of the training is only $2300. The training in=
-cludes all the necessary steps for you to get a CDL.<br /><br /></p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;"><img style=3D"width: 600px; height: 260px;" src=3D"h=
-ttps://img.i.imgcaa.com/client_files/cdlschooltexas/images/800x600-cdl=
--truck-traini-02.jpg" alt=3D"800x600-cdl-truck-traini-02.jpg" width=3D=
-"600" height=3D"260" /></p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">To obtain the CDL in Texas you must meet the followi=
-ng requirements:<br /><br /><span style=3D"color: #ffffff;"><strong>TE=
-XAS CDL REQUIREMENTS</strong></span></p>
-<ol>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #ffffff; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">Over 18 years old</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #ffffff; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">U.S. Citizenship or, if you are not a U.S. Citizen, =
-evidence of lawful presence ;&nbsp;<em>Texas</em>&nbsp;Residency ; Ide=
-ntity, and ; Social Security Number. If you are original from Mexico o=
-r Canada must be an American resident or citizen, if you are from anot=
-her country you can do so with a work permit. &nbsp;</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #ffffff; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">No DUI or DWI in less than 2 years</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #ffffff; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">Not owing traffic tickets</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #ffffff; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">Have a Texas license</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #ffffff; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #ffffff; =
-font-size: 14px;">Pass the DOT medical exam</p>
-</li>
-</ol>
-</td>
-</tr>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0; font-size: 0px;">=
-<a href=3D"http://link.rm0005.net/go/P-RzQLC9dWJXUqanJTW9pA2/" target=3D=
-"_blank" rel=3D"noopener"><img style=3D"width: 600px; height: 150px;" =
-src=3D"https://img.i.imgcaa.com/client_files/cdlschooltexas/images/cli=
-ck-here-information.jpg" alt=3D"click-here-information.jpg" width=3D"6=
-00" height=3D"150" /></a></td>
-</tr>
-<tr>
-<td align=3D"center" bgcolor=3D"#ffe349" style=3D"padding: 20px; margi=
-n: 0;">
-<h1 style=3D"margin: 0; line-height: 29px; mso-line-height-rule: exact=
-ly; font-family: arial, 'helvetica neue', helvetica, sans-serif; font-=
-size: 24px; font-style: normal; font-weight: bold; color: #5906ca;">WH=
-AT WE DO FOR YOU</h1>
-</td>
-</tr>
-<tr>
-<td align=3D"left" bgcolor=3D"#ffe349" style=3D"padding: 0; margin: 0;=
- padding-bottom: 10px; padding-left: 20px; padding-right: 20px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">Our service has a cost of $2300 for the class "A" li=
-cense or the Class "B"<br />We use manual and automatic trucks as the =
-student prefers, Answers? please call</p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">&nbsp;</p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;"><strong><span style=3D"font-size: 16pt;">832-706-636=
-8 - 210-946-9841</span></strong></p>
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;"><strong><span style=3D"font-size: 16pt;"><span style=
-=3D"color: #0000ff;">SPANISH ENGLISH</span></span></strong><br /><br /=
-><span style=3D"color: #5906ca;"><strong>Training includes:</strong></=
-span></p>
-<ol>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">ELDT classes</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">Reading test practice, our system allows you to prac=
-tice from home using a computer with internet access or a smartphone.<=
-/p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">&nbsp;Air Brakes on the truck practice training</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">Pre_trip Inspection on the truck</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">Maneuvers this is parallel parking, backing, shiftin=
-g practice</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">Route test practice</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">The truck for testing we offer you the truck for the=
- test 6 chances this is the best support you can receive from any CDL =
-school in the USA, the other schools offer you 1 or 2 opportunities to=
- pass the test.</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">Job placement if you need</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">Endorsements Hazmat and tankers</p>
-</li>
-<li style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: non=
-e; mso-line-height-rule: exactly; font-family: arial, 'helvetica neue'=
-, helvetica, sans-serif; line-height: 21px; margin-bottom: 15px; margi=
-n-left: 0; color: #333333; font-size: 14px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">Dispatcher training</p>
-</li>
-</ol>
-</td>
-</tr>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0; font-size: 0px;">=
-<a style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: none=
-; mso-line-height-rule: exactly; text-decoration: underline; color: #2=
-cb543; font-size: 14px;" title=3D"CDL School Texas" href=3D"http://lin=
-k.rm0005.net/go/P-RzQLEzQeEyf3g2eUJqcw2/" target=3D"_blank" rel=3D"noo=
-pener"><img class=3D"adapt-img" style=3D"display: block; border: 0; ou=
-tline: none; text-decoration: none; -ms-interpolation-mode: bicubic;" =
-src=3D"https://mcusercontent.com/f75e78bf4dd92355b074e2581/images/6f38=
-ca12-8874-067b-70b3-027eb8c0c99d.jpg" alt=3D"" width=3D"600" height=3D=
-"280" /></a></td>
-</tr>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0; font-size: 0px;">=
-<img class=3D"adapt-img" style=3D"display: block; border: 0; outline: =
-none; text-decoration: none; -ms-interpolation-mode: bicubic;" src=3D"=
-https://mcusercontent.com/f75e78bf4dd92355b074e2581/images/e6f9522b-74=
-29-d1b5-fde9-f8fc25123138.jpg" alt=3D"" width=3D"600" /></td>
-</tr>
-<tr>
-<td align=3D"center" bgcolor=3D"#dfffff" style=3D"padding: 20px; margi=
-n: 0;">
-<h1 style=3D"margin: 0; line-height: 29px; mso-line-height-rule: exact=
-ly; font-family: arial, 'helvetica neue', helvetica, sans-serif; font-=
-size: 24px; font-style: normal; font-weight: bold; color: #d1234a;">TR=
-AINING AVAILABLE SPANISH ENGLISH</h1>
-</td>
-</tr>
-<tr>
-<td align=3D"left" bgcolor=3D"#dfffff" style=3D"padding: 0; margin: 0;=
- padding-bottom: 10px; padding-left: 20px; padding-right: 20px;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;">If you are interested in changing your future or if =
-a family member or friend needs an opportunity to succeed in the USA, =
-we are the right way, the CDL license is a job that allows you to grow=
- enormously.<br /><br />&nbsp;<a style=3D"-webkit-text-size-adjust: no=
-ne; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-de=
-coration: none; color: #d1234a; font-size: 14px;" href=3D"tel:832-706-=
-6368" target=3D"_blank" rel=3D"noopener">832-706-6368</a>,&nbsp;<a sty=
-le=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-=
-line-height-rule: exactly; text-decoration: none; color: #d1234a; font=
--size: 14px;" href=3D"tel:210-946-9841" target=3D"_blank" rel=3D"noope=
-ner">210-946-9841</a>&nbsp;or SPANISH- ENGLISH&nbsp;<a style=3D"-webki=
-t-text-size-adjust: none;=20
--ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decora=
-tion: none; color: #d1234a; font-size: 14px;" href=3D"mailto:info@cdls=
-chooltexas.com" target=3D"_blank" rel=3D"noopener">info@cdlschooltexas=
-.com</a></p>
-</td>
-</tr>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0; font-size: 0px;">=
-<a style=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: none=
-; mso-line-height-rule: exactly; text-decoration: underline; color: #2=
-cb543; font-size: 14px;" href=3D"http://link.rm0005.net/go/P-RzQLC9dWJ=
-XUqanJTW9pA2/" target=3D"_blank" rel=3D"noopener"><img class=3D"adapt-=
-img" style=3D"display: block; border: 0; outline: none; text-decoratio=
-n: none; -ms-interpolation-mode: bicubic;" src=3D"https://mcuserconten=
-t.com/f75e78bf4dd92355b074e2581/images/f372705e-5c08-e3e2-18d8-5d1b780=
-ba581.jpg" alt=3D"" width=3D"600" height=3D"178" /></a></td>
-</tr>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0; font-size: 0px;">=
-<img class=3D"adapt-img" style=3D"display: block; border: 0; outline: =
-none; text-decoration: none; -ms-interpolation-mode: bicubic;" src=3D"=
-https://mcusercontent.com/f75e78bf4dd92355b074e2581/images/9fdccf26-33=
-e1-debb-6170-53e0bddc05a7.jpg" alt=3D"" width=3D"600" /></td>
-</tr>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0; font-size: 0px;">=
-<img class=3D"adapt-img" style=3D"display: block; border: 0; outline: =
-none; text-decoration: none; -ms-interpolation-mode: bicubic;" src=3D"=
-https://mcusercontent.com/f75e78bf4dd92355b074e2581/images/413358e9-10=
-45-4a3c-64dc-4c94f28bbdea.jpg" alt=3D"" width=3D"600" /></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<table class=3D"es-footer" cellspacing=3D"0" cellpadding=3D"0" align=3D=
-"center" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; border=
--collapse: collapse; border-spacing: 0px; table-layout: fixed !importa=
-nt; width: 100%; background-color: transparent; background-repeat: rep=
-eat; background-position: center top;">
-<tbody>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0;">
-<table class=3D"es-footer-body" cellspacing=3D"0" cellpadding=3D"0" bg=
-color=3D"#ffffff" align=3D"center" style=3D"mso-table-lspace: 0pt; mso=
--table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; ba=
-ckground-color: #ffffff; width: 600px;">
-<tbody>
-<tr>
-<td align=3D"left" bgcolor=3D"#ffe349" style=3D"margin: 0; background-=
-color: #ffe349; padding: 20px;">
-<table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"mso=
--table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; =
-border-spacing: 0px;">
-<tbody>
-<tr>
-<td align=3D"left" style=3D"padding: 0; margin: 0; width: 560px;">
-<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"pres=
-entation" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; borde=
-r-collapse: collapse; border-spacing: 0px;">
-<tbody>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0; font-size: 0px;">=
-<img style=3D"display: block; border: 0; outline: none; text-decoratio=
-n: none; -ms-interpolation-mode: bicubic;" src=3D"https://cdlschooltex=
-as.com/wp-content/uploads/2021/10/cdlschooltexas-logo-2x-1.png" alt=3D=
-"" width=3D"145" /></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td align=3D"left" bgcolor=3D"#ffe349" style=3D"margin: 0; background-=
-color: #ffe349; padding: 10px 20px 20px 20px;">
-<table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"mso=
--table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; =
-border-spacing: 0px;">
-<tbody>
-<tr>
-<td align=3D"left" style=3D"padding: 0; margin: 0; width: 560px;">
-<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"pres=
-entation" style=3D"mso-table-lspace: 0pt; mso-table-rspace: 0pt; borde=
-r-collapse: collapse; border-spacing: 0px;">
-<tbody>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0; font-size: 0;">
-<table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-table-not-adapt=
- es-social" role=3D"presentation" style=3D"mso-table-lspace: 0pt; mso-=
-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px;">
-<tbody>
-<tr>
-<td align=3D"center" valign=3D"top" style=3D"padding: 0; margin: 0; pa=
-dding-right: 10px;"><img style=3D"display: block; border: 0; outline: =
-none; text-decoration: none; -ms-interpolation-mode: bicubic;" title=3D=
-"Facebook" src=3D"https://i.postimg.cc/cLgBJKxP/fb.png" alt=3D"Fb" hei=
-ght=3D"32" /></td>
-<td align=3D"center" valign=3D"top" style=3D"padding: 0; margin: 0; pa=
-dding-right: 10px;"><img style=3D"display: block; border: 0; outline: =
-none; text-decoration: none; -ms-interpolation-mode: bicubic;" title=3D=
-"Twitter" src=3D"https://i.postimg.cc/X7PsFd6J/tw.png" alt=3D"Tw" heig=
-ht=3D"32" /></td>
-<td align=3D"center" valign=3D"top" style=3D"padding: 0; margin: 0; pa=
-dding-right: 10px;"><img style=3D"display: block; border: 0; outline: =
-none; text-decoration: none; -ms-interpolation-mode: bicubic;" title=3D=
-"Instagram" src=3D"https://i.postimg.cc/NMY6bp6w/ig.png" alt=3D"Inst" =
-height=3D"32" /></td>
-<td align=3D"center" valign=3D"top" style=3D"padding: 0; margin: 0;"><=
-img style=3D"display: block; border: 0; outline: none; text-decoration=
-: none; -ms-interpolation-mode: bicubic;" title=3D"Pinterest" src=3D"h=
-ttps://i.postimg.cc/dt3WLnXp/pi.png" alt=3D"P" height=3D"32" /></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td align=3D"center" style=3D"padding: 10px; margin: 0; font-size: 0;"=
->
-<table border=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" c=
-ellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace: 0pt;=
- mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px=
-;">
-<tbody>
-<tr>
-<td style=3D"padding: 0; margin: 0px; border-bottom: 2px solid #333333=
-; background: unset; height: 1px; width: 100%;"></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td align=3D"center" style=3D"padding: 0; margin: 0;">
-<p style=3D"margin: 0; -webkit-text-size-adjust: none; -ms-text-size-a=
-djust: none; mso-line-height-rule: exactly; font-family: arial, 'helve=
-tica neue', helvetica, sans-serif; line-height: 21px; color: #333333; =
-font-size: 14px;"><a style=3D"-webkit-text-size-adjust: none; -ms-text=
--size-adjust: none; mso-line-height-rule: exactly; text-decoration: no=
-ne; color: #242424; font-size: 14px;" href=3D"www.cdlschooltexas.com" =
-target=3D"_blank" rel=3D"noopener">cdlschooltexas.com</a><br /><a styl=
-e=3D"-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-l=
-ine-height-rule: exactly; text-decoration: none; color: #242424; font-=
-size: 14px;" href=3D"mailto:info@cdlschooltexas.com" target=3D"_blank"=
- rel=3D"noopener">info@cdlschooltexas.com</a><br /><a style=3D"-webkit=
--text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-r=
-ule: exactly; text-decoration: none; color: #242424; font-size: 14px;"=
- href=3D"#" target=3D"_blank"=20
-rel=3D"noopener">Phone:832-706-6368</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+<img src=3D"http://45.153.131.158/oem/to.php?p=3Drx/rx/rs/1348/rx/rs" width=
+=3D"5" height=3D"2" alt=3D".">
 
-<br><div style=3D"background-color:#FFFFFF;color:#666666"><div align=3D=
-"center"><table cellpadding=3D"0" cellspacing=3D0 width=3D"100%" style=
-=3D"color:inherit;"><tr><td width=3D"80%" align=3D"center" style=3D"te=
-xt-align: center;"><p style=3D"text-align: center !important;"><font f=
-ace=3D"Verdana, Arial, Helvetica, sans-serif" size=3D"1">This email is=
- being sent to industrypack-devel@lists.sourceforge.net.<br><br><a hre=
-f=3D"http://link.rm0005.net/subscription/?t=3DP-RzQDFPLC_iuo7JHwS-Rg2"=
-><font color=3D"#0000FF">Unsubscribe or update your address.</font></a=
-><br><br>This message was sent by CDL school Texas.<br>CDL school Texa=
-s | 564 W Campbell Ave   | PHOENIX, AZ 85031</font></p></td></tr></tab=
-le></div></div>
 </body>
 </html>
 
 
---===============5602031120212121098==
+--===============6430733099363650660==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5602031120212121098==
+--===============6430733099363650660==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -909,4 +232,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5602031120212121098==--
+--===============6430733099363650660==--
