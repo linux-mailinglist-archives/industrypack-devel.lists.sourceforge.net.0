@@ -2,58 +2,58 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5FE8D60BFB4
-	for <lists+industrypack-devel@lfdr.de>; Tue, 25 Oct 2022 02:36:21 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5B0D760C0AC
+	for <lists+industrypack-devel@lfdr.de>; Tue, 25 Oct 2022 03:13:33 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1on7vY-00056x-6E
+	id 1on8VY-0007XQ-4s
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 25 Oct 2022 00:36:20 +0000
+	Tue, 25 Oct 2022 01:13:32 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <ramsha@46groups.online>) id 1on7vX-00056q-BK
+ (envelope-from <ramsha@46groups.online>) id 1on8VW-0007XK-I3
  for industrypack-devel@lists.sourceforge.net;
- Tue, 25 Oct 2022 00:36:19 +0000
+ Tue, 25 Oct 2022 01:13:30 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=ZrBwdEJu0x0gi1xW+GeOVUFP6CwjMs+SRv69UHjU7LI=; b=NujNluz6TDMe4OJdhVW1WBZylI
- 7VHEROfVaD+iq2boOEvhaAJBRU681j3fHwHnkS9OS1esnU1cRKFrMvz9dcE0v1z905+xcqk2yW5nh
- qVCygRWMwuc6Ka5dDJYOFua4bCPzLdl669l5L+DA5qEr9xn3zBt7YCDfhxwK5wGsBCO0=;
+ bh=ZrBwdEJu0x0gi1xW+GeOVUFP6CwjMs+SRv69UHjU7LI=; b=LDou259CbwkV/S1VXJdRie/lhr
+ n3FqnKRBBPwLuaRRnkQj+k8eA/rFrekF1nUkA6X+JCb1iHSdlydqHENatU0SieOW9Xdlf7kmbcDJC
+ c9YEJRcG88sFzMwcAUvyDd8tZoz69T7S3DVkDS1/ZiZUXqoO3ETtCGa8vniDeRzEZbvM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=ZrBwdEJu0x0gi1xW+GeOVUFP6CwjMs+SRv69UHjU7LI=; b=I
- zpYLc/SLxK0ALbOv+tDNeHj0Pm8qKUb+w6+pZKj6iNpzuNVz0/fKtlEEf6IOKzvDMryM+8Ea12PwG
- 6r+vYfMnrm0HrcLhCWZ8idm+44xDY3KVxYtH4467fkPjyMvaOXNCFUrg8ZKL5MRFMwL59QVASDaSM
- sbqOL/2S3ctPrVoE=;
+ List-Owner:List-Archive; bh=ZrBwdEJu0x0gi1xW+GeOVUFP6CwjMs+SRv69UHjU7LI=; b=V
+ OV0IGquxBTNM3vO39EggVn+hEZ+m00tBivmOfHSh2hp/medeNRVaE2xTk5Tose+Qud6wiZG3IAEEj
+ jH82R5Nivcqb89LMwhRivTOfVT0XZ0a6KmwZpYDOxqOw6nVisoZTBTthpDcgBhmCZUn9tYkm2s83F
+ yCUr9TsFrgeVRDXM=;
 Received: from ns1.46groups.online ([5.230.72.193] helo=ns1.localdomain)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1on7vV-00GDzP-7z for industrypack-devel@lists.sourceforge.net;
- Tue, 25 Oct 2022 00:36:19 +0000
+ id 1on8VV-0004oe-LA for industrypack-devel@lists.sourceforge.net;
+ Tue, 25 Oct 2022 01:13:30 +0000
 Received: from 46groups.online (ip29.ip-149-56-252.net [149.56.252.29])
- by ns1.localdomain (Postfix) with ESMTPA id 07554EB845
+ by ns1.localdomain (Postfix) with ESMTPA id 3007AE8D63
  for <industrypack-devel@lists.sourceforge.net>;
- Tue, 25 Oct 2022 00:34:57 +0000 (UTC)
+ Tue, 25 Oct 2022 01:05:37 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=46groups.online;
- s=202209; t=1666658098;
+ s=202209; t=1666659937;
  bh=ZrBwdEJu0x0gi1xW+GeOVUFP6CwjMs+SRv69UHjU7LI=;
  h=From:To:Subject:Date:From;
- b=X2C5jnfGf9AGCfKXzxyKjGchqjV2s3IShxCmmOYjS5fz7Z01x3a4pUEbiEE8dzbhO
- b+5Ca8P8YwpXa+7FcZcnGaFrQTc5DbiKY75vXr0s5Ncc98JqndatXApNQu+lFD2+ao
- 5bV1Zith2PJOh+/9q0faLHH+viB/d9sHYVJroBCs=
+ b=gco2JlNOjV4ZxyLsoEj+I/31LN5IIZUMICAuwnCM/jp/X3EYAbTwDHRW2U4aLZtHg
+ oy/7/p2Q2XdeQAoascVOTmAaosvhUdh5zEybTxnbWA+3yWppZEWxZp/Fz5G/WWUXUM
+ 8ME029qrwZMJ1sQ/fLdnSAOh1qsSaurEo9NTGnA4=
 To: industrypack-devel@lists.sourceforge.net
-Date: 24 Oct 2022 17:34:57 -0700
-Message-ID: <20221024173457.55DB3DB4E98FC271@46groups.online>
+Date: 24 Oct 2022 18:05:37 -0700
+Message-ID: <20221024180536.8CC23F52E74276C3@46groups.online>
 MIME-Version: 1.0
 X-Spam-Score: 7.9 (+++++++)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
@@ -73,8 +73,6 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.
   2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
                              blocklist
                              [URIs: 46groups.online]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [5.230.72.193 listed in wl.mailspike.net]
   2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
                              [URI: 46groups.online (online)]
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -94,9 +92,11 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.
   1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
                              https://senderscore.org/blocklistlookup/
                              [5.230.72.193 listed in bl.score.senderscore.com]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [5.230.72.193 listed in wl.mailspike.net]
   1.8 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
   0.0 FROM_SUSPICIOUS_NTLD   From abused NTLD
-X-Headers-End: 1on7vV-00GDzP-7z
+X-Headers-End: 1on8VV-0004oe-LA
 Subject: [Industrypack-devel] =?utf-8?q?lists=2Esourceforge=2Enet_?=
  =?utf-8?b?6LSm5Y+35a+G56CB6K6k6K+B?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
@@ -113,10 +113,10 @@ List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 From: "lists.sourceforge.net Upgrade via Industrypack-devel"
  <industrypack-devel@lists.sourceforge.net>
 Reply-To: "lists.sourceforge.net Upgrade" <ramsha@46groups.online>
-Content-Type: multipart/mixed; boundary="===============3950482749875222017=="
+Content-Type: multipart/mixed; boundary="===============3707747923762143276=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3950482749875222017==
+--===============3707747923762143276==
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -162,14 +162,14 @@ troke-width: 0px; text-decoration-thickness: initial; text-decoration-style=
 </DIV></BODY></HTML>
 
 
---===============3950482749875222017==
+--===============3707747923762143276==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3950482749875222017==
+--===============3707747923762143276==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -180,4 +180,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3950482749875222017==--
+--===============3707747923762143276==--
