@@ -2,91 +2,96 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id B0B7060E6C1
-	for <lists+industrypack-devel@lfdr.de>; Wed, 26 Oct 2022 19:50:37 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id D377960EE0B
+	for <lists+industrypack-devel@lfdr.de>; Thu, 27 Oct 2022 04:44:16 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1onkY0-00017w-FW
+	id 1onssQ-0002EV-JQ
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 26 Oct 2022 17:50:36 +0000
+	Thu, 27 Oct 2022 02:44:14 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <misa@e-ml.jp>) id 1onkXz-00017q-Dr
- for industrypack-devel@lists.sourceforge.net;
- Wed, 26 Oct 2022 17:50:35 +0000
+ (envelope-from <bounce-2492-523916-2492-248@p25n2.cn>)
+ id 1onssP-0002EP-8U for industrypack-devel@lists.sourceforge.net;
+ Thu, 27 Oct 2022 02:44:13 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=HFQCVmTk3kp+HJnXs4PxxI1McUoehnT0vDM6DXqWyKw=; b=XGv2S26xBoBhD0+Z0q6awLPzO7
- qY6nf2BfWFuFCoeUmbefwlL1CBCb7zZWnQhE4DPv5JI/pDiKFNyBZDjGY8dPyPLI3ewSRooHMwWg7
- X0Di5B4vawifzv1ElsUmx4IQ7REoY4jEvoZshipdWWfVZOF2wQRvhZjxV0Ihy8jH5k1k=;
+ d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
+ :List-Unsubscribe:Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=xkLwqoMlFpo3VPnJ+sRJZaiwynfAl1q0vNGtcgz1xiU=; b=OmNQWDwfScS0qMZ5nzLH8TSEnm
+ YkGt7neoWNP/FFXoH+XtyqZ8TokAEJhg9MOeoLfN5G0Sp5podS228hO4s3Eyspg/5xAsG5oJqs9W4
+ Tz2Vw8osDbXTH9miP8HkuqpbhUlaunmbR1rzHDnJCGestYTDtwLqApkJpe4VcLPOIopU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=HFQCVmTk3kp+HJnXs4PxxI1McUoehnT0vDM6DXqWyKw=; b=B
- jQeWo0yiVjyzdNipXch2g5xmpqRIyxmwFNhmXoSNNHIm/JnxeNu75kB6Ueuagb3Gh452ohlq/LzA3
- 94YxgykOSVUnCEvw7RjAxxwSN15GTWKn3vmg98rjAW0i7RUrXGbMEj7VJWWqs0Sc3b8nHVA6FLL4Y
- LUGiudL5sdFCuhBc=;
-Received: from ofl-203-142-204-6.kagoya.net ([203.142.204.6]
- helo=cp.mailserve.co.jp)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1onkXt-000t5G-VR for industrypack-devel@lists.sourceforge.net;
- Wed, 26 Oct 2022 17:50:35 +0000
-Received: from tsinghua.edu.cn (unknown [185.202.101.92])
- (Authenticated sender: misa@e-ml.jp)
- by cp.mailserve.co.jp (hde-lc-postfix) with ESMTPA id 9E9DE2E5ACC
- for <industrypack-devel@lists.sourceforge.net>;
- Wed, 26 Oct 2022 23:54:49 +0900 (JST) (envelope-from misa@e-ml.jp)
-X-SenderID: Sendmail Sender-ID Filter v1.0.0 cp.mailserve.co.jp 9E9DE2E5ACC
-Authentication-Results: cp.mailserve.co.jp;
- sender-id=none header.sender=misa@e-ml.jp; auth=pass (LOGIN);
- spf=none smtp.mfrom=misa@e-ml.jp
-Date: Wed, 26 Oct 2022 22:54:42 +0800
-From: "Bruce" <lkmould@lk-tooling.com>
-To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20221026225448257260@e-ml.jp>
-X-mailer: Foxmail 6, 13, 102, 15 [cn]
-Mime-Version: 1.0
-X-Spam-Score: 7.0 (+++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+ h=Content-Type:Content-Transfer-Encoding:MIME-Version:List-Unsubscribe:
+ Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=xkLwqoMlFpo3VPnJ+sRJZaiwynfAl1q0vNGtcgz1xiU=; b=P34MlvzvCHU0lhYphppMeeuNQ5
+ TYFfYx6VxZZOCDU47a5AkS00zsVaKoCwkUL3BEZDhf8aFoAcGlmqECLmAJbtGs9Hj27WDjsa85Gcn
+ FfqaClh1DxU1AJ8hTFJwJtjewKYq5W6Go1JTEeA9wgizvGQkMzFBhInTbovzTwsnl2D4=;
+Received: from [103.41.65.118] (helo=p25n2.cn)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1onssK-0002Lc-TM for industrypack-devel@lists.sourceforge.net;
+ Thu, 27 Oct 2022 02:44:13 +0000
+Received: by p25n2.cn id hb7o7g0e97cu for
+ <industrypack-devel@lists.sourceforge.net>;
+ Thu, 27 Oct 2022 09:40:43 +0800 (envelope-from
+ <bounce-2492-523916-2492-248@p25n2.cn>)
+Date: Thu, 27 Oct 2022 01:40:41 +0000
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+From: Mr Mao <n0jen3mgt_6d@163.com>
+Message-ID: <5507bcac1efc95caa17f2bba5d3d431f@103.41.65.118>
+X-Priority: 3
+X-Mailer: Email Sending System
+X-Complaints-To: test@test.com
+X-MessageID: MTJ8fHx8MjU2OHx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDEyfHx8fDF8fHx8MA%3D%3D
+X-Report-Abuse: <http://103.41.65.118/oem/report_abuse.php?mid=MTJ8fHx8MjU2OHx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDEyfHx8fDF8fHx8MA%3D%3D>
+MIME-Version: 1.0
+X-Spam-Score: 2.6 (++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Dear sir, I am bruce from LK-Mould Co., Ltd. We specialized
- in design and manufacturing plastic, die casting mould and molded parts,
- also provide full service for product develop and secondary operati [...] 
- Content analysis details:   (7.0 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  Untitled document 拓客需要耗费大量时间精力？
+   通过分析Google，LinkedIn，facebook，WhatsApp等平台的公开信息，以及超10亿海关交易数据记录，获客方式多样，引擎+社交+智能推荐，实现多渠道精准开发
+    
+ 
+ Content analysis details:   (2.6 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
- 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
- bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?185.202.101.92>]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+  1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+                             [103.41.65.118 listed in dnsbl-1.uceprotect.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 2.0 PYZOR_CHECK            Listed in Pyzor
- (https://pyzor.readthedocs.io/en/latest/)
- 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
- dynamic-looking rDNS
- 1.0 FORGED_SPF_HELO        No description available.
- 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
- 0.0 PDS_RDNS_DYNAMIC_FP    RDNS_DYNAMIC with FP steps
- 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
-X-Headers-End: 1onkXt-000t5G-VR
-Subject: Re: [Industrypack-devel] mould
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [n0jen3mgt_6d[at]163.com]
+  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
+                              address
+  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.0 T_HK_NAME_FM_MR_MRS    No description available.
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+                             EnvelopeFrom freemail headers are
+                             different
+X-Headers-End: 1onssK-0002Lc-TM
+Subject: [Industrypack-devel] =?utf-8?b?5rKh5pyJ5a6i5oi36K+i55uY5q+P5aSp?=
+ =?utf-8?b?5piv5ZCm6YO95aSE5Zyo5LiA5Liq57mB55CQ55qE5om+5a6i5oi355qE5pa5?=
+ =?utf-8?b?5byP77yf?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -98,64 +103,111 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: lkmould@lk-tooling.com
-Content-Type: multipart/mixed; boundary="===============7606539191791396652=="
+Reply-To: Mr Mao <n0jen3mgt_6d@163.com>
+Content-Type: multipart/mixed; boundary="===============1555285484565436067=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+--===============1555285484565436067==
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
 
---===============7606539191791396652==
-Content-Type: multipart/alternative;
-	boundary="=====003_Dragon451433502465_====="
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Untitled document</title>
+</head>
+<body>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><strong><span style=3D"font-size: large;">=E6=8B=93=E5=AE=A2=E9=9C=80=
+=E8=A6=81=E8=80=97=E8=B4=B9=E5=A4=A7=E9=87=8F=E6=97=B6=E9=97=B4=E7=B2=BE=E5=
+=8A=9B=EF=BC=9F</span></strong></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><strong><span style=3D"font-size: large;"><br /></span></strong></span>=
+</div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><strong><span style=3D"font-size: large;">=E9=80=9A=E8=BF=87=E5=88=86=
+=E6=9E=90Google=EF=BC=8CLinkedIn=EF=BC=8Cfacebook=EF=BC=8CWhatsApp=E7=AD=89=
+=E5=B9=B3=E5=8F=B0=E7=9A=84=E5=85=AC=E5=BC=80=E4=BF=A1=E6=81=AF=EF=BC=8C=E4=
+=BB=A5=E5=8F=8A=E8=B6=8510=E4=BA=BF=E6=B5=B7=E5=85=B3=E4=BA=A4=E6=98=93=E6=
+=95=B0=E6=8D=AE=E8=AE=B0=E5=BD=95=EF=BC=8C=E8=8E=B7=E5=AE=A2=E6=96=B9=E5=BC=
+=8F=E5=A4=9A=E6=A0=B7=EF=BC=8C=E5=BC=95=E6=93=8E+=E7=A4=BE=E4=BA=A4+=E6=99=
+=BA=E8=83=BD=E6=8E=A8=E8=8D=90=EF=BC=8C=E5=AE=9E=E7=8E=B0=E5=A4=9A=E6=B8=A0=
+=E9=81=93=E7=B2=BE=E5=87=86=E5=BC=80=E5=8F=91</span></strong></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><strong><span style=3D"font-size: large;"><br /></span></strong></span>=
+</div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><strong><span style=3D"font-size: large;">=E5=8F=AF=E4=BB=A5=E6=A0=B9=
+=E6=8D=AE=E4=B8=8D=E5=90=8C=E8=A1=8C=E4=B8=9A=E4=BA=A7=E5=93=81=EF=BC=8C=E7=
+=9B=B4=E8=A7=82=E6=BC=94=E7=A4=BA=E6=95=88=E6=9E=9C=EF=BC=8C=E5=B9=BF=E6=B7=
+=B1=E5=8F=8A=E5=91=A8=E8=BE=B9=E5=8F=AF=E9=9D=A2=E8=B0=88</span></strong></=
+span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><strong><span style=3D"font-size: large;">QQ: 2213932187</span></strong=
+></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><strong><span style=3D"font-size: large;">Wechat:13266762417(=E6=89=8B=
+=E6=9C=BA=E5=90=8C=E5=8F=B7)</span></strong></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><strong><span style=3D"font-size: large;">&nbsp;=E9=A1=BA=E7=A5=9D=E5=
+=95=86=E7=A5=BA</span></strong></span></div>
+<div><span style=3D"font-size: 10px;"><strong><span style=3D"font-size: lar=
+ge;">=E6=8B=93=E5=AE=A2=E9=9C=80=E8=A6=81=E8=80=97=E8=B4=B9=E5=A4=A7=E9=87=
+=8F=E6=97=B6=E9=97=B4=E7=B2=BE=E5=8A=9B=EF=BC=9F</span></strong></span></di=
+v>
+<div><span style=3D"font-size: 10px;"><strong><span style=3D"font-size: lar=
+ge;"><br /></span></strong></span></div>
+<div><span style=3D"font-size: 10px;"><strong><span style=3D"font-size: lar=
+ge;">=E9=80=9A=E8=BF=87=E5=88=86=E6=9E=90Google=EF=BC=8CLinkedIn=EF=BC=8Cfa=
+cebook=EF=BC=8CWhatsApp=E7=AD=89=E5=B9=B3=E5=8F=B0=E7=9A=84=E5=85=AC=E5=BC=
+=80=E4=BF=A1=E6=81=AF=EF=BC=8C=E4=BB=A5=E5=8F=8A=E8=B6=8510=E4=BA=BF=E6=B5=
+=B7=E5=85=B3=E4=BA=A4=E6=98=93=E6=95=B0=E6=8D=AE=E8=AE=B0=E5=BD=95=EF=BC=8C=
+=E8=8E=B7=E5=AE=A2=E6=96=B9=E5=BC=8F=E5=A4=9A=E6=A0=B7=EF=BC=8C=E5=BC=95=E6=
+=93=8E+=E7=A4=BE=E4=BA=A4+=E6=99=BA=E8=83=BD=E6=8E=A8=E8=8D=90=EF=BC=8C=E5=
+=AE=9E=E7=8E=B0=E5=A4=9A=E6=B8=A0=E9=81=93=E7=B2=BE=E5=87=86=E5=BC=80=E5=8F=
+=91</span></strong></span></div>
+<div><span style=3D"font-size: 10px;"><strong><span style=3D"font-size: lar=
+ge;"><br /></span></strong></span></div>
+<div><span style=3D"font-size: 10px;"><strong><span style=3D"font-size: lar=
+ge;">=E5=8F=AF=E4=BB=A5=E6=A0=B9=E6=8D=AE=E4=B8=8D=E5=90=8C=E8=A1=8C=E4=B8=
+=9A=E4=BA=A7=E5=93=81=EF=BC=8C=E7=9B=B4=E8=A7=82=E6=BC=94=E7=A4=BA=E6=95=88=
+=E6=9E=9C=EF=BC=8C=E5=B9=BF=E6=B7=B1=E5=8F=8A=E5=91=A8=E8=BE=B9=E5=8F=AF=E9=
+=9D=A2=E8=B0=88</span></strong></span></div>
+<div><span style=3D"font-size: 10px;"><strong><span style=3D"font-size: lar=
+ge;">QQ: <span style=3D"color: #ff6600;">1643747039</span></span></strong><=
+/span></div>
+<div><span style=3D"font-size: 10px;"><strong><span style=3D"font-size: lar=
+ge;">Wechat:<span style=3D"color: #ff6600;">18124696139</span></span></stro=
+ng></span></div>
+<div><span style=3D"font-size: 10px;"><strong><span style=3D"font-size: lar=
+ge;">&nbsp;</span></strong></span></div>
+<div><span style=3D"font-size: 10px;"><strong><span style=3D"font-size: lar=
+ge;">=E9=A1=BA=E7=A5=9D=E5=95=86=E7=A5=BA</span></strong></span></div>
 
-This is a multi-part message in MIME format.
+<img src=3D"http://103.41.65.118/oem/to.php?p=3Ds4/s4/rs/2r4/s4/rs" width=
+=3D"5" height=3D"2" alt=3D".">
 
---=====003_Dragon451433502465_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-RGVhciBzaXIsDQpJIGFtIGJydWNlICBmcm9tIExLLU1vdWxkIENvLiwgTHRkLg0KV2Ugc3BlY2lh
-bGl6ZWQgaW4gZGVzaWduIGFuZCBtYW51ZmFjdHVyaW5nIHBsYXN0aWMsIGRpZSBjYXN0aW5nIG1v
-dWxkIGFuZCBtb2xkZWQgcGFydHMsIGFsc28gcHJvdmlkZSBmdWxsIHNlcnZpY2UgZm9yIHByb2R1
-Y3QgZGV2ZWxvcCBhbmQgc2Vjb25kYXJ5IG9wZXJhdGlvbi5Nb2xkIERlc2lnbixNYW51ZmFjdHVy
-aW5nLFBsYXN0aWMgSW5qZWN0aW9uIE1vbGRpbmcsUHJvamVjdCBNYW5hZ2VtZW50Lg0KRG8geW91
-IGhhdmUgYW55IHByb2plY3QgaW4gaGFuZD8gSSBiZWxpZXZlIG91ciBwcm9kdWN0cyBxdWFsaXR5
-IG1ha2UgeW91IDEwMCUgc2F0aXNmeSENClRoYW5rcw0KQnJ1Y2UNClByb2Zlc3Npb25hbCBwbGFz
-dGljIG1vbGRpbmcgYW5kIGRpZSBjYXN0aW5nIG1vdWxkICBTdXBwbGllci4=
-
---=====003_Dragon451433502465_=====
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZPg0KPFA+RGVhciBzaXIs
-PC9QPg0KPFA+SSBhbSZuYnNwO2JydWNlICZuYnNwO2Zyb20gTEstTW91bGQgQ28uLCBMdGQuPC9Q
-Pg0KPFA+V2Ugc3BlY2lhbGl6ZWQgaW4gPFNUUk9ORz48Rk9OVCBzaXplPTQ+ZGVzaWduIGFuZCBt
-YW51ZmFjdHVyaW5nIHBsYXN0aWMsIGRpZSANCmNhc3RpbmcgbW91bGQgYW5kIG1vbGRlZCBwYXJ0
-cyw8L0ZPTlQ+PC9TVFJPTkc+IGFsc28gcHJvdmlkZSBmdWxsIHNlcnZpY2UgZm9yIA0KcHJvZHVj
-dCBkZXZlbG9wIGFuZCBzZWNvbmRhcnkgb3BlcmF0aW9uLk1vbGQgRGVzaWduLE1hbnVmYWN0dXJp
-bmcsUGxhc3RpYyANCkluamVjdGlvbiBNb2xkaW5nLFByb2plY3QgTWFuYWdlbWVudC48L1A+DQo8
-UD5EbyB5b3UgaGF2ZSBhbnkgcHJvamVjdCBpbiBoYW5kPyBJIGJlbGlldmUgb3VyIHByb2R1Y3Rz
-IHF1YWxpdHkgbWFrZSB5b3UgMTAwJSANCnNhdGlzZnkhPC9QPg0KPFA+VGhhbmtzPEJSPkJydWNl
-PC9QPg0KPFA+PFNUUk9ORz5Qcm9mZXNzaW9uYWwgcGxhc3RpYyBtb2xkaW5nIGFuZCBkaWUgY2Fz
-dGluZyBtb3VsZCZuYnNwOyANClN1cHBsaWVyLjwvU1RST05HPjwvUD48L0JPRFk+PC9IVE1MPg0K
-
---=====003_Dragon451433502465_=====--
+</body>
+</html>
 
 
-
---===============7606539191791396652==
+--===============1555285484565436067==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7606539191791396652==
+--===============1555285484565436067==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -166,6 +218,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7606539191791396652==--
-
-
+--===============1555285484565436067==--
