@@ -2,100 +2,97 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4A0916619EB
-	for <lists+industrypack-devel@lfdr.de>; Sun,  8 Jan 2023 22:25:29 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 70D9C662036
+	for <lists+industrypack-devel@lfdr.de>; Mon,  9 Jan 2023 09:41:27 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1pEdAW-00030k-25
+	id 1pEnig-0002Ky-7u
 	for lists+industrypack-devel@lfdr.de;
-	Sun, 08 Jan 2023 21:25:28 +0000
+	Mon, 09 Jan 2023 08:41:26 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
- <74b7b433df00d7a7d43820adcd5b22fd@atl4wpplatweb07.registeredsite.com>)
- id 1pEdAT-00030c-5h for industrypack-devel@lists.sourceforge.net;
- Sun, 08 Jan 2023 21:25:25 +0000
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <joseph.bahringer@elbesaale.com>) id 1pEnie-0002Jx-Ds
+ for industrypack-devel@lists.sourceforge.net;
+ Mon, 09 Jan 2023 08:41:24 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Subject:From:To:Date:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:To:From:Date:Message-ID:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=wE8jN6gcFWxCQVWYLgEGeK+pL3Edg5Dm/DB6aDlkYeo=; b=EbNFAGMtN1AYUZEUF0pUIVqk8u
- 5HcOMKdHAGl81aoihCbyy+1EtQciwrly1iM9u5N0cJMxOWIMkGtET0iFNDCIYeZAxbtATn08+xHWN
- O8qANk+SL7C4+/QOJX+22NxRVFuFVUJSjILKXzjSoERQPDXAyp4lIiULn02AAgLUgrYw=;
+ bh=wlmkcl0hB4UXFyup6zf4o3SNHK3urlErXF/0NwMt1yI=; b=axXrl8mv0ep+i4y7CRmADIAsZ9
+ PxVyx9IUxJGai5vNOIJN+CT6EkrQQfAIQRhBpiYMTjnT8psgTAla01bWIcpeze3WgAOBsFFQ89iBb
+ MSjnmcIARZrNsUrfnrHfjNO47DgBx8p7IhI36KsZT06T1wpcgjI1nojuT0FNJV9TpZ3s=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Subject:
- From:To:Date:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:To:From:Date:
+ Message-ID:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=wE8jN6gcFWxCQVWYLgEGeK+pL3Edg5Dm/DB6aDlkYeo=; b=d
- J2hpUul+sGnSiSzN91E1gxjMTjpD5seX0QUpiwQZFXc3vavCLC+rOvqLYdc9yaz8pMXKWL09HKRNC
- tCQacvZQJt47eA+MASPZ8+aCCEkqlwOiE+cerGvNH/lam0tRmsvhKgmiU6srAZ1xyxTq4lMqSA+Vw
- w6dHCV93giKW3KgU=;
-Received: from atl4mhho05.registeredsite.com ([209.17.115.113])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=wlmkcl0hB4UXFyup6zf4o3SNHK3urlErXF/0NwMt1yI=; b=X
+ MtIeSG0ZhCAD77zQKjTGaS5r7dMOhnXDrIt1y4YXIod47GD1igfSHSnhttTOpHk/S9T07Wq09NrNs
+ XOoFzxrRSSmOdX13H3MoKvpObMwJ3R3D2O6mqB+bO7aAYaW2InSASe4+30ZrcNYnc2IulncAxb8kb
+ 0zid5I93+n834jNE=;
+Received: from [193.142.59.73] (helo=mail.elbesaale.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1pEdAS-00AbGd-GR for industrypack-devel@lists.sourceforge.net;
- Sun, 08 Jan 2023 21:25:25 +0000
-Received: from atl4wpplatweb07.registeredsite.com ([10.30.83.94])
- by atl4mhho05.registeredsite.com (8.14.4/8.14.4) with ESMTP id 308LPIBK030055
- (version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
- for <industrypack-devel@lists.sourceforge.net>; Sun, 8 Jan 2023 16:25:18 -0500
-Received: from atl4wpplatweb07.registeredsite.com (localhost [127.0.0.1])
- by atl4wpplatweb07.registeredsite.com (8.14.7/8.14.4) with ESMTP id
- 308LPIZc001796
- for <industrypack-devel@lists.sourceforge.net>; Sun, 8 Jan 2023 16:25:18 -0500
-Received: (from 74b7b433df00d7a7d43820adcd5b22fd@localhost)
- by atl4wpplatweb07.registeredsite.com (8.14.7/8.14.7/Submit) id 308LPIWk001795;
- Sun, 8 Jan 2023 16:25:18 -0500
-Date: Sun, 8 Jan 2023 16:22:24 -0500
-To: industrypack-devel@lists.sourceforge.net
-From: DHL-Express Delivery Company <Tracking-@ipgeolocation.io>
-Message-ID: <b6b4bca64ab420bc14c176b407ebbe61@ipgeolocation.io>
+ id 1pEniX-000711-6T for industrypack-devel@lists.sourceforge.net;
+ Mon, 09 Jan 2023 08:41:24 +0000
+Received: by mail.elbesaale.com (Postfix, from userid 1001)
+ id 332842249A; Mon,  9 Jan 2023 03:41:04 -0500 (EST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=elbesaale.com;
+ s=mail; t=1673253668;
+ bh=wlmkcl0hB4UXFyup6zf4o3SNHK3urlErXF/0NwMt1yI=;
+ h=Date:From:To:Subject:From;
+ b=D0eXzTDjtPvpGwso3tld3awxkbQXpXfAkp73O/UAedlp40d6xLIv41UtuhSpiUgII
+ r268ztZyeqUnnMz6aN/P/TmGbvI1dXg2pi6V3J0vaclM2BuzeDOoDYYRvjvz2n8sdd
+ vpDkqSa3d97dvy2wVK7OeRrMeT6+NTy6XCAL+N1JjGKcVPSPwFVei7fX+DjRNQEE9y
+ oiM9C03kL7waRpc7CCObcleNNBPWCLN1t3sSLAfbncKbBtP2qBea7++MuC9id7pjsU
+ vXcTsv08RIl02nH4f3HWqgaBQUfOE94NfgLt/ntzhbTuIpAvatxBTH+wD00WLL4JJS
+ biHRAS7ZxMpcw==
+Received: by mail.elbesaale.com for <industrypack-devel@lists.sourceforge.net>;
+ Mon,  9 Jan 2023 08:40:55 GMT
+Message-ID: <20230109024500-0.1.14.2q8o.0.92b07xq978@elbesaale.com>
+Date: Mon,  9 Jan 2023 08:40:55 GMT
+To: <industrypack-devel@lists.sourceforge.net>
+X-Mailer: mail.elbesaale.com
 MIME-Version: 1.0
-X-Spam-Score: 4.0 (++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 8.9 (++++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  DHL   Dear customer, 
- 
- Content analysis details:   (4.0 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Dear Sir/Madam, I would like to draw your attention to our
+ range of products, which are an opportunity to improve competitiveness and
+ increase sales. We provide energy drinks, isotonic drinks, and vitamin drinks
+ in aluminium cans and PET plastic bottles, available in a very wide variety
+ of flavours. 
+ Content analysis details:   (8.9 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
-                             blocked.  See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URIs: cloudwaysapps.com]
-  1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
-                             [209.17.115.113 listed in dnsbl-1.uceprotect.net]
-  1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
-                             bl.spamcop.net
-              [Blocked - see <https://www.spamcop.net/bl.shtml?209.17.115.113>]
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
+ 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
+ blocklist [URIs: elbesaale.com]
+ 1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
+ 3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
+ [193.142.59.73 listed in zen.spamhaus.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
-                              no trust
-                             [209.17.115.113 listed in list.dnswl.org]
-  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
-                             https://senderscore.org/blocklistlookup/
-                            [209.17.115.113 listed in bl.score.senderscore.com]
-  0.1 URI_HEX                URI: URI hostname has long hexadecimal sequence
-  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
-  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [209.17.115.113 listed in wl.mailspike.net]
-X-Headers-End: 1pEdAS-00AbGd-GR
-Subject: [Industrypack-devel] Tracking Number 31385670087409
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1pEniX-000711-6T
+Subject: [Industrypack-devel] [SPAM] New energy drinks on offer
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -107,146 +104,31 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4797091266201820203=="
+From: Joseph Bahringer via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: Joseph Bahringer <joseph.bahringer@elbesaale.com>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+Dear Sir/Madam,
+ 
+I would like to draw your attention to our range of products, which are an opportunity to improve competitiveness and increase sales.
+ 
+We provide energy drinks, isotonic drinks, and vitamin drinks in aluminium cans and PET plastic bottles, available in a very wide variety of flavours.
+ 
+Our success is based on a unique, patented recipe and numerous innovative flavours (e.g. cannabis), which meet the current needs of customers. As a result, customers make an informed decision to choose our products out of all the others available on the market.
+ 
+Thanks to many years of experience in export sales, we offer you flexibility and drink samples for tasting.
+ 
+Could we explore the potential of working with you?
+ 
+ 
+Yours faithfully,
+Joseph Bahringer
 
---===============4797091266201820203==
-Content-Type: multipart/alternative;
-	boundary="16a2fd74a24106dce82df32706c0511ad"
-Content-Transfer-Encoding: 8bit
-
-This is a multi-part message in MIME format.
-
---16a2fd74a24106dce82df32706c0511ad
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 8bit
-
-
-
-
-	
-
-
-DHL
-
- 
-
-Dear customer,
-
- 
-
-Your parcel has arrived at the post office DHL. 
-
-Our courier was unable to deliver the parcel to you
-
- 
-
-You must update your shipping address in order to receive the package.
-
- 
-
-https://www.dhl.com/information
-
- 
-
- 
-
-mandatory procedure:
-
-
-You must also pay 1.35, via the link above, the costs of sending the package to the address we will receive from you.
-
- 
-
-When you do not pay the cost, we will return the package to the place it was sent from
-
- 
-p
-{
-	font-size: 15px;
-	font-family: Tahoma,Verdana,Segoe,sans-serif; 
-}
-
-
-
-
---16a2fd74a24106dce82df32706c0511ad
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: 8bit
-
-<!doctype html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<p><span style="color:#cc0000;"><em><span style="font-size: 48px;"><b>DHL</b></span></em></span></p>
-
-<p> </p>
-
-<p style="font-family: Verdana; font-size: 12px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;"><strong>Dear customer</strong>,</span></span></p>
-
-<p style="font-family: Verdana; font-size: 12px;"> </p>
-
-<p style="font-family: Verdana; font-size: 12px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;">Your parcel has arrived at the post office <a href="https://wordpress-910379-3160064.cloudwaysapps.com/Ceska/dhl/">DHL</a>. </span></span></p>
-
-<p style="font-family: Verdana; font-size: 12px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;">Our courier was unable to deliver the parcel to you</span></span></p>
-
-<p style="font-family: Verdana; font-size: 12px;"> </p>
-
-<p style="font-family: Verdana; font-size: 12px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;">You must update your shipping address in order to receive the package.</span></span></p>
-
-<p style="font-family: Verdana; font-size: 12px;"> </p>
-
-<p style="font-family: Verdana; font-size: 12px;"><a href="https://wordpress-910379-3160064.cloudwaysapps.com/Ceska/dhl/"><span style="font-size:14px;"><span style="font-family: Verdana;">https://www.dhl.com/information</span></span></a></p>
-
-<p style="font-family: Verdana; font-size: 12px;"> </p>
-
-<p style="font-family: Verdana; font-size: 12px;"> </p>
-
-<p style="font-family: Verdana; font-size: 12px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;"><span style="color:#FF0000;"><strong><u>mandatory procedure:</u></strong></span></span></span></p>
-
-<p style="font-family: Verdana; font-size: 12px;"><br />
-<span style="font-size:14px;">You must also pay 1.35, via the link above, the costs of sending the package to the address we will receive from you.</span></p>
-
-<p style="font-family: Verdana; font-size: 12px;"> </p>
-
-<p style="font-family: Verdana; font-size: 12px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;">When you do not pay the cost, we will return the package to the place it was sent from</span></span></p>
-
-<p style="font-family: Verdana; font-size: 12px;"> </p>
-<style type="text/css">p
-{
-	font-size: 15px;
-	font-family: Tahoma,Verdana,Segoe,sans-serif; 
-}
-</style>
-</body>
-</html>
-
-
-
---16a2fd74a24106dce82df32706c0511ad--
-
-
---===============4797091266201820203==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============4797091266201820203==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============4797091266201820203==--
-
