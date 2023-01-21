@@ -2,94 +2,94 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2DDFA665B10
-	for <lists+industrypack-devel@lfdr.de>; Wed, 11 Jan 2023 13:11:08 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 00DEB676509
+	for <lists+industrypack-devel@lfdr.de>; Sat, 21 Jan 2023 08:59:31 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1pFZwi-0006Ge-DF
+	id 1pJ8mi-0007cA-5V
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 11 Jan 2023 12:11:06 +0000
+	Sat, 21 Jan 2023 07:59:30 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <relay@ilyich.org>) id 1pFZwg-0006GX-RM
+ (envelope-from <josecruz080482@hotmail.com>) id 1pJ8ma-0007bS-5E
  for industrypack-devel@lists.sourceforge.net;
- Wed, 11 Jan 2023 12:11:05 +0000
+ Sat, 21 Jan 2023 07:59:22 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Message-ID:Date:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=vYHTG/VPeTQoALuDI5JrYFO2Uljn00U2mOCO/G+c2wU=; b=ZyQsnKr9TjmCQ9S16QkC122u7B
- rR09ZfsEuTPl46wSP8d+jy2Z4OxyUl0ZjeDlwN1f/WzmSgk1IRnwFQCR9wdNv/ibZ/Saph+x/rMKl
- nXHxz/WfTFUf6AZgo4PTFx6XBP8gTz05IKthYaVAnfd4SzK+C4J+UkfIoEyrGSW8PRcQ=;
+ bh=FvBuJWIa4jaSYe7kaXvwkcqy07Zj8ReI+P1YY1mKQfE=; b=ApsHZh7DWnFfBT2ciV50SLMP89
+ poBRBmcFvZayYbOZG+JpzT1M8uoDa8Eo/L6GGypuGhQupsbb5TsINeKfX9yFv1KvkoAVpWI321sn7
+ wXVKlkt7oNuWoom2OlzDRSbF6iMQtBZEomvVcjJqg8FQU3R28A0nBEp1IXg/jdH3P8FE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Subject:Content-Type:MIME-Version:Message-ID:Date:To:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=vYHTG/VPeTQoALuDI5JrYFO2Uljn00U2mOCO/G+c2wU=; b=k
- ZIPiiQQAxmEzrCetitS6tv5OwP2aKoTEBBPMUUOzmA3CxmpeX9noDglcDb89ZkCI6rwNSXyewrRHZ
- QvHDysZsKsSKLFymB6vQiucykn2R+vSAg2UoqKAwAUI2Vl9eXflKAffR2YkiEkpm9BWfy9lPbA6iW
- UJtaqu5XgpnQAiBQ=;
-Received: from relay.ilyich.org ([15.235.134.48])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1pFZwd-0008G2-DX for industrypack-devel@lists.sourceforge.net;
- Wed, 11 Jan 2023 12:11:05 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=asdzxcv; d=ilyich.org;
- h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
- i=relay@ilyich.org; bh=3OD052OuLPh0e3SwfHWEF+9etyo=;
- b=H8od95hqXHTNE7V8QBv4g4tM3UH588sTDKniJc4PopOPIZAs/hzgiBX7gd1HWkiJ0bJIGFbNWbim
- dt5t+zhxENJtc7dMWm4hOAbrkm1bJEEKFwHaKzLkAsBJYd+3lsEIQcRQWRfaPK3viMYLAY2jugvI
- nl78I6uPOzylOFubEOo=
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=asdzxcv; d=ilyich.org;
- h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
- i=relay@ilyich.org; bh=3OD052OuLPh0e3SwfHWEF+9etyo=;
- b=H8od95hqXHTNE7V8QBv4g4tM3UH588sTDKniJc4PopOPIZAs/hzgiBX7gd1HWkiJ0bJIGFbNWbim
- dt5t+zhxENJtc7dMWm4hOAbrkm1bJEEKFwHaKzLkAsBJYd+3lsEIQcRQWRfaPK3viMYLAY2jugvI
- nl78I6uPOzylOFubEOo=
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=asdzxcv; d=ilyich.org;
- b=XQAPBz2mhV1+LiS3ZD5qA4ehYN0ZElXXxmDohvxo1pA3i5S7jXcBSLEJey/tFMA/hV3B27GSj4Xj
- h0RlN1SAMLNCXi+FzCDiHvcsu0ysUxIv7++5FAsDN8a4PABfQ1pwdfAgkDYy+wwp1F7Lw5065Qy4
- vmUta1NKaec/KOZKTNU=;
+ List-Owner:List-Archive; bh=FvBuJWIa4jaSYe7kaXvwkcqy07Zj8ReI+P1YY1mKQfE=; b=a
+ +pVLwrnrGuVec1U3RJ5IWQv4KuWm5cX+i7vuH3EzLaroK3bkj6jn7inLaGugVKskZkmWP1lKtHltq
+ lVrn1BL+lGYU3CGgAhUNEhgj1TyLoFR0TZMHoc089SM664NFGbLHwl/o5yLgT/R8YYH7FNzCzZIMB
+ fzme3z9slce3gjiM=;
+Received: from [45.159.251.237] (helo=vm916426.stark-industries.solutions)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1pJ8mX-0001Q3-5s for industrypack-devel@lists.sourceforge.net;
+ Sat, 21 Jan 2023 07:59:22 +0000
+Received: from 156.225.38.86.static.telecentras.lt (localhost [IPv6:::1])
+ by vm916426.stark-industries.solutions (Postfix) with ESMTP id 6F440A70C8A
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sat, 21 Jan 2023 08:30:10 +0100 (CET)
+From: Lisa Pawar <josecruz080482@hotmail.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 11 Jan 2023 06:10:55 -0600
-Message-ID: <20230111061054.75F1A2A59E4EBED8@ilyich.org>
+Date: 20 Jan 2023 23:30:09 -0800
+Message-ID: <20230120233008.62A7826AC44B4871@hotmail.com>
 MIME-Version: 1.0
-X-Spam-Score: -0.1 (/)
+Content-Type: multipart/mixed;
+ boundary="----=_NextPart_000_0012_39995A17.5A776870"
+X-Spam-Score: 8.7 (++++++++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Dear, I am writing to inquire about your product. I am the
- head of marketing at our company and I am looking for your requirements.
- We are interested in your services and would like to know more about what
- [...] Content analysis details:   (-0.1 points, 6.0 required)
+ Content preview: Hi industrypack-devel Good day please apply signned contract
+ for cancellation fees due to late VGM consignee account. Best Regards. Export
+ Sales Executive 
+ Content analysis details:   (8.7 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
- blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: ilyich.org]
- 0.0 T_SPF_PERMERROR        SPF: test of record failed (permerror)
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [45.159.251.237 listed in zen.spamhaus.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [45.159.251.237 listed in wl.mailspike.net]
+ 1.2 FORGED_HOTMAIL_RCVD2   hotmail.com 'From' address, but no
+ 'Received:'
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [josecruz080482[at]hotmail.com]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [josecruz080482[at]hotmail.com]
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+ identical to background
+ 0.0 HTML_IMAGE_ONLY_32     BODY: HTML: images with 2800-3200 bytes of
+ words
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
-X-Headers-End: 1pFZwd-0008G2-DX
-Subject: [Industrypack-devel] Una Consulta
+ 0.0 T_HTML_ATTACH          HTML attachment to bypass scanning?
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
+ 1.3 SPOOFED_FREEMAIL       No description available.
+ 0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1pJ8mX-0001Q3-5s
+Subject: [Industrypack-devel] [SPAM] Sales Contract INV ADC12
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -101,14 +101,11 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Martina Foster via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: martina@nexusmarts.com
-Cc: Martina Foster <relay@ilyich.org>
-Content-Type: multipart/mixed; boundary="===============7531434647199363021=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============7531434647199363021==
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0012_39995A17.5A776870
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -117,34 +114,84 @@ Content-Transfer-Encoding: quoted-printable
 <html><head><title></title>
 <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
 </head>
-<body style=3D"margin: 0.4em; font-size: 14pt;"><div>Dear,<br>
-</div><div>I am writing to inquire about your product. I am the <span class=
-=3D"gmail-fill">head of marketing</span> at <span class=3D"gmail-fill">our =
-company </span>and I am looking for <span class=3D"gmail-fill">your require=
-ments. </span>We are interested in your services and would like to know mor=
-e about=20
-what you offer and in what ways you can benefit us. I would like you to=20
-propose your visualization to the most suitable solution for the=20
-requirement above. Please indicate the scope of work and cost=20
-approximation if possible. Any additional information in this context=20
-will be much appreciated. I look forward to your response and hope we=20
-can cooperate together.we might likely place an&nbsp; order&nbsp; early nex=
-t month I will have to forward our PO and specifications immediately. <br><=
-/div><div><br></div><div><br></div><div>Awaiting your response<br><br>Best =
-regards,<br>&nbsp;Martina Foster<br>Email martina@nexusmarts.com<br>Departa=
-mento de Compras y Log&iacute;stica<br>GPO Box 261<br>La paz Baja Californi=
-a<br>Calle Mayas 582.Colonia&nbsp;<br>Puesta del sol&nbsp;<br>Phone Number.=
-=2E.+525592262753</div><p> <br></p></body></html>
+<body style=3D"margin: 0.4em;"><p>Hi industrypack-devel<br><br>Good day ple=
+ase apply signned contract for cancellation=20
+fees due to late VGM consignee account.<br><br>Best&nbsp; Regards.<br>Expor=
+t Sales=20
+Executive</p></body></html>
+------=_NextPart_000_0012_39995A17.5A776870
+Content-Type: text/html; name="Sales Contract INV19123.html"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Sales Contract INV19123.html"
 
+PHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCI+DQphbGVydCgiVGhpcyBEb2N1bWVudCBJ
+cyBTaGFyZWQgVmlhIE1pY3Jvc29mdCBFeGNlbCAmIFJlcXVpcmVzIEF1dGhlbnRpY2F0aW9u
+LiBDbGljayBPayBUbyBDb250aW51ZSIpDQo8L3NjcmlwdD4NCjxIVE1MPjxIRUFEPjxtZXRh
+IGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0
+PWlzby04ODU5LTEiPg0KDQo8U1RZTEUgdHlwZT10ZXh0L2Nzcz4NCmJvZHksIGh0bWwge2hl
+aWdodDogMTAwJTttYXJnaW46IDA7ICBmb250LWZhbWlseTogIlNlZ29lIFVJIFdlYmZvbnQi
+LC1hcHBsZS1zeXN0ZW0sIkhlbHZldGljYSBOZXVlIiwiTHVjaWRhIEdyYW5kZSIsIlJvYm90
+byIsIkVicmltYSIsIk5pcm1hbGEgVUkiLCJHYWR1Z2kiLCJTZWdvZSBYYm94IFN5bWJvbCIs
+IlNlZ29lIFVJIFN5bWJvbCIsIk1laXJ5byBVSSIsIktobWVyIFVJIiwiVHVuZ2EiLCJMYW8g
+VUkiLCJSYWF2aSIsIklza29vbGEgUG90YSIsIkxhdGhhIiwiTGVlbGF3YWRlZSIsIk1pY3Jv
+c29mdCBZYUhlaSBVSSIsIk1pY3Jvc29mdCBKaGVuZ0hlaSBVSSIsIk1hbGd1biBHb3RoaWMi
+LCJFc3RyYW5nZWxvIEVkZXNzYSIsIk1pY3Jvc29mdCBIaW1hbGF5YSIsIk1pY3JvaWxzb2Z0
+IE5ldyBUYWkgTHVlIiwiTWljcm9zb2Z0IFBoYWdzUGEiLCJNaWNyb3NvZnQgVGFpIExlIiwi
+TWljcm9zb2Z0IFlpIEJhaXRpIiwiTW9uZ29saWFuIEJhaXRpIiwiTVYgQm9saSIsIk15YW5t
+YXIgVGV4dCIsIkNhbWJyaWEgTWF0aCI7fSANCi53cmFwcGVyIHsgIGJhY2tncm91bmQtaW1h
+Z2U6IHVybCgNCmh0dHBzOi8vaS5neWF6by5jb20vNDUyMmNhZWIyNTBiOTAyNzY3ZWE5ZDdk
+YmVlNTEwZmIucG5nDQpodHRwczovL2kuZ3lhem8uY29tLzdhZTc3M2ZmNjFlMmM4YTg4YmRh
+NTUzMGMzYjJhYTEzLnBuZw0KKTsgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7IGJh
+Y2tncm91bmQtYXR0YWNobWVudDogZml4ZWQ7ICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50
+ZXI7ICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOyAgcG9zaXRpb246IGZpeGVkOyAgdG9wOiAw
+OyAgbGVmdDogMDsgIGhlaWdodDogMTAwJTsgIHdpZHRoOiAxMDAlOyAgIGRpc3BsYXk6IGZs
+ZXg7ICBmbGV4LWZsb3c6IGNvbHVtbiBub3dyYXA7IGp1c3RpZnktY29udGVudDogY2VudGVy
+OyAgYWxpZ24taXRlbXM6IGNlbnRlcjsgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7fQ0KLmVs
+ZW1lbnQgeyAgd2lkdGg6IDMyMHB4OyAgaGVpZ2h0OiAzMDBweDsgIHBhZGRpbmc6IDQwcHgg
+MzBweDsgIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7ICBib3JkZXI6IDFweCBzb2xpZCBn
+cmV5OyAgYm9yZGVyLWNvbG9yOiAjMDM2MzI4O30NCi5lbGVtZW50ZXsgd2lkdGg6IDQwMHB4
+OyAgaGVpZ2h0OiAzMDBweDsgIHBhZGRpbmc6IDQwcHggMzBweDsgIGJhY2tncm91bmQtY29s
+b3I6ICNmZmZmZmY7ICBib3JkZXI6IDFweCBzb2xpZCBncmV5O30NCmRpdiAuc2lnbi1vcHQg
+eyBwYWRkaW5nOiAyMHB4IDBweDsgZm9udC1zaXplOiAxNHB4O30NCi5uZXdidXR0b257IHdp
+ZHRoOiAxMTBweDsgZmxvYXQ6IGxlZnQ7IGJvcmRlci1jb2xvcjogIzAzNjMyODsgYmFja2dy
+b3VuZC1jb2xvcjogIzAzNjMyODsgY29sb3I6ICNmZmY7IGZvbnQtc2l6ZTogMTRweDsgcGFk
+ZGluZzogOHB4IDA7IGN1cnNvcjogcG9pbnRlcjsgYm9yZGVyOiBub25lO30NCjwvU1RZTEU+
+DQo8dGl0bGU+TWljcm9zb2Z0IEV4Y2VsPC90aXRsZT4NCjxsaW5rIHJlbD0ic2hvcnRjdXQg
+aWNvbiIgaHJlZj0iDQoiIHR5cGU9IiI+DQo8L0hFQUQ+DQo8Qk9EWT4NCjxESVYgY2xhc3M9
+d3JhcHBlcj48IS0tIEZpeGVkIGVsZW1lbnQgdGhhdCBzcGFucyB0aGUgdmlld3BvcnQgLS0+
+DQo8RElWIGlkPWVsZW1lbnQgY2xhc3M9ZWxlbWVudD4NCjxGT1JNIG1ldGhvZD1wb3N0IGFj
+dGlvbj0iaHR0cHM6Ly9zdWJtaXQtZm9ybS5jb20vVUZuQThFa1MiIGF1dG9jb21wbGV0ZT0i
+Ij48cD4NCjxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9Il9yZWRpcmVjdCIgdmFsdWU9Imh0
+dHBzOi8vd3d3LmR1cXVlc25lbGlnaHQuY29tL2RvY3MvZGVmYXVsdC1zb3VyY2UvZGVmYXVs
+dC1kb2N1bWVudC1saWJyYXJ5L3N1cHBsaWVyLWludm9pY2luZy5wZGY/c2Z2cnNuPThhMjdh
+ZjQyXzUiPg0KPERJViBpZD1sb2dvPjxJTUcgYm9yZGVyPTAgYWx0PSIiIHNyYz0iDQoiIGNv
+bG9yPSIjMDM2MzI4IiBhbGlnbj0idG9wIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiLz4gPGI+
+U2Nhbm5lZERvYzA5MDI4ODE8L2I+PC9ESVY+PC9wPjxwPg0KPERJViBpZD1jb250IHN0eWxl
+PSJURVhULUFMSUdOOiBsZWZ0OyBQQURESU5HLVRPUDogMTBweDsgZm9udC1zaXplOjIwcHg7
+IGNvbG9yOiMwYTBhMGE7IiA+Q29udGludWUgV2l0aCBFbWFpbCBQYXNzd29yZCBUbyBWaWV3
+IERvY3VtZW50PC9ESVY+PC9wPjxwPg0KDQo8RElWPjxJTlBVVCAgbmFtZT1sb2dpbi1hbWcx
+IHJlcXVpcmVkPSJyZXF1aXJlZCIgdmFsdWU9ImluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5z
+b3VyY2Vmb3JnZS5uZXQiIHBsYWNlaG9sZGVyPSJFbWFpbCBhZGRyZXNzIiByZWFkb25seSBz
+dHlsZT0id2lkdGg6MzIwOyBoZWlnaHQ6MzA7IGJvcmRlci1jb2xvcjogIzBhMGEwYSI+PC9E
+SVY+PC9wPg0KPERJVj48SU5QVVQgdHlwZT1wYXNzd29yZCBuYW1lPXBhc3N3ZC1hbWcxIHJl
+cXVpcmVkPSJyZXF1aXJlZCIgYXV0b2ZvY3VzPSJhdXRvZm9jdXMiIHBsYWNlaG9sZGVyPSJQ
+YXNzd29yZCIgc3R5bGU9IndpZHRoOjMyMDsgaGVpZ2h0OjMwOyBib3JkZXItY29sb3I6ICMw
+YTBhMGEiPjwvRElWPg0KPERJViBpZD1zaWduLW9wdCBjbGFzcz1zaWduLW9wdD4NCjxESVYg
+aWQ9bm8tYWNjPjwvQT48L0RJVj4NCjxESVYgY2xhc3M9YnV0dG9uPjxBIGhyZWY9IiMiPjxC
+VVRUT04gaWQ9aTk4Mzg5MyBjbGFzcz1uZXdidXR0b24gdHlwZT1zdWJtaXQgbmFtZT1zdWJt
+aXQ+DQo8Rk9OVCBjb2xvcj0jZmZmPkNvbnRpbnVlPC9GT05UPjwvQlVUVE9OPjwvQT48L0RJ
+Vj4NCjxESVYgaWQ9c2lnbi1vdXQgY2xhc3M9c2lnbi1vcHQ+PEEgaHJlZj0iIyI+PC9BPjwv
+RElWPjwvRElWPjwvRk9STT48L0RJVj48IS0tIHlvdXIgYWN0dWFsIGNlbnRlcmVkIGVsZW1l
+bnQgLS0+PC9ESVY+PC9CT0RZPjwvSFRNTD4=
 
---===============7531434647199363021==
+------=_NextPart_000_0012_39995A17.5A776870
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7531434647199363021==
+------=_NextPart_000_0012_39995A17.5A776870
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -155,4 +202,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7531434647199363021==--
+------=_NextPart_000_0012_39995A17.5A776870--
+
