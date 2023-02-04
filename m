@@ -2,18 +2,18 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6F11A68A7EA
-	for <lists+industrypack-devel@lfdr.de>; Sat,  4 Feb 2023 03:57:29 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id A70D468A7E9
+	for <lists+industrypack-devel@lfdr.de>; Sat,  4 Feb 2023 03:57:28 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1pO8k4-0005TV-Sp
+	id 1pO8k3-0006V3-FN
 	for lists+industrypack-devel@lfdr.de;
-	Sat, 04 Feb 2023 02:57:28 +0000
+	Sat, 04 Feb 2023 02:57:26 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <documentstrackin@dhl.com>) id 1pO8k2-0005TN-6B
+ (envelope-from <documentstrackin@dhl.com>) id 1pO8k1-0006Uw-OH
  for industrypack-devel@lists.sourceforge.net;
  Sat, 04 Feb 2023 02:57:25 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
@@ -22,27 +22,27 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=5fI867Xw4qFWvBrYQNO8yKwilrp5YrWUa2nrvIyPXFw=; b=mMnlpSw+X42mY7c+zu/7gQ6esV
- U9UD1O4k2GHiSb5HEXeQsNZ1dUvhoL4TxIJxEm4PGRMM2V5/3rvKGJid4gacr/+Ht5ZrmIQEuux9v
- qgexlhyFwB8kExwzX+hHDPos+fEuA43RJDAI1pFXyCqoAQ7A/2ASqs5DsrcvZfmVYLOE=;
+ bh=5fI867Xw4qFWvBrYQNO8yKwilrp5YrWUa2nrvIyPXFw=; b=Lq4n9crWFr08IcTNtvI8EAoQU4
+ s1vu6l6oe158IW4CQ4q74pWKsdXENsmgNWLVMYTCe4iU7lLuk11GDcZlXEvSvr9p00T5/HxTglBqt
+ tIyUtGoEaesMhZpj804C83bPAhdVHvePtUmsSx7M4pV7NE2arzpm0oEzq4vGduH9wEfw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=5fI867Xw4qFWvBrYQNO8yKwilrp5YrWUa2nrvIyPXFw=; b=P
- lba6pLqrT5H4D5ewC0bVaBEm8+1yU7eT4JQFxUc7CUt2IhC2QwxX3SWRe82BtrOmZtmQE4zyNfpzt
- t7GdLNKEDm/wULy0rOyz8PjmUzoSFb7hrsxq+/BWI3U5V4aryZQzhp2HB4rBXhz65/E1iwRRW63gV
- q0wPT87jtNBcWfDU=;
+ List-Owner:List-Archive; bh=5fI867Xw4qFWvBrYQNO8yKwilrp5YrWUa2nrvIyPXFw=; b=g
+ 8VHOlB6g9MJYw2W2jqCdmSoBOS/+KY99d2kpk45RByT1FHNTopU949iQncZR5NYT70g7WAoMiZ6F3
+ 5nP6dbqEs3rjp5eQYs67HV/PfSL17Yu31U8/edQb7CJEiYfu4HoNtlsURAYYPffukubbiN+QatcC5
+ 74PpVgYKoUAL/Fgs=;
 Received: from [155.94.160.144] (helo=mail0.mapleleaf.com)
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1pO8k0-00Ajac-VM for industrypack-devel@lists.sourceforge.net;
- Sat, 04 Feb 2023 02:57:25 +0000
+ id 1pO8jz-00Ajac-PC for industrypack-devel@lists.sourceforge.net;
+ Sat, 04 Feb 2023 02:57:24 +0000
 To: industrypack-devel@lists.sourceforge.net
-Date: 04 Feb 2023 02:02:22 +0000
-Message-ID: <20230204020222.04418653782758D7@dhl.com>
+Date: 04 Feb 2023 02:27:38 +0000
+Message-ID: <20230204022738.5C4EA57ED4764778@dhl.com>
 MIME-Version: 1.0
 X-Spam-Score: 3.6 (+++)
 X-Spam-Report: Spam detection software,
@@ -71,7 +71,7 @@ X-Spam-Report: Spam detection software,
  1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
  1.2 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
  only 0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
-X-Headers-End: 1pO8k0-00Ajac-VM
+X-Headers-End: 1pO8jz-00Ajac-PC
 Subject: [Industrypack-devel] DHL On Demand Delivery
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -87,10 +87,10 @@ List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 From: Shipping Doc via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
 Reply-To: Shipping Doc <documentstrackin@dhl.com>
-Content-Type: multipart/mixed; boundary="===============0942950094920559630=="
+Content-Type: multipart/mixed; boundary="===============5710004441067305638=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============0942950094920559630==
+--===============5710004441067305638==
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -199,14 +199,14 @@ ans-serif"><B>DHL Express Worldwide</B></FONT></DIV></TD></TR></TBODY></TAB=
 LE><BR><BR><BR></TD></TR></TBODY></TABLE></P></BODY></HTML>
 
 
---===============0942950094920559630==
+--===============5710004441067305638==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0942950094920559630==
+--===============5710004441067305638==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -217,4 +217,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0942950094920559630==--
+--===============5710004441067305638==--
