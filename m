@@ -2,91 +2,87 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1931D6B7960
-	for <lists+industrypack-devel@lfdr.de>; Mon, 13 Mar 2023 14:46:59 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id BE6946B8621
+	for <lists+industrypack-devel@lfdr.de>; Tue, 14 Mar 2023 00:36:36 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1pbiVt-0000zX-72
+	id 1pbriV-0003UG-1q
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 13 Mar 2023 13:46:57 +0000
+	Mon, 13 Mar 2023 23:36:35 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <email_feedback_handler@mta-inbound.cluster3.convio.net>)
- id 1pbiVs-0000zR-J8 for industrypack-devel@lists.sourceforge.net;
- Mon, 13 Mar 2023 13:46:57 +0000
+ (envelope-from <simon@chinanetdomains.net>) id 1pbriT-0003U9-Vq
+ for industrypack-devel@lists.sourceforge.net;
+ Mon, 13 Mar 2023 23:36:34 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Subject:Message-ID:To:
- Reply-To:Sender:From:Date:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:Message-ID:Mime-Version:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=C/sNddiKGMX/DjfSxm45fu3pymf2+hDnDpQpbjoRQjc=; b=TiwWj3gdzrYk+f8ExuPMnmWUzI
- Iq7rSiQWV0hx2d05z0JO9y7iEDoUFdEw7BtyDCxWM9kzSdOEgSCCR2cUiKttIeRAuyeurhies7x+J
- lYUKxfJKakN345Y6MLdtCdudMWBGXECf5mjnnMRTL637UMXxlcY8+jRKIy4SAOhv7I5Y=;
+ bh=j6B65Jp5pJNKoMcgo+GYnp67tzTNE2JnArCIYGM45AU=; b=F6M6Ze7vUDCg/ohH0XLUlQ5qug
+ VGzsz3JrNBWiMGAyDy9WGhO4mXSIjuxbaM2yT7bDDaZyEDhtkJdD/MagPb2zdf1IeYbP7G7XmrtkX
+ X+8t3QXxNN0yG/7RPFSTwnK82+jdpxy0AIjVbAmixIwc3YjUcm42qRT9rAs950HID1Sc=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Subject:Message-ID:To:Reply-To:Sender:From:Date
+ h=Content-Type:Message-ID:Mime-Version:Subject:To:From:Date:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=C/sNddiKGMX/DjfSxm45fu3pymf2+hDnDpQpbjoRQjc=; b=a
- Lt8ehZ3z4lUw1BAKBCNXfMdhajDwKsnyca8jD5UEWwOs1L+FemePaAwPNBsYz2XOdp35kuR+HHQz4
- ieAa7+2u7iyoMEg0lVF4rzjotW59nnsKtHoOR46mnFJbGqI4/vP8LLz5qx3ifyJGOYuOaEwGUI78U
- CJ7dcUXb6xrVN+WE=;
-Received: from mta-c3pooltaf.cluster3.convio.net ([216.235.195.152])
+ List-Owner:List-Archive; bh=j6B65Jp5pJNKoMcgo+GYnp67tzTNE2JnArCIYGM45AU=; b=l
+ W3itm2mYlTGDN8GD+m1ncW5Uqj4laDwmxJhZcx0qBqiKybEOsbwAtXtIeZ2wCYuM0cF9UsMLPXLy5
+ 1EL3fG/ZExawwMJndQyGMfMMdtE02o7fDPIPwnkG8V7vtB9piVG+pK49mBK9XvZdcbfAEXZd1ZCZx
+ q7M4QGvg8tXIWp60=;
+Received: from mx.chinanetdomains.net ([45.61.188.139])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1pbiVr-006WvV-AV for industrypack-devel@lists.sourceforge.net;
- Mon, 13 Mar 2023 13:46:57 +0000
-Received: from 10.0.31.225 (10.64.82.34) by mta-c3pooltaf.cluster3.convio.net
- id h1skku20dd8o for <industrypack-devel@lists.sourceforge.net>;
- Mon, 13 Mar 2023 08:46:49 -0500 (envelope-from
- <email_feedback_handler@mta-inbound.cluster3.convio.net>)
-Date: Mon, 13 Mar 2023 08:46:49 -0500 (CDT)
-From: Jennifer Brown <donations@hamiltonhealth.ca>
-To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <640615094.111771678715209923.JavaMail.www@app30034.cl3int.convio.net>
-MIME-Version: 1.0
-Organization: Hamilton Health Sciences Foundation
-X-TAF-Origin-IP: 102.215.253.76
-X-Gateway: c3poolcons
-XData: 1010,4Ky@4MnteQQ@neKt@7wFTj5jdwxTfcxTcF
-X-ConvioDeliveryGroup: poolb
-X-Spam-Score: 5.5 (+++++)
+ id 1pbriP-006rmB-2e for industrypack-devel@lists.sourceforge.net;
+ Mon, 13 Mar 2023 23:36:34 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=chinanetdomains;
+ d=chinanetdomains.net; 
+ h=Date:From:To:Subject:Mime-Version:Message-ID:Content-Type;
+ i=simon@chinanetdomains.net;
+ bh=j6B65Jp5pJNKoMcgo+GYnp67tzTNE2JnArCIYGM45AU=;
+ b=pZImNcC30ele7BZihSnL7rK0LrrLWzzuuc3YWCZquC1+Zi9YOIIaLr0tVGQXngsqNhqE7dx0OoRG
+ Q27m/nUdg9Zave+rAQiPQguAnXoA9wXFehO87qk12X4X6q7K0Sz+3T5x+cVA4D2NK/EtxKcYpBEq
+ QJuLOMaqYq6ZzN4Yw3Q=
+Date: Tue, 14 Mar 2023 07:36:10 +0800
+From: Simon Liu <simon@chinanetdomains.net>
+To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
+X-Priority: 3
+X-Has-Attach: no
+X-Mailer: Foxmail 7, 1, 3, 52[cn]
+Mime-Version: 1.0
+Message-ID: <202303140736175467385@chinanetdomains.net>
+X-Spam-Score: 1.7 (+)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: My Name is Miss Jennifer Brown. I would like to inquire about
- your services to be my foreign partner/investor and help me transfer and
- manage my funds by investing in profitable ventures such as buyin [...] 
- Content analysis details:   (5.5 points, 6.0 required)
+ Content preview:  (It's very urgent, therefore we kindly ask you to forward
+ this email to your CEO. If you believe this has been sent to you in error,
+ please ignore it. Thanks)Dear CEO,This is a formal email. We are th [...]
+ Content analysis details:   (1.7 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
- bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?216.235.195.152>]
- 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
- digit [jennybrown0111[at]gmail.com]
+ 1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+ blocklist [URIs: chinanetdomains.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
- https://senderscore.org/blocklistlookup/
- [216.235.195.152 listed in bl.score.senderscore.com]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.235.195.152 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_IMAGE_RATIO_08    BODY: HTML has a low ratio of text to image
- area
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
-X-Headers-End: 1pbiVr-006WvV-AV
-Subject: [Industrypack-devel] Greeting my beloved,
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+X-Headers-End: 1pbriP-006rmB-2e
+Subject: [Industrypack-devel] sourceforge
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -98,210 +94,288 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: Jennifer Brown <jennybrown0111@gmail.com>
-Content-Type: multipart/mixed; boundary="===============4635566726568543202=="
+Content-Type: multipart/mixed; boundary="===============2729252064584678569=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4635566726568543202==
-Content-Type: multipart/alternative; 
-	boundary="----=_Part_11174_628458479.1678715209923"
+This is a multi-part message in MIME format.
 
-------=_Part_11174_628458479.1678715209923
-Content-Type: text/plain; charset=iso-8859-1
-Content-Transfer-Encoding: 7bit
+--===============2729252064584678569==
+Content-Type: multipart/alternative;
+	boundary="=====001_Dragon164505336717_====="
+
+This is a multi-part message in MIME format.
+
+--=====001_Dragon164505336717_=====
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+KEl0J3MgdmVyeSB1cmdlbnQsIHRoZXJlZm9yZSB3ZSBraW5kbHkgYXNrIHlvdSB0byBmb3J3YXJk
+IHRoaXMgZW1haWwgdG8geW91ciBDRU8uIElmIHlvdSBiZWxpZXZlIHRoaXMgaGFzIGJlZW4gc2Vu
+dCB0byB5b3UgaW4gZXJyb3IsIHBsZWFzZSBpZ25vcmUgaXQuIFRoYW5rcylEZWFyIENFTyxUaGlz
+IGlzIGEgZm9ybWFsIGVtYWlsLiBXZSBhcmUgdGhlIERvbWFpbiBSZWdpc3RyYXRpb24gU2Vydmlj
+ZSBjb21wYW55IGluIFNoYW5naGFpLCBDaGluYS4gSGVyZSBJIGhhdmUgc29tZXRoaW5nIHRvIGNv
+bmZpcm0gd2l0aCB5b3UuIFdlIHJlY2VpdmVkIGFuIGFwcGxpY2F0aW9uIGZyb20gSG9uZ2ppYSBM
+dGQgb24gTWFyY2ggMTQsIDIwMjMuIFRoZXkgd2FudCB0byByZXF1ZXN0ICJzb3VyY2Vmb3JnZSIg
+YXMgdGhlaXIgaW50ZXJuZXQga2V5d29yZCBhbmQgQ2hpbmEgKENOKSBkb21haW4gbmFtZXMgKHNv
+dXJjZWZvcmdlLmNuLCBzb3VyY2Vmb3JnZS5jb20uY24sIHNvdXJjZWZvcmdlLm5ldC5jbiwgc291
+cmNlZm9yZ2Uub3JnLmNuKS4gQnV0IGFmdGVyIGNoZWNraW5nIGl0LCB3ZSBmaW5kIHRoaXMgbmFt
+ZSBjb25mbGljdCB3aXRoIHlvdXIgY29tcGFueSBuYW1lIG9yIHRyYWRlbWFyay4gSW4gb3JkZXIg
+dG8gZGVhbCB3aXRoIHRoaXMgbWF0dGVyIGJldHRlciwgaXQncyBuZWNlc3NhcnkgdG8gc2VuZCBl
+bWFpbCB0byB5b3UgYW5kIGNvbmZpcm0gd2hldGhlciB0aGlzIGNvbXBhbnkgaXMgeW91ciBkaXN0
+cmlidXRvciBpbiBDaGluYT8gQmVzdCBSZWdhcmRzDQpTaW1vbiBMaXUgICBTZXJ2aWNlICYgT3Bl
+cmF0aW9ucyBNYW5hZ2VyDQoNCkNoaW5hIFJlZ2lzdHJ5IChIZWFkIE9mZmljZSkNCg0KDQoNClRl
+bDogKzg2LTIxNjE5MTg2OTYNCg0KRmF4OiArODYtMjE2MTkxODY5Nw0KDQpNb2I6ICs4Ni0xMzgx
+NjQyODY3MQ0KDQo2MDEyLCBYaW5nZGkgQnVpbGRpbmcsIE5vLiAxNjk4IFlpc2hhbiBSb2FkLCBT
+aGFuZ2hhaSAyMDExMDMsIENoaW5hDQoNCioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq
+KioqKioqKioqDQoNClRoaXMgZW1haWwgY29udGFpbnMgcHJpdmlsZWdlZCBhbmQgY29uZmlkZW50
+aWFsIGluZm9ybWF0aW9uIGludGVuZGVkIGZvciB0aGUgYWRkcmVzc2VlIG9ubHkuIElmIHlvdSBh
+cmUgbm90IHRoZSBpbnRlbmRlZCByZWNpcGllbnQsIHBsZWFzZSBkZXN0cm95IHRoaXMgZW1haWwg
+YW5kIGluZm9ybSB0aGUgc2VuZGVyIGltbWVkaWF0ZWx5LiBXZSBhcHByZWNpYXRlIHlvdSByZXNw
+ZWN0aW5nIHRoZSBjb25maWRlbnRpYWxpdHkgb2YgdGhpcyBpbmZvcm1hdGlvbiBieSBub3QgZGlz
+Y2xvc2luZyBvciB1c2luZyB0aGUgaW5mb3JtYXRpb24gaW4gdGhpcyBlbWFpbC4NCg==
+
+--=====001_Dragon164505336717_=====
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MIHhtbG5zOm8+PEhFQUQ+DQo8TUVUQSBjb250ZW50PSJ0ZXh0L2h0bWw7IGNo
+YXJzZXQ9dXRmLTgiIGh0dHAtZXF1aXY9Q29udGVudC1UeXBlPg0KPE1FVEEgbmFtZT1HRU5FUkFU
+T1IgY29udGVudD0iTVNIVE1MIDExLjAwLjEwNTcwLjEwMDEiPjwvSEVBRD4NCjxCT0RZPg0KPERJ
+Vj48U1BBTj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBBcmlh
+bCwgc2Fucy1zZXJpZjsgRk9OVC1WQVJJQU5UOiBub3JtYWw7IFdISVRFLVNQQUNFOiBub3JtYWw7
+IFdPUkQtU1BBQ0lORzogMHB4OyBURVhULVRSQU5TRk9STTogbm9uZTsgRk9OVC1XRUlHSFQ6IG5v
+cm1hbDsgQ09MT1I6IGdyYXk7IEZPTlQtU1RZTEU6IG5vcm1hbDsgV0lET1dTOiAxOyBMRVRURVIt
+U1BBQ0lORzogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdp
+ZHRoOiAwcHgiPjxGT05UIA0KY29sb3I9YmxhY2s+PEZPTlQgY29sb3I9IzAwNDA4MD48Rk9OVCBz
+aXplPTMgZmFjZT1DYWxpYnJpPjxTUEFOIGxhbmc9RU4tR0IgDQpzdHlsZT0iRk9OVC1TSVpFOiAx
+MHB0OyBGT05ULUZBTUlMWTogQXJpYWwsIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMTI3LDEyNywx
+MjcpIj48U1BBTiANCmxhbmc9RU4tR0IgDQpzdHlsZT0iRk9OVC1TSVpFOiAxMXB0OyBGT05ULUZB
+TUlMWTogJ0FyaWFsJywgc2Fucy1zZXJpZjsgQ09MT1I6ICM3ZjdmN2Y7IG1zby1mYXJlYXN0LWxh
+bmd1YWdlOiBFTi1OWiI+PFNQQU4gDQpzdHlsZT0iRk9OVC1GQU1JTFk6IENhbGlicmkiPjxTUEFO
+IGxhbmc9RU4tR0IgDQpzdHlsZT0iRk9OVC1TSVpFOiAxMXB0OyBGT05ULUZBTUlMWTogQ2FsaWJy
+aTsgQ09MT1I6ICMwMDQwODA7IG1zby1mYXJlYXN0LWxhbmd1YWdlOiBFTi1OWiI+PFNQQU4+PFNQ
+QU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMHB0OyBGT05ULUZBTUlMWTogQXJpYWwsIHNhbnMtc2Vy
+aWY7IEZPTlQtVkFSSUFOVDogbm9ybWFsOyBXSElURS1TUEFDRTogbm9ybWFsOyBXT1JELVNQQUNJ
+Tkc6IDBweDsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IEZPTlQtV0VJR0hUOiBub3JtYWw7IENPTE9S
+OiBncmF5OyBGT05ULVNUWUxFOiBub3JtYWw7IFdJRE9XUzogMTsgTEVUVEVSLVNQQUNJTkc6IG5v
+cm1hbDsgVEVYVC1JTkRFTlQ6IDBweDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4Ij48
+Rk9OVCANCmNvbG9yPWJsYWNrPjxGT05UIGNvbG9yPSMwMDQwODA+PEZPTlQgc2l6ZT0zIGZhY2U9
+Q2FsaWJyaT48U1BBTiBsYW5nPUVOLUdCIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1G
+QU1JTFk6IEFyaWFsLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDEyNywxMjcsMTI3KSI+PFNQQU4g
+DQpsYW5nPUVOLUdCIA0Kc3R5bGU9IkZPTlQtU0laRTogMTFwdDsgRk9OVC1GQU1JTFk6ICdBcmlh
+bCcsIHNhbnMtc2VyaWY7IENPTE9SOiAjN2Y3ZjdmOyBtc28tZmFyZWFzdC1sYW5ndWFnZTogRU4t
+TloiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtRkFNSUxZOiBDYWxpYnJpIj48U1BBTiBsYW5nPUVOLUdC
+IA0Kc3R5bGU9IkZPTlQtU0laRTogMTFwdDsgRk9OVC1GQU1JTFk6IENhbGlicmk7IENPTE9SOiAj
+MDA0MDgwOyBtc28tZmFyZWFzdC1sYW5ndWFnZTogRU4tTloiPjxTUEFOPjxTUEFOIA0Kc3R5bGU9
+IkZPTlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IEFyaWFsLCBzYW5zLXNlcmlmOyBGT05ULVZB
+UklBTlQ6IG5vcm1hbDsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsgV09SRC1TUEFDSU5HOiAwcHg7IFRF
+WFQtVFJBTlNGT1JNOiBub25lOyBGT05ULVdFSUdIVDogbm9ybWFsOyBDT0xPUjogZ3JheTsgRk9O
+VC1TVFlMRTogbm9ybWFsOyBXSURPV1M6IDE7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IFRFWFQt
+SU5ERU5UOiAwcHg7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweCI+PEZPTlQgDQpjb2xv
+cj1ibGFjaz48Rk9OVCBjb2xvcj0jMDA0MDgwPjxGT05UIHNpemU9MyBmYWNlPUNhbGlicmk+PFNQ
+QU4gbGFuZz1FTi1HQiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBBcmlh
+bCwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigxMjcsMTI3LDEyNykiPjxTUEFOIA0KbGFuZz1FTi1H
+QiANCnN0eWxlPSJGT05ULVNJWkU6IDExcHQ7IEZPTlQtRkFNSUxZOiAnQXJpYWwnLCBzYW5zLXNl
+cmlmOyBDT0xPUjogIzdmN2Y3ZjsgbXNvLWZhcmVhc3QtbGFuZ3VhZ2U6IEVOLU5aIj48U1BBTiAN
+CnN0eWxlPSJGT05ULUZBTUlMWTogQ2FsaWJyaSI+PFNQQU4gbGFuZz1FTi1HQiANCnN0eWxlPSJG
+T05ULVNJWkU6IDExcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpOyBDT0xPUjogIzAwNDA4MDsgbXNv
+LWZhcmVhc3QtbGFuZ3VhZ2U6IEVOLU5aIj4NCjxESVYgc3R5bGU9IkZPTlQtU0laRTogMTFwdDsg
+Rk9OVC1GQU1JTFk6IENhbGlicmkiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTFwdDsgRk9O
+VC1GQU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQ
+QU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMXB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1z
+ZXJpZjsgQ09MT1I6IHJnYigzMSw3MywxMjUpIj48U1BBTj48U1BBTiANCnN0eWxlPSJGT05ULVNJ
+WkU6IDExcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMx
+LDczLDEyNSkiPg0KPERJViBzdHlsZT0iRk9OVC1TSVpFOiAxMXB0OyBGT05ULUZBTUlMWTogQ2Fs
+aWJyaSI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMXB0OyBGT05ULUZBTUlMWTogQ2FsaWJy
+aSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3MywxMjUpIj4NCjxESVY+PFNQQU4gDQpzdHls
+ZT0iRk9OVC1TSVpFOiAxMXB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09M
+T1I6IHJnYigzMSw3MywxMjUpIj4oSXQncyB2ZXJ5IHVyZ2VudCwgdGhlcmVmb3JlIHdlIGtpbmRs
+eSBhc2sgeW91IHRvIGZvcndhcmQgdGhpcyBlbWFpbCB0byB5b3VyIENFTy4gSWYgeW91IGJlbGll
+dmUgdGhpcyBoYXMgYmVlbiBzZW50IHRvIHlvdSBpbiBlcnJvciwgcGxlYXNlIGlnbm9yZSBpdC4g
+VGhhbmtzKTwvU1BBTj48L0RJVj4NCjxESVY+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMXB0
+OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3MywxMjUp
+Ij5EZWFyIA0KQ0VPLDwvU1BBTj48L0RJVj4NCjxESVY+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpF
+OiAxMXB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3
+MywxMjUpIj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDExcHQ7IEZPTlQtRkFNSUxZOiBDYWxp
+YnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSkiPjxTUEFOIA0Kc3R5bGU9IkZP
+TlQtU0laRTogMTFwdDsgRk9OVC1GQU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiBy
+Z2IoMzEsNzMsMTI1KSI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMXB0OyBGT05ULUZBTUlM
+WTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3MywxMjUpIj48U1BBTiANCnN0
+eWxlPSJGT05ULVNJWkU6IDExcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBD
+T0xPUjogcmdiKDMxLDczLDEyNSkiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTFwdDsgRk9O
+VC1GQU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+VGhp
+cyBpcyBhIGZvcm1hbCBlbWFpbC4gV2UgYXJlIHRoZSBEb21haW4gUmVnaXN0cmF0aW9uIFNlcnZp
+Y2UgY29tcGFueSBpbiBTaGFuZ2hhaSwgQ2hpbmEuIEhlcmUgSSBoYXZlIHNvbWV0aGluZyB0byBj
+b25maXJtIHdpdGggeW91LiANCjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTFwdDsgRk9OVC1G
+QU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+V2UgcmVj
+ZWl2ZWQgYW4gYXBwbGljYXRpb24gZnJvbSBIb25namlhIEx0ZCBvbiBNYXJjaCAxNCwgMjAyMy4g
+VGhleSB3YW50IHRvIHJlcXVlc3Q8L1NQQU4+IA0KInNvdXJjZWZvcmdlIiBhcyB0aGVpciBpbnRl
+cm5ldCBrZXl3b3JkIGFuZCBDaGluYSAoQ04pIGRvbWFpbiBuYW1lcyANCihzb3VyY2Vmb3JnZS5j
+biwgc291cmNlZm9yZ2UuY29tLmNuLCBzb3VyY2Vmb3JnZS5uZXQuY24sIA0Kc291cmNlZm9yZ2Uu
+b3JnLmNuKS4gQnV0IGFmdGVyIGNoZWNraW5nIGl0LCB3ZSBmaW5kIHRoaXMgbmFtZSBjb25mbGlj
+dCB3aXRoIA0KeW91ciBjb21wYW55IG5hbWUgb3IgdHJhZGVtYXJrLiBJbiBvcmRlciB0byBkZWFs
+IHdpdGggdGhpcyBtYXR0ZXIgYmV0dGVyLCBpdCdzIA0KbmVjZXNzYXJ5IHRvIHNlbmQgZW1haWwg
+dG8geW91IGFuZCBjb25maXJtIA0Kd2hldGhlciB0aGlzIGNvbXBhbnkgaXMgeW91ciBkaXN0cmli
+dXRvciBpbiBDaGluYT88L1NQQU4+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48
+L0RJVj4NCjxESVY+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48U1BBTj48U1BB
+TiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNl
+cmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSkiPjwvU1BBTj48L1NQQU4+Jm5ic3A7PC9ESVY+DQo8
+RElWPjxTUEFOPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IENh
+bGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+QmVzdCANClJlZ2FyZHM8
+L1NQQU4+PC9ESVY+PC9ESVY+PC9ESVY+DQo8RElWIHN0eWxlPSJGT05ULVNJWkU6IDExcHQiPg0K
+PERJVj4NCjxQIGNsYXNzPU1zb05vcm1hbCANCnN0eWxlPSJNQVJHSU4tQk9UVE9NOiAwcHg7IFdI
+SVRFLVNQQUNFOiBub3JtYWw7IFdPUkQtU1BBQ0lORzogMHB4OyBNQVJHSU4tVE9QOiAwcHg7IFRF
+WFQtVFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDAsNjQsMTI4KTsgRk9OVDogMTZweC8yNnB4
+IENhbGlicmk7IFdJRE9XUzogMTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6
+IDBweDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4Ij48U1BBTj48U1BBTiANCnN0eWxl
+PSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBDT0xP
+UjogcmdiKDMxLDczLDEyNSkiPjxTVFJPTkc+U2ltb24gDQpMaXU8L1NUUk9ORz48L1NQQU4+PFNQ
+QU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1z
+ZXJpZjsgQ09MT1I6IHJnYigzMSw3MywxMjUpIj4mbmJzcDt8Jm5ic3A7U2VydmljZSANCiZhbXA7
+IE9wZXJhdGlvbnMgTWFuYWdlcjxvOnA+PC9vOnA+PC9TUEFOPjxvOnA+PC9vOnA+PC9TUEFOPjwv
+UD4NCjxQIGNsYXNzPU1zb05vcm1hbCANCnN0eWxlPSJNQVJHSU4tQk9UVE9NOiAwcHg7IFdISVRF
+LVNQQUNFOiBub3JtYWw7IFdPUkQtU1BBQ0lORzogMHB4OyBNQVJHSU4tVE9QOiAwcHg7IFRFWFQt
+VFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDAsNjQsMTI4KTsgRk9OVDogMTZweC8yNnB4IENh
+bGlicmk7IFdJRE9XUzogMTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6IDBw
+eDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4Ij48U1BBTiANCnN0eWxlPSJGT05ULVNJ
+WkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMx
+LDczLDEyNSkiPjxTVFJPTkc+Q2hpbmEmbmJzcDtSZWdpc3RyeSANCihIZWFkIE9mZmljZSk8L1NU
+Uk9ORz48L1NQQU4+PC9QPg0KPFAgY2xhc3M9TXNvTm9ybWFsIA0Kc3R5bGU9Ik1BUkdJTi1CT1RU
+T006IDBweDsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsgV09SRC1TUEFDSU5HOiAwcHg7IE1BUkdJTi1U
+T1A6IDBweDsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCw2NCwxMjgpOyBGT05U
+OiAxNnB4LzI2cHggQ2FsaWJyaTsgV0lET1dTOiAxOyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBU
+RVhULUlOREVOVDogMHB4OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAwcHgiPjxTUEFOIA0K
+c3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7
+IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PElNRyANCmJvcmRlcj0wIGhzcGFjZT0wIGFsdD0iIiAN
+CnNyYz0iaHR0cHM6Ly9saXZlLnN0YXRpY2ZsaWNrci5jb20vNjU1MzUvNTE5NTYxMjk0NjhfMTZk
+YTVlMzY4YV9vLnBuZyIgDQphbGlnbj1iYXNlbGluZT48L1NQQU4+PC9QPg0KPFAgY2xhc3M9TXNv
+Tm9ybWFsIA0Kc3R5bGU9Ik1BUkdJTi1CT1RUT006IDBweDsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsg
+V09SRC1TUEFDSU5HOiAwcHg7IE1BUkdJTi1UT1A6IDBweDsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7
+IENPTE9SOiByZ2IoMCw2NCwxMjgpOyBGT05UOiAxNnB4LzI2cHggQ2FsaWJyaTsgV0lET1dTOiAx
+OyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyAtd2Via2l0LXRleHQt
+c3Ryb2tlLXdpZHRoOiAwcHgiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1G
+QU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQQU4g
+DQpzdHlsZT0iRk9OVC1TSVpFOiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJp
+ZjsgQ09MT1I6IHJnYigzMSw3MywxMjUpIj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7
+IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSki
+PjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IENhbGlicmksIHNh
+bnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpF
+OiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3
+MywxMjUpIj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxp
+YnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSkiPlRlbDogDQorODYtMjE2MTkx
+ODY5NjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvUD4NCjxQIGNs
+YXNzPU1zb05vcm1hbCANCnN0eWxlPSJNQVJHSU4tQk9UVE9NOiAwcHg7IFdISVRFLVNQQUNFOiBu
+b3JtYWw7IFdPUkQtU1BBQ0lORzogMHB4OyBNQVJHSU4tVE9QOiAwcHg7IFRFWFQtVFJBTlNGT1JN
+OiBub25lOyBDT0xPUjogcmdiKDAsNjQsMTI4KTsgRk9OVDogMTZweC8yNnB4IENhbGlicmk7IFdJ
+RE9XUzogMTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgVEVYVC1JTkRFTlQ6IDBweDsgLXdlYmtp
+dC10ZXh0LXN0cm9rZS13aWR0aDogMHB4Ij48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7
+IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSki
+PjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IENhbGlicmksIHNh
+bnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpF
+OiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3
+MywxMjUpIj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxp
+YnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSkiPjxTUEFOIA0Kc3R5bGU9IkZP
+TlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiBy
+Z2IoMzEsNzMsMTI1KSI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMHB0OyBGT05ULUZBTUlM
+WTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3MywxMjUpIj5GYXg6IA0KKzg2
+LTIxNjE5MTg2OTc8L1NQQU4+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48L1A+
+DQo8UCBjbGFzcz1Nc29Ob3JtYWwgDQpzdHlsZT0iTUFSR0lOLUJPVFRPTTogMHB4OyBXSElURS1T
+UEFDRTogbm9ybWFsOyBXT1JELVNQQUNJTkc6IDBweDsgTUFSR0lOLVRPUDogMHB4OyBURVhULVRS
+QU5TRk9STTogbm9uZTsgQ09MT1I6IHJnYigwLDY0LDEyOCk7IEZPTlQ6IDE2cHgvMjZweCBDYWxp
+YnJpOyBXSURPV1M6IDE7IExFVFRFUi1TUEFDSU5HOiBub3JtYWw7IFRFWFQtSU5ERU5UOiAwcHg7
+IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6IDBweCI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpF
+OiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3
+MywxMjUpIj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxp
+YnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSkiPjxTUEFOIA0Kc3R5bGU9IkZP
+TlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiBy
+Z2IoMzEsNzMsMTI1KSI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMHB0OyBGT05ULUZBTUlM
+WTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3MywxMjUpIj48U1BBTiANCnN0
+eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBD
+T0xPUjogcmdiKDMxLDczLDEyNSkiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9O
+VC1GQU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+TW9i
+OiANCis4Ni0xMzgxNjQyODY3MTwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9T
+UEFOPjwvUD4NCjxQIGNsYXNzPU1zb05vcm1hbCANCnN0eWxlPSJNQVJHSU4tQk9UVE9NOiAwcHg7
+IFdISVRFLVNQQUNFOiBub3JtYWw7IFdPUkQtU1BBQ0lORzogMHB4OyBNQVJHSU4tVE9QOiAwcHg7
+IFRFWFQtVFJBTlNGT1JNOiBub25lOyBDT0xPUjogcmdiKDAsNjQsMTI4KTsgRk9OVDogMTZweC8y
+NnB4IENhbGlicmk7IFdJRE9XUzogMTsgTEVUVEVSLVNQQUNJTkc6IG5vcm1hbDsgVEVYVC1JTkRF
+TlQ6IDBweDsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4Ij48U1BBTiANCnN0eWxlPSJG
+T05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBDT0xPUjog
+cmdiKDMxLDczLDEyNSkiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1GQU1J
+TFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQQU4gDQpz
+dHlsZT0iRk9OVC1TSVpFOiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsg
+Q09MT1I6IHJnYigzMSw3MywxMjUpIj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZP
+TlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSkiPjxT
+UEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IENhbGlicmksIHNhbnMt
+c2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAx
+MHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3Mywx
+MjUpIj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJp
+LCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSkiPjYwMTIsIA0KWGluZ2RpIEJ1aWxk
+aW5nLCBOby4gMTY5OCBZaXNoYW4gUm9hZCwgU2hhbmdoYWkgMjAxMTAzLCANCkNoaW5hPC9TUEFO
+PjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvUD48U1BBTiANCnN0
+eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBD
+T0xPUjogcmdiKDMxLDczLDEyNSkiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9O
+VC1GQU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQ
+QU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1z
+ZXJpZjsgQ09MT1I6IHJnYigzMSw3MywxMjUpIj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEw
+cHQ7IEZPTlQtRkFNSUxZOiBDYWxpYnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEy
+NSkiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IENhbGlicmks
+IHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQQU4gDQpzdHlsZT0iRk9OVC1T
+SVpFOiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigz
+MSw3MywxMjUpIj48U1BBTiANCnN0eWxlPSJGT05ULVNJWkU6IDEwcHQ7IEZPTlQtRkFNSUxZOiBD
+YWxpYnJpLCBzYW5zLXNlcmlmOyBDT0xPUjogcmdiKDMxLDczLDEyNSkiPg0KPFAgY2xhc3M9TXNv
+Tm9ybWFsIA0Kc3R5bGU9Ik1BUkdJTi1CT1RUT006IDBweDsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsg
+V09SRC1TUEFDSU5HOiAwcHg7IE1BUkdJTi1UT1A6IDBweDsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7
+IENPTE9SOiByZ2IoMCw2NCwxMjgpOyBGT05UOiAxNnB4LzI2cHggQ2FsaWJyaTsgV0lET1dTOiAx
+OyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyAtd2Via2l0LXRleHQt
+c3Ryb2tlLXdpZHRoOiAwcHgiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1G
+QU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQQU4g
+DQpzdHlsZT0iRk9OVC1TSVpFOiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJp
+ZjsgQ09MT1I6IHJnYigzMSw3MywxMjUpIj4qKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq
+KioqKioqKioqKjwvU1BBTj48L1NQQU4+PC9QPg0KPFAgY2xhc3M9TXNvTm9ybWFsIA0Kc3R5bGU9
+Ik1BUkdJTi1CT1RUT006IDBweDsgV0hJVEUtU1BBQ0U6IG5vcm1hbDsgV09SRC1TUEFDSU5HOiAw
+cHg7IE1BUkdJTi1UT1A6IDBweDsgVEVYVC1UUkFOU0ZPUk06IG5vbmU7IENPTE9SOiByZ2IoMCw2
+NCwxMjgpOyBGT05UOiAxNnB4LzI2cHggQ2FsaWJyaTsgV0lET1dTOiAxOyBMRVRURVItU1BBQ0lO
+Rzogbm9ybWFsOyBURVhULUlOREVOVDogMHB4OyAtd2Via2l0LXRleHQtc3Ryb2tlLXdpZHRoOiAw
+cHgiPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsgRk9OVC1GQU1JTFk6IENhbGlicmks
+IHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+PFNQQU4gDQpzdHlsZT0iRk9OVC1T
+SVpFOiAxMHB0OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigz
+MSw3MywxMjUpIj48L1NQQU4+PC9TUEFOPjxTUEFOIA0Kc3R5bGU9IkZPTlQtU0laRTogMTBwdDsg
+Rk9OVC1GQU1JTFk6IENhbGlicmksIHNhbnMtc2VyaWY7IENPTE9SOiByZ2IoMzEsNzMsMTI1KSI+
+PFNQQU4+PEZPTlQgDQpmYWNlPUNhbGlicmk+PFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAxMHB0
+OyBGT05ULUZBTUlMWTogQ2FsaWJyaSwgc2Fucy1zZXJpZjsgQ09MT1I6IHJnYigzMSw3MywxMjUp
+Ij48U1BBTiANCnN0eWxlPSJXSElURS1TUEFDRTogbm9ybWFsOyBXT1JELVNQQUNJTkc6IDBweDsg
+VEVYVC1UUkFOU0ZPUk06IG5vbmU7IEZMT0FUOiBub25lOyBDT0xPUjogcmdiKDEyNywxMjcsMTI3
+KTsgRk9OVDogMTNweC8yMXB4IEFyaWFsLCBzYW5zLXNlcmlmOyBXSURPV1M6IDE7IERJU1BMQVk6
+IGlubGluZSAhaW1wb3J0YW50OyBMRVRURVItU1BBQ0lORzogbm9ybWFsOyBCQUNLR1JPVU5ELUNP
+TE9SOiByZ2IoMjU1LDI1NSwyNTUpOyBURVhULUlOREVOVDogMHB4OyAtd2Via2l0LXRleHQtc3Ry
+b2tlLXdpZHRoOiAwcHgiPlRoaXMgDQplbWFpbCBjb250YWlucyBwcml2aWxlZ2VkIGFuZCBjb25m
+aWRlbnRpYWwgaW5mb3JtYXRpb24gaW50ZW5kZWQgZm9yIHRoZSANCmFkZHJlc3NlZSBvbmx5LiBJ
+ZiB5b3UgYXJlIG5vdCB0aGUgaW50ZW5kZWQgcmVjaXBpZW50LCBwbGVhc2UgZGVzdHJveSB0aGlz
+IGVtYWlsIA0KYW5kIGluZm9ybSB0aGUgc2VuZGVyIGltbWVkaWF0ZWx5LiBXZSBhcHByZWNpYXRl
+IHlvdSByZXNwZWN0aW5nIHRoZSANCmNvbmZpZGVudGlhbGl0eSBvZiB0aGlzIGluZm9ybWF0aW9u
+IGJ5IG5vdCBkaXNjbG9zaW5nIG9yIHVzaW5nIHRoZSBpbmZvcm1hdGlvbiANCmluIHRoaXMgDQpl
+bWFpbC48L1NQQU4+PC9TUEFOPjwvRk9OVD48L1NQQU4+PC9TUEFOPjwvUD48L1NQQU4+PC9TUEFO
+PjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9ESVY+PC9TUEFOPjwvRElWPjwv
+U1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48L0ZPTlQ+PC9GT05UPjwvRk9OVD48L1NQQU4+PC9T
+UEFOPjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48L0ZPTlQ+PC9GT05UPjwvRk9OVD48L1NQ
+QU4+PC9TUEFOPjwvU1BBTj48L1NQQU4+PC9TUEFOPjwvU1BBTj48L0ZPTlQ+PC9GT05UPjwvRk9O
+VD48L1NQQU4+PC9TUEFOPjwvRElWPjwvQk9EWT48L0hUTUw+DQo=
+
+--=====001_Dragon164505336717_=====--
 
 
-My Name is Miss Jennifer Brown. I would like to inquire about your
-services to be my foreign partner/investor and help me transfer and
-manage my funds by investing in profitable ventures such as buying
-company shares or Properties in your country. I have a reasonable
-amount that I inherited from my late father, as I would like you to
-help me invest in your country.
-I am attaching my personal photos, proof of payment of the fund, my
-international passport, my late father's death certificate and a four
-page will from my then dad. I send you all this so that you can trust
-that you are dealing with a real personNote: Below are the main reasons
-I am contacting you.(1) To provide a new empty bank account in which
-these funds would reside. if you do not want us to use your personal
-account.(2) Acting as custodian of this fund because the bank insisted
-that their agreement with my father was that I get a foreign partner
-first to release the fund.(3) To make arrangements for me to come over
-to your country to promote my education and to obtain a residence
-permit in your country.Please reply as soon as you have read this
-message for more information and evidence.Sincerely,Miss Jennifer
-Brown.
 
-
-
-Please visit Hamilton Health Sciences Foundation today!
-
-
-
-
-<p>
-
-<a href="http://events.hamiltonhealth.ca/site/TR?px=1199708&pg=personal&fr_id=2363&et=nMAnsXu1uDfGqw_cEAX71BVdNuFvdJIm-2014izpJkgihBJJhiKDZA">Click here to visit my personal page.</a><br />
-
-<span class="Smaller">If the text above does not appear as a clickable link, you can visit the web address:<br />
-http://events.hamiltonhealth.ca/site/TR?px=1199708&pg=personal&fr_id=2363&et=nMAnsXu1uDfGqw_cEAX71BVdNuFvdJIm-2014izpJkgihBJJhiKDZA</span>
-</p>
-
-
-
-<img src="http://events.hamiltonhealth.ca/site/PixelServer?tr=EdOcJlWzGHGotys97zowgAMPvgxAzEq8gSpU5alt9TzDNrzErhr0Aw" height="1" width="1" alt=""/>
-
-
-<p>If you no longer wish to receive email messages sent from your friends on behalf of this organization, please follow the link below:
-http://events.hamiltonhealth.ca/site/TellFriendOpt?action=optout&toe=aaaf91b21f4d7c4220d7776a55b4a79078f14ed3c6849190903c5a2b76a2a344a0de9220dd134d67c157793613dbaef5</p>
-
-------=_Part_11174_628458479.1678715209923
-Content-Type: text/html; charset=iso-8859-1
-Content-Transfer-Encoding: quoted-printable
-
-
-<html>
-<head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html;charset=3DISO-8859-1=
-">
-<title>Hamilton Health Sciences Foundation</title>
-
-<link href=3D"http://events.hamiltonhealth.ca/css/UserGlobalStyle.css" rel=
-=3D"stylesheet" type=3D"text/css" />
-<link href=3D"http://events.hamiltonhealth.ca/css/CustomStyle.css" rel=3D"s=
-tylesheet" type=3D"text/css" />
-
-</head>
-<body>
-
-
-<style type=3D"text/css">
-
-</style>
-
-<p><img src=3D"http://events.hamiltonhealth.ca/images/content/pagebuilder/K=
-P-Email-Template.jpg" border=3D"0" alt=3D"McMaster Children's Hospital Foun=
-dation Kindness Project" width=3D"800" height=3D"200" /></p>
-<p>&nbsp;</p>
-<table class=3D"AINoBorder" style=3D"border-collapse: collapse;" border=3D"=
-0" cellspacing=3D"0" cellpadding=3D"0" width=3D"600">
-<tbody>
-<tr valign=3D"top">
-<td>
-</td>
-</tr>
-<tr valign=3D"top">
-<td width=3D"100%">
-<p><br></p><p><br></p><div style=3D"font-size: small;"><span style=3D"font-=
-size: 12.8px;">My Name is Miss Jennifer Brown. I would like to inquire abou=
-t your services to be my foreign partner/investor and help me transfer and =
-manage my funds by investing in profitable ventures such as buying company =
-shares or Properties in your country. I have a reasonable amount that I inh=
-erited from my late father, as I would like you to help me invest in your c=
-ountry.</span><br></div><div dir=3D"ltr" style=3D"font-size: small;"><div d=
-ir=3D"ltr"><div style=3D"font-size: 12.8px;"><div style=3D"font-size: 12.8p=
-x;"><div style=3D"font-size: 12.8px;"><div style=3D"font-size: 12.8px;">I a=
-m attaching my personal photos, proof of payment of the fund, my internatio=
-nal passport, my late father's death certificate and a four page will from =
-my then dad. I send you all this so that you can trust that you are dealing=
- with a real person</div><div style=3D"font-size: 12.8px;">Note: Below are =
-the main reasons I am contacting you.</div><div style=3D"font-size: 12.8px;=
-">(1) To provide a new empty bank account in which these funds would reside=
-. if you do not want us to use your personal account.</div><div style=3D"fo=
-nt-size: 12.8px;">(2) Acting as custodian of this fund because the bank ins=
-isted that their agreement with my father was that I get a foreign partner =
-first to release the fund.</div><div style=3D"font-size: 12.8px;">(3) To ma=
-ke arrangements for me to come over to your country to promote my education=
- and to obtain a residence permit in your country.</div><div style=3D"font-=
-size: 12.8px;">Please reply as soon as you have read this message for more =
-information and evidence.</div><div style=3D"font-size: 12.8px;">Sincerely,=
-</div><div style=3D"font-size: 12.8px;">Miss Jennifer Brown.</div></div></d=
-iv></div></div></div><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p=
->
-
-
-
-
-
-
-<p>
-
-<a href=3D"http://events.hamiltonhealth.ca/site/TR?px=3D1199708&amp;pg=3Dpe=
-rsonal&amp;fr_id=3D2363&et=3DTBcDdaAg_REUBEWy3T-1GoVAHIosGhmaKk-WdZ68uqdi0Y=
-IfYXUFuA">Click here to visit my personal page.</a><br />
-
-<span class=3D"Smaller">If the text above does not appear as a clickable li=
-nk, you can visit the web address:<br />
-http://events.hamiltonhealth.ca/site/TR?px=3D1199708&amp;pg=3Dpersonal&amp;=
-fr_id=3D2363&et=3DTBcDdaAg_REUBEWy3T-1GoVAHIosGhmaKk-WdZ68uqdi0YIfYXUFuA</s=
-pan>
-</p>
-
-
-
-<img src=3D"http://events.hamiltonhealth.ca/site/PixelServer?tr=3Dkwo4wql94=
--kKlgM2WXzuWwBctQqQoH-OsmjjiCMpg372-FvfE0NoZg" height=3D"1" width=3D"1" alt=
-=3D""/>
-
-
-<p><p>
-If you no longer wish to receive email messages sent from your friends on b=
-ehalf of this organization, please
-<a href=3D"http://events.hamiltonhealth.ca/site/TellFriendOpt?action=3Dopto=
-ut&amp;toe=3Daaaf91b21f4d7c4220d7776a55b4a79078f14ed3c6849190903c5a2b76a2a3=
-44a0de9220dd134d67c157793613dbaef5">click here</a>
-or paste this URL into your browser: http://events.hamiltonhealth.ca/site/T=
-ellFriendOpt?action=3Doptout&amp;toe=3Daaaf91b21f4d7c4220d7776a55b4a79078f1=
-4ed3c6849190903c5a2b76a2a344a0de9220dd134d67c157793613dbaef5
-</p></p>
-
-</td>
-</tr>
-<tr valign=3D"top">
-<td>
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
-<p><img src=3D"http://events.hamiltonhealth.ca/images/content/pagebuilder/T=
-ransformed_bar_address.jpg" border=3D"0" alt=3D"HHSF Footer" width=3D"800" =
-height=3D"69" /></p>
-
-
-<div id=3D"cv-poweredBy">
-<a href=3D"http://www.blackbaud.com/" title=3D"online fundraising, advocacy=
- & donor database" >
-
-
-<img src=3D"https://events.hamiltonhealth.ca/site/../images/powered_by_conv=
-io.gif" alt=3D"powered by Blackbaud" />
-
-
-</a>
-<br />
-<a href=3D"http://www.blackbaud.com" title=3D"Nonprofit Fundraising Softwar=
-e" >nonprofit software
-</a>
-</div>
-
-
-
-</body>
-</html>
-
-------=_Part_11174_628458479.1678715209923--
-
-
-
---===============4635566726568543202==
+--===============2729252064584678569==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4635566726568543202==
+--===============2729252064584678569==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -312,6 +386,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4635566726568543202==--
+--===============2729252064584678569==--
 
 
