@@ -2,29 +2,29 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 19B866DC237
-	for <lists+industrypack-devel@lfdr.de>; Mon, 10 Apr 2023 02:52:35 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 22DCB6DC512
+	for <lists+industrypack-devel@lfdr.de>; Mon, 10 Apr 2023 11:26:05 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1plflq-0003c0-17
+	id 1plnml-0005ab-0a
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 10 Apr 2023 00:52:33 +0000
+	Mon, 10 Apr 2023 09:26:03 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <sara@vietdot.com>) id 1plflm-0003bt-9t
+ (envelope-from <sara@vietdot.com>) id 1plnmh-0005aM-84
  for industrypack-devel@lists.sourceforge.net;
- Mon, 10 Apr 2023 00:52:29 +0000
+ Mon, 10 Apr 2023 09:26:00 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:List-Unsubscribe:MIME-Version:
  Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Q4PmZRSGRSnZ+qIFz+wBFYKDKiGg8LmpIhdwtKrwWME=; b=EbiBl2NV0t4VMknK71nI6jG6sV
- fMsLu3yWB93BdsBeAcq3PRwgdjrG2M0TVWvQTepaXFVzBTQmMJ8YM+97PYm+eh/zXxf825BAbeSwm
- TovjkTfcKfz9yga0exqCekTrsMIVTbYCsA6Nfd2zexYsLmvS9oZ6FymUMpKyQqE2Kt0M=;
+ bh=QWY4FfkjH7EFW6XNwXCax7inC+qy52atMCgNa0KmZ4E=; b=b+bAGqsexHh+fBDy2NzR1s3Mp1
+ JWqNGbFJCs2g+YAL4SullvQ5k3oSU9ctG6VbDfOxUNtz9Rbb/+xvVFlMeEdCvRaAvHFo88XMexO18
+ ipIX6R0R+//G077x5vpPlTQkcPW2XAFjbCFj5UUYHBYX93AG4k0eQKfhQG3sKG3EZD+k=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:List-Unsubscribe:MIME-Version:Message-ID:Date:Subject:To:
@@ -32,36 +32,36 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=Q4PmZRSGRSnZ+qIFz+wBFYKDKiGg8LmpIhdwtKrwWME=; b=FIz5UARScg19rqrmIIsyHBaARB
- etglrYETZOyWqe3zVHDNeW32nC92Ju8wAar9XaULcYsM2MItjMwo74cJc2uvq/P/wpQ/TktNWHUyT
- GMT+5QjJxEpLHb9MKJDFZj2G37+blJE2yk/hKY4F4rHxLCQwfJkd3qxC8s/DU6gr9wN0=;
+ bh=QWY4FfkjH7EFW6XNwXCax7inC+qy52atMCgNa0KmZ4E=; b=YvRpgY8v+tapEcWY0aFylT3jnP
+ Q5+rp9/E318U/pgl4Ip3h8OGrX738hwrYgxHV+cdLCjbSjLaJ+nvonU8Xbc5an4ObbYbRJ2Vevu9J
+ hdH/YEyNcmbyXz/D4MHK2CC9no3tF7r2U/QL0y9uFTyRgxU2Hdr2T1AW6HvW/BJ2Eqm4=;
 Received: from stella0386.vietdot.com ([88.209.253.161])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1plflh-0003hv-Ez for industrypack-devel@lists.sourceforge.net;
- Mon, 10 Apr 2023 00:52:27 +0000
+ id 1plnme-002n7A-P0 for industrypack-devel@lists.sourceforge.net;
+ Mon, 10 Apr 2023 09:26:00 +0000
 DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=vietdot.com;
  h=From:To:Subject:Date:Message-ID:MIME-Version:List-Unsubscribe:Content-Type;
- i=sara@vietdot.com; bh=cqU5rrPW4tLNXvNYdcL0svgD9zc=;
- b=Vj4S6fbzVqF8dapXH2wA9XMjMLTSk/2cqN14zhjm47uEToMAaj0FD8g5VtoZgk+Om5YSKMIpGTC3
- yQpaGziM2AZEQSU/g+btWGKOhB1l82Fi7Y0vuP39wLj2DYQCwR5LOtenQ+yws2GZ9SD9Yb/P1u52
- ipzuv27+HUkLV//P075jKwLCgfFn0dDEgArEflIUNUwsBwiJAXK3oEUgWc+pAgaiY8GJSCtg3gpX
- RT2XUiAZUlj+MDl0jW4PRgk7VzM/Tcgg1wtsVXhR8pItNkvqbckw+1khzWXcHoCFGDka/IiTwUyE
- vTk1PcYcx74eCJVGe6xcYCD9lplVuzzg3+Fy2A==
+ i=sara@vietdot.com; bh=mAYj0bSb7+LR6lrHbSMWAWxO4Ws=;
+ b=EcDXAmxFrZ9VdiIx+0KrQzkRADE3aAhx8VFDooQfe38Ax0YDhyFplziUlTZDXI38PYGVuxFgb2Zc
+ tVGWYslCn2qNa5rmDXcv6/i0nHmLWEkUo2zo/pDO6oYJ1B0wBXJ5D1Qy71+qff1cuFOT6ds4xAaQ
+ BEgrrNKQUgtyXRE1fEQFWxJbPY29JRz2rpGMHJf2lzCbqcSQ/KgRgE6mPAE3sJuOzkjXOIz9zHLG
+ EtIzTQ0R3kXylG46OTWoYO6yjugQBBTgyeQpC6gEo+vYC0U9t60dbx54URH8kZFP70eps8Lv8RIZ
+ JumBytgnZqmyoZ3Bx4WNC+Jm0PP8uFzQPFH1/A==
 DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=vietdot.com;
- b=B0J47fSnMrKQ+rQjLJqK11IC2qBCBXriFCZDxVVJgddQTt2l+RO9KyF2OWssMtRiplhrdWM9a9k7
- lzCYgwVFSF6sIPuXC37AFREKB4mcGa0K+jZ8OB6xCRRmBSJm8KtKO3XVNm2HVH7JcITLTs9TX2Ik
- vDrATozUkndZgzsvgsBq05xYKwckEKcP7BBfIr1KevgUiZ7hyvvGSFUlQEJh4jQ2+PeOVA+Zx6ej
- S0MK4gv7Tud2iiv5zeW3lFKQHxuno7zvOg5S0lL6A4U+3LK/4NxtVimNMXX9rJ3uOpZAeZEAN/LJ
- qHYn5Y78OnS3G+aUwOLI8B7Q4gS/NcPp6/uhBg==;
+ b=Oa6hoTTFpZ02tYC2BP2LpmTxo4nlyTQm+Mc4v7j0arqZst3OyxDConbQ8Sn2CvQhMx2rzWPdpIbS
+ GkhVB5IYfsOVbwg7zDtztwL4MNmDY0FZE2mhU+T5tNeGui03qeoE5pGlIELA398AlHP6P1/admR7
+ RA5tKY6QHMz0YAWEXJXkkyGfXB4NrQhlAb11Env4pvZzs1MNekAeAH9nX84nkhDtOegdbK0xPPGS
+ G/qjOL7qaPmuFTjv/5H1menH9LSVkzaYTVPHhQvBvNzSU8jf5IrWBZyznlct/iPG+lVzf9ZpWk6Q
+ KOW2llcQpKmVzV18CpnQa+tSgdTyavfrL9N/zw==;
 From: WGO SALES<sara@vietdot.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 10 Apr 2023 02:52:16 +0200
-Message-ID: <20230410025216.1A7A1B16F9F845C0@vietdot.com>
+Date: 10 Apr 2023 11:25:48 +0200
+Message-ID: <20230410112548.DA0E1212F3007477@vietdot.com>
 MIME-Version: 1.0
 Content-Type: multipart/mixed;
- boundary="----=_NextPart_000_0012_5A0ED665.C4B98EC9"
-X-Spam-Score: 6.1 (++++++)
+ boundary="----=_NextPart_000_0012_7AF73014.C55CF708"
+X-Spam-Score: 7.3 (+++++++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has identified this incoming email as possible spam.  The original
@@ -72,7 +72,7 @@ X-Spam-Report: Spam detection software,
  We have an urgent requirement as per attached samples
  & specification. Kindly quote your price and the inquiry at the earliest.
  Also confirm the Terms & Conditions including Delivery schedule for supp
- [...] Content analysis details:   (6.1 points, 6.0 required)
+ [...] Content analysis details:   (7.3 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  2.5 URIBL_DBL_MALWARE      Contains a malware URL listed in the Spamhaus
@@ -81,6 +81,9 @@ X-Spam-Report: Spam detection software,
  [88.209.253.161 listed in zen.spamhaus.org]
  0.1 URIBL_CSS_A Contains URL's A record listed in the Spamhaus CSS
  blocklist [URIs: vietdot.com]
+ 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
+ bl.spamcop.net
+ [Blocked - see <https://www.spamcop.net/bl.shtml?88.209.253.161>]
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
  [88.209.253.161 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -94,7 +97,7 @@ X-Spam-Report: Spam detection software,
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
-X-Headers-End: 1plflh-0003hv-Ez
+X-Headers-End: 1plnme-002n7A-P0
 Subject: [Industrypack-devel] Quotation for industrypack-devel of
  lists.sourceforge.net
 X-BeenThere: industrypack-devel@lists.sourceforge.net
@@ -112,7 +115,7 @@ Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
 
-------=_NextPart_000_0012_5A0ED665.C4B98EC9
+------=_NextPart_000_0012_7AF73014.C55CF708
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -138,7 +141,7 @@ the Terms &amp; Conditions including Delivery schedule for supply.</DIV>
 <DIV>Direct Dial : +865198736198</DIV>
 <DIV>Fax : +865198736738</DIV>
 <DIV>Switch Board : +861395858063</DIV></DIV></BODY></HTML>
-------=_NextPart_000_0012_5A0ED665.C4B98EC9
+------=_NextPart_000_0012_7AF73014.C55CF708
 Content-Type: application/octet-stream; name="Quote.docx.shtml"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="Quote.docx.shtml"
@@ -222,14 +225,14 @@ aXY+DQo8L3RkPjwvdHI+DQo8L3RhYmxlPg0KPC9ib2R5Pg0KPC9odG1sPg0KdGFyZ2V0PV9i
 bGFuayANCmRhdGEtc2FmZXJlZGlyZWN0dXJsPSJodHRwczovL3d3dy5nb29nbGUuY29tL3Vy
 bD9x
 
-------=_NextPart_000_0012_5A0ED665.C4B98EC9
+------=_NextPart_000_0012_7AF73014.C55CF708
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
-------=_NextPart_000_0012_5A0ED665.C4B98EC9
+------=_NextPart_000_0012_7AF73014.C55CF708
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -240,6 +243,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
-------=_NextPart_000_0012_5A0ED665.C4B98EC9--
+------=_NextPart_000_0012_7AF73014.C55CF708--
 
 
