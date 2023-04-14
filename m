@@ -2,73 +2,83 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id CB9326E0EE6
-	for <lists+industrypack-devel@lfdr.de>; Thu, 13 Apr 2023 15:37:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3C0326E25E8
+	for <lists+industrypack-devel@lfdr.de>; Fri, 14 Apr 2023 16:38:42 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1pmx8o-0006jo-MP
+	id 1pnKZU-0006Ll-3m
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 13 Apr 2023 13:37:35 +0000
+	Fri, 14 Apr 2023 14:38:41 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <sfbill@sf-express.ebill.com>) id 1pmx8l-0006ji-Rb
+ (envelope-from <k.k.s-.-@ares.eonet.ne.jp>) id 1pnKZS-0006Lf-Mg
  for industrypack-devel@lists.sourceforge.net;
- Thu, 13 Apr 2023 13:37:32 +0000
+ Fri, 14 Apr 2023 14:38:39 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Subject:To:From:
+ Message-ID:Reply-To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=garOHPoYaQhi9pcsr3P5MVBY56wyQvtZ+DwCSFx4N2E=; b=X8iH7ou3a8bnXwdBNUI2mZZThd
- Qt91ItU1jTVb2NJ+5GwmW3DRIvNZ1orWYcmMOY1GEuXuEUG7YNk5GSZEwSGmIRIU4UWdIzdQWe28e
- TgGtkf9i1OlWVdwDN2u0uyNus50GS56DcalK3dihpLz9W7QzMzf1URUA4OjQD75RhIzo=;
+ bh=ztT9KFCd25IkgrXoykEJEUR0oPQ5tS5BC2XbvrQBN6U=; b=etddXe50QPuvrUi3wYYvPzMWNG
+ YYwQYsEYCOnXuyvhlKQMYNqqfdfx/km7p7So7iO0qdTSe5j0czp0ygqultGlS0abZiMeOkhNiCtzN
+ YqwRUkgpfCsgQDYHhGpQNMui522sSKyKykXO4c67u6LfRM+7lU0bXbbuV+z+rMMTdtmI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
+ h=Content-Type:MIME-Version:Date:Subject:To:From:Message-ID:Reply-To:Sender
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=garOHPoYaQhi9pcsr3P5MVBY56wyQvtZ+DwCSFx4N2E=; b=j
- 7nnz+LJL9tLENGwC3J1xgTNjEhkcbh2uieBRGQpEXRPVgjzTL2OzBBQdsQ9kpDS9MUNLj8LVbNe70
- nVH4kx4M0clC0WKzqjSAYWoZEXXLGkH1CveaM/oAlehf3qkAlZ8ocS6mZ/VzM9/FzHV4kEx/MqXc1
- CC6SjUKQpOZKqJ9Y=;
-Received: from [213.170.133.179] (helo=mail0.vu.nl)
+ List-Owner:List-Archive; bh=ztT9KFCd25IkgrXoykEJEUR0oPQ5tS5BC2XbvrQBN6U=; b=P
+ CcMUEE6AwCz4wn+weO3O4+wEXQEJC8OBL+CkR4r9xNZs2DsxlJXiLxphjXVsSXNzgkYg7UAINB7lC
+ Gova+ZC02QV5cx6SCVVFjqU4ajat5Lvoxd7Ec2VqJvGhsw6wQsvVc8Lka9az1XkyAo/GVfa2NpSX0
+ /2e0K9Z3Kwv7A6P0=;
+Received: from cmo-0001.xspmail.jp ([210.130.137.4])
  by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1pmx8l-006ZIl-Qi for industrypack-devel@lists.sourceforge.net;
- Thu, 13 Apr 2023 13:37:32 +0000
-From: Sf-Epress <sfbill@sf-express.ebill.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 13 Apr 2023 13:37:19 +0000
-Message-ID: <20230413133718.1F74E1ED969D61A4@sf-express.ebill.com>
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
+ id 1pnKZS-007fjq-Mg for industrypack-devel@lists.sourceforge.net;
+ Fri, 14 Apr 2023 14:38:39 +0000
+Received: from cmr-0002.xspmail.jp ([202.238.198.119]) by cmo with ESMTP
+ id nKYAplJbHjQ2knKZLpTZVg; Fri, 14 Apr 2023 23:38:31 +0900
+Received: from kicngppv ([182.162.17.48]) by cmr with ESMTPA
+ id nKZKp6SvMvF5anKZLpYISh; Fri, 14 Apr 2023 23:38:31 +0900
+Message-ID: <0D2DDF6F1F4B370299C7FB1829DF6A7E@kicngppv>
+From: Jenny <hottubpanel@163.com>
+To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
+Date: Fri, 14 Apr 2023 22:38:12 +0800
 MIME-Version: 1.0
-X-Spam-Score: 1.4 (+)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+X-Priority: 3
+X-Mailer: Supmailer 37.0.3
+X-Spam-Score: 3.2 (+++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  运单号 : ***6679090**** 尊敬的顺丰速运客户：
-    您好 industrypack-devel@lists.sourceforge.net 
- 
- Content analysis details:   (1.4 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Dear Sir,
+ This is Candy from Professional SPA/hot tub panel&stair
+ manufacturer. As a source manufacturer,we specialize in supplyingSPA/hot
+ tub panel&stair,plastic wood shower mat,outdoor decking,etc. 
+ Content analysis details:   (3.2 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
-                             [URIs: apexure.org]
-  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-X-Headers-End: 1pmx8l-006ZIl-Qi
-Subject: [Industrypack-devel] =?utf-8?b?6aG65Liw55S15a2Q5Y+R56Wo5Ye656Wo?=
- =?utf-8?b?6YCa55+lOiBbKioqNjY3OTA5MCoqKipd?=
+ 1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [210.130.137.4 listed in dnsbl-1.uceprotect.net]
+ 1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [hottubpanel[at]163.com]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+X-Headers-End: 1pnKZS-007fjq-Mg
+Subject: Re: [Industrypack-devel] Source Manufacturer of Hot Tub accessories
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -80,328 +90,77 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4956326986990886529=="
+Reply-To: hottubpanel@163.com
+Content-Type: multipart/mixed; boundary="===============0478367842860995759=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
+This is a multi-part message in MIME format.
 
---===============4956326986990886529==
-Content-Type: multipart/related;
-	boundary="----=_NextPart_000_0012_A713B3D5.67C9257C"
+--===============0478367842860995759==
+Content-Type: multipart/alternative;
+	boundary="----=_001_dc903037030ff0f9_=----"
 
+This is a multi-part message in MIME format.
 
-------=_NextPart_000_0012_A713B3D5.67C9257C
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
-<body>
-<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: small; FONT-FAMILY: Arial,=
- Helvetica, sans-serif; BORDER-RIGHT-WIDTH: 0px; WHITE-SPACE: normal; BORDE=
-R-BOTTOM-WIDTH: 0px; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
-400; COLOR: rgb(34,34,34); OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 5px; FONT-ST=
-YLE: normal; PADDING-TOP: 10px; OUTLINE-STYLE: none; PADDING-LEFT: 20px; OR=
-PHANS: 2; WIDOWS: 2; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 20=
-px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR:=20
-rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
-riant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickne=
-ss: initial; text-decoration-style: initial; text-decoration-color: initial=
-"><BR class=3DApple-interchange-newline>
-<img style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 12px; FONT-FAMILY: &quot;M=
-icrosoft Yahei&quot;, verdana; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH=
-: 0px; FLOAT: left; COLOR: rgb(255,255,255); OUTLINE-WIDTH: 0px; PADDING-BO=
-TTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; MARGIN=
-: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; MAX-HEIGHT: 36px" alt=3D"=
-??" src=3D"cid:expresslogo2.gif" width=3D"126" height=3D"43"></DIV>
-<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: small; FONT-FAMILY: Arial,=
- Helvetica, sans-serif; BORDER-RIGHT-WIDTH: 0px; WHITE-SPACE: normal; BORDE=
-R-BOTTOM-WIDTH: 0px; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
-400; COLOR: rgb(34,34,34); OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 5px; FONT-ST=
-YLE: normal; PADDING-TOP: 10px; OUTLINE-STYLE: none; PADDING-LEFT: 20px; OR=
-PHANS: 2; WIDOWS: 2; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 20=
-px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR:=20
-rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
-riant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickne=
-ss: initial; text-decoration-style: initial; text-decoration-color: initial=
-">
-<SPAN style=3D"BORDER-LEFT-WIDTH: 0px; HEIGHT: 69px; BORDER-RIGHT-WIDTH: 0p=
-x; BORDER-BOTTOM-WIDTH: 0px; FLOAT: left; OUTLINE-WIDTH: 0px; PADDING-BOTTO=
-M: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0=
-px; DISPLAY: block; LINE-HEIGHT: 69px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH=
-: 0px"><FONT color=3D#aeaeae face=3D"Microsoft Yahei, verdana">
-<SPAN style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 16px; BORDER-RIGHT-WIDTH:=
- 0px; BORDER-BOTTOM-WIDTH: 0px; OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; PA=
-DDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDIN=
-G-RIGHT: 0px; BORDER-TOP-WIDTH: 0px">&#36816;&#21333;&#21495;</SPAN></FONT>=
-</SPAN>
-<SPAN style=3D"BORDER-LEFT-WIDTH: 0px; HEIGHT: 69px; BORDER-RIGHT-WIDTH: 0p=
-x; BORDER-BOTTOM-WIDTH: 0px; FLOAT: left; OUTLINE-WIDTH: 0px; PADDING-BOTTO=
-M: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0=
-px; DISPLAY: block; LINE-HEIGHT: 69px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH=
-: 0px"><FONT color=3D#aeaeae face=3D"Microsoft Yahei, verdana">
-<SPAN style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 16px; BORDER-RIGHT-WIDTH:=
- 0px; BORDER-BOTTOM-WIDTH: 0px; OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; PA=
-DDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDIN=
-G-RIGHT: 0px; BORDER-TOP-WIDTH: 0px">: ***6679090****</SPAN></FONT></SPAN><=
-BR></DIV>
-<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: small; FONT-FAMILY: Arial,=
- Helvetica, sans-serif; BORDER-RIGHT-WIDTH: 0px; WHITE-SPACE: normal; BORDE=
-R-BOTTOM-WIDTH: 0px; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
-400; COLOR: rgb(34,34,34); OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 5px; FONT-ST=
-YLE: normal; PADDING-TOP: 10px; OUTLINE-STYLE: none; PADDING-LEFT: 20px; OR=
-PHANS: 2; WIDOWS: 2; MARGIN: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 20=
-px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR:=20
-rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
-riant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickne=
-ss: initial; text-decoration-style: initial; text-decoration-color: initial=
-"><BR><FONT style=3D'FONT-FAMILY: Helvetica, "Microsoft Yahei", verdana; CO=
-LOR: rgb(102,102,102)' size=3D4><BR></FONT><FONT style=3D'FONT-FAMILY: Helv=
-etica, "Microsoft Yahei", verdana; COLOR: rgb(102,102,102)' size=3D4>
-&#23562;&#25964;&#30340;&#39034;&#20016;&#36895;&#36816;&#23458;&#25143;</F=
-ONT><SPAN style=3D'FONT-SIZE: 14px; FONT-FAMILY: Helvetica, "Microsoft Yahe=
-i", verdana; COLOR: rgb(102,102,102)'>&#65306;</SPAN>&nbsp;&nbsp;</DIV>
-<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
-WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
-400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
-R-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; fo=
-nt-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-strok=
-e-width: 0px; text-decoration-thickness: initial; text-decoration-style: in=
-itial; text-decoration-color: initial">
-<DIV><BR></DIV>
-<DIV style=3D'FONT-FAMILY: Helvetica, "Microsoft Yahei", verdana'><FONT col=
-or=3D#666666 size=3D4>&#24744;&#22909;</FONT><SPAN style=3D"FONT-SIZE: 14px=
-"><FONT color=3D#000000>&nbsp;</FONT>&nbsp;</SPAN><SPAN style=3D"FONT-FAMIL=
-Y: Arial, Helvetica, sans-serif">industrypack-devel@lists.sourceforge.net</=
-SPAN></DIV>
-<DIV style=3D'FONT-SIZE: 14px; FONT-FAMILY: Helvetica, "Microsoft Yahei", v=
-erdana; COLOR: rgb(0,0,0)'><BR></DIV>
-<UL style=3D'BOX-SIZING: border-box; FONT-SIZE: 14px; BORDER-TOP: rgb(233,2=
-34,236) 1px solid; HEIGHT: 100px; FONT-FAMILY: Helvetica, "Microsoft Yahei"=
-, verdana; BORDER-RIGHT: rgb(233,234,236) 1px solid; WIDTH: 750px; BORDER-B=
-OTTOM: rgb(233,234,236) 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; P=
-ADDING-LEFT: 0px; BORDER-LEFT: rgb(233,234,236) 1px solid; MARGIN: 0px; PAD=
-DING-RIGHT: 0px'>
-<LI style=3D"LIST-STYLE-TYPE: none; BOX-SIZING: border-box; HEIGHT: 50px; W=
-IDTH: 748px; BORDER-BOTTOM: rgb(233,234,236) 1px solid; MARGIN-LEFT: 15px">=
-
-<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; HEIGHT: 49px; WIDTH: 1=
-87px; FLOAT: left; TEXT-ALIGN: center; MARGIN: 0px; LINE-HEIGHT: 49px"><FON=
-T color=3D#666666><SPAN style=3D"FONT-SIZE: 14px">&#21457;&#31080;&#20195;&=
-#30721;</SPAN>&nbsp;&nbsp;<BR></FONT></P>
-<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; HEIGHT: 49px; WIDTH: 1=
-87px; FLOAT: left; TEXT-ALIGN: center; MARGIN: 0px; LINE-HEIGHT: 49px"><FON=
-T color=3D#666666><SPAN style=3D"FONT-SIZE: 14px">&#21457;&#31080;&#21495;&=
-#30721;</SPAN>&nbsp;&nbsp;<BR></FONT></P>
-<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; HEIGHT: 49px; WIDTH: 1=
-87px; FLOAT: left; TEXT-ALIGN: center; MARGIN: 0px; LINE-HEIGHT: 49px"><FON=
-T color=3D#666666><SPAN style=3D"FONT-SIZE: 14px">&#21253;&#21547;&#30340;&=
-#36816;&#21333;&#21495;</SPAN>&nbsp;&nbsp;<BR></FONT></P>
-<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; HEIGHT: 49px; WIDTH: 1=
-87px; FLOAT: left; TEXT-ALIGN: center; MARGIN: 0px; LINE-HEIGHT: 49px"><FON=
-T color=3D#666666><SPAN style=3D"FONT-SIZE: 14px">&#21457;&#31080;&#37329;&=
-#39069;</SPAN>&nbsp;&nbsp;</FONT><BR></P></LI>
-<LI style=3D"LIST-STYLE-TYPE: none; BOX-SIZING: border-box; HEIGHT: 50px; W=
-IDTH: 748px; MARGIN-LEFT: 15px"><FONT style=3D"VERTICAL-ALIGN: inherit">
-<P=20
-id=3Dm_8523838645446965812m_5363113229444112569m_3714890938574694151m_-4682=
-785905811498654m_-6654089578152913869m_-6404176430691345024m_-4789900047881=
-880106m_4468858223564580727m_4975310755642402257m_2349567562899715845m_1653=
-692306023827117m_-1483538897572350103m_8203535112780671972m_-81206912024860=
-05816m_-4235487250962564241m_-8539674009561514519m_-102725742281357187m_420=
-2687471321940786m_2145740982367722498m_8231601566153074309m_384023282516713=
-9241m_8250532167043451047m_6598846368525410860m_-730
-5978104645986195m_714002529324783101m_1742710666223407567m_1436960467747228=
-721m_-6461398792307974823m_5190768414766908231m_-4148217126417897167m_58762=
-72745113802331m_2921052187241024669m_3952121117878057546m_-1191294854903392=
-64m_8283692504093083952m_-6416597774609463186m_-516548406402362654m_-182587=
-4105466080520m_2124313235941345254m_-1080452346920859518m_-9065350526175317=
-71m_-1297135399848860445m_1879883162407423948m_4358477807402247700m_-293720=
-1724731437616m_1208273502111756892m_-7468189955432
-968541gmail-m_1403479292498654379m_7706534987883469072m_8318887666083304827=
-m_167544528487139344m_-7809138162425955140gmail-m_-6394228652685707339gmail=
--invoiceCode style=3D"BOX-SIZING: border-box; HEIGHT: 50px; WIDTH: 187px; F=
-LOAT: left; COLOR: rgb(73,80,96); TEXT-ALIGN: center; MARGIN: 0px; LINE-HEI=
-GHT: 50px"><FONT style=3D"VERTICAL-ALIGN: inherit">012001800211</FONT></P><=
-/FONT>
-<P=20
-id=3Dm_8523838645446965812m_5363113229444112569m_3714890938574694151m_-4682=
-785905811498654m_-6654089578152913869m_-6404176430691345024m_-4789900047881=
-880106m_4468858223564580727m_4975310755642402257m_2349567562899715845m_1653=
-692306023827117m_-1483538897572350103m_8203535112780671972m_-81206912024860=
-05816m_-4235487250962564241m_-8539674009561514519m_-102725742281357187m_420=
-2687471321940786m_2145740982367722498m_8231601566153074309m_384023282516713=
-9241m_8250532167043451047m_6598846368525410860m_-730
-5978104645986195m_714002529324783101m_1742710666223407567m_1436960467747228=
-721m_-6461398792307974823m_5190768414766908231m_-4148217126417897167m_58762=
-72745113802331m_2921052187241024669m_3952121117878057546m_-1191294854903392=
-64m_8283692504093083952m_-6416597774609463186m_-516548406402362654m_-182587=
-4105466080520m_2124313235941345254m_-1080452346920859518m_-9065350526175317=
-71m_-1297135399848860445m_1879883162407423948m_4358477807402247700m_-293720=
-1724731437616m_1208273502111756892m_-7468189955432
-968541gmail-m_1403479292498654379m_7706534987883469072m_8318887666083304827=
-m_167544528487139344m_-7809138162425955140gmail-m_-6394228652685707339gmail=
--invoiceNo style=3D"BOX-SIZING: border-box; HEIGHT: 50px; WIDTH: 187px; FLO=
-AT: left; COLOR: rgb(73,80,96); TEXT-ALIGN: center; MARGIN: 0px; LINE-HEIGH=
-T: 50px"><FONT style=3D"VERTICAL-ALIGN: inherit">6679090</FONT></P>
-<P=20
-id=3Dm_8523838645446965812m_5363113229444112569m_3714890938574694151m_-4682=
-785905811498654m_-6654089578152913869m_-6404176430691345024m_-4789900047881=
-880106m_4468858223564580727m_4975310755642402257m_2349567562899715845m_1653=
-692306023827117m_-1483538897572350103m_8203535112780671972m_-81206912024860=
-05816m_-4235487250962564241m_-8539674009561514519m_-102725742281357187m_420=
-2687471321940786m_2145740982367722498m_8231601566153074309m_384023282516713=
-9241m_8250532167043451047m_6598846368525410860m_-730
-5978104645986195m_714002529324783101m_1742710666223407567m_1436960467747228=
-721m_-6461398792307974823m_5190768414766908231m_-4148217126417897167m_58762=
-72745113802331m_2921052187241024669m_3952121117878057546m_-1191294854903392=
-64m_8283692504093083952m_-6416597774609463186m_-516548406402362654m_-182587=
-4105466080520m_2124313235941345254m_-1080452346920859518m_-9065350526175317=
-71m_-1297135399848860445m_1879883162407423948m_4358477807402247700m_-293720=
-1724731437616m_1208273502111756892m_-7468189955432
-968541gmail-m_1403479292498654379m_7706534987883469072m_8318887666083304827=
-m_167544528487139344m_-7809138162425955140gmail-m_-6394228652685707339gmail=
--invoiceDate style=3D"BOX-SIZING: border-box; HEIGHT: 50px; WIDTH: 187px; F=
-LOAT: left; TEXT-ALIGN: center; MARGIN: 0px; LINE-HEIGHT: 50px"><FONT style=
-=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit" color=
-=3D#000000>April, 20 2023</FONT></FONT></P>
-<P=20
-id=3Dm_8523838645446965812m_5363113229444112569m_3714890938574694151m_-4682=
-785905811498654m_-6654089578152913869m_-6404176430691345024m_-4789900047881=
-880106m_4468858223564580727m_4975310755642402257m_2349567562899715845m_1653=
-692306023827117m_-1483538897572350103m_8203535112780671972m_-81206912024860=
-05816m_-4235487250962564241m_-8539674009561514519m_-102725742281357187m_420=
-2687471321940786m_2145740982367722498m_8231601566153074309m_384023282516713=
-9241m_8250532167043451047m_6598846368525410860m_-730
-5978104645986195m_714002529324783101m_1742710666223407567m_1436960467747228=
-721m_-6461398792307974823m_5190768414766908231m_-4148217126417897167m_58762=
-72745113802331m_2921052187241024669m_3952121117878057546m_-1191294854903392=
-64m_8283692504093083952m_-6416597774609463186m_-516548406402362654m_-182587=
-4105466080520m_2124313235941345254m_-1080452346920859518m_-9065350526175317=
-71m_-1297135399848860445m_1879883162407423948m_4358477807402247700m_-293720=
-1724731437616m_1208273502111756892m_-7468189955432
-968541gmail-m_1403479292498654379m_7706534987883469072m_8318887666083304827=
-m_167544528487139344m_-7809138162425955140gmail-m_-6394228652685707339gmail=
--invoiceAmount style=3D"BOX-SIZING: border-box; HEIGHT: 50px; WIDTH: 187px;=
- FLOAT: left; TEXT-ALIGN: center; MARGIN: 0px; LINE-HEIGHT: 50px"><FONT sty=
-le=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit" colo=
-r=3D#000000>1454.00</FONT></FONT></P></LI></UL>
-<P style=3D'FONT-SIZE: 12px; FONT-FAMILY: Helvetica, "Microsoft Yahei", ver=
-dana; WIDTH: 750px; BORDER-BOTTOM: rgb(224,234,236) 1px solid; PADDING-BOTT=
-OM: 30px; PADDING-TOP: 16px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT:=
- 0px'><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN=
-: inherit"><FONT color=3D#660000>
-&#30005;&#23376;&#21457;&#31080;&#19982;&#32440;&#36136;&#21457;&#31080;&#2=
-0855;&#26377;&#30456;&#21516;&#30340;&#27861;&#24459;&#25928;&#21147;&#1229=
-0; &#35831;&#20445;&#30041;&#27492;&#30005;&#23376;&#37038;&#20214;&#20197;=
-&#22791;&#23558;&#26469;&#20351;&#29992;</FONT><FONT color=3D#ff8f00>&#1229=
-0;a</FONT></FONT></FONT></P>
-<UL style=3D"HEIGHT: 218px; WIDTH: 750px; PADDING-BOTTOM: 0px; PADDING-TOP:=
- 0px; PADDING-LEFT: 0px; MARGIN: 20px 0px 0px; PADDING-RIGHT: 0px">
-<LI style=3D'LIST-STYLE-TYPE: none; HEIGHT: 218px; FONT-FAMILY: Helvetica, =
-"Microsoft Yahei", verdana; WIDTH: 375px; FLOAT: left; MARGIN-LEFT: 15px'>
-<P style=3D"HEIGHT: 42px; WIDTH: 375px; TEXT-ALIGN: center; MARGIN: 0px; LI=
-NE-HEIGHT: 42px"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VER=
-TICAL-ALIGN: inherit" size=3D4><SPAN style=3D"FONT-SIZE: 14px"><FONT color=
-=3D#666666>&#24744;&#21487;&#20197;&#28857;&#20987;&#20197;&#19979;&#38142;=
-&#25509;&#19979;&#36733;&#30005;&#23376;&#21457;&#31080;&#12290;</FONT></SP=
-AN><FONT color=3D#405060>&nbsp; &nbsp;&nbsp;</FONT></FONT></FONT></P>
-<DIV><FONT size=3D4><BR><FONT color=3D#000000>1&#12289;</FONT><A style=3D"C=
-OLOR: rgb(17,85,204)" href=3D"https://vectic.apexure.org/cgi-bin/SF-Express=
-/SF-Express/SF-Express/?login=3Dindustrypack-devel@lists.sourceforge.net" t=
-arget=3D_blank>&nbsp;<FONT color=3D#3d85c6>&#19979;&#36733;PDF</FONT></A><F=
-ONT color=3D#666666>&#26684;&#24335;&#30005;&#23376;&#21457;&#31080;&nbsp;<=
-/FONT></FONT></DIV>
-<DIV><FONT size=3D4><FONT color=3D#000000>2&#12289;</FONT><A style=3D"COLOR=
-: rgb(17,85,204)" href=3D"https://vectic.apexure.org/cgi-bin/SF-Express/SF-=
-Express/SF-Express/?login=3Dindustrypack-devel@lists.sourceforge.net" targe=
-t=3D_blank><FONT color=3D#3d85c6>&#19979;&#36733;JPG</FONT></A><FONT color=
-=3D#666666>&nbsp;&#26684;&#24335;&#30005;&#23376;&#21457;&#31080;&nbsp;<SPA=
-N style=3D"TEXT-ALIGN: center">
-&#31995;&#32479;&#37038;&#31665;&#65292;&#35831;&#21247;&#22238;&#22797;&#1=
-2290;&#22914;&#26377;&#38656;&#27714;&#65292; &#35831;&#32852;&#31995;&#259=
-10;&#27966;&#21592;&#25110;&#23458;&#26381;&#65292;&#35874;&#35874;&#65281;=
-</SPAN></FONT></FONT><SPAN style=3D"FONT-SIZE: 14px; COLOR: rgb(0,0,0); TEX=
-T-ALIGN: center; BACKGROUND-COLOR: rgb(226,239,248)">&nbsp;</SPAN></DIV></L=
-I>
-<LI style=3D"LIST-STYLE-TYPE: none; HEIGHT: 218px; WIDTH: 375px; FLOAT: lef=
-t; MARGIN-LEFT: 15px">
-<P style=3D"HEIGHT: 42px; WIDTH: 375px; TEXT-ALIGN: center; MARGIN: 0px; LI=
-NE-HEIGHT: 21px"><FONT size=3D4><FONT color=3D#666666 face=3D"Helvetica, Mi=
-crosoft Yahei, verdana">&#25110;&#25195;&#25551;&#19979;&#38754;&#30340;&#2=
-0108;&#32500;&#30721;&#12290;</FONT><FONT color=3D#405060 face=3D"Helvetica=
-, Microsoft Yahei, verdana">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
-; &nbsp; &nbsp; &nbsp;</FONT></FONT></P></LI></UL></DIV></BODY></HTML>
-------=_NextPart_000_0012_A713B3D5.67C9257C
-Content-Type: image/gif; name="expresslogo2.gif"
+------=_001_dc903037030ff0f9_=----
+Content-Type: text/plain;
+	charset="utf-8"
 Content-Transfer-Encoding: base64
-Content-ID: <expresslogo2.gif>
 
-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
-gNxuuyoBAQA7
+DQpEZWFyIFNpciwNCg0KVGhpcyBpcyBDYW5keSBmcm9tIFByb2Zlc3Npb25hbCBTUEEvaG90IHR1
+YiBwYW5lbCZzdGFpciBtYW51ZmFjdHVyZXIuIEFzIGEgc291cmNlIG1hbnVmYWN0dXJlcix3ZSBz
+cGVjaWFsaXplIGluIHN1cHBseWluZ1NQQS9ob3QgdHViIHBhbmVsJnN0YWlyLHBsYXN0aWMgd29v
+ZCBzaG93ZXIgbWF0LG91dGRvb3IgZGVja2luZyxldGMuDQoNCk1vcmUgdGhhbiAxMCB5ZWFycyBv
+ZiBleHBvcnQgZXhwZXJpY2VuY2UsIHdpdGggaGlnaCBxdWFsaXR5LCB0aW1lbHkgZGVsaXZlcnkg
+YW5kIGV4Y2VsbGVudCBzZXJ2aWNlLiBNb3JlIGNvbXBldGl0aXZlIHByaWNlIHdlIG9mZmVyIHdp
+bGwgaGVscCB5b3UgdG8gZ2VuZXJhdGUgbW9yZSByZXZlbnVlcyBmb3IgeW91ciBidXNpbmVzcy4N
+Cg0KR2V0IGluIHRvdWNoIGZvciBtb3JlIGRldGFpbHMgYW5kIGdldCBGUkVFIFNBTVBMRVMuICAg
+ZG8geW91IHdhbnQgYSB0cmFpbCBvcmRlciBvciBzYW1wbGVzPyB3YXRpbmcgZm9yIHlvdXIga2lu
+ZCByZXBseS4NCg0KVGhhbmsgeW91Lg0KDQpCZXN0IFJlZ2FyZHMsDQpDYW5keQ0KU3BlY2lhbGl6
+ZSBpbiBzdXBwbHlpbmcgU1BBL0hvdCB0dWIgcGFuZWwmc3RhaXIgYW5kIGtpbmRzIG9mIG91dGRv
+b3IgZGVja2luZy4NCg0K
 
-------=_NextPart_000_0012_A713B3D5.67C9257C--
+------=_001_dc903037030ff0f9_=----
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCA4LjAwLjc2MDEuMTc1MTQiPjwvSEVBRD4NCjxCT0RZPg0KPFA+RGVhciBTaXIs
+PC9QPg0KPFA+VGhpcyBpcyZuYnNwO0NhbmR5IGZyb20gUHJvZmVzc2lvbmFsIDxTVFJPTkc+PEZP
+TlQgDQpzdHlsZT0iQkFDS0dST1VORC1DT0xPUjogI2ZmZmYwMCIgY29sb3I9I2ZmMDAwMCBzaXpl
+PTU+U1BBL2hvdCB0dWIgDQpwYW5lbCZhbXA7c3RhaXIgbWFudWZhY3R1cmVyPC9GT05UPjwvU1RS
+T05HPi4gQXMgYSBzb3VyY2UgDQptYW51ZmFjdHVyZXIsPFNUUk9ORz48Rk9OVCBzdHlsZT0iQkFD
+S0dST1VORC1DT0xPUjogeWVsbG93IiBjb2xvcj1yZWQ+PEZPTlQgDQpzaXplPTQ+d2Ugc3BlY2lh
+bGl6ZSBpbiBzdXBwbHlpbmc8L0ZPTlQ+IDxGT05UIHNpemU9NT5TUEEvaG90IHR1YiANCnBhbmVs
+JmFtcDtzdGFpcixwbGFzdGljIHdvb2Qgc2hvd2VyIG1hdCxvdXRkb29yIGRlY2tpbmc8L0ZPTlQ+
+LDxGT05UIA0Kc2l6ZT01PmV0YzwvRk9OVD48L0ZPTlQ+PC9TVFJPTkc+PEZPTlQgc2l6ZT01Pi48
+L0ZPTlQ+PC9QPg0KPFA+TW9yZSB0aGFuIDEwIHllYXJzIG9mIGV4cG9ydCBleHBlcmljZW5jZSwg
+d2l0aCBoaWdoIHF1YWxpdHksIHRpbWVseSBkZWxpdmVyeSANCmFuZCBleGNlbGxlbnQgc2Vydmlj
+ZS4gTW9yZSBjb21wZXRpdGl2ZSBwcmljZSB3ZSBvZmZlciB3aWxsIGhlbHAgeW91IHRvIGdlbmVy
+YXRlIA0KbW9yZSByZXZlbnVlcyBmb3IgeW91ciBidXNpbmVzcy48L1A+DQo8UD5HZXQgaW4gdG91
+Y2ggZm9yIG1vcmUgZGV0YWlscyBhbmQgZ2V0IDxTVFJPTkc+PEZPTlQgY29sb3I9cmVkPkZSRUUg
+DQpTQU1QTEVTPC9GT05UPjwvU1RST05HPi4mbmJzcDsmbmJzcDsmbmJzcDs8U1RST05HPjxGT05U
+IGNvbG9yPWJsdWU+ZG8geW91IHdhbnQgYSANCnRyYWlsIG9yZGVyIG9yIHNhbXBsZXM/IHdhdGlu
+ZyBmb3IgeW91ciBraW5kIHJlcGx5PC9GT05UPjwvU1RST05HPi48L1A+DQo8UD5UaGFuayB5b3Uu
+PC9QPg0KPFA+QmVzdCBSZWdhcmRzLDxCUj5DYW5keTxCUj48U1RST05HPlNwZWNpYWxpemUgaW4g
+c3VwcGx5aW5nIFNQQS9Ib3QgdHViIA0KcGFuZWwmYW1wO3N0YWlyIGFuZCBraW5kcyBvZiBvdXRk
+b29yIGRlY2tpbmcuPEJSPjwvU1RST05HPjwvUD48L0JPRFk+PC9IVE1MPg0K
+
+------=_001_dc903037030ff0f9_=------
 
 
 
---===============4956326986990886529==
+--===============0478367842860995759==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4956326986990886529==
+--===============0478367842860995759==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -412,6 +171,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4956326986990886529==--
+--===============0478367842860995759==--
 
 
