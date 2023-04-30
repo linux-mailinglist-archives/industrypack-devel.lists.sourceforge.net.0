@@ -2,107 +2,92 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 262516F1059
-	for <lists+industrypack-devel@lfdr.de>; Fri, 28 Apr 2023 04:33:04 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 78FB96F2A8F
+	for <lists+industrypack-devel@lfdr.de>; Sun, 30 Apr 2023 22:02:39 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1psDux-00039E-7A
+	id 1ptDFn-0000Vb-42
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 28 Apr 2023 02:33:02 +0000
+	Sun, 30 Apr 2023 20:02:38 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
- <3f817c57.AMYAABUcvOAAAcju9ioAAM5Eez0AAYCsxc8AnUiJABIoIQBkSyn7@a1189921.bnc3.mailjet.com>)
- id 1psDuw-00038m-H8 for industrypack-devel@lists.sourceforge.net;
- Fri, 28 Apr 2023 02:33:01 +0000
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <and34895@maia.eonet.ne.jp>) id 1ptDFl-0000VV-Qp
+ for industrypack-devel@lists.sourceforge.net;
+ Sun, 30 Apr 2023 20:02:37 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:List-Unsubscribe:List-Id:Date:Subject:
- To:From:MIME-Version:Message-Id:Sender:Reply-To:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Help:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Subject:To:From:
+ Message-ID:Reply-To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=2CCCRJocneMyCH2skQYLeJfNkhVw3wcRvx+ix3Jy8Jc=; b=hGwogvTFAH27XsPoFxNvOw268S
- c0XTFYkIjO2quBm6jxAZ3qOKM25TR2ygofMG6EkS5ng5kmGCSam4NAdFBa/dc6uhEMYIWEnDr0Yp+
- hB675DNlSLEg0H58BnHqJ4ah6aDhx3Ecm2JCF5eE5P2ops7oi4fTXzRaC1vGniUlqW78=;
+ bh=Uglcr/KgBEpC00qT0HMKBdXfu2ait2UTkKOJm2wcd7g=; b=UacMVpqcBPX7J8cOohsYeB8JNt
+ fqGImElrGAwZEYuXQh33yzlPNoeIrCkmC+SVmoFz2jjwuv0aas1lpEUcj6jjhvpzddpsZ0D5UQCCQ
+ 1TJuX1E0z3IExT2XOeHfPDZvfF5kEJbAF9VjivDXN0UqL4+yLrqy1qQW1LQLnM7n7jn4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:List-Unsubscribe:List-Id:Date:Subject:To:From:MIME-Version:
- Message-Id:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Help:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=2CCCRJocneMyCH2skQYLeJfNkhVw3wcRvx+ix3Jy8Jc=; b=J
- N5wXOd7T3xsbaOgZch9bHTIv5imco8gpXIe6S5PbT6+hxC4Sn6JDcOQEt14yMrrBKB0XmTNzCj6Vl
- Ld3rIEF5ptSlI89lSiT5uVqCeN4PaEO3VdMygk/mV9T3UuLTtcJhDqTLLFIhsnW39vyrgxpEVAY7M
- anyT5+//iEdTX5Ns=;
-Received: from o65.p38.mailjet.com ([185.250.237.65])
+ h=Content-Type:MIME-Version:Date:Subject:To:From:Message-ID:Reply-To:Sender
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=Uglcr/KgBEpC00qT0HMKBdXfu2ait2UTkKOJm2wcd7g=; b=m
+ odIsSjsSPlm4glAWQAaljwQYBfhq++v2aaqg5uqEPIRTwpNp4vJ6FFvcgHso9mqxk/BiE7oS0+l/o
+ Q0NNJIuQW1SDXqvmkjbNBWY/Z9US9osAs7YIRsVAnqVfRXHLaOKEwFvV2EQ3SIInPZ6a7qhhJTpla
+ 63UFAh0Bzcy4iXAQ=;
+Received: from cmo-0000.xspmail.jp ([210.130.137.3])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1psDut-0007yo-FR for industrypack-devel@lists.sourceforge.net;
- Fri, 28 Apr 2023 02:33:01 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; q=dns/txt;
- d=bnc3.mailjet.com; i=sales=3Dcypress-tech.com@a1189921.bnc3.mailjet.com;
- s=mailjet1; x=1682657547; 
- h=message-id:mime-version:from:from:to:to:subject:subject:date:date:list-id:list-unsubscribe:
- list-unsubscribe-post:feedback-id:precedence:x-campaignid:x-csa-complaints:
- x-mj-mid:x-mj-smtpguid:x-report-abuse-to:content-type;
- bh=E5rcxeuCdoFQCv2bzhM7dtVOqOJVe1KhzU02oiGBfi4=;
- b=V0Mf1HtZlDdu1cWb4S3gE4xuLrODg7gpM1uwjyi0eGWWuNfS8IXH19JFM
- NG5cFDoXtFlxB+qSMAzBj7p77UnPlzeklB02rNQJesqdBeTtCjcfWazbczBP
- cGgi4Lis1FrthxgClQLHCklMGXUORY+gmnJr2hz5VXhoEP0lx8N2PE=
-Message-Id: <3f817c57.AMYAABUcvOAAAcju9ioAAM5Eez0AAYCsxc8AnUiJABIoIQBkSyn7@mailjet.com>
+ id 1ptDFi-00027n-Tw for industrypack-devel@lists.sourceforge.net;
+ Sun, 30 Apr 2023 20:02:36 +0000
+Received: from cmr-0000.xspmail.jp ([202.238.198.117]) by cmo with ESMTP
+ id tDEnpMscOwQRRtDFapQUtr; Mon, 01 May 2023 05:02:26 +0900
+Received: from desrz ([154.92.19.89]) by cmr with ESMTPA
+ id tDFZpo4x8mGAptDFZpDZEB; Mon, 01 May 2023 05:02:26 +0900
+Message-ID: <C047A7BF4B689E70613EE85E7206EE49@desrz>
+From: Mr Cheng <circuitboard_homer@163.com>
+To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
+Date: Mon, 1 May 2023 04:02:12 +0800
 MIME-Version: 1.0
-From: Jesse Dougherty <sales@cypress-tech.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: Fri, 28 Apr 2023 02:05:47 +0000 (UTC)
-List-Unsubscribe-Post: List-Unsubscribe=One-Click
-Feedback-Id: 42.1189921.1191387:MJ
-Precedence: bulk
-X-CampaignID: 7666071082
-X-CSA-Complaints: csa-complaints@eco.de
-X-MJ-Mid: AMYAABUcvOAAAcju9ioAAM5Eez0AAYCsxc8AnUiJABIoIQBkSyn7ZmKLFPgwTIi43cGKpywnVQASLds
-X-MJ-SMTPGUID: 66628b14-f830-4c88-b8dd-c18aa72c2755
-X-REPORT-ABUSE-TO: Message sent by Mailjet please report to
- abuse@mailjet.com with a copy of the message
-X-Spam-Score: 0.3 (/)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Priority: 3
+X-Mailer: Supmailer 37.0.3
+X-Spam-Score: 6.6 (++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  (Buy, Sell, Repair, & Support)  Cypress Technology is a reseller
-    of HP 9000, e3000, & Itanium series, ABB Addvant series hardware working
-   with the HP-UX UNIX, MPE/iX, and VMS operating systems. We have been in business
-    for 28 years [...] 
- 
- Content analysis details:   (0.3 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Dear friend, Have a good day in April and wish everyting goes
+ well with you. I'm Mr Cheng from PCB/PCBA factory, we know your company from
+ Internet,
+ sorry to bother you. We are professional manufacture foucs on PCB/PCBA
+ design and production, 
+ Content analysis details:   (6.6 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  1.1 URIBL_GREY             Contains an URL listed in the URIBL greylist
-                             [URIs: mjt.lu]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
+ 1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [210.130.137.3 listed in dnsbl-1.uceprotect.net]
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [185.250.237.65 listed in wl.mailspike.net]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
-                              no trust
-                             [185.250.237.65 listed in list.dnswl.org]
-  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -1.0 MAILING_LIST_MULTI     Multiple indicators imply a widely-seen list
-                             manager
- -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium trust sender
-X-Headers-End: 1psDut-0007yo-FR
-Subject: [Industrypack-devel] Hewlett-Packard / ABB hardware - Cypress
- Technology
+ [210.130.137.3 listed in wl.mailspike.net]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [circuitboard_homer[at]163.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 2.6 DEAR_FRIEND            BODY: Dear Friend? That's not very dear!
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 1.0 HTML_IMAGE_ONLY_16     BODY: HTML: images with 1200-1600 bytes of
+ words -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ 1.5 HK_NAME_FM_MR_MRS      No description available.
+X-Headers-End: 1ptDFi-00027n-Tw
+Subject: Re: [Industrypack-devel] PCB/PCBA  Design and Production
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
+Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -111,245 +96,417 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4543326188069065529=="
+Reply-To: circuitboard_homer@163.com
+Content-Type: multipart/mixed; boundary="===============2268263119827894633=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4543326188069065529==
-Content-Type: multipart/alternative; boundary="=-89/+hryPAa38o7UDSHsA"
+This is a multi-part message in MIME format.
 
---=-89/+hryPAa38o7UDSHsA
-Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
+--===============2268263119827894633==
+Content-Type: multipart/related;
+	boundary="----=_001_34a5ba1ced4d648a_=----"
 
-(Buy, Sell, Repair, & Support)=C2=A0
+This is a multi-part message in MIME format.
 
-Cypress Technology is a reseller of HP 9000, e3000, & Itanium series, ABB A=
-ddvant series hardware working with the HP-UX UNIX, MPE/iX, and VMS operati=
-ng systems. We have been in business for 28 years selling HP hardware to en=
-d-users, reseller, maintenance companies, and data centers. We sell complet=
-e plug-n-play systems with OS loaded or spare parts. We provide replacement=
-s for discontinued HP product lines.
+------=_001_34a5ba1ced4d648a_=----
+Content-Type: multipart/alternative;
+	boundary="----=_002_34a5ba1ced4d648a_=----"
 
-The hardware that we stock and have expertise on is:
+------=_002_34a5ba1ced4d648a_=----
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
- * HP Itanium IA64 servers - rx2800, RX class IA64 blade, etc=C2=A0
- * HP Itanium IA64 workstations - ZX class
- * HP 9000 HP-UX PA-RISC RP, A, D, E, F, G, N, K, L, T, etc=C2=A0
- * HP 9000 HP-UX PA-RISC B, C, J, 700 series workstations
- * HP 9000 HP-UX PA-RISC VME based industrial controllers
- * HP 1000 HP-RTE A990, A900 A700, A600, A400.. etc servers
- * ABB / HP Advant controllers - RTA real-time accelerators
- * All parts for the above systems, arrays, drives, memory, etc
+DQpEZWFyIGZyaWVuZCwNCg0KSGF2ZSBhIGdvb2QgZGF5IGluIEFwcmlsICBhbmQgd2lzaCBldmVy
+eXRpbmcgZ29lcyAgd2VsbCB3aXRoIHlvdS4NCg0KSSdtIE1yIENoZW5nIGZyb20gUENCL1BDQkEg
+ZmFjdG9yeSwgd2Uga25vdyB5b3VyIGNvbXBhbnkgZnJvbSBJbnRlcm5ldCwgc29ycnkgdG8gYm90
+aGVyIHlvdS4NCldlIGFyZSBwcm9mZXNzaW9uYWwgbWFudWZhY3R1cmUgZm91Y3Mgb24gUENCL1BD
+QkEgIGRlc2lnbiBhbmQgcHJvZHVjdGlvbiwNCg0KTWF5YmUgeW91IGhhdmUgbmVlZGVkIGZvciB0
+aGUgc29sdXRpb24gb2YgIFBDQi9QQ0JBICAgZm9yIHlvdXIgbWFjaGluZXMgYW5kIHlvdXIgbW91
+ZGVscy4NCg0KVGhlbiBjYW4geW91IGNvbnNpZGVyIHRvIGNvbnRhY3QgdXMgZm9yIGVucXVpcnk/
+ICAgWW91IGNhbiBnZXQgb3VyIGVuZ2luZWVyIHByb2Zlc3NpbmFsIHNlcnZpY2Ugb24gdGhpcyBm
+aWVsZC4gDQoNCkxvb2sgZm9yd2FyZCB0byBoZWFyIGZyb20geW91IHNvbWUgZGF5Lg0KDQpUaGFu
+ayB5b3UgdmVyeSBtdWNoLg0KDQoNCg0KQmVzdCByZWdhcmRzDQpTYWxlcyBFbmdpbmVlcg0KQ2hl
+bmcNCg0KQ2hlbmcNClNhbGVzIEVuZ2luZWVyDQoNClByb2Zlc3Npb25hbCBNYW51ZmFjdHVyZSBm
+b3VjcyBvbiBQQ0IvUENCQSAgRGVzaWduIGFuZCBQcm9kdWN0aW9uDQpBZGQ6IE1pbmdDaGFvIEUt
+Y29tbWVyY2UgSW5kdXN0cmlhbCBQYXJrIFNoaXdhbiBUb3duLCBIdWl6aG91IENpdHksR3Vhbmdk
+b25nLENoaW5hDQoNCg==
 
-HP RX2800 running HP-UX 11.31 (v3) or VMS operating systems [http://www.cyp=
-ress-tech.com/hpe-hp-integrity-itanium-rx2800-i4-i6-server.html]
+------=_002_34a5ba1ced4d648a_=----
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
- * Standard 90-day warranty / eligible for HW maintenance
- * disaster back-up, clone replicas, spare parts, and add on peripherals
- * replacement parts for discontinued HP systems=C2=A0
- * buy - off lease bulk, surplus, & unused HP hardware
- * =C2=A0ship / export Worldwide to every country
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE4ODk0Ij48L0hFQUQ+DQo8Qk9EWT4NCjxQPkRlYXIgZnJp
+ZW5kLDwvUD4NCjxQPkhhdmUgYSBnb29kIGRheSBpbiBBcHJpbCZuYnNwOyBhbmQgd2lzaCBldmVy
+eXRpbmcgZ29lcyZuYnNwOyB3ZWxsIHdpdGggDQp5b3UuPC9QPg0KPFA+SSdtIE1yIENoZW5nIGZy
+b20gUENCL1BDQkEgZmFjdG9yeSwgd2Uga25vdyB5b3VyIGNvbXBhbnkgZnJvbSBJbnRlcm5ldCwg
+c29ycnkgDQp0byBib3RoZXIgeW91LjxCUj5XZSBhcmUmbmJzcDtwcm9mZXNzaW9uYWwmbmJzcDtt
+YW51ZmFjdHVyZSBmb3VjcyBvbiANCjxTVFJPTkc+UENCL1BDQkEmbmJzcDsgZGVzaWduIGFuZCBw
+cm9kdWN0aW9uPC9TVFJPTkc+LDwvUD4NCjxQPk1heWJlIHlvdSBoYXZlIG5lZWRlZCBmb3IgdGhl
+IHNvbHV0aW9uIG9mJm5ic3A7IFBDQi9QQ0JBJm5ic3A7Jm5ic3A7IGZvciB5b3VyIA0KbWFjaGlu
+ZXMgYW5kIHlvdXIgbW91ZGVscy48L1A+DQo8UD5UaGVuIGNhbiB5b3UgY29uc2lkZXIgdG8gY29u
+dGFjdCB1cyBmb3IgZW5xdWlyeT8mbmJzcDsmbmJzcDsgWW91IGNhbiBnZXQgb3VyIA0KZW5naW5l
+ZXIgcHJvZmVzc2luYWwgc2VydmljZSBvbiB0aGlzIGZpZWxkLiZuYnNwOzwvUD4NCjxQPkxvb2sg
+Zm9yd2FyZCB0byBoZWFyIGZyb20geW91IHNvbWUgZGF5LjwvUD4NCjxQPlRoYW5rIHlvdSB2ZXJ5
+IG11Y2guPC9QPg0KPFA+PElNRyBib3JkZXI9MCBoc3BhY2U9MCBhbHQ9IiIgc3JjPSJjaWQ6MDAw
+NjM5REJFMkI5XzA3NjIzQUJCXzA5QTA2Q0YxIiANCmFsaWduPWJhc2VsaW5lPjwvUD4NCjxQPkJl
+c3QgcmVnYXJkczxCUj5TYWxlcyBFbmdpbmVlcjxCUj5DaGVuZzwvUD4NCjxQPkNoZW5nPEJSPlNh
+bGVzIEVuZ2luZWVyPC9QPg0KPFA+PFNUUk9ORz48Rk9OVCBjb2xvcj1ibGFjaz5Qcm9mZXNzaW9u
+YWwmbmJzcDtNYW51ZmFjdHVyZSBmb3VjcyBvbiANClBDQi9QQ0JBJm5ic3A7IERlc2lnbiBhbmQg
+UHJvZHVjdGlvbjxCUj5BZGQ6IE1pbmdDaGFvIEUtY29tbWVyY2UgSW5kdXN0cmlhbCBQYXJrIA0K
+U2hpd2FuIFRvd24sIEh1aXpob3UgQ2l0eSxHdWFuZ2RvbmcsQ2hpbmE8QlI+PC9GT05UPjwvU1RS
+T05HPjwvUD48L0JPRFk+PC9IVE1MPg0K
 
-Contact us if you wish to buy, sell, or RFQ on any HP hardware. Contact wit=
-h any questions, requests, or assistance.=C2=A0
+------=_002_34a5ba1ced4d648a_=------
 
- * =C2=A0 =C2=A0 Thank you
- * =C2=A0 =C2=A0 Jesse Dougherty
- * =C2=A0 =C2=A0 Cypress Technology, Inc.
- * =C2=A0 =C2=A0 Land O Lakes, Florida USA
- * =C2=A0 =C2=A0 Phone 888-954-3414 / (direct) 412-589-3779
- * =C2=A0 =C2=A0=C2=A0jesse@cypress-tech.com [jesse@cypress-tech.com]
- * =C2=A0 =C2=A0=C2=A0www.Cypress-Tech.com [http://www.Cypress-Tech.com]
+------=_001_34a5ba1ced4d648a_=----
+Content-Type: image/jpeg;
+	name="pic.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <000639DBE2B9_07623ABB_09A06CF1>
 
-=C2=A0
+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
+VihX3c+H7/8A8T4btn//2Q==
+
+------=_001_34a5ba1ced4d648a_=------
 
 
 
-This e-mail has been sent to industrypack-devel@lists.sourceforge.net, clic=
-k here to unsubscribe http://xz01x.mjt.lu/unsub2?hl=3Den&m=3DAMYAABUcvOAAAc=
-ju9ioAAM5Eez0AAYCsxc8AnUiJABIoIQBkSyn7ZmKLFPgwTIi43cGKpywnVQASLds&b=3D3f817=
-c57&e=3D9316ed96&x=3DblJVDsiX8plutd-JCF2z0VeWXlNx4uKSwKrKrO8ySkZ-DvU2MaH33p=
-xNfIxLd1hR.=
-
---=-89/+hryPAa38o7UDSHsA
-Content-Type: text/html; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
-
-<!doctype html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
-schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
-ce"><head><title>Hewlett-Packard / ABB hardware - Cypress Technology</title=
-><!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Ded=
-ge"><!--<![endif]--><meta http-equiv=3D"Content-Type" content=3D"text/html;=
- charset=3DUTF-8"><meta name=3D"viewport" content=3D"width=3Ddevice-width,i=
-nitial-scale=3D1"><style type=3D"text/css">#outlook a { padding:0; }
-          body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-=
-size-adjust:100%; }
-          table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-tab=
-le-rspace:0pt; }
-          img { border:0;height:auto;line-height:100%; outline:none;text-de=
-coration:none;-ms-interpolation-mode:bicubic; }
-          p { display:block;margin:13px 0; }</style><!--[if mso]>
-        <noscript>
-        <xml>
-        <o:OfficeDocumentSettings>
-          <o:AllowPNG/>
-          <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-        </xml>
-        </noscript>
-        <![endif]--><!--[if lte mso 11]>
-        <style type=3D"text/css">
-          .mj-outlook-group-fix { width:100% !important; }
-        </style>
-        <![endif]--><style type=3D"text/css">@media only screen and (min-wi=
-dth:480px) {
-        .mj-column-per-100 { width:100% !important; max-width: 100%; }
-      }</style><style media=3D"screen and (min-width:480px)">.moz-text-html=
- .mj-column-per-100 { width:100% !important; max-width: 100%; }</style><sty=
-le type=3D"text/css">[owa] .mj-column-per-100 { width:100% !important; max-=
-width: 100%; }</style><style type=3D"text/css"></style></head><body style=
-=3D"word-spacing:normal;background-color:#F4F4F4;"><div style=3D"background=
--color:#F4F4F4;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cel=
-lspacing=3D"0" role=3D"presentation" style=3D"background:#ffffff;background=
--color:#ffffff;width:100%;"><tbody><tr><td><!--[if mso | IE]><table align=
-=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" rol=
-e=3D"presentation" style=3D"width:600px;" width=3D"600" bgcolor=3D"#ffffff"=
- ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exact=
-ly;"><![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table ali=
-gn=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pres=
-entation" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-=
-size:0px;padding:20px 0px 20px 0px;padding-left:0px;padding-right:0px;text-=
-align:center;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" =
-cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-al=
-ign:top;width:600px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlo=
-ok-group-fix" style=3D"font-size:0px;text-align:left;direction:ltr;display:=
-inline-block;vertical-align:top;width:100%;"><table border=3D"0" cellpaddin=
-g=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"vertical-align:top=
-;" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"font-size:0px;padd=
-ing:10px 25px;padding-top:0px;padding-bottom:0px;word-break:break-word;"><d=
-iv style=3D"font-family:Arial, sans-serif;font-size:16px;letter-spacing:nor=
-mal;line-height:1;text-align:left;color:#000000;"><p class=3D"text-build-co=
-ntent" data-testid=3D"XOg3BoD5V" style=3D"margin: 10px 0; margin-top: 10px;=
-"><span style=3D"color:#000000;font-family:Arial, sans-serif;font-size:18px=
-;"><b>(Buy, Sell, Repair, &amp; Support)&nbsp;</b></span></p><p class=3D"te=
-xt-build-content" data-testid=3D"XOg3BoD5V" style=3D"margin: 10px 0;"><span=
- style=3D"color:#000000;font-family:Arial;font-size:16px;">Cypress Technolo=
-gy is a reseller of HP 9000, e3000, &amp; Itanium series, ABB Addvant serie=
-s hardware working with the HP-UX UNIX, MPE/iX, and VMS operating systems. =
-We have been in business for 28 years selling HP hardware to end-users, res=
-eller, maintenance companies, and data centers. We sell complete plug-n-pla=
-y systems with OS loaded or spare parts. We provide replacements for discon=
-tinued HP product lines.</span></p><p class=3D"text-build-content" data-tes=
-tid=3D"XOg3BoD5V" style=3D"margin: 10px 0;"><span style=3D"color:#000000;fo=
-nt-family:Arial;font-size:16px;">The hardware that we stock and have expert=
-ise on is:</span></p><ul><li><span style=3D"color:#000000;font-family:Arial=
-;font-size:16px;">HP Itanium IA64 servers - rx2800, RX class IA64 blade, et=
-c&nbsp;</span></li><li><span style=3D"color:#000000;font-family:Arial;font-=
-size:16px;">HP Itanium IA64 workstations - ZX class</span></li><li><span st=
-yle=3D"color:#000000;font-family:Arial;font-size:16px;">HP 9000 HP-UX PA-RI=
-SC RP, A, D, E, F, G, N, K, L, T, etc&nbsp;</span></li><li><span style=3D"c=
-olor:#000000;font-family:Arial;font-size:16px;">HP 9000 HP-UX PA-RISC B, C,=
- J, 700 series workstations</span></li><li><span style=3D"color:#000000;fon=
-t-family:Arial;font-size:16px;">HP 9000 HP-UX PA-RISC VME based industrial =
-controllers</span></li><li><span style=3D"color:#000000;font-family:Arial;f=
-ont-size:16px;">HP 1000 HP-RTE A990, A900 A700, A600, A400.. etc servers</s=
-pan></li><li><span style=3D"color:#000000;font-family:Arial;font-size:16px;=
-">ABB / HP Advant controllers - RTA real-time accelerators</span></li><li><=
-span style=3D"color:#000000;font-family:Arial;font-size:16px;">All parts fo=
-r the above systems, arrays, drives, memory, etc</span></li></ul><p class=
-=3D"text-build-content" data-testid=3D"XOg3BoD5V" style=3D"margin: 10px 0;"=
-><a class=3D"link-build-content" style=3D"color:inherit;; text-decoration: =
-none;" target=3D"_blank" href=3D"http://xz01x.mjt.lu/lnk/AMYAABUcvOAAAcju9i=
-oAAM5Eez0AAYCsxc8AnUiJABIoIQBkSyn7ZmKLFPgwTIi43cGKpywnVQASLds/1/Q80KZeT-rhL=
-53oJXoNQfYA/aHR0cDovL3d3dy5jeXByZXNzLXRlY2guY29tL2hwZS1ocC1pbnRlZ3JpdHktaXR=
-hbml1bS1yeDI4MDAtaTQtaTYtc2VydmVyLmh0bWw"><span style=3D"color:#55575d;font=
--family:Arial;font-size:16px;"><b><u>HP RX2800 running HP-UX 11.31 (v3) or =
-VMS operating systems</u></b></span></a></p><ul><li>Standard 90-day warrant=
-y / eligible for HW maintenance</li><li><span style=3D"color:#000000;font-f=
-amily:Arial;font-size:16px;">disaster back-up, clone replicas, spare parts,=
- and add on peripherals</span></li><li><span style=3D"color:#000000;font-fa=
-mily:Arial;font-size:16px;">replacement parts for discontinued HP systems&n=
-bsp;</span></li><li><span style=3D"color:#000000;font-family:Arial;font-siz=
-e:16px;">buy - off lease bulk, surplus, &amp; unused HP hardware</span></li=
-><li><span style=3D"color:#000000;font-family:Arial;font-size:16px;">&nbsp;=
-ship / export Worldwide to every country</span></li></ul><p class=3D"text-b=
-uild-content" data-testid=3D"XOg3BoD5V" style=3D"margin: 10px 0;"><span sty=
-le=3D"color:#000000;font-family:Arial;font-size:16px;">Contact us if you wi=
-sh to buy, sell, or RFQ on any HP hardware. Contact with any questions, req=
-uests, or assistance.&nbsp;</span></p><ul><li><span style=3D"color:#000000;=
-font-family:Arial;font-size:16px;">&nbsp; &nbsp; Thank you</span></li><li><=
-span style=3D"color:#000000;font-family:Arial;font-size:16px;">&nbsp; &nbsp=
-; Jesse Dougherty</span></li><li><span style=3D"color:#000000;font-family:A=
-rial;font-size:16px;">&nbsp; &nbsp; Cypress Technology, Inc.</span></li><li=
-><span style=3D"color:#000000;font-family:Arial;font-size:16px;">&nbsp; &nb=
-sp; Land O Lakes, Florida USA</span></li><li><span style=3D"color:#000000;f=
-ont-family:Arial;font-size:16px;">&nbsp; &nbsp; Phone 888-954-3414 / (direc=
-t) 412-589-3779</span></li><li><span style=3D"color:#000000;font-family:Ari=
-al;font-size:16px;">&nbsp; &nbsp;&nbsp;</span><a class=3D"link-build-conten=
-t" style=3D"color:inherit;; text-decoration: none;" href=3D"mailto:jesse@cy=
-press-tech.com"><span style=3D"color:#55575d;font-family:Arial;font-size:16=
-px;"><u>jesse@cypress-tech.com</u></span></a></li><li><span style=3D"color:=
-#000000;font-family:Arial;font-size:16px;">&nbsp; &nbsp;&nbsp;</span><a cla=
-ss=3D"link-build-content" style=3D"color:inherit;; text-decoration: none;" =
-target=3D"_blank" href=3D"http://xz01x.mjt.lu/lnk/AMYAABUcvOAAAcju9ioAAM5Ee=
-z0AAYCsxc8AnUiJABIoIQBkSyn7ZmKLFPgwTIi43cGKpywnVQASLds/2/Uxr1SrCDf8flwZ190s=
-96dg/aHR0cDovL3d3dy5DeXByZXNzLVRlY2guY29t"><span style=3D"color:#55575d;fon=
-t-family:Arial;font-size:16px;"><u>www.Cypress-Tech.com</u></span></a></li>=
-</ul><p class=3D"text-build-content" data-testid=3D"XOg3BoD5V" style=3D"mar=
-gin: 10px 0; margin-bottom: 10px;">&nbsp;</p></div></td></tr></tbody></tabl=
-e></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody><=
-/table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tb=
-ody></table><!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadd=
-ing=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width=
-:600px;" width=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-=
-line-height-rule:exactly;"><![endif]--><div style=3D"margin:0px auto;max-wi=
-dth:600px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
-ing=3D"0" role=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=
-=3D"direction:ltr;font-size:0px;padding:20px 0px 20px 0px;text-align:center=
-;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=
-=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;wid=
-th:600px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fi=
-x" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
-k;vertical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cel=
-lspacing=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D=
-"100%"><tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:0px 20p=
-x 0px 20px;padding-top:0px;padding-bottom:0px;word-break:break-word;"><div =
-style=3D"font-family:Arial, sans-serif;font-size:13px;letter-spacing:normal=
-;line-height:1;text-align:left;color:#000000;"><p class=3D"text-build-conte=
-nt" style=3D"text-align: center; margin: 10px 0; margin-top: 10px; margin-b=
-ottom: 10px;" data-testid=3D"h4QAoZveqV24o"><span style=3D"color:#55575d;fo=
-nt-family:Arial;font-size:13px;line-height:22px;">This e-mail has been sent=
- to industrypack-devel@lists.sourceforge.net, </span><a class=3D"link-build=
--content" style=3D"color:inherit;; text-decoration: none;" target=3D"_blank=
-" href=3D"http://xz01x.mjt.lu/unsub2?hl=3Den&amp;m=3DAMYAABUcvOAAAcju9ioAAM=
-5Eez0AAYCsxc8AnUiJABIoIQBkSyn7ZmKLFPgwTIi43cGKpywnVQASLds&amp;b=3D3f817c57&=
-amp;e=3D9316ed96&amp;x=3DblJVDsiX8plutd-JCF2z0VeWXlNx4uKSwKrKrO8ySkZ-DvU2Ma=
-H33pxNfIxLd1hR"><span style=3D"color:#55575d;font-family:Arial;font-size:13=
-px;line-height:22px;">click here to unsubscribe</span></a><span style=3D"co=
-lor:#55575d;font-family:Arial;font-size:13px;line-height:22px;">.</span></p=
-></div></td></tr><tr><td align=3D"left" style=3D"font-size:0px;padding:0px =
-20px 0px 20px;padding-top:0px;padding-bottom:0px;word-break:break-word;"><d=
-iv style=3D"font-family:Arial, sans-serif;font-size:13px;letter-spacing:nor=
-mal;line-height:1;text-align:left;color:#000000;"></div></td></tr></tbody><=
-/table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tb=
-ody></table></div><!--[if mso | IE]></td></tr></table><![endif]--></div>
-<br/><img src=3D"http://xz01x.mjt.lu/oo/AMYAABUcvOAAAcju9ioAAM5Eez0AAYCsxc8=
-AnUiJABIoIQBkSyn7ZmKLFPgwTIi43cGKpywnVQASLds/1c3d1ba7/e.gif" height=3D"1" w=
-idth=3D"1" alt=3D"" border=3D"0" style=3D"height:1px;width:1px;border:0;"/>
-</body></html>=
-
---=-89/+hryPAa38o7UDSHsA--
-
-
-
---===============4543326188069065529==
+--===============2268263119827894633==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4543326188069065529==
+--===============2268263119827894633==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -360,6 +517,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4543326188069065529==--
+--===============2268263119827894633==--
 
 
