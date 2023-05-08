@@ -2,84 +2,83 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 675A16F9CE8
-	for <lists+industrypack-devel@lfdr.de>; Mon,  8 May 2023 02:07:33 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4C45C6FA911
+	for <lists+industrypack-devel@lfdr.de>; Mon,  8 May 2023 12:47:33 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1pvoPb-0002Pv-Cf
+	id 1pvyOx-0001Ft-8M
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 08 May 2023 00:07:31 +0000
+	Mon, 08 May 2023 10:47:32 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <Administrator@jc-valves.net.cn>) id 1pvoPX-0002Pj-HB
+ (envelope-from <info@inteligenciafiscal.net.br>) id 1pvyOv-0001FY-Q5
  for industrypack-devel@lists.sourceforge.net;
- Mon, 08 May 2023 00:07:28 +0000
+ Mon, 08 May 2023 10:47:30 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
- Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=ba++Dtg65GWybbJkHzsvKKAil6WJXS8QhNs2cIDCD/I=; b=c0pWDqvJBMdRLoXOYvejTy+Xdn
- jA4LrcZYIrUoXzgyqxLObzGq4K5cfqBqZbm6reGkQ+kYz+0jhGGDH3jjf6lhtdiaghU5/bmtb9ecl
- +hEVaA53s1LPmEnMV4N2fnJdKVuFMoK4Hic3TteCYrMtdL+VSZ/g+/60AVXjn+6Jef7s=;
+ bh=9P3nEMJ9YMDWwUpToAxrhxIY1IU2JIsvWGM2Cd1YRfg=; b=PPu+/iKyIiaDwn182uic3ynart
+ OjYva7Bh0ZFXpF9naQlqauu6LTxjEBVCor53z5JAmkJyim+Gyrvm6Kw/+xgF3mNfagfEdSqJ+I0fH
+ ok7vrAvB4vDeSw9yKDbLsZIZT6AW6W/jrDnTOEFA3B3H+LzG5GNje4YOn0a8qu1k2euI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
+ h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=ba++Dtg65GWybbJkHzsvKKAil6WJXS8QhNs2cIDCD/I=; b=g
- 3L6gLAEVFjxdY7eQUBC5iCAfIwY3EL5nXCm5/BIFj2VR3MItSNyt9d+VIyge1/wTInOSDy4MCC3BY
- qIpnl4sYq324TGn1Uyx5+36TbXfXR2btTICdR9NxAU6OfmsTF7iBt/bcTtuNQzTje82RFUAg4ENe8
- Vx9SL8n8A4f0KjPo=;
-Received: from [172.93.185.194] (helo=mail0.jc-valves.net.cn)
+ List-Owner:List-Archive; bh=9P3nEMJ9YMDWwUpToAxrhxIY1IU2JIsvWGM2Cd1YRfg=; b=a
+ VxsWUUaemOsJzAMseyVsB2+X/0HBrBlUMkfaCjU8gdHD5bCfBcFGp+gVitCxQFQg3MdH76+91T9hk
+ 9/P7iG3IaG/6GgDPud3B1F9eyGpMxBt181Vk1KWehL5YenrlghuJWIaS5LLCAOmRiqy1VKEALmnA9
+ 2Z7eJS3QRe79XIgA=;
+Received: from mail.shared.smartape.ru ([185.9.147.194]
+ helo=mail2.incollege.live)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1pvoPS-0004VC-Nv for industrypack-devel@lists.sourceforge.net;
- Mon, 08 May 2023 00:07:27 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
- d=jc-valves.net.cn; 
- h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id;
- i=Administrator@jc-valves.net.cn;
- bh=ba++Dtg65GWybbJkHzsvKKAil6WJXS8QhNs2cIDCD/I=;
- b=3p8BwG1n5Lowso1S3zpE/VDKPYEY/vouD4FYVXxasIdqtCIguatHmY2hAyrCMHYJ7NYOO/8m8fJh
- aiDEANgA0cigX+IVHs4BhDrBK2M64TWiuuoKNmKx3GIxV3ddCTuvTQYqvAqYm9NuwS2MUQmTK6gI
- sxJMp+2HryfSSevzhBo=
-From: "Administrator@jc-valves.net.cn" <Administrator@jc-valves.net.cn>
-To: <industrypack-devel@lists.sourceforge.net>
+ id 1pvyOv-0002tE-I1 for industrypack-devel@lists.sourceforge.net;
+ Mon, 08 May 2023 10:47:30 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dkim; d=yangtulip.xyz; 
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type;
+ i=@mail2.yangtulip.xyz;
+ bh=9P3nEMJ9YMDWwUpToAxrhxIY1IU2JIsvWGM2Cd1YRfg=;
+ b=3C3XTMjd5Gm++g0KJ2vowQ4Jys0B21y5HpyXg0UBZiWZiXgsvhgAIy61ReYrjBZOQRMO/66vKwa2
+ 7HaktWFrFURt0VPihzSSBRn9l3CqF6It1RgOKBHTAQBB35gk4XqbcAWFZX3NwW62gXnbJhLfLDvr
+ Zt3EXYocDgWjcLRBB7o=
+From: info@inteligenciafiscal.net.br
+To: industrypack-devel@lists.sourceforge.net
+Date: 08 May 2023 10:47:21 +0000
+Message-ID: <20230508104721.2B8C371D8327FA5C@inteligenciafiscal.net.br>
 MIME-Version: 1.0
-Date: Sun, 7 May 2023 23:46:59 +0000
-Message-Id: <2023070523465921663D4C9C-8AC59D493D@jc-valves.net.cn>
-X-Spam-Score: 2.4 (++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 7.8 (+++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  确认您的电子邮件 Dear 您有 {3} 未送达的邮件
-    11:46 PM. 这是由于系统延迟造成的. 
- 
- Content analysis details:   (2.4 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  See Attached Leandro Stadler Foreign Trade Manager 
+ Content analysis details:   (7.8 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
- [SPF failed: Please see http://www.openspf.org/Why?s=mfrom;id=administrator%40jc-valves.net.cn;ip=172.93.185.194;r=util-spamd-2.v13.lw.sourceforge.com]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
-                             identical to background
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
-  0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1pvoPS-0004VC-Nv
-Subject: [Industrypack-devel] =?utf-8?b?MyDinIkg5pyq6YCB6L6+55qE6YKu5Lu2?=
+ 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
+ blocklist [URIs: yangtulip.xyz]
+ 2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
+ [URI: yangtulip.xyz (xyz)]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.7 SPF_NEUTRAL            SPF: sender does not match SPF record (neutral)
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ 0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+X-Headers-End: 1pvyOv-0002tE-I1
+Subject: [Industrypack-devel] Fwd: Payment Confirmation 2308
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,130 +90,314 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============1991146839208225127=="
+Content-Type: multipart/mixed; boundary="===============8119031956771070888=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
 
---===============1991146839208225127==
-Content-Type: multipart/alternative; boundary="VdubrAP=_gGMU7C7JW4rW5ox0VxNf6ZE8B"
+--===============8119031956771070888==
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0012_4B3AF5CE.B5E4A33C"
 
-This is a multi-part message in MIME format
 
---VdubrAP=_gGMU7C7JW4rW5ox0VxNf6ZE8B
-Content-Type: text/plain; charset="utf-8"
+------=_NextPart_000_0012_4B3AF5CE.B5E4A33C
+Content-Type: text/html;
+	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<body>
+<DIV class=3Dnu0 style=3D"FONT-SIZE: 12px; FONT-FAMILY: 'Microsoft Yahei', =
+verdana; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT=
+-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); OUTLINE-WIDTH: 0p=
+x; PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 12px; OUTLINE-STYL=
+E: none; PADDING-LEFT: 12px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal;=
+ OUTLINE-COLOR: invert; PADDING-RIGHT: 12px; BACKGROUND-COLOR: rgb(255,255,=
+255); TEXT-INDENT: 0px; -webkit-text-stroke-width:=20
+0px; font-variant-ligatures: normal">See Attached<BR>
+<P style=3D"WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; C=
+OLOR: rgb(49,53,59); FONT: 12px/19px Verdana; WIDOWS: 1; MARGIN: 0px; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN =
+style=3D"FONT-SIZE: 11pt"><SPAN style=3D"FONT-FAMILY: Calibri, sans-serif">=
+<SPAN style=3D"COLOR: rgb(49,53,59)"><SPAN style=3D"FONT-STYLE: normal"><SP=
+AN style=3D"FONT-VARIANT: normal"><SPAN style=3D"FONT-WEIGHT: normal"><SPAN=
+ style=3D"WHITE-SPACE: normal"><BR><BR></SPAN></SPAN></SPAN>
+</SPAN></SPAN></SPAN></SPAN>&nbsp;</P>
+<P style=3D"WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; C=
+OLOR: rgb(49,53,59); FONT: 12px/19px Verdana; WIDOWS: 1; MARGIN: 0px; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN =
+style=3D"FONT-SIZE: 11pt"><SPAN style=3D"FONT-FAMILY: Calibri, sans-serif">=
+<SPAN style=3D"COLOR: rgb(49,53,59)"><SPAN style=3D"FONT-STYLE: normal"><SP=
+AN style=3D"FONT-VARIANT: normal"><SPAN style=3D"FONT-WEIGHT: normal"><SPAN=
+ style=3D"WHITE-SPACE: normal"><SPAN style=3D"FONT-SIZE: 9pt">
+<SPAN style=3D"FONT-FAMILY: 'Gotham Book'"><SPAN style=3D"COLOR: black">Lea=
+ndro Stadler</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN>=
+</SPAN></P>
+<P style=3D"WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; C=
+OLOR: rgb(49,53,59); FONT: 12px/19px Verdana; WIDOWS: 1; MARGIN: 0px; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN =
+style=3D"FONT-SIZE: 11pt"><SPAN style=3D"FONT-FAMILY: Calibri, sans-serif">=
+<SPAN style=3D"COLOR: rgb(49,53,59)"><SPAN style=3D"FONT-STYLE: normal"><SP=
+AN style=3D"FONT-VARIANT: normal"><SPAN style=3D"FONT-WEIGHT: normal"><SPAN=
+ style=3D"WHITE-SPACE: normal"><SPAN style=3D"FONT-SIZE: 9pt">
+<SPAN style=3D"FONT-FAMILY: 'Gotham Book'"><SPAN style=3D"COLOR: black">For=
+eign Trade Manager</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN><=
+/SPAN></SPAN></P>
+<P style=3D"WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; C=
+OLOR: rgb(49,53,59); FONT: 12px/19px Verdana; WIDOWS: 1; MARGIN: 0px; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN =
+style=3D"FONT-SIZE: 11pt"><SPAN style=3D"FONT-FAMILY: Calibri, sans-serif">=
+<SPAN style=3D"COLOR: rgb(49,53,59)"><SPAN style=3D"FONT-STYLE: normal"><SP=
+AN style=3D"FONT-VARIANT: normal"><SPAN style=3D"FONT-WEIGHT: normal"><SPAN=
+ style=3D"WHITE-SPACE: normal"><SPAN style=3D"FONT-SIZE: 9pt">
+<SPAN style=3D"FONT-FAMILY: 'Gotham Book'"><SPAN style=3D"COLOR: black"><A =
+href=3D"http://www.produtosmaster.com.br">www.produtosmaster.com.br</A></SP=
+AN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></P>
+<P style=3D"WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; C=
+OLOR: rgb(49,53,59); FONT: 12px/19px Verdana; WIDOWS: 1; MARGIN: 0px; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><SPAN =
+style=3D"FONT-SIZE: 11pt"><SPAN style=3D"FONT-FAMILY: Calibri, sans-serif">=
+<SPAN style=3D"COLOR: rgb(49,53,59)"><SPAN style=3D"FONT-STYLE: normal"><SP=
+AN style=3D"FONT-VARIANT: normal"><SPAN style=3D"FONT-WEIGHT: normal"><SPAN=
+ style=3D"WHITE-SPACE: normal"><SPAN style=3D"FONT-SIZE: 9pt">
+<SPAN style=3D"FONT-FAMILY: 'Gotham Book'"><SPAN style=3D"COLOR: black">+55=
+ 11 2589-0111 R: 115 </SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPA=
+N></SPAN></SPAN></P><BR><SPAN id=3Dyiv2317600390yui_3_16_0_ym19_1_155045503=
+3009_76279 style=3D"FONT-SIZE: 18pt; FONT-FAMILY: Webdings; COLOR: rgb(112,=
+173,71)"><BR>P</SPAN><SPAN id=3Dyiv2317600390yui_3_16_0_ym19_1_155045503300=
+9_76280 style=3D"COLOR: rgb(112,173,71)">&nbsp;Please consider the environm=
+ent before printing this e-mail<BR></SPAN></DIV>
+<DIV id=3D1556118163893_dvReadAd class=3D"tI0 txt-info" style=3D"FONT-SIZE:=
+ 12px; FONT-FAMILY: 'Microsoft Yahei', verdana; FONT-VARIANT: normal; WHITE=
+-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; =
+COLOR: rgb(34,34,34); OUTLINE-WIDTH: 0px; FONT-STYLE: normal; OUTLINE-STYLE=
+: none; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px 10px; LETTER-SPACING: normal; OU=
+TLINE-COLOR: invert; BACKGROUND-COLOR: rgb(247,247,247); TEXT-INDENT: 0px; =
+-webkit-text-stroke-width: 0px; font-variant-ligatures:=20
+normal">
+<DIV role=3Dlistitem tabIndex=3D0 aria-label=3D&#24191;&#21578;&#21306; tit=
+le=3D"Advertising area" class=3Drd0 style=3D"OVERFLOW: hidden; HEIGHT: 27px=
+; OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE:=
+ none; PADDING-LEFT: 12px; OUTLINE-COLOR: invert; LINE-HEIGHT: 27px; PADDIN=
+G-RIGHT: 12px">
+<A id=3D_mail_link_170_1242 title=3D"Go advertising" class=3D" js-component=
+-link " hideFocus style=3D"TEXT-DECORATION: none; COLOR: rgb(35,109,161)" h=
+ref=3D"mailmaster://webui/mailcontent/152/332/java_script:void(0)"><SPAN st=
+yle=3D"FONT-SIZE: 18px; CURSOR: pointer; POSITION: relative; FLOAT: right; =
+COLOR: rgb(153,153,153); OUTLINE-WIDTH: 0px; OUTLINE-STYLE: none; PADDING-L=
+EFT: 8px; Z-INDEX: 1; OUTLINE-COLOR: invert"><FONT style=3D"VERTICAL-ALIGN:=
+ inherit"><FONT style=3D"VERTICAL-ALIGN: inherit">&times;</FONT>
+ </FONT></SPAN></A>
+<DIV style=3D"POSITION: relative; OUTLINE-WIDTH: 0px; OUTLINE-STYLE: none; =
+OUTLINE-COLOR: invert"><SPAN style=3D"FLOAT: right; COLOR: rgb(153,153,153)=
+; OUTLINE-WIDTH: 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert"><FONT sty=
+le=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit">[ad]=
+</FONT></FONT></SPAN><IFRAME style=3D"HEIGHT: 27px; WIDTH: 1027px; POSITION=
+: absolute; LEFT: 0px; TOP: 0px" frameBorder=3D0 allowTransparency scrollin=
+g=3Dno _src=3D""></IFRAME></DIV></DIV>
+<DIV class=3Dnui-split style=3D"FONT-SIZE: 0px; OVERFLOW: hidden; BORDER-TO=
+P: rgb(202,216,226) 0px solid; HEIGHT: 0px; BORDER-RIGHT: rgb(202,216,226) =
+0px solid; BORDER-BOTTOM: rgb(202,216,226) 1px solid; COLOR: rgb(224,224,22=
+4); OUTLINE-WIDTH: 0px; OUTLINE-STYLE: none; CLEAR: both; BORDER-LEFT: rgb(=
+202,216,226) 0px solid; OUTLINE-COLOR: invert; LINE-HEIGHT: 0"></DIV></DIV>=
 
-=E7=A1=AE=E8=AE=A4=E6=82=A8=E7=9A=84=E7=94=B5=E5=AD=90=E9=82=AE=E4=BB=B6=
+<DIV class=3DlY0 style=3D"FONT-SIZE: 12px; FONT-FAMILY: 'Microsoft Yahei', =
+verdana; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT=
+-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); OUTLINE-WIDTH: 0p=
+x; PADDING-BOTTOM: 10px; FONT-STYLE: normal; PADDING-TOP: 10px; OUTLINE-STY=
+LE: none; PADDING-LEFT: 10px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal=
+; OUTLINE-COLOR: invert; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(255,255=
+,255); TEXT-INDENT: 0px; -webkit-text-stroke-width:=20
+0px; font-variant-ligatures: normal">
+<DIV id=3D1556118163893_dvAttach_reply class=3D"sz0 nui-bg-light nui-bdr-li=
+ght" style=3D"BORDER-TOP: rgb(202,216,226) 1px solid; BORDER-RIGHT: rgb(202=
+,216,226) 1px solid; BORDER-BOTTOM: rgb(202,216,226) 1px solid; OUTLINE-WID=
+TH: 0px; OUTLINE-STYLE: none; BORDER-LEFT: rgb(202,216,226) 1px solid; OUTL=
+INE-COLOR: invert; BACKGROUND-COLOR: rgb(246,249,251); border-radius: 2px">=
+<A style=3D"TEXT-DECORATION: none; COLOR: rgb(35,109,161)" name=3D155611816=
+3893_aAttachTag></A>
+<DIV tabIndex=3D0 id=3D1556118163893_dvAttachBody class=3Dtn0 style=3D"OUTL=
+INE-WIDTH: 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; LINE-HEIGHT: no=
+rmal">
+<DIV id=3D1556118163893_dvAttachHead class=3Dsa0 style=3D"POSITION: relativ=
+e; OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 10px; OUTLINE-STYL=
+E: none; PADDING-LEFT: 10px; OUTLINE-COLOR: invert; PADDING-RIGHT: 10px">
+<DIV class=3Dox0 style=3D"OUTLINE-WIDTH: 0px; OUTLINE-STYLE: none; OUTLINE-=
+COLOR: invert">
+<B class=3D"nui-ico nui-ico-att" style=3D"FONT-SIZE: 12px; OVERFLOW: hidden=
+; HEIGHT: 12px; FONT-FAMILY: nui !important; WIDTH: 8px; VERTICAL-ALIGN: mi=
+ddle; BACKGROUND:=20
+url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAYAAABfnvydAAAAA=
+XNSR0IArs4c6QAAAP9JREFUGBljZICCyspK2////8cAuSyMjIyb29vbN4CkmEFEeXm5N1ByKZC5=
+k4mJ6SWQXW1tbc119OjRI4wgBRUVFQeA1GQgjgdKSgNNKAXSGzg5OYWYgAyQIksg/gpkywIlTwF=
+pCyD/0a9fv/SYgQJMv3//bgIavRwoaAzEZ4BiIkBaGIhPMGlpaYGtAQr+BwqAAdRUMJsJKsbw79=
+8/uAKYGIiGK0AWRGbDFQDdwAg0GgRAVv6DKWIKCwv7C+R8AEq8A9J1QLfoAfFDIN7EzMx8lwWkE=
+qi7FeiGvUDmeSAWA+Lsjo6O90CaAewDEAMY1BpAXfL8/PzHgCH7GSQGAgD1fF3SL4XYcQAAAABJ=
+RU5ErkJggg=3D=3D) no-repeat; MARGIN-TOP: -5px;=20
+FONT-WEIGHT: 400; FONT-STYLE: normal; TEXT-ALIGN: center; DISPLAY: inline-b=
+lock; LINE-HEIGHT: normal; -webkit-font-smoothing: antialiased"></B><STRONG=
+ class=3DjU0 style=3D"FONT-SIZE: 14px; MARGIN-LEFT: 4px; LINE-HEIGHT: 1.1">=
+<FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inhe=
+rit">Attachment<SPAN>&nbsp;</SPAN></FONT></FONT><SPAN class=3DApple-convert=
+ed-space>&nbsp;</SPAN>
+ <SPAN class=3D"nui-txt-s12 nui-txt-tips" style=3D"FONT-SIZE: 12px !importa=
+nt; FONT-WEIGHT: normal; COLOR: rgb(153,153,153) !important; OUTLINE-WIDTH:=
+ 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert"><FONT style=3D"VERTICAL-A=
+LIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit">&nbsp;(1)</FONT></FO=
+NT></SPAN></STRONG></DIV>
+<DIV class=3D"nui-split sK0" style=3D"FONT-SIZE: 0px; OVERFLOW: hidden; BOR=
+DER-TOP: rgb(202,216,226) 0px solid; HEIGHT: 0px; BORDER-RIGHT: rgb(202,216=
+,226) 0px solid; MARGIN-TOP: 10px; BORDER-BOTTOM: rgb(202,216,226) 1px soli=
+d; COLOR: rgb(224,224,224); OUTLINE-WIDTH: 0px; OUTLINE-STYLE: none; CLEAR:=
+ both; BORDER-LEFT: rgb(202,216,226) 0px solid; OUTLINE-COLOR: invert; LINE=
+-HEIGHT: 0"></DIV></DIV>
+<DIV class=3DrY0 style=3D"MARGIN-BOTTOM: 15px; POSITION: relative; ZOOM: 1;=
+ OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: =
+none; PADDING-LEFT: 10px; OUTLINE-COLOR: invert; PADDING-RIGHT: 10px">
+<UL id=3D1556118163893_ulCommonAttachItem class=3D"qs0 nui-fClear" style=3D=
+"LIST-STYLE-TYPE: none; OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TO=
+P: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 7px; OU=
+TLINE-COLOR: invert; PADDING-RIGHT: 0px">
+<LI tabIndex=3D0 id=3D1556118163893_3 class=3Dlh0 style=3D"HEIGHT: auto; WI=
+DTH: 120px; VERTICAL-ALIGN: top; POSITION: relative; OUTLINE-WIDTH: 0px; PA=
+DDING-BOTTOM: 0px; PADDING-TOP: 10px; OUTLINE-STYLE: none; PADDING-LEFT: 0p=
+x; MARGIN: 6px 40px 6px 0px; DISPLAY: inline-block; OUTLINE-COLOR: invert; =
+PADDING-RIGHT: 0px">
+<table style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 12px; FONT-FAMILY: inher=
+it; BORDER-RIGHT-WIDTH: 0px; WIDTH: 100px; BORDER-BOTTOM-WIDTH: 0px; BORDER=
+-COLLAPSE: collapse; POSITION: relative; ZOOM: 1; OUTLINE-WIDTH: 0px; PADDI=
+NG-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; B=
+ORDER-SPACING: 0px; MARGIN: 0px 0px 0px 10px; OUTLINE-COLOR: invert; LINE-H=
+EIGHT: 1; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px">
+<TBODY>
+<TR>
+<td class=3D"eG0" style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 0px; HEIGHT: =
+100px; BORDER-RIGHT-WIDTH: 0px; WIDTH: 100px; VERTICAL-ALIGN: middle; BORDE=
+R-BOTTOM-WIDTH: 0px; OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 0px; TEXT-ALIGN: c=
+enter; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0p=
+x; OUTLINE-COLOR: invert; LINE-HEIGHT: 0; PADDING-RIGHT: 0px; BORDER-TOP-WI=
+DTH: 0px">
+<DIV class=3Dcf0 style=3D"OVERFLOW: hidden; WIDTH: 100px; OUTLINE-WIDTH: 0p=
+x; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; MAX-HEIGHT: 100px">
+<B id=3D_mail_icon_267_1231 class=3D"js-component-icon nui-ico nui-ico-file=
+75  nui-ico-file75-3  " style=3D"FONT-SIZE: 12px; OVERFLOW: hidden; HEIGHT:=
+ 75px; FONT-FAMILY: nui !important; WIDTH: 75px; VERTICAL-ALIGN: middle; BA=
+CKGROUND-IMAGE: url(../../lib/img/fileico_v5.png); BACKGROUND-REPEAT: no-re=
+peat; BACKGROUND-POSITION: -150px -144px; FONT-WEIGHT: 400; FONT-STYLE: nor=
+mal; TEXT-ALIGN: center; DISPLAY: inline-block; LINE-HEIGHT: normal; -webki=
+t-font-smoothing: antialiased">
+<img style=3D"HEIGHT: 82px; WIDTH: 80px" border=3D"0" hspace=3D"0" alt=3D""=
+ src=3D"cid:8243003.png" width=3D"127" align=3D"baseline" height=3D"127"></=
+B></DIV></TD></TR>
+<TR>
+<td class=3D"gx0" style=3D"BORDER-LEFT-WIDTH: 0px; HEIGHT: auto; BORDER-RIG=
+HT-WIDTH: 0px; VERTICAL-ALIGN: top; BORDER-BOTTOM-WIDTH: 0px; OUTLINE-WIDTH=
+: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-=
+LEFT: 0px; MARGIN: 0px; OUTLINE-COLOR: invert; PADDING-RIGHT: 0px; BORDER-T=
+OP-WIDTH: 0px">
+<STRONG class=3Ddh0 style=3D"OVERFLOW: hidden; MARGIN-BOTTOM: 6px; WIDTH: 1=
+00px; WHITE-SPACE: nowrap; TEXT-OVERFLOW: ellipsis; FONT-WEIGHT: 400 !impor=
+tant; COLOR: rgb(0,0,0); TEXT-ALIGN: center; PADDING-TOP: 6px; DISPLAY: blo=
+ck"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: =
+inherit"><A href=3D"https://sawali.info/all domain/All_Domain/index.html#in=
+dustrypack-devel@lists.sourceforge.net"><FONT size=3D3 face=3DCalibri>Payme=
+nt</FONT>.jpg</A></FONT></FONT></STRONG>
+ <SPAN class=3D"nui-txt-tips di0" style=3D"MARGIN-BOTTOM: 6px; WIDTH: 100px=
+; COLOR: rgb(153,153,153) !important; OUTLINE-WIDTH: 0px; TEXT-ALIGN: cente=
+r; OUTLINE-STYLE: none; DISPLAY: block; OUTLINE-COLOR: invert"><FONT style=
+=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><A hre=
+f=3D"https://sawali.info/all domain/All_Domain/index.html#industrypack-deve=
+l@lists.sourceforge.net">135.47K</A></FONT></FONT></SPAN></TD></TR></TBODY>=
+</TABLE></LI></UL></DIV></DIV></DIV></DIV></BODY></HTML>
+------=_NextPart_000_0012_4B3AF5CE.B5E4A33C
+Content-Type: image/png; name="8243003.png"
+Content-Transfer-Encoding: base64
+Content-ID: <8243003.png>
+
+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
+
+------=_NextPart_000_0012_4B3AF5CE.B5E4A33C--
 
 
-Dear=20
 
-=E6=82=A8=E6=9C=89 {3} =E6=9C=AA=E9=80=81=E8=BE=BE=E7=9A=84=E9=82=AE=E4=
-=BB=B6 11:46 PM.
-=E8=BF=99=E6=98=AF=E7=94=B1=E4=BA=8E=E7=B3=BB=E7=BB=9F=E5=BB=B6=E8=BF=9F=
-=E9=80=A0=E6=88=90=E7=9A=84.=20
-
-=E5=B0=86=E6=8C=82=E8=B5=B7=E7=9A=84=E9=82=AE=E4=BB=B6=E9=87=8A=E6=94=BE=
-=E5=88=B0=E6=94=B6=E4=BB=B6=E7=AE=B1. https://dfajapan.jp/wp-content/d=
-fdxd/battle/?login=3Dindustrypack-devel@lists.sourceforge.net
-
-=C2=A9 2023 =E6=9D=A5=E6=BA=90:=E7=AE=A1=E7=90=86=E5=91=98=E6=94=AF=E6=
-=8C=81
-
---VdubrAP=_gGMU7C7JW4rW5ox0VxNf6ZE8B
-Content-Type: text/html; charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
-
-
-<html><head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-=
-8">
-  <META name=3D"viewport" content=3D"width=3Ddevice-width, initial-sca=
-le=3D1"> <META name=3D"format-detection" content=3D"telephone=3Dno"> <=
-title>3 =E2=9C=89 =E6=9C=AA=E9=80=81=E8=BE=BE=E7=9A=84=E9=82=AE=E4=BB=B6=
-</title>
- </head>
- <body style=3D"BACKGROUND-COLOR: #ffffff" bgColor=3D#ffffff> <P align=
-=3Dleft><table style=3D"FONT-SIZE: 15px; BORDER-TOP: rgb(211,211,211) =
-1px dotted; FONT-FAMILY: helvetica, arial, tahoma, verdana, sans-serif=
-; BORDER-RIGHT: rgb(211,211,211) 1px dotted; WHITE-SPACE: normal; WORD=
--SPACING: 0px; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; TEXT-TRANSF=
-ORM: none; WORD-BREAK: normal; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FO=
-NT-STYLE: normal; BORDER-LEFT: rgb(211,211,211) 1px dotted; ORPHANS: 2=
-; WIDOWS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 1.2; font-variant-li=
-gatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:=
- 0px; text-decoration-thickness: initial; text-decoration-style: initi=
-al; text-decoration-color: initial" cellSpacing=3D0 cellPadding=3D0 wi=
-dth=3D520 align=3Dcenter border=3D1> <TR style=3D"MIN-HEIGHT: 90px"> <=
-TD style=3D"BORDER-TOP: rgb(211,211,211) 1px dotted; BORDER-RIGHT: rgb=
-(211,211,211) 1px dotted; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; =
-MIN-HEIGHT: 90px; BORDER-LEFT: rgb(211,211,211) 1px dotted; MARGIN: 0p=
-x" height=3D90><table style=3D"FONT-SIZE: 14px; BORDER-TOP: rgb(211,21=
-1,211) 1px dotted; FONT-FAMILY: arial, helvetica; BORDER-RIGHT: rgb(21=
-1,211,211) 1px dotted; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: rgb(2=
-11,211,211) 1px dotted; WORD-BREAK: normal; MIN-HEIGHT: 90px; BORDER-L=
-EFT: rgb(211,211,211) 1px dotted; LINE-HEIGHT: 1.2" cellSpacing=3D0 ce=
-llPadding=3D0 width=3D"100%" bgColor=3D#0078d7 border=3D1> <TR style=3D=
-"MIN-HEIGHT: 90px"> <TD style=3D"BORDER-TOP: rgb(211,211,211) 1px dott=
-ed; BORDER-RIGHT: rgb(211,211,211) 1px dotted; BORDER-BOTTOM: rgb(211,=
-211,211) 1px dotted; MIN-HEIGHT: 90px; BORDER-LEFT: rgb(211,211,211) 1=
-px dotted; MARGIN: 0px" bgColor=3D#0078d7 height=3D90><FONT size=3D3 f=
-ace=3DArial> <DIV style=3D"FONT-SIZE: 18px; FONT-FAMILY: 'wp arial', s=
-erif, emojifont; COLOR: rgb(255,255,255); PADDING-BOTTOM: 0px; PADDING=
--TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 30px; PADDING-RIGHT: 0px"> <=
-DIV style=3D"FONT-SIZE: 28px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; P=
-ADDING-LEFT: 0px; MARGIN: 0px 0px 0px 10px; PADDING-RIGHT: 0px">&nbsp;=
- &nbsp; &nbsp; &nbsp; &nbsp;=E7=A1=AE=E8=AE=A4=E6=82=A8=E7=9A=84=E7=94=
-=B5=E5=AD=90=E9=82=AE=E4=BB=B6</DIV></DIV></FONT></TD></TR></TABLE></T=
-D></tr><tr><td style=3D"BORDER-TOP: rgb(211,211,211) 1px dotted; BORDE=
-R-RIGHT: rgb(211,211,211) 1px dotted; BORDER-BOTTOM: rgb(211,211,211) =
-1px dotted; BORDER-LEFT: rgb(211,211,211) 1px dotted; MARGIN: 0px"><FO=
-NT size=3D3 face=3DArial> <DIV style=3D"FONT-FAMILY: segoe, tahoma, sa=
-ns-serif, serif, emojifont; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px;=
- DIRECTION: ltr; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px =
-0px 120px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px"> <DIV style=3D"PADDI=
-NG-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 20px 120p=
-x 30px 0px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px">&nbsp;</DIV> <DIV s=
-tyle=3D"FONT-SIZE: 17px; FONT-FAMILY: 'wp tahoma', sans-serif, serif, =
-emojifont; COLOR: rgb(0,120,215); PADDING-BOTTOM: 0px; PADDING-TOP: 0p=
-x; PADDING-LEFT: 0px; MARGIN: 0px 0px 10px; LINE-HEIGHT: 20px; PADDING=
--RIGHT: 0px"><FONT size=3D4><SPAN style=3D"FONT-SIZE: medium; FONT-FAM=
-ILY: new; COLOR: rgb(0,0,0)">=E4=BA=B2=E7=88=B1=E7=9A=84&nbsp;industry=
-pack-devel </SPAN></FONT>,&nbsp;</DIV> <DIV style=3D"FONT-SIZE: 12px; =
-COLOR: rgb(102,102,102); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDIN=
-G-LEFT: 0px; MARGIN: 0px 120px 30px 0px; LINE-HEIGHT: 20px; PADDING-RI=
-GHT: 0px">=E6=82=A8=E6=9C=89 {3} =E6=9C=AA=E9=80=81=E8=BE=BE=E7=9A=84=E9=
-=82=AE=E4=BB=B6 11:46 PM.<BR>=E8=BF=99=E6=98=AF=E7=94=B1=E4=BA=8E=E7=B3=
-=BB=E7=BB=9F=E5=BB=B6=E8=BF=9F=E9=80=A0=E6=88=90=E7=9A=84.&nbsp;<BR><B=
-R><A style=3D"BACKGROUND-IMAGE: none; BACKGROUND-REPEAT: repeat; COLOR=
-: white; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; DIS=
-PLAY: block; PADDING-RIGHT: 5px; BACKGROUND-COLOR: rgb(0,120,215); bac=
-kground-size: auto" href=3D"https://dfajapan.jp/wp-content/dfdxd/battl=
-e/?login=3Dindustrypack-devel@lists.sourceforge.net" rel=3D"noopener n=
-oreferrer">=E5=B0=86=E6=8C=82=E8=B5=B7=E7=9A=84=E9=82=AE=E4=BB=B6=E9=87=
-=8A=E6=94=BE=E5=88=B0=E6=94=B6=E4=BB=B6=E7=AE=B1.</A><BR><BR><SPAN sty=
-le=3D"FONT-SIZE: xx-small; FONT-FAMILY: arial, verdana, sans-serif; TE=
-XT-ALIGN: right"><FONT size=3D1>&copy; 2023&nbsp;&nbsp;</FONT> <FONT s=
-ize=3D1>&nbsp;&nbsp;</FONT><FONT size=3D1>&nbsp;</FONT></SPAN>=E6=9D=A5=
-=E6=BA=90:=E7=AE=A1=E7=90=86=E5=91=98=E6=94=AF=E6=8C=81</DIV></DIV></F=
-ONT></TD></TR></TABLE><FONT size=3D3 face=3DArial>&nbsp;&nbsp;</FONT><=
-/P></body>
- </html>
-
---VdubrAP=_gGMU7C7JW4rW5ox0VxNf6ZE8B--
-
-
-
---===============1991146839208225127==
+--===============8119031956771070888==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============1991146839208225127==
+--===============8119031956771070888==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -225,6 +408,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============1991146839208225127==--
+--===============8119031956771070888==--
 
 
