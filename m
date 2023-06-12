@@ -2,75 +2,97 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9047A72A963
-	for <lists+industrypack-devel@lfdr.de>; Sat, 10 Jun 2023 08:29:54 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id D24D272B806
+	for <lists+industrypack-devel@lfdr.de>; Mon, 12 Jun 2023 08:23:16 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1q7s6i-0003Do-TC
+	id 1q8axK-0007nA-6q
 	for lists+industrypack-devel@lfdr.de;
-	Sat, 10 Jun 2023 06:29:53 +0000
+	Mon, 12 Jun 2023 06:23:11 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <smtp1@s-main.cn>) id 1q7s6h-0003Di-BC
- for industrypack-devel@lists.sourceforge.net;
- Sat, 10 Jun 2023 06:29:51 +0000
+ (envelope-from <bounce-248-23568164-248-248@3xc5lh.cyou>)
+ id 1q8awx-0007mz-Dx for industrypack-devel@lists.sourceforge.net;
+ Mon, 12 Jun 2023 06:22:50 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
- To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=lG4n2WhKuiRJ7JjrAJWWyxJFJES9JUVAnUuY2nUA1DU=; b=kgLuN14dCXZN1RgylfxLEjEPYy
- Kea+Djv33RqP44xwZLlOc48yTGktXQW9BrglkQqezVPaFS6vR6Gqi6kG51PuMDvH3qndIOU4KrhQz
- Fn3KeAysYq4IcKKj+hxcpYlys2lzpnlYouYZBShag/h6V5qhu8kxZij3qGYzt1+wkn9A=;
+ d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
+ :List-Unsubscribe:Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=vhNIheSYoDkTkMkdi7ynlimd1vSa7XFo7R4K5W8SMp0=; b=IAZUjzva0byh5Gva5UHbk56GnO
+ bIB390+eVtqN6JqriZtt4cGzfPL+6BKciYezto8hxKh49kPE1YgL4CE92s2XtNYev4QILNGKh+51O
+ jpj4Qfpf2ZvpRxiEwEPB2VghnWEtQp3bjfdIPCvKlYSAcJ5eb0Tb5kk44F9e1suyHZWI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=lG4n2WhKuiRJ7JjrAJWWyxJFJES9JUVAnUuY2nUA1DU=; b=c
- dyV3YsmIcPmpKqfFkiF4JRnS77nIk6IsejP0VRrZ3MxkQFdTwkrl/4bb3O7zMrU57gu2RpZzXfKqs
- NOLeF1GjMkMmx7VvqWS7U31git1Z8SzXA5nD2brdfzsY8tb0Tre72o1bMb+7XW4flSiZ69VzGp4My
- dTZ4zMP9oAPEEdLE=;
-Received: from s-main.cn ([176.126.164.236])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1q7s6g-00GGp1-Iz for industrypack-devel@lists.sourceforge.net;
- Sat, 10 Jun 2023 06:29:51 +0000
-From: "eSupport" <aytqr@@lists.sourceforge.net>
-To: industrypack-devel@lists.sourceforge.net
-Date: 10 Jun 2023 08:29:40 +0200
-Message-ID: <20230610082939.BB2BA0720CBCE21D@from.header.has.no.domain>
+ h=Content-Type:Content-Transfer-Encoding:MIME-Version:List-Unsubscribe:
+ Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=vhNIheSYoDkTkMkdi7ynlimd1vSa7XFo7R4K5W8SMp0=; b=I9jr/1xp9e07y6ylX8mpoti5j/
+ UIY5xId5nlcHxbxpxTEY+7WBCgHqnMe1XurT5NcZteESHc43amXJoTocyOsEZ1v6D2dIsZJQppksJ
+ EUNvSbEO/2V0WAEOAFZBzKK/PuwAzahmxvxDsfU30gXKpEK0UvelVU7LmdFg2CaVjfn0=;
+Received: from [202.146.216.20] (helo=3xc5lh.cyou)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1q8aws-00041S-Oz for industrypack-devel@lists.sourceforge.net;
+ Mon, 12 Jun 2023 06:22:46 +0000
+Received: by 3xc5lh.cyou id hgqsr40e97ck for
+ <industrypack-devel@lists.sourceforge.net>;
+ Mon, 12 Jun 2023 06:22:33 +0000 (envelope-from
+ <bounce-248-23568164-248-248@3xc5lh.cyou>)
+Date: Mon, 12 Jun 2023 06:22:32 +0000
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+From: zz <zhaung_1@163.com>
+Message-ID: <5f187e4ed6d5644e791574c5d892d8c2@202.146.216.20>
+X-Priority: 3
+X-Mailer: Email Sending System
+X-Complaints-To: test@test.com
+X-MessageID: MXx8fHwxMTU1MzB8fHx8aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldHx8fHwxfHx8fDF8fHx8MA%3D%3D
+X-Report-Abuse: <http://202.146.216.20/oem/report_abuse.php?mid=MXx8fHwxMTU1MzB8fHx8aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldHx8fHwxfHx8fDF8fHx8MA%3D%3D>
 MIME-Version: 1.0
-X-Spam-Score: 3.3 (+++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+X-Spam-Score: 5.5 (+++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
- the administrator of that system for details. Content preview:
- https://uwdplrqtwf-xn----c1aprj-xn----p1ai.translate.goog/kbbg/mkssjt/jmcxcwcg?YVc1a2RYTjBjbmx3WVdOckxXUmxkbVZzUUd4cGMzUnpMbk52ZFhKalpXWnZjbWRsTG01bGRBPT06eHh3c3J5a2t2Yg==+&_x_tr_sch=http&_x_tr_sl=psm
- [...] Content analysis details:   (3.3 points, 6.0 required)
- pts rule name              description
+ the administrator of that system for details.
+ 
+ Content preview:  Untitled document 2021年外贸公司用的最新客户开发神器
+    不限国家，不限地区，不限行业 
+ 
+ Content analysis details:   (5.5 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.7 GB_GOOGLE_TRANSL       URI: Obfuscate url through Google Translate
- 0.5 URI_NOVOWEL            URI: URI hostname has long non-vowel sequence
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
- identical to background
- 0.7 MPART_ALT_DIFF         BODY: HTML and text parts are different
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1q7s6g-00GGp1-Iz
-Subject: [Industrypack-devel] =?utf-8?q?Alerta_de_seguridad=3A_nuevo_inici?=
- =?utf-8?q?o_de_sesi_=C3=B3n_del_dispositivo?=
+  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
+                             digit
+                             [zhaung_1[at]163.com]
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [zhaung_1[at]163.com]
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
+                              address
+  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  1.6 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
+  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+                             EnvelopeFrom freemail headers are
+                             different
+  0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
+  1.3 SPOOFED_FREEMAIL       No description available.
+X-Headers-End: 1q8aws-00041S-Oz
+Subject: [Industrypack-devel] =?utf-8?b?dG/vvJo=?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -82,404 +104,104 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4292899454272100543=="
+Reply-To: zz <zhaung_1@163.com>
+Content-Type: multipart/mixed; boundary="===============5189695493385557822=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4292899454272100543==
-Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0012_699D7416.FC76A23C"
-
-------=_NextPart_000_0012_699D7416.FC76A23C
-Content-Type: text/plain;
-	charset="utf-8"
+--===============5189695493385557822==
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
 
-https://uwdplrqtwf-xn----c1aprj-xn----p1ai.translate.goog/kbbg/mkssjt/jmcxc=
-wcg?YVc1a2RYTjBjbmx3WVdOckxXUmxkbVZzUUd4cGMzUnpMbk52ZFhKalpXWnZjbWRsTG01bGR=
-BPT06eHh3c3J5a2t2Yg=3D=3D+&_x_tr_sch=3Dhttp&_x_tr_sl=3Dpsmxtizb&_x_tr_tl=3D=
-veoprrdv
-------=_NextPart_000_0012_699D7416.FC76A23C
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE html>
-
-<html><head>
-    <meta charset=3D"utf-8">
-    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
-=3D1.0">
-=20=20=20=20
-    <title>
-    </title>
-    <link href=3D"https://myfiles.space/user_files/134405_b61c72c0aacb7e8f/=
-1686340752_t098/styles.css" rel=3D"stylesheet" type=3D"text/css" media=3D"a=
-ll">
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Untitled document</title>
 </head>
-
 <body>
-    <div style=3D"position:absolute; position:relative;
-	margin:10pt auto 10pt auto;
-	overflow:hidden; width: 612pt; height: 792pt;" class=3D"wcdiv wcpage">
-        <div style=3D"position:absolute; left: 72pt; top: 72pt;" class=3D"w=
-cdiv">
-            <div style=3D"position:absolute; border: 0.1pt solid rgb(251, 2=
-29, 231); border-image: none; left: -0.05pt; top: -0.05pt; width: 467.9pt; =
-height: 188.52pt; background-color: rgb(251, 229, 231);" class=3D"wcdiv"><b=
-r></div>
-            <div style=3D"position:absolute; clip: rect(0pt, 468pt, 189.62p=
-t, 0pt);" class=3D"wcdiv">
-                <div style=3D"position:absolute; left: 9pt;" class=3D"wcdiv=
-">
-                    <div style=3D"position:absolute; border: 0.1pt solid rg=
-b(255, 255, 255); border-image: none; left: 0.33pt; top: 0.7pt; width: 449.=
-15pt; height: 187.77pt; background-color: rgb(255, 255, 255);" class=3D"wcd=
-iv"><br></div>
-                    <div style=3D"position:absolute; clip: rect(0.75pt, 449=
-=2E63pt, 189.62pt, 0.38pt);" class=3D"wcdiv">
-                        <div style=3D"position:absolute; left: 0.38pt; top:=
- 0.75pt;" class=3D"wcdiv">
-                            <div style=3D"position:absolute; top: 90pt;" cl=
-ass=3D"wcdiv">
-                                <div style=3D"position:absolute; clip: rect=
-(0pt, 449.25pt, 26.87pt, 0pt);" class=3D"wcdiv"><span style=3D"position:abs=
-olute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Times New Roman';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 0.96pt; line-height: 24.92pt; font-siz=
-e: 22.5pt;" class=3D"wcspan wctext001">&nbsp;</span></div>
-                            </div>
-                            <div style=3D"position:absolute; top: 115.87pt;=
-" class=3D"wcdiv">
-                                <div style=3D"position:absolute; clip: rect=
-(0pt, 449.25pt, 73pt, 0pt);" class=3D"wcdiv">
-                                    <div style=3D"position:absolute; left: =
-30pt;" class=3D"wcdiv"><span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 52.831pt; top: 1.5pt; color: rgb(45, 0, 3); line=
--height: 30.16pt; font-size: 27pt;" class=3D"wcspan wctext002">Nuevo inicio=
--de-sesi&oacute;n en&nbsp;</span> <span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:bold; left: 137.421pt; top: 31.349pt; color: rgb(45, 0, 3); li=
-ne-height: 30.16pt; font-size: 27pt;" class=3D"wcspan wctext003">lists.sour=
-ceforge.net</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style=3D"position:absolute; left: -0.38pt; top: 0.=
-75pt; width: 0pt; height: 187.87pt; border-left-color: rgb(224, 227, 235); =
-border-left-width: 0.75pt; border-left-style: solid;" class=3D"wcdiv"><br><=
-/div>
-                    <div style=3D"position:absolute; left: 449.63pt; top: 0=
-=2E75pt; width: 0pt; height: 187.87pt; border-left-color: rgb(224, 227, 235=
-); border-left-width: 0.75pt; border-left-style: solid;" class=3D"wcdiv"><b=
-r></div>
-                    <div style=3D"position:absolute; left: -0.38pt; top: 0p=
-t; width: 450.75pt; height: 0pt; border-top-color: rgb(224, 227, 235); bord=
-er-top-width: 0.75pt; border-top-style: solid;" class=3D"wcdiv"><br></div>
-                </div>
-            </div>
-            <div style=3D"position:absolute; top: 188.62pt;" class=3D"wcdiv=
-">
-                <div style=3D"position:absolute; clip: rect(0pt, 468pt, 290=
-=2E39pt, 0pt);" class=3D"wcdiv">
-                    <div style=3D"position:absolute; left: 9pt;" class=3D"w=
-cdiv">
-                        <div style=3D"position:absolute; border: 0.1pt soli=
-d rgb(255, 255, 255); border-image: none; left: 0.33pt; top: -0.05pt; width=
-: 449.15pt; height: 288.54pt; background-color: rgb(255, 255, 255);" class=
-=3D"wcdiv"><br></div>
-                        <div style=3D"position:absolute; clip: rect(0pt, 44=
-9.63pt, 289.64pt, 0.38pt);" class=3D"wcdiv">
-                            <div style=3D"position:absolute; left: 0.38pt;"=
- class=3D"wcdiv">
-                                <div style=3D"position:absolute; clip: rect=
-(0pt, 449.25pt, 26.87pt, 0pt);" class=3D"wcdiv"><span style=3D"position:abs=
-olute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Times New Roman';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 0.96pt; line-height: 24.92pt; font-siz=
-e: 22.5pt;" class=3D"wcspan wctext001">&nbsp;</span></div>
-                                <div style=3D"position:absolute; top: 25.87=
-pt;" class=3D"wcdiv">
-                                    <div style=3D"position:absolute; clip: =
-rect(0pt, 449.25pt, 196pt, 0pt);" class=3D"wcdiv">
-                                        <div style=3D"position:absolute; le=
-ft: 30pt;" class=3D"wcdiv"><span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 5.7pt; color: rgb(65, 65, 65); line-he=
-ight: 17.88pt; font-size: 16pt;" class=3D"wcspan wctext002">Hola</span> <sp=
-an style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 32.91pt; top: 3.89pt; color: rgb(65, 65, 65); li=
-ne-height: 20.11pt; font-size: 18pt;" class=3D"wcspan wctext002">&nbsp;indu=
-strypack-devel,</span></div>
-                                        <div style=3D"position:absolute; le=
-ft: 30pt; top: 39pt;" class=3D"wcdiv"><span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 4.59pt; color: rgb(65, 65, 65); line-h=
-eight: 13.41pt;" class=3D"wcspan wctext002">Notamos un nuevo inicio de sesi=
-&oacute;n en su cuenta desde un nuevo&nbsp;</span> <span style=3D"position:=
-absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 22.59pt; color: rgb(65, 65, 65); line-=
-height: 13.41pt;" class=3D"wcspan wctext002">dispositivo&nbsp;</span>
- <span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:bold; left: 59.36pt; top: 22.59pt; color: rgb(65, 65, 65); lin=
-e-height: 13.41pt;" class=3D"wcspan wctext003">Microsoft Edge usando Window=
-s ubicado en Panam&aacute;</span> <span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 364.06pt; top: 22.59pt; color: rgb(65, 65, 65); =
-line-height: 13.41pt;" class=3D"wcspan wctext002">&nbsp;(IP&nbsp;</span> <s=
-pan style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 40.59pt; color: rgb(65, 65, 65); line-=
-height: 13.41pt;" class=3D"wcspan wctext002">=3D&nbsp;</span>
- <span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 10.34pt; top: 40.59pt; color: rgb(45, 0, 3); lin=
-e-height: 13.41pt;" class=3D"wcspan wctext002">190.141.130.238)</span> <spa=
-n style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 104.43pt; top: 40.59pt; color: rgb(65, 65, 65); =
-line-height: 13.41pt;" class=3D"wcspan wctext002">&nbsp;en&nbsp;</span> <sp=
-an style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:bold; left: 124.44pt; top: 40.59pt; color: rgb(45, 0, 3); line=
--height: 13.41pt;" class=3D"wcspan wctext003">Saturday, 10 June 2023&nbsp;<=
-/span>
- <span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:bold; left: 0pt; top: 58.59pt; color: rgb(45, 0, 3); line-heig=
-ht: 13.41pt;" class=3D"wcspan wctext003">08:29:39 a.m.</span> <span style=
-=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 163.34pt; top: 58.59pt; color: rgb(65, 65, 65); =
-line-height: 13.41pt;" class=3D"wcspan wctext002">.</span></div>
-                                        <div style=3D"position:absolute; le=
-ft: 30pt; top: 126pt;" class=3D"wcdiv"><span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 4.59pt; color: rgb(65, 65, 65); line-h=
-eight: 13.41pt;" class=3D"wcspan wctext002">Si fue usted, ignore este mensa=
-je; no se requiere ninguna otra acci&oacute;n.</span></div>
-                                        <div style=3D"position:absolute; le=
-ft: 30pt; top: 159pt;" class=3D"wcdiv"><span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 4.59pt; color: rgb(65, 65, 65); line-h=
-eight: 13.41pt;" class=3D"wcspan wctext002">este no fue usted,&nbsp;</span>=
-
- <a href=3D"https://mfjokdqzgp-xn----e1aaikl9h-xn----p1ai.translate.goog/fl=
-ij/mpzhna/euaoahop?YVc1a2RYTjBjbmx3WVdOckxXUmxkbVZzUUd4cGMzUnpMbk52ZFhKalpX=
-WnZjbWRsTG01bGRBPT06eGplbmNja2NsdA=3D=3D+&_x_tr_sch=3Dhttp&_x_tr_sl=3Duteva=
-xqz&_x_tr_tl=3Dqxhnbqku">
-                                                <div style=3D"position:abso=
-lute" class=3D"wcdiv"><span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 98.74pt; top: 4.59pt; color: rgb(0, 0, 255); lin=
-e-height: 13.41pt;" class=3D"wcspan wctext002">cambie su contrase&ntilde;a<=
-/span></div>
-                                            </a> <span style=3D"position:ab=
-solute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 216.14pt; top: 4.59pt; color: rgb(0, 176, 240); =
-line-height: 13.41pt;" class=3D"wcspan wctext002">&nbsp;</span> <span style=
-=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 219.47pt; top: 4.59pt; color: rgb(65, 65, 65); l=
-ine-height: 13.41pt;" class=3D"wcspan wctext002">para ayudar a proteger su&=
-nbsp;</span>
-                                            <div style=3D"position:absolute=
-; left: 98.74pt; top: 16.73pt; width: 117.4pt; height: 0pt; border-top-colo=
-r: rgb(0, 0, 255); border-top-width: 0.88pt; border-top-style: solid;" clas=
-s=3D"wcdiv"><br></div><span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 22.59pt; color: rgb(65, 65, 65); line-=
-height: 13.41pt;" class=3D"wcspan wctext002">cuenta.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style=3D"position:absolute; top: 220.8=
-7pt;" class=3D"wcdiv">
-                                    <div style=3D"position:absolute; clip: =
-rect(0pt, 449.25pt, 26.87pt, 0pt);" class=3D"wcdiv"><span style=3D"position=
-:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Times New Roman';
-	font-style:normal;
-	font-weight:normal; left: 0pt; top: 0.96pt; line-height: 24.92pt; font-siz=
-e: 22.5pt;" class=3D"wcspan wctext001">&nbsp;</span></div>
-                                </div>
-                                <div style=3D"position:absolute; top: 246.7=
-5pt;" class=3D"wcdiv">
-                                    <div style=3D"position:absolute; clip: =
-rect(0pt, 449.25pt, 42.9pt, 0pt);" class=3D"wcdiv">
-                                        <div style=3D"position:absolute; le=
-ft: 153.38pt;" class=3D"wcdiv">
-                                            <div style=3D"position:absolute=
-; border: 0.1pt solid rgb(175, 38, 47); border-image: none; left: -0.05pt; =
-top: -0.05pt; width: 142.4pt; height: 41.8pt; background-color: rgb(175, 38=
-, 47);" class=3D"wcdiv"><br></div>
-                                            <div style=3D"position:absolute=
-; clip: rect(0pt, 142.5pt, 42.9pt, 0pt);" class=3D"wcdiv"><a name=3D"link3"=
- style=3D"left: 0.01pt; top: 0pt;">&nbsp;</a>
- <a href=3D"https://vhcfdmyraq-xn----e1aaikl9h-xn----p1ai.translate.goog/df=
-om/royooh/szgisjus?YVc1a2RYTjBjbmx3WVdOckxXUmxkbVZzUUd4cGMzUnpMbk52ZFhKalpX=
-WnZjbWRsTG01bGRBPT06dmVmbWhmaWVndA=3D=3D+&_x_tr_sch=3Dhttp&_x_tr_sl=3Dexqzc=
-lkq&_x_tr_tl=3Dyzxuhwrs" target=3D"_blank">
-                                                    <div style=3D"position:=
-absolute" class=3D"wcdiv"><span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Calibri';
-	font-style:normal;
-	font-weight:normal; left: 0.01pt; top: 16.28pt; line-height: 13.43pt; font=
--size: 11pt;" class=3D"wcspan wctext004">&nbsp;</span> <span style=3D"posit=
-ion:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:bold; left: 14.25pt; top: 12.27pt; color: rgb(255, 255, 255); =
-line-height: 17.88pt; font-size: 16pt;" class=3D"wcspan wctext003">Si es mi=
- cuenta</span> <span style=3D"position:absolute;
-	white-space:pre;
-	color:#000000;
-	font-size:12pt; font-family:'Arial';
-	font-style:normal;
-	font-weight:bold; left: 142.49pt; top: 12.27pt; color: rgb(255, 255, 255);=
- line-height: 17.88pt; font-size: 16pt;" class=3D"wcspan wctext003">&nbsp;<=
-/span>
-</div>
-                                                </a>
-                                                <div style=3D"position:abso=
-lute; left: 2.5pt; top: 0.75pt; width: 0pt; height: 40.4pt; border-left-col=
-or: rgb(175, 38, 47); border-left-width: 0.75pt; border-left-style: solid;"=
- class=3D"wcdiv"><br></div>
-                                                <div style=3D"position:abso=
-lute; left: 141.74pt; top: 0.75pt; width: 0pt; height: 40.4pt; border-left-=
-color: rgb(175, 38, 47); border-left-width: 0.75pt; border-left-style: soli=
-d;" class=3D"wcdiv"><br></div>
-                                                <div style=3D"position:abso=
-lute; left: 2.5pt; top: 0pt; width: 139.99pt; height: 0pt; border-top-color=
-: rgb(175, 38, 47); border-top-width: 0.75pt; border-top-style: solid;" cla=
-ss=3D"wcdiv"><br></div>
-                                                <div style=3D"position:abso=
-lute; left: 2.5pt; top: 41.15pt; width: 139.99pt; height: 0pt; border-top-c=
-olor: rgb(175, 38, 47); border-top-width: 0.75pt; border-top-style: solid;"=
- class=3D"wcdiv"><br></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style=3D"position:absolute; left: -0.38pt; top=
-: 0pt; width: 0pt; height: 288.64pt; border-left-color: rgb(224, 227, 235);=
- border-left-width: 0.75pt; border-left-style: solid;" class=3D"wcdiv"><br>=
-</div>
-                        <div style=3D"position:absolute; left: 449.63pt; to=
-p: 0pt; width: 0pt; height: 288.64pt; border-left-color: rgb(224, 227, 235)=
-; border-left-width: 0.75pt; border-left-style: solid;" class=3D"wcdiv"><br=
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;">2021=E5=B9=B4=E5=A4=96=E8=B4=B8=E5=85=AC=E5=8F=B8=E7=94=A8=E7=9A=84=E6=
+=9C=80=E6=96=B0=E5=AE=A2=E6=88=B7=E5=BC=80=E5=8F=91=E7=A5=9E=E5=99=A8</span=
 ></div>
-                        <div style=3D"position:absolute; left: -0.38pt; top=
-: 288.64pt; width: 450.75pt; height: 0pt; border-top-color: rgb(224, 227, 2=
-35); border-top-width: 0.75pt; border-top-style: solid;" class=3D"wcdiv"><b=
-r></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style=3D"position:absolute; left: 111.38pt; top: 72.75pt;" cla=
-ss=3D"wcdiv">
-            <div style=3D"position:absolute; clip: rect(0pt, 419.25pt, 91pt=
-, -30pt);" class=3D"wcdiv"><img style=3D"position:absolute; left: 149.63pt;=
- top: 0pt; width: 90pt; height: 90pt;" width=3D"90" height=3D"90" class=3D"=
-wcimg" src=3D"https://myfiles.space/user_files/134405_b61c72c0aacb7e8f/1686=
-340752_t098/1686340752_t098-1.png"></div>
-        </div>
-    </div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;">=E4=B8=8D=E9=99=90=E5=9B=BD=E5=AE=B6=EF=BC=8C=E4=B8=8D=E9=99=90=E5=9C=
+=B0=E5=8C=BA=EF=BC=8C=E4=B8=8D=E9=99=90=E8=A1=8C=E4=B8=9A</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;">=E4=B8=80=E9=94=AE=E7=AD=9B=E9=80=89=EF=BC=8C=E7=B2=BE=E5=87=86=E8=8E=
+=B7=E5=AE=A2=EF=BC=8C=E8=87=AA=E5=8A=A8=E5=AE=9A=E4=BD=8D=E9=87=87=E8=B4=AD=
+=E5=95=86=EF=BC=8C=E9=87=87=E8=B4=AD=E8=B4=9F=E8=B4=A3=E4=BA=BA=E8=81=94=E7=
+=B3=BB=E6=96=B9=E5=BC=8F</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;">=E4=BD=A0=E8=BF=98=E5=9C=A8=E7=8A=B9=E8=B1=AB=E7=9A=84=E6=97=B6=E5=80=
+=99=EF=BC=8C=E4=BD=A0=E7=9A=84=E5=90=8C=E8=A1=8C=E5=8F=AF=E8=83=BD=E6=AF=94=
+=E4=BD=A0=E5=85=88=E4=B8=80=E6=AD=A5=E8=81=94=E7=B3=BB=E5=88=B0=E5=AE=A2=E6=
+=88=B7=E3=80=82</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;">Wechat:13247602337(=E6=89=8B=E6=9C=BA=E5=90=8C=E5=8F=B7)</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;">QQ=EF=BC=9A2890057524</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: lar=
+ge;">=E6=AC=A2=E8=BF=8E=E5=89=8D=E6=9D=A5=E5=92=A8=E8=AF=A2=E4=BD=93=E9=AA=
+=8C</span></div>
+<div><span style=3D"font-size: large;">2023=E5=B9=B4=E5=A4=96=E8=B4=B8=E5=
+=85=AC=E5=8F=B8=E7=94=A8=E7=9A=84=E6=9C=80=E6=96=B0=E5=AE=A2=E6=88=B7=E5=BC=
+=80=E5=8F=91=E7=A5=9E=E5=99=A8</span></div>
+<div><span style=3D"font-size: large;"><br /></span></div>
+<div><span style=3D"font-size: large;">=E4=B8=8D=E9=99=90=E5=9B=BD=E5=AE=B6=
+=EF=BC=8C=E4=B8=8D=E9=99=90=E5=9C=B0=E5=8C=BA=EF=BC=8C=E4=B8=8D=E9=99=90=E8=
+=A1=8C=E4=B8=9A</span></div>
+<div><span style=3D"font-size: large;"><br /></span></div>
+<div><span style=3D"font-size: large;">=E4=B8=80=E9=94=AE=E7=AD=9B=E9=80=89=
+=EF=BC=8C=E7=B2=BE=E5=87=86=E8=8E=B7=E5=AE=A2=EF=BC=8C=E8=87=AA=E5=8A=A8=E5=
+=AE=9A=E4=BD=8D=E9=87=87=E8=B4=AD=E5=95=86=EF=BC=8C=E9=87=87=E8=B4=AD=E8=B4=
+=9F=E8=B4=A3=E4=BA=BA=E8=81=94=E7=B3=BB=E6=96=B9=E5=BC=8F</span></div>
+<div><span style=3D"font-size: large;"><br /></span></div>
+<div><span style=3D"font-size: large;">=E4=BD=A0=E8=BF=98=E5=9C=A8=E7=8A=B9=
+=E8=B1=AB=E7=9A=84=E6=97=B6=E5=80=99=EF=BC=8C=E4=BD=A0=E7=9A=84=E5=90=8C=E8=
+=A1=8C=E5=8F=AF=E8=83=BD=E6=AF=94=E4=BD=A0=E5=85=88=E4=B8=80=E6=AD=A5=E8=81=
+=94=E7=B3=BB=E5=88=B0=E5=AE=A2=E6=88=B7=E3=80=82</span></div>
+<div><span style=3D"font-size: large;"><br /></span></div>
+<div><span style=3D"font-size: large;"><span style=3D"color: #ff0000;">Wech=
+at:13247602337(=E6=89=8B=E6=9C=BA=E5=90=8C=E5=8F=B7)</span></span></div>
+<div><span style=3D"font-size: large;"><span style=3D"color: #ff0000;">QQ=
+=EF=BC=9A2890057524</span></span></div>
+<div><span style=3D"font-size: large;">=E6=AC=A2=E8=BF=8E=E5=89=8D=E6=9D=A5=
+=E5=92=A8=E8=AF=A2=E4=BD=93=E9=AA=8C</span></div>
+
+<img src=3D"http://202.146.216.20/oem/to.php?p=3Drt/rt/rs/2hwy/rt/rs" width=
+=3D"5" height=3D"2" alt=3D".">
+
+</body>
+</html>
 
 
-</body></html>
-------=_NextPart_000_0012_699D7416.FC76A23C--
-
-
---===============4292899454272100543==
+--===============5189695493385557822==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4292899454272100543==
+--===============5189695493385557822==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -490,5 +212,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4292899454272100543==--
-
+--===============5189695493385557822==--
