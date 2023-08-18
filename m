@@ -2,89 +2,80 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id F0BEB77F324
-	for <lists+industrypack-devel@lfdr.de>; Thu, 17 Aug 2023 11:24:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 890C5780567
+	for <lists+industrypack-devel@lfdr.de>; Fri, 18 Aug 2023 07:16:01 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1qWZEo-0007Hy-BG
+	id 1qWrq3-0003YY-BM
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 17 Aug 2023 09:24:18 +0000
+	Fri, 18 Aug 2023 05:15:59 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1qWZEm-0007Hr-H3
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <ts2@ydq16.xyz>) id 1qWrq0-0003YS-Fs
  for industrypack-devel@lists.sourceforge.net;
- Thu, 17 Aug 2023 09:24:16 +0000
+ Fri, 18 Aug 2023 05:15:56 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Date:Message-Id:Subject:MIME-Version:Content-Type:
- References:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Message-ID:Content-Type:MIME-Version:Date:Subject:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:List-Id:List-Help:List-Unsubscribe:
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=1HAhioc1b787YNAVHMq5BzU0FqXsYaMDhoW2pDbjbOI=; b=AwWhUhez3MPtzJocjWBAHTt/r7
- 9C8UPEN+XjOGAva8SwnaXwqos+SfC0hoLbGdD6Zq1axnVLGK2KGjbLrrNZ5JF+iggxbD5/Q/u5gVe
- Y2qXA5h4XWn0OubVvxuqFALPdQDOsbNdfhsaMm+oxctWyKQ3/3fJy9euMpR/Uj4H+Tfk=;
+ bh=Hl72ENOlXnTFq/Rdoj3aNrtwYyoIwZnjNBoJjOWK6Gc=; b=HRVXuEZTubhgBMCiSLdOMbuejG
+ W4ztRKH/wezmbL3XgG0dq8O3TWMcwo9rTlVq6jthnBga1oSdkFsEHLcrw4i40OXX6xH84geZ71TX1
+ 0v0nVqTp5sCJiDV+daOh7kA+Bi1NjZzj9MooxEf+CIhSUuCCBKNP8fiGg5B1n1K3MCEk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Date:Message-Id:Subject:MIME-Version:Content-Type:References:To:From:
- Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
- Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
- In-Reply-To:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=1HAhioc1b787YNAVHMq5BzU0FqXsYaMDhoW2pDbjbOI=; b=g
- tFrcVIWEg2iYgV1n9lj14tIQ8vdSgWBiDoa7xwseX8kAFMNDym8t34nGlgrc4iSXdPKrevelpSfYt
- V7WXFI0gagjlaCrswKLufbVL1gkP3+r0uv8cxJp4/bOU9V0Ndx5tjbNhIeBaiUuH10ZFSRi8NC5j1
- kdkijH9D77UTnd7w=;
-Received: from [108.163.232.234] (helo=chg.server2.ideacentral.com)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1qWZEm-007mSu-24 for industrypack-devel@lists.sourceforge.net;
- Thu, 17 Aug 2023 09:24:16 +0000
-Received: from mailnull by ns-196.awsdns-24.com with local (Exim 4.96)
- id 1qWZEg-001khm-1V for industrypack-devel@lists.sourceforge.net;
- Thu, 17 Aug 2023 04:24:10 -0500
-X-Failed-Recipients: industrypack-devel@lists.sourceforge.net
-Auto-Submitted: auto-replied
-From: Mail Delivery System <Mailer-Daemon@ns-196.awsdns-24.com>
+ h=Message-ID:Content-Type:MIME-Version:Date:Subject:To:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=Hl72ENOlXnTFq/Rdoj3aNrtwYyoIwZnjNBoJjOWK6Gc=; b=a
+ Udbp/SZbiE9KJk15MPEgAlsWuua1cKMQqhp+3IecquNVLAxqIl4ZH6TTVB3bRnQPasNYt06s7sx6G
+ 5uVoBexrctYwdYxau30vo9fVxYaMfOrENs/+cRrLhFNYr8E9huh/91oflPGexa8pDw2fJVilKm4c2
+ uCUmybhupfnLlIxQ=;
+Received: from [121.127.252.148] (helo=ydq16.xyz)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1qWrpv-00028V-Ju for industrypack-devel@lists.sourceforge.net;
+ Fri, 18 Aug 2023 05:15:56 +0000
+Received: from DESKTOP-4EMPE6O (unknown [223.74.156.156])
+ by ydq16.xyz (Postfix) with ESMTPA id 032BF4599FF
+ for <industrypack-devel@lists.sourceforge.net>;
+ Fri, 18 Aug 2023 04:58:09 +0000 (UTC)
+From: ts2@ydq16.xyz
 To: industrypack-devel@lists.sourceforge.net
-References: <20230817102403.2A6B49455EA54639@lists.sourceforge.net>
+Date: Fri, 18 Aug 2023 12:58:10 +0800
 MIME-Version: 1.0
-Message-Id: <E1qWZEg-001khm-1V@ns-196.awsdns-24.com>
-Date: Thu, 17 Aug 2023 04:24:10 -0500
-X-AntiAbuse: This header was added to track abuse,
- please include it with any abuse report
-X-AntiAbuse: Primary Hostname - ns-196.awsdns-24.com
-X-AntiAbuse: Original Domain - lists.sourceforge.net
-X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
-X-AntiAbuse: Sender Address Domain - 
-X-Get-Message-Sender-Via: ns-196.awsdns-24.com: sender_ident via
- received_protocol == local: mailnull/primary_hostname/system user
-X-Authenticated-Sender: ns-196.awsdns-24.com: mailnull
-X-Spam-Score: 3.6 (+++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+Content-Type: multipart/mixed; boundary="Mark=_-1944856999-972428499648"
+X-Mailer: Foxmail 7, 2,53,  24[cn]
+Message-ID: <8C13D66908120C3A0A5AFDEC1FBD8@DESKTOP-4EMPE6O>
+X-Spam-Score: 6.3 (++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
- the administrator of that system for details.
- Content preview: This message was created automatically by mail delivery
- software.
- A message that you sent could not be delivered to one or more of its
- recipients.
- This is a permanent error. The following address(es) failed: 
- Content analysis details:   (3.6 points, 6.0 required)
- pts rule name              description
+ @@CONTACT_ADDRESS@@ for details.
+ 
+ Content preview:  你好 抱歉打扰到你了~ 今年您的客户开发工作是否顺利呢？
+    我们这边是做一款外贸获客营销系统的，1分钟获取国外采购商信息，深挖出客户的采购负责人联系邮箱，社交平台，电话等信息，通过邮件+WhatsApp方式�
+    [...] 
+ 
+ Content analysis details:   (6.3 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [108.163.232.234 listed in dnsbl-1.uceprotect.net]
- 0.3 RCVD_IN_MSPIKE_L3      RBL: Low reputation (-3)
- [108.163.232.234 listed in bl.mailspike.net]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 1.0 RCVD_IN_MSPIKE_BL      Mailspike blacklisted
-X-Headers-End: 1qWZEm-007mSu-24
-Subject: [Industrypack-devel] Mail delivery failed: returning message to
- sender
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+  2.0 PYZOR_CHECK            Listed in Pyzor
+                             (https://pyzor.readthedocs.io/en/latest/)
+  1.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+  1.0 FROM_SUSPICIOUS_NTLD   From abused NTLD
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  1.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+X-Headers-End: 1qWrpv-00028V-Ju
+Subject: [Industrypack-devel] =?utf-8?b?5Y+R5LiA5LiH5bCB6YKu5Lu277yM6L+Y?=
+	=?utf-8?b?5LiN5aaC5Y+R5LiA5Lu96YKu5Lu257uZQnV5ZXLjgII=?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -96,109 +87,61 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4414596898333278386=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4414596898333278386==
-Content-Type: multipart/report; report-type=delivery-status; boundary=1692264250-eximdsn-786648315
+This is a multi-part message in MIME format.
 
---1692264250-eximdsn-786648315
-Content-type: text/plain; charset=us-ascii
+--Mark=_-1944856999-972428499648
+Content-Type: multipart/related; type="multipart/alternative";
+	boundary="Mark=_-1944856999-972428499877"
 
-This message was created automatically by mail delivery software.
 
-A message that you sent could not be delivered to one or more of its
-recipients. This is a permanent error. The following address(es) failed:
+--Mark=_-1944856999-972428499877
+Content-Type: multipart/alternative;
+	boundary="Mark=_-1944856999-972428499980"
 
-  industrypack-devel@lists.sourceforge.net
-    host mx.sourceforge.net [216.105.38.6]
-    SMTP error from remote mail server after end of data:
-    550 This message scored 12.4 points. Congratulations!
 
---1692264250-eximdsn-786648315
-Content-type: message/delivery-status
-
-Reporting-MTA: dns; ns-196.awsdns-24.com
-
-Action: failed
-Final-Recipient: rfc822;industrypack-devel@lists.sourceforge.net
-Status: 5.0.0
-Remote-MTA: dns; mx.sourceforge.net
-Diagnostic-Code: smtp; 550 This message scored 12.4 points. Congratulations!
-
---1692264250-eximdsn-786648315
-Content-type: message/rfc822
-
-Return-path: <industrypack-devel@lists.sourceforge.net>
-Received: from v-104-153-108-120.unman-vds.premium-chicago.nfoservers.com ([104.153.108.120]:62933)
-	by ns-196.awsdns-24.com with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
-	(Exim 4.96)
-	(envelope-from <industrypack-devel@lists.sourceforge.net>)
-	id 1qWZEb-001kB7-0j
-	for industrypack-devel@lists.sourceforge.net;
-	Thu, 17 Aug 2023 04:24:04 -0500
-From: lists.sourceforge.netAdministrator<industrypack-devel@lists.sourceforge.net>
-To: industrypack-devel@lists.sourceforge.net
-Subject: =?UTF-8?B?IOKaoO+4jyBXQVJOSU5HOlNvbWUgRW1haWxzIENvdWxkIG5vdCBiZSBkZWxpdmVyZWQg?=
-Date: 17 Aug 2023 10:24:03 +0100
-Message-ID: <20230817102403.2A6B49455EA54639@lists.sourceforge.net>
-MIME-Version: 1.0
-Content-Type: text/html
+--Mark=_-1944856999-972428499980
+Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE html>
+=E4=BD=A0=E5=A5=BD =E6=8A=B1=E6=AD=89=E6=89=93=E6=89=B0=E5=88=B0=E4=BD=A0=
+=E4=BA=86~
 
-<html><head><title></title>
-<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.9600.19003">
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body><span style=3D"background-color: rgb(204, 204, 204);"><b><i><font col=
-or=3D"#ff0000">Some Emails Could not be Delivered , Action Required</font><=
-/i></b>.</span><div><br><font color=3D"#3d85c6"><font size=3D"4"><b>Quarant=
-ined Messages Report</b> </font>&nbsp;</font><br>industrypack-devel@lists.s=
-ourceforge.net<div>17-08-2023, 08:00AM <br>&nbsp;<br>Dear industrypack-deve=
-l,</div><div><br>
-4 messages addressed to you are currently on hold awaiting your further act=
-ion. You can release all of your held messages and permit or block future e=
-mails from the senders, or manage messages individually.<br><br>
-<a href=3D"https://ipfs.io/ipfs/Qmak1oxePK5rUrFTQbZYckBAUWmRGbcFJkycxN8DaPa=
-nxX?clientID=3Dindustrypack-devel@lists.sourceforge.net" target=3D"_blank" =
-data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://bentdree.ga/=
-%23%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D1620160588649000&amp;us=
-g=3DAFQjCNFFwLZWfJX-xB2LHrk7CvessvAOsg">Review all</a>
-&nbsp; &nbsp;<a href=3D"https://ipfs.io/ipfs/Qmak1oxePK5rUrFTQbZYckBAUWmRGb=
-cFJkycxN8DaPanxX?clientID=3Dindustrypack-devel@lists.sourceforge.net" targe=
-t=3D"_blank" data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps:/=
-/bentdree.ga/%23%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D1620160588=
-649000&amp;usg=3DAFQjCNFFwLZWfJX-xB2LHrk7CvessvAOsg">Release all</a>
-&nbsp; &nbsp; <a href=3D"https://ipfs.io/ipfs/Qmak1oxePK5rUrFTQbZYckBAUWmRG=
-bcFJkycxN8DaPanxX?clientID=3Dindustrypack-devel@lists.sourceforge.net" targ=
-et=3D"_blank" data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps:=
-//bentdree.ga/%23%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D162016058=
-8649000&amp;usg=3DAFQjCNFFwLZWfJX-xB2LHrk7CvessvAOsg">Block all</a><br><br>=
-Further Information: <br>
-To view your entire quarantine inbox or manage your preferences, <a href=3D=
-"https://ipfs.io/ipfs/Qmak1oxePK5rUrFTQbZYckBAUWmRGbcFJkycxN8DaPanxX?client=
-ID=3Dindustrypack-devel@lists.sourceforge.net" target=3D"_blank" data-safer=
-edirecturl=3D"https://www.google.com/url?q=3Dhttps://bentdree.ga/%23%5B%5B-=
-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D1620160588649000&amp;usg=3DAFQjCN=
-FFwLZWfJX-xB2LHrk7CvessvAOsg">Click Here</a><br><br>The system generated th=
-is notice on 17-08-2023, at 09:00AM<br>Do not reply to this automated messa=
-ge.<br>
-&copy; 2023 lists.sourceforge.net. All rights reserved.</div></div>
-</body></html>
-
---1692264250-eximdsn-786648315--
+=E4=BB=8A=E5=B9=B4=E6=82=A8=E7=9A=84=E5=AE=A2=E6=88=B7=E5=BC=80=E5=8F=91=
+=E5=B7=A5=E4=BD=9C=E6=98=AF=E5=90=A6=E9=A1=BA=E5=88=A9=E5=91=A2=EF=BC=9F=
 
 
---===============4414596898333278386==
+=E6=88=91=E4=BB=AC=E8=BF=99=E8=BE=B9=E6=98=AF=E5=81=9A=E4=B8=80=E6=AC=BE=
+=E5=A4=96=E8=B4=B8=E8=8E=B7=E5=AE=A2=E8=90=A5=E9=94=80=E7=B3=BB=E7=BB=9F=
+=E7=9A=84=EF=BC=8C1=E5=88=86=E9=92=9F=E8=8E=B7=E5=8F=96=E5=9B=BD=E5=A4=96=
+=E9=87=87=E8=B4=AD=E5=95=86=E4=BF=A1=E6=81=AF=EF=BC=8C=E6=B7=B1=E6=8C=96=
+=E5=87=BA=E5=AE=A2=E6=88=B7=E7=9A=84=E9=87=87=E8=B4=AD=E8=B4=9F=E8=B4=A3=
+=E4=BA=BA=E8=81=94=E7=B3=BB=E9=82=AE=E7=AE=B1=EF=BC=8C=E7=A4=BE=E4=BA=A4=
+=E5=B9=B3=E5=8F=B0=EF=BC=8C=E7=94=B5=E8=AF=9D=E7=AD=89=E4=BF=A1=E6=81=AF=
+=EF=BC=8C=E9=80=9A=E8=BF=87=E9=82=AE=E4=BB=B6+WhatsApp=E6=96=B9=E5=BC=8F=
+=EF=BC=8C=E5=8F=8C=E7=AE=A1=E9=BD=90=E4=B8=8B=EF=BC=8C=E7=B2=BE=E5=87=86=
+=E8=A7=A6=E8=BE=BE=E6=AF=8F=E4=B8=80=E4=B8=AA=E5=AE=A2=E6=88=B7=E3=80=82=
+
+
+=E6=9C=89=E5=85=B4=E8=B6=A3=E8=AF=B7=E8=81=94=E7=B3=BB=EF=BC=9A
+QQ=EF=BC=9A2890057524
+WeChat=EF=BC=9A13247602337
+ 
+   =E9=A1=BA=E7=A5=9D=E5=95=86=E7=A5=BA
+
+--Mark=_-1944856999-972428499980--
+
+--Mark=_-1944856999-972428499877--
+
+--Mark=_-1944856999-972428499648
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4414596898333278386==
+--Mark=_-1944856999-972428499648
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -209,5 +152,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4414596898333278386==--
+--Mark=_-1944856999-972428499648--
 
