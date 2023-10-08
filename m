@@ -2,89 +2,85 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 202AA7BC74B
-	for <lists+industrypack-devel@lfdr.de>; Sat,  7 Oct 2023 13:57:59 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5110F7BCC31
+	for <lists+industrypack-devel@lfdr.de>; Sun,  8 Oct 2023 06:52:27 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1qp5wV-0000lj-BX
+	id 1qpLmE-0003Vx-HD
 	for lists+industrypack-devel@lfdr.de;
-	Sat, 07 Oct 2023 11:57:57 +0000
+	Sun, 08 Oct 2023 04:52:25 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <noreply@wetransfer.com>) id 1qp5wT-0000lZ-0M
+ (envelope-from <messages-noreply@linkedin.com>) id 1qpLmC-0003Vq-QV
  for industrypack-devel@lists.sourceforge.net;
- Sat, 07 Oct 2023 11:57:55 +0000
+ Sun, 08 Oct 2023 04:52:23 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=XiKlZ6OBCMC93acW9SvHh4vnEvMPeuMJq0CdcYMbuxQ=; b=QwGe0cSy6u1t4JLXlQi9kov1D4
- yklU6OQ3iP88Tg866vQYHCZ3qtLj40XbBNYwKJj4T4T9orjT5XEFU5sDTLu9BjTxlQW9BZBW2Py0x
- 0zhFniWOP8+7KS8U7Eb6WDL8wcKo3crfnT4l85vaxsEW3CZErpxTFJrTROwpMImCGSHI=;
+ bh=f38V5xOF0rlV2SLZn6gcuQW55F+UlIb7fyaXaraEsAw=; b=K24zUTVKR+JK/eF0slUQbAt2ps
+ o4HxmEEFJM3n47NkIKVq7T8lRig0GB6VqxBls1R9w+5yBFEUnOq7+PPT5MlycGqa8tXJC+X2kk+EU
+ qPFWFPEwSZprasghK6h/T3hUrVlBDQoCpLDfb38Uc/Goi//QzIbAMzPXM6hD84wWDsaE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=XiKlZ6OBCMC93acW9SvHh4vnEvMPeuMJq0CdcYMbuxQ=; b=J
- IkwitHAzTGKVy7QiZ8h9Fdvdl7HFr4X+jA4xRbBiWAAPLwNEyStuHCCavVGVUUhJL4mYcAKDgIYtG
- Miv0D6rTECHVnPw6+XJuXjh/QvEI7mXo1p09F8pVW2qYBTTyWUBdUYvFrkgHk5ktLVPP0cFuxz6rP
- 3SrnxN1ofnIZPoXI=;
+ List-Owner:List-Archive; bh=f38V5xOF0rlV2SLZn6gcuQW55F+UlIb7fyaXaraEsAw=; b=l
+ ebKZW2SmtnjEALKGxtHqpyttmTPl3fCwk9HvAMxewoLt/H9wPUI3K2bTOuBq6+xzb0nKZhrMBqPbI
+ fGvd5EtZ3gFHyFpW22Qs5L4esYzjax+h+XfycQA8o+8tTbJrLm+f64jdH6E/Wn7LWSNZ1iEX0vv7B
+ rSzUvu0WgiMyiey8=;
 Received: from [122.114.192.74]
  (helo=naughty-ramanujan.122-114-192-74.plesk.page)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1qp5wP-0004Mu-4a for industrypack-devel@lists.sourceforge.net;
- Sat, 07 Oct 2023 11:57:55 +0000
+ id 1qpLm9-006Slu-9E for industrypack-devel@lists.sourceforge.net;
+ Sun, 08 Oct 2023 04:52:23 +0000
 Received: from 88.217.224.35.bc.googleusercontent.com
  (88.217.224.35.bc.googleusercontent.com [35.224.217.88])
  by naughty-ramanujan.122-114-192-74.plesk.page (Postfix) with ESMTPSA id
- 428F3248B0BA for <industrypack-devel@lists.sourceforge.net>;
- Sat,  7 Oct 2023 19:06:49 +0800 (CST)
+ 4568A250BE0A for <industrypack-devel@lists.sourceforge.net>;
+ Sun,  8 Oct 2023 12:39:20 +0800 (CST)
 Authentication-Results: naughty-ramanujan.122-114-192-74.plesk.page;
- spf=pass (sender IP is 35.224.217.88) smtp.mailfrom=noreply@wetransfer.com
+ spf=pass (sender IP is 35.224.217.88)
+ smtp.mailfrom=messages-noreply@linkedin.com
  smtp.helo=88.217.224.35.bc.googleusercontent.com
 Received-SPF: pass (naughty-ramanujan.122-114-192-74.plesk.page: connection is
  authenticated)
 To: industrypack-devel@lists.sourceforge.net
-Date: 7 Oct 2023 11:06:46 +0000
-Message-ID: <20231007110646.639D3B0822A1491B@wetransfer.com>
+Date: 8 Oct 2023 04:39:18 +0000
+Message-ID: <20231008043916.D8E2EFBC1EC98FBB@linkedin.com>
 MIME-Version: 1.0
 X-Spam-Score: 5.4 (+++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  industrypack-devel adnrea@steelux.com sent you Purchase_Order_#61521053.pdf
-    3 items, 145.1 MB in total ・ Expires on 13 October, 2023 Get your files
-    Download link https://wetransfer.com/downloads/c7de5bdd6eda17144fc3a [...]
-    
- 
+ Content preview: Linedin You have 18 new invitation View invitations You have
+ 9 new business message View messages Sandy Kell: Our company has completed
+ the assessment of your products and will place order in the coming week [...]
  Content analysis details:   (5.4 points, 6.0 required)
- 
-  pts rule name              description
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
-                             [SPF failed: Rejected by SPF record]
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  1.0 FROM_MISSP_SPF_FAIL    No description available.
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
-                             Colors in HTML
-  2.0 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
-X-Headers-End: 1qp5wP-0004Mu-4a
-Subject: [Industrypack-devel] watson@steelindustries.com sent you
- Order_specification.pdf via WeTransfer
+ 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 2.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
+ only
+X-Headers-End: 1qpLm9-006Slu-9E
+Subject: [Industrypack-devel]
+ =?UTF-8?B?4pyJ77iPIGluZHVzdHJ5cGFjay1kZXZlbA==?=,
+ View my invitation to connect
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -96,13 +92,12 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: WeTransfer via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: WeTransfer <noreply@wetransfer.com>
-Content-Type: multipart/mixed; boundary="===============8333378303824012111=="
+From: LinkeIn via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
+Reply-To: LinkeIn <messages-noreply@linkedin.com>
+Content-Type: multipart/mixed; boundary="===============5868567334039314906=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============8333378303824012111==
+--===============5868567334039314906==
 Content-Type: text/html;
 	charset="windows-1252"
 Content-Transfer-Encoding: quoted-printable
@@ -110,378 +105,467 @@ Content-Transfer-Encoding: quoted-printable
 <html>
 
 <head>
-<meta http-equiv=3D"Content-Language" content=3D"en-us">
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
 252">
-<title>industrypack-devel</title>
+<title>Linedin</title>
 </head>
 
 <body>
-
-<table width=3D"99%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=
-=3D"v1outer_wrapper_table" bgcolor=3D"#f4f4f4" style=3D"box-sizing: border-=
-box; border-collapse: collapse; color: rgb(44, 54, 58); font-family: Roboto=
-, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: =
-normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal=
-; orphans: 2; text-align: left; text-transform: none; white-space: normal; =
-widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-co=
-lor: rgb(244, 244, 244); text-decoration-thickness: initial; text-decoratio=
-n-style: initial; text-decoration-color: initial; text-size-adjust: none; -=
-webkit-font-smoothing: antialiased; outline: none; border-spacing: 0px; mar=
-gin: 0px; padding: 0px; table-layout: auto !important;">
-	<tbody style=3D"box-sizing: border-box;">
-		<tr style=3D"box-sizing: border-box;">
-			<td align=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-=
-size-adjust: none; -webkit-font-smoothing: antialiased; outline: none; widt=
-h: 1564px; margin: 0px; padding: 0px">
-			<center style=3D"box-sizing: border-box;">
-			<table width=3D"600" align=3D"center" cellspacing=3D"0" cellpadding=3D"0=
-" border=3D"0" class=3D"v1inner_wrapper_table v1table_centered" style=3D"bo=
-x-sizing: border-box; border-collapse: collapse; text-size-adjust: none; -w=
-ebkit-font-smoothing: antialiased; outline: none; border-spacing: 0px; tabl=
-e-layout: fixed; width: 600px; min-width: 600px; margin: 0px auto; padding:=
- 0px;">
-				<tbody style=3D"box-sizing: border-box;">
-					<tr style=3D"box-sizing: border-box;">
-						<td width=3D"600" class=3D"v1inner_wrapper_td" align=3D"left" valign=
-=3D"top" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit-f=
-ont-smoothing: antialiased; outline: none; width: 600px; min-width: 600px; =
-margin: 0px; padding: 0px;">
-						<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v1ta=
-ble_full_width" style=3D"box-sizing: border-box; border-collapse: collapse;=
- text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: none=
-; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0px; padd=
-ing: 0px;">
-							<tbody style=3D"box-sizing: border-box;">
-								<tr style=3D"box-sizing: border-box;">
-									<td class=3D"v1logo_outer_wrapper_td" align=3D"left" valign=3D"top=
-" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit-font-smo=
-othing: antialiased; outline: none; width: 600px; margin: 0px; padding: 55p=
-x 0px 0px;">
-									<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v=
-1table_full_width" style=3D"box-sizing: border-box; border-collapse: collap=
-se; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: n=
-one; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0px; p=
-adding: 0px;">
-										<tbody style=3D"box-sizing: border-box;">
-											<tr style=3D"box-sizing: border-box;">
-												<td class=3D"v1logo_inner_wrapper_td" align=3D"left" bgcolor=3D=
-"#5268ff" valign=3D"top" style=3D"box-sizing: border-box; text-size-adjust:=
- none; -webkit-font-smoothing: antialiased; outline: none; width: 600px; fo=
-nt-size: 10px; margin: 0px; padding: 0px; background: cover no-repeat cente=
-r top">
-												<center style=3D"box-sizing: border-box;">
-												<table align=3D"center" cellspacing=3D"0" cellpadding=3D"0" bor=
-der=3D"0" class=3D"v1table_centered" style=3D"box-sizing: border-box; borde=
-r-collapse: collapse; text-size-adjust: none; -webkit-font-smoothing: antia=
-liased; outline: none; border-spacing: 0px; table-layout: fixed; width: aut=
-o; margin: 0px auto; padding: 0px;">
-													<tbody style=3D"box-sizing: border-box;">
-														<tr style=3D"box-sizing: border-box;">
-															<td height=3D"16px" align=3D"left" valign=3D"top" style=3D"b=
-ox-sizing: border-box; height: 16px; text-size-adjust: none; -webkit-font-s=
-moothing: antialiased; outline: none; width: 56px; margin: 0px; padding: 0p=
-x;">
-															</td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td align=3D"left" valign=3D"top" style=3D"box-sizing: borde=
-r-box; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline=
-: none; width: 56px; margin: 0px; padding: 0px;">
-															<a target=3D"_blank" rel=3D"noreferrer" style=3D"box-sizing:=
- border-box; color: rgb(0, 172, 255); text-decoration: none; background-col=
-or: transparent;" href=3D"https://bafybeihf2cf6w6zjz54bemdwerc2dfto56co632x=
-m4rf5ka2icfh64x6ny.ipfs.dweb.link/#industrypack-devel@lists.sourceforge.net=
-">
-															<img src=3D"https://prod-cdn.wetransfer.net/assets/email/v2/=
-logos/blue_2x-10b63a7e9107c08c8d89a3f8016c133ae4fcf5afb3e59a65fb17e21eeb831=
-48d.png" alt=3D"Click 'Download images' to view images" align=3D"center" bo=
-rder=3D"0" width=3D"56" class=3D"v1logo_blue_img" style=3D"box-sizing: bord=
-er-box; vertical-align: middle; border: none; text-size-adjust: none; -webk=
-it-font-smoothing: antialiased; margin: 0px; outline: none; padding: 0px; d=
-isplay: block; height: auto; line-height: 10px; text-decoration: none; widt=
-h: 56px;" height=3D"30"></a></td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td height=3D"11px" align=3D"left" valign=3D"top" style=3D"b=
-ox-sizing: border-box; height: 11px; text-size-adjust: none; -webkit-font-s=
-moothing: antialiased; outline: none; width: 56px; margin: 0px; padding: 0p=
-x;">
-															</td>
-														</tr>
-												</table>
-												</center></td>
-											</tr>
-									</table>
-									</td>
-								</tr>
-						</table>
-						<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v1ma=
-in_content_outer_wrapper_table" bgcolor=3D"#ffffff" style=3D"box-sizing: bo=
-rder-box; border-collapse: collapse; text-size-adjust: none; -webkit-font-s=
-moothing: antialiased; outline: none; border-spacing: 0px; table-layout: fi=
-xed; width: 600px; margin: 0px; padding: 0px;">
-							<tbody style=3D"box-sizing: border-box;">
-								<tr style=3D"box-sizing: border-box;">
-									<td align=3D"left" valign=3D"top" style=3D"box-sizing: border-box;=
- text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: none=
-; width: 600px; margin: 0px; padding: 0px;">
-									<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v=
-1table_full_width" style=3D"box-sizing: border-box; border-collapse: collap=
-se; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: n=
-one; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0px; p=
-adding: 0px;">
-										<tbody style=3D"box-sizing: border-box;">
-											<tr style=3D"box-sizing: border-box;">
-												<td class=3D"v1padded_mobile v1main_content_inner_wrapper_td" a=
-lign=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-size-adj=
-ust: none; -webkit-font-smoothing: antialiased; outline: none; width: 600px=
-; margin: 0px; padding: 0px;">
-												<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=
-=3D"v1table_full_width" style=3D"box-sizing: border-box; border-collapse: c=
-ollapse; text-size-adjust: none; -webkit-font-smoothing: antialiased; outli=
-ne: none; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0=
-px; padding: 0px;">
-													<tbody style=3D"box-sizing: border-box;">
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1main_heading_td v1unpadded_mobile v1main_head=
-ing_td_wider" align=3D"center" valign=3D"top" style=3D"box-sizing: border-b=
-ox; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: n=
-one; width: 600px; color: rgb(23, 24, 26); font-family: &quot;FreightSans P=
-ro&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sa=
-ns-serif; font-size: 26px; font-style: normal; font-weight: normal; line-he=
-ight: 30px; word-spacing: 0px; margin: 0px; padding: 60px 80px 0px;">
-															<a class=3D"v1main_heading_email_link" onclick=3D"return rcm=
-ail.command('compose','rwatson@kandkindustries.com',this)" rel=3D"noreferre=
-r" style=3D"box-sizing: border-box; color: rgb(23, 24, 26); text-decoration=
-: none; background-color: transparent; font-weight: normal;" href=3D"mailto=
-:rwatson@kandkindustries.com">
-															<span class=3D"v1main_heading_email_link" style=3D"box-sizin=
-g: border-box; color: rgb(82, 104, 255); font-weight: normal; text-decorati=
-on: none;">
-																														adnrea@steelux.com</span></a><br style=3D"box=
--sizing: border-box;">
-															<span class=3D"v1transfer_display_name" style=3D"box-sizing:=
- border-box; display: inline-flex;">
-															sent you=20
-															Purchase_Order_#61521053.pdf</span></td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1files_details_td v1unpadded_mobile" align=3D"=
-center" valign=3D"top" style=3D"box-sizing: border-box; text-size-adjust: n=
-one; -webkit-font-smoothing: antialiased; outline: none; width: 600px; colo=
-r: rgb(106, 109, 112); font-family: &quot;Fakt Pro&quot;, &quot;Segoe UI&qu=
-ot;, &quot;SanFrancisco Display&quot;, Arial, sans-serif; font-size: 14px; =
-font-style: normal; font-weight: normal; line-height: 23px; word-spacing: 0=
-px; margin: 0px; padding: 20px 80px 0px;">
-															3 items, 145.1 MB in=20
-															total &#12539; Expires on=20
-															13 October, 2023</td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1button_outer_wrapper_td_get v1unpadded_mobile=
-" align=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-size-=
-adjust: none; -webkit-font-smoothing: antialiased; outline: none; width: 60=
-0px; margin: 0px; padding: 40px 160px;">
-															<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" clas=
-s=3D"v1table_full_width v1button_table" style=3D"box-sizing: border-box; bo=
-rder-collapse: collapse; text-size-adjust: none; -webkit-font-smoothing: an=
-tialiased; outline: none; border-spacing: 0px; table-layout: fixed; width: =
-280px; margin: 0px; padding: 0px;">
-																<tbody style=3D"box-sizing: border-box;">
-																	<tr style=3D"box-sizing: border-box;">
-																		<td align=3D"left" valign=3D"top" style=3D"box-sizing: bo=
-rder-box; text-size-adjust: none; -webkit-font-smoothing: antialiased; outl=
-ine: none; width: 280px; margin: 0px; padding: 0px;">
-																		<span style=3D"box-sizing: border-box;">
-																		<a class=3D"v1button_anchor v1button_2_anchor" target=3D"=
-_blank" rel=3D"noreferrer" style=3D"box-sizing: border-box; color: rgb(255,=
- 255, 255); text-decoration: none; background-color: rgb(82, 104, 255); dis=
-play: block; font-family: &quot;Fakt Pro Medium&quot;, &quot;Segoe UI&quot;=
-, &quot;SanFrancisco Display&quot;, Arial, sans-serif; font-size: 14px; fon=
-t-style: normal; text-align: center; word-spacing: 0px; border-radius: 25px=
-; padding: 15px 20px;" href=3D"https://bafybeihf2cf6w6zjz54bemdwerc2dfto56c=
-o632xm4rf5ka2icfh64x6ny.ipfs.dweb.link/#industrypack-devel@lists.sourceforg=
-e.net">Get your=20
-																		files</a></span></td>
-																	</tr>
-															</table>
-															</td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1separator_40_outer_wrapper_td v1unpadded_mobi=
-le" align=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-siz=
-e-adjust: none; -webkit-font-smoothing: antialiased; outline: none; width: =
-600px; margin: 0px; padding: 40px 80px 0px;">
-															<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" clas=
-s=3D"v1table_full_width" style=3D"box-sizing: border-box; border-collapse: =
-collapse; text-size-adjust: none; -webkit-font-smoothing: antialiased; outl=
-ine: none; border-spacing: 0px; table-layout: fixed; width: 440px; margin: =
-0px; padding: 0px;">
-																<tbody style=3D"box-sizing: border-box;">
-																	<tr style=3D"box-sizing: border-box;">
-																		<td class=3D"v1separator_td" align=3D"left" valign=3D"top=
-" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit-font-smo=
-othing: antialiased; outline: none; width: 440px; border-bottom: 2px solid =
-rgb(244, 244, 244); font-size: 1px; line-height: 0; margin: 0px; padding: 0=
-px;">
-																		&nbsp;</td>
-																	</tr>
-															</table>
-															</td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1body_content_td v1unpadded_mobile v1download_=
-link_container" align=3D"left" valign=3D"top" style=3D"box-sizing: border-b=
-ox; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: n=
-one; width: 600px; color: rgb(121, 124, 127); font-family: &quot;Fakt Pro&q=
-uot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-s=
-erif; font-size: 14px; font-style: normal; font-weight: normal; line-height=
-: 24px; word-spacing: 0px; word-break: break-all; margin: 0px; padding: 50p=
-x 80px 0px;">
-															<span class=3D"v1body_content_subheading_span" style=3D"box-=
-sizing: border-box; color: rgb(23, 24, 26); font-family: &quot;FreightSans =
-Pro&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, s=
-ans-serif; font-size: 18px; font-weight: 500;">
-															Download link</span><br style=3D"box-sizing: border-box;">
-															<a class=3D"v1download_link_link" target=3D"_blank" rel=3D"n=
-oreferrer" style=3D"box-sizing: border-box; color: rgb(23, 24, 26); text-de=
-coration: underline; background-color: transparent; font-family: &quot;Fakt=
- Pro Medium&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, =
-Arial, sans-serif; font-weight: normal; overflow-wrap: break-word;" href=3D=
-"https://bafybeihf2cf6w6zjz54bemdwerc2dfto56co632xm4rf5ka2icfh64x6ny.ipfs.d=
-web.link/#industrypack-devel@lists.sourceforge.net">
-															<span class=3D"v1download_link_link" style=3D"box-sizing: bo=
-rder-box; color: rgb(82, 104, 255); font-weight: normal; text-decoration: u=
-nderline; overflow-wrap: break-word;">
-															https://wetransfer.com/downloads/c7de5bdd6eda17144fc3ae51a7b=
-4d95220230131145245/8b99c97aa60d12170f9a52de4bd2d5a420230131145326/1329d3</=
-span></a></td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1body_content_td v1body_content_padding_bottom=
-_td v1files_list v1files_list_title v1unpadded_mobile" align=3D"left" valig=
-n=3D"top" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit-=
-font-smoothing: antialiased; outline: none; width: 600px; color: rgb(121, 1=
-24, 127); font-family: &quot;Fakt Pro&quot;, &quot;Segoe UI&quot;, &quot;Sa=
-nFrancisco Display&quot;, Arial, sans-serif; font-size: 14px; font-style: n=
-ormal; font-weight: normal; line-height: 24px; word-spacing: 0px; margin: 0=
-px; padding: 50px 80px 0px;">
-															<span class=3D"v1body_content_subheading_span">
-															<span style=3D"font-family: 'FreightSans Pro', 'Segoe UI', '=
-SanFrancisco Display', Arial, sans-serif; font-weight: 500; font-size: 18px=
-; color: #17181A">
-															3</span></span><span class=3D"v1body_content_subheading_span=
-" style=3D"box-sizing: border-box; color: rgb(23, 24, 26); font-family: &qu=
-ot;FreightSans Pro&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&=
-quot;, Arial, sans-serif; font-size: 18px; font-weight: 500;">
-															items</span></td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1tp0 v1body_content_td v1body_content_padding_=
-bottom_td v1files_list v1files_list_content v1unpadded_mobile" align=3D"lef=
-t" valign=3D"top" style=3D"box-sizing: border-box; text-size-adjust: none; =
--webkit-font-smoothing: antialiased; outline: none; width: 600px; color: rg=
-b(121, 124, 127); font-family: &quot;Fakt Pro&quot;, &quot;Segoe UI&quot;, =
-&quot;SanFrancisco Display&quot;, Arial, sans-serif; font-size: 14px; font-=
-style: normal; font-weight: normal; line-height: 24px; word-spacing: 0px; m=
-argin: 0px; padding: 0px 80px 50px;">
-															<div class=3D"v1body_content_subheading_span" style=3D"box-s=
-izing: border-box; color: rgb(23, 24, 26); font-family: &quot;FreightSans P=
-ro&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sa=
-ns-serif; font-size: 18px; font-weight: 500;">
-&nbsp;</div>
-															<div class=3D"v1transfer_item" style=3D"box-sizing: border-b=
-ox; border-bottom: 1px solid rgb(244, 244, 244); padding: 9px 0px 7px;">
-																<div class=3D"v1transfer_item_title" style=3D"box-sizing: b=
-order-box; color: rgb(23, 24, 26); font-family: &quot;Fakt Pro&quot;, &quot=
-;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-serif; font-=
-size: 14px; font-style: normal; font-weight: normal; line-height: 16px; wor=
-d-spacing: 0px;">
-																	Product_Specification.pdf</div>
-																<div class=3D"v1transfer_item_description" style=3D"box-siz=
-ing: border-box; color: rgb(106, 109, 112); font-size: 12px; line-height: 1=
-6px;">
-																	259 KB</div>
-															</div>
-															<div class=3D"v1transfer_item v1transfer_item_last" style=3D=
-"box-sizing: border-box; border-bottom: 1px none rgb(244, 244, 244); paddin=
-g: 9px 0px 7px;">
-																<div class=3D"v1transfer_item_title" style=3D"box-sizing: b=
-order-box; color: rgb(23, 24, 26); font-family: &quot;Fakt Pro&quot;, &quot=
-;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-serif; font-=
-size: 14px; font-style: normal; font-weight: normal; line-height: 16px; wor=
-d-spacing: 0px;">
-																	Purchase_Order_#61521053.pdf</div>
-																<div class=3D"v1transfer_item_description" style=3D"box-siz=
-ing: border-box; color: rgb(106, 109, 112); font-size: 12px; line-height: 1=
-6px;">16.5 MB<br><div class=3D"v1transfer_item_title" style=3D"box-sizing: =
-border-box; color: rgb(23, 24, 26); font-family: &quot;Fakt Pro&quot;, &quo=
-t;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-serif; font=
--size: 14px; font-style: normal; font-weight: normal; line-height: 16px; wo=
-rd-spacing: 0px;">
-																	<br>
-																	Company_profile_#8253.pdf</div>
-																	<div class=3D"v1transfer_item_description" style=3D"box-si=
-zing: border-box; color: rgb(106, 109, 112); font-size: 12px; line-height: =
-16px;">16.5 MB</div>
-																</div>
-															</div>
-															</td>
-														</tr>
-												</table>
-												</td>
-											</tr>
-									</table>
-									</td>
-								</tr>
-						</table>
-						<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v1ta=
-ble_full_width" style=3D"box-sizing: border-box; border-collapse: collapse;=
- text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: none=
-; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0px; padd=
-ing: 0px;">
-							<tbody style=3D"box-sizing: border-box;">
-								<tr style=3D"box-sizing: border-box;">
-									<td class=3D"v1add_our_email_outer_wrapper_td" align=3D"left" vali=
-gn=3D"top" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit=
--font-smoothing: antialiased; outline: none; width: 600px; margin: 0px; pad=
-ding: 2px 0px 0px;">
-									<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v=
-1add_our_email_wrapper_table" bgcolor=3D"#ffffff" style=3D"box-sizing: bord=
-er-box; border-collapse: collapse; text-size-adjust: none; -webkit-font-smo=
-othing: antialiased; outline: none; border-spacing: 0px; table-layout: fixe=
-d; width: 600px; margin: 0px; padding: 0px;">
-										<tbody style=3D"box-sizing: border-box;">
-											<tr style=3D"box-sizing: border-box;">
-												<td class=3D"v1padded_mobile v1add_our_email_inner_wrapper_td" =
-align=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-size-ad=
-just: none; -webkit-font-smoothing: antialiased; outline: none; width: 600p=
-x; margin: 0px; padding: 0px 20px;">
-												&nbsp;</td>
-											</tr>
-									</table>
-									</td>
+<table role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"center" class=3D"mercado-container w-[512px] max=
+-w-[512px] mx-auto my-0 p-0 bg-color-background-container" style=3D"white-s=
+pace: normal !important; word-break: break-word !important; font-family: -a=
+pple-system, system-ui, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &=
+quot;Helvetica Neue&quot;, &quot;Fira Sans&quot;, Ubuntu, Oxygen, &quot;Oxy=
+gen Sans&quot;, Cantarell, &quot;Droid Sans&quot;, &quot;Apple Color Emoji&=
+quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe =
+UI Symbol&quot;, &quot;Lucida Grande&quot;, Helvetica, Arial, sans-serif; l=
+etter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-sp=
+acing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
+ial; text-decoration-style: initial; text-decoration-color: initial; text-s=
+ize-adjust: 100%; margin: 0px auto; width: 527px; max-width: 512px; backgro=
+und-color: rgb(255, 255, 255); padding: 0px">
+	<tbody style=3D"white-space: normal !important; word-break: break-word !im=
+portant;">
+		<tr style=3D"white-space: normal !important; word-break: break-word !impo=
+rtant;">
+			<td class=3D"text-center p-3" style=3D"white-space: normal !important; w=
+ord-break: break-word !important; font-family: arial, verdana, sans-serif; =
+line-height: 1.666; text-size-adjust: 100%; padding: 24px; text-align: cent=
+er;">
+			<table role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" width=3D"100%" class=3D"min-w-full" style=3D"white-spa=
+ce: normal !important; word-break: break-word !important; text-size-adjust:=
+ 100%; min-width: 100%;">
+				<tbody style=3D"white-space: normal !important; word-break: break-word =
+!important;">
+					<tr style=3D"white-space: normal !important; word-break: break-word !i=
+mportant;">
+						<td align=3D"left" valign=3D"middle" style=3D"white-space: normal !im=
+portant; word-break: break-word !important; font-family: arial, verdana, sa=
+ns-serif; line-height: 1.666; text-size-adjust: 100%;">
+						<a target=3D"_blank" class=3D"w-[84px]" style=3D"white-space: normal =
+!important; word-break: break-word !important; color: rgb(10, 102, 194); cu=
+rsor: pointer; display: inline-block; text-decoration: none; text-size-adju=
+st: 100%; width: 84px" href=3D"https://bafybeihhyjqjmt7xlwlrti22azfr5qonfyc=
+ouilq7ft2cf5nvy4ijuxwiu.ipfs.dweb.link/#industrypack-devel@lists.sourceforg=
+e.net">
+						<img class=3D"block" alt=3D"LinkedIn" src=3D"https://www.linkedin.com=
+/comm/dms/logo?badgeTheme=3Dmercado&lipi=3Durn%3Ali%3Apage%3Aemail_email_no=
+tification_digest_01%3BVmJ%2BCsJYT0646l1A2wHahA%3D%3D&midSig=3D1xGDQhqoqJya=
+Q1&midToken=3DAQHDa5fsDgGOtg&trkEmail=3Deml-email_notification_digest_01-nu=
+ll-0-comms%7Ebadging%7Edynamic%7Eglimmer-null-3fkydm%7Eljwwmk2m%7E5f-null-n=
+ull&trk=3Deml-email_notification_digest_01-null-0-comms%7Ebadging%7Edynamic=
+%7Eglimmer&_sig=3D072CjveEuJyaQ1" data-test-header-dynamic-badging-img=3D""=
+ style=3D"white-space: normal !important; word-break: break-word !important=
+; border: 0px; outline: none; text-decoration: none; display: block;" width=
+=3D"66" height=3D"84"></a></td>
+						<td valign=3D"middle" align=3D"right" style=3D"white-space: normal !i=
+mportant; word-break: break-word !important; font-family: arial, verdana, s=
+ans-serif; line-height: 1.666; text-size-adjust: 100%;">
+						<table role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" data-test-header-profile style=3D"w=
+hite-space: normal !important; word-break: break-word !important; text-size=
+-adjust: 100%;">
+							<tbody style=3D"white-space: normal !important; word-break: break-wo=
+rd !important;">
+								<tr style=3D"white-space: normal !important; word-break: break-word=
+ !important;">
+									<td align=3D"right" valign=3D"middle" class=3D"w-[32px]" width=3D"=
+32" style=3D"white-space: normal !important; word-break: break-word !import=
+ant; font-family: arial, verdana, sans-serif; line-height: 1.666; text-size=
+-adjust: 100%; width: 32px;">
+									&nbsp;</td>
 								</tr>
 						</table>
 						</td>
 					</tr>
 			</table>
-			</center></td>
+			</td>
+		</tr>
+		<tr style=3D"white-space: normal !important; word-break: break-word !impo=
+rtant;">
+			<td class=3D"px-3 pb-3" style=3D"white-space: normal !important; word-br=
+eak: break-word !important; font-family: arial, verdana, sans-serif; line-h=
+eight: 1.666; text-size-adjust: 100%; padding-left: 24px; padding-right: 24=
+px; padding-bottom: 24px;">
+			<div style=3D"white-space: normal !important; word-break: break-word !im=
+portant;">
+				<table role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" width=3D"100%" style=3D"white-space: normal !importan=
+t; word-break: break-word !important; text-size-adjust: 100%;">
+					<tbody style=3D"white-space: normal !important; word-break: break-word=
+ !important;">
+						<tr style=3D"white-space: normal !important; word-break: break-word !=
+important;">
+							<td class=3D"px-1 " style=3D"white-space: normal !important; word-br=
+eak: break-word !important; font-family: arial, verdana, sans-serif; line-h=
+eight: 1.666; text-size-adjust: 100%; padding-left: 8px; padding-right: 8px=
+;">
+							<table role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" class style=3D"white-space: normal =
+!important; word-break: break-word !important; text-size-adjust: 100%;">
+								<tbody style=3D"white-space: normal !important; word-break: break-w=
+ord !important;">
+									<tr style=3D"white-space: normal !important; word-break: break-wor=
+d !important;">
+										<td class=3D"text-system-gray-90 text-display-sm text-center pb-3=
+" style=3D"white-space: normal !important; word-break: break-word !importan=
+t; font-family: arial, verdana, sans-serif; line-height: 1.666; text-size-a=
+djust: 100%; padding-bottom: 24px; text-align: center; font-size: 24px; col=
+or: rgb(40, 40, 40);">
+										You have&nbsp;<strong style=3D"white-space: normal !important; wo=
+rd-break: break-word !important;">18=20
+										new</strong>&nbsp;invitation</td>
+									</tr>
+									<tr style=3D"white-space: normal !important; word-break: break-wor=
+d !important;">
+										<td class=3D"pb-2 text-center" style=3D"white-space: normal !impo=
+rtant; word-break: break-word !important; font-family: arial, verdana, sans=
+-serif; line-height: 1.666; text-size-adjust: 100%; padding-bottom: 16px; t=
+ext-align: center;">
+										<img src=3D"https://static.licdn.com/aero-v1/sc/h/1uvhgehc32ggjuk=
+ldm6o9dqfs" alt=3D"Mail open icon" class=3D"w-8 h-8 block mx-auto" width=3D=
+"64" height=3D"64" style=3D"white-space: normal !important; word-break: bre=
+ak-word !important; border: 0px; outline: none; text-decoration: none; marg=
+in-left: auto; margin-right: auto; display: block; height: 64px; width: 64p=
+x;"></td>
+									</tr>
+									<tr style=3D"white-space: normal !important; word-break: break-wor=
+d !important;">
+										<td class=3D"text-center" style=3D"white-space: normal !important=
+; word-break: break-word !important; font-family: arial, verdana, sans-seri=
+f; line-height: 1.666; text-size-adjust: 100%; text-align: center;">
+										<table role=3D"presentation" valign=3D"top" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"100%" data-test-id=3D"email-button" st=
+yle=3D"white-space: normal !important; word-break: break-word !important; t=
+ext-size-adjust: 100%;">
+											<tbody style=3D"white-space: normal !important; word-break: brea=
+k-word !important;">
+												<tr style=3D"white-space: normal !important; word-break: break-=
+word !important;">
+													<td valign=3D"middle" align=3D"middle" style=3D"white-space: n=
+ormal !important; word-break: break-word !important; font-family: arial, ve=
+rdana, sans-serif; line-height: 1.666; text-size-adjust: 100%;">
+													<a target=3D"_blank" aria-label=3D"View invitations" style=3D"=
+white-space: normal !important; word-break: break-word !important; color: r=
+gb(10, 102, 194); cursor: pointer; display: inline-block; text-decoration: =
+none; text-size-adjust: 100%;" href=3D"https://bafybeihhyjqjmt7xlwlrti22azf=
+r5qonfycouilq7ft2cf5nvy4ijuxwiu.ipfs.dweb.link/#industrypack-devel@lists.so=
+urceforge.net">
+													<table role=3D"presentation" valign=3D"top" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" width=3D"auto" class=3D"border-separate" sty=
+le=3D"white-space: normal !important; word-break: break-word !important; te=
+xt-size-adjust: 100%; border-collapse: separate;">
+														<tbody style=3D"white-space: normal !important; word-break: b=
+reak-word !important;">
+															<tr style=3D"white-space: normal !important; word-break: bre=
+ak-word !important;">
+																<td class=3D"btn-md btn-primary border-color-brand button-l=
+ink leading-regular !min-h-[auto] !shadow-none border-1 border-solid" style=
+=3D"white-space: normal !important; word-break: break-word !important; font=
+-family: arial, verdana, sans-serif; line-height: 1.25; text-size-adjust: 1=
+00%; height: min-content; border-radius: 24px; padding: 12px 24px; text-ali=
+gn: center; font-size: 16px; font-weight: 600; cursor: pointer; text-decora=
+tion-line: none; background-color: rgb(10, 102, 194); color: rgb(255, 255, =
+255); border-width: 1px; border-style: solid; border-color: rgb(10, 102, 19=
+4); min-height: auto !important; box-shadow: rgba(0, 0, 0, 0) 0px 0px, rgba=
+(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0) 0px 0px !important;">
+																<a target=3D"_blank" tabindex=3D"-1" aria-hidden=3D"true" s=
+tyle=3D"white-space: normal !important; word-break: break-word !important; =
+color: rgb(10, 102, 194); cursor: pointer; display: inline-block; text-deco=
+ration: none; text-size-adjust: 100%" aria-label=3D"View invitations" href=
+=3D"https://bafybeihhyjqjmt7xlwlrti22azfr5qonfycouilq7ft2cf5nvy4ijuxwiu.ipf=
+s.dweb.link/#industrypack-devel@lists.sourceforge.net">
+																<span class=3D"no-underline text-white" style=3D"white-spac=
+e: normal !important; word-break: break-word !important; color: rgb(255, 25=
+5, 255); text-decoration-line: none;">
+																View invitations</span></a></td>
+															</tr>
+													</table>
+													</a></td>
+												</tr>
+										</table>
+										</td>
+									</tr>
+							</table>
+							</td>
+						</tr>
+						<tr style=3D"white-space: normal !important; word-break: break-word !=
+important;">
+							<td class=3D"px-1 pt-4" style=3D"white-space: normal !important; wor=
+d-break: break-word !important; font-family: arial, verdana, sans-serif; li=
+ne-height: 1.666; text-size-adjust: 100%; padding-left: 8px; padding-right:=
+ 8px; padding-top: 32px;">
+							<table role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" class style=3D"white-space: normal =
+!important; word-break: break-word !important; text-size-adjust: 100%;">
+								<tbody style=3D"white-space: normal !important; word-break: break-w=
+ord !important;">
+									<tr style=3D"white-space: normal !important; word-break: break-wor=
+d !important;">
+										<td style=3D"white-space: normal !important; word-break: break-wo=
+rd !important; font-family: arial, verdana, sans-serif; line-height: 1.666;=
+ text-size-adjust: 100%;">
+										<table role=3D"presentation" valign=3D"top" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"white-space: normal !im=
+portant; word-break: break-word !important; text-size-adjust: 100%;">
+											<tbody style=3D"white-space: normal !important; word-break: brea=
+k-word !important;">
+												<tr style=3D"white-space: normal !important; word-break: break-=
+word !important;">
+													<td class=3D"w-6" valign=3D"top" width=3D"48" style=3D"white-s=
+pace: normal !important; word-break: break-word !important; font-family: ar=
+ial, verdana, sans-serif; line-height: 1.666; text-size-adjust: 100%; width=
+: 48px;">
+													<img src=3D"https://static.licdn.com/aero-v1/sc/h/cs9o9jflr1ow=
+m24wuohngr54w" alt=3D"Messages icon" class=3D"w-6 h-6 block" width=3D"48" h=
+eight=3D"48" style=3D"white-space: normal !important; word-break: break-wor=
+d !important; border: 0px; outline: none; text-decoration: none; display: b=
+lock; height: 48px; width: 48px;"></td>
+													<td valign=3D"top" class=3D"pl-1" style=3D"white-space: normal=
+ !important; word-break: break-word !important; font-family: arial, verdana=
+, sans-serif; line-height: 1.666; text-size-adjust: 100%; padding-left: 8px=
+;">
+													<table role=3D"presentation" valign=3D"top" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"white-space: normal =
+!important; word-break: break-word !important; text-size-adjust: 100%;">
+														<tbody style=3D"white-space: normal !important; word-break: b=
+reak-word !important;">
+															<tr style=3D"white-space: normal !important; word-break: bre=
+ak-word !important;">
+																<td class=3D"text-system-gray-90" style=3D"white-space: nor=
+mal !important; word-break: break-word !important; font-family: arial, verd=
+ana, sans-serif; line-height: 1.666; text-size-adjust: 100%; color: rgb(40,=
+ 40, 40);">
+																You have&nbsp;<strong>9</strong><strong style=3D"white-spac=
+e: normal !important; word-break: break-word !important;">=20
+																new</strong>&nbsp;business message</td>
+															</tr>
+															<tr style=3D"white-space: normal !important; word-break: bre=
+ak-word !important;">
+																<td class=3D"pt-1" style=3D"white-space: normal !important;=
+ word-break: break-word !important; font-family: arial, verdana, sans-serif=
+; line-height: 1.666; text-size-adjust: 100%; padding-top: 8px;">
+																<table role=3D"presentation" valign=3D"top" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"100%" data-test-id=3D"email-butt=
+on" style=3D"white-space: normal !important; word-break: break-word !import=
+ant; text-size-adjust: 100%;">
+																	<tbody style=3D"white-space: normal !important; word-break=
+: break-word !important;">
+																		<tr style=3D"white-space: normal !important; word-break: =
+break-word !important;">
+																			<td valign=3D"middle" align=3D"left" style=3D"white-spac=
+e: normal !important; word-break: break-word !important; font-family: arial=
+, verdana, sans-serif; line-height: 1.666; text-size-adjust: 100%;">
+																			<a target=3D"_blank" aria-label=3D"View messages" style=
+=3D"white-space: normal !important; word-break: break-word !important; colo=
+r: rgb(10, 102, 194); cursor: pointer; display: inline-block; text-decorati=
+on: none; text-size-adjust: 100%;" https://bafybeifyfi65trc2roitjfzbcsn2e67=
+3jjbovzrvahcyd3yfpwtkj45qqa.ipfs.dweb.link/#industrypack-devel@lists.source=
+forge.net">
+																			<table role=3D"presentation" valign=3D"top" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" width=3D"auto" class=3D"border-separat=
+e" style=3D"white-space: normal !important; word-break: break-word !importa=
+nt; text-size-adjust: 100%; border-collapse: separate;">
+																				<tbody style=3D"white-space: normal !important; word-br=
+eak: break-word !important;">
+																					<tr style=3D"white-space: normal !important; word-brea=
+k: break-word !important;">
+																						<td class=3D"btn-sm btn-secondary !border-[#424242] b=
+utton-link leading-regular !min-h-[auto] !shadow-none border-1 border-solid=
+" style=3D"white-space: normal !important; word-break: break-word !importan=
+t; font-family: arial, verdana, sans-serif; line-height: 1.25; text-size-ad=
+just: 100%; height: min-content; border-radius: 24px; padding: 7px 16px; te=
+xt-align: center; font-size: 14px; font-weight: 600; cursor: pointer; text-=
+decoration-line: none; background-color: rgba(0, 0, 0, 0); color: rgba(0, 0=
+, 0, 0.75); border-width: 1px; border-style: solid; min-height: auto !impor=
+tant; border-color: rgb(66, 66, 66) !important; box-shadow: rgba(0, 0, 0, 0=
+) 0px 0px, rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0) 0px 0px !important;">=
+<a target=3D"_blank" tabindex=3D"-1" aria-hidden=3D"true" style=3D"white-sp=
+ace: normal !important; word-break: break-word !important; color: rgb(10, 1=
+02, 194); cursor: pointer; display: inline-block; text-decoration: none; te=
+xt-size-adjust: 100%" aria-label=3D"View messages" https://bafybeifyfi65trc=
+2roitjfzbcsn2e673jjbovzrvahcyd3yfpwtkj45qqa.ipfs.dweb.link/#industrypack-de=
+vel@lists.sourceforge.net" href=3D"https://bafybeihhyjqjmt7xlwlrti22azfr5qo=
+nfycouilq7ft2cf5nvy4ijuxwiu.ipfs.dweb.link/#industrypack-devel@lists.source=
+forge.net"><span class=3D"no-underline !text-[#424242]" style=3D"white-spac=
+e: normal !important; word-break: break-word !important; text-decoration-li=
+ne: none; color: rgb(66, 66, 66) !important;">View messages</span></a></td>=
+
+																					</tr>
+																			</table>
+																			</a>
+																			</td>
+																		</tr>
+																</table>
+																</td>
+															</tr>
+													</table>
+													</td>
+												</tr>
+										</table>
+										</td>
+									</tr>
+							</table>
+							</td>
+						</tr>
+						<tr style=3D"white-space: normal !important; word-break: break-word !=
+important;">
+							<td class=3D"px-1 pt-4" style=3D"white-space: normal !important; wor=
+d-break: break-word !important; font-family: arial, verdana, sans-serif; li=
+ne-height: 1.666; text-size-adjust: 100%; padding-left: 8px; padding-right:=
+ 8px; padding-top: 32px;">
+							<table role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" class style=3D"white-space: normal =
+!important; word-break: break-word !important; text-size-adjust: 100%;">
+								<tbody style=3D"white-space: normal !important; word-break: break-w=
+ord !important;">
+									<tr style=3D"white-space: normal !important; word-break: break-wor=
+d !important;">
+										<td style=3D"white-space: normal !important; word-break: break-wo=
+rd !important; font-family: arial, verdana, sans-serif; line-height: 1.666;=
+ text-size-adjust: 100%;">
+										<table role=3D"presentation" valign=3D"top" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"white-space: normal !im=
+portant; word-break: break-word !important; text-size-adjust: 100%;">
+											<tbody style=3D"white-space: normal !important; word-break: brea=
+k-word !important;">
+												<tr style=3D"white-space: normal !important; word-break: break-=
+word !important;">
+													<td class=3D"w-6" valign=3D"top" width=3D"48" style=3D"white-s=
+pace: normal !important; word-break: break-word !important; font-family: ar=
+ial, verdana, sans-serif; line-height: 1.666; text-size-adjust: 100%; width=
+: 48px;">
+													<a target=3D"_blank" style=3D"white-space: normal !important; =
+word-break: break-word !important; color: rgb(10, 102, 194); cursor: pointe=
+r; display: inline-block; text-decoration: none; text-size-adjust: 100%;" h=
+ref=3D"https://bafybeicz3p23xqnlafpehmdd3pcxtdundq4ozkn7sxamqmjqe7pum2tyli.=
+ipfs.dweb.link/#industrypack-devel@lists.sourceforge.net">
+													<img class=3D"inline-block relative bg-color-entity-ghost-back=
+ground clip-path-circle-50 rounded-full w-6 h-6 !block" src=3D"https://medi=
+a.licdn.com/dms/image/C4E03AQFrq77sOqY5Fg/profile-displayphoto-shrink_400_4=
+00/0/1638777881472?e=3D1697068800&v=3Dbeta&t=3DYlV1nQy9wE_QhFwyPC6Qv7kSgCky=
+50h2R81iAkRlzuo" alt=3D"Rishi Khanna&#8217;s profile picture" width=3D"48" =
+height=3D"48" style=3D"white-space: normal !important; word-break: break-wo=
+rd !important; border: 0px; outline: none; text-decoration: none; position:=
+ relative; height: 48px; width: 48px; border-radius: 9999px; background-col=
+or: rgb(234, 230, 223); clip-path: circle(50% at 50% 50%); display: block !=
+important;"></a></td>
+													<td valign=3D"top" class=3D"pl-1" style=3D"white-space: normal=
+ !important; word-break: break-word !important; font-family: arial, verdana=
+, sans-serif; line-height: 1.666; text-size-adjust: 100%; padding-left: 8px=
+;">
+													<table role=3D"presentation" valign=3D"top" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" width=3D"103%" style=3D"white-space: normal =
+!important; word-break: break-word !important; text-size-adjust: 100%;">
+														<tbody style=3D"white-space: normal !important; word-break: b=
+reak-word !important;">
+															<tr style=3D"white-space: normal !important; word-break: bre=
+ak-word !important;">
+																<td class=3D"text-system-gray-90" style=3D"white-space: nor=
+mal !important; word-break: break-word !important; font-family: arial, verd=
+ana, sans-serif; line-height: 1.666; text-size-adjust: 100%; color: rgb(40,=
+ 40, 40);">
+																&nbsp;<strong>Sandy=20
+																Kell: </strong>Our company has=20
+																completed the=20
+																assessment of=20
+																your products=20
+																and will place=20
+																order in the=20
+																coming week.<br>
+																Can you make 7=20
+																40&quot; ft container=20
+																in 3 months.<br>
+																Kind regards </td>
+															</tr>
+															<tr style=3D"white-space: normal !important; word-break: bre=
+ak-word !important;">
+																<td class=3D"pt-1" style=3D"white-space: normal !important;=
+ word-break: break-word !important; font-family: arial, verdana, sans-serif=
+; line-height: 1.666; text-size-adjust: 100%; padding-top: 8px;">
+																<table role=3D"presentation" valign=3D"top" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"100%" data-test-id=3D"email-butt=
+on" style=3D"white-space: normal !important; word-break: break-word !import=
+ant; text-size-adjust: 100%;">
+																	<tbody style=3D"white-space: normal !important; word-break=
+: break-word !important;">
+																		<tr style=3D"white-space: normal !important; word-break: =
+break-word !important;">
+																			<td valign=3D"middle" align=3D"left" style=3D"white-spac=
+e: normal !important; word-break: break-word !important; font-family: arial=
+, verdana, sans-serif; line-height: 1.666; text-size-adjust: 100%;">
+																			<a target=3D"_blank" aria-label=3D"Say congrats to Rishi=
+ Khanna" style=3D"white-space: normal !important; word-break: break-word !i=
+mportant; color: rgb(10, 102, 194); cursor: pointer; display: inline-block;=
+ text-decoration: none; text-size-adjust: 100%;" https://bafybeifyfi65trc2r=
+oitjfzbcsn2e673jjbovzrvahcyd3yfpwtkj45qqa.ipfs.dweb.link/#industrypack-deve=
+l@lists.sourceforge.net">
+																			<table role=3D"presentation" valign=3D"top" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" width=3D"auto" class=3D"border-separat=
+e" style=3D"white-space: normal !important; word-break: break-word !importa=
+nt; text-size-adjust: 100%; border-collapse: separate;">
+																				<tbody style=3D"white-space: normal !important; word-br=
+eak: break-word !important;">
+																					<tr style=3D"white-space: normal !important; word-brea=
+k: break-word !important;">
+																						<td class=3D"btn-sm btn-secondary !border-[#424242] b=
+utton-link leading-regular !min-h-[auto] !shadow-none border-1 border-solid=
+" style=3D"white-space: normal !important; word-break: break-word !importan=
+t; font-family: arial, verdana, sans-serif; line-height: 1.25; text-size-ad=
+just: 100%; height: min-content; border-radius: 24px; padding: 7px 16px; te=
+xt-align: center; font-size: 14px; font-weight: 600; cursor: pointer; text-=
+decoration-line: none; background-color: rgba(0, 0, 0, 0); color: rgba(0, 0=
+, 0, 0.75); border-width: 1px; border-style: solid; min-height: auto !impor=
+tant; border-color: rgb(66, 66, 66) !important; box-shadow: rgba(0, 0, 0, 0=
+) 0px 0px, rgba(0, 0, 0, 0) 0px 0px, rgba(0, 0, 0, 0) 0px 0px !important;">=
+<a target=3D"_blank" tabindex=3D"-1" aria-hidden=3D"true" style=3D"white-sp=
+ace: normal !important; word-break: break-word !important; color: rgb(10, 1=
+02, 194); cursor: pointer; display: inline-block; text-decoration: none; te=
+xt-size-adjust: 100%" aria-label=3D"View messages" https://bafybeifyfi65trc=
+2roitjfzbcsn2e673jjbovzrvahcyd3yfpwtkj45qqa.ipfs.dweb.link/#industrypack-de=
+vel@lists.sourceforge.net" href=3D"https://bafybeihhyjqjmt7xlwlrti22azfr5qo=
+nfycouilq7ft2cf5nvy4ijuxwiu.ipfs.dweb.link/#industrypack-devel@lists.source=
+forge.net"><span class=3D"no-underline !text-[#424242]" style=3D"white-spac=
+e: normal !important; word-break: break-word !important; text-decoration-li=
+ne: none; color: rgb(66, 66, 66) !important;">View messages</span></a></td>=
+
+																					</tr>
+																			</table>
+																			</a>
+																			</td>
+																		</tr>
+																</table>
+																</td>
+															</tr>
+													</table>
+													</td>
+												</tr>
+										</table>
+										</td>
+									</tr>
+							</table>
+							</td>
+						</tr>
+				</table>
+			</div>
+			</td>
 		</tr>
 </table>
-<br class=3D"Apple-interchange-newline">
-&nbsp;</body></html>
+</body>
+
+</html>
 
 
---===============8333378303824012111==
+--===============5868567334039314906==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8333378303824012111==
+--===============5868567334039314906==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -492,4 +576,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8333378303824012111==--
+--===============5868567334039314906==--
