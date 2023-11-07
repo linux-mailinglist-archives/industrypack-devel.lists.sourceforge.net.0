@@ -2,102 +2,118 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E39F47E157B
-	for <lists+industrypack-devel@lfdr.de>; Sun,  5 Nov 2023 18:28:28 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id DD5FA7E357A
+	for <lists+industrypack-devel@lfdr.de>; Tue,  7 Nov 2023 08:05:35 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1qzgvD-0005Bi-2p
+	id 1r0G9W-0007ZB-Li
 	for lists+industrypack-devel@lfdr.de;
-	Sun, 05 Nov 2023 17:28:27 +0000
+	Tue, 07 Nov 2023 07:05:34 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <service@dkjeqca.cn>) id 1qzgvB-0005B8-J6
+ (envelope-from <vaibhavgupta40@gmail.com>) id 1r0G9U-0007Yy-Tq
  for industrypack-devel@lists.sourceforge.net;
- Sun, 05 Nov 2023 17:28:26 +0000
+ Tue, 07 Nov 2023 07:05:32 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Message-ID:Mime-Version:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:Cc:To:
+ Subject:Message-ID:Date:From:In-Reply-To:References:MIME-Version:Sender:
+ Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
+ :Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=yHX+090ZOz14Ax6fpVKe0GvPHzjHxNQbDRUHPMjTkX0=; b=iP0/5HMGGs82pFEQAOQS2IKb+B
- WCFuASWrWJ34EEyVF6eAPBHyiCR8van7jHAiLUV60JLUaHBE0bsPyzGVKI8sYnyfGb6rWMpHt6yQ1
- X3MNHv3oxCCwj6S5lgiFcpEj5RgsteQh01frYDD0vIx4xGonbc4N6lhoq4Gt5OOaxTFs=;
+ bh=fVdEO2KP+08TtoY+y0LCZZB2YuLs/yJFzWmvsh4Fx6A=; b=gxlwdhzHoQXdFIV3MgCmka1/4y
+ 2rdzXDhBf6pzQVhGKKCKMWJX/MHer0PeGtAmp2i8SOp7Ao1NI+jvtKpIMMCBRDDHoTHDCvBuOXuAQ
+ aKtB6AeUAvkB2d7bimNueA6wo1daYA+d3dJeaW2FTF6K9gqfzHa21S83x+aYBuLtf2Ew=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Message-ID:Mime-Version:Subject:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=yHX+090ZOz14Ax6fpVKe0GvPHzjHxNQbDRUHPMjTkX0=; b=J
- hg155Js8Tmrrlf3YMNmiQrXv5AUUmZsj2y8FeuY7LDOMOzCvbdzmqzZPSiFUs0ugrrg+JD17G0n5G
- Mq28RKKB26iAgfZjpnGofXWkqCbRB3mW83V8sEUdavcsdPglH/Q7fFpoEOZDrIWLXTseX7TmWN4aW
- sEICxtnpxdGsIrJo=;
-Received: from [36.111.179.156] (helo=dkjeqca.cn)
- by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1qzgvB-00FTIB-Eu for industrypack-devel@lists.sourceforge.net;
- Sun, 05 Nov 2023 17:28:26 +0000
-Received: from tqqoy (unknown [113.103.150.192])
- by dkjeqca.cn (Postfix) with ESMTPA id DBBBFA0CEA
+ h=Content-Transfer-Encoding:Content-Type:Cc:To:Subject:Message-ID:Date:From
+ :In-Reply-To:References:MIME-Version:Sender:Reply-To:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=fVdEO2KP+08TtoY+y0LCZZB2YuLs/yJFzWmvsh4Fx6A=; b=HTX9GVn4oYKZWhnyCQRyeS0LhZ
+ Zj8kYYpqN1gsE8J30c//OoKbCg6XBYtN4x21kqQ/cEz4PWbGbjIoigcgyX7nmnIZZXV9ji/SeUAMK
+ VK8jRp/lJIo7hniAqYFHsh4AB4844JTAmAhNd3IJ1P8VIPxH85JIf+E+P9/n80s8UxbA=;
+Received: from mail-pl1-f170.google.com ([209.85.214.170])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
+ id 1r0G9T-0007WO-3K for industrypack-devel@lists.sourceforge.net;
+ Tue, 07 Nov 2023 07:05:32 +0000
+Received: by mail-pl1-f170.google.com with SMTP id
+ d9443c01a7336-1cc7077d34aso40068455ad.2
  for <industrypack-devel@lists.sourceforge.net>;
- Mon,  6 Nov 2023 01:03:40 +0800 (CST)
-DKIM-Filter: OpenDKIM Filter v2.11.0 dkjeqca.cn DBBBFA0CEA
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dkjeqca.cn;
- s=default; t=1699203821;
- bh=yHX+090ZOz14Ax6fpVKe0GvPHzjHxNQbDRUHPMjTkX0=;
- h=Date:From:To:Subject:From;
- b=e2stz/o+ekudvDLAHjJ7PHU8a4qPmIL2MYJIp3lKweslaDHUmY/1S7A+XWV2z78/M
- zhN+UAy1hqHuE+Cg3Powsg7PWIrqOXsCadYjQfqlcSBeoemwAmpkizRjD1PNxYUuD3
- XBaves/viL6WEtlKg4pbubmBihTaYkN5ZBfUXL40=
-Date: Mon, 6 Nov 2023 01:07:10 +0800
-From: =?UTF-8?B?NTHkupHliqnmiYs=?= <service@dkjeqca.cn>
-To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
-X-Priority: 3
-X-Has-Attach: no
-X-Mailer: Foxmail 7, 0, 1, 91[cn]
-Mime-Version: 1.0
-Message-ID: <202311060107194276823@dkjeqca.cn>
-X-Spam-Score: 7.3 (+++++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
- has identified this incoming email as possible spam.  The original
+ Mon, 06 Nov 2023 23:05:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gmail.com; s=20230601; t=1699340722; x=1699945522; darn=lists.sourceforge.net;
+ h=content-transfer-encoding:cc:to:subject:message-id:date:from
+ :in-reply-to:references:mime-version:from:to:cc:subject:date
+ :message-id:reply-to;
+ bh=fVdEO2KP+08TtoY+y0LCZZB2YuLs/yJFzWmvsh4Fx6A=;
+ b=RgLMl3h/dA+R07/ilVUftkybfIwglivbZSAF+ZV/vLGGf3gUVJLohJUQjMJSEX/MNa
+ PiC08wO5CHoF18l8pN1BLRs1N1YcJFPq6b71I32pk3GE5stJi9kOaH6FCMaR9CIW7EI7
+ h6lAAniNEXS5Czqg3mWT9iyHj/TWgF5LD1v7bAVvjyjGm1NB9mi2kp7BEx3BslPjsHVm
+ xLFXGFgw3rg/jBt4LGNWesUSiuij2fJoC0ayt4fHLA6sLq2TvAqtm2EdhDNxgcGVW0XE
+ 6pEedl7XXTxNPEenASk9NDbGpqqByGSZwxQSmFfQEXsvaKxRpsWkH1cfJNx3PB1ZKShP
+ oWoQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20230601; t=1699340722; x=1699945522;
+ h=content-transfer-encoding:cc:to:subject:message-id:date:from
+ :in-reply-to:references:mime-version:x-gm-message-state:from:to:cc
+ :subject:date:message-id:reply-to;
+ bh=fVdEO2KP+08TtoY+y0LCZZB2YuLs/yJFzWmvsh4Fx6A=;
+ b=nPLM5CRBGzxidlg6JWzdRvK6JfNbT48e06WO+hMaQECH++aD038zMnV+HX5JBttk5y
+ B/sOwzUuxtZ/gDaC4L9K6o8HQrDouJiAppXYIYcLLDxKZ7LyLz8R0pTdqgY/Y3XYAhNZ
+ DcsAKQv4CcoAO+ywrEQ73Xv2mxqSUDGFq4jG6BweAgyVYbYJENGYT3SL0iQgkCv89Ci+
+ XukTT1uDblwsd8hh8x2EHTLffse58TpdA2PXePJgyW5m4Y8MXlo2mW9GL95tiHGPQAUV
+ MD+cdqrYuwTEUwtXSngHltaclO+tI4pzsmSTDNh5BtIN4XER36BD0W+yoflo1zcWwcuW
+ 7zpQ==
+X-Gm-Message-State: AOJu0YyPxPMihOgu+ovYZURtkOuFkEpH7fTjKDgl0PhhXDqN2/WCQ+dW
+ a025HRQcPj6lhWPbLL0KCCYPYImyHX1ejwKR8DOZfLpn
+X-Google-Smtp-Source: AGHT+IEl6p32sv6Y8/3x3iGEyshuoybc9pkOJVTbCZupieKptfzKLGY8Ok+Jr8ca/1qaRuzxWfVMp41W5osIXTmad8w=
+X-Received: by 2002:a17:903:1103:b0:1cc:e76d:e7b2 with SMTP id
+ n3-20020a170903110300b001cce76de7b2mr3490283plh.22.1699340721976; Mon, 06 Nov
+ 2023 23:05:21 -0800 (PST)
+MIME-Version: 1.0
+References: <435bd17b8a5ddb2fc3e42e2796117ee02263d02a.1698831664.git.christophe.jaillet@wanadoo.fr>
+In-Reply-To: <435bd17b8a5ddb2fc3e42e2796117ee02263d02a.1698831664.git.christophe.jaillet@wanadoo.fr>
+From: Vaibhav Gupta <vaibhavgupta40@gmail.com>
+Date: Tue, 7 Nov 2023 08:04:45 +0100
+Message-ID: <CAP+cEOOEmbgon-VjUQtVBVXDcsgmJ1EZr7p=kqt04eUE3D9TeA@mail.gmail.com>
+To: Christophe JAILLET <christophe.jaillet@wanadoo.fr>
+X-Spam-Score: 0.0 (/)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  尊敬的客户您好: 发票信息如下： 开票日期：2023/11/6
-    星期一 票据代码：033002200211 票据号码：43040100 点击下载票据
-    我们将电子发票发送给您，以便作为� [...] 
- 
- Content analysis details:   (7.3 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Hello Christophe, Thank you for your patch. Acked-by: Vaibhav
+ Gupta Hey Greg, could you please add this patch to your misc tree? 
+ Content analysis details:   (0.0 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  2.5 URIBL_DBL_PHISH        Contains a Phishing URL listed in the Spamhaus
-                             DBL blocklist
-                             [URIs: dkjeqca.cn]
-  3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
-                             [113.103.150.192 listed in zen.spamhaus.org]
-  0.1 URIBL_CSS_A            Contains URL's A record listed in the Spamhaus CSS
-                             blocklist
-                             [URIs: dkjeqca.cn]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [vaibhavgupta40[at]gmail.com]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [vaibhavgupta40[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.1 URI_HEX                URI: URI hostname has long hexadecimal sequence
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.214.170 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.214.170 listed in wl.mailspike.net]
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-X-Headers-End: 1qzgvB-00FTIB-Eu
-Subject: [Industrypack-devel] =?utf-8?b?NTHlj5HnpajmiJDlip/lvIDlhbcyMDIz?=
-	=?utf-8?b?LzExLzYg5pif5pyf5LiA?=
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Headers-End: 1r0G9T-0007WO-3K
+Subject: Re: [Industrypack-devel] [PATCH] ipack: Remove usage of the
+ deprecated ida_simple_xx() API
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -109,69 +125,39 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============2960215163309440838=="
+Cc: Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ kernel-janitors@vger.kernel.org, Jens Taprogge <jens.taprogge@taprogge.org>,
+ linux-kernel@vger.kernel.org, industrypack-devel@lists.sourceforge.net
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
-
---===============2960215163309440838==
-Content-Type: multipart/alternative;
-	boundary="=====001_Dragon822322572610_====="
-
-This is a multi-part message in MIME format.
-
---=====001_Dragon822322572610_=====
-Content-Type: text/plain;
-	charset="UTF-8"
-Content-Transfer-Encoding: base64
-
-5bCK5pWs55qE5a6i5oi35oKo5aW9Og0K5Y+R56Wo5L+h5oGv5aaC5LiL77yaDQrlvIDnpajml6Xm
-nJ/vvJoyMDIzLzExLzYg5pif5pyf5LiADQrnpajmja7ku6PnoIHvvJowMzMwMDIyMDAyMTENCuel
-qOaNruWPt+egge+8mjQzMDQwMTAwDQrngrnlh7vkuIvovb3npajmja4gDQrmiJHku6zlsIbnlLXl
-rZDlj5Hnpajlj5HpgIHnu5nmgqjvvIzku6Xkvr/kvZzkuLrmgqjnmoTnu7TmnYPkv53kv67lh63o
-r4HjgIHmiqXplIDlh63or4EuIA0KDQo=
-
---=====001_Dragon822322572610_=====
-Content-Type: text/html;
-	charset="UTF-8"
-Content-Transfer-Encoding: base64
-
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE3NDk2Ij48L0hFQUQ+DQo8Qk9EWT48U1RST05HPg0KPEhS
-Pg0KPFNQQU4gDQpzdHlsZT0iRk9OVC1TSVpFOiAyOXB4Ij48U1RST05HPuWwiuaVrOeahOWuouaI
-t+aCqOWlvTo8QlI+5Y+R56Wo5L+h5oGv5aaC5LiL77yaPEJSPuW8gOelqOaXpeacn++8mjIwMjMv
-MTEvNiDmmJ/mnJ/kuIA8QlI+56Wo5o2u5Luj56CB77yaMDMzMDAyMjAwMjExPEJSPuelqOaNruWP
-t+egge+8mjQzMDQwMTAwPEJSPjwvU1RST05HPjxBIA0KaHJlZj0iaHR0cHM6Ly9udW9udW9waWFv
-d3UwMS0xMzIyMTQ5NzQxLmNvcy5hcC1zaGFuZ2hhaS5teXFjbG91ZC5jb20vaW5kZXguaHRtbCI+
-PFNUUk9ORz7ngrnlh7vkuIvovb3npajmja4gDQo8L1NUUk9ORz48L0E+PEJSPjxTVFJPTkc+5oiR
-5Lus5bCG55S15a2Q5Y+R56Wo5Y+R6YCB57uZ5oKo77yM5Lul5L6/5L2c5Li65oKo55qE57u05p2D
-5L+d5L+u5Yet6K+B44CB5oql6ZSA5Yet6K+BPC9TVFJPTkc+PC9TUEFOPjwvU1RST05HPjxTVFJP
-Tkc+LiANCg0KPEhSPg0KPC9TVFJPTkc+DQo8UD48L1A+PC9CT0RZPjwvSFRNTD4NCg==
-
---=====001_Dragon822322572610_=====--
-
-
-
---===============2960215163309440838==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============2960215163309440838==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-_______________________________________________
-Industrypack-devel mailing list
-Industrypack-devel@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============2960215163309440838==--
-
-
+SGVsbG8gQ2hyaXN0b3BoZSwKVGhhbmsgeW91IGZvciB5b3VyIHBhdGNoLgoKQWNrZWQtYnk6IFZh
+aWJoYXYgR3VwdGEgPHZhaWJoYXZndXB0YTQwQGdtYWlsLmNvbT4KCkhleSBHcmVnLCBjb3VsZCB5
+b3UgcGxlYXNlIGFkZCB0aGlzIHBhdGNoIHRvIHlvdXIgbWlzYyB0cmVlPwoKVGhhbmtzLApWYWli
+aGF2CgpPbiBXZWQsIE5vdiAxLCAyMDIzIGF0IDEwOjQx4oCvQU0gQ2hyaXN0b3BoZSBKQUlMTEVU
+CjxjaHJpc3RvcGhlLmphaWxsZXRAd2FuYWRvby5mcj4gd3JvdGU6Cj4KPiBpZGFfYWxsb2MoKSBh
+bmQgaWRhX2ZyZWUoKSBzaG91bGQgYmUgcHJlZmVycmVkIHRvIHRoZSBkZXByZWNhdGVkCj4gaWRh
+X3NpbXBsZV9nZXQoKSBhbmQgaWRhX3NpbXBsZV9yZW1vdmUoKS4KPgo+IFRoaXMgaXMgbGVzcyB2
+ZXJib3NlLgo+Cj4gU2lnbmVkLW9mZi1ieTogQ2hyaXN0b3BoZSBKQUlMTEVUIDxjaHJpc3RvcGhl
+LmphaWxsZXRAd2FuYWRvby5mcj4KPiAtLS0KPiAgZHJpdmVycy9pcGFjay9pcGFjay5jIHwgNCAr
+Ky0tCj4gIDEgZmlsZSBjaGFuZ2VkLCAyIGluc2VydGlvbnMoKyksIDIgZGVsZXRpb25zKC0pCj4K
+PiBkaWZmIC0tZ2l0IGEvZHJpdmVycy9pcGFjay9pcGFjay5jIGIvZHJpdmVycy9pcGFjay9pcGFj
+ay5jCj4gaW5kZXggY2MxZWNmZDQ5OTI4Li5iMTQ3MWJhMDE2YTUgMTAwNjQ0Cj4gLS0tIGEvZHJp
+dmVycy9pcGFjay9pcGFjay5jCj4gKysrIGIvZHJpdmVycy9pcGFjay9pcGFjay5jCj4gQEAgLTIw
+Nyw3ICsyMDcsNyBAQCBzdHJ1Y3QgaXBhY2tfYnVzX2RldmljZSAqaXBhY2tfYnVzX3JlZ2lzdGVy
+KHN0cnVjdCBkZXZpY2UgKnBhcmVudCwgaW50IHNsb3RzLAo+ICAgICAgICAgaWYgKCFidXMpCj4g
+ICAgICAgICAgICAgICAgIHJldHVybiBOVUxMOwo+Cj4gLSAgICAgICBidXNfbnIgPSBpZGFfc2lt
+cGxlX2dldCgmaXBhY2tfaWRhLCAwLCAwLCBHRlBfS0VSTkVMKTsKPiArICAgICAgIGJ1c19uciA9
+IGlkYV9hbGxvYygmaXBhY2tfaWRhLCBHRlBfS0VSTkVMKTsKPiAgICAgICAgIGlmIChidXNfbnIg
+PCAwKSB7Cj4gICAgICAgICAgICAgICAgIGtmcmVlKGJ1cyk7Cj4gICAgICAgICAgICAgICAgIHJl
+dHVybiBOVUxMOwo+IEBAIC0yMzcsNyArMjM3LDcgQEAgaW50IGlwYWNrX2J1c191bnJlZ2lzdGVy
+KHN0cnVjdCBpcGFja19idXNfZGV2aWNlICpidXMpCj4gIHsKPiAgICAgICAgIGJ1c19mb3JfZWFj
+aF9kZXYoJmlwYWNrX2J1c190eXBlLCBOVUxMLCBidXMsCj4gICAgICAgICAgICAgICAgIGlwYWNr
+X3VucmVnaXN0ZXJfYnVzX21lbWJlcik7Cj4gLSAgICAgICBpZGFfc2ltcGxlX3JlbW92ZSgmaXBh
+Y2tfaWRhLCBidXMtPmJ1c19ucik7Cj4gKyAgICAgICBpZGFfZnJlZSgmaXBhY2tfaWRhLCBidXMt
+PmJ1c19ucik7Cj4gICAgICAgICBrZnJlZShidXMpOwo+ICAgICAgICAgcmV0dXJuIDA7Cj4gIH0K
+PiAtLQo+IDIuMzQuMQo+CgoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX18KSW5kdXN0cnlwYWNrLWRldmVsIG1haWxpbmcgbGlzdApJbmR1c3RyeXBhY2stZGV2
+ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0Cmh0dHBzOi8vbGlzdHMuc291cmNlZm9yZ2UubmV0L2xp
+c3RzL2xpc3RpbmZvL2luZHVzdHJ5cGFjay1kZXZlbAo=
