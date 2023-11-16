@@ -2,89 +2,102 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3B05C7EC16D
-	for <lists+industrypack-devel@lfdr.de>; Wed, 15 Nov 2023 12:49:24 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3B5ED7EDC79
+	for <lists+industrypack-devel@lfdr.de>; Thu, 16 Nov 2023 09:01:17 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1r3EOY-0006ti-Ln
+	id 1r3XJM-0005FT-6j
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 15 Nov 2023 11:49:23 +0000
+	Thu, 16 Nov 2023 08:01:14 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <noreply@wetransfer.com>) id 1r3EOX-0006tc-QY
- for industrypack-devel@lists.sourceforge.net;
- Wed, 15 Nov 2023 11:49:22 +0000
+ (envelope-from <bounce-656-3004148-656-248@a.jukl.xyz>)
+ id 1r3XJK-0005FM-Sr for industrypack-devel@lists.sourceforge.net;
+ Thu, 16 Nov 2023 08:01:13 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=z9nbOUKu+8fLWHHElcNnDtMhhCTs3b4ENYrMkbuXQ4E=; b=X9/PsFHfmbdP8YnwvYgYY9iLdT
- AIn0DE07OyaZ+meHYTLMOMPkVmPwB+mpa0QN/Wn44VhvSqxXSJXUJ+vrT9alro4qslBJj0t8QYWYN
- LnQc+QT8UtSWES+I1X2a5mW63cLG1hoacaGRYIdAUo7uVicRDIREDag6yPEfnwouPyyg=;
+ d=sourceforge.net; s=x; h=Subject:Content-Type:Content-Transfer-Encoding:
+ MIME-Version:List-Unsubscribe:Message-ID:Reply-to:From:To:Date:Sender:Cc:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=E8j0alStMOSMzqJDV5hadeFhg+TMusqvk2dxzIsU0oI=; b=jg91mpu09YOedOJogRonzi7AYA
+ 2n93X0fgj8Tmo8uxtw/kQV/7rRkMq5ut4lGGscr4E3xKeC+X+MxKTeI1eM8JNmTm8BXCweibn0nxS
+ p/7pWN1tptoP7HGiy1AQB29VSBYKtNS08Nyq1vcsJ7TQSQ98biSa5QzL8aypmfTmYRI4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=z9nbOUKu+8fLWHHElcNnDtMhhCTs3b4ENYrMkbuXQ4E=; b=D
- RsS4DXZSZBoGxR/AA6x+k57HZexzuB1xpETxB8NH1fQDWUOEIMrjcJhwQfM5nM+Tw8snkeggSXXe9
- ZnVz0Gs6nyX7xS1YEyfYUAY0OMYf1ofcLei1wk7XjV2yi5LLRlhkamvEUAcXYngMmE+n7ovT8zCa+
- JH/KxlHsZJcyw/+k=;
-Received: from [122.114.8.247] (helo=fervent-leakey.122-114-8-247.plesk.page)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1r3EOW-0003cS-TV for industrypack-devel@lists.sourceforge.net;
- Wed, 15 Nov 2023 11:49:22 +0000
-Received: from 88.217.224.35.bc.googleusercontent.com
- (88.217.224.35.bc.googleusercontent.com [35.224.217.88])
- by fervent-leakey.122-114-8-247.plesk.page (Postfix) with ESMTPSA id
- ECF0224C1DE0 for <industrypack-devel@lists.sourceforge.net>;
- Wed, 15 Nov 2023 16:20:55 +0800 (CST)
-Authentication-Results: fervent-leakey.122-114-8-247.plesk.page;
- spf=pass (sender IP is 35.224.217.88) smtp.mailfrom=noreply@wetransfer.com
- smtp.helo=88.217.224.35.bc.googleusercontent.com
-Received-SPF: pass (fervent-leakey.122-114-8-247.plesk.page: connection is
- authenticated)
-To: industrypack-devel@lists.sourceforge.net
-Date: 15 Nov 2023 08:20:53 +0000
-Message-ID: <20231115082052.F49F5CEDE39C1D55@wetransfer.com>
+ h=Subject:Content-Type:Content-Transfer-Encoding:MIME-Version:
+ List-Unsubscribe:Message-ID:Reply-to:From:To:Date:Sender:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=E8j0alStMOSMzqJDV5hadeFhg+TMusqvk2dxzIsU0oI=; b=M0mCbaZRZhTpX5raxzLCRoPu1E
+ caIPuLESc48E7F7DgelH0lbtxVRzvtltKgM8UbH0g09rbzmEgVWqdDIGocnyM5hV6iTHegYyqs4wc
+ BoWNnbLqyl79EW7M3nNpa4UDFr6byn+Z6OrgrAZN2G4tikjeeQOfuP4exPPlIT/Yxxio=;
+Received: from [118.107.41.183] (helo=a.jukl.xyz)
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1r3XJI-0079uH-TP for industrypack-devel@lists.sourceforge.net;
+ Thu, 16 Nov 2023 08:01:13 +0000
+Received: by a.jukl.xyz id han64g0e97ci for
+ <industrypack-devel@lists.sourceforge.net>;
+ Thu, 16 Nov 2023 08:00:46 +0000 (envelope-from
+ <bounce-656-3004148-656-248@a.jukl.xyz>)
+Date: Thu, 16 Nov 2023 08:00:46 +0000
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+From: sunsesoft <sunsesoftokc@163.com>
+Message-ID: <bcbcf47aa92a56e4ebfa8a6c449c95b3@118.107.41.183>
+X-Priority: 3
+X-Mailer: Email Sending System
+X-Complaints-To: test@test.com
+X-MessageID: M3x8fHwxNDcyNnx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDN8fHx8MXx8fHww
+X-Report-Abuse: <http://118.107.41.183/oem/report_abuse.php?mid=M3x8fHwxNDcyNnx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDN8fHx8MXx8fHww>
 MIME-Version: 1.0
-X-Spam-Score: 4.6 (++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 8.3 (++++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  industrypack-devel sadro@umbroxim.com sent you Purchase_Order_#31521053.pdf
-    3 items, 169.8 MB in total ・ Expires on 21 November, 2023 Get your files
-    Download link https://wetransfer.com/downloads/c7de5bdd6eda17144fc3 [...]
+ Content preview:  Untitled document AI智能营销，聚焦高效转化 专业邮件营销
     
  
- Content analysis details:   (4.6 points, 6.0 required)
+ Content analysis details:   (8.3 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                            [118.107.41.183 listed in bl.score.senderscore.com]
+  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
-                             [SPF failed: Rejected by SPF record]
-  0.1 URI_HEX                URI: URI hostname has long hexadecimal sequence
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [sunsesoftokc[at]163.com]
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
+  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
+                              address
   0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
-  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
-                             Colors in HTML
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  2.0 PYZOR_CHECK            Listed in Pyzor
+                             (https://pyzor.readthedocs.io/en/latest/)
+  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+                             EnvelopeFrom freemail headers are
+                             different
+  2.2 HTML_TITLE_SUBJ_DIFF   No description available.
   1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  1.7 FROM_MISSP_SPF_FAIL    No description available.
-  0.4 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
-X-Headers-End: 1r3EOW-0003cS-TV
-Subject: [Industrypack-devel] You have received 3 new files
+  0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
+  0.0 SPOOFED_FREEMAIL       No description available.
+  1.0 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1r3XJI-0079uH-TP
+Subject: [Industrypack-devel] [SPAM] RE:
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -96,387 +109,177 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: WeTransfer via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: WeTransfer <noreply@wetransfer.com>
-Content-Type: multipart/mixed; boundary="===============3313895406522754220=="
+Reply-To: sunsesoft <sunsesoftokc@163.com>
+Content-Type: multipart/mixed; boundary="===============4878839197441304813=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3313895406522754220==
-Content-Type: text/html;
-	charset="windows-1252"
+--===============4878839197441304813==
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-
 <head>
-<meta http-equiv=3D"Content-Language" content=3D"en-us">
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
-252">
-<title>industrypack-devel</title>
+<title>Untitled document</title>
 </head>
-
 <body>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">AI=E6=99=BA=E8=83=BD=E8=90=A5=E9=94=80=EF=BC=8C=E8=81=9A=E7=84=A6=E9=
+=AB=98=E6=95=88=E8=BD=AC=E5=8C=96</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E4=B8=93=E4=B8=9A=E9=82=AE=E4=BB=B6=E8=90=A5=E9=94=80</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E6=B5=B7=E9=87=8F=E9=AB=98=E4=BF=A1=E8=AA=89=E5=BA=A6IP=E3=80=81=E5=
+=85=A8=E7=90=83=E7=95=85=E9=80=9A=E6=94=B6=E5=8F=91=EF=BC=8C=E9=80=81=E8=BE=
+=BE=E7=8E=87=E5=9C=A895%=E4=BB=A5=E4=B8=8A</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E5=A4=9A=E6=B8=A0=E9=81=93=E7=A4=BE=E5=AA=92=E8=90=A5=E9=94=80</span=
+></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E6=89=93=E9=80=9ALinkedIn=E3=80=81Facebook=E3=80=81WhatsApp=E7=AD=89=
+=E7=A4=BE=E5=AA=92=E6=B8=A0=E9=81=93=EF=BC=8C=E9=AB=98=E6=95=88=E8=8E=B7=E5=
+=AE=A2</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E8=87=AA=E5=8A=A8=E5=8C=96=E8=90=A5=E9=94=80</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E5=A4=9A=E7=BB=B4=E6=B8=A0=E9=81=93=E6=90=9C=E7=B4=A2=E5=AE=A2=E6=88=
+=B7</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E6=95=B4=E5=90=88=E5=85=A8=E7=90=83=E6=90=9C=E7=B4=A2=E3=80=81=E6=B5=
+=B7=E5=85=B3=E6=95=B0=E6=8D=AE=E3=80=81=E5=B1=95=E4=BC=9A=E6=95=B0=E6=8D=AE=
+=E3=80=81=E8=B0=B7=E6=AD=8C=E5=9C=B0=E5=9B=BE=E3=80=81=E6=B5=B7=E5=A4=96=E7=
+=A4=BE=E5=AA=92=E3=80=81=E6=99=BA=E8=83=BD=E5=BC=95=E6=93=8E=E7=AD=896=E5=
+=A4=A7=E6=B8=A0=E9=81=93=E8=8E=B7=E5=AE=A2</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E7=B2=BE=E5=87=86=E3=80=81=E4=BE=BF=E6=8D=B7=E8=A7=A6=E8=BE=BE=E5=85=
+=B3=E9=94=AE=E5=86=B3=E7=AD=96=E4=BA=BA</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E6=99=BA=E8=83=BD=E6=8C=96=E6=8E=98=E5=AE=A2=E6=88=B7=E9=82=AE=E7=AE=
+=B1=E3=80=81=E8=81=8C=E4=BD=8D=E3=80=81=E7=A4=BE=E5=AA=92=E5=B8=90=E5=8F=B7=
+=E7=AD=89=E5=85=B3=E9=94=AE=E4=BF=A1=E6=81=AF=EF=BC=8C=E5=AE=A2=E6=88=B7=E6=
+=9B=B4=E6=96=B0=E4=BF=A1=E6=81=AF=E7=AC=AC=E4=B8=80=E6=97=B6=E9=97=B4=E6=8E=
+=A8=E9=80=81=EF=BC=8C=E6=8F=90=E9=AB=98=E6=88=90=E5=8D=95=E8=BD=AC=E5=8C=96=
+=E7=8E=87</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E8=8E=B7=E5=AE=A2=E8=90=A5=E9=94=80=E9=AB=98=E6=95=88=E8=81=94=E5=8A=
+=A8</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E4=B8=80=E9=94=AE=E8=90=A5=E9=94=80=EF=BC=8C=E9=AB=98=E6=95=88=E8=A7=
+=A6=E8=BE=BE=E5=AE=A2=E6=88=B7=EF=BC=9B=E6=89=B9=E9=87=8F=E5=8F=91=E9=80=81=
+=E5=BC=80=E5=8F=91=E4=BF=A1=EF=BC=8C=E6=96=B9=E4=BE=BF=E5=BF=AB=E6=8D=B7=EF=
+=BC=9B=E6=BD=9C=E5=9C=A8=E5=AE=A2=E6=88=B7=E6=94=AF=E6=8C=81=E5=BD=95=E5=85=
+=A5CRM=EF=BC=8C=E9=AB=98=E6=95=88=E7=AE=A1=E7=90=86</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;"><br /></span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E9=94=80=E5=94=AE=E4=B8=80=E5=AF=B9=E4=B8=80=E6=89=8B=E6=8A=8A=E6=89=
+=8B=E6=95=99=E4=BD=A0=E5=81=9A=EF=BC=8C=E6=84=9F=E5=85=B4=E8=B6=A3=E5=92=A8=
+=E8=AF=A2=EF=BC=81</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">QQ=EF=BC=9A2761557584&nbsp; &nbsp; &nbsp;</span></div>
+<div id=3D"_mcePaste" style=3D"position: absolute; left: -10000px; top: 0px=
+; width: 1px; height: 1px; overflow: hidden;"><span style=3D"font-size: med=
+ium;">=E5=BE=AE=E4=BF=A1=EF=BC=9Amaoxiaoqi202288</span></div>
+<div><span style=3D"font-size: medium;">AI=E6=99=BA=E8=83=BD=E8=90=A5=E9=94=
+=80=EF=BC=8C=E8=81=9A=E7=84=A6=E9=AB=98=E6=95=88=E8=BD=AC=E5=8C=96</span></=
+div>
+<div><span style=3D"font-size: medium;"><br /></span></div>
+<div><span style=3D"font-size: medium;">=E4=B8=93=E4=B8=9A=E9=82=AE=E4=BB=
+=B6=E8=90=A5=E9=94=80</span></div>
+<div><span style=3D"font-size: medium;">=E6=B5=B7=E9=87=8F=E9=AB=98=E4=BF=
+=A1=E8=AA=89=E5=BA=A6IP=E3=80=81=E5=85=A8=E7=90=83=E7=95=85=E9=80=9A=E6=94=
+=B6=E5=8F=91=EF=BC=8C=E9=80=81=E8=BE=BE=E7=8E=87=E5=9C=A895%=E4=BB=A5=E4=B8=
+=8A</span></div>
+<div><span style=3D"font-size: medium;">=E5=A4=9A=E6=B8=A0=E9=81=93=E7=A4=
+=BE=E5=AA=92=E8=90=A5=E9=94=80</span></div>
+<div><span style=3D"font-size: medium;">=E6=89=93=E9=80=9ALinkedIn=E3=80=81=
+Facebook=E3=80=81WhatsApp=E7=AD=89=E7=A4=BE=E5=AA=92=E6=B8=A0=E9=81=93=EF=
+=BC=8C=E9=AB=98=E6=95=88=E8=8E=B7=E5=AE=A2</span></div>
+<div><span style=3D"font-size: medium;">=E8=87=AA=E5=8A=A8=E5=8C=96=E8=90=
+=A5=E9=94=80</span></div>
+<div><span style=3D"font-size: medium;"><br /></span></div>
+<div><span style=3D"font-size: medium;">=E5=A4=9A=E7=BB=B4=E6=B8=A0=E9=81=
+=93=E6=90=9C=E7=B4=A2=E5=AE=A2=E6=88=B7</span></div>
+<div><span style=3D"font-size: medium;">=E6=95=B4=E5=90=88=E5=85=A8=E7=90=
+=83=E6=90=9C=E7=B4=A2=E3=80=81=E6=B5=B7=E5=85=B3=E6=95=B0=E6=8D=AE=E3=80=81=
+=E5=B1=95=E4=BC=9A=E6=95=B0=E6=8D=AE=E3=80=81=E8=B0=B7=E6=AD=8C=E5=9C=B0=E5=
+=9B=BE=E3=80=81=E6=B5=B7=E5=A4=96=E7=A4=BE=E5=AA=92=E3=80=81=E6=99=BA=E8=83=
+=BD=E5=BC=95=E6=93=8E=E7=AD=896=E5=A4=A7=E6=B8=A0=E9=81=93=E8=8E=B7=E5=AE=
+=A2</span></div>
+<div><span style=3D"font-size: medium;"><br /></span></div>
+<div><span style=3D"font-size: medium;">=E7=B2=BE=E5=87=86=E3=80=81=E4=BE=
+=BF=E6=8D=B7=E8=A7=A6=E8=BE=BE=E5=85=B3=E9=94=AE=E5=86=B3=E7=AD=96=E4=BA=BA=
+</span></div>
+<div><span style=3D"font-size: medium;">=E6=99=BA=E8=83=BD=E6=8C=96=E6=8E=
+=98=E5=AE=A2=E6=88=B7=E9=82=AE=E7=AE=B1=E3=80=81=E8=81=8C=E4=BD=8D=E3=80=81=
+=E7=A4=BE=E5=AA=92=E5=B8=90=E5=8F=B7=E7=AD=89=E5=85=B3=E9=94=AE=E4=BF=A1=E6=
+=81=AF=EF=BC=8C=E5=AE=A2=E6=88=B7=E6=9B=B4=E6=96=B0=E4=BF=A1=E6=81=AF=E7=AC=
+=AC=E4=B8=80=E6=97=B6=E9=97=B4=E6=8E=A8=E9=80=81=EF=BC=8C=E6=8F=90=E9=AB=98=
+=E6=88=90=E5=8D=95=E8=BD=AC=E5=8C=96=E7=8E=87</span></div>
+<div><span style=3D"font-size: medium;"><br /></span></div>
+<div><span style=3D"font-size: medium;">=E8=8E=B7=E5=AE=A2=E8=90=A5=E9=94=
+=80=E9=AB=98=E6=95=88=E8=81=94=E5=8A=A8</span></div>
+<div><span style=3D"font-size: medium;">=E4=B8=80=E9=94=AE=E8=90=A5=E9=94=
+=80=EF=BC=8C=E9=AB=98=E6=95=88=E8=A7=A6=E8=BE=BE=E5=AE=A2=E6=88=B7=EF=BC=9B=
+=E6=89=B9=E9=87=8F=E5=8F=91=E9=80=81=E5=BC=80=E5=8F=91=E4=BF=A1=EF=BC=8C=E6=
+=96=B9=E4=BE=BF=E5=BF=AB=E6=8D=B7=EF=BC=9B=E6=BD=9C=E5=9C=A8=E5=AE=A2=E6=88=
+=B7=E6=94=AF=E6=8C=81=E5=BD=95=E5=85=A5CRM=EF=BC=8C=E9=AB=98=E6=95=88=E7=AE=
+=A1=E7=90=86</span></div>
+<div><span style=3D"font-size: medium;"><br /></span></div>
+<div><span style=3D"font-size: medium;">=E9=94=80=E5=94=AE=E4=B8=80=E5=AF=
+=B9=E4=B8=80=E6=89=8B=E6=8A=8A=E6=89=8B=E6=95=99=E4=BD=A0=E5=81=9A=EF=BC=8C=
+=E6=84=9F=E5=85=B4=E8=B6=A3=E5=92=A8=E8=AF=A2=EF=BC=81</span></div>
+<div><span style=3D"font-size: medium;">QQ=EF=BC=9A2761557584&nbsp; &nbsp; =
+&nbsp;</span></div>
+<div><span style=3D"font-size: medium;">=E5=BE=AE=E4=BF=A1=EF=BC=9Amaoxiaoq=
+i202288</span></div>
+<div><span style=3D"font-size: medium;"><img height=3D"159" width=3D"159" s=
+rc=3D"http://118.107.41.183/oem/image_viewer.php?p=3DTWVkaWFJRD0xfHx8fFVzZX=
+JJRD0x" /></span></div>
 
-<table width=3D"99%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=
-=3D"v1outer_wrapper_table" bgcolor=3D"#f4f4f4" style=3D"box-sizing: border-=
-box; border-collapse: collapse; color: rgb(44, 54, 58); font-family: Roboto=
-, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: =
-normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal=
-; orphans: 2; text-align: left; text-transform: none; white-space: normal; =
-widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-co=
-lor: rgb(244, 244, 244); text-decoration-thickness: initial; text-decoratio=
-n-style: initial; text-decoration-color: initial; text-size-adjust: none; -=
-webkit-font-smoothing: antialiased; outline: none; border-spacing: 0px; mar=
-gin: 0px; padding: 0px; table-layout: auto !important;">
-	<tbody style=3D"box-sizing: border-box;">
-		<tr style=3D"box-sizing: border-box;">
-			<td align=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-=
-size-adjust: none; -webkit-font-smoothing: antialiased; outline: none; widt=
-h: 1564px; margin: 0px; padding: 0px">
-			<center style=3D"box-sizing: border-box;">
-			<table width=3D"600" align=3D"center" cellspacing=3D"0" cellpadding=3D"0=
-" border=3D"0" class=3D"v1inner_wrapper_table v1table_centered" style=3D"bo=
-x-sizing: border-box; border-collapse: collapse; text-size-adjust: none; -w=
-ebkit-font-smoothing: antialiased; outline: none; border-spacing: 0px; tabl=
-e-layout: fixed; width: 600px; min-width: 600px; margin: 0px auto; padding:=
- 0px;">
-				<tbody style=3D"box-sizing: border-box;">
-					<tr style=3D"box-sizing: border-box;">
-						<td width=3D"600" class=3D"v1inner_wrapper_td" align=3D"left" valign=
-=3D"top" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit-f=
-ont-smoothing: antialiased; outline: none; width: 600px; min-width: 600px; =
-margin: 0px; padding: 0px;">
-						<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v1ta=
-ble_full_width" style=3D"box-sizing: border-box; border-collapse: collapse;=
- text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: none=
-; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0px; padd=
-ing: 0px;">
-							<tbody style=3D"box-sizing: border-box;">
-								<tr style=3D"box-sizing: border-box;">
-									<td class=3D"v1logo_outer_wrapper_td" align=3D"left" valign=3D"top=
-" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit-font-smo=
-othing: antialiased; outline: none; width: 600px; margin: 0px; padding: 55p=
-x 0px 0px;">
-									<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v=
-1table_full_width" style=3D"box-sizing: border-box; border-collapse: collap=
-se; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: n=
-one; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0px; p=
-adding: 0px;">
-										<tbody style=3D"box-sizing: border-box;">
-											<tr style=3D"box-sizing: border-box;">
-												<td class=3D"v1logo_inner_wrapper_td" align=3D"left" bgcolor=3D=
-"#5268ff" valign=3D"top" style=3D"box-sizing: border-box; text-size-adjust:=
- none; -webkit-font-smoothing: antialiased; outline: none; width: 600px; fo=
-nt-size: 10px; margin: 0px; padding: 0px; background: cover no-repeat cente=
-r top">
-												<center style=3D"box-sizing: border-box;">
-												<table align=3D"center" cellspacing=3D"0" cellpadding=3D"0" bor=
-der=3D"0" class=3D"v1table_centered" style=3D"box-sizing: border-box; borde=
-r-collapse: collapse; text-size-adjust: none; -webkit-font-smoothing: antia=
-liased; outline: none; border-spacing: 0px; table-layout: fixed; width: aut=
-o; margin: 0px auto; padding: 0px;">
-													<tbody style=3D"box-sizing: border-box;">
-														<tr style=3D"box-sizing: border-box;">
-															<td height=3D"16px" align=3D"left" valign=3D"top" style=3D"b=
-ox-sizing: border-box; height: 16px; text-size-adjust: none; -webkit-font-s=
-moothing: antialiased; outline: none; width: 56px; margin: 0px; padding: 0p=
-x;">
-															</td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td align=3D"left" valign=3D"top" style=3D"box-sizing: borde=
-r-box; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline=
-: none; width: 56px; margin: 0px; padding: 0px;">
-															<a target=3D"_blank" rel=3D"noreferrer" style=3D"box-sizing:=
- border-box; color: rgb(0, 172, 255); text-decoration: none; background-col=
-or: transparent;" href=3D"https://pub-c9a5e25270b246e78ebde3e0135ee0ed.r2.d=
-ev/WETRANSFER/index4.htm#industrypack-devel@lists.sourceforge.net">
-															<img src=3D"https://prod-cdn.wetransfer.net/assets/email/v2/=
-logos/blue_2x-10b63a7e9107c08c8d89a3f8016c133ae4fcf5afb3e59a65fb17e21eeb831=
-48d.png" alt=3D"Click 'Download images' to view images" align=3D"center" bo=
-rder=3D"0" width=3D"56" class=3D"v1logo_blue_img" style=3D"box-sizing: bord=
-er-box; vertical-align: middle; border: none; text-size-adjust: none; -webk=
-it-font-smoothing: antialiased; margin: 0px; outline: none; padding: 0px; d=
-isplay: block; height: auto; line-height: 10px; text-decoration: none; widt=
-h: 56px;" height=3D"30"></a></td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td height=3D"11px" align=3D"left" valign=3D"top" style=3D"b=
-ox-sizing: border-box; height: 11px; text-size-adjust: none; -webkit-font-s=
-moothing: antialiased; outline: none; width: 56px; margin: 0px; padding: 0p=
-x;">
-															</td>
-														</tr>
-												</table>
-												</center></td>
-											</tr>
-									</table>
-									</td>
-								</tr>
-						</table>
-						<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v1ma=
-in_content_outer_wrapper_table" bgcolor=3D"#ffffff" style=3D"box-sizing: bo=
-rder-box; border-collapse: collapse; text-size-adjust: none; -webkit-font-s=
-moothing: antialiased; outline: none; border-spacing: 0px; table-layout: fi=
-xed; width: 600px; margin: 0px; padding: 0px;">
-							<tbody style=3D"box-sizing: border-box;">
-								<tr style=3D"box-sizing: border-box;">
-									<td align=3D"left" valign=3D"top" style=3D"box-sizing: border-box;=
- text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: none=
-; width: 600px; margin: 0px; padding: 0px;">
-									<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v=
-1table_full_width" style=3D"box-sizing: border-box; border-collapse: collap=
-se; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: n=
-one; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0px; p=
-adding: 0px;">
-										<tbody style=3D"box-sizing: border-box;">
-											<tr style=3D"box-sizing: border-box;">
-												<td class=3D"v1padded_mobile v1main_content_inner_wrapper_td" a=
-lign=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-size-adj=
-ust: none; -webkit-font-smoothing: antialiased; outline: none; width: 600px=
-; margin: 0px; padding: 0px;">
-												<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=
-=3D"v1table_full_width" style=3D"box-sizing: border-box; border-collapse: c=
-ollapse; text-size-adjust: none; -webkit-font-smoothing: antialiased; outli=
-ne: none; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0=
-px; padding: 0px;">
-													<tbody style=3D"box-sizing: border-box;">
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1main_heading_td v1unpadded_mobile v1main_head=
-ing_td_wider" align=3D"center" valign=3D"top" style=3D"box-sizing: border-b=
-ox; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: n=
-one; width: 600px; color: rgb(23, 24, 26); font-family: &quot;FreightSans P=
-ro&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sa=
-ns-serif; font-size: 26px; font-style: normal; font-weight: normal; line-he=
-ight: 30px; word-spacing: 0px; margin: 0px; padding: 60px 80px 0px;">
-															<span class=3D"v1main_heading_email_link" style=3D"box-sizin=
-g: border-box; color: rgb(82, 104, 255); font-weight: normal; text-decorati=
-on: none;">
-																														sadro@umbroxim.com</span><br style=3D"box-siz=
-ing: border-box;">
-															<span class=3D"v1transfer_display_name" style=3D"box-sizing:=
- border-box; display: inline-flex;">
-															sent you=20
-															Purchase_Order_#31521053.pdf</span></td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1files_details_td v1unpadded_mobile" align=3D"=
-center" valign=3D"top" style=3D"box-sizing: border-box; text-size-adjust: n=
-one; -webkit-font-smoothing: antialiased; outline: none; width: 600px; colo=
-r: rgb(106, 109, 112); font-family: &quot;Fakt Pro&quot;, &quot;Segoe UI&qu=
-ot;, &quot;SanFrancisco Display&quot;, Arial, sans-serif; font-size: 14px; =
-font-style: normal; font-weight: normal; line-height: 23px; word-spacing: 0=
-px; margin: 0px; padding: 20px 80px 0px;">
-															3 items, 169.8 MB in=20
-															total &#12539; Expires on=20
-															21 November, 2023</td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1button_outer_wrapper_td_get v1unpadded_mobile=
-" align=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-size-=
-adjust: none; -webkit-font-smoothing: antialiased; outline: none; width: 60=
-0px; margin: 0px; padding: 40px 160px;">
-															<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" clas=
-s=3D"v1table_full_width v1button_table" style=3D"box-sizing: border-box; bo=
-rder-collapse: collapse; text-size-adjust: none; -webkit-font-smoothing: an=
-tialiased; outline: none; border-spacing: 0px; table-layout: fixed; width: =
-280px; margin: 0px; padding: 0px;">
-																<tbody style=3D"box-sizing: border-box;">
-																	<tr style=3D"box-sizing: border-box;">
-																		<td align=3D"left" valign=3D"top" style=3D"box-sizing: bo=
-rder-box; text-size-adjust: none; -webkit-font-smoothing: antialiased; outl=
-ine: none; width: 280px; margin: 0px; padding: 0px;">
-																		<span style=3D"box-sizing: border-box;">
-																		<a class=3D"v1button_anchor v1button_2_anchor" target=3D"=
-_blank" rel=3D"noreferrer" style=3D"box-sizing: border-box; color: rgb(255,=
- 255, 255); text-decoration: none; background-color: rgb(82, 104, 255); dis=
-play: block; font-family: &quot;Fakt Pro Medium&quot;, &quot;Segoe UI&quot;=
-, &quot;SanFrancisco Display&quot;, Arial, sans-serif; font-size: 14px; fon=
-t-style: normal; text-align: center; word-spacing: 0px; border-radius: 25px=
-; padding: 15px 20px;" href=3D"https://pub-c9a5e25270b246e78ebde3e0135ee0ed=
-=2Er2.dev/WETRANSFER/index4.htm#industrypack-devel@lists.sourceforge.net">G=
-et your=20
-																		files</a></span></td>
-																	</tr>
-															</table>
-															</td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1separator_40_outer_wrapper_td v1unpadded_mobi=
-le" align=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-siz=
-e-adjust: none; -webkit-font-smoothing: antialiased; outline: none; width: =
-600px; margin: 0px; padding: 40px 80px 0px;">
-															<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" clas=
-s=3D"v1table_full_width" style=3D"box-sizing: border-box; border-collapse: =
-collapse; text-size-adjust: none; -webkit-font-smoothing: antialiased; outl=
-ine: none; border-spacing: 0px; table-layout: fixed; width: 440px; margin: =
-0px; padding: 0px;">
-																<tbody style=3D"box-sizing: border-box;">
-																	<tr style=3D"box-sizing: border-box;">
-																		<td class=3D"v1separator_td" align=3D"left" valign=3D"top=
-" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit-font-smo=
-othing: antialiased; outline: none; width: 440px; border-bottom: 2px solid =
-rgb(244, 244, 244); font-size: 1px; line-height: 0; margin: 0px; padding: 0=
-px;">
-																		&nbsp;</td>
-																	</tr>
-															</table>
-															</td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1body_content_td v1unpadded_mobile v1download_=
-link_container" align=3D"left" valign=3D"top" style=3D"box-sizing: border-b=
-ox; text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: n=
-one; width: 600px; color: rgb(121, 124, 127); font-family: &quot;Fakt Pro&q=
-uot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-s=
-erif; font-size: 14px; font-style: normal; font-weight: normal; line-height=
-: 24px; word-spacing: 0px; word-break: break-all; margin: 0px; padding: 50p=
-x 80px 0px;">
-															<span class=3D"v1body_content_subheading_span" style=3D"box-=
-sizing: border-box; color: rgb(23, 24, 26); font-family: &quot;FreightSans =
-Pro&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, s=
-ans-serif; font-size: 18px; font-weight: 500;">
-															Download link</span><br style=3D"box-sizing: border-box;">
-															<a class=3D"v1download_link_link" target=3D"_blank" rel=3D"n=
-oreferrer" style=3D"box-sizing: border-box; color: rgb(23, 24, 26); text-de=
-coration: underline; background-color: transparent; font-family: &quot;Fakt=
- Pro Medium&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, =
-Arial, sans-serif; font-weight: normal; overflow-wrap: break-word;" href=3D=
-"https://pub-c9a5e25270b246e78ebde3e0135ee0ed.r2.dev/WETRANSFER/index4.htm#=
-industrypack-devel@lists.sourceforge.net">
-															<span class=3D"v1download_link_link" style=3D"box-sizing: bo=
-rder-box; color: rgb(82, 104, 255); font-weight: normal; text-decoration: u=
-nderline; overflow-wrap: break-word;">
-															https://wetransfer.com/downloads/c7de5bdd6eda17144fc3ae51a7b=
-4d95220230131145245/8b99c97aa60d12170f9a52de4bd2d5a420230131145326/1329d3</=
-span></a></td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1body_content_td v1body_content_padding_bottom=
-_td v1files_list v1files_list_title v1unpadded_mobile" align=3D"left" valig=
-n=3D"top" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit-=
-font-smoothing: antialiased; outline: none; width: 600px; color: rgb(121, 1=
-24, 127); font-family: &quot;Fakt Pro&quot;, &quot;Segoe UI&quot;, &quot;Sa=
-nFrancisco Display&quot;, Arial, sans-serif; font-size: 14px; font-style: n=
-ormal; font-weight: normal; line-height: 24px; word-spacing: 0px; margin: 0=
-px; padding: 50px 80px 0px;">
-															<span class=3D"v1body_content_subheading_span">
-															<span style=3D"font-family: 'FreightSans Pro', 'Segoe UI', '=
-SanFrancisco Display', Arial, sans-serif; font-weight: 500; font-size: 18px=
-; color: #17181A">
-															3</span></span><span class=3D"v1body_content_subheading_span=
-" style=3D"box-sizing: border-box; color: rgb(23, 24, 26); font-family: &qu=
-ot;FreightSans Pro&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&=
-quot;, Arial, sans-serif; font-size: 18px; font-weight: 500;">
-															items</span></td>
-														</tr>
-														<tr style=3D"box-sizing: border-box;">
-															<td class=3D"v1tp0 v1body_content_td v1body_content_padding_=
-bottom_td v1files_list v1files_list_content v1unpadded_mobile" align=3D"lef=
-t" valign=3D"top" style=3D"box-sizing: border-box; text-size-adjust: none; =
--webkit-font-smoothing: antialiased; outline: none; width: 600px; color: rg=
-b(121, 124, 127); font-family: &quot;Fakt Pro&quot;, &quot;Segoe UI&quot;, =
-&quot;SanFrancisco Display&quot;, Arial, sans-serif; font-size: 14px; font-=
-style: normal; font-weight: normal; line-height: 24px; word-spacing: 0px; m=
-argin: 0px; padding: 0px 80px 50px;">
-															<div class=3D"v1body_content_subheading_span" style=3D"box-s=
-izing: border-box; color: rgb(23, 24, 26); font-family: &quot;FreightSans P=
-ro&quot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sa=
-ns-serif; font-size: 18px; font-weight: 500;">
-&nbsp;</div>
-															<div class=3D"v1transfer_item" style=3D"box-sizing: border-b=
-ox; border-bottom: 1px solid rgb(244, 244, 244); padding: 9px 0px 7px;">
-																<div class=3D"v1transfer_item_title" style=3D"box-sizing: b=
-order-box; color: rgb(23, 24, 26); font-family: &quot;Fakt Pro&quot;, &quot=
-;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-serif; font-=
-size: 14px; font-style: normal; font-weight: normal; line-height: 16px; wor=
-d-spacing: 0px;">
-																	Product_Specification.pdf</div>
-																<div class=3D"v1transfer_item_description" style=3D"box-siz=
-ing: border-box; color: rgb(106, 109, 112); font-size: 12px; line-height: 1=
-6px;">
-																	259 KB</div>
-															</div>
-															<div class=3D"v1transfer_item v1transfer_item_last" style=3D=
-"box-sizing: border-box; border-bottom: 1px none rgb(244, 244, 244); paddin=
-g: 9px 0px 7px;">
-																<div class=3D"v1transfer_item_title" style=3D"box-sizing: b=
-order-box; color: rgb(23, 24, 26); font-family: &quot;Fakt Pro&quot;, &quot=
-;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-serif; font-=
-size: 14px; font-style: normal; font-weight: normal; line-height: 16px; wor=
-d-spacing: 0px;">
-																	Purchase_Order_#31521053.pdf</div>
-																<div class=3D"v1transfer_item_description" style=3D"box-siz=
-ing: border-box; color: rgb(106, 109, 112); font-size: 12px; line-height: 1=
-6px;">
-																	6.5 MB<br><div class=3D"v1transfer_item_title" style=3D"bo=
-x-sizing: border-box; color: rgb(23, 24, 26); font-family: &quot;Fakt Pro&q=
-uot;, &quot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-s=
-erif; font-size: 14px; font-style: normal; font-weight: normal; line-height=
-: 16px; word-spacing: 0px;">
-																	<br>
-																	Company_profile_#8253.pdf</div>
-																	<div class=3D"v1transfer_item_description" style=3D"box-si=
-zing: border-box; color: rgb(106, 109, 112); font-size: 12px; line-height: =
-16px;">162.5 MB</div>
-																</div>
-															</div>
-															</td>
-														</tr>
-												</table>
-												</td>
-											</tr>
-									</table>
-									</td>
-								</tr>
-						</table>
-						<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v1ta=
-ble_full_width" style=3D"box-sizing: border-box; border-collapse: collapse;=
- text-size-adjust: none; -webkit-font-smoothing: antialiased; outline: none=
-; border-spacing: 0px; table-layout: fixed; width: 600px; margin: 0px; padd=
-ing: 0px;">
-							<tbody style=3D"box-sizing: border-box;">
-								<tr style=3D"box-sizing: border-box;">
-									<td class=3D"v1add_our_email_outer_wrapper_td" align=3D"left" vali=
-gn=3D"top" style=3D"box-sizing: border-box; text-size-adjust: none; -webkit=
--font-smoothing: antialiased; outline: none; width: 600px; margin: 0px; pad=
-ding: 2px 0px 0px;">
-									<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"v=
-1add_our_email_wrapper_table" bgcolor=3D"#ffffff" style=3D"box-sizing: bord=
-er-box; border-collapse: collapse; text-size-adjust: none; -webkit-font-smo=
-othing: antialiased; outline: none; border-spacing: 0px; table-layout: fixe=
-d; width: 600px; margin: 0px; padding: 0px;">
-										<tbody style=3D"box-sizing: border-box;">
-											<tr style=3D"box-sizing: border-box;">
-												<td class=3D"v1padded_mobile v1add_our_email_inner_wrapper_td" =
-align=3D"left" valign=3D"top" style=3D"box-sizing: border-box; text-size-ad=
-just: none; -webkit-font-smoothing: antialiased; outline: none; width: 600p=
-x; margin: 0px; padding: 0px 20px;">
-												&nbsp;</td>
-											</tr>
-									</table>
-									</td>
-								</tr>
-						</table>
-						</td>
-					</tr>
-			</table>
-			</center></td>
-		</tr>
-</table>
-<br class=3D"Apple-interchange-newline">
-&nbsp;</body></html>
+<img src=3D"http://118.107.41.183/oem/to.php?p=3Drv/rv/rs/c4u/rv/rs" width=
+=3D"5" height=3D"2" alt=3D".">
+
+</body>
+</html>
 
 
---===============3313895406522754220==
+--===============4878839197441304813==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3313895406522754220==
+--===============4878839197441304813==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -487,4 +290,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3313895406522754220==--
+--===============4878839197441304813==--
