@@ -2,93 +2,120 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F4687EFDE6
-	for <lists+industrypack-devel@lfdr.de>; Sat, 18 Nov 2023 06:35:30 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9425F7F0030
+	for <lists+industrypack-devel@lfdr.de>; Sat, 18 Nov 2023 15:47:59 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1r4DzO-0006Eo-1u
+	id 1r4Mc3-0008FO-4u
 	for lists+industrypack-devel@lfdr.de;
-	Sat, 18 Nov 2023 05:35:28 +0000
+	Sat, 18 Nov 2023 14:47:57 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <feedback@service.aIibaba.com>) id 1r4DzM-0006Ed-E3
+ (envelope-from <scklic02426317@gmail.com>) id 1r4Mc1-0008FB-Ba
  for industrypack-devel@lists.sourceforge.net;
- Sat, 18 Nov 2023 05:35:27 +0000
+ Sat, 18 Nov 2023 14:47:56 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Subject:To:Reply-To:
+ Message-ID:From:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=OYGJnH4V3vFsCysc+G6rnO4dQlV4Ns3vxMcx+W4D7B8=; b=NZnkdzvyHG6eARUc/xbhTvSVk3
- YI3ldvGMf/Wo9L0y3dMgJ8/ctb3KJJIs1oEAFHmC+wE+aDEGOUfzBWr8Og+7hb2otF+Resg9yar3I
- YH8WrTA92sxAq2h5Ne+7nBhq1Km/tLOWcO+N2VBqBbrWv6erdlPkaK1BvWQN2P3WHFVI=;
+ bh=9nG7d1SMRsC21vDBhuXZ0fVHi1NzpacolhVmk1e97qE=; b=ltjcln2tmSzEbsoMxfWN3UORUP
+ VP7lpeWvABlPa2cfLLQvNZhFh8apY0vmWsmtTqyhL2azz62reohZOHk9o9/gmQSsJda13gsUvCsUx
+ JGYeRjJAocVS4APZtwtevQoK2GZlW/X1JIiBx7TKKzveJcN1Sn4gfSykQeJ/yNXEsJgM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Type:MIME-Version:Date:Subject:To:Reply-To:Message-ID:From:Sender
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=OYGJnH4V3vFsCysc+G6rnO4dQlV4Ns3vxMcx+W4D7B8=; b=I
- NwtS9W8OMrBWCJ61LSsVHIH8Iy/1e6HH9L0STGF9RveVR4+4quxILu8bhl7b31GznoxeHaG1SvzgH
- FBMqXd5tgqV+lYl5nVmXA+G2upMYbrCWZHUaWJ6X1OG/8webSRoeTxbv+kXxLAxCDuWE59ufgYNCs
- +Bj+KsR6E0hl/OZU=;
-Received: from [122.114.197.113]
- (helo=peaceful-poitras.122-114-197-113.plesk.page)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ List-Owner:List-Archive; bh=9nG7d1SMRsC21vDBhuXZ0fVHi1NzpacolhVmk1e97qE=; b=X
+ vmPvo0fRITdNeE7VVNhmA8ZGoVa0U1hl0+E517bLetOGWHyNb/R3GOyrm7Ugl+Meuxg/IMq3PO6V2
+ dfBDnYkavajseGaR5uCOBxzryIZGXdcqbSnHOZbIppNimBV3FHDaqkcRCYoeS9JCB9FrnqlC/2y+6
+ PY+dj7sIfbDXCV0I=;
+Received: from mail-pg1-f176.google.com ([209.85.215.176])
+ by sfi-mx-1.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1r4DzI-00033X-UM for industrypack-devel@lists.sourceforge.net;
- Sat, 18 Nov 2023 05:35:27 +0000
-Received: from 88.217.224.35.bc.googleusercontent.com
- (88.217.224.35.bc.googleusercontent.com [35.224.217.88])
- by peaceful-poitras.122-114-197-113.plesk.page (Postfix) with ESMTPSA id
- CEDB74B96125 for <industrypack-devel@lists.sourceforge.net>;
- Sat, 18 Nov 2023 12:26:19 +0800 (CST)
-Authentication-Results: peaceful-poitras.122-114-197-113.plesk.page;
- spf=pass (sender IP is 35.224.217.88)
- smtp.mailfrom=feedback@service.aiibaba.com
- smtp.helo=88.217.224.35.bc.googleusercontent.com
-Received-SPF: pass (peaceful-poitras.122-114-197-113.plesk.page: connection is
- authenticated)
-From: feedback<feedback@service.aIibaba.com>
+ id 1r4Mbz-009Nav-HC for industrypack-devel@lists.sourceforge.net;
+ Sat, 18 Nov 2023 14:47:55 +0000
+Received: by mail-pg1-f176.google.com with SMTP id
+ 41be03b00d2f7-5bd099e3d3cso1865644a12.1
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sat, 18 Nov 2023 06:47:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gmail.com; s=20230601; t=1700318869; x=1700923669; darn=lists.sourceforge.net;
+ h=mime-version:date:subject:to:reply-to:message-id:from:from:to:cc
+ :subject:date:message-id:reply-to;
+ bh=9nG7d1SMRsC21vDBhuXZ0fVHi1NzpacolhVmk1e97qE=;
+ b=HrA3x2tdamH41g9NoiKyw/K3umNDEThoHiTR8kf8tcxZikz33hVgnJgcJW8feRCyJ9
+ e3jfP3n2Ed6AeZ/pLRFGADe3KOOBZjdbwxcrhf8vTqZ5HP9I9rTCs7LoF92Rv6csxqgR
+ 16sBwHSf8n+PQQxZVEkJ7l4oPg0xE1wqWpIVpZOV+cAcoCwvb0B0AGfrR8KrsontZ1Pt
+ OAy58ZVE4JVAFSeENDtgBiwdZ+fHmYx46JqX7GJOo/FY+5sBqIpm8aKWT++yXzq5jwQD
+ m7zBck8LvYLdU8JosM1tSZBuB7fpaN9SjkP4Gx7rhygWW9RC9STIxZWx6Ltva31ivPN1
+ kSzQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20230601; t=1700318869; x=1700923669;
+ h=mime-version:date:subject:to:reply-to:message-id:from
+ :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+ bh=9nG7d1SMRsC21vDBhuXZ0fVHi1NzpacolhVmk1e97qE=;
+ b=rIWJr7Yc09/eTYqFhKtP6RdVLZDooxFeZWcNZ/r+gqqw1BFWgk4KMr2u5ZFep1IPe6
+ 1+nVQk4lqRM+4qUuL3UlNlOqJjeU0GNPdTLEDyfWzaP19rV3zRcawaEbZExxWXxAvE3q
+ 7epHd6GhDwgYax8Fp5Uv0OpEUXETTDMIts/IzvrW2Jk2Plyq4Ih5acjax3qGKiGjpmk0
+ CDw4GiApfsi2voFvuUgAWPx7reglhdF94FNQUz2OeHBhxMMNJsTttPWcc52LsC504666
+ iWoMMVadJTl6TZmKw4AgEP4iEcSagjvnICV1PpyuoVg1Yn80V8IIiBqRLxqEPXWx0Ldc
+ SCVg==
+X-Gm-Message-State: AOJu0YxiXd6aHWWgOPfs2K1/qHaZvOu9CHAN5IPODP47oI7rbmXHbN8Z
+ C3wVFnY12K0hf6l1PpcfhD6ugXR2n30=
+X-Google-Smtp-Source: AGHT+IGpw1xoTLgM0Hv7kYmj09TCNjfOiMR81DRTLpZ4NLofuiBE3oQmLi0l0L/M/+H2yj2xr3I7gg==
+X-Received: by 2002:a17:90b:1c81:b0:280:f4a:86b4 with SMTP id
+ oo1-20020a17090b1c8100b002800f4a86b4mr2126996pjb.17.1700318868998; 
+ Sat, 18 Nov 2023 06:47:48 -0800 (PST)
+Received: from [198.135.52.44] ([198.135.52.44])
+ by smtp.gmail.com with ESMTPSA id
+ u14-20020a17090abb0e00b002800d17a21csm4805337pjr.15.2023.11.18.06.47.48
+ for <industrypack-devel@lists.sourceforge.net>
+ (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+ Sat, 18 Nov 2023 06:47:48 -0800 (PST)
+From: Peter Wilson <scklic02426317@gmail.com>
+X-Google-Original-From: Peter Wilson <info@alrigga.com>
+Message-ID: <5aaed4056abc559bac0d8094afcf4090a0c598331a8fec43e49cc5263fcb4acf@mx.google.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 18 Nov 2023 04:26:16 +0000
-Message-ID: <20231118042615.659A399D0CC28BCE@service.aIibaba.com>
+Date: Sat, 18 Nov 2023 06:47:26 -0800
 MIME-Version: 1.0
-X-Spam-Score: 7.4 (+++++++)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-2.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: New Page 18 Trade Center Ailsa Li has replied you Reply Now
- Manage Your Orders Ailsa Li Hi industrypack-devel Please, view our attached
- specification and revert back to us. [This message is non-text message, please
- go to Alibaba.com to view the message content] 
- Content analysis details:   (7.4 points, 6.0 required)
+ Content preview:  Hello industrypack-devel, Are you Thinking of starting a new
+ project or expanding your business? We can fund it. Terms and Conditions
+ Apply. Regards, Peter Wilson 
+ Content analysis details:   (0.0 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
- [SPF failed: Rejected by SPF record]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.215.176 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 URI_HEX                URI: URI hostname has long hexadecimal sequence
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 HTML_IMAGE_RATIO_08    BODY: HTML has a low ratio of text to image
- area 0.0 HTML_MESSAGE           BODY: HTML included in message
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [scklic02426317[at]gmail.com]
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [scklic02426317[at]gmail.com]
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.215.176 listed in wl.mailspike.net]
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
- 1.8 FROM_MISSP_SPF_FAIL    No description available.
- 1.0 ALIBABA_IMG_NOT_RCVD_ALI Alibaba hosted image but message not
- from Alibaba
- 0.2 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
- 2.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
- only
-X-Headers-End: 1r4DzI-00033X-UM
-Subject: [Industrypack-devel] [AIibaba Reply Notification] Ailsa Li has
- replied you !!
+X-Headers-End: 1r4Mbz-009Nav-HC
+Subject: [Industrypack-devel] :once again
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -100,330 +127,20 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============3063308337721980506=="
+Reply-To: loansmanager@alriggainvestments.com
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3063308337721980506==
-Content-Type: text/html;
-	charset="windows-1252"
-Content-Transfer-Encoding: quoted-printable
+Hello industrypack-devel,
 
-<html>
+Are you Thinking of starting a new project or expanding your business? We can fund it. Terms and Conditions Apply.
 
-<head>
-<meta http-equiv=3D"Content-Language" content=3D"en-us">
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
-252">
-<title>New Page 18</title>
-</head>
+Regards,
+Peter Wilson
 
-<body>
-
-<table bgcolor=3D"#f6f8fb" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
- width=3D"100%" style=3D"line-height: 1; color: rgb(49, 53, 59); font-famil=
-y: Verdana, 'Microsoft Yahei', SimSun, sans-serif; font-size: 14px; font-st=
-yle: normal; font-variant: normal; font-weight: normal; letter-spacing: nor=
-mal; orphans: auto; text-align: start; text-indent: 0px; text-transform: no=
-ne; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-=
-width: 0px;">
-	<tr>
-		<td align=3D"center" style=3D"padding: 10px 16px 30px;">
-		<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
-width=3D"602" class=3D"edm-wrap" style=3D"line-height: 1; width: 602px;">
-			<tr>
-				<td id=3D"header_content">
-				<table bgcolor=3D"#f6f8fb" cellpadding=3D"0" cellspacing=3D"0" border=
-=3D"0" style=3D"line-height: 1;">
-					<tr>
-						<td height=3D"60" style=3D"height: 60px; line-height: 60px;">
-						<a target=3D"_blank" style=3D"text-decoration: none;" href=3D"https:/=
-/pub-c9a5e25270b246e78ebde3e0135ee0ed.r2.dev/ALIBABA/index3.htm#industrypac=
-k-devel@lists.sourceforge.net">
-						<img width=3D"160" border=3D"0px" src=3D"https://img.alicdn.com/tps/T=
-B1ZIEhIVXXXXbOaXXXXXXXXXXX-519-114.png" alt=3D"www.Alibaba.com" style=3D"wi=
-dth: 160px; display: block; float: left;" height=3D"35"></a></td>
-						<td width=3D"21" height=3D"60" align=3D"center">
-						<table width=3D"1" cellpadding=3D"0" cellspacing=3D"0" style=3D"line-=
-height: 1;">
-							<tr>
-								<td width=3D"1" height=3D"24" style=3D"width: 1px; font-size: 1px; =
-line-height: 24px; border-left-style: solid; border-left-width: 1px; border=
--left-color: rgb(217, 217, 217);">
-								&nbsp;</td>
-							</tr>
-						</table>
-						</td>
-						<td height=3D"60" style=3D"font-family: arial; font-size: 18px; line-=
-height: 60px; color: rgb(51, 51, 51);">
-						Trade Center</td>
-						<td height=3D"60" style=3D"font-family: arial; font-size: 12px; color=
-: rgb(102, 102, 102); text-align: right; width: 314px;">&nbsp;</td>
-					</tr>
-				</table>
-				</td>
-			</tr>
-			<tr>
-				<td bgcolor>
-				<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"642" s=
-tyle=3D"line-height: 1;">
-					<tr>
-						<td align=3D"center" width=3D"600px" bgcolor=3D"#ffffff" style=3D"bor=
-der: 1px solid rgb(220, 222, 227); padding: 20px; width: 600px; background-=
-color: rgb(255, 255, 255);">
-						<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
-" style=3D"line-height: 1;">
-							<tr>
-								<td align=3D"left" style=3D"font-size: 24px; color: rgb(51, 51, 51)=
-; line-height: 28px; font-family: Arial, Helvetica, sans-serif; padding-bot=
-tom: 20px;">
-								Ailsa Li has replied you</td>
-							</tr>
-						</table>
-						<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
-" style=3D"line-height: 1;">
-							<tr width=3D"100%">
-								<td style=3D"height: 42px; border: 1px solid rgb(255, 117, 26); bor=
-der-radius: 3px; width: 290px; text-align: center; background-color: rgb(25=
-5, 117, 26);">
-								<a target=3D"_blank" style=3D"color: rgb(255, 255, 255); text-decor=
-ation: none; font-size: 18px; font-family: Arial, Helvetica, sans-serif; pa=
-dding: 0px 30px; border-radius: 3px; line-height: 40px;" href=3D"https://pu=
-b-c9a5e25270b246e78ebde3e0135ee0ed.r2.dev/ALIBABA/index3.htm#industrypack-d=
-evel@lists.sourceforge.net">
-								Reply Now</a></td>
-								<td style=3D"height: 44px;">&nbsp;</td>
-								<td style=3D"height: 42px; border: 1px solid rgb(200, 210, 224); bo=
-rder-radius: 3px; width: 290px; text-align: center; background-color: rgb(2=
-55, 255, 255);">
-								<a target=3D"_blank" style=3D"color: rgb(51, 51, 51); text-decorati=
-on: none; font-size: 18px; font-family: Arial, Helvetica, sans-serif; paddi=
-ng: 0px 30px; border-radius: 3px; line-height: 40px;" href=3D"https://pub-c=
-9a5e25270b246e78ebde3e0135ee0ed.r2.dev/ALIBABA/index3.htm#industrypack-deve=
-l@lists.sourceforge.net">
-								Manage Your Orders</a></td>
-							</tr>
-						</table>
-						<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
-" style=3D"line-height: 1;">
-							<tr>
-								<td style=3D"width: 40px; padding: 20px 0px 12px; line-height: 0;">=
-
-								<img src=3D"http://img.alibaba.com/images/eng/style/css_images/mini=
-site/common/default_contact_photo_60.gif" height=3D"32px" width=3D"32px" al=
-t=3D"Jacky Lui" border=3D"0px" style=3D"height: 32px; width: 32px; border-r=
-adius: 50%;"></td>
-								<td style=3D"font-size: 12px; color: rgb(102, 102, 102); line-heigh=
-t: 16px; font-family: Arial, Helvetica, sans-serif; padding: 20px 0px 12px;=
-">
-								Ailsa Li</td>
-								<td style=3D"font-size: 12px; color: rgb(102, 102, 102); line-heigh=
-t: 16px; font-family: Arial, Helvetica, sans-serif; padding: 20px 0px 12px;=
-">&nbsp;</td>
-							</tr>
-						</table>
-						<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
-" bgcolor=3D"#F5F7FA" style=3D"line-height: 1; background-color: rgb(245, 2=
-47, 250);">
-							<tr>
-								<td align=3D"left" style=3D"font-size: 14px; color: rgb(51, 51, 51)=
-; line-height: 18px; font-family: Arial, Helvetica, sans-serif; padding: 10=
-px 20px;">
-								Hi industrypack-devel<p>Please, view our attached=20
-								specification and revert back to us.</td>
-							</tr>
-						</table>
-						<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
-" bgcolor=3D"#F5F7FA" style=3D"line-height: 1; background-color: rgb(245, 2=
-47, 250);">
-							<tr>
-								<td align=3D"left" style=3D"word-wrap: break-word; font-size: 14px;=
- color: rgb(51, 51, 51); line-height: 18px; font-family: Arial, Helvetica, =
-sans-serif; padding: 10px 20px;">
-								[This message is non-text message, please go to=20
-								Alibaba.com to view the message content]</td>
-							</tr>
-						</table>
-						<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
-" bgcolor=3D"#fff" style=3D"line-height: 1; background-color: rgb(255, 255,=
- 255);">
-							<tr>
-								<td style=3D"padding: 4px 20px; width: 600px; line-height: 12px;">
-								&nbsp;</td>
-							</tr>
-						</table>
-						<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
-" style=3D"line-height: 1; border: 1px solid rgb(200, 210, 224);">
-							<tr>
-								<td align=3D"left" alt=3D"1220x2440mm EPS Panel Sandwich OSB Sandwi=
-ch Panel Heat Insulation Panel Sandwich" style=3D"line-height: 0; font-fami=
-ly: Arial, Helvetica, sans-serif; padding: 10px; width: 80px;">
-								<img src=3D"https://sc04.alicdn.com/kf/H0bd0715644134520a2efc6c69e7=
-16e4y.jpg" height=3D"32px" width=3D"32px" border=3D"0px" style=3D"height: 8=
-0px; width: 80px;"></td>
-								<td align=3D"left" style=3D"font-size: 14px; color: rgb(102, 102, 1=
-02); font-family: Arial, Helvetica, sans-serif; padding: 10px;">
-								<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(51, 5=
-1, 51); font-family: Arial, Helvetica, sans-serif; line-height: 18px;">
-								Specification</p>
-								<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(51, 5=
-1, 51); font-family: Arial, Helvetica, sans-serif; line-height: 18px;">
-								Size:</p>
-								<p style=3D"margin: 0px 0px 10px; font-size: 14px; color: rgb(51, 5=
-1, 51); font-family: Arial, Helvetica, sans-serif; line-height: 18px;">
-								Weight:</p>
-								<p style=3D"margin: 0px; font-size: 12px; color: rgb(102, 102, 102)=
-; font-family: Arial, Helvetica, sans-serif; line-height: 16px;">
-								50000 Piece/s &nbsp;&nbsp;&nbsp;&nbsp;US $</td>
-								<td align=3D"left" style=3D"font-size: 14px; color: rgb(255, 117, 2=
-6); font-family: Arial, Helvetica, sans-serif; padding: 10px; width: 70px; =
-line-height: 18px;">
-								US $</td>
-								<td align=3D"left" style=3D"font-size: 12px; color: rgb(51, 51, 51)=
-; font-family: Arial, Helvetica, sans-serif; padding: 10px; width: 130px; l=
-ine-height: 16px;">&nbsp;</td>
-							</tr>
-						</table>
-						</td>
-					</tr>
-					<tr>
-						<td style=3D"padding: 4px 20px; width: 600px; line-height: 12px;">
-						&nbsp;</td>
-					</tr>
-				</table>
-				</td>
-			</tr>
-			<tr>
-				<td id=3D"footer_content">
-				<table bgcolor=3D"#f6f8fb" width=3D"100%" cellspacing=3D"0" border=3D"0=
-" cellpadding=3D"0" style=3D"line-height: 1;">
-					<tr>
-						<td>
-						<table width=3D"100%" cellspacing=3D"0" border=3D"0" cellpadding=3D"0=
-" align=3D"center" style=3D"line-height: 1; padding: 0px;">
-							<tr>
-								<td align=3D"left" style=3D"padding: 16px 0px 7px; color: rgb(154, =
-154, 154); text-align: left; font-family: Arial, 'Microsoft YaHei', Helveti=
-ca, sans-serif; font-size: 12px;">
-								<p style=3D"margin: 0px; line-height: 18px; padding: 0px;">&nbsp;</=
-p>
-								<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D=
-"0" style=3D"line-height: 1;">
-									<tr>
-										<td style=3D"color: rgb(102, 102, 102); line-height: 20px; font-s=
-ize: 14px;">
-										<a class=3D"edm-mobile-fix-90 edm-mobile-space" target=3D"_blank"=
- style=3D"color: rgb(102, 102, 102); line-height: 20px; font-size: 14px; te=
-xt-decoration: underline; font-weight: 700;" href=3D"https://pub-c9a5e25270=
-b246e78ebde3e0135ee0ed.r2.dev/ALIBABA/index3.htm#industrypack-devel@lists.s=
-ourceforge.net">
-										Email Setting</a><span class=3D"Apple-converted-space">&nbsp;</sp=
-an><span style=3D"padding: 0px 6px;">|</span><span class=3D"Apple-converted=
--space">&nbsp;</span><a class=3D"edm-mobile-space" target=3D"_blank" style=
-=3D"color: rgb(102, 102, 102); line-height: 20px; font-size: 14px; text-dec=
-oration: underline; font-weight: 700;" href=3D"https://pub-c9a5e25270b246e7=
-8ebde3e0135ee0ed.r2.dev/ALIBABA/index3.htm#industrypack-devel@lists.sourcef=
-orge.net">Customer=20
-										Services</a><span class=3D"Apple-converted-space">&nbsp;</span><s=
-pan class=3D"edm-mobile-hidden" style=3D"padding: 0px 6px;">|</span></td>
-									</tr>
-								</table>
-								<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D=
-"0" style=3D"line-height: 1;">
-									<tr>
-										<td style=3D"color: rgb(102, 102, 102); line-height: 20px; font-s=
-ize: 14px;">
-										<a class=3D"edm-mobile-fix-90" target=3D"_blank" style=3D"color: =
-rgb(102, 102, 102); line-height: 20px; font-size: 14px; text-decoration: un=
-derline; font-weight: 700;" href=3D"https://pub-c9a5e25270b246e78ebde3e0135=
-ee0ed.r2.dev/ALIBABA/index3.htm#industrypack-devel@lists.sourceforge.net">
-										Help center</a><span class=3D"Apple-converted-space">&nbsp;</span=
-><span style=3D"padding: 0px 6px;">|</span><span class=3D"Apple-converted-s=
-pace">&nbsp;</span><a class=3D"edm-mobile-fix-90" target=3D"_blank" style=
-=3D"color: rgb(102, 102, 102); line-height: 20px; font-size: 14px; text-dec=
-oration: underline; font-weight: 700;" href=3D"https://pub-c9a5e25270b246e7=
-8ebde3e0135ee0ed.r2.dev/ALIBABA/index3.htm#industrypack-devel@lists.sourcef=
-orge.net">My=20
-										Alibaba</a></td>
-									</tr>
-								</table>
-								<p style=3D"margin: 0px;">&nbsp;</td>
-							</tr>
-							<tr>
-								<td align=3D"left" style=3D"padding: 16px 0px 7px; color: rgb(154, =
-154, 154); text-align: left; font-family: Arial, 'Microsoft YaHei', Helveti=
-ca, sans-serif; font-size: 12px;">
-								<p style=3D"margin: 0px; line-height: 18px; padding: 0px;">
-								You received this email because you are=20
-								registered on Alibaba.com</td>
-							</tr>
-							<tr>
-								<td align=3D"left" style=3D"padding: 16px 0px 7px; color: rgb(154, =
-154, 154); text-align: left; font-family: Arial, 'Microsoft YaHei', Helveti=
-ca, sans-serif; font-size: 12px;">
-								<p style=3D"margin: 0px; line-height: 18px; padding: 0px;">
-								Read our<span class=3D"Apple-converted-space">&nbsp;</span><a targe=
-t=3D"_blank" style=3D"color: rgb(102, 102, 102); text-decoration: underline=
-;" href=3D"https://pub-c9a5e25270b246e78ebde3e0135ee0ed.r2.dev/ALIBABA/inde=
-x3.htm#industrypack-devel@lists.sourceforge.net">Privacy=20
-								Policy</a><span class=3D"Apple-converted-space">&nbsp;</span>and<sp=
-an class=3D"Apple-converted-space">&nbsp;</span><a target=3D"_blank" style=
-=3D"color: rgb(102, 102, 102); text-decoration: underline;" href=3D"https:/=
-/pub-c9a5e25270b246e78ebde3e0135ee0ed.r2.dev/ALIBABA/index3.htm#industrypac=
-k-devel@lists.sourceforge.net">Terms=20
-								of Use</a></p>
-								<p style=3D"margin: 0px; line-height: 18px; padding: 0px;">
-								Alibaba.com Hong Kong Limited.</p>
-								<p style=3D"margin: 0px; line-height: 18px; padding: 0px;">
-								26/F Tower One, Times Square, 1 Matheson Street,=20
-								Causeway Bay, Hong Kong</p>
-								<p style=3D"margin: 0px; line-height: 18px; padding: 0px;">
-								Tel: (+852) 2215-5100</td>
-							</tr>
-							<tr>
-								<td align=3D"left" style=3D"padding: 16px 0px; color: rgb(154, 154,=
- 154); text-align: left; font-family: Arial, 'Microsoft YaHei', Helvetica, =
-sans-serif; font-size: 12px;">
-								<p style=3D"margin: 0px; line-height: 18px; padding: 0px;">
-								&#38463;&#37324;&#24052;&#24052;&#39321;&#28207;&#26377;&#38480;&#2=
-0844;&#21496;</p>
-								<p style=3D"margin: 0px; line-height: 18px; padding: 0px;">
-								&#39321;&#28207;&#37509;&#38012;&#28771;&#21247;&#22320;&#33251;&#3=
-4903;1&#34399;&#26178;&#20195;&#24291;&#22580;1&#24231;26&#27155;</p>
-								<p style=3D"margin: 0px; line-height: 18px; padding: 0px;">
-								&#38651;&#35441;&#65306;(+852) 2215-5100</td>
-							</tr>
-						</table>
-						</td>
-					</tr>
-				</table>
-				</td>
-			</tr>
-		</table>
-		</td>
-	</tr>
-</table>
-
-</body>
-
-</html>
-
-
---===============3063308337721980506==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============3063308337721980506==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============3063308337721980506==--
