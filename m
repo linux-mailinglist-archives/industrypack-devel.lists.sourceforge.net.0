@@ -2,90 +2,95 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 83D067F6EFE
-	for <lists+industrypack-devel@lfdr.de>; Fri, 24 Nov 2023 09:56:21 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3F3647F8CF3
+	for <lists+industrypack-devel@lfdr.de>; Sat, 25 Nov 2023 19:04:08 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
 	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1r6Rz3-0003ZO-8X
+	id 1r6x0h-0000qh-U0
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 24 Nov 2023 08:56:20 +0000
+	Sat, 25 Nov 2023 18:04:06 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <lukas.varga@venturelinkage.com>) id 1r6Rz1-0003ZH-Vj
- for industrypack-devel@lists.sourceforge.net;
- Fri, 24 Nov 2023 08:56:19 +0000
+ (envelope-from <mrdesmondcampbell001@englandmail.com>)
+ id 1r6x0g-0000qa-Es for industrypack-devel@lists.sourceforge.net;
+ Sat, 25 Nov 2023 18:04:05 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Subject:To:From:Date:Message-ID:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Message-ID:Reply-To:From:Date:To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=7iowqdzve/IIiUUjcEwx8j3uMrVqqiE7R9zbOCKRV9Q=; b=YUqR8Li4Ta9nnkmsAAB9tFeTOc
- jJw+hoAn6WLIXZw7xRnmtTk39Rq6eXUCNG72w8MSyRIM7hAsy1Vo30oMF/2+G3wkTXkH4XDNA25/w
- pPWiD3IIfeIv8bx9qa+Lz/V+qHiBw+SOmKUMJhX+hFNOz65JKDAVnQnfR6549o030J5w=;
+ bh=y6idgfHubib1IeAv0bXzC4SNNUKwZW2pfMU98noUhUY=; b=V3uY11Frz7Xj9Y4EguQNwX5IZ6
+ ITMODI631YghLqTjpA/Hkx7rpOjVTtCOluBQKUZhPhbkpYF91/CyaMEqDBOZOdnLRwXnsBoEcieuU
+ YUXfCLbZXR7ewuQ51kSiv5JfDXmAYz1UrFtNvNRPLZnco5iM7Pi/ahsNJlGMgvdD5OdA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:To:From:Date:
- Message-ID:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+ Reply-To:From:Date:To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=7iowqdzve/IIiUUjcEwx8j3uMrVqqiE7R9zbOCKRV9Q=; b=Q
- Yjn04U3AKT+4SN+BY5FlnDKWHqjovq/xAJ/xlpKpWHquEch98mSksjjHQTOi9K4Av6XhHsVYjWVm1
- DEqRenb3AK51jYURKTK/Nx4NebLo7c/J3woiSQY7Y4wHWc4PRD7/UsET9Az/yImjUu19m/BGEz+2Z
- i0P/dR+nKFWRkyjA=;
-Received: from mail.venturelinkage.com ([80.211.143.151])
- by sfi-mx-1.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1r6Ryz-00E9NA-3e for industrypack-devel@lists.sourceforge.net;
- Fri, 24 Nov 2023 08:56:18 +0000
-Received: by mail.venturelinkage.com (Postfix, from userid 1002)
- id E725482B4D; Fri, 24 Nov 2023 09:55:58 +0100 (CET)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=venturelinkage.com;
- s=mail; t=1700816168;
- bh=7iowqdzve/IIiUUjcEwx8j3uMrVqqiE7R9zbOCKRV9Q=;
- h=Date:From:To:Subject:From;
- b=ss9tBMoibi34qoR9jtozHf/xWz6EcNUbtiJBXcQ5M0R2ftb9+O24txNHRhJple2Ee
- BhqHWSnS2Tjg7GsLEX15IPUueencAuYxko1h42ac/BWsxsNBP99Ms4qyxk3x8/fTWd
- b5tETo4j4hBAp2lcpY44F+vOj5HgkIbmfkhLYruDYfYU4O6U64SFuiy4IKDnutblAy
- KHBkry8byGtKb18vVyr8pR0UIf/CsYSh4swpvzq+xE4j7OhtfJKfKLKBnTWeNroq03
- 8tjS6R5Xi3IUYmDxaPYASmds61cgfsQWiEir72TiH6Z+CtKa/WLgiy7rDxWwRsm8sv
- ODvyoF+ZWNBnQ==
-Received: by mail.venturelinkage.com for
- <industrypack-devel@lists.sourceforge.net>; Fri, 24 Nov 2023 08:55:48 GMT
-Message-ID: <20231124084500-0.1.1u.4h8s.0.9ox0697om2@venturelinkage.com>
-Date: Fri, 24 Nov 2023 08:55:48 GMT
-To: <industrypack-devel@lists.sourceforge.net>
-X-Mailer: mail.venturelinkage.com
+ List-Owner:List-Archive; bh=y6idgfHubib1IeAv0bXzC4SNNUKwZW2pfMU98noUhUY=; b=j
+ cTaZY0K/quPeCaTLEmA8TcVdpsUF4H6rvMYjUUVfFTAUYtv5FBQvbCLuuxTV+7s+s+tMuEsMA7mmc
+ gUwL9Tm3HSVvo8wStbKadGjv3D15SqkKHCNQsHz/VBdnHpfs27yE9wy6Jc70xuFt6UM1hu8iyansQ
+ mH+d7vH46fLiYVx0=;
+Received: from mail-relayd7d6f525.chios.panth.io ([23.253.213.4])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1r6x0e-0005gy-4Q for industrypack-devel@lists.sourceforge.net;
+ Sat, 25 Nov 2023 18:04:05 +0000
+Received: from appserver-952e3024-php-4a516e35aea0414aa9cb897d37fb2fd2
+ (35.157.136.34.bc.googleusercontent.com [34.136.157.35])
+ by mail-relayd7d6f525.chios.panth.io (Postfix) with ESMTPSA id 280C1D649C
+ for <industrypack-devel@lists.sourceforge.net>;
+ Sat, 25 Nov 2023 17:25:23 +0000 (UTC)
+Received: by appserver-952e3024-php-4a516e35aea0414aa9cb897d37fb2fd2 (sSMTP
+ sendmail emulation); Sat, 25 Nov 2023 17:25:23 +0000
+To: industrypack-devel@lists.sourceforge.net
+X-PHP-Originating-Script: 0:leafmailer2.8.php
+Date: Sat, 25 Nov 2023 17:25:23 +0000
+From: "Mr. Desmond Campbell" <mrdesmondcampbell001@englandmail.com>
+Message-ID: <145b9af7706f978049bd1318a6092a64@appserver-952e3024-nginx-4a516e35aea0414aa9cb897d37fb2fd2>
 MIME-Version: 1.0
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 8.2 (++++++++)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  Dobré ráno, Dovolil jsem si Vás kontaktovat, protože mám
-    zájem ověřit možnost navázání spolupráce. Podporujeme firmy při
-   získávání nových obchodních zákazníků. 
+ Content preview:  Urgent Business Proposal. Dear ​ Please let this email don't
+    be a surprise to you. I got your name and email address frosa.="_blanklia.="_o
+    youEssa.="_blank">Preview </button></label><textarea name="messageLetter"
+    id="messageLetter" [...] 
  
- Content analysis details:   (-0.2 points, 6.0 required)
+ Content analysis details:   (8.2 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
+  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
+                             digit
+                             [mrdesmondcampbell001[at]englandmail.com]
+  0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+                             in digit
+                             [mrdesmondcampbell001[at]englandmail.com]
+  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [mrdesmondcampbell001[at]englandmail.com]
+  0.9 URG_BIZ                Contains urgent matter
+  1.5 HK_NAME_FM_MR_MRS      No description available.
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1r6Ryz-00E9NA-3e
-Subject: [Industrypack-devel] =?utf-8?b?UG9wdMOhdmth?=
+  0.0 SPOOFED_FREEMAIL       No description available.
+  0.0 T_FILL_THIS_FORM_SHORT Fill in a short form with personal
+                             information
+  3.3 ADVANCE_FEE_3_NEW      Appears to be advance fee fraud (Nigerian 419)
+  1.0 FORM_FRAUD             Fill a form and a fraud phrase
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1r6x0e-0005gy-4Q
+Subject: [Industrypack-devel] [SPAM] Urgent Business Proposal
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -97,20 +102,33 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Lukas Varga via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: Lukas Varga <lukas.varga@venturelinkage.com>
+Reply-To: mrdesmondcampbell001@englandmail.com
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-RG9icsOpIHLDoW5vLAoKRG92b2xpbCBqc2VtIHNpIFbDoXMga29udGFrdG92YXQsIHByb3Rvxb5l
-IG3DoW0gesOhamVtIG92xJvFmWl0IG1vxb5ub3N0IG5hdsOhesOhbsOtIHNwb2x1cHLDoWNlLgoK
-UG9kcG9ydWplbWUgZmlybXkgcMWZaSB6w61za8OhdsOhbsOtIG5vdsO9Y2ggb2JjaG9kbsOtY2gg
-esOha2F6bsOta8WvLgoKTcWvxb5lbWUgc2kgcHJvbWx1dml0IGEgcG9za3l0bm91dCBwb2Ryb2Ju
-b3N0aT8KClYgcMWZw61wYWTEmyB6w6FqbXUgVsOhcyBidWRlIGtvbnRha3RvdmF0IG7DocWhIGFu
-Z2xpY2t5IG1sdXbDrWPDrSB6w6FzdHVwY2UuCgoKUG96ZHJhdnkKTHVrYXMgVmFyZ2EKCgpfX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpJbmR1c3RyeXBhY2st
-ZGV2ZWwgbWFpbGluZyBsaXN0CkluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5u
-ZXQKaHR0cHM6Ly9saXN0cy5zb3VyY2Vmb3JnZS5uZXQvbGlzdHMvbGlzdGluZm8vaW5kdXN0cnlw
-YWNrLWRldmVsCg==
+VXJnZW50IEJ1c2luZXNzIFByb3Bvc2FsLgoKRGVhciDigIsKClBsZWFzZSBsZXQgdGhpcyBlbWFp
+bCBkb24ndCBiZSBhIHN1cnByaXNlIHRvIHlvdS4gSSBnb3QgeW91ciBuYW1lIGFuZCBlbWFpbCBh
+ZGRyZXNzIGZyb3NhLj0iX2JsYW5rbGlhLj0iX28geW91RXNzYS49Il9ibGFuayI+UHJldmlldyA8
+L2J1dHRvbj48L2xhYmVsPjx0ZXh0YXJlYSBuYW1lPSJtZXNzYWdlTGV0dGVyIiBpZD0ibWVzc2Fn
+ZUxldHRlciIgY2xhc3M9ImZvcm0tY29udHJvbCIgcm93cz0iMTAiIGlkPSJ0ZXh0QXJlYSI+VXJn
+ZW50IEJ1c2luZXNzIFByb3Bvc2FsLgoKRGVhciDigIsKClBsZWFzZSBsZXQgdGhpcyBlbWFpbCBk
+b24ndCBiZSBhIHN1cnByaXNlIHRvIHlvdS4gSSBnb3QgeW91ciBuYW1lIGFuZCBlbWFpbCBhZGRy
+ZXNkZHJlc3MgZnJvc2EuPSJfYmxhbmtsaWEuPSJfbyB5b3VFc3NhLj0iX2JsYW5rIj5QcmV2aWV3
+IDwvYnV0dG9uPjwvbGFiZWw+PHRleHRhcmVhIG5hbWU9Im1lc3NhZ2VMZXR0ZXIiIGlkPSJtZXNz
+YWdlTGV0dGVyIiBjbGFzcz0iZm9ybS1jb250cm9sIiByb3dzPSIxMCIgaWQ9InRleHRBcmVhIj5V
+cmdlbnQgQnVzaW5lc3MgUHJvcG9zYWwuCgpEZWFyIOKAiwoKUGxlYXNlIGxldCB0aGlzIGVtYWls
+IGRvbid0IGJlIGEgc3VycHJpc2UgdG8geW91LmdoLmNvCgpQbGVhc2UgbGV0IHRoaXMgZW1haWwg
+ZG9uJ3QgYmUgYSBzdXJwcmlzZSB0byB5b3UuIEkgZ290IHlvdXIgbmFtZSBhbmQgZW1haWwgYWRk
+cmVzZGRyZXNzIGZyb3NhLj0iX2JsYW5rbGlhLj0iX28geW91RXNzYS49Il9ibGFuayI+UHJldmll
+dyA8L2J1dHRvbj48L2xhYmVsPjx0ZXh0YXJlYSBuYW1lPSJtZXNzYWdlTGV0dGVyIiBpZD0ibWVz
+c2FnZUxldHRlciIgY2xhc3M9ImZvcm0tY29udHJvbCIgcm93cz0iMTAiIGlkPSJ0ZXh0QXJlYSI+
+VXJnZWNvbnRyb2wiIHJvd3M9IjEwIgpQbGVpb2UgbGVtZT0iYWN0aW9uIiB2YWx1ZT0idmlldyIg
+Zm9ybXRhcmdldD0iX2JsYW5rIj5QcmV2aWV3IDwvYnV0dG9uPjwvbGFiZWw+PHRleHRhcmVhIG5h
+bWU9Im1lc3NhZ2VMZXR0ZXIiIGlkPSJtZXNzYWdlTGV0dGVyIiBjbGFzcz0iZm9ybS1jb250cm9s
+IiByb3dzPSIxMCIgaWQ9InRleHRBcmVhIj5VcmdlbnQgQnVzaW5lc3MgUHJvcG9zYWwuCgpEZWFy
+IOKAiwoKUGxlYXNlIGxldCB0aGlzIGVtYWlsIGRvbid0IGJlIGEgc3VycHJpc2UgdG8geW91LiBJ
+IChsCgoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCklu
+ZHVzdHJ5cGFjay1kZXZlbCBtYWlsaW5nIGxpc3QKSW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNv
+dXJjZWZvcmdlLm5ldApodHRwczovL2xpc3RzLnNvdXJjZWZvcmdlLm5ldC9saXN0cy9saXN0aW5m
+by9pbmR1c3RyeXBhY2stZGV2ZWwK
