@@ -2,94 +2,105 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id F10B67FCDE9
-	for <lists+industrypack-devel@lfdr.de>; Wed, 29 Nov 2023 05:30:48 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 786A8801AF7
+	for <lists+industrypack-devel@lfdr.de>; Sat,  2 Dec 2023 07:13:31 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1r8CDn-0002Bd-N7
+	id 1r9JFq-00085c-Oi
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 29 Nov 2023 04:30:47 +0000
+	Sat, 02 Dec 2023 06:13:29 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <noreply@sf-express.com>) id 1r8CDg-0002BX-OL
- for industrypack-devel@lists.sourceforge.net;
- Wed, 29 Nov 2023 04:30:40 +0000
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
+ <Lisa=winhoo.axmanufacturer.com@bounces.winhoo.axmanufacturer.com>)
+ id 1r9JFo-00085V-1G for industrypack-devel@lists.sourceforge.net;
+ Sat, 02 Dec 2023 06:13:27 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=3kZ6y5mK+uDAUhWhZFkXt9qx8GwQkeZPRVG/bqQV1GM=; b=NQo82nkw1/qW89PzzeI7Fi7aI+
- aKZhuSBco+b5JMogXHjBzgxCGY9cQhxTMeo6RcIt7BWQRa7ACxKpIMxiETEg7AKKNl3lg+m6r6kJe
- UO8NXH5wgKpcdobzdQQofnxOhwTyaHqZLqFaHUlCPCLJ6GVxiwlhyZySyeb3Bg5CLF8A=;
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:List-Unsubscribe:To:
+ Sender:Reply-To:Message-Id:Subject:Date:From:Cc:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=27jazIyTnajbARa7OyFR6enl+ZqNGdSWALqRZGisHWc=; b=ME9RmHOC9oYixFn186AcuZCs4B
+ j+cYpllhpbaVTa8pOvdvvKP3emc8GKg2UYyXO3nDRymvzBDPjQwOInsmVoAnIGQ6hWwbPSmokRT5x
+ bisiTGRbVw0ARYbSFKHm/ImzTeN1xkBk4u9J3z5Q4NwO8Y2JR1diakSxMGutveqFQjFw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=3kZ6y5mK+uDAUhWhZFkXt9qx8GwQkeZPRVG/bqQV1GM=; b=l
- mjnJV0r/lw1VYy8U07lA+GReilVeypOVukaBsundb2C0tMhWjVB9/WM4zUPckngxtWDrb72j75eGo
- WjImIdpCwEN4xfp+4XlJmuYVAKeXZB+dTS/T835SvXtXJiFc3tuCqNlOLQRkbmJZ7O0i0lWIcAYeF
- +QeGJwY0M+eoYI7c=;
-Received: from [122.114.8.247]
- (helo=interesting-ritchie.122-114-8-247.plesk.page)
+ h=Content-Type:MIME-Version:List-Unsubscribe:To:Sender:Reply-To:Message-Id:
+ Subject:Date:From:Cc:Content-Transfer-Encoding:Content-ID:Content-Description
+ :Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Id:List-Help:List-Subscribe:List-Post:List-Owner:
+ List-Archive; bh=27jazIyTnajbARa7OyFR6enl+ZqNGdSWALqRZGisHWc=; b=NJX4Jt2G6iKV
+ qYP31XtmxNY8p5vmch114fK0PM9Y11mZTLiUU0XPGRTxzaR2dIaIU22jWtivIrOqW7TxTIm3xOvk3
+ ZKpb4T+HXOhbDPyXssiy16mGKPDC0lBXBnFPFSGE7UBknBZJgOpORaL/KBP2pwSg+paUTg8p9pAL0
+ ipxr4=;
+Received: from m189.mxout.mta4.net ([67.227.85.189])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1r8CDa-000451-ND for industrypack-devel@lists.sourceforge.net;
- Wed, 29 Nov 2023 04:30:37 +0000
-Received: from 27.130.16.34.bc.googleusercontent.com
- (27.130.16.34.bc.googleusercontent.com [34.16.130.27])
- by interesting-ritchie.122-114-8-247.plesk.page (Postfix) with ESMTPSA id
- 9CA91493220C for <industrypack-devel@lists.sourceforge.net>;
- Wed, 29 Nov 2023 10:47:32 +0800 (CST)
-Authentication-Results: interesting-ritchie.122-114-8-247.plesk.page;
- spf=pass (sender IP is 34.16.130.27) smtp.mailfrom=noreply@sf-express.com
- smtp.helo=27.130.16.34.bc.googleusercontent.com
-Received-SPF: pass (interesting-ritchie.122-114-8-247.plesk.page: connection
- is authenticated)
-From: SF Express<noreply@sf-express.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 28 Nov 2023 18:47:30 -0800
-Message-ID: <20231128184729.019882EF1D7CBE79@sf-express.com>
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1r9JFk-0003DK-R9 for industrypack-devel@lists.sourceforge.net;
+ Sat, 02 Dec 2023 06:13:26 +0000
+DKIM-Signature: v=1; a=rsa-sha256; d=winhoo.axmanufacturer.com; s=api;
+ c=relaxed/simple; t=1701497578;
+ h=from:date:subject:reply-to:to:list-unsubscribe:mime-version;
+ bh=27jazIyTnajbARa7OyFR6enl+ZqNGdSWALqRZGisHWc=;
+ b=PMUbo5EAJpBXo8Uf9m91efGbJ3U5rIv+FUaU0l1IId91zeVlgRlQgBN4HWq2grWmem1hUXR4w4T
+ Qg2fQQg8nirNKY7I++Llw/0AbvZGPJcCzo6gSDVqY0kNYcfIuP9WteYL6e8jSucS4Ob+1MNxl35TE
+ 27MMbIACzF3a5vA1fF8=
+DKIM-Signature: v=1; a=rsa-sha256; d=elasticemail.com; s=api;
+ c=relaxed/simple; t=1701497578;
+ h=from:date:subject:reply-to:to:list-unsubscribe;
+ bh=27jazIyTnajbARa7OyFR6enl+ZqNGdSWALqRZGisHWc=;
+ b=OjM1XGtqaHMWjYrBuPVqS/irMH1xPNIGy1610YM0kt7L1FerZqhiPu1d8+MKZs0JbtRW0Ez1cfw
+ rbNPfdBJRCiGhKMbdYgB9wFr4tmUgaRSj4K+JeHo0KexvfhH5WObzu4hjw7fiPUQXxEuJNTb+4ep6
+ n9Y9RGxt2CQ7KFWBS/U=
+From: Lisa Yu <Lisa@winhoo.axmanufacturer.com>
+Date: Sat, 02 Dec 2023 06:12:58 +0000
+Message-Id: <4ulnm30t7aka.-dpyU20qan4hKssgiF2EYg2@tracking.winhoo.axmanufacturer.com>
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+X-Msg-EID: -dpyU20qan4hKssgiF2EYg2
 MIME-Version: 1.0
-X-Spam-Score: 7.6 (+++++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has identified this incoming email as possible spam.  The original
+X-Spam-Score: 3.9 (+++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  industrypack-devel S؜F؜-E؜xp؜r؜e؜ss 亲؜爱؜的 industrypack-devel
-    由؜于؜您؜的؜地؜址؜不؜符，您؜的؜货؜件被؜扣؜留؜在؜我؜们؜的؜办؜公؜室.
-    请؜再؜次؜确؜认؜您؜的؜地؜址，以؜便؜我؜们؜能؜够؜在؜今؜天؜
-    [...] 
+ Content preview:  Dear , I hope this email finds you well. As the Sales Director
+    of Winhoo Precision, I wanted to reach out and express how much we value
+   your business.  We understand that you have a choice in selecti [...] 
  
- Content analysis details:   (7.6 points, 6.0 required)
+ Content analysis details:   (3.9 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: xcwms.com]
   1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
                              https://senderscore.org/blocklistlookup/
-                             [122.114.8.247 listed in bl.score.senderscore.com]
-  0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
-                             [SPF failed: Rejected by SPF record]
+                             [67.227.85.189 listed in bl.score.senderscore.com]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [67.227.85.189 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.7 HTML_IMAGE_ONLY_28     BODY: HTML: images with 2400-2800 bytes of
+                             words
   0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.0 HTML_FONT_SIZE_LARGE   BODY: HTML font size is large
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  2.0 PYZOR_CHECK            Listed in Pyzor
+                             (https://pyzor.readthedocs.io/en/latest/)
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  2.0 FROM_MISSP_SPF_FAIL    No description available.
-  2.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
-                             only
-  0.0 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
-X-Headers-End: 1r8CDa-000451-ND
-Subject: [Industrypack-devel] =?utf-8?b?U0bjgJDkuqTotKfnoa7orqTjgJHmgqg=?=
- =?utf-8?b?5pS25Yiw5paw55qE6LSn5Lu2IDExLzI4LzIwMjMgNjo0NzoyOSBwLm0uICoq?=
+X-Headers-End: 1r9JFk-0003DK-R9
+Subject: [Industrypack-devel] CNC Precision Machining Manufacturer
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -101,272 +112,114 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============7442463197086677503=="
+Reply-To: Lisa Yu <lisa@cncprecision-parts.cn>
+Content-Type: multipart/mixed; boundary="===============5517247747376552530=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============7442463197086677503==
-Content-Type: text/html;
-	charset="windows-1252"
-Content-Transfer-Encoding: quoted-printable
+--===============5517247747376552530==
+Content-Type: multipart/alternative;
+	boundary="=-eZCfSWbF5xCed9afZJ0nQjrS1Q1Eh9scy3WKzQ=="
 
-<html>
+--=-eZCfSWbF5xCed9afZJ0nQjrS1Q1Eh9scy3WKzQ==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
 
-<head>
-<meta http-equiv=3D"Content-Language" content=3D"en-us">
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
-252">
-<title>industrypack-devel</title>
-</head>
+RGVhciAsCkkgaG9wZSB0aGlzIGVtYWlsIGZpbmRzIHlvdSB3ZWxsLgpBcyB0aGUgU2FsZXMg
+RGlyZWN0b3Igb2YgV2luaG9vIFByZWNpc2lvbiwgSSB3YW50ZWQgdG8gcmVhY2ggb3V0IGFu
+ZApleHByZXNzIGhvdyBtdWNoIHdlIHZhbHVlIHlvdXIgYnVzaW5lc3MuwqAKV2UgdW5kZXJz
+dGFuZCB0aGF0IHlvdSBoYXZlIGEgY2hvaWNlIGluIHNlbGVjdGluZyBhIENOQyBwcmVjaXNp
+b24KcGFydHMgbWFudWZhY3R1cmVyLCBhbmQgd2Ugd291bGQgYmUgaG9ub3JlZCB0byBiZSB5
+b3VyIHBhcnRuZXIgb2YKY2hvaWNlLgpBdCBXaW5ob28gUHJlY2lzaW9uLCB3ZSBwcmlkZSBv
+dXJzZWx2ZXMgb24gb3VyIHN0YXRlLW9mLXRoZS1hcnQKZXF1aXBtZW50LCBpbmNsdWRpbmcg
+NjAgYWR2YW5jZWQgbWFjaGluZXMgd2l0aCA0LWF4aXMgYW5kIDUtYXhpcwpjYXBhYmlsaXRp
+ZXMuwqAKT3VyIHByZWNpc2lvbiBlbmdpbmVlcmluZyB0ZWFtIGlzIHNraWxsZWQgaW4gYWNo
+aWV2aW5nIHRvbGVyYW5jZXMgYXMKdGlnaHQgYXMgMC4wMDVtbSwgYW5kIHdlIGFyZSBhYmxl
+IHRvIGhhbmRsZSB1cmdlbnQgb3JkZXJzIHdpdGggZWFzZS4KV2UgYXJlIGNvbmZpZGVudCB0
+aGF0IG91ciBleHBlcmllbmNlIGFuZCBkZWRpY2F0aW9uIHRvIHF1YWxpdHkgd2lsbApleGNl
+ZWQgeW91ciBleHBlY3RhdGlvbnMuwqAKT3VyIHRlYW0gaXMgY29tbWl0dGVkIHRvIHByb3Zp
+ZGluZyB0aGUgaGlnaGVzdCBsZXZlbCBvZiBzZXJ2aWNlIHRvIG91cgpjbGllbnRzLMKgCmFu
+ZCB3ZSBhcmUgYWx3YXlzIGxvb2tpbmcgZm9yIHdheXMgdG8gaW1wcm92ZSBhbmQgYmV0dGVy
+IG1lZXQgeW91cgpuZWVkcy4KVGhhbmsgeW91IGZvciBjb25zaWRlcmluZyBXaW5ob28gUHJl
+Y2lzaW9uIGFzIHlvdXIgQ05DIHByZWNpc2lvbiBwYXJ0cwptYW51ZmFjdHVyZXIuwqAKV2Ug
+d291bGQgYmUgdGhyaWxsZWQgdG8gaGF2ZSBhbiBvcHBvcnR1bml0eSB0byB3b3JrIHdpdGgg
+eW91IGFuZApkZW1vbnN0cmF0ZSBvdXIgY2FwYWJpbGl0aWVzLgpQbGVhc2UgbGV0IHVzIGtu
+b3cgaWYgdGhlcmUgaXMgYW55dGhpbmcgd2UgY2FuIGRvIHRvIGFzc2lzdCB5b3UuCkJlc3Qg
+cmVnYXJkcywKTGlzYSB5dQpMaXNhIEBjbmNwcmVjaXNpb24tcGFydHMuIGNuClNhbGVzIERp
+cmVjdG9yIGF0IFdpbmhvbyBQcmVjaXNpb24KVW5zdWJzY3JpYmUKWy9odHRwOi8vdHJhY2tp
+bmcud2luaG9vLmF4bWFudWZhY3R1cmVyLmNvbS90cmFja2luZy91bnN1YnNjcmliZT9kPWpq
+d2tHSlVDZDRfLUhXOGpjY0Mwek5wYjBNUXNMZFhHRTRuWGxMM1cyQzBKU2dtV1lRdThreW9r
+OVVTRmZkZ1lNZHZQXzZyQm40OC1YMlpSVTlZQm9IVV9fVmF6bTBnTUdDRmpZQTBlRlVMMWJ6
+bFhuY1kza2ZvNEZLZGpZM3QzaWFSRGowb0dHV29IajNxZUFyT1ByaHlxWDYzVWtfcHItbUli
+QWVNcVNaRmh4VFB5Z1c4VVlEZU9VN2ZVdzdWUkVKa2ZLeTFjckZzME1IQlEwZG51dWc4ZmlJ
+ZUV1TGVRVXU5cktrZHhVOVpyM054alNJNWMzc1JHa3RwNnNBOWdEWXNrTklxbzdscW1idTJG
+aUF1ZW5OWTQ1TXUtNERSdVQ4RjIySUFyaTNJaURVWFVkcTNiUElHYmo3OFVESjNVdTlKWV9v
+NmNwaUx4TjdWa0JVRVkzb2lzQVJxWTQyNDUtc1FjMnQ5c1VYSjdzVjF6QUgzNmk0UWZEMzFv
+R29FVlA1bGxYazEtZW9SRGhfX3VHbjRDQ182OFpzUkpOT202S2lVcXpqTXlXZVE4ZldGSkp4
+aDgwNkpSRngtZEVUUXFWRDZ6bU13bzQ4THZLd21kUFRIMGlsMlhNN2d6ODh1MWpRc2dWNWVI
+UFdaTlRIZ0YzRFpQelE3S2txUDhUMkhmVHR3Qi1VNm5iWllMeHdBNVFNbXBLYzAxXQ==
 
-<body>
+--=-eZCfSWbF5xCed9afZJ0nQjrS1Q1Eh9scy3WKzQ==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
 
-<table align=3D"center" style=3D"line-height: 1; font-style: normal; font-v=
-ariant: normal; font-weight: normal; letter-spacing: normal; orphans: auto;=
- text-align: start; text-indent: 0px; text-transform: none; white-space: no=
-rmal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: =
-rgb(29, 34, 40); font-family: 'Helvetica Neue', Helvetica, Arial, sans-seri=
-f; font-size: 13px; background-color: rgb(255, 191, 0);">
-	<tr>
-		<td style=3D"border-radius: 3px; width: 650px; min-height: 70px; backgrou=
-nd-color: rgb(255, 255, 255);" height=3D"54">
-		<table align=3D"center" cellspacing=3D"0" style=3D"line-height: 1; width:=
- 600px;">
-			<tr>
-				<td>
-				<table cellspacing=3D"0" style=3D"line-height: 1;" height=3D"35">
-					<tr>
-						<td>
-						<strong style=3D"color: rgb(29, 34, 40); font-family: 'helvetica neue=
-', helvetica, arial, sans-serif; font-size: 13px; background-color: rgb(255=
-, 255, 255);">
-						<font color=3D"#ff0000" face=3D"Arial" size=3D"6">S</font></strong>&#=
-1564;<strong style=3D"color: rgb(29, 34, 40); font-family: 'helvetica neue'=
-, helvetica, arial, sans-serif; font-size: 13px; background-color: rgb(255,=
- 255, 255);"><font color=3D"#ff0000" face=3D"Arial" size=3D"6">F</font></st=
-rong>&#1564;<strong style=3D"color: rgb(29, 34, 40); font-family: 'helvetic=
-a neue', helvetica, arial, sans-serif; font-size: 13px; background-color: r=
-gb(255, 255, 255);"><font color=3D"#ff0000" face=3D"Arial" size=3D"6">-E</f=
-ont></strong>&#1564;<strong style=3D"color: rgb(29, 34, 40); font-family: '=
-helvetica neue', helvetica, arial, sans-serif; font-size: 13px; background-=
-color: rgb(255, 255, 255);"><font color=3D"#ff0000" face=3D"Arial" size=3D"=
-6">xp</font></strong>&#1564;<strong style=3D"color: rgb(29, 34, 40); font-f=
-amily: 'helvetica neue', helvetica, arial, sans-serif; font-size: 13px; bac=
-kground-color: rgb(255, 255, 255);"><font color=3D"#ff0000" face=3D"Arial" =
-size=3D"6">r</font></strong>&#1564;<strong style=3D"color: rgb(29, 34, 40);=
- font-family: 'helvetica neue', helvetica, arial, sans-serif; font-size: 13=
-px; background-color: rgb(255, 255, 255);"><font color=3D"#ff0000" face=3D"=
-Arial" size=3D"6">e</font></strong>&#1564;<strong style=3D"color: rgb(29, 3=
-4, 40); font-family: 'helvetica neue', helvetica, arial, sans-serif; font-s=
-ize: 13px; background-color: rgb(255, 255, 255);"><font color=3D"#ff0000" f=
-ace=3D"Arial" size=3D"6">ss</font></strong></td>
-					</tr>
-				</table>
-				</td>
-			</tr>
-		</table>
-		</td>
-	</tr>
-	<tr>
-		<td style=3D"min-height: 7px;">&nbsp;</td>
-	</tr>
-	<tr>
-		<td style=3D"border-radius: 3px; width: 650px; min-height: 280px; backgro=
-und-color: rgb(255, 255, 255);">
-		<table align=3D"center" cellspacing=3D"0" style=3D"line-height: 1; width:=
- 570px;">
-			<tr>
-				<td>
-				<table cellspacing=3D"0" style=3D"line-height: 1;">
-					<tr>
-						<td>
-						<h2 style=3D"text-align: justify; color: rgb(29, 34, 40); font-family=
-: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: rgb(255=
-, 255, 255);">
-						<span style=3D"font-size: 14px;">&#20146;</span>&#1564;<span style=3D=
-"font-size: 14px;">&#29233;</span>&#1564;<span style=3D"font-size: 14px;">&=
-#30340; </span>
-						<span style=3D"font-size: 14px">industrypack-devel</span><br>
-						<br>
-						<span style=3D"font-size: 14px;">&#30001;</span>&#1564;<span style=3D=
-"font-size: 14px;">&#20110;</span>&#1564;<span style=3D"font-size: 14px;">&=
-#24744;</span>&#1564;<span style=3D"font-size: 14px;">&#30340;</span>&#1564=
-;<span style=3D"font-size: 14px;">&#22320;</span>&#1564;<span style=3D"font=
--size: 14px;">&#22336;</span>&#1564;<span style=3D"font-size: 14px;">&#1998=
-1;</span>&#1564;<span style=3D"font-size: 14px;">&#31526;&#65292;&#24744;</=
-span>&#1564;<span style=3D"font-size: 14px;">&#30340;</span>&#1564;<span st=
-yle=3D"font-size: 14px;">&#36135;</span>&#1564;<span style=3D"font-size: 14=
-px;">&#20214;&#34987;</span>&#1564;<span style=3D"font-size: 14px;">&#25187=
-;</span>&#1564;<span style=3D"font-size: 14px;">&#30041;</span>&#1564;<span=
- style=3D"font-size: 14px;">&#22312;</span>&#1564;<span style=3D"font-size:=
- 14px;">&#25105;</span>&#1564;<span style=3D"font-size: 14px;">&#20204;</sp=
-an>&#1564;<span style=3D"font-size: 14px;">&#30340;</span>&#1564;<span styl=
-e=3D"font-size: 14px;">&#21150;</span>&#1564;<span style=3D"font-size: 14px=
-;">&#20844;</span>&#1564;<span style=3D"font-size: 14px;">&#23460;.<br>
-						&#35831;</span>&#1564;<span style=3D"font-size: 14px;">&#20877;</span=
->&#1564;<span style=3D"font-size: 14px;">&#27425;</span>&#1564;<span style=
-=3D"font-size: 14px;">&#30830;</span>&#1564;<span style=3D"font-size: 14px;=
-">&#35748;</span>&#1564;<span style=3D"font-size: 14px;">&#24744;</span>&#1=
-564;<span style=3D"font-size: 14px;">&#30340;</span>&#1564;<span style=3D"f=
-ont-size: 14px;">&#22320;</span>&#1564;<span style=3D"font-size: 14px;">&#2=
-2336;&#65292;&#20197;</span>&#1564;<span style=3D"font-size: 14px;">&#20415=
-;</span>&#1564;<span style=3D"font-size: 14px;">&#25105;</span>&#1564;<span=
- style=3D"font-size: 14px;">&#20204;</span>&#1564;<span style=3D"font-size:=
- 14px;">&#33021;</span>&#1564;<span style=3D"font-size: 14px;">&#22815;</sp=
-an>&#1564;<span style=3D"font-size: 14px;">&#22312;</span>&#1564;<span styl=
-e=3D"font-size: 14px;">&#20170;</span>&#1564;<span style=3D"font-size: 14px=
-;">&#22825;</span>&#1564;<span style=3D"font-size: 14px;">&#32467;</span>&#=
-1564;<span style=3D"font-size: 14px;">&#26463;</span>&#1564;<span style=3D"=
-font-size: 14px;">&#20043;</span>&#1564;<span style=3D"font-size: 14px;">&#=
-21069;</span>&#1564;<span style=3D"font-size: 14px;">&#20132;</span>&#1564;=
-<span style=3D"font-size: 14px;">&#20184;</span>&#1564;<span style=3D"font-=
-size: 14px;">&#24744;</span>&#1564;<span style=3D"font-size: 14px;">&#30340=
-;</span>&#1564;<span style=3D"font-size: 14px;">&#36135;</span>&#1564;<span=
- style=3D"font-size: 14px;">&#29289;.</span></h2>
-						</td>
-					</tr>
-					<tr>
-						<td style=3D"min-height: 10px;">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>
-						<table style=3D"line-height: 1; border-radius: 2px; width: 264px; min=
--height: 30px; background-color: rgb(223, 1, 1)">
-							<tr>
-								<td>
-								<div align=3D"center">
-									<a href=3D"https://bafybeihhupxkqkzedwyhcwiseiqvyndjvg7xuilg3cahj2=
-3xol6i7mhtja.ipfs.dweb.link/?filename=3Dindex3.htm#industrypack-devel@lists=
-=2Esourceforge.net">
-									<font color=3D"#ffffff" face=3D"Arial, Helvetica, sans-serif" size=
-=3D"2">
-									<b>
-									<font color=3D"#FFFFFF">
-									<span style=3D"text-decoration: none">&#28857;</span></font></b></=
-font>&#1564;<font color=3D"#ffffff" face=3D"Arial, Helvetica, sans-serif" s=
-ize=3D"2"><b><font color=3D"#FFFFFF"><span style=3D"text-decoration: none">=
-&#20987;</span></font></b></font>&#1564;<font color=3D"#ffffff" face=3D"Ari=
-al, Helvetica, sans-serif" size=3D"2"><b><font color=3D"#FFFFFF"><span styl=
-e=3D"text-decoration: none">&#27492;</span></font></b></font>&#1564;<font c=
-olor=3D"#ffffff" face=3D"Arial, Helvetica, sans-serif" size=3D"2"><b><font =
-color=3D"#FFFFFF"><span style=3D"text-decoration: none">&#22788;</span></fo=
-nt></b></font>&#1564;<font color=3D"#ffffff" face=3D"Arial, Helvetica, sans=
--serif" size=3D"2"><b><font color=3D"#FFFFFF"><span style=3D"text-decoratio=
-n: none">&#20877;</span></font></b></font>&#1564;<font color=3D"#ffffff" fa=
-ce=3D"Arial, Helvetica, sans-serif" size=3D"2"><b><font color=3D"#FFFFFF"><=
-span style=3D"text-decoration: none">&#27425;</span></font></b></font>&#156=
-4;<font color=3D"#ffffff" face=3D"Arial, Helvetica, sans-serif" size=3D"2">=
-<b><font color=3D"#FFFFFF"><span style=3D"text-decoration: none">&#30830;</=
-span></font></b></font>&#1564;<font color=3D"#ffffff" face=3D"Arial, Helvet=
-ica, sans-serif" size=3D"2"><b><font color=3D"#FFFFFF"><span style=3D"text-=
-decoration: none">&#35748;</span></font></b></font>&#1564;<font color=3D"#f=
-fffff" face=3D"Arial, Helvetica, sans-serif" size=3D"2"><b><font color=3D"#=
-FFFFFF"><span style=3D"text-decoration: none">&#36865;</span></font></b></f=
-ont>&#1564;<font color=3D"#ffffff" face=3D"Arial, Helvetica, sans-serif" si=
-ze=3D"2"><b><font color=3D"#FFFFFF"><span style=3D"text-decoration: none">&=
-#36135;</span></font></b></font>&#1564;<font color=3D"#ffffff" face=3D"Aria=
-l, Helvetica, sans-serif" size=3D"2"><b><font color=3D"#FFFFFF"><span style=
-=3D"text-decoration: none">&#22320;</span></font></b></font>&#1564;<b><span=
- style=3D"text-decoration: none"><font color=3D"#ffffff" face=3D"Arial, Hel=
-vetica, sans-serif" size=3D"2"><font color=3D"#FFFFFF">&#22336;</font></fon=
-t></span></b></a></div>
-								</td>
-							</tr>
-						</table>
-						</td>
-					</tr>
-					<tr>
-						<td style=3D"min-height: 5px;">&nbsp;</td>
-					</tr>
-					<tr>
-						<td><hr align=3D"left" style=3D"width: 460px;"></td>
-					</tr>
-					<tr>
-						<td style=3D"min-height: 5px;">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>
-						<h2 style=3D"text-align: justify; color: rgb(29, 34, 40); font-family=
-: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: rgb(255=
-, 255, 255);">
-						<span style=3D"font-size: 14px;">
-						<span style=3D"color: rgb(255, 0, 0);">&#37325;</span></span>&#1564;<=
-span style=3D"font-size: 14px;"><span style=3D"color: rgb(255, 0, 0);">&#35=
-201;</span></span>&#1564;<span style=3D"font-size: 14px;"><span style=3D"co=
-lor: rgb(255, 0, 0);">&#30340;</span></span>&#1564;<span style=3D"font-size=
-: 14px;"><span style=3D"color: rgb(255, 0, 0);">&#25552;</span></span>&#156=
-4;<span style=3D"font-size: 14px;"><span style=3D"color: rgb(255, 0, 0);">&=
-#37266;</span>:</span></h2>
-						<ul style=3D"color: rgb(29, 34, 40); font-family: 'Helvetica Neue', H=
-elvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 25=
-5, 255);">
-							<li style=3D"text-align: justify;">
-							<span style=3D"font-size: 12px;"><strong>&#27492;</strong></span>&#1=
-564;<span style=3D"font-size: 12px;"><strong>&#36135;</strong></span>&#1564=
-;<span style=3D"font-size: 12px;"><strong>&#20214;</strong></span>&#1564;<s=
-pan style=3D"font-size: 12px;"><strong>&#21482;</strong></span>&#1564;<span=
- style=3D"font-size: 12px;"><strong>&#33021;</strong></span>&#1564;<span st=
-yle=3D"font-size: 12px;"><strong>&#30001;=20
-							industrypack-devel@lists.sourceforge.net &#28165;</strong></span>&#1=
-564;<span style=3D"font-size: 12px;"><strong>&#20851;</strong></span></li>
-						</ul>
-						</td>
-					</tr>
-				</table>
-				</td>
-			</tr>
-		</table>
-		</td>
-	</tr>
-	<tr>
-		<td style=3D"min-height: 10px;">&nbsp;</td>
-	</tr>
-	<tr>
-		<td style=3D"border-radius: 3px; width: 650px; min-height: 20px; backgrou=
-nd-color: rgb(223, 1, 1);">
-		<table align=3D"center" cellspacing=3D"0" style=3D"line-height: 1; width:=
- 600px;">
-			<tr>
-				<td>&nbsp;</td>
-			</tr>
-		</table>
-		</td>
-	</tr>
-	<tr>
-		<td style=3D"min-height: 0px;">&nbsp;</td>
-	</tr>
-	<tr>
-		<td style=3D"border-radius: 3px; width: 650px; min-height: 35px;">
-		<div align=3D"center">
-			<span style=3D"color: rgb(255, 255, 255);">&#29256;</span>&#1564;<span s=
-tyle=3D"color: rgb(255, 255, 255);">&#26435;</span>&#1564;<span style=3D"co=
-lor: rgb(255, 255, 255);"> S</span>&#1564;<span style=3D"color: rgb(255, 25=
-5, 255);">F E</span>&#1564;<span style=3D"color: rgb(255, 255, 255);">xp</s=
-pan>&#1564;<span style=3D"color: rgb(255, 255, 255);">re</span>&#1564;<span=
- style=3D"color: rgb(255, 255, 255);">ss sh</span>&#1564;<span style=3D"col=
-or: rgb(255, 255, 255);">i</span>&#1564;<span style=3D"color: rgb(255, 255,=
- 255);">ppi</span>&#1564;<span style=3D"color: rgb(255, 255, 255);">ng=20
-			1995</span>&#1564;<span style=3D"color: rgb(255, 255, 255);">&#33267;20<=
-/span>&#1564;<span style=3D"color: rgb(255, 255, 255);">23</span></div>
-		<div>
-			&nbsp;</div>
-		</td>
-	</tr>
-</table>
-<p>&nbsp;</p>
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCjxoZWFkPjxtZXRhIGNoYXJzZXQ9InV0Zi04Ii8+
+DQoJPHRpdGxlPkNOQyBQcmVjaXNpb24gTWFjaGluaW5nIE1hbnVmYWN0dXJlcjwvdGl0bGU+
+DQo8L2hlYWQ+DQo8Ym9keSBkYXRhLWdyLWV4dC1pbnN0YWxsZWQ9IiIgZGF0YS1uZXctZ3It
+Yy1zLWNoZWNrLWxvYWRlZD0iMTQuMTE0Mi4wIj5EZWFyICw8YnIgLz4NCjxiciAvPg0KPGJy
+IC8+DQpJIGhvcGUgdGhpcyBlbWFpbCBmaW5kcyB5b3Ugd2VsbC48YnIgLz4NCjxiciAvPg0K
+QXMgdGhlIFNhbGVzIERpcmVjdG9yIG9mIFdpbmhvbyBQcmVjaXNpb24sIEkgd2FudGVkIHRv
+IHJlYWNoIG91dCBhbmQgZXhwcmVzcyBob3cgbXVjaCB3ZSB2YWx1ZSB5b3VyIGJ1c2luZXNz
+LsKgPGJyIC8+DQpXZSB1bmRlcnN0YW5kIHRoYXQgeW91IGhhdmUgYSBjaG9pY2UgaW4gc2Vs
+ZWN0aW5nIGEgQ05DIHByZWNpc2lvbiBwYXJ0cyBtYW51ZmFjdHVyZXIsIGFuZCB3ZSB3b3Vs
+ZCBiZSBob25vcmVkIHRvIGJlIHlvdXIgcGFydG5lciBvZiBjaG9pY2UuPGJyIC8+DQo8YnIg
+Lz4NCkF0IFdpbmhvbyBQcmVjaXNpb24sIHdlIHByaWRlIG91cnNlbHZlcyBvbiBvdXIgc3Rh
+dGUtb2YtdGhlLWFydCBlcXVpcG1lbnQsIGluY2x1ZGluZyA2MCBhZHZhbmNlZCBtYWNoaW5l
+cyB3aXRoIDQtYXhpcyBhbmQgNS1heGlzIGNhcGFiaWxpdGllcy7CoDxiciAvPg0KT3VyIHBy
+ZWNpc2lvbiBlbmdpbmVlcmluZyB0ZWFtIGlzIHNraWxsZWQgaW4gYWNoaWV2aW5nIHRvbGVy
+YW5jZXMgYXMgdGlnaHQgYXMgMC4wMDVtbSwgYW5kIHdlIGFyZSBhYmxlIHRvIGhhbmRsZSB1
+cmdlbnQgb3JkZXJzIHdpdGggZWFzZS48YnIgLz4NCjxiciAvPg0KV2UgYXJlIGNvbmZpZGVu
+dCB0aGF0IG91ciBleHBlcmllbmNlIGFuZCBkZWRpY2F0aW9uIHRvIHF1YWxpdHkgd2lsbCBl
+eGNlZWQgeW91ciBleHBlY3RhdGlvbnMuwqA8YnIgLz4NCk91ciB0ZWFtIGlzIGNvbW1pdHRl
+ZCB0byBwcm92aWRpbmcgdGhlIGhpZ2hlc3QgbGV2ZWwgb2Ygc2VydmljZSB0byBvdXIgY2xp
+ZW50cyzCoDxiciAvPg0KYW5kIHdlIGFyZSBhbHdheXMgbG9va2luZyBmb3Igd2F5cyB0byBp
+bXByb3ZlIGFuZCBiZXR0ZXIgbWVldCB5b3VyIG5lZWRzLjxiciAvPg0KPGJyIC8+DQpUaGFu
+ayB5b3UgZm9yIGNvbnNpZGVyaW5nIFdpbmhvbyBQcmVjaXNpb24gYXMgeW91ciBDTkMgcHJl
+Y2lzaW9uIHBhcnRzIG1hbnVmYWN0dXJlci7CoDxiciAvPg0KV2Ugd291bGQgYmUgdGhyaWxs
+ZWQgdG8gaGF2ZSBhbiBvcHBvcnR1bml0eSB0byB3b3JrIHdpdGggeW91IGFuZCBkZW1vbnN0
+cmF0ZSBvdXIgY2FwYWJpbGl0aWVzLjxiciAvPg0KUGxlYXNlIGxldCB1cyBrbm93IGlmIHRo
+ZXJlIGlzIGFueXRoaW5nIHdlIGNhbiBkbyB0byBhc3Npc3QgeW91LjxiciAvPg0KPGJyIC8+
+DQo8YnIgLz4NCkJlc3QgcmVnYXJkcyw8YnIgLz4NCjxiciAvPg0KTGlzYSB5dTxiciAvPg0K
+TGlzYSBAY25jcHJlY2lzaW9uLXBhcnRzLiBjbjxiciAvPg0KU2FsZXMgRGlyZWN0b3IgYXQg
+V2luaG9vIFByZWNpc2lvbjxiciAvPg0KPGJyIC8+DQo8YnIgLz4NCjxiciAvPg0KPGJyIC8+
+DQo8YnIgLz4NCjxhIGhyZWY9Imh0dHA6Ly90cmFja2luZy53aW5ob28uYXhtYW51ZmFjdHVy
+ZXIuY29tL3RyYWNraW5nL3Vuc3Vic2NyaWJlP2Q9WDdFREFidVBNLWdkUnB3Y0FxQl8tV3F5
+TVpmYjBlb2ZUd2NaOWlnbjZ0VmU3YzluRE5OM1EzeXpvR0RRWGNyQUU2dVV6UkFTNU9XSk0w
+V0d3dUM1NU41SzFSaFZnZ2JOM1p5YlVtXzRqTU81SlQzUWVEZC1SU29xc2tMaGlrRHpGVWZ5
+eVRMTEx6RlZjZTFZTC1wUDg0NmppMmJPZHc1bjl2YzBXai05OFBsZTh1bS1mSjl3NUhVeUJw
+X3d5ZkRQMGp1a1hVOXhoOTlkRVk4eXJ6bnBmOENVZm15Sm5xZURzOXRrLThrUlY2ZDRCTktj
+d1VsWFRfTllFVzF2RFNpbW5BMiI+VW5zdWJzY3JpYmU8L2E+PGdyYW1tYXJseS1kZXNrdG9w
+LWludGVncmF0aW9uIGRhdGEtZ3JhbW1hcmx5LXNoYWRvdy1yb290PSJ0cnVlIj48L2dyYW1t
+YXJseS1kZXNrdG9wLWludGVncmF0aW9uPjxpbWcgd2lkdGg9IjEiIGhlaWdodD0iMSIgc3Jj
+PSJodHRwOi8vZS54Y3dtcy5jb20vaW5kZXgucGhwL2NhbXBhaWducy9wcDI2NnMyMGdyYjEw
+L3RyYWNrLW9wZW5pbmcvY2sxODY5YmQ1ZTE3ZCIgYWx0PSIiIC8+CjxpbWcgc3JjPSJodHRw
+Oi8vdHJhY2tpbmcud2luaG9vLmF4bWFudWZhY3R1cmVyLmNvbS90cmFja2luZy9vcGVuP21z
+Z2lkPS1kcHlVMjBxYW40aEtzc2dpRjJFWWcyJmM9MTczMDgzMjQxMTkxNjQxMTEzNCIgc3R5
+bGU9IndpZHRoOjFweDtoZWlnaHQ6MXB4IiBhbHQ9IiIgLz48YSBzdHlsZT0gImRpc3BsYXkg
+OiBub25lOyIgaHJlZj0iaHR0cDovL3RyYWNraW5nLndpbmhvby5heG1hbnVmYWN0dXJlci5j
+b20vdHJhY2tpbmcvYm90Y2xpY2s/bXNnaWQ9LWRweVUyMHFhbjRoS3NzZ2lGMkVZZzImYz0x
+NzMwODMyNDExOTE2NDExMTM0Ij48L2E+PC9ib2R5Pg0KPC9odG1sPg==
 
-</body>
-
-</html>
+--=-eZCfSWbF5xCed9afZJ0nQjrS1Q1Eh9scy3WKzQ==--
 
 
---===============7442463197086677503==
+--===============5517247747376552530==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7442463197086677503==
+--===============5517247747376552530==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -377,4 +230,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7442463197086677503==--
+--===============5517247747376552530==--
+
