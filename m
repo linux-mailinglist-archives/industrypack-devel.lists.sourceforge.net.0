@@ -2,101 +2,108 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 374AE81B0AD
-	for <lists+industrypack-devel@lfdr.de>; Thu, 21 Dec 2023 09:50:17 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5EEDD820097
+	for <lists+industrypack-devel@lfdr.de>; Fri, 29 Dec 2023 17:49:55 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rGEkx-0002CW-Vt
+	id 1rJG3V-0003Kw-P0
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 21 Dec 2023 08:50:15 +0000
+	Fri, 29 Dec 2023 16:49:54 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <noreply@susanagneshacock.com>) id 1rGEkt-0002CP-22
- for industrypack-devel@lists.sourceforge.net;
- Thu, 21 Dec 2023 08:50:11 +0000
+ (envelope-from <admin-vpass.ne.jp@brttnfkbjh.com>)
+ id 1rJG3U-0003Kp-3I for industrypack-devel@lists.sourceforge.net;
+ Fri, 29 Dec 2023 16:49:52 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Type:MIME-Version:Date:To:From:
+ Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Csw2oNWFe1iLEfIEUUX1p9XZHV/iK5c4xf9njcEN1n4=; b=dgHLM1Awtf/CFROwS+JMfHS822
- zLgzDcOpaUy6LCE3567jmjABRMMjYg6Rrzuxo02Th69w5j0qlOhs9nNOYL7MakoVEgPqjk/n35OEh
- EE7Dr+47a9/fIqEyN8bTgSst+CC3K9QWfbLi6DaWtcHRd966LnOgVMELcDGL4lt9LOr8=;
+ bh=zSMWvHE0nizqgyONhV4kC4qssLmu3V+RfcW0iD/wHrU=; b=GgZ3gw6KkQKE5b8u7Ci08+7Rkl
+ HX4Taz7DvwA55yukIdbO0X5g2G9ihOamU5Ta1ABlvC2j78CigR33JFfupQgEfGrZZzJEtCDvuwrCP
+ 2E/1ys6tii3QO++iMnzKgGLLQg0pPWPy9L6cycUfu4lgP/wnU4ZGNF/+OJ6NtcOuqOnk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Subject:Content-Type:MIME-Version:Date:To:From:Message-ID:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Csw2oNWFe1iLEfIEUUX1p9XZHV/iK5c4xf9njcEN1n4=; b=W
- RJTjPNypZ+vETntTURnG+xta6sWOKyQK639J1x/JSsbSVrsUpaaw72Mc+LSHWdBS83yG5bldN9B9/
- 15DpOZW49+EN2IavZl6GRq8mnW/xPjjQFQBtOPJE+2QU0YEfOO1GGFI2Z33DMPFm9bqFqkFH63s/w
- g5y/iVW0jUZg7kq8=;
-Received: from mail.susanagneshacock.com ([107.173.192.243])
+ List-Owner:List-Archive; bh=zSMWvHE0nizqgyONhV4kC4qssLmu3V+RfcW0iD/wHrU=; b=k
+ XlCCl6HlHoH11PTdLU2kL5oBwAta7DV5TFVzuXJr1Mcy6e5bjqpoWItxDgCEHAjG0ne7rtPOypauQ
+ upXs1O4g1Cey7oTZr+HRpsnIG7oNibyXHBkxSLxnEcQraFQQf4HGElbuzVBly99jF0xcMFvtHzI8E
+ Sn6+TG31LmZf4YI0=;
+Received: from [104.238.249.188] (helo=brttnfkbjh.com)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1rGEks-0001cC-6h for industrypack-devel@lists.sourceforge.net;
- Thu, 21 Dec 2023 08:50:10 +0000
-Received: from mail.susanagneshacock.com (susanagneshacock.com
- [107.173.192.243]) (Authenticated sender: info@susanagneshacock.com)
- by mail.susanagneshacock.com (Postfix) with ESMTPSA id D3AF92B0EB0
+ id 1rJG3Q-0006Ed-DH for industrypack-devel@lists.sourceforge.net;
+ Fri, 29 Dec 2023 16:49:52 +0000
+Received: from fyi (unknown [192.161.171.208])
+ by brttnfkbjh.com (Postfix) with ESMTPA id E9BC9807DD
  for <industrypack-devel@lists.sourceforge.net>;
- Thu, 21 Dec 2023 08:33:14 +0000 (GMT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=susanagneshacock.com;
- s=default; t=1703147594;
- bh=Csw2oNWFe1iLEfIEUUX1p9XZHV/iK5c4xf9njcEN1n4=;
+ Sat, 30 Dec 2023 00:44:09 +0800 (CST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 brttnfkbjh.com E9BC9807DD
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=brttnfkbjh.com;
+ s=default; t=1703868250;
+ bh=zSMWvHE0nizqgyONhV4kC4qssLmu3V+RfcW0iD/wHrU=;
  h=From:To:Subject:Date:From;
- b=YZgs2s5E7caSYkedBHBBv1gkF8TYhb9FGoMPG+HmfMxkeTYputT+VX8JBa7PVRRlV
- NAR+MGNBqRLjnAe5OZCADaq3ITptRMITBHmLsGet7UdVqI9ve2ifBdggm9QfNIDkyK
- 96hMkpwnPAUtAVG1/xUb+62lcm0tVTIHojuYVB60XKHBED8QHOUMjIFE44XIAOl6XF
- 6sIFPvxusMaixIeNucmJSxLoNSs72voG0f9LYXb/OQUXOU1vaNhaTZLg9V1zC7BRJL
- AO0cBulX3q6xnels/dyWpqTG39Ks+hhp8jECX8p98ehvLo2XWGSoHkDMW6WAWP/PQi
- /EQfYe5NHsaOA==
-From: lists.sourceforge.net<noreply@susanagneshacock.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 21 Dec 2023 08:33:13 +0000
-Message-ID: <20231221083313.67F66088824895F3@susanagneshacock.com>
+ b=YYRW7bgvsAKkDR+ivpdClHtcoLDyfPlBBFikBsBJk+Y0k3R/xG7uoTVhRDvBpQ6Qi
+ s6Vdau3dSt5LRqw+hrYcKAUCiB7ryiE75EPryBZdXXIDvCpxUIvZ0vpX6X4ySYmjso
+ kR/nkCmiSUQp44rqqrRd0Y8ZXOQYhkCXCR+arSME=
+Message-ID: <21D20238A2FAB700DC23B5A3ABB21D33@fyi>
+To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
+Date: Sat, 30 Dec 2023 01:44:00 +0900
 MIME-Version: 1.0
-X-Spam-Score: 7.0 (+++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+X-Priority: 3
+X-Mailer: Supmailer 38.2.0
+X-Helo-Check: bad, Forged Random Domain (brttnfkbjh.com)
+X-Spam-Score: 8.6 (++++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Message generated from lists.sourceforge.net source. Sender
- Action Required Messages suspended Message Failure Delivery Notice. 
- Content analysis details:   (7.0 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  いつも三井住友カードをご利用頂きありがとうございます。
+    お客様のカードご利用内容をお知らせいたします。 ご利用カード：三井住友カード
+    ◇利用先：ＪＲ東日本みどりの窓口（びゅうプラザ）
+   ◇利用日：2023/12/30 ◇利用金額：2,189円 
+ 
+ Content analysis details:   (8.6 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.2 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
- bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?107.173.192.243>]
- 1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [107.173.192.243 listed in dnsbl-1.uceprotect.net]
- 2.5 URIBL_DBL_PHISH        Contains a Phishing URL listed in the Spamhaus
- DBL blocklist [URIs: susanagneshacock.com]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
+                             blocklist
+                             [URIs: brttnfkbjh.com]
+  0.5 FROM_DOMAIN_NOVOWEL    From: domain has series of non-vowel letters
+  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+                             [URIs: ycvdutm.cn]
+  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+                             blocklist
+                             [URIs: ycvdutm.cn]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 HTML_FONT_FACE_BAD     BODY: HTML font face is not a word
- 0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+                             envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid 0.4 RCVD_IN_MSPIKE_L4      RBL: Bad reputation (-4)
- [107.173.192.243 listed in bl.mailspike.net]
+                             author's domain
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
- 1.0 RCVD_IN_MSPIKE_BL      Mailspike blocklisted
- 1.0 PDS_DBL_URL_TNB_RUNON  Double-url and To no arrows, from runon
-X-Headers-End: 1rGEks-0001cC-6h
-Subject: [Industrypack-devel] You have (6) Suspended incoming messages
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  2.5 VISTA_TONOM_EQ_TOLOC   Old MSFT msgid format + To display name =
+                             username
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1rJG3Q-0006Ed-DH
+Subject: [Industrypack-devel] =?utf-8?b?W1NQQU1dIOOAkOS4ieS6leS9j+WPiw==?=
+ =?utf-8?b?44Kr44O844OJ44CR44GU5Yip55So44Gu44GK55+l44KJ44Gb?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -108,184 +115,138 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4182736014752251527=="
+From: =?utf-8?B?5LiJ5LqV5L2P5Y+L44Kr44O844OJ?= via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: =?utf-8?B?5LiJ5LqV5L2P5Y+L44Kr44O844OJ?=
+ <admin-vpass.ne.jp@brttnfkbjh.com>
+Content-Type: multipart/mixed; boundary="===============2826458856427007185=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4182736014752251527==
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
+This is a multi-part message in MIME format.
 
-<html><head>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body><div class=3D"mr_read__body__content" id=3D"viewmessagebody_BODY">
-<div class=3D"cl_832343">
-<div style=3D"text-align: justify; color: rgb(34, 34, 34); text-transform: =
-none; text-indent: 0px; letter-spacing: normal; font-family: Arial, Helveti=
-ca, sans-serif; font-size: small; font-style: normal; font-weight: 400; wor=
-d-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-li=
-gatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;=
- text-decoration-thickness: initial; text-decoration-style: initial; text-d=
-ecoration-color: initial;">
-<div><br class=3D"Apple-interchange-newline_mr_css_attr">
-<table style=3D"width: 435px; color: rgb(155, 158, 161); line-height: 1.3; =
-font-size: 14px; border-collapse: collapse; table-layout: fixed; max-width:=
- 100%; border-spacing: 0px;" cellpadding=3D"0">
-<tbody>
-<tr>
-<td width=3D"45" style=3D'margin: 0px; padding: 0px 7px 0px 0px; width: 45p=
-x; font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-=
-serif; box-sizing: border-box;'></td>
-<td style=3D'margin: 0px; padding: 0px 0px 0px 7px; font-family: "Google Sa=
-ns", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;'></td></tr></tbody>=
-</table></div></div>
-<div style=3D"text-align: justify; color: rgb(34, 34, 34); text-transform: =
-none; text-indent: 0px; letter-spacing: normal; font-family: Arial, Helveti=
-ca, sans-serif; font-size: small; font-style: normal; font-weight: 400; wor=
-d-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-li=
-gatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;=
- text-decoration-thickness: initial; text-decoration-style: initial; text-d=
-ecoration-color: initial;"=20
-name=3D"mailruanchor_quoted-content">
-<div style=3D"background-color: rgb(244, 248, 245);">
-<div style=3D"width: 408px; padding-top: 5px; padding-right: 5px; padding-b=
-ottom: 5px; margin-left: 18px; float: left;">
-<div><span style=3D'font-family: wf_segoe-ui_normal, "Segoe UI", "Segoe WP"=
-, Tahoma, Arial, sans-serif; font-size: 13px;'>Message generated from&nbsp;=
-<font size=3D"3">&nbsp;lists.sourceforge.net</font></span><font face=3D"wf_=
-segoe-ui_normal, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif">&nbsp;sourc=
-e. </font></div></div>
-<div>
-<div style=3D"width: 5px; height: 30px; background-color: rgb(86, 166, 89);=
-"></div>
-<p></p>
-<table width=3D"548" style=3D"color: black; padding-top: 0px; padding-botto=
-m: 0px; font-size: 15px; border-collapse: collapse; max-width: 548px; borde=
-r-spacing: 0px; font-stretch: inherit;" cellspacing=3D"0" cellpadding=3D"0"=
->
-<tbody>
-<tr>
-<td style=3D'margin: 0px; padding-right: 0px; padding-bottom: 15px; padding=
--left: 0px; font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Ari=
-al, sans-serif; border-spacing: 0px;'>
-<table style=3D"padding-top: 0px; padding-bottom: 0px; font-family: inherit=
-; font-weight: 600; border-collapse: collapse; max-width: 548px; border-spa=
-cing: 0px; font-stretch: inherit;">
-<tbody>
-<tr>
-<td style=3D'margin: 0px; width: 181px; font-family: "Segoe UI", Frutiger, =
-Arial, sans-serif; vertical-align: bottom;'></td>
-<td style=3D'margin: 0px; width: 186px; text-align: center; font-family: "S=
-egoe UI", Frutiger, Arial, sans-serif; vertical-align: bottom;'></td>
-<td style=3D'margin: 0px; width: 181px; text-align: right; font-family: "Se=
-goe UI", Frutiger, Arial, sans-serif; vertical-align: bottom;'></td></tr>
-<tr>
-<td style=3D'margin: 0px; width: 181px; padding-top: 0px; padding-bottom: 0=
-px; font-family: "Segoe UI", Frutiger, Arial, sans-serif; font-size: 14px; =
-font-weight: 400; vertical-align: middle;'><font color=3D"white"><span styl=
-e=3D"border-width: 0px; margin: 0px; padding: 0px; color: black; vertical-a=
-lign: baseline;">Sender </span></font></td>
-<td style=3D'margin: 0px; width: 186px; text-align: center; padding-top: 0p=
-x; padding-bottom: 0px; font-family: "Segoe UI", Frutiger, Arial, sans-seri=
-f; font-size: 14px; font-weight: 400; vertical-align: middle;'></td>
-<td style=3D'margin: 0px; width: 181px; text-align: right; padding-top: 0px=
-; padding-bottom: 0px; font-family: "Segoe UI", Frutiger, Arial, sans-serif=
-; font-size: 14px; font-weight: 400; vertical-align: middle;'><font color=
-=3D"white"><span style=3D"border-width: 0px; margin: 0px; padding: 0px; col=
-or: rgb(192, 0, 0); vertical-align: baseline;"><b>Action Required </b></spa=
-n></font></td></tr>
-<tr>
-<td style=3D"margin: 0px; padding: 0px;" colspan=3D"3">
-<table style=3D"padding: 0px; border-collapse: collapse; border-spacing: 0p=
-x;" cellspacing=3D"0" cellpadding=3D"0">
-<tbody>
-<tr height=3D"10">
-<td style=3D"margin: 0px; padding: 0px; width: 180px; height: 10px; line-he=
-ight: 10px; font-size: 6px;" bgcolor=3D"#cccccc"></td>
-<td style=3D"margin: 0px; padding: 0px; width: 4px; height: 10px; line-heig=
-ht: 10px; font-size: 6px;" bgcolor=3D"white"></td>
-<td style=3D"margin: 0px; padding: 0px; width: 180px; height: 10px; line-he=
-ight: 10px; font-size: 6px;" bgcolor=3D"#cccccc"></td>
-<td style=3D"margin: 0px; padding: 0px; width: 4px; height: 10px; line-heig=
-ht: 10px; font-size: 6px;" bgcolor=3D"white"></td>
-<td style=3D"margin: 0px; padding: 0px; width: 180px; height: 10px; line-he=
-ight: 10px; font-size: 6px;" bgcolor=3D"#c00000"></td></tr></tbody></table>=
-</td></tr>
-<tr>
-<td style=3D'margin: 0px; padding: 0px; width: 181px; line-height: 20px; fo=
-nt-family: "Segoe UI", Frutiger, Arial, sans-serif; font-size: 14px; font-w=
-eight: 400;'></td>
-<td style=3D'margin: 0px; padding: 0px; width: 186px; text-align: center; l=
-ine-height: 20px; font-family: "Segoe UI", Frutiger, Arial, sans-serif; fon=
-t-size: 14px; font-weight: 400;'></td>
-<td style=3D'margin: 0px; padding: 0px; width: 181px; text-align: right; li=
-ne-height: 20px; font-family: "Segoe UI", Frutiger, Arial, sans-serif; font=
--size: 14px; font-weight: 400;'><font color=3D"white"><span style=3D"border=
--width: 0px; margin: 0px; padding: 0px; color: rgb(192, 0, 0); vertical-ali=
-gn: baseline;">Messages suspended </span></font></td></tr></tbody></table><=
-/td></tr>
-<tr>
-<td style=3D'margin: 0px; width: 528px; padding-top: 0px; padding-right: 10=
-px; padding-left: 10px; font-family: "Google Sans", Roboto, RobotoDraft, He=
-lvetica, Arial, sans-serif;'><br>
-<table style=3D"padding: 0px; width: 528px; margin-left: 0px; background-co=
-lor: rgb(242, 245, 250);">
-<tbody>
-<tr>
-<td style=3D'margin: 0px; padding: 0px 10px; font-family: "Segoe UI", Fruti=
-ger, Arial, sans-serif; font-size: 21px;'>
-<div style=3D"border-width: 0px; margin: 0px; padding: 0px; color: rgb(32, =
-31, 30); font-family: inherit; font-size: 15px; vertical-align: baseline; f=
-ont-stretch: inherit;"><b>Message Failure Delivery Notice. </b></div>
-<div style=3D"border-width: 0px; margin: 0px; padding: 0px; color: rgb(32, =
-31, 30); font-family: inherit; font-size: 15px; vertical-align: baseline; f=
-ont-stretch: inherit;">User:&nbsp;industrypack-devel@lists.sourceforge.net<=
-/div>
-<div style=3D"border-width: 0px; margin: 0px; padding: 0px; color: rgb(32, =
-31, 30); font-family: inherit; font-size: 15px; vertical-align: baseline; f=
-ont-stretch: inherit;"></div></td></tr>
-<tr>
-<td style=3D'margin: 0px; padding: 0px 10px 6px; font-family: "Segoe UI", F=
-rutiger, Arial, sans-serif; font-size: 16px;'>You have (6) Suspended incomi=
-ng messages <br><br>Please Fix It Below <br><br><a style=3D"border-width: 0=
-px; margin: 0px; padding: 0px; color: rgb(17, 85, 204); vertical-align: bas=
-eline;" href=3D"https://googleweblight.com/i?u=3Dhttps://cloudflare-ipfs.co=
-m/ipfs/bafybeifa7d5wbveq4lrfajxhefoeyni7lt4bsd5tszbmlxkhjjt4dysrbm/#industr=
-ypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"noopener norefe=
-rrer"><b>
-Click Confirmation Here </b></a>&nbsp;To View Incoming Suspended Messages A=
-nd Retrieve Them. <br></td></tr>
-<tr>
-<td style=3D'margin: 0px; padding: 0px 10px 6px; font-family: "Segoe UI", F=
-rutiger, Arial, sans-serif; font-size: 16px;'>Created Date: 12/21/2023 8:33=
-:13 a.m.</td></tr></tbody></table></td></tr>
-<tr>
-<td style=3D'margin: 0px; padding-top: 10px; padding-bottom: 4px; font-fami=
-ly: "Segoe UI", Frutiger, Arial, sans-serif; font-size: 14px;'><br></td></t=
-r></tbody></table><font color=3D"#999999">
-The information contained in or attached to this communication is intended =
-solely for the use of the individual or entity to whom it is addressed and =
-others authorized to receive it. It may contain confidential or legally pri=
-vileged information. If you are not the intended recipient you are hereby n=
-otified that any disclosure, copying, distribution or taking any action in =
-reliance on the contents of this information is strictly prohibited and may=
- be unlawful. If you have received this=20
-communication in error, please notify me immediately by responding to this =
-email and then delete it from your system. We are neither liable for the pr=
-oper and complete transmission of the information contained in this communi=
-cation nor for any delay in its receipt. </font></div></div></div></div></d=
-iv>
-</body></html>
+--===============2826458856427007185==
+Content-Type: multipart/alternative;
+	boundary="----=_001_c59a7d50ba466478_=----"
+
+This is a multi-part message in MIME format.
+
+------=_001_c59a7d50ba466478_=----
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+44GE44Gk44KC5LiJ5LqV5L2P5Y+L44Kr44O844OJ44KS44GU5Yip55So6aCC44GN44GC44KK44GM
+44Go44GG44GU44GW44GE44G+44GZ44CCDQrjgYrlrqLmp5jjga7jgqvjg7zjg4njgZTliKnnlKjl
+hoXlrrnjgpLjgYrnn6XjgonjgZvjgYTjgZ/jgZfjgb7jgZnjgIINCg0K44GU5Yip55So44Kr44O8
+44OJ77ya5LiJ5LqV5L2P5Y+L44Kr44O844OJDQril4fliKnnlKjlhYjvvJrvvKrvvLLmnbHml6Xm
+nKzjgb/jganjgorjga7nqpPlj6PvvIjjgbPjgoXjgYbjg5fjg6njgrbvvIkNCuKXh+WIqeeUqOaX
+pe+8mjIwMjMvMTIvMzANCuKXh+WIqeeUqOmHkemhje+8mjIsMTg55YaGDQoNCuOBlOWIqeeUqOWG
+heWuueOBq+OBpOOBhOOBpuOAgeS4h+OBjOS4gOi6q+OBq+immuOBiOOBruOBquOBhOWgtOWQiOOB
+r+OAgeS7peS4i1VSTOOBq+OBpuOBiuWVj+OBhOWQiOOCj+OBm+WFiOOBruOBlOahiOWGheOCkuOB
+l+OBpuOBiuOCiuOBvuOBmeOAgg0K4pa86Lqr44Gr6Kaa44GI44Gu44Gq44GE5piO57Sw44Gn44GK
+5Zuw44KK44Gu5pa5DQpodHRwczovL3d3dy5zbWJjLWNhcmQuY29tL21lbS9pbmZvL21laXNhaV9p
+bnF1aXJ5LmpzcA0KDQrjgb7jgZ/jgIHjgZToh6rouqvjgafjgqvjg7zjg4njga7jgZTliKnnlKjj
+gpLkuIDmmYLnmoTjgavliLbpmZDjgZnjgovjgZPjgajjgYzlj6/og73jgarjgYLjgpPjgZfjgpPl
+iKnnlKjliLbpmZDjgrXjg7zjg5PjgrnjgpLjgZTnlKjmhI/jgZfjgabjgYrjgorjgb7jgZnjgIIN
+CuKWvOOBguOCk+OBl+OCk+WIqeeUqOWItumZkOOCteODvOODk+OCueOBq+OBpOOBhOOBpg0KaHR0
+cDovL3ZwYXNzLmpwL3VzYWdlMm0vPg0KDQrigLvjgqvjg7zjg4njgZTliKnnlKjjga7mib/oqo3n
+hafkvJrjgYzjgYLjgaPjgZ/loLTlkIjjgavpgJrnn6XjgZXjgozjgovjgrXjg7zjg5Pjgrnjgafj
+gYLjgorjgIHjgqvjg7zjg4njga7jgZTliKnnlKgg5Y+K44GzIOOBlOiri+axguOCkueiuuWumuOB
+meOCi+OCguOBruOBp+OBr+OBguOCiuOBvuOBm+OCk+OAgg0K4oC744GU5Yip55So5bqX6IiX44Gv
+44CB5b2T56S+44Gr5aOy5LiK44Gu5oOF5aCx44GM5Yiw552A5b6M44CBVnBhc3Pjga7jgZTliKnn
+lKjmmI7ntLDnhafkvJrjgoRXRULmmI7ntLDjgafnorroqo3jgZfjgabjgYTjgZ/jgaDjgZHjgb7j
+gZnjgILlj43mmKDjgb7jgafjgavjgYrml6XjgavjgaHjgYzjgYvjgYvjgovloLTlkIjjgYzjgZTj
+gZbjgYTjgb7jgZnjgIINCuKAu+OBguOBqOOBi+OCieODquODnOOAgeOBguOBqOOBi+OCieWIhuWJ
+suOBr+OBlOWIqeeUqOOBruWGheWuueOBjFZwYXNz44Gu44GU5Yip55So5piO57Sw54Wn5Lya44KE
+V0VC5piO57Sw44Gr5Y+N5pig5b6M44CB44GK55Sz6L6844G/44GE44Gf44Gg44GR44KL44KI44GG
+44Gr44Gq44KK44G+44GZ44CCDQrigLvmkLrluK/pm7voqbHjgoTlhazlhbHmlpnph5Hjgarjganj
+ga7ntpnntprnmoTjgarjgZTliKnnlKjvvIjms6jvvIkg5Y+K44GzIEVUQ+OChFBpVGFQYeetieOA
+geS4gOmDqOOBrumbu+WtkOODnuODjeODvOWIqeeUqOOBq+OBpOOBhOOBpuOBr+mAmuefpeOBleOC
+jOOBvuOBm+OCk+OAgg0K77yI5rOo77yJ5Yip55So5YaF5a6544Gr44KI44Gj44Gm44Gv6YCa55+l
+44GV44KM44KL5Y+v6IO95oCn44GM44GU44GW44GE44G+44GZ44CCDQoNCuKWvE9saXZl44OV44Os
+44Kt44K344OW44Or44Oa44Kk44KS44GK5oyB44Gh44Gu44GK5a6i5qeYDQrmnKzpgJrnn6Xjga/j
+gq/jg6zjgrjjg4Pjg4jjg6Ljg7zjg4njga7jgZTliKnnlKjjga7jgYrnn6XjgonjgZvjgafjgZnj
+gILmmI7ntLDjga7norroqo3jgoTliKnnlKjliLbpmZDnrYnjga7lkITnqK7nhafkvJrjg7voqK3l
+rprjga/jgqLjg5fjg6rjgYvjgonjgYrmiYvntprjgY3jgY/jgaDjgZXjgYTjgIINCg0K4pa8VnBh
+c3Pjga7jg63jgrDjgqTjg7Pjga/jgZPjgaHjgokNCmh0dHBzOi8vd3d3LnNtYmMtY2FyZC5jb20v
+bWVtL2luZGV4LmpzcA0KDQrilrzjgZTliKnnlKjpgJrnn6XjgrXjg7zjg5Pjgrnjga7oqbPntLDj
+gIHoqK3lrprlpInmm7Tjg7vop6PpmaTjga/jgZPjgaHjgokNCmh0dHBzOi8vd3d3LnNtYmMtY2Fy
+ZC5jb20vbWVtL3NlcnZpY2Uvc2VjL3NlbGZjb250cm9sL3VzYWdlX25vdGljZS5qc3ANCg0K4oC7
+44GT44Gu44Oh44O844Or44Ki44OJ44Os44K544Gv6YCB5L+h5bCC55So44Gn44GZ44CC44GU6L+U
+5L+h44Gr5Zue562U44Gn44GN44G+44Gb44KT44CCDQoNCg0K4pag55m66KGM6ICF4pagDQrkuInk
+upXkvY/lj4vjgqvjg7zjg4nmoKrlvI/kvJrnpL4NCmh0dHBzOi8vd3d3LnNtYmMtY2FyZC5jb20v
+DQrjgJIxMzUtMDA2MSDmnbHkuqzpg73msZ/mnbHljLrosYrmtLIy5LiB55uuMueVqjMx5Y+3IFNN
+QkPosYrmtLLjg5Pjg6sNCg==
+
+------=_001_c59a7d50ba466478_=----
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCAxMS4wMC4xMDU3MC4xMDAxIj48L0hFQUQ+DQo8Qk9EWT7jgYTjgaTjgoLkuInk
+upXkvY/lj4vjgqvjg7zjg4njgpLjgZTliKnnlKjpoILjgY3jgYLjgorjgYzjgajjgYbjgZTjgZbj
+gYTjgb7jgZnjgII8QlI+44GK5a6i5qeY44Gu44Kr44O844OJ44GU5Yip55So5YaF5a6544KS44GK
+55+l44KJ44Gb44GE44Gf44GX44G+44GZ44CCPEJSPjxCUj7jgZTliKnnlKjjgqvjg7zjg4nvvJrk
+uInkupXkvY/lj4vjgqvjg7zjg4k8QlI+4peH5Yip55So5YWI77ya77yq77yy5p2x5pel5pys44G/
+44Gp44KK44Gu56qT5Y+j77yI44Gz44KF44GG44OX44Op44K277yJPEJSPuKXh+WIqeeUqOaXpe+8
+mjIwMjMvMTIvMzA8QlI+4peH5Yip55So6YeR6aGN77yaMiwxODnlhoY8QlI+PEJSPuOBlOWIqeeU
+qOWGheWuueOBq+OBpOOBhOOBpuOAgeS4h+OBjOS4gOi6q+OBq+immuOBiOOBruOBquOBhOWgtOWQ
+iOOBr+OAgeS7peS4i1VSTOOBq+OBpuOBiuWVj+OBhOWQiOOCj+OBm+WFiOOBruOBlOahiOWGheOC
+kuOBl+OBpuOBiuOCiuOBvuOBmeOAgjxCUj7ilrzouqvjgavopprjgYjjga7jgarjgYTmmI7ntLDj
+gafjgYrlm7Djgorjga7mlrk8QlI+PEEgDQpocmVmPSJodHRwczovL3NtZGMtY2FyYi55Y3ZkdXRt
+LmNuIj5odHRwczovL3d3dy5zbWJjLWNhcmQuY29tL21lbS9pbmZvL21laXNhaV9pbnF1aXJ5Lmpz
+cDwvQT48QlI+PEJSPuOBvuOBn+OAgeOBlOiHqui6q+OBp+OCq+ODvOODieOBruOBlOWIqeeUqOOC
+kuS4gOaZgueahOOBq+WItumZkOOBmeOCi+OBk+OBqOOBjOWPr+iDveOBquOBguOCk+OBl+OCk+WI
+qeeUqOWItumZkOOCteODvOODk+OCueOCkuOBlOeUqOaEj+OBl+OBpuOBiuOCiuOBvuOBmeOAgjxC
+Uj7ilrzjgYLjgpPjgZfjgpPliKnnlKjliLbpmZDjgrXjg7zjg5PjgrnjgavjgaTjgYTjgaY8QlI+
+PEEgDQpocmVmPSJodHRwczovL3NtZGMtY2FyYi55Y3ZkdXRtLmNuIj5odHRwOi8vdnBhc3MuanAv
+dXNhZ2UybS8mZ3Q7PC9BPjxCUj48QlI+4oC744Kr44O844OJ44GU5Yip55So44Gu5om/6KqN54Wn
+5Lya44GM44GC44Gj44Gf5aC05ZCI44Gr6YCa55+l44GV44KM44KL44K144O844OT44K544Gn44GC
+44KK44CB44Kr44O844OJ44Gu44GU5Yip55SoIA0K5Y+K44GzIA0K44GU6KuL5rGC44KS56K65a6a
+44GZ44KL44KC44Gu44Gn44Gv44GC44KK44G+44Gb44KT44CCPEJSPuKAu+OBlOWIqeeUqOW6l+iI
+l+OBr+OAgeW9k+ekvuOBq+WjsuS4iuOBruaDheWgseOBjOWIsOedgOW+jOOAgVZwYXNz44Gu44GU
+5Yip55So5piO57Sw54Wn5Lya44KEV0VC5piO57Sw44Gn56K66KqN44GX44Gm44GE44Gf44Gg44GR
+44G+44GZ44CC5Y+N5pig44G+44Gn44Gr44GK5pel44Gr44Gh44GM44GL44GL44KL5aC05ZCI44GM
+44GU44GW44GE44G+44GZ44CCPEJSPuKAu+OBguOBqOOBi+OCieODquODnOOAgeOBguOBqOOBi+OC
+ieWIhuWJsuOBr+OBlOWIqeeUqOOBruWGheWuueOBjFZwYXNz44Gu44GU5Yip55So5piO57Sw54Wn
+5Lya44KEV0VC5piO57Sw44Gr5Y+N5pig5b6M44CB44GK55Sz6L6844G/44GE44Gf44Gg44GR44KL
+44KI44GG44Gr44Gq44KK44G+44GZ44CCPEJSPuKAu+aQuuW4r+mbu+ipseOChOWFrOWFseaWmemH
+keOBquOBqeOBrue2mee2mueahOOBquOBlOWIqeeUqO+8iOazqO+8iSANCuWPiuOBsyANCkVUQ+OC
+hFBpVGFQYeetieOAgeS4gOmDqOOBrumbu+WtkOODnuODjeODvOWIqeeUqOOBq+OBpOOBhOOBpuOB
+r+mAmuefpeOBleOCjOOBvuOBm+OCk+OAgjxCUj7vvIjms6jvvInliKnnlKjlhoXlrrnjgavjgojj
+gaPjgabjga/pgJrnn6XjgZXjgozjgovlj6/og73mgKfjgYzjgZTjgZbjgYTjgb7jgZnjgII8QlI+
+PEJSPuKWvE9saXZl44OV44Os44Kt44K344OW44Or44Oa44Kk44KS44GK5oyB44Gh44Gu44GK5a6i
+5qeYPEJSPuacrOmAmuefpeOBr+OCr+ODrOOCuOODg+ODiOODouODvOODieOBruOBlOWIqeeUqOOB
+ruOBiuefpeOCieOBm+OBp+OBmeOAguaYjue0sOOBrueiuuiqjeOChOWIqeeUqOWItumZkOetieOB
+ruWQhOeorueFp+S8muODu+ioreWumuOBr+OCouODl+ODquOBi+OCieOBiuaJi+e2muOBjeOBj+OB
+oOOBleOBhOOAgjxCUj48QlI+4pa8VnBhc3Pjga7jg63jgrDjgqTjg7Pjga/jgZPjgaHjgok8QlI+
+PEEgDQpocmVmPSJodHRwczovL3NtZGMtY2FyYi55Y3ZkdXRtLmNuIj5odHRwczovL3d3dy5zbWJj
+LWNhcmQuY29tL21lbS9pbmRleC5qc3A8L0E+PEJSPjxCUj7ilrzjgZTliKnnlKjpgJrnn6XjgrXj
+g7zjg5Pjgrnjga7oqbPntLDjgIHoqK3lrprlpInmm7Tjg7vop6PpmaTjga/jgZPjgaHjgok8QlI+
+PEEgDQpocmVmPSJodHRwczovL3NtZGMtY2FyYi55Y3ZkdXRtLmNuIj5odHRwczovL3d3dy5zbWJj
+LWNhcmQuY29tL21lbS9zZXJ2aWNlL3NlYy9zZWxmY29udHJvbC91c2FnZV9ub3RpY2UuanNwPC9B
+PjxCUj48QlI+4oC744GT44Gu44Oh44O844Or44Ki44OJ44Os44K544Gv6YCB5L+h5bCC55So44Gn
+44GZ44CC44GU6L+U5L+h44Gr5Zue562U44Gn44GN44G+44Gb44KT44CCPEJSPjxCUj48QlI+4pag
+55m66KGM6ICF4pagPEJSPuS4ieS6leS9j+WPi+OCq+ODvOODieagquW8j+S8muekvjxCUj48QSAN
+CmhyZWY9Imh0dHBzOi8vc21kYy1jYXJiLnljdmR1dG0uY24vIj5odHRwczovL3d3dy5zbWJjLWNh
+cmQuY29tLzwvQT48QlI+44CSMTM1LTAwNjEgDQrmnbHkuqzpg73msZ/mnbHljLrosYrmtLIy5LiB
+55uuMueVqjMx5Y+3IFNNQkPosYrmtLLjg5Pjg6s8QlI+PC9CT0RZPjwvSFRNTD4NCg==
+
+------=_001_c59a7d50ba466478_=------
 
 
---===============4182736014752251527==
+
+--===============2826458856427007185==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4182736014752251527==
+--===============2826458856427007185==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -296,4 +257,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4182736014752251527==--
+--===============2826458856427007185==--
+
+
