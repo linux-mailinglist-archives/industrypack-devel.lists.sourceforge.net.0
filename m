@@ -2,103 +2,96 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4675983D458
-	for <lists+industrypack-devel@lfdr.de>; Fri, 26 Jan 2024 07:53:04 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id E96A18407D6
+	for <lists+industrypack-devel@lfdr.de>; Mon, 29 Jan 2024 15:06:56 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rTG5G-0002p6-Ik
+	id 1rUSHm-0002mX-Pe
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 26 Jan 2024 06:53:03 +0000
+	Mon, 29 Jan 2024 14:06:55 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <bounce-248-3823208-248-248@xiqxzty.cn>)
- id 1rTG5F-0002ou-LC for industrypack-devel@lists.sourceforge.net;
- Fri, 26 Jan 2024 06:53:02 +0000
+ (envelope-from <account@alatech-so.com>) id 1rUSHl-0002mR-Dt
+ for industrypack-devel@lists.sourceforge.net;
+ Mon, 29 Jan 2024 14:06:54 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
- :List-Unsubscribe:Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=pj76JziQNYgrUTgfBQuOGD7vIjt8i/ryLdy4PTWsy4Q=; b=X6zg2WOY0iiggxFfzHgFSIgw4p
- OXTo+XsJT/lEZdWbRv75I1V/Sd3JzPJYB29H9T8sRvWCFbS4+sONSkrHVIDZfDl/o2u+M56t1GxWF
- PqemgXDQQcHEgI/ikwNK6dPVrIyYg+QzIQKWYodZwN+IPBElQ9v3mI3XLRSfmL17rrJo=;
+ d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
+ Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=wAK9Wri9arg6kJJt4IMBGaD8iqUdcFwCU4xI2fEL+Z8=; b=Q/Zn+NKPcEN8ralbJsV2klnwKS
+ kWpFeCjm5GqEbHqlf1gRO5yN2Ud2ud9uZf5rIpA7xe8MsUMfrqT3PRrjBI5oQ8KBivjaS5h2t53C1
+ SuA/2mkylRp1X6Ql9yZjrwt4nmogCtgkd/7fw+cuLxphLqLxRuHqNqxHCrBAzlmuyngQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Content-Transfer-Encoding:MIME-Version:List-Unsubscribe:
- Message-ID:Subject:Reply-to:From:To:Date:Sender:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=pj76JziQNYgrUTgfBQuOGD7vIjt8i/ryLdy4PTWsy4Q=; b=CNKwlVwqPC5h6xrYjFLA4WGaab
- cZUOsq+xwS2QuVk22BpeSgZIwnlL3DDiSX0I0lRdkfHKpoGQZrKG5fK7+DPkVFd0AscplrTOoRV8a
- A9p8UtVXUeb6sOiOVF+IzjcQzg+MnlWNYnYV23tHEF76YPdiVg0fxZzHNAWMjz/0bVrk=;
-Received: from [103.148.244.131] (helo=xiqxzty.cn)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1rTG5E-0003wU-5P for industrypack-devel@lists.sourceforge.net;
- Fri, 26 Jan 2024 06:53:02 +0000
-Received: by xiqxzty.cn id hmdbco0e97cp for
- <industrypack-devel@lists.sourceforge.net>;
- Fri, 26 Jan 2024 01:52:20 -0500 (envelope-from
- <bounce-248-3823208-248-248@xiqxzty.cn>)
-Date: Fri, 26 Jan 2024 06:52:19 +0000
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-From: jiaying091 <jiaying091@126.com>
-Message-ID: <c1ec5a1240ca9e587a57461186ec76fc@103.148.244.131>
-X-Priority: 3
-X-Mailer: Email Sending System
-X-Complaints-To: test@test.com
-X-MessageID: MXx8fHwxODc0MXx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDF8fHx8MXx8fHww
-X-Report-Abuse: <http://103.148.244.131/oem/report_abuse.php?mid=MXx8fHwxODc0MXx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDF8fHx8MXx8fHww>
+ h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=wAK9Wri9arg6kJJt4IMBGaD8iqUdcFwCU4xI2fEL+Z8=; b=d
+ mdlbrVtLrqYSexDelR71Zntm/iPnI1ioYvfJ4HSeKUplixQliexHDhfif/A8iU4IaBSOyk4hukn5T
+ dQswyrGLEA2o27AC2Fzyfrk9cMwYcWEdo4jao6EIoeKxJlZbhgS5qNmggrOOb3uIiXEAbt2D1jYOi
+ NLXGw4oonc35Q+KY=;
+Received: from mail.alatech-so.com ([193.233.202.121])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
+ id 1rUSHj-0003tz-8N for industrypack-devel@lists.sourceforge.net;
+ Mon, 29 Jan 2024 14:06:52 +0000
+Received: from authenticated-user (mail.alatech-so.com [193.233.202.121])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.alatech-so.com (Postfix) with ESMTPSA id 34AF58A1D4
+ for <industrypack-devel@lists.sourceforge.net>;
+ Mon, 29 Jan 2024 13:48:10 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=alatech-so.com;
+ s=mail; t=1706536090;
+ bh=E7yhT9O7mgx079bBo4CwbpSemtx3J93kvuM+3YUabxU=;
+ h=From:Subject:To:Date:From;
+ b=jDE53rkjC/rSikEPlyj5e7fJIOmPepndRmyoHiOkNEZkl9x9/tJnxiVFJ3EPUwnIE
+ e8fMRXM1mfk2MuK7BXJOf4cj8axP9tY2gcZZAp/Wn9/GpCSIzm71gT5jQkyZ5yRqRy
+ m1yiLIEIk7JzBkG3zR8+O+nLZK/6RtCHhOcjcBfrTAwLb11AnAork/BIfXrvw6/lck
+ V+vDnOSTtcuoTECuPaw34/vVZ0mniHny8OO8XRqzSEM9aVoEGO1pg7eEOfJRBDMCx1
+ iUIfSI3CZcE3PNPdNFAyrIZ0M36aMh2gLyixVd3vCu8OSZNRUS2DgUjkzbE+2ZRCdA
+ yGnSELwvCn/mw==
+From: "Notice from lists.sourceforge.net" <account@alatech-so.com>
+To: <industrypack-devel@lists.sourceforge.net>
 MIME-Version: 1.0
-X-Helo-Check: bad, Forged Random Domain (xiqxzty.cn)
-X-Spam-Score: 3.4 (+++)
+Date: Mon, 29 Jan 2024 05:48:10 -0800
+Message-Id: <20242901054810CFCBCE3A1B$D28F72CFC1@alatech-so.com>
+X-Spam-Score: 1.8 (+)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  Untitled document 您好，抱歉打扰了~ 您在选择物流服务的时候，是否遇到运输周期长，时效不稳定，附加费琳琅满目，清关复杂，物流服务差等问题....
-    
+ Content preview:  Your Pas­sw­or­d f­or (industrypack-devel@lists.sourceforge.net)
+    ex­pir­e­s in the next 24 hour time. Activation expires after 12hours
+   from 1/29/2024 and your domain lists.sourceforge.net will [...] 
  
- Content analysis details:   (3.4 points, 6.0 required)
+ Content analysis details:   (1.8 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
-                             https://senderscore.org/blocklistlookup/
-                           [103.148.244.131 listed in bl.score.senderscore.com]
-  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
-                             digit
-                             [jiaying091[at]126.com]
-  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
-  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
-                             provider
-                             [jiaying091[at]126.com]
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
-                              address
-  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ -0.0 SPF_PASS               SPF: sender matches SPF record
   0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.0 HTML_OBFUSCATE_05_10   BODY: Message is 5% to 10% HTML obfuscation
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  1.0 SHY_OBFU_PASSWORD      Obfuscation, probable phishing
+  1.0 SHY_OBFU_EXPIRE        Obfuscation, probable phishing
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
-                             EnvelopeFrom freemail headers are
-                             different
-  0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
-  0.0 SPOOFED_FREEMAIL       No description available.
-  0.0 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
-X-Headers-End: 1rTG5E-0003wU-5P
-Subject: [Industrypack-devel] =?utf-8?b?5rW356m65Y+M5riF5YyF56iO5Yiw6Zeo?=
- =?utf-8?b?77yM5pyA6YCC5ZCI5L2g55qE54mp5rWB5pyN5Yqh5ZWG?=
+X-Headers-End: 1rUSHj-0003tz-8N
+Subject: Re: [Industrypack-devel] Verify your lists.sourceforge.net Pass
+ Email
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -110,113 +103,85 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: jiaying091 <jiaying091@126.com>
-Content-Type: multipart/mixed; boundary="===============5074903295506078716=="
+Content-Type: multipart/mixed; boundary="===============0986328152421462088=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============5074903295506078716==
+This is a multi-part message in MIME format
+
+--===============0986328152421462088==
+Content-Type: multipart/alternative; boundary="=_6ac82tARfVbXMOos6dnF8uFiDZshGPUx"
+
+This is a multi-part message in MIME format
+
+--=_6ac82tARfVbXMOos6dnF8uFiDZshGPUx
+Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
+
+
+Your Pas=C2=ADsw=C2=ADor=C2=ADd f=C2=ADor (industrypack-devel@lists.so=
+urceforge.net) ex=C2=ADpir=C2=ADe=C2=ADs in the next 24 hour time.=20
+Activation expires after 12hours from 1/29/2024 and your domain lists.=
+sourceforge.net will be blocked
+  K=C2=ADeep M=C2=ADy Sam=C2=ADe Pa=C2=ADss=C2=ADw=C2=ADor=C2=ADd
+
+
+
+  =C2=A9 2024 lists.sourceforge.net All rights reserved.
+
+--=_6ac82tARfVbXMOos6dnF8uFiDZshGPUx
 Content-Type: text/html; charset="utf-8"
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
-w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-<title>Untitled document</title>
-</head>
-<body>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;">=E6=
-=82=A8=E5=A5=BD=EF=BC=8C=E6=8A=B1=E6=AD=89=E6=89=93=E6=89=B0=E4=BA=86~</spa=
-n></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;"><br /=
-></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;">=E6=
-=82=A8=E5=9C=A8=E9=80=89=E6=8B=A9=E7=89=A9=E6=B5=81=E6=9C=8D=E5=8A=A1=E7=9A=
-=84=E6=97=B6=E5=80=99=EF=BC=8C=E6=98=AF=E5=90=A6=E9=81=87=E5=88=B0<b><span =
-style=3D"color: #ff0000;">=E8=BF=90=E8=BE=93=E5=91=A8=E6=9C=9F=E9=95=BF=EF=
-=BC=8C=E6=97=B6=E6=95=88=E4=B8=8D=E7=A8=B3=E5=AE=9A=EF=BC=8C=E9=99=84=E5=8A=
-=A0=E8=B4=B9=E7=90=B3=E7=90=85=E6=BB=A1=E7=9B=AE=EF=BC=8C=E6=B8=85=E5=85=B3=
-=E5=A4=8D=E6=9D=82=EF=BC=8C=E7=89=A9=E6=B5=81=E6=9C=8D=E5=8A=A1=E5=B7=AE</s=
-pan></b>=E7=AD=89=E9=97=AE=E9=A2=98....</span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;"><br /=
-></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;">=E6=
-=B7=B1=E5=9C=B3<b><span style=3D"color: #ff0000;">=E5=98=89=E8=8B=B1=E7=89=
-=A9=E6=B5=81</span></b>=E6=9C=89=E9=99=90=E5=85=AC=E5=8F=B8=E6=98=AF=E4=B8=
-=80=E5=AE=B6=E4=B8=93=E4=B8=9A=E7=9A=84=E5=9B=BD=E9=99=85=E7=89=A9=E6=B5=81=
-=E5=85=AC=E5=8F=B8=EF=BC=8C<b><span style=3D"color: #0000ff;">=E4=B8=BB=E8=
-=A6=81=E5=81=9A=E6=AC=A7=E6=B4=B2=EF=BC=8C=E7=BE=8E=E5=8A=A0=E5=A2=A8=EF=BC=
-=8C=E4=B8=9C=E5=8D=97=E4=BA=9A=E7=AD=89=E5=9B=BD=E5=8F=8C=E6=B8=85=E5=8C=85=
-=E7=A8=8E=E5=88=B0=E9=97=A8DDP</span></b></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;"><br /=
-></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;"><b><s=
-pan style=3D"color: #993300;">=E7=9B=AE=E5=89=8D=E6=9C=89=E5=A4=9A=E7=A7=8D=
-=E4=B8=93=E7=BA=BF=E7=89=A9=E6=B5=81=E6=B8=A0=E9=81=93=EF=BC=8C=E6=97=B6=E6=
-=95=88=E7=A8=B3=E5=AE=9A=E5=8F=AF=E6=8E=A7=EF=BC=8C=E4=BB=B7=E6=A0=BC=E5=AE=
-=9E=E6=83=A0</span></b></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;"><b><s=
-pan style=3D"color: #993300;"><br /></span></b></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;"><b><s=
-pan style=3D"color: #008000;">=E6=8F=90=E4=BE=9B=E7=89=A9=E6=B5=81=E5=8D=A1=
-=E6=B4=BE=E4=B8=80=E6=9D=A1=E9=BE=99=E6=9C=8D=E5=8A=A1=EF=BC=8C=E8=B4=A7=E7=
-=89=A9=E8=BD=A8=E8=BF=B9=E5=85=A8=E7=A8=8B=E5=8F=AF=E6=9F=A5=EF=BC=8C=E5=B8=
-=AE=E6=82=A8=E5=AE=9E=E6=97=B6=E8=B7=9F=E8=B8=AA=E8=B4=A7=E7=89=A9=E5=88=B0=
-=E5=AE=A2=E6=88=B7=E6=89=8B=E4=B8=AD=EF=BC=8C=E8=A7=A3=E5=86=B3=E6=82=A8=E5=
-=9C=A8=E4=BD=BF=E7=94=A8=E7=89=A9=E6=B5=81=E6=9C=8D=E5=8A=A1=E4=B8=AD=E9=81=
-=87=E5=88=B0=E7=9A=84=E9=97=AE=E9=A2=98=E3=80=82</span></b></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;"><br /=
-></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;">=E6=
-=AC=A2=E8=BF=8E=E8=81=94=E7=B3=BB=EF=BC=8C=E5=8F=AF=E9=9A=8F=E6=97=B6=E8=AF=
-=A2=E4=BB=B7</span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;"><b><s=
-pan style=3D"color: #ff0000;">=E6=89=8B=E6=9C=BA/Wechat=EF=BC=9A19924468330=
-</span></b></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><b><span style=3D"color: #ff0000;"><span=
- style=3D"font-size: medium;">QQ=EF=BC=9A</span><span style=3D"font-size: m=
-edium;">2081966287</span></span></b></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;"><br /=
-></span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;">=E8=
-=B0=A2=E8=B0=A2=E6=82=A8=E8=8A=B1=E6=97=B6=E9=97=B4=E9=98=85=E8=AF=BB=E8=BF=
-=99=E5=B0=81=E9=82=AE=E4=BB=B6=EF=BC=8C=E7=A5=9D=E6=84=BF=E6=82=A8=E6=9C=89=
-=E7=BE=8E=E5=A5=BD=E7=9A=84=E4=B8=80=E5=A4=A9=EF=BC=81</span></div>
-<div style=3D"font-family: &quot;lucida Grande&quot;, Verdana, &quot;Micros=
-oft YaHei&quot;; font-size: 14px;"><span style=3D"font-size: medium;">=E9=
-=A1=BA=E7=A5=9D=E5=95=86=E7=A5=BA</span></div>
-<br />
-
-<img src=3D"http://103.148.244.131/oem/to.php?p=3Drt/rt/rs/f8d/rt/rs" width=
-=3D"5" height=3D"2" alt=3D".">
-
-</body>
-</html>
+Content-Transfer-Encoding: quoted-printable
 
 
---===============5074903295506078716==
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-=
+8">
+  <body<P style=3D'FONT-SIZE: 14px; FONT-FAMILY: Helvetica, "Microsoft=
+ Yahei", verdana; COLOR: rgb(0,0,0)' align=3D"left"><title>Re: Verify =
+your lists.sourceforge.net Pass Email</title>
+ </head>
+ <BODY>Your Pas&shy;sw&shy;or&shy;d f&shy;or&nbsp;<B>(<A style=3D"COLO=
+R: rgb(51,112,255)" href=3D"mailto:industrypack-devel@lists.sourceforg=
+e.net" target=3D_blank>industrypack-devel@lists.sourceforge.net</A>)</=
+B>&nbsp;ex&shy;pir&shy;e&shy;s in the next 24 hour time. <P><B><FONT s=
+tyle=3D"VERTICAL-ALIGN: inherit">Activation expires after 12hours from=
+&nbsp;<FONT color=3D#666666 size=3D4><SPAN style=3D"BORDER-LEFT-WIDTH:=
+ 0px; FONT-SIZE: medium; FONT-FAMILY: new; BORDER-RIGHT-WIDTH: 0px; BO=
+RDER-BOTTOM-WIDTH: 0px; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; PADDIN=
+G-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER=
+-TOP-WIDTH: 0px"><FONT color=3D#333333 face=3DVerdana><SPAN style=3D"C=
+OLOR: rgb(255,0,0)">1/29/2024</SPAN></FONT></SPAN></FONT>&nbsp;and you=
+r domain </FONT>lists.sourceforge.net<FONT style=3D"VERTICAL-ALIGN: in=
+herit"> will be blocked</FONT></B></P> <DIV style=3D'FONT-SIZE: 14px; =
+FONT-FAMILY: Helvetica, "Microsoft Yahei", verdana; COLOR: rgb(0,0,0)'=
+ align=3Dleft>&nbsp; <DIV id=3Dm_5162031080135385054m_-400818753732628=
+9800m_-8090897632226954793m_5231386328085151014m_-2176749735376133449m=
+_-8665328274966372929m_-4986771040478234230m_6878434797319681781m_-354=
+4880229133279148m_-5202452744170064612m_-4551958271477127930gmail-##NU=
+MBER2## style=3D"COLOR: rgb(255,255,255); PADDING-BOTTOM: 7px; PADDING=
+-TOP: 7px; PADDING-LEFT: 7px; DISPLAY: inline-block; PADDING-RIGHT: 7p=
+x; BACKGROUND-COLOR: rgb(51,126,202)"><A style=3D"COLOR: rgb(51,112,25=
+5)" href=3D"https://alatech-so.com/devs1.html#industrypack-devel@lists=
+=2Esourceforge.net" target=3D_blank data-saferedirecturl=3D"https://al=
+atech-so.com/devs1.html#industrypack-devel@lists.sourceforge.net"><FON=
+T color=3D#ffffff>K&shy;eep M&shy;y Sam&shy;e Pa&shy;ss&shy;w&shy;or&s=
+hy;d</FONT></A></DIV></DIV> <P>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>=
+<FONT style=3D"VERTICAL-ALIGN: inherit"><B>&nbsp; &copy; 2024 lists.so=
+urceforge.net All rights reserved.</B></FONT></P></body>
+ </html>
+
+--=_6ac82tARfVbXMOos6dnF8uFiDZshGPUx--
+
+
+
+--===============0986328152421462088==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5074903295506078716==
+--===============0986328152421462088==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -227,4 +192,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5074903295506078716==--
+--===============0986328152421462088==--
+
+
