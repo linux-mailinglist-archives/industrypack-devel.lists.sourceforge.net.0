@@ -2,74 +2,74 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5672B84C5B7
-	for <lists+industrypack-devel@lfdr.de>; Wed,  7 Feb 2024 08:45:51 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 87C0B854371
+	for <lists+industrypack-devel@lfdr.de>; Wed, 14 Feb 2024 08:30:55 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rXccv-0001fR-4i
+	id 1ra9jK-0002qg-BB
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 07 Feb 2024 07:45:50 +0000
+	Wed, 14 Feb 2024 07:30:54 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <postman6339301@us13.besteml.com>) id 1rXcct-0001fL-D8
+ (envelope-from <postman6339301@us13.besteml.com>) id 1ra9jI-0002qZ-CZ
  for industrypack-devel@lists.sourceforge.net;
- Wed, 07 Feb 2024 07:45:48 +0000
+ Wed, 14 Feb 2024 07:30:52 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Date:List-Unsubscribe:List-Id:List-Help:
  Content-Type:MIME-Version:Subject:Message-Id:To:Reply-To:From:Sender:Cc:
  Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=cSuEESHRwpS4qCfznTdzIEAIGDgWIkdZTwazziTBkmA=; b=P09DybxkWUhCXGqliYqJSU+yiK
- Y10L5GrqNK+gkWRgCs5CbCzJCBSYiv6H+5uwg+JhIOI7pqWfsJgohTNiHksXEfzjz6y8OBPUPC9ug
- iqBceWXl8HEqhVVBS6XEjcBJynPywedEka9C6y+xhw2sO1LcaPA+bl70bm41jkxvHURo=;
+ bh=//AvGTb5QAxfvbEH6RGZn24wWu3+MNEWtv1kPuNBJhs=; b=IQG2dYqpLoaUYH7Yj9/bQLxVmM
+ lD0yFYaobVu3/XZm0t3gzW93fFc5KeQab7fHvRVLrlZ9LrzOQV0D5FPbV293GeLu6u4i2x7jiXgKN
+ uVD8G0oi4LUMVv13lojgZdNWMzQ2fH4q22d9ynpKU9z4l9uXqiiCDRAWrnd7/6/IdPxI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Date:List-Unsubscribe:List-Id:List-Help:Content-Type:MIME-Version:Subject
  :Message-Id:To:Reply-To:From:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Subscribe:List-Post:List-Owner
- :List-Archive; bh=cSuEESHRwpS4qCfznTdzIEAIGDgWIkdZTwazziTBkmA=; b=UlvV2TRdbj3
- JuBv4bcHPK3U3r7vzQMFAUEO2EIxZ+Esmtro3Md05+T13z99d1QwtguK/yERF0Wv2xBQcqAXxsET0
- CROyI1Sr5n6b5FSYnYSyrLGhMMoqs6jrpg3jEv22298/kosRwv9BBmIAhCu4Yt/lBg1cIidOeQVKK
- JWB80M=;
-Received: from smtp735.emlone.com ([195.122.27.222])
+ :List-Archive; bh=//AvGTb5QAxfvbEH6RGZn24wWu3+MNEWtv1kPuNBJhs=; b=MQj6w7qoNQX
+ RQx6jBm8810rUFN3bw66qIXwiuKV1t8MXveYm8+pUK+0V+JkD3qjk1Dx+Xg1BdC/mDHdpDc3/1SPT
+ Ct7h2+nZ/sTIlmzdnIQnDG/8ag7jlLD/6K1ENYNShV/Jg8qvtDDWblhpc9+jnzQWTIaI1ReQi+AJE
+ reEVXQ=;
+Received: from smtp383.emlone.com ([87.246.187.46])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1rXccm-0004wa-87 for industrypack-devel@lists.sourceforge.net;
- Wed, 07 Feb 2024 07:45:48 +0000
+ id 1ra9jC-0002Yw-9a for industrypack-devel@lists.sourceforge.net;
+ Wed, 14 Feb 2024 07:30:52 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=us; d=bstroy1411.online;
  h=From:Reply-To:To:Message-Id:Subject:MIME-Version:Content-Type:List-Help:
  List-Id:List-Unsubscribe:Date:no; i=info@bstroy1411.online;
- bh=cSuEESHRwpS4qCfznTdzIEAIGDgWIkdZTwazziTBkmA=;
- b=3gYgLlFQNpVFlEpRH5y5tZ693PF8okmJwFCZE3zn25aaLm5ljfSzje9QLUnUoVUTUTMGC70kEe81
- Xifaiq/Iw6ZLzh3n+1CLhp5oO8Fbf6hL0R9L3XbC4acdC2FrZfbAGti3xzO3RSk+Y8Erwv681yMl
- t98+PYpAwDFMHOaBxRI=
+ bh=//AvGTb5QAxfvbEH6RGZn24wWu3+MNEWtv1kPuNBJhs=;
+ b=1OogiIb3XhaGIdheGEjPkCY+faZUT63pqnFXIPd++CTrYRYZrIslivBknLg/6Uk7HfA1Kx/sqT3V
+ CHEVUgyZqTUWMwMIch9CrM9c1AEG++d3YF6y9WJcNaPSMP/oLC7DOiNk3sH1jY1SAWuesHhWIdQH
+ somiUTQRknw+emoTX4w=
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=jul2015; d=topeml.com; 
  h=From:Reply-To:To:Message-Id:Subject:MIME-Version:Content-Type:List-Help:
  List-Id:List-Unsubscribe:Date;
- bh=cSuEESHRwpS4qCfznTdzIEAIGDgWIkdZTwazziTBkmA=;
- b=N1+k/Jp2g2Cf5wQh4D5WaFRmddGdn228RNYIYprCmgL7xQkgwFm5gnXCJSPotWeeHUURKFxZC53Q
- KaEEF+VAniCQx0aVnHPa+uqjJxzYb4N5yJxKzJ77tje66NyR0FWG0AjX9eG65ZpbhDfnrShttxSp
- Nm7bRS8S09noG7SAyz8=
-Received: by smtp368.emlone.com id hocqia2erpkt for
+ bh=//AvGTb5QAxfvbEH6RGZn24wWu3+MNEWtv1kPuNBJhs=;
+ b=I/Q0a1+D6ZVwbcK6k4PN7tw6YDL7De4rikcD+3PZfltCC8Z6FpqnG233SdxYQ2GZLsOc5tYHY3vv
+ VXeSGgOGkcNZufuRGr4B0veJEbTMIeJgMkBnutJjvRy0jsVqtlZR3/m+jw8ys+8isGBY+6HF/Bbb
+ dV3IxOHOSxuBoguuIMU=
+Received: by smtp368.emlone.com id hphm2e2erpkp for
  <industrypack-devel@lists.sourceforge.net>;
- Wed, 7 Feb 2024 07:45:23 +0000 (envelope-from
+ Wed, 14 Feb 2024 07:30:24 +0000 (envelope-from
  <postman6339301@us13.besteml.com>)
 From: =?UTF-8?B?0JvQm9CaLdCY0L3RgtC10YDQvdC10YjQvdC7?= <info@bstroy1411.online>
 To: industrypack-devel@lists.sourceforge.net
-Message-Id: <E1rXccT-T3QS3r-Ns@ucs101-ucs-14.msgpanel.com>
+Message-Id: <E1ra9iq-ibFuB5-Nt@ucs301-ucs-11.msgpanel.com>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="MXJYY2NULVQzUVMzci1Ocw=="
+Content-Type: multipart/mixed; boundary="MXJhOWlxLWliRnVCNS1OdA=="
 Precedence: bulk
 X-Complaints-To: abuse@us13.besteml.com
-X-EnvId: usproduction.b_6339301_314609458_34631342869_859640
-X-Feedback-ID: 314609458:6339301:campaign:US
-Date: Wed, 7 Feb 2024 07:45:23 +0000
+X-EnvId: usproduction.b_6339301_315171022_34631342869_859640
+X-Feedback-ID: 315171022:6339301:campaign:US
+Date: Wed, 14 Feb 2024 07:30:24 +0000
 X-Spam-Score: 1.6 (+)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -83,27 +83,27 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
   0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
                              mail domains are different
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.0 T_PDS_OTHER_BAD_TLD    Untrustworthy TLDs
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
                              [URI: bstroy1411.online (online)]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
   0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
                              identical to background
-  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
   0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
                              valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
                              author's domain
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
   2.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
   0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
  -1.0 MAILING_LIST_MULTI     Multiple indicators imply a widely-seen list
                              manager
  -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium trust sender
-X-Headers-End: 1rXccm-0004wa-87
+X-Headers-End: 1ra9jC-0002Yw-9a
 Subject: [Industrypack-devel] =?utf-8?b?0JHQuNGC0YPQvCwg0LzQsNC30YPRgiA=?=
  =?utf-8?b?0L7RgiDQv9GA0L7QuNC30LLQvtC00LjRgtC10LvRjw==?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
@@ -119,11 +119,11 @@ List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 Reply-To: llk-bitum@lukoil-bitumen.ru
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---MXJYY2NULVQzUVMzci1Ocw==
+--MXJhOWlxLWliRnVCNS1OdA==
 Content-Type: multipart/alternative; 
-	boundary="----=_Part_15026894_914068237.1707291922580"
+	boundary="----=_Part_10118857_1367065183.1707895824366"
 
-------=_Part_15026894_914068237.1707291922580
+------=_Part_10118857_1367065183.1707895824366
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: base64
 
@@ -169,10 +169,10 @@ u9C4INGN0YLQviDQv9C40YHRjNC80L4sINGC0LDQuiDQutCw0Log0LjQvdGC0LXRgNC10YHQvtCy
 INC90LUg0YXQvtGC0LjRgtC1INC/0L7Qu9GD0YfQsNGC0Ywg0L3QsNGI0Lgg0L/QuNGB0YzQvNCw
 LCDQvdCw0LbQvNC40YLQtSDQvdCwINGB0YHRi9C70LrRgyDQvdC40LbQtToK0J7RgtC60LDQt9Cw
 0YLRjNGB0Y8g0L7RgiDRgNCw0YHRgdGL0LvQutC4IChodHRwczovL3VzMTEuYmVzdGVtbC5jb20v
-cnUvdW5zdWJzY3JpYmU/aGFzaD02Z3J5NmNzZnUzaDFpcndwZHpidWJ4emVwZzM3YmZ6amU5Mzgz
-bWpmZHVxcWYxOW80aXBnYmI1ZHRpZHdtamFiZTZ1eTNiNTdwa3lvb3Ijbm9fdHJhY2tpbmcpCgrC
+cnUvdW5zdWJzY3JpYmU/aGFzaD02aW9idTV4YzhiZDllb3dwZHpidWJ4emVwZzM3YmZ6amU5Mzgz
+bWpmcDhzeHA0eHVmYjM1Z3o5bXIzd3E4cmZ1ZTZ1eTNiNTdwa3lvb3Ijbm9fdHJhY2tpbmcpCgrC
 qSAyMDI0INCe0J7QniDCq9Cb0JvQmi3QmNC90YLQtdGA0L3QtdGI0L3Qu8K7Cgo=
-------=_Part_15026894_914068237.1707291922580
+------=_Part_10118857_1367065183.1707895824366
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
@@ -707,7 +707,7 @@ exactly; color: #ffffff; text-align: center; font-size: 14px; font-weight: =
 =B6=D0=BC=D0=B8=D1=82=D0=B5 =D0=BD=D0=B0 =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=
 =83 =D0=BD=D0=B8=D0=B6=D0=B5:<br>
 =09=09=09=09=09=09=09=09=09<a href=3D"https://us11.besteml.com/ru/unsubscri=
-be?hash=3D6gry6csfu3h1irwpdzbubxzepg37bfzje9383mjfduqqf19o4ipgbb5dtidwmjabe=
+be?hash=3D6iobu5xc8bd9eowpdzbubxzepg37bfzje9383mjfp8sxp4xufb35gz9mr3wq8rfue=
 6uy3b57pkyoor#no_tracking" style=3D"Margin: 0; padding: 0; box-sizing: bord=
 er-box; cursor: pointer; color: #DB2B36; text-decoration: underline;" targe=
 t=3D"_blank">=D0=9E=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C=D1=81=D1=8F =
@@ -737,20 +737,20 @@ p>
 </table>
 </div>
 <center><table><tr><td><img src=3D"https://us11.besteml.com/ru/mail_read_tr=
-acker/6339301?hash=3D67rn6jx5f7591hmuzc8wbzjfbr37bfzje9383mjfduqqf19o4ipgdu=
-gurkwwggf6oupmzcounjrxgaqq6nrx87pfc7e" width=3D"1" height=3D"1" alt=3D"" ti=
+acker/6339301?hash=3D6xy1siafdzw9aqmuzc8wbzjfbr37bfzje9383mjfp8sxp4xufb35mc=
+5dr6q64kgqiupmzcounjrxgaqq6nrx87pfc7e" width=3D"1" height=3D"1" alt=3D"" ti=
 tle=3D"" border=3D"0"></td></tr></table></center></body>
 </html>
-------=_Part_15026894_914068237.1707291922580--
+------=_Part_10118857_1367065183.1707895824366--
 
---MXJYY2NULVQzUVMzci1Ocw==
+--MXJhOWlxLWliRnVCNS1OdA==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---MXJYY2NULVQzUVMzci1Ocw==
+--MXJhOWlxLWliRnVCNS1OdA==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -761,5 +761,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---MXJYY2NULVQzUVMzci1Ocw==--
+--MXJhOWlxLWliRnVCNS1OdA==--
 
