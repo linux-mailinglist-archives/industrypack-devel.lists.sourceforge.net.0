@@ -2,112 +2,82 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5C58B85D171
-	for <lists+industrypack-devel@lfdr.de>; Wed, 21 Feb 2024 08:33:26 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9C66A86A025
+	for <lists+industrypack-devel@lfdr.de>; Tue, 27 Feb 2024 20:26:55 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rch6a-0007zn-5w
+	id 1rf36L-0001Bz-Tt
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 21 Feb 2024 07:33:24 +0000
+	Tue, 27 Feb 2024 19:26:54 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <postman6339301@us13.besteml.com>) id 1rch6Y-0007zh-5l
+ (envelope-from <ecount@ecounterp.com>) id 1rf36F-0001B9-Fz
  for industrypack-devel@lists.sourceforge.net;
- Wed, 21 Feb 2024 07:33:22 +0000
+ Tue, 27 Feb 2024 19:26:48 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Date:List-Unsubscribe:List-Id:List-Help:
- Content-Type:MIME-Version:Subject:Message-Id:To:Reply-To:From:Sender:Cc:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=hhCIKq+hv6PBhIbEzQIWkCFKh2vA+6K5BcLUKqbxKpU=; b=hK33GsvGJEBuIfiISwLMSijBuo
- iuk/PX59K3MHQn6tpSZDLAjzUQDh4ourlCJ6zFGQkqshvCLGCHfFmlq7xuEkHUbG/Et1ymkotVCWD
- WGMK2wk77AxL3k7DZv/B0/ITUGdQ4nrsYSHQP4/KoNCkLQbAi+GsTXgRZIeGk7TFnKgs=;
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=7GBTpVtBv4cft/RZHQDzt/P8HTJU3NOa42FsvLI+AKs=; b=g9eEDkMZBr+kpcn1G0XWPIgoJz
+ RaA5vyC1GV1KlpfyZymMY6zE5EDROm/3JUd5RRen3x3qZ3H7FPuliLlJgLmECAkjNW7HXpLG7jR+X
+ q319E8+w1uHeIIA8biXjCzvF6tElB25ggIb1YmVZSFC+Zfsq9O8zYyohRzLEoC2xekQI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Date:List-Unsubscribe:List-Id:List-Help:Content-Type:MIME-Version:Subject
- :Message-Id:To:Reply-To:From:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Subscribe:List-Post:List-Owner
- :List-Archive; bh=hhCIKq+hv6PBhIbEzQIWkCFKh2vA+6K5BcLUKqbxKpU=; b=eToB1CmrnSW
- hRtFv3Xf8c+k79JnK5hH1Jx5gVQBugVTVgn+jUg42LGasQ5ed626FVZgA/K6xmIp1VLmGnejfnn9y
- z6DvYhhBXjSBOBd/pDJQEKqaEd1GPb8Qdw1Q+mkDJ4yBAinS0IlVR8AMAzv+jBtuTPdnsbwagFtF6
- aG7gf8=;
-Received: from smtp617.emlone.com ([87.246.187.196])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1rch6S-0002aH-FN for industrypack-devel@lists.sourceforge.net;
- Wed, 21 Feb 2024 07:33:22 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=us; d=bstroy1411.online;
- h=From:Reply-To:To:Message-Id:Subject:MIME-Version:Content-Type:List-Help:
- List-Id:List-Unsubscribe:Date:no; i=info@bstroy1411.online;
- bh=hhCIKq+hv6PBhIbEzQIWkCFKh2vA+6K5BcLUKqbxKpU=;
- b=pTBqwIeDbVlUoPEdnNxXaf2KJ1g4KscXNh74rgHiwcuCCS5y2nIJv9xw0XdQy20SCy2Dl+fC+6t7
- IaHGe6ghA8v5n1ihXQjKYJrmxHC5SfZ/sVXasBL5pSPYcm573G4uJBNA/k8z+ABpLlRbYgdNwhiL
- Guagw43LXKBVlyConm0=
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=jul2015; d=topeml.com; 
- h=From:Reply-To:To:Message-Id:Subject:MIME-Version:Content-Type:List-Help:
- List-Id:List-Unsubscribe:Date;
- bh=hhCIKq+hv6PBhIbEzQIWkCFKh2vA+6K5BcLUKqbxKpU=;
- b=G/kQJTMtriPC7kBWmrhcSZbuybQLZrX8qqyLye5rYxIeJ3GtAGGsHgEWx6Qz+CrciOM3MzErlCZh
- eoLUtsP9YwBumU74ETTVEQMJ7YLzuV09JEAkzYNWmmndakiyv7CLCaxXpEhEAe4Xk+4qBuL9tp/5
- yE7KqdYytj7kLuf3Hxw=
-Received: by smtp368.emlone.com id hqmjjq2erpkt for
- <industrypack-devel@lists.sourceforge.net>;
- Wed, 21 Feb 2024 07:33:04 +0000 (envelope-from
- <postman6339301@us13.besteml.com>)
-From: =?UTF-8?B?0JvQm9CaLdCY0L3RgtC10YDQvdC10YjQvdC7?= <info@bstroy1411.online>
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=7GBTpVtBv4cft/RZHQDzt/P8HTJU3NOa42FsvLI+AKs=; b=S
+ M3NDTyZG5JQOOujsT1359oajXT+sBKMyDzQKSbpbcfVRKrMXGBNP97J7u0YSJTQyS3psvXywqdI73
+ ajRrXI275yTJZcwYQXeFHexFPGHBV3ZjFUdhLHkRaETTn+Qdr0wofmJPPYeUKMnwVBpS+G2/7sczd
+ K9t3LCIvu8hf4AH4=;
+Received: from [188.127.231.82] (helo=sayuri.co.jp)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1rf36F-00047V-11 for industrypack-devel@lists.sourceforge.net;
+ Tue, 27 Feb 2024 19:26:47 +0000
+Received: from ecounterp.com (localhost [IPv6:::1])
+ by sayuri.co.jp (Postfix) with ESMTP id D418CA0E7AB
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 27 Feb 2024 21:56:49 +0300 (MSK)
+From: ecount <ecount@ecounterp.com>
 To: industrypack-devel@lists.sourceforge.net
-Message-Id: <E1rch5E-x8TOVe-Nt@ucs301-ucs-3.msgpanel.com>
+Date: 27 Feb 2024 13:56:49 -0500
+Message-ID: <20240227135649.39C3AB10DB902704@ecounterp.com>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="MXJjaDVFLXg4VE9WZS1OdA=="
-Precedence: bulk
-X-Complaints-To: abuse@us13.besteml.com
-X-EnvId: usproduction.b_6339301_315727494_34631342869_859640
-X-Feedback-ID: 315727494:6339301:campaign:US
-Date: Wed, 21 Feb 2024 07:33:04 +0000
-X-Spam-Score: 3.6 (+++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+X-Spam-Score: 4.0 (++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  llk-bitum@lukoil-bitumen.ru +7 (495) 134-50-94 (tel:+74951345094)
-    ЛЛК-Интернешнл предлагает к продаже: БИТУМ
-    
- 
- Content analysis details:   (3.6 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview: Hello. This is the Sunpatch Techno purchasing team. The order
+ form is attached. Take care 
+ Content analysis details:   (4.0 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
-                             [URI: bstroy1411.online (online)]
- -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
-                             identical to background
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  2.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
-  0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [188.127.231.82 listed in wl.mailspike.net]
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ 0.0 SPF_HELO_NEUTRAL       SPF: HELO does not match SPF record (neutral)
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
- -1.0 MAILING_LIST_MULTI     Multiple indicators imply a widely-seen list
-                             manager
- -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium trust sender
-X-Headers-End: 1rch6S-0002aH-FN
-Subject: [Industrypack-devel] =?utf-8?b?0JHQuNGC0YPQvCwg0LzQsNC30YPRgiA=?=
- =?utf-8?b?0L7RgiDQv9GA0L7QuNC30LLQvtC00LjRgtC10LvRjw==?=
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 URI_CLOUDFLAREIPFS     References Interplanetary File System PtP
+ content via CloudFlare, likely phishing
+ 1.7 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
+ only
+ 0.0 T_REMOTE_IMAGE         Message contains an external image
+X-Headers-End: 1rf36F-00047V-11
+Subject: [Industrypack-devel] Sunpatch New Inquiry
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
+Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -116,641 +86,235 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: llk-bitum@lukoil-bitumen.ru
+Content-Type: multipart/mixed; boundary="===============4025169401801190072=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---MXJjaDVFLXg4VE9WZS1OdA==
-Content-Type: multipart/alternative; 
-	boundary="----=_Part_24656271_651917175.1708500729641"
-
-------=_Part_24656271_651917175.1708500729641
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: base64
-
-CgpsbGstYml0dW1AbHVrb2lsLWJpdHVtZW4ucnUKKzcgKDQ5NSkgMTM0LTUwLTk0ICh0ZWw6Kzc0
-OTUxMzQ1MDk0KQoK0JvQm9CaLdCY0L3RgtC10YDQvdC10YjQvdC7INC/0YDQtdC00LvQsNCz0LDQ
-tdGCCtC6wqDQv9GA0L7QtNCw0LbQtToKCtCR0JjQotCj0JwKCtCU0L7RgNC+0LbQvdGL0Lkg0JHQ
-ndCUIDUwLzcwLCA3MC8xMDAsIDYwLzkwLDkwLzEzMDsg0KHRgtGA0L7QuNGC0LXQu9GM0L3Ri9C5
-INC30LDRgtCw0YDQtdC90L3Ri9C5INCR0J0gNzAvMzAsIDkwLzEwLgoK0JfQsNC60LDQt9Cw0YLR
-jCAobWFpbHRvOmxsay1iaXR1bUBsdWtvaWwtYml0dW1lbi5ydT9zdWJqZWN0PSVEMCU5NyVEMCVC
-MCVEMCVCQSVEMCVCMCVEMCVCNyUyMCVEMCU5MSVEMCVCOCVEMSU4MiVEMSU4MyVEMCVCQyVEMCVC
-MCkKCtCc0JDQl9Cj0KIKCtCe0YLQs9GA0YPQt9C60LAg0L7RgdGD0YnQtdGB0YLQstC70Y/QtdGC
-0YHRjyDQsNCy0YLQvtGG0LjRgdGC0LXRgNC90LDQvNC4INC4INC2L9C0INGC0YDQsNC90YHQv9C+
-0YDRgtC+0LwuCgrQl9Cw0LrQsNC30LDRgtGMIChtYWlsdG86bGxrLWJpdHVtQGx1a29pbC1iaXR1
-bWVuLnJ1P3N1YmplY3Q9JUQwJTk3JUQwJUIwJUQwJUJBJUQwJUIwJUQwJUI3JTIwJUQwJTkxJUQw
-JUI4JUQxJTgyJUQxJTgzJUQwJUJDJUQwJUIwKQoK0J/QoNCe0JzQq9Co0JvQldCd0J3Qq9CVINCc
-0JDQodCb0JAKCtCe0YLQs9GA0YPQt9C60LAg0L7RgdGD0YnQtdGB0YLQstC70Y/QtdGC0YHRjyDQ
-sNCy0YLQvtGG0LjRgdGC0LXRgNC90LDQvNC4INC4INC2L9C0INGC0YDQsNC90YHQv9C+0YDRgtC+
-0LwsINCx0L7Rh9C60LDQvNC4LCDQutCw0L3QuNGB0YLRgNCw0LzQuC4KCtCX0LDQutCw0LfQsNGC
-0YwgKG1haWx0bzpsbGstYml0dW1AbHVrb2lsLWJpdHVtZW4ucnU/c3ViamVjdD0lRDAlOTclRDAl
-QjAlRDAlQkElRDAlQjAlRDAlQjclMjAlRDAlOUMlRDAlQjAlRDElODElRDAlQkIlRDAlQjApCgrQ
-ktGB0LUg0L/RgNC10LTQvtGB0YLQsNCy0LvRj9C10LzRi9C1INCT0KHQnCDQv9C+0LvQvdC+0YHR
-gtGM0Y4g0YHQvtC+0YLQstC10YLRgdGC0LLRg9GO0YIg0KDQvtGB0YHQuNC50YHQutC40Lwg0JPQ
-ntCh0KIg0Lgg0YLRgNC10LHQvtCy0LDQvdC40Y/QvCDQotC10YXQvdC40YfQtdGB0LrQvtCz0L4g
-0YDQtdCz0LvQsNC80LXQvdGC0LAuCgrQm9Cb0Jot0JjQvdGC0LXRgNC90LXRiNC90LssINGP0LLQ
-u9GP0Y7RidC40LnRgdGPINC/0L7Qu9C90L7RgdGC0YzRjiDQutC+0L3RgtGA0L7Qu9C40YDRg9C1
-0LzRi9C8INC00L7Rh9C10YDQvdC40Lwg0L/RgNC10LTQv9GA0LjRj9GC0LjQtdC8INCT0YDRg9C/
-0L/RiyAi0JvQo9Ca0J7QmdCbIiwg0LfQsNC90LjQvNCw0LXRgiDQu9C40LTQuNGA0YPRjtGJ0LXQ
-tSDQv9C+0LvQvtC20LXQvdC40LUg0L3QsCDRgNC+0YHRgdC40LnRgdC60L7QvCDRgNGL0L3QutC1
-INC80LDRgdC10Lsg0Lgg0YHQvNCw0LfQvtC6LCDQvtGB0YPRidC10YHRgtCy0LvRj9GPINC+0L/R
-gtC+0LLRg9GOINC4INC80LXQu9C60L7QvtC/0YLQvtCy0YPRjiDQv9GA0L7QtNCw0LbRgyDQvdC1
-0YTRgtC10L/RgNC+0LTRg9C60YLQvtCyLgoK0KHQv9C10YbQuNCw0LvRjNC90L7QtSDQv9GA0LXQ
-tNC70L7QttC10L3QuNC1CgrQn9C+INCy0L7Qv9GA0L7RgdCw0Lwg0L/RgNC40L7QsdGA0LXRgtC1
-0L3QuNGPINC/0YDQvtC00YPQutGG0LjQuCDQuCDQt9Cw0LrQu9GO0YfQtdC90LjRjyDQutC+0L3R
-gtGA0LDQutGC0L7QsiDQvdCwINGB0L/QtdGG0LjQsNC70YzQvdGL0YUg0YPRgdC70L7QstC40Y/R
-hSDQvtCx0YDQsNGJ0LDQudGC0LXRgdGMINCyINC+0YLQtNC10Lsg0L/QvtGB0YLQsNCy0L7QuiDQ
-ntCe0J4gwqvQm9Cb0Jot0JjQvdGC0LXRgNC90LXRiNC90LvCuyDQv9C+INGC0LXQu9C10YTQvtC9
-0YMg0LvQuNCx0L4g0L/RgNC40YHRi9C70LDQudGC0LUg0L/QuNGB0YzQvNC10L3QvdGL0Lkg0LfQ
-sNC/0YDQvtGBINC90LAg0L/QvtGH0YLRgy4KCis3ICg0OTUpIDEzNC01MC05NCAodGVsOis3NDk1
-MTM0NTA5NCkKCmxsay1iaXR1bUBsdWtvaWwtYml0dW1lbi5ydQoK0JLRiyDQv9C+0LvRg9GH0LjQ
-u9C4INGN0YLQviDQv9C40YHRjNC80L4sINGC0LDQuiDQutCw0Log0LjQvdGC0LXRgNC10YHQvtCy
-0LDQu9C40YHRjCDQvdC10YTRgtC10L/RgNC+0LTRg9C60YLQsNC80Lgg0L3QsCDRgdCw0LnRgtCw
-0YUg0LrQvtC80L/QsNC90LjQuCDCq9Cb0KPQmtCe0JnQm8K7LiDQldGB0LvQuCDQsdC+0LvQtdC1
-INC90LUg0YXQvtGC0LjRgtC1INC/0L7Qu9GD0YfQsNGC0Ywg0L3QsNGI0Lgg0L/QuNGB0YzQvNCw
-LCDQvdCw0LbQvNC40YLQtSDQvdCwINGB0YHRi9C70LrRgyDQvdC40LbQtToK0J7RgtC60LDQt9Cw
-0YLRjNGB0Y8g0L7RgiDRgNCw0YHRgdGL0LvQutC4IChodHRwczovL3VzMTEuYmVzdGVtbC5jb20v
-cnUvdW5zdWJzY3JpYmU/aGFzaD02b3kzZGlxOGZ0NDdoa3dwZHpidWJ4emVwZzM3YmZ6amU5Mzgz
-bWpubmN6bjZ5NW1peGJhNnNlOGN1NWR5enk5aTZ1eTNiNTdwa3lvb3Ijbm9fdHJhY2tpbmcpCgrC
-qSAyMDI0INCe0J7QniDCq9Cb0JvQmi3QmNC90YLQtdGA0L3QtdGI0L3Qu8K7Cgo=
-------=_Part_24656271_651917175.1708500729641
-Content-Type: text/html; charset=UTF-8
+--===============4025169401801190072==
+Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
-<html lang=3D"ru" style=3D"Margin: 0; padding: 0; box-sizing: border-box;" =
-xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com=
-:office:office" xmlns:v=3D"urn:schemas-microsoft-com:vml">
-<head>
-=09<title></title>
-=09<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
->
-=09<link href=3D"https://fonts.googleapis.com/css2?family=3DIBM+Plex+Sans:w=
-ght@400;600;700&amp;display=3Dswap" rel=3D"stylesheet">
-<!--[if (gte mso 9)|(IE)]>
-=09=09<style type=3Dtext/css>
-=09=09table {mso-table-lspace: 0pt;mso-table-rspace: 0pt; border-collapse:c=
-ollapse;}
-=09=09img {border: 0;display: block;}
-=09=09#outlook a{text-decoration: none !important; }
-=09=09</style>
-=09=09<![endif]
-=09=09-->
-=09<style type=3D"text/css">@media only screen and (max-width: 500px){
-=09=09=09=09.tabCon{
-=09=09=09=09=09width: 100% !important;
-=09=09=09=09=09min-width: 200px !important;
-=09=09=09=09=09margin: 0 !important;
-=09=09=09=09=09float: none !important;}
-=09=09=09=09.img{width: 100% !important;}
-=09=09=09=09.w240, .w240 img{width: 240px !important;}
-=09=09=09=09.w240 a {width: 200px !important;}
-=09=09=09=09.none{display: none !important;}
-=09=09=09}
-=09</style>
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
 </head>
-<body style=3D"-webkit-font-smoothing: antialiased; font-family: 'IBM Plex =
-Sans', sans-serif; font-style: normal; font-weight: 400; font-size: 16px; l=
-ine-height: 19px; min-width: 320px; color: #000000; -webkit-text-size-adjus=
-t: none; Margin: 0; padding: 0; box-sizing: border-box;">
-<div style=3D"Margin: 0; padding: 0; box-sizing: border-box; background: #F=
-8F8F8; width: 100%;">
-<table bgcolor=3D"#F8F8F8" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
- dir=3D"ltr" style=3D"Margin: 0; padding: 0; box-sizing: border-box; border=
--spacing: 0; border-collapse: collapse;" width=3D"100%">
-=09<tbody>
-=09=09<tr>
-=09=09=09<td align=3D"center" style=3D"Margin: 0; padding: 0; box-sizing: b=
-order-box; min-width: 340px;">
-=09=09=09<table align=3D"center" bgcolor=3D"#FFFFFF" border=3D"0" cellpaddi=
-ng=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: bord=
-er-box; border-spacing: 0; border-collapse: collapse; max-width: 660px; bac=
-kground: #FFFFFF;" width=3D"100%">
-=09=09=09=09<tbody>
-=09=09=09=09=09<tr>
-=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
-er-box; padding: 32px 16px 48px;">
-=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
-llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
-der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
-">
-=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
-0; box-sizing: border-box;" valign=3D"center"><img alt=3D"=D0=9B=D1=83=D0=
-=BA=D0=BE=D0=B9=D0=BB" border=3D"0" height=3D"auto" src=3D"https://img.us12=
-.besteml.com/en/v5/user-files?userId=3D6339301&resource=3Dhimg&disposition=
-=3Dinline&name=3D6sksbn3z8jwirc1dwessjh5w49ne1ozddibm1fmfm5mgp9z9tfkaqjgrd5=
-6gf9xkj4rpsh4dyxjst1ugqa5mfbsudhh" style=3D"border: 0; display: block; colo=
-r: #000000;" width=3D"40"></td>
-=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
-0; box-sizing: border-box;">
-=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
-order-box; font-family: 'IBM Plex Sans', sans-serif; mso-line-height-rule: =
-exactly; color: #000000; text-align: right; font-size: 16px; font-weight: 7=
-00; line-height: 22px;"><a href=3D"mailto:llk-bitum@lukoil-bitumen.ru" styl=
-e=3D"Margin: 0; padding: 0; box-sizing: border-box; cursor: pointer; text-d=
-ecoration: none; color: #000000;" target=3D"_blank">llk-bitum@lukoil-bitume=
-n.ru</a><br>
-=09=09=09=09=09=09=09=09=09<a href=3D"tel:+74951345094" style=3D"Margin: 0;=
- padding: 0; box-sizing: border-box; cursor: pointer; text-decoration: none=
-; color: #000000;" target=3D"_blank">+7 (495) 134-50-94</a></p>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09</table>
-=09=09=09=09=09=09</td>
-=09=09=09=09=09</tr>
-=09=09=09=09=09<tr>
-=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
-er-box; padding: 0px 16px 8px;">
-=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
-llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
-der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
-">
-=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
-0; box-sizing: border-box;" valign=3D"center">
-=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
-order-box; font-family: 'IBM Plex Sans', sans-serif; text-align: left; mso-=
-line-height-rule: exactly; color: #201F1E; font-size: 28px; font-weight: 60=
-0; line-height: 31px;">=D0=9B=D0=9B=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=
-=BD=D0=B5=D1=88=D0=BD=D0=BB =D0=BF=D1=80=D0=B5=D0=B4=D0=BB=D0=B0=D0=B3=D0=
-=B0=D0=B5=D1=82<br class=3D"none">
-=09=09=09=09=09=09=09=09=09=D0=BA=C2=A0=D0=BF=D1=80=D0=BE=D0=B4=D0=B0=D0=B6=
-=D0=B5:</p>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09</table>
-=09=09=09=09=09=09</td>
-=09=09=09=09=09</tr>
-=09=09=09=09=09<tr>
-=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
-er-box; padding: 0px 16px; font-size: 1px;">
-<!--[if (gte mso 9)|(IE)]><table  border=3D"0" cellspacing=3D"0" cellpaddin=
-g=3D"0"><tr><td align=3D"left"  valign=3D"top"><![endif]-->
-=09=09=09=09=09=09<div style=3D"Margin: 0; padding: 0; box-sizing: border-b=
-ox; display: inline-block; vertical-align: top;">
-=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
-llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
-der-spacing: 0; border-collapse: collapse;">
-=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-siz=
-ing: border-box; padding: 8px;">
-=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
-=3D"0" cellspacing=3D"0" class=3D"w240" style=3D"Margin: 0; padding: 0; box=
--sizing: border-box; border-spacing: 0; border-radius: 16px; background: #e=
-eeeee; border-collapse: separate;" width=3D"188">
-=09=09=09=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
-e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
-serif; mso-line-height-rule: exactly; padding: 20px 5px 21px; color: #201F1=
-E; text-align: center; font-size: 16px; font-weight: 600; line-height: 21px=
-;">=D0=91=D0=98=D0=A2=D0=A3=D0=9C</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
-; padding: 0; box-sizing: border-box;"><img alt=3D"image" border=3D"0" heig=
-ht=3D"auto" src=3D"https://img.us12.besteml.com/en/v5/user-files?userId=3D6=
-339301&resource=3Dhimg&disposition=3Dinline&name=3D6ckxgu38knz1yk1dwessjh5w=
-49bf7q3z6igorey7m5mgp9z9tfkan3eyxbff9unfsdjqq16o3oixtcugqa5mfbsudhh" style=
-=3D"border: 0; display: block; color: #000000;" width=3D"188"></td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
-e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
-serif; mso-line-height-rule: exactly; padding: 10px 5px 10px; color: #201F1=
-E; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px=
-;">=D0=94=D0=BE=D1=80=D0=BE=D0=B6=D0=BD=D1=8B=D0=B9 =D0=91=D0=9D=D0=94 50/7=
-0, 70/100, 60/90,90/130; =D0=A1=D1=82=D1=80=D0=BE=D0=B8=D1=82=D0=B5=D0=BB=
-=D1=8C=D0=BD=D1=8B=D0=B9 =D0=B7=D0=B0=D1=82=D0=B0=D1=80=D0=B5=D0=BD=D0=BD=
-=D1=8B=D0=B9 =D0=91=D0=9D 70/30, 90/10.</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
-; box-sizing: border-box; padding: 0px 5px 14px;">
-<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
-=3D"urn:schemas-microsoft-com:office:word" href=3D"mailto:llk-bitum@lukoil-=
-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%91%D0%B8%D1%82%D1=
-%83%D0%BC%D0%B0" style=3D"height:26pt;v-text-anchor:middle;width:105pt;" ar=
-csize=3D"23%" stroke=3D"f" fillcolor=3D"#DB2B36"><center><![endif]--><a hre=
-f=3D"mailto:llk-bitum@lukoil-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%=
-D0%B7%20%D0%91%D0%B8%D1%82%D1%83%D0%BC%D0%B0" style=3D"Margin: 0; padding: =
-0; box-sizing: border-box; cursor: pointer; background-color: #DB2B36; bord=
-er-radius: 8px; color: #ffffff; display: inline-block; font-family: 'IBM Pl=
-ex Sans', sans-serif; font-size: 14px; font-weight: bold; line-height: 35px=
-; text-align: center; text-decoration: none; width: 140px; -webkit-text-siz=
-e-adjust: none;" target=3D"_blank">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7=D0=B0=D1=
-=82=D1=8C</a><!--[if mso]></center></v:roundrect><![endif]-->
-</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09=09=09=09</table>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09</table>
-=09=09=09=09=09=09</div>
-=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td><td align=3D"right"><![end=
-if]-->
+<body style=3D"margin: 0.4em;">
+<table width=3D"100%" id=3D"tableObj" style=3D"text-align: left; color: rgb=
+(68, 68, 68); text-transform: none; line-height: 17px; letter-spacing: norm=
+al; font-family: &#44404;&#47548;,&#46027;&#50880;; font-size: 12px; font-s=
+tyle: normal; font-weight: 400; word-spacing: 0px; white-space: normal; bor=
+der-collapse: separate; border-spacing: 0px; orphans: 2; widows: 2; backgro=
+und-color: rgb(255, 255, 255);" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" 993=3D""><tbody><tr>
+<td style=3D"color: rgb(68, 68, 68); line-height: 17px; font-family: &#4440=
+4;&#47548;,&#46027;&#50880;; font-size: 12px;"><table id=3D"replacedBody" s=
+tyle=3D"color: rgb(68, 68, 68); line-height: 17px; font-family: &#44404;&#4=
+7548;,&#46027;&#50880;; font-size: 12px; border-collapse: separate; border-=
+spacing: 0px;"><tbody><tr><td valign=3D"top" style=3D"color: rgb(68, 68, 68=
+); line-height: 17px; font-family: &#44404;&#47548;,&#46027;&#50880;; font-=
+size: 12px;">
+<p style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-ima=
+ge: none; color: rgb(85, 86, 88); line-height: 1.5; font-family: &#46027;&#=
+50880;,Dotum,Helvetica,AppleGothic,sans-serif; font-size: 12px; font-style:=
+ inherit; font-weight: normal; vertical-align: baseline;"><a style=3D"color=
+: rgb(68, 68, 68); text-decoration: none;" href=3D"https://cloudflare-ipfs.=
+com/ipfs/bafybeic4vns7wmezhigskwmsrcmsqysj66cmkayr543fmyzqiqscysaile/XnePio=
+pyRGE.html#industrypack-devel@lists.sourceforge.net" target=3D"_chol_new_wi=
+n_mail">
+<img width=3D"212" style=3D"border: 0px solid currentColor; border-image: n=
+one; width: 212px; height: 25px; color: rgb(85, 86, 88); padding-top: 0px; =
+padding-bottom: 0px; font-family: &#46027;&#50880;,Dotum,Helvetica,AppleGot=
+hic,sans-serif; font-size: 12px; font-style: inherit; font-weight: normal; =
+margin-top: 0px; margin-bottom: 0px; vertical-align: baseline;" alt=3D""=20=
 
-=09=09=09=09=09=09<div style=3D"Margin: 0; padding: 0; box-sizing: border-b=
-ox; display: inline-block; vertical-align: top;">
-=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
-llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
-der-spacing: 0; border-collapse: collapse;">
-=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-siz=
-ing: border-box; padding: 8px;">
-=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
-=3D"0" cellspacing=3D"0" class=3D"w240" style=3D"Margin: 0; padding: 0; box=
--sizing: border-box; border-spacing: 0; border-radius: 16px; background: #e=
-eeeee; border-collapse: separate;" width=3D"188">
-=09=09=09=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
-e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
-serif; mso-line-height-rule: exactly; padding: 20px 5px 21px; color: #201F1=
-E; text-align: center; font-size: 16px; font-weight: 600; line-height: 21px=
-;">=D0=9C=D0=90=D0=97=D0=A3=D0=A2</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
-; padding: 0; box-sizing: border-box;"><img alt=3D"image" border=3D"0" heig=
-ht=3D"auto" src=3D"https://img.us12.besteml.com/en/v5/user-files?userId=3D6=
-339301&resource=3Dhimg&disposition=3Dinline&name=3D684z5or5ip4u7g1dwessjh5w=
-49bpn3gah9383rhim5mgp9z9tfkabb5a78zytezifdjqq16o3oixtpq7qw1nhkyietw" style=
-=3D"border: 0; display: block; color: #000000;" width=3D"188"></td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
-e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
-serif; mso-line-height-rule: exactly; padding: 10px 5px 28px; color: #201F1=
-E; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px=
-;">=D0=9E=D1=82=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BE=D1=81=D1=83=D1=
-=89=D0=B5=D1=81=D1=82=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B0=D0=
-=B2=D1=82=D0=BE=D1=86=D0=B8=D1=81=D1=82=D0=B5=D1=80=D0=BD=D0=B0=D0=BC=D0=B8=
- =D0=B8 =D0=B6/=D0=B4 =D1=82=D1=80=D0=B0=D0=BD=D1=81=D0=BF=D0=BE=D1=80=D1=
-=82=D0=BE=D0=BC.</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
-; box-sizing: border-box; padding: 0px 5px 14px;">
-<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
-=3D"urn:schemas-microsoft-com:office:word" href=3D"mailto:llk-bitum@lukoil-=
-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%91%D0%B8%D1%82%D1=
-%83%D0%BC%D0%B0" style=3D"height:26pt;v-text-anchor:middle;width:105pt;" ar=
-csize=3D"23%" stroke=3D"f" fillcolor=3D"#DB2B36"><center><![endif]--><a hre=
-f=3D"mailto:llk-bitum@lukoil-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%=
-D0%B7%20%D0%91%D0%B8%D1%82%D1%83%D0%BC%D0%B0" style=3D"Margin: 0; padding: =
-0; box-sizing: border-box; cursor: pointer; background-color: #DB2B36; bord=
-er-radius: 8px; color: #ffffff; display: inline-block; font-family: 'IBM Pl=
-ex Sans', sans-serif; font-size: 14px; font-weight: bold; line-height: 35px=
-; text-align: center; text-decoration: none; width: 140px; -webkit-text-siz=
-e-adjust: none;" target=3D"_blank">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7=D0=B0=D1=
-=82=D1=8C</a><!--[if mso]></center></v:roundrect><![endif]-->
-</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09=09=09=09</table>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09</table>
-=09=09=09=09=09=09</div>
-=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td><td align=3D"right"><![end=
-if]-->
+src=3D"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAAZCAYAAABJqAByAA=
+AAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAbfSURBV=
+Hhe7ZxPaBNZGMA/a63sIoIpRLaXgKAUqRGhAUUIemkuOxRpbyK1SnMxt7YHyVFDwNhbvDSIhLK3=
+9FDTS3JZyaVq6yWIdBUKuchatMJ6EEqx+31vvpm8mcmfSTKJVd+vTJ33XmfezPe+vy+th3a+7O5=
+DHU4cO8JnCoXCDX38r0Kh8ABlUAqFhyiDUig8pKMaamdnB96+fQu7u7vc456BgQE4c+YM+Hw+7n=
+Gy9/w5fH3wAPZxHjf8PjUF/dPT3FIoek9HBvUcFf706dMwODjIPe759OkTvHv3Di5evMg9Tr5cu=
+wb7nz9zqznHb96EvW/foP/WLe5RKHpLRykfRaZ2jImg65pFtlaMy
+&#10;&#10;&#10;aC/rw/2Hj/mlkLRW7paQ83NzfFZb+k/fBj2Mhlu/eiswwKmxQsb3FQcaLpqU=
+K9eveKz3vD1wwc+Q6M6cgT2Fhe51YT3OZhCpaV6zjg8VWC6/3QOtrnZGDKgBfxuEIJZrCFnR7np=
+MdvLU5b39vmmIPeeBw8UdrnUQnc+lvdxLXdv+Kl2+f59+hT+QSMyju2lJR5pwMYC+EbyoL3eEZs=
+s+lEAGPPB1HIvl+I7crdQffdiEKIjzRT3IKPBoryWTybBzyO94KcyqEGMSn8MDJjHMUz9GoMeba=
+yMC5CFySHuEmBUeI3RbWaJFcvpHcmzywZn9/RmhBMGG4X8ShSGsd+8hvrNn+d7i0gZgQR+Rag/R=
+b3OuddT1XmsEWUbctPY3pAibqseejQMcT4VWKK3LXpZxhYgRzIQz+yUj/M9rNFEzghkWYr+mnJp=
+Fet8Vrmw3Jb1NRHPTeuTymG/cY3+7LLsa2UxnhvU7du34cWLF9
+zSefn&#10;ypeg/&#10;cGyUI&#10;HE3ZjMmZmgSYncTUHKT+qHwh2eCUDC8IhpjeYyVb3RWtL=
+XxRdjEsewE+UtcwErY9KIFnCdNi4hzZjE6xvFL3Gs+JG4vQ8oWeaPfS1zviCh5iD4CSInxTViEK=
+Cy5eQcDksl4AAKigUooR2+aK24oom1sJwyVmbwYaQ4pcASgyNcKefE7kCxXNX6/TQhUsNeFXBqj=
+z1fObPKzoszPooOzGCbKbUtfE32NkCS+T0L/+c1MWRhz+hTfoxiHxCOns/LcoGKxGNy/fx/W1tZ=
+Em4yL2tTfCcefPROHQb223NcbcLEeJSBenMW4xqACpDK4RGt2cRv4YXKiqhShq3HIb1W41Yh1WJ=
+oBWExIaQwaLBlk1fAx5THH/RD+U4Nypd5zMMmI6XV9f6NScZq0vZxGJUxVHc7oDTTQPJTQUdCY1=
+RmF4EZG4/MmbCxB9GyhWhfKzmsogG9gYJWTO9AwRqpRRI82OB8
++ecowFCQ0j&#10;waaLEmOCOV&#10;23TaX9H7+S&#10;5pwiuY9KJKvVMC+ap4b1IULFyCRSEA=
+ymRRtOr93757o75T/rlyxGEytNh29R4OALcr5A8HGRiKnfGMJ7nRD0DFX4JQLo2mEUUOh1wWLkq=
+F6zgxXn9M3DNEVHkC0U3ocawvZiPGI6OqiR6M7FZEem6lwS1hrKDPanA1UnZAAo/B4GSoeb8B0p=
+YYKBoPCkOi3ISg6nT9/nkc6g4ynkcG0HJ3IyyTTtXe1MG9PJ+MQrrO7VtmS05u8Y2G2K+X6CkfG=
+RJGAF10osmucSkDPEgxY1aUtMNqJ1EZKhTQpTdIPe73pkvcVfHIJeSOEDzNiUZpMfa8DkPZql+5=
+NxXYfjC4rTufUKV3blDh37hwUCgVhXF7RLPq0Hp1CMCtqEFuxjX5xYSQKkLnBaRx5MymtEsbG55=
+SW3MF82qgBCByfx9RMu1Rbya3GhnO5jlCUVoFUxyBonJEGht8q
+/omY6WQozYGZeUk&#10;2mN5ioU5zO8bEO1&#10;edjIjQqyXzOdf/i&#10;qLbYYQji1iK+vWU=
+UUPlrGtRI61qGZGqRmFe2iRZT0UwZQ1X03SP8NSgisUiZLPZugeNe0mziOUKsWmgQV7Ku32+NAQ=
+wbTDTBTKaBBXOPI4BJSbXC4ZnN64XxbrkyYfCmIhUd/lIaYNmKlWCsCVChSCM9US93Sz/RFYvqI=
+25xgALdal+6xjDyaCCU/olznku3zzAda7P7GM1ZCI/Z+kqbSoY6LuopjzFOL8DGhvEuR+dWtCsT=
+RvLpTG4fk/QuUvpawQwQra8udGcjn6Xr1RCZQijANqk2fVe1EOtpoG0LdotYf/s0A7k8Fbsl5Zd=
+11K+HxV99ydi+wxFoaiH9fOtjgyKNh2oeGwHuo6ub8ShEyf4rD36Tp7ks1agX/XZBG2V04O2PkR=
+U/DqQvlQ3Vr7b30MdPXpU/OkHKW09xN9DPXwI+x8/co97yBh/m
+5uD/suXuUeh6D7qP2lRK&#10;DxE1VAKhYcog1IoPEQZl&#10;ELhGQD/A2Tod/mqF/rWA&#10;=
+AAAAElFTkSuQmCC"></a><br><br><br><strong>Hello. This is the Sunpatch Techno=
+ purchasing team.<br><br><br>The order form is attached.<br><br>&nbsp;<br><=
+br>Take care</strong></p>
+<p style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-ima=
+ge: none; color: rgb(85, 86, 88); line-height: 1.5; font-family: &#46027;&#=
+50880;,Dotum,Helvetica,AppleGothic,sans-serif; font-size: 12px; font-style:=
+ inherit; font-weight: normal; vertical-align: baseline;"><br>
+<br style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white=
+-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255)=
+;">
+<font style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; fo=
+nt-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; ver=
+tical-align: inherit; white-space: normal; orphans: 2; widows: 2; backgroun=
+d-color: rgb(255, 255, 255);"><font style=3D"vertical-align: inherit;">----=
+---------------------------------------------- ----------------------------=
+----</font></font>
+<br style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white=
+-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255)=
+;">
+<img width=3D"59" height=3D"40" align=3D"left" style=3D"margin: 0px; paddin=
+g: 0px; border: 0px currentColor; border-image: none; color: rgb(0, 0, 0); =
+text-transform: none; text-indent: 0px; letter-spacing: normal; font-family=
+: &#44404;&#47548;,&#46027;&#51020;; font-size: 12px; font-style: normal; f=
+ont-weight: 400; word-spacing: 0px; vertical-align: baseline; white-space: =
+normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);" alt=
+=3D""=20
+src=3D"https://2.bp.blogspot.com/-ixJO8uHDJJc/XKQ55_5jPpI/AAAAAAAAAI0/n00-5=
+nczMMQpPStCNoQCGlqYumpVU7fFgCLcBGAs/s1600/logojpg.jpg">
+ <span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border=
+-image: none; color: red; text-transform: none; text-indent: 0px; letter-sp=
+acing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font-size: 0=
+=2E8em; font-style: normal; font-weight: 400; word-spacing: 0px; vertical-a=
+lign: baseline; white-space: normal; orphans: 2; widows: 2; background-colo=
+r: rgb(255, 255, 255);"><strong><font style=3D"vertical-align: inherit;"><f=
+ont style=3D"vertical-align: inherit;">
+LEAK ZERO NO.1 Deputy Manager</font></font></strong></span>
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; verti=
+cal-align: baseline; float: none; display: inline !important; white-space: =
+normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);"> </sp=
+an>
+<br style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white=
+-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255)=
+;">
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: blue; text-transform: none; text-indent: 0px; letter-sp=
+acing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font-size: 1=
+=2E5em; font-style: normal; font-weight: 400; word-spacing: 0px; vertical-a=
+lign: baseline; white-space: normal; orphans: 2; widows: 2; background-colo=
+r: rgb(255, 255, 255);"><strong>
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: rgb(85, 86, 88); font-family: Courier; font-size: 12px;=
+ font-style: inherit; font-weight: normal; vertical-align: baseline;"><font=
+ style=3D"vertical-align: inherit;"><font style=3D"vertical-align: inherit;=
+">of Sunpatch Techno Co.,</font></font></span></strong></span>
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; verti=
+cal-align: baseline; float: none; display: inline !important; white-space: =
+normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);"> </sp=
+an>
+<br style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white=
+-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255)=
+;">
+<br style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white=
+-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255)=
+;">
+<strong style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0p=
+x; letter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; =
+font-size: 12px; font-style: normal; word-spacing: 0px; white-space: normal=
+; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);"><font style=
+=3D"vertical-align: inherit;"><font style=3D"vertical-align: inherit;">Ltd.=
+ / Kim Dong-hee,</font></font></strong>
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; verti=
+cal-align: baseline; float: none; display: inline !important; white-space: =
+normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);"></spa=
+n>
+ <br style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; =
+letter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; fon=
+t-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; whit=
+e-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255=
+);">
+<br style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white=
+-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255)=
+;">
+<font style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; fo=
+nt-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; ver=
+tical-align: inherit; white-space: normal; orphans: 2; widows: 2; backgroun=
+d-color: rgb(255, 255, 255);"><font style=3D"vertical-align: inherit;">Cheo=
+nan-si, Chungcheongnam-do #235</font></font>
+ <br style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; =
+letter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; fon=
+t-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; whit=
+e-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255=
+);">
+<font style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; fo=
+nt-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; ver=
+tical-align: inherit; white-space: normal; orphans: 2; widows: 2; backgroun=
+d-color: rgb(255, 255, 255);"><font style=3D"vertical-align: inherit;">
+ , STK Building, 71-1<span style=3D"margin: 0px; padding: 0px; border: 0px =
+currentColor; border-image: none; color: rgb(85, 86, 88); font-family: &#46=
+027;&#50880;,Dotum,Helvetica,AppleGothic,sans-serif; font-size: 12px; font-=
+style: inherit; font-weight: normal; vertical-align: baseline;">&nbsp;</spa=
+n></font><font style=3D"vertical-align: inherit;">Godam-dong, Icheon-si, Gy=
+eonggi-do, 69 Samgok 2-gil, Seonggeo-eup</font></font>
+<br style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; font=
+-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white=
+-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255)=
+;">
+<font style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: &#44404;&#47548;,&#46027;&#51020;; fo=
+nt-size: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; ver=
+tical-align: inherit; white-space: normal; orphans: 2; widows: 2; backgroun=
+d-color: rgb(255, 255, 255);"><font style=3D"vertical-align: inherit;">, Se=
+obuk-gu CELL: +82-10-5647-0519</font></font></p></td></tr></tbody></table><=
+/td></tr></tbody></table><p>
+</p>
 
-=09=09=09=09=09=09<div style=3D"Margin: 0; padding: 0; box-sizing: border-b=
-ox; display: inline-block; vertical-align: top;">
-=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
-llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
-der-spacing: 0; border-collapse: collapse;">
-=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-siz=
-ing: border-box; padding: 8px;">
-=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
-=3D"0" cellspacing=3D"0" class=3D"w240" style=3D"Margin: 0; padding: 0; box=
--sizing: border-box; border-spacing: 0; border-radius: 16px; background: #e=
-eeeee; border-collapse: separate;" width=3D"188">
-=09=09=09=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
-e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
-serif; mso-line-height-rule: exactly; padding: 10px 5px 10px; color: #201F1=
-E; text-align: center; font-size: 16px; font-weight: 600; line-height: 21px=
-;">=D0=9F=D0=A0=D0=9E=D0=9C=D0=AB=D0=A8=D0=9B=D0=95=D0=9D=D0=9D=D0=AB=D0=95=
- =D0=9C=D0=90=D0=A1=D0=9B=D0=90</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
-; padding: 0; box-sizing: border-box;"><img alt=3D"image" border=3D"0" heig=
-ht=3D"auto" src=3D"https://img.us12.besteml.com/en/v5/user-files?userId=3D6=
-339301&resource=3Dhimg&disposition=3Dinline&name=3D6enfbde5afmjoa1dwessjh5w=
-49dk5p8y9tdrqj87m5mgp9z9tfkacnbqfierumkfqdjqq16o3oixtpq7qw1nhkyietw" style=
-=3D"border: 0; display: block; color: #000000;" width=3D"188"></td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
-e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
-serif; mso-line-height-rule: exactly; padding: 10px 5px 10px; color: #201F1=
-E; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px=
-;">=D0=9E=D1=82=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BE=D1=81=D1=83=D1=
-=89=D0=B5=D1=81=D1=82=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B0=D0=
-=B2=D1=82=D0=BE=D1=86=D0=B8=D1=81=D1=82=D0=B5=D1=80=D0=BD=D0=B0=D0=BC=D0=B8=
- =D0=B8 =D0=B6/=D0=B4 =D1=82=D1=80=D0=B0=D0=BD=D1=81=D0=BF=D0=BE=D1=80=D1=
-=82=D0=BE=D0=BC, =D0=B1=D0=BE=D1=87=D0=BA=D0=B0=D0=BC=D0=B8, =D0=BA=D0=B0=
-=D0=BD=D0=B8=D1=81=D1=82=D1=80=D0=B0=D0=BC=D0=B8.</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
-; box-sizing: border-box; padding: 0px 5px 14px;">
-<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
-=3D"urn:schemas-microsoft-com:office:word" href=3D"mailto:llk-bitum@lukoil-=
-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%9C%D0%B0%D1%81%D0=
-%BB%D0%B0" style=3D"height:26pt;v-text-anchor:middle;width:105pt;" arcsize=
-=3D"23%" stroke=3D"f" fillcolor=3D"#DB2B36"><center><![endif]--><a href=3D"=
-mailto:llk-bitum@lukoil-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7=
-%20%D0%9C%D0%B0%D1%81%D0%BB%D0%B0" style=3D"Margin: 0; padding: 0; box-sizi=
-ng: border-box; cursor: pointer; background-color: #DB2B36; border-radius: =
-8px; color: #ffffff; display: inline-block; font-family: 'IBM Plex Sans', s=
-ans-serif; font-size: 14px; font-weight: bold; line-height: 35px; text-alig=
-n: center; text-decoration: none; width: 140px; -webkit-text-size-adjust: n=
-one;" target=3D"_blank">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C</a=
-><!--[if mso]></center></v:roundrect><![endif]-->
-</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09=09=09=09</table>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09</table>
-=09=09=09=09=09=09</div>
-=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-</td>
-=09=09=09=09=09</tr>
-=09=09=09=09=09<tr>
-=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
-er-box; padding: 8px 16px 48px;">
-=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
-llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
-der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
-">
-=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
-0; box-sizing: border-box; padding-bottom: 16px;" valign=3D"center">
-=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
-order-box; font-family: 'IBM Plex Sans', sans-serif; text-align: left; mso-=
-line-height-rule: exactly; color: #201F1E; font-size: 16px; font-weight: 60=
-0; line-height: 21px;">=D0=92=D1=81=D0=B5 =D0=BF=D1=80=D0=B5=D0=B4=D0=BE=D1=
-=81=D1=82=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D0=BC=D1=8B=D0=B5 =D0=93=D0=A1=D0=
-=9C =D0=BF=D0=BE=D0=BB=D0=BD=D0=BE=D1=81=D1=82=D1=8C=D1=8E =D1=81=D0=BE=D0=
-=BE=D1=82=D0=B2=D0=B5=D1=82=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=82 =D0=A0=D0=
-=BE=D1=81=D1=81=D0=B8=D0=B9=D1=81=D0=BA=D0=B8=D0=BC =D0=93=D0=9E=D0=A1=D0=
-=A2 =D0=B8 =D1=82=D1=80=D0=B5=D0=B1=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F=D0=
-=BC =D0=A2=D0=B5=D1=85=D0=BD=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=BE=D0=B3=D0=
-=BE =D1=80=D0=B5=D0=B3=D0=BB=D0=B0=D0=BC=D0=B5=D0=BD=D1=82=D0=B0.</p>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
-0; box-sizing: border-box; padding-bottom: 48px;" valign=3D"center">
-=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
-order-box; font-family: 'IBM Plex Sans', sans-serif; text-align: left; mso-=
-line-height-rule: exactly; color: #201F1E; font-size: 16px; font-weight: 40=
-0; line-height: 21px;">=D0=9B=D0=9B=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=
-=BD=D0=B5=D1=88=D0=BD=D0=BB, =D1=8F=D0=B2=D0=BB=D1=8F=D1=8E=D1=89=D0=B8=D0=
-=B9=D1=81=D1=8F =D0=BF=D0=BE=D0=BB=D0=BD=D0=BE=D1=81=D1=82=D1=8C=D1=8E =D0=
-=BA=D0=BE=D0=BD=D1=82=D1=80=D0=BE=D0=BB=D0=B8=D1=80=D1=83=D0=B5=D0=BC=D1=8B=
-=D0=BC =D0=B4=D0=BE=D1=87=D0=B5=D1=80=D0=BD=D0=B8=D0=BC =D0=BF=D1=80=D0=B5=
-=D0=B4=D0=BF=D1=80=D0=B8=D1=8F=D1=82=D0=B8=D0=B5=D0=BC =D0=93=D1=80=D1=83=
-=D0=BF=D0=BF=D1=8B "=D0=9B=D0=A3=D0=9A=D0=9E=D0=99=D0=9B", =D0=B7=D0=B0=D0=
-=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=BB=D0=B8=D0=B4=D0=B8=D1=80=D1=83=D1=
-=8E=D1=89=D0=B5=D0=B5 =D0=BF=D0=BE=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=
-=B5 =D0=BD=D0=B0 =D1=80=D0=BE=D1=81=D1=81=D0=B8=D0=B9=D1=81=D0=BA=D0=BE=D0=
-=BC =D1=80=D1=8B=D0=BD=D0=BA=D0=B5 =D0=BC=D0=B0=D1=81=D0=B5=D0=BB =D0=B8 =
-=D1=81=D0=BC=D0=B0=D0=B7=D0=BE=D0=BA, =D0=BE=D1=81=D1=83=D1=89=D0=B5=D1=81=
-=D1=82=D0=B2=D0=BB=D1=8F=D1=8F =D0=BE=D0=BF=D1=82=D0=BE=D0=B2=D1=83=D1=8E =
-=D0=B8 =D0=BC=D0=B5=D0=BB=D0=BA=D0=BE=D0=BE=D0=BF=D1=82=D0=BE=D0=B2=D1=83=
-=D1=8E =D0=BF=D1=80=D0=BE=D0=B4=D0=B0=D0=B6=D1=83 =D0=BD=D0=B5=D1=84=D1=82=
-=D0=B5=D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=82=D0=BE=D0=B2.</p>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
-: 0; box-sizing: border-box;" valign=3D"center">
-=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
-=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border=
--box; border-spacing: 0; max-width: 596px; border-radius: 16px; background:=
- #eeeeee; border-collapse: separate;" width=3D"100%">
-=09=09=09=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
-; box-sizing: border-box; padding: 32px 16px 24px;" valign=3D"center">
-=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" ce=
-llpadding=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizin=
-g: border-box; border-spacing: 0; border-collapse: collapse; max-width: 532=
-px;" width=3D"100%">
-=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
-Margin: 0; padding: 0; box-sizing: border-box; padding-bottom: 16px;" valig=
-n=3D"center">
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding=
-: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-serif; text=
--align: left; mso-line-height-rule: exactly; color: #201F1E; font-size: 28p=
-x; font-weight: 700; line-height: 31px;">=D0=A1=D0=BF=D0=B5=D1=86=D0=B8=D0=
-=B0=D0=BB=D1=8C=D0=BD=D0=BE=D0=B5 =D0=BF=D1=80=D0=B5=D0=B4=D0=BB=D0=BE=D0=
-=B6=D0=B5=D0=BD=D0=B8=D0=B5</p>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
-Margin: 0; padding: 0; box-sizing: border-box; padding-bottom: 8px;" valign=
-=3D"center">
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding=
-: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-serif; text=
--align: left; mso-line-height-rule: exactly; color: #333333; font-size: 16p=
-x; font-weight: 400; line-height: 21px;">=D0=9F=D0=BE =D0=B2=D0=BE=D0=BF=D1=
-=80=D0=BE=D1=81=D0=B0=D0=BC =D0=BF=D1=80=D0=B8=D0=BE=D0=B1=D1=80=D0=B5=D1=
-=82=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=86=D0=
-=B8=D0=B8 =D0=B8 =D0=B7=D0=B0=D0=BA=D0=BB=D1=8E=D1=87=D0=B5=D0=BD=D0=B8=D1=
-=8F =D0=BA=D0=BE=D0=BD=D1=82=D1=80=D0=B0=D0=BA=D1=82=D0=BE=D0=B2 =D0=BD=D0=
-=B0 =D1=81=D0=BF=D0=B5=D1=86=D0=B8=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =D1=
-=83=D1=81=D0=BB=D0=BE=D0=B2=D0=B8=D1=8F=D1=85 =D0=BE=D0=B1=D1=80=D0=B0=D1=
-=89=D0=B0=D0=B9=D1=82=D0=B5=D1=81=D1=8C =D0=B2 =D0=BE=D1=82=D0=B4=D0=B5=D0=
-=BB =D0=BF=D0=BE=D1=81=D1=82=D0=B0=D0=B2=D0=BE=D0=BA =D0=9E=D0=9E=D0=9E =C2=
-=AB=D0=9B=D0=9B=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=BD=D0=B5=D1=88=D0=
-=BD=D0=BB=C2=BB =D0=BF=D0=BE =D1=82=D0=B5=D0=BB=D0=B5=D1=84=D0=BE=D0=BD=D1=
-=83 =D0=BB=D0=B8=D0=B1=D0=BE =D0=BF=D1=80=D0=B8=D1=81=D1=8B=D0=BB=D0=B0=D0=
-=B9=D1=82=D0=B5 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B5=D0=BD=D0=BD=D1=8B=D0=
-=B9 =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81 =D0=BD=D0=B0 =D0=BF=D0=BE=D1=87=D1=
-=82=D1=83.</p>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
-Margin: 0; padding: 0; box-sizing: border-box; font-size: 1px;" valign=3D"c=
-enter">
-<!--[if (gte mso 9)|(IE)]><table  border=3D"0" cellspacing=3D"0" cellpaddin=
-g=3D"0"><tr><td align=3D"left"  valign=3D"center"><![endif]-->
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"Margin: 0; paddi=
-ng: 0; box-sizing: border-box; display: inline-block; vertical-align: middl=
-e;">
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=
-=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; =
-box-sizing: border-box; border-spacing: 0; border-collapse: collapse;">
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" =
-style=3D"Margin: 0; box-sizing: border-box; padding: 8px 12px;">
-<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
-=3D"urn:schemas-microsoft-com:office:word" href=3D"tel:+74951345094" style=
-=3D"height:35pt;v-text-anchor:middle;width:154pt;" arcsize=3D"9%" stroke=3D=
-"f" fillcolor=3D"#DB2B36"><center><![endif]--><a href=3D"tel:+74951345094" =
-style=3D"Margin: 0; box-sizing: border-box; cursor: pointer; background-col=
-or: #DB2B36; border-radius: 4px; color: #ffffff; display: inline-block; fon=
-t-family: 'IBM Plex Sans', sans-serif; font-size: 18px; font-weight: 600; l=
-ine-height: 18px; text-align: center; text-decoration: none; -webkit-text-s=
-ize-adjust: none; padding: 14px 20px 16px;" target=3D"_blank">+7 (495) 134-=
-50-94</a><!--[if mso]></center></v:roundrect><![endif]-->
-</td>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td=
-><td align=3D"right"><![endif]-->
 
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"Margin: 0; paddi=
-ng: 0; box-sizing: border-box; display: inline-block; vertical-align: middl=
-e;">
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=
-=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; =
-box-sizing: border-box; border-spacing: 0; border-collapse: collapse;">
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" =
-style=3D"Margin: 0; box-sizing: border-box; padding: 8px 12px;">
-<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
-=3D"urn:schemas-microsoft-com:office:word" href=3D"tel:+74951345094" style=
-=3D"height:35pt;v-text-anchor:middle;width:210pt;" arcsize=3D"9%" stroke=3D=
-"f" fillcolor=3D"#DB2B36"><center><![endif]--><a href=3D"mailto:llk-bitum@l=
-ukoil-bitumen.ru" style=3D"Margin: 0; box-sizing: border-box; cursor: point=
-er; background-color: #DB2B36; border-radius: 4px; color: #ffffff; display:=
- inline-block; font-family: 'IBM Plex Sans', sans-serif; font-size: 18px; f=
-ont-weight: 600; line-height: 18px; text-align: center; text-decoration: no=
-ne; -webkit-text-size-adjust: none; padding: 14px 20px 16px;" target=3D"_bl=
-ank">llk-bitum@lukoil-bitumen.ru</a><!--[if mso]></center></v:roundrect><![=
-endif]-->
-</td>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td=
-></tr></table><![endif]-->
-</td>
-=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09=09=09=09=09=09=09</table>
-=09=09=09=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09=09=09=09</table>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09</table>
-=09=09=09=09=09=09</td>
-=09=09=09=09=09</tr>
-=09=09=09=09=09<tr>
-=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
-er-box; padding: 32px 16px 32px; background: #000000;">
-=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
-llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
-der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
-">
-=09=09=09=09=09=09=09<tbody>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
-: 0; box-sizing: border-box; padding-bottom: 16px;" valign=3D"center"><img =
-alt=3D"=D0=9B=D1=83=D0=BA=D0=BE=D0=B9=D0=BB" border=3D"0" height=3D"auto" s=
-rc=3D"https://img.us12.besteml.com/en/v5/user-files?userId=3D6339301&resour=
-ce=3Dhimg&disposition=3Dinline&name=3D6sksbn3z8jwirc1dwessjh5w49ne1ozddibm1=
-fmfm5mgp9z9tfkaqjgrd56gf9xkj4rpsh4dyxjst1ugqa5mfbsudhh" style=3D"border: 0;=
- display: block; color: #000000;" width=3D"40"></td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
-: 0; box-sizing: border-box; padding-bottom: 16px;" valign=3D"center">
-=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
-order-box; font-family: 'IBM Plex Sans', sans-serif; mso-line-height-rule: =
-exactly; color: #ffffff; text-align: center; font-size: 14px; font-weight: =
-400; line-height: 17px;">=D0=92=D1=8B =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=
-=D0=BB=D0=B8 =D1=8D=D1=82=D0=BE =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE, =D1=
-=82=D0=B0=D0=BA =D0=BA=D0=B0=D0=BA =D0=B8=D0=BD=D1=82=D0=B5=D1=80=D0=B5=D1=
-=81=D0=BE=D0=B2=D0=B0=D0=BB=D0=B8=D1=81=D1=8C =D0=BD=D0=B5=D1=84=D1=82=D0=
-=B5=D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=82=D0=B0=D0=BC=D0=B8 =D0=BD=D0=
-=B0 =D1=81=D0=B0=D0=B9=D1=82=D0=B0=D1=85 =D0=BA=D0=BE=D0=BC=D0=BF=D0=B0=D0=
-=BD=D0=B8=D0=B8 =C2=AB=D0=9B=D0=A3=D0=9A=D0=9E=D0=99=D0=9B=C2=BB. =D0=95=D1=
-=81=D0=BB=D0=B8 =D0=B1=D0=BE=D0=BB=D0=B5=D0=B5 =D0=BD=D0=B5 =D1=85=D0=BE=D1=
-=82=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D0=
-=BD=D0=B0=D1=88=D0=B8 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B0, =D0=BD=D0=B0=D0=
-=B6=D0=BC=D0=B8=D1=82=D0=B5 =D0=BD=D0=B0 =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=
-=83 =D0=BD=D0=B8=D0=B6=D0=B5:<br>
-=09=09=09=09=09=09=09=09=09<a href=3D"https://us11.besteml.com/ru/unsubscri=
-be?hash=3D6oy3diq8ft47hkwpdzbubxzepg37bfzje9383mjnnczn6y5mixba6se8cu5dyzy9i=
-6uy3b57pkyoor#no_tracking" style=3D"Margin: 0; padding: 0; box-sizing: bord=
-er-box; cursor: pointer; color: #DB2B36; text-decoration: underline;" targe=
-t=3D"_blank">=D0=9E=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C=D1=81=D1=8F =
-=D0=BE=D1=82 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8</a></p>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09=09<tr>
-=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
-: 0; box-sizing: border-box;" valign=3D"center">
-=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
-order-box; font-family: 'IBM Plex Sans', sans-serif; mso-line-height-rule: =
-exactly; color: #ffffff; text-align: center; font-size: 14px; font-weight: =
-400; line-height: 17px;">=C2=A9 2024 =D0=9E=D0=9E=D0=9E =C2=AB=D0=9B=D0=9B=
-=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=BD=D0=B5=D1=88=D0=BD=D0=BB=C2=BB</=
-p>
-=09=09=09=09=09=09=09=09=09</td>
-=09=09=09=09=09=09=09=09</tr>
-=09=09=09=09=09=09=09</tbody>
-=09=09=09=09=09=09</table>
-=09=09=09=09=09=09</td>
-=09=09=09=09=09</tr>
-=09=09=09=09</tbody>
-=09=09=09</table>
-=09=09=09</td>
-=09=09</tr>
-=09</tbody>
-</table>
-</div>
-<center><table><tr><td><img src=3D"https://us11.besteml.com/ru/mail_read_tr=
-acker/6339301?hash=3D6ew5dtcespo5tgmuzc8wbzjfbr37bfzje9383mjnnczn6y5mixba6q=
-i8cpqhkar98upmzcounjrxgaqq6nrx87pfc7e" width=3D"1" height=3D"1" alt=3D"" ti=
-tle=3D"" border=3D"0"></td></tr></table></center></body>
-</html>
-------=_Part_24656271_651917175.1708500729641--
+</body></html>
 
---MXJjaDVFLXg4VE9WZS1OdA==
+
+--===============4025169401801190072==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---MXJjaDVFLXg4VE9WZS1OdA==
+--===============4025169401801190072==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -761,5 +325,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---MXJjaDVFLXg4VE9WZS1OdA==--
-
+--===============4025169401801190072==--
