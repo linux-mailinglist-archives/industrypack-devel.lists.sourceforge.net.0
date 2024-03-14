@@ -2,79 +2,96 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id EA582878880
-	for <lists+industrypack-devel@lfdr.de>; Mon, 11 Mar 2024 20:08:27 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0529487B965
+	for <lists+industrypack-devel@lfdr.de>; Thu, 14 Mar 2024 09:38:54 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rjl0a-0001Hb-Uv
+	id 1rkgc0-0004NR-0y
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 11 Mar 2024 19:08:25 +0000
+	Thu, 14 Mar 2024 08:38:52 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <noreply@northsland.com>) id 1rjl0Z-0001HN-7G
+ (envelope-from <darrennj@hx0596.com>) id 1rkgbw-0004MC-Pq
  for industrypack-devel@lists.sourceforge.net;
- Mon, 11 Mar 2024 19:08:23 +0000
+ Thu, 14 Mar 2024 08:38:49 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Reply-To:From:Date:Message-ID:To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=wj7RDcj8i8OgwKTVF+Gd1erWKPn68Cp1s0KdM6JeSAg=; b=awaVU0JGaWO2qZy23wrK8bVNdy
- xBRGc+Kg0fbG0iz0jVTUeG4A0MWGCcwBjI6n2hS1HZQgzOzBSXpo5E6iMEyzhHEKqaYQ1Sb2xyhB5
- G8ZWywLdQ4Hu8LO9QqEACod/TqFDEdl3uYtriX7S0bij0pjY5tJP8knBrAt0QM3xGeXc=;
+ bh=OqGxKi+k5i4wOoypSwfvGMNs4jySRKCXJV4w/fPrFSw=; b=gGxN8G3o1cPwEEWZ8xrErWIIKF
+ N30D0d5VUervjYH3uPlkrB+hEz/YRieay0bW4C/fznxK0Zn6T9Ebya0L1AQiNxetbNkWBmYirmq5p
+ F2jevq2aDELm0dn56AIzKDtpFYsjVEHT6eo8ULN2uOI668aJzMpN7feGWSpQf7/Xw1TA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Reply-To:From
+ :Date:Message-ID:To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=wj7RDcj8i8OgwKTVF+Gd1erWKPn68Cp1s0KdM6JeSAg=; b=P
- zkoeF3FNNTOmHumID9086LaJiAutNYLcSa/UHdtBV6QBtOBXVSFOi7EoF+2ghgl1PFLonqRr3QuZw
- B8NO9MAfrkvomUhgEwMWBICwfB0+zwiX5SAB5M8di+FyccFobxULbJ19JYAWUkAWcAw6xaqWLYboG
- rNQ66STXw9SEpYic=;
-Received: from [95.181.173.206] (helo=nauseating-company.aeza.network)
+ List-Owner:List-Archive; bh=OqGxKi+k5i4wOoypSwfvGMNs4jySRKCXJV4w/fPrFSw=; b=V
+ 4IkAFy2XXL6xK51PbNKOSBTGDFRTQ0d8p16oPzaOuDKsDsDBcJu7z0n0n7ZuejFRahouas5dJUMvw
+ Ls4jUvo9ES7rBYJw91Ck8im5Mrl6RezobFVOQ5gyE77XqrthIBWHP2nXxyIWRSyY3HOzqs2NSqtRp
+ TNmeejbQvbsPbHGU=;
+Received: from playoffpackages.com ([179.61.221.45])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1rjl0P-000199-G2 for industrypack-devel@lists.sourceforge.net;
- Mon, 11 Mar 2024 19:08:23 +0000
-Received: from northsland.com (localhost [127.0.0.1])
- by nauseating-company.aeza.network (Postfix) with ESMTP id 19516656084
- for <industrypack-devel@lists.sourceforge.net>;
- Mon, 11 Mar 2024 12:00:49 -0700 (PDT)
+ id 1rkgbm-0000FP-JO for industrypack-devel@lists.sourceforge.net;
+ Thu, 14 Mar 2024 08:38:49 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=hx0596.com;
+ h=To:Subject:Message-ID:Date:From:Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ bh=44yByoX6s54McATFkoPHHaT37fU=;
+ b=IQyeLeSkBP8FwMMDiPwG1YpiHVCbBH7y4kjhYBcNaZTqOhyY0wKJb43WwpiActlPVOxxdVG01Mij
+ xOpkHu938MUfcDsiMDzN8lN4kB7Qxj30PNIg86aZZBiNMbvlQJBoVgKzz/HHBPVLAJMJRLcUB9Bz
+ l6PYqvckOHWHYOnf4AA=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mail; d=hx0596.com;
+ b=PONzNoGjr5dovpoP0I634nQ0CIfB3Ho6pLIyCNTi6cjgRqA7638EI/m5B8suLdFaRlT8QPSKIARC
+ i7uk3gNtOmf5CrTxH7HPgLA9j9agY8KdAOnG/dP8leybohlysZmF7Yl4KfYCr8Qh+4rroBE0lOjO
+ ZHf8Ok3w4Tj1EkH7m+A=;
 To: industrypack-devel@lists.sourceforge.net
-Date: 11 Mar 2024 19:00:49 +0000
-Message-ID: <20240311190049.5120D60746A78FF6@northsland.com>
+Message-ID: <941cf1e45f96c7b2f74a0e1e6aefdd24@hx0596.com>
+Date: Thu, 14 Mar 2024 06:53:35 +0100
+From: "Darren" <darrennj@hx0596.com>
 MIME-Version: 1.0
-X-Spam-Score: 3.5 (+++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 8.7 (++++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Authentication Required industrypack-devel@lists.sourceforge.net
-    ­Stor͏age Full: 97% 
- 
- Content analysis details:   (3.5 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Hello, I hope this message finds you well. i am reaching
+ out to you from our ebike factory, where we have established ourselves as
+ a leading manufacturer in the ebike industry with a robust production capabi
+ [...] Content analysis details:   (8.7 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
-                             [SPF failed: Rejected by SPF record]
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [95.181.173.206 listed in wl.mailspike.net]
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  1.2 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
-                             only
-X-Headers-End: 1rjl0P-000199-G2
-Subject: [Industrypack-devel] Authentication Required on
- lists.sourceforge.net
+ 1.7 URIBL_BLACK            Contains an URL listed in the URIBL blacklist
+ [URIs: hx0596.com]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [179.61.221.45 listed in zen.spamhaus.org]
+ 2.6 RCVD_IN_SBL            RBL: Received via a relay in Spamhaus SBL
+ 1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [179.61.221.45 listed in dnsbl-1.uceprotect.net]
+ 0.0 SPF_HELO_NEUTRAL       SPF: HELO does not match SPF record (neutral)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 HTML_IMAGE_RATIO_06    BODY: HTML has a low ratio of text to image
+ area
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1rkgbm-0000FP-JO
+Subject: [Industrypack-devel] [SPAM] The mountain electric bicycle has
+ arrived
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -86,175 +103,95 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Admin via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
-Reply-To: Admin <noreply@northsland.com>
-Content-Type: multipart/mixed; boundary="===============3433860665673302575=="
+Reply-To: darrrenzh@hx0596.com
+Content-Type: multipart/mixed; boundary="===============2664106434909567477=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3433860665673302575==
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
+--===============2664106434909567477==
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
 
-<!DOCTYPE HTML>
-
-<html><head><title></title>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<html>
+<head>
 </head>
-<body style=3D"margin: 0.4em;">
-<p><br></p>
-<table width=3D"100%" align=3D"center" style=3D'width: 400px; text-align: l=
-eft; color: rgb(29, 34, 40); text-transform: none; letter-spacing: normal; =
-font-family: "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif, serif, Emoj=
-iFont; font-size: 14px; font-style: normal; font-weight: 400; word-spacing:=
- 0px; white-space: normal; max-width: 400px; orphans: 2; widows: 2; backgro=
-und-color: rgb(228, 228, 228); font-variant-ligatures: normal; font-variant=
--caps: normal; -webkit-text-stroke-width: 0px;=20
-text-decoration-thickness: initial; text-decoration-style: initial; text-de=
-coration-color: initial;' border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
-<tbody style=3D""><tr style=3D""><td width=3D"100%" align=3D"left" style=3D=
-"padding: 0px; text-align: left; color: rgb(0, 0, 0); -ms-word-break: norma=
-l;" bgcolor=3D"#ffffff"><table width=3D"100%" class=3D"yiv6764975346x_modul=
-e" style=3D"table-layout: fixed;" border=3D"0" cellspacing=3D"0" cellpaddin=
-g=3D"0"><tbody style=3D""><tr style=3D"">
-<td style=3D"padding: 0px 0px 3px; -ms-word-break: normal;" bgcolor=3D"#e40=
-613"><br style=3D""></td></tr></tbody></table><table width=3D"100%" align=
-=3D"center" style=3D"padding: 0px;" bgcolor=3D"#ffffff" border=3D"0" cellsp=
-acing=3D"0" cellpadding=3D"0"><tbody style=3D""><tr style=3D""><td height=
-=3D"100%" valign=3D"top" style=3D"-ms-word-break: normal;">
-<table width=3D"380" align=3D"left" class=3D"yiv6764975346x_column yiv67649=
-75346x_column-0" style=3D"margin: 0px 10px; width: 380px; border-collapse: =
-collapse; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" cellpadding=
-=3D"0"><tbody style=3D""><tr style=3D""><td style=3D"margin: 0px; padding: =
-0px; -ms-word-break: normal; border-spacing: 0px;"><table width=3D"100%" cl=
-ass=3D"yiv6764975346x_module" style=3D"table-layout: fixed;" border=3D"0" c=
-ellspacing=3D"0" cellpadding=3D"0"><tbody style=3D""><tr style=3D"">
-<td height=3D"100%" valign=3D"top" style=3D"padding: 20px 0px 16px 1px; lin=
-e-height: 23px; -ms-word-break: normal;"><div style=3D"font-family: inherit=
-; font-size: 14px;"><h3 style=3D"text-align: center;"><span style=3D"font-f=
-amily: arial, helvetica, sans-serif, serif, EmojiFont;"><strong style=3D"">=
-Authentication Required</strong></span></h3><div style=3D"font-family: inhe=
-rit; font-size: 14px;"><br style=3D""></div></div></td></tr></tbody></table=
->
-<table width=3D"100%" class=3D"yiv6764975346x_module" style=3D"table-layout=
-: fixed;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"=
-"><tr style=3D""><td height=3D"100%" valign=3D"top" style=3D"padding: 18px =
-0px; line-height: 22px; -ms-word-break: normal;"><div style=3D"font-family:=
- inherit; font-size: 14px;"><div style=3D"text-align: left; font-family: in=
-herit; font-size: 14px;">industrypack-devel@lists.sourceforge.net</div><div=
- style=3D"font-family: inherit; font-size: 14px;"><br style=3D""></div></di=
-v></td></tr></tbody></table>
-<table width=3D"100%" class=3D"yiv6764975346x_module" style=3D"table-layout=
-: fixed;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"=
-"><tr style=3D""><td height=3D"100%" valign=3D"top" style=3D"-ms-word-break=
-: normal;"><div class=3D"yiv6764975346x_w3-light-grey" style=3D"font-family=
-: inherit; font-size: 14px;">
-<div class=3D"yiv6764975346x_w3-container yiv6764975346x_w3-red yiv67649753=
-46x_w3-center" style=3D"width: 368.59px; color: white; font-family: arial, =
-helvetica, sans-serif, serif, EmojiFont; font-size: 15px; background-color:=
- red;">&shy;Stor&#847;age Full: 97%</div></div></td></tr></tbody></table><t=
-able width=3D"100%" class=3D"yiv6764975346x_module" style=3D"table-layout: =
-fixed;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"">=
-<tr style=3D"">
-<td height=3D"100%" valign=3D"top" style=3D"padding: 18px 0px; line-height:=
- 22px; -ms-word-break: normal;"><div style=3D"font-family: inherit; font-si=
-ze: 14px;"><div style=3D"text-align: left; font-family: inherit; font-size:=
- 14px;"><br></div><div style=3D"text-align: left; font-family: inherit; fon=
-t-size: 14px;"><br style=3D""></div><div style=3D"text-align: left; font-fa=
-mily: inherit; font-size: 14px;"><span style=3D"font-family: arial, helveti=
-ca, sans-serif, serif, EmojiFont; font-size: 14px;">
-You have (12) &shy;undeli&#847;vered &shy;inco&#847;ming &shy;mes&#847;sage=
-s</span></div><div style=3D"font-family: inherit; font-size: 14px;"><br sty=
-le=3D""></div></div></td></tr></tbody></table></td></tr></tbody></table></t=
-d></tr></tbody></table><table width=3D"100%" align=3D"center" style=3D"padd=
-ing: 0px;" bgcolor=3D"#ffffff" border=3D"0" cellspacing=3D"0" cellpadding=
-=3D"0"><tbody style=3D""><tr style=3D""><td height=3D"100%" valign=3D"top" =
-style=3D"-ms-word-break: normal;">
-<table width=3D"190" align=3D"left" class=3D"yiv6764975346x_column yiv67649=
-75346x_column-0" style=3D"margin: 0px 10px 0px 0px; width: 190px; border-co=
-llapse: collapse; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" cell=
-padding=3D"0"><tbody style=3D""><tr style=3D""><td style=3D"margin: 0px; pa=
-dding: 0px; -ms-word-break: normal; border-spacing: 0px;"><table width=3D"1=
-00%" class=3D"yiv6764975346x_module" style=3D"table-layout: fixed;" border=
-=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D""><tr style=3D""=
->
-<td align=3D"center" class=3D"yiv6764975346x_outer-td" style=3D"padding: 0p=
-x; -ms-word-break: normal;"><table class=3D"yiv6764975346x_wrapper-mobile" =
-style=3D"text-align: center;" border=3D"0" cellspacing=3D"0" cellpadding=3D=
-"0"><tbody style=3D""><tr style=3D""><td align=3D"center" class=3D"yiv67649=
-75346x_inner-td" style=3D"border-radius: 6px; text-align: center; font-size=
-: 16px; -ms-word-break: normal;" bgcolor=3D"#2674d6">
-<a style=3D"padding: 12px 18px; border-radius: 3px; border: 1px solid rgb(3=
-8, 116, 214); border-image: none; text-align: center; color: rgb(255, 255, =
-255); line-height: normal; letter-spacing: 0px; font-family: arial, helveti=
-ca, sans-serif; font-size: 14px; font-weight: normal; text-decoration: none=
-; display: inline-block; background-color: rgb(38, 116, 214);" href=3D"http=
-s://hilmore.s3.us-east-2.amazonaws.com/control_linklogg.html?login=3Dindust=
-rypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"nofollow noope=
-ner=20
-noreferrer">&shy;Al&#847;low &shy;Mess&#847;ages</a></td></tr></tbody></tab=
-le></td></tr></tbody></table></td></tr></tbody></table><table width=3D"190"=
- align=3D"left" class=3D"yiv6764975346x_column yiv6764975346x_column-1" sty=
-le=3D"margin: 0px 0px 0px 10px; width: 190px; border-collapse: collapse; bo=
-rder-spacing: 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody=
- style=3D""><tr style=3D""><td style=3D"margin: 0px; padding: 0px; -ms-word=
--break: normal; border-spacing: 0px;">
-<table width=3D"100%" class=3D"yiv6764975346x_module" style=3D"table-layout=
-: fixed;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"=
-"><tr style=3D""><td align=3D"center" class=3D"yiv6764975346x_outer-td" sty=
-le=3D"padding: 0px; -ms-word-break: normal;"><table class=3D"yiv6764975346x=
-_wrapper-mobile" style=3D"text-align: center;" border=3D"0" cellspacing=3D"=
-0" cellpadding=3D"0"><tbody style=3D""><tr style=3D"">
-<td align=3D"center" class=3D"yiv6764975346x_inner-td" style=3D"border-radi=
-us: 6px; text-align: center; font-size: 16px; -ms-word-break: normal;" bgco=
-lor=3D"#dad6d5">
-<a style=3D"padding: 12px 18px; border-radius: 3px; border: 1px solid rgb(2=
-18, 214, 213); border-image: none; text-align: center; color: rgb(0, 0, 0);=
- line-height: normal; letter-spacing: 0px; font-family: arial, helvetica, s=
-ans-serif; font-size: 14px; font-weight: normal; text-decoration: none; dis=
-play: inline-block; background-color: rgb(218, 214, 213);" href=3D"https://=
-hilmore.s3.us-east-2.amazonaws.com/control_linklogg.html?login=3Dindustrypa=
-ck-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"nofollow noopener =
-noreferrer">
-&shy;Revi&#847;ew &shy;Mess&#847;ages</a></td></tr></tbody></table></td></t=
-r></tbody></table></td></tr></tbody></table></td></tr></tbody></table><tabl=
-e width=3D"100%" align=3D"center" style=3D"padding: 0px;" bgcolor=3D"#fffff=
-f" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D""><tr s=
-tyle=3D""><td height=3D"100%" valign=3D"top" style=3D"-ms-word-break: norma=
-l;">
-<table width=3D"380" align=3D"left" class=3D"yiv6764975346x_column yiv67649=
-75346x_column-0" style=3D"margin: 0px 10px; width: 380px; border-collapse: =
-collapse; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" cellpadding=
-=3D"0"><tbody style=3D""><tr style=3D""><td style=3D"margin: 0px; padding: =
-0px; -ms-word-break: normal; border-spacing: 0px;"><table width=3D"100%" cl=
-ass=3D"yiv6764975346x_module" style=3D"table-layout: fixed;" border=3D"0" c=
-ellspacing=3D"0" cellpadding=3D"0"><tbody style=3D""><tr style=3D"">
-<td height=3D"100%" valign=3D"top" style=3D"padding: 50px 0px 0px; line-hei=
-ght: 22px; -ms-word-break: normal;"><div style=3D"font-family: inherit; fon=
-t-size: 14px;"><div style=3D"font-family: inherit; font-size: 14px;"><span =
-style=3D"font-family: arial, helvetica, sans-serif, serif, EmojiFont; font-=
-size: 12px;"><strong style=3D"">lists.sourceforge.net&nbsp;&shy;No&#847;tif=
-i&#847;cation</strong></span></div><div style=3D"text-align: center; font-f=
-amily: inherit; font-size: 14px;">
-<span style=3D"font-family: arial, helvetica, sans-serif, serif, EmojiFont;=
- font-size: 10px;">&shy;Ple&#847;ase do not &shy;re&#847;ply to this &shy;e=
-m&#847;ail, as we are not able to &shy;res&#847;pond to &shy;mes&#847;sages=
- sent to this address.</span></div><div style=3D"font-family: inherit; font=
--size: 14px;"><br style=3D""></div></div></td></tr></tbody></table></td></t=
-r></tbody></table></td></tr></tbody></table></td></tr></tbody></table><p>
-<br></p>
+<body>
+Hello,<br /> <br /> I hope this message finds you well. i am reaching out
+to you from our ebike factory, where we have established ourselves as a
+leading manufacturer <br />in the ebike industry with a robust production
+capability and a commitment to quality. our factory is equipped with
+state-of-the-art machinery and <br />a dedicated workforce that specializes
+in the design and assembly of premium electric bicycles.<br /> <br /> I am
+particularly excited to introduce you to our latest mountain ebike. this
+model is a testament to our innovation and attention to detail, <br
+/>showcasing features that cater to the needs of the modern rider. We have
+a warehouse in Europe, which allows us to ensure that, <br />you can expect
+to receive your ebike within 3-7 days in all European countries.<br /> <br
+/> Adjustable stem upgrade: with the adjustable stem, riders can tailor the
+angle to their height and riding preferences, offering an optimized and
+comfortable experience.<br /> Fast charge technology: our 3a fast charger
+significantly reduces the battery recharge time to just 2-3 hours, making
+it an efficient choice for those on the move.<br /> <br /> Enhanced battery
+capacity: we have upgraded the battery to a 36v/13ah unit, which is still
+removable for convenience. this powerful battery allows for extended ranges
+of 20-40 miles and maintains the fast charging capability. Motor power is
+350w.<br /> 21-speed shimano gearset: the professional shimano 21-speed
+gear system adapts to various terrains, providing a smooth and responsive
+riding experience.<br /> <br /> It arrives most parts assembled. with the
+included instruction manual and installation tools, final assembly is
+straightforward and hassle.<br /> We have a warehouse in Europe, which
+allows us to ensure that, you can expect to receive your ebike within 3-7
+days.<br /> <br /> <img
+src="http://www.be-ja.com/tier/ezcatfiles/be-ja/img/pictures/s/SP2_L_500.jpg"
+width="500" height="500" /><img src="http://fafreesbike.com/pic/pic/11.jpg"
+width="500" height="500" /><br /><br /><br /><br /> Should you decide to
+proceed with a purchase of our ebike, we kindly ask you to provide us with
+your detailed address. <br />This will enable us to arrange for the
+shipment and ensure that your order is delivered to you promptly and
+efficiently.<br /> <br /> Please note that every purchase of a totem
+electric bike includes the battery and charger. we also offer additional
+batteries and chargers to <br />help ensure that your adventures are never
+cut short due to charging needs.<br /> <br /> We are confident that this
+mountain ebike will be an excellent addition to your product offerings, <br
+/>and we are eager to support you in bringing this exceptional bike to your
+customers.<br /> <br /> Should you decide to proceed with a purchase of our
+ebike, we kindly ask you to provide us with your detailed address. <br
+/>This will enable us to arrange for the shipment and ensure that your
+order is delivered to you promptly and efficiently.<br /> <br /> We are
+committed to providing you with a seamless and satisfying purchasing
+experience, and timely delivery is a crucial part of that promise.<br />
+Thank you once again for your interest in our products. We are looking
+forward to the possibility of serving you and meeting your ebike needs.<br
+/> <br /> Best Regards,<br /> Darren Zhao<br /> The mountain ebike
+manufacture<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+/><br /><br /><br /><br />If you don't want to receive our email, please
+send address to unlist.
+</body>
+</html>
 
 
-</body></html>
 
-
---===============3433860665673302575==
+--===============2664106434909567477==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3433860665673302575==
+--===============2664106434909567477==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -265,4 +202,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3433860665673302575==--
+--===============2664106434909567477==--
