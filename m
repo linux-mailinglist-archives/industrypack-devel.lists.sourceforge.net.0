@@ -2,99 +2,95 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id CE98587CE7E
-	for <lists+industrypack-devel@lfdr.de>; Fri, 15 Mar 2024 15:05:59 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id BCB3D87E9F9
+	for <lists+industrypack-devel@lfdr.de>; Mon, 18 Mar 2024 14:18:53 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rl8C6-0003Jj-84
+	id 1rmCtA-0008RS-81
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 15 Mar 2024 14:05:58 +0000
+	Mon, 18 Mar 2024 13:18:52 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <bikezv@zhjh505.com>) id 1rl8C5-0003Jd-1w
+ (envelope-from <electricbikemv@ca-che.com>) id 1rmCt4-0008RD-Iu
  for industrypack-devel@lists.sourceforge.net;
- Fri, 15 Mar 2024 14:05:57 +0000
+ Mon, 18 Mar 2024 13:18:46 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Reply-To:From:Date:Message-ID:Subject:To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=z2GdklCOy+ycxn5C6R9BHfvFHGurLQwQfzbUqC3ZtaE=; b=cDecwI9y4tpnemeZD0LS5DNwOR
- k9YjFdoqYynEBJ3jQi9Vgt8kETyeTYZ88IpvxWo0GnPyp5eebcxhpJRroKwkvh/7OW0SRELzpJcfB
- 9ryFVGyAeRRz5dOPrns8aosVL1Nmq/Xuspt3eF+6H+MuYaxj79UkL8/kc7WabvSx+yGo=;
+ bh=O5uSPuAXojzcaWKLCko4Qv0Ix9lXgrQZksU7m/sYM8w=; b=OTXzGxMB2qMcWNSsXYQJjvNfv6
+ KMQAf3nHq6fo42oqv0cz9ShIM5l9xcAH+Oy0TvQWfpHc3nlTtm8AGZ7XWAusHWTcqrKYslfuz+pI1
+ j+urrbdl2L5JE6ndtj0cHZqqau6ZvaKMeoS5rBo8zjwcO1R7V4gDmcQB423Y1nJ57WjA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Reply-To:From:Date:
  Message-ID:Subject:To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=z2GdklCOy+ycxn5C6R9BHfvFHGurLQwQfzbUqC3ZtaE=; b=m
- TsoBhUJOlpfXKnwVUo/j8RrVKHzLb6/eQzFMKZB2UHPCStNTqapeiHVTriGOn2oHJX/fq/fx4uhgU
- Sl22ZFRV+ToBCb2BidHFKihLqZG0RqVLXCew0MLJJDNm3Cu8ueqHzx06ZmQOK7bpXI+PBZetQR1Z7
- GfJWQlmkARW2UhcM=;
-Received: from royfreywestern.com ([64.188.4.214])
+ List-Owner:List-Archive; bh=O5uSPuAXojzcaWKLCko4Qv0Ix9lXgrQZksU7m/sYM8w=; b=T
+ Kx7ZaGqcLqgxLq1ZKm93uGb6lG+Hrocqi6mNQZxMuXnDlpVKP2n6F2sNN73dZVRaxLug5Vyfpi4WJ
+ rh8d0mRvcnX+REt27Pm3qxMUGRkI3qN+AU1B+czdcW6KGzQ+aa/we+q7aiQN+yx6Kai7o0dwxyqp1
+ 4Lw4FrYhiqz2kjxQ=;
+Received: from 01390.net ([194.53.136.174])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1rl8Bt-00070M-M7 for industrypack-devel@lists.sourceforge.net;
- Fri, 15 Mar 2024 14:05:57 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=zhjh505.com;
+ id 1rmCss-0006y3-2u for industrypack-devel@lists.sourceforge.net;
+ Mon, 18 Mar 2024 13:18:45 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=ca-che.com;
  h=To:Subject:Message-ID:Date:From:Reply-To:MIME-Version:Content-Type:Content-Transfer-Encoding;
- bh=x37vk5v/uoWZNvS1zrnAQOtv9zk=;
- b=ai/zO1AqoMa/i630983yYRgHKlNvGTEPwVAJ+sQkiv8GqxGo5IupmT72XD5YdMIm8H/U3DUgmE7f
- pQ64tmArrOXbOz2ikP7XN0/PDTBXCB0rd9IdgKgASYRB0JkA7ETBBztPJtiDmgpdTmucZg+Map4i
- MUJNhxw6rol5iAzm+sk=
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mail; d=zhjh505.com;
- b=hYtQ4D2QTnwCvnr4ur7Fo6LRZTIvBvu8mKIc4bxo+3kz17e9rU5t4U8I4ulXY9/qoo9ura4DHv9X
- J+jsOIGYn4KJXghO98s5HNTlV3bGsUbiHW9Zzxk6Mfc+fvv3Nu4/tbkfYxEl6e264HI0LzYidzvk
- DiAWXxyjzE0HEl4OlT8=;
+ bh=FhRs9CCjJL2J47so4fs6OxpxrXY=;
+ b=GFzfNQG1Sw3RuAuUtZodKvgdtMxhpBtOjwwp5gE+BUvcg0mhPw/47CDfrAiSO6+pfRyxzdX8YnMA
+ RHwM+Nvy1d10o5jDSY7LJSLd1A0Fswogks9wIsnvqUmbu3YRiSizzYulY/X8MC5sdvsfcGr6ylRF
+ tbkkgG3DkjRg5PQ4bD4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mail; d=ca-che.com;
+ b=L8sjyoKXkgRg4j2VcgWrOXhdEjdJ/9//cFGZCIhZiT+xxYEGd74P39JecCyvDupvbQ+ABWHRJhJ+
+ zSYylHudSnwqymHqrNMxLBe1PInWFGz2Py8LKyhjzgCr+qzl/GwH8zvaxBSwTBWpURjYpaMxFa8W
+ wlG0wY8mI5PRTdVi/7o=;
 To: industrypack-devel@lists.sourceforge.net
-Message-ID: <3c585a9317686b7cb9d481f7ec728315@zhjh505.com>
-Date: Fri, 15 Mar 2024 07:23:32 +0100
-From: "David Dike" <bikezv@zhjh505.com>
+Message-ID: <f59966802f48262a51521b7c721cebb1@ca-che.com>
+Date: Mon, 18 Mar 2024 13:28:15 +0100
+From: "Thompson" <electricbikedb@ca-che.com>
 MIME-Version: 1.0
-X-Spam-Score: 6.7 (++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+X-Spam-Score: 1.6 (+)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hello, We hope this email finds you well. We are glad to
- introduce you to our latest product from our factory: the 20-inch 4.0 Fat
- Tire eBike. With its exceptional features and reliable performance, this eBi
- [...] Content analysis details:   (6.7 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  Hi, Are you ready to take your outdoor adventures to the
+   next level? Look no further than our latest designed– the mountain ebike,
+    designed to elevate your riding experience with unmatched power, versat [...]
+    
+ 
+ Content analysis details:   (1.6 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
- blocklist [URIs: zhjh505.com]
- 0.0 URIBL_RED              Contains an URL listed in the URIBL redlist
- [URIs: zhjh505.com]
- 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
- blocklist [URIs: zhjh505.com]
+  1.7 URIBL_BLACK            Contains an URL listed in the URIBL blacklist
+                             [URIs: ca-che.com]
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [64.188.4.214 listed in wl.mailspike.net]
- 1.1 DATE_IN_PAST_06_12     Date: is 6 to 12 hours before Received: date
- 1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
- https://senderscore.org/blocklistlookup/
- [64.188.4.214 listed in bl.score.senderscore.com]
- 0.0 SPF_HELO_NEUTRAL       SPF: HELO does not match SPF record (neutral)
+                             [194.53.136.174 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_IMAGE_RATIO_02    BODY: HTML has a low ratio of text to image
- area
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+  0.0 SPF_HELO_NEUTRAL       SPF: HELO does not match SPF record (neutral)
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.0 HTML_IMAGE_RATIO_02    BODY: HTML has a low ratio of text to image
+                             area
+  0.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+                             envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+                             author's domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1rl8Bt-00070M-M7
-Subject: [Industrypack-devel] electric bicycle in stock
+X-Headers-End: 1rmCss-0006y3-2u
+Subject: [Industrypack-devel] reliable and affordable - your trusted
+ electric bicycle
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -106,11 +102,11 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: davidd@zhjh505.com
-Content-Type: multipart/mixed; boundary="===============3137229077591598165=="
+Reply-To: jancontact@ca-che.com
+Content-Type: multipart/mixed; boundary="===============1910486434631255243=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3137229077591598165==
+--===============1910486434631255243==
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: 8bit
 
@@ -118,48 +114,51 @@ Content-Transfer-Encoding: 8bit
 <head>
 </head>
 <body>
-Hello,<br /><br />We hope this email finds you well. We are glad to
-introduce you to our latest product from our factory: the 20-inch 4.0 Fat
-Tire eBike. <br /> With its exceptional features and reliable performance,
-this eBike is set to revolutionize your cycling experience.<br /> <br />
-Key Features:<br /> 20 inches with 4.0 fat tire for enhanced stability and
-traction on various terrains.<br /> Battery: Equipped with a powerful 48V
-13AH battery, providing long-lasting support for your rides.<br /> Motor
-Power: The 500W motor ensures a smooth and effortless ride, making uphill
-climbs and longer distances a breeze.<br /> <br /> With a remarkable range
-of up to 50km, you can confidently explore the surroundings without
-worrying about running out of power.<br /> Pedal Assist Mode: Enjoy the
-convenience of pedal assist mode, which seamlessly complements your
-pedaling efforts and extends your riding distance.<br /> <br /> Our German
-warehouse is fully stocked with this eBike model, ensuring prompt shipping
-to all European countries. <br /> Customers can expect to receive their
-order within 3-7 days.<br /> <br /> If you are interested in purchasing our
-20-inch 4.0 Fat Tire eBike or have any inquiries, please don't hesitate to
-contact us. <br /> We would be delighted to assist you further and provide
-any additional information you may require.<br /> <br /><img
-src="https://freegobikes.com/cdn/shop/files/FreegoE1Model.jpg?v=1699322251&amp;width=1800"
-width="900" height="900" /><br /><img
-src="https://shopezusa.com/cdn/shop/products/imageService-2023-11-16T152241.206_1024x.jpg?v=1700908829"
-width="800" height="800" /><br /> <br /> If you are interested in
-purchasing our 20-inch 4.0 Fat Tire eBike or have any inquiries, please
-don't hesitate to contact us. <br /> We would be delighted to assist you
-further and provide any additional information you may require.<br /> <br
-/> At our factory, we take pride in our commitment to producing
-high-quality and reliable electric bikes. <br /> With years of experience
-in the industry, we have established a reputation for delivering
-exceptional products that meet the evolving needs of our customers.<br />
-<br /> Here's why you should choose our factory:<br /> Each eBike undergoes
-rigorous testing and quality checks to ensure its durability and
-performance.<br /> We incorporate the latest advancements in eBike
-technology to provide you with a seamless and enjoyable riding
-experience.<br /> We prioritize customer satisfaction and strive to exceed
-your expectations with our products and services. <br /> Our factory offers
-competitive pricing without compromising on the quality and features of our
-eBikes. <br /> We value long-term partnerships and are committed to
-providing ongoing support and assistance to our clients.<br /><br /> Thank
-you for considering our eBike for your cycling needs. We look forward to
-serving you and providing an exceptional riding experience.<br /> <br />
-Best regards,<br /> David Wilson<br /> The E-bike Supplier<br /><br /><br
+Hi,<br /> <br /> Are you ready to take your outdoor adventures to the next
+level? Look no further than our latest designed&ndash; the mountain ebike,
+<br /> designed to elevate your riding experience with unmatched power,
+versatility, and convenience.<br /> <br /> <img
+src="https://e-smartway.com/cdn/shop/files/H39c6d656aa4f40ceaffbb2e0e10b5d15U.jpg_960x960_9a1e26ff-2307-42d8-8b22-e2a8c5e64800_600x.jpg?v=1694084714"
+width="600" height="600" /><br /><img
+src="https://api.bikeflip.com/storage/150778/responsive-images/IMG_2285___optimized-bike-ad-images_800_643.jpg"
+width="800" height="643" /><br /><img
+src="https://bharathcyclehub.com/cdn/shop/files/t-rex_1920x1440.jpg?v=1693554351"
+width="800" height="600" /><br /> <br /> <br /> <br /> <br /> <br /> If you
+wish to make a purchase, please provide the address details.<br /> We will
+arrange delivery from our warehouse, located in Germany, to all European
+countries within 3-5 days.<br /> <br /> Here's why our mountain ebike
+stands out from the rest:<br /> <br /> 1.Powerful performance: Featuring a
+36V robust hub motor delivering an impressive output power&nbsp; 350W, <br
+/> our ebike reaches speeds of up to 20 mph effortlessly. With its 21-speed
+shift system, conquer diverse terrains with ease, <br /> ensuring a smooth
+and thrilling journey every time.<br /> <br /> 2.Long-lasting battery:
+Equipped with a high-capacity 36V 13AH battery, our ebike boasts an
+extensive range of up to 40 miles per charge, <br /> lasting 5-6 hours. The
+battery management system ensures safe charging, and its removable design
+facilitates hassle charging in various scenarios.<br /> <br /> 3.Enhanced
+comfort and safety: Navigate rough terrains with confidence, thanks to the
+high-strength shock-absorbing front fork suspension <br /> and reliable
+front and rear mechanical disc brakes. The LCD display keeps you informed,
+<br /> while the 21-speed gear system ensures optimal performance in any
+riding conditions.<br /> <br /> 4.Versatile riding modes: Choose from three
+different riding modes to suit your preferences &ndash; Assistance mode for
+moderate power assistance while pedaling, <br /> Pure Electric mode for
+effortless acceleration with the twist of a throttle, and Pedal mode for a
+traditional biking experience.<br /> 5.All-weather durability: Ride worry
+in any weather condition with our waterproof ebike, equipped with LED
+perspective lights for <br /> enhanced visibility during night rides and
+unexpected weather changes.<br /> <br /> 6.Easy assembly and customer
+support: Enjoy a hassle assembly process with our ebike, which comes 90
+percent pre-assembled and<br /> &nbsp;includes comprehensive instructions
+and installation tools. Plus, our dedicated customer support team is
+available round-the-clock <br /> to address any queries or concerns you may
+have.<br /> <br /> Experience the thrill of off-road adventures like never
+before with our mountain ebike. <br /> Don't miss out on this opportunity
+to explore the great outdoors with confidence and style.<br /> <br /> If
+you wish to make a purchase, please provide the address details.<br /> We
+will arrange delivery from our warehouse, located in Germany, to all
+European countries within 3-5 days.<br /> <br /> Best regards,<br /> Jan
+Thompson<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
 /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
 /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
 /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
@@ -173,24 +172,20 @@ Best regards,<br /> David Wilson<br /> The E-bike Supplier<br /><br /><br
 /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
 /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
 /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
-/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
-/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
-/><br /><br /><br /><br /><br /><br /><br /><br />Thank you for considering
-our eBike for your cycling needs. We look forward to serving you and
-providing an exceptional riding experience.
+/>Welcome to visit our factory.
 </body>
 </html>
 
 
 
---===============3137229077591598165==
+--===============1910486434631255243==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3137229077591598165==
+--===============1910486434631255243==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -201,4 +196,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3137229077591598165==--
+--===============1910486434631255243==--
