@@ -2,53 +2,53 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2516488D973
-	for <lists+industrypack-devel@lfdr.de>; Wed, 27 Mar 2024 09:50:09 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1382788DCCA
+	for <lists+industrypack-devel@lfdr.de>; Wed, 27 Mar 2024 12:47:10 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rpOz1-0002JZ-Qp
+	id 1rpRkK-0000id-G0
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 27 Mar 2024 08:50:07 +0000
+	Wed, 27 Mar 2024 11:47:08 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <Noreply@WeTransfer.com>) id 1rpOz0-0002JR-KY
+ (envelope-from <Noreply@WeTransfer.com>) id 1rpRkI-0000iV-8j
  for industrypack-devel@lists.sourceforge.net;
- Wed, 27 Mar 2024 08:50:06 +0000
+ Wed, 27 Mar 2024 11:47:06 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=WI0EGLmZONnvXHF2td13QEj/nlKcSHfz5oBnP41avfg=; b=V2P5LnBRQB063oPlEvbpX0M/B5
- k9Lhs0QX+RBbB7fEgOER8/1yRerdJykiC7HrxRNc9a/E9q3X2ONtny3fdXizuxztoa/FBykLQAAI1
- /yohI6JzV2WhvUlKPIQlkn+xacf/eFo5txmBL7l/Qy7ovoV7IHRxG3KZMtGQvmMMaeiQ=;
+ bh=WI0EGLmZONnvXHF2td13QEj/nlKcSHfz5oBnP41avfg=; b=WT64Qy2v8qx9pe55vbVi/85BJ1
+ 6G3eXdux+FZdRV4sRezgVbdhc1siceUVgHo4655PPeM3mN47kaOKtJR3wKxv3cBBccqEXiZJGdodr
+ RgaYb8bMiPgeIrmnKLwvA1OWXqFmYml6ChYYZmqDr0UygzArME0B14br+88hy9DgD2Qg=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=WI0EGLmZONnvXHF2td13QEj/nlKcSHfz5oBnP41avfg=; b=W
- eJUJYv6PN5Lpf76bzoEy45YEpMuPcfLVJwT+NOp/ZKsw2Xj7Dy354lS+2DMWGhilPZgzl03zA2s5+
- YNlkP36kk0xiyDNPbWQQNplfY79oLWqnHgDagr5dNG3yd+dwjNIZBUMAWBjz+tUHZa+nVu77UQg6F
- Su7iA81ct34mUPuk=;
+ List-Owner:List-Archive; bh=WI0EGLmZONnvXHF2td13QEj/nlKcSHfz5oBnP41avfg=; b=J
+ l1ULMllKaBeIlLZebFuyzfTshPkZbPNK4BfQn1Ag+tQhbhH+irqlYj0ljtZCu2G1WJwNo3fBWkaZw
+ skVq/38+QVVr0duQo1JTfDNciQyx5zkckH0r5ViAqhVR74VyrRJs/airaCE8TAsHFKi0nDnsot+3q
+ 3RM6CJaebrZvTgNo=;
 Received: from s846335.srvape.com ([91.199.154.224])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1rpOyz-00014d-H9 for industrypack-devel@lists.sourceforge.net;
- Wed, 27 Mar 2024 08:50:06 +0000
+ id 1rpRkH-0000w7-Fz for industrypack-devel@lists.sourceforge.net;
+ Wed, 27 Mar 2024 11:47:06 +0000
 Received: from WeTransfer.com (localhost [IPv6:::1])
- by s846335.srvape.com (Postfix) with ESMTP id BE52A31B708
+ by s846335.srvape.com (Postfix) with ESMTP id 1FD742F581F
  for <industrypack-devel@lists.sourceforge.net>;
- Wed, 27 Mar 2024 09:45:04 +0100 (CET)
+ Wed, 27 Mar 2024 12:41:52 +0100 (CET)
 To: industrypack-devel@lists.sourceforge.net
-Date: 27 Mar 2024 01:45:00 -0700
-Message-ID: <20240327014500.0024BF43E83594A9@WeTransfer.com>
+Date: 27 Mar 2024 04:41:47 -0700
+Message-ID: <20240327044147.68664CF967F1CBB2@WeTransfer.com>
 MIME-Version: 1.0
 X-Spam-Score: 5.3 (+++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -62,21 +62,21 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [91.199.154.224 listed in wl.mailspike.net]
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
   0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
                              [SPF failed: Rejected by SPF record]
   0.0 HTML_MESSAGE           BODY: HTML included in message
   0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.0 FROM_MISSP_SPF_FAIL    No description available.
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [91.199.154.224 listed in wl.mailspike.net]
   0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
                              Colors in HTML
+  0.0 FROM_MISSP_SPF_FAIL    No description available.
   2.5 TO_NO_BRKTS_FROM_MSSP  Multiple header formatting problems
   0.4 FROM_MISSP_EH_MATCH    From misspaced, matches envelope
   1.4 BODY_URI_ONLY          Message body is only a URI in one line of text or
                              for an image
-X-Headers-End: 1rpOyz-00014d-H9
+X-Headers-End: 1rpRkH-0000w7-Fz
 Subject: [Industrypack-devel] You have received a file via WeTransfer
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -92,10 +92,10 @@ List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 From: WeTransfer via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
 Reply-To: WeTransfer <Noreply@WeTransfer.com>
-Content-Type: multipart/mixed; boundary="===============2737716770761388724=="
+Content-Type: multipart/mixed; boundary="===============2356376082688948078=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============2737716770761388724==
+--===============2356376082688948078==
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -230,14 +230,14 @@ x">64fe1d0aaf3ee97d4a120dccecfecb<WBR style=3D"BOX-SIZING: border-box">4d20=
 ne></TBODY></P></BODY></HTML>
 
 
---===============2737716770761388724==
+--===============2356376082688948078==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2737716770761388724==
+--===============2356376082688948078==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -248,4 +248,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2737716770761388724==--
+--===============2356376082688948078==--
