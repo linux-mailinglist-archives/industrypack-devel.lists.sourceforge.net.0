@@ -2,83 +2,108 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5C96F8A7A1F
-	for <lists+industrypack-devel@lfdr.de>; Wed, 17 Apr 2024 03:23:23 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 922118A7A94
+	for <lists+industrypack-devel@lfdr.de>; Wed, 17 Apr 2024 04:31:21 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rwu1B-0006zo-QG
+	id 1rwv4x-00062u-5W
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 17 Apr 2024 01:23:22 +0000
+	Wed, 17 Apr 2024 02:31:19 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <cost09@lk-tech.com>) id 1rwu17-0006zi-5h
+ (envelope-from <no-reply.email.aeon@kwhhuzt.cn>) id 1rwv4v-00062c-CB
  for industrypack-devel@lists.sourceforge.net;
- Wed, 17 Apr 2024 01:23:17 +0000
+ Wed, 17 Apr 2024 02:31:18 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Subject:To:From:
+ Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=P0pwXC/vRzAF30k3ZAe00W8ozryaHkVT+3EuQ10S1Xo=; b=FqQ4yThubpa2rDMdE/mCmnO8YP
- c0AK6dBoXhEda9OnuOI70zby5rQZ385Ay97jInryXr3RXj/TTdJPli2/HnUvefZNQLZ2ovaumBUhw
- srTBXnjrS7QDDXOWYRPXz+97Txblczw/nVpyiLAhd+pAWhZ+7n1oFCON7BnvbDONMz4k=;
+ bh=p+Hl3ptfoTsqyS9OsGTuCMKcq2YNPUSZCgnwcZ8T6Yg=; b=YVm86SUWv/MxN3Un1hBy9NSQlw
+ GiAjWHpKPoJ+JxD8mEO1ex6Rj0dK0sgrUh5a6clximeqTPfvr8CDHhkhXYnhZV4s5U6/Jo1p+B/aK
+ a3ooGJN6kl0I5ez38Nx9HAnEh52IzLwAenbOdfAICvLsiYUqfyi1iaoYz0FQ+pORAUzw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Type:MIME-Version:Date:Subject:To:From:Message-ID:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=P0pwXC/vRzAF30k3ZAe00W8ozryaHkVT+3EuQ10S1Xo=; b=G
- CpO/YRsaYNyAAngN8TL6DzjIhsaOQ6/ooekDMtqBnj7vfjFWT1dgyFTSRUFJE69ncKC/zYGh4BtDV
- UHq+Cx+RCI4FSJM8OPRTA4zjwVthhAwOzAgUdl6Oz50LfliN8dQQSN9g2Voq8vFXToLsKifO2YA5c
- ryUhMoYdaLAoWTyk=;
-Received: from [91.199.154.57] (helo=s862263.srvape.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1rwu15-00073d-SK for industrypack-devel@lists.sourceforge.net;
- Wed, 17 Apr 2024 01:23:17 +0000
-Received: from lk-tech.com (localhost [IPv6:::1])
- by s862263.srvape.com (Postfix) with ESMTP id 7D6D230FB41
- for <industrypack-devel@lists.sourceforge.net>;
- Wed, 17 Apr 2024 03:22:03 +0200 (CEST)
-From: NGUYEN THANH VINH<cost09@lk-tech.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 16 Apr 2024 18:22:02 -0700
-Message-ID: <20240416182202.AA87F174E5E64BDE@lk-tech.com>
+ List-Owner:List-Archive; bh=p+Hl3ptfoTsqyS9OsGTuCMKcq2YNPUSZCgnwcZ8T6Yg=; b=S
+ bsG0q7Ee3GPG2gefMsFmo2hv0ITv1E4X6RvZsBiea2oQAhW8vlITaSc5H2z6ee4Y8g2vclUQbgKbk
+ GZXiiL917RKIUHIj6jv5eJI9R/fszCZDj+Y6csQx1ovFAoEZ/qGy7JOxML6sxke3qvFmLA2CNqXLc
+ j0Xmh2sP6CsgXvTw=;
+Received: from [165.154.172.176] (helo=mail.kwhhuzt.cn)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1rwv4u-0005jM-87 for industrypack-devel@lists.sourceforge.net;
+ Wed, 17 Apr 2024 02:31:18 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=kwhhuzt.cn; 
+ h=Message-ID:From:To:Subject:Date:MIME-Version:Content-Type;
+ i=no-reply.email.aeon@kwhhuzt.cn;
+ bh=p+Hl3ptfoTsqyS9OsGTuCMKcq2YNPUSZCgnwcZ8T6Yg=;
+ b=dg9nRoSpCv6ZNgIDQbdee8/Y9ktE2f+jV+Anvqe3Cu/7xZxbzAh5c5px6oF8jKyAo5gPykAXla0w
+ hjeZTiuKBbifbZxtThp1xU83UeFjjrrC6xp+KjmCLzt/bam+VG2mKUbESCqKl4Z7JK5/YAkttgua
+ 5qHLUsi8B8ZAhISRh5rw2byfJZI/AhuoScpf3lT+l0GzyjUSHshfhDGgM9oDw8y5rzF4oB6+KWDW
+ ssY2ojDeDyG2lK4SkdJCQGIjpWRoTvxDqBkBQOvJpe9AaEH5lRn5biMHbClQExYeN0PUXHuWOLpB
+ H6BNM4DJGHXyhaj2z0c6NC2dL+VuJot5eq9buQ==
+Message-ID: <9D889F7D37C0F76CF91DB210D8A3AA67@YsF.nmc>
+From: =?utf-8?B?44Kk44Kq44Oz44Kr44O844OJ?= <no-reply.email.aeon@kwhhuzt.cn>
+To: <industrypack-devel@lists.sourceforge.net>
+Date: Wed, 17 Apr 2024 11:10:44 +0900
 MIME-Version: 1.0
-X-Spam-Score: 3.1 (+++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+X-MSMail-Priority: High
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+X-Spam-Score: 7.4 (+++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Dear industrypack-devel We have new project that want to use
- your products as BOQ attached. attach is the drawing need to be customize
- 2000- 3000K. Please help to check and send quotation as soon as possible.
- Thank you. 
- Content analysis details:   (3.1 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  いつもイオンマークのカードをご利用いただき、ありがとうございます。
+    本メールはWeb明細(環境宣言)にご登録いただいているお客さまにお送りし�
+    [...] 
+ 
+ Content analysis details:   (7.4 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
- blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: vadesecure.com]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 T_SPF_PERMERROR        SPF: test of record failed (permerror)
- 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
- identical to background
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML
- 1.7 PDS_DBL_URL_TNB_RUNON  Double-url and To no arrows, from runon
- 0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
-X-Headers-End: 1rwu15-00073d-SK
-Subject: [Industrypack-devel] Request the quotation for project MO Bai Nom
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: aeonfinancial.co.jp]
+  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+                             blocklist
+                             [URIs: lwrelde.cn]
+  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+                             [URIs: lwrelde.cn]
+  1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+                             [165.154.172.176 listed in dnsbl-1.uceprotect.net]
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                           [165.154.172.176 listed in bl.score.senderscore.com]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+  2.0 PYZOR_CHECK            Listed in Pyzor
+                             (https://pyzor.readthedocs.io/en/latest/)
+  0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+X-Headers-End: 1rwv4u-0005jM-87
+Subject: [Industrypack-devel] =?utf-8?b?M+aciOOBlOiri+axgumhjeOBruOBig==?=
+ =?utf-8?b?55+l44KJ44Gb?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -90,554 +115,217 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============0681537574489597909=="
+Content-Type: multipart/mixed; boundary="===============2205217559424057467=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============0681537574489597909==
+This is a multi-part message in MIME format.
+
+--===============2205217559424057467==
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0948_010FEC4B.10FF33F0"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0948_010FEC4B.10FF33F0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+
+44GE44Gk44KC44Kk44Kq44Oz44Oe44O844Kv44Gu44Kr44O844OJ44KS44GU5Yip55So44GE44Gf
+44Gg44GN44CB44GC44KK44GM44Go44GG44GU44GW44GE44G+44GZ44CCDQrmnKzjg6Hjg7zjg6vj
+ga9XZWLmmI7ntLAo55Kw5aKD5a6j6KiAKeOBq+OBlOeZu+mMsuOBhOOBn+OBoOOBhOOBpuOBhOOC
+i+OBiuWuouOBleOBvuOBq+OBiumAgeOCiuOBl+OBpuOBiuOCiuOBvuOBmeOAgg0KDQoz5pyI44Gu
+44GU6KuL5rGC6aGN44GM56K65a6a44GE44Gf44GX44G+44GX44Gf44CCDQoNCuKUgeKUgeKUgeKU
+geKUgeKUgeKUgeKUgQ0K44GK5pSv5omV44GE44Gr44Gk44GE44GmDQrilIHilIHilIHilIHilIHi
+lIHilIHilIENCuOBlOWIqeeUqOOCq+ODvOODiSDvvJog44Kk44Kq44Oz44Kr44O844OJ44K744Os
+44Kv44OIDQrjgYrmlK/miZXml6Ug77yaMjAyNOW5tDTmnIgyMOaXpQ0KDQrlj6Pluqfmrovpq5jj
+ga7jgZTnorroqo3jg7vjgZTlhaXph5Hjga/jgIHjgYrmlK/miZXml6Xjga7liY3llrbmpa3ml6Xj
+gb7jgafjgavjgYrpoZjjgYTjgYTjgZ/jgZfjgb7jgZnjgIINCuOBlOWIqeeUqOaYjue0sOOBr+OA
+geOCouODl+ODquOAjOOCpOOCquODs+OCpuOCqeODrOODg+ODiOOAjeOBvuOBn+OBr+ODm+ODvOOD
+oOODmuODvOOCuOOAjOaaruOCieOBl+OBruODnuODjeODvOOCteOCpOODiOOAjeOBuOODreOCsOOC
+pOODs+OBhOOBn+OBoOOBjeOBlOeiuuiqjeOBj+OBoOOBleOBhOOAgg0KDQrilrzjgZToq4vmsYLm
+mI7ntLDjga7jgZTnorroqo3jga/jgZPjgaHjgokNCmh0dHBzOi8vd3d3LmFlb24uY28uanAvYXBw
+Lw0KDQrigLvjg6Hjg7zjg6vkvZzmiJDmmYLngrnjgafjga7oq4vmsYLnorrlrprpoY3jgavjgarj
+gorjgb7jgZnjgILjgZTliKnnlKjnirbms4Hjgavjgojjgorlho3luqboq4vmsYLpoY3norrlrprj
+g6Hjg7zjg6vjgpLjgYrpgIHjgorjgZnjgovloLTlkIjjgYzjgZTjgZbjgYTjgb7jgZnjgIINCuKA
+u+OBiuW8leiQveWPo+W6p+OBruioreWumuOBjOWujOS6huOBl+OBpuOBhOOBquOBhOWgtOWQiOOB
+r+OAgeaciOacq+mgg+OBq+eZuumAgeOBhOOBn+OBl+OBvuOBmeOCs+ODs+ODk+ODi+OBruaMr+i+
+vOeUqOe0meOBp+OBruOBiuaUr+aJleOBhOOCkuOBiumhmOOBhOOBhOOBn+OBl+OBvuOBmeOAguOB
+iuW8leiQveWPo+W6p+OBruioreWumuOBjOWujOS6huOBl+OBn+OBi+OBlOS4jeaYjuOBquWgtOWQ
+iOOBr+S4i+iomOOCiOOCiuOBlOeiuuiqjeOBj+OBoOOBleOBhOOAgg0KaHR0cHM6Ly9mYXEuYWVv
+bi5jby5qcC9mYXEvc2hvdy82NjA/c2l0ZV9kb21haW49ZGVmYXVsdA0K4oC75LiA6YOo44CB44GK
+5byV6JC95pel44GM55Ww44Gq44KL44Kr44O844OJ44GM44GU44GW44GE44G+44GZ44CCDQoNCuKU
+geKUgeKUgeKUgeKUgeKUgeKUgeKUgQ0KV0FPTiBQT0lOVOOBq+OBpOOBhOOBpg0K4pSB4pSB4pSB
+4pSB4pSB4pSB4pSB4pSBDQrjgq/jg6zjgrjjg4Pjg4jjg7vjg4fjg5Pjg4Pjg4jmiZXjgYTjgafj
+gZ/jgb7jgotXQU9OIFBPSU5U5pWw44Gv5q+O5pyIMjXml6Xjgavjg4fjg7zjgr/jgYzmm7TmlrDj
+gZXjgozjgb7jgZnjgILjgqLjg5fjg6rjgIzjgqTjgqrjg7Pjgqbjgqnjg6zjg4Pjg4jjgI3jgb7j
+gZ/jga/jg5vjg7zjg6Djg5rjg7zjgrjjgIzmmq7jgonjgZfjga7jg57jg43jg7zjgrXjgqTjg4jj
+gI3jgbjjg63jgrDjgqTjg7PjgYTjgZ/jgaDjgY3jgZTnorroqo3jgY/jgaDjgZXjgYTjgIINCihX
+QU9OIFBPSU5U44GM6YCy5ZGI44GV44KM44Gq44GE44Kr44O844OJ44Gv44GU5Yip55So44GE44Gf
+44Gg44GR44G+44Gb44KTKQ0KDQrilrzmmq7jgonjgZfjga7jg57jg43jg7zjgrXjgqTjg4jjga/j
+gZPjgaHjgokNCmh0dHBzOi8vd3d3LmFlb24uY28uanAvYXBwL3BvaW50Lw0K4pa8V0FPTiBQT0lO
+VOOBruS9v+OBiOOCi+W6l+iIl+ODu+S9v+OBhOaWueOBq+mWouOBl+OBpuOBr+OBk+OBoeOCiQ0K
+aHR0cHM6Ly9mYXEuYWVvbi5jby5qcC9mYXEvc2hvdy81NjI/YmFjaz1mcm9udCUyRmNhdGVnb3J5
+JTNBc2hvdyZjYXRlZ29yeV9pZD0xNjYmcGFnZT0xJnNpdGVfZG9tYWluPWRlZmF1bHQmc29ydD1z
+b3J0X2FjY2VzcyZzb3J0X29yZGVyPWRlc2MgDQoNCuKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgQ0K
+44Ki44OX44Oq44KE44Oh44O844Or44Gn44GK44OI44Kv44Gq5oOF5aCx44GM5Y+X5Y+W44KM44G+
+44GZ77yBDQrilIHilIHilIHilIHilIHilIHilIHilIENCuOCpOOCquODs+OCq+ODvOODieWFrOW8
+j+OCouODl+ODquOAjOOCpOOCquODs+OCpuOCqeODrOODg+ODiOOAjeOBquOCieOBlOWIqeeUqOaY
+jue0sOOBrueiuuiqjeOChOODneOCpOODs+ODiOS6pOaPm+OBr+OCguOBoeOCjeOCk+OAgeS8muWT
+oemZkOWumuOCr+ODvOODneODs+OCguWIqeeUqOOBp+OBjeS+v+WIqeOBp+OBiuODiOOCr+KZqg0K
+4pa8aVBob25l44KS44GK5oyB44Gh44Gu5pa544Gv44GT44Gh44KJDQpodHRwczovL2l0dW5lcy5h
+cHBsZS5jb20vanAvYXBwL2Flb24td2FsbGV0L2lkMTEwMDU2NDg0Mj9sPWphJmxzPTEmbXQ9OA0K
+4pa8QW5kcm9pZOOCueODnuODm+OCkuOBiuaMgeOBoeOBruaWueOBr+OBk+OBoeOCiQ0KaHR0cHM6
+Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWpwLmNvLmFlb24uY3JlZGl0
+LmFuZHJvaWQud2FsbGV0DQoNCuKWvOOCpOOCquODs+OBquOBqeOBp+OBruOBiuiyt+OBhOeJqeaD
+heWgseOChOOCq+ODvOODieOCreODo+ODs+ODmuODvOODs+aDheWgseOCguOBhOOBoeaXqeOBj+OB
+iuWxiuOBke+8geODoeODvOODq+ODnuOCrOOCuOODs+OBruOBlOeZu+mMsuOBr+OBk+OBoeOCiQ0K
+aHR0cHM6Ly93d3cuYWVvbi5jby5qcC9zZXJ2aWNlL25ld3NsZXR0ZXIvDQrilIHilIHilIHilIHi
+lIHilIHilIHilIENCuOBiuWuouOBleOBvuaDheWgseOBruacgOaWsOWMluOBq+OBpOOBhOOBpg0K
+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSBDQrjgZTnmbvpjLLmg4XloLEo5rCP5ZCN44CB5L2P5omA
+44CB6YCj57Wh5YWI44CB44Oh44O844Or44Ki44OJ44Os44K544Gq44GpKeOBq+WkieabtOOBjOOB
+lOOBluOBhOOBvuOBl+OBn+OCieOAgeaaruOCieOBl+OBruODnuODjeODvOOCteOCpOODiOOCiOOC
+iuOBiuaJi+e2muOBjeOCkuOBiumhmOOBhOOBhOOBn+OBl+OBvuOBmeOAgg0KDQriiarkvY/miYDl
+pInmm7TmiYvntprjgY3jga7jgYrpoZjjgYTiiasNCuOBiuW8lei2iuOBl+OBquOBqeOBp+S9j+aJ
+gOOBq+WkieabtOOBjOeUn+OBmOOBn+mam+OBq+OBr+OAgeOBiuaXqeOCgeOBq+S9j+aJgOWkieab
+tOOBruWxiuWHuuOCkuOBiumhmOOBhOOBhOOBn+OBl+OBvuOBmeOAguOBiuWxiuOBkeOBhOOBn+OB
+oOOBkeOBquOBhOWgtOWQiOOAgemDtemAgeOBq+OCiOOCi+mHjeimgeOBquOBiuefpeOCieOBm+OB
+jOWxiuOBi+OBquOBhOWgtOWQiOOCguOBguOCiuOBvuOBmeOBruOBp+OBlOazqOaEj+OBj+OBoOOB
+leOBhOOAgg0KDQrilrzjgqvjg7zjg4nnmbvpjLLlhoXlrrnnhafkvJrjg7vlpInmm7TjgavjgaTj
+gYTjgabjga/jgZPjgaHjgokNCmh0dHBzOi8vd3d3LmFlb24uY28uanAvaW5xdWlyeS9jaGFuZ2Uv
+DQoNCuKWvOODoeODvOODq+OCouODieODrOOCueOBruWkieabtOOBr+OBk+OBoeOCiSANCmh0dHBz
+Oi8vd3d3LmFlb24uY28uanAvYXBwL3NldHRpbmdzL3Byb2ZpbGUvDQoNCu+8ne+8ne+8ne+8ne+8
+ne+8ne+8ne+8ne+8nQ0K4pag44Kk44Kq44Oz44K544Kv44Ko44Ki44Oh44Oz44OQ44O8SUTjg7vj
+g5Hjgrnjg6/jg7zjg4njgpLjgYrlv5jjgozjga7loLTlkIgNCmh0dHBzOi8vd3d3LmFlb24uY28u
+anAvYXBwL3NlYXJjaF9pZF9wd19yZWlzc3VlLw0KDQrilqDjgYrllY/jgYTlkIjjgo/jgZvlhYgN
+Cmh0dHBzOi8vd3d3LmFlb24uY28uanAvaW5xdWlyeS8NCg0K77yd77yd77yd77yd77yd77yd77yd
+77yd77ydDQrjgZPjga7jg6Hjg7zjg6vjgqLjg4njg6zjgrlbIHN0YXRlbWVudEBlbWFpbC5hZW9u
+LmNvLmpwIF3jga/pgIHkv6HlsILnlKjjgqLjg4njg6zjgrnjga7jgZ/jgoHjgIHjgZTov5Tkv6Hj
+gYTjgZ/jgaDjgYTjgabjgoLjgZTnlKjku7bjga/mib/jgozjgb7jgZvjgpPjgIINCuW9k+ODoeOD
+vOODq+OBq+OBiuW/g+W9k+OBn+OCiuOBruOBquOBhOaWueOBr+OAgeWkp+WkieOBiuaJi+aVsOOC
+kuOBiuaOm+OBkeOBhOOBn+OBl+OBvuOBmeOBjOOAgeOBneOBruaXqOOCkuOBiuabuOOBjea3u+OB
+iOOBhOOBn+OBoOOBjeS4i+iomOOCouODieODrOOCueOBvuOBp+OBiumAgeOCiuOBj+OBoOOBleOB
+hOOAgg0KbmV0YnJhbmNoQGFlb24uY28uanANCg0K4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB
+DQrnmbrooYzvvJrmoKrlvI/kvJrnpL7jgqTjgqrjg7PpioDooYwNCmh0dHBzOi8vd3d3LmFlb25i
+YW5rLmNvLmpwLw0KDQrmpa3li5nlj5foqJfkvJrnpL7vvJrjgqTjgqrjg7Pjg5XjgqPjg4rjg7Pj
+grfjg6Pjg6vjgrXjg7zjg5PjgrnmoKrlvI/kvJrnpL4NCmh0dHBzOi8vd3d3LmFlb25maW5hbmNp
+YWwuY28uanAvDQoNCuOBk+OBruODoeODvOODq+OBq+aOsui8ieOBleOCjOOBn+WGheWuueOCkuio
+seWPr+OBquOBj+i7oui8ieOBmeOCi+OBk+OBqOOCkuemgeOBmOOBvuOBmeOAgg0K4pSB4pSB4pSB
+4pSB4pSB4pSB4pSB4pSB4pSB
+
+------=_NextPart_000_0948_010FEC4B.10FF33F0
 Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+	charset="utf-8"
+Content-Transfer-Encoding: base64
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
+L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
+Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
+bnQ9Ik1TSFRNTCAxMS4wMC4xMDU3MC4xMDAxIj48L0hFQUQ+DQo8Qk9EWT7jgYTjgaTjgoLjgqTj
+gqrjg7Pjg57jg7zjgq/jga7jgqvjg7zjg4njgpLjgZTliKnnlKjjgYTjgZ/jgaDjgY3jgIHjgYLj
+gorjgYzjgajjgYbjgZTjgZbjgYTjgb7jgZnjgII8QlI+5pys44Oh44O844Or44GvV2Vi5piO57Sw
+KOeSsOWig+Wuo+iogCnjgavjgZTnmbvpjLLjgYTjgZ/jgaDjgYTjgabjgYTjgovjgYrlrqLjgZXj
+gb7jgavjgYrpgIHjgorjgZfjgabjgYrjgorjgb7jgZnjgII8QlI+PEJSPjPmnIjjga7jgZToq4vm
+sYLpoY3jgYznorrlrprjgYTjgZ/jgZfjgb7jgZfjgZ/jgII8QlI+PEJSPuKUgeKUgeKUgeKUgeKU
+geKUgeKUgeKUgTxCUj7jgYrmlK/miZXjgYTjgavjgaTjgYTjgaY8QlI+4pSB4pSB4pSB4pSB4pSB
+4pSB4pSB4pSBPEJSPuOBlOWIqeeUqOOCq+ODvOODiSANCu+8miDjgqTjgqrjg7Pjgqvjg7zjg4nj
+grvjg6zjgq/jg4g8QlI+44GK5pSv5omV5pelIA0K77yaMjAyNOW5tDTmnIgyMOaXpTxCUj48QlI+
+5Y+j5bqn5q6L6auY44Gu44GU56K66KqN44O744GU5YWl6YeR44Gv44CB44GK5pSv5omV5pel44Gu
+5YmN5Za25qWt5pel44G+44Gn44Gr44GK6aGY44GE44GE44Gf44GX44G+44GZ44CCPEJSPuOBlOWI
+qeeUqOaYjue0sOOBr+OAgeOCouODl+ODquOAjOOCpOOCquODs+OCpuOCqeODrOODg+ODiOOAjeOB
+vuOBn+OBr+ODm+ODvOODoOODmuODvOOCuOOAjOaaruOCieOBl+OBruODnuODjeODvOOCteOCpOOD
+iOOAjeOBuOODreOCsOOCpOODs+OBhOOBn+OBoOOBjeOBlOeiuuiqjeOBj+OBoOOBleOBhOOAgjxC
+Uj48QlI+4pa844GU6KuL5rGC5piO57Sw44Gu44GU56K66KqN44Gv44GT44Gh44KJPEJSPjxBIA0K
+aHJlZj0iaHR0cHM6Ly9sd3JlbGRlLmNuIj5odHRwczovL3d3dy5hZW9uLmNvLmpwL2FwcC88L0E+
+PEJSPjxCUj7igLvjg6Hjg7zjg6vkvZzmiJDmmYLngrnjgafjga7oq4vmsYLnorrlrprpoY3jgavj
+garjgorjgb7jgZnjgILjgZTliKnnlKjnirbms4Hjgavjgojjgorlho3luqboq4vmsYLpoY3norrl
+rprjg6Hjg7zjg6vjgpLjgYrpgIHjgorjgZnjgovloLTlkIjjgYzjgZTjgZbjgYTjgb7jgZnjgII8
+QlI+4oC744GK5byV6JC95Y+j5bqn44Gu6Kit5a6a44GM5a6M5LqG44GX44Gm44GE44Gq44GE5aC0
+5ZCI44Gv44CB5pyI5pyr6aCD44Gr55m66YCB44GE44Gf44GX44G+44GZ44Kz44Oz44OT44OL44Gu
+5oyv6L6855So57SZ44Gn44Gu44GK5pSv5omV44GE44KS44GK6aGY44GE44GE44Gf44GX44G+44GZ
+44CC44GK5byV6JC95Y+j5bqn44Gu6Kit5a6a44GM5a6M5LqG44GX44Gf44GL44GU5LiN5piO44Gq
+5aC05ZCI44Gv5LiL6KiY44KI44KK44GU56K66KqN44GP44Gg44GV44GE44CCPEJSPjxBIA0KaHJl
+Zj0iaHR0cHM6Ly9sd3JlbGRlLmNuIj5odHRwczovL2ZhcS5hZW9uLmNvLmpwL2ZhcS9zaG93LzY2
+MD9zaXRlX2RvbWFpbj1kZWZhdWx0PC9BPjxCUj7igLvkuIDpg6jjgIHjgYrlvJXokL3ml6XjgYzn
+lbDjgarjgovjgqvjg7zjg4njgYzjgZTjgZbjgYTjgb7jgZnjgII8QlI+PEJSPuKUgeKUgeKUgeKU
+geKUgeKUgeKUgeKUgTxCUj5XQU9OIA0KUE9JTlTjgavjgaTjgYTjgaY8QlI+4pSB4pSB4pSB4pSB
+4pSB4pSB4pSB4pSBPEJSPuOCr+ODrOOCuOODg+ODiOODu+ODh+ODk+ODg+ODiOaJleOBhOOBp+OB
+n+OBvuOCi1dBT04gDQpQT0lOVOaVsOOBr+avjuaciDI15pel44Gr44OH44O844K/44GM5pu05paw
+44GV44KM44G+44GZ44CC44Ki44OX44Oq44CM44Kk44Kq44Oz44Km44Kp44Os44OD44OI44CN44G+
+44Gf44Gv44Ob44O844Og44Oa44O844K444CM5pqu44KJ44GX44Gu44Oe44ON44O844K144Kk44OI
+44CN44G444Ot44Kw44Kk44Oz44GE44Gf44Gg44GN44GU56K66KqN44GP44Gg44GV44GE44CCPEJS
+PihXQU9OIA0KUE9JTlTjgYzpgLLlkYjjgZXjgozjgarjgYTjgqvjg7zjg4njga/jgZTliKnnlKjj
+gYTjgZ/jgaDjgZHjgb7jgZvjgpMpPEJSPjxCUj7ilrzmmq7jgonjgZfjga7jg57jg43jg7zjgrXj
+gqTjg4jjga/jgZPjgaHjgok8QlI+PEEgDQpocmVmPSJodHRwczovL2x3cmVsZGUuY24iPmh0dHBz
+Oi8vd3d3LmFlb24uY28uanAvYXBwL3BvaW50LzwvQT48QlI+4pa8V0FPTiANClBPSU5U44Gu5L2/
+44GI44KL5bqX6IiX44O75L2/44GE5pa544Gr6Zai44GX44Gm44Gv44GT44Gh44KJPEJSPjxBIA0K
+aHJlZj0iaHR0cHM6Ly9sd3JlbGRlLmNuIj5odHRwczovL2ZhcS5hZW9uLmNvLmpwL2ZhcS9zaG93
+LzU2Mj9iYWNrPWZyb250JTJGY2F0ZWdvcnklM0FzaG93JmFtcDtjYXRlZ29yeV9pZD0xNjYmYW1w
+O3BhZ2U9MSZhbXA7c2l0ZV9kb21haW49ZGVmYXVsdCZhbXA7c29ydD1zb3J0X2FjY2VzcyZhbXA7
+c29ydF9vcmRlcj1kZXNjIA0KPC9BPjxCUj48QlI+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSBPEJS
+PuOCouODl+ODquOChOODoeODvOODq+OBp+OBiuODiOOCr+OBquaDheWgseOBjOWPl+WPluOCjOOB
+vuOBme+8gTxCUj7ilIHilIHilIHilIHilIHilIHilIHilIE8QlI+44Kk44Kq44Oz44Kr44O844OJ
+5YWs5byP44Ki44OX44Oq44CM44Kk44Kq44Oz44Km44Kp44Os44OD44OI44CN44Gq44KJ44GU5Yip
+55So5piO57Sw44Gu56K66KqN44KE44Od44Kk44Oz44OI5Lqk5o+b44Gv44KC44Gh44KN44KT44CB
+5Lya5ZOh6ZmQ5a6a44Kv44O844Od44Oz44KC5Yip55So44Gn44GN5L6/5Yip44Gn44GK44OI44Kv
+4pmqPEJSPuKWvGlQaG9uZeOCkuOBiuaMgeOBoeOBruaWueOBr+OBk+OBoeOCiTxCUj48QSANCmhy
+ZWY9Imh0dHBzOi8vbHdyZWxkZS5jbiI+aHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL2pwL2FwcC9h
+ZW9uLXdhbGxldC9pZDExMDA1NjQ4NDI/bD1qYSZhbXA7bHM9MSZhbXA7bXQ9ODwvQT48QlI+4pa8
+QW5kcm9pZOOCueODnuODm+OCkuOBiuaMgeOBoeOBruaWueOBr+OBk+OBoeOCiTxCUj48QSANCmhy
+ZWY9Imh0dHBzOi8vbHdyZWxkZS5jbiI+aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBw
+cy9kZXRhaWxzP2lkPWpwLmNvLmFlb24uY3JlZGl0LmFuZHJvaWQud2FsbGV0PC9BPjxCUj48QlI+
+4pa844Kk44Kq44Oz44Gq44Gp44Gn44Gu44GK6LK344GE54mp5oOF5aCx44KE44Kr44O844OJ44Kt
+44Oj44Oz44Oa44O844Oz5oOF5aCx44KC44GE44Gh5pep44GP44GK5bGK44GR77yB44Oh44O844Or
+44Oe44Ks44K444Oz44Gu44GU55m76Yyy44Gv44GT44Gh44KJPEJSPjxBIA0KaHJlZj0iaHR0cHM6
+Ly9sd3JlbGRlLmNuIj5odHRwczovL3d3dy5hZW9uLmNvLmpwL3NlcnZpY2UvbmV3c2xldHRlci88
+L0E+PEJSPuKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgTxCUj7jgYrlrqLjgZXjgb7mg4XloLHjga7m
+nIDmlrDljJbjgavjgaTjgYTjgaY8QlI+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSBPEJSPuOBlOeZ
+u+mMsuaDheWgsSjmsI/lkI3jgIHkvY/miYDjgIHpgKPntaHlhYjjgIHjg6Hjg7zjg6vjgqLjg4nj
+g6zjgrnjgarjgakp44Gr5aSJ5pu044GM44GU44GW44GE44G+44GX44Gf44KJ44CB5pqu44KJ44GX
+44Gu44Oe44ON44O844K144Kk44OI44KI44KK44GK5omL57aa44GN44KS44GK6aGY44GE44GE44Gf
+44GX44G+44GZ44CCPEJSPjxCUj7iiarkvY/miYDlpInmm7TmiYvntprjgY3jga7jgYrpoZjjgYTi
+ias8QlI+44GK5byV6LaK44GX44Gq44Gp44Gn5L2P5omA44Gr5aSJ5pu044GM55Sf44GY44Gf6Zqb
+44Gr44Gv44CB44GK5pep44KB44Gr5L2P5omA5aSJ5pu044Gu5bGK5Ye644KS44GK6aGY44GE44GE
+44Gf44GX44G+44GZ44CC44GK5bGK44GR44GE44Gf44Gg44GR44Gq44GE5aC05ZCI44CB6YO16YCB
+44Gr44KI44KL6YeN6KaB44Gq44GK55+l44KJ44Gb44GM5bGK44GL44Gq44GE5aC05ZCI44KC44GC
+44KK44G+44GZ44Gu44Gn44GU5rOo5oSP44GP44Gg44GV44GE44CCPEJSPjxCUj7ilrzjgqvjg7zj
+g4nnmbvpjLLlhoXlrrnnhafkvJrjg7vlpInmm7TjgavjgaTjgYTjgabjga/jgZPjgaHjgok8QlI+
+PEEgDQpocmVmPSJodHRwczovL2x3cmVsZGUuY24iPmh0dHBzOi8vd3d3LmFlb24uY28uanAvaW5x
+dWlyeS9jaGFuZ2UvPC9BPjxCUj48QlI+4pa844Oh44O844Or44Ki44OJ44Os44K544Gu5aSJ5pu0
+44Gv44GT44Gh44KJIA0KPEJSPjxBIA0KaHJlZj0iaHR0cHM6Ly9sd3JlbGRlLmNuIj5odHRwczov
+L3d3dy5hZW9uLmNvLmpwL2FwcC9zZXR0aW5ncy9wcm9maWxlLzwvQT48QlI+PEJSPu+8ne+8ne+8
+ne+8ne+8ne+8ne+8ne+8ne+8nTxCUj7ilqDjgqTjgqrjg7Pjgrnjgq/jgqjjgqLjg6Hjg7Pjg5Dj
+g7xJROODu+ODkeOCueODr+ODvOODieOCkuOBiuW/mOOCjOOBruWgtOWQiDxCUj48RU0+PEEgDQpo
+cmVmPSJodHRwczovL2x3cmVsZGUuY24iPmh0dHBzOi8vd3d3LmFlb24uY28uanAvYXBwL3NlYXJj
+aF9pZF9wd19yZWlzc3VlLzwvQT48L0VNPjxCUj48QlI+4pag44GK5ZWP44GE5ZCI44KP44Gb5YWI
+PEJSPjxBIA0KaHJlZj0iaHR0cHM6Ly9sd3JlbGRlLmNuIj5odHRwczovL3d3dy5hZW9uLmNvLmpw
+L2lucXVpcnkvPC9BPjxCUj48QlI+77yd77yd77yd77yd77yd77yd77yd77yd77ydPEJSPuOBk+OB
+ruODoeODvOODq+OCouODieODrOOCuVsgDQpzdGF0ZW1lbnRAZW1haWwuYWVvbi5jby5qcCANCl3j
+ga/pgIHkv6HlsILnlKjjgqLjg4njg6zjgrnjga7jgZ/jgoHjgIHjgZTov5Tkv6HjgYTjgZ/jgaDj
+gYTjgabjgoLjgZTnlKjku7bjga/mib/jgozjgb7jgZvjgpPjgII8QlI+5b2T44Oh44O844Or44Gr
+44GK5b+D5b2T44Gf44KK44Gu44Gq44GE5pa544Gv44CB5aSn5aSJ44GK5omL5pWw44KS44GK5o6b
+44GR44GE44Gf44GX44G+44GZ44GM44CB44Gd44Gu5peo44KS44GK5pu444GN5re744GI44GE44Gf
+44Gg44GN5LiL6KiY44Ki44OJ44Os44K544G+44Gn44GK6YCB44KK44GP44Gg44GV44GE44CCPEJS
+Pm5ldGJyYW5jaEBhZW9uLmNvLmpwPEJSPjxCUj7ilIHilIHilIHilIHilIHilIHilIHilIHilIE8
+QlI+55m66KGM77ya5qCq5byP5Lya56S+44Kk44Kq44Oz6YqA6KGMPEJSPmh0dHBzOi8vd3d3LmFl
+b25iYW5rLmNvLmpwLzxCUj48QlI+5qWt5YuZ5Y+X6KiX5Lya56S+77ya44Kk44Kq44Oz44OV44Kj
+44OK44Oz44K344Oj44Or44K144O844OT44K55qCq5byP5Lya56S+PEJSPmh0dHBzOi8vd3d3LmFl
+b25maW5hbmNpYWwuY28uanAvPEJSPjxCUj7jgZPjga7jg6Hjg7zjg6vjgavmjrLovInjgZXjgozj
+gZ/lhoXlrrnjgpLoqLHlj6/jgarjgY/ou6LovInjgZnjgovjgZPjgajjgpLnpoHjgZjjgb7jgZnj
+gII8QlI+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSBPEJSPjwvQk9EWT48L0hUTUw+DQo=
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.16438"></HEAD>
-<body style=3D"MARGIN: 0.5em">
-<P style=3D"MARGIN-BOTTOM: 0px; FONT-SIZE: 13px; FONT-FAMILY: monospace; WH=
-ITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 40=
-0; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN-=
-TOP: 0px; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures:=
- normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-de=
-coration-thickness: initial; text-decoration-style: initial; text-decoratio=
-n-color: initial">
-<SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-s=
-erif; COLOR: rgb(0,112,192)'>Dear industrypack-devel</SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
-der-box"></SPAN>&nbsp;</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial">We have new project that want to use your p=
-roducts as BOQ attached. attach is the drawing need to be customize 2000-<B=
-R><BR>3000K. Please help to check and send quotation as soon as possible. T=
-hank you.<SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
-der-box"></SPAN>&nbsp;</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial">Here is the project/our company information=
- for your reference in the below link:<SPAN lang=3DEN-GB style=3D"BOX-SIZIN=
-G: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
-der-box"></SPAN>&nbsp;</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0cm 36pt; ORPHANS: 2; WIDOWS: 2; =
-LETTER-SPACING: normal; TEXT-INDENT: -18pt; font-variant-ligatures: normal;=
- font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
--thickness: initial; text-decoration-style: initial;=20
-text-decoration-color: initial"><A style=3D"COLOR: rgb(17,85,204)" href=3D"=
-https://share-cell-5936.pages.dev/?cis=3Djoaasulsq&amp;psa=3Dindustrypack-d=
-evel@lists.sourceforge.net">Viewfile</A><SPAN lang=3DEN-GB style=3D"BOX-SIZ=
-ING: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0cm 36pt; ORPHANS: 2; WIDOWS: 2; =
-LETTER-SPACING: normal; TEXT-INDENT: -18pt; font-variant-ligatures: normal;=
- font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
--thickness: initial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
-der-box"></SPAN>&nbsp;</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
-der-box"></SPAN>&nbsp;</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial">If you have any question, please contact me=
-=2E Hope to receive your reply soonest!<SPAN lang=3DEN-GB style=3D"BOX-SIZI=
-NG: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
-der-box"></SPAN>&nbsp;</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
-der-box"></SPAN>&nbsp;</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-box; FONT=
--FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>Thank you and =
-best regards,</SPAN><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></S=
-PAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-box; FONT=
--FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'></SPAN><SPAN l=
-ang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN>&nbsp;</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><B style=3D"BOX-SIZING: border-box; FONT-WE=
-IGHT: bolder"><SPAN style=3D'BOX-SIZING: border-box; FONT-SIZE: 11.5pt; FON=
-T-FAMILY: "Segoe UI", sans-serif; BACKGROUND: white; COLOR: rgb(0,112,192)'=
->NGUYEN THANH VINH</SPAN></B><B style=3D"BOX-SIZING: border-box; FONT-WEIGH=
-T: bolder"><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Lig=
-ht", sans-serif; COLOR: rgb(0,112,192)'><SPAN>&nbsp;</SPAN>(Mr.)</SPAN></B>=
-<SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN>
-</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; LINE-HEIGHT: 16px; TEXT-INDENT: 0px; font-variant-ligatures: nor=
-mal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decora=
-tion-thickness: initial; text-decoration-style:=20
-initial; text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-=
-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>Cost =
-Control</SPAN><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></=
-P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; LINE-HEIGHT: 16px; TEXT-INDENT: 0px; font-variant-ligatures: nor=
-mal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decora=
-tion-thickness: initial; text-decoration-style:=20
-initial; text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-=
-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>Cell:=
- (+</SPAN><SPAN style=3D'BOX-SIZING: border-box; FONT-SIZE: 11.5pt; FONT-FA=
-MILY: "Calibri Light", sans-serif; BACKGROUND: white; COLOR: rgb(0,112,192)=
-; LINE-HEIGHT: 17px'>84)</SPAN><SPAN style=3D'BOX-SIZING: border-box; FONT-=
-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'><SPAN>&nbsp;</S=
-PAN></SPAN>
-<SPAN style=3D"BOX-SIZING: border-box; COLOR: rgb(0,112,192)">0387922770</S=
-PAN><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; LINE-HEIGHT: 16px; TEXT-INDENT: 0px; font-variant-ligatures: nor=
-mal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decora=
-tion-thickness: initial; text-decoration-style:=20
-initial; text-decoration-color: initial"><SPAN style=3D"BOX-SIZING: border-=
-box; FONT-FAMILY: Arial, sans-serif; COLOR: rgb(0,112,192)"></SPAN><SPAN la=
-ng=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN>&nbsp;</P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><B style=3D"BOX-SIZING: border-box; FONT-WE=
-IGHT: bolder"><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri =
-Light", sans-serif; COLOR: rgb(0,112,192)'>LK Technology Co., Ltd.</SPAN></=
-B><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial">
-<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
-5,99,193); BACKGROUND-COLOR: transparent"=20
-href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3DoetCEz21MJYoLmAYG3y=
-jfloYumDnSMV97_NVuj0aI-IBpcOizuzpeSiFLrV9f0zy&amp;i=3Dc8mJ1dcBfQMbvl-3dgRxA=
-YgXGwkTjdTL9voWIcfyiVGwhjzy87pbSUNqeHFzxjRtYDNBfM2thX2vKF4vN9UFfQ&amp;k=3Dk=
-AaX&amp;r=3D3B2QE41qCMtUNvRH98xvpZG2_mPNfXlSwd2F5bc90lpn8amujnoyOnE7OBKvHrD=
-X&amp;s=3Db251fb17626367197b65865c12945cfa0abb65b7b405ab428e2cebe4953500cd&=
-amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
-ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
-Ff%253DAg3HO79HtBjVspn58D7kstA4zP35n_0Nad1UQ_-7_vWfh1_4SROxk8r8g7-RwlfD%252=
-6i%253DlIch9r1x5ZX5ptR9P_HQY2CR-HYR4TYg13Uf0NFxMYohkv-14PmmypNj0YDMwouNsxrf=
-tmneQpBX9DECVmTREA%2526k%253DIcAz%2526r%253DqxU58IIPKZfpwAEDOhBGwF_EHybYDnT=
-UR-jZhdZjgenxex4jDE4dbQ5p_SEeA1NX%2526s%253D51c0cbc3e2f07ac79f84117b12402b3=
-f64ca3d58fb0ef1d65452518d56ccfe4b%2526u%253Dhttps%25253A%25252F%25252Fnam12=
-=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
-525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
-roxy%2525252Fv4%2525253Ff%2525253DPJr234-q9dnR6S86_MZBbzu1frxHtzbG01HiFhl28=
-wWYfEnY4GpOIjT4vcGor7Ml%25252526i%2525253Dzkq7oODGoUWKDhQBI5r9xAAMTfi2dPeUV=
-uxNw3d5gDfXQ-LxlPCSWl5kMIAZ8we-aK5GIEMqhxKhTxskhUmNmA%25252526k%2525253D4Ko=
-k%25252526r%2525253DRThXCBes33Eyf_hqtW81E7mMdZXw6p8lwSy_7q6VoIhu-6ZAInA-Eym=
-ecvTK5lv4%25252526s%2525253D1ce9ad9f74c760978d487a66a6e1349c902571e4f077334=
-8d34affd2b76e6581%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
-am12.safelinks.protection.outlook.com%252525252F%2
-52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fwww.goog=
-le.com%25252525252Fmaps%25252525252Fplace%25252525252FLK%25252525252BTechno=
-logy%25252525252BCo.%25252525252BLtd%25252525252B%2525252528VN%2525252529%2=
-5252525252F%25252525254010.7728184%25252525252C106.7548225%25252525252C17z%=
-25252525252Fdata%25252525253D%25252525213m1%25252525214b1%25252525214m5%252=
-52525213m4%25252525211s0x317525c50c1feb85%25252525253A0x9d682803f99f7250%25=
-252525218m2%25252525213d10.7728184%25252525214d106
-=2E7570112%2525252526data%252525253D05%25252525257C02%25252525257CDZheng%25=
-2525252540genledbrands.com%2525252525" rel=3Dnoreferrer target=3D_blank><SP=
-AN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-seri=
-f; COLOR: rgb(0,112,192)'>#24&nbsp;Street 68, Thanh My Loi Ward, Thu Duc Ci=
-ty , HCMC, Vietnam</SPAN></A><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border=
--box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-box; FONT=
--FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>Tel: (+84) 28 =
-22534 101 - 102. Service:<SPAN>&nbsp;</SPAN></SPAN><SPAN style=3D'BOX-SIZIN=
-G: border-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: red'>0888.6=
-88.040 -<SPAN>&nbsp;</SPAN></SPAN>
-<A onclick=3D"return rcmail.command('compose','service@lk-tech.com',this)" =
-style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(5,9=
-9,193); BACKGROUND-COLOR: transparent" href=3D"mailto:service@lk-tech.com" =
-rel=3Dnoreferrer><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calib=
-ri Light", sans-serif; COLOR: red'>service@lk-tech.com</SPAN></A><SPAN lang=
-=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm 0cm 6pt; ORPHANS: 2; WIDOWS: 2; LETTE=
-R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
-ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
-ess: initial; text-decoration-style: initial;=20
-text-decoration-color: initial">
-<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
-5,99,193); BACKGROUND-COLOR: transparent"=20
-href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3D5P6GdU3MFO_bD9nv1-K=
-xg_i6HP-1O1Jnv9e234mit31z0yvNh9eEle12wrcbnVkR&amp;i=3DI3qZAEIG9iah7PKeT9VKR=
-h17Ba7rIJZVgdSiapjXY5vaJHGkV2E6fVv79r4virqAhU49VklaDsmxTTj8Fw3lPg&amp;k=3DX=
-ZyO&amp;r=3DIDNQ1bdrereWg-q2DiMdpwB0yUoWZIc5EGs4Oe69ceYZhCnITd3xiUVOA46bMIs=
-L&amp;s=3D6c3d290c12bd8252c822628c9cbb26ace54c872ffbf47d9c309722bab4e9a6ca&=
-amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
-ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
-Ff%253DhV0SSIIRd3HD3bVdQdulC11pAHkjM5rL3sUeUU0g3EChqk1n3vp-UfAfyplUwRA8%252=
-6i%253Da9w9k5zjDTP4J1u9Ah6V6Vl2l8NgpCHKtYHQ5zoQs2LGWiClOVE6ydqXcplxV1awfPeA=
-TVXp2udAXvYIUQnVNg%2526k%253DEOPM%2526r%253DDuC_nRggjzh29kWynrPsAVSrWuTnn5N=
-5x76nl_mpGc_AehD3QQuo-af1GR20uRQU%2526s%253D6ff48c02245a04249b93a7a265dadd6=
-68cf17371e8b319537634f938f23633c2%2526u%253Dhttps%25253A%25252F%25252Fnam12=
-=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
-525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
-roxy%2525252Fv4%2525253Ff%2525253DdjmYzCdsDuPwq_qeQOZDThyjwhVUkadxXf47byCyI=
-1JXmUOYWABmM1xYA6k8iAJG%25252526i%2525253Do9xb2wnx4FFGkb9hHMMDVkFmH8qjHwlVT=
-SDTLn8IUBqekFhnjyS-aAthcO6dig63jqkyx9_UdiSYbXv_NMDS0Q%25252526k%2525253D1tu=
-S%25252526r%2525253DQjkRHzlLpn-MHBqLNbT-RQWE6uJgDZuLWqb4hBX34ZYE6OqOEJZeT4M=
-nNnw5vClX%25252526s%2525253D9e24071d7b11daee5dd31ed9ab92b52c8761dc0cc66e63c=
-218763a9672f5bba4%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
-am12.safelinks.protection.outlook.com%252525252F%2
-52525253Furl%252525253Dhttp%25252525253A%25252525252F%25252525252Flk-tech.c=
-om%25252525252F%2525252526data%252525253D05%25252525257C02%25252525257CDZhe=
-ng%252525252540genledbrands.com%25252525257C5b03540e948b426f85e608dbfc7bdd9=
-d%25252525257C45dc660a14a24749b4b0c56091295d73%25252525257C0%25252525257C0%=
-25252525257C638381381743575292%25252525257CUnknown%25252525257CTWFpbGZsb3d8=
-eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%25252525253=
-D%25252525257C3000%25252525257C%25252525257C%25252
-525257C%2525252526sdata%252525253DPVYVq62jDgqe36ifojUv7tjCP%25252525252FuST=
-jrHJeH0IdXgi70%25252525253D%2525252" rel=3Dnoreferrer target=3D_blank><SPAN=
- style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
- COLOR: rgb(0,112,192)'>Website&nbsp;</SPAN></A><SPAN style=3D'BOX-SIZING: =
-border-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)=
-'><SPAN>&nbsp;</SPAN>|&nbsp;<SPAN>&nbsp;</SPAN></SPAN>
-<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
-5,99,193); BACKGROUND-COLOR: transparent"=20
-href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3Di1XAR2DV1bTSa9V7hQY=
-Kv-al68O9ij4DQxE68axI2E4ymQ6FO_Bs9Dv17oMtqqkY&amp;i=3Dsm-Witj2bvXrxnMVoMReF=
-q5PzpF1heGODzgpCpaI9IfQIpTbQZRjGZfceXr5vDWX_bOIcrgtLBvtwcTHO0haoQ&amp;k=3Dz=
-Yjj&amp;r=3DXh_wlIELi-0fBa3NLgvOxoPAjQNRozmzT_uHHxN78HU3sNFq7isT0U4AwC9I7GB=
-B&amp;s=3D6fd6c38d42b5ea6819ca07cc6b7b0efbffc4f24b3d9a2c5dce3688e24cbe9743&=
-amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
-ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
-Ff%253DMqw2iggj0U1dm4ZNzdht5VZuO9AsKgBUhCD6V-BjtqkraWD_VOsP9AcujHYPZhU3%252=
-6i%253DlOIya-RmTiXdxibE5wlG9Mx0ToxNYKTno5-xnxh7pA5M2li9JOsSSucg7LIkDzebEQXc=
-Tc82CPy0lQkfnd2hbg%2526k%253DrM03%2526r%253DZa4d2g0g_jB65SLCGm1Hzj_qoiXzNrJ=
-ckLyQV12zamhvKQ-X9ktL_BagLb48Qhj3%2526s%253Da7566f685f868411029eb90e787a486=
-c0a5c81d39fc08f82ef1f3b67bad5d5d1%2526u%253Dhttps%25253A%25252F%25252Fnam12=
-=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
-525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
-roxy%2525252Fv4%2525253Ff%2525253DCzDyqshHsrIpvzYHQOYO0XBQLVr1O3fnfHFniriUy=
-6oM9c9egepeR0x-UIkRzp1i%25252526i%2525253DpXYXW8G_oZ6-9V-Nwpt_7WjQguZ7IDvrr=
-azA3aWXbEtXiTCACEQGu_yerEC_JcE-ffC1sNBbEX1slk1SJ63ULQ%25252526k%2525253D8Ra=
-E%25252526r%2525253DU_XNEvaZyebRcxshFUXhy4sRqV-OJ8flaEGFdjKk2N6NmCeL6156oKe=
-bdHFAZLUE%25252526s%2525253D456c96f0c077b6f829c4201c39f775cf6f3fec643a32b84=
-4270f378814903681%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
-am12.safelinks.protection.outlook.com%252525252F%2
-52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fwww.face=
-book.com%25252525252FLightingKnowhow%2525252526data%252525253D05%2525252525=
-7C02%25252525257CDZheng%252525252540genledbrands.com%25252525257C5b03540e94=
-8b426f85e608dbfc7bdd9d%25252525257C45dc660a14a24749b4b0c56091295d73%2525252=
-5257C0%25252525257C0%25252525257C638381381743575292%25252525257CUnknown%252=
-52525257CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLC=
-JXVCI6Mn0%25252525253D%25252525257C3000%2525252525
-7C%25252525257C%25252525257C%2525252526sdata%252525253DFqbHE6SDRHLzNFfyQQ%2=
-5252525252BjOJC6alXe%25252525252Bgv" rel=3Dnoreferrer target=3D_blank><SPAN=
- style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
- COLOR: rgb(0,112,192)'>Facebook &nbsp;</SPAN></A><SPAN style=3D'BOX-SIZING=
-: border-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,19=
-2)'>| &nbsp;</SPAN>
-<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
-5,99,193); BACKGROUND-COLOR: transparent"=20
-href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3D2CtFS6PGNYguNc0N-Z5=
-QI1cyPro0H54t2JAB7Hg52_A-AoU9OIKtkRIoLVEkdaJj&amp;i=3DjMV6NPHOmIFXHUrK2rfhc=
-qneexXVeenYX4H0ENjZQANcDBpvguGqR1XTGeFo8xEmq4VXuuHeeKBW09QIOMsa0Q&amp;k=3DW=
-p57&amp;r=3DNq3tg6nyS0OZAfL597igybnR16hhGDvn9G5s746uaYOzdoNabR-pqyoQrA2Fhrb=
-x&amp;s=3D0c100177559ab1216cad5ef0fff4b97cb05f64d139c0e7b88ba4d3745bd7045b&=
-amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
-ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
-Ff%253DYzAZTXxhVCEbA1-RAG6Z2DaQGOzzEdkAJlgxCqi7eEAvR1hT-e6YrfCFxE8nrezO%252=
-6i%253D9iPqSeAQYUmgMzkXF4gOSW0LqVFqMxUWgJ3kdLsLCrgdmwi_j-WWjlCda99iUVCJp3Hg=
-q8GDlLUHZfCzNe6Gzg%2526k%253Dzgwg%2526r%253DvwjknnESGvWa6kkNPN6326h6tFoUHsC=
-Fo9suwityIaDIUSs4O5CwW1NbyNk3Y6BI%2526s%253D3a7cf09cc882fd9bcbdddb80cf5b5ef=
-b2c8267ddc94f1b9214b6e7d652d2a2ee%2526u%253Dhttps%25253A%25252F%25252Fnam12=
-=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
-525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
-roxy%2525252Fv4%2525253Ff%2525253DCBcLmdKHHKwp87S-rH_vuC5R9IeeVOTtPXKqQcaP_=
-_Bd61_EFhUxX5UacS77vxd0%25252526i%2525253DA0u13usb7OKOjXX73RHt1RT6xYjwJYaKz=
-dQzC1mNVXxhkSWd5diVRjtYtGDnoEDjipff62dJo0NCea7AY45z7w%25252526k%2525253DzwH=
-W%25252526r%2525253D9prjcAAmWrTt1uy6LHvkU58tF55SIB3rvU_0KfGMaDbJ6c0gqfbD_UK=
-Fp5aOQyKo%25252526s%2525253D06300258b0aef0398f7204a2f11593f4885333bf8341efb=
-16a87ca25bee2838b%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
-am12.safelinks.protection.outlook.com%252525252F%2
-52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fwww.inst=
-agram.com%25252525252Flightingknowhow%25252525252F%2525252526data%252525253=
-D05%25252525257C02%25252525257CDZheng%252525252540genledbrands.com%25252525=
-257C5b03540e948b426f85e608dbfc7bdd9d%25252525257C45dc660a14a24749b4b0c56091=
-295d73%25252525257C0%25252525257C0%25252525257C638381381743575292%252525252=
-57CUnknown%25252525257CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJB=
-TiI6Ik1haWwiLCJXVCI6Mn0%25252525253D%25252525257C3
-000%25252525257C%25252525257C%25252525257C%2525252526sdata%252525253DTC8pE4=
-ncfbec%25252525252BFliMYIFb9Klw33CJ" rel=3Dnoreferrer target=3D_blank><SPAN=
- style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
- COLOR: rgb(0,112,192)'>Instagram&nbsp;</SPAN></A><SPAN style=3D'BOX-SIZING=
-: border-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,19=
-2)'><SPAN>&nbsp;</SPAN>|&nbsp;<SPAN>&nbsp;</SPAN></SPAN>
-<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
-5,99,193); BACKGROUND-COLOR: transparent"=20
-href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3DGYM6GioN4VQqfJS8TGX=
-bbiI3q38aCWbA6pIEvC-Vlp-c61Wv6TcNKPv1OsmB360M&amp;i=3D24RC9_5634jik5i4PSUKd=
-wQGm0jYrLSqfqaOmmbIghm9aocPbGvogcscj6auSq6hhaHMFd8X91mf6VfWySAsLg&amp;k=3DZ=
-rVx&amp;r=3DeImB9hTx1T_iqXZCu2SFmZMJBcWSimmWy_XP2OvxWXHryUTuTj49Hici4z83ca0=
-A&amp;s=3Dfb21c2237be6b68acafa4c8d2fda3d228f9cea4219580503eb9ac07d2cc05154&=
-amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
-ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
-Ff%253DkzhghkvdTQrSw6Y5pQ781ND4lAxefvOUACmMZTEHG9cZ_sl7sSyDrjjKLLWhC7lg%252=
-6i%253DPKfC535BuSQFmFIet8p43r1JvDW7k5ajOTbDtKmQFsjIfQO75lLidAqW0NpqRs6vP4oV=
-6CytFP3Ve6u2Bn0yLQ%2526k%253DfVv8%2526r%253D4nF6Bu0RCOtp6-_Unv0xbNyJvnuwAwW=
-UWE6m-N1ZDKXq-pxuEpqICGbGpybLyaA5%2526s%253Dfd49ee7ffc73eaa0e0a55b17ebf6253=
-8472062901ac7af168b9c2ba7a9b07a70%2526u%253Dhttps%25253A%25252F%25252Fnam12=
-=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
-525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
-roxy%2525252Fv4%2525253Ff%2525253DiwFGCS8b0aE95SC7OIe-CSu0uQm6fN4DQ5ao3Mlg4=
-ztBNe_pXXGWXnIhOduPmWxQ%25252526i%2525253DRRbIuMuOUMcF74spTZZGXnZFR8xc2IGOC=
-ThTg8TOutKnDvvTIR_4Q6d5E3-Rq5H7B08Qb0wIoKdBH98QJMLh6A%25252526k%2525253D9zz=
-B%25252526r%2525253DzSJEWr-KnUW0-c7iq2Rw5bQlN_S6e3tsdxeBaNIDfY3NNDe_ratYWoW=
-Zpy93ov2D%25252526s%2525253D80c4afd9e0183825630051e715192cd7b47c90eac2a2815=
-7eee97de1451a4521%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
-am12.safelinks.protection.outlook.com%252525252F%2
-52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fwww.link=
-edin.com%25252525252Fcompany%25252525252Flk-lighting%25252525252Fabout%2525=
-2525252F%2525252526data%252525253D05%25252525257C02%25252525257CDZheng%2525=
-25252540genledbrands.com%25252525257C5b03540e948b426f85e608dbfc7bdd9d%25252=
-525257C45dc660a14a24749b4b0c56091295d73%25252525257C0%25252525257C0%2525252=
-5257C638381381743575292%25252525257CUnknown%25252525257CTWFpbGZsb3d8eyJWIjo=
-iMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXV
-CI6Mn0%25252525253D%25252525257C3000%25252525257C%25252525257C%25252525257C=
-%2525252526sdata%252525253DPEyudNp6" rel=3Dnoreferrer target=3D_blank><SPAN=
- style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
- COLOR: rgb(0,112,192)'>Linkedin</SPAN></A><SPAN style=3D'BOX-SIZING: borde=
-r-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>&nb=
-sp; |&nbsp;<SPAN>&nbsp;</SPAN></SPAN>
-<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
-5,99,193); BACKGROUND-COLOR: transparent"=20
-href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3DCmcBmh6EsiGN_TIi9dy=
-x9sep1sscfG1AElsMTzBU7mYGo-2ijit7JY-QbGNAx2sr&amp;i=3D9F_PXqn6H9I6VYzPul_C9=
-tFXu6jAYVrJLuhHpiiyd3-UnSmdBnkn4g3Ocd3v8vcQN6WdnKkaKp6I--iRu3kVyw&amp;k=3DJ=
-1xD&amp;r=3DEjJD775h_4Xfz2HTrx5F5lxgE-QAS-0Q1K1HgjorQQYTu_QMpY-pSRU_oJ3MILZ=
-p&amp;s=3D3b31955d0550500b27fa9f83d19c55b635f6340621bfdbec7b90822f3628dd78&=
-amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
-ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
-Ff%253DMBXT8rSP_3-4vU5LPtVVgbgTAlZoQkW3sZ3pmV5TYxSJBg7K8dWclkAIHPDCbPFf%252=
-6i%253DpkNa1L3gFqyy1WoqCdKoO7gchMylJvgIWOKnVy8h8d9MJIC8anV4N4yQmDC8lfHritW_=
-VfcdsqjnJzU_i8tkng%2526k%253DUlhq%2526r%253DWlbgcY0knk_JlFDL1VXtaQ9GzjKlS1k=
-KJEKwtz5H78hGH7NCZz7454HoUWpi796f%2526s%253D75e2e077362d6d9599eab3ee0917f66=
-291acc1081576f4cb79263339b4a965c0%2526u%253Dhttps%25253A%25252F%25252Fnam12=
-=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
-525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
-roxy%2525252Fv4%2525253Ff%2525253DtO8StUvAX4vrBJ8A9jntKOZJJqUVFUXH5j_d6xXQU=
-g58S7TkTXU6i0Ctjem_uXFF%25252526i%2525253DMGvaZ9XKxbI9wWfbf03g-4ZQwYuNnZjt1=
-Ye_I_4HA5V6jhmHZD0vYy0X5EYLyxq4RTd7JeUease-eE6FtNjVtg%25252526k%2525253DqWv=
-R%25252526r%2525253DLzAP4sJjrgKoYtvUd3z6nSCoIkdCYT1vztP_5MVbG0a70L33IMlke4V=
-HcDlFBX3s%25252526s%2525253D93bfafcab810537152f6a9f4bcc2fb4872ab42befb4bc36=
-7d5a30696e9aead47%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
-am12.safelinks.protection.outlook.com%252525252F%2
-52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fdrive.go=
-ogle.com%25252525252Fdrive%25252525252Ffolders%25252525252F12af9a1AwUGmW2ky=
-3BXA0F3b4W2VYnV2D%25252525253Fusp%25252525253Dsharing%2525252526data%252525=
-253D05%25252525257C02%25252525257CDZheng%252525252540genledbrands.com%25252=
-525257C5b03540e948b426f85e608dbfc7bdd9d%25252525257C45dc660a14a24749b4b0c56=
-091295d73%25252525257C0%25252525257C0%25252525257C638381381743575292%252525=
-25257CUnknown%25252525257CTWFpbGZsb3d8eyJWIjoiMC4w
-LjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%25252525253D%2525252525=
-7C3000%25252525257C%25252525257C%25" rel=3Dnoreferrer target=3D_blank><SPAN=
- style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
- COLOR: rgb(0,112,192)'>Profile Company&nbsp;</SPAN></A><SPAN lang=3DEN-GB =
-style=3D"BOX-SIZING: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm 0cm 6pt; ORPHANS: 2; WIDOWS: 2; LETTE=
-R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
-ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
-ess: initial; text-decoration-style: initial;=20
-text-decoration-color: initial"><B style=3D"BOX-SIZING: border-box; FONT-WE=
-IGHT: bolder"><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri =
-Light", sans-serif; BACKGROUND: blue; COLOR: blue'>&nbsp;&nbsp;&nbsp; &nbsp=
-;</SPAN></B><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder"><SPAN =
-style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif; =
-BACKGROUND: blue; COLOR: white'>
-Ho Chi Minh&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp; Da Nang&nbsp;&nbsp;&nbsp;&nbsp; =
--&nbsp;&nbsp;&nbsp; Ha Noi&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;&nbsp;&nbsp=
-; Phnom Penh&nbsp; &nbsp;&nbsp;</SPAN></B><SPAN lang=3DEN-GB style=3D"BOX-S=
-IZING: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial"><B style=3D"BOX-SIZING: border-box; FONT-WE=
-IGHT: bolder"><I style=3D"BOX-SIZING: border-box"><SPAN style=3D'BOX-SIZING=
-: border-box; FONT-FAMILY: "Calibri Light", sans-serif; BACKGROUND: white; =
-COLOR: rgb(0,112,192)'>Let us know your feedback<SPAN>&nbsp;</SPAN></SPAN><=
-/I></B>
-<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
-5,99,193); BACKGROUND-COLOR: transparent"=20
-href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3DWU9X3yCrzOvgFeO-Zyg=
-_bAEt1j_IlJ-hpZqgHdA0tkF-0BL72RztPOm4A2rcu3NL&amp;i=3D2xmo3E2sNAdaObH8KnWQn=
-v0-WgAWmFI-hcjRgXQ5Xk1f-PK2OB2KPmaJhYXkbHA5EqAzWDM16h59r9WBx0JyZw&amp;k=3Dm=
-VCg&amp;r=3D6TK2Aw2DmtAP87KpX6GAf_9m24vzgSgFSw8p89-l4Fg--ZxoGD6oN-FXaAymqor=
-b&amp;s=3D5e3794c3d7efb0fde72baeb7971c196f45cf95cff6fc3f9d1eefbbaee047574b&=
-amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
-ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
-Ff%253D8wpANLTuxScjWy-0U4dkLUF2x3Zf2iGRRwXWbuI6Hfbk6xbKU0g6gOpoPplRiF_M%252=
-6i%253Do1E7UOIfdL87xy3KVDOeSPqma2OIY-IVSk8wy2U8Pql-qMj7g0vVQQjBEtdkmrj87uyW=
-ETSqa7uOWJU7P-Vjhg%2526k%253DuBc2%2526r%253DO1OJ6ge-5SuJNpVDLaHZvdcapLKeNVr=
-54aqo49Eg7IBipQOIclr6SL8qZvqOnCSG%2526s%253D27ffee9b1fa03fc3b63b6f86eddd436=
-9ad29ab8dd72b5c694c9c29763265cb38%2526u%253Dhttps%25253A%25252F%25252Fnam12=
-=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
-525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
-roxy%2525252Fv4%2525253Ff%2525253DzIB1HWqxia19CbF0JVQnqmIueKCasJH33AcXySC3D=
-XUsKrbPBrJS3SuOZN7KpZgT%25252526i%2525253DOF3clc6SWWUSF3TEd35qwqc9EppCEyGg_=
-jShnOwvIKrLp7kgSTHsXa_k53QcFWmgt44aqGSS1jYk6X0BRQMR7g%25252526k%2525253DbxM=
-k%25252526r%2525253D8T9wOuaeuKs4hQl1CoJem3zAONg8y6noaK9O8BXywpRK9SEJU9BOZcD=
-dlbBZ_tBt%25252526s%2525253D5e42fb089a51ea8278d0b0c22104f9dad195c83518016c8=
-0536231433774aec6%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
-am12.safelinks.protection.outlook.com%252525252F%2
-52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fforms.gl=
-e%25252525252FZbAeLJsnr6pyWJ3R9%2525252526data%252525253D05%25252525257C02%=
-25252525257CDZheng%252525252540genledbrands.com%25252525257C5b03540e948b426=
-f85e608dbfc7bdd9d%25252525257C45dc660a14a24749b4b0c56091295d73%25252525257C=
-0%25252525257C0%25252525257C638381381743575292%25252525257CUnknown%25252525=
-257CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI=
-6Mn0%25252525253D%25252525257C3000%25252525257C%25
-252525257C%25252525257C%2525252526sdata%252525253DbFzlMVDnxjnIi7l25qY8Lu6Fb=
-kymxfd3yripVlqXTMk%25252525253D%252" rel=3Dnoreferrer target=3D_blank><B st=
-yle=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder"><I style=3D"BOX-SIZING:=
- border-box"><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri L=
-ight", sans-serif; BACKGROUND: white; COLOR: red'>click to link</SPAN></I><=
-/B></A><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder"><I style=3D=
-"BOX-SIZING: border-box">
-<SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-s=
-erif; BACKGROUND: white; COLOR: red'>!</SPAN></I></B><SPAN lang=3DEN-GB sty=
-le=3D"BOX-SIZING: border-box"></SPAN></P>
-<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
- FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
-TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
-normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
-G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
-aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
-tial; text-decoration-style: initial;=20
-text-decoration-color: initial">&nbsp;</P></BODY></HTML>
+------=_NextPart_000_0948_010FEC4B.10FF33F0--
 
 
---===============0681537574489597909==
+
+--===============2205217559424057467==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0681537574489597909==
+--===============2205217559424057467==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -648,4 +336,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0681537574489597909==--
+--===============2205217559424057467==--
+
+
