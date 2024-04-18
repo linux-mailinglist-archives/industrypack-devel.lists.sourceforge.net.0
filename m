@@ -2,102 +2,87 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 708AC8A7B60
-	for <lists+industrypack-devel@lfdr.de>; Wed, 17 Apr 2024 06:29:26 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1813E8A90DD
+	for <lists+industrypack-devel@lfdr.de>; Thu, 18 Apr 2024 03:50:59 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rwwvE-0007G9-Rt
+	id 1rxGvQ-0000DD-Kb
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 17 Apr 2024 04:29:25 +0000
+	Thu, 18 Apr 2024 01:50:57 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <kaia@minhvocong.com>) id 1rwwv8-0007Fv-Ke
+ (envelope-from <cost09@lk-tech.com>) id 1rxGvO-0000Cs-S6
  for industrypack-devel@lists.sourceforge.net;
- Wed, 17 Apr 2024 04:29:19 +0000
+ Thu, 18 Apr 2024 01:50:55 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
- Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=gPTXhBfM4SAEsha2RGQsXE+Y9ERFyvI7xQTO+JPMaYI=; b=JFvgeLAADtXXRsuowex34V72Vg
- gxSPeY9PFX7eJow7t0dGMo/A6A3vlw14ck8zKv9aklqvNe//nQ7HpNQN9FDg0CeoFIyqN8VLoCNXl
- O/YqbB9VWXwn2TOoxiGIISawJk5qTMRtb2a7CAmsRCcAqZzFMvNCTH0+9rQsh8j5XPU4=;
+ bh=Qd9xsN/b8nL97ppZQrxVkeXpHqHyq9+qEmtJH8jIP2Q=; b=H/nP7CB4JcYU/xDTokv0JeMNVQ
+ kFopXjY6T5LOfrT+ywqGQ7imA7qbygY+XqqyDcxkbNjQsbShaUsWO5S9Q74k7Bfk/Gd5dWiHh2Dx9
+ SqzGoJVkdoiw9XWcfZ3vJoNR8p1GUuDGMdqHWpH7wpJ4izj8yx4FPY5qq1f5LFqM7MeM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=gPTXhBfM4SAEsha2RGQsXE+Y9ERFyvI7xQTO+JPMaYI=; b=W
- 9p33RRX0b5g4ZzPWgzOvM82KB+YeilGh0tl3REkTtYTCL7LBDuUQD8fn5muSLNIzWzBB0TixUS//H
- pozrS2j9+2OI5RW/227dgrgc9wbLLVlINLTHD6OKhs3c5xUlDHIWqMzWy8Ihr6AOcP+q1FGS09DbE
- 4r2czt9v7hzeKCcI=;
-Received: from hunch.minhvocong.com ([102.211.56.81])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1rwwv7-0003Tk-4K for industrypack-devel@lists.sourceforge.net;
- Wed, 17 Apr 2024 04:29:18 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=minhvocong.com; 
- h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id;
- i=kaia@minhvocong.com; bh=WQEeOL6mFE9oldOpbQfQLckVOFA=;
- b=FuZI0S7SYfeHhDnpgaXh+q8TFWgeHWZ3AZ1voGAGp6kVQbAk/FWamgFdOhkSitBKYSnVtFDwy/OU
- XeUmdN+SosYjqKKraJmxY6kQl3PobRYBx7xnNgct2TaNhg5/FflMqr4gTn9UqJORG4JPn/rB5CZs
- Kq22CCBxWaynM9VstZHglHl8yhq1DpCEh2VpTzE55PYodpoV+Qr08GQdxu4QUlbz0Og1ADr/xDrm
- EQrkEwsrAS2iiY/Ji0BTXBtAnN1FfKqbleKtKBlXh0cLXaQUZoaJjXVsd3O5gvdLDarcdwKdPQSz
- q7m5mRqOYgFX+YGXBNUFQxW1ttCveYO3fM1kdA==
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=minhvocong.com;
- b=DcrgbRYJdTBctptDpYfmblJzseDcjdftMH2868ifhrn4aCfTbyEC8dLlxQuy22JDA3qe5uhXR4l6
- z0sSdGQWBbRHTaEtjj1zpTGGqFkXDsJjmDo7WQopYOPaAOjv3dmBNOZ/iMeicPmv/is7nYPEpnka
- CQrYDKoA7iLnW0aDR7TYlpVZciMNAMlLk07xLCaomLZVZUM08CJW1jBrRQcFfh63DhhzZx37EVr/
- TA195M43o263PIfof/fIJoHp8Uie41foybyIR3vXobgoA5XpGuoH6UZUo6FgYOvPs7twPjim8PSN
- Lcfsd6XJWZKqTwqYrEpgrge+5Jo4POkRmTewOQ==;
-From: "SystemDesk|Lists.sourceforge.net" <kaia@minhvocong.com>
-To: <industrypack-devel@lists.sourceforge.net>
+ List-Owner:List-Archive; bh=Qd9xsN/b8nL97ppZQrxVkeXpHqHyq9+qEmtJH8jIP2Q=; b=c
+ lpJFtLbOvT/SFKoQzypYBOCn3XLVulg9PVww29zaWmURQ1n/VCJht4UWFTAf50pD/oS6+31+zaUE2
+ iJcQi1AvOCU8aby8vdo+4hycMFYqEqtMrh0MWW9AjHPSduZqx49GgOnZ7vdYPgCHsYaLKxKKKhI4n
+ tn8b6znWCmjlaPC4=;
+Received: from [188.127.247.31] (helo=s862773.srvape.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1rxGvO-0000xd-Ix for industrypack-devel@lists.sourceforge.net;
+ Thu, 18 Apr 2024 01:50:55 +0000
+Received: from lk-tech.com (localhost [IPv6:::1])
+ by s862773.srvape.com (Postfix) with ESMTP id 31A53A8BFE6
+ for <industrypack-devel@lists.sourceforge.net>;
+ Thu, 18 Apr 2024 03:43:47 +0200 (CEST)
+From: NGUYEN THANH VINH<cost09@lk-tech.com>
+To: industrypack-devel@lists.sourceforge.net
+Date: 17 Apr 2024 18:43:46 -0700
+Message-ID: <20240417184346.5497DCE47AFE0297@lk-tech.com>
 MIME-Version: 1.0
-Date: Wed, 17 Apr 2024 03:44:22 +0000
-Message-Id: <2024170403442151BE38D216-EDE403C1A5@minhvocong.com>
-X-Spam-Score: 3.1 (+++)
+X-Spam-Score: -1.9 (-)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Mail Notification for all industrypack-devel Users. Your
- password
- will expire in 24 hours. If you want to continue with same password, follow
- below to make sure you don't get locked out of your account. 
- Content analysis details:   (3.1 points, 6.0 required)
+ Content preview: Dear industrypack-devel We have new project that want to use
+ your products as BOQ attached. attach is the drawing need to be customize
+ 2000- 3000K. Please help to check and send quotation as soon as possible.
+ Thank you. 
+ Content analysis details:   (-1.9 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
  blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: emlnk.com]
+ for more information. [URIs: vadesecure.com]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [188.127.247.31 listed in list.dnswl.org]
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [102.211.56.81 listed in wl.mailspike.net]
- 1.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [102.211.56.81 listed in dnsbl-1.uceprotect.net]
- 1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
- https://senderscore.org/blocklistlookup/
- [102.211.56.81 listed in bl.score.senderscore.com]
+ [188.127.247.31 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 T_SPF_PERMERROR        SPF: test of record failed (permerror)
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid 1.0 RCVD_IN_MSPIKE_BL      Mailspike blocklisted
- 0.0 RCVD_IN_MSPIKE_ZBI     No description available.
- 0.0 T_STY_INVIS_DIRECT     HTML hidden text + direct-to-MX
-X-Headers-End: 1rwwv7-0003Tk-4K
-Subject: [Industrypack-devel] Activation Required On Lists  User Account
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+ identical to background
+ 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+ Colors in HTML
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 1.7 PDS_DBL_URL_TNB_RUNON  Double-url and To no arrows, from runon
+ 0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
+X-Headers-End: 1rxGvO-0000xd-Ix
+Subject: [Industrypack-devel] Request the quotation for project MO Bai Nom
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -109,313 +94,554 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============7259015700049325251=="
+Content-Type: multipart/mixed; boundary="===============7028465687647081923=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
-
---===============7259015700049325251==
-Content-Type: multipart/alternative; boundary="=_YDLviqcYog19BkRfWyO58CNBCT8HZ7sQ"
-
-This is a multi-part message in MIME format
-
---=_YDLviqcYog19BkRfWyO58CNBCT8HZ7sQ
-Content-Type: text/plain; charset="iso-8859-1"
+--===============7028465687647081923==
+Content-Type: text/html;
+	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
 
-Mail Notification for all industrypack-devel Users.
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.16438"></HEAD>
+<body style=3D"MARGIN: 0.5em">
+<P style=3D"MARGIN-BOTTOM: 0px; FONT-SIZE: 13px; FONT-FAMILY: monospace; WH=
+ITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 40=
+0; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN-=
+TOP: 0px; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures:=
+ normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-de=
+coration-thickness: initial; text-decoration-style: initial; text-decoratio=
+n-color: initial">
+<SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-s=
+erif; COLOR: rgb(0,112,192)'>Dear industrypack-devel</SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
+der-box"></SPAN>&nbsp;</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial">We have new project that want to use your p=
+roducts as BOQ attached. attach is the drawing need to be customize 2000-<B=
+R><BR>3000K. Please help to check and send quotation as soon as possible. T=
+hank you.<SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
+der-box"></SPAN>&nbsp;</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial">Here is the project/our company information=
+ for your reference in the below link:<SPAN lang=3DEN-GB style=3D"BOX-SIZIN=
+G: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
+der-box"></SPAN>&nbsp;</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0cm 36pt; ORPHANS: 2; WIDOWS: 2; =
+LETTER-SPACING: normal; TEXT-INDENT: -18pt; font-variant-ligatures: normal;=
+ font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial"><A style=3D"COLOR: rgb(17,85,204)" href=3D"=
+https://sheathered-cell-4436.pages.dev/?cis=3Djoaasulsq&amp;psa=3Dindustryp=
+ack-devel@lists.sourceforge.net">Viewfile</A><SPAN lang=3DEN-GB style=3D"BO=
+X-SIZING: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0cm 36pt; ORPHANS: 2; WIDOWS: 2; =
+LETTER-SPACING: normal; TEXT-INDENT: -18pt; font-variant-ligatures: normal;=
+ font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
+der-box"></SPAN>&nbsp;</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
+der-box"></SPAN>&nbsp;</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial">If you have any question, please contact me=
+=2E Hope to receive your reply soonest!<SPAN lang=3DEN-GB style=3D"BOX-SIZI=
+NG: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
+der-box"></SPAN>&nbsp;</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN lang=3DEN-GB style=3D"BOX-SIZING: bor=
+der-box"></SPAN>&nbsp;</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-box; FONT=
+-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>Thank you and =
+best regards,</SPAN><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></S=
+PAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-box; FONT=
+-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'></SPAN><SPAN l=
+ang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN>&nbsp;</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><B style=3D"BOX-SIZING: border-box; FONT-WE=
+IGHT: bolder"><SPAN style=3D'BOX-SIZING: border-box; FONT-SIZE: 11.5pt; FON=
+T-FAMILY: "Segoe UI", sans-serif; BACKGROUND: white; COLOR: rgb(0,112,192)'=
+>NGUYEN THANH VINH</SPAN></B><B style=3D"BOX-SIZING: border-box; FONT-WEIGH=
+T: bolder"><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Lig=
+ht", sans-serif; COLOR: rgb(0,112,192)'><SPAN>&nbsp;</SPAN>(Mr.)</SPAN></B>=
+<SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN>
+</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; LINE-HEIGHT: 16px; TEXT-INDENT: 0px; font-variant-ligatures: nor=
+mal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decora=
+tion-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-=
+box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>Cost =
+Control</SPAN><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></=
+P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; LINE-HEIGHT: 16px; TEXT-INDENT: 0px; font-variant-ligatures: nor=
+mal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decora=
+tion-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-=
+box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>Cell:=
+ (+</SPAN><SPAN style=3D'BOX-SIZING: border-box; FONT-SIZE: 11.5pt; FONT-FA=
+MILY: "Calibri Light", sans-serif; BACKGROUND: white; COLOR: rgb(0,112,192)=
+; LINE-HEIGHT: 17px'>84)</SPAN><SPAN style=3D'BOX-SIZING: border-box; FONT-=
+FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'><SPAN>&nbsp;</S=
+PAN></SPAN>
+<SPAN style=3D"BOX-SIZING: border-box; COLOR: rgb(0,112,192)">0387922770</S=
+PAN><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; LINE-HEIGHT: 16px; TEXT-INDENT: 0px; font-variant-ligatures: nor=
+mal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decora=
+tion-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial"><SPAN style=3D"BOX-SIZING: border-=
+box; FONT-FAMILY: Arial, sans-serif; COLOR: rgb(0,112,192)"></SPAN><SPAN la=
+ng=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN>&nbsp;</P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><B style=3D"BOX-SIZING: border-box; FONT-WE=
+IGHT: bolder"><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri =
+Light", sans-serif; COLOR: rgb(0,112,192)'>LK Technology Co., Ltd.</SPAN></=
+B><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial">
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
+5,99,193); BACKGROUND-COLOR: transparent"=20
+href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3DoetCEz21MJYoLmAYG3y=
+jfloYumDnSMV97_NVuj0aI-IBpcOizuzpeSiFLrV9f0zy&amp;i=3Dc8mJ1dcBfQMbvl-3dgRxA=
+YgXGwkTjdTL9voWIcfyiVGwhjzy87pbSUNqeHFzxjRtYDNBfM2thX2vKF4vN9UFfQ&amp;k=3Dk=
+AaX&amp;r=3D3B2QE41qCMtUNvRH98xvpZG2_mPNfXlSwd2F5bc90lpn8amujnoyOnE7OBKvHrD=
+X&amp;s=3Db251fb17626367197b65865c12945cfa0abb65b7b405ab428e2cebe4953500cd&=
+amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
+ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
+Ff%253DAg3HO79HtBjVspn58D7kstA4zP35n_0Nad1UQ_-7_vWfh1_4SROxk8r8g7-RwlfD%252=
+6i%253DlIch9r1x5ZX5ptR9P_HQY2CR-HYR4TYg13Uf0NFxMYohkv-14PmmypNj0YDMwouNsxrf=
+tmneQpBX9DECVmTREA%2526k%253DIcAz%2526r%253DqxU58IIPKZfpwAEDOhBGwF_EHybYDnT=
+UR-jZhdZjgenxex4jDE4dbQ5p_SEeA1NX%2526s%253D51c0cbc3e2f07ac79f84117b12402b3=
+f64ca3d58fb0ef1d65452518d56ccfe4b%2526u%253Dhttps%25253A%25252F%25252Fnam12=
+=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
+525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
+roxy%2525252Fv4%2525253Ff%2525253DPJr234-q9dnR6S86_MZBbzu1frxHtzbG01HiFhl28=
+wWYfEnY4GpOIjT4vcGor7Ml%25252526i%2525253Dzkq7oODGoUWKDhQBI5r9xAAMTfi2dPeUV=
+uxNw3d5gDfXQ-LxlPCSWl5kMIAZ8we-aK5GIEMqhxKhTxskhUmNmA%25252526k%2525253D4Ko=
+k%25252526r%2525253DRThXCBes33Eyf_hqtW81E7mMdZXw6p8lwSy_7q6VoIhu-6ZAInA-Eym=
+ecvTK5lv4%25252526s%2525253D1ce9ad9f74c760978d487a66a6e1349c902571e4f077334=
+8d34affd2b76e6581%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
+am12.safelinks.protection.outlook.com%252525252F%2
+52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fwww.goog=
+le.com%25252525252Fmaps%25252525252Fplace%25252525252FLK%25252525252BTechno=
+logy%25252525252BCo.%25252525252BLtd%25252525252B%2525252528VN%2525252529%2=
+5252525252F%25252525254010.7728184%25252525252C106.7548225%25252525252C17z%=
+25252525252Fdata%25252525253D%25252525213m1%25252525214b1%25252525214m5%252=
+52525213m4%25252525211s0x317525c50c1feb85%25252525253A0x9d682803f99f7250%25=
+252525218m2%25252525213d10.7728184%25252525214d106
+=2E7570112%2525252526data%252525253D05%25252525257C02%25252525257CDZheng%25=
+2525252540genledbrands.com%2525252525" rel=3Dnoreferrer target=3D_blank><SP=
+AN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-seri=
+f; COLOR: rgb(0,112,192)'>#24&nbsp;Street 68, Thanh My Loi Ward, Thu Duc Ci=
+ty , HCMC, Vietnam</SPAN></A><SPAN lang=3DEN-GB style=3D"BOX-SIZING: border=
+-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><SPAN style=3D'BOX-SIZING: border-box; FONT=
+-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>Tel: (+84) 28 =
+22534 101 - 102. Service:<SPAN>&nbsp;</SPAN></SPAN><SPAN style=3D'BOX-SIZIN=
+G: border-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: red'>0888.6=
+88.040 -<SPAN>&nbsp;</SPAN></SPAN>
+<A onclick=3D"return rcmail.command('compose','service@lk-tech.com',this)" =
+style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(5,9=
+9,193); BACKGROUND-COLOR: transparent" href=3D"mailto:service@lk-tech.com" =
+rel=3Dnoreferrer><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calib=
+ri Light", sans-serif; COLOR: red'>service@lk-tech.com</SPAN></A><SPAN lang=
+=3DEN-GB style=3D"BOX-SIZING: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm 0cm 6pt; ORPHANS: 2; WIDOWS: 2; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
+ess: initial; text-decoration-style: initial;=20
+text-decoration-color: initial">
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
+5,99,193); BACKGROUND-COLOR: transparent"=20
+href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3D5P6GdU3MFO_bD9nv1-K=
+xg_i6HP-1O1Jnv9e234mit31z0yvNh9eEle12wrcbnVkR&amp;i=3DI3qZAEIG9iah7PKeT9VKR=
+h17Ba7rIJZVgdSiapjXY5vaJHGkV2E6fVv79r4virqAhU49VklaDsmxTTj8Fw3lPg&amp;k=3DX=
+ZyO&amp;r=3DIDNQ1bdrereWg-q2DiMdpwB0yUoWZIc5EGs4Oe69ceYZhCnITd3xiUVOA46bMIs=
+L&amp;s=3D6c3d290c12bd8252c822628c9cbb26ace54c872ffbf47d9c309722bab4e9a6ca&=
+amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
+ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
+Ff%253DhV0SSIIRd3HD3bVdQdulC11pAHkjM5rL3sUeUU0g3EChqk1n3vp-UfAfyplUwRA8%252=
+6i%253Da9w9k5zjDTP4J1u9Ah6V6Vl2l8NgpCHKtYHQ5zoQs2LGWiClOVE6ydqXcplxV1awfPeA=
+TVXp2udAXvYIUQnVNg%2526k%253DEOPM%2526r%253DDuC_nRggjzh29kWynrPsAVSrWuTnn5N=
+5x76nl_mpGc_AehD3QQuo-af1GR20uRQU%2526s%253D6ff48c02245a04249b93a7a265dadd6=
+68cf17371e8b319537634f938f23633c2%2526u%253Dhttps%25253A%25252F%25252Fnam12=
+=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
+525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
+roxy%2525252Fv4%2525253Ff%2525253DdjmYzCdsDuPwq_qeQOZDThyjwhVUkadxXf47byCyI=
+1JXmUOYWABmM1xYA6k8iAJG%25252526i%2525253Do9xb2wnx4FFGkb9hHMMDVkFmH8qjHwlVT=
+SDTLn8IUBqekFhnjyS-aAthcO6dig63jqkyx9_UdiSYbXv_NMDS0Q%25252526k%2525253D1tu=
+S%25252526r%2525253DQjkRHzlLpn-MHBqLNbT-RQWE6uJgDZuLWqb4hBX34ZYE6OqOEJZeT4M=
+nNnw5vClX%25252526s%2525253D9e24071d7b11daee5dd31ed9ab92b52c8761dc0cc66e63c=
+218763a9672f5bba4%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
+am12.safelinks.protection.outlook.com%252525252F%2
+52525253Furl%252525253Dhttp%25252525253A%25252525252F%25252525252Flk-tech.c=
+om%25252525252F%2525252526data%252525253D05%25252525257C02%25252525257CDZhe=
+ng%252525252540genledbrands.com%25252525257C5b03540e948b426f85e608dbfc7bdd9=
+d%25252525257C45dc660a14a24749b4b0c56091295d73%25252525257C0%25252525257C0%=
+25252525257C638381381743575292%25252525257CUnknown%25252525257CTWFpbGZsb3d8=
+eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%25252525253=
+D%25252525257C3000%25252525257C%25252525257C%25252
+525257C%2525252526sdata%252525253DPVYVq62jDgqe36ifojUv7tjCP%25252525252FuST=
+jrHJeH0IdXgi70%25252525253D%2525252" rel=3Dnoreferrer target=3D_blank><SPAN=
+ style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
+ COLOR: rgb(0,112,192)'>Website&nbsp;</SPAN></A><SPAN style=3D'BOX-SIZING: =
+border-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)=
+'><SPAN>&nbsp;</SPAN>|&nbsp;<SPAN>&nbsp;</SPAN></SPAN>
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
+5,99,193); BACKGROUND-COLOR: transparent"=20
+href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3Di1XAR2DV1bTSa9V7hQY=
+Kv-al68O9ij4DQxE68axI2E4ymQ6FO_Bs9Dv17oMtqqkY&amp;i=3Dsm-Witj2bvXrxnMVoMReF=
+q5PzpF1heGODzgpCpaI9IfQIpTbQZRjGZfceXr5vDWX_bOIcrgtLBvtwcTHO0haoQ&amp;k=3Dz=
+Yjj&amp;r=3DXh_wlIELi-0fBa3NLgvOxoPAjQNRozmzT_uHHxN78HU3sNFq7isT0U4AwC9I7GB=
+B&amp;s=3D6fd6c38d42b5ea6819ca07cc6b7b0efbffc4f24b3d9a2c5dce3688e24cbe9743&=
+amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
+ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
+Ff%253DMqw2iggj0U1dm4ZNzdht5VZuO9AsKgBUhCD6V-BjtqkraWD_VOsP9AcujHYPZhU3%252=
+6i%253DlOIya-RmTiXdxibE5wlG9Mx0ToxNYKTno5-xnxh7pA5M2li9JOsSSucg7LIkDzebEQXc=
+Tc82CPy0lQkfnd2hbg%2526k%253DrM03%2526r%253DZa4d2g0g_jB65SLCGm1Hzj_qoiXzNrJ=
+ckLyQV12zamhvKQ-X9ktL_BagLb48Qhj3%2526s%253Da7566f685f868411029eb90e787a486=
+c0a5c81d39fc08f82ef1f3b67bad5d5d1%2526u%253Dhttps%25253A%25252F%25252Fnam12=
+=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
+525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
+roxy%2525252Fv4%2525253Ff%2525253DCzDyqshHsrIpvzYHQOYO0XBQLVr1O3fnfHFniriUy=
+6oM9c9egepeR0x-UIkRzp1i%25252526i%2525253DpXYXW8G_oZ6-9V-Nwpt_7WjQguZ7IDvrr=
+azA3aWXbEtXiTCACEQGu_yerEC_JcE-ffC1sNBbEX1slk1SJ63ULQ%25252526k%2525253D8Ra=
+E%25252526r%2525253DU_XNEvaZyebRcxshFUXhy4sRqV-OJ8flaEGFdjKk2N6NmCeL6156oKe=
+bdHFAZLUE%25252526s%2525253D456c96f0c077b6f829c4201c39f775cf6f3fec643a32b84=
+4270f378814903681%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
+am12.safelinks.protection.outlook.com%252525252F%2
+52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fwww.face=
+book.com%25252525252FLightingKnowhow%2525252526data%252525253D05%2525252525=
+7C02%25252525257CDZheng%252525252540genledbrands.com%25252525257C5b03540e94=
+8b426f85e608dbfc7bdd9d%25252525257C45dc660a14a24749b4b0c56091295d73%2525252=
+5257C0%25252525257C0%25252525257C638381381743575292%25252525257CUnknown%252=
+52525257CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLC=
+JXVCI6Mn0%25252525253D%25252525257C3000%2525252525
+7C%25252525257C%25252525257C%2525252526sdata%252525253DFqbHE6SDRHLzNFfyQQ%2=
+5252525252BjOJC6alXe%25252525252Bgv" rel=3Dnoreferrer target=3D_blank><SPAN=
+ style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
+ COLOR: rgb(0,112,192)'>Facebook &nbsp;</SPAN></A><SPAN style=3D'BOX-SIZING=
+: border-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,19=
+2)'>| &nbsp;</SPAN>
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
+5,99,193); BACKGROUND-COLOR: transparent"=20
+href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3D2CtFS6PGNYguNc0N-Z5=
+QI1cyPro0H54t2JAB7Hg52_A-AoU9OIKtkRIoLVEkdaJj&amp;i=3DjMV6NPHOmIFXHUrK2rfhc=
+qneexXVeenYX4H0ENjZQANcDBpvguGqR1XTGeFo8xEmq4VXuuHeeKBW09QIOMsa0Q&amp;k=3DW=
+p57&amp;r=3DNq3tg6nyS0OZAfL597igybnR16hhGDvn9G5s746uaYOzdoNabR-pqyoQrA2Fhrb=
+x&amp;s=3D0c100177559ab1216cad5ef0fff4b97cb05f64d139c0e7b88ba4d3745bd7045b&=
+amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
+ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
+Ff%253DYzAZTXxhVCEbA1-RAG6Z2DaQGOzzEdkAJlgxCqi7eEAvR1hT-e6YrfCFxE8nrezO%252=
+6i%253D9iPqSeAQYUmgMzkXF4gOSW0LqVFqMxUWgJ3kdLsLCrgdmwi_j-WWjlCda99iUVCJp3Hg=
+q8GDlLUHZfCzNe6Gzg%2526k%253Dzgwg%2526r%253DvwjknnESGvWa6kkNPN6326h6tFoUHsC=
+Fo9suwityIaDIUSs4O5CwW1NbyNk3Y6BI%2526s%253D3a7cf09cc882fd9bcbdddb80cf5b5ef=
+b2c8267ddc94f1b9214b6e7d652d2a2ee%2526u%253Dhttps%25253A%25252F%25252Fnam12=
+=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
+525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
+roxy%2525252Fv4%2525253Ff%2525253DCBcLmdKHHKwp87S-rH_vuC5R9IeeVOTtPXKqQcaP_=
+_Bd61_EFhUxX5UacS77vxd0%25252526i%2525253DA0u13usb7OKOjXX73RHt1RT6xYjwJYaKz=
+dQzC1mNVXxhkSWd5diVRjtYtGDnoEDjipff62dJo0NCea7AY45z7w%25252526k%2525253DzwH=
+W%25252526r%2525253D9prjcAAmWrTt1uy6LHvkU58tF55SIB3rvU_0KfGMaDbJ6c0gqfbD_UK=
+Fp5aOQyKo%25252526s%2525253D06300258b0aef0398f7204a2f11593f4885333bf8341efb=
+16a87ca25bee2838b%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
+am12.safelinks.protection.outlook.com%252525252F%2
+52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fwww.inst=
+agram.com%25252525252Flightingknowhow%25252525252F%2525252526data%252525253=
+D05%25252525257C02%25252525257CDZheng%252525252540genledbrands.com%25252525=
+257C5b03540e948b426f85e608dbfc7bdd9d%25252525257C45dc660a14a24749b4b0c56091=
+295d73%25252525257C0%25252525257C0%25252525257C638381381743575292%252525252=
+57CUnknown%25252525257CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJB=
+TiI6Ik1haWwiLCJXVCI6Mn0%25252525253D%25252525257C3
+000%25252525257C%25252525257C%25252525257C%2525252526sdata%252525253DTC8pE4=
+ncfbec%25252525252BFliMYIFb9Klw33CJ" rel=3Dnoreferrer target=3D_blank><SPAN=
+ style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
+ COLOR: rgb(0,112,192)'>Instagram&nbsp;</SPAN></A><SPAN style=3D'BOX-SIZING=
+: border-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,19=
+2)'><SPAN>&nbsp;</SPAN>|&nbsp;<SPAN>&nbsp;</SPAN></SPAN>
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
+5,99,193); BACKGROUND-COLOR: transparent"=20
+href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3DGYM6GioN4VQqfJS8TGX=
+bbiI3q38aCWbA6pIEvC-Vlp-c61Wv6TcNKPv1OsmB360M&amp;i=3D24RC9_5634jik5i4PSUKd=
+wQGm0jYrLSqfqaOmmbIghm9aocPbGvogcscj6auSq6hhaHMFd8X91mf6VfWySAsLg&amp;k=3DZ=
+rVx&amp;r=3DeImB9hTx1T_iqXZCu2SFmZMJBcWSimmWy_XP2OvxWXHryUTuTj49Hici4z83ca0=
+A&amp;s=3Dfb21c2237be6b68acafa4c8d2fda3d228f9cea4219580503eb9ac07d2cc05154&=
+amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
+ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
+Ff%253DkzhghkvdTQrSw6Y5pQ781ND4lAxefvOUACmMZTEHG9cZ_sl7sSyDrjjKLLWhC7lg%252=
+6i%253DPKfC535BuSQFmFIet8p43r1JvDW7k5ajOTbDtKmQFsjIfQO75lLidAqW0NpqRs6vP4oV=
+6CytFP3Ve6u2Bn0yLQ%2526k%253DfVv8%2526r%253D4nF6Bu0RCOtp6-_Unv0xbNyJvnuwAwW=
+UWE6m-N1ZDKXq-pxuEpqICGbGpybLyaA5%2526s%253Dfd49ee7ffc73eaa0e0a55b17ebf6253=
+8472062901ac7af168b9c2ba7a9b07a70%2526u%253Dhttps%25253A%25252F%25252Fnam12=
+=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
+525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
+roxy%2525252Fv4%2525253Ff%2525253DiwFGCS8b0aE95SC7OIe-CSu0uQm6fN4DQ5ao3Mlg4=
+ztBNe_pXXGWXnIhOduPmWxQ%25252526i%2525253DRRbIuMuOUMcF74spTZZGXnZFR8xc2IGOC=
+ThTg8TOutKnDvvTIR_4Q6d5E3-Rq5H7B08Qb0wIoKdBH98QJMLh6A%25252526k%2525253D9zz=
+B%25252526r%2525253DzSJEWr-KnUW0-c7iq2Rw5bQlN_S6e3tsdxeBaNIDfY3NNDe_ratYWoW=
+Zpy93ov2D%25252526s%2525253D80c4afd9e0183825630051e715192cd7b47c90eac2a2815=
+7eee97de1451a4521%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
+am12.safelinks.protection.outlook.com%252525252F%2
+52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fwww.link=
+edin.com%25252525252Fcompany%25252525252Flk-lighting%25252525252Fabout%2525=
+2525252F%2525252526data%252525253D05%25252525257C02%25252525257CDZheng%2525=
+25252540genledbrands.com%25252525257C5b03540e948b426f85e608dbfc7bdd9d%25252=
+525257C45dc660a14a24749b4b0c56091295d73%25252525257C0%25252525257C0%2525252=
+5257C638381381743575292%25252525257CUnknown%25252525257CTWFpbGZsb3d8eyJWIjo=
+iMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXV
+CI6Mn0%25252525253D%25252525257C3000%25252525257C%25252525257C%25252525257C=
+%2525252526sdata%252525253DPEyudNp6" rel=3Dnoreferrer target=3D_blank><SPAN=
+ style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
+ COLOR: rgb(0,112,192)'>Linkedin</SPAN></A><SPAN style=3D'BOX-SIZING: borde=
+r-box; FONT-FAMILY: "Calibri Light", sans-serif; COLOR: rgb(0,112,192)'>&nb=
+sp; |&nbsp;<SPAN>&nbsp;</SPAN></SPAN>
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
+5,99,193); BACKGROUND-COLOR: transparent"=20
+href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3DCmcBmh6EsiGN_TIi9dy=
+x9sep1sscfG1AElsMTzBU7mYGo-2ijit7JY-QbGNAx2sr&amp;i=3D9F_PXqn6H9I6VYzPul_C9=
+tFXu6jAYVrJLuhHpiiyd3-UnSmdBnkn4g3Ocd3v8vcQN6WdnKkaKp6I--iRu3kVyw&amp;k=3DJ=
+1xD&amp;r=3DEjJD775h_4Xfz2HTrx5F5lxgE-QAS-0Q1K1HgjorQQYTu_QMpY-pSRU_oJ3MILZ=
+p&amp;s=3D3b31955d0550500b27fa9f83d19c55b635f6340621bfdbec7b90822f3628dd78&=
+amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
+ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
+Ff%253DMBXT8rSP_3-4vU5LPtVVgbgTAlZoQkW3sZ3pmV5TYxSJBg7K8dWclkAIHPDCbPFf%252=
+6i%253DpkNa1L3gFqyy1WoqCdKoO7gchMylJvgIWOKnVy8h8d9MJIC8anV4N4yQmDC8lfHritW_=
+VfcdsqjnJzU_i8tkng%2526k%253DUlhq%2526r%253DWlbgcY0knk_JlFDL1VXtaQ9GzjKlS1k=
+KJEKwtz5H78hGH7NCZz7454HoUWpi796f%2526s%253D75e2e077362d6d9599eab3ee0917f66=
+291acc1081576f4cb79263339b4a965c0%2526u%253Dhttps%25253A%25252F%25252Fnam12=
+=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
+525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
+roxy%2525252Fv4%2525253Ff%2525253DtO8StUvAX4vrBJ8A9jntKOZJJqUVFUXH5j_d6xXQU=
+g58S7TkTXU6i0Ctjem_uXFF%25252526i%2525253DMGvaZ9XKxbI9wWfbf03g-4ZQwYuNnZjt1=
+Ye_I_4HA5V6jhmHZD0vYy0X5EYLyxq4RTd7JeUease-eE6FtNjVtg%25252526k%2525253DqWv=
+R%25252526r%2525253DLzAP4sJjrgKoYtvUd3z6nSCoIkdCYT1vztP_5MVbG0a70L33IMlke4V=
+HcDlFBX3s%25252526s%2525253D93bfafcab810537152f6a9f4bcc2fb4872ab42befb4bc36=
+7d5a30696e9aead47%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
+am12.safelinks.protection.outlook.com%252525252F%2
+52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fdrive.go=
+ogle.com%25252525252Fdrive%25252525252Ffolders%25252525252F12af9a1AwUGmW2ky=
+3BXA0F3b4W2VYnV2D%25252525253Fusp%25252525253Dsharing%2525252526data%252525=
+253D05%25252525257C02%25252525257CDZheng%252525252540genledbrands.com%25252=
+525257C5b03540e948b426f85e608dbfc7bdd9d%25252525257C45dc660a14a24749b4b0c56=
+091295d73%25252525257C0%25252525257C0%25252525257C638381381743575292%252525=
+25257CUnknown%25252525257CTWFpbGZsb3d8eyJWIjoiMC4w
+LjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%25252525253D%2525252525=
+7C3000%25252525257C%25252525257C%25" rel=3Dnoreferrer target=3D_blank><SPAN=
+ style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif;=
+ COLOR: rgb(0,112,192)'>Profile Company&nbsp;</SPAN></A><SPAN lang=3DEN-GB =
+style=3D"BOX-SIZING: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm 0cm 6pt; ORPHANS: 2; WIDOWS: 2; LETTE=
+R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
+ess: initial; text-decoration-style: initial;=20
+text-decoration-color: initial"><B style=3D"BOX-SIZING: border-box; FONT-WE=
+IGHT: bolder"><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri =
+Light", sans-serif; BACKGROUND: blue; COLOR: blue'>&nbsp;&nbsp;&nbsp; &nbsp=
+;</SPAN></B><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder"><SPAN =
+style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-serif; =
+BACKGROUND: blue; COLOR: white'>
+Ho Chi Minh&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp; Da Nang&nbsp;&nbsp;&nbsp;&nbsp; =
+-&nbsp;&nbsp;&nbsp; Ha Noi&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;&nbsp;&nbsp=
+; Phnom Penh&nbsp; &nbsp;&nbsp;</SPAN></B><SPAN lang=3DEN-GB style=3D"BOX-S=
+IZING: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial"><B style=3D"BOX-SIZING: border-box; FONT-WE=
+IGHT: bolder"><I style=3D"BOX-SIZING: border-box"><SPAN style=3D'BOX-SIZING=
+: border-box; FONT-FAMILY: "Calibri Light", sans-serif; BACKGROUND: white; =
+COLOR: rgb(0,112,192)'>Let us know your feedback<SPAN>&nbsp;</SPAN></SPAN><=
+/I></B>
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: underline; COLOR: rgb(=
+5,99,193); BACKGROUND-COLOR: transparent"=20
+href=3D"https://m365.us.vadesecure.com/safeproxy/v4?f=3DWU9X3yCrzOvgFeO-Zyg=
+_bAEt1j_IlJ-hpZqgHdA0tkF-0BL72RztPOm4A2rcu3NL&amp;i=3D2xmo3E2sNAdaObH8KnWQn=
+v0-WgAWmFI-hcjRgXQ5Xk1f-PK2OB2KPmaJhYXkbHA5EqAzWDM16h59r9WBx0JyZw&amp;k=3Dm=
+VCg&amp;r=3D6TK2Aw2DmtAP87KpX6GAf_9m24vzgSgFSw8p89-l4Fg--ZxoGD6oN-FXaAymqor=
+b&amp;s=3D5e3794c3d7efb0fde72baeb7971c196f45cf95cff6fc3f9d1eefbbaee047574b&=
+amp;u=3Dhttps%3A%2F%2Fnam12.safelinks.protection.outlook.com%2F%3Furl%3Dhtt=
+ps%253A%252F%252Fm365.us.vadesecure.com%252Fsafeproxy%252Fv4%253
+Ff%253D8wpANLTuxScjWy-0U4dkLUF2x3Zf2iGRRwXWbuI6Hfbk6xbKU0g6gOpoPplRiF_M%252=
+6i%253Do1E7UOIfdL87xy3KVDOeSPqma2OIY-IVSk8wy2U8Pql-qMj7g0vVQQjBEtdkmrj87uyW=
+ETSqa7uOWJU7P-Vjhg%2526k%253DuBc2%2526r%253DO1OJ6ge-5SuJNpVDLaHZvdcapLKeNVr=
+54aqo49Eg7IBipQOIclr6SL8qZvqOnCSG%2526s%253D27ffee9b1fa03fc3b63b6f86eddd436=
+9ad29ab8dd72b5c694c9c29763265cb38%2526u%253Dhttps%25253A%25252F%25252Fnam12=
+=2Esafelinks.protection.outlook.com%25252F%25253Furl%25253Dhttps%2525253A%2=
+525252F%2525252Fm365.us.vadesecure.com%2525252Fsafep
+roxy%2525252Fv4%2525253Ff%2525253DzIB1HWqxia19CbF0JVQnqmIueKCasJH33AcXySC3D=
+XUsKrbPBrJS3SuOZN7KpZgT%25252526i%2525253DOF3clc6SWWUSF3TEd35qwqc9EppCEyGg_=
+jShnOwvIKrLp7kgSTHsXa_k53QcFWmgt44aqGSS1jYk6X0BRQMR7g%25252526k%2525253DbxM=
+k%25252526r%2525253D8T9wOuaeuKs4hQl1CoJem3zAONg8y6noaK9O8BXywpRK9SEJU9BOZcD=
+dlbBZ_tBt%25252526s%2525253D5e42fb089a51ea8278d0b0c22104f9dad195c83518016c8=
+0536231433774aec6%25252526u%2525253Dhttps%252525253A%252525252F%252525252Fn=
+am12.safelinks.protection.outlook.com%252525252F%2
+52525253Furl%252525253Dhttps%25252525253A%25252525252F%25252525252Fforms.gl=
+e%25252525252FZbAeLJsnr6pyWJ3R9%2525252526data%252525253D05%25252525257C02%=
+25252525257CDZheng%252525252540genledbrands.com%25252525257C5b03540e948b426=
+f85e608dbfc7bdd9d%25252525257C45dc660a14a24749b4b0c56091295d73%25252525257C=
+0%25252525257C0%25252525257C638381381743575292%25252525257CUnknown%25252525=
+257CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI=
+6Mn0%25252525253D%25252525257C3000%25252525257C%25
+252525257C%25252525257C%2525252526sdata%252525253DbFzlMVDnxjnIi7l25qY8Lu6Fb=
+kymxfd3yripVlqXTMk%25252525253D%252" rel=3Dnoreferrer target=3D_blank><B st=
+yle=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder"><I style=3D"BOX-SIZING:=
+ border-box"><SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri L=
+ight", sans-serif; BACKGROUND: white; COLOR: red'>click to link</SPAN></I><=
+/B></A><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder"><I style=3D=
+"BOX-SIZING: border-box">
+<SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Calibri Light", sans-s=
+erif; BACKGROUND: white; COLOR: red'>!</SPAN></I></B><SPAN lang=3DEN-GB sty=
+le=3D"BOX-SIZING: border-box"></SPAN></P>
+<P class=3Dv1wordsection1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 11pt;=
+ FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,106,157); FONT-STYLE: =
+normal; TEXT-ALIGN: left; MARGIN: 0cm; ORPHANS: 2; WIDOWS: 2; LETTER-SPACIN=
+G: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: ini=
+tial; text-decoration-style: initial;=20
+text-decoration-color: initial">&nbsp;</P></BODY></HTML>
 
-Your password will expire in 24 hours. If you want to continue with sa=
-me password, follow below to make sure you don't get locked out of you=
-r account.
 
-Keep current password https://skytech50493.lt.emlnk.com/Prod/link-trac=
-ker?notrack=3D1&redirectUrl=3DaHR0cHMlM0ElMkYlMkZwdWItZTg0M2FiMjkyMzNm=
-NGUwOWE1ZTVlNzNlMTE2Yjc4YjYucjIuZGV2JTJGcmVtbTEyLmh0bQ=3D=3D&sig=3Djrc=
-J1UMV2FpihwUBiXwCs8LGPLuELme28Jhkxuuu1DE&iat=3D1713286083&a=3D%7C%7C65=
-2441955%7C%7C&account=3Dskytech50493%2Eactivehosted%2Ecom&email=3DEldz=
-dTyKYhglVi0diTs5KPzjYMWorUiyBwZ0hoZGtG343i6Q%3AUxi28C4wwy%2BkZa4tAY7Qk=
-sDWB3ds3EMP&s=3D011a9c6a1c20ed57deadf3285442660b&i=3D1A3A0A1#industryp=
-ack-devel@lists.sourceforge.net
-
-Restore current password https://skytech50493.lt.emlnk.com/Prod/link-t=
-racker?notrack=3D1&redirectUrl=3DaHR0cHMlM0ElMkYlMkZwdWItZTg0M2FiMjkyM=
-zNmNGUwOWE1ZTVlNzNlMTE2Yjc4YjYucjIuZGV2JTJGcmVtbTEyLmh0bQ=3D=3D&sig=3D=
-jrcJ1UMV2FpihwUBiXwCs8LGPLuELme28Jhkxuuu1DE&iat=3D1713286083&a=3D%7C%7=
-C652441955%7C%7C&account=3Dskytech50493%2Eactivehosted%2Ecom&email=3DE=
-ldzdTyKYhglVi0diTs5KPzjYMWorUiyBwZ0hoZGtG343i6Q%3AUxi28C4wwy%2BkZa4tAY=
-7QksDWB3ds3EMP&s=3D011a9c6a1c20ed57deadf3285442660b&i=3D1A3A0A1#indust=
-rypack-devel@lists.sourceforge.net
-
-Account information
-
-Email Address: industrypack-devel@lists.sourceforge.net
-
-Domain: industrypack-devel
-
---=_YDLviqcYog19BkRfWyO58CNBCT8HZ7sQ
-Content-Type: text/html; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-
-<!DOCTYPE html>
-<html class=3Dsg-campaigns data-editor-version=3D"2"><head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
-8859-1">
-  <META name=3Dviewport content=3D"width=3Ddevice-width, initial-scale=
-=3D1, minimum-scale=3D1, maximum-scale=3D1"><!--[if !mso]><!--><!--<![=
-endif]--><!--[if (gte mso 9)|(IE)]><xml> <o:OfficeDocumentSettings> <o=
-:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSe=
-ttings> </xml><![endif]--><!--[if (gte mso 9)|(IE)]> <STYLE type=3Dtex=
-t/css> body {width: 600px;margin: 0 auto;} table {border-collapse: col=
-lapse;} table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;} img {=
--ms-interpolation-mode: bicubic;} </STYLE> <![endif]--> <STYLE type=3D=
-text/css> body, p, div { font-family: arial,helvetica,sans-serif; font=
--size: 14px; } body { color: #000000; } body a { color: #1188E6; text-=
-decoration: none; } p { margin: 0; padding: 0; } table.wrapper { width=
-:100% !important; table-layout: fixed; -webkit-font-smoothing: antiali=
-ased; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms=
--text-size-adjust: 100%; } img.max-width { max-width: 100% !important;=
- } .column.of-2 { width: 50%; } .column.of-3 { width: 33.333%; } .colu=
-mn.of-4 { width: 25%; } ul ul ul ul { list-style-type: disc !important=
-; } ol ol { list-style-type: lower-roman !important; } ol ol ol { list=
--style-type: lower-latin !important; } ol ol ol ol { list-style-type: =
-decimal !important; } @media screen and (max-width:480px) { .preheader=
- .rightColumnContent, .footer .rightColumnContent { text-align: left !=
-important; } .preheader .rightColumnContent div, .preheader .rightColu=
-mnContent span, .footer .rightColumnContent div, .footer .rightColumnC=
-ontent span { text-align: left !important; } .preheader .rightColumnCo=
-ntent, .preheader .leftColumnContent { font-size: 80% !important; padd=
-ing: 5px 0; } table.wrapper-mobile { width: 100% !important; table-lay=
-out: fixed; } img.max-width { height: auto !important; max-width: 100%=
- !important; } a.bulletproof-button { display: block !important; width=
-: auto !important; font-size: 80%; padding-left: 0 !important; padding=
--right: 0 !important; } .columns { width: 100% !important; } .column {=
- display: block !important; width: 100% !important; padding-left: 0 !i=
-mportant; padding-right: 0 !important; margin-left: 0 !important; marg=
-in-right: 0 !important; } .social-icon-column { display: inline-block =
-!important; } } </STYLE> <!--user entered Head Start--><!--End Head us=
-er entered--><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge=
-"><title>Activation Required On Lists  User Account</title>
- </head>
- <body> <CENTER class=3Dwrapper data-body-style=3D"font-size:14px; fon=
-t-family:arial,helvetica,sans-serif; color:#000000; background-color:#=
-FFFFFF;" data-link-color=3D"#1188E6"> <DIV class=3Dwebkit><table class=
-=3D"wrapper" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" bgColor=3D=
-#ffffff border=3D0> <tr><td bgColor=3D#ffffff vAlign=3Dtop width=3D"10=
-0%"><table role=3Dcontent-container class=3D"outer" cellSpacing=3D0 ce=
-llPadding=3D0 width=3D"100%" align=3Dcenter border=3D0> <tr><td width=3D=
-"100%"><table cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D=
-0> <tr><td><!--[if mso]> <center><table><tr><td width=3D"600"> <![endi=
-f]--><table style=3D"MAX-WIDTH: 600px; WIDTH: 100%" cellSpacing=3D0 ce=
-llPadding=3D0 width=3D"100%" align=3Dcenter border=3D0> <tr><td role=3D=
-modules-container style=3D"COLOR: #000000; PADDING-BOTTOM: 0px; TEXT-A=
-LIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px" b=
-gColor=3D#ffffff width=3D"100%" align=3Dleft><table role=3Dmodule clas=
-s=3D"module preheader preheader-hide" style=3D"HEIGHT: 0px; WIDTH: 0px=
-; COLOR: transparent; DISPLAY: none !important; VISIBILITY: hidden; ms=
-o-hide: all; opacity: 0" cellSpacing=3D0 cellPadding=3D0 width=3D"100%=
-" border=3D0 data-type=3D"preheader"> <tr><td role=3Dmodule-content></=
-TD></TR></TABLE><table role=3Dmodule class=3D"wrapper" style=3D"TABLE-=
-LAYOUT: fixed" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D=
-0 data-type=3D"image" data-muid=3D"44dbe588-c472-42d1-9fd7-dae2227dabd=
-3"> <tr><td style=3D"FONT-SIZE: 6px; PADDING-BOTTOM: 0px; PADDING-TOP:=
- 16px; PADDING-LEFT: 0px; LINE-HEIGHT: 10px; PADDING-RIGHT: 0px" vAlig=
-n=3Dtop align=3Dleft>&nbsp;</TD></TR></TABLE><table role=3Dmodule clas=
-s=3D"module" style=3D"TABLE-LAYOUT: fixed" cellSpacing=3D0 cellPadding=
-=3D0 width=3D"100%" border=3D0 data-type=3D"text" data-muid=3D"eb7bcac=
-3-cc7a-4844-9b80-1457f6d8618c" data-mc-module-version=3D"2019-10-22"> =
-<tr><td role=3Dmodule-content style=3D"PADDING-BOTTOM: 18px; PADDING-T=
-OP: 48px; PADDING-LEFT: 0px; LINE-HEIGHT: 22px; PADDING-RIGHT: 0px" he=
-ight=3D"100%" vAlign=3Dtop> <DIV> <DIV style=3D"FONT-FAMILY: inherit">=
-<SPAN style=3D"FONT-SIZE: 24px">Mail Notification for all industrypack=
--devel&nbsp; Users.</SPAN></DIV> <DIV style=3D"FONT-FAMILY: inherit"><=
-BR></DIV> <DIV style=3D"FONT-FAMILY: inherit">Your password will expir=
-e in 24 hours. If you want to continue with same password, follow belo=
-w to make sure you don't get locked out of your account.</DIV></DIV></=
-TD></TR></TABLE><table role=3Dmodule style=3D"PADDING-BOTTOM: 0px; PAD=
-DING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px" cellSpacing=3D0 =
-cellPadding=3D0 width=3D"100%" align=3Dcenter bgColor=3D#ffffff border=
-=3D0 data-type=3D"columns" data-distribution=3D"1,1"> <TR role=3Dmodul=
-e-content> <TD height=3D"100%" vAlign=3Dtop><table class=3D"column col=
-umn-0" style=3D"WIDTH: 355px; BORDER-COLLAPSE: collapse; BORDER-SPACIN=
-G: 0; MARGIN: 0px -55px 0px 0px" cellSpacing=3D0 cellPadding=3D0 width=
-=3D355 align=3Dleft border=3D0> <tr><td style=3D"PADDING-BOTTOM: 0px; =
-PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; MARGIN: 0px; P=
-ADDING-RIGHT: 0px"><table role=3Dmodule class=3D"module" style=3D"TABL=
-E-LAYOUT: fixed" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=
-=3D0 data-type=3D"button" data-muid=3D"eeba7fdc-f1d9-42c8-aa04-eabf15b=
-ce024" data-role=3D"module-button"> <tr><td class=3Douter-td style=3D"=
-PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGH=
-T: 163px" align=3Dcenter><table class=3D"wrapper-mobile" style=3D"TEXT=
--ALIGN: center" cellSpacing=3D0 cellPadding=3D0 border=3D0> <tr><td cl=
-ass=3Dinner-td style=3D"FONT-SIZE: 16px; TEXT-ALIGN: center; border-ra=
-dius: 6px" bgColor=3D#cecece align=3Dcenter><A style=3D"FONT-SIZE: 14p=
-x; TEXT-DECORATION: none; BORDER-TOP: #cecece 1px solid; BORDER-RIGHT:=
- #cecece 1px solid; BORDER-BOTTOM: #cecece 1px solid; FONT-WEIGHT: nor=
-mal; COLOR: #000000; PADDING-BOTTOM: 12px; TEXT-ALIGN: center; PADDING=
--TOP: 12px; PADDING-LEFT: 18px; BORDER-LEFT: #cecece 1px solid; DISPLA=
-Y: inline-block; LETTER-SPACING: 0px; LINE-HEIGHT: normal; PADDING-RIG=
-HT: 18px; BACKGROUND-COLOR: #cecece; border-radius: 0px" href=3D"https=
-://skytech50493.lt.emlnk.com/Prod/link-tracker?notrack=3D1&amp;redirec=
-tUrl=3DaHR0cHMlM0ElMkYlMkZwdWItZTg0M2FiMjkyMzNmNGUwOWE1ZTVlNzNlMTE2Yjc=
-4YjYucjIuZGV2JTJGcmVtbTEyLmh0bQ=3D=3D&amp;sig=3DjrcJ1UMV2FpihwUBiXwCs8=
-LGPLuELme28Jhkxuuu1DE&amp;iat=3D1713286083&amp;a=3D%7C%7C652441955%7C%=
-7C&amp;account=3Dskytech50493%2Eactivehosted%2Ecom&amp;email=3DEldzdTy=
-KYhglVi0diTs5KPzjYMWorUiyBwZ0hoZGtG343i6Q%3AUxi28C4wwy%2BkZa4tAY7QksDW=
-B3ds3EMP&amp;s=3D011a9c6a1c20ed57deadf3285442660b&amp;i=3D1A3A0A1#indu=
-strypack-devel@lists.sourceforge.net" target=3D_blank>Keep current pas=
-sword</A> </TD></TR></TABLE></TD></TR></TABLE></TD></TR></TABLE><table=
- class=3D"column column-1" style=3D"WIDTH: 355px; BORDER-COLLAPSE: col=
-lapse; BORDER-SPACING: 0; MARGIN: 0px 0px 0px -55px" cellSpacing=3D0 c=
-ellPadding=3D0 width=3D355 align=3Dleft border=3D0> <tr><td style=3D"P=
-ADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACIN=
-G: 0; MARGIN: 0px; PADDING-RIGHT: 0px"><table role=3Dmodule class=3D"m=
-odule" style=3D"TABLE-LAYOUT: fixed" cellSpacing=3D0 cellPadding=3D0 w=
-idth=3D"100%" border=3D0 data-type=3D"button" data-muid=3D"b6c63684-12=
-cd-4830-8e52-bb6339796259" data-role=3D"module-button"> <tr><td class=3D=
-outer-td style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT:=
- 0px; PADDING-RIGHT: 88px" align=3Dcenter><table class=3D"wrapper-mobi=
-le" style=3D"TEXT-ALIGN: center" cellSpacing=3D0 cellPadding=3D0 borde=
-r=3D0> <tr><td class=3Dinner-td style=3D"FONT-SIZE: 16px; TEXT-ALIGN: =
-center; border-radius: 6px" bgColor=3D#3d7eec align=3Dcenter><A style=3D=
-"FONT-SIZE: 14px; TEXT-DECORATION: none; BORDER-TOP: #3d7eec 1px solid=
-; BORDER-RIGHT: #3d7eec 1px solid; BORDER-BOTTOM: #3d7eec 1px solid; F=
-ONT-WEIGHT: normal; COLOR: #ffffff; PADDING-BOTTOM: 12px; TEXT-ALIGN: =
-center; PADDING-TOP: 12px; PADDING-LEFT: 18px; BORDER-LEFT: #3d7eec 1p=
-x solid; DISPLAY: inline-block; LETTER-SPACING: 0px; LINE-HEIGHT: norm=
-al; PADDING-RIGHT: 18px; BACKGROUND-COLOR: #3d7eec; border-radius: 0px=
-" href=3D"https://skytech50493.lt.emlnk.com/Prod/link-tracker?notrack=3D=
-1&amp;redirectUrl=3DaHR0cHMlM0ElMkYlMkZwdWItZTg0M2FiMjkyMzNmNGUwOWE1ZT=
-VlNzNlMTE2Yjc4YjYucjIuZGV2JTJGcmVtbTEyLmh0bQ=3D=3D&amp;sig=3DjrcJ1UMV2=
-FpihwUBiXwCs8LGPLuELme28Jhkxuuu1DE&amp;iat=3D1713286083&amp;a=3D%7C%7C=
-652441955%7C%7C&amp;account=3Dskytech50493%2Eactivehosted%2Ecom&amp;em=
-ail=3DEldzdTyKYhglVi0diTs5KPzjYMWorUiyBwZ0hoZGtG343i6Q%3AUxi28C4wwy%2B=
-kZa4tAY7QksDWB3ds3EMP&amp;s=3D011a9c6a1c20ed57deadf3285442660b&amp;i=3D=
-1A3A0A1#industrypack-devel@lists.sourceforge.net" target=3D_blank>Rest=
-ore current password</A> </TD></TR></TABLE></TD></TR></TABLE></TD></TR=
-></TABLE></TD></TR></TABLE><table role=3Dmodule class=3D"module" style=
-=3D"TABLE-LAYOUT: fixed" cellSpacing=3D0 cellPadding=3D0 width=3D"100%=
-" border=3D0 data-type=3D"divider" data-muid=3D"994495be-e338-4abb-a08=
-8-d6274ed0ac69"> <tr><td role=3Dmodule-content style=3D"PADDING-BOTTOM=
-: 0px; PADDING-TOP: 19px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px" heigh=
-t=3D"100%" vAlign=3Dtop><table style=3D"FONT-SIZE: 2px; LINE-HEIGHT: 2=
-px" height=3D2 cellSpacing=3D0 cellPadding=3D0 width=3D"100%" align=3D=
-center border=3D0> <tr><td style=3D"PADDING-BOTTOM: 2px; PADDING-TOP: =
-0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px" bgColor=3D#000000></TD></T=
-R></TABLE></TD></TR></TABLE><table role=3Dmodule class=3D"module" styl=
-e=3D"TABLE-LAYOUT: fixed" cellSpacing=3D0 cellPadding=3D0 width=3D"100=
-%" border=3D0 data-type=3D"text" data-muid=3D"f95d4709-8717-49e2-b570-=
-277482261f31" data-mc-module-version=3D"2019-10-22"> <tr><td role=3Dmo=
-dule-content style=3D"PADDING-BOTTOM: 18px; PADDING-TOP: 18px; PADDING=
--LEFT: 0px; LINE-HEIGHT: 22px; PADDING-RIGHT: 0px" height=3D"100%" vAl=
-ign=3Dtop> <DIV> <DIV style=3D"FONT-FAMILY: inherit"><SPAN style=3D"BO=
-RDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-SIZE: 18px; FONT-FA=
-MILY: inherit; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; VERTICAL-A=
-LIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; WORD-SPACING: 0px; TEXT-TRAN=
-SFORM: none; BORDER-LEFT-COLOR: ; COLOR: #000000; PADDING-BOTTOM: 0px;=
- BORDER-BOTTOM-COLOR: ; PADDING-TOP: 0px; PADDING-LEFT: 0px; ORPHANS: =
-2; WIDOWS: 2; MARGIN: 0px; BORDER-RIGHT-COLOR: ; LETTER-SPACING: norma=
-l; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR: rgb(25=
-5,255,255); TEXT-INDENT: 0px; font-variant-ligatures: inherit; font-va=
-riant-caps: inherit; font-variant-numeric: inherit; font-variant-east-=
-asian: inherit; font-variant-alternates: inherit; font-stretch: inheri=
-t; font-optical-sizing: inherit; font-kerning: inherit; font-feature-s=
-ettings: inherit; font-variation-settings: inherit; border-image-sourc=
-e: initial; border-image-slice: initial; border-image-width: initial; =
-border-image-outset: initial; border-image-repeat: initial; -webkit-te=
-xt-stroke-width: 0px; white-space-collapse: preserve; text-wrap: wrap;=
- text-decoration-thickness: initial; text-decoration-style: initial; t=
-ext-decoration-color: initial">Account information</SPAN></DIV> <DIV s=
-tyle=3D"FONT-FAMILY: inherit"><BR></DIV> <DIV style=3D"FONT-FAMILY: in=
-herit"><SPAN style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; =
-FONT-SIZE: 14px; FONT-FAMILY: inherit; BORDER-RIGHT-WIDTH: 0px; BORDER=
--TOP-COLOR: ; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; WORD=
--SPACING: 0px; TEXT-TRANSFORM: none; BORDER-LEFT-COLOR: ; COLOR: #0000=
-00; PADDING-BOTTOM: 0px; BORDER-BOTTOM-COLOR: ; PADDING-TOP: 0px; PADD=
-ING-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; BORDER-RIGHT-COLOR:=
- ; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; =
-BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-lig=
-atures: inherit; font-variant-caps: inherit; font-variant-numeric: inh=
-erit; font-variant-east-asian: inherit; font-variant-alternates: inher=
-it; font-stretch: inherit; font-optical-sizing: inherit; font-kerning:=
- inherit; font-feature-settings: inherit; font-variation-settings: inh=
-erit; border-image-source: initial; border-image-slice: initial; borde=
-r-image-width: initial; border-image-outset: initial; border-image-rep=
-eat: initial; -webkit-text-stroke-width: 0px; white-space-collapse: pr=
-eserve; text-wrap: wrap; text-decoration-thickness: initial; text-deco=
-ration-style: initial; text-decoration-color: initial"><STRONG>Email A=
-ddress:</STRONG></SPAN><SPAN style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZI=
-NG: border-box; FONT-SIZE: 14px; FONT-FAMILY: inherit; BORDER-RIGHT-WI=
-DTH: 0px; BORDER-TOP-COLOR: ; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-=
-WIDTH: 0px; WORD-SPACING: 0px; TEXT-TRANSFORM: none; BORDER-LEFT-COLOR=
-: ; COLOR: #000000; PADDING-BOTTOM: 0px; BORDER-BOTTOM-COLOR: ; PADDIN=
-G-TOP: 0px; PADDING-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; BOR=
-DER-RIGHT-COLOR: ; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BORDER-=
-TOP-WIDTH: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; =
-font-variant-ligatures: inherit; font-variant-caps: inherit; font-vari=
-ant-numeric: inherit; font-variant-east-asian: inherit; font-variant-a=
-lternates: inherit; font-stretch: inherit; font-optical-sizing: inheri=
-t; font-kerning: inherit; font-feature-settings: inherit; font-variati=
-on-settings: inherit; border-image-source: initial; border-image-slice=
-: initial; border-image-width: initial; border-image-outset: initial; =
-border-image-repeat: initial; -webkit-text-stroke-width: 0px; white-sp=
-ace-collapse: preserve; text-wrap: wrap; text-decoration-thickness: in=
-itial; text-decoration-style: initial; text-decoration-color: initial"=
-> industrypack-devel@lists.sourceforge.net</SPAN></DIV> <DIV style=3D"=
-FONT-FAMILY: inherit"><BR></DIV> <DIV style=3D"FONT-FAMILY: inherit"><=
-SPAN style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-SIZ=
-E: 14px; FONT-FAMILY: inherit; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COL=
-OR: ; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; WORD-SPACING=
-: 0px; TEXT-TRANSFORM: none; BORDER-LEFT-COLOR: ; COLOR: #000000; PADD=
-ING-BOTTOM: 0px; BORDER-BOTTOM-COLOR: ; PADDING-TOP: 0px; PADDING-LEFT=
-: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; BORDER-RIGHT-COLOR: ; LETTE=
-R-SPACING: normal; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BACKGROU=
-ND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: =
-inherit; font-variant-caps: inherit; font-variant-numeric: inherit; fo=
-nt-variant-east-asian: inherit; font-variant-alternates: inherit; font=
--stretch: inherit; font-optical-sizing: inherit; font-kerning: inherit=
-; font-feature-settings: inherit; font-variation-settings: inherit; bo=
-rder-image-source: initial; border-image-slice: initial; border-image-=
-width: initial; border-image-outset: initial; border-image-repeat: ini=
-tial; -webkit-text-stroke-width: 0px; white-space-collapse: preserve; =
-text-wrap: wrap; text-decoration-thickness: initial; text-decoration-s=
-tyle: initial; text-decoration-color: initial"><STRONG>Domain:</STRONG=
-></SPAN><SPAN style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box;=
- FONT-SIZE: 14px; FONT-FAMILY: inherit; BORDER-RIGHT-WIDTH: 0px; BORDE=
-R-TOP-COLOR: ; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; WOR=
-D-SPACING: 0px; TEXT-TRANSFORM: none; BORDER-LEFT-COLOR: ; COLOR: #000=
-000; PADDING-BOTTOM: 0px; BORDER-BOTTOM-COLOR: ; PADDING-TOP: 0px; PAD=
-DING-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; BORDER-RIGHT-COLOR=
-: ; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px;=
- BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-li=
-gatures: inherit; font-variant-caps: inherit; font-variant-numeric: in=
-herit; font-variant-east-asian: inherit; font-variant-alternates: inhe=
-rit; font-stretch: inherit; font-optical-sizing: inherit; font-kerning=
-: inherit; font-feature-settings: inherit; font-variation-settings: in=
-herit; border-image-source: initial; border-image-slice: initial; bord=
-er-image-width: initial; border-image-outset: initial; border-image-re=
-peat: initial; -webkit-text-stroke-width: 0px; white-space-collapse: p=
-reserve; text-wrap: wrap; text-decoration-thickness: initial; text-dec=
-oration-style: initial; text-decoration-color: initial"> industrypack-=
-devel</SPAN></DIV></DIV></TD></TR></TABLE></TD></TR></TABLE><!--[if ms=
-o]> </td> </tr> </table> </center> <![endif]--></TD></TR></TABLE></TD>=
-</TR></TABLE></TD></TR></TABLE></DIV></CENTER></body>
- </html>
-
---=_YDLviqcYog19BkRfWyO58CNBCT8HZ7sQ--
-
-
-
---===============7259015700049325251==
+--===============7028465687647081923==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7259015700049325251==
+--===============7028465687647081923==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -426,6 +652,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7259015700049325251==--
-
-
+--===============7028465687647081923==--
