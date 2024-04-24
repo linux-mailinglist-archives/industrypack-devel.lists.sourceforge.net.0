@@ -2,50 +2,50 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id ED6978B09EA
-	for <lists+industrypack-devel@lfdr.de>; Wed, 24 Apr 2024 14:43:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3409A8B0AA0
+	for <lists+industrypack-devel@lfdr.de>; Wed, 24 Apr 2024 15:15:16 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1rzbyG-00060f-2A
+	id 1rzcSw-0000RU-8l
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 24 Apr 2024 12:43:32 +0000
+	Wed, 24 Apr 2024 13:15:15 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <com@satofull.co.jp>) id 1rzbyE-00060P-Jh
+ (envelope-from <com@satofull.co.jp>) id 1rzcSv-0000RK-DN
  for industrypack-devel@lists.sourceforge.net;
- Wed, 24 Apr 2024 12:43:31 +0000
+ Wed, 24 Apr 2024 13:15:14 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:Mime-Version:Message-ID:Subject:To:
  From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=tzr3SMsGzPOUN/j8QVq+Bg7q54vOPCvPCen5Hp36USo=; b=NaiwHN3D8ULOFZGTyQFXBBqDVr
- cFPWC72ITg3OjQ2DdahZFIy+g4l8o1ZTmgxQ6WfTOJCwjdCz39zoWQ+Ik68Z8hJ05rqAaWryEFmnX
- ijEpWzRW6jypy3dbwa8XuZrmM9HLpxnAQ8/MuFTgf65/6rmhXS0WJ/n8i4trsmfipTTM=;
+ bh=poHxPm5EPf+Cb8LaI7tyKXiQ/3B98aDDHHiYs3vcaTo=; b=dijLjAjiOlg/LyEj9es4bc3M0e
+ vX9ELpJllDRoq1MdmdpXNhSNj1pjzEfCIKiEuJUvDWiQOL0ykyxL+9l4z8Joz+Ocq05qbEUUh84DS
+ sExmD/PTxPdIXWekoYqs+XDV3ihQ6U6bC20wwJxAtc3L77bwrbG3xEkzasD6riiB5B+g=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:Mime-Version:Message-ID:Subject:To:From:Date:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=tzr3SMsGzPOUN/j8QVq+Bg7q54vOPCvPCen5Hp36USo=; b=k
- MM5YCIfgLS+5gVVudhQhKDs6n9xjEg3fIIDgWqvDQ/SCMw0ezPwZAr1Z22tVSd4qekb2vvl61IulZ
- 3oIp0JJ9ETncR4uMF7tl36lgt+d4NuB2w3uqsAvniM3ZzmcMVl1Mg1/cgMZ8BKn42FJGgBWnEO3xe
- P4Y11rbpkK709PFI=;
-Received: from [175.165.177.78] (helo=satofull.co.jp)
+ List-Owner:List-Archive; bh=poHxPm5EPf+Cb8LaI7tyKXiQ/3B98aDDHHiYs3vcaTo=; b=Q
+ macavRZp7A8cJkj3u7X7eQqHFOE0v7sxhwE77WWdGrq4TJtrUHjaty5dfLz2D3s/n8CvrAAIukCR2
+ 7pIqgasVY/7LAWZih6FcpDt1Oyom38yr49YlTaaHrZ5Gxm2Fe1NX5wN0af8qd3c5Q1/IwleWaanS1
+ kfyVddlPImUeXI5o=;
+Received: from [119.115.98.79] (helo=satofull.co.jp)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1rzbyD-0003CA-A4 for industrypack-devel@lists.sourceforge.net;
- Wed, 24 Apr 2024 12:43:31 +0000
-Received: from bz (unknown [90.114.128.140])
- by satofull.co.jp with SMTP id 9CP6FCKIWvBtX5Mo.1
- for <industrypack-devel@lists.sourceforge.net>; Wed, 24 Apr 2024 20:43:24 +0800
-Date: Wed, 24 Apr 2024 20:43:10 +0800
+ id 1rzcSu-0005n3-3d for industrypack-devel@lists.sourceforge.net;
+ Wed, 24 Apr 2024 13:15:14 +0000
+Received: from dllbamist (unknown [104.66.88.186])
+ by satofull.co.jp with SMTP id 5VKgxkeNMoF8EHkR.1
+ for <industrypack-devel@lists.sourceforge.net>; Wed, 24 Apr 2024 21:15:12 +0800
+Date: Wed, 24 Apr 2024 21:15:06 +0800
 From: "MasterCard" <com@satofull.co.jp>
 To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20240424204324508035@satofull.co.jp>
+Message-ID: <20240424211512864177@satofull.co.jp>
 X-mailer: Foxmail 6, 13, 102, 15 [cn]
 Mime-Version: 1.0
 X-Spam-Score: 5.4 (+++++)
@@ -63,22 +63,22 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: mastercard.us]
   0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
                              [URIs: clck.ru]
   1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
                              blocklist
                              [URIs: clck.ru]
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
-                             blocked.  See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URIs: clck.ru]
-  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
-                             https://senderscore.org/blocklistlookup/
-                            [175.165.177.78 listed in bl.score.senderscore.com]
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
                              high trust
-                             [175.165.177.78 listed in list.dnswl.org]
+                             [119.115.98.79 listed in list.dnswl.org]
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                             [119.115.98.79 listed in bl.score.senderscore.com]
   0.9 SPF_HELO_SOFTFAIL      SPF: HELO does not match SPF record (softfail)
   1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
   0.0 HTML_MESSAGE           BODY: HTML included in message
@@ -87,7 +87,7 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.
   1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
   2.0 MIXED_HREF_CASE        Has href in mixed case
   0.0 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
-X-Headers-End: 1rzbyD-0003CA-A4
+X-Headers-End: 1rzcSu-0005n3-3d
 Subject: [Industrypack-devel] =?utf-8?b?TWFzdGVyQ2FyZOOCq+ODvOODiTrkuI0=?=
 	=?utf-8?b?5q2j5L2/55So55aR5oOR44Gu44K744Kt44Ol44Oq44OG44Kj44OB44Kn?=
 	=?utf-8?b?44OD44Kv?=
@@ -102,18 +102,18 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============7324878424006680428=="
+Content-Type: multipart/mixed; boundary="===============9089586364032539381=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
 
---===============7324878424006680428==
+--===============9089586364032539381==
 Content-Type: multipart/alternative;
-	boundary="=====003_Dragon264247707562_====="
+	boundary="=====003_Dragon083543408127_====="
 
 This is a multi-part message in MIME format.
 
---=====003_Dragon264247707562_=====
+--=====003_Dragon083543408127_=====
 Content-Type: text/plain;
 	charset="utf-8"
 Content-Transfer-Encoding: base64
@@ -154,7 +154,7 @@ cmNhcmQuY28uanAvamEtanAvcGVyc29uYWwvZ2V0LXN1cHBvcnQvbWFzdGVyY2FyZC1uZWFyYnku
 aHRtbA0K55m66KGM6ICFDQpNYXN0ZXJjYXJkDQrmnbHkuqzpg73muIvosLfljLrmoZzkuJjnlLoy
 Ni0xIOOCu+ODq+ODquOCouODs+OCv+ODr+ODvDE26ZqO
 
---=====003_Dragon264247707562_=====
+--=====003_Dragon083543408127_=====
 Content-Type: text/html;
 	charset="utf-8"
 Content-Transfer-Encoding: base64
@@ -176,7 +176,7 @@ ga/jgZQg6L+3IA0K5oOR44CB44GU5b+D6YWN44KS44GK5o6b44GR44GX44CB6Kqg44Gr55Sz44GX
 44GK6aGY44GE55Sz44GX44GC44GS44G+44GZ44CC44GU5Zue562U44KS44GE44Gf44Gg44GR44Gq
 44GE5aC05ZCI44CB44Kr44O844OJ44Gu44GU5YipIOeUqOWItiANCumZkOOBjOe2mee2muOBleOC
 jOOCi+OBk+OBqOOCguOBlOOBluOBhOOBvuOBmeOBruOBp+OAgeS6iOOCgeOBlOS6huaJv+S4i+OB
-leOBhOOAgjwvUD4NCjxQPjxCUj48QSBocmVmPSJodHRwczovL2NsY2sucnUvM0FHWjR2Ij7ilrzj
+leOBhOOAgjwvUD4NCjxQPjxCUj48QSBocmVmPSJodHRwczovL2NsY2sucnUvM0FHWThWIj7ilrzj
 gZTliKnnlKjnorroqo3jga/jgZPjgaHjgok8L0E+PC9QPg0KPFA+PEJSPuOBlOS4jeS+v+OBqOOB
 lOW/g+mFjeOCkuOBiuOBi+OBkeOBl+OBvuOBl+OBpuiqoOOBq+eUs+OBl+ios+OBlOOBluOBhOOB
 vuOBm+OCk+OBjOOAgeS9leOBqOOBnuOBlOeQhiDop6Mg6LOc44KK44Gf44GP44GK6aGY44GE55Sz
@@ -205,18 +205,18 @@ LXN1cHBvcnQvbWFzdGVyY2FyZC1uZWFyYnkuaHRtbDwvQT48L1A+DQo8UD7nmbrooYzogIU8QlI+
 TWFzdGVyY2FyZDxCUj7mnbHkuqzpg73muIvosLfljLrmoZzkuJjnlLoyNi0xIOOCu+ODq+ODquOC
 ouODs+OCv+ODr+ODvDE26ZqOPC9QPjwvQk9EWT48L0hUTUw+DQo=
 
---=====003_Dragon264247707562_=====--
+--=====003_Dragon083543408127_=====--
 
 
 
---===============7324878424006680428==
+--===============9089586364032539381==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7324878424006680428==
+--===============9089586364032539381==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -227,6 +227,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7324878424006680428==--
+--===============9089586364032539381==--
 
 
