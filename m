@@ -2,64 +2,64 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E61F8BF895
-	for <lists+industrypack-devel@lfdr.de>; Wed,  8 May 2024 10:33:36 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id ABA1F8BF927
+	for <lists+industrypack-devel@lfdr.de>; Wed,  8 May 2024 11:00:10 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1s4ck3-0001Me-0s
+	id 1s4d9k-0001h5-9B
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 08 May 2024 08:33:35 +0000
+	Wed, 08 May 2024 09:00:09 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <sara@icevolcano.com>) id 1s4ck2-0001MW-67
+ (envelope-from <sara@icevolcano.com>) id 1s4d9g-0001gP-3n
  for industrypack-devel@lists.sourceforge.net;
- Wed, 08 May 2024 08:33:34 +0000
+ Wed, 08 May 2024 09:00:05 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=GbqxzPvFgyOjGZEcjKRSlkUebjTwY8H1ui4PFV95j4U=; b=D/y0VJwNdnhwwr79N7qckAHkQD
- FThRJ0Pr9tYYWDKB3GTReyOHpP8Cbb8GeMZd/9PvoMht+rsBREOLY4Y9y8K61/kMowB/+zc2DDA2g
- 7cW9ioesEzIM6KaAVEMvebGzcKxhlkw6qx2F69N4TyuHn+REgF/AqfZyEkTi48bJFRT4=;
+ bh=8C/bWrwhN26IvhtZER+KNqPJ56GwkvrBe7Ek05LnFLg=; b=m0S2PqyBk1eMBzHlIVBmo5Dyva
+ 59PGJfXj18TE8A2wKVFF7u/tDd4ouW77bk27qbyi0T/XgMxtyrZkVqVScS3n5fxnPVqv6o/Nv/blk
+ UjighNHU/K0KuoqLH58bgd63yiM9U6+cA7kiipuYD5efl43iMZCfWVgh5Ah82WLRbQSk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=GbqxzPvFgyOjGZEcjKRSlkUebjTwY8H1ui4PFV95j4U=; b=d
- zVv4YnGageU0shgNtAcbbqaUY9c6smiHcDGNoEk6fSwRbC64WBKMrEy5Evvc0Ko3L3SCjG4jTRAh7
- QIk63njlwo0uSm62OqOIpSCMz10WBU3dN4cwsabWBKoBDQjZN40h6VxnfLUDWb0OcoqFtHFamBZk6
- GOd8Y0h5ivSzRajk=;
+ List-Owner:List-Archive; bh=8C/bWrwhN26IvhtZER+KNqPJ56GwkvrBe7Ek05LnFLg=; b=I
+ 58cUUzglxVPJgqkyKdqrl/kAOKwolwc82R7cHm513g0reG1H+9pb94VwnvG+tGX+2lJJyd08G7+7F
+ Rg7Us40n4bgpZ+SiEoIW28auM3AT9pal8qg6v3XumVCg0cEXLGJ3a/LX1Vz49PM9/y+AxCVpYjQZW
+ yuspLaO9ZZZBuNyM=;
 Received: from aboon.icevolcano.com ([194.169.172.99])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1s4ck2-0004oJ-JH for industrypack-devel@lists.sourceforge.net;
- Wed, 08 May 2024 08:33:34 +0000
+ id 1s4d9g-0007Ij-Vv for industrypack-devel@lists.sourceforge.net;
+ Wed, 08 May 2024 09:00:05 +0000
 DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=icevolcano.com; 
  h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
- i=sara@icevolcano.com; bh=yuFa0rP9H66tjIUHEO7xlr+hi8I=;
- b=jHaceuYkpTvBTXE9ou+X0i6L/q0oSX7lOaYpzfEwUMbWVvoCdVGzjw2NhLRwZpItS3NvddCToMXZ
- t0BFcHqJ3wbzXbbsFneGwfoDQtJD4dYBQBxzQ85f15fd/xaoVx716fzUBnHEaUXvhFXkwWmmRa+B
- XmLmsGcmA6Rdbu4Qm1lZsZiVFYmvdx5o9Gw5KPa1epDl507i8i/KXnQiCYg8fQMQwftDwBJBr8F6
- 7MCzqLiwHQCZjDeBEMXBBQeSnQ/p3eLPxmuTGuZgXl1JlqhnQM3nEIL57kptsA7oIcLQV5MSoC58
- h8MNNvRAqM2q5yErWVZBgwETjzl3yNuDSa2BnA==
+ i=sara@icevolcano.com; bh=XJBnkWZI3YPexPD4U3emNzAayko=;
+ b=UKUWPcrBvjd33uzVxMNi2EcpOb7SFmYOywNgQHornX2UU1oF1xOsb9tOPUsF7G7G5ULHwzwKp8Mb
+ vaGI7KsMIvV+usATHIIT58FxY+RC1ftBrR3Ncqxg/YJsppYSgNBznI8h7dxULrAShlucmbDreb90
+ MgXtL47K9OK4WrgJz2CEh08sFzb8IUb8horKgNxEv/Snviw9jnYrhbRBrqPhv7x3IOGQDHjtbBep
+ z1N00oYeDieoHcqfWqOOxYm6axNKWTpihnSFsyDog7m8eAbU4NSIHlHLUlsO+rtuHLC/RU8dosv4
+ nXxFRW52v7hyihx8/hDjJ5PJCbtR9JC+pmSPDg==
 DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=icevolcano.com;
- b=O2mLiTQJKdnT1yb51iGNa+jNNb3eQIX6CShFp/LxcAvJVVtqcISAevp+5Gthz1rBptZmnR/sSv4S
- wj9bDs5zYZmiMTWXqnzDrEXtexyUqMlUe98v5Q2yuioH9jt9AkCgAm3L70gdQ77llo4U6311LrQV
- INJyPv6wk+RS45kHUH780kdIAThqgDXwklpIenI3uk3mVtnmycGUQ5HhMR5knYPmykq7GeKjajy9
- GAQxxV7houVsWvv6RKTnwRpTxActA94d2RxiMOU3a0Zo3a4hGxl5Ig524ujgrtQH1Y0+X8GkpZZ2
- FKojAflbRZOzBbzcHtK2FVSukoUalRg1YZf7KA==;
+ b=LaKwrtkTJAU1z3WG9UAxCXxv0FNFReESMv73+OAqOqPUtiurv/plo0+TDNojEIceDqDh0UooOJye
+ ayud10mULGJKUzOUQBo7DagayrRa6AWV7/RuYmXnKc66bexkrN8tgODO6bJoYL8v3rlHivE+S381
+ hkYOpbi+00DTKQNf4YR2UwxJuIK9sju3/aUlbbV0fFWv+uudscbeCs6HUpzv1yfn8QVDq1Iyjmt2
+ bpKlwvsPdRGWxYE8ti5uy9uuEI+mA5igQTbZYL0jnXqHp7MvQMiVDnOfKh/rYSktys3H4WE7lL0a
+ QuopvCeY8a713vRyLySAXmAn7HldpW5v9pojfA==;
 From: lists.sourceforge.net <sara@icevolcano.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 8 May 2024 01:33:25 -0700
-Message-ID: <20240508013325.DC250DE0EC54B418@icevolcano.com>
+Date: 8 May 2024 01:59:47 -0700
+Message-ID: <20240508015947.2BF30FB397E10A54@icevolcano.com>
 MIME-Version: 1.0
-X-Spam-Score: -1.2 (-)
+X-Spam-Score: 3.8 (+++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
@@ -69,17 +69,21 @@ X-Spam-Report: Spam detection software,
  Content preview:  lists.sourceforge.net Notification Update Hi,
  industrypack-devel, 
  Your password for industrypack-devel@lists.sourceforge.net expires today
- 5/8/2024 1:33:25 a.m. Follow below to keep your current password and update
+ 5/8/2024 1:59:47 a.m. Follow below to keep your current password and update
  your account. 
- Content analysis details:   (-1.2 points, 6.0 required)
+ Content analysis details:   (3.8 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
  blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: cloudflare-ipfs.com]
+ for more information. [URIs: dweb.link]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 RCVD_IN_DNSWL_BLOCKED  RBL: ADMINISTRATOR NOTICE: The query to
+ DNSWL was blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [194.169.172.99 listed in list.dnswl.org]
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 HTML_MESSAGE           BODY: HTML included in message
  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
@@ -91,8 +95,6 @@ X-Spam-Report: Spam detection software,
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [194.169.172.99 listed in list.dnswl.org]
  0.8 PDS_FROM_NAME_TO_DOMAIN From:name looks like To:domain
  2.5 URI_CLOUDFLAREIPFS     References Interplanetary File System PtP
  content via CloudFlare, likely phishing
@@ -100,9 +102,9 @@ X-Spam-Report: Spam detection software,
  Colors in HTML
  0.0 PDS_FRNOM_TODOM_DBL_URL From Name to domain, double URL
  0.6 PDS_FRNOM_TODOM_NAKED_TO Naked to From name equals to Domain
-X-Headers-End: 1s4ck2-0004oJ-JH
+X-Headers-End: 1s4d9g-0007Ij-Vv
 Subject: [Industrypack-devel] Password Expiration Notification today
- 5/8/2024 1:33:25 a.m.
+ 5/8/2024 1:59:47 a.m.
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -114,10 +116,10 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============3486660212254040688=="
+Content-Type: multipart/mixed; boundary="===============0634960289513892560=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3486660212254040688==
+--===============0634960289513892560==
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -181,7 +183,7 @@ yle=3D"font-weight: bolder; box-sizing: border-box;">,<br style=3D"box-sizi=
 ng: border-box;"><br style=3D"box-sizing: border-box;"></b>Your password fo=
 r<span> </span></font>industrypack-devel@lists.sourceforge.net<font color=
 =3D"#000000" style=3D"box-sizing: border-box;"><span> </span>expires today =
-5/8/2024 1:33:25 a.m.<br style=3D"box-sizing: border-box;">
+5/8/2024 1:59:47 a.m.<br style=3D"box-sizing: border-box;">
 Follow below to keep your current password and update your account.</font><=
 font color=3D"#3d85c6" style=3D"box-sizing: border-box;"><br style=3D"box-s=
 izing: border-box;"></font><span style=3D"font-size: small; box-sizing: bor=
@@ -230,14 +232,14 @@ nt>
 <br></p></body></html>
 
 
---===============3486660212254040688==
+--===============0634960289513892560==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3486660212254040688==
+--===============0634960289513892560==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -248,4 +250,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3486660212254040688==--
+--===============0634960289513892560==--
