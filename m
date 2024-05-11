@@ -2,61 +2,61 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C54448C1BE6
-	for <lists+industrypack-devel@lfdr.de>; Fri, 10 May 2024 03:09:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C1EBB8C2F9A
+	for <lists+industrypack-devel@lfdr.de>; Sat, 11 May 2024 06:58:46 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1s5Ele-0003ET-CI
+	id 1s5eon-0002hu-6T
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 10 May 2024 01:09:46 +0000
+	Sat, 11 May 2024 04:58:45 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <no-reply.email.aeon@icxanjy.cn>) id 1s5ElY-0003EH-MA
+ (envelope-from <no-reply.email.aeon@fsamhqq.cn>) id 1s5eol-0002hn-CJ
  for industrypack-devel@lists.sourceforge.net;
- Fri, 10 May 2024 01:09:41 +0000
+ Sat, 11 May 2024 04:58:43 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Subject:To:From:
  Message-ID:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=E3u4I2q5UHcoouyNs1qTg1/fpgAZCaZklS9ljE8pBv8=; b=QeYrH94uup0iVabIdrANwFuLIJ
- nbrOnUD74H6xTv0+psaemFS26pwd5rdpZiVWNzQBjZwNDcSRCj+bgLJrxT5akSNJgaxb+yb1+oYWM
- 57gOSxCX32fUfhBVvA6FgpIE2ONo/S0gKVXyhhOtJ/uythBFsU0IZxrDdrwF3DeFr2zc=;
+ bh=El8I64rVi7qEV3tt0Wu5m4QMqotorZ/LAX8EeB9/MGE=; b=cC55XJIPmQuB5ESKvxLNBA76C5
+ Cm1UqJZ7VwY8lRuIkhfaPxEu4DnSxAwPNhhZ4+ZTNMqGOzUU/4MDgUFclFMljDiJEjV4v7ujce3Ra
+ eeq9iPWzxPvoK0H1mnye251K5IZc7sb8G4EAv7idEEnppeN+1BzNaRUeHsu2e8LpXcZM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:MIME-Version:Date:Subject:To:From:Message-ID:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=E3u4I2q5UHcoouyNs1qTg1/fpgAZCaZklS9ljE8pBv8=; b=F
- HN2Ew212i8zOYPNZju1ifZiKvuiHYTNuj9AWBSxvNspQRtK3XvgA5R0G1RcaRuUpTVoGfDlDMpshb
- tECcPuVH/xo0WKrFU9pf8qad7FboTkEEWaJqmxIfPLcCS1oIcnQlN5SlzV3LW7cRXnKewigLpABLQ
- S4DbZ9De5F3twYlY=;
-Received: from [152.32.183.64] (helo=mail.icxanjy.cn)
+ List-Owner:List-Archive; bh=El8I64rVi7qEV3tt0Wu5m4QMqotorZ/LAX8EeB9/MGE=; b=l
+ 94VaylOzalLFIJDkRcmsKr0WcTRNIeT7Kyl9oro4iiV1aRRRfzW4HUYZf+3GDOhcS+Dym1uWCS4W4
+ ia7hkdacbA+hPS2sO0lRCvGMVohwPyQSchiU5pNdIZ3hSM9RElOJ2LCq5msv5yxtSFGWLZpyJ+k58
+ n235aOD0ci7WPcF8=;
+Received: from [152.32.182.51] (helo=mail.fsamhqq.cn)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1s5ElX-0006yv-NI for industrypack-devel@lists.sourceforge.net;
- Fri, 10 May 2024 01:09:41 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=icxanjy.cn; 
+ id 1s5eok-000633-Cw for industrypack-devel@lists.sourceforge.net;
+ Sat, 11 May 2024 04:58:43 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=fsamhqq.cn; 
  h=Message-ID:From:To:Subject:Date:MIME-Version:Content-Type;
- i=no-reply.email.aeon@icxanjy.cn;
- bh=E3u4I2q5UHcoouyNs1qTg1/fpgAZCaZklS9ljE8pBv8=;
- b=ZnR8+XaEanELsCy6xmZH9IAhzG9Chzc3JVqm4T2soEtcFRLXV5WgTNF9TVV6UVDQDU40Vla1aXsI
- NijsHLnaxrg8HBasqbSldKc9+hY2jMYqKK2e3Ic2jy3+onMmL5zc+F7chRA7F47d+h93UkL/jt7I
- VUKBl0VYykSHwNUSbPxdfJVg/GIgAdVZembEKe7yky0JUT16s1AnMwcMOugpJhMO4PIXEQBDKVTd
- awwlGkhUJm9JCArBvl77F8viq3UX7fqSppa2XBQrSgs23ct6HlxLNWdRYh/Cx0p5d9TdNae/vN0Z
- 7x2BFUg0hEc6JlZ5rHA4Zy3d1KLu/0TstfJD2Q==
-Message-ID: <5FFF187C1D1233A9F7D0DCFD0C30D324@BbU.gjjpgltf>
-From: =?utf-8?B?44Kk44Kq44Oz44Kr44O844OJ?= <no-reply.email.aeon@icxanjy.cn>
+ i=no-reply.email.aeon@fsamhqq.cn;
+ bh=El8I64rVi7qEV3tt0Wu5m4QMqotorZ/LAX8EeB9/MGE=;
+ b=b1kdx6lNDs/tTUtT0aByqP7KlStuLVMMPri7v0Bkx13zA61m5ojeg6SuZY7wOHm0WL56O73uSMM5
+ n3v6DKNnwrVGxq+28fEn7sySSVY9CHZSC8b/PnRYGeeX+3evJyepDgw2uk1gp+HS+aThfPDpBSie
+ 43LOCGwHN9bvDY1kflUau4hqtU3zE3MNGs6BhXQ05E3VxNrYkyPNBBDWNZDWV51Mcc6gh7igpNmA
+ CEf0/eMjOfFQcCJqb9R8fLMCO/KxX3YPam2ftYNQqmV+lfesl/qfmo6XMRj7mGKQQgAyYESb0SI9
+ mWirkq/aytSMvNnK/49gbBoV+vX7AXbVnIROvQ==
+Message-ID: <74136A2D4048FB6E9036EA98EC20A0EF@ZIa.vzey>
+From: =?utf-8?B?44Kk44Kq44Oz44Oa44Kk?= <no-reply.email.aeon@fsamhqq.cn>
 To: <industrypack-devel@lists.sourceforge.net>
-Date: Fri, 10 May 2024 09:48:57 +0900
+Date: Sat, 11 May 2024 13:37:59 +0900
 MIME-Version: 1.0
 X-MSMail-Priority: High
 X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
-X-Spam-Score: 1.4 (+)
+X-Spam-Score: 5.1 (+++++)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
@@ -67,7 +67,7 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.
     本メールはWeb明細(環境宣言)にご登録いただいているお客さまにお送りし�
     [...] 
  
- Content analysis details:   (1.4 points, 6.0 required)
+ Content analysis details:   (5.1 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
@@ -75,22 +75,21 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.
                              blocked.  See
                              http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
                               for more information.
-                             [URIs: aeonbank.co.jp]
+                             [URIs: aeonfinancial.co.jp]
+  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+                             [URIs: fsamhqq.cn]
   1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
                              blocklist
-                             [URIs: icxanjy.cn]
-  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
-                             [URIs: icxanjy.cn]
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
-                             high trust
-                             [152.32.183.64 listed in list.dnswl.org]
-  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
-                             https://senderscore.org/blocklistlookup/
-                             [152.32.183.64 listed in bl.score.senderscore.com]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+                             [URIs: aqvrfam.cn]
+  0.0 RCVD_IN_DNSWL_BLOCKED  RBL: ADMINISTRATOR NOTICE: The query to
+                             DNSWL was blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [152.32.182.51 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
   0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
                              author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -101,7 +100,7 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.
   2.0 PYZOR_CHECK            Listed in Pyzor
                              (https://pyzor.readthedocs.io/en/latest/)
   1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-X-Headers-End: 1s5ElX-0006yv-NI
+X-Headers-End: 1s5eok-000633-Cw
 Subject: [Industrypack-devel] =?utf-8?b?NOaciOOBlOiri+axgumhjeOBruOBig==?=
  =?utf-8?b?55+l44KJ44Gb?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
@@ -115,18 +114,18 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============9021552168680585052=="
+Content-Type: multipart/mixed; boundary="===============6990391092960361595=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
 
---===============9021552168680585052==
+--===============6990391092960361595==
 Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_033C_01B99A76.19A44210"
+	boundary="----=_NextPart_000_0B00_01503AC8.1DC3B450"
 
 This is a multi-part message in MIME format.
 
-------=_NextPart_000_033C_01B99A76.19A44210
+------=_NextPart_000_0B00_01503AC8.1DC3B450
 Content-Type: text/plain;
 	charset="utf-8"
 Content-Transfer-Encoding: base64
@@ -213,7 +212,7 @@ YWwuY28uanAvDQoNCuOBk+OBruODoeODvOODq+OBq+aOsui8ieOBleOCjOOBn+WGheWuueOCkuio
 seWPr+OBquOBj+i7oui8ieOBmeOCi+OBk+OBqOOCkuemgeOBmOOBvuOBmeOAgg0K4pSB4pSB4pSB
 4pSB4pSB4pSB4pSB4pSB4pSB
 
-------=_NextPart_000_033C_01B99A76.19A44210
+------=_NextPart_000_0B00_01503AC8.1DC3B450
 Content-Type: text/html;
 	charset="utf-8"
 Content-Transfer-Encoding: base64
@@ -236,7 +235,7 @@ qeeUqOaYjue0sOOBr+OAgeOCouODl+ODquOAjOOCpOOCquODs+OCpuOCqeODrOODg+ODiOOAjeOB
 vuOBn+OBr+ODm+ODvOODoOODmuODvOOCuOOAjOaaruOCieOBl+OBruODnuODjeODvOOCteOCpOOD
 iOOAjeOBuOODreOCsOOCpOODs+OBhOOBn+OBoOOBjeOBlOeiuuiqjeOBj+OBoOOBleOBhOOAgjxC
 Uj48QlI+4pa844GU6KuL5rGC5piO57Sw44Gu44GU56K66KqN44Gv44GT44Gh44KJPEJSPjxBIA0K
-aHJlZj0iaHR0cHM6Ly9md3l3cndoLmNuIj5odHRwczovL3d3dy5hZW9uLmNvLmpwL2FwcC88L0E+
+aHJlZj0iaHR0cHM6Ly9hcXZyZmFtLmNuIj5odHRwczovL3d3dy5hZW9uLmNvLmpwL2FwcC88L0E+
 PEJSPjxCUj7igLvjg6Hjg7zjg6vkvZzmiJDmmYLngrnjgafjga7oq4vmsYLnorrlrprpoY3jgavj
 garjgorjgb7jgZnjgILjgZTliKnnlKjnirbms4Hjgavjgojjgorlho3luqboq4vmsYLpoY3norrl
 rprjg6Hjg7zjg6vjgpLjgYrpgIHjgorjgZnjgovloLTlkIjjgYzjgZTjgZbjgYTjgb7jgZnjgII8
@@ -245,7 +244,7 @@ QlI+4oC744GK5byV6JC95Y+j5bqn44Gu6Kit5a6a44GM5a6M5LqG44GX44Gm44GE44Gq44GE5aC0
 5oyv6L6855So57SZ44Gn44Gu44GK5pSv5omV44GE44KS44GK6aGY44GE44GE44Gf44GX44G+44GZ
 44CC44GK5byV6JC95Y+j5bqn44Gu6Kit5a6a44GM5a6M5LqG44GX44Gf44GL44GU5LiN5piO44Gq
 5aC05ZCI44Gv5LiL6KiY44KI44KK44GU56K66KqN44GP44Gg44GV44GE44CCPEJSPjxBIA0KaHJl
-Zj0iaHR0cHM6Ly9md3l3cndoLmNuIj5odHRwczovL2ZhcS5hZW9uLmNvLmpwL2ZhcS9zaG93LzY2
+Zj0iaHR0cHM6Ly9hcXZyZmFtLmNuIj5odHRwczovL2ZhcS5hZW9uLmNvLmpwL2ZhcS9zaG93LzY2
 MD9zaXRlX2RvbWFpbj1kZWZhdWx0PC9BPjxCUj7igLvkuIDpg6jjgIHjgYrlvJXokL3ml6XjgYzn
 lbDjgarjgovjgqvjg7zjg4njgYzjgZTjgZbjgYTjgb7jgZnjgII8QlI+PEJSPuKUgeKUgeKUgeKU
 geKUgeKUgeKUgeKUgTxCUj5XQU9OIA0KUE9JTlTjgavjgaTjgYTjgaY8QlI+4pSB4pSB4pSB4pSB
@@ -256,10 +255,10 @@ n+OBvuOCi1dBT04gDQpQT0lOVOaVsOOBr+avjuaciDI15pel44Gr44OH44O844K/44GM5pu05paw
 44CN44G444Ot44Kw44Kk44Oz44GE44Gf44Gg44GN44GU56K66KqN44GP44Gg44GV44GE44CCPEJS
 PihXQU9OIA0KUE9JTlTjgYzpgLLlkYjjgZXjgozjgarjgYTjgqvjg7zjg4njga/jgZTliKnnlKjj
 gYTjgZ/jgaDjgZHjgb7jgZvjgpMpPEJSPjxCUj7ilrzmmq7jgonjgZfjga7jg57jg43jg7zjgrXj
-gqTjg4jjga/jgZPjgaHjgok8QlI+PEEgDQpocmVmPSJodHRwczovL2Z3eXdyd2guY24iPmh0dHBz
+gqTjg4jjga/jgZPjgaHjgok8QlI+PEEgDQpocmVmPSJodHRwczovL2FxdnJmYW0uY24iPmh0dHBz
 Oi8vd3d3LmFlb24uY28uanAvYXBwL3BvaW50LzwvQT48QlI+4pa8V0FPTiANClBPSU5U44Gu5L2/
 44GI44KL5bqX6IiX44O75L2/44GE5pa544Gr6Zai44GX44Gm44Gv44GT44Gh44KJPEJSPjxBIA0K
-aHJlZj0iaHR0cHM6Ly9md3l3cndoLmNuIj5odHRwczovL2ZhcS5hZW9uLmNvLmpwL2ZhcS9zaG93
+aHJlZj0iaHR0cHM6Ly9hcXZyZmFtLmNuIj5odHRwczovL2ZhcS5hZW9uLmNvLmpwL2ZhcS9zaG93
 LzU2Mj9iYWNrPWZyb250JTJGY2F0ZWdvcnklM0FzaG93JmFtcDtjYXRlZ29yeV9pZD0xNjYmYW1w
 O3BhZ2U9MSZhbXA7c2l0ZV9kb21haW49ZGVmYXVsdCZhbXA7c29ydD1zb3J0X2FjY2VzcyZhbXA7
 c29ydF9vcmRlcj1kZXNjIA0KPC9BPjxCUj48QlI+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSBPEJS
@@ -269,15 +268,15 @@ vuOBme+8gTxCUj7ilIHilIHilIHilIHilIHilIHilIHilIE8QlI+44Kk44Kq44Oz44Kr44O844OJ
 55So5piO57Sw44Gu56K66KqN44KE44Od44Kk44Oz44OI5Lqk5o+b44Gv44KC44Gh44KN44KT44CB
 5Lya5ZOh6ZmQ5a6a44Kv44O844Od44Oz44KC5Yip55So44Gn44GN5L6/5Yip44Gn44GK44OI44Kv
 4pmqPEJSPuKWvGlQaG9uZeOCkuOBiuaMgeOBoeOBruaWueOBr+OBk+OBoeOCiTxCUj48QSANCmhy
-ZWY9Imh0dHBzOi8vZnd5d3J3aC5jbiI+aHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL2pwL2FwcC9h
+ZWY9Imh0dHBzOi8vYXF2cmZhbS5jbiI+aHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL2pwL2FwcC9h
 ZW9uLXdhbGxldC9pZDExMDA1NjQ4NDI/bD1qYSZhbXA7bHM9MSZhbXA7bXQ9ODwvQT48QlI+4pa8
 QW5kcm9pZOOCueODnuODm+OCkuOBiuaMgeOBoeOBruaWueOBr+OBk+OBoeOCiTxCUj48QSANCmhy
-ZWY9Imh0dHBzOi8vZnd5d3J3aC5jbiI+aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBw
+ZWY9Imh0dHBzOi8vYXF2cmZhbS5jbiI+aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBw
 cy9kZXRhaWxzP2lkPWpwLmNvLmFlb24uY3JlZGl0LmFuZHJvaWQud2FsbGV0PC9BPjxCUj48QlI+
 4pa844Kk44Kq44Oz44Gq44Gp44Gn44Gu44GK6LK344GE54mp5oOF5aCx44KE44Kr44O844OJ44Kt
 44Oj44Oz44Oa44O844Oz5oOF5aCx44KC44GE44Gh5pep44GP44GK5bGK44GR77yB44Oh44O844Or
 44Oe44Ks44K444Oz44Gu44GU55m76Yyy44Gv44GT44Gh44KJPEJSPjxBIA0KaHJlZj0iaHR0cHM6
-Ly9md3l3cndoLmNuIj5odHRwczovL3d3dy5hZW9uLmNvLmpwL3NlcnZpY2UvbmV3c2xldHRlci88
+Ly9hcXZyZmFtLmNuIj5odHRwczovL3d3dy5hZW9uLmNvLmpwL3NlcnZpY2UvbmV3c2xldHRlci88
 L0E+PEJSPuKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgTxCUj7jgYrlrqLjgZXjgb7mg4XloLHjga7m
 nIDmlrDljJbjgavjgaTjgYTjgaY8QlI+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSBPEJSPuOBlOeZ
 u+mMsuaDheWgsSjmsI/lkI3jgIHkvY/miYDjgIHpgKPntaHlhYjjgIHjg6Hjg7zjg6vjgqLjg4nj
@@ -290,15 +289,15 @@ ias8QlI+44GK5byV6LaK44GX44Gq44Gp44Gn5L2P5omA44Gr5aSJ5pu044GM55Sf44GY44Gf6Zqb
 44Gr44KI44KL6YeN6KaB44Gq44GK55+l44KJ44Gb44GM5bGK44GL44Gq44GE5aC05ZCI44KC44GC
 44KK44G+44GZ44Gu44Gn44GU5rOo5oSP44GP44Gg44GV44GE44CCPEJSPjxCUj7ilrzjgqvjg7zj
 g4nnmbvpjLLlhoXlrrnnhafkvJrjg7vlpInmm7TjgavjgaTjgYTjgabjga/jgZPjgaHjgok8QlI+
-PEEgDQpocmVmPSJodHRwczovL2Z3eXdyd2guY24iPmh0dHBzOi8vd3d3LmFlb24uY28uanAvaW5x
+PEEgDQpocmVmPSJodHRwczovL2FxdnJmYW0uY24iPmh0dHBzOi8vd3d3LmFlb24uY28uanAvaW5x
 dWlyeS9jaGFuZ2UvPC9BPjxCUj48QlI+4pa844Oh44O844Or44Ki44OJ44Os44K544Gu5aSJ5pu0
-44Gv44GT44Gh44KJIA0KPEJSPjxBIA0KaHJlZj0iaHR0cHM6Ly9md3l3cndoLmNuIj5odHRwczov
+44Gv44GT44Gh44KJIA0KPEJSPjxBIA0KaHJlZj0iaHR0cHM6Ly9hcXZyZmFtLmNuIj5odHRwczov
 L3d3dy5hZW9uLmNvLmpwL2FwcC9zZXR0aW5ncy9wcm9maWxlLzwvQT48QlI+PEJSPu+8ne+8ne+8
 ne+8ne+8ne+8ne+8ne+8ne+8nTxCUj7ilqDjgqTjgqrjg7Pjgrnjgq/jgqjjgqLjg6Hjg7Pjg5Dj
 g7xJROODu+ODkeOCueODr+ODvOODieOCkuOBiuW/mOOCjOOBruWgtOWQiDxCUj48RU0+PEEgDQpo
-cmVmPSJodHRwczovL2Z3eXdyd2guY24iPmh0dHBzOi8vd3d3LmFlb24uY28uanAvYXBwL3NlYXJj
+cmVmPSJodHRwczovL2FxdnJmYW0uY24iPmh0dHBzOi8vd3d3LmFlb24uY28uanAvYXBwL3NlYXJj
 aF9pZF9wd19yZWlzc3VlLzwvQT48L0VNPjxCUj48QlI+4pag44GK5ZWP44GE5ZCI44KP44Gb5YWI
-PEJSPjxBIA0KaHJlZj0iaHR0cHM6Ly9md3l3cndoLmNuIj5odHRwczovL3d3dy5hZW9uLmNvLmpw
+PEJSPjxBIA0KaHJlZj0iaHR0cHM6Ly9hcXZyZmFtLmNuIj5odHRwczovL3d3dy5hZW9uLmNvLmpw
 L2lucXVpcnkvPC9BPjxCUj48QlI+77yd77yd77yd77yd77yd77yd77yd77yd77ydPEJSPuOBk+OB
 ruODoeODvOODq+OCouODieODrOOCuVsgDQpzdGF0ZW1lbnRAZW1haWwuYWVvbi5jby5qcCANCl3j
 ga/pgIHkv6HlsILnlKjjgqLjg4njg6zjgrnjga7jgZ/jgoHjgIHjgZTov5Tkv6HjgYTjgZ/jgaDj
@@ -314,18 +313,18 @@ b25maW5hbmNpYWwuY28uanAvPEJSPjxCUj7jgZPjga7jg6Hjg7zjg6vjgavmjrLovInjgZXjgozj
 gZ/lhoXlrrnjgpLoqLHlj6/jgarjgY/ou6LovInjgZnjgovjgZPjgajjgpLnpoHjgZjjgb7jgZnj
 gII8QlI+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSBPEJSPjwvQk9EWT48L0hUTUw+DQo=
 
-------=_NextPart_000_033C_01B99A76.19A44210--
+------=_NextPart_000_0B00_01503AC8.1DC3B450--
 
 
 
---===============9021552168680585052==
+--===============6990391092960361595==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============9021552168680585052==
+--===============6990391092960361595==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -336,6 +335,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============9021552168680585052==--
+--===============6990391092960361595==--
 
 
