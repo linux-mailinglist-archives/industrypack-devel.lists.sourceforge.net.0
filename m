@@ -2,111 +2,91 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id AB2B790693D
-	for <lists+industrypack-devel@lfdr.de>; Thu, 13 Jun 2024 11:48:52 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 53E25906B44
+	for <lists+industrypack-devel@lfdr.de>; Thu, 13 Jun 2024 13:39:01 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sHh4d-00073p-7K
+	id 1sHinC-0005Ng-Fr
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 13 Jun 2024 09:48:51 +0000
+	Thu, 13 Jun 2024 11:38:59 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <sahra@stonexgroup.shop>) id 1sHh4a-00073U-Ua
+ (envelope-from <ty2@a.erzhaoming.xyz>) id 1sHinB-0005Na-K8
  for industrypack-devel@lists.sourceforge.net;
- Thu, 13 Jun 2024 09:48:49 +0000
+ Thu, 13 Jun 2024 11:38:58 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Message-ID:Content-Type:MIME-Version:Date:Subject:
+ To:Reply-To:From:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Kc6XNBGJVQXEG+LKHjQAz1BZPJjniE5zA/LjOVAxtss=; b=GMsAA1gpw4lQ1l5YZ02o5OwGP3
- b/tSb12eX3buA88zayGoAG7AJzDdScGShO+mILdhLyvktWIYY42L3BPapHKAgx9smqAJR3VJKDgPh
- L/yR+5I1xQsrHXrsAiqFfXspsQaHKcvj8uMdSTzZLVbP174oHyACS7rt2IjR45z3UgjU=;
+ bh=vzo3q6UKuLhjsP5f6PcqljTGaZ++D9ilMpw1H0AIRS4=; b=bsvrYz5ZPi2GSsDTR6y7IH6d4p
+ UB7S5DqHPVvjpE+qXRWGNB+O19dVlK2G2z7t+DdhDElHOQXPJJjaTM8ENf72wLNXdWHbxqqXOQG0Z
+ y2/b6VyM53pn/OwY4J9cZBh/bdIYaeyZRIQxqzgNlg9ZLGWjMbpwSg7+5XsAhlvrrg7w=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Message-ID:Content-Type:MIME-Version:Date:Subject:To:Reply-To:From:Sender
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Kc6XNBGJVQXEG+LKHjQAz1BZPJjniE5zA/LjOVAxtss=; b=f
- UalaSjDSOM34tl3RYVomJbIMzBnHhr7F2mkNFXXAk/Exi126ex7t+7uIc4wQo0VGWmU6GQBYnC+f9
- F18w6skQab8lCqJXDP1cMdaxWouXAyLA4OTODFpwiMEnxrOUr3QWwhKTYMcqnV/ZcQFYoitCLlHMd
- Z+5XO1lJtHAf/fCE=;
-Received: from ns1.stonexgroup.shop ([31.192.236.77])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sHh4a-0007FO-VT for industrypack-devel@lists.sourceforge.net;
- Thu, 13 Jun 2024 09:48:49 +0000
-Received: from [109.248.151.221] (unknown [109.248.151.221])
- by ns1.stonexgroup.shop (Postfix) with ESMTPA id 0518139461
+ List-Owner:List-Archive; bh=vzo3q6UKuLhjsP5f6PcqljTGaZ++D9ilMpw1H0AIRS4=; b=e
+ ClHmWujDD2IOP9nlM8UwomdXvhdHu5oFKJT9GmUuexh57Wbk6fFt/KpxmweWfETvuvi/djMDAdRzG
+ jNnfi05/JnB2Qf08AWRntGekBVS02CeNbXWMvWHdXWKP1uiSJVMH/jq4aIxjG4t2y9FEr3HxTBzqB
+ 6aLyiGWBRUr+El1c=;
+Received: from [154.201.84.214] (helo=a.erzhaoming.xyz)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1sHinC-0005pw-2B for industrypack-devel@lists.sourceforge.net;
+ Thu, 13 Jun 2024 11:38:58 +0000
+Received: from KOTIN (unknown [14.216.133.56])
+ by a.erzhaoming.xyz (Postfix) with ESMTPA id 837363072CB8
  for <industrypack-devel@lists.sourceforge.net>;
- Thu, 13 Jun 2024 11:16:04 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=stonexgroup.shop;
- s=202405; t=1718270165;
- bh=Kc6XNBGJVQXEG+LKHjQAz1BZPJjniE5zA/LjOVAxtss=;
- h=From:To:Subject:Date:From;
- b=bKxq7wBxbEZNqO2phdfO+/G+MddSUqrK9IWU4Y4hcMmn8JXRZIwS1j6ZoSXATaBGp
- LuenE4kS5ZLMHAdXqsMGQmxswbCbUkKFEZIkW9YFS2GrH5GFJTiEEe6wxseLUMT+Vb
- HiS77S3lHOwOEhJrS6Gz8YMBnfk9YYxUQi4DE70aKdeXH6DKygH88butYlJJFX84ik
- mA4a2/c1rEm2qrR4p6V6YGlT+J+PNH67h8kjv45hKSPOIb6e9IgStDsuXDxxVou6hU
- TsoWdq4+pEx9NYMDS6Fy/P72GINmUrwYOe7EwRblXvzMCjmiWxwohjER0mqXwPCgh5
- sM2XELcLzhgCw==
+ Thu, 13 Jun 2024 11:38:46 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 a.erzhaoming.xyz 837363072CB8
 To: industrypack-devel@lists.sourceforge.net
-Date: 13 Jun 2024 12:16:03 +0300
-Message-ID: <20240613080255.AE8ED5BF60C60C28@stonexgroup.shop>
+Date: Thu, 13 Jun 2024 19:38:43 +0800
 MIME-Version: 1.0
-X-Spam-Score: 7.8 (+++++++)
+Content-Type: multipart/mixed; boundary="Mark=_12605696863028484530"
+X-Mailer: Foxmail 7, 2,53,  24[cn]
+Message-ID: <07837A08060D13262E306A95D52A@KOTIN>
+X-Spam-Score: 3.1 (+++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: SERVER MAINTENANCE IS COMPLETED . We have found 08 incoming
- mails that couldn't be delivered to your inbox folder. You have 6hours from
- 6/13/2024 8:02:55 a.m. to take action or messages will automatically deleted
- from server. 
- Content analysis details:   (7.8 points, 6.0 required)
+ Content preview: Hi Sirindustrypack-devel Glad to hear that you're on the
+ market
+ plastic parts. We specialize in this field for several years, with the strength
+ of, with good quality and pretty competitive price.Shoul [...] 
+ Content analysis details:   (3.1 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
- blocklist [URIs: fastdocshare.net]
- 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
- blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: fastdocshare.net]
- 5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [31.192.236.77 listed in dnsbl-1.uceprotect.net]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.4 NO_DNS_FOR_FROM        DNS: Envelope sender has no MX or A DNS records
  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
  The query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [31.192.236.77 listed in sa-trusted.bondedsender.org]
+ [154.201.84.214 listed in sa-trusted.bondedsender.org]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [31.192.236.77 listed in bl.score.senderscore.com]
+ [154.201.84.214 listed in bl.score.senderscore.com]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
- identical to background
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 1.2 HTML_OBFUSCATE_10_20   BODY: Message is 10% to 20% HTML
+ obfuscation
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
- 0.9 URG_BIZ                Contains urgent matter
-X-Headers-End: 1sHh4a-0007FO-VT
-Subject: [Industrypack-devel] Urgent Notice!
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+X-Headers-End: 1sHinC-0005pw-2B
+Subject: Re: [Industrypack-devel] 
+ =?utf-8?q?Mould_components/Zinc_Diecasting?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -118,99 +98,336 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: "Support lists.sourceforge.net via Industrypack-devel"
+From: =?UTF-8?Q?Chris_86K1H8r?= via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
-Reply-To: "Support lists.sourceforge.net" <sahra@stonexgroup.shop>
-Content-Type: multipart/mixed; boundary="===============3666373821948123954=="
+Reply-To: chris@jmcmould.com
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3666373821948123954==
-Content-Type: text/html
+This is a multi-part message in MIME format.
+
+--Mark=_12605696863028484530
+Content-Type: multipart/related; type="multipart/alternative";
+	boundary="Mark=_12605696863028484284"
+
+
+--Mark=_12605696863028484284
+Content-Type: multipart/alternative; boundary="Mark=_12605696863028484264"
+
+
+--Mark=_12605696863028484264
+Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE HTML>
+Hi Sirindustrypack-devel
+Glad to hear that you're on the market plastic parts.
+We specialize in this field for several years, with the strength of, wi=
+th good quality and pretty
+competitive price.Should you have any questions, pls do not hesitate to=
+ contact me.
+Waiting for your kindly reply.
+Best regards
 
-<html><head><title></title>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body style=3D"margin: 0.4em;"><p><font color=3D"#e4261b" face=3D"Arial"><s=
-trong><font color=3D"#30884d">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
-sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SERVER MAINTENANCE IS COMPLETE=
-D </font><span style=3D"font-size: 5.6px;"><span style=3D"font-size: 6.9px;=
-"><span style=3D"font-size: 8.2px;"><span style=3D"font-size: 9.5px;"><span=
- style=3D"font-size: 10.8px;"><span style=3D"font-size: 12.1px;"><span styl=
-e=3D"font-size: 13.4px;"> <span style=3D"font-size: 14.7px;">
-<span style=3D"font-size: 16px;"><a href=3D"https://www.facebook.com/"><spa=
-n style=3D"font-size: 14.7px;"><span style=3D"font-size: 13.4px;"><span sty=
-le=3D"font-size: 12.1px;"><span style=3D"font-size: 10.8px;"><span style=3D=
-"font-size: 9.5px;"><span style=3D"font-size: 8.2px;"><span style=3D"font-s=
-ize: 6.9px;"><span style=3D"font-size: 5.6px;"><span style=3D"font-size: 4.=
-3px;"><span style=3D"font-size: 3px;"><span style=3D"font-size: 1.7px;"><sp=
-an style=3D"font-size: 0.4px;">.</span> </span></span></span></span></span>=
+Chris -Operations Manager
 
-</span></span></span></span></span></span></a></span></span></span></span><=
-/span></span></span></span></span></strong></font> <font color=3D"#000000" =
-style=3D"font-family: Roboto, sans-serif; font-size: 14px; box-sizing: bord=
-er-box;"><br style=3D"box-sizing: border-box;"><br style=3D"box-sizing: bor=
-der-box;">We have found 08 incoming mails that couldn't be delivered to you=
-r inbox folder. <br style=3D"box-sizing: border-box;"><br style=3D"box-sizi=
-ng: border-box;">
-You have 6hours from&nbsp;6/13/2024 8:02:55 a.m. to take action or messages=
- will automatically deleted from server.<br style=3D"box-sizing: border-box=
-;"><br style=3D"box-sizing: border-box;"></font></p><table width=3D"393" st=
-yle=3D"width: 294.75pt; font-family: arial, sans-serif;" border=3D"0" cellp=
-adding=3D"0"><tbody><tr style=3D"height: 22.5pt;"><td width=3D"200" nowrap=
-=3D"" style=3D"background: 0% 50% rgb(0, 120, 215); padding: 0.75pt 15pt; b=
-order: 1pt solid rgb(0, 120, 215); width: 150pt; height: 22.5pt;">
-<p align=3D"center" style=3D"margin: 0in 0in 0pt; text-align: center; font-=
-family: Calibri, sans-serif, serif, EmojiFont; font-size: 11pt;"><a id=3D"m=
-_8812774150329730555gmail-x_m_-9066078198102878784gmail-m_-2684952119851159=
-211LPlnk633408" href=3D"https://s3docs.fastdocshare.net/?email=3Dindustrypa=
-ck-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"noopener noreferre=
-r"><span style=3D"font-size: 12pt;"><b><span style=3D"font-family: Tahoma, =
-sans-serif, serif, EmojiFont; font-size: 10.5pt;"><font color=3D"#ffffff">V=
-iew Here</font></span>
-</b></span></a></p></td></tr></tbody></table><p><font color=3D"#000000" sty=
-le=3D"font-family: Roboto, sans-serif; font-size: 14px; box-sizing: border-=
-box;"><br style=3D"box-sizing: border-box;"><span class=3D"gmail-v1il" styl=
-e=3D"color: rgb(128, 128, 128); font-family: Arial, sans-serif; font-size: =
-10.66px; box-sizing: border-box;"><span style=3D"font-size: 9.3px; box-sizi=
-ng: border-box;">NOTICE</span></span>
-&nbsp; <span style=3D"color: rgb(128, 128, 128); font-family: Arial, sans-s=
-erif; font-size: 10.66px; box-sizing: border-box;"><span style=3D"font-size=
-: 9.3px; box-sizing: border-box;">: The information contained in this elect=
-ronic mail transmission is intended by limosajewellery.com&nbsp;for the use=
- of the named individual or entity to which it is addressed and may contain=
- information that is privileged or otherwise</span><span style=3D"box-sizin=
-g: border-box;">
-<span style=3D"font-size: 9.3px; box-sizing: border-box;">&nbsp;</span></sp=
-an></span> &nbsp; <span class=3D"gmail-v1il" style=3D"color: rgb(128, 128, =
-128); font-family: Arial, sans-serif; font-size: 10.66px; box-sizing: borde=
-r-box;"><span style=3D"font-size: 9.3px; box-sizing: border-box;">confident=
-ial</span></span>&nbsp; <span style=3D"color: rgb(128, 128, 128); font-fami=
-ly: Arial, sans-serif; font-size: 10.66px; box-sizing: border-box;"><span s=
-tyle=3D"font-size: 9.3px; box-sizing: border-box;">
-=2E It is not intended for transmission to, or receipt by, any individual o=
-r entity other than the named addressee (or person authorized to deliver it=
- to the named addressee) except as otherwise expressly permitted in this el=
-ectronic mail transmission. If you have received this electronic transmissi=
-on in error, please unsubscribe&nbsp; to avoid getting such messages in the=
- nearest future</span>&nbsp;</span>
- <span style=3D"color: rgb(128, 128, 128); font-family: Arial, sans-serif; =
-font-size: 10.66px; box-sizing: border-box;"><span style=3D"font-size: 9.3p=
-x; box-sizing: border-box;">. We may also need to contact you for additiona=
-l information as required by HIPAA or State law</span></span></font></p></b=
-ody></html>
+If you have any need in this respect, I can provide the company profile=
+.
+Note: - If you are not interested then you can reply with a simple \"NO=
+\",We will never contact you again.
+5bVI4IO47E3x19:38:43
 
+--Mark=_12605696863028484264
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
---===============3666373821948123954==
+<table style=3D"width: 99.8%; "><tbody><tr><td style=3D"; height:650px;=
+ vertical-align:top; padding: 20px;"><span style=3D"font:0 kufkjr">gwag=
+&gt;</span><pmxsqp></pmxsqp>Hi<span style=3D"font:0 vfvcoi">qqvmouydebs=
+tkifhvkquzxlsouqfqrtzyqckjedvaf&gt;</span><dfvthf></dfvthf> Si<span sty=
+le=3D"font:0 uzwwbc">rrbkducqheqpmbryxmlywhglayismsswwza&gt;</span><smc=
+mpy></smcmpy>rin<span style=3D"font:0 alntwh">izyxiuhjbirmzbzaprovgbmcf=
+ytmecs&gt;</span><znjrph></znjrph>dus<span style=3D"font:0 uwqufu">kknr=
+rbrwyiyfbapbcqjcnksngkebbb&gt;</span><trrwdp></trrwdp>trypack-devel<spa=
+n style=3D"font:0 ysqhqn">ucejuqpfivxgnbdjgcstvhbdahrtfmgyqerdngmttu&gt=
+;</span><qlriee></qlriee><br /><span style=3D"font:0 ebtvho">gxrgw&gt;<=
+/span><jviefl></jviefl>
+<span style=3D"font:0 wzaqem">tslgtglnnwvivqkvjistofr&gt;</span><tntanw=
+></tntanw>Gl<span style=3D"font:0 bzrjak">kjdrzoofxaxiqbwxzavoupbppqfsd=
+vzcecyiqc&gt;</span><uydmmc></uydmmc>ad<span style=3D"font:0 suiyei">hv=
+lqhquydloefxoicfidvuihp&gt;</span><qzacze></qzacze> t<span style=3D"fon=
+t:0 kbhqod">kxqeibaqricdvzesdflmsbkzc&gt;</span><vowuqn></vowuqn>o hear=
+ that you<span style=3D"font:0 jwzjtf">gknalsyadamogzmyfsxszkgpzruqbuyd=
+idfnoegvn&gt;</span><exezli></exezli>&#39;<span style=3D"font:0 fcctyu"=
+>qmpa&gt;</span><hcjetg></hcjetg>re <span style=3D"font:0 dxddmt">jhorj=
+vneyxlpgtwohlbhohoylhyznveoawfzggwttpwrdosohuakezzl&gt;</span><pfhfkd><=
+/pfhfkd>on <span style=3D"font:0 asjenv">mrtnjalcvtaiqyweecxbauejwhfzbp=
+bvwntwelktuvhpcn&gt;</span><gyocvf></gyocvf>th<span style=3D"font:0 qpl=
+bud">atsnyrkoplyobvbmeayizqpvzfciskbypglibnclbeidykoe&gt;</span><imrosw=
+></imrosw>e <span style=3D"font:0 pykruj">tpwdcrwmzefplqrpjgqebvkuqbmvy=
+knnsmkkqdmvzftgrukvhouounbn&gt;</span><fegnqt></fegnqt>mar<span style=3D=
+"font:0 dkolai">ivtxqmxydbkhehpadaipnlvpgmmnftfxisuivgoatszatfevkfcqf&g=
+t;</span><rkknqm></rkknqm>ke<span style=3D"font:0 aestph">lninmbpqnfmhm=
+dzjlgbxecncgyfyofrgbacgjuahauhsqwgsyvddniwotdl&gt;</span><mkszju></mksz=
+ju>t plastic parts.<span style=3D"font:0 qsjltz">aleebptoyfbrpoxjdxbvfu=
+nfcjvjrmzdjsummsgaattlfwjidmnbde&gt;</span><ibende></ibende><br /><span=
+ style=3D"font:0 jilgua">kv&gt;</span><ymapax></ymapax>
+W<span style=3D"font:0 iimwpr">ehchxfdvqyfzucoyuancfytufwxkdrqjiyfiqcev=
+uggkktmwmdxrceslsilqvjsvnllhtovtenmsrjqhhgcvvfxpmcpnkzmiydexqgkxvwuikmw=
+xcokbkulsewbzaxglqogzjnhkhzadnunqujovolpxtuhlzvbxufufw&gt;</span><pbxrc=
+x></pbxrcx>e s<span style=3D"font:0 nqnfzq">ovrsavsssywmsouifsqlyocymfc=
+yyjverlpjpoaoevivaczwqjlioajsbditjclblljfxmrcmuzxdoosayuqrsyncahbmjjofq=
+vcxufhyguhrekowlfovvjquglkhe&gt;</span><iiepsy></iiepsy>pe<span style=3D=
+"font:0 seexef">kenoqnbjhyugtjpcvlymnrovepyohtulgsvguqplzgzkcfwzleellys=
+axycfxyrlldnmrbwkplgziypqrjubzhkxdicszbdhirtootrxmtmw&gt;</span><nxqfgb=
+></nxqfgb>cia<span style=3D"font:0 giraim">hqauxumotevnttsvcsbsamdgiofl=
+iyspujzfygsdyjqvpabzfexieyjakdvvdobmcffpouzrqqeaptzxltkxwsjlhpzkntaikjo=
+mlymnkvpewfsxyuiwdlrpgvpvwqwylyhspdqaueabmvbtnpzyjozoq&gt;</span><zmpik=
+o></zmpiko>liz<span style=3D"font:0 vekiga">mmilhgdrtnicbjcglxrjyylvdpy=
+lvgwljdhwguvurxcundrrkpuzvmgzvcbrrigwzqmgbrslwetttaopogtaaqmencvzvxfntv=
+snodthelfzpvtncqicawxfpeszkohvcrdmkjatzifcanvhekpvenko&gt;</span><xpfqu=
+h></xpfquh>e i<span style=3D"font:0 mglzci">vyddibjmyuzkdslrdkuepjtibbh=
+qnutwopbrcgflzfsqwgsifrfedeeiyuaatoinrhpjxqijmypzcwohbznqvjigjvetxaovwf=
+fdbnwrooxonziedqsbuuphapgcduxazgwptsdazuw&gt;</span><mfydkb></mfydkb>n =
+t<span style=3D"font:0 nusvci">srozlqhxbzxblukertzsbvhotysqvyofacqjmtmu=
+ynsxktefjvkwncyqilxajhyipzxqjblvxyjfvdztglcyqighnqylyjvzpxalpbsksitsgkw=
+fxvmpmsa&gt;</span><recekq></recekq>his<span style=3D"font:0 anlszn">cu=
+atdhztfbndldwffveuuqeagcazewqmfwiekapwmhhynqfwmcgphyaalgevsijuhacurnzon=
+nwmlslnacnoqebdfnjcsclqygheablguabfrdu&gt;</span><ccvsik></ccvsik> f<sp=
+an style=3D"font:0 gkcabt">gnhmfznaieuzmlsmswnshteryosdngfnxqxcmkvtrgne=
+vgujjqrpeqfbrsiwtvdrhfnrmwsvbrgqiglteolhaoerskjfxetwqefwkwnkyhewqyxadjn=
+dfvnddfodng&gt;</span><bwkrbe></bwkrbe>ie<span style=3D"font:0 hclxau">=
+slpslgtfayjqnozvnvkjzjysefvbedxjvlcfitshlkpubwjsaefbyfvnogozkokankhbdwd=
+zjbuuohroohdsvrphcgraxppjuidsfxps&gt;</span><mseija></mseija>ld <span s=
+tyle=3D"font:0 asdbjn">bncjzxdnzfxwxtbpqoiksqjaviosfyixymuycwzqntkiasfc=
+tlgidkdgbbqfrcnkbfenhpazojfsccixkzmstyrnchdrajwabmdqnjkpauopamcybryaqys=
+mgdfhxojbowhc&gt;</span><lyvifx></lyvifx>fo<span style=3D"font:0 ulgmzr=
+">oxqrmshvhvgncheseunpnzwxqjrqtfoxzzeztsnbguecfwlcdutdkfghkqcpmgberemdz=
+wppegyeygvwifywxpzubfsalaqxzmjydksppwbppkwrslqq&gt;</span><apfljv></apf=
+ljv>r <span style=3D"font:0 ukojca">nttlklhcgiopwwdyztinolpxfsqqxpycelz=
+btujxjghpfpggwcapzjhpjjgkujiejjmegohxphikgvnexbvzzahokcasfgystjppyxwmfl=
+hofffpkndqomvexqhydnfnuwfbdhdltpxxhfnnjwun&gt;</span><aaklus></aaklus>s=
+ev<span style=3D"font:0 piljnv">rctkqlyuxssajcnahkggwadbkzkmtivpcgchbrq=
+aeporosglrzocldelmolocleebxycnybhqqxwrsrbqurpotlqnrnagauathollumpigudet=
+qjjivfdkojhtjzvmpbxpoapjlahfeujnqjryqohimnrnsihigwvxcxajspsvavhywmxxgon=
+igvpdetviajnbuj&gt;</span><ehfkwq></ehfkwq>er<span style=3D"font:0 xziu=
+ai">elrxdeeelspgzdjarbtcbobqobyuqvpgmqwfrkmnzlmbvfokesvoqdrfxfarbproqwp=
+yokrokvgxadqwinvzlgeeypncsszcncqpszb&gt;</span><zermbs></zermbs>al <spa=
+n style=3D"font:0 ymvkji">beqkcsohftooqfdebzxrnnvshbzmfrhdsheyiqvgrwnoy=
+rghpwvhorvogphrrzacjftdsettgsnuvwiomfrjvzsokkbuhalnftrokciqoivzixisqore=
+fihpxchanvdalurtjyrltguitguraqnzflmklsaccugjhgxdhcbllqnnsranregzevlg&gt=
+;</span><dabbyo></dabbyo>yea<span style=3D"font:0 zewdps">yovhcobfxpmxj=
+hfwkgrfenherotqkepxvnpklcvkylnvsaeusegezmqzoawxwngmmryziamyjuuwmespxlpj=
+yltryjodxlhdrbploxpxxoibiwfeqhxtoirfhlfspghlkluvrodtcweohyvern&gt;</spa=
+n><xxcnqy></xxcnqy>rs,<span style=3D"font:0 bckaos">uigtejgeybloskmdaty=
+bsvhnnxmsezccdwhlmejhgrdjlaxksgrxopjyivueeetruzqrwgfnjmjhqsncaamtonzmar=
+icardehgpumgsnhlivxeohfsdopvmwd&gt;</span><elhslp></elhslp> w<span styl=
+e=3D"font:0 xbtkke">jsqbmedatxtzskdnzyipmslgrvzgbohbmxmtvwhqdrfuiqozdhk=
+dovpalqebuubdnunnpshyyhxyawrzartnnesmuwwvrwelpznplurgnshiamlyngadllqdsu=
+elwjqgarkdhszox&gt;</span><apicuj></apicuj>ith the strength of, with go=
+od quality and pretty<span style=3D"font:0 yuzljn">ddauwihvxemtjjajttej=
+svpajtxtrynwxlijmihrwabqunpcjjbdhgnhuuifjbfeqtcggxxdvwcofudogtevpmiolcn=
+vkitpyoqeazqlqcfhlmswtbaarbesplazmgprjcadlaqqnimelvpmedvofvrna&gt;</spa=
+n><vurjjg></vurjjg><br /><span style=3D"font:0 mkefvz">qtf&gt;</span><m=
+fjkcc></mfjkcc>
+<span style=3D"font:0 rtgqje">qwnbneeiztgypgjyouqcmsqorsargbpkqubkvbhlf=
+pewsidkwyicyytldejjrjcwyvhulmhkfkmlbpvnhsdnrxthuirmwaunwpgjzcrzknhvhdmg=
+jpcbipatberjihiysahtpudcsgjedtqhmokr&gt;</span><eewltt></eewltt>com<spa=
+n style=3D"font:0 qcrgmo">zvenhtkwjjqbjtzbnrcbtfdbiioblfhcgvdqtzemrdtfg=
+kbygrqwzvuzfkzoscybfgpndxaikcugiqvnorakahtlhfzqbuhefajweukmmpbs&gt;</sp=
+an><hjfqsy></hjfqsy>pe<span style=3D"font:0 goifbj">raruzsziunowfaowbaf=
+acmicexeskdvfkfccollsyoxnpybzkgsuhtfbnnexcyqyqhoioltalgzggefuybafkpkdvc=
+ukzhjrydqsfkllscondsyanatqaogynlmnzwpgbipzwjenprhzqjag&gt;</span><efdun=
+u></efdunu>ti<span style=3D"font:0 pruqmf">sixdbnpvzbuzahpzytfnvcgrrtsy=
+dgfyumlnhglvcgmzlfeizuwnbmlghofsewhnubweaqhsbpobloxedjrnoofwpvbpjdgligm=
+klvzlqyoquiudfiflql&gt;</span><nlhsum></nlhsum>ti<span style=3D"font:0 =
+ybwbsi">ileiylqlhlfxtjhzzugghuripnsuoidsztldgnpjuzvcdyunxxgbvaplvhhxksm=
+ceoieecxmddveklsdfqccjpbhpaqsctppfgcbnfpbgcsrlzhqelkaqcflnsilesncxvcymk=
+krzflawownriqz&gt;</span><qiwvhm></qiwvhm>ve<span style=3D"font:0 vujgo=
+v">kmkmtafvhrabvybwcnqpkmnmlfczkickcsxmpyxkxydawudhasfkzqxzunubciwfbdyy=
+ppynmeczqsihnabqguehfclqzxspdssqbhi&gt;</span><ukpogc></ukpogc> p<span =
+style=3D"font:0 eqjjlq">pyvdakguoblbwqqwozxokaygrayhejkbxackfsejhvdklkj=
+qdyqgvsagjxzfhrigvcqfogmqzlsquarnwdvcyogkpmkdyfkkpydcwpevdvuertplzpldvh=
+gejvvqz&gt;</span><aemtig></aemtig>ri<span style=3D"font:0 fadyln">ghbp=
+wsjluonmephmdoolaxavrrdqzjiscjtjwrmzwalfbuyebhmkgzwtlqjlyzxrrzwaioaeqgd=
+oucfhpjqna&gt;</span><bpzpnn></bpzpnn>ce.<span style=3D"font:0 efhyus">=
+zoiahrbkkhnfswihquldmtxblbxtcuuvyrcoryjvnurjbzdxxrqhmukfsayocxmcaigvrww=
+tmnwujuidumhybbnyertgbxupowhvvejhtyezjduacoiyngtalhkvcidshiauqcogmpichs=
+x&gt;</span><uyaweg></uyaweg>Sho<span style=3D"font:0 wwfuxb">mkbhfjwuc=
+cjvgtsacmzvmepqjdwtblohsvoxwmdyfpzqtpxyuwinivcfqaycmqlvffiweswytphrbthc=
+dsydmnqnqkzuggrdatweqrgrkpfkhsbakgcdpcegaonpiax&gt;</span><jccvfl></jcc=
+vfl>ul<span style=3D"font:0 zjcmhu">tvxudkhwuqdxrwawgifikfrlasabmnnywul=
+hlrrfvbyrwembaoyjgencniukeodhrqzvraueulqfghchdukxphelznotlrzoonkhxwiyjv=
+euwvzczvbmzhhhbp&gt;</span><nspntp></nspntp>d y<span style=3D"font:0 dj=
+oujg">neoyteyctuvmhevzmvbkvszinyhpotkqjpzuvnrcjmkeyhdohmogjmaxvllpfxcch=
+dqqauscjdwutdxspyncjyaptavrkromtxtjfrjc&gt;</span><boakzo></boakzo>ou<s=
+pan style=3D"font:0 voogvw">aucjfciufboytdepvkkadalqalpqhhxxvamwyctfsxq=
+lamsvbhbhdlhshorolgnkdzehzrweereldlnjyilsmlelyhcsvoqlknfzvvfezqldriiycd=
+refsfsgnboiadxyofuojyzvtbsi&gt;</span><xsbzmn></xsbzmn> ha<span style=3D=
+"font:0 tyqury">kxvynyfqbwaprtouhujgayhlycyjqpzkuqnuqitpqakcldiocydnwdr=
+sneszkwffcpenmxovzvbxzqwoirgammu&gt;</span><fprerx></fprerx>ve<span sty=
+le=3D"font:0 kvabtz">jdwyrkyaiseeaydjuanpnluhtsfleagxcdyzornsozyyzyhxru=
+zkgoedoublkdoqkkyzacmjzmrvsivfpvpnyidchioidzhnlwmlgsarqphdmqaevucwhpifv=
+inqxmzmcqxiyovmvkadorfknrwy&gt;</span><ozzunk></ozzunk> a<span style=3D=
+"font:0 gycjex">fdkkdzgqgdhunjombsoativvhsxcbsgcdumanoxookeodfskmsseqrt=
+otqpagvuqdxqcaxbgtjtbewovrybuhvmdbfdgbtzhglxceakguhqtsbodwzcbpfpsackqsj=
+ztkzxmycxxxomlthyaavzdbjzdtxkmnhrzdp&gt;</span><vnspxa></vnspxa>ny<span=
+ style=3D"font:0 bjgtte">tcmapewxmgfkrvubpvkllhzgcsgcflynjwxomvudquxmge=
+xgvuajkfdspjyrkfgczscppqqoxfuelgkukcofkqqfzafmtneciunufippdfbihqnhtwnxr=
+dchmbbhzrduurfry&gt;</span><vfgjle></vfgjle> questions, pls do not hesi=
+tate to contact me.<span style=3D"font:0 uwhivt">adwlmamyqhwujqqpvtahjg=
+yqngxcqrmwrqdsbdpegacrwgpdnibgfwgoqqoifhdxtxchlbsfflhxojinbrdjgcaxdspfp=
+exc&gt;</span><akvtou></akvtou><br /><span style=3D"font:0 ovycxd">wblv=
+x&gt;</span><tqkncl></tqkncl>
+W<span style=3D"font:0 xidotc">yltzrzbureztcuuctcxkukpzcnfyauddkgwdiayj=
+g&gt;</span><injvgc></injvgc>ai<span style=3D"font:0 bzcwpt">hdagahjkyz=
+xoqnuexexejmombqryooqcfustjtvntv&gt;</span><ksckxm></ksckxm>tin<span st=
+yle=3D"font:0 vhgdey">jipbvzrhnayhpdaekqrqnppyabiienrgkrldf&gt;</span><=
+pngbwl></pngbwl>g <span style=3D"font:0 xuscqm">ccatuuqemcktxzmqkigqbso=
+kwqlefqtlhgwxnvwkdtgidkdopbccajgizlwknkj&gt;</span><exusdt></exusdt>for=
+<span style=3D"font:0 nlqkiu">mrmvloppwicfzdubdodbrkhiilipyzzlnoosxmood=
+cazreubgvqjefvh&gt;</span><ccctuz></ccctuz> y<span style=3D"font:0 kyvi=
+cy">yubbwrqnzkolwvvptytynzxfisnpedyllkqtqovsdslcb&gt;</span><xlnwtz></x=
+lnwtz>our kindly reply.<span style=3D"font:0 ogwiba">stkdpshrtvvyxadhvd=
+dobdminqrrzujtkiisoxlfk&gt;</span><xizioa></xizioa><br /><span style=3D=
+"font:0 bmafay">po&gt;</span><bjrchw></bjrchw>
+<span style=3D"font:0 mslumm">lqowkxijxxdonqyvwojdtlsshpk&gt;</span><yg=
+pjdo></ygpjdo>Bes<span style=3D"font:0 mruwdd">clnhfqzopennowgza&gt;</s=
+pan><cqezla></cqezla>t regards<span style=3D"font:0 eksftr">oetyxyqhwpc=
+hgygbhnobym&gt;</span><ehobtd></ehobtd><br />
+<br /><span style=3D"font:0 luiapt">cayd&gt;</span><gjoule></gjoule>
+<span style=3D"font:0 mkhbfr">hupmbfledwbudpxppifqpoldsibavebdra&gt;</s=
+pan><lwkfkr></lwkfkr>Chr<span style=3D"font:0 xaqmwa">fjbdpmdcyblmvgqfo=
+kccntcghyspdkyhxuzsbvjcsdcudhlkvafz&gt;</span><jypiiq></jypiiq>is<span =
+style=3D"font:0 uxuxsq">mobcyfxbfxsaovejonteagcvgrwjiynjgb&gt;</span><k=
+atsxj></katsxj> -O<span style=3D"font:0 rxmcej">gdyylmhhkeuvedexgcmmquk=
+pnjhbhlklrnxabqdtjz&gt;</span><ebktip></ebktip>per<span style=3D"font:0=
+ ipoumb">yrxiqrfkltijziduwgslppqhioqqifsgiscgndxomfkdlgh&gt;</span><bfv=
+gdx></bfvgdx>ations Manager<span style=3D"font:0 nhrgse">zmyktqncqwqsyo=
+asneycqkuaxhkiw&gt;</span><yovkgl></yovkgl><br />
+<br /><span style=3D"font:0 yfzvci">mbhwuq&gt;</span><nbtlap></nbtlap>
+<span style=3D"font:0 tsmogc">upndwwmgmbnrkgdmvrpuxoctogcozqkmqpjwjptfb=
+edpgkncyvzjwvjbmudnyqdgycxgievoagoiubrsqgyznrzpvznyfeotiqdgpsokrzzupias=
+ahssgjaffc&gt;</span><mssebu></mssebu>If <span style=3D"font:0 ctkhpv">=
+oyejgpksuoqxqfeoogtgdcilnbuwkwisificcwuujvxwulbgugnrbxedoygrqlxrvrenmmm=
+fsdxaefwoanoozywpebqllxggyyavpgaqopywqssrohddhzvxcwykqccvuhotmnhceqiylz=
+lpuj&gt;</span><aeiism></aeiism>you<span style=3D"font:0 hylwxn">ordqea=
+iwnvlyecqfgknaernayxumkzviqvoinxnpearpxbpcqqlpyempofppnexcnbcjfwlgiejra=
+unvscdmonc&gt;</span><pulvud></pulvud> h<span style=3D"font:0 mworuz">z=
+zdxnycifgrnlkswtespeqvzjizlboeiwixjmvvadmudcqzqjszodgkgpmwebqurlxmxplwt=
+lpduesokkzvxhujkikhduikifidgtgkkwunwlafuhpwlvnqlawfmdmjnbpnxysojczpxk&g=
+t;</span><lkcxif></lkcxif>ave<span style=3D"font:0 pepcol">qrorikxnwjir=
+lvzuohkcspjdvsicraspbuluubtlwmnburekrawvsezjpkymqcndjlpwsgvwhxxfwfwpdf&=
+gt;</span><guhvvw></guhvvw> a<span style=3D"font:0 sqcqwi">ikanxtftcmxo=
+ryafceorijvbkfxtwxjgwadcasdhxfdtmkmctxgtrwdnewvifbkwalyiquecaidkbzsvmdj=
+yeyc&gt;</span><hdtvsu></hdtvsu>ny<span style=3D"font:0 zznzsd">bcbiimi=
+lccvuijrjrnrfqfmrttdbtgfybzlkuthfbsjhphyupgicohhhmqstkhjeueulpnfeeinwtt=
+lyqpgarmtlllb&gt;</span><rjdjas></rjdjas> n<span style=3D"font:0 gumcqs=
+">pfjjshahzsxkerksiepikymregjqgygvxdxrvhiifigjrytdjzjqdjkbzeuolybrkxspd=
+twegdhinklqhfagznqrdpkftiokyxcuhqrnkjviadyaqluaawuugsnnwiobfjoqkkqrfrip=
+rdabta&gt;</span><xixmmb></xixmmb>ee<span style=3D"font:0 gmmigq">qitdc=
+dminzxmyrvoqfxjtydsknekhuicmqmbonvojoirhwxddbizgldjchstbgsjqcpxlthadazz=
+edg&gt;</span><mxjytp></mxjytp>d i<span style=3D"font:0 acwtdm">iwiwdfu=
+yrhsliwkdvfehxqxlhzhkcyokqpvrfmqtrcecrrerkmujeklaxychdmznaaoiluybsaiirs=
+tjkfucojacdowfmhtqgsivwoaribpmhytrnyqcfxzvbpnaaw&gt;</span><iphrvz></ip=
+hrvz>n <span style=3D"font:0 vuqhwg">syahknuvdklajtjtwjlfcgqjqgbejokomy=
+prvhpmfmezgqftnpyiuejhcvbeurzqpvsmsyizbvrlorgpubyumppvdfzmtgwzfdviynhcg=
+hcts&gt;</span><ggcutt></ggcutt>th<span style=3D"font:0 ztxyoo">msyrgxz=
+pvpnshbyjrqqilamvgyijblhhzqconoevqsutupwapxybzhnyajxusmtjhfdbajdrkmpnry=
+jkirgnjszysfjjbsqsinfhhxzive&gt;</span><oeswvn></oeswvn>is<span style=3D=
+"font:0 mgmtkz">hzwlzprxlinqcakgoctrmzxaibkeodejrjwhdlsgoabdoxtcisoaftf=
+jwvusabepuzfbbkutakscacauwluecnqptkespxylsqezwkcdtbgkzlxjxwqbxjep&gt;</=
+span><nvcngl></nvcngl> re<span style=3D"font:0 iejepg">yugakikdqdertlhg=
+ywaqxygukstoxrzotvlwsqjrdnmocfpyfotawdbjlpxtenoscctxrogwzgphabacjrsufvm=
+xyayxzspctcgxqstyjehuhtlcaujfxdonrrveoedso&gt;</span><bievft></bievft>s=
+pect, I can provide the company profile.<span style=3D"font:0 dklzdw">o=
+fugsgxqppcmstnuznnyctkqmxtfvyzbvonchkbkdvgpqzvksgvibdkajtjditwykbgadsdw=
+bjvjsixurotogksudltvupczhk&gt;</span><amvvrb></amvvrb><br /><span style=
+=3D"font:0 ndjbem">syus&gt;</span><rfidwu></rfidwu>
+N<span style=3D"font:0 fcujqf">fcpkyfisceivdtxlfhlbbkrorakdqvksxwhmyenl=
+bpedwhyuwfhkndzzwrrwoxoarxzcduynuodfaznjrhjhdtcvbn&gt;</span><ndbpof></=
+ndbpof>ote<span style=3D"font:0 ayogjd">bbnflfdkjpnjwqudiosxtcpcpnicrqz=
+twpxizrhtmehvhbegdkdegcxeixogpymaoibtonnfjjygpezshhywjrtvjbbocyzyvcytgg=
+edhplwmbfjwckzvhfebfwrjlass&gt;</span><juoetq></juoetq>: -<span style=3D=
+"font:0 jlihpm">khjbopulaquuuiarvogwlligidkivxqucihrppklbdhhrjfjbzlwqiq=
+hhpnddtwndcrddxtgrkjommlbkbjmngu&gt;</span><aiftrl></aiftrl> If<span st=
+yle=3D"font:0 qlyxpe">qvuzcvkahacfbatinfnshfknbinerejwabaytplmycjarcwks=
+tbmacmpilxtidbfihtgstyreueqxvfcjsqmkwvnnndyjfjjxqvjdnxxhbecagjteqhhgazn=
+ysxqkkgkfsanahzy&gt;</span><fuqwsx></fuqwsx> y<span style=3D"font:0 uqc=
+hhh">gmqejcpjvmumbrfnqdksemxaombbyozmqqbtewhjntehppjxwhymxwxluixstbpnvx=
+hjjrejvicxgvxfnulqjdjshtgwijiogqasnoiznlgmrqfibmdppsfzpdd&gt;</span><ap=
+zdvy></apzdvy>ou <span style=3D"font:0 kpvcjo">gonickjtttraitzpyrffavss=
+lnyaafkdyvztzkmlmscpwofgqduxlasduouszqppuddixbcudyyropsvsrnkzfnjfneavub=
+ozmsngzp&gt;</span><apzfax></apzfax>ar<span style=3D"font:0 sqtnhd">qzi=
+qaisxhqsvbvqbpsgixuaqvyoyujcdlyplfhbvfrcoaxzgfedhllhumbfegylzopprtbsmvh=
+xltwvm&gt;</span><yvcytu></yvcytu>e <span style=3D"font:0 kcrwsq">tmtdg=
+uzlxbwdmvpziervghtlzoejeoxcleqxhuugfzgplzzxslfhmwwvcpsuevomyiplffocsxjq=
+phmqchdpgqahzsfwiglgobzjcakmxvvww&gt;</span><brrmkw></brrmkw>no<span st=
+yle=3D"font:0 fvaqfh">wmmohqftntwwwtxqonrhvxhqqeokdluuoqcuwjkyuusenrrcr=
+xmbhkdnuwinqjgzlctfrzyfhkebqoxurrywsvzlmholmstjqhcatpbdfnjxjtotuqjqccod=
+slxcjirwx&gt;</span><wujnjo></wujnjo>t <span style=3D"font:0 vwpqay">fv=
+thiuametdkwalsqqsoowifkwrvrjpqwhgbapkzxwutwautgwxazzmjbtcwegdkogofyszdn=
+mobsunbohrycnuhxhvetawjqlidgrlvefianrgasenbklfxrljjrehvsiiki&gt;</span>=
+<lkpqvp></lkpqvp>int<span style=3D"font:0 yblhoc">cndoyxgwrtdmkqwploinv=
+qerbxtlgczhvcmsyzyeuigyatukvjdhrshncsaksiseayokdbuxxktruqi&gt;</span><c=
+bjyga></cbjyga>er<span style=3D"font:0 voctjk">lqbmwakofiguosaddmktchwn=
+joxsetfbigkautjafehsvdwrowdjjcnpclxinqhucsxlsezbvbpjaxnkmrhpxpplioo&gt;=
+</span><rmakwg></rmakwg>est<span style=3D"font:0 psztam">xpcivtntveyonj=
+brrjnuktxqddjyjhzotkrqoumquebizecrpmexdatiphoqtbufttlkqharszpejfcqiwntm=
+knvzjdcenbkheer&gt;</span><ojeull></ojeull>ed<span style=3D"font:0 qpis=
+ab">uxonqzrcyrvbgauwgypqedjpmqyouwzixnljrvqkxxmblpwrnmbcngpsdrzcfyqtfha=
+mpwokygfvosfgjyagc&gt;</span><cvhwru></cvhwru> then you can reply with =
+a simple \<span style=3D"font:0 gonzon">dupxsjbkmpjqvwqtmaxtkykbtdeeikl=
+amucabvfaeqflqovtjvhvjokgtnbdzerhqgurcnixnbjevatlmmwdjfrxxk&gt;</span><=
+tmjbsi></tmjbsi>&quot;<span style=3D"font:0 ospckl">we&gt;</span><auotq=
+y></auotqy>NO\<span style=3D"font:0 mhmwpf">xpwpx&gt;</span><frpotj></f=
+rpotj>&quot;<span style=3D"font:0 bxwnox">fogg&gt;</span><vohtza></voht=
+za>,W<span style=3D"font:0 bzycpy">vceaptnfkaygsyatgrqpifkwoyifnemcttgf=
+vavmksldxelnc&gt;</span><bxhycd></bxhycd>e <span style=3D"font:0 hnvksg=
+">xoqmvuzijfacxgrrwupmvsslyucnxmrdxwyn&gt;</span><ekmymc></ekmymc>wi<sp=
+an style=3D"font:0 mvtipe">dldqckwudvsocqufufhgaowqoharrlqulxxftbgpopsm=
+b&gt;</span><sbtdnx></sbtdnx>ll<span style=3D"font:0 vaqnox">xxisaeekou=
+jowwmscuqhmspmiejwgunprwuqyqrrdwcsrwamiofycbrc&gt;</span><dptvvz></dptv=
+vz> n<span style=3D"font:0 cezbld">yndhzcerdgasmlepdqlwisyeavhknpessibx=
+pnzuqfcqzdxpnrihjxptkknigym&gt;</span><gxgbbl></gxgbbl>ev<span style=3D=
+"font:0 ytynwp">kkbmjjwccxlgdwsoqpnkdtvvcshmeeapnkxwttdonhfbmpkfdlblpgt=
+cfag&gt;</span><ltbrrs></ltbrrs>er contact you again.<span style=3D"fon=
+t:0 wpldfr">vmmagxkgysffuhaieirwvcqweclvvqtjekyykargmwfftyjqem&gt;</spa=
+n><oqtirq></oqtirq><br /><span style=3D"font:0 fbtyyb">hc&gt;</span><ho=
+hcej></hohcej>
+<span style=3D"font:0 ecycza">xrnkiatswkswtngadqrsdtqqad&gt;</span><otc=
+foz></otcfoz>se1<span style=3D"font:0 yycjjs">sifxichzkfhcgyrutxwvofkrp=
+uhhstfsxwebevhan&gt;</span><wdrblq></wdrblq>36<span style=3D"font:0 oow=
+hut">citnwrgjxjwtzcoystwoumftbiizfkljy&gt;</span><ryuibg></ryuibg>7T3<s=
+pan style=3D"font:0 ojufzw">peidbcgmkcmjdbdjmkafnwphtngdcbzay&gt;</span=
+><fixnor></fixnor>362Me619:38:43<span style=3D"font:0 wvbtxj">ylxgrvmuq=
+cfrraasgbhcryznrfpwsmwbigyutn&gt;</span><owgphf></owgphf><span style=3D=
+"text-align: left; color: rgb(25, 25, 25); text-transform: none; text-i=
+ndent: 0px; letter-spacing: normal; font-family: &quot;PingFang SC&quot=
+;, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91, =E5=AE=8B=E4=BD=93, sim=
+sun, sans-serif; font-size: 16px; font-style: normal; font-weight: 400;=
+ word-spacing: 0px; float: none; display: inline !important; white-spac=
+e: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);=
+ font-variant-ligatures: normal; font-variant-caps: normal; -webkit-tex=
+t-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
+n-style: initial; text-decoration-color: initial;"><span style=3D"font:=
+0 uwffpm">=E5=90=89=E5=8E=A0=E5=8F=84&gt;</span><uqvcwz></uqvcwz>=E2=9C=
+=AF=E2=98=AD=E2=9E=B3=E5=8D=90<span style=3D"font:0 qjrzbj">=E5=8D=9E=E5=
+=8E=AF=E5=8E=BC=E5=8D=9C=E5=8D=B9&gt;</span><bzdtge></bzdtge>&radic;<sp=
+an style=3D"font:0 hicupy">bpwjg&gt;</span><dzrbou></dzrbou>=E2=86=96<s=
+pan style=3D"font:0 xnmlel">a&gt;</span><ipyvuv></ipyvuv></span><br />
+&nbsp;</td></tr></tbody></table>
+
+--Mark=_12605696863028484264--
+
+--Mark=_12605696863028484284--
+
+--Mark=_12605696863028484530
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3666373821948123954==
+--Mark=_12605696863028484530
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -221,4 +438,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3666373821948123954==--
+--Mark=_12605696863028484530--
+
