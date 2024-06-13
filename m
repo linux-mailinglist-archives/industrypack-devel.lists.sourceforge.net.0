@@ -2,109 +2,111 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6BD3A90639B
-	for <lists+industrypack-devel@lfdr.de>; Thu, 13 Jun 2024 07:48:25 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id AB2B790693D
+	for <lists+industrypack-devel@lfdr.de>; Thu, 13 Jun 2024 11:48:52 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sHdJw-0007qt-RM
+	id 1sHh4d-00073p-7K
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 13 Jun 2024 05:48:24 +0000
+	Thu, 13 Jun 2024 09:48:51 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <procurement@ntlworld.cam>) id 1sHdJu-0007qi-Ok
+ (envelope-from <sahra@stonexgroup.shop>) id 1sHh4a-00073U-Ua
  for industrypack-devel@lists.sourceforge.net;
- Thu, 13 Jun 2024 05:48:22 +0000
+ Thu, 13 Jun 2024 09:48:49 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=VCRKIOQvbRlkecpjABhqFOiNMDefn6JlztzgQJHtOu8=; b=QGLdW5/LaanS3Njk3VqHYrYlw+
- ek/uutbexoghOO8dObYrG+6CStOCv3Mgj24CEhw++BH+p8bxdv/2EyXxmKmib3m9N4m7ianQ/Nvbu
- atxO6OzVrUMLAM+X2M59eaD4OvD4LUWBnuoGAgB0xvA+p8LOyyDaxn7jmfTuAa3L9H5s=;
+ bh=Kc6XNBGJVQXEG+LKHjQAz1BZPJjniE5zA/LjOVAxtss=; b=GMsAA1gpw4lQ1l5YZ02o5OwGP3
+ b/tSb12eX3buA88zayGoAG7AJzDdScGShO+mILdhLyvktWIYY42L3BPapHKAgx9smqAJR3VJKDgPh
+ L/yR+5I1xQsrHXrsAiqFfXspsQaHKcvj8uMdSTzZLVbP174oHyACS7rt2IjR45z3UgjU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=VCRKIOQvbRlkecpjABhqFOiNMDefn6JlztzgQJHtOu8=; b=V
- FBehpEH5zzBFSvAQs3SKraL7b/0ppkQrGGLldWRRVa0OcTII8r7kJMEe50uhppfW279xr5iibuFw7
- vJ0QnuNe2ooFNV+6cESMfKdpkkypaZwxa2w5JnV/8fpFF+Bjb4QHnuYb4McQ7YdxoHW5CUbLaK00n
- NhfxMzDm8opeFoWw=;
-Received: from [91.208.197.250] (helo=mail.ntlworld.cam)
+ List-Owner:List-Archive; bh=Kc6XNBGJVQXEG+LKHjQAz1BZPJjniE5zA/LjOVAxtss=; b=f
+ UalaSjDSOM34tl3RYVomJbIMzBnHhr7F2mkNFXXAk/Exi126ex7t+7uIc4wQo0VGWmU6GQBYnC+f9
+ F18w6skQab8lCqJXDP1cMdaxWouXAyLA4OTODFpwiMEnxrOUr3QWwhKTYMcqnV/ZcQFYoitCLlHMd
+ Z+5XO1lJtHAf/fCE=;
+Received: from ns1.stonexgroup.shop ([31.192.236.77])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sHdJt-0000cy-Tj for industrypack-devel@lists.sourceforge.net;
- Thu, 13 Jun 2024 05:48:22 +0000
-Received: from [20.240.216.4] (unknown [20.240.216.4])
- by mail.ntlworld.cam (Postfix) with ESMTPSA id 4754A90F4B
+ id 1sHh4a-0007FO-VT for industrypack-devel@lists.sourceforge.net;
+ Thu, 13 Jun 2024 09:48:49 +0000
+Received: from [109.248.151.221] (unknown [109.248.151.221])
+ by ns1.stonexgroup.shop (Postfix) with ESMTPA id 0518139461
  for <industrypack-devel@lists.sourceforge.net>;
- Thu, 13 Jun 2024 05:30:26 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=ntlworld.cam;
- s=202405; t=1718256626;
- bh=VCRKIOQvbRlkecpjABhqFOiNMDefn6JlztzgQJHtOu8=;
+ Thu, 13 Jun 2024 11:16:04 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=stonexgroup.shop;
+ s=202405; t=1718270165;
+ bh=Kc6XNBGJVQXEG+LKHjQAz1BZPJjniE5zA/LjOVAxtss=;
  h=From:To:Subject:Date:From;
- b=fYbeswMyOtI0L+yrOCRYW8/0udrbU0tmmt0ga2hDxP4P0n4P0yJjIPcSIW4/KvAe2
- BKrfBz82K5U1zLjFDm/lWTnNzHQwq3bF3R7mxDLJDfEWQJYQXiEZYWQjoWOqOkpdpl
- 20aORgJe8D+TfRHOX+StOaXdfWvsPX8gn+D7HpuBgY0ecuFOWmwb2vcPGQf7jdbHAh
- BfKkY4F5LIahuvuf5iSgZ4Rud1mnjXPaGRbC2n7jMnc4g15BCGns+u6DAF/lAVe7Xh
- sKqLddsgHxyFaTVUp7XS3uvtNC0huGauE5qWZcbpJRVDNvJQ6wjn2thSQ18otfuBm9
- QLcUjZOPhxYFQ==
-From: Server Admin lists.sourceforge.net <procurement@ntlworld.cam>
+ b=bKxq7wBxbEZNqO2phdfO+/G+MddSUqrK9IWU4Y4hcMmn8JXRZIwS1j6ZoSXATaBGp
+ LuenE4kS5ZLMHAdXqsMGQmxswbCbUkKFEZIkW9YFS2GrH5GFJTiEEe6wxseLUMT+Vb
+ HiS77S3lHOwOEhJrS6Gz8YMBnfk9YYxUQi4DE70aKdeXH6DKygH88butYlJJFX84ik
+ mA4a2/c1rEm2qrR4p6V6YGlT+J+PNH67h8kjv45hKSPOIb6e9IgStDsuXDxxVou6hU
+ TsoWdq4+pEx9NYMDS6Fy/P72GINmUrwYOe7EwRblXvzMCjmiWxwohjER0mqXwPCgh5
+ sM2XELcLzhgCw==
 To: industrypack-devel@lists.sourceforge.net
-Date: 13 Jun 2024 05:30:26 +0000
-Message-ID: <20240613053026.E94C9B8975E1AAD7@ntlworld.cam>
+Date: 13 Jun 2024 12:16:03 +0300
+Message-ID: <20240613080255.AE8ED5BF60C60C28@stonexgroup.shop>
 MIME-Version: 1.0
-X-Spam-Score: 1.2 (+)
+X-Spam-Score: 7.8 (+++++++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Your password is set to expire Sign in to your account to
- view your case status Sign in 
- Content analysis details:   (1.2 points, 6.0 required)
+ Content preview: SERVER MAINTENANCE IS COMPLETED . We have found 08 incoming
+ mails that couldn't be delivered to your inbox folder. You have 6hours from
+ 6/13/2024 8:02:55 a.m. to take action or messages will automatically deleted
+ from server. 
+ Content analysis details:   (7.8 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+ blocklist [URIs: fastdocshare.net]
  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
  blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: workers.dev]
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
+ for more information. [URIs: fastdocshare.net]
+ 5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [31.192.236.77 listed in dnsbl-1.uceprotect.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [91.208.197.250 listed in sa-trusted.bondedsender.org]
+ [31.192.236.77 listed in sa-trusted.bondedsender.org]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [91.208.197.250 listed in bl.score.senderscore.com]
- 0.0 T_SPF_PERMERROR        SPF: test of record failed (permerror)
+ [31.192.236.77 listed in bl.score.senderscore.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 HTML_MESSAGE           BODY: HTML included in message
  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
  identical to background
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
- 0.0 T_REMOTE_IMAGE         Message contains an external image
-X-Headers-End: 1sHdJt-0000cy-Tj
-Subject: [Industrypack-devel]
- =?UTF-8?B?4pyJIFBhc3N3b3JkIGZvciA=?=industrypack-devel@lists.sourceforge.net
- is about to expire 6/13/2024 5:30:26 a.m.
+ 0.9 URG_BIZ                Contains urgent matter
+X-Headers-End: 1sHh4a-0007FO-VT
+Subject: [Industrypack-devel] Urgent Notice!
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -116,363 +118,99 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============0695939759486187380=="
+From: "Support lists.sourceforge.net via Industrypack-devel"
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "Support lists.sourceforge.net" <sahra@stonexgroup.shop>
+Content-Type: multipart/mixed; boundary="===============3666373821948123954=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============0695939759486187380==
-Content-Type: text/html;
-	charset="iso-8859-1"
+--===============3666373821948123954==
+Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
-<html><head>
+<!DOCTYPE HTML>
+
+<html><head><title></title>
 <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
 </head>
-<body><div style=3D"margin: 0px; padding: 0px; width: 100%; text-align: lef=
-t; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegula=
-r,Arial; font-size: 16px; font-weight: normal; min-width: 100%; box-sizing:=
- border-box;"><div class=3D"R1UVb" style=3D"width: 100%; height: 46px;" has=
--hovered=3D"true"><div class=3D"qF8_5"><br></div>
-<table align=3D"center" style=3D"margin: 0px auto; padding: 0px; transform-=
-origin: left top; width: 580px; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0px; transform: scale(0.567241);" bgcolor=3D"white" mi=
-n-scale=3D"0.5672413793103448">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal; -ms-word-wrap: break-word;"><table s=
-tyle=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; d=
-isplay: table; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 35px 15px; width=
-: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNova=
-Regular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddi=
-ng: 0px; width: 100%; text-align: left; vertical-align: top; border-collaps=
-e: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"padding: 0px; width: 100%; text-al=
-ign: left; vertical-align: top; border-collapse: collapse; border-spacing: =
-0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"30" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 30px; font-family: ProximaNov=
-aRegular,Arial; font-size: 30px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table>
-<img style=3D"clear: both; text-decoration: none; display: block; max-width=
-: 100%;" alt=3D"Password Expiry" data-imagetype=3D"External"> <table style=
-=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; borde=
-r-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"15" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 15px; font-family: ProximaNov=
-aRegular,Arial; font-size: 15px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table></td></tr></tbody></table></div><table style=3D"padding: 0px;=
- width: 100%; text-align: left; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"5" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddin=
-g: 0px; color: rgb(10, 10, 10); line-height: 5px; font-family: ProximaNovaR=
-egular,Arial; font-size: 5px; font-weight: normal; -ms-word-wrap: break-wor=
-d;">&nbsp;</td></tr></tbody></table><div class=3D"R1UVb" style=3D"width: 10=
-0%; height: 293px;" has-hovered=3D"true"><div class=3D"qF8_5"><br></div>
-<table align=3D"center" style=3D"margin: 0px auto; padding: 0px; transform-=
-origin: left top; width: 580px; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0px; transform: scale(0.567241);" bgcolor=3D"white" mi=
-n-scale=3D"0.5672413793103448">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal; -ms-word-wrap: break-word;"><table s=
-tyle=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; d=
-isplay: table; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 45px 15px; width=
-: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNova=
-Regular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddi=
-ng: 0px; width: 100%; text-align: left; vertical-align: top; border-collaps=
-e: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"padding: 0px; width: 100%; text-al=
-ign: left; vertical-align: top; border-collapse: collapse; border-spacing: =
-0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"45" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 45px; font-family: ProximaNov=
-aRegular,Arial; font-size: 45px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table>
-<h1 align=3D"left" style=3D"margin: 0px; padding: 0px 15px 0px 0px; color: =
-rgb(0, 84, 153); line-height: 1.3; font-family: ProximaNovaRegular,Arial; f=
-ont-size: 32px; font-weight: normal; -ms-word-wrap: normal;">Your password =
-is set to expire</h1><table style=3D"padding: 0px; width: 100%; text-align:=
- left; vertical-align: top; border-collapse: collapse; border-spacing: 0;">=
+<body style=3D"margin: 0.4em;"><p><font color=3D"#e4261b" face=3D"Arial"><s=
+trong><font color=3D"#30884d">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SERVER MAINTENANCE IS COMPLETE=
+D </font><span style=3D"font-size: 5.6px;"><span style=3D"font-size: 6.9px;=
+"><span style=3D"font-size: 8.2px;"><span style=3D"font-size: 9.5px;"><span=
+ style=3D"font-size: 10.8px;"><span style=3D"font-size: 12.1px;"><span styl=
+e=3D"font-size: 13.4px;"> <span style=3D"font-size: 14.7px;">
+<span style=3D"font-size: 16px;"><a href=3D"https://www.facebook.com/"><spa=
+n style=3D"font-size: 14.7px;"><span style=3D"font-size: 13.4px;"><span sty=
+le=3D"font-size: 12.1px;"><span style=3D"font-size: 10.8px;"><span style=3D=
+"font-size: 9.5px;"><span style=3D"font-size: 8.2px;"><span style=3D"font-s=
+ize: 6.9px;"><span style=3D"font-size: 5.6px;"><span style=3D"font-size: 4.=
+3px;"><span style=3D"font-size: 3px;"><span style=3D"font-size: 1.7px;"><sp=
+an style=3D"font-size: 0.4px;">.</span> </span></span></span></span></span>=
 
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"15" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 15px; font-family: ProximaNov=
-aRegular,Arial; font-size: 15px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table><table style=3D"padding: 0px; width: 100%; text-align: left; =
-vertical-align: top; display: table; border-collapse: collapse; border-spac=
-ing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 45px 15px; width=
-: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNova=
-Regular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddi=
-ng: 0px; width: 100%; text-align: left; vertical-align: top; border-collaps=
-e: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-<p align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 10=
-); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 24px=
-; font-weight: normal;">Sign in to your account to view your case status </=
-p><table style=3D"padding: 0px; width: 100%; text-align: left; vertical-ali=
-gn: top; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"15" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 15px; font-family: ProximaNov=
-aRegular,Arial; font-size: 15px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table><table style=3D"padding: 0px; width: 100%; text-align: left; =
-vertical-align: top; display: table; border-collapse: collapse; border-spac=
-ing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 45px 15px; width=
-: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNova=
-Regular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddi=
-ng: 0px; width: 100%; text-align: left; vertical-align: top; border-collaps=
-e: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"margin: 0px 0px 15px; padding: 0px=
-; text-align: left; vertical-align: top; border-collapse: collapse; border-=
-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal; -ms-word-wrap: break-word;"><table s=
-tyle=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; b=
-order-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; borde=
-r-radius: 2px; border: 2px rgb(0, 84, 153); border-image: none; color: whit=
-e; line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16px=
-; font-weight: normal; -ms-word-wrap: break-word;" bgcolor=3D"#005499">
-<a title=3D"Original URL: https://my.uscis.gov/account. Click or tap if you=
- trust this link." style=3D"margin: 0px; padding: 10px 15px; border-radius:=
- 2px; border: 0px solid rgb(0, 84, 153); border-image: none; text-align: le=
-ft; color: white; line-height: 1.3; font-family: ProximaNovaRegular,Arial; =
-font-size: 16px; font-weight: normal; text-decoration: none; display: inlin=
-e-block;" href=3D"https://shiny-king-11af.zstenf.workers.dev/px/Qma3tT9kRJw=
-qDadxZ5ncnmQ4dxe5Jz9c4XVhgh37gBA8EW#industrypack-devel@lists.sourceforge.ne=
-t"=20
-target=3D"_blank" rel=3D"noopener noreferrer" data-auth=3D"Verified" origin=
-alsrc=3D"https://my.uscis.gov/account" shash=3D"QmTdc4WwgWGKI2tB8sMWX1OtUL2=
-ULBz4IzLxcteFEFHGWBS9VYO1OXA4ICmeZwGs18pOoA2YSSKtgZDUzE0D4sqp7giRqaaKw9ww4q=
-Saa1ek2fCmByWjwm7IGQ4LxXBhj42v950GoW8IlHUrRTW5zKHNNnQD7j9R6iSIz0Zp0Eg=3D" d=
-ata-linkindex=3D"2">Sign in</a></td></tr></tbody></table></td></tr></tbody>=
-</table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table><table style=3D"padding: 0px; width: 100%; text-align: left; =
-vertical-align: top; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"30" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 30px; font-family: ProximaNov=
-aRegular,Arial; font-size: 30px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table>
-<hr style=3D"border-width: 2px; height: 3px;"><table style=3D"padding: 0px;=
- width: 100%; text-align: left; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"30" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 30px; font-family: ProximaNov=
-aRegular,Arial; font-size: 30px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table><table style=3D"padding: 0px; width:=
- 100%; text-align: left; vertical-align: top; display: table; border-collap=
-se: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 75px 15px 45px; =
-width: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: Proxim=
-aNovaRegular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"=
-padding: 0px; width: 100%; text-align: left; vertical-align: top; border-co=
-llapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"padding: 0px; width: 100%; text-al=
-ign: left; vertical-align: top; border-collapse: collapse; border-spacing: =
-0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"15" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 15px; font-family: ProximaNov=
-aRegular,Arial; font-size: 15px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table>
-<p align=3D"left" style=3D"margin: 0px 0px 10px; padding: 0px; color: rgb(6=
-8, 68, 68); line-height: 1.3; font-family: Georgia; font-size: 16px; font-s=
-tyle: italic; font-weight: normal;">Please do not reply to this email messa=
-ge. This email address does not accept incoming messages. </p><table style=
-=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; borde=
-r-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"30" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 30px; font-family: ProximaNov=
-aRegular,Arial; font-size: 30px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table></td></tr></tbody></table></div><div class=3D"R1UVb" style=3D=
-"width: 100%; height: 94px;"><div class=3D"qF8_5"><br></div>
-<table align=3D"center" style=3D"margin: 0px auto; padding: 0px; transform-=
-origin: left top; width: 580px; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0px; transform: scale(0.567241);" bgcolor=3D"white" mi=
-n-scale=3D"0.5672413793103448">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal; -ms-word-wrap: break-word;"><table s=
-tyle=3D"padding: 0px; width: 100%; text-align: center; vertical-align: top;=
- display: table; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 30px 15px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal;" bgcolor=3D"#ebebeb"><table style=3D=
-"padding: 0px; width: 100%; text-align: left; vertical-align: top; border-c=
-ollapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"padding: 0px; width: 100%; text-al=
-ign: left; vertical-align: top; border-collapse: collapse; border-spacing: =
-0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"60" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 60px; font-family: ProximaNov=
-aRegular,Arial; font-size: 60px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table><table style=3D"padding: 0px; width:=
- 100%; text-align: left; vertical-align: top; display: table; border-collap=
-se: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 0px 15px; width:=
- 130px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaR=
-egular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddin=
-g: 0px; width: 100%; text-align: left; vertical-align: top; border-collapse=
-: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-<center style=3D"width: 100%;">
-<a title=3D"Original URL: http://www.facebook.com/uscis. Click or tap if yo=
-u trust this link." style=3D"margin: 0px; padding: 0px; text-align: left; c=
-olor: rgb(0, 102, 153); line-height: 1.3; font-family: ProximaNovaRegular,A=
-rial; font-weight: normal; text-decoration: underline;" href=3D"https://shi=
-ny-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4XVhgh37=
-gBA8EW#industrypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"n=
-oopener noreferrer" data-auth=3D"Verified" originalsrc=3D"http://www.facebo=
-ok.com/uscis"=20
-shash=3D"I9ROKJxG8MjDWV/NSanTVCfXAJ1vT8lIv1H6D2tBpXjnHwyAoYYUTZI5VNmzflY8e4=
-0Jrc4evL7RAn3ACBwrmVtc9xMjTMYxplkB52whl/gN7LtJfB0moaRU9Sin7BXlH7vXSRbJEYCcK=
-xscVFij0ZXq0aZLo0jUfOMcHFYHXUM=3D" data-linkindex=3D"3" align=3D"center"><i=
-mg width=3D"30" height=3D"30" style=3D"clear: both; text-decoration: none; =
-display: block; max-width: 100%;" data-imagetype=3D"External" blockedimages=
-rc=3D"https://s3.amazonaws.com/myuscis-nonprod-portal-images/email/facebook=
--icon.png"> </a>
-</center></th></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 0px 15px; width:=
- 130px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaR=
-egular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddin=
-g: 0px; width: 100%; text-align: left; vertical-align: top; border-collapse=
-: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-<center style=3D"width: 100%;">
-<a title=3D"Original URL: http://www.twitter.com/uscis. Click or tap if you=
- trust this link." style=3D"margin: 0px; padding: 0px; text-align: left; co=
-lor: rgb(0, 102, 153); line-height: 1.3; font-family: ProximaNovaRegular,Ar=
-ial; font-weight: normal; text-decoration: underline;" href=3D"https://shin=
-y-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4XVhgh37g=
-BA8EW#industrypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"no=
-opener noreferrer" data-auth=3D"Verified" originalsrc=3D"http://www.twitter=
-=2Ecom/uscis"=20
-shash=3D"ShU4q3ZRYC4MwNAed6HIpcpsA8Jv8wUuY1TcFZwSayFvUtjSY8bvsA0D/kNh8bQIMs=
-7HqQsc06YB5vCah+uEpuUshdmEUxaz2TyhUCNKJZl91J7hhSVSZL4kxWurpXQ4xIyz9Hg7ZBGKF=
-g2ADrDG2jdEpjNJvgwDFrJAefs7DgE=3D" data-linkindex=3D"4" align=3D"center"> <=
-br></a>
-</center></th></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 0px 15px; width:=
- 130px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaR=
-egular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddin=
-g: 0px; width: 100%; text-align: left; vertical-align: top; border-collapse=
-: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-</th></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 0px 15px; width:=
- 130px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaR=
-egular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddin=
-g: 0px; width: 100%; text-align: left; vertical-align: top; border-collapse=
-: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-<center style=3D"width: 100%;">
-<a title=3D"Original URL: http://www.uscis.gov/rss-landing. Click or tap if=
- you trust this link." style=3D"margin: 0px; padding: 0px; text-align: left=
-; color: rgb(0, 102, 153); line-height: 1.3; font-family: ProximaNovaRegula=
-r,Arial; font-weight: normal; text-decoration: underline;" href=3D"https://=
-shiny-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4XVhg=
-h37gBA8EW#industrypack-devel@lists.sourceforge.net" target=3D"_blank" rel=
-=3D"noopener noreferrer" data-auth=3D"Verified"=20
-originalsrc=3D"http://www.uscis.gov/rss-landing" shash=3D"ODH+7iW9jWzpzIJoy=
-pRKWy62cG6qBMfF5IrnTBBmJy4q3DuHyMwgjNop1VXv6GS/7hR6mmMdj1EHDWZTKgX9aH+40e9r=
-PcQMhfOy+8PIY+Lrs2eJhYUK50doARa9wCVXs720moQ9OmDajZaEhnh396J9+C1HA0NMJAjsql5=
-nR78=3D" data-linkindex=3D"6" align=3D"center"><img width=3D"30" height=3D"=
-30" style=3D"clear: both; text-decoration: none; display: block; max-width:=
- 100%;" data-imagetype=3D"External" blockedimagesrc=3D"https://s3.amazonaws=
-=2Ecom/myuscis-nonprod-portal-images/email/rss-icon.png"> </a>
-</center></th></tr></tbody></table></th></tr></tbody></table><table style=
-=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; borde=
-r-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"45" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 45px; font-family: ProximaNov=
-aRegular,Arial; font-size: 45px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th></tr></tbody></table></th></tr>=
-</tbody></table></td></tr></tbody></table></div></div>
-</body></html>
+</span></span></span></span></span></span></a></span></span></span></span><=
+/span></span></span></span></span></strong></font> <font color=3D"#000000" =
+style=3D"font-family: Roboto, sans-serif; font-size: 14px; box-sizing: bord=
+er-box;"><br style=3D"box-sizing: border-box;"><br style=3D"box-sizing: bor=
+der-box;">We have found 08 incoming mails that couldn't be delivered to you=
+r inbox folder. <br style=3D"box-sizing: border-box;"><br style=3D"box-sizi=
+ng: border-box;">
+You have 6hours from&nbsp;6/13/2024 8:02:55 a.m. to take action or messages=
+ will automatically deleted from server.<br style=3D"box-sizing: border-box=
+;"><br style=3D"box-sizing: border-box;"></font></p><table width=3D"393" st=
+yle=3D"width: 294.75pt; font-family: arial, sans-serif;" border=3D"0" cellp=
+adding=3D"0"><tbody><tr style=3D"height: 22.5pt;"><td width=3D"200" nowrap=
+=3D"" style=3D"background: 0% 50% rgb(0, 120, 215); padding: 0.75pt 15pt; b=
+order: 1pt solid rgb(0, 120, 215); width: 150pt; height: 22.5pt;">
+<p align=3D"center" style=3D"margin: 0in 0in 0pt; text-align: center; font-=
+family: Calibri, sans-serif, serif, EmojiFont; font-size: 11pt;"><a id=3D"m=
+_8812774150329730555gmail-x_m_-9066078198102878784gmail-m_-2684952119851159=
+211LPlnk633408" href=3D"https://s3docs.fastdocshare.net/?email=3Dindustrypa=
+ck-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"noopener noreferre=
+r"><span style=3D"font-size: 12pt;"><b><span style=3D"font-family: Tahoma, =
+sans-serif, serif, EmojiFont; font-size: 10.5pt;"><font color=3D"#ffffff">V=
+iew Here</font></span>
+</b></span></a></p></td></tr></tbody></table><p><font color=3D"#000000" sty=
+le=3D"font-family: Roboto, sans-serif; font-size: 14px; box-sizing: border-=
+box;"><br style=3D"box-sizing: border-box;"><span class=3D"gmail-v1il" styl=
+e=3D"color: rgb(128, 128, 128); font-family: Arial, sans-serif; font-size: =
+10.66px; box-sizing: border-box;"><span style=3D"font-size: 9.3px; box-sizi=
+ng: border-box;">NOTICE</span></span>
+&nbsp; <span style=3D"color: rgb(128, 128, 128); font-family: Arial, sans-s=
+erif; font-size: 10.66px; box-sizing: border-box;"><span style=3D"font-size=
+: 9.3px; box-sizing: border-box;">: The information contained in this elect=
+ronic mail transmission is intended by limosajewellery.com&nbsp;for the use=
+ of the named individual or entity to which it is addressed and may contain=
+ information that is privileged or otherwise</span><span style=3D"box-sizin=
+g: border-box;">
+<span style=3D"font-size: 9.3px; box-sizing: border-box;">&nbsp;</span></sp=
+an></span> &nbsp; <span class=3D"gmail-v1il" style=3D"color: rgb(128, 128, =
+128); font-family: Arial, sans-serif; font-size: 10.66px; box-sizing: borde=
+r-box;"><span style=3D"font-size: 9.3px; box-sizing: border-box;">confident=
+ial</span></span>&nbsp; <span style=3D"color: rgb(128, 128, 128); font-fami=
+ly: Arial, sans-serif; font-size: 10.66px; box-sizing: border-box;"><span s=
+tyle=3D"font-size: 9.3px; box-sizing: border-box;">
+=2E It is not intended for transmission to, or receipt by, any individual o=
+r entity other than the named addressee (or person authorized to deliver it=
+ to the named addressee) except as otherwise expressly permitted in this el=
+ectronic mail transmission. If you have received this electronic transmissi=
+on in error, please unsubscribe&nbsp; to avoid getting such messages in the=
+ nearest future</span>&nbsp;</span>
+ <span style=3D"color: rgb(128, 128, 128); font-family: Arial, sans-serif; =
+font-size: 10.66px; box-sizing: border-box;"><span style=3D"font-size: 9.3p=
+x; box-sizing: border-box;">. We may also need to contact you for additiona=
+l information as required by HIPAA or State law</span></span></font></p></b=
+ody></html>
 
 
---===============0695939759486187380==
+--===============3666373821948123954==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0695939759486187380==
+--===============3666373821948123954==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -483,4 +221,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0695939759486187380==--
+--===============3666373821948123954==--
