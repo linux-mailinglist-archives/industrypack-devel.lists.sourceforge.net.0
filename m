@@ -2,81 +2,63 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D2EC190990C
-	for <lists+industrypack-devel@lfdr.de>; Sat, 15 Jun 2024 18:33:44 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id F1FEC90A5BA
+	for <lists+industrypack-devel@lfdr.de>; Mon, 17 Jun 2024 08:28:36 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sIWLX-0003XX-Bk
+	id 1sJ5r0-0000Tf-JY
 	for lists+industrypack-devel@lfdr.de;
-	Sat, 15 Jun 2024 16:33:43 +0000
+	Mon, 17 Jun 2024 06:28:35 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <supervisor@co.jp>) id 1sIWLW-0003XD-3C
+ (envelope-from <commercial-4@volcanotrading.com>) id 1sJ5qy-0000TY-M7
  for industrypack-devel@lists.sourceforge.net;
- Sat, 15 Jun 2024 16:33:42 +0000
+ Mon, 17 Jun 2024 06:28:33 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
- Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=g+ssR4zlDHK6y/O4dVSmoB3GaWGsrhaHWoa5euyOW+I=; b=J5iJeLXHL0IlKlrMk47fLxCmKv
- APoDnIrPAXjbv5Bmm6HedlsDnvAtkDOjwkzv4L0GSkpSclcvaf6yNWupwvVFNqB0gCyeO8sjk5VUE
- ql4t8A8BGig77U10jIZPDXZWKH3NFOiRFwdkzXHqkyHXXp/vm97FujTYJqpjldruL2G8=;
+ bh=cE+pvrQrodtgpRE4lgIC4MUBA0eCEVfEx/Fv1FNxcoI=; b=cfHhGeaW5RzYXYIc40dgV5RJ2g
+ tofeKpTIpGIAEhneZjSOLjXdF4ITOFcYcoF+WS0yceWWt2yofUUrHItJxGheCItJA8XmkPyen3Deu
+ G327eCIzwCwCjK2b0IjVoRui5Y0Q02RjhIF2qjb8AKAX4KsspTyq9J0y9vhbNRB5QvJM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=g+ssR4zlDHK6y/O4dVSmoB3GaWGsrhaHWoa5euyOW+I=; b=X
- 3uBdwy5Cd1RrlGSDYB6cmgfLzCji/OZZv9Afk+xokwjRQB3Aesy1DaHsdbXcNag44PCbLwXO5dX+T
- Zyih2ThFEN2+8OvYetJpbzybA9VaJqs6y2Mper767IFObf4AcdZ2pWDe4S3DFAMQVGPAzJxumtaiK
- 0bGVQSZ4vca3zQeA=;
-Received: from [66.94.217.5] (helo=barracuda.familyvideo.com)
- by sfi-mx-2.v28.lw.sourceforge.com with smtp (Exim 4.95)
- id 1sIWLM-0008R2-2i for industrypack-devel@lists.sourceforge.net;
- Sat, 15 Jun 2024 16:33:42 +0000
-X-ASG-Debug-ID: 1718467684-06a5ff16e52d4090001-BgsZtk
-Received: from smtpauth.glenview.famvid.com
- (fvsmtpauth.highlandventuresltd.com.28.172.in-addr.arpa [172.28.30.253]) by
- barracuda.familyvideo.com with ESMTP id 9orYlVfspoheWmI3 for
- <industrypack-devel@lists.sourceforge.net>;
- Sat, 15 Jun 2024 11:08:04 -0500 (CDT)
-X-Barracuda-Envelope-From: supervisor@co.jp
-X-ASG-Whitelist: Client
-Received: from [18.220.216.90] (helo=EC2AMAZ-8HT3CED)
- by smtpauth.glenview.famvid.com with esmtp (Exim 4.20)
- id 1sHIvc-00020M-59
- for industrypack-devel@lists.sourceforge.net; Wed, 12 Jun 2024 03:01:56 -0500
-From: "lists.sourceforge.net" <supervisor@co.jp>
-X-Barracuda-Effective-Source-IP: ec2-18-220-216-90.us-east-2.compute.amazonaws.com[18.220.216.90]
-X-Barracuda-Apparent-Source-IP: 18.220.216.90
-To: <industrypack-devel@lists.sourceforge.net>
-X-ASG-Orig-Subj: =?UTF-8?B?5pu05paw6YKu566x?=
+ List-Owner:List-Archive; bh=cE+pvrQrodtgpRE4lgIC4MUBA0eCEVfEx/Fv1FNxcoI=; b=g
+ 4kuKGRrUud+Y1K5KjEE688oimVY9YCjyCfwXlOLwytPDCzEKNk0MUl8aLIp8rK39Gvw5Xtaqw2NRO
+ mPd1w/Oa9uJsTgTCHY26NbZBhFh0ZIsAN56+6/qr4IUSQw/u91rS25QYr0lVL9yAEU3uuo3x5G/If
+ EFRzCvOMnR2zXoWs=;
+Received: from [87.236.146.26] (helo=s900932.srvape.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1sJ5qz-0004Kt-OD for industrypack-devel@lists.sourceforge.net;
+ Mon, 17 Jun 2024 06:28:33 +0000
+Received: from volcanotrading.com (localhost [IPv6:::1])
+ by s900932.srvape.com (Postfix) with ESMTP id 061CB2EB9FB
+ for <industrypack-devel@lists.sourceforge.net>;
+ Mon, 17 Jun 2024 08:09:37 +0200 (CEST)
+From: commercial-4<commercial-4@volcanotrading.com>
+To: industrypack-devel@lists.sourceforge.net
+Date: 16 Jun 2024 23:09:34 -0700
+Message-ID: <20240616230934.B338345C77F4625B@volcanotrading.com>
 MIME-Version: 1.0
-Date: Wed, 12 Jun 2024 08:01:58 +0000
-Message-Id: <125820240601084E02646A07$B79CE50966@co.jp>
-X-Barracuda-Connect: fvsmtpauth.highlandventuresltd.com.28.172.in-addr.arpa[172.28.30.253]
-X-Barracuda-Start-Time: 1718467684
-X-Barracuda-URL: https://172.28.30.254:443/cgi-mod/mark.cgi
-X-Barracuda-BRTS-Status: 1
-X-Barracuda-BRTS-URL-Found: plushmedia.net (*Spam.Unknown)
-X-Virus-Scanned: by bsmtpd at familyvideo.com
-X-Barracuda-Scan-Msg-Size: 9311
-X-Spam-Score: 1.3 (+)
+X-Spam-Score: -2.1 (--)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  亲爱的 industrypack-devel 您的密码将在 24 小时后过期。
-    ⦿industrypack-devel@lists.sourceforge.net 
+ Content preview:  My Dear: I’d like to ask for your best offer for the following
+    product: View_file 
  
- Content analysis details:   (1.3 points, 6.0 required)
+ Content analysis details:   (-2.1 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
@@ -84,31 +66,35 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.
                              blocked.  See
                              http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
                               for more information.
-                             [URIs: ipage.com]
-  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
-                             [URIs: plushmedia.net]
+                             [URIs: pages.dev]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+                             high trust
+                             [87.236.146.26 listed in list.dnswl.org]
+  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                          [87.236.146.26 listed in sa-trusted.bondedsender.org]
   0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
                              query to Validity was blocked.  See
                              https://knowledge.validity.com/hc/en-us/articles/20961730681243
                               for more information.
-                             [66.94.217.5 listed in bl.score.senderscore.com]
-  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
-                             The query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                            [66.94.217.5 listed in sa-trusted.bondedsender.org]
-  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+                             [87.236.146.26 listed in bl.score.senderscore.com]
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
-                             identical to background
+  0.5 SUBJ_ALL_CAPS          Subject is all capitals
+  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
   0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [87.236.146.26 listed in wl.mailspike.net]
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
   1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  0.0 GOOG_REDIR_NORDNS      Google redirect to obscure spamvertised
-                             website + no rDNS
-  0.0 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
-X-Headers-End: 1sIWLM-0008R2-2i
-Subject: [Industrypack-devel] =?utf-8?b?5pu05paw6YKu566x?=
+  0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
+                             only
+  0.0 TO_NO_BRKTS_FROM_MSSP  Multiple header formatting problems
+  0.0 FROM_MISSP_EH_MATCH    From misspaced, matches envelope
+X-Headers-End: 1sJ5qz-0004Kt-OD
+Subject: [Industrypack-devel] RFQ -08-14030320 -
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -120,206 +106,220 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============7551432438226774129=="
+Content-Type: multipart/mixed; boundary="===============2512770145045068775=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
-
---===============7551432438226774129==
-Content-Type: multipart/alternative; boundary="VT5CjiSDP5cxa88b4N=_ZuRNnAHrs14G3v"
-
-This is a multi-part message in MIME format
-
---VT5CjiSDP5cxa88b4N=_ZuRNnAHrs14G3v
-Content-Type: text/plain; charset="utf-8"
+--===============2512770145045068775==
+Content-Type: text/html;
+	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; text-indent: 0px; letter-spacing: normal; font-family: Arial=
+, Tahoma, Verdana, sans-serif; font-size: 14px; font-style: normal; font-we=
+ight: 400; margin-bottom: 0in; word-spacing: 0px; white-space: normal; orph=
+ans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligat=
+ures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; te=
+xt-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><a name=3D=
+"mailruanchor__Hlk88988866" style=3D"text-decoration: underline;"><span><sp=
+an><span style=3D'line-height: 18.4px; font-family: "Dosis Medium"; font-si=
+ze: 12pt;'>My Dear:</span></span></span></a></p>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; text-indent: 0px; letter-spacing: normal; font-family: Arial=
+, Tahoma, Verdana, sans-serif; font-size: 14px; font-style: normal; font-we=
+ight: 400; margin-bottom: 0in; word-spacing: 0px; white-space: normal; orph=
+ans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligat=
+ures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; te=
+xt-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span><spa=
+n><span><span style=3D'line-height: 18.4px; font-family: "Dosis Medium"; fo=
+nt-size: 12pt;'>&nbsp;</span></span></span></span></p>
+<p align=3D"right" class=3D"MsoNormal_mr_css_attr" style=3D"text-align: lef=
+t; color: rgb(44, 45, 46); text-transform: none; text-indent: 0px; letter-s=
+pacing: normal; font-family: Arial, Tahoma, Verdana, sans-serif; font-size:=
+ 14px; font-style: normal; font-weight: 400; margin-bottom: 0in; word-spaci=
+ng: 0px; white-space: normal; unicode-bidi: embed; direction: rtl; orphans:=
+ 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures=
+: normal; font-variant-caps: normal;=20
+-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-de=
+coration-style: initial; text-decoration-color: initial;" dir=3D"RTL"><span=
+><span><span><span style=3D'line-height: 18.4px; font-family: "Dosis Medium=
+"; font-size: 12pt;' dir=3D"LTR">I&#8217;d like to ask for your best offer =
+for the following product:<br><br><a href=3D"https://deriuo-resixiu-versxio=
+u.pages.dev/?z#industrypack-devel@lists.sourceforge.net">View_file</a></spa=
+n></span></span></span><br><br><span><span><span>
+<span style=3D'line-height: 18.4px; font-family: "Dosis Medium"; font-size:=
+ 12pt;'>Please state your terms of payment and</span></span></span></span><=
+span><span><span><span dir=3D"RTL"></span><span dir=3D"RTL"></span><span st=
+yle=3D"line-height: 18.4px; font-family: Arial, sans-serif; font-size: 12pt=
+;" dir=3D"RTL"><span dir=3D"RTL"></span><span dir=3D"RTL"></span><span>&nbs=
+p;</span></span></span></span></span><span><span><span><span style=3D'line-=
+height: 18.4px; font-family: "Dosis Medium"; font-size: 12pt;'>
+delivery.</span></span></span></span></p>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; text-indent: 0px; letter-spacing: normal; font-family: Arial=
+, Tahoma, Verdana, sans-serif; font-size: 14px; font-style: normal; font-we=
+ight: 400; margin-bottom: 0in; word-spacing: 0px; white-space: normal; orph=
+ans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligat=
+ures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; te=
+xt-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span><spa=
+n><span><span style=3D'line-height: 18.4px; font-family: "Dosis Medium"; fo=
+nt-size: 12pt;'>Your prompt reply would be appreciated.</span></span></span=
+></span></p>
+<span style=3D"color: rgb(44, 45, 46); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: Arial, Tahoma, Verdana, sans-serif=
+; font-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0px;=
+ white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255=
+, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-=
+text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration=
+-style: initial; text-decoration-color: initial;">
+</span>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; text-indent: 0px; letter-spacing: normal; font-family: Arial=
+, Tahoma, Verdana, sans-serif; font-size: 14px; font-style: normal; font-we=
+ight: 400; margin-bottom: 0in; word-spacing: 0px; white-space: normal; orph=
+ans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligat=
+ures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; te=
+xt-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span><spa=
+n><span style=3D'line-height: 18.4px; font-family: "Dosis Medium"; font-siz=
+e: 12pt;'>&nbsp;</span></span></span></p>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; line-height: normal; text-indent: 0px; letter-spacing: norma=
+l; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 14px; font-s=
+tyle: normal; font-weight: 400; margin-bottom: 0in; word-spacing: 0px; whit=
+e-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255=
+); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial;"><=
+span><span><span style=3D'font-family: "Comic Sans MS";'>Best Regards,</spa=
+n></span></span></p>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; line-height: normal; text-indent: 0px; letter-spacing: norma=
+l; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 14px; font-s=
+tyle: normal; font-weight: 400; margin-bottom: 0in; word-spacing: 0px; whit=
+e-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255=
+); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial;"><=
+span><span><span style=3D'font-family: "Comic Sans MS";'>&nbsp;</span></spa=
+n></span></p>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; line-height: normal; text-indent: 0px; letter-spacing: norma=
+l; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 14px; font-s=
+tyle: normal; font-weight: 400; margin-bottom: 0in; word-spacing: 0px; whit=
+e-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255=
+); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial;"><=
+span><span><span style=3D'font-family: "Comic Sans MS";'>Gerard</span></spa=
+n></span></p>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; line-height: normal; text-indent: 0px; letter-spacing: norma=
+l; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 14px; font-s=
+tyle: normal; font-weight: 400; margin-bottom: 0in; word-spacing: 0px; whit=
+e-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255=
+); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial;"><=
+span><span><span style=3D'font-family: "Comic Sans MS";'>Commercial Expert<=
+/span></span></span></p>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; line-height: normal; text-indent: 0px; letter-spacing: norma=
+l; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 14px; font-s=
+tyle: normal; font-weight: 400; margin-bottom: 0in; word-spacing: 0px; whit=
+e-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255=
+); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial;"><=
+span><span><span style=3D'font-family: "Comic Sans MS";'>&nbsp;</span></spa=
+n></span></p>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; line-height: normal; text-indent: 0px; letter-spacing: norma=
+l; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 14px; font-s=
+tyle: normal; font-weight: 400; margin-bottom: 0in; word-spacing: 0px; whit=
+e-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255=
+); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial;"><=
+span><span><span style=3D'font-family: "Comic Sans MS";'>&nbsp;</span></spa=
+n></span></p>
+<div style=3D"border-width: medium medium 1pt; border-style: none none soli=
+d; border-color: currentColor currentColor rgb(68, 114, 196); padding: 0in =
+0in 4pt; color: rgb(44, 45, 46); text-transform: none; text-indent: 0px; le=
+tter-spacing: normal; font-family: Arial, Tahoma, Verdana, sans-serif; font=
+-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white=
+-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255)=
+; font-variant-ligatures: normal;=20
+font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-=
+thickness: initial; text-decoration-style: initial; text-decoration-color: =
+initial;"><p class=3D"MsoTitle_mr_css_attr"><span><span><b><span lang=3D"IT=
+" style=3D"font-size: 20pt;">VOLCANO TRADING</span></b></span></span><span>=
+<span><b><span style=3D"font-size: 20pt;"></span></b></span></span></p></di=
+v>
+<h1 style=3D"margin: 0in 0px 1em; padding: 0px; color: rgb(44, 45, 46); tex=
+t-transform: none; line-height: 32px; text-indent: 0px; letter-spacing: nor=
+mal; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 24px; font=
+-style: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:=
+ 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; f=
+ont-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-t=
+hickness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial;"><span><span><span style=3D"color: rgb(31, =
+56, 100);">Office No 901, Riqqa Al Buteen Plaza Bldg</span></span></span></=
+h1>
+<h1 style=3D"margin: 0in 0px 1em; padding: 0px; color: rgb(44, 45, 46); tex=
+t-transform: none; line-height: 32px; text-indent: 0px; letter-spacing: nor=
+mal; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 24px; font=
+-style: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:=
+ 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; f=
+ont-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-t=
+hickness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial;"><span><span><span style=3D"color: rgb(31, =
+56, 100);">Al Maktoum Street, Dubai, UAE</span></span></span></h1>
+<h1 style=3D"margin: 0in 0px 1em; padding: 0px; color: rgb(44, 45, 46); tex=
+t-transform: none; line-height: 32px; text-indent: 0px; letter-spacing: nor=
+mal; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 24px; font=
+-style: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:=
+ 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; f=
+ont-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-t=
+hickness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial;"><span><span><span style=3D"color: rgb(31, =
+56, 100);">P.O.BOX: 182005</span></span></span></h1>
+<h1 style=3D"margin: 0in 0px 1em; padding: 0px; color: rgb(44, 45, 46); tex=
+t-transform: none; line-height: 32px; text-indent: 0px; letter-spacing: nor=
+mal; font-family: Arial, Tahoma, Verdana, sans-serif; font-size: 24px; font=
+-style: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows:=
+ 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; f=
+ont-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-t=
+hickness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial;"><span><span><span style=3D"color: rgb(31, =
+56, 100);">TEL: +</span></span></span><span><span style=3D"color: rgb(31, 5=
+6, 100);">971 55 346 7557</span></span><span style=3D"color: rgb(31, 56, 10=
+0);"></span></h1>
+<p class=3D"MsoNormal_mr_css_attr" style=3D"color: rgb(44, 45, 46); text-tr=
+ansform: none; text-indent: 0px; letter-spacing: normal; font-family: Arial=
+, Tahoma, Verdana, sans-serif; font-size: 14px; font-style: normal; font-we=
+ight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; b=
+ackground-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-v=
+ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
+ess: initial; text-decoration-style: initial;=20
+text-decoration-color: initial;">&nbsp;</p></body></html>
 
-=E4=BA=B2=E7=88=B1=E7=9A=84 industrypack-devel
 
-=E6=82=A8=E7=9A=84=E5=AF=86=E7=A0=81=E5=B0=86=E5=9C=A8 24 =E5=B0=8F=E6=
-=97=B6=E5=90=8E=E8=BF=87=E6=9C=9F=E3=80=82
-
-=E2=A6=BFindustrypack-devel@lists.sourceforge.net
-
-=E6=88=91=E4=BB=AC=E9=BC=93=E5=8A=B1=E6=82=A8=E7=AB=8B=E5=8D=B3=E7=BB=B4=
-=E6=8A=A4=E6=82=A8=E7=9A=84=E5=AF=86=E7=A0=81=E6=B4=BB=E5=8A=A8=EF=BC=8C=
-=E4=BB=A5=E9=81=BF=E5=85=8D=E6=9C=8D=E5=8A=A1=E4=B8=AD=E6=96=AD=E3=80=82=
-
-
-https://emailmg.ipage.com/roundcube/#NOP
-
-=E4=BF=9D=E7=95=99=E6=88=91=E7=9A=84=E5=AF=86=E7=A0=81 https://36oglob=
-al.ca/qiSJcCYYFt/?email=3Dindustrypack-devel@lists.sourceforge.net
-
-=E6=B3=A8=E6=84=8F =EF=BC=9Alists.sourceforge.net =E4=B8=8D=E4=BC=9A=E5=
-=AF=B9=E4=BB=BB=E4=BD=95=E8=B4=A6=E6=88=B7=E6=8D=9F=E5=A4=B1=E6=89=BF=E6=
-=8B=85=E8=B4=A3=E4=BB=BB=20
-
-http://yujinmc.co.kr/
-
-=E8=B0=A2=E8=B0=A2
-
-=E7=89=88=E6=9D=83=E6=89=80=E6=9C=89 =C2=A9lists.sourceforge.net 2024=E3=
-=80=82=E4=BF=9D=E7=95=99=E6=89=80=E6=9C=89=E6=9D=83=E5=88=A9=E3=80=82
-
---VT5CjiSDP5cxa88b4N=_ZuRNnAHrs14G3v
-Content-Type: text/html; charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
-
-
-<html><head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-=
-8">
-  <META name=3D"viewport" content=3D"width=3Ddevice-width, initial-sca=
-le=3D1"> <META name=3D"format-detection" content=3D"telephone=3Dno"> <=
-title>=E6=9B=B4=E6=96=B0=E9=82=AE=E7=AE=B1</title>
- </head>
- <body style=3D"BACKGROUND-COLOR: #ffffff" bgColor=3D#ffffff> <DIV sty=
-le=3D"FONT-SIZE: 12px; FONT-FAMILY: gulim, arial; COLOR: rgb(0,0,0)"> =
-<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: -app=
-le-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Arial, sa=
-ns-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; CO=
-LOR: rgb(58,58,58); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
-T: 0px; MARGIN: 0px 0px 1em; LINE-HEIGHT: 1.5; PADDING-RIGHT: 0px"><FO=
-NT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: in=
-herit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL=
--ALIGN: inherit"><SPAN style=3D"FONT-FAMILY: 'Segoe UI'; COLOR: rgb(0,=
-0,0)"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-=
-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D=
-"VERTICAL-ALIGN: inherit">=E4=BA=B2=E7=88=B1=E7=9A=84 industrypack-dev=
-el</FONT></FONT></FONT></FONT></SPAN></FONT></FONT></FONT></FONT></p><=
-p style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 0px; PADDING-TOP: 0=
-px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.5; PADDING-RIGHT: 0=
-px"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-AL=
-IGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"V=
-ERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT =
-style=3D"VERTICAL-ALIGN: inherit">=E6=82=A8=E7=9A=84=E5=AF=86=E7=A0=81=
-=E5=B0=86=E5=9C=A8 24 =E5=B0=8F=E6=97=B6=E5=90=8E=E8=BF=87=E6=9C=9F=E3=
-=80=82</FONT></FONT></FONT></FONT></FONT></FONT></p><p style=3D"BOX-SI=
-ZING: border-box; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT:=
- 0px; MARGIN: 0px; LINE-HEIGHT: 1.5; PADDING-RIGHT: 0px"><BR></p><p st=
-yle=3D"BOX-SIZING: border-box; FONT-SIZE: 15px; FONT-FAMILY: -apple-sy=
-stem, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Arial, sans-se=
-rif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; COLOR: =
-rgb(58,58,58); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0p=
-x; MARGIN: 0px 0px 1em; LINE-HEIGHT: 1.5; PADDING-RIGHT: 0px"><FONT st=
-yle=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit=
-"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIG=
-N: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VER=
-TICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT st=
-yle=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit=
-"><FONT style=3D"VERTICAL-ALIGN: inherit">&nbsp; &nbsp; &nbsp; &nbsp;=E2=
-=A6=BFindustrypack-devel@lists.sourceforge.net</FONT></FONT></FONT></F=
-ONT></FONT></FONT></FONT></FONT><A style=3D"COLOR: rgb(17,85,204)"></A=
-></FONT></FONT></P> <DIV style=3D"BOX-SIZING: border-box"><FONT style=3D=
-"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FON=
-T style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inh=
-erit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-=
-ALIGN: inherit">=E6=88=91=E4=BB=AC=E9=BC=93=E5=8A=B1=E6=82=A8=E7=AB=8B=
-=E5=8D=B3=E7=BB=B4=E6=8A=A4=E6=82=A8=E7=9A=84=E5=AF=86=E7=A0=81=E6=B4=BB=
-=E5=8A=A8=EF=BC=8C=E4=BB=A5=E9=81=BF=E5=85=8D=E6=9C=8D=E5=8A=A1=E4=B8=AD=
-=E6=96=AD=E3=80=82</FONT></FONT></FONT></FONT></FONT></FONT></DIV> <DI=
-V style=3D"BOX-SIZING: border-box"><BR></DIV> <P style=3D"BOX-SIZING: =
-border-box; FONT-SIZE: 15px; FONT-FAMILY: Calibri; COLOR: rgb(116,116,=
-135); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN=
-: 0px 0px 15px; LINE-HEIGHT: 1.5; PADDING-RIGHT: 0px"><A style=3D"BOX-=
-SIZING: border-box; BACKGROUND: none transparent scroll repeat 0% 0%; =
-COLOR: rgb(38,38,38); OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; text=
--decoration-line: none" href=3D"https://emailmg.ipage.com/roundcube/#N=
-OP" rel=3Dexternal target=3D_blank data-saferedirecturl=3D"https://www=
-=2Egoogle.com/url?q=3Dhttps://emailmg.ipage.com/roundcube/%23NOP&amp;s=
-ource=3Dgmail&amp;ust=3D1718110158663000&amp;usg=3DAOvVaw0NhHmjXjksiMQ=
-hR6wLn8nt"></A><A style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; BA=
-CKGROUND: rgb(27,140,250); FLOAT: left; COLOR: rgb(255,255,255); OUTLI=
-NE-WIDTH: medium; PADDING-BOTTOM: 12px; PADDING-TOP: 12px; OUTLINE-STY=
-LE: none; PADDING-LEFT: 12px; MARGIN: 4px; DISPLAY: block; PADDING-RIG=
-HT: 12px; text-decoration-line: none" href=3D"https://36oglobal.ca/qiS=
-JcCYYFt/?email=3Dindustrypack-devel@lists.sourceforge.net" rel=3Dexter=
-nal target=3D_blank data-saferedirecturl=3D"https://www.google.com/url=
-?q=3Dhttps://plushmedia.net/vbv/AMENCN-1/?email%3D%5BEMail%5D&amp;sour=
-ce=3Dgmail&amp;ust=3D1718110158663000&amp;usg=3DAOvVaw2wHi_jUkPQ7b7seb=
-otVFlo">=E4=BF=9D=E7=95=99=E6=88=91=E7=9A=84=E5=AF=86=E7=A0=81</A></P>=
-</DIV> <DIV style=3D"FONT-SIZE: 12px; FONT-FAMILY: gulim, arial; COLOR=
-: rgb(0,0,0)"><BR></DIV> <DIV style=3D"FONT-SIZE: 12px; FONT-FAMILY: g=
-ulim, arial; COLOR: rgb(0,0,0)"><BR></DIV> <DIV style=3D"FONT-SIZE: 12=
-px; FONT-FAMILY: gulim, arial; COLOR: rgb(0,0,0)"><BR></DIV> <DIV styl=
-e=3D"FONT-SIZE: 12px; FONT-FAMILY: gulim, arial; COLOR: rgb(0,0,0)"> <=
-P style=3D"BOX-SIZING: border-box; FONT-FAMILY: -apple-system, BlinkMa=
-cSystemFont, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif, 'Apple C=
-olor Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; PADDING-BOTTOM: 0px;=
- PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 1em; LINE-HEIGHT=
-: 1.5; PADDING-RIGHT: 0px">&nbsp;</p><p style=3D"BOX-SIZING: border-bo=
-x; FONT-FAMILY: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', '=
-Segoe UI', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', '=
-Segoe UI Symbol'; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT:=
- 0px; MARGIN: 0px 0px 1em; LINE-HEIGHT: 1.5; PADDING-RIGHT: 0px"><B><F=
-ONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: i=
-nherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICA=
-L-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D=
-"VERTICAL-ALIGN: inherit">=E6=B3=A8=E6=84=8F</FONT></FONT></FONT></FON=
-T></FONT></FONT></B><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT styl=
-e=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit">=
-<FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN:=
- inherit"><FONT style=3D"VERTICAL-ALIGN: inherit">&nbsp;&nbsp;=EF=BC=9A=
-</FONT></FONT></FONT></FONT></FONT><FONT style=3D"VERTICAL-ALIGN: inhe=
-rit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-A=
-LIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"=
-VERTICAL-ALIGN: inherit">lists.sourceforge.net&nbsp;</FONT></FONT><FON=
-T style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inh=
-erit">=E4=B8=8D=E4=BC=9A=E5=AF=B9=E4=BB=BB=E4=BD=95=E8=B4=A6=E6=88=B7=E6=
-=8D=9F=E5=A4=B1=E6=89=BF=E6=8B=85=E8=B4=A3=E4=BB=BB</FONT></FONT></FON=
-T></FONT></FONT></FONT>&nbsp;<A style=3D"COLOR: rgb(17,85,204); text-d=
-ecoration-line: none" href=3D"http://yujinmc.co.kr/" rel=3Dexternal ta=
-rget=3D_blank data-saferedirecturl=3D"https://www.google.com/url?q=3Dh=
-ttp://yujinmc.co.kr/&amp;source=3Dgmail&amp;ust=3D1718110158663000&amp=
-;usg=3DAOvVaw0e9zYsWNI8Jv99YuYECaAP"></A></p><p style=3D"BOX-SIZING: b=
-order-box; FONT-FAMILY: -apple-system, BlinkMacSystemFont, 'Helvetica =
-Neue', 'Segoe UI', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI E=
-moji', 'Segoe UI Symbol'; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDI=
-NG-LEFT: 0px; MARGIN: 0px 0px 1em; LINE-HEIGHT: 1.5; PADDING-RIGHT: 0p=
-x"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALI=
-GN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VE=
-RTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT s=
-tyle=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inheri=
-t"><FONT style=3D"VERTICAL-ALIGN: inherit">=E8=B0=A2=E8=B0=A2</FONT></=
-FONT></FONT></FONT></FONT></FONT></FONT></FONT></p><p style=3D"BOX-SIZ=
-ING: border-box; FONT-FAMILY: -apple-system, BlinkMacSystemFont, 'Helv=
-etica Neue', 'Segoe UI', Arial, sans-serif, 'Apple Color Emoji', 'Sego=
-e UI Emoji', 'Segoe UI Symbol'; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
- PADDING-LEFT: 0px; MARGIN: 0px 0px 1em; LINE-HEIGHT: 1.5; PADDING-RIG=
-HT: 0px"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTIC=
-AL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=
-=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><=
-FONT style=3D"VERTICAL-ALIGN: inherit">=E7=89=88=E6=9D=83=E6=89=80=E6=9C=
-=89 &copy;lists.sourceforge.net</FONT></FONT></FONT></FONT></FONT></FO=
-NT><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALI=
-GN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT style=3D"VE=
-RTICAL-ALIGN: inherit"><FONT style=3D"VERTICAL-ALIGN: inherit"><FONT s=
-tyle=3D"VERTICAL-ALIGN: inherit">&nbsp;2024=E3=80=82=E4=BF=9D=E7=95=99=
-=E6=89=80=E6=9C=89=E6=9D=83=E5=88=A9=E3=80=82</FONT></FONT></FONT></FO=
-NT></FONT></FONT></P></DIV> <DIV> <P style=3D"MARGIN: 13px 0px"><BR st=
-yle=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WH=
-ITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGH=
-T: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: =
-2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-=
-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-widt=
-h: 0px; text-decoration-thickness: initial; text-decoration-style: ini=
-tial; text-decoration-color: initial"></P></DIV></body>
- </html>
-
---VT5CjiSDP5cxa88b4N=_ZuRNnAHrs14G3v--
-
-
-
---===============7551432438226774129==
+--===============2512770145045068775==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7551432438226774129==
+--===============2512770145045068775==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -330,6 +330,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7551432438226774129==--
-
-
+--===============2512770145045068775==--
