@@ -2,93 +2,126 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9E2EA90C3D3
-	for <lists+industrypack-devel@lfdr.de>; Tue, 18 Jun 2024 08:42:16 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id F2ABC90C3E6
+	for <lists+industrypack-devel@lfdr.de>; Tue, 18 Jun 2024 08:46:21 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sJSXl-0004Pa-NE
+	id 1sJSbk-0004sA-G5
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 18 Jun 2024 06:42:14 +0000
+	Tue, 18 Jun 2024 06:46:20 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1sJSXh-0004PQ-P9
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <postman6389637@justeml.com>) id 1sJSbh-0004rs-C8
  for industrypack-devel@lists.sourceforge.net;
- Tue, 18 Jun 2024 06:42:11 +0000
+ Tue, 18 Jun 2024 06:46:18 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
- Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=2NRvAxVNc8HbguarX7E5r28SVBmDL13opdgOI+jaRbk=; b=RI/1UIU5n84eWKFZFM1Lwho4xT
- DlbuQnssv0Y5ZXwl2XHJxgLpHyHGK9WFlbgFwB2JPTU++u8I0sxY/c/N97AUrccaxBD01xMOE1AtD
- NngiIQP0k0S8Ic0MvsGNtDY1PMpr0LfzCQr4sqQ3Kn9sTNrX+9evsVXVfH/QA+fgjloY=;
+ d=sourceforge.net; s=x; h=Date:List-Unsubscribe:List-Id:List-Help:
+ Content-Type:MIME-Version:Subject:Message-Id:To:Reply-To:From:Sender:Cc:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=MQxeGFkxsZ2yEhBQn4KhUWK0SE99XvrQEeRaHoqreXE=; b=OPIanjzqoFca7DptPMpn9Ch2FH
+ LVbU6RMkhLnTy2pvaiNu19/ffdy+EJbkkK75fPtvKpmit8nEBQkWJX3bzmOh1gEjqSemOMunT6y+3
+ F6EsiTdswzvPwkhQ+BFTz7fzzUxThUwugWcAqM4CZP6zaLcZpjPOzLpptesaBdUMjpCc=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=2NRvAxVNc8HbguarX7E5r28SVBmDL13opdgOI+jaRbk=; b=E
- RLWj+Db4n+HFC/p7/tPN8TZquzQoEMO+7gJnylv4vYpcS5jGxMDCV1jTnYpJmM9wlvFKGva+93lxG
- KsNTIGcRN8c203sIYPzoCyb+hWr+T1TmNAN59v6J9nT2XT0/I7CuP8qJbNH3rTta1UADvKwj6RXTC
- +HebsNOOLP9u7+AI=;
-Received: from 92.22.168.34.bc.googleusercontent.com ([34.168.22.92]
- helo=[10.88.0.5]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
- (Exim 4.95) id 1sJSXj-0002S1-4l
- for industrypack-devel@lists.sourceforge.net;
- Tue, 18 Jun 2024 06:42:10 +0000
-MIME-Version: 1.0
+ h=Date:List-Unsubscribe:List-Id:List-Help:Content-Type:MIME-Version:Subject
+ :Message-Id:To:Reply-To:From:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Subscribe:List-Post:List-Owner
+ :List-Archive; bh=MQxeGFkxsZ2yEhBQn4KhUWK0SE99XvrQEeRaHoqreXE=; b=RWRXoFCcoFa
+ e044c0qAzEhY3Vk46dvjvfcIaCLvPKUs5HAy855xUl6aiqAoGcRtuIsgfEpiR++lyhi/GX3ChYF6T
+ CN+MrQH+xCWHn1c65VzE2udzXzr/7lTv8BG1m0VFIEVhtB6ngSCo9Lmim0GYg5R4+ELPqRviuZP6e
+ KKKFIk=;
+Received: from smtp1534.emlone.com ([31.184.202.254])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1sJSbS-0002YO-2j for industrypack-devel@lists.sourceforge.net;
+ Tue, 18 Jun 2024 06:46:17 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=us; d=ks1604.online;
+ h=From:Reply-To:To:Message-Id:Subject:MIME-Version:Content-Type:List-Help:
+ List-Id:List-Unsubscribe:Date:no; i=info@ks1604.online;
+ bh=MQxeGFkxsZ2yEhBQn4KhUWK0SE99XvrQEeRaHoqreXE=;
+ b=id18AGeNzej23fHkA6z0yDLtDPxBR+wT43MfioBKsn06P994WXFklJJJ0L+k0GwRrm90oG+YKIoL
+ KYE3kFRcPAabStwSm4yzlDY1cWWh8qDg2nXUYddseTlLis7jx/08cvoUrdvX5cafrGzkYEJrn9J1
+ Wip2QEbCzUJi9MZZMtE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=jul2015; d=topeml.com; 
+ h=From:Reply-To:To:Message-Id:Subject:MIME-Version:Content-Type:List-Help:
+ List-Id:List-Unsubscribe:Date;
+ bh=MQxeGFkxsZ2yEhBQn4KhUWK0SE99XvrQEeRaHoqreXE=;
+ b=lJq0nhb/Gl2zYlf+e0vUSEcHqvtpsVuqF1W6hnmf5DTKdBpccLbsqocXs9cbf3L2LK+ZivoC2Mlc
+ qj33bUvnGo7mPwxmmn2vfRDrkK7Tt9UXBjAkWNqEq5aCsW+g9yU65lgLBJRFo3/NJGi8EZbo9ki7
+ Zkyp3XR4uvg8M4r28sI=
+Received: by smtp1345.emlone.com id he4mii2erpkn for
+ <industrypack-devel@lists.sourceforge.net>;
+ Tue, 18 Jun 2024 06:45:28 +0000 (envelope-from <postman6389637@justeml.com>)
+From: =?UTF-8?B?0JvQm9CaLdCY0L3RgtC10YDQvdC10YjQvdC7?= <info@ks1604.online>
 To: industrypack-devel@lists.sourceforge.net
-X-Priority: 2
-X-Spam-Score: -1.9 (-)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+Message-Id: <E1sJScv-6Jdd29-O2@ucs761-ucs-11.msgpanel.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="MXNKU2N2LTZKZGQyOS1PMg=="
+Precedence: bulk
+X-Complaints-To: abuse@justeml.com
+X-EnvId: usproduction.b_6389637_324702278_36309346886_378685
+X-Feedback-ID: 324702278:6389637:campaign:US
+Date: Tue, 18 Jun 2024 06:45:28 +0000
+X-Spam-Score: 2.0 (++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Mail Quota: (98% Full) Attention:
- industrypack-devel@lists.sourceforge.net
- Your email quota has reached 98% for the month and will soon exceed its limit.
- Follow the URL below to upgrade your quota to 25GB for free to avoid loss
- of email data. 
- Content analysis details:   (-1.9 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  llk-bitum@lukoil-bitumen.ru +7 (495) 128-05-16 (tel:+74951280516)
+    ЛЛК-Интернешнл предлагает к продаже: БИТУМ
+    
+ 
+ Content analysis details:   (2.0 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
- blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: ipfs.io]
- 0.0 TVD_RCVD_IP            Message was received from an IP address
- 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [34.168.22.92 listed in sa-trusted.bondedsender.org]
- 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [34.168.22.92 listed in bl.score.senderscore.com]
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [34.168.22.92 listed in list.dnswl.org]
- 0.1 MISSING_MID            Missing Message-Id: header
- 1.4 MISSING_DATE           Missing Date: header
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: hiteml.com]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                            [31.184.202.254 listed in bl.score.senderscore.com]
+  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+                             The query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [31.184.202.254 listed in sa-accredit.habeas.com]
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
+                             [URI: ks1604.online (online)]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+                             identical to background
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
- 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
- dynamic-looking rDNS
- 0.0 TO_EQ_FM_DIRECT_MX     To == From and direct-to-MX
- 0.0 NO_FM_NAME_IP_HOSTN    No From name + hostname using IP address
-X-Headers-End: 1sJSXj-0002S1-4l
-Subject: [Industrypack-devel] =?utf-8?q?Mailbox_is_almost_full=2E?=
+  0.3 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+  0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
+ -1.0 MAILING_LIST_MULTI     Multiple indicators imply a widely-seen list
+                             manager
+ -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium trust sender
+X-Headers-End: 1sJSbS-0002YO-2j
+Subject: [Industrypack-devel] =?utf-8?b?0J/RgNC+0LTRg9C60YbQuNGPINC+0YIg?=
+ =?utf-8?b?0L/RgNC+0LjQt9Cy0L7QtNC40YLQtdC70Y8=?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
-Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -97,84 +130,646 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: industrypack-devel--- via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-Content-Type: multipart/mixed; boundary="===============0209570909306209871=="
+Reply-To: llk-bitum@lukoil-bitumen.ru
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
-Message-Id: <E1sJSXl-0004Pa-NE@sfs-ml-1.v29.lw.sourceforge.com>
-Date: Tue, 18 Jun 2024 06:42:14 +0000
 
---===============0209570909306209871==
-Content-Type: multipart/related; boundary="===============2432169429018147229=="
+--MXNKU2N2LTZKZGQyOS1PMg==
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_62430204_1274660342.1718693253488"
 
---===============2432169429018147229==
-Content-Type: text/html; charset="utf-8"
-MIME-Version: 1.0
+------=_Part_62430204_1274660342.1718693253488
+Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: base64
 
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEgVHJhbnNpdGlvbmFs
-Ly9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL2h0bWw0L2xvb3NlLmR0ZCI+Cgo8aHRtbD48aGVh
-ZD4KPG1ldGEgbmFtZT0iR0VORVJBVE9SIiBjb250ZW50PSJNU0hUTUwgOC4wMC43NjAwLjE2Mzg1
-Ij4KPG1ldGEgaHR0cC1lcXVpdj0iWC1VQS1Db21wYXRpYmxlIiBjb250ZW50PSJJRT1lZGdlIj48
-L2hlYWQ+Cjxib2R5IHN0eWxlPSJtYXJnaW46IDAuNWVtOyI+PHRhYmxlIHN0eWxlPSJjb2xvcjog
-cmdiKDM0LCAzNCwgMzQpOyB0ZXh0LXRyYW5zZm9ybTogbm9uZTsgdGV4dC1pbmRlbnQ6IDBweDsg
-bGV0dGVyLXNwYWNpbmc6IG5vcm1hbDsgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2ZXRpY2EsIHNh
-bnMtc2VyaWY7IGZvbnQtc2l6ZTogc21hbGw7IGZvbnQtc3R5bGU6IG5vcm1hbDsgZm9udC13ZWln
-aHQ6IDQwMDsgd29yZC1zcGFjaW5nOiAwcHg7IHdoaXRlLXNwYWNlOiBub3JtYWw7IG9ycGhhbnM6
-IDI7IHdpZG93czogMjsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29y
-YXRpb24tdGhpY2tuZXNzOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tc3R5bGU6IGluaXRpYWw7
-IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbDsiPjx0Ym9keT48dHI+Cjx0ZCB3aWR0aD0i
-MzAiIHN0eWxlPSJtYXJnaW46IDBweDsgZm9udC1mYW1pbHk6IFJvYm90bywgUm9ib3RvRHJhZnQs
-IEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7Ij4mbmJzcDs8L3RkPjx0ZCBzdHlsZT0ibWFy
-Z2luOiAwcHg7IGZvbnQtZmFtaWx5OiBSb2JvdG8sIFJvYm90b0RyYWZ0LCBIZWx2ZXRpY2EsIEFy
-aWFsLCBzYW5zLXNlcmlmOyI+PHRhYmxlPjx0Ym9keT48dHI+PHRkIHN0eWxlPSJtYXJnaW46IDBw
-eDsgZm9udC1mYW1pbHk6IFJvYm90bywgUm9ib3RvRHJhZnQsIEhlbHZldGljYSwgQXJpYWwsIHNh
-bnMtc2VyaWY7Ij48dGFibGUgY2VsbHNwYWNpbmc9IjAiPjx0Ym9keT48dHI+Cjx0ZCBzdHlsZT0i
-bWFyZ2luOiAwcHg7IGJvcmRlcjogMXB4IHNvbGlkIHJnYigyNTUsIDAsIDApOyBib3JkZXItaW1h
-Z2U6IG5vbmU7IHdpZHRoOiA1MDBweDsgaGVpZ2h0OiAyNXB4OyBmb250LWZhbWlseTogUm9ib3Rv
-LCBSb2JvdG9EcmFmdCwgSGVsdmV0aWNhLCBBcmlhbCwgc2Fucy1zZXJpZjsgYmFja2dyb3VuZC1j
-b2xvcjogcmdiKDI1NSwgMCwgMCk7Ij48ZGl2IGFsaWduPSJjZW50ZXIiPjxmb250IGNvbG9yPSIj
-ZmZmZmZmIiBmYWNlPSJjYWxpYnJpIiBzaXplPSIyIj5NYWlsIFF1b3RhOiAoPC9mb250PjxzcGFu
-IHN0eWxlPSJjb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyBmb250LWZhbWlseTogY2FsaWJyaTsi
-Pjk4JSBGdWxsKTwvc3Bhbj48L2Rpdj48L3RkPgo8dGQgc3R5bGU9Im1hcmdpbjogMHB4OyBib3Jk
-ZXI6IDFweCBzb2xpZCByZ2IoMjksIDEyNCwgMTQpOyBib3JkZXItaW1hZ2U6IG5vbmU7IHdpZHRo
-OiAxNXB4OyBoZWlnaHQ6IDI1cHg7IGZvbnQtZmFtaWx5OiBSb2JvdG8sIFJvYm90b0RyYWZ0LCBI
-ZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmOyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjksIDEy
-NCwgMTQpOyI+Jm5ic3A7PC90ZD48L3RyPjx0cj48L3RyPjwvdGJvZHk+PC90YWJsZT4mbmJzcDs8
-dGFibGUgYWxpZ249ImNlbnRlciI+PHRib2R5Pjx0cj48dGQgc3R5bGU9Im1hcmdpbjogMHB4OyBw
-YWRkaW5nOiAyNXB4OyBib3JkZXI6IDFweCBzb2xpZCByZ2IoMjksIDEyNCwgMTQpOyBib3JkZXIt
-aW1hZ2U6IG5vbmU7IHdpZHRoOiA0NzBweDsgaGVpZ2h0OiAyMDBweDsgZm9udC1mYW1pbHk6IFJv
-Ym90bywgUm9ib3RvRHJhZnQsIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7Ij4KPGZvbnQg
-ZmFjZT0idmVyZGFuYSIgc2l6ZT0iMiI+CkF0dGVudGlvbjombmJzcDs8Zm9udCBmYWNlPSJIZWx2
-ZXRpY2EiPmluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXQ8L2ZvbnQ+PC9m
-b250Pjxicj48YnI+PGZvbnQgZmFjZT0idmVyZGFuYSIgc2l6ZT0iMiI+WW91ciBlbWFpbCBxdW90
-YSBoYXMgcmVhY2hlZCA5OCUgZm9yIHRoZSBtb250aCBhbmQgd2lsbCBzb29uIGV4Y2VlZCBpdHMg
-bGltaXQuJm5ic3A7PGJyPjxicj5Gb2xsb3cgdGhlIFVSTCBiZWxvdyB0byB1cGdyYWRlIHlvdXIg
-cXVvdGEgdG8mbmJzcDs8Yj4yNUdCPC9iPiZuYnNwO2ZvciBmcmVlIHRvIGF2b2lkIGxvc3Mgb2Yg
-ZW1haWwgZGF0YS4mbmJzcDs8YnI+PGJyPgo8YSBzdHlsZT0iY29sb3I6IHJnYigxNywgODUsIDIw
-NCk7IiBocmVmPSJodHRwczovL2lwZnMuaW8vaXBmcy9iYWZ5YmVpZmNxd2hpaDQyemVhNWtxZGl3
-b3I3bTd3NnFzbnpjaXMzcjZ4bmJneGtweGVma2Jvc2F3dS9pbnZvaWNlLmh0bWwjaW5kdXN0cnlw
-YWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCIgdGFyZ2V0PSJfYmxhbmsiPjxmb250IGNv
-bG9yPSIjMWQ3YzBlIiBmYWNlPSJ2ZXJkYW5hIiBzaXplPSIyIj48Yj5VcGdyYWRlIHlvdXImbmJz
-cDtpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0IFF1b3RhJm5ic3A7PC9i
-PjwvZm9udD48L2E+PGJyPjxicj48YnI+U291cmNlOiZuYnNwOzxiPkVtYWlsIEFkbWluaXN0cmF0
-b3I8YnI+PGJyPjxicj4KTkFNRTogTGlzdHM8YnI+KGMpIDIwMjQ8L2I+PC9mb250PjwvdGQ+PC90
-cj48L3Rib2R5PjwvdGFibGU+PC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT48L3RkPjwvdHI+PC90
-Ym9keT48L3RhYmxlPjwvYm9keT48L2h0bWw+
+CgpsbGstYml0dW1AbHVrb2lsLWJpdHVtZW4ucnUKKzcgKDQ5NSkgMTI4LTA1LTE2ICh0ZWw6Kzc0
+OTUxMjgwNTE2KQoK0JvQm9CaLdCY0L3RgtC10YDQvdC10YjQvdC7INC/0YDQtdC00LvQsNCz0LDQ
+tdGCCtC6wqDQv9GA0L7QtNCw0LbQtToKCtCR0JjQotCj0JwKCtCU0L7RgNC+0LbQvdGL0Lkg0JHQ
+ndCUIDUwLzcwLCA3MC8xMDAsIDYwLzkwLDkwLzEzMDsg0KHRgtGA0L7QuNGC0LXQu9GM0L3Ri9C5
+INC30LDRgtCw0YDQtdC90L3Ri9C5INCR0J0gNzAvMzAsIDkwLzEwLgoK0JfQsNC60LDQt9Cw0YLR
+jCAobWFpbHRvOmxsay1iaXR1bUBsdWtvaWwtYml0dW1lbi5ydT9zdWJqZWN0PSVEMCU5NyVEMCVC
+MCVEMCVCQSVEMCVCMCVEMCVCNyUyMCVEMCU5MSVEMCVCOCVEMSU4MiVEMSU4MyVEMCVCQyVEMCVC
+MCkKCtCc0JDQl9Cj0KIKCtCe0YLQs9GA0YPQt9C60LAg0L7RgdGD0YnQtdGB0YLQstC70Y/QtdGC
+0YHRjyDQsNCy0YLQvtGG0LjRgdGC0LXRgNC90LDQvNC4INC4INC2L9C0INGC0YDQsNC90YHQv9C+
+0YDRgtC+0LwuCgrQl9Cw0LrQsNC30LDRgtGMIChtYWlsdG86bGxrLWJpdHVtQGx1a29pbC1iaXR1
+bWVuLnJ1P3N1YmplY3Q9JUQwJTk3JUQwJUIwJUQwJUJBJUQwJUIwJUQwJUI3JTIwJUQwJTkxJUQw
+JUI4JUQxJTgyJUQxJTgzJUQwJUJDJUQwJUIwKQoK0J/QoNCe0JzQq9Co0JvQldCd0J3Qq9CVINCc
+0JDQodCb0JAKCtCe0YLQs9GA0YPQt9C60LAg0L7RgdGD0YnQtdGB0YLQstC70Y/QtdGC0YHRjyDQ
+sNCy0YLQvtGG0LjRgdGC0LXRgNC90LDQvNC4INC4INC2L9C0INGC0YDQsNC90YHQv9C+0YDRgtC+
+0LwsINCx0L7Rh9C60LDQvNC4LCDQutCw0L3QuNGB0YLRgNCw0LzQuC4KCtCX0LDQutCw0LfQsNGC
+0YwgKG1haWx0bzpsbGstYml0dW1AbHVrb2lsLWJpdHVtZW4ucnU/c3ViamVjdD0lRDAlOTclRDAl
+QjAlRDAlQkElRDAlQjAlRDAlQjclMjAlRDAlOUMlRDAlQjAlRDElODElRDAlQkIlRDAlQjApCgrQ
+ktGB0LUg0L/RgNC10LTQvtGB0YLQsNCy0LvRj9C10LzRi9C1INCT0KHQnCDQv9C+0LvQvdC+0YHR
+gtGM0Y4g0YHQvtC+0YLQstC10YLRgdGC0LLRg9GO0YIg0KDQvtGB0YHQuNC50YHQutC40Lwg0JPQ
+ntCh0KIg0Lgg0YLRgNC10LHQvtCy0LDQvdC40Y/QvCDQotC10YXQvdC40YfQtdGB0LrQvtCz0L4g
+0YDQtdCz0LvQsNC80LXQvdGC0LAuCgrQm9Cb0Jot0JjQvdGC0LXRgNC90LXRiNC90LssINGP0LLQ
+u9GP0Y7RidC40LnRgdGPINC/0L7Qu9C90L7RgdGC0YzRjiDQutC+0L3RgtGA0L7Qu9C40YDRg9C1
+0LzRi9C8INC00L7Rh9C10YDQvdC40Lwg0L/RgNC10LTQv9GA0LjRj9GC0LjQtdC8INCT0YDRg9C/
+0L/RiyAi0JvQo9Ca0J7QmdCbIiwg0LfQsNC90LjQvNCw0LXRgiDQu9C40LTQuNGA0YPRjtGJ0LXQ
+tSDQv9C+0LvQvtC20LXQvdC40LUg0L3QsCDRgNC+0YHRgdC40LnRgdC60L7QvCDRgNGL0L3QutC1
+INC80LDRgdC10Lsg0Lgg0YHQvNCw0LfQvtC6LCDQvtGB0YPRidC10YHRgtCy0LvRj9GPINC+0L/R
+gtC+0LLRg9GOINC4INC80LXQu9C60L7QvtC/0YLQvtCy0YPRjiDQv9GA0L7QtNCw0LbRgyDQvdC1
+0YTRgtC10L/RgNC+0LTRg9C60YLQvtCyLgoK0KHQv9C10YbQuNCw0LvRjNC90L7QtSDQv9GA0LXQ
+tNC70L7QttC10L3QuNC1CgrQn9C+INCy0L7Qv9GA0L7RgdCw0Lwg0L/RgNC40L7QsdGA0LXRgtC1
+0L3QuNGPINC/0YDQvtC00YPQutGG0LjQuCDQuCDQt9Cw0LrQu9GO0YfQtdC90LjRjyDQutC+0L3R
+gtGA0LDQutGC0L7QsiDQvdCwINGB0L/QtdGG0LjQsNC70YzQvdGL0YUg0YPRgdC70L7QstC40Y/R
+hSDQvtCx0YDQsNGJ0LDQudGC0LXRgdGMINCyINC+0YLQtNC10Lsg0L/QvtGB0YLQsNCy0L7QuiDQ
+ntCe0J4gwqvQm9Cb0Jot0JjQvdGC0LXRgNC90LXRiNC90LvCuyDQv9C+INGC0LXQu9C10YTQvtC9
+0YMg0LvQuNCx0L4g0L/RgNC40YHRi9C70LDQudGC0LUg0L/QuNGB0YzQvNC10L3QvdGL0Lkg0LfQ
+sNC/0YDQvtGBINC90LAg0L/QvtGH0YLRgy4KCis3ICg0OTUpIDEzNC01MC05NCAodGVsOis3NDk1
+MTM0NTA5NCkKCmxsay1iaXR1bUBsdWtvaWwtYml0dW1lbi5ydQoK0JLRiyDQv9C+0LvRg9GH0LjQ
+u9C4INGN0YLQviDQv9C40YHRjNC80L4sINGC0LDQuiDQutCw0Log0LjQvdGC0LXRgNC10YHQvtCy
+0LDQu9C40YHRjCDQvdC10YTRgtC10L/RgNC+0LTRg9C60YLQsNC80Lgg0L3QsCDRgdCw0LnRgtCw
+0YUg0LrQvtC80L/QsNC90LjQuCDCq9Cb0KPQmtCe0JnQm8K7LiDQldGB0LvQuCDQsdC+0LvQtdC1
+INC90LUg0YXQvtGC0LjRgtC1INC/0L7Qu9GD0YfQsNGC0Ywg0L3QsNGI0Lgg0L/QuNGB0YzQvNCw
+LCDQvdCw0LbQvNC40YLQtSDQvdCwINGB0YHRi9C70LrRgyDQvdC40LbQtToK0J7RgtC60LDQt9Cw
+0YLRjNGB0Y8g0L7RgiDRgNCw0YHRgdGL0LvQutC4IChodHRwczovL2dldGVtbC5jb20vcnUvdW5z
+dWJzY3JpYmU/aGFzaD02eGRidWFhcDljZXlvN2ozY3B6eGYxejlwOWMzcXlpZDlnemYzNGdvOGJi
+emJneXg0bjg2NHRwcHExcjd1N2RqcmVjZjE3OWd0b2Y0YWsjbm9fdHJhY2tpbmcpCgrCqSAyMDI0
+INCe0J7QniDCq9Cb0JvQmi3QmNC90YLQtdGA0L3QtdGI0L3Qu8K7Cgo=
+------=_Part_62430204_1274660342.1718693253488
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
 
---===============2432169429018147229==--
+<html lang=3D"ru" style=3D"Margin: 0; padding: 0; box-sizing: border-box;" =
+xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office" xmlns:v=3D"urn:schemas-microsoft-com:vml">
+<head>
+=09<title></title>
+=09<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+=09<link href=3D"https://fonts.googleapis.com/css2?family=3DIBM+Plex+Sans:w=
+ght@400;600;700&amp;display=3Dswap" rel=3D"stylesheet">
+<!--[if (gte mso 9)|(IE)]>
+=09=09<style type=3Dtext/css>
+=09=09table {mso-table-lspace: 0pt;mso-table-rspace: 0pt; border-collapse:c=
+ollapse;}
+=09=09img {border: 0;display: block;}
+=09=09#outlook a{text-decoration: none !important; }
+=09=09</style>
+=09=09<![endif]
+=09=09-->
+=09<style type=3D"text/css">@media only screen and (max-width: 500px){
+=09=09=09=09.tabCon{
+=09=09=09=09=09width: 100% !important;
+=09=09=09=09=09min-width: 200px !important;
+=09=09=09=09=09margin: 0 !important;
+=09=09=09=09=09float: none !important;}
+=09=09=09=09.img{width: 100% !important;}
+=09=09=09=09.w240, .w240 img{width: 240px !important;}
+=09=09=09=09.w240 a {width: 200px !important;}
+=09=09=09=09.none{display: none !important;}
+=09=09=09}
+=09</style>
+</head>
+<body style=3D"-webkit-font-smoothing: antialiased; font-family: 'IBM Plex =
+Sans', sans-serif; font-style: normal; font-weight: 400; font-size: 16px; l=
+ine-height: 19px; min-width: 320px; color: #000000; -webkit-text-size-adjus=
+t: none; Margin: 0; padding: 0; box-sizing: border-box;">
+<div style=3D"Margin: 0; padding: 0; box-sizing: border-box; background: #F=
+8F8F8; width: 100%;">
+<table bgcolor=3D"#F8F8F8" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ dir=3D"ltr" style=3D"Margin: 0; padding: 0; box-sizing: border-box; border=
+-spacing: 0; border-collapse: collapse;" width=3D"100%">
+=09<tbody>
+=09=09<tr>
+=09=09=09<td align=3D"center" style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; min-width: 340px;">
+=09=09=09<table align=3D"center" bgcolor=3D"#FFFFFF" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: bord=
+er-box; border-spacing: 0; border-collapse: collapse; max-width: 660px; bac=
+kground: #FFFFFF;" width=3D"100%">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 32px 16px 48px;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
+">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box;" valign=3D"center"><img alt=3D"=D0=9B=D1=83=D0=
+=BA=D0=BE=D0=B9=D0=BB" border=3D"0" height=3D"auto" src=3D"https://img.hite=
+ml.com/en/v5/user-files?userId=3D6389637&resource=3Dhimg&disposition=3Dinli=
+ne&name=3D6johzai7tbq91xj9d4b9yuroi7mssqujydp9w66ttujmnmbi8ai7d41riw3j4yd6b=
+ozmquq9tin79hsjsr5isxcw7c9e6pfnxwpy7h4zkb1i3qpqc8j1kyn6ppyztk3xq91ysgifhu76=
+ihenhgke3cqnnsy" style=3D"border: 0; display: block; color: #000000;" width=
+=3D"40"></td>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box;">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; mso-line-height-rule: =
+exactly; color: #000000; text-align: right; font-size: 16px; font-weight: 7=
+00; line-height: 22px;"><a href=3D"mailto:llk-bitum@lukoil-bitumen.ru" styl=
+e=3D"Margin: 0; padding: 0; box-sizing: border-box; cursor: pointer; text-d=
+ecoration: none; color: #000000;" target=3D"_blank">llk-bitum@lukoil-bitume=
+n.ru</a><br>
+=09=09=09=09=09=09=09=09=09<a href=3D"tel:+74951280516" style=3D"Margin: 0;=
+ padding: 0; box-sizing: border-box; cursor: pointer; text-decoration: none=
+; color: #000000;" target=3D"_blank">+7 (495) 128-05-16</a></p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 0px 16px 8px;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
+">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; text-align: left; mso-=
+line-height-rule: exactly; color: #201F1E; font-size: 28px; font-weight: 60=
+0; line-height: 31px;">=D0=9B=D0=9B=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=
+=BD=D0=B5=D1=88=D0=BD=D0=BB =D0=BF=D1=80=D0=B5=D0=B4=D0=BB=D0=B0=D0=B3=D0=
+=B0=D0=B5=D1=82<br class=3D"none">
+=09=09=09=09=09=09=09=09=09=D0=BA=C2=A0=D0=BF=D1=80=D0=BE=D0=B4=D0=B0=D0=B6=
+=D0=B5:</p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 0px 16px; font-size: 1px;">
+<!--[if (gte mso 9)|(IE)]><table  border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0"><tr><td align=3D"left"  valign=3D"top"><![endif]-->
+=09=09=09=09=09=09<div style=3D"Margin: 0; padding: 0; box-sizing: border-b=
+ox; display: inline-block; vertical-align: top;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-siz=
+ing: border-box; padding: 8px;">
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"w240" style=3D"Margin: 0; padding: 0; box=
+-sizing: border-box; border-spacing: 0; border-radius: 16px; background: #e=
+eeeee; border-collapse: separate;" width=3D"188">
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 20px 5px 21px; color: #201F1=
+E; text-align: center; font-size: 16px; font-weight: 600; line-height: 21px=
+;">=D0=91=D0=98=D0=A2=D0=A3=D0=9C</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; padding: 0; box-sizing: border-box;"><img alt=3D"image" border=3D"0" heig=
+ht=3D"auto" src=3D"https://img.hiteml.com/en/v5/user-files?userId=3D6389637=
+&resource=3Dhimg&disposition=3Dinline&name=3D6ski9yyxwgfbq3j9d4b9yuroi7ja3o=
+wpha15dnuttujmnmbi8ai7mfdniuuocjqp6sgw69g79dyj3wsjsr5isxcw7c7ha78j37aanx9zk=
+b1i3qpqc8j1r9yq1skqhq45u91ysgifhu76ihenhgke3cqnnsy" style=3D"border: 0; dis=
+play: block; color: #000000;" width=3D"188"></td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 10px 5px 10px; color: #201F1=
+E; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px=
+;">=D0=94=D0=BE=D1=80=D0=BE=D0=B6=D0=BD=D1=8B=D0=B9 =D0=91=D0=9D=D0=94 50/7=
+0, 70/100, 60/90,90/130; =D0=A1=D1=82=D1=80=D0=BE=D0=B8=D1=82=D0=B5=D0=BB=
+=D1=8C=D0=BD=D1=8B=D0=B9 =D0=B7=D0=B0=D1=82=D0=B0=D1=80=D0=B5=D0=BD=D0=BD=
+=D1=8B=D0=B9 =D0=91=D0=9D 70/30, 90/10.</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; box-sizing: border-box; padding: 0px 5px 14px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"mailto:llk-bitum@lukoil-=
+bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%91%D0%B8%D1%82%D1=
+%83%D0%BC%D0%B0" style=3D"height:26pt;v-text-anchor:middle;width:105pt;" ar=
+csize=3D"23%" stroke=3D"f" fillcolor=3D"#DB2B36"><center><![endif]--><a hre=
+f=3D"mailto:llk-bitum@lukoil-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%=
+D0%B7%20%D0%91%D0%B8%D1%82%D1%83%D0%BC%D0%B0" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box; cursor: pointer; background-color: #DB2B36; bord=
+er-radius: 8px; color: #ffffff; display: inline-block; font-family: 'IBM Pl=
+ex Sans', sans-serif; font-size: 14px; font-weight: bold; line-height: 35px=
+; text-align: center; text-decoration: none; width: 140px; -webkit-text-siz=
+e-adjust: none;" target=3D"_blank">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7=D0=B0=D1=
+=82=D1=8C</a><!--[if mso]></center></v:roundrect><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</div>
+=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td><td align=3D"right"><![end=
+if]-->
 
+=09=09=09=09=09=09<div style=3D"Margin: 0; padding: 0; box-sizing: border-b=
+ox; display: inline-block; vertical-align: top;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-siz=
+ing: border-box; padding: 8px;">
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"w240" style=3D"Margin: 0; padding: 0; box=
+-sizing: border-box; border-spacing: 0; border-radius: 16px; background: #e=
+eeeee; border-collapse: separate;" width=3D"188">
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 20px 5px 21px; color: #201F1=
+E; text-align: center; font-size: 16px; font-weight: 600; line-height: 21px=
+;">=D0=9C=D0=90=D0=97=D0=A3=D0=A2</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; padding: 0; box-sizing: border-box;"><img alt=3D"image" border=3D"0" heig=
+ht=3D"auto" src=3D"https://img.hiteml.com/en/v5/user-files?userId=3D6389637=
+&resource=3Dhimg&disposition=3Dinline&name=3D66dyo6ccs6jhbtj9d4b9yuroi7mcge=
+6i3546xr1ttujmnmbi8ai78n9n7cjz8ui5qcx6gaye11p6s6sjsr5isxcw7c9rkt3u1g74fkfxk=
+b1i3qpqc8j1yjbkoj3555hmz91ysgifhu76i7rbpmsu4uenbqe" style=3D"border: 0; dis=
+play: block; color: #000000;" width=3D"188"></td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 10px 5px 28px; color: #201F1=
+E; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px=
+;">=D0=9E=D1=82=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BE=D1=81=D1=83=D1=
+=89=D0=B5=D1=81=D1=82=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B0=D0=
+=B2=D1=82=D0=BE=D1=86=D0=B8=D1=81=D1=82=D0=B5=D1=80=D0=BD=D0=B0=D0=BC=D0=B8=
+ =D0=B8 =D0=B6/=D0=B4 =D1=82=D1=80=D0=B0=D0=BD=D1=81=D0=BF=D0=BE=D1=80=D1=
+=82=D0=BE=D0=BC.</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; box-sizing: border-box; padding: 0px 5px 14px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"mailto:llk-bitum@lukoil-=
+bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%91%D0%B8%D1%82%D1=
+%83%D0%BC%D0%B0" style=3D"height:26pt;v-text-anchor:middle;width:105pt;" ar=
+csize=3D"23%" stroke=3D"f" fillcolor=3D"#DB2B36"><center><![endif]--><a hre=
+f=3D"mailto:llk-bitum@lukoil-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%=
+D0%B7%20%D0%91%D0%B8%D1%82%D1%83%D0%BC%D0%B0" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box; cursor: pointer; background-color: #DB2B36; bord=
+er-radius: 8px; color: #ffffff; display: inline-block; font-family: 'IBM Pl=
+ex Sans', sans-serif; font-size: 14px; font-weight: bold; line-height: 35px=
+; text-align: center; text-decoration: none; width: 140px; -webkit-text-siz=
+e-adjust: none;" target=3D"_blank">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7=D0=B0=D1=
+=82=D1=8C</a><!--[if mso]></center></v:roundrect><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</div>
+=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td><td align=3D"right"><![end=
+if]-->
 
---===============0209570909306209871==
+=09=09=09=09=09=09<div style=3D"Margin: 0; padding: 0; box-sizing: border-b=
+ox; display: inline-block; vertical-align: top;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-siz=
+ing: border-box; padding: 8px;">
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"w240" style=3D"Margin: 0; padding: 0; box=
+-sizing: border-box; border-spacing: 0; border-radius: 16px; background: #e=
+eeeee; border-collapse: separate;" width=3D"188">
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 10px 5px 10px; color: #201F1=
+E; text-align: center; font-size: 16px; font-weight: 600; line-height: 21px=
+;">=D0=9F=D0=A0=D0=9E=D0=9C=D0=AB=D0=A8=D0=9B=D0=95=D0=9D=D0=9D=D0=AB=D0=95=
+ =D0=9C=D0=90=D0=A1=D0=9B=D0=90</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; padding: 0; box-sizing: border-box;"><img alt=3D"image" border=3D"0" heig=
+ht=3D"auto" src=3D"https://img.hiteml.com/en/v5/user-files?userId=3D6389637=
+&resource=3Dhimg&disposition=3Dinline&name=3D6yo8ydeet14ubpj9d4b9yuroi7j5ih=
+ba5qfq67w3tujmnmbi8ai7kx4f77jcqnifkkftd6fnafikycsjsr5isxcw7c9zgks36x3mafxxk=
+b1i3qpqc8j1fzszfradxim4q91ysgifhu76i7rbpmsu4uenbqe" style=3D"border: 0; dis=
+play: block; color: #000000;" width=3D"188"></td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 10px 5px 10px; color: #201F1=
+E; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px=
+;">=D0=9E=D1=82=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BE=D1=81=D1=83=D1=
+=89=D0=B5=D1=81=D1=82=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B0=D0=
+=B2=D1=82=D0=BE=D1=86=D0=B8=D1=81=D1=82=D0=B5=D1=80=D0=BD=D0=B0=D0=BC=D0=B8=
+ =D0=B8 =D0=B6/=D0=B4 =D1=82=D1=80=D0=B0=D0=BD=D1=81=D0=BF=D0=BE=D1=80=D1=
+=82=D0=BE=D0=BC, =D0=B1=D0=BE=D1=87=D0=BA=D0=B0=D0=BC=D0=B8, =D0=BA=D0=B0=
+=D0=BD=D0=B8=D1=81=D1=82=D1=80=D0=B0=D0=BC=D0=B8.</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; box-sizing: border-box; padding: 0px 5px 14px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"mailto:llk-bitum@lukoil-=
+bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%9C%D0%B0%D1%81%D0=
+%BB%D0%B0" style=3D"height:26pt;v-text-anchor:middle;width:105pt;" arcsize=
+=3D"23%" stroke=3D"f" fillcolor=3D"#DB2B36"><center><![endif]--><a href=3D"=
+mailto:llk-bitum@lukoil-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7=
+%20%D0%9C%D0%B0%D1%81%D0%BB%D0%B0" style=3D"Margin: 0; padding: 0; box-sizi=
+ng: border-box; cursor: pointer; background-color: #DB2B36; border-radius: =
+8px; color: #ffffff; display: inline-block; font-family: 'IBM Plex Sans', s=
+ans-serif; font-size: 14px; font-weight: bold; line-height: 35px; text-alig=
+n: center; text-decoration: none; width: 140px; -webkit-text-size-adjust: n=
+one;" target=3D"_blank">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C</a=
+><!--[if mso]></center></v:roundrect><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</div>
+=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 8px 16px 48px;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
+">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box; padding-bottom: 16px;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; text-align: left; mso-=
+line-height-rule: exactly; color: #201F1E; font-size: 16px; font-weight: 60=
+0; line-height: 21px;">=D0=92=D1=81=D0=B5 =D0=BF=D1=80=D0=B5=D0=B4=D0=BE=D1=
+=81=D1=82=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D0=BC=D1=8B=D0=B5 =D0=93=D0=A1=D0=
+=9C =D0=BF=D0=BE=D0=BB=D0=BD=D0=BE=D1=81=D1=82=D1=8C=D1=8E =D1=81=D0=BE=D0=
+=BE=D1=82=D0=B2=D0=B5=D1=82=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=82 =D0=A0=D0=
+=BE=D1=81=D1=81=D0=B8=D0=B9=D1=81=D0=BA=D0=B8=D0=BC =D0=93=D0=9E=D0=A1=D0=
+=A2 =D0=B8 =D1=82=D1=80=D0=B5=D0=B1=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F=D0=
+=BC =D0=A2=D0=B5=D1=85=D0=BD=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=BE=D0=B3=D0=
+=BE =D1=80=D0=B5=D0=B3=D0=BB=D0=B0=D0=BC=D0=B5=D0=BD=D1=82=D0=B0.</p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box; padding-bottom: 48px;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; text-align: left; mso-=
+line-height-rule: exactly; color: #201F1E; font-size: 16px; font-weight: 40=
+0; line-height: 21px;">=D0=9B=D0=9B=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=
+=BD=D0=B5=D1=88=D0=BD=D0=BB, =D1=8F=D0=B2=D0=BB=D1=8F=D1=8E=D1=89=D0=B8=D0=
+=B9=D1=81=D1=8F =D0=BF=D0=BE=D0=BB=D0=BD=D0=BE=D1=81=D1=82=D1=8C=D1=8E =D0=
+=BA=D0=BE=D0=BD=D1=82=D1=80=D0=BE=D0=BB=D0=B8=D1=80=D1=83=D0=B5=D0=BC=D1=8B=
+=D0=BC =D0=B4=D0=BE=D1=87=D0=B5=D1=80=D0=BD=D0=B8=D0=BC =D0=BF=D1=80=D0=B5=
+=D0=B4=D0=BF=D1=80=D0=B8=D1=8F=D1=82=D0=B8=D0=B5=D0=BC =D0=93=D1=80=D1=83=
+=D0=BF=D0=BF=D1=8B "=D0=9B=D0=A3=D0=9A=D0=9E=D0=99=D0=9B", =D0=B7=D0=B0=D0=
+=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=BB=D0=B8=D0=B4=D0=B8=D1=80=D1=83=D1=
+=8E=D1=89=D0=B5=D0=B5 =D0=BF=D0=BE=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=
+=B5 =D0=BD=D0=B0 =D1=80=D0=BE=D1=81=D1=81=D0=B8=D0=B9=D1=81=D0=BA=D0=BE=D0=
+=BC =D1=80=D1=8B=D0=BD=D0=BA=D0=B5 =D0=BC=D0=B0=D1=81=D0=B5=D0=BB =D0=B8 =
+=D1=81=D0=BC=D0=B0=D0=B7=D0=BE=D0=BA, =D0=BE=D1=81=D1=83=D1=89=D0=B5=D1=81=
+=D1=82=D0=B2=D0=BB=D1=8F=D1=8F =D0=BE=D0=BF=D1=82=D0=BE=D0=B2=D1=83=D1=8E =
+=D0=B8 =D0=BC=D0=B5=D0=BB=D0=BA=D0=BE=D0=BE=D0=BF=D1=82=D0=BE=D0=B2=D1=83=
+=D1=8E =D0=BF=D1=80=D0=BE=D0=B4=D0=B0=D0=B6=D1=83 =D0=BD=D0=B5=D1=84=D1=82=
+=D0=B5=D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=82=D0=BE=D0=B2.</p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border=
+-box; border-spacing: 0; max-width: 596px; border-radius: 16px; background:=
+ #eeeeee; border-collapse: separate;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; box-sizing: border-box; padding: 32px 16px 24px;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizin=
+g: border-box; border-spacing: 0; border-collapse: collapse; max-width: 532=
+px;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
+Margin: 0; padding: 0; box-sizing: border-box; padding-bottom: 16px;" valig=
+n=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-serif; text=
+-align: left; mso-line-height-rule: exactly; color: #201F1E; font-size: 28p=
+x; font-weight: 700; line-height: 31px;">=D0=A1=D0=BF=D0=B5=D1=86=D0=B8=D0=
+=B0=D0=BB=D1=8C=D0=BD=D0=BE=D0=B5 =D0=BF=D1=80=D0=B5=D0=B4=D0=BB=D0=BE=D0=
+=B6=D0=B5=D0=BD=D0=B8=D0=B5</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
+Margin: 0; padding: 0; box-sizing: border-box; padding-bottom: 8px;" valign=
+=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-serif; text=
+-align: left; mso-line-height-rule: exactly; color: #333333; font-size: 16p=
+x; font-weight: 400; line-height: 21px;">=D0=9F=D0=BE =D0=B2=D0=BE=D0=BF=D1=
+=80=D0=BE=D1=81=D0=B0=D0=BC =D0=BF=D1=80=D0=B8=D0=BE=D0=B1=D1=80=D0=B5=D1=
+=82=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=86=D0=
+=B8=D0=B8 =D0=B8 =D0=B7=D0=B0=D0=BA=D0=BB=D1=8E=D1=87=D0=B5=D0=BD=D0=B8=D1=
+=8F =D0=BA=D0=BE=D0=BD=D1=82=D1=80=D0=B0=D0=BA=D1=82=D0=BE=D0=B2 =D0=BD=D0=
+=B0 =D1=81=D0=BF=D0=B5=D1=86=D0=B8=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =D1=
+=83=D1=81=D0=BB=D0=BE=D0=B2=D0=B8=D1=8F=D1=85 =D0=BE=D0=B1=D1=80=D0=B0=D1=
+=89=D0=B0=D0=B9=D1=82=D0=B5=D1=81=D1=8C =D0=B2 =D0=BE=D1=82=D0=B4=D0=B5=D0=
+=BB =D0=BF=D0=BE=D1=81=D1=82=D0=B0=D0=B2=D0=BE=D0=BA =D0=9E=D0=9E=D0=9E =C2=
+=AB=D0=9B=D0=9B=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=BD=D0=B5=D1=88=D0=
+=BD=D0=BB=C2=BB =D0=BF=D0=BE =D1=82=D0=B5=D0=BB=D0=B5=D1=84=D0=BE=D0=BD=D1=
+=83 =D0=BB=D0=B8=D0=B1=D0=BE =D0=BF=D1=80=D0=B8=D1=81=D1=8B=D0=BB=D0=B0=D0=
+=B9=D1=82=D0=B5 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B5=D0=BD=D0=BD=D1=8B=D0=
+=B9 =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81 =D0=BD=D0=B0 =D0=BF=D0=BE=D1=87=D1=
+=82=D1=83.</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
+Margin: 0; padding: 0; box-sizing: border-box; font-size: 1px;" valign=3D"c=
+enter">
+<!--[if (gte mso 9)|(IE)]><table  border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0"><tr><td align=3D"left"  valign=3D"center"><![endif]-->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"Margin: 0; paddi=
+ng: 0; box-sizing: border-box; display: inline-block; vertical-align: middl=
+e;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; =
+box-sizing: border-box; border-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" =
+style=3D"Margin: 0; box-sizing: border-box; padding: 8px 12px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"tel:+74951345094" style=
+=3D"height:35pt;v-text-anchor:middle;width:154pt;" arcsize=3D"9%" stroke=3D=
+"f" fillcolor=3D"#DB2B36"><center><![endif]--><a href=3D"tel:+74951345094" =
+style=3D"Margin: 0; box-sizing: border-box; cursor: pointer; background-col=
+or: #DB2B36; border-radius: 4px; color: #ffffff; display: inline-block; fon=
+t-family: 'IBM Plex Sans', sans-serif; font-size: 18px; font-weight: 600; l=
+ine-height: 18px; text-align: center; text-decoration: none; -webkit-text-s=
+ize-adjust: none; padding: 14px 20px 16px;" target=3D"_blank">+7 (495) 134-=
+50-94</a><!--[if mso]></center></v:roundrect><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td=
+><td align=3D"right"><![endif]-->
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"Margin: 0; paddi=
+ng: 0; box-sizing: border-box; display: inline-block; vertical-align: middl=
+e;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; =
+box-sizing: border-box; border-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" =
+style=3D"Margin: 0; box-sizing: border-box; padding: 8px 12px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"tel:+74951345094" style=
+=3D"height:35pt;v-text-anchor:middle;width:210pt;" arcsize=3D"9%" stroke=3D=
+"f" fillcolor=3D"#DB2B36"><center><![endif]--><a href=3D"mailto:llk-bitum@l=
+ukoil-bitumen.ru" style=3D"Margin: 0; box-sizing: border-box; cursor: point=
+er; background-color: #DB2B36; border-radius: 4px; color: #ffffff; display:=
+ inline-block; font-family: 'IBM Plex Sans', sans-serif; font-size: 18px; f=
+ont-weight: 600; line-height: 18px; text-align: center; text-decoration: no=
+ne; -webkit-text-size-adjust: none; padding: 14px 20px 16px;" target=3D"_bl=
+ank">llk-bitum@lukoil-bitumen.ru</a><!--[if mso]></center></v:roundrect><![=
+endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td=
+></tr></table><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 32px 16px 32px; background: #000000;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
+">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box; padding-bottom: 16px;" valign=3D"center"><img =
+alt=3D"=D0=9B=D1=83=D0=BA=D0=BE=D0=B9=D0=BB" border=3D"0" height=3D"auto" s=
+rc=3D"https://img.hiteml.com/en/v5/user-files?userId=3D6389637&resource=3Dh=
+img&disposition=3Dinline&name=3D6johzai7tbq91xj9d4b9yuroi7mssqujydp9w66ttuj=
+mnmbi8ai7d41riw3j4yd6bozmquq9tin79hsjsr5isxcw7c9e6pfnxwpy7h4zkb1i3qpqc8j1ky=
+n6ppyztk3xq91ysgifhu76ihenhgke3cqnnsy" style=3D"border: 0; display: block; =
+color: #000000;" width=3D"40"></td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box; padding-bottom: 16px;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; mso-line-height-rule: =
+exactly; color: #ffffff; text-align: center; font-size: 14px; font-weight: =
+400; line-height: 17px;">=D0=92=D1=8B =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=
+=D0=BB=D0=B8 =D1=8D=D1=82=D0=BE =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE, =D1=
+=82=D0=B0=D0=BA =D0=BA=D0=B0=D0=BA =D0=B8=D0=BD=D1=82=D0=B5=D1=80=D0=B5=D1=
+=81=D0=BE=D0=B2=D0=B0=D0=BB=D0=B8=D1=81=D1=8C =D0=BD=D0=B5=D1=84=D1=82=D0=
+=B5=D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=82=D0=B0=D0=BC=D0=B8 =D0=BD=D0=
+=B0 =D1=81=D0=B0=D0=B9=D1=82=D0=B0=D1=85 =D0=BA=D0=BE=D0=BC=D0=BF=D0=B0=D0=
+=BD=D0=B8=D0=B8 =C2=AB=D0=9B=D0=A3=D0=9A=D0=9E=D0=99=D0=9B=C2=BB. =D0=95=D1=
+=81=D0=BB=D0=B8 =D0=B1=D0=BE=D0=BB=D0=B5=D0=B5 =D0=BD=D0=B5 =D1=85=D0=BE=D1=
+=82=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D0=
+=BD=D0=B0=D1=88=D0=B8 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B0, =D0=BD=D0=B0=D0=
+=B6=D0=BC=D0=B8=D1=82=D0=B5 =D0=BD=D0=B0 =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=
+=83 =D0=BD=D0=B8=D0=B6=D0=B5:<br>
+=09=09=09=09=09=09=09=09=09<a href=3D"https://geteml.com/ru/unsubscribe?has=
+h=3D6xdbuaap9ceyo7j3cpzxf1z9p9c3qyid9gzf34go8bbzbgyx4n864tppq1r7u7djrecf179=
+gtof4ak#no_tracking" style=3D"Margin: 0; padding: 0; box-sizing: border-box=
+; cursor: pointer; color: #DB2B36; text-decoration: underline;" target=3D"_=
+blank">=D0=9E=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=BE=
+=D1=82 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8</a></p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; mso-line-height-rule: =
+exactly; color: #ffffff; text-align: center; font-size: 14px; font-weight: =
+400; line-height: 17px;">=C2=A9 2024 =D0=9E=D0=9E=D0=9E =C2=AB=D0=9B=D0=9B=
+=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=BD=D0=B5=D1=88=D0=BD=D0=BB=C2=BB</=
+p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</td>
+=09=09</tr>
+=09</tbody>
+</table>
+</div>
+<center><table><tr><td><img src=3D"https://geteml.com/ru/mail_read_tracker/=
+6389637?hash=3D6zbsan8b7w7axqwrw8k1mrg35jr3qyid9gzf34go8bbzbgyx4n86wwdn8ox4=
+tjc3554cr7ap46t1qjemdkw3wf7upxa" width=3D"1" height=3D"1" alt=3D"" title=3D=
+"" border=3D"0"></td></tr></table></center></body>
+</html>
+------=_Part_62430204_1274660342.1718693253488--
+
+--MXNKU2N2LTZKZGQyOS1PMg==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0209570909306209871==
+--MXNKU2N2LTZKZGQyOS1PMg==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -185,5 +780,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0209570909306209871==--
+--MXNKU2N2LTZKZGQyOS1PMg==--
 
