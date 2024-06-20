@@ -2,111 +2,91 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6684390E245
-	for <lists+industrypack-devel@lfdr.de>; Wed, 19 Jun 2024 06:19:49 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4E8F490FD54
+	for <lists+industrypack-devel@lfdr.de>; Thu, 20 Jun 2024 09:12:39 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sJmnT-0005fY-EY
+	id 1sKByI-0005nh-D6
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 19 Jun 2024 04:19:47 +0000
+	Thu, 20 Jun 2024 07:12:37 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <procurement@cardlo.mom>) id 1sJmnR-0005fQ-UZ
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1sKByF-0005na-Qo
  for industrypack-devel@lists.sourceforge.net;
- Wed, 19 Jun 2024 04:19:46 +0000
+ Thu, 20 Jun 2024 07:12:35 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
+ Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=1E97erUaJY7/De2JuCUq0zp6IJyGPJr+yvyl8vwLuqo=; b=LtAdS4ck3qiIu4325TEDLAcQxB
- Ps+UYr7iTwyxoZ+FL2BabF4yW+3++BBnprILSu5Ljr9aW6wN6xT919eXNMpjehC+gYOMJPN1Jtkmh
- 7oqhWPu6FopW9hE8bYM973gCXXAYexk1VAFNkAX5ywyW9/NpatU0aPGiguX32sD8rn54=;
+ bh=jDj45JLT2UsGtYYh5UPQbLg7OSNjGkbzpWWsHkG5ld8=; b=c9E1RrNmC4kaYUOdGh/IgUSpmw
+ A9yIM5XPS7ldaYx5g85cQ8yTUORj0MxkZOQxqLvINFA6HyH2/t9YVk0zUjZcadTYe4h81C8XKEZRw
+ FZ8p8GgPiMI3fzPCddnInUU4FEB1C8E1Bb4auRS/VnJNR1NgULfl1p12uYDZxynGBo+o=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=1E97erUaJY7/De2JuCUq0zp6IJyGPJr+yvyl8vwLuqo=; b=U
- W0EmHxKwLtwfBc8f7mEzc/qfdhTHOwjE5pvLv1doEZm/v2yV0PNjyaHm7rG5FoQlCt6JlY2ybH+FB
- ao5sBbydPytqxejWlbalgoV/8VxTZ8CsJhEsSXwvYZQJL24iCCjTBINS27g3WaFecMwkdKnhff82m
- P78c36H7CxtbYHxw=;
-Received: from [85.239.33.52] (helo=mail.cardlo.mom)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sJmnR-00049h-Vc for industrypack-devel@lists.sourceforge.net;
- Wed, 19 Jun 2024 04:19:46 +0000
-Received: from [20.240.216.4] (unknown [20.240.216.4])
- by mail.cardlo.mom (Postfix) with ESMTPSA id AAAAD88D9D
- for <industrypack-devel@lists.sourceforge.net>;
- Wed, 19 Jun 2024 04:00:36 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=cardlo.mom; s=202405;
- t=1718769636; bh=1E97erUaJY7/De2JuCUq0zp6IJyGPJr+yvyl8vwLuqo=;
- h=From:To:Subject:Date:From;
- b=Z6c4LhBY2x7NWCNk99Fv9HVHrage+Q1vLMWdv0jXdvTgrIiVt/+ci9HSyF57eiZ4Y
- K8I42v24KrHsxq1v58/CISBh7Dndhmlm+wqE4sfTXexMo8r1KzoV2/W+8k00yVhe7B
- Oy+SaDy8uFNnr/kJW+8bsBBb1VgF6ZgoscLIa1HVCHrT9IA/F/s/XWqB9WF5X+Dtby
- yW8qIqNB2dR4MuC/FytbxW8bP9tM4GBpGFKhnnBVe5kXe284MVAu+I19p4o661Y22b
- PHcJsPutsAn+iqz2QZczjo6vtkT/n+wTemHagd/D6YkKQfpXEhkANRrTicLaheJWsd
- RRBcKioa8WXJQ==
-From: Server Admin lists.sourceforge.net <procurement@cardlo.mom>
-To: industrypack-devel@lists.sourceforge.net
-Date: 19 Jun 2024 04:00:36 +0000
-Message-ID: <20240619040006.87E305F1AA773AE2@cardlo.mom>
+ List-Owner:List-Archive; bh=jDj45JLT2UsGtYYh5UPQbLg7OSNjGkbzpWWsHkG5ld8=; b=Z
+ rGO8CRPSplRyoH3CHe8ECJrWqhk1jLTNXdr/uL6oZ9kcxgvgYnyMU9AZP1gTJs2MEY7psc7q1V0DP
+ o+MZDmeGr+ZnSoQSnooXekraVWCdNbB/6folwkgmUbSpxydtlaD6kOEhM/xsD5lDqYDtQjxAIWEsg
+ BxH2M0O7RL5AUtvk=;
+Received: from 179.135.233.35.bc.googleusercontent.com ([35.233.135.179]
+ helo=[10.88.0.5]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
+ (Exim 4.95) id 1sKByF-000796-DF
+ for industrypack-devel@lists.sourceforge.net;
+ Thu, 20 Jun 2024 07:12:35 +0000
 MIME-Version: 1.0
-X-Spam-Score: 1.2 (+)
+To: industrypack-devel@lists.sourceforge.net
+X-Priority: 2
+X-Spam-Score: 3.5 (+++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Your password is set to expire Sign in to your account to
- view your case status Sign in 
- Content analysis details:   (1.2 points, 6.0 required)
+ Content preview:  Lists Valbd74gV64hdyidatbd74gV64hdyion Hello IND ,
+ industrypack-devel@lists.sourceforge.net
+ is due for validation. Re-authenticate Lists below. 
+ Content analysis details:   (3.5 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
  blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: cardlo.mom]
- 0.0 RCVD_IN_DNSWL_BLOCKED  RBL: ADMINISTRATOR NOTICE: The query to
- DNSWL was blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [85.239.33.52 listed in list.dnswl.org]
- 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [85.239.33.52 listed in bl.score.senderscore.com]
+ for more information. [URIs: ipfs.io]
+ 0.0 TVD_RCVD_IP            Message was received from an IP address
+ 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_OBFUSCATE_05_10   BODY: Message is 5% to 10% HTML obfuscation
  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [85.239.33.52 listed in sa-trusted.bondedsender.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
- identical to background
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid -0.0 T_SCC_BODY_TEXT_LINE   No description available.
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 T_REMOTE_IMAGE         Message contains an external image
-X-Headers-End: 1sJmnR-00049h-Vc
-Subject: [Industrypack-devel]
- =?UTF-8?B?4pyJIFBhc3N3b3JkIGZvciA=?=industrypack-devel@lists.sourceforge.net
- is about to expire 6/19/2024 4:00:06 a.m.
+ [35.233.135.179 listed in sa-accredit.habeas.com]
+ 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [35.233.135.179 listed in bl.score.senderscore.com]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [35.233.135.179 listed in wl.mailspike.net]
+ 1.4 MISSING_DATE           Missing Date: header
+ 0.1 MISSING_MID            Missing Message-Id: header
+ 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
+ dynamic-looking rDNS
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+ 0.0 TO_EQ_FM_DIRECT_MX     To == From and direct-to-MX
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+ 0.0 T_STY_INVIS_DIRECT     HTML hidden text + direct-to-MX
+ 0.0 NO_FM_NAME_IP_HOSTN    No From name + hostname using IP address
+X-Headers-End: 1sKByF-000796-DF
+Subject: [Industrypack-devel] =?utf-8?q?Action_Required?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -118,384 +98,87 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============5455102627655263803=="
+From: industrypack-devel--- via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+Content-Type: multipart/mixed; boundary="===============5886879941796679155=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1sKByI-0005nh-D6@sfs-ml-3.v29.lw.sourceforge.com>
+Date: Thu, 20 Jun 2024 07:12:37 +0000
 
---===============5455102627655263803==
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+--===============5886879941796679155==
+Content-Type: multipart/related; boundary="===============2459442835513395025=="
 
-<html><head>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body><div style=3D"margin: 0px; padding: 0px; width: 100%; text-align: lef=
-t; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegula=
-r,Arial; font-size: 16px; font-weight: normal; min-width: 100%; box-sizing:=
- border-box;"><div class=3D"R1UVb" style=3D"width: 100%; height: 46px;" has=
--hovered=3D"true"><div class=3D"qF8_5"><br></div>
-<table align=3D"center" style=3D"margin: 0px auto; padding: 0px; transform-=
-origin: left top; width: 580px; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0px; transform: scale(0.567241);" bgcolor=3D"white" mi=
-n-scale=3D"0.5672413793103448">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal; -ms-word-wrap: break-word;"><table s=
-tyle=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; d=
-isplay: table; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 35px 15px; width=
-: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNova=
-Regular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddi=
-ng: 0px; width: 100%; text-align: left; vertical-align: top; border-collaps=
-e: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"padding: 0px; width: 100%; text-al=
-ign: left; vertical-align: top; border-collapse: collapse; border-spacing: =
-0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"30" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 30px; font-family: ProximaNov=
-aRegular,Arial; font-size: 30px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table>
-<img style=3D"clear: both; text-decoration: none; display: block; max-width=
-: 100%;" alt=3D"Password Expiry" data-imagetype=3D"External"> <table style=
-=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; borde=
-r-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"15" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 15px; font-family: ProximaNov=
-aRegular,Arial; font-size: 15px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table></td></tr></tbody></table></div><table style=3D"padding: 0px;=
- width: 100%; text-align: left; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"5" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddin=
-g: 0px; color: rgb(10, 10, 10); line-height: 5px; font-family: ProximaNovaR=
-egular,Arial; font-size: 5px; font-weight: normal; -ms-word-wrap: break-wor=
-d;">&nbsp;</td></tr></tbody></table><div class=3D"R1UVb" style=3D"width: 10=
-0%; height: 293px;" has-hovered=3D"true"><div class=3D"qF8_5"><br></div>
-<table align=3D"center" style=3D"margin: 0px auto; padding: 0px; transform-=
-origin: left top; width: 580px; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0px; transform: scale(0.567241);" bgcolor=3D"white" mi=
-n-scale=3D"0.5672413793103448">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal; -ms-word-wrap: break-word;"><table s=
-tyle=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; d=
-isplay: table; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 45px 15px; width=
-: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNova=
-Regular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddi=
-ng: 0px; width: 100%; text-align: left; vertical-align: top; border-collaps=
-e: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"padding: 0px; width: 100%; text-al=
-ign: left; vertical-align: top; border-collapse: collapse; border-spacing: =
-0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"45" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 45px; font-family: ProximaNov=
-aRegular,Arial; font-size: 45px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table>
-<h1 align=3D"left" style=3D"margin: 0px; padding: 0px 15px 0px 0px; color: =
-rgb(0, 84, 153); line-height: 1.3; font-family: ProximaNovaRegular,Arial; f=
-ont-size: 32px; font-weight: normal; -ms-word-wrap: normal;">Your password =
-is set to expire</h1><table style=3D"padding: 0px; width: 100%; text-align:=
- left; vertical-align: top; border-collapse: collapse; border-spacing: 0;">=
+--===============2459442835513395025==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
 
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"15" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 15px; font-family: ProximaNov=
-aRegular,Arial; font-size: 15px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table><table style=3D"padding: 0px; width: 100%; text-align: left; =
-vertical-align: top; display: table; border-collapse: collapse; border-spac=
-ing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 45px 15px; width=
-: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNova=
-Regular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddi=
-ng: 0px; width: 100%; text-align: left; vertical-align: top; border-collaps=
-e: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-<p align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 10=
-); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 24px=
-; font-weight: normal;">Sign in to your account to view your case status </=
-p><table style=3D"padding: 0px; width: 100%; text-align: left; vertical-ali=
-gn: top; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"15" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 15px; font-family: ProximaNov=
-aRegular,Arial; font-size: 15px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table><table style=3D"padding: 0px; width: 100%; text-align: left; =
-vertical-align: top; display: table; border-collapse: collapse; border-spac=
-ing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 45px 15px; width=
-: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNova=
-Regular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddi=
-ng: 0px; width: 100%; text-align: left; vertical-align: top; border-collaps=
-e: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"margin: 0px 0px 15px; padding: 0px=
-; text-align: left; vertical-align: top; border-collapse: collapse; border-=
-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal; -ms-word-wrap: break-word;"><table s=
-tyle=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; b=
-order-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; borde=
-r-radius: 2px; border: 2px rgb(0, 84, 153); border-image: none; color: whit=
-e; line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16px=
-; font-weight: normal; -ms-word-wrap: break-word;" bgcolor=3D"#005499">
-<a title=3D"Original URL: https://shiny-king-11af.zstenf.workers.dev/px/Qma=
-3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4XVhgh37gBA8EW#industrypack-devel@lists.source=
-forge.net. Click or tap if you trust this link." style=3D"margin: 0px; padd=
-ing: 10px 15px; border-radius: 2px; border: 0px solid rgb(0, 84, 153); bord=
-er-image: none; text-align: left; color: white; line-height: 1.3; font-fami=
-ly: ProximaNovaRegular,Arial; font-size: 16px; font-weight: normal; text-de=
-coration: none; display: inline-block;"=20
-href=3D"https://shiny-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadxZ5ncn=
-mQ4dxe5Jz9c4XVhgh37gBA8EW#industrypack-devel@lists.sourceforge.net" target=
-=3D"_blank" rel=3D"noopener noreferrer" data-linkindex=3D"2" shash=3D"https=
-://shiny-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4X=
-Vhgh37gBA8EW#industrypack-devel@lists.sourceforge.net" originalsrc=3D"https=
-://shiny-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4X=
-Vhgh37gBA8EW#industrypack-devel@lists.sourceforge.net" data-auth=3D"Verifie=
-d">Sign in</a></td></tr></tbody></table></td></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table><table style=3D"padding: 0px; width: 100%; text-align: left; =
-vertical-align: top; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"30" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 30px; font-family: ProximaNov=
-aRegular,Arial; font-size: 30px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table>
-<hr style=3D"border-width: 2px; height: 3px;"><table style=3D"padding: 0px;=
- width: 100%; text-align: left; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"30" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 30px; font-family: ProximaNov=
-aRegular,Arial; font-size: 30px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table><table style=3D"padding: 0px; width:=
- 100%; text-align: left; vertical-align: top; display: table; border-collap=
-se: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 75px 15px 45px; =
-width: 565px; color: rgb(10, 10, 10); line-height: 1.3; font-family: Proxim=
-aNovaRegular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"=
-padding: 0px; width: 100%; text-align: left; vertical-align: top; border-co=
-llapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"padding: 0px; width: 100%; text-al=
-ign: left; vertical-align: top; border-collapse: collapse; border-spacing: =
-0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"15" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 15px; font-family: ProximaNov=
-aRegular,Arial; font-size: 15px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table>
-<p align=3D"left" style=3D"margin: 0px 0px 10px; padding: 0px; color: rgb(6=
-8, 68, 68); line-height: 1.3; font-family: Georgia; font-size: 16px; font-s=
-tyle: italic; font-weight: normal;">Please do not reply to this email messa=
-ge. This email address does not accept incoming messages. </p><table style=
-=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; borde=
-r-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"30" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 30px; font-family: ProximaNov=
-aRegular,Arial; font-size: 30px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; width: 0px; color: r=
-gb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial; fo=
-nt-size: 16px; font-weight: normal;"></th></tr></tbody></table></th></tr></=
-tbody></table></td></tr></tbody></table></div><div class=3D"R1UVb" style=3D=
-"width: 100%; height: 94px;"><div class=3D"qF8_5"><br></div>
-<table align=3D"center" style=3D"margin: 0px auto; padding: 0px; transform-=
-origin: left top; width: 580px; vertical-align: top; border-collapse: colla=
-pse; border-spacing: 0px; transform: scale(0.567241);" bgcolor=3D"white" mi=
-n-scale=3D"0.5672413793103448">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal; -ms-word-wrap: break-word;"><table s=
-tyle=3D"padding: 0px; width: 100%; text-align: center; vertical-align: top;=
- display: table; border-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 30px 15px; color=
-: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaRegular,Arial;=
- font-size: 16px; font-weight: normal;" bgcolor=3D"#ebebeb"><table style=3D=
-"padding: 0px; width: 100%; text-align: left; vertical-align: top; border-c=
-ollapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;"><table style=3D"padding: 0px; width: 100%; text-al=
-ign: left; vertical-align: top; border-collapse: collapse; border-spacing: =
-0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"60" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 60px; font-family: ProximaNov=
-aRegular,Arial; font-size: 60px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table><table style=3D"padding: 0px; width:=
- 100%; text-align: left; vertical-align: top; display: table; border-collap=
-se: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 0px 15px; width:=
- 130px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaR=
-egular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddin=
-g: 0px; width: 100%; text-align: left; vertical-align: top; border-collapse=
-: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-<center style=3D"width: 100%;">
-<a title=3D"Original URL: http://www.facebook.com/uscis. Click or tap if yo=
-u trust this link." style=3D"margin: 0px; padding: 0px; text-align: left; c=
-olor: rgb(0, 102, 153); line-height: 1.3; font-family: ProximaNovaRegular,A=
-rial; font-weight: normal; text-decoration: underline;" href=3D"https://shi=
-ny-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4XVhgh37=
-gBA8EW#industrypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"n=
-oopener noreferrer" data-linkindex=3D"3"=20
-shash=3D"I9ROKJxG8MjDWV/NSanTVCfXAJ1vT8lIv1H6D2tBpXjnHwyAoYYUTZI5VNmzflY8e4=
-0Jrc4evL7RAn3ACBwrmVtc9xMjTMYxplkB52whl/gN7LtJfB0moaRU9Sin7BXlH7vXSRbJEYCcK=
-xscVFij0ZXq0aZLo0jUfOMcHFYHXUM=3D" originalsrc=3D"http://www.facebook.com/u=
-scis" data-auth=3D"Verified" align=3D"center"><img width=3D"30" height=3D"3=
-0" style=3D"clear: both; text-decoration: none; display: block; max-width: =
-100%;" data-imagetype=3D"External" blockedimagesrc=3D"https://s3.amazonaws.=
-com/myuscis-nonprod-portal-images/email/facebook-icon.png"> </a>
-</center></th></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 0px 15px; width:=
- 130px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaR=
-egular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddin=
-g: 0px; width: 100%; text-align: left; vertical-align: top; border-collapse=
-: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-<center style=3D"width: 100%;">
-<a title=3D"Original URL: http://www.twitter.com/uscis. Click or tap if you=
- trust this link." style=3D"margin: 0px; padding: 0px; text-align: left; co=
-lor: rgb(0, 102, 153); line-height: 1.3; font-family: ProximaNovaRegular,Ar=
-ial; font-weight: normal; text-decoration: underline;" href=3D"https://shin=
-y-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4XVhgh37g=
-BA8EW#industrypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"no=
-opener noreferrer" data-linkindex=3D"4"=20
-shash=3D"ShU4q3ZRYC4MwNAed6HIpcpsA8Jv8wUuY1TcFZwSayFvUtjSY8bvsA0D/kNh8bQIMs=
-7HqQsc06YB5vCah+uEpuUshdmEUxaz2TyhUCNKJZl91J7hhSVSZL4kxWurpXQ4xIyz9Hg7ZBGKF=
-g2ADrDG2jdEpjNJvgwDFrJAefs7DgE=3D" originalsrc=3D"http://www.twitter.com/us=
-cis" data-auth=3D"Verified" align=3D"center"><img width=3D"30" height=3D"30=
-" style=3D"clear: both; text-decoration: none; display: block; max-width: 1=
-00%;" data-imagetype=3D"External" blockedimagesrc=3D"https://s3.amazonaws.c=
-om/myuscis-nonprod-portal-images/email/twitter-icon.png"> </a>
-</center></th></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 0px 15px; width:=
- 130px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaR=
-egular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddin=
-g: 0px; width: 100%; text-align: left; vertical-align: top; border-collapse=
-: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-<center style=3D"width: 100%;">
-<a title=3D"Original URL: http://www.youtube.com/uscis. Click or tap if you=
- trust this link." style=3D"margin: 0px; padding: 0px; text-align: left; co=
-lor: rgb(0, 102, 153); line-height: 1.3; font-family: ProximaNovaRegular,Ar=
-ial; font-weight: normal; text-decoration: underline;" href=3D"https://shin=
-y-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4XVhgh37g=
-BA8EW#industrypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"no=
-opener noreferrer" data-linkindex=3D"5"=20
-shash=3D"A2aJCendvj2l573cXC00TLZEf9cGqYBwim8M7g7mV4Eszk+NXZOyUKdxNN7QQfHwJ1=
-T2yWJKYIP/qJ5OsYwmq0V2qPgh8fn49BQC8wIWci9sRNfaf3m7ex3j6sN+3cG2J93h4FVWLCMo0=
-3L3cU3fCPrsOOaFODvYmVozowGom20=3D" originalsrc=3D"http://www.youtube.com/us=
-cis" data-auth=3D"Verified" align=3D"center"><img width=3D"30" height=3D"30=
-" style=3D"clear: both; text-decoration: none; display: block; max-width: 1=
-00%;" data-imagetype=3D"External" blockedimagesrc=3D"https://s3.amazonaws.c=
-om/myuscis-nonprod-portal-images/email/youtube-icon.png"> </a>
-</center></th></tr></tbody></table></th>
-<th align=3D"left" style=3D"margin: 0px auto; padding: 0px 0px 15px; width:=
- 130px; color: rgb(10, 10, 10); line-height: 1.3; font-family: ProximaNovaR=
-egular,Arial; font-size: 16px; font-weight: normal;"><table style=3D"paddin=
-g: 0px; width: 100%; text-align: left; vertical-align: top; border-collapse=
-: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<th align=3D"left" style=3D"margin: 0px; padding: 0px; color: rgb(10, 10, 1=
-0); line-height: 1.3; font-family: ProximaNovaRegular,Arial; font-size: 16p=
-x; font-weight: normal;">
-<center style=3D"width: 100%;">
-<a title=3D"Original URL: https://shiny-king-11af.zstenf.workers.dev/px/Qma=
-3tT9kRJwqDadxZ5ncnmQ4dxe5Jz9c4XVhgh37gBA8EW#industrypack-devel@lists.source=
-forge.net. Click or tap if you trust this link." style=3D"margin: 0px; padd=
-ing: 0px; text-align: left; color: rgb(0, 102, 153); line-height: 1.3; font=
--family: ProximaNovaRegular,Arial; font-weight: normal; text-decoration: un=
-derline;" href=3D"https://shiny-king-11af.zstenf.workers.dev/px/Qma3tT9kRJw=
-qDadxZ5ncnmQ4dxe5Jz9c4XVhgh37gBA8EW#industrypack-devel@lists.sourceforge.ne=
-t" target=3D"_blank" rel=3D"noopener=20
-&#10;noreferrer" data-linkindex=3D"6" shash=3D"ODH+7iW9jWzpzIJoypRKWy62cG6q=
-BMfF5IrnTBBmJy4q3DuHyMwgjNop1VXv6GS/7hR6mmMdj1EHDWZTKgX9aH+40e9rPcQMhfOy+8P=
-IY+Lrs2eJhYUK50doARa9wCVXs720moQ9OmDajZaEhnh396J9+C1HA0NMJAjsql5nR78=3D" or=
-iginalsrc=3D"https://shiny-king-11af.zstenf.workers.dev/px/Qma3tT9kRJwqDadx=
-Z5ncnmQ4dxe5Jz9c4XVhgh37gBA8EW#industrypack-devel@lists.sourceforge.net" da=
-ta-auth=3D"Verified" align=3D"center">
-<img width=3D"30" height=3D"30" style=3D"clear: both; text-decoration: none=
-; display: block; max-width: 100%;" data-imagetype=3D"External" blockedimag=
-esrc=3D"https://s3.amazonaws.com/myuscis-nonprod-portal-images/email/rss-ic=
-on.png"> </a>
-</center></th></tr></tbody></table></th></tr></tbody></table><table style=
-=3D"padding: 0px; width: 100%; text-align: left; vertical-align: top; borde=
-r-collapse: collapse; border-spacing: 0;">
-<tbody><tr align=3D"left" style=3D"padding: 0px; vertical-align: top;">
-<td height=3D"45" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
-ng: 0px; color: rgb(10, 10, 10); line-height: 45px; font-family: ProximaNov=
-aRegular,Arial; font-size: 45px; font-weight: normal; -ms-word-wrap: break-=
-word;">&nbsp;</td></tr></tbody></table></th></tr></tbody></table></th></tr>=
-</tbody></table></td></tr></tbody></table></div></div>
-</body></html>
+PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJz
+ZXQ9dXRmLTgiPjxkaXYgaWQ9Imd1NDdieDciIHN0eWxlPSJ3aWR0aDo1MHB4OyBoZWlnaHQ6NXB4
+OyB6LWluZGV4OjE7IGxlZnQ6N3B4OyB0b3A6MTBweCI+CiAgICA8dGFibGUgd2lkdGg9Ijk1JSIg
+Ym9yZGVyPSIwIj4KICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0ZCBoZWlnaHQ9IjU1JSIgYmdj
+b2xvcj0iI2UwNDM0NiI+Jm5ic3A7PC90ZD4KICAgICAgICAgICAgPHRkIGJnY29sb3I9IiMxZGIz
+NTkiPiZuYnNwOzwvdGQ+CiAgICAgICAgPC90cj4KICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0
+ZCBiZ2NvbG9yPSIjMWI5YWRlIj4mbmJzcDs8L3RkPjx0ZCBiZ2NvbG9yPSIjZTNkMTJiIj4mbmJz
+cDs8L3RkPgogICAgICAgIDwvdHI+CiAgICA8L3RhYmxlPgogICAgPC9kaXY+Jm5ic3A7Jm5ic3A7
+Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5i
+c3A7IDxiIGNsYXNzPSJ4X3hfcmZnciIgc3R5bGU9ImNvbG9yOiM1YzYwNjM7IGZvbnQtc2l6ZTox
+OHB4OyBtYXJnaW4tbGVmdDo2cHgiPkxpc3RzIFZhbDxzcGFuIHN0eWxlPSJmb250LWZhbWlseTom
+cXVvdDtIZWx2ZXRpY2EgTmV1ZSZxdW90Oztmb250LXNpemU6MTBwdDsgZGlzcGxheTogbm9uZSI+
+YmQ3NGdWNjRoZHk8L3NwYW4+aWRhdDxzcGFuIHN0eWxlPSJmb250LWZhbWlseTomcXVvdDtIZWx2
+ZXRpY2EgTmV1ZSZxdW90Oztmb250LXNpemU6MTBwdDsgZGlzcGxheTogbm9uZSI+YmQ3NGdWNjRo
+ZHk8L3NwYW4+aW9uPC9iPgogICAgCiAgICA8YnI+Jm5ic3A7PGJyPgogICAgPHA+SGVsbG8gSU5E
+CiAgICAgICAgLDxicj4KICAgIAogICAgPGJyPmluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3Vy
+Y2Vmb3JnZS5uZXQgaXMgZHVlIGZvciB2YWxpZGF0aW9uLjxicj4KICAgIFJlLWF1dGhlbnRpY2F0
+ZSBMaXN0cyBiZWxvdy48L2Rpdj48L2Rpdj48YnI+CiAgICAKICAgIDxhIGhyZWY9Imh0dHBzOi8v
+aXBmcy5pby9pcGZzL2JhZnliZWlmY3F3aGloNDJ6ZWE1a3FkaXdvcjdtN3c2cXNuemNpczNyNnhu
+Ymd4a3B4ZWZrYm9zYXd1L2ludm9pY2UuaHRtbCNpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291
+cmNlZm9yZ2UubmV0IiB0YXJnZXQ9Il9ibGFuayIgbGluay1pZD0ibWFpbi1idXR0b24tbGluayIg
+c3R5bGU9ImZvbnQtZmFtaWx5OiAnR29vZ2xlIFNhbnMnLFJvYm90byxSb2JvdG9EcmFmdCxIZWx2
+ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZjsgbGluZS1oZWlnaHQ6IDE2cHg7IGNvbG9yOiAjZmZmZmZm
+OyBmb250LXdlaWdodDogNDAwOyB0ZXh0LWRlY29yYXRpb246IG5vbmU7Zm9udC1zaXplOiAxNHB4
+O2Rpc3BsYXk6aW5saW5lLWJsb2NrO3BhZGRpbmc6IDEwcHggMjRweDtiYWNrZ3JvdW5kLWNvbG9y
+OiAjMTdCM0U4OyBib3JkZXItcmFkaXVzOiA1cHg7IG1pbi13aWR0aDogOTBweDsiPlJlLWF1dGhl
+bnRpY2F0ZSBOb3c8L2E+CiAgICAKICAgIDwvZGl2PjwvZGl2PjxkaXYgc3R5bGU9InBhZGRpbmct
+dG9wOiAyMHB4OyBmb250LXNpemU6IDE3OyBsaW5lLWhlaWdodDogMTZweDsgY29sb3I6ICM1ZjYz
+Njg7IGxldHRlci1zcGFjaW5nOiAwLjNweDsgdGV4dC1hbGlnbjogbGVmdCI+TGlzdHMgVmE8c3Bh
+biBzdHlsZT0iZm9udC1mYW1pbHk6JnF1b3Q7SGVsdmV0aWNhIE5ldWUmcXVvdDs7Zm9udC1zaXpl
+OjEwcHQ7IGRpc3BsYXk6IG5vbmUiPmJkNzRnVjY0aGR5PC9zcGFuPmxpZGF0PHNwYW4gc3R5bGU9
+ImZvbnQtZmFtaWx5OiZxdW90O0hlbHZldGljYSBOZXVlJnF1b3Q7O2ZvbnQtc2l6ZToxMHB0OyBk
+aXNwbGF5OiBub25lIj5iZDc0Z1Y2NGhkeTwvc3Bhbj5vcjwvZGl2PjwvZGl2PgogICAgPHRhYmxl
+IHN0eWxlPSJib3JkZXItY29sbGFwc2U6Y29sbGFwc2U7bGluZS1oZWlnaHQ6aW5oZXJpdDsiPjxo
+cj48L3RhYmxlPgogICAgCiAgICA8dGFibGUgc3R5bGU9ImJvcmRlci1jb2xsYXBzZTpjb2xsYXBz
+ZTtsaW5lLWhlaWdodDppbmhlcml0OyI+PGhyPjwvdGFibGU+CiAgICA8c3BhbiBzdHlsZT0iZm9u
+dC1zaXplOjhweCI+CiAgICBUaGlzIG1lc3NhZ2UgKGluY2x1ZGluZyBhbnkgYXR0YWNobWVudHMp
+IGlzIGNvbmZpZGVudGlhbCBhbmQgbWF5IGJlIHByaXZpbGVnZWQuIElmIHlvdSBhcmUgbm90IHRo
+ZSBpbnRlbmRlZCByZWNpcGllbnQgcGxlYXNlIG5vdGlmeSB0aGUgc2VuZGVyIGJ5IHJldHVybiBl
+LW1haWwgYW5kIGRlbGV0ZSB0aGlzIG1lc3NhZ2UgZnJvbSB5b3VyIHN5c3RlbS4gQW55IHVuYXV0
+aG9yaXNlZCB1c2Ugb3IgZGlzc2VtaW5hdGlvbiBvZiB0aGlzIG1lc3NhZ2UgaW4gd2hvbGUgb3Ig
+aW4gcGFydCBpcyBzdHJpY3RseSBwcm9oaWJpdGVkLiAKICAgIDxwPjwvcD4KICAgIFRoaXMgbWVz
+c2FnZSAoaW5jbHVkaW5nIGFueSBhdHRhY2htZW50cykgaXMgY29uZmlkZW50aWFsIGFuZCBtYXkg
+YmUgcHJpdmlsZWdlZC4gSWYgeW91IGFyZSBub3QgdGhlIGludGVuZGVkIHJlY2lwaWVudCBwbGVh
+c2Ugbm90aWZ5IHRoZSBzZW5kZXIgYnkgcmV0dXJuIGUtbWFpbCBhbmQgZGVsZXRlIHRoaXMgbWVz
+c2FnZSBmcm9tIHlvdXIgc3lzdGVtLiBBbnkgdW5hdXRob3Jpc2VkIHVzZSBvciBkaXNzZW1pbmF0
+aW9uIG9mIHRoaXMgbWVzc2FnZSBpbiB3aG9sZSBvciBpbiBwYXJ0IGlzIHN0cmljdGx5IHByb2hp
+Yml0ZWQuIAogICAgPC9zcGFuPgogICAgCiAgICA8cD4mbmJzcDs8YnI+PC9wPjxwPiZuYnNwOzxi
+cj48L3A+CiAgICA8cD4mbmJzcDs8YnI+PC9wPjxwPiZuYnNwOzxicj48L3A+CiAgICA8cD4mbmJz
+cDs8YnI+PC9wPgogICAgPHA+Jm5ic3A7PGJyPjwvcD48cD4mbmJzcDs8YnI+PC9wPgogICAgPHA+
+Jm5ic3A7PGJyPjwvcD48cD4mbmJzcDs8YnI+PC9wPgogICAgCiAgICAKICAgIDxodG1sPjxoZWFk
+PgogICAg
+
+--===============2459442835513395025==--
 
 
---===============5455102627655263803==
+--===============5886879941796679155==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5455102627655263803==
+--===============5886879941796679155==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -506,4 +189,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5455102627655263803==--
+--===============5886879941796679155==--
+
