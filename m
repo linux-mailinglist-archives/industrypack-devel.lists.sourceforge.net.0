@@ -2,129 +2,89 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6330F9120F9
-	for <lists+industrypack-devel@lfdr.de>; Fri, 21 Jun 2024 11:42:00 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5BD91912B53
+	for <lists+industrypack-devel@lfdr.de>; Fri, 21 Jun 2024 18:27:15 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sKamN-0000Xd-FG
+	id 1sKh6W-0001vf-Vu
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 21 Jun 2024 09:41:58 +0000
+	Fri, 21 Jun 2024 16:27:14 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <yujiangtao@tongji.edu.cn>) id 1sKamL-0000XR-Aw
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1sKh6V-0001vX-7i
  for industrypack-devel@lists.sourceforge.net;
- Fri, 21 Jun 2024 09:41:57 +0000
+ Fri, 21 Jun 2024 16:27:12 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
+ Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=TGjD1F7U+Et9ggDl5GrsSfliARnodgE3NEA1YsK0ZIk=; b=Tg0eaY+C/EUXTB6t/dHbEdz7fw
- JWbH0k4WfUmAurYGzfvZ0CyJ3uq6zmHZuF6KgHJay+0/iCZVIFtANmCXuUZmC0I+n/E3kjmfd41h2
- D5Tncf5VseI8Xxbl4ELIiM/+HT1bW+9FhXmzxxtOCfSUvwfHuxVXReT1J81sJXPdQNnM=;
+ bh=LOtVE++/5AOf60TUzmSvw42dEmwz+x39/KbArYzbgKA=; b=ilYN2e1R/a+pqKKLTVV6JvGHL2
+ aaKy3mNEi/WXtw8ZYkg1AYW5y9W+up613MU4gj/+QE1uHb5nMDiP7H/Rt5E4DVj51C87XuVCpaZ5o
+ Ia2GwTf35TjgHqJUIruK1g2T3zsPMYEXGIPpxhNHbEXNeTBxHzptJMxo8ski+GdxwmQI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=TGjD1F7U+Et9ggDl5GrsSfliARnodgE3NEA1YsK0ZIk=; b=j
- g+kK3R46tF0gW/UzGxB/QdiIApckrGEUlFucHMb0TXZWBlRY2VCfS6whpdTErTP/iFqg4zxO98/mC
- oLArmCWDCZwryeq8tDDQVpTZmxqYhRcJS4vW/lQrPEdjr+pUzYPZxJrddPMHbHAzTvD1SA8RaWZdX
- BVrpGbpMaKXq6yr4=;
-Received: from newserver11.dotv.asia ([137.59.110.133])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sKamJ-00017F-2d for industrypack-devel@lists.sourceforge.net;
- Fri, 21 Jun 2024 09:41:56 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=tongyinnmetal.com.my; s=default; h=Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=TGjD1F7U+Et9ggDl5GrsSfliARnodgE3NEA1YsK0ZIk=; b=uPBc60w8UapFMOUgHsgvH5Wr33
- OQcckC3GZnBeGyQpOeIUB9P3uvuFGKHLmmEmfkrrn6bj1wJQYFYJMtC2CmzfarOWfyLOsG5EU4oxE
- CxTgJ6TG07tWFFvsQTJv/32b9FuiMe80Q97A1WzFjK2q77yYkjgIzxkqL+hGO6HASKBZ5MGUOPfFt
- 2U/UXC9B1ZZmc+UOoLHMOLQDTl+6ZJwQgo126McfJrctfFj6n5C0S3gq4fICjM8dakKVaf/hM7MI6
- QAmjEZFKjIbdcovtIuYU3buiKVipFUNAqz/yslL0tPnqCMEIzpTI5XsgMvjaT8p871s4RKTnjtkBN
- ZoSFniuQ==;
-Received: from [185.236.231.76] (port=64625 helo=error-no-valid-domain.com)
- by server11.dotv.asia with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
- (Exim 4.97.1) (envelope-from <yujiangtao@tongji.edu.cn>)
- id 1sKZm1-00000006TYp-04VL
+ List-Owner:List-Archive; bh=LOtVE++/5AOf60TUzmSvw42dEmwz+x39/KbArYzbgKA=; b=X
+ X/CObpi1V0PqwmLlhAEOLCwuxkSRcf5blrdiuHALmKclJYPzpJMmYp2zaMueIdkU5Dwy5vl0Hvldr
+ e30pejPTinJI8Q1/9UiZ/181ChHO/da4cmwFygcOVqV0yB3u8YKOsVr/w9KzxoWZ8CPtAYYounXfC
+ l3J8Ng4uyACqdNNY=;
+Received: from 207.11.230.35.bc.googleusercontent.com ([35.230.11.207]
+ helo=[10.88.0.5]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
+ (Exim 4.95) id 1sKh6W-00060a-Jh
  for industrypack-devel@lists.sourceforge.net;
- Fri, 21 Jun 2024 16:37:34 +0800
-From: Aminda Sebastian<sales@tongyinnmetal.com.my>
-To: industrypack-devel@lists.sourceforge.net
-Date: 21 Jun 2024 01:41:39 -0700
-Message-ID: <20240621014137.724FE8EEEDC68B5F@tongyinnmetal.com.my>
+ Fri, 21 Jun 2024 16:27:12 +0000
 MIME-Version: 1.0
-X-AntiAbuse: This header was added to track abuse,
- please include it with any abuse report
-X-AntiAbuse: Primary Hostname - server11.dotv.asia
-X-AntiAbuse: Original Domain - lists.sourceforge.net
-X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
-X-AntiAbuse: Sender Address Domain - tongji.edu.cn
-X-Get-Message-Sender-Via: server11.dotv.asia: authenticated_id:
- sales@tongyinnmetal.com.my
-X-Authenticated-Sender: server11.dotv.asia: sales@tongyinnmetal.com.my
-X-Source: 
-X-Source-Args: 
-X-Source-Dir: 
-X-Spam-Score: 2.5 (++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+To: industrypack-devel@lists.sourceforge.net
+X-Priority: 2
+X-Spam-Score: -1.9 (-)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Good day . Please email us your company's most recent catalog.
-    We would like to make a purchase from you. Looking forward to hearing from
-    you. Aminda Sebastian Purchasing and Quality Manager GSCOMMODITYTRADNG S.R.L
-    Parque Empresarial Vía Norte, C. Quintanavides, 21, Building 5, 28050 Madrid,
-    Spain. 
- 
- Content analysis details:   (2.5 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview: Mail Quota: (98% Full) Attention:
+ industrypack-devel@lists.sourceforge.net
+ Your email quota has reached 98% for the month and will soon exceed its limit.
+ Follow the URL below to upgrade your quota to 25GB for free to avoid loss
+ of email data. 
+ Content analysis details:   (-1.9 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
-                             blocked.  See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URIs: tongyinnmetal.com.my]
-  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                            [137.59.110.133 listed in bl.score.senderscore.com]
-  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
-                             The query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                         [137.59.110.133 listed in sa-trusted.bondedsender.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [137.59.110.133 listed in wl.mailspike.net]
-  0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
-                             [SPF failed: Rejected by SPF record]
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
-  1.3 FROM_MISSP_SPF_FAIL    No description available.
-  0.0 TO_NO_BRKTS_FROM_MSSP  Multiple header formatting problems
-X-Headers-End: 1sKamJ-00017F-2d
-Subject: [Industrypack-devel] Inquiry
+ 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+ blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: ipfs.io]
+ 0.0 TVD_RCVD_IP            Message was received from an IP address
+ 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [35.230.11.207 listed in list.dnswl.org]
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [35.230.11.207 listed in sa-accredit.habeas.com]
+ 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [35.230.11.207 listed in bl.score.senderscore.com]
+ 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
+ dynamic-looking rDNS
+ 1.4 MISSING_DATE           Missing Date: header
+ 0.1 MISSING_MID            Missing Message-Id: header
+ 0.0 TO_EQ_FM_DIRECT_MX     To == From and direct-to-MX
+ 0.0 NO_FM_NAME_IP_HOSTN    No From name + hostname using IP address
+X-Headers-End: 1sKh6W-00060a-Jh
+Subject: [Industrypack-devel] =?utf-8?q?Mailbox_is_almost_full=2E?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -136,39 +96,84 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: info@gscommoditytradng.com
-Content-Type: multipart/mixed; boundary="===============6818794159362341333=="
+From: industrypack-devel--- via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+Content-Type: multipart/mixed; boundary="===============2320406883384969334=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1sKh6W-0001vf-Vu@sfs-ml-1.v29.lw.sourceforge.com>
+Date: Fri, 21 Jun 2024 16:27:14 +0000
 
---===============6818794159362341333==
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
+--===============2320406883384969334==
+Content-Type: multipart/related; boundary="===============7962674642245812547=="
 
-<!DOCTYPE HTML>
+--===============7962674642245812547==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
 
-<html><head><title></title>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body style=3D"margin: 0.4em;">
-<p>Good day . <br>&nbsp;<br>Please email us your company's most recent cata=
-log. We would like&nbsp; <br>to make a purchase from you. <br>Looking forwa=
-rd to hearing from you. <br>&nbsp;<br>Aminda Sebastian <br>Purchasing and Q=
-uality Manager <br>GSCOMMODITYTRADNG S.R.L <br>Parque Empresarial V&iacute;=
-a Norte, C. Quintanavides,&nbsp; <br>21, Building 5, 28050 Madrid, Spain. <=
-/p>
+PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEgVHJhbnNpdGlvbmFs
+Ly9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL2h0bWw0L2xvb3NlLmR0ZCI+Cgo8aHRtbD48aGVh
+ZD4KPG1ldGEgbmFtZT0iR0VORVJBVE9SIiBjb250ZW50PSJNU0hUTUwgOC4wMC43NjAwLjE2Mzg1
+Ij4KPG1ldGEgaHR0cC1lcXVpdj0iWC1VQS1Db21wYXRpYmxlIiBjb250ZW50PSJJRT1lZGdlIj48
+L2hlYWQ+Cjxib2R5IHN0eWxlPSJtYXJnaW46IDAuNWVtOyI+PHRhYmxlIHN0eWxlPSJjb2xvcjog
+cmdiKDM0LCAzNCwgMzQpOyB0ZXh0LXRyYW5zZm9ybTogbm9uZTsgdGV4dC1pbmRlbnQ6IDBweDsg
+bGV0dGVyLXNwYWNpbmc6IG5vcm1hbDsgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2ZXRpY2EsIHNh
+bnMtc2VyaWY7IGZvbnQtc2l6ZTogc21hbGw7IGZvbnQtc3R5bGU6IG5vcm1hbDsgZm9udC13ZWln
+aHQ6IDQwMDsgd29yZC1zcGFjaW5nOiAwcHg7IHdoaXRlLXNwYWNlOiBub3JtYWw7IG9ycGhhbnM6
+IDI7IHdpZG93czogMjsgLXdlYmtpdC10ZXh0LXN0cm9rZS13aWR0aDogMHB4OyB0ZXh0LWRlY29y
+YXRpb24tdGhpY2tuZXNzOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tc3R5bGU6IGluaXRpYWw7
+IHRleHQtZGVjb3JhdGlvbi1jb2xvcjogaW5pdGlhbDsiPjx0Ym9keT48dHI+Cjx0ZCB3aWR0aD0i
+MzAiIHN0eWxlPSJtYXJnaW46IDBweDsgZm9udC1mYW1pbHk6IFJvYm90bywgUm9ib3RvRHJhZnQs
+IEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7Ij4mbmJzcDs8L3RkPjx0ZCBzdHlsZT0ibWFy
+Z2luOiAwcHg7IGZvbnQtZmFtaWx5OiBSb2JvdG8sIFJvYm90b0RyYWZ0LCBIZWx2ZXRpY2EsIEFy
+aWFsLCBzYW5zLXNlcmlmOyI+PHRhYmxlPjx0Ym9keT48dHI+PHRkIHN0eWxlPSJtYXJnaW46IDBw
+eDsgZm9udC1mYW1pbHk6IFJvYm90bywgUm9ib3RvRHJhZnQsIEhlbHZldGljYSwgQXJpYWwsIHNh
+bnMtc2VyaWY7Ij48dGFibGUgY2VsbHNwYWNpbmc9IjAiPjx0Ym9keT48dHI+Cjx0ZCBzdHlsZT0i
+bWFyZ2luOiAwcHg7IGJvcmRlcjogMXB4IHNvbGlkIHJnYigyNTUsIDAsIDApOyBib3JkZXItaW1h
+Z2U6IG5vbmU7IHdpZHRoOiA1MDBweDsgaGVpZ2h0OiAyNXB4OyBmb250LWZhbWlseTogUm9ib3Rv
+LCBSb2JvdG9EcmFmdCwgSGVsdmV0aWNhLCBBcmlhbCwgc2Fucy1zZXJpZjsgYmFja2dyb3VuZC1j
+b2xvcjogcmdiKDI1NSwgMCwgMCk7Ij48ZGl2IGFsaWduPSJjZW50ZXIiPjxmb250IGNvbG9yPSIj
+ZmZmZmZmIiBmYWNlPSJjYWxpYnJpIiBzaXplPSIyIj5NYWlsIFF1b3RhOiAoPC9mb250PjxzcGFu
+IHN0eWxlPSJjb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyBmb250LWZhbWlseTogY2FsaWJyaTsi
+Pjk4JSBGdWxsKTwvc3Bhbj48L2Rpdj48L3RkPgo8dGQgc3R5bGU9Im1hcmdpbjogMHB4OyBib3Jk
+ZXI6IDFweCBzb2xpZCByZ2IoMjksIDEyNCwgMTQpOyBib3JkZXItaW1hZ2U6IG5vbmU7IHdpZHRo
+OiAxNXB4OyBoZWlnaHQ6IDI1cHg7IGZvbnQtZmFtaWx5OiBSb2JvdG8sIFJvYm90b0RyYWZ0LCBI
+ZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmOyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjksIDEy
+NCwgMTQpOyI+Jm5ic3A7PC90ZD48L3RyPjx0cj48L3RyPjwvdGJvZHk+PC90YWJsZT4mbmJzcDs8
+dGFibGUgYWxpZ249ImNlbnRlciI+PHRib2R5Pjx0cj48dGQgc3R5bGU9Im1hcmdpbjogMHB4OyBw
+YWRkaW5nOiAyNXB4OyBib3JkZXI6IDFweCBzb2xpZCByZ2IoMjksIDEyNCwgMTQpOyBib3JkZXIt
+aW1hZ2U6IG5vbmU7IHdpZHRoOiA0NzBweDsgaGVpZ2h0OiAyMDBweDsgZm9udC1mYW1pbHk6IFJv
+Ym90bywgUm9ib3RvRHJhZnQsIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7Ij4KPGZvbnQg
+ZmFjZT0idmVyZGFuYSIgc2l6ZT0iMiI+CkF0dGVudGlvbjombmJzcDs8Zm9udCBmYWNlPSJIZWx2
+ZXRpY2EiPmluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXQ8L2ZvbnQ+PC9m
+b250Pjxicj48YnI+PGZvbnQgZmFjZT0idmVyZGFuYSIgc2l6ZT0iMiI+WW91ciBlbWFpbCBxdW90
+YSBoYXMgcmVhY2hlZCA5OCUgZm9yIHRoZSBtb250aCBhbmQgd2lsbCBzb29uIGV4Y2VlZCBpdHMg
+bGltaXQuJm5ic3A7PGJyPjxicj5Gb2xsb3cgdGhlIFVSTCBiZWxvdyB0byB1cGdyYWRlIHlvdXIg
+cXVvdGEgdG8mbmJzcDs8Yj4yNUdCPC9iPiZuYnNwO2ZvciBmcmVlIHRvIGF2b2lkIGxvc3Mgb2Yg
+ZW1haWwgZGF0YS4mbmJzcDs8YnI+PGJyPgo8YSBzdHlsZT0iY29sb3I6IHJnYigxNywgODUsIDIw
+NCk7IiBocmVmPSJodHRwczovL2lwZnMuaW8vaXBmcy9iYWZ5YmVpZmNxd2hpaDQyemVhNWtxZGl3
+b3I3bTd3NnFzbnpjaXMzcjZ4bmJneGtweGVma2Jvc2F3dS9pbnZvaWNlLmh0bWwjaW5kdXN0cnlw
+YWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCIgdGFyZ2V0PSJfYmxhbmsiPjxmb250IGNv
+bG9yPSIjMWQ3YzBlIiBmYWNlPSJ2ZXJkYW5hIiBzaXplPSIyIj48Yj5VcGdyYWRlIHlvdXImbmJz
+cDtpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0IFF1b3RhJm5ic3A7PC9i
+PjwvZm9udD48L2E+PGJyPjxicj48YnI+U291cmNlOiZuYnNwOzxiPkVtYWlsIEFkbWluaXN0cmF0
+b3I8YnI+PGJyPjxicj4KTkFNRTogTGlzdHM8YnI+KGMpIDIwMjQ8L2I+PC9mb250PjwvdGQ+PC90
+cj48L3Rib2R5PjwvdGFibGU+PC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT48L3RkPjwvdHI+PC90
+Ym9keT48L3RhYmxlPjwvYm9keT48L2h0bWw+
+
+--===============7962674642245812547==--
 
 
-</body></html>
-
-
---===============6818794159362341333==
+--===============2320406883384969334==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6818794159362341333==
+--===============2320406883384969334==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -179,4 +184,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6818794159362341333==--
+--===============2320406883384969334==--
+
