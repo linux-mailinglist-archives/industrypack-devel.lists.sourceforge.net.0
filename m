@@ -2,94 +2,102 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 05A53914296
-	for <lists+industrypack-devel@lfdr.de>; Mon, 24 Jun 2024 08:15:22 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7EBB991429E
+	for <lists+industrypack-devel@lfdr.de>; Mon, 24 Jun 2024 08:19:25 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sLcz1-0007o0-Pu
+	id 1sLd2y-0007zw-1C
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 24 Jun 2024 06:15:20 +0000
+	Mon, 24 Jun 2024 06:19:24 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <info@uk.fxexports.cfd>) id 1sLcz0-0007ns-Fx
+ (envelope-from <info@training-me.me>) id 1sLd2w-0007zq-7n
  for industrypack-devel@lists.sourceforge.net;
- Mon, 24 Jun 2024 06:15:18 +0000
+ Mon, 24 Jun 2024 06:19:22 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Subject:From:
+ To:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=T0J4bRmK1cuYgRiiD6jNLYFrR/wPDVyMDbA9f2sj1Tk=; b=QbLydKKwb7zcgMM0b8ggXq9tsx
- WebJzJmwRN5sguE3LRZPxBq3rwzpahaxJxGWxUlJ89CB+k1uTv1mm1UN61K+jVBZ+k1a9RHabZE/3
- vkTUKeouAbYknFFPuSFdI7uMJSBdgUhHvByOl4945UJSylOGz8a03NiTHrb+AKyUl33w=;
+ bh=SrrKiN1qVMcEao2S0V1yf3dtdZHsw90quHsj2phrbQw=; b=TqU3jyQorpehyc6ksBeDCV7SK/
+ LP7/tMPDwyeZmG1WISuLoJK7bp/hBbJrjuX4I+4ljVByskTLoOoCzwz4jeuM0rRar4tuMwgYGqkVV
+ L6ZyOG2N7lZvumeghmrdlhS9ffFbiAiUOg35mBKbpCTHW0cWD7ZFFXTkpr+8t7g7rp00=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Type:MIME-Version:Message-ID:Subject:From:To:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=T0J4bRmK1cuYgRiiD6jNLYFrR/wPDVyMDbA9f2sj1Tk=; b=E
- z60VIo0RrxCh7OykaT6X/7E50RGgJz0T6g15BabhFbEZfU5cEhN6FsOXiyjvgGNA3gC5qQcV1UFod
- Kph5namh2sexnOOXoDtPsbeNjSv6eVwu30My5ynhqmmpIkX8NdxriJIDkLWj1vpt2sU7CZCyYuete
- 3qOYN9KDx4ml/b30=;
-Received: from p0.uk.fxexports.cfd ([195.133.52.18])
+ List-Owner:List-Archive; bh=SrrKiN1qVMcEao2S0V1yf3dtdZHsw90quHsj2phrbQw=; b=C
+ tf8wc+wrlI6/nbtPoQx3P3bqSt9p/Z8cIugAL3zCbYYXBqXTBveCWRj4JLBU+VSis60y/OmWk4e6m
+ UsGKO8nTH5BIopC+HYNP/jfurnXEZ3yi6+8CyHrqsiT8h+QVREmGOMWAApls5vFqx8M4ZL0nh/4VW
+ IsDT2dw4ZQf4tcGU=;
+Received: from [103.77.155.24] (helo=green-net-vc-642.top)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sLcz0-00074H-85 for industrypack-devel@lists.sourceforge.net;
- Mon, 24 Jun 2024 06:15:18 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
- d=uk.fxexports.cfd; 
- h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
- Content-Transfer-Encoding; i=info@uk.fxexports.cfd;
- bh=T0J4bRmK1cuYgRiiD6jNLYFrR/wPDVyMDbA9f2sj1Tk=;
- b=yoJl3YWeQaQeGD0XvtEobrP+rZT6UuFjUw2qqXi3UjqAQCRgrTA/IgJZObTQYv/tndGfSc8NQTcZ
- 5NI0QpLSbD3yNR+WU+VupeHXePQKiVhfotwe/XnML7BP/BojmeQsRuTwwCOMOwCwG4chPn13uxKC
- A/SjnG3oJJUWeJa/fiI=
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
+ id 1sLd2u-0007gC-OW for industrypack-devel@lists.sourceforge.net;
+ Mon, 24 Jun 2024 06:19:22 +0000
+Received: (Haraka outbound); Mon, 24 Jun 2024 06:02:24 +0000
+Authentication-Results: green-net-vc-642.top; auth=pass (plain)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=training-me.me;
+ s=sm; t=1719208943; bh=SrrKiN1qVMcEao2S0V1yf3dtdZHsw90quHsj2phrbQw=;
+ h=Date:To:From:Subject:From;
+ b=FyoloQKS3vj7t9RhM8CcriIpzrXY4C/NTfNuffPafNqSiU/RCIwLci4sweYvwAc2C
+ M2RSHG2sfhbMh2JTi+EOqyVSATJni2c6sX2cTjcWmUvrCrf5flpyljGxmwGbX8ha6y
+ Cl5oFVfhWV2VTuf0xGfZ28QHERbyuc2JQbkdEvq4=
+Date: Mon, 24 Jun 2024 11:31:58 +0530
 To: industrypack-devel@lists.sourceforge.net
-Date: 23 Jun 2024 22:54:56 -0700
-Message-ID: <20240623225456.F0CA1F653F1B8D9A@uk.fxexports.cfd>
+From: STC <info@training-me.me>
+Message-ID: <5e57a906-939e-4f48-918e-2ffe225ed1ba@green-net-vc-642.top>
+X-Tags: 38
 MIME-Version: 1.0
-X-Spam-Score: 0.0 (/)
+X-UserID: 53361
+X-Spam-Score: 1.1 (+)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  New Page 7 Greetings, I'm the Managing Director of Egyptalum
- Co.,Ltd. My name is Kanokwan Hassan. I have gone through your website and
- product page and I am interested in ordering from your company. 
- Content analysis details:   (0.0 points, 6.0 required)
+ Content preview:  Dear Ladies and Gentlemen, Subject: Invitation to Participate
+ in Advanced Project Management & Leadership Skills We are delighted to invite
+ you to participate in our upcoming training course,
+ [Advanced Project Management
+ & Leadership Skills], scheduled to take place from Aug 4 2024 to Aug 15 2024
+ at [Istanbul Ra [...] 
+ Content analysis details:   (1.1 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
- blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: fxexports.cfd]
  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [195.133.52.18 listed in sa-trusted.bondedsender.org]
+ [103.77.155.24 listed in sa-trusted.bondedsender.org]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [195.133.52.18 listed in bl.score.senderscore.com]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ [103.77.155.24 listed in bl.score.senderscore.com]
+ 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+ blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: training-me.me]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
-X-Headers-End: 1sLcz0-00074H-85
-Subject: [Industrypack-devel] Interest on your Product
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+X-Headers-End: 1sLd2u-0007gC-OW
+Subject: [Industrypack-devel] Istanbul Seminar August 2024
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -101,76 +109,139 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Egyptalum Ltd via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: reqnag@egyptalum-eg.org
-Cc: Egyptalum Ltd <info@uk.fxexports.cfd>
-Content-Type: multipart/mixed; boundary="===============6877065429889724500=="
+Content-Type: multipart/mixed; boundary="===============1825393397427763107=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============6877065429889724500==
-Content-Type: text/html;
-	charset="windows-1252"
+--===============1825393397427763107==
+Content-Type: multipart/alternative;
+	boundary="b1_f45efd9f667d338d7c4ca1d45fb53521"
+
+--b1_f45efd9f667d338d7c4ca1d45fb53521
+Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<html><head>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-<meta http-equiv=3D"Content-Language" content=3D"en-us">
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
-252">
-<title>New Page 7</title>
-<style>
-<!--
-table {border-spacing: 0;border-collapse: collapse;}table {padding: 0;verti=
-cal-align: top;text-align:=20
-left;}table {border-spacing: 0;border-collapse: collapse;}table {padding: 0=
-;vertical-align: top;text-align:=20
-left;}p {margin: 0 0 0 10px;Margin: 0 0 0 10px;}p {color:=20
-#0a0a0a;font-family: Helvetica, Arial, sans-serif;font-weight: normal;paddi=
-ng: 0;margin: 0;Margin: 0;text-align: left;line-height: 1.45;}p {font-size:=
- 16px;line-height: 19px;}p {margin-bottom:=20
-10px;margin-bottom: 10px;}p {margin-bottom: 0;line-height: normal;color: /*=
- @body-text-color */ #000000 /* @body-text-color */;}p {margin: 0 0 0 10px;=
-Margin: 0 0 0 10px;}p {color:=20
-#0a0a0a;font-family: Helvetica, Arial, sans-serif;font-weight: normal;paddi=
-ng: 0;margin: 0;Margin: 0;text-align: left;line-height: 1.45;}p {font-size:=
- 16px;line-height: 19px;}p {margin-bottom:=20
-10px;margin-bottom: 10px;}p {margin-bottom: 0;line-height: normal;color: /*=
- @body-text-color */ #000000 /* @body-text-color */;}h2 {color:=20
-#0a0a0a;font-family: Helvetica, Arial, sans-serif;font-weight: normal;paddi=
-ng: 0;margin: 0;Margin: 0;text-align: left;line-height: 1.45;}h2 {color: in=
-herit;word-wrap: normal;font-family: Helvetica, Arial, sans-serif;font-weig=
-ht: normal;margin-bottom: 10px;margin-bottom: 10px;}h2 {font-size: 30px;}h2=
- {color:=20
-#0a0a0a;font-family: Helvetica, Arial, sans-serif;font-weight: normal;paddi=
-ng: 0;margin: 0;Margin: 0;text-align: left;line-height: 1.45;}h2 {color: in=
-herit;word-wrap: normal;font-family: Helvetica, Arial, sans-serif;font-weig=
-ht: normal;margin-bottom: 10px;margin-bottom: 10px;}h2 {font-size: 30px;}--=
->
-</style>
-</head>
+Dear Ladies and Gentlemen,
 
-<body><p>Greetings,<br><br></p><p>I'm the Managing Director of&nbsp; Egypta=
-lum Co.,Ltd. My name&nbsp; is Kanokwan Hassan.<br>I have gone through your =
-website and product page and I am<br>interested in ordering from your compa=
-ny. <br><br>Please can you send your company catalog with your best price s=
-o we<br>can prepare our order specification.<br><br></p><p>Kindly send dire=
-ct to my business email: <a href=3D"mailto:reqnag@egyptalum-eg.org">reqnag@=
-egyptalum-eg.org</a><br><br></p><p>
-Your early response will be much appreciated!</p><p><br>Best Regards</p><p>=
---<br>Kanokwan Hassan<br>Egyptalum Ltd<br>tel. 0 691 470 049<br>&nbsp;&nbsp=
-;&nbsp;&nbsp;&nbsp; 0 691 650 001<br><a href=3D"http://www.egyptalum.com.eg=
-">www.egyptalum.com.eg</a></p></body></html>
+Subject: Invitation to Participate in Advanced Project Management &
+Leadership Skills
+
+We are delighted to invite you to participate in our upcoming training
+course, [Advanced Project Management & Leadership Skills], scheduled to
+take place from Aug 4 2024 to Aug 15 2024 at [Istanbul Radison Blu sisli].
+
+This comprehensive training program is designed to provide you with the
+essential skills and knowledge in Advanced Project Management & Leadership
+Skills. Through a combination of expert-led sessions, interactive
+workshops, and practical exercises, you will gain valuable insights and
+hands-on experience to enhance your proficiency in [Advanced Project
+Management & Leadership Skills].
+
+Details of the Training Course:
+
+Dates: Aug 4 2024 to Aug 15 2024
+
+Time: 9 AM to 2PM
+
+Venue: Istanbul - Radison Blue Sisl
+
+Registration Deadline: Jul 25 2024
+
+Contact Information: For any queries or additional information, please
+contact:
+
+Phone & Whatsapp: +90 5557888898
 
 
---===============6877065429889724500==
+
+We believe this training course will significantly contribute to your
+professional development and look forward to your participation.
+
+best regards,
+
+Mohammad Nour
+
+Training Manager
+
+STC Training
+
+WhatsApp: +90 5557888898
+--b1_f45efd9f667d338d7c4ca1d45fb53521
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>=0A        <meta content=3D"text/html;charset=3DUTF-8" http-equ=
+iv=3D"Content-Type">=0A        <title></title></head><body><p style=3D"colo=
+r: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: mediu=
+m;"><strong>Dear Ladies and Gentlemen,</strong></p>=0A=0A<p style=3D"color:=
+ rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium;=
+">Subject: Invitation to Participate in Advanced Project Management &amp; L=
+eadership Skills</p>=0A=0A<p style=3D"color: rgb(0, 0, 0); font-family: &qu=
+ot;Times New Roman&quot;; font-size: medium;">We are delighted to invite yo=
+u to participate in our upcoming training course, [Advanced Project Managem=
+ent &amp; Leadership Skills], scheduled to take place from Aug 4 2024 to Au=
+g 15 2024&nbsp;at [Istanbul Radison Blu sisli].</p>=0A=0A<p style=3D"color:=
+ rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium;=
+">This comprehensive training program is designed to provide you with the e=
+ssential skills and knowledge in Advanced Project Management &amp; Leadersh=
+ip Skills. Through a combination of expert-led sessions, interactive worksh=
+ops, and practical exercises, you will gain valuable insights and hands-on =
+experience to enhance your proficiency in [Advanced Project Management &amp=
+; Leadership Skills].</p>=0A=0A<p style=3D"color: rgb(0, 0, 0); font-family=
+: &quot;Times New Roman&quot;; font-size: medium;"><strong>Details of the T=
+raining Course:</strong></p>=0A=0A<p style=3D"color: rgb(0, 0, 0); font-fam=
+ily: &quot;Times New Roman&quot;; font-size: medium;"><strong>Dates:</stron=
+g>&nbsp;Aug 4 2024&nbsp;to Aug 15 2024</p>=0A=0A<p style=3D"color: rgb(0, 0=
+, 0); font-family: &quot;Times New Roman&quot;; font-size: medium;"><strong=
+>Time:</strong>&nbsp;9 AM&nbsp;to 2PM</p>=0A=0A<p style=3D"color: rgb(0, 0,=
+ 0); font-family: &quot;Times New Roman&quot;; font-size: medium;"><strong>=
+Venue:</strong>&nbsp;Istanbul &ndash; Radison Blue Sisl</p>=0A=0A<p style=
+=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-siz=
+e: medium;"><strong>Registration Deadline</strong>: Jul 25 2024</p>=0A=0A<p=
+ style=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; fo=
+nt-size: medium;"><strong>Contact Information:</strong>&nbsp;For any querie=
+s or additional information, please contact:</p>=0A=0A<p style=3D"color: rg=
+b(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium;"><=
+strong>Phone &amp; Whatsapp:</strong>&nbsp;+90 5557888898</p>=0A=0A<p style=
+=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-siz=
+e: medium;">We believe this training course will significantly contribute t=
+o your professional development and look forward to your participation.</p>=
+=0A=0A<p style=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&q=
+uot;; font-size: medium;"><strong>best regards,</strong></p>=0A=0A<p style=
+=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-siz=
+e: medium;"><strong>Mohammad Nour</strong></p>=0A=0A<p style=3D"color: rgb(=
+0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium;"><st=
+rong>Training Manager</strong></p>=0A=0A<p style=3D"color: rgb(0, 0, 0); fo=
+nt-family: &quot;Times New Roman&quot;; font-size: medium;"><strong>STC Tra=
+ining</strong></p>=0A=0A<p style=3D"color: rgb(0, 0, 0); font-family: &quot=
+;Times New Roman&quot;; font-size: medium;"><strong>WhatsApp: +90 555788889=
+8</strong></p>=0A=0A<a href=3D"https://smtracking.training-me.me/track/unsu=
+bscribe/2%2BOSjA9sk7zAixH23a3xDNj9dD3tz9ymW851F8LURQfE53yHexn1CX7r6HOePHdlN=
+k0Tmq45AsIK31HylsbLb%2BePN2Nhhcmk%2Btwxrzux6aAgryJszUTiaqRDm3zdpG8hslDE%2Bu=
+x3K1mQFi308I1GJvzw89p2At6DxEaXMdIVZORkERTcIgSrk8Npz0U5HPo4sU6J6j7ExvC1NL%2F=
+2FvzY%2BoXuD8%2BKtZEDKoeYiPm7oslGgZYRmBSI4XOBEKHnNCs6ngS10DnAaPa%2Bp4mDwc54=
+hM26faZ%2B0EOTYYZij%2FCCWQky1cUYnw%2BGT48jI9mxdFG08mPj2WNTLj7iDAJsIewACuO9l=
+Y2P5hxrfMckV72P70a7XSjnItnDBPupmXfWqngxAbtYOd0m4qaUbn2va%2Fjq8v5iszSAyS4jju=
+qTMvzrHuzgYrHYD2EoldVqu5qyipameR%2FTLlIvJtfjOkniDpGtMg%3D%3D" >Unsubscribe<=
+/a><img src=3D"https://smtracking.training-me.me/track/open/2%2BOSjA9sk7zAi=
+xH23a3xDNj9dD3tz9ymW851F8LURQfE53yHexn1CX7r6HOePHdlNk0Tmq45AsIK31HylsbLb%2B=
+ePN2Nhhcmk%2Btwxrzux6aAgryJszUTiaqRDm3zdpG8hslDE%2Bux3K1mQFi308I1GJvzw89p2A=
+t6DxEaXMdIVZORkERTcIgSrk8Npz0U5HPo4sU6J6j7ExvC1NL%2F2FvzY%2BoXuD8%2BKtZEDKo=
+eYiPm7oslGgZYRmBSI4XOBEKHnNCs6ngS10DnAaPa%2Bp4mDwc54hM26faZ%2B0EOTYYZij%2FC=
+CWQky1cUYnw%2BGT48jI9mxdFG08mPj2WNTLj7iDAJsIewACuO9lY2P5hxrfMckV72P70a7XSjn=
+ItnDBPupmXfWqngxAbtYOd0m4qaUbn2va%2Fjq8v5iszSAyS4jjuqTMvzrHuzgYrHYD2EoldVqu=
+5qyipameR%2FTLlIvJtfjOkniDpGtMg%3D%3D.gif" width=3D"1" height=3D"1" border=
+=3D"0" alt=3D"" /></body></html>
+--b1_f45efd9f667d338d7c4ca1d45fb53521--
+
+
+--===============1825393397427763107==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6877065429889724500==
+--===============1825393397427763107==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -181,4 +252,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6877065429889724500==--
+--===============1825393397427763107==--
+
