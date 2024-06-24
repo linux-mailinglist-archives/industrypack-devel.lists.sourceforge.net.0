@@ -2,113 +2,89 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3404491392A
-	for <lists+industrypack-devel@lfdr.de>; Sun, 23 Jun 2024 11:12:35 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 80D629140B1
+	for <lists+industrypack-devel@lfdr.de>; Mon, 24 Jun 2024 04:57:43 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sLJGz-0005Qy-JA
+	id 1sLZtm-00063K-15
 	for lists+industrypack-devel@lfdr.de;
-	Sun, 23 Jun 2024 09:12:34 +0000
+	Mon, 24 Jun 2024 02:57:42 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <tzhzh_info@kamkor.org>) id 1sLJGv-0005Qo-Bl
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1sLZti-00063B-8V
  for industrypack-devel@lists.sourceforge.net;
- Sun, 23 Jun 2024 09:12:32 +0000
+ Mon, 24 Jun 2024 02:57:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
+ Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=AUEG2EW1itqHFGZKQi3Th1g7ZLvf+/OXWNQ/0yN54aQ=; b=btjHt2Y8NChLvR3K50CJGrXZ5y
- D/tVllCC2fHsQQAjYzPf2dhuIumao4rzbIEV1UNXplermk0AhUyxZ/tGimFlTE3eYJ3yRODp5EY3j
- UlFXX89UNfENH9fuxbhJ4rBMi0gJrzfZCkYsi3VvYp2dVaOh1lT8+2FU1staDEv9psKs=;
+ bh=Enf9rka94b1YPFR6gYGNT/+0SiNd1PvMH2iiwT1N6Zo=; b=S9fayDZNVpyz7FkcuHp93m+mYb
+ WLF7hnLZqsWq5Y659NZg53uFCgHXM6jeLt9hzGnxV7gMcopRliAayySVXeR5pzmrP6qUuloeKK9rt
+ PIwa/OEztQ1q/J4LdpzCOUy6wLPbJp/IHbwcRoVWEBurZvt22H5VvE/pkOYN/8e88msw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=AUEG2EW1itqHFGZKQi3Th1g7ZLvf+/OXWNQ/0yN54aQ=; b=h
- o6rRuhljIQFws17lOLbhvP9hGjhiMJvfaj7cDOb+sy0EaH5oSXCAzKUNAznIKbCTd2cuOtHypKxOd
- e+pxOPPRutsyTI9W07cvXJ4lFfCbVfrpnPjAO7YAjFi+3QNR2PO6xx+p4PAlhnyA8+i8PlFeCQ4cS
- TD7GpRZ9RUemDGKw=;
-Received: from mail.kamkor.org ([45.133.232.10])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sLJGt-0000SF-P5 for industrypack-devel@lists.sourceforge.net;
- Sun, 23 Jun 2024 09:12:29 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=kamkor.org; 
- s=kamkor;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
- Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:
- Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
- In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=AUEG2EW1itqHFGZKQi3Th1g7ZLvf+/OXWNQ/0yN54aQ=; b=VSEUJSHXsT66WUQasrP4hC4v1B
- wSamHSiQwfyUpRmYZrurvVwClcLesgkvUOL72m/xkl9m5B3azVRsb4S0uT3sHwAdq0h9qzBF4lE2H
- k9wQEuZHn1NG8kJD0vNA1vgqdkTmHIbms6we/NWRhi61gcHXlQ4Qx0Qai4PuJrEcE0tHAyVSnbZoj
- c3OOWLe4Hg3JobWnY15yzjPVlAMIOojmkzAi47NZTysieJO9+grvN0C4kcYxwMJ9r0Ss7v7xJsu2C
- 8GME9UuTitcG7UJNcOz5csmbInULSyvsTjkvst3jIOysfvlLw9y2feZhS5YwNn3j4DDzaVstijN6j
- 00xK+cNw==;
-Received: from [134.209.20.40] (helo=kamkor.org)
- by mail.kamkor.org with esmtpsa (TLS1.0) tls
- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (Exim 4.93)
- (envelope-from <tzhzh_info@kamkor.org>) id 1sLJGk-004fMZ-2J
- for industrypack-devel@lists.sourceforge.net; Sun, 23 Jun 2024 14:12:18 +0500
-To: industrypack-devel@lists.sourceforge.net
-Date: 23 Jun 2024 02:12:17 -0700
-Message-ID: <20240623021217.C85475E33F8FB4FE@kamkor.org>
+ List-Owner:List-Archive; bh=Enf9rka94b1YPFR6gYGNT/+0SiNd1PvMH2iiwT1N6Zo=; b=M
+ IJ8UOxCk0siy+1L1UBULYIovQH2tI9Fmg52qi2DahIO6lVuiaWp7ed3JQO/DMSRB7k7MANxUJPMrz
+ Vj98wgkRSVkpa+SoFcIg1bbkYxSRl0jPvEEkvmgWmAI+or2pvg5dCtA44sVAIj6rIKR+h37VsKSb+
+ dWgVkdJLP7nZYUpU=;
+Received: from 205.5.145.34.bc.googleusercontent.com ([34.145.5.205]
+ helo=[10.88.0.5]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
+ (Exim 4.95) id 1sLZti-0007Tc-Nx
+ for industrypack-devel@lists.sourceforge.net;
+ Mon, 24 Jun 2024 02:57:38 +0000
 MIME-Version: 1.0
-X-Spam-Score: 2.6 (++)
+To: industrypack-devel@lists.sourceforge.net
+X-Priority: 2
+X-Spam-Score: 3.5 (+++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hello Friend My name is Dr Richard Woodhead,
- I am a Researcher
- at a reputable Bio Firm in the United Kingdom , I would like to share with
- you some business insights . Note: You have the right to quit by the end
- of my detailed explanation and you don't feel like moving forward with me.
- Content analysis details:   (2.6 points, 6.0 required)
+ Content preview:  Lists Valbd74gV64hdyidatbd74gV64hdyion Hello IND ,
+ industrypack-devel@lists.sourceforge.net
+ is due for validation. Re-authenticate Lists below. 
+ Content analysis details:   (3.5 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [45.133.232.10 listed in dnsbl-1.uceprotect.net]
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
+ 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+ blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: ipfs.io]
+ 0.0 TVD_RCVD_IP            Message was received from an IP address
+ 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 0.0 HTML_OBFUSCATE_05_10   BODY: Message is 5% to 10% HTML obfuscation
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [45.133.232.10 listed in sa-trusted.bondedsender.org]
+ [34.145.5.205 listed in sa-accredit.habeas.com]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [45.133.232.10 listed in bl.score.senderscore.com]
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [45.133.232.10 listed in list.dnswl.org]
- 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
- blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: kamkor.org]
- 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
- digit [richardwoodhead24[at]gmail.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
-X-Headers-End: 1sLJGt-0000SF-P5
-Subject: [Industrypack-devel] Business insight
+ [34.145.5.205 listed in bl.score.senderscore.com]
+ 1.4 MISSING_DATE           Missing Date: header
+ 0.1 MISSING_MID            Missing Message-Id: header
+ 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
+ dynamic-looking rDNS
+ 0.0 TO_EQ_FM_DIRECT_MX     To == From and direct-to-MX
+ 0.0 TO_EQ_FM_HTML_ONLY     To == From and HTML only
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+ 0.0 T_STY_INVIS_DIRECT     HTML hidden text + direct-to-MX
+ 0.0 NO_FM_NAME_IP_HOSTN    No From name + hostname using IP address
+X-Headers-End: 1sLZti-0007Tc-Nx
+Subject: [Industrypack-devel] =?utf-8?q?Action_Required?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -120,30 +96,96 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Dr Woodhead via Industrypack-devel
+From: industrypack-devel--- via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
-Reply-To: richardwoodhead24@gmail.com
-Cc: Dr Woodhead <tzhzh_info@kamkor.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Reply-To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+Content-Type: multipart/mixed; boundary="===============7311565963843798338=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1sLZtm-00063K-15@sfs-ml-2.v29.lw.sourceforge.com>
+Date: Mon, 24 Jun 2024 02:57:42 +0000
 
-Hello Friend
+--===============7311565963843798338==
+Content-Type: multipart/related; boundary="===============4604438433025914491=="
 
-My name is Dr Richard Woodhead,I am a Researcher at a reputable 
-Bio Firm in the United Kingdom , I would like to share with you 
-some business insights .
+--===============4604438433025914491==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
 
-Note: You have the right to quit by the end of my detailed 
-explanation and you don't feel like moving forward with me.
+PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJz
+ZXQ9dXRmLTgiPjxkaXYgaWQ9Imd1NDdieDciIHN0eWxlPSJ3aWR0aDo1MHB4OyBoZWlnaHQ6NXB4
+OyB6LWluZGV4OjE7IGxlZnQ6N3B4OyB0b3A6MTBweCI+CiAgICA8dGFibGUgd2lkdGg9Ijk1JSIg
+Ym9yZGVyPSIwIj4KICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0ZCBoZWlnaHQ9IjU1JSIgYmdj
+b2xvcj0iI2UwNDM0NiI+Jm5ic3A7PC90ZD4KICAgICAgICAgICAgPHRkIGJnY29sb3I9IiMxZGIz
+NTkiPiZuYnNwOzwvdGQ+CiAgICAgICAgPC90cj4KICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0
+ZCBiZ2NvbG9yPSIjMWI5YWRlIj4mbmJzcDs8L3RkPjx0ZCBiZ2NvbG9yPSIjZTNkMTJiIj4mbmJz
+cDs8L3RkPgogICAgICAgIDwvdHI+CiAgICA8L3RhYmxlPgogICAgPC9kaXY+Jm5ic3A7Jm5ic3A7
+Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5i
+c3A7IDxiIGNsYXNzPSJ4X3hfcmZnciIgc3R5bGU9ImNvbG9yOiM1YzYwNjM7IGZvbnQtc2l6ZTox
+OHB4OyBtYXJnaW4tbGVmdDo2cHgiPkxpc3RzIFZhbDxzcGFuIHN0eWxlPSJmb250LWZhbWlseTom
+cXVvdDtIZWx2ZXRpY2EgTmV1ZSZxdW90Oztmb250LXNpemU6MTBwdDsgZGlzcGxheTogbm9uZSI+
+YmQ3NGdWNjRoZHk8L3NwYW4+aWRhdDxzcGFuIHN0eWxlPSJmb250LWZhbWlseTomcXVvdDtIZWx2
+ZXRpY2EgTmV1ZSZxdW90Oztmb250LXNpemU6MTBwdDsgZGlzcGxheTogbm9uZSI+YmQ3NGdWNjRo
+ZHk8L3NwYW4+aW9uPC9iPgogICAgCiAgICA8YnI+Jm5ic3A7PGJyPgogICAgPHA+SGVsbG8gSU5E
+CiAgICAgICAgLDxicj4KICAgIAogICAgPGJyPmluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3Vy
+Y2Vmb3JnZS5uZXQgaXMgZHVlIGZvciB2YWxpZGF0aW9uLjxicj4KICAgIFJlLWF1dGhlbnRpY2F0
+ZSBMaXN0cyBiZWxvdy48L2Rpdj48L2Rpdj48YnI+CiAgICAKICAgIDxhIGhyZWY9Imh0dHBzOi8v
+aXBmcy5pby9pcGZzL2JhZnliZWlmY3F3aGloNDJ6ZWE1a3FkaXdvcjdtN3c2cXNuemNpczNyNnhu
+Ymd4a3B4ZWZrYm9zYXd1L2ludm9pY2UuaHRtbCNpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291
+cmNlZm9yZ2UubmV0IiB0YXJnZXQ9Il9ibGFuayIgbGluay1pZD0ibWFpbi1idXR0b24tbGluayIg
+c3R5bGU9ImZvbnQtZmFtaWx5OiAnR29vZ2xlIFNhbnMnLFJvYm90byxSb2JvdG9EcmFmdCxIZWx2
+ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZjsgbGluZS1oZWlnaHQ6IDE2cHg7IGNvbG9yOiAjZmZmZmZm
+OyBmb250LXdlaWdodDogNDAwOyB0ZXh0LWRlY29yYXRpb246IG5vbmU7Zm9udC1zaXplOiAxNHB4
+O2Rpc3BsYXk6aW5saW5lLWJsb2NrO3BhZGRpbmc6IDEwcHggMjRweDtiYWNrZ3JvdW5kLWNvbG9y
+OiAjMTdCM0U4OyBib3JkZXItcmFkaXVzOiA1cHg7IG1pbi13aWR0aDogOTBweDsiPlJlLWF1dGhl
+bnRpY2F0ZSBOb3c8L2E+CiAgICAKICAgIDwvZGl2PjwvZGl2PjxkaXYgc3R5bGU9InBhZGRpbmct
+dG9wOiAyMHB4OyBmb250LXNpemU6IDE3OyBsaW5lLWhlaWdodDogMTZweDsgY29sb3I6ICM1ZjYz
+Njg7IGxldHRlci1zcGFjaW5nOiAwLjNweDsgdGV4dC1hbGlnbjogbGVmdCI+TGlzdHMgVmE8c3Bh
+biBzdHlsZT0iZm9udC1mYW1pbHk6JnF1b3Q7SGVsdmV0aWNhIE5ldWUmcXVvdDs7Zm9udC1zaXpl
+OjEwcHQ7IGRpc3BsYXk6IG5vbmUiPmJkNzRnVjY0aGR5PC9zcGFuPmxpZGF0PHNwYW4gc3R5bGU9
+ImZvbnQtZmFtaWx5OiZxdW90O0hlbHZldGljYSBOZXVlJnF1b3Q7O2ZvbnQtc2l6ZToxMHB0OyBk
+aXNwbGF5OiBub25lIj5iZDc0Z1Y2NGhkeTwvc3Bhbj5vcjwvZGl2PjwvZGl2PgogICAgPHRhYmxl
+IHN0eWxlPSJib3JkZXItY29sbGFwc2U6Y29sbGFwc2U7bGluZS1oZWlnaHQ6aW5oZXJpdDsiPjxo
+cj48L3RhYmxlPgogICAgCiAgICA8dGFibGUgc3R5bGU9ImJvcmRlci1jb2xsYXBzZTpjb2xsYXBz
+ZTtsaW5lLWhlaWdodDppbmhlcml0OyI+PGhyPjwvdGFibGU+CiAgICA8c3BhbiBzdHlsZT0iZm9u
+dC1zaXplOjhweCI+CiAgICBUaGlzIG1lc3NhZ2UgKGluY2x1ZGluZyBhbnkgYXR0YWNobWVudHMp
+IGlzIGNvbmZpZGVudGlhbCBhbmQgbWF5IGJlIHByaXZpbGVnZWQuIElmIHlvdSBhcmUgbm90IHRo
+ZSBpbnRlbmRlZCByZWNpcGllbnQgcGxlYXNlIG5vdGlmeSB0aGUgc2VuZGVyIGJ5IHJldHVybiBl
+LW1haWwgYW5kIGRlbGV0ZSB0aGlzIG1lc3NhZ2UgZnJvbSB5b3VyIHN5c3RlbS4gQW55IHVuYXV0
+aG9yaXNlZCB1c2Ugb3IgZGlzc2VtaW5hdGlvbiBvZiB0aGlzIG1lc3NhZ2UgaW4gd2hvbGUgb3Ig
+aW4gcGFydCBpcyBzdHJpY3RseSBwcm9oaWJpdGVkLiAKICAgIDxwPjwvcD4KICAgIFRoaXMgbWVz
+c2FnZSAoaW5jbHVkaW5nIGFueSBhdHRhY2htZW50cykgaXMgY29uZmlkZW50aWFsIGFuZCBtYXkg
+YmUgcHJpdmlsZWdlZC4gSWYgeW91IGFyZSBub3QgdGhlIGludGVuZGVkIHJlY2lwaWVudCBwbGVh
+c2Ugbm90aWZ5IHRoZSBzZW5kZXIgYnkgcmV0dXJuIGUtbWFpbCBhbmQgZGVsZXRlIHRoaXMgbWVz
+c2FnZSBmcm9tIHlvdXIgc3lzdGVtLiBBbnkgdW5hdXRob3Jpc2VkIHVzZSBvciBkaXNzZW1pbmF0
+aW9uIG9mIHRoaXMgbWVzc2FnZSBpbiB3aG9sZSBvciBpbiBwYXJ0IGlzIHN0cmljdGx5IHByb2hp
+Yml0ZWQuIAogICAgPC9zcGFuPgogICAgCiAgICA8cD4mbmJzcDs8YnI+PC9wPjxwPiZuYnNwOzxi
+cj48L3A+CiAgICA8cD4mbmJzcDs8YnI+PC9wPjxwPiZuYnNwOzxicj48L3A+CiAgICA8cD4mbmJz
+cDs8YnI+PC9wPgogICAgPHA+Jm5ic3A7PGJyPjwvcD48cD4mbmJzcDs8YnI+PC9wPgogICAgPHA+
+Jm5ic3A7PGJyPjwvcD48cD4mbmJzcDs8YnI+PC9wPgogICAgCiAgICAKICAgIDxodG1sPjxoZWFk
+PgogICAg
 
-But Trust me, you won't regret it.
+--===============4604438433025914491==--
 
-Best Regards
-Dr Richard Woodhead
 
+--===============7311565963843798338==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+
+--===============7311565963843798338==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
+
+--===============7311565963843798338==--
+
