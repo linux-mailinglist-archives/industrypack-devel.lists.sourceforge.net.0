@@ -2,113 +2,117 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2973191D17E
-	for <lists+industrypack-devel@lfdr.de>; Sun, 30 Jun 2024 13:50:01 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 91C1B91D4BA
+	for <lists+industrypack-devel@lfdr.de>; Mon,  1 Jul 2024 01:16:51 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sNt4A-0006jw-A3
+	id 1sO3mr-0007NA-78
 	for lists+industrypack-devel@lfdr.de;
-	Sun, 30 Jun 2024 11:49:59 +0000
+	Sun, 30 Jun 2024 23:16:49 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <smtp@quicklyemailsend77.com>) id 1sNt48-0006ih-7S
+ (envelope-from <admin@lxhetgz.cn>) id 1sO3mo-0007Ml-Im
  for industrypack-devel@lists.sourceforge.net;
- Sun, 30 Jun 2024 11:49:57 +0000
+ Sun, 30 Jun 2024 23:16:47 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Date:Message-ID:Subject:
- To:From:Reply-To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=k8P2rLzoYZR6s0wG9XKRjCFHpaJq96MOFrQY4QgpDY8=; b=dPOOKnyZ1XrofVwUnfu3m6aHC3
- Uo6fTs/vAZs14gUry2sNLHjF14QH8tm/oBqEWHxlr0iJARPC8pMqPoLwKdR3l7dg1XAkw4/DAi+Gr
- 0xy9/MQ9kFFAgpsBxHra1BBKYTZXZj40UjHPrVqa47bAK2eyg7NgtUe2GDci7zcWcQZM=;
+ bh=7qXKM0MlkqETqhBMytJcg5t5/PhPX6s8pruy6dCt/8s=; b=ASU6cVS6KRWk9PfYQ87N60lmU6
+ dTGJ286rQUHI8lJvKfoRD11DVh24CWp4lzoYfZAxOznxf9VEpH/oMNDLZvSuzxKx+VgyCqxVaQlch
+ 6kMHrcO1gDwwdnAPs8Y5xOVwHGIEZqNHL3MBJU4rs0zGhRknM9HjOpJh5s6jZgiL1TjM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Date:Message-ID:Subject:To:From:Reply-To:Sender
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=k8P2rLzoYZR6s0wG9XKRjCFHpaJq96MOFrQY4QgpDY8=; b=N
- 6pevxFCXVv18hy2xrWJD3d2ck/cr3Vn4KHjRyfcqCxV6VKrpwN5ovfrF235fW9CNXsteFdIPV3oKi
- PnVvm1bSpsxvl2qP6cxQs9P8i05rjUSlTFUAaiEuqbNFLuRAE+jxCroXBuFQuRjrWuLf3WlGnBbl3
- nuaGCdS5p+7AJpmo=;
-Received: from quicklyemailsend77.com ([54.36.163.70])
+ List-Owner:List-Archive; bh=7qXKM0MlkqETqhBMytJcg5t5/PhPX6s8pruy6dCt/8s=; b=j
+ f0bciQmiKZ95CiADRnwVYZsp5DanjVS/YOzVbsgqEVuJaP975S3+Yj5tIoJCyOjUP0+iYtb11zd1B
+ bdzBAJElaUteXJksjR4tQqn2BSOmtxQO6ZxkMt28TFA40bvczc4fIqyiAtyMvzGnSSebmj1yv8cvh
+ fEayABEcyUU1Euw4=;
+Received: from [154.38.105.52] (helo=lxhetgz.cn)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sNt48-0000IH-Vw for industrypack-devel@lists.sourceforge.net;
- Sun, 30 Jun 2024 11:49:57 +0000
-Received: from DESKTOP-IL35PKJ (unknown [102.88.84.70])
- by quicklyemailsend77.com (Postfix) with ESMTPSA id 43F1F5089E
+ id 1sO3mo-0002Wh-3I for industrypack-devel@lists.sourceforge.net;
+ Sun, 30 Jun 2024 23:16:46 +0000
+Received: from jerecruteuninformaticien.com (unknown [149.137.179.163])
+ by lxhetgz.cn (Postfix) with ESMTPA id A257622204
  for <industrypack-devel@lists.sourceforge.net>;
- Sun, 30 Jun 2024 11:49:44 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 quicklyemailsend77.com 43F1F5089E
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=quicklyemailsend77.com; s=default; t=1719748184;
- bh=k8P2rLzoYZR6s0wG9XKRjCFHpaJq96MOFrQY4QgpDY8=;
- h=Reply-To:From:To:Subject:Date:From;
- b=DM7Tsq7IHExchNgoGTRm52uwxvb4ilBabPXvhi4nJFXg1oJHa9MQ0VM1igWyHP3Pp
- 8gWG3WiNRTjUXP8uHSCoPb8Y/MOhb2rmt1nfi2Vqu7ui8WPc5ujsEoBIaEmCBwHbUg
- ObH/o2lZLTJQ9ugsKyhS7hTuNWut3jkjpEcH+2lhl7NI9KYB/Nh2gcQhgCx+bVZArb
- M0m56I6Y4P4dcwUzcG93c6QR0genanFysELtJsrNEwRzAcElJbbhpnpAy0bhj6uFp1
- FIIE1ukvwOqyMqa1m0WEzGZ8krwPxPtEwXUckuqXexVgglpLSMi2/2ChPGT/6gzM4Y
- bYNvW+1JKlTRw==
-To: "industrypack-devel" <industrypack-devel@lists.sourceforge.net> 
-Message-ID: <fce7a0553996e846b9c68c45ddf81a45@169.254.85.160>
-Date: Sun, 30 Jun 2024 06:49:11 -0500
+ Mon,  1 Jul 2024 06:58:51 +0800 (CST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 lxhetgz.cn A257622204
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=lxhetgz.cn;
+ s=default; t=1719788334;
+ bh=7qXKM0MlkqETqhBMytJcg5t5/PhPX6s8pruy6dCt/8s=;
+ h=From:To:Subject:Date:From;
+ b=kXAnNMmhOHg9b78e0pAdg68y90ojfZzOoH/z/iLzZLQfWDlcB4PoEbQvcj1jRMiek
+ Ake6tmdFH3prHvcXYMVHFVZ79eZTzWc78+LV1SWXvpjhBgaTtpwjA8+U1d8FKlnr/d
+ ijpzc+ZP+gygasClSyQwCR8UiQcT6pWLGovB/aFM=
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+Date: Sun, 30 Jun 2024 22:58:43 +0000
+Message-ID: <BNFDKKJCBHIILLDAOJLKMNLKICJL.admin@lxhetgz.cn>
 MIME-Version: 1.0
-X-Priority: 3
-X-Spam-Score: 3.4 (+++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook IMO, Build 9.0.2416 (9.0.2911.0)
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+X-Spam-Score: -2.0 (--)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hello Peace be upon you. My name is Marco, from the Vanittech
- company in the United Kingdom. Due to urgent need by our company,
- I am personally
- contacting you to partner with me and represent our bot [...] 
- Content analysis details:   (3.4 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  いつもETC利用照会サービスをご利用いただき、誠にありがとうございます。
+    日本高速道路株式会社より重要なお知らせです。 お客様のユーザーIDは�
+    [...] 
+ 
+ Content analysis details:   (-2.0 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [54.36.163.70 listed in dnsbl-1.uceprotect.net]
- 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
- blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: quicklyemailsend77.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
- digit [marcolorenzo042[at]gmail.com]
- 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
- The query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [54.36.163.70 listed in sa-accredit.habeas.com]
- 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [54.36.163.70 listed in bl.score.senderscore.com]
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_MOSTLY       BODY: Multipart message mostly text/html MIME
- 0.7 MPART_ALT_DIFF         BODY: HTML and text parts are different
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: 51mt4.com]
+  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+                             [URIs: 51mt4.com]
+  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+                             blocklist
+                             [URIs: 51mt4.com]
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [54.36.163.70 listed in list.dnswl.org]
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
-X-Headers-End: 1sNt48-0000IH-Vw
-Subject: [Industrypack-devel] Due to urgent need by our company
+                             high trust
+                             [154.38.105.52 listed in list.dnswl.org]
+  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [154.38.105.52 listed in sa-accredit.habeas.com]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [154.38.105.52 listed in bl.score.senderscore.com]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+X-Headers-End: 1sO3mo-0002Wh-3I
+Subject: [Industrypack-devel] =?utf-8?b?RVRD44K144O844OT44K544Gv6Ieq5YuV?=
+	=?utf-8?b?6Kej57SE44GV44KM44G+44GZ?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -120,69 +124,40 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Marco Lorenzo via Industrypack-devel
+From: =?utf-8?B?6Ieq5YuV44Oh44O844Or6YCa55+l?= via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
-Reply-To: marcolorenzo042@gmail.com
-Cc: Marco Lorenzo <smtp@quicklyemailsend77.com>
-Content-Type: multipart/mixed; boundary="===============8486425775027119617=="
+Reply-To: =?utf-8?B?6Ieq5YuV44Oh44O844Or6YCa55+l?= <admin@lxhetgz.cn>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
-
---===============8486425775027119617==
-Content-Type: multipart/alternative;
-	boundary="----=_NextPart_000_0001_EC4AEEE6.EEDA7D4F"
-
-This is a multi-part message in MIME format.
-
-------=_NextPart_000_0001_EC4AEEE6.EEDA7D4F
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
-
-
-
-------=_NextPart_000_0001_EC4AEEE6.EEDA7D4F
-Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">=0D=0A<H=
-TML><HEAD>=0D=0A<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1=
-001"></HEAD>=0D=0A<BODY>Hello<BR>Peace be upon you. My name =
-is Marco, from the Vanittech company in the United Kingdom. =
-Due to urgent need by our company, I am personally contacting =
-you to partner with me and represent our both interest in purchasing =
-and selling the basic raw materials used by my company in multi =
-productions. This may not be your specialization but it is a =
-great opportunity you must not miss for it will be another income-gene=
-rating business out of your specialty which you can handle successfull=
-y from the comfort of your home. I will have to stop here till =
-I hear from you for more details if you are interested. <BR>Best =
-regards<BR>Marco <BR></BODY></HTML>
-
-------=_NextPart_000_0001_EC4AEEE6.EEDA7D4F--
-
-
-
---===============8486425775027119617==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============8486425775027119617==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-_______________________________________________
-Industrypack-devel mailing list
-Industrypack-devel@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============8486425775027119617==--
-
-
+44GE44Gk44KCRVRD5Yip55So54Wn5Lya44K144O844OT44K544KS44GU5Yip55So44GE44Gf44Gg
+44GN44CB6Kqg44Gr44GC44KK44GM44Go44GG44GU44GW44GE44G+44GZ44CCDQrml6XmnKzpq5jp
+gJ/pgZPot6/moKrlvI/kvJrnpL7jgojjgorph43opoHjgarjgYrnn6XjgonjgZvjgafjgZnjgIIN
+CuOBiuWuouanmOOBruODpuODvOOCtuODvElE44Gv44CMIGluZHVzdHJ5cGFjay1kZXZlbEBsaXN0
+cy5zb3VyY2Vmb3JnZS5uZXQg44CN44Gn44GU44GW44GE44G+44GZ44CCDQpFVEPliKnnlKjnhafk
+vJrjgrXjg7zjg5PjgrnvvIjnmbvpjLLlnovvvInjgafjga/jgIHjgYrlrqLjgZXjgb7jga7jgqLj
+gq/jg4bjgqPjg5Pjg4bjgqPjgajjgrvjgq3jg6Xjg6rjg4bjgqPjgpLnorrkv53jgZnjgovjgZ/j
+goHjgIE0NTDml6Xku6XlhoXjgavjg63jgrDjgqTjg7PjgYzjgarjgYTloLTlkIjjgIHjg6bjg7zj
+grbjg7xJROOCkuiHquWLleeahOOBq+ODreOCsOOCouOCpuODiOOBmeOCi+S7lee1hOOBv+OCkuio
+reOBkeOBpuOBhOOBvuOBmeOAgg0K6Kej57SE5LqI5a6a5pel44Gv44CMIDIwMjTlubQ35pyIMuaX
+pSDjgI3jgajjgarjgaPjgabjgYrjgorjgb7jgZnjga7jgafjgIHjgYrmiYvmlbDjgafjgZnjgYzj
+gIHjg63jgrDjgqTjg7PjgajlgIvkurrmg4XloLHjga7mm7TmlrDjgpLjgYrpoZjjgYTnlLPjgZfk
+uIrjgZLjgb7jgZnjgIINCg0K44Om44O844K244O8SUQgIGluZHVzdHJ5cGFjay1kZXZlbEBsaXN0
+cy5zb3VyY2Vmb3JnZS5uZXQgIA0K6Kej57SE5LqI5a6a5pelICAyMDI05bm0N+aciDLml6UgDQoN
+Cuino+e0hOS6iOWumuaXpeOBvuOBp+OBq+S4i+iomOOBrlVSTOOBi+OCieacrOOCteODvOODk+OC
+ueOBq+ODreOCsOOCpOODs+OBl+OAgeWAi+S6uuaDheWgseOBruabtOaWsOOCkuOBiumhmOOBhOOB
+hOOBn+OBl+OBvuOBmeOAgg0KaHR0cHM6Ly81MW10NC5jb20vamFwYW4ucGhwDQoNCuODreOCsOOC
+pOODs+W+jOOBq+OAgeOBiuWuouanmOOBrueZu+mMsuaDheWgseOCkuWGjeeiuuiqjeOBl+OAgeW/
+heimgeOBquaDheWgseOCkuacgOaWsOOBrueKtuaFi+OBq+abtOaWsOOBl+OBpuOBj+OBoOOBleOB
+hOOAguino+e0hOS6iOWumuaXpeOBvuOBp+OBq+ODreOCsOOCpOODs+OBhOOBn+OBoOOBkeOCjOOB
+sOOAgeeZu+mMsuOBr+e2mee2muOBleOCjOOBvuOBmeOBruOBp+OAgeOBlOazqOaEj+OBj+OBoOOB
+leOBhOOAgg0K5LiH44GM5LiA44CB6Kej57SE44GM6Ieq5YuV55qE44Gr6KGM44KP44KM44Gf5aC0
+5ZCI44Gn44GC44Gj44Gm44KC44CB5YaN5bqm55m76Yyy44GE44Gf44Gg44GR44KM44GwRVRD5Yip
+55So54Wn5Lya44K144O844OT44K544KS5byV44GN57aa44GN44GU5Yip55So44GE44Gf44Gg44GR
+44G+44GZ44Gu44Gn44CB44GU5a6J5b+D44GP44Gg44GV44GE44CCDQoNCuKWoEVUQ+WIqeeUqOeF
+p+S8muOCteODvOODk+OCueS6i+WLmeWxgA0K44CA5bm05Lit54Sh5LyR44CAOe+8mjAw772eMTjv
+vJowMA0K44CA6Zu76Kmx55Wq5Y+344CAMDU3MC0wMDEwNjkKX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX18KSW5kdXN0cnlwYWNrLWRldmVsIG1haWxpbmcgbGlz
+dApJbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0Cmh0dHBzOi8vbGlzdHMu
+c291cmNlZm9yZ2UubmV0L2xpc3RzL2xpc3RpbmZvL2luZHVzdHJ5cGFjay1kZXZlbAo=
