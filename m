@@ -2,120 +2,130 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 008AB9246F6
-	for <lists+industrypack-devel@lfdr.de>; Tue,  2 Jul 2024 20:05:35 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5E63A925508
+	for <lists+industrypack-devel@lfdr.de>; Wed,  3 Jul 2024 10:02:40 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sOhsf-0007qk-6n
+	id 1sOuwo-0004JT-BM
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 02 Jul 2024 18:05:30 +0000
+	Wed, 03 Jul 2024 08:02:38 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <accounts@tspract.ink>) id 1sOhsd-0007qd-Ht
+ (envelope-from <postman6389637@justeml.com>) id 1sOuwl-0004JJ-2F
  for industrypack-devel@lists.sourceforge.net;
- Tue, 02 Jul 2024 18:05:28 +0000
+ Wed, 03 Jul 2024 08:02:36 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:Reply-To:MIME-Version:Content-Type:
- To:Subject:From:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=JlaXcWcFwqFBrPfIUn2uZSc8KWRZ+bPwD8MDN4xd7D4=; b=GoZCle5802tkoac17b9YS76Dx0
- JSPA2Crrr5AhLS+2YyLHMccaNDmKnZs3tcEGPySwDSoyIERiDXF6Q4/jCc+Nk1LJYXyNGkuxThdcB
- WBIlUeb4ceaWKLfyj5x0Fpjg1EdXuVcknXV2X4S4tq4sIfK9lES495HX4zgfEEKymy74=;
+ d=sourceforge.net; s=x; h=Date:List-Unsubscribe:List-Id:List-Help:
+ Content-Type:MIME-Version:Subject:Message-Id:To:Reply-To:From:Sender:Cc:
+ Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=WTSMzej0XGPHBIwy9DZcGC1SVGkDnR3qxcloIbGwrwk=; b=AoARqpGOKGOIC/WuLd+sGeSd7/
+ agKYvwffhMW1pFnN580wNmauhktpPnqDAo2wfZEn+3lrynCTEyJzoq3y71ilGs6iAwPPqg3yZQjPZ
+ /uTyb3xBw32l/o+K5yLEuFmeuoDCDdmnkxxwQjSDOcpvZzy+7yJeR+KFPolR7WurtcJU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:Reply-To:MIME-Version:Content-Type:To:Subject:From:Sender
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=JlaXcWcFwqFBrPfIUn2uZSc8KWRZ+bPwD8MDN4xd7D4=; b=Z
- yezpYetnrwBXi8ZKnaT6Up8+PnQciAhDQ8aOq9ZQwgdD/ZLTrPRQ7xmD9TO8UbvB5J/nFgw1Bxm7W
- ZxKxg+IVTBdw8vHB6sIbiFsXmcvgvCtrzt8CRBbh9HZuM8Zwv+NeKly8CPEhbHlFXMJlLKryxIsuC
- ammHPLwWpv6PZeQs=;
-Received: from [46.29.238.187] (helo=mail.tspract.ink)
+ h=Date:List-Unsubscribe:List-Id:List-Help:Content-Type:MIME-Version:Subject
+ :Message-Id:To:Reply-To:From:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Subscribe:List-Post:List-Owner
+ :List-Archive; bh=WTSMzej0XGPHBIwy9DZcGC1SVGkDnR3qxcloIbGwrwk=; b=CuS/UXc3kP/
+ nEjUQMDO76CuqL6Q6LvcTnBW9oqBspM1I8PuWFLHVcjbLup4sv9Qimqh9PwJCtwJ7Cr2OSzfIE0hb
+ 1FY7EOeT66GHkfzdur8M25vHMBKDP691wnDP3u2zj0NQIlRRaxhk31mxjfZOASTUNjqwnBwSvyMlf
+ 8WUz/k=;
+Received: from smtp1515.emlone.com ([31.184.202.235])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sOhsd-0004Th-RW for industrypack-devel@lists.sourceforge.net;
- Tue, 02 Jul 2024 18:05:28 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=tspract.ink;
- s=default; t=1719942427;
- bh=1KO5pplhDG1V89TI7B7saIrYjibBARGr0+H0HNv5sxU=;
- h=From:Subject:To:Reply-To:Date:From;
- b=O4FkUmmBdd42D38UNbhpFjc7Zo+NIKi79wpXo0yLNm+aWvu5GbgiBakD8CHH0+sXT
- x34LZlNflMoeLZCP4g1Vj/9sVdE5V1vhgBC3ytjtyYVdJL9TZXbplkg+d1JXxaZLO1
- 1+27NPXeuXIsNN9XZvcDi+q0IMsRpjs2xyJKoaZeH96lzq4WZjpfOjjus6pgeLOWve
- crU9bcdC/RdEYoro15oXDJU/SXg3f6GtaXEPbi6XPDBkydlycnIDaRWjmoLqBvbRZZ
- fKbxktfbNlQlXT2hEXZREvP4RjkBB1zj1nBzW7K3BX1i9S8Rm5T4JmBOk34CG+Io2J
- TRk6RUXmxn66Q==
-Received: from WIN-BUNS25TD77J (ip3.ip-51-89-54.eu [51.89.54.3])
- (Authenticated sender: accounts@tspract.ink)
- by mail.tspract.ink (Postfix) with ESMTPSA id 1C4437235A
- for <industrypack-devel@lists.sourceforge.net>;
- Tue,  2 Jul 2024 19:47:07 +0200 (CEST)
-From: "David Richard" <accounts@tspract.ink>
-To: <industrypack-devel@lists.sourceforge.net>
+ id 1sOuwb-0004I8-IB for industrypack-devel@lists.sourceforge.net;
+ Wed, 03 Jul 2024 08:02:35 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=us; d=stroy1604.online;
+ h=From:Reply-To:To:Message-Id:Subject:MIME-Version:Content-Type:List-Help:
+ List-Id:List-Unsubscribe:Date:no; i=info@stroy1604.online;
+ bh=WTSMzej0XGPHBIwy9DZcGC1SVGkDnR3qxcloIbGwrwk=;
+ b=Q7ZsTI0z4N5iLtvGXbuyBSh/5FxFDXXlKffWQ5ByX5k6fVKCCGOWuTL7yRnbOMzM8aQxXAtKZtK1
+ Ou3RNq4Eml1poLWCpLBhsRpnzEp/u869HkV8evorRpdpGI3+ID11dAsOwh5ONbdqW3IJPLirLSOX
+ 7MnSKvdUyePsIF+tV+o=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=jul2015; d=topeml.com; 
+ h=From:Reply-To:To:Message-Id:Subject:MIME-Version:Content-Type:List-Help:
+ List-Id:List-Unsubscribe:Date;
+ bh=WTSMzej0XGPHBIwy9DZcGC1SVGkDnR3qxcloIbGwrwk=;
+ b=Adg9Rdv1X0T3EioHfSi41g0jKSTAYkn2OGJRP/rO3LA4I163PosyzCpRTi8lMp2lIacJWW5BDdTZ
+ KQSmwq+U0AhIM1ElqIel5htq+Mz6QSMkRn7fsjVBQykWnQAi3aqb/GTjxHZ9+Saevmy6XztiXGme
+ BpLON5tEltrkSVqjmiA=
+Received: by smtp1345.emlone.com id hgk2p02erpkk for
+ <industrypack-devel@lists.sourceforge.net>;
+ Wed, 3 Jul 2024 08:01:52 +0000 (envelope-from <postman6389637@justeml.com>)
+From: =?UTF-8?B?0JvQm9CaLdCY0L3RgtC10YDQvdC10YjQvdC7?= <info@stroy1604.online>
+To: industrypack-devel@lists.sourceforge.net
+Message-Id: <E1sOuyW-g3pIxu-O3@ucs761-ucs-11.msgpanel.com>
 MIME-Version: 1.0
-Date: Tue, 2 Jul 2024 10:47:07 -0700
-Message-Id: <20240207104705AF39C928AF-8AD0049577@tspract.ink>
-X-Spam-Score: 5.0 (+++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+Content-Type: multipart/mixed; boundary="MXNPdXlXLWczcEl4dS1PMw=="
+Precedence: bulk
+X-Complaints-To: abuse@justeml.com
+X-EnvId: usproduction.b_6389637_325851174_36309346886_378685
+X-Feedback-ID: 325851174:6389637:campaign:US
+Date: Wed, 3 Jul 2024 08:01:52 +0000
+X-Spam-Score: 3.4 (+++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  GREETINGS My name is Barrister David Richard, a lawyer here
- in the UK. My deceased client has unclaimed permanent life insurance, the
- transaction involves an unclaimed "payable on death" cash deposit [...] 
- Content analysis details:   (5.0 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  llk-bitum@lukoil-bitumen.ru +7 (495) 128-05-16 (tel:+74951280516)
+    ЛЛК-Интернешнл предлагает к продаже: БИТУМ
+    
+ 
+ Content analysis details:   (3.4 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
- blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: tspract.ink]
- 2.8 MILLION_HUNDRED        BODY: Million "One to Nine" Hundred
- 0.0 RCVD_IN_DNSWL_BLOCKED  RBL: ADMINISTRATOR NOTICE: The query to
- DNSWL was blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [46.29.238.187 listed in list.dnswl.org]
- 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
- The query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [46.29.238.187 listed in sa-accredit.habeas.com]
- 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [46.29.238.187 listed in bl.score.senderscore.com]
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: googleapis.com]
+  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+                             The query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                         [31.184.202.235 listed in sa-trusted.bondedsender.org]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                            [31.184.202.235 listed in bl.score.senderscore.com]
+  0.0 RCVD_IN_DNSWL_BLOCKED  RBL: ADMINISTRATOR NOTICE: The query to
+                             DNSWL was blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [31.184.202.235 listed in list.dnswl.org]
+  2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
+                             [URI: stroy1604.online (online)]
+  0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+                             identical to background
+  0.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 LOTS_OF_MONEY          Huge... sums of money
- 1.0 MONEY_BARRISTER        Lots of money from a UK lawyer
- 0.0 T_FILL_THIS_FORM_SHORT Fill in a short form with personal
- information
- 0.1 MONEY_FORM_SHORT       Lots of money if you fill out a short form
- 0.0 ADVANCE_FEE_4_NEW_MONEY Advance Fee fraud and lots of money
- 0.0 MONEY_FRAUD_5          Lots of money and many fraud phrases
- 0.0 FORM_FRAUD_5           Fill a form and many fraud phrases
-X-Headers-End: 1sOhsd-0004Th-RW
-Subject: [Industrypack-devel] Transaction involves an unclaimed
+                             author's domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  2.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+  0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
+ -1.0 MAILING_LIST_MULTI     Multiple indicators imply a widely-seen list
+                             manager
+ -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium trust sender
+X-Headers-End: 1sOuwb-0004I8-IB
+Subject: [Industrypack-devel] =?utf-8?b?0J/RgNC+0LTRg9C60YbQuNGPINC+0YIg?=
+ =?utf-8?b?0L/RgNC+0LjQt9Cy0L7QtNC40YLQtdC70Y8=?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
-Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -124,533 +134,646 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: davidrichardman001@zohomail.eu
-Content-Type: multipart/mixed; boundary="===============5238857522517315256=="
+Reply-To: llk-bitum@lukoil-bitumen.ru
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
+--MXNPdXlXLWczcEl4dS1PMw==
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_10447382_760574277.1719993864502"
 
---===============5238857522517315256==
-Content-Type: multipart/alternative; boundary="wdcOqS5clOtoD=_RVL2XsjvegPeAXki1Ei"
+------=_Part_10447382_760574277.1719993864502
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: base64
 
-This is a multi-part message in MIME format
-
---wdcOqS5clOtoD=_RVL2XsjvegPeAXki1Ei
-Content-Type: text/plain; charset="iso-8859-1"
+CgpsbGstYml0dW1AbHVrb2lsLWJpdHVtZW4ucnUKKzcgKDQ5NSkgMTI4LTA1LTE2ICh0ZWw6Kzc0
+OTUxMjgwNTE2KQoK0JvQm9CaLdCY0L3RgtC10YDQvdC10YjQvdC7INC/0YDQtdC00LvQsNCz0LDQ
+tdGCCtC6wqDQv9GA0L7QtNCw0LbQtToKCtCR0JjQotCj0JwKCtCU0L7RgNC+0LbQvdGL0Lkg0JHQ
+ndCUIDUwLzcwLCA3MC8xMDAsIDYwLzkwLDkwLzEzMDsg0KHRgtGA0L7QuNGC0LXQu9GM0L3Ri9C5
+INC30LDRgtCw0YDQtdC90L3Ri9C5INCR0J0gNzAvMzAsIDkwLzEwLgoK0JfQsNC60LDQt9Cw0YLR
+jCAobWFpbHRvOmxsay1iaXR1bUBsdWtvaWwtYml0dW1lbi5ydT9zdWJqZWN0PSVEMCU5NyVEMCVC
+MCVEMCVCQSVEMCVCMCVEMCVCNyUyMCVEMCU5MSVEMCVCOCVEMSU4MiVEMSU4MyVEMCVCQyVEMCVC
+MCkKCtCc0JDQl9Cj0KIKCtCe0YLQs9GA0YPQt9C60LAg0L7RgdGD0YnQtdGB0YLQstC70Y/QtdGC
+0YHRjyDQsNCy0YLQvtGG0LjRgdGC0LXRgNC90LDQvNC4INC4INC2L9C0INGC0YDQsNC90YHQv9C+
+0YDRgtC+0LwuCgrQl9Cw0LrQsNC30LDRgtGMIChtYWlsdG86bGxrLWJpdHVtQGx1a29pbC1iaXR1
+bWVuLnJ1P3N1YmplY3Q9JUQwJTk3JUQwJUIwJUQwJUJBJUQwJUIwJUQwJUI3JTIwJUQwJTkxJUQw
+JUI4JUQxJTgyJUQxJTgzJUQwJUJDJUQwJUIwKQoK0J/QoNCe0JzQq9Co0JvQldCd0J3Qq9CVINCc
+0JDQodCb0JAKCtCe0YLQs9GA0YPQt9C60LAg0L7RgdGD0YnQtdGB0YLQstC70Y/QtdGC0YHRjyDQ
+sNCy0YLQvtGG0LjRgdGC0LXRgNC90LDQvNC4INC4INC2L9C0INGC0YDQsNC90YHQv9C+0YDRgtC+
+0LwsINCx0L7Rh9C60LDQvNC4LCDQutCw0L3QuNGB0YLRgNCw0LzQuC4KCtCX0LDQutCw0LfQsNGC
+0YwgKG1haWx0bzpsbGstYml0dW1AbHVrb2lsLWJpdHVtZW4ucnU/c3ViamVjdD0lRDAlOTclRDAl
+QjAlRDAlQkElRDAlQjAlRDAlQjclMjAlRDAlOUMlRDAlQjAlRDElODElRDAlQkIlRDAlQjApCgrQ
+ktGB0LUg0L/RgNC10LTQvtGB0YLQsNCy0LvRj9C10LzRi9C1INCT0KHQnCDQv9C+0LvQvdC+0YHR
+gtGM0Y4g0YHQvtC+0YLQstC10YLRgdGC0LLRg9GO0YIg0KDQvtGB0YHQuNC50YHQutC40Lwg0JPQ
+ntCh0KIg0Lgg0YLRgNC10LHQvtCy0LDQvdC40Y/QvCDQotC10YXQvdC40YfQtdGB0LrQvtCz0L4g
+0YDQtdCz0LvQsNC80LXQvdGC0LAuCgrQm9Cb0Jot0JjQvdGC0LXRgNC90LXRiNC90LssINGP0LLQ
+u9GP0Y7RidC40LnRgdGPINC/0L7Qu9C90L7RgdGC0YzRjiDQutC+0L3RgtGA0L7Qu9C40YDRg9C1
+0LzRi9C8INC00L7Rh9C10YDQvdC40Lwg0L/RgNC10LTQv9GA0LjRj9GC0LjQtdC8INCT0YDRg9C/
+0L/RiyAi0JvQo9Ca0J7QmdCbIiwg0LfQsNC90LjQvNCw0LXRgiDQu9C40LTQuNGA0YPRjtGJ0LXQ
+tSDQv9C+0LvQvtC20LXQvdC40LUg0L3QsCDRgNC+0YHRgdC40LnRgdC60L7QvCDRgNGL0L3QutC1
+INC80LDRgdC10Lsg0Lgg0YHQvNCw0LfQvtC6LCDQvtGB0YPRidC10YHRgtCy0LvRj9GPINC+0L/R
+gtC+0LLRg9GOINC4INC80LXQu9C60L7QvtC/0YLQvtCy0YPRjiDQv9GA0L7QtNCw0LbRgyDQvdC1
+0YTRgtC10L/RgNC+0LTRg9C60YLQvtCyLgoK0KHQv9C10YbQuNCw0LvRjNC90L7QtSDQv9GA0LXQ
+tNC70L7QttC10L3QuNC1CgrQn9C+INCy0L7Qv9GA0L7RgdCw0Lwg0L/RgNC40L7QsdGA0LXRgtC1
+0L3QuNGPINC/0YDQvtC00YPQutGG0LjQuCDQuCDQt9Cw0LrQu9GO0YfQtdC90LjRjyDQutC+0L3R
+gtGA0LDQutGC0L7QsiDQvdCwINGB0L/QtdGG0LjQsNC70YzQvdGL0YUg0YPRgdC70L7QstC40Y/R
+hSDQvtCx0YDQsNGJ0LDQudGC0LXRgdGMINCyINC+0YLQtNC10Lsg0L/QvtGB0YLQsNCy0L7QuiDQ
+ntCe0J4gwqvQm9Cb0Jot0JjQvdGC0LXRgNC90LXRiNC90LvCuyDQv9C+INGC0LXQu9C10YTQvtC9
+0YMg0LvQuNCx0L4g0L/RgNC40YHRi9C70LDQudGC0LUg0L/QuNGB0YzQvNC10L3QvdGL0Lkg0LfQ
+sNC/0YDQvtGBINC90LAg0L/QvtGH0YLRgy4KCis3ICg0OTUpIDEzNC01MC05NCAodGVsOis3NDk1
+MTM0NTA5NCkKCmxsay1iaXR1bUBsdWtvaWwtYml0dW1lbi5ydQoK0JLRiyDQv9C+0LvRg9GH0LjQ
+u9C4INGN0YLQviDQv9C40YHRjNC80L4sINGC0LDQuiDQutCw0Log0LjQvdGC0LXRgNC10YHQvtCy
+0LDQu9C40YHRjCDQvdC10YTRgtC10L/RgNC+0LTRg9C60YLQsNC80Lgg0L3QsCDRgdCw0LnRgtCw
+0YUg0LrQvtC80L/QsNC90LjQuCDCq9Cb0KPQmtCe0JnQm8K7LiDQldGB0LvQuCDQsdC+0LvQtdC1
+INC90LUg0YXQvtGC0LjRgtC1INC/0L7Qu9GD0YfQsNGC0Ywg0L3QsNGI0Lgg0L/QuNGB0YzQvNCw
+LCDQvdCw0LbQvNC40YLQtSDQvdCwINGB0YHRi9C70LrRgyDQvdC40LbQtToK0J7RgtC60LDQt9Cw
+0YLRjNGB0Y8g0L7RgiDRgNCw0YHRgdGL0LvQutC4IChodHRwczovL2dldGVtbC5jb20vcnUvdW5z
+dWJzY3JpYmU/aGFzaD02MWZoa2t0cmV6d3ltOWozY3B6eGYxejlwOWMzcXlpZDlnemYzNGd6NXFr
+dHlhYTU2bXNpM3Q1M21mOGozNmJjamVjZjE3OWd0b2Y0YWsjbm9fdHJhY2tpbmcpCgrCqSAyMDI0
+INCe0J7QniDCq9Cb0JvQmi3QmNC90YLQtdGA0L3QtdGI0L3Qu8K7Cgo=
+------=_Part_10447382_760574277.1719993864502
+Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
+<html lang=3D"ru" style=3D"Margin: 0; padding: 0; box-sizing: border-box;" =
+xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office" xmlns:v=3D"urn:schemas-microsoft-com:vml">
+<head>
+=09<title></title>
+=09<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+=09<link href=3D"https://fonts.googleapis.com/css2?family=3DIBM+Plex+Sans:w=
+ght@400;600;700&amp;display=3Dswap" rel=3D"stylesheet">
+<!--[if (gte mso 9)|(IE)]>
+=09=09<style type=3Dtext/css>
+=09=09table {mso-table-lspace: 0pt;mso-table-rspace: 0pt; border-collapse:c=
+ollapse;}
+=09=09img {border: 0;display: block;}
+=09=09#outlook a{text-decoration: none !important; }
+=09=09</style>
+=09=09<![endif]
+=09=09-->
+=09<style type=3D"text/css">@media only screen and (max-width: 500px){
+=09=09=09=09.tabCon{
+=09=09=09=09=09width: 100% !important;
+=09=09=09=09=09min-width: 200px !important;
+=09=09=09=09=09margin: 0 !important;
+=09=09=09=09=09float: none !important;}
+=09=09=09=09.img{width: 100% !important;}
+=09=09=09=09.w240, .w240 img{width: 240px !important;}
+=09=09=09=09.w240 a {width: 200px !important;}
+=09=09=09=09.none{display: none !important;}
+=09=09=09}
+=09</style>
+</head>
+<body style=3D"-webkit-font-smoothing: antialiased; font-family: 'IBM Plex =
+Sans', sans-serif; font-style: normal; font-weight: 400; font-size: 16px; l=
+ine-height: 19px; min-width: 320px; color: #000000; -webkit-text-size-adjus=
+t: none; Margin: 0; padding: 0; box-sizing: border-box;">
+<div style=3D"Margin: 0; padding: 0; box-sizing: border-box; background: #F=
+8F8F8; width: 100%;">
+<table bgcolor=3D"#F8F8F8" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ dir=3D"ltr" style=3D"Margin: 0; padding: 0; box-sizing: border-box; border=
+-spacing: 0; border-collapse: collapse;" width=3D"100%">
+=09<tbody>
+=09=09<tr>
+=09=09=09<td align=3D"center" style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; min-width: 340px;">
+=09=09=09<table align=3D"center" bgcolor=3D"#FFFFFF" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: bord=
+er-box; border-spacing: 0; border-collapse: collapse; max-width: 660px; bac=
+kground: #FFFFFF;" width=3D"100%">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 32px 16px 48px;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
+">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box;" valign=3D"center"><img alt=3D"=D0=9B=D1=83=D0=
+=BA=D0=BE=D0=B9=D0=BB" border=3D"0" height=3D"auto" src=3D"https://img.hite=
+ml.com/en/v5/user-files?userId=3D6389637&resource=3Dhimg&disposition=3Dinli=
+ne&name=3D6johzai7tbq91xj9d4b9yuroi7mssqujydp9w66ttujmnmbi8ai7d41riw3j4yd6b=
+ozmquq9tin79hsjsr5isxcw7c9e6pfnxwpy7h4zkb1i3qpqc8j1kyn6ppyztk3xq91ysgifhu76=
+ihenhgke3cqnnsy" style=3D"border: 0; display: block; color: #000000;" width=
+=3D"40"></td>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box;">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; mso-line-height-rule: =
+exactly; color: #000000; text-align: right; font-size: 16px; font-weight: 7=
+00; line-height: 22px;"><a href=3D"mailto:llk-bitum@lukoil-bitumen.ru" styl=
+e=3D"Margin: 0; padding: 0; box-sizing: border-box; cursor: pointer; text-d=
+ecoration: none; color: #000000;" target=3D"_blank">llk-bitum@lukoil-bitume=
+n.ru</a><br>
+=09=09=09=09=09=09=09=09=09<a href=3D"tel:+74951280516" style=3D"Margin: 0;=
+ padding: 0; box-sizing: border-box; cursor: pointer; text-decoration: none=
+; color: #000000;" target=3D"_blank">+7 (495) 128-05-16</a></p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 0px 16px 8px;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
+">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; text-align: left; mso-=
+line-height-rule: exactly; color: #201F1E; font-size: 28px; font-weight: 60=
+0; line-height: 31px;">=D0=9B=D0=9B=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=
+=BD=D0=B5=D1=88=D0=BD=D0=BB =D0=BF=D1=80=D0=B5=D0=B4=D0=BB=D0=B0=D0=B3=D0=
+=B0=D0=B5=D1=82<br class=3D"none">
+=09=09=09=09=09=09=09=09=09=D0=BA=C2=A0=D0=BF=D1=80=D0=BE=D0=B4=D0=B0=D0=B6=
+=D0=B5:</p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 0px 16px; font-size: 1px;">
+<!--[if (gte mso 9)|(IE)]><table  border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0"><tr><td align=3D"left"  valign=3D"top"><![endif]-->
+=09=09=09=09=09=09<div style=3D"Margin: 0; padding: 0; box-sizing: border-b=
+ox; display: inline-block; vertical-align: top;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-siz=
+ing: border-box; padding: 8px;">
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"w240" style=3D"Margin: 0; padding: 0; box=
+-sizing: border-box; border-spacing: 0; border-radius: 16px; background: #e=
+eeeee; border-collapse: separate;" width=3D"188">
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 20px 5px 21px; color: #201F1=
+E; text-align: center; font-size: 16px; font-weight: 600; line-height: 21px=
+;">=D0=91=D0=98=D0=A2=D0=A3=D0=9C</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; padding: 0; box-sizing: border-box;"><img alt=3D"image" border=3D"0" heig=
+ht=3D"auto" src=3D"https://img.hiteml.com/en/v5/user-files?userId=3D6389637=
+&resource=3Dhimg&disposition=3Dinline&name=3D6ski9yyxwgfbq3j9d4b9yuroi7ja3o=
+wpha15dnuttujmnmbi8ai7mfdniuuocjqp6sgw69g79dyj3wsjsr5isxcw7c7ha78j37aanx9zk=
+b1i3qpqc8j1r9yq1skqhq45u91ysgifhu76ihenhgke3cqnnsy" style=3D"border: 0; dis=
+play: block; color: #000000;" width=3D"188"></td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 10px 5px 10px; color: #201F1=
+E; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px=
+;">=D0=94=D0=BE=D1=80=D0=BE=D0=B6=D0=BD=D1=8B=D0=B9 =D0=91=D0=9D=D0=94 50/7=
+0, 70/100, 60/90,90/130; =D0=A1=D1=82=D1=80=D0=BE=D0=B8=D1=82=D0=B5=D0=BB=
+=D1=8C=D0=BD=D1=8B=D0=B9 =D0=B7=D0=B0=D1=82=D0=B0=D1=80=D0=B5=D0=BD=D0=BD=
+=D1=8B=D0=B9 =D0=91=D0=9D 70/30, 90/10.</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; box-sizing: border-box; padding: 0px 5px 14px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"mailto:llk-bitum@lukoil-=
+bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%91%D0%B8%D1%82%D1=
+%83%D0%BC%D0%B0" style=3D"height:26pt;v-text-anchor:middle;width:105pt;" ar=
+csize=3D"23%" stroke=3D"f" fillcolor=3D"#DB2B36"><center><![endif]--><a hre=
+f=3D"mailto:llk-bitum@lukoil-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%=
+D0%B7%20%D0%91%D0%B8%D1%82%D1%83%D0%BC%D0%B0" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box; cursor: pointer; background-color: #DB2B36; bord=
+er-radius: 8px; color: #ffffff; display: inline-block; font-family: 'IBM Pl=
+ex Sans', sans-serif; font-size: 14px; font-weight: bold; line-height: 35px=
+; text-align: center; text-decoration: none; width: 140px; -webkit-text-siz=
+e-adjust: none;" target=3D"_blank">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7=D0=B0=D1=
+=82=D1=8C</a><!--[if mso]></center></v:roundrect><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</div>
+=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td><td align=3D"right"><![end=
+if]-->
 
-GREETINGS
-My name is Barrister David Richard, a lawyer here in the UK. My deceas=
-ed client has unclaimed permanent life insurance, the transaction invo=
-lves an unclaimed "payable on death" cash deposit of
-=A317,820,000.00 (seventeen million eight hundred and twenty thousand =
-pounds) in a UK bank. He worked for an energy company here in the UK, =
-he died of cancer. No one came forward after his death and all our eff=
-orts to locate his relatives proved futile. He has no wife and childre=
-n.
-The Insurance Code requires that unclaimed "permanent insurancepolicie=
-s" must be turned over to the state abandoned property department afte=
-r 8 years. I ask for your consent to work with me to request this insu=
-rance benefit. If you allow me to add your name to the policy, all wit=
-hdrawals will be processed on your behalf.
+=09=09=09=09=09=09<div style=3D"Margin: 0; padding: 0; box-sizing: border-b=
+ox; display: inline-block; vertical-align: top;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-siz=
+ing: border-box; padding: 8px;">
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"w240" style=3D"Margin: 0; padding: 0; box=
+-sizing: border-box; border-spacing: 0; border-radius: 16px; background: #e=
+eeeee; border-collapse: separate;" width=3D"188">
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 20px 5px 21px; color: #201F1=
+E; text-align: center; font-size: 16px; font-weight: 600; line-height: 21px=
+;">=D0=9C=D0=90=D0=97=D0=A3=D0=A2</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; padding: 0; box-sizing: border-box;"><img alt=3D"image" border=3D"0" heig=
+ht=3D"auto" src=3D"https://img.hiteml.com/en/v5/user-files?userId=3D6389637=
+&resource=3Dhimg&disposition=3Dinline&name=3D66dyo6ccs6jhbtj9d4b9yuroi7mcge=
+6i3546xr1ttujmnmbi8ai78n9n7cjz8ui5qcx6gaye11p6s6sjsr5isxcw7c9rkt3u1g74fkfxk=
+b1i3qpqc8j1yjbkoj3555hmz91ysgifhu76i7rbpmsu4uenbqe" style=3D"border: 0; dis=
+play: block; color: #000000;" width=3D"188"></td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 10px 5px 28px; color: #201F1=
+E; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px=
+;">=D0=9E=D1=82=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BE=D1=81=D1=83=D1=
+=89=D0=B5=D1=81=D1=82=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B0=D0=
+=B2=D1=82=D0=BE=D1=86=D0=B8=D1=81=D1=82=D0=B5=D1=80=D0=BD=D0=B0=D0=BC=D0=B8=
+ =D0=B8 =D0=B6/=D0=B4 =D1=82=D1=80=D0=B0=D0=BD=D1=81=D0=BF=D0=BE=D1=80=D1=
+=82=D0=BE=D0=BC.</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; box-sizing: border-box; padding: 0px 5px 14px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"mailto:llk-bitum@lukoil-=
+bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%91%D0%B8%D1%82%D1=
+%83%D0%BC%D0%B0" style=3D"height:26pt;v-text-anchor:middle;width:105pt;" ar=
+csize=3D"23%" stroke=3D"f" fillcolor=3D"#DB2B36"><center><![endif]--><a hre=
+f=3D"mailto:llk-bitum@lukoil-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%=
+D0%B7%20%D0%91%D0%B8%D1%82%D1%83%D0%BC%D0%B0" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box; cursor: pointer; background-color: #DB2B36; bord=
+er-radius: 8px; color: #ffffff; display: inline-block; font-family: 'IBM Pl=
+ex Sans', sans-serif; font-size: 14px; font-weight: bold; line-height: 35px=
+; text-align: center; text-decoration: none; width: 140px; -webkit-text-siz=
+e-adjust: none;" target=3D"_blank">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7=D0=B0=D1=
+=82=D1=8C</a><!--[if mso]></center></v:roundrect><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</div>
+=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td><td align=3D"right"><![end=
+if]-->
 
-I would like to point out that I want 10% of this money to be distribu=
-ted among charities, while the remaining 90% will be distributed among=
- us.We are not breaking any laws with this statement as I have all the=
- necessary documentation to expedite the process in a highlyprofession=
-al and confidential manner.=20
+=09=09=09=09=09=09<div style=3D"Margin: 0; padding: 0; box-sizing: border-b=
+ox; display: inline-block; vertical-align: top;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-siz=
+ing: border-box; padding: 8px;">
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"w240" style=3D"Margin: 0; padding: 0; box=
+-sizing: border-box; border-spacing: 0; border-radius: 16px; background: #e=
+eeeee; border-collapse: separate;" width=3D"188">
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 10px 5px 10px; color: #201F1=
+E; text-align: center; font-size: 16px; font-weight: 600; line-height: 21px=
+;">=D0=9F=D0=A0=D0=9E=D0=9C=D0=AB=D0=A8=D0=9B=D0=95=D0=9D=D0=9D=D0=AB=D0=95=
+ =D0=9C=D0=90=D0=A1=D0=9B=D0=90</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; padding: 0; box-sizing: border-box;"><img alt=3D"image" border=3D"0" heig=
+ht=3D"auto" src=3D"https://img.hiteml.com/en/v5/user-files?userId=3D6389637=
+&resource=3Dhimg&disposition=3Dinline&name=3D6yo8ydeet14ubpj9d4b9yuroi7j5ih=
+ba5qfq67w3tujmnmbi8ai7kx4f77jcqnifkkftd6fnafikycsjsr5isxcw7c9zgks36x3mafxxk=
+b1i3qpqc8j1fzszfradxim4q91ysgifhu76i7rbpmsu4uenbqe" style=3D"border: 0; dis=
+play: block; color: #000000;" width=3D"188"></td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" class=3D"t11" styl=
+e=3D"Margin: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-=
+serif; mso-line-height-rule: exactly; padding: 10px 5px 10px; color: #201F1=
+E; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px=
+;">=D0=9E=D1=82=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BE=D1=81=D1=83=D1=
+=89=D0=B5=D1=81=D1=82=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B0=D0=
+=B2=D1=82=D0=BE=D1=86=D0=B8=D1=81=D1=82=D0=B5=D1=80=D0=BD=D0=B0=D0=BC=D0=B8=
+ =D0=B8 =D0=B6/=D0=B4 =D1=82=D1=80=D0=B0=D0=BD=D1=81=D0=BF=D0=BE=D1=80=D1=
+=82=D0=BE=D0=BC, =D0=B1=D0=BE=D1=87=D0=BA=D0=B0=D0=BC=D0=B8, =D0=BA=D0=B0=
+=D0=BD=D0=B8=D1=81=D1=82=D1=80=D0=B0=D0=BC=D0=B8.</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; box-sizing: border-box; padding: 0px 5px 14px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"mailto:llk-bitum@lukoil-=
+bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%9C%D0%B0%D1%81%D0=
+%BB%D0%B0" style=3D"height:26pt;v-text-anchor:middle;width:105pt;" arcsize=
+=3D"23%" stroke=3D"f" fillcolor=3D"#DB2B36"><center><![endif]--><a href=3D"=
+mailto:llk-bitum@lukoil-bitumen.ru?subject=3D%D0%97%D0%B0%D0%BA%D0%B0%D0%B7=
+%20%D0%9C%D0%B0%D1%81%D0%BB%D0%B0" style=3D"Margin: 0; padding: 0; box-sizi=
+ng: border-box; cursor: pointer; background-color: #DB2B36; border-radius: =
+8px; color: #ffffff; display: inline-block; font-family: 'IBM Plex Sans', s=
+ans-serif; font-size: 14px; font-weight: bold; line-height: 35px; text-alig=
+n: center; text-decoration: none; width: 140px; -webkit-text-size-adjust: n=
+one;" target=3D"_blank">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C</a=
+><!--[if mso]></center></v:roundrect><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</div>
+=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 8px 16px 48px;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
+">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box; padding-bottom: 16px;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; text-align: left; mso-=
+line-height-rule: exactly; color: #201F1E; font-size: 16px; font-weight: 60=
+0; line-height: 21px;">=D0=92=D1=81=D0=B5 =D0=BF=D1=80=D0=B5=D0=B4=D0=BE=D1=
+=81=D1=82=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D0=BC=D1=8B=D0=B5 =D0=93=D0=A1=D0=
+=9C =D0=BF=D0=BE=D0=BB=D0=BD=D0=BE=D1=81=D1=82=D1=8C=D1=8E =D1=81=D0=BE=D0=
+=BE=D1=82=D0=B2=D0=B5=D1=82=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=82 =D0=A0=D0=
+=BE=D1=81=D1=81=D0=B8=D0=B9=D1=81=D0=BA=D0=B8=D0=BC =D0=93=D0=9E=D0=A1=D0=
+=A2 =D0=B8 =D1=82=D1=80=D0=B5=D0=B1=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F=D0=
+=BC =D0=A2=D0=B5=D1=85=D0=BD=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=BE=D0=B3=D0=
+=BE =D1=80=D0=B5=D0=B3=D0=BB=D0=B0=D0=BC=D0=B5=D0=BD=D1=82=D0=B0.</p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"left" style=3D"Margin: 0; padding: =
+0; box-sizing: border-box; padding-bottom: 48px;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; text-align: left; mso-=
+line-height-rule: exactly; color: #201F1E; font-size: 16px; font-weight: 40=
+0; line-height: 21px;">=D0=9B=D0=9B=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=
+=BD=D0=B5=D1=88=D0=BD=D0=BB, =D1=8F=D0=B2=D0=BB=D1=8F=D1=8E=D1=89=D0=B8=D0=
+=B9=D1=81=D1=8F =D0=BF=D0=BE=D0=BB=D0=BD=D0=BE=D1=81=D1=82=D1=8C=D1=8E =D0=
+=BA=D0=BE=D0=BD=D1=82=D1=80=D0=BE=D0=BB=D0=B8=D1=80=D1=83=D0=B5=D0=BC=D1=8B=
+=D0=BC =D0=B4=D0=BE=D1=87=D0=B5=D1=80=D0=BD=D0=B8=D0=BC =D0=BF=D1=80=D0=B5=
+=D0=B4=D0=BF=D1=80=D0=B8=D1=8F=D1=82=D0=B8=D0=B5=D0=BC =D0=93=D1=80=D1=83=
+=D0=BF=D0=BF=D1=8B "=D0=9B=D0=A3=D0=9A=D0=9E=D0=99=D0=9B", =D0=B7=D0=B0=D0=
+=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=BB=D0=B8=D0=B4=D0=B8=D1=80=D1=83=D1=
+=8E=D1=89=D0=B5=D0=B5 =D0=BF=D0=BE=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D0=
+=B5 =D0=BD=D0=B0 =D1=80=D0=BE=D1=81=D1=81=D0=B8=D0=B9=D1=81=D0=BA=D0=BE=D0=
+=BC =D1=80=D1=8B=D0=BD=D0=BA=D0=B5 =D0=BC=D0=B0=D1=81=D0=B5=D0=BB =D0=B8 =
+=D1=81=D0=BC=D0=B0=D0=B7=D0=BE=D0=BA, =D0=BE=D1=81=D1=83=D1=89=D0=B5=D1=81=
+=D1=82=D0=B2=D0=BB=D1=8F=D1=8F =D0=BE=D0=BF=D1=82=D0=BE=D0=B2=D1=83=D1=8E =
+=D0=B8 =D0=BC=D0=B5=D0=BB=D0=BA=D0=BE=D0=BE=D0=BF=D1=82=D0=BE=D0=B2=D1=83=
+=D1=8E =D0=BF=D1=80=D0=BE=D0=B4=D0=B0=D0=B6=D1=83 =D0=BD=D0=B5=D1=84=D1=82=
+=D0=B5=D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=82=D0=BE=D0=B2.</p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border=
+-box; border-spacing: 0; max-width: 596px; border-radius: 16px; background:=
+ #eeeeee; border-collapse: separate;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0=
+; box-sizing: border-box; padding: 32px 16px 24px;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizin=
+g: border-box; border-spacing: 0; border-collapse: collapse; max-width: 532=
+px;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
+Margin: 0; padding: 0; box-sizing: border-box; padding-bottom: 16px;" valig=
+n=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-serif; text=
+-align: left; mso-line-height-rule: exactly; color: #201F1E; font-size: 28p=
+x; font-weight: 700; line-height: 31px;">=D0=A1=D0=BF=D0=B5=D1=86=D0=B8=D0=
+=B0=D0=BB=D1=8C=D0=BD=D0=BE=D0=B5 =D0=BF=D1=80=D0=B5=D0=B4=D0=BB=D0=BE=D0=
+=B6=D0=B5=D0=BD=D0=B8=D0=B5</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
+Margin: 0; padding: 0; box-sizing: border-box; padding-bottom: 8px;" valign=
+=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box; font-family: 'IBM Plex Sans', sans-serif; text=
+-align: left; mso-line-height-rule: exactly; color: #333333; font-size: 16p=
+x; font-weight: 400; line-height: 21px;">=D0=9F=D0=BE =D0=B2=D0=BE=D0=BF=D1=
+=80=D0=BE=D1=81=D0=B0=D0=BC =D0=BF=D1=80=D0=B8=D0=BE=D0=B1=D1=80=D0=B5=D1=
+=82=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=86=D0=
+=B8=D0=B8 =D0=B8 =D0=B7=D0=B0=D0=BA=D0=BB=D1=8E=D1=87=D0=B5=D0=BD=D0=B8=D1=
+=8F =D0=BA=D0=BE=D0=BD=D1=82=D1=80=D0=B0=D0=BA=D1=82=D0=BE=D0=B2 =D0=BD=D0=
+=B0 =D1=81=D0=BF=D0=B5=D1=86=D0=B8=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =D1=
+=83=D1=81=D0=BB=D0=BE=D0=B2=D0=B8=D1=8F=D1=85 =D0=BE=D0=B1=D1=80=D0=B0=D1=
+=89=D0=B0=D0=B9=D1=82=D0=B5=D1=81=D1=8C =D0=B2 =D0=BE=D1=82=D0=B4=D0=B5=D0=
+=BB =D0=BF=D0=BE=D1=81=D1=82=D0=B0=D0=B2=D0=BE=D0=BA =D0=9E=D0=9E=D0=9E =C2=
+=AB=D0=9B=D0=9B=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=BD=D0=B5=D1=88=D0=
+=BD=D0=BB=C2=BB =D0=BF=D0=BE =D1=82=D0=B5=D0=BB=D0=B5=D1=84=D0=BE=D0=BD=D1=
+=83 =D0=BB=D0=B8=D0=B1=D0=BE =D0=BF=D1=80=D0=B8=D1=81=D1=8B=D0=BB=D0=B0=D0=
+=B9=D1=82=D0=B5 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B5=D0=BD=D0=BD=D1=8B=D0=
+=B9 =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81 =D0=BD=D0=B0 =D0=BF=D0=BE=D1=87=D1=
+=82=D1=83.</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"=
+Margin: 0; padding: 0; box-sizing: border-box; font-size: 1px;" valign=3D"c=
+enter">
+<!--[if (gte mso 9)|(IE)]><table  border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0"><tr><td align=3D"left"  valign=3D"center"><![endif]-->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"Margin: 0; paddi=
+ng: 0; box-sizing: border-box; display: inline-block; vertical-align: middl=
+e;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; =
+box-sizing: border-box; border-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" =
+style=3D"Margin: 0; box-sizing: border-box; padding: 8px 12px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"tel:+74951345094" style=
+=3D"height:35pt;v-text-anchor:middle;width:154pt;" arcsize=3D"9%" stroke=3D=
+"f" fillcolor=3D"#DB2B36"><center><![endif]--><a href=3D"tel:+74951345094" =
+style=3D"Margin: 0; box-sizing: border-box; cursor: pointer; background-col=
+or: #DB2B36; border-radius: 4px; color: #ffffff; display: inline-block; fon=
+t-family: 'IBM Plex Sans', sans-serif; font-size: 18px; font-weight: 600; l=
+ine-height: 18px; text-align: center; text-decoration: none; -webkit-text-s=
+ize-adjust: none; padding: 14px 20px 16px;" target=3D"_blank">+7 (495) 134-=
+50-94</a><!--[if mso]></center></v:roundrect><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td=
+><td align=3D"right"><![endif]-->
 
-I will provide all relevant documents to substantiate your claim as a =
-beneficiary. This request
-requires a high level of confidentiality. Your first reply on thistopi=
-c would be highly appreciated.
-please consider this offer and send me the following information for
-documentation
-1, their full names,
-2, your contact address/country of residence,
-3, Your direct mobile number
-4, date of birth
-5, your occupation
-Your faithful,
-David Richard,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div style=3D"Margin: 0; paddi=
+ng: 0; box-sizing: border-box; display: inline-block; vertical-align: middl=
+e;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"Margin: 0; padding: 0; =
+box-sizing: border-box; border-spacing: 0; border-collapse: collapse;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" =
+style=3D"Margin: 0; box-sizing: border-box; padding: 8px 12px;">
+<!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=
+=3D"urn:schemas-microsoft-com:office:word" href=3D"tel:+74951345094" style=
+=3D"height:35pt;v-text-anchor:middle;width:210pt;" arcsize=3D"9%" stroke=3D=
+"f" fillcolor=3D"#DB2B36"><center><![endif]--><a href=3D"mailto:llk-bitum@l=
+ukoil-bitumen.ru" style=3D"Margin: 0; box-sizing: border-box; cursor: point=
+er; background-color: #DB2B36; border-radius: 4px; color: #ffffff; display:=
+ inline-block; font-family: 'IBM Plex Sans', sans-serif; font-size: 18px; f=
+ont-weight: 600; line-height: 18px; text-align: center; text-decoration: no=
+ne; -webkit-text-size-adjust: none; padding: 14px 20px 16px;" target=3D"_bl=
+ank">llk-bitum@lukoil-bitumen.ru</a><!--[if mso]></center></v:roundrect><![=
+endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<!--[if (gte mso 9)|(IE)]></td=
+></tr></table><![endif]-->
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; box-sizing: bord=
+er-box; padding: 32px 16px 32px; background: #000000;">
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"Margin: 0; padding: 0; box-sizing: border-box; bor=
+der-spacing: 0; border-collapse: collapse; max-width: 596px;" width=3D"100%=
+">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box; padding-bottom: 16px;" valign=3D"center"><img =
+alt=3D"=D0=9B=D1=83=D0=BA=D0=BE=D0=B9=D0=BB" border=3D"0" height=3D"auto" s=
+rc=3D"https://img.hiteml.com/en/v5/user-files?userId=3D6389637&resource=3Dh=
+img&disposition=3Dinline&name=3D6johzai7tbq91xj9d4b9yuroi7mssqujydp9w66ttuj=
+mnmbi8ai7d41riw3j4yd6bozmquq9tin79hsjsr5isxcw7c9e6pfnxwpy7h4zkb1i3qpqc8j1ky=
+n6ppyztk3xq91ysgifhu76ihenhgke3cqnnsy" style=3D"border: 0; display: block; =
+color: #000000;" width=3D"40"></td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box; padding-bottom: 16px;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; mso-line-height-rule: =
+exactly; color: #ffffff; text-align: center; font-size: 14px; font-weight: =
+400; line-height: 17px;">=D0=92=D1=8B =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=
+=D0=BB=D0=B8 =D1=8D=D1=82=D0=BE =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE, =D1=
+=82=D0=B0=D0=BA =D0=BA=D0=B0=D0=BA =D0=B8=D0=BD=D1=82=D0=B5=D1=80=D0=B5=D1=
+=81=D0=BE=D0=B2=D0=B0=D0=BB=D0=B8=D1=81=D1=8C =D0=BD=D0=B5=D1=84=D1=82=D0=
+=B5=D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=82=D0=B0=D0=BC=D0=B8 =D0=BD=D0=
+=B0 =D1=81=D0=B0=D0=B9=D1=82=D0=B0=D1=85 =D0=BA=D0=BE=D0=BC=D0=BF=D0=B0=D0=
+=BD=D0=B8=D0=B8 =C2=AB=D0=9B=D0=A3=D0=9A=D0=9E=D0=99=D0=9B=C2=BB. =D0=95=D1=
+=81=D0=BB=D0=B8 =D0=B1=D0=BE=D0=BB=D0=B5=D0=B5 =D0=BD=D0=B5 =D1=85=D0=BE=D1=
+=82=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D0=
+=BD=D0=B0=D1=88=D0=B8 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=B0, =D0=BD=D0=B0=D0=
+=B6=D0=BC=D0=B8=D1=82=D0=B5 =D0=BD=D0=B0 =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D1=
+=83 =D0=BD=D0=B8=D0=B6=D0=B5:<br>
+=09=09=09=09=09=09=09=09=09<a href=3D"https://geteml.com/ru/unsubscribe?has=
+h=3D61fhkktrezwym9j3cpzxf1z9p9c3qyid9gzf34gz5qktyaa56msi3t53mf8j36bcjecf179=
+gtof4ak#no_tracking" style=3D"Margin: 0; padding: 0; box-sizing: border-box=
+; cursor: pointer; color: #DB2B36; text-decoration: underline;" target=3D"_=
+blank">=D0=9E=D1=82=D0=BA=D0=B0=D0=B7=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=BE=
+=D1=82 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8</a></p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"Margin: 0; padding=
+: 0; box-sizing: border-box;" valign=3D"center">
+=09=09=09=09=09=09=09=09=09<p style=3D"Margin: 0; padding: 0; box-sizing: b=
+order-box; font-family: 'IBM Plex Sans', sans-serif; mso-line-height-rule: =
+exactly; color: #ffffff; text-align: center; font-size: 14px; font-weight: =
+400; line-height: 17px;">=C2=A9 2024 =D0=9E=D0=9E=D0=9E =C2=AB=D0=9B=D0=9B=
+=D0=9A-=D0=98=D0=BD=D1=82=D0=B5=D1=80=D0=BD=D0=B5=D1=88=D0=BD=D0=BB=C2=BB</=
+p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</td>
+=09=09</tr>
+=09</tbody>
+</table>
+</div>
+<center><table><tr><td><img src=3D"https://geteml.com/ru/mail_read_tracker/=
+6389637?hash=3D6dzqgxpj3a7snhwrw8k1mrg35jr3qyid9gzf34gz5qktyaa56msiswciu13t=
+d3k5t54cr7ap46t1qjemdkw3wf7upxa" width=3D"1" height=3D"1" alt=3D"" title=3D=
+"" border=3D"0"></td></tr></table></center></body>
+</html>
+------=_Part_10447382_760574277.1719993864502--
 
---wdcOqS5clOtoD=_RVL2XsjvegPeAXki1Ei
-Content-Type: text/html; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-
-<html><head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
-8859-1">
-  <META name=3Dviewport content=3D"width=3Ddevice-width, initial-scale=
-=3D1"> <META name=3Dformat-detection content=3Dtelephone=3Dno> <title>=
-Transaction involves an unclaimed</title>
- </head>
- <body style=3D"BACKGROUND-COLOR: #ffffff" bgColor=3D#ffffff> <P align=
-=3Dleft><FONT size=3D3 face=3DArial><SPAN style=3D"FONT-SIZE: small; F=
-ONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SP=
-ACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR=
-: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: i=
-nline !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px=
-; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-t=
-ext-stroke-width: 0px; text-decoration-thickness: initial; text-decora=
-tion-style: initial; text-decoration-color: initial">GREETINGS</SPAN><=
-BR style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-seri=
-f; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-=
-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WID=
-OWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-var=
-iant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke=
--width: 0px; text-decoration-thickness: initial; text-decoration-style=
-: initial; text-decoration-color: initial"><BR style=3D"FONT-SIZE: sma=
-ll; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WO=
-RD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34=
-,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: =
-rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; fo=
-nt-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decorati=
-on-thickness: initial; text-decoration-style: initial; text-decoration=
--color: initial"><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, =
-Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TR=
-ANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FO=
-NT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; B=
-ACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-liga=
-tures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0=
-px; text-decoration-thickness: initial; text-decoration-style: initial=
-; text-decoration-color: initial">My name is Barrister&nbsp;</SPAN><SP=
-AN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-seri=
-f; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-=
-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WID=
-OWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-var=
-iant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke=
--width: 0px; text-decoration-thickness: initial; text-decoration-style=
-: initial; text-decoration-color: initial">David</SPAN><SPAN style=3D"=
-FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPA=
-CE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT=
--WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WI=
-DOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255=
-); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps=
-: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: i=
-nitial; text-decoration-style: initial; text-decoration-color: initial=
-">&nbsp;</SPAN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, He=
-lvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRAN=
-SFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: norma=
-l; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-IND=
-ENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -=
-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; tex=
-t-decoration-style: initial; text-decoration-color: initial">Richard</=
-SPAN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, s=
-ans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: non=
-e; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: no=
-rmal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-CO=
-LOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: norma=
-l; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-dec=
-oration-thickness: initial; text-decoration-style: initial; text-decor=
-ation-color: initial">, a lawyer here in the UK. </SPAN><SPAN style=3D=
-"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SP=
-ACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FON=
-T-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; W=
-IDOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,25=
-5); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-cap=
-s: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: =
-initial; text-decoration-style: initial; text-decoration-color: initia=
-l">My deceased client has unclaimed permanent life insurance, the </SP=
-AN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, san=
-s-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none;=
- FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: norm=
-al; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-COLO=
-R: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal;=
- font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decor=
-ation-thickness: initial; text-decoration-style: initial; text-decorat=
-ion-color: initial">transaction involves an unclaimed "payable on deat=
-h" cash deposit of</SPAN><BR style=3D"FONT-SIZE: small; FONT-FAMILY: A=
-rial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; T=
-EXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYL=
-E: normal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); =
-TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: n=
-ormal; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
-ial; text-decoration-style: initial; text-decoration-color: initial"><=
-SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-se=
-rif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLO=
-AT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; =
-ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: r=
-gb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; fon=
-t-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoratio=
-n-thickness: initial; text-decoration-style: initial; text-decoration-=
-color: initial">=A317,820,000.00 (seventeen million eight hundred and =
-twenty thousand </SPAN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: A=
-rial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; T=
-EXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,3=
-4); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !import=
-ant; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-varian=
-t-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
-dth: 0px; text-decoration-thickness: initial; text-decoration-style: i=
-nitial; text-decoration-color: initial">pounds) in a UK bank. He worke=
-d for an energy company here in the UK, </SPAN><SPAN style=3D"FONT-SIZ=
-E: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: norm=
-al; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT:=
- 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2;=
- DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-=
-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal=
-; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; =
-text-decoration-style: initial; text-decoration-color: initial">he die=
-d of cancer. No one came forward after his death and all our </SPAN><S=
-PAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-ser=
-if; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOA=
-T: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; O=
-RPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rg=
-b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
--variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
--thickness: initial; text-decoration-style: initial; text-decoration-c=
-olor: initial">efforts to locate his relatives proved futile. He has n=
-o wife and </SPAN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial,=
- Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-T=
-RANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); F=
-ONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; =
-BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-lig=
-atures: normal; font-variant-caps: normal; -webkit-text-stroke-width: =
-0px; text-decoration-thickness: initial; text-decoration-style: initia=
-l; text-decoration-color: initial">children.</SPAN><BR style=3D"FONT-S=
-IZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: no=
-rmal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR=
-: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; BACKGROUND=
--COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: no=
-rmal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
-decoration-thickness: initial; text-decoration-style: initial; text-de=
-coration-color: initial"><BR style=3D"FONT-SIZE: small; FONT-FAMILY: A=
-rial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; T=
-EXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYL=
-E: normal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); =
-TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: n=
-ormal; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
-ial; text-decoration-style: initial; text-decoration-color: initial"><=
-SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-se=
-rif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLO=
-AT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; =
-ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: r=
-gb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; fon=
-t-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoratio=
-n-thickness: initial; text-decoration-style: initial; text-decoration-=
-color: initial">The Insurance Code requires that unclaimed "permanent =
-insurance</SPAN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, H=
-elvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRA=
-NSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FON=
-T-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BA=
-CKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligat=
-ures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0p=
-x; text-decoration-thickness: initial; text-decoration-style: initial;=
- text-decoration-color: initial">policies" must be turned over to the =
-state abandoned property </SPAN><SPAN style=3D"FONT-SIZE: small; FONT-=
-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACIN=
-G: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rg=
-b(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inlin=
-e !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; fo=
-nt-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
-stroke-width: 0px; text-decoration-thickness: initial; text-decoration=
--style: initial; text-decoration-color: initial">department after 8 ye=
-ars. I ask for your consent to work with me to </SPAN><SPAN style=3D"F=
-ONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPAC=
-E: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-=
-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WID=
-OWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255)=
-; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps:=
- normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: in=
-itial; text-decoration-style: initial; text-decoration-color: initial"=
->request this insurance benefit. If you allow me to add your name to <=
-/SPAN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, =
-sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: no=
-ne; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: n=
-ormal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-C=
-OLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: norm=
-al; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-de=
-coration-thickness: initial; text-decoration-style: initial; text-deco=
-ration-color: initial">the policy, all withdrawals will be processed o=
-n your behalf.</SPAN></FONT></p><p align=3Dleft><FONT size=3D3 face=3D=
-Arial><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, =
-sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: no=
-ne; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: n=
-ormal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-C=
-OLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: norm=
-al; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-de=
-coration-thickness: initial; text-decoration-style: initial; text-deco=
-ration-color: initial">&nbsp;I would </SPAN><SPAN style=3D"FONT-SIZE: =
-small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal;=
- WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 40=
-0; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DI=
-SPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-IND=
-ENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -=
-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; tex=
-t-decoration-style: initial; text-decoration-color: initial">like to p=
-oint out that I want 10% of this money to be distributed </SPAN><SPAN =
-style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
-WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: n=
-one; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHA=
-NS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(25=
-5,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-var=
-iant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thi=
-ckness: initial; text-decoration-style: initial; text-decoration-color=
-: initial">among charities, while the remaining 90% will be distribute=
-d among us.</SPAN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial,=
- Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-T=
-RANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); F=
-ONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; =
-BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-lig=
-atures: normal; font-variant-caps: normal; -webkit-text-stroke-width: =
-0px; text-decoration-thickness: initial; text-decoration-style: initia=
-l; text-decoration-color: initial">We are not breaking any laws with t=
-his statement as I have all the </SPAN><SPAN style=3D"FONT-SIZE: small=
-; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD=
--SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; CO=
-LOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY=
-: inline !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: =
-0px; font-variant-ligatures: normal; font-variant-caps: normal; -webki=
-t-text-stroke-width: 0px; text-decoration-thickness: initial; text-dec=
-oration-style: initial; text-decoration-color: initial">necessary docu=
-mentation to expedite the process in a highly</SPAN><SPAN style=3D"FON=
-T-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE:=
- normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WE=
-IGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOW=
-S: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255); =
-TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: n=
-ormal; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
-ial; text-decoration-style: initial; text-decoration-color: initial">p=
-rofessional and confidential manner. </SPAN></FONT></p><p align=3Dleft=
->&nbsp;</p><p align=3Dleft><FONT size=3D3 face=3DArial><SPAN style=3D"=
-FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPA=
-CE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT=
--WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WI=
-DOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255=
-); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps=
-: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: i=
-nitial; text-decoration-style: initial; text-decoration-color: initial=
-">I will provide all relevant </SPAN><SPAN style=3D"FONT-SIZE: small; =
-FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-S=
-PACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLO=
-R: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: =
-inline !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0p=
-x; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-=
-text-stroke-width: 0px; text-decoration-thickness: initial; text-decor=
-ation-style: initial; text-decoration-color: initial">documents to sub=
-stantiate your claim as a beneficiary. This request</SPAN><BR style=3D=
-"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SP=
-ACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400=
-; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; BAC=
-KGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatu=
-res: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px=
-; text-decoration-thickness: initial; text-decoration-style: initial; =
-text-decoration-color: initial"><SPAN style=3D"FONT-SIZE: small; FONT-=
-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACIN=
-G: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rg=
-b(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inlin=
-e !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; fo=
-nt-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
-stroke-width: 0px; text-decoration-thickness: initial; text-decoration=
--style: initial; text-decoration-color: initial">requires a high level=
- of confidentiality. Your first reply on this</SPAN><SPAN style=3D"FON=
-T-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE:=
- normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WE=
-IGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOW=
-S: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255); =
-TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: n=
-ormal; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
-ial; text-decoration-style: initial; text-decoration-color: initial">t=
-opic would be highly appreciated.</SPAN><BR style=3D"FONT-SIZE: small;=
- FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-=
-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34=
-,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb=
-(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-=
-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-=
-thickness: initial; text-decoration-style: initial; text-decoration-co=
-lor: initial"><BR style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helve=
-tica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFO=
-RM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; =
-ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT=
-: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -web=
-kit-text-stroke-width: 0px; text-decoration-thickness: initial; text-d=
-ecoration-style: initial; text-decoration-color: initial"><SPAN style=3D=
-"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SP=
-ACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FON=
-T-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; W=
-IDOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,25=
-5); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-cap=
-s: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: =
-initial; text-decoration-style: initial; text-decoration-color: initia=
-l">please consider this offer and send me the following information fo=
-r</SPAN><BR style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, =
-sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: no=
-ne; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHAN=
-S: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px;=
- font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
-xt-stroke-width: 0px; text-decoration-thickness: initial; text-decorat=
-ion-style: initial; text-decoration-color: initial"><SPAN style=3D"FON=
-T-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE:=
- normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WE=
-IGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOW=
-S: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255); =
-TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: n=
-ormal; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
-ial; text-decoration-style: initial; text-decoration-color: initial">d=
-ocumentation</SPAN><BR style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, =
-Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TR=
-ANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: nor=
-mal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-I=
-NDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal;=
- -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; t=
-ext-decoration-style: initial; text-decoration-color: initial"><BR sty=
-le=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHI=
-TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT=
-: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2=
-; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-l=
-igatures: normal; font-variant-caps: normal; -webkit-text-stroke-width=
-: 0px; text-decoration-thickness: initial; text-decoration-style: init=
-ial; text-decoration-color: initial"><SPAN style=3D"FONT-SIZE: small; =
-FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-S=
-PACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLO=
-R: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: =
-inline !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0p=
-x; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-=
-text-stroke-width: 0px; text-decoration-thickness: initial; text-decor=
-ation-style: initial; text-decoration-color: initial">1, their full na=
-mes,</SPAN><BR style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetic=
-a, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM:=
- none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORP=
-HANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0=
-px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-deco=
-ration-style: initial; text-decoration-color: initial"><SPAN style=3D"=
-FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPA=
-CE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT=
--WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WI=
-DOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255=
-); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps=
-: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: i=
-nitial; text-decoration-style: initial; text-decoration-color: initial=
-">2, your contact address/country of residence,</SPAN><BR style=3D"FON=
-T-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE:=
- normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; CO=
-LOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; BACKGRO=
-UND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures:=
- normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; te=
-xt-decoration-thickness: initial; text-decoration-style: initial; text=
--decoration-color: initial"><SPAN style=3D"FONT-SIZE: small; FONT-FAMI=
-LY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0=
-px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34=
-,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !i=
-mportant; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-v=
-ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
-ke-width: 0px; text-decoration-thickness: initial; text-decoration-sty=
-le: initial; text-decoration-color: initial">3, Your direct mobile num=
-ber</SPAN><BR style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica=
-, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: =
-none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPH=
-ANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0p=
-x; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-=
-text-stroke-width: 0px; text-decoration-thickness: initial; text-decor=
-ation-style: initial; text-decoration-color: initial"><SPAN style=3D"F=
-ONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPAC=
-E: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-=
-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WID=
-OWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rgb(255,255,255)=
-; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps:=
- normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: in=
-itial; text-decoration-style: initial; text-decoration-color: initial"=
->4, date of birth</SPAN><BR style=3D"FONT-SIZE: small; FONT-FAMILY: Ar=
-ial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TE=
-XT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE=
-: normal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); T=
-EXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: no=
-rmal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initi=
-al; text-decoration-style: initial; text-decoration-color: initial"><S=
-PAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-ser=
-if; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOA=
-T: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; O=
-RPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-COLOR: rg=
-b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
--variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
--thickness: initial; text-decoration-style: initial; text-decoration-c=
-olor: initial">5, your occupation</SPAN><BR style=3D"FONT-SIZE: small;=
- FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-=
-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34=
-,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb=
-(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-=
-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-=
-thickness: initial; text-decoration-style: initial; text-decoration-co=
-lor: initial"><BR style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helve=
-tica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFO=
-RM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; =
-ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT=
-: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -web=
-kit-text-stroke-width: 0px; text-decoration-thickness: initial; text-d=
-ecoration-style: initial; text-decoration-color: initial"><BR style=3D=
-"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SP=
-ACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400=
-; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; BAC=
-KGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatu=
-res: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px=
-; text-decoration-thickness: initial; text-decoration-style: initial; =
-text-decoration-color: initial"><SPAN style=3D"FONT-SIZE: small; FONT-=
-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACIN=
-G: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rg=
-b(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inlin=
-e !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; fo=
-nt-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
-stroke-width: 0px; text-decoration-thickness: initial; text-decoration=
--style: initial; text-decoration-color: initial">Your faithful,</SPAN>=
-<BR style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-ser=
-if; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT=
--WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WI=
-DOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-va=
-riant-ligatures: normal; font-variant-caps: normal; -webkit-text-strok=
-e-width: 0px; text-decoration-thickness: initial; text-decoration-styl=
-e: initial; text-decoration-color: initial"><BR style=3D"FONT-SIZE: sm=
-all; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; W=
-ORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(3=
-4,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR:=
- rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; f=
-ont-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decorat=
-ion-thickness: initial; text-decoration-style: initial; text-decoratio=
-n-color: initial"><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial,=
- Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-T=
-RANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: no=
-rmal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); TEXT-=
-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal=
-; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; =
-text-decoration-style: initial; text-decoration-color: initial">David<=
-/SPAN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, =
-sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: no=
-ne; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: n=
-ormal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; BACKGROUND-C=
-OLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: norm=
-al; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-de=
-coration-thickness: initial; text-decoration-style: initial; text-deco=
-ration-color: initial">&nbsp;</SPAN><SPAN style=3D"FONT-SIZE: small; F=
-ONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SP=
-ACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,3=
-4); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(2=
-55,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
-riant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-th=
-ickness: initial; text-decoration-style: initial; text-decoration-colo=
-r: initial">Richard</SPAN><SPAN style=3D"FONT-SIZE: small; FONT-FAMILY=
-: Arial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px=
-; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(34,3=
-4,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !imp=
-ortant; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-var=
-iant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke=
--width: 0px; text-decoration-thickness: initial; text-decoration-style=
-: initial; text-decoration-color: initial">,</SPAN></FONT></P></body>
- </html>
-
---wdcOqS5clOtoD=_RVL2XsjvegPeAXki1Ei--
-
-
-
---===============5238857522517315256==
+--MXNPdXlXLWczcEl4dS1PMw==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5238857522517315256==
+--MXNPdXlXLWczcEl4dS1PMw==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -661,6 +784,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5238857522517315256==--
-
+--MXNPdXlXLWczcEl4dS1PMw==--
 
