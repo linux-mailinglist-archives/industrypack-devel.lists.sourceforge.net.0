@@ -2,103 +2,106 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7B344927F2E
-	for <lists+industrypack-devel@lfdr.de>; Fri,  5 Jul 2024 01:47:57 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id ABFE792815A
+	for <lists+industrypack-devel@lfdr.de>; Fri,  5 Jul 2024 07:10:05 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sPWBA-0008Dv-SJ
+	id 1sPbCu-0000JM-4U
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 04 Jul 2024 23:47:56 +0000
+	Fri, 05 Jul 2024 05:10:04 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <n-kang@tenshindo.ne.jp>) id 1sPWB8-0008Dn-PW
+ (envelope-from <support@japantanner.co.jp>) id 1sPbCs-0000J7-ME
  for industrypack-devel@lists.sourceforge.net;
- Thu, 04 Jul 2024 23:47:54 +0000
+ Fri, 05 Jul 2024 05:10:03 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
  To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=lsPb01qxBlMNEWZFfD4fdSVNnR5TCbMFHcCP3C31iJc=; b=PBEiN4BYJ+jWFE7U/uCFcTIuM8
- jAzcMUFge9kmTOpYZk3sLkuvhStuwN1vN94hbJpGw1of+W9qfIDfzkRqIiCLUtcnP62TYUEJqgmoX
- klhkoHr4YgajkBUvUyQTLYXoSVVD0MeNH61RhUMtQgcoevrIb6zepBt7uV9rXBksKI5Y=;
+ bh=1KLWGSyXBL8+JE8jOAJtGDFl91q0pYPQjSatWoRFLIQ=; b=AouL+cv7qsVYlWxwHZmwoUpAby
+ hUxChNAATFYEEYHv7Akdjf31/ofnk7ioY/TvCZs/DRq3unNmzMu0FNP6eEGc681b2JAanbdMz32Dt
+ zhzD85SGi2N06aFzrSVXYgPvPv7WafTC+lzXy2+G11+hsm61gbEkcHu/1V/i7g1EWUd8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=lsPb01qxBlMNEWZFfD4fdSVNnR5TCbMFHcCP3C31iJc=; b=j
- b2BQxutSjZK9VBLu5RLkl7pS4gbKC9QYD/TWTZuE6UGah8DQx7ONX/f16JToBHqp32OVST+EEUe3Y
- fv5djv40gs1p6e+8GyWL6RbhTMXtr4Y5miNW181pnIRybFeKe3ZDSV7zhIuA15cpxoDPtKUASxEmt
- qveoSWxq3RI0tz9A=;
-Received: from [162.240.168.131] (helo=162-240-168-131.bluehost.com)
+ List-Owner:List-Archive; bh=1KLWGSyXBL8+JE8jOAJtGDFl91q0pYPQjSatWoRFLIQ=; b=k
+ T9u88NUtH2ctnFsvvLFA5U7YVdeEpdWJheKMCUJetUC0nfGqIUqE6BH0PIC4MjTa7cUZ6FCQ8rRPg
+ sd+e1Ov5Nw1NfhJV3cMxMtGGLZfmqvtfORlA92mSX+saH0+7OMkObXYnOr+7oBZBRcasXZthC+nQ4
+ pJS/N9Fv8SsaZ4+U=;
+Received: from [162.240.167.116] (helo=162-240-167-116.bluehost.com)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sPWB7-0006Tw-Td for industrypack-devel@lists.sourceforge.net;
- Thu, 04 Jul 2024 23:47:54 +0000
-Received: from [127.0.0.1] (port=57534 helo=tenshindo.ne.jp)
- by 162-240-168-131.bluehost.com with esmtps (TLS1.2) tls
+ id 1sPbCs-0000O3-TB for industrypack-devel@lists.sourceforge.net;
+ Fri, 05 Jul 2024 05:10:02 +0000
+Received: from [127.0.0.1] (port=54546 helo=japantanner.co.jp)
+ by 162-240-167-116.bluehost.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.96.2)
- (envelope-from <n-kang@tenshindo.ne.jp>) id 1sPUPd-000rT8-2J
+ (envelope-from <support@japantanner.co.jp>) id 1sPNuv-004jTH-0F
  for industrypack-devel@lists.sourceforge.net;
- Thu, 04 Jul 2024 21:54:45 +0000
+ Thu, 04 Jul 2024 14:58:37 +0000
+From: Ms Low <support@japantanner.co.jp>
 To: industrypack-devel@lists.sourceforge.net
-Date: 04 Jul 2024 17:54:46 -0400
-Message-ID: <20240704175446.CBB8705D8FFAD03E@tenshindo.ne.jp>
+Date: 04 Jul 2024 10:58:37 -0400
+Message-ID: <20240704105837.D9299ED72BFC8E49@japantanner.co.jp>
 MIME-Version: 1.0
 Content-Type: multipart/mixed;
- boundary="----=_NextPart_000_0012_3C74028E.72467227"
+ boundary="----=_NextPart_000_0012_CD2C9DB7.2F851FD2"
 X-AntiAbuse: This header was added to track abuse,
  please include it with any abuse report
-X-AntiAbuse: Primary Hostname - 162-240-168-131.bluehost.com
+X-AntiAbuse: Primary Hostname - 162-240-167-116.bluehost.com
 X-AntiAbuse: Original Domain - lists.sourceforge.net
 X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
-X-AntiAbuse: Sender Address Domain - tenshindo.ne.jp
-X-Get-Message-Sender-Via: 162-240-168-131.bluehost.com: acl_c_authenticated_local_user:
+X-AntiAbuse: Sender Address Domain - japantanner.co.jp
+X-Get-Message-Sender-Via: 162-240-167-116.bluehost.com: acl_c_authenticated_local_user:
  root
-X-Authenticated-Sender: 162-240-168-131.bluehost.com: root
+X-Authenticated-Sender: 162-240-167-116.bluehost.com: root
 X-Source: 
 X-Source-Args: 
 X-Source-Dir: 
-X-Spam-Score: -2.2 (--)
+X-Spam-Score: 3.7 (+++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  Content preview:  Dear industrypack-devel, Payment slip attached for your kind
  reference. Thank you. 
- Content analysis details:   (-2.2 points, 6.0 required)
+ Content analysis details:   (3.7 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [162.240.168.131 listed in list.dnswl.org]
- 0.5 SUBJ_ALL_CAPS          Subject is all capitals
+ 0.0 RCVD_IN_DNSWL_BLOCKED  RBL: ADMINISTRATOR NOTICE: The query to
+ DNSWL was blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [162.240.167.116 listed in list.dnswl.org]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [162.240.168.131 listed in bl.score.senderscore.com]
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
+ [162.240.167.116 listed in bl.score.senderscore.com]
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [162.240.168.131 listed in sa-trusted.bondedsender.org]
- 0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
- [SPF failed: Rejected by SPF record]
+ [162.240.167.116 listed in sa-accredit.habeas.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.5 SUBJ_ALL_CAPS          Subject is all capitals
+ 0.8 DATE_IN_PAST_12_24     Date: is 12 to 24 hours before Received: date
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 HTML_MESSAGE           BODY: HTML included in message
  0.0 T_OBFU_PDF_ATTACH      BODY: PDF attachment with generic MIME type
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 T_OBFU_HTML_ATTACH     BODY: HTML attachment with non-text MIME type
  0.0 T_HTML_ATTACH          HTML attachment to bypass scanning?
  1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
-X-Headers-End: 1sPWB7-0006Tw-Td
+X-Headers-End: 1sPbCs-0000O3-TB
 Subject: [Industrypack-devel] =?utf-8?q?PAYMENT_SLIP?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -111,13 +114,11 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Ms Low via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
-Reply-To: Ms Low <n-kang@tenshindo.ne.jp>
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
 This is a multi-part message in MIME format.
 
-------=_NextPart_000_0012_3C74028E.72467227
+------=_NextPart_000_0012_CD2C9DB7.2F851FD2
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -226,7 +227,7 @@ ACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-wi=
 dth: 0px; text-decoration-thickness: initial; text-decoration-style: initia=
 l; text-decoration-color: initial;=20
 font-variant-ligatures: normal; font-variant-caps: normal"><SPAN style=3D"B=
-OX-SIZING: border-box; FONT-SIZE: 10pt">Tel: 603-5171 2882</SPAN></P>
+OX-SIZING: border-box; FONT-SIZE: 10pt">Tel: 603-5161 2883</SPAN></P>
 <P style=3D"BOX-SIZING: border-box; FONT-SIZE: 13px; FONT-FAMILY: Verdana, =
 Geneva, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; MARGIN-TOP: 0px=
 ; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(17,17,17); FONT-STYLE:=
@@ -235,9 +236,9 @@ ACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-wi=
 dth: 0px; text-decoration-thickness: initial; text-decoration-style: initia=
 l; text-decoration-color: initial;=20
 font-variant-ligatures: normal; font-variant-caps: normal"><SPAN style=3D"B=
-OX-SIZING: border-box; FONT-SIZE: 10pt">Fax: 603-5362 1383</SPAN></P></BODY=
+OX-SIZING: border-box; FONT-SIZE: 10pt">Fax: 603-5162 1382</SPAN></P></BODY=
 ></HTML>
-------=_NextPart_000_0012_3C74028E.72467227
+------=_NextPart_000_0012_CD2C9DB7.2F851FD2
 Content-Type: application/octet-stream; name="=?UTF-8?B?UEFZTUVOVCBTTElQIChOIFMgVEFOIEFEVklTT1JZKS5wZGYuc2h0bWw=?="
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="=?UTF-8?B?UEFZTUVOVCBTTElQIChOIFMgVEFOIEFEVklTT1JZKS5wZGYuc2h0bWw=?="
@@ -294,14 +295,14 @@ ZXItYm90dG9tLWxlZnQtcmFkaXVzOiAycHg7IGJhY2tncm91bmQtY29sb3I6IHJnYig1MSwg
 MjA0LCA1MSk7IGZvbnQtc2l6ZTogMTNweDsiPg0KCQkJCQkJCQlWaWV3PC9idXR0b24+PC9k
 aXY+DQoNCg0KDQombmJzcDs8L2Zvcm0+PC9kaXY+DQoNCjwvYm9keT48L2h0bWw+
 
-------=_NextPart_000_0012_3C74028E.72467227
+------=_NextPart_000_0012_CD2C9DB7.2F851FD2
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
-------=_NextPart_000_0012_3C74028E.72467227
+------=_NextPart_000_0012_CD2C9DB7.2F851FD2
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -312,6 +313,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
-------=_NextPart_000_0012_3C74028E.72467227--
+------=_NextPart_000_0012_CD2C9DB7.2F851FD2--
 
 
