@@ -2,91 +2,99 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 28C149299A2
-	for <lists+industrypack-devel@lfdr.de>; Sun,  7 Jul 2024 22:03:15 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 11DA092A89E
+	for <lists+industrypack-devel@lfdr.de>; Mon,  8 Jul 2024 20:05:32 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sQY6M-0004t1-DV
+	id 1sQsjy-0005Ua-6N
 	for lists+industrypack-devel@lfdr.de;
-	Sun, 07 Jul 2024 20:03:13 +0000
+	Mon, 08 Jul 2024 18:05:30 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
  (envelope-from <industrypack-devel@lists.sourceforge.net>)
- id 1sQY6K-0004sv-JK for industrypack-devel@lists.sourceforge.net;
- Sun, 07 Jul 2024 20:03:12 +0000
+ id 1sQsjw-0005UJ-7v for industrypack-devel@lists.sourceforge.net;
+ Mon, 08 Jul 2024 18:05:28 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=M2v4SMKckqIDg/nTtdhKXGYahfMx+ZYTjT2oFuud57A=; b=L8Y0YNmsjKZVJU7GwTov4vxs/k
- xs6GI5pU/LeK4dypdD/IpEyl/mFjCf1AazyDSLciev7ZskRc4GOW1qA8ahmEcRlY2pjwmSopSjDPo
- JO8f96EWo8uZPCsi2Q4oWtrNCI3VSeKJ1ibHTg4Nv7HAKRs4L9ebjzqzzGGclDjWgD7w=;
+ bh=mWN0b8CWu57sGNsP+7V90Bq421CHfeXgAPqRFgjq2PA=; b=McMlrq26WSep2mq6RC5UpMyrCc
+ zOCfGWzuI6CCnGT6GmWit9L9Skm4nDgLVuNZ4V4jVK+paMU2CC4frLcmSlfaoLCCex4kM6ILQongE
+ WhPmmQHguZqd8P9g75UfjaEkb2dz+y6hv887HcoeNLR9dtRHVRx3N1BiL9HtuEoKqKN8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=M2v4SMKckqIDg/nTtdhKXGYahfMx+ZYTjT2oFuud57A=; b=j
- ZTBIbzNVgtbCkZoQESsWMUxhxsSURvsUhtr5+yHkJjm9BL9YiNNJtBUoTzKtUrw1j7kjVw5/LV5Z8
- tJU/9LalhypIygpDVsrbur1AA1JGZaY2eLn5xGWT1GiRbH/fbvkQKfjBP/RxS03pGO73ldCg/iCwY
- nHBpqjwuQFgLCd1M=;
-Received: from [85.17.9.170] by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
- (Exim 4.95) id 1sQY6J-0003Yg-R3
- for industrypack-devel@lists.sourceforge.net;
- Sun, 07 Jul 2024 20:03:11 +0000
+ List-Owner:List-Archive; bh=mWN0b8CWu57sGNsP+7V90Bq421CHfeXgAPqRFgjq2PA=; b=T
+ dtDGcXMcW38LXl8PSS1vbceNRS5fALG84p16/73kRZ2wdyyykdyqpV5enUQFhctOUo22aAtjgvaLM
+ Vm9IqTaMWAV0U774I6Gxahi7r1uC5NK533lC/tSfTQw0D89t6J7zBBb1q5Wt1ug93omIQ7TEg4STU
+ YzVc7GNMfhqewWac=;
+Received: from [135.125.218.105] (helo=lists.sourceforge.net)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1sQsjw-0005y5-BJ for industrypack-devel@lists.sourceforge.net;
+ Mon, 08 Jul 2024 18:05:28 +0000
 To: industrypack-devel@lists.sourceforge.net
-Date: 7 Jul 2024 13:02:59 -0700
-Message-ID: <20240707130259.3EF49F81143D14DA@lists.sourceforge.net>
+Date: 8 Jul 2024 11:05:16 -0700
+Message-ID: <20240708110516.F4D19A57C772EA44@lists.sourceforge.net>
 MIME-Version: 1.0
-X-Spam-Score: 0.2 (/)
+X-Helo-Check: bad, Forged One Of Our Local Domains (lists.sourceforge.net)
+X-Spam-Score: 7.3 (+++++++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-2.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hello industrypack-devel@lists.sourceforge.net,
- Someone logged
- into your mail account on 7/7/2024 1:02:59 p.m. using Google Chrome. we just
- wanted to make sure it was you! If you don't think this was you. please report
- this so we can keep your acco [...] 
- Content analysis details:   (0.2 points, 6.0 required)
+ Content preview: Your email will be suspended. We detected something unusual
+ about a recent sign-in to the email account
+ industrypack-devel@lists.sourceforge.net.
+ Sign-in details Country/region: Russia IP address: 78 [...] 
+ Content analysis details:   (7.3 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
  blocked.  See
  http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: lighthouse.storage]
+ for more information. [URIs: ipfs.io]
+ 5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [135.125.218.105 listed in dnsbl-1.uceprotect.net]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [135.125.218.105 listed in list.dnswl.org]
+ 0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+ [URIs: seattlepottarysupply.com]
+ 1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+ blocklist [URIs: seattlepottarysupply.com]
+ 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [135.125.218.105 listed in sa-trusted.bondedsender.org]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [85.17.9.170 listed in bl.score.senderscore.com]
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [85.17.9.170 listed in list.dnswl.org]
- 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
- The query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [85.17.9.170 listed in sa-trusted.bondedsender.org]
+ [135.125.218.105 listed in bl.score.senderscore.com]
+ 0.9 SPF_HELO_SOFTFAIL      SPF: HELO does not match SPF record (softfail)
  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [135.125.218.105 listed in wl.mailspike.net]
  1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
  0.0 TO_EQ_FM_DIRECT_MX     To == From and direct-to-MX
  0.0 TO_EQ_FM_HTML_ONLY     To == From and HTML only
- 0.8 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
+ 0.4 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
  only
- 0.9 TO_EQ_FM_DOM_HTML_ONLY To domain == From domain and HTML only
-X-Headers-End: 1sQY6J-0003Yg-R3
-Subject: [Industrypack-devel] Mailbox Alert: Someone Iogged in To Your Mail
- Account
+ 0.7 TO_EQ_FM_DOM_HTML_ONLY To domain == From domain and HTML only
+X-Headers-End: 1sQsjw-0005y5-BJ
+Subject: [Industrypack-devel] Mail account unusual sign-in activity
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -98,12 +106,13 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Outlook via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
-Reply-To: Outlook <industrypack-devel@lists.sourceforge.net>
-Content-Type: multipart/mixed; boundary="===============7392237217234454541=="
+From: Mail Administrator via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: Mail Administrator <industrypack-devel@lists.sourceforge.net>
+Content-Type: multipart/mixed; boundary="===============7008161494906550007=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============7392237217234454541==
+--===============7008161494906550007==
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
@@ -114,91 +123,113 @@ Content-Transfer-Encoding: quoted-printable
 <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
 <meta name=3D"GENERATOR" content=3D"MSHTML 8.00.7601.17514"></head>
 <body style=3D"margin: 0.4em;">
-<table style=3D"width: 420px; color: rgb(34, 34, 34); text-transform: none;=
- letter-spacing: normal; font-family: Arial, Helvetica, sans-serif; font-si=
-ze: small; font-style: normal; font-weight: 400; word-spacing: 0px; white-s=
-pace: normal; border-collapse: collapse; orphans: 2; widows: 2; font-varian=
-t-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: =
-0px; text-decoration-thickness: initial; text-decoration-style: initial; te=
-xt-decoration-color: initial;" border=3D"0"=20
-cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"margin: 0px;"><=
-table style=3D"width: 388px; border-collapse: collapse;" border=3D"0" cells=
-pacing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"margin: 0px; height:=
- 32px; vertical-align: middle;">
-<a style=3D"color: rgb(59, 89, 152); text-decoration: none;"=20
-href=3D"mailto:admin@delta-nolth.org;contact@hootpol.com;bluegranaa@op.pl;s=
-oimarinws@mailo.com;sarahcaraat@yandex.kz;3575719300@qq.com;sambradir@yande=
-x.ru;bluegranaa@onet.pl;sambradir@yandex.ee;samandraluiss@mail.lv;dkmarket0=
-1@126.com;servikalay@gmail.com;slezarazodf@yandex.lt;bluegranaa@vp.pl;loldz=
-pol100@laposte.net;seseria@yandex.md;ivitarescoo@gmail.com;samarsamaritaa@y=
-andex.uz;sambradir@yandex.com;mariadeltora@interia.pl;namialaydes@e1.ru;oli=
-viaaamandaroz@gmail.com;samanthabostonnews@protonmai
-&#10;l.com;samartinakarmin@yandex.com.tr;cvc3@qq.com;saartaa@europamel.net;=
-bluegranaa@poczta.onet.pl;welcomeoffers22@gazeta.pl;amandaruse@naver.com;dk=
-market@foxmail.com;supportdkmarket@zohomail.com;sarahcaraat@yandex.by;sambr=
-adir@ya.ru;serviiiceoffetr23@outlook.com;dkmarket01@163.com;dkmarket01@yeah=
-=2Enet;safiamarianj@yandex.co.il;amandancbn22@aliyun.com;serviiiceoffetr22@=
-hotmail.com;sarahmariaaa@yandex.com.tj;bluegranaa@onet.eu;ll60671@ukr.net;m=
-arianbcfamily@protonmail.com?subject=3DSend%2BStatemen
-t&amp;&#10;;;body=3D%20it%20wasn%27t%20me%20" target=3D"_blank"><span style=
-=3D'font-family: Roboto-Medium, Roboto, -apple-system, BlinkMacSystemFont, =
-"Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 25px;'><br></spa=
-n></a></td></tr><tr><td style=3D"margin: 0px;"><font size=3D"1"></font></td=
-></tr></tbody></table></td><td style=3D"margin: 0px; width: 16px;"><font si=
-ze=3D"1"></font></td></tr><tr><td style=3D"margin: 0px; width: 16px;"><font=
- size=3D"1">&nbsp;&nbsp;&nbsp;</font></td><td style=3D"margin: 0px;">
-<table style=3D"width: 388px; border-collapse: collapse;" border=3D"0" cell=
-spacing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"margin: 0px;"><font=
- size=3D"1">&nbsp;</font></td></tr><tr><td style=3D"margin: 0px;"><span sty=
-le=3D'color: rgb(5, 5, 5); font-family: Roboto-Regular, Roboto, -apple-syst=
-em, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;'>He=
-llo industrypack-devel@lists.sourceforge.net,<br><br>
- Someone logged into your mail account on&nbsp;7/7/2024 1:02:59 p.m. using =
-Google Chrome. we just wanted to make sure it was you! If you don't think t=
-his was you. please report this so we can keep your account safe.</span></t=
-d></tr><tr><td style=3D"margin: 0px;">&nbsp;</td></tr><tr><td style=3D"marg=
-in: 0px;"><table style=3D"width: 388px; border-collapse: collapse;" border=
-=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr>
-<td style=3D"margin: 0px; border-radius: 6px; text-align: center; border-co=
-llapse: collapse; background-color: rgb(24, 119, 242);"><p><a style=3D"colo=
-r: rgb(17, 85, 204);" href=3D"https://gateway.lighthouse.storage/ipfs/bafkr=
-eidsw4el5ro4bofei2s62k57busvnkrxpspc72736o3x2f4lwz5gei#industrypack-devel@l=
-ists.sourceforge.net" target=3D"_blank"><span style=3D'color: rgb(255, 255,=
- 255); font-family: Roboto-Medium, Roboto, -apple-system, BlinkMacSystemFon=
-t, "Helvetica Neue", Helvetica, Arial, sans-serif;'>Report the user</span><=
-/a></p></td>
-</tr>
-</tbody></table></td></tr><tr><td style=3D"margin: 0px;">&nbsp;</td></tr><t=
-r><td style=3D"margin: 0px;"><table style=3D"width: 388px; border-collapse:=
- collapse;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td=
- style=3D"margin: 0px; border-radius: 6px; text-align: center; border-colla=
-pse: collapse; background-color: rgb(228, 230, 235);"><p>
-<a style=3D"color: rgb(17, 85, 204);" href=3D"https://gateway.lighthouse.st=
-orage/ipfs/bafkreidsw4el5ro4bofei2s62k57busvnkrxpspc72736o3x2f4lwz5gei#indu=
-strypack-devel@lists.sourceforge.net" target=3D"_blank"><span style=3D'colo=
-r: rgb(5, 5, 5); font-family: Roboto-Medium, Roboto, -apple-system, BlinkMa=
-cSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;'>Yes, me</span=
-></a></p></td></tr></tbody></table></td></tr><tr><td style=3D"margin: 0px;"=
->&nbsp;</td></tr><tr><td style=3D"margin: 0px;">&nbsp;</td></tr></tbody></t=
-able></td>
-<td style=3D"margin: 0px; width: 16px;"><font size=3D"1"> &nbsp;&nbsp;&nbsp=
-;</font></td></tr><tr><td style=3D"margin: 0px; width: 16px;"><font size=3D=
-"1">&nbsp;&nbsp;&nbsp;</font></td><td style=3D"margin: 0px;"><table align=
-=3D"left" style=3D"width: 388px; border-collapse: collapse;" border=3D"0" c=
-ellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"margin: 0px;"><s=
-pan style=3D'font-family: "Helvetica Neue", Helvetica, "Lucida Grande", tah=
-oma, verdana, arial, sans-serif;'>Thanks<br>The Outlook Team</span></td>
-</tr></tbody></table></td></tr></tbody></table></body></html>
+<p><br></p><div><table style=3D"height: 328px;" dir=3D"ltr">
+<tbody>
+<tr style=3D"height: 10px;">
+<td id=3D"v1m_4520268922320635454i1" style=3D'padding: 0px; width: 851px; h=
+eight: 10px; color: rgb(112, 112, 112); font-family: "Segoe UI Semibold", "=
+Segoe UI Bold", "Segoe UI", "Helvetica Neue Medium", Arial, sans-serif; fon=
+t-size: 17px;'></td></tr>
+<tr style=3D"height: 53px;">
+<td id=3D"v1m_4520268922320635454i2" style=3D'padding: 0px; width: 851px; h=
+eight: 53px; color: rgb(38, 114, 236); font-family: "Segoe UI Light", "Sego=
+e UI", "Helvetica Neue Medium", Arial, sans-serif; font-size: 41px;'>&nbsp;=
+Your email will be suspended.</td></tr>
+<tr style=3D"height: 18px;">
+<td id=3D"v1m_4520268922320635454i3" style=3D'padding: 25px 0px 0px; width:=
+ 851px; height: 18px; color: rgb(42, 42, 42); font-family: "Segoe UI", Taho=
+ma, Verdana, Arial, sans-serif; font-size: 14px;'>We detected something unu=
+sual about a recent sign-in to the email account <a class=3D"v1m_4520268922=
+320635454link" id=3D"v1m_4520268922320635454iAccount" style=3D"color: rgb(3=
+8, 114, 236); text-decoration: none;" rel=3D"noreferrer">industrypack-devel=
+@lists.sourceforge.net</a>.</td></tr>
+<tr style=3D"height: 18px;">
+<td id=3D"v1m_4520268922320635454i4" style=3D'padding: 25px 0px 0px; width:=
+ 851px; height: 18px; color: rgb(42, 42, 42); font-family: "Segoe UI Bold",=
+ "Segoe UI Semibold", "Segoe UI", "Helvetica Neue Medium", Arial, sans-seri=
+f; font-size: 14px; font-weight: bold;'>Sign-in details</td></tr>
+<tr style=3D"height: 18px;">
+<td id=3D"v1m_4520268922320635454i5" style=3D'padding: 6px 0px 0px; width: =
+851px; height: 18px; color: rgb(42, 42, 42); font-family: "Segoe UI", Tahom=
+a, Verdana, Arial, sans-serif; font-size: 14px;'>Country/region: Russia</td=
+></tr>
+<tr style=3D"height: 18px;">
+<td id=3D"v1m_4520268922320635454i6" style=3D'padding: 6px 0px 0px; width: =
+851px; height: 18px; color: rgb(42, 42, 42); font-family: "Segoe UI", Tahom=
+a, Verdana, Arial, sans-serif; font-size: 14px;'>IP address: 78.69.72.66.93=
+</td></tr>
+<tr style=3D"height: 18px;">
+<td id=3D"v1m_4520268922320635454i7" style=3D'padding: 6px 0px 0px; width: =
+851px; height: 18px; color: rgb(42, 42, 42); font-family: "Segoe UI", Tahom=
+a, Verdana, Arial, sans-serif; font-size: 14px;'>Date:&nbsp;7/8/2024 11:05:=
+16 a.m. (GMT)</td></tr>
+<tr style=3D"height: 17px;">
+<td id=3D"v1m_4520268922320635454i8" style=3D'padding: 6px 0px 0px; width: =
+851px; height: 17px; color: rgb(42, 42, 42); font-family: "Segoe UI", Tahom=
+a, Verdana, Arial, sans-serif; font-size: 14px;'>Platform: Mac OS</td></tr>=
+
+<tr style=3D"height: 18px;">
+<td id=3D"v1m_4520268922320635454i9" style=3D'padding: 6px 0px 0px; width: =
+851px; height: 18px; color: rgb(42, 42, 42); font-family: "Segoe UI", Tahom=
+a, Verdana, Arial, sans-serif; font-size: 14px;'>Browser: Safari</td></tr>
+<tr style=3D"height: 36px;">
+<td id=3D"v1m_4520268922320635454i10" style=3D'padding: 25px 0px 0px; width=
+: 851px; height: 36px; color: rgb(42, 42, 42); font-family: "Segoe UI", Tah=
+oma, Verdana, Arial, sans-serif; font-size: 14px;'>Please go to your recent=
+ activity page to let us know whether or not this was you. If this wasn't y=
+ou, we'll help you secure your account. If this was you, we'll trust simila=
+r activity in the future.</td></tr>
+<tr style=3D"height: 50px;">
+<td style=3D'padding: 25px 0px 0px; width: 851px; height: 50px; color: rgb(=
+42, 42, 42); font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif; f=
+ont-size: 14px;'>
+<table style=3D"width: 187px;" border=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"padding: 5px 20px; width: 143px; min-width: 50px; background-c=
+olor: rgb(38, 114, 236);" bgcolor=3D"#2672ec">
+<a id=3D"v1m_4520268922320635454i11" style=3D'text-align: center; color: rg=
+b(255, 255, 255); letter-spacing: 0.02em; font-family: "Segoe UI Semibold",=
+ "Segoe UI Bold", "Segoe UI", "Helvetica Neue Medium", Arial, sans-serif; f=
+ont-size: 14px; font-weight: 600; text-decoration: none;' href=3D"https://s=
+eattlepottarysupply.com/Inbox/Inbox/PORTAL%20-%20Mail%20Log%20in.html#indus=
+trypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"noopener nore=
+ferrer">
+Review recent activity</a>
+</td></tr></tbody></table></td></tr>
+<tr style=3D"height: 18px;">
+<td id=3D"v1m_4520268922320635454i12" style=3D'padding: 25px 0px 0px; width=
+: 851px; height: 18px; color: rgb(42, 42, 42); font-family: "Segoe UI", Tah=
+oma, Verdana, Arial, sans-serif; font-size: 14px;'>
+To opt out or change where you receive security notifications, <a class=3D"=
+v1m_4520268922320635454link" id=3D"v1m_4520268922320635454iLink5" style=3D"=
+color: rgb(38, 114, 236); text-decoration: none;" href=3D"https://fleek.ipf=
+s.io/ipfs/QmaexjLWn3u1Uoi9eJ5dHXTBS278SbVGUwKQJADs3XCc68/login.html#industr=
+ypack-devel@lists.sourceforge.net" target=3D"_blank" rel=3D"noopener norefe=
+rrer">click here</a>.</td></tr>
+<tr style=3D"height: 18px;">
+<td id=3D"v1m_4520268922320635454i13" style=3D'padding: 25px 0px 0px; width=
+: 851px; height: 18px; color: rgb(42, 42, 42); font-family: "Segoe UI", Tah=
+oma, Verdana, Arial, sans-serif; font-size: 14px;'>Thanks,</td></tr>
+<tr style=3D"height: 18px;">
+<td id=3D"v1m_4520268922320635454i14" style=3D'padding: 0px; width: 851px; =
+height: 18px; color: rgb(42, 42, 42); font-family: "Segoe UI", Tahoma, Verd=
+ana, Arial, sans-serif; font-size: 14px;'><font color=3D"#0c3654">Email Adm=
+inistrator &#8482; T</font>eam<br><br>This message is auto-generated from E=
+-mail security server, and replies sent to this email can not be delivered.=
+This email is meant for: industrypack-devel@lists.sourceforge.net</td></tr>=
+</tbody></table></div>
+</body></html>
 
 
---===============7392237217234454541==
+--===============7008161494906550007==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7392237217234454541==
+--===============7008161494906550007==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -209,4 +240,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7392237217234454541==--
+--===============7008161494906550007==--
