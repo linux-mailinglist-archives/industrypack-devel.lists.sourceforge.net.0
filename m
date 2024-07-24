@@ -2,106 +2,91 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3670C939EBD
-	for <lists+industrypack-devel@lfdr.de>; Tue, 23 Jul 2024 12:26:10 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 36CE493B487
+	for <lists+industrypack-devel@lfdr.de>; Wed, 24 Jul 2024 18:09:01 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sWCie-0000QV-A9
+	id 1sWeXz-0007gT-OR
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 23 Jul 2024 10:26:09 +0000
+	Wed, 24 Jul 2024 16:08:59 +0000
 Received: from [172.30.29.67] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <Wester@yvo364.com>) id 1sWCid-0000QL-7N
+ (envelope-from <noreply@lists.sourceforge.net>) id 1sWeXy-0007gM-2M
  for industrypack-devel@lists.sourceforge.net;
- Tue, 23 Jul 2024 10:26:08 +0000
+ Wed, 24 Jul 2024 16:08:58 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Message-ID:Mime-Version:Subject:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=enonROhYOLEVKKW0Jcp5jLQpWdvcUL7vUeAGvRckYf0=; b=cM6p/SYXwif2cnPddoJJ9tkE5n
- UuJebeLW8i5WHPXy+s723mmbI9IWaro3J3Id21O9z6fw33MAPRJyrylvmUtEhh+EDsbPtgf0i+Wng
- loiNvqFQpOqs8a70xxD5Bo5rM+TcfdcdOGnm1vsMai5EzUwXf6LEQ8HzHdufeis6Jsdc=;
+ bh=gE0/1TdEhW0NcBIJH95RJ7Ljon66BsYF5h1f6tqWqP8=; b=LgKHBymVC1/c9hV/7hJDLH2lWO
+ aZXiXLU5LAEkdYlMdHxA8vYfwJTeXaN6WsMl8TzuBtxdrdCBNjQY32rhZevC5WbtzflAmPKQ9xiOn
+ GI9HFoYBXWfBIIAqva3TsOxdwrSKZR24HMtQdGjzL1TXRbi4qc1RFPVVkzFU9waC0J5E=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Message-ID:Mime-Version:Subject:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+ Date:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=enonROhYOLEVKKW0Jcp5jLQpWdvcUL7vUeAGvRckYf0=; b=a
- CqZUdyIwZd2YQWrznxIWqJIs0wfdYoeP1eNQihwXJ8/E/czvP9Y/XhVeaxj1IB4WyRxwxPO8bn6Xe
- UDEur8+/f5dYxhTL7bipCSN1swXaKcEzYcMfkGPy+ZGe7ysSBEHmdYQPj7kcN9V14FaUNOdyc59by
- 4ModB8/FtnbqUDd4=;
-Received: from mail4.yvo364.com ([192.227.191.84])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1sWCiZ-0005cL-Tk for industrypack-devel@lists.sourceforge.net;
- Tue, 23 Jul 2024 10:26:07 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=yvo364.com; 
- h=Date:From:To:Subject:Mime-Version:Message-ID:Content-Type;
- i=Wester@yvo364.com;
- bh=enonROhYOLEVKKW0Jcp5jLQpWdvcUL7vUeAGvRckYf0=;
- b=bwmNpD02TE3czu8CDKGTkdu5tPP4Kt8BAHamOMuOd0ug3IoldkMmYjEBR9R2BRYgkpEd6OFMloEz
- 1HqgbzCD6u2rRp+tHEfjmeQghyJZV1JQXV1hboCG6d/6O2f2sxxsYRQ2RBn1qyC3f3r2n7XZ1B85
- rBZwgdvheLf7QNauc5U=
-Date: Tue, 23 Jul 2024 19:25:41 +0900
-To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
-X-Has-Attach: no
-Mime-Version: 1.0
-Message-ID: <202407231925524733378@yvo364.com>
-X-Spam-Score: 1.9 (+)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+ List-Owner:List-Archive; bh=gE0/1TdEhW0NcBIJH95RJ7Ljon66BsYF5h1f6tqWqP8=; b=V
+ maoEKqewY9lIcNkIKnR0EqUtLk7yTeyLT7zHshtz1UHJzZLZJaMwwqS7dxq0w58Fhlgqk3uZ0IuT8
+ NkMRJBqiqeiTiHsfGzS7oCvVE1VWAkmIuYF/N+uYIPefKhaPHcavK9h9ae/td0itKmdqphI7xWaem
+ 3U462X/eB7Uavwd4=;
+Received: from [197.184.177.85] (helo=rain-197-184-177-85.rain.network)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1sWeXw-0000lZ-DZ for industrypack-devel@lists.sourceforge.net;
+ Wed, 24 Jul 2024 16:08:58 +0000
+To: industrypack-devel@lists.sourceforge.net
+Date: 24 Jul 2024 18:08:47 +0200
+Message-ID: <20240724180843.8EA080123CC4C082@lists.sourceforge.net>
+MIME-Version: 1.0
+X-Spam-Score: 9.0 (+++++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  日頃より「 JR西日本」をご利用いただきありがとうございます。
-    ●当社は7月23日にシステムを更新する予定です。 PESAEZ
-    MNBVP ●アカウントに長期間ログインしていないため、 
- 
- Content analysis details:   (1.9 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview: Pending Incoming Messages Failed The following messages have
+ been blocked by your administrator due to validation errors. You have 4 new
+ messages in your email quarantine. Date: 07/23/2024 00:34:50 a [...] 
+ Content analysis details:   (9.0 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
-                             blocked.  See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URIs: jr-odekake.net]
-  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
-                             blocklist
-                             [URIs: yvo364.com]
-  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                            [192.227.191.84 listed in bl.score.senderscore.com]
-  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
-                             The query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                             [192.227.191.84 listed in sa-accredit.habeas.com]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.0 HTML_IMAGE_ONLY_32     BODY: HTML: images with 2800-3200 bytes of
-                             words
-  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
-  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
-X-Headers-End: 1sWCiZ-0005cL-Tk
-Subject: [Industrypack-devel] =?utf-8?b?44CQSlLopb/ml6XmnKw6Q2x1YiBKLVdF?=
-	=?utf-8?b?U1TjgJHjgafjgY3jgovjgaDjgZHml6njgY/jgqLjgqvjgqbjg7Pjg4g=?=
-	=?utf-8?b?6KqN6Ki844KS5a6M5LqG44GZ44KL?=
+ 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+ blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: googleapis.com]
+ 5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [197.184.177.85 listed in dnsbl-1.uceprotect.net]
+ 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [197.184.177.85 listed in sa-trusted.bondedsender.org]
+ 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [197.184.177.85 listed in bl.score.senderscore.com]
+ 0.5 SUBJ_ALL_CAPS          Subject is all capitals
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+ identical to background
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
+ only
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1sWeXw-0000lZ-DZ
+Subject: [Industrypack-devel] [SPAM] PENDING INCOME MESSAGE FAILED
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -113,128 +98,411 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: =?UTF-8?B?SlLopb/ml6XmnKwgV0VTVEVS5Lya5ZOh5LqL5YuZ5bGA?= via
- Industrypack-devel <industrypack-devel@lists.sourceforge.net>
-Reply-To: =?UTF-8?B?SlLopb/ml6XmnKwgV0VTVEVS5Lya5ZOh5LqL5YuZ5bGA?=
- <Wester@yvo364.com>
-Content-Type: multipart/mixed; boundary="===============5759233284174976363=="
+From: noreply--- via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: noreply@lists.sourceforge.net
+Content-Type: multipart/mixed; boundary="===============3461591899000095470=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
+--===============3461591899000095470==
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
 
---===============5759233284174976363==
-Content-Type: multipart/alternative;
-	boundary="=====001_Dragon432855325885_====="
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<table width=3D"100%" align=3D"center" id=3D"gmail-v1i0rd_mr_css_attr" styl=
+e=3D'color: rgb(44, 45, 46); line-height: normal; font-family: -apple-syste=
+m, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, sans-serif, "Ap=
+ple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 13px; bor=
+der-collapse: collapse; font-feature-settings: "liga" 0;' bgcolor=3D"#eff2f=
+7" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1i0bs_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1idzf_mr_css_attr" style=3D"box-sizing: border-box;">
+<td width=3D"600" align=3D"center" id=3D"gmail-v1iq38n_mr_css_attr" valign=
+=3D"top" style=3D"box-sizing: border-box;"><br class=3D"gmail-Apple-interch=
+ange-newline">
+<table align=3D"center" id=3D"gmail-v1i0mg8_mr_css_attr" style=3D'border: 1=
+px solid rgb(240, 241, 246); border-image: none; line-height: normal; borde=
+r-collapse: collapse; max-width: 600px; font-feature-settings: "liga" 0;' b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1i0bb3_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1itceg_mr_css_attr" style=3D"box-sizing: border-box;">
+<td width=3D"600" align=3D"center" id=3D"gmail-v1icr7h_mr_css_attr" valign=
+=3D"top" style=3D"max-width: 600px; box-sizing: border-box;" bgcolor=3D"#ff=
+ffff">
+<table width=3D"100%" align=3D"center" id=3D"gmail-v1in3cl_mr_css_attr" sty=
+le=3D'line-height: normal; border-collapse: collapse; font-feature-settings=
+: "liga" 0;' border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1i0fn6_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1i7dvh_mr_css_attr" style=3D"box-sizing: border-box;">
+<td align=3D"center" id=3D"gmail-v1igi3u_mr_css_attr" valign=3D"top" style=
+=3D"box-sizing: border-box;" bgcolor=3D"#030594">
+<table width=3D"95%" align=3D"center" id=3D"gmail-v1i98xt_mr_css_attr" styl=
+e=3D'line-height: normal; border-collapse: collapse; font-feature-settings:=
+ "liga" 0;' border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1imqoe_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1i931z_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"18" id=3D"gmail-v1i7v9o_mr_css_attr" valign=3D"top" style=3D"=
+box-sizing: border-box;">&nbsp;</td></tr>
+<tr id=3D"gmail-v1ivo8n_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1ip3ho_mr_css_attr" valign=3D"top" style=3D"box-sizing: bo=
+rder-box;">
+<table align=3D"center" id=3D"gmail-v1ib192_mr_css_attr" style=3D'line-heig=
+ht: normal; border-collapse: collapse; font-feature-settings: "liga" 0;' bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1i3yyx_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1igh4t_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1ilgy1_mr_css_attr" style=3D"box-sizing: border-box;">
+<h1 id=3D"gmail-v1i4i9g_mr_css_attr" style=3D"margin: auto; padding: 0px; t=
+ext-align: center; color: rgb(255, 255, 255); line-height: 32px; font-size:=
+ 28px; box-sizing: border-box;">Pending Incoming Messages Failed</h1></td><=
+/tr></tbody></table></td></tr>
+<tr id=3D"gmail-v1ipnbk_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"15" id=3D"gmail-v1ip3yr_mr_css_attr" valign=3D"top" style=3D"=
+box-sizing: border-box;">&nbsp;</td></tr></tbody></table></td></tr>
+<tr id=3D"gmail-v1i4d2h_mr_css_attr" style=3D"box-sizing: border-box;">
+<td align=3D"center" id=3D"gmail-v1ii89o_mr_css_attr" valign=3D"top" style=
+=3D"box-sizing: border-box;">
+<table width=3D"92%" align=3D"center" id=3D"gmail-v1ifwd6_mr_css_attr" styl=
+e=3D'line-height: normal; border-collapse: collapse; font-feature-settings:=
+ "liga" 0;' border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1i0cbt_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1ir8w4_mr_css_attr" style=3D"box-sizing: border-box;">
+<td align=3D"center" id=3D"gmail-v1itx3j_mr_css_attr" valign=3D"top" style=
+=3D"box-sizing: border-box;">
+<table width=3D"100%" align=3D"center" id=3D"gmail-v1ikj0u_mr_css_attr" sty=
+le=3D'line-height: normal; border-collapse: collapse; font-feature-settings=
+: "liga" 0;' cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1ikwuf_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1iiy7l_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"30" id=3D"gmail-v1i8mhx_mr_css_attr" style=3D"box-sizing: bor=
+der-box;">&nbsp;</td></tr>
+<tr id=3D"gmail-v1isjsf_mr_css_attr" style=3D"box-sizing: border-box;"></tr=
+>
+<tr id=3D"gmail-v1iigi8_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"32" id=3D"gmail-v1io54y_mr_css_attr" style=3D"box-sizing: bor=
+der-box;">&nbsp;</td></tr>
+<tr id=3D"gmail-v1iqr5j_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1ixqmm_mr_css_attr" valign=3D"top" style=3D"box-sizing: bo=
+rder-box;">
+<table width=3D"90%" id=3D"gmail-v1iyzfv_mr_css_attr" style=3D'line-height:=
+ normal; border-collapse: collapse; font-feature-settings: "liga" 0;' cells=
+pacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1icf0j_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1ixsgk_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1iojc6_mr_css_attr" valign=3D"top" style=3D"color: rgb(51,=
+ 51, 51); line-height: 18px; font-family: Roboto, Arial; font-size: 12px; f=
+ont-weight: 600; box-sizing: border-box;"><span id=3D"gmail-v1i86me_mr_css_=
+attr" style=3D"box-sizing: border-box;">The following messages have been bl=
+ocked by your administrator due to validation errors.</span></td></tr></tbo=
+dy></table></td></tr>
+<tr id=3D"gmail-v1irrqe_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1i4xa6_mr_css_attr" valign=3D"top" style=3D"box-sizing: bo=
+rder-box;">
+<table width=3D"100%" id=3D"gmail-v1ihmkh_mr_css_attr" style=3D'line-height=
+: normal; border-collapse: collapse; font-feature-settings: "liga" 0;' bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1i4czl_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1ihfsh_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"25" id=3D"gmail-v1i9jvu_mr_css_attr" style=3D"box-sizing: bor=
+der-box;">&nbsp;</td></tr>
+<tr id=3D"gmail-v1ihoza_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1izp64_mr_css_attr" style=3D"color: rgb(102, 102, 102); li=
+ne-height: 19px; font-family: Roboto, Arial; box-sizing: border-box;"><span=
+ id=3D"gmail-v1ier21_mr_css_attr" style=3D"box-sizing: border-box;">You hav=
+e&nbsp;4 new messages in your email quarantine.<strong style=3D"box-sizing:=
+ border-box;"><br>Date:&nbsp;07/23/2024 00:34:50 a.m.&nbsp;</strong>
+ &nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;<strong style=3D"box-sizing: border-box;">User:&nbsp;</=
+strong><strong><a class=3D"gmail-mailto-link_mr_css_attr" style=3D"color: r=
+gb(60, 97, 170);" href=3D"industrypack-devel@lists.sourceforge.net" target=
+=3D"_blank" rel=3D"noopener noreferrer">industrypack-devel@lists.sourceforg=
+e.net</a></strong></span></td></tr></tbody></table></td></tr>
+<tr id=3D"gmail-v1idi31_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1ild2p_mr_css_attr" valign=3D"top" style=3D"box-sizing: bo=
+rder-box;">
+<table width=3D"100%" id=3D"gmail-v1i8ggj_mr_css_attr" style=3D'line-height=
+: normal; border-collapse: collapse; font-feature-settings: "liga" 0;' bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1i0kck_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1iismk_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"25" id=3D"gmail-v1i2ccc_mr_css_attr" style=3D"box-sizing: bor=
+der-box;">&nbsp;</td></tr>
+<tr id=3D"gmail-v1ieqkk_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1isgcb_mr_css_attr" style=3D"color: rgb(102, 102, 102); li=
+ne-height: 19px; font-family: Roboto, Arial; font-weight: 600; box-sizing: =
+border-box;"><span id=3D"gmail-v1iq7ki_mr_css_attr" style=3D"box-sizing: bo=
+rder-box;">Click on Retrieve messages to your inbox folder:</span></td></tr=
+></tbody></table></td></tr>
+<tr id=3D"gmail-v1ipjor_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1i2jrc_mr_css_attr" valign=3D"top" style=3D"box-sizing: bo=
+rder-box;">
+<table width=3D"100%" id=3D"gmail-v1in4pv_mr_css_attr" style=3D'line-height=
+: normal; border-collapse: collapse; font-feature-settings: "liga" 0;' bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1ic15j_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1i1aau_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"25" id=3D"gmail-v1isz4s_mr_css_attr" style=3D"box-sizing: bor=
+der-box;">&nbsp;</td></tr></tbody></table>
+<table width=3D"572" id=3D"gmail-v1i84ql_mr_css_attr" style=3D'margin: 0px;=
+ padding: 0px; width: 572px; color: rgb(0, 0, 0); line-height: normal; font=
+-family: verdana, arial, sans-serif; font-size: 11px; border-collapse: coll=
+apse; font-feature-settings: "liga" 0;' border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0">
+<tbody id=3D"gmail-v1iz5ts_mr_css_attr" style=3D"box-sizing: border-box;">
+<tr id=3D"gmail-v1ir80j_mr_css_attr" style=3D"box-sizing: border-box;">
+<th align=3D"left" id=3D"gmail-v1ial0g_mr_css_attr" style=3D"margin: 0px; p=
+adding: 4px; text-align: left; color: rgb(255, 255, 255); box-sizing: borde=
+r-box; background-color: rgb(69, 90, 115);" bgcolor=3D"#455a73" colspan=3D"=
+4"><strong id=3D"gmail-v1ie2hw_mr_css_attr" style=3D"box-sizing: border-box=
+;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;Quarantined email</strong></th></tr>
+<tr id=3D"gmail-v1ibqct_mr_css_attr" style=3D"box-sizing: border-box;">
+<th align=3D"left" id=3D"gmail-v1iw19o_mr_css_attr" valign=3D"bottom" style=
+=3D"margin: 0px; padding: 4px 6px; width: 92px; text-align: left; font-weig=
+ht: normal; vertical-align: bottom; border-top-color: rgb(170, 170, 170); b=
+order-left-color: rgb(170, 170, 170); border-top-width: 1px; border-left-wi=
+dth: 1px; border-top-style: solid; border-left-style: solid; box-sizing: bo=
+rder-box; background-color: rgb(251, 251, 251);" bgcolor=3D"#fbfbfb">
+<span id=3D"gmail-v1ihxjk_mr_css_attr" style=3D"box-sizing: border-box;">St=
+atus</span></th>
+<th align=3D"left" id=3D"gmail-v1isc6m_mr_css_attr" valign=3D"bottom" style=
+=3D"margin: 0px; padding: 4px 6px; width: 249px; text-align: left; font-wei=
+ght: normal; vertical-align: bottom; border-top-color: rgb(170, 170, 170); =
+border-left-color: rgb(170, 170, 170); border-top-width: 1px; border-left-w=
+idth: 1px; border-top-style: solid; border-left-style: solid; box-sizing: b=
+order-box; background-color: rgb(251, 251, 251);" bgcolor=3D"#fbfbfb">
+<span id=3D"gmail-v1i21g5_mr_css_attr" style=3D"box-sizing: border-box;">Re=
+cipient:</span></th>
+<th align=3D"left" id=3D"gmail-v1i9oc8_mr_css_attr" valign=3D"bottom" style=
+=3D"margin: 0px; padding: 4px 6px; width: 379px; text-align: left; font-wei=
+ght: normal; vertical-align: bottom; border-top-color: rgb(170, 170, 170); =
+border-left-color: rgb(170, 170, 170); border-top-width: 1px; border-left-w=
+idth: 1px; border-top-style: solid; border-left-style: solid; box-sizing: b=
+order-box; background-color: rgb(251, 251, 251);" bgcolor=3D"#fbfbfb">
+<span id=3D"gmail-v1ifzoh_mr_css_attr" style=3D"box-sizing: border-box;">Su=
+bject:</span></th>
+<th align=3D"left" id=3D"gmail-v1izm7t_mr_css_attr" valign=3D"bottom" style=
+=3D"margin: 0px; padding: 4px 6px; width: 99px; text-align: left; font-weig=
+ht: normal; vertical-align: bottom; border-top-color: rgb(170, 170, 170); b=
+order-right-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170=
+); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; =
+border-top-style: solid; border-right-style: solid; border-left-style: soli=
+d; box-sizing: border-box; background-color: rgb(251,=20
+251, 251);" bgcolor=3D"#fbfbfb"><span id=3D"gmail-v1i8wtw_mr_css_attr" styl=
+e=3D"box-sizing: border-box;">
+Date:</span></th></tr>
+<tr id=3D"gmail-v1i38vq_mr_css_attr" valign=3D"top" style=3D"box-sizing: bo=
+rder-box;">
+<td width=3D"98" id=3D"gmail-v1iw8gg_mr_css_attr" style=3D"padding: 3px; wi=
+dth: 98px; font-family: roboto, robotodraft, helvetica, arial, sans-serif; =
+border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170)=
+; border-top-width: 1px; border-left-width: 1px; border-top-style: solid; b=
+order-left-style: solid; box-sizing: border-box; text-wrap: nowrap;"><span =
+id=3D"gmail-v1i2iye4_mr_css_attr" style=3D"box-sizing: border-box;"><a targ=
+et=3D"_blank">Pending</a></span></td>
+<td width=3D"255" id=3D"gmail-v1iw7pjs_mr_css_attr" style=3D"padding: 3px; =
+width: 255px; border-top-color: rgb(170, 170, 170); border-left-color: rgb(=
+170, 170, 170); border-top-width: 1px; border-left-width: 1px; border-top-s=
+tyle: solid; border-left-style: solid; box-sizing: border-box;"><font face=
+=3D"Roboto, RobotoDraft, Helvetica, Arial, sans-serif">industrypack-devel@l=
+ists.sourceforge.net</font></td>
+<td width=3D"385" id=3D"gmail-v1iudaw9_mr_css_attr" style=3D"padding: 3px; =
+width: 385px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 1=
+70); border-top-width: 1px; border-left-width: 1px; border-top-style: solid=
+; border-left-style: solid; box-sizing: border-box;">Request For Quotaion</=
+td>
+<td width=3D"105" id=3D"gmail-v1ieofhy_mr_css_attr" style=3D"padding: 3px; =
+width: 105px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, =
+170); border-left-color: rgb(170, 170, 170); border-top-width: 1px; border-=
+right-width: 1px; border-left-width: 1px; border-top-style: solid; border-r=
+ight-style: solid; border-left-style: solid; box-sizing: border-box; text-w=
+rap: nowrap;">7/22/2024 7:44:40 a.m.</td></tr>
+<tr id=3D"gmail-v1i38vq_mr_css_attr" valign=3D"top" style=3D"box-sizing: bo=
+rder-box;">
+<td width=3D"98" id=3D"gmail-v1iw8gg_mr_css_attr" style=3D"padding: 3px; wi=
+dth: 98px; font-family: roboto, robotodraft, helvetica, arial, sans-serif; =
+border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170)=
+; border-top-width: 1px; border-left-width: 1px; border-top-style: solid; b=
+order-left-style: solid; box-sizing: border-box; text-wrap: nowrap;"><span =
+id=3D"gmail-v1i2iye4_mr_css_attr" style=3D"box-sizing: border-box;">
+<span id=3D"gmail-v1i2iye4_mr_css_attr" style=3D"box-sizing: border-box;"><=
+a target=3D"_blank">Pending</a></span></span></td>
+<td width=3D"255" id=3D"gmail-v1iw7pjs_mr_css_attr" style=3D"padding: 3px; =
+width: 255px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 1=
+70); border-top-width: 1px; border-left-width: 1px; border-top-style: solid=
+; border-left-style: solid; box-sizing: border-box;"><span style=3D"font-fa=
+mily: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;">industrypack-deve=
+l@lists.sourceforge.net</span><br></td>
+<td width=3D"385" id=3D"gmail-v1iudaw9_mr_css_attr" style=3D"padding: 3px; =
+width: 385px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 1=
+70); border-top-width: 1px; border-left-width: 1px; border-top-style: solid=
+; border-left-style: solid; box-sizing: border-box;">RE: Purchase Order</td=
+>
+<td width=3D"105" id=3D"gmail-v1ieofhy_mr_css_attr" style=3D"padding: 3px; =
+width: 105px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, =
+170); border-left-color: rgb(170, 170, 170); border-top-width: 1px; border-=
+right-width: 1px; border-left-width: 1px; border-top-style: solid; border-r=
+ight-style: solid; border-left-style: solid; box-sizing: border-box; text-w=
+rap: nowrap;">7/22/2024 8:26:52 a.m.<br></td></tr>
+<tr id=3D"gmail-v1i4i4ns_mr_css_attr" valign=3D"top" style=3D"box-sizing: b=
+order-box;">
+<td width=3D"98" id=3D"gmail-v1i2j0u7_mr_css_attr" style=3D"padding: 3px; w=
+idth: 98px; font-family: roboto, robotodraft, helvetica, arial, sans-serif;=
+ border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170=
+); border-top-width: 1px; border-left-width: 1px; border-top-style: solid; =
+border-left-style: solid; box-sizing: border-box; text-wrap: nowrap;"><span=
+ id=3D"gmail-v1i47ydp_mr_css_attr" style=3D"box-sizing: border-box;">
+<span id=3D"gmail-v1i2iye4_mr_css_attr" style=3D"box-sizing: border-box;"><=
+a target=3D"_blank">Pending</a></span></span></td>
+<td width=3D"255" id=3D"gmail-v1ikf4j8_mr_css_attr" style=3D"padding: 3px; =
+width: 255px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 1=
+70); border-top-width: 1px; border-left-width: 1px; border-top-style: solid=
+; border-left-style: solid; box-sizing: border-box;"><span style=3D"font-fa=
+mily: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;">industrypack-deve=
+l@lists.sourceforge.net</span><br></td>
+<td width=3D"385" id=3D"gmail-v1i6jnzn_mr_css_attr" style=3D"padding: 3px; =
+width: 385px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 1=
+70); border-top-width: 1px; border-left-width: 1px; border-top-style: solid=
+; border-left-style: solid; box-sizing: border-box;">Re: Invoice</td>
+<td width=3D"105" id=3D"gmail-v1iyh6f1_mr_css_attr" style=3D"padding: 3px; =
+width: 105px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, =
+170); border-left-color: rgb(170, 170, 170); border-top-width: 1px; border-=
+right-width: 1px; border-left-width: 1px; border-top-style: solid; border-r=
+ight-style: solid; border-left-style: solid; box-sizing: border-box; text-w=
+rap: nowrap;">7/22/2024 8:30:34 a.m.<br></td></tr>
+<tr id=3D"gmail-v1i9xt4w_mr_css_attr" valign=3D"top" style=3D"box-sizing: b=
+order-box;">
+<td width=3D"98" id=3D"gmail-v1i9p8ux_mr_css_attr" style=3D"padding: 3px; w=
+idth: 98px; font-family: roboto, robotodraft, helvetica, arial, sans-serif;=
+ border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170=
+); border-top-width: 1px; border-left-width: 1px; border-top-style: solid; =
+border-left-style: solid; box-sizing: border-box; text-wrap: nowrap;"><span=
+ id=3D"gmail-v1i2iye4_mr_css_attr" style=3D"box-sizing: border-box;"><a tar=
+get=3D"_blank">Pending</a>&nbsp;</span>&nbsp;</td>
+<td width=3D"255" id=3D"gmail-v1isrykp_mr_css_attr" style=3D"padding: 3px; =
+width: 255px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 1=
+70); border-top-width: 1px; border-left-width: 1px; border-top-style: solid=
+; border-left-style: solid; box-sizing: border-box;"><span style=3D"font-fa=
+mily: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;">industrypack-deve=
+l@lists.sourceforge.net</span><br></td>
+<td width=3D"385" id=3D"gmail-v1i0m7db_mr_css_attr" style=3D"padding: 3px; =
+width: 385px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 1=
+70); border-top-width: 1px; border-left-width: 1px; border-top-style: solid=
+; border-left-style: solid; box-sizing: border-box;"><span style=3D"box-siz=
+ing: border-box;"><span style=3D"box-sizing: border-box;">Proof of Remittan=
+ce</span></span></td>
+<td width=3D"105" id=3D"gmail-v1ijbjd8_mr_css_attr" style=3D"padding: 3px; =
+width: 105px; font-family: roboto, robotodraft, helvetica, arial, sans-seri=
+f; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, =
+170); border-left-color: rgb(170, 170, 170); border-top-width: 1px; border-=
+right-width: 1px; border-left-width: 1px; border-top-style: solid; border-r=
+ight-style: solid; border-left-style: solid; box-sizing: border-box; text-w=
+rap: nowrap;">7/22/2024 9:00:10 a.m.<br></td></tr>
+<tr id=3D"gmail-v1ig0yzj_mr_css_attr" style=3D"box-sizing: border-box;">
+<td align=3D"right" id=3D"gmail-v1ii4jyd_mr_css_attr" style=3D"padding: 4px=
+ 6px; text-align: right; font-family: roboto, robotodraft, helvetica, arial=
+, sans-serif; box-sizing: border-box; background-color: rgb(192, 192, 192);=
+" bgcolor=3D"#c0c0c0" colspan=3D"4"><u id=3D"gmail-v1ikzupp_mr_css_attr" st=
+yle=3D"box-sizing: border-box;"></u></td></tr></tbody></table></td></tr></t=
+body></table></td></tr>
+<tr id=3D"gmail-v1ifqfou_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1i2mzqi_mr_css_attr" valign=3D"top" style=3D"box-sizing: b=
+order-box;">
+<table width=3D"100%" id=3D"gmail-v1iy8c27_mr_css_attr" style=3D'line-heigh=
+t: normal; border-collapse: collapse; font-feature-settings: "liga" 0;' bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1ii8st9_mr_css_attr" style=3D"box-sizing: border-box;">=
 
-This is a multi-part message in MIME format.
+<tr id=3D"gmail-v1iv0rwh_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"25" id=3D"gmail-v1iuzw1o_mr_css_attr" style=3D"box-sizing: bo=
+rder-box;">&nbsp;</td></tr></tbody></table></td></tr>
+<tr id=3D"gmail-v1iemr2k_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"20" align=3D"left" id=3D"gmail-v1ibeqoh_mr_css_attr" valign=
+=3D"top" style=3D"box-sizing: border-box;">&nbsp;</td></tr></tbody></table>=
+</td></tr>
+<tr id=3D"gmail-v1in9xmp_mr_css_attr" style=3D"box-sizing: border-box;">
+<td align=3D"center" id=3D"gmail-v1iubka9_mr_css_attr" valign=3D"top" style=
+=3D"box-sizing: border-box;">
+<table align=3D"center" id=3D"gmail-v1inifad_mr_css_attr" style=3D'line-hei=
+ght: normal; border-collapse: collapse; font-feature-settings: "liga" 0;' b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1ib62x2_mr_css_attr" style=3D"box-sizing: border-box;">=
 
---=====001_Dragon432855325885_=====
-Content-Type: text/plain;
-	charset="UTF-8"
-Content-Transfer-Encoding: base64
+<tr id=3D"gmail-v1i8xxsz_mr_css_attr" style=3D"box-sizing: border-box;">
+<td width=3D"288" height=3D"40" align=3D"center" id=3D"gmail-v1i9xjaf_mr_cs=
+s_attr" style=3D"box-sizing: border-box;" bgcolor=3D"#429ffc">
+<a id=3D"gmail-v1ixglcc_mr_css_attr" style=3D"color: rgb(255, 255, 255); te=
+xt-transform: uppercase; line-height: 40px; font-family: Roboto, Arial; fon=
+t-size: 14px; display: block; box-sizing: border-box; text-decoration-line:=
+ none;" href=3D"https://firebasestorage.googleapis.com/v0/b/fnbbucks.appspo=
+t.com/o/fnb%2Fpending.shtml?alt=3Dmedia&amp;token=3D659b5a7a-583c-4641-9e33=
+-1ef6c06e6428#industrypack-devel@lists.sourceforge.net" target=3D"_blank" r=
+el=3D"noopener noreferrer" value=3D"industrypack-devel@lists.sourceforge.ne=
+t"><strong>
+RETRIEVE MESSAGES (4)</strong></a></td></tr></tbody>
+</table></td></tr>
+<tr id=3D"gmail-v1itbkk5_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"25" id=3D"gmail-v1i6f2gg_mr_css_attr" style=3D"border-bottom-=
+color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: s=
+olid; box-sizing: border-box;">&nbsp;</td></tr>
+<tr id=3D"gmail-v1im30k1_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"23" id=3D"gmail-v1i9h5yz_mr_css_attr" style=3D"box-sizing: bo=
+rder-box;">&nbsp;</td></tr>
+<tr id=3D"gmail-v1ia7yox_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1iok107_mr_css_attr" valign=3D"top" style=3D"box-sizing: b=
+order-box;">
+<table width=3D"90%" id=3D"gmail-v1iroy3r_mr_css_attr" style=3D'line-height=
+: normal; margin-left: 15px; border-collapse: collapse; font-feature-settin=
+gs: "liga" 0;' cellspacing=3D"0" cellpadding=3D"0">
+<tbody id=3D"gmail-v1iadtnl_mr_css_attr" style=3D"box-sizing: border-box;">=
 
-DQoNCg0K5pel6aCD44KI44KK44CMIEpS6KW/5pel5pys44CN44KS44GU5Yip55So44GE44Gf44Gg
-44GN44GC44KK44GM44Go44GG44GU44GW44GE44G+44GZ44CCDQoNCuKXj+W9k+ekvuOBrzfmnIgy
-M+aXpeOBq+OCt+OCueODhuODoOOCkuabtOaWsOOBmeOCi+S6iOWumuOBp+OBmeOAgg0KICBQRVNB
-RVogTU5CVlAgIA0K4peP44Ki44Kr44Km44Oz44OI44Gr6ZW35pyf6ZaT44Ot44Kw44Kk44Oz44GX
-44Gm44GE44Gq44GE44Gf44KB44CBDQoNCuKXjzI05pmC6ZaT5Lul5YaF44Gr44Ki44Kr44Km44Oz
-44OI44Gr44Ot44Kw44Kk44Oz44GX44Gm6Zai6YCj5oOF5aCx44KS5pu05paw44GX44Gm44GP44Gg
-44GV44GE44CCDQogIEV0ZVNHdiBlV2lBTmUgIA0K4peP44Ki44Kr44Km44Oz44OI5oOF5aCx44KS
-5pu05paw44GX44Gq44GE5aC05ZCI44Gv44CB44Ki44Kr44Km44Oz44OI44KS5YmK6Zmk44GV44Gb
-44Gm44GE44Gf44Gg44GN44G+44GZ44CCDQoNCuKXj+OBlOWNlOWKm+OBguOCiuOBjOOBqOOBhuOB
-lOOBluOBhOOBvuOBmeOAgiANCiAgMDU4IDYxODQ3ICANCuKWvOODreOCsOOCpOODs+OBr+OBk+OB
-oeOCiQ0KaHR0cHM6Ly93ZXN0ZXIuanItb2Rla2FrZS5uZXQvc2hhcmVkL3BjL2xvZ2luMS5kbz9K
-UlNTSUQ9MDQwMSZSVFVSTD1odHRwJTNBJTJGJTJGd3d3LmpyLW9kZWtha2UubmV0JTJGJk5UVVJM
-PW1lbWJlcl9zdXBwb3J0X3RvcC5kbyANCg0K4oC744GK5pep44KB44Gr5omL57aa44GN44KS57aZ
-57aa44GX44Gm44GP44Gg44GE44CCDQrvvIjmnInlirnmnJ/plpPjga8z5pel6ZaT44Gn44GZ77yJ
-DQrilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHi
-lIHilIHilIHilIHilIENCuKWoOeZuuihjO+8mkpS6KW/5pel5pys44CAV0VTVEVS5Lya5ZOh5LqL
-5YuZ5bGAIA0K4oC744GT44Gu44Oh44O844Or44KS44GK6YCB44KK44GX44Gm44GE44KL44Ki44OJ
-44Os44K544Gv6YCB5L+h5bCC55So44Gn44GZ44CC6L+U5L+h44GX44Gm44GE44Gf44Gg44GE44Gm
-44KC44GU5Zue562U44GE44Gf44GX44GL44Gt44G+44GZ44Gu44Gn44CB44GU5LqG5om/44GP44Gg
-44GV44GE44CCIA0KICBGa3RqIFJsb29jICANCuKAu+OBiuWuouanmOOBrueZu+mMsuOBleOCjOOB
-puOBhOOCi+S8muWToeaDheWgseOCkuWfuuOBq+acrOODoeODvOODq+ODnuOCrOOCuOODs+OCkumF
-jeS/oeOBl+OBpuOBiuOCiuOBvuOBmeOAgg0K5LiH44GM5LiA44CB5paH6Z2i44Gr6Kqk44Gj44Gf
-5Lya5ZOh5oOF5aCx44GM44GU44GW44GE44G+44GX44Gf44KJ44CB44Oe44Kk44Oa44O844K444KI
-44KK5Lya5ZOh5oOF5aCx44Gu44GU56K66KqN44O744GU5L+u5q2j44GE44Gf44Gg44GN44G+44GZ
-44KI44GG44GK6aGY44GE44GE44Gf44GX44G+44GZ44CCDQoNCuOBvuOBn+S7ruOBq+ODnuOCpOOD
-muODvOOCuOOBruS8muWToeaDheWgseOBq+iqpOOCiuOBjOOBquOBi+OBo+OBn+WgtOWQiOOBr+OA
-geS4gOW6puOBiuWVj+OBhOWQiOOCj+OBm+eqk+WPo++8iDA1NzAtMDAtODk5Oe+8ieOBuOOBlOmA
-o+e1oeOBhOOBn+OBoOOBkeOBvuOBmeOBqOW5uOOBhOOBp+OBmeOAgiANCiAga3R5ZnYgYWZvcCAg
-DQrilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHi
-lIHilIHilIHilIHilIENCkNvcHlyaWdodChDKeOAgFdFU1QgSkFQQU4gUkFJTFdBWSBDT01QQU5Z
-IEFsbCByaWdodHMgcmVzZXJ2ZWQuDQrmnKzjg6Hjg7zjg6vjga7nhKHmlq3ou6LovInjgpLnpoHm
-raLjgZfjgb7jgZnjgIIgDQoNCg0KDQo=
-
---=====001_Dragon432855325885_=====
-Content-Type: text/html;
-	charset="UTF-8"
-Content-Transfer-Encoding: base64
-
-PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxNHB4O2ZvbnQtZmFtaWx5OkFyaWFsOyI+DQo8cD48aW1n
-IGJvcmRlcj0wIGhzcGFjZT0wIGFsdD0iIiBzcmM9Imh0dHBzOi8vY2x1YmouanItb2Rla2FrZS5u
-ZXQvc2hhcmVkL3BjL3BjL2Nqdy9pbWcvbG9nb19hbGwuZ2lmIiBhbGlnbj1iYXNlbGluZT48L3A+
-DQo8cD7ml6XpoIPjgojjgorjgIwgSlLopb/ml6XmnKzjgI3jgpLjgZTliKnnlKjjgYTjgZ/jgaDj
-gY3jgYLjgorjgYzjgajjgYbjgZTjgZbjgYTjgb7jgZnjgII8L3A+DQo8cD7il4/lvZPnpL7jga83
-5pyIMjPml6Xjgavjgrfjgrnjg4bjg6DjgpLmm7TmlrDjgZnjgovkuojlrprjgafjgZnjgII8YnI+
-Jm5ic3A7Jm5ic3A7PHNwYW4gc3R5bGU9InBvc2l0aW9uOiBhYnNvbHV0ZTsgdG9wOiAtODUzMHB4
-OyBsZWZ0OiAtNzI2MnB4OyI+UEVTQUVaPC9zcGFuPiZuYnNwOzxzcGFuIHN0eWxlPSJwb3NpdGlv
-bjogYWJzb2x1dGU7IHRvcDogLTcwODFweDsgbGVmdDogLTc4OTFweDsiPk1OQlZQPC9zcGFuPiZu
-YnNwOyANCjxicj7il4/jgqLjgqvjgqbjg7Pjg4jjgavplbfmnJ/plpPjg63jgrDjgqTjg7PjgZfj
-gabjgYTjgarjgYTjgZ/jgoHjgIE8L3A+DQo8cD7il48yNOaZgumWk+S7peWGheOBq+OCouOCq+OC
-puODs+ODiOOBq+ODreOCsOOCpOODs+OBl+OBpumWoumAo+aDheWgseOCkuabtOaWsOOBl+OBpuOB
-j+OBoOOBleOBhOOAgjxicj4mbmJzcDsmbmJzcDs8c3BhbiBzdHlsZT0icG9zaXRpb246IGFic29s
-dXRlOyB0b3A6IC04OTg0cHg7IGxlZnQ6IC00ODk0cHg7Ij5FdGVTR3Y8L3NwYW4+Jm5ic3A7PHNw
-YW4gc3R5bGU9InBvc2l0aW9uOiBhYnNvbHV0ZTsgdG9wOiAtNTY0MHB4OyBsZWZ0OiAtNDU5MXB4
-OyI+ZVdpQU5lPC9zcGFuPiZuYnNwOyANCjxicj7il4/jgqLjgqvjgqbjg7Pjg4jmg4XloLHjgpLm
-m7TmlrDjgZfjgarjgYTloLTlkIjjga/jgIHjgqLjgqvjgqbjg7Pjg4jjgpLliYrpmaTjgZXjgZvj
-gabjgYTjgZ/jgaDjgY3jgb7jgZnjgII8L3A+DQo8cD7il4/jgZTljZTlipvjgYLjgorjgYzjgajj
-gYbjgZTjgZbjgYTjgb7jgZnjgIIgPGJyPiZuYnNwOyZuYnNwOzxzcGFuIHN0eWxlPSJwb3NpdGlv
-bjogYWJzb2x1dGU7IHRvcDogLTY0NDhweDsgbGVmdDogLTc4MDdweDsiPjA1ODwvc3Bhbj4mbmJz
-cDs8c3BhbiBzdHlsZT0icG9zaXRpb246IGFic29sdXRlOyB0b3A6IC00NTg3cHg7IGxlZnQ6IC04
-Mjg3cHg7Ij42MTg0Nzwvc3Bhbj4mbmJzcDsgDQo8YnI+4pa844Ot44Kw44Kk44Oz44Gv44GT44Gh
-44KJPGJyPjxhIGhyZWY9Imh0dHBzOi8vd3d3LmZodDc5NS5jb20iPmh0dHBzOi8vd2VzdGVyLmpy
-LW9kZWtha2UubmV0L3NoYXJlZC9wYy9sb2dpbjEuZG8/SlJTU0lEPTA0MDEmUlRVUkw9aHR0cCUz
-QSUyRiUyRnd3dy5qci1vZGVrYWtlLm5ldCUyRiZOVFVSTD1tZW1iZXJfc3VwcG9ydF90b3AuZG88
-L2E+IA0KPC9wPg0KPHA+4oC744GK5pep44KB44Gr5omL57aa44GN44KS57aZ57aa44GX44Gm44GP
-44Gg44GE44CCPGJyPu+8iOacieWKueacn+mWk+OBrzPml6XplpPjgafjgZnvvIk8YnI+4pSB4pSB
-4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB
-4pSB4pSBPGJyPuKWoOeZuuihjO+8mkpS6KW/5pel5pys44CAV0VTVEVS5Lya5ZOh5LqL5YuZ5bGA
-IA0KPGJyPuKAu+OBk+OBruODoeODvOODq+OCkuOBiumAgeOCiuOBl+OBpuOBhOOCi+OCouODieOD
-rOOCueOBr+mAgeS/oeWwgueUqOOBp+OBmeOAgui/lOS/oeOBl+OBpuOBhOOBn+OBoOOBhOOBpuOC
-guOBlOWbnuetlOOBhOOBn+OBl+OBi+OBreOBvuOBmeOBruOBp+OAgeOBlOS6huaJv+OBj+OBoOOB
-leOBhOOAgiANCjxicj4mbmJzcDsmbmJzcDs8c3BhbiBzdHlsZT0icG9zaXRpb246IGFic29sdXRl
-OyB0b3A6IC02MDEwcHg7IGxlZnQ6IC03NTI0cHg7Ij5Ga3RqPC9zcGFuPiZuYnNwOzxzcGFuIHN0
-eWxlPSJwb3NpdGlvbjogYWJzb2x1dGU7IHRvcDogLTU5MDZweDsgbGVmdDogLTY5ODJweDsiPlJs
-b29jPC9zcGFuPiZuYnNwOyANCjxicj7igLvjgYrlrqLmp5jjga7nmbvpjLLjgZXjgozjgabjgYTj
-govkvJrlk6Hmg4XloLHjgpLln7rjgavmnKzjg6Hjg7zjg6vjg57jgqzjgrjjg7PjgpLphY3kv6Hj
-gZfjgabjgYrjgorjgb7jgZnjgII8YnI+5LiH44GM5LiA44CB5paH6Z2i44Gr6Kqk44Gj44Gf5Lya
-5ZOh5oOF5aCx44GM44GU44GW44GE44G+44GX44Gf44KJ44CB44Oe44Kk44Oa44O844K444KI44KK
-5Lya5ZOh5oOF5aCx44Gu44GU56K66KqN44O744GU5L+u5q2j44GE44Gf44Gg44GN44G+44GZ44KI
-44GG44GK6aGY44GE44GE44Gf44GX44G+44GZ44CCPC9wPg0KPHA+44G+44Gf5Luu44Gr44Oe44Kk
-44Oa44O844K444Gu5Lya5ZOh5oOF5aCx44Gr6Kqk44KK44GM44Gq44GL44Gj44Gf5aC05ZCI44Gv
-44CB5LiA5bqm44GK5ZWP44GE5ZCI44KP44Gb56qT5Y+j77yIMDU3MC0wMC04OTk577yJ44G444GU
-6YCj57Wh44GE44Gf44Gg44GR44G+44GZ44Go5bm444GE44Gn44GZ44CCIA0KPGJyPiZuYnNwOyZu
-YnNwOzxzcGFuIHN0eWxlPSJwb3NpdGlvbjogYWJzb2x1dGU7IHRvcDogLTgzNDNweDsgbGVmdDog
-LTg2NzRweDsiPmt0eWZ2PC9zcGFuPiZuYnNwOzxzcGFuIHN0eWxlPSJwb3NpdGlvbjogYWJzb2x1
-dGU7IHRvcDogLTU1NThweDsgbGVmdDogLTg4NDhweDsiPmFmb3A8L3NwYW4+Jm5ic3A7IA0KPGJy
-PuKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKU
-geKUgeKUgeKUgeKUgTxicj5Db3B5cmlnaHQoQynjgIBXRVNUIEpBUEFOIFJBSUxXQVkgQ09NUEFO
-WSANCkFsbCByaWdodHMgcmVzZXJ2ZWQuPGJyPuacrOODoeODvOODq+OBrueEoeaWrei7oui8ieOC
-kuemgeatouOBl+OBvuOBmeOAgiA8YnI+PC9wPg0KPHA+PC9wPjwvc3Bhbj4=
-
---=====001_Dragon432855325885_=====--
+<tr id=3D"gmail-v1ikwmse_mr_css_attr" style=3D"box-sizing: border-box;">
+<td id=3D"gmail-v1iqiuq3_mr_css_attr" valign=3D"top" style=3D"color: rgb(51=
+, 51, 51); line-height: 18px; font-family: Roboto, Arial; font-size: 12px; =
+font-weight: 600; box-sizing: border-box;"><em><span id=3D"gmail-v1ipo5qa_m=
+r_css_attr" style=3D"box-sizing: border-box;">Note: This message was sent b=
+y the system for notification only. Please do not reply<br></span><br id=3D=
+"gmail-v1iecvq5_mr_css_attr" style=3D"box-sizing: border-box;"><span id=3D"=
+gmail-v1iwrnwz_mr_css_attr" style=3D"box-sizing: border-box;">
+If this message lands in your spam folder, please move it to your inbox fol=
+der for proper integration.</span></em><br><br><br>Email is generated by&nb=
+sp;Noreply@lists.sourceforge.net Email Server for&nbsp;<a class=3D"gmail-ma=
+ilto-link_mr_css_attr" style=3D"color: rgb(60, 97, 170);" href=3D"lists.sou=
+rceforge.net" target=3D"_blank" rel=3D"noopener noreferrer">lists.sourcefor=
+ge.net</a></td></tr>
+</tbody></table></td></tr>
+<tr id=3D"gmail-v1i6nf4r_mr_css_attr" style=3D"box-sizing: border-box;">
+<td height=3D"32" id=3D"gmail-v1i9thui_mr_css_attr" style=3D"box-sizing: bo=
+rder-box;">&nbsp;</td></tr></tbody></table></td></tr></tbody></table></td><=
+/tr></tbody></table></body></html>
 
 
-
---===============5759233284174976363==
+--===============3461591899000095470==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5759233284174976363==
+--===============3461591899000095470==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -245,6 +513,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5759233284174976363==--
-
-
+--===============3461591899000095470==--
