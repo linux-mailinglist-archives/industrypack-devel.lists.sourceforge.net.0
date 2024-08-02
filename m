@@ -2,97 +2,106 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id CFC33944D27
-	for <lists+industrypack-devel@lfdr.de>; Thu,  1 Aug 2024 15:28:39 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9DBF89459C1
+	for <lists+industrypack-devel@lfdr.de>; Fri,  2 Aug 2024 10:18:03 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sZVrC-0003Qd-Ks
+	id 1sZnUA-0004fE-EQ
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 01 Aug 2024 13:28:38 +0000
+	Fri, 02 Aug 2024 08:18:02 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <admin@lists.sourceforge.net>) id 1sZVrB-0003QP-9G
+ (envelope-from <denis.marek@platelier.com>) id 1sZnU2-0004eq-4v
  for industrypack-devel@lists.sourceforge.net;
- Thu, 01 Aug 2024 13:28:37 +0000
+ Fri, 02 Aug 2024 08:17:54 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ :Subject:To:From:Date:Message-ID:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=/IAn5PN0W6F9hRizG3LMenzzvDnBDyOtgOZz9OEFAEU=; b=P92wfaBWp4+WSLgEP4RFxUzOyE
- ZAjZvf3WvgCrwt6i5QtTALPD54PdDtueGGeyNDnds/GnHBu/7CgWTDhnlmc3CHkUo6t7lZRjv5l2e
- 6J0/TFexwhIs0lT/pKELwmt66HoiAi53wtKu8f8O1Nq3SZUgxqNWlvEzEQlRcutRG4XI=;
+ bh=n52SfiQB7f8f/ImPhd9Q3t5M9sbScejTU44V3S9avKc=; b=brsPFsfk5atwVs7t9ZgLtEopPe
+ hST6GGEX2hivJdd1gu441JaO9JFiBlGFXOYiSYIu9BTZ/uMAhbVr+Gjo/0kmreHGxh8BzaxXaPURA
+ SX+cSbSNfCX/SLSO7Ko2w+mYcjpFczaFfM4JChWS60SED4HmV/+6SY1oprAx8Qr59Lrs=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Subject:To:From:Date:
+ Message-ID:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=/IAn5PN0W6F9hRizG3LMenzzvDnBDyOtgOZz9OEFAEU=; b=a
- W++f2V0BDi1wdrPc0r5oelQX1tjkUa6UBkByUdEPPynYJMlX7TQVu3Pi+B3IiGGxXsPWuGc9RsdHA
- CjtjGaCcb9dwIYll4ELqniuFxXyc0mts/F/KLvKnTGRIsn8TdhmwfWDwQbkMc7642Rxf+rgobc79r
- 9XplYwojhlKsahjo=;
-Received: from [188.127.237.180] (helo=s929116.srvape.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1sZVrA-00022s-AM for industrypack-devel@lists.sourceforge.net;
- Thu, 01 Aug 2024 13:28:37 +0000
-Received: from promega.com (localhost [IPv6:::1])
- by s929116.srvape.com (Postfix) with ESMTP id 5EF1C2DA079
- for <industrypack-devel@lists.sourceforge.net>;
- Thu,  1 Aug 2024 14:52:37 +0300 (MSK)
-To: industrypack-devel@lists.sourceforge.net
-Date: 01 Aug 2024 04:52:31 -0700
-Message-ID: <20240801045231.6086C336A7D682F8@lists.sourceforge.net>
+ List-Owner:List-Archive; bh=n52SfiQB7f8f/ImPhd9Q3t5M9sbScejTU44V3S9avKc=; b=I
+ 1J+a886AH1mKBLTTHj4APW0SgliKng9y9P1oJtbTeBFEI9pBH1xuakKhMH4HJejn+0+ml6i6hp/Vz
+ PbfJXBw9zpOoW5/uszMd+Pic1BvNW+Si/PLmxB/HWImqZ8eBnkqvvQu8EjDjUE3MXPH9xrg5qI1o4
+ NIvLlYJwoDYjvowU=;
+Received: from mail.platelier.com ([141.95.17.171])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1sZnU0-0008Qa-O1 for industrypack-devel@lists.sourceforge.net;
+ Fri, 02 Aug 2024 08:17:54 +0000
+Received: by mail.platelier.com (Postfix, from userid 1002)
+ id DDC6BA2F9A; Fri,  2 Aug 2024 10:01:01 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=platelier.com;
+ s=mail; t=1722585663;
+ bh=n52SfiQB7f8f/ImPhd9Q3t5M9sbScejTU44V3S9avKc=;
+ h=Date:From:To:Subject:From;
+ b=mbJcxjamzIsMFt9gHCsktNPxoH4J9oP3vNL9IOxwF2Fp3zYvPCaCp3tc7lkiPA71r
+ uKqrPPESWx8V5d502BDSUvcvh7quiUBqiqOLJMAnrbN/PLWTF7OprNzlJtWHXOjlIA
+ xbmrvTk8mV2nnGkEvqXRx1/2RRn1v5Kv49qJD6ebqApRvzHSreWfKOscMX5eAezD57
+ XtSZ2+0TxI2ZOJXQrb4BKSOz9dkgSTJpa9Z2CtBGunEfD9ZtsadASlNV1CVZROelIv
+ 86DGLz8nYX2uA2bz/PYoUIb0YIVzRjFJAadqlbfEL1NIYxpCicqhyq6BmOfBXPR2am
+ BaOK1mIHGQTbg==
+Received: by mail.platelier.com for <industrypack-devel@lists.sourceforge.net>;
+ Fri,  2 Aug 2024 08:00:56 GMT
+Message-ID: <20240802084500-0.1.f1.tlgl.0.ymbr581dd1@platelier.com>
+Date: Fri,  2 Aug 2024 08:00:56 GMT
+To: <industrypack-devel@lists.sourceforge.net>
+X-Mailer: mail.platelier.com
 MIME-Version: 1.0
-X-Spam-Score: 2.4 (++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+X-Spam-Score: -0.2 (/)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Hello industrypack-devel,
- Your account industrypack-devel@lists.sourceforge.net
- password expires in 48hours. Kindly use the button below to continue with
- the same password. Keep Same Password 
- Content analysis details:   (2.4 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  Vážení, jsme experti s více než 10letou zkušeností
+   v cestovním ruchu. Implementovali jsme náš vlastní rezervační systém
+    na různých trzích ve střední a východní Evropě. Systém je neustále
+    vyvíjen v souladu s aktuálními tržními trendy. 
+ 
+ Content analysis details:   (-0.2 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
- blocked.  See
- http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
- for more information. [URIs: abpphkv.com]
- 0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
- [URIs: abpphkv.com]
- 1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
- blocklist [URIs: abpphkv.com]
- 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
- 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
- The query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [188.127.237.180 listed in sa-accredit.habeas.com]
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [188.127.237.180 listed in bl.score.senderscore.com]
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [188.127.237.180 listed in list.dnswl.org]
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 2.0 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
- 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
- only
- 0.0 TO_EQ_FM_DOM_HTML_ONLY To domain == From domain and HTML only
-X-Headers-End: 1sZVrA-00022s-AM
-Subject: [Industrypack-devel] Server Administrator | IT Support
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: platelier.com]
+  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                          [141.95.17.171 listed in sa-trusted.bondedsender.org]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [141.95.17.171 listed in bl.score.senderscore.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+X-Headers-End: 1sZnU0-0008Qa-O1
+Subject: [Industrypack-devel] =?utf-8?q?Podpora_pro_odv=C4=9Btv=C3=AD_cest?=
+ =?utf-8?q?ovn=C3=ADho_ruchu?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -104,111 +113,28 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: System Administrator via Industrypack-devel
+From: Denis Marek via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
-Reply-To: System Administrator <admin@lists.sourceforge.net>
-Content-Type: multipart/mixed; boundary="===============1284589100136083117=="
+Reply-To: Denis Marek <denis.marek@platelier.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============1284589100136083117==
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
-
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
-<body style=3D"MARGIN: 0.5em">
-<P>
-<table style=3D"BOX-SIZING: border-box; FONT-SIZE: 12px; BORDER-TOP: rgb(20=
-4,204,204) 1px solid; FONT-FAMILY: &quot;Lucida Grande&quot;, Verdana, Aria=
-l, Helvetica, sans-serif; BORDER-RIGHT: rgb(204,204,204) 1px solid; WHITE-S=
-PACE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: =
-rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: =
-rgb(0,0,0); FONT-STYLE: normal; BORDER-SPACING: 0px; BORDER-LEFT: rgb(204,2=
-04,204) 1px solid; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING:=20
-normal; BACKGROUND-COLOR: rgb(255,255,255); font-variant-ligatures: normal;=
- font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
--thickness: initial; text-decoration-style: initial; text-decoration-color:=
- initial" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" bgcolor=3D"#ff=
-ffff" border=3D"0">
-<TBODY style=3D"BOX-SIZING: border-box">
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; FONT-SIZE: 13px; FONT-FAMILY: calibri;=
- BORDER-COLLAPSE: collapse; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
-LEFT: 15px; MARGIN: 0px; LINE-HEIGHT: 27px; PADDING-RIGHT: 15px; BACKGROUND=
--COLOR: rgb(236,243,249)"><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: =
-bolder">Hello<SPAN style=3D"BOX-SIZING: border-box">&nbsp;industrypack-deve=
-l,</SPAN></B></TD></TR>
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; FONT-SIZE: 13px; FONT-FAMILY: calibri;=
- BORDER-COLLAPSE: collapse; PADDING-BOTTOM: 5px; PADDING-TOP: 0px; PADDING-=
-LEFT: 15px; MARGIN: 0px; LINE-HEIGHT: 27px; PADDING-RIGHT: 15px; BACKGROUND=
--COLOR: rgb(236,243,249)">
-<table style=3D"BOX-SIZING: border-box; FONT-SIZE: small; FONT-FAMILY: aria=
-l, helvetica, sans-serif; BORDER-COLLAPSE: collapse" cellspacing=3D"0" cell=
-padding=3D"0" width=3D"100%" border=3D"0">
-<TBODY style=3D"BOX-SIZING: border-box">
-<TR style=3D'BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: "open sa=
-ns", helveticaneue-light, "helvetica neue light", "helvetica neue", helveti=
-ca, arial, "lucida grande", sans-serif; COLOR: rgb(64,64,64); LINE-HEIGHT: =
-26px'>
-<td style=3D"BOX-SIZING: border-box; MARGIN: 0px">
-<P style=3D"BOX-SIZING: border-box; MARGIN-TOP: 0px"><FONT style=3D"BOX-SIZ=
-ING: border-box; VERTICAL-ALIGN: inherit">Your account<SPAN style=3D"BOX-SI=
-ZING: border-box">&nbsp;industrypack-devel@lists.sourceforge.net</SPAN><SPA=
-N style=3D"BOX-SIZING: border-box">&nbsp;</SPAN>password expires in 48hours=
-=2E<BR style=3D"BOX-SIZING: border-box">Kindly use the button below to cont=
-inue with the same password.</FONT></P></TD></TR></TBODY></TABLE></TD></TR>=
-
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; BORDER-COLLAPSE: collapse; PADDING-BOT=
-TOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; MARGIN: 0px; PADDING-RIGH=
-T: 10px" width=3D"300" align=3D"left">
-<A style=3D'BOX-SIZING: border-box; FONT-SIZE: 15px; TEXT-DECORATION: none;=
- MAX-WIDTH: 210px; FONT-FAMILY: "open sans", "helvetica neue", arial; WIDTH=
-: 210px; COLOR: white; OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 14px; TEXT-ALIGN=
-: center; PADDING-TOP: 14px; OUTLINE-STYLE: none; PADDING-LEFT: 7px; MARGIN=
-: 0px; OUTLINE-COLOR: invert; PADDING-RIGHT: 7px; BACKGROUND-COLOR: darkblu=
-e' href=3D"https://abpphkv.com/ato/Wp-images/?i=3Di&amp;0=3Dindustrypack-de=
-vel@lists.sourceforge.net" rel=3Dnoreferrer target=3D_blank>
-<FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inherit">Keep&nbsp;S=
-ame Password&nbsp;</FONT></A></TD></TR>
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; FONT-SIZE: 0px; BORDER-COLLAPSE: colla=
-pse; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 15px; MARGIN: 0px=
-; LINE-HEIGHT: 0; PADDING-RIGHT: 15px">&nbsp;</TD></TR>
-<TR style=3D"BOX-SIZING: border-box; MARGIN-TOP: 10px; BACKGROUND-COLOR: rg=
-b(228,228,228)">
-<td style=3D"BOX-SIZING: border-box; FONT-SIZE: 13px; FONT-FAMILY: calibri;=
- BORDER-COLLAPSE: collapse; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDIN=
-G-LEFT: 15px; MARGIN: 0px; LINE-HEIGHT: 20px; PADDING-RIGHT: 15px">
-<P style=3D"BOX-SIZING: border-box; MARGIN-TOP: 0px">&nbsp;</P>
-<P style=3D"BOX-SIZING: border-box; MARGIN-TOP: 0px"><FONT style=3D"BOX-SIZ=
-ING: border-box; VERTICAL-ALIGN: inherit">Account will be&nbsp; automatical=
-ly deleted after 7days,&nbsp; You can change the frequency of these notific=
-ations within your mailbox portal.</FONT></P></TD></TR></TBODY></TABLE><BR =
-class=3DApple-interchange-newline></P></BODY></HTML>
-
-
---===============1284589100136083117==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============1284589100136083117==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-_______________________________________________
-Industrypack-devel mailing list
-Industrypack-devel@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============1284589100136083117==--
+VsOhxb5lbsOtLCBqc21lIGV4cGVydGkgcyB2w61jZSBuZcW+IDEwbGV0b3Ugemt1xaFlbm9zdMOt
+IHYgY2VzdG92bsOtbSBydWNodS4gCgpJbXBsZW1lbnRvdmFsaSBqc21lIG7DocWhIHZsYXN0bsOt
+IHJlemVydmHEjW7DrSBzeXN0w6ltIG5hIHLFr3puw71jaCB0cnrDrWNoIHZlIHN0xZllZG7DrSBh
+IHbDvWNob2Ruw60gRXZyb3DEmy4gU3lzdMOpbSBqZSBuZXVzdMOhbGUgdnl2w61qZW4gdiBzb3Vs
+YWR1IHMgYWt0dcOhbG7DrW1pIHRyxb5uw61taSB0cmVuZHkuIAoKU3BvbHVwcsOhY2UgcyB0b3Vy
+b3BlcsOhdG9yeSBuw6FtIHVtb8W+xYh1amUgcHLFr2LEm8W+bsSbIGlkZW50aWZpa292YXQgYSB0
+ZXN0b3ZhdCBub3bDoSDFmWXFoWVuw60gdiByZcOhbG7DvWNoIHBvZG3DrW5rw6FjaCwgY2/FviB1
+bW/FvsWIdWplIHJ5Y2hsw6kgcMWZaXpwxa9zb2JlbsOtIHByb2R1a3TFryB2w716dsOhbSBhIG/E
+jWVrw6F2w6Fuw61tIHrDoWthem7DrWvFry4gCgpOw6HFoSBwxZnDrXN0dXAgdW1vxb7FiHVqZSBy
+eWNobGUgcmVhZ292YXQgbmEgbcSbbsOtY8OtIHNlIHBvdMWZZWJ5IHRyaHUgYSBwb3NreXRvdmF0
+IMWZZcWhZW7DrSwga3RlcsOhIHp2ecWhdWrDrSBlZmVrdGl2aXR1IGEga29ua3VyZW5jZXNjaG9w
+bm9zdCBuYcWhaWNoIHrDoWthem7DrWvFry4gCgpNb2hsaSBieWNob20gc2kgZG9tbHV2aXQga3LD
+oXRrw70gcm96aG92b3IsIGFieWNob20gcHJvZGlza3V0b3ZhbGksIGphayBuYcWhZSB6a3XFoWVu
+b3N0aSBhIHN5c3TDqW0gbW9ob3UgcG9kcG/FmWl0IHbDocWhIGJ5em55cz8KCgpTIHDFmcOhdGVs
+c2vDvW0gcG96ZHJhdmVtCkRlbmlzIE1hcmVrCgoKX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX18KSW5kdXN0cnlwYWNrLWRldmVsIG1haWxpbmcgbGlzdApJbmR1
+c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0Cmh0dHBzOi8vbGlzdHMuc291cmNl
+Zm9yZ2UubmV0L2xpc3RzL2xpc3RpbmZvL2luZHVzdHJ5cGFjay1kZXZlbAo=
