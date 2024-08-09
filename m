@@ -2,104 +2,125 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 06D3194C901
-	for <lists+industrypack-devel@lfdr.de>; Fri,  9 Aug 2024 06:01:49 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id E13FE94C981
+	for <lists+industrypack-devel@lfdr.de>; Fri,  9 Aug 2024 07:13:32 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1scGp0-0007gI-4l
+	id 1scHwS-0001aI-9s
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 09 Aug 2024 04:01:46 +0000
+	Fri, 09 Aug 2024 05:13:31 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <noreply@3065h.online>) id 1scGoq-0007g6-Uh
+ (envelope-from <sales@wissx.online>) id 1scHwQ-0001a9-WD
  for industrypack-devel@lists.sourceforge.net;
- Fri, 09 Aug 2024 04:01:36 +0000
+ Fri, 09 Aug 2024 05:13:30 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Subject:From:To:Date:Sender:Reply-To:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ d=sourceforge.net; s=x; h=List-Id:List-Unsubscribe:Content-Type:MIME-Version:
+ To:Reply-To:From:Subject:Date:Message-ID:Sender:Cc:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Help:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=OTf6UVL4y6Kmrbktxnai+2Q5zhilkJ7tnjvMJlLdJbI=; b=mvHFJz/rimEc8vpgxjhoLRk9ct
- Ohe7n+w8yNrFJ/TRomRSPg+RJ5v5YYXXP+xUBBgIB2te3ngyTdvE+NGnImVtXRPqE749f3s8v13JZ
- ++HFJpllC36GpCFw7416VmVi48nVJGpJGiP4YdKRUneyryrDuYDO1p2NufJje0nz6Hnc=;
+ bh=0kH9sdwpSLy7kCMJNgHIAM8058d5ABi4GtlEBN0FRVQ=; b=g8psRtCss+CQ/5fOYOHbFoC/vm
+ bP0iZDL8kUX1iyzgajQqdqSx8dQw3n8xDp+1XErDRq0EioL9SnV81lBvm9syeTsOWnNnWo3JRMXc/
+ jH6gIJAoUc5mzekWvUr7x4zsraALZSwdVHeq4qP8Yjn/8xajjTK90wcVMVKhJ2uJONrY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Subject:
- From:To:Date:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=OTf6UVL4y6Kmrbktxnai+2Q5zhilkJ7tnjvMJlLdJbI=; b=m
- zcW6UeYKHXY1DU5aHw8JGRcKPvWxRYP1L9vjKahMsGb3QPc7ZVEK1Adpa5Yaq8BywMFEvwS+7Tw3Y
- qssDdVRugqAuGEEa3dU/yoTKIejEBudUc2HGgXaso9wkBYXmVRzT5zChSz7ctPyxeunDPBPh1Nc0H
- 3h//doK72xKri4Ks=;
-Received: from static.250.19.40.188.clients.your-server.de ([188.40.19.250]
- helo=3065h.online) by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1scGop-0002DD-8N for industrypack-devel@lists.sourceforge.net;
- Fri, 09 Aug 2024 04:01:36 +0000
-Received: by 3065h.online (Postfix, from userid 0)
- id CC7DB2D295; Fri,  9 Aug 2024 05:59:55 +0200 (CEST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=3065h.online;
- s=default; t=1723176083;
- bh=NgODGahHCAOr4cyOEwGoS6eZlnd4iMC6Vxs9+UdetqA=;
- h=Date:To:From:Subject:From;
- b=ipgiVzJ818gWQTSi238GNhDx3cP2k3HmDfJAeO3bYwdQ0uQipXtZr34eLLSQJtTcd
- liPv5up5zPW2dIKGcI8IwlZORJkHQBF9szM/LDwQku0TNcwm040HW8avKLtlD6RN47
- zhBfK3EGb/Aox0ZnAjYyG1COBMTmi8gfCBX0aFZO3qrSqSzT4xvD2izY6Hs0cW61kS
- BTJFa3ZL5tHOOM7fvMxw74ouv1u9y2lRu2omOiaeQ7SUH0ligatKOIyMJnYbvd7ftr
- V307AF1rh+mQNuQ7ADHvclGpdrhoy3y7nB3Mpnna0gfu3simh5ExY+ZC4XqbmfPENp
- sTWDtW3HsvOJg==
-Date: Fri, 9 Aug 2024 05:59:55 +0200
+ h=List-Id:List-Unsubscribe:Content-Type:MIME-Version:To:Reply-To:From:
+ Subject:Date:Message-ID:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Help:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=0kH9sdwpSLy7kCMJNgHIAM8058d5ABi4GtlEBN0FRVQ=; b=e
+ yy5HEy4ZcG5WqP6V+RMd3HqGT1hF5f73rKrNeUEsOZDAULzZYT/0BUcUPge8pywx6qZfuk/oNciJY
+ ayns5mUpuSzFTsEwndrr+l4U9WWdWWiJnU6T2jyoiNff2rhFbsc5IsAM3blcsOcBqMykvARLmG2D7
+ 1D17xcqwVda5i8Vo=;
+Received: from [107.155.56.29] (helo=server1.wissx.online)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1scHwP-0005EQ-5c for industrypack-devel@lists.sourceforge.net;
+ Fri, 09 Aug 2024 05:13:30 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=hondetech.com;
+ h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:List-Unsubscribe:List-Id;
+ i=info@hondetech.com; bh=xL9gIL5gJAJ3Z9YFOed1yj3bIWE=;
+ b=YmvHZoVoqE0HKCr1r808C4f07tBrqKXeL39WaTdLrdDp1/QIsWpDbL8Y6gqEkhnJbX+UEGFo+cFx
+ UO5oXQhlCr0YwFKOrhYJ4ws8FRyVOe7f4Qdp4lT39UcDUbXDE6IotxL5pbsJgwTiMGvrshkkJIPL
+ D8vm4NvLAsViLdva5AL4XAuh5bOcU9OJufWUJUqJAAfe4xuuKBJFDCw31sfioofNJ+NOBz8FwSfm
+ B7H1AU1y1N4EaOb0r/spEXxF6AkW7sbTfvDkoir7yck11YahElx4LneOOsW14GQl7vMbAqxl4xpQ
+ IaOTfiYlUPFM107qg+1HkI0rzqfAsRoWTwXFeg==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mail; d=hondetech.com;
+ b=EI4lFxvzPsmrEKK5Rre6KjzoGJrOHWCPFQ0h8JG0Z05f0ilJrXekJ0nJzcvaU0XbWT1ppKgCFH59
+ GO5265TOg9GvnmjZNkktbssV6c5Dfm4oEP/qFN/sTeay1uAJJy3yWxQ7s7/Msz0uezYB4/8h48eb
+ 0+IxhRUHkYxfSV3JA8m6y4eHfXcDWOnafJHe4JkEsv9YAHNp09IqH6z/atTsfhivBrT9NTeo/SAF
+ vnMTdg8Q3Gv4EG5Zf6x3VU1vMYv4MKsdQFcscPoP4T8J2R+kQcJZ7SZxAAwWlhRBbY/NyTsv4F7d
+ 1pAUl+/sWAXLGQ0xd0iru2hJc+iHusaoUXpgeA==;
+Received: from vip.ossedm.com (182.106.136.62) by server1.wissx.online id
+ hmmini0e97ca for <industrypack-devel@lists.sourceforge.net>;
+ Fri, 9 Aug 2024 13:13:15 +0800 (envelope-from <sales@wissx.online>)
+Message-ID: <b66f91c710d7adb0f24f5b287e00586a@wissx.online>
+Date: Fri, 09 Aug 2024 05:13:11 +0000
 To: "industrypack-devel@lists.sourceforge.net"
  <industrypack-devel@lists.sourceforge.net>
-From: "SharePoint Notification From lists.sourceforge.net"
- <noreply@3065h.online>
-Message-ID: <j9SY5rVJBfLd1c37ydDyr1i8keFiInFC7hLlpOv78Ps@host7761341317-2>
-X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
 MIME-Version: 1.0
-X-Spam-Score: 3.8 (+++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Sender: sales@wissx.online
+X-Report-Abuse: Please report abuse for this campaign here:
+ http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/report-abuse/yg1010r8bs67d/sq655xx7nkd5e
+X-Receiver: industrypack-devel@lists.sourceforge.net
+X-Jhvf-Tracking-Did: 0
+X-Jhvf-Subscriber-Uid: sq655xx7nkd5e
+X-Jhvf-Mailer: SwiftMailer - 5.4.x
+X-Jhvf-EBS: http://vip.ossedm.com/index.php/lists/block-address
+X-Jhvf-Delivery-Sid: 21
+X-Jhvf-Customer-Uid: ck928m6dxs713
+X-Jhvf-Customer-Gid: 1
+X-Jhvf-Campaign-Uid: ky661cp7ota0b
+Precedence: bulk
+Feedback-ID: ky661cp7ota0b:sq655xx7nkd5e:yg1010r8bs67d:ck928m6dxs713
+X-Spam-Score: 7.6 (+++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:                                                                                                     
-                                                            
- 
- Content analysis details:   (3.8 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Dear Manager, Greetings from Marvin Li! We are supplier of
+ the water level water speed water flow sensors for the river and the open
+ channel or underground pipe and so on with wireless module and the [...] 
+ Content analysis details:   (7.6 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
-                             blocked.  See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URIs: pages.dev]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.0 SPF_PASS               SPF: sender matches SPF record
-  1.5 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
-                             [URI: 3065h.online (online)]
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
-  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
-                             Colors in HTML
-  2.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
-  0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
-X-Headers-End: 1scGop-0002DD-8N
-Subject: [Industrypack-devel] You Have A Sharepoint Portal Notification
+ 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+ blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: hondetechco.com]
+ 5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [107.155.56.29 listed in dnsbl-1.uceprotect.net]
+ 0.4 NO_DNS_FOR_FROM        DNS: Envelope sender has no MX or A DNS records
+ 2.0 URIBL_CT_SURBL         Contains an URL listed in the CT SURBL blocklist
+ [URIs: ossedm.com]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [107.155.56.29 listed in list.dnswl.org]
+ 1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+ https://senderscore.org/blocklistlookup/
+ [107.155.56.29 listed in bl.score.senderscore.com]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ 1.0 RAND_MKTG_HEADER       Has partially-randomized marketing/tracking
+ header(s)
+ 0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
+ 2.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+ 0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ -1.0 MAILING_LIST_MULTI     Multiple indicators imply a widely-seen list
+ manager
+X-Headers-End: 1scHwP-0005EQ-5c
+Subject: [Industrypack-devel] Ultrasonic water level sensor bluetooth
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
-Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -108,236 +129,221 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============6400597124226651073=="
+From: "H ONDE TECHNOLOGY.CO.LTD via Industrypack-devel"
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "H ONDE TECHNOLOGY.CO.LTD" <info@hondetech.com>
+Content-Type: multipart/mixed; boundary="===============3214565321824019633=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============6400597124226651073==
+
+--===============3214565321824019633==
 Content-Type: multipart/alternative;
- boundary="b1=_j9SY5rVJBfLd1c37ydDyr1i8keFiInFC7hLlpOv78Ps"
-Content-Transfer-Encoding: 8bit
-
---b1=_j9SY5rVJBfLd1c37ydDyr1i8keFiInFC7hLlpOv78Ps
-Content-Type: text/plain; charset=iso-8859-1
-Content-Transfer-Encoding: 8bit
-
- 
-    
-    
-    
-    
-    
-    
-                                                                                                                                                       
-     
-    
-    
-    
-     
-     
-    
-     
-    Sharefile Email Service 
-     
-    
-    
-    
-     
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-     
-     
-     
-    A new document has been shared with you on industrypack-devel@lists.sourceforge.net SharePoint Storage.
-    
-    
-    
-    
-    
-    
-    Date:  2024-8-09 
-     
-    Title: PURCHASE ORDER .xlsx
-     
-    Size: 256kb
-     
-    
-    
-    
-    
-     
-    
-    
-    
-    
-    
-    
-    View Documents Now>>>>>
-    
-    
-    Thanks,
-    
-     
-     
-     
-    Sign in to view encrypted document
-     
-     
-     
-     lists.sourceforge.net SharePoint Online
-     
-     
-     
-     
-     
-     
-    
-     
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    This message was sent from an unsupervised email address. 
-    Do not reply to this message
-     
-    
-    This email is meant for: 
-    industrypack-devel@lists.sourceforge.net 
-    
-     
-
---b1=_j9SY5rVJBfLd1c37ydDyr1i8keFiInFC7hLlpOv78Ps
-Content-Type: text/html; charset=us-ascii
-
-<HTML><HEAD>
-    <META name=GENERATOR content="MSHTML 11.00.10570.1001"></HEAD>
-    <BODY>&nbsp;
-    <TABLE style="FONT-SIZE: 14px; MAX-WIDTH: 100%; FONT-FAMILY: Roboto, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; MIN-WIDTH: 100%; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; LETTER-SPACING: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial" cellSpacing=0 cellPadding=0 width="100%" align=left border=0>
-    <TBODY style="BOX-SIZING: border-box">
-    <TR style="BOX-SIZING: border-box">
-    <TD style="BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: Helvetica; COLOR: rgb(32,32,32); PADDING-BOTTOM: 9px; PADDING-TOP: 0px; PADDING-LEFT: 18px; MARGIN: 0px; LINE-HEIGHT: 24px; PADDING-RIGHT: 18px" vAlign=top>
-    
-    <P style="BOX-SIZING: border-box; FONT-FAMILY: Calibri, Helvetica, sans-serif; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 24px; PADDING-RIGHT: 0px"><SPAN style="BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: roboto, sans-serif; COLOR: rgb(44,54,58)">
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<WBR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></P>
-    <DIV style="BOX-SIZING: border-box; TEXT-ALIGN: center">&nbsp;</DIV>
-    <TABLE lang=ca style="FONT-SIZE: 14px; FONT-FAMILY: Roboto, sans-serif; BORDER-RIGHT: rgb(227,227,227) 1px solid; BORDER-COLLAPSE: collapse; COLOR: rgb(44,54,58); BORDER-LEFT: rgb(227,227,227) 1px solid" dir=ltr cellSpacing=0 cellPadding=0 width=640 border=0>
-    <TBODY style="BOX-SIZING: border-box">
-    <TR style="BOX-SIZING: border-box; BACKGROUND-COLOR: rgb(0,114,198)">
-    <TD style="BOX-SIZING: border-box; BORDER-TOP: rgb(227,227,227) 1px solid; MARGIN: 0px; background-size: initial; background-origin: initial; background-clip: initial" width=1>&nbsp;</TD>
-    <TD style="BOX-SIZING: border-box; BORDER-TOP: rgb(227,227,227) 1px solid; BORDER-BOTTOM: rgb(227,227,227) 1px solid; MARGIN: 0px" width=24>&nbsp;</TD>
-    <TD style="BOX-SIZING: border-box; BORDER-TOP: rgb(227,227,227) 1px solid; BORDER-BOTTOM: rgb(227,227,227) 1px solid; PADDING-BOTTOM: 12px; PADDING-TOP: 12px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" vAlign=middle width=310>
-    <H1 style='BOX-SIZING: border-box; FONT-SIZE: 18pt; FONT-FAMILY: "Segoe UI Light"; FONT-WEIGHT: normal; COLOR: rgb(255,255,255); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 20pt; PADDING-RIGHT: 0px' align=center>&nbsp;</H1>
-    <H1 style='BOX-SIZING: border-box; FONT-SIZE: 18pt; FONT-FAMILY: "Segoe UI Light"; FONT-WEIGHT: normal; COLOR: rgb(255,255,255); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 20pt; PADDING-RIGHT: 0px' align=left><SPAN style="BOX-SIZING: border-box"><FONT style="BOX-SIZING: border-box; VERTICAL-ALIGN: inherit"><FONT style="BOX-SIZING: border-box; VERTICAL-ALIGN: inherit">Sharefile Email Service</FONT></FONT></SPAN>&nbsp;</H1></TD>
-    <TD style="BOX-SIZING: border-box; BORDER-TOP: rgb(227,227,227) 1px solid; BORDER-BOTTOM: rgb(227,227,227) 1px solid; MARGIN: 0px" width=24>&nbsp;</TD></TR></TBODY></TABLE>
-    <TABLE lang=ca style="FONT-SIZE: 14px; FONT-FAMILY: Roboto, sans-serif; BORDER-COLLAPSE: collapse; COLOR: rgb(44,54,58)" dir=ltr cellSpacing=0 cellPadding=0 width=640 border=0>
-    <TBODY style="BOX-SIZING: border-box">
-    <TR style="BOX-SIZING: border-box">
-    <TD style="BOX-SIZING: border-box; BACKGROUND: rgb(227,227,227); MARGIN: 0px" width=1>&nbsp;</TD>
-    <TD style="BOX-SIZING: border-box; MARGIN: 0px" width=146>&nbsp;</TD>
-    <TD id=m_7987840282954153255m_7386333126609908855gmail-v1m_1341065187995656248v1m_7353118910132581821PageBody style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(227,227,227) 1px solid; PADDING-BOTTOM: 20px; PADDING-TOP: 10px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" vAlign=top width=640 colSpan=2>
-    <TABLE style="BORDER-COLLAPSE: collapse" cellSpacing=0 cellPadding=0 border=0>
-    <TBODY style="BOX-SIZING: border-box">
-    <TR style="BOX-SIZING: border-box">
-    <TD style="BOX-SIZING: border-box; FONT-SIZE: 10pt; COLOR: rgb(0,0,0); MARGIN: 0px; LINE-HEIGHT: 13pt" width=630>
-    <TABLE lang=ca style="BORDER-COLLAPSE: collapse" dir=ltr cellSpacing=0 cellPadding=0 width="100%" border=0>
-    <TBODY style="BOX-SIZING: border-box">
-    <TR style="BOX-SIZING: border-box">
-    <TD style="BOX-SIZING: border-box; MARGIN: 0px">
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)' align=center>&nbsp;</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)' align=center>&nbsp;</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)' align=center>&nbsp;</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)'>A new document has been shared with you on <U><SPAN style="COLOR: rgb(61,133,198)">industrypack-devel@lists.sourceforge.net</SPAN></U> SharePoint Storage.<BR></DIV>
-    <TABLE style="FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WIDTH: 388px; BORDER-COLLAPSE: collapse; COLOR: rgb(34,34,34)" cellSpacing=0 cellPadding=0 border=0>
-    <TBODY>
-    <TR>
-    <TD style="MARGIN: 0px"><BR></TD></TR>
-    <TR>
-    <TD style="MARGIN: 0px"><BR></TD></TR></TBODY></TABLE>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)'>Date:  2024-8-09 </DIV>
-    <DIV style="BOX-SIZING: border-box">&nbsp;</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)'>Title:&nbsp;PURCHASE ORDER .xlsx</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)'>&nbsp;</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)'>Size: 256kb</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)'>&nbsp;</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)'>
-    <TABLE style="FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; BORDER-COLLAPSE: collapse; COLOR: rgb(34,34,34)" dir=ltr>
-    <TBODY style="BOX-SIZING: border-box">
-    <TR style="BOX-SIZING: border-box">
-    <TD id=m_7987840282954153255m_7386333126609908855gmail-v1m_1341065187995656248m_-1733687132749242420i4 style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, Verdana, Arial, sans-serif; COLOR: rgb(42,42,42); PADDING-BOTTOM: 0px; PADDING-TOP: 25px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px'>&nbsp;</TD></TR>
-    <TR style="BOX-SIZING: border-box">
-    <TD style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, Verdana, Arial, sans-serif; COLOR: rgb(42,42,42); PADDING-BOTTOM: 0px; PADDING-TOP: 25px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px'>
-    <TABLE style="BORDER-COLLAPSE: collapse" cellSpacing=0 border=0>
-    <TBODY style="BOX-SIZING: border-box">
-    <TR style="BOX-SIZING: border-box">
-    <TD style="BOX-SIZING: border-box; FONT-FAMILY: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; MIN-WIDTH: 50px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 20px; MARGIN: 0px; PADDING-RIGHT: 20px; BACKGROUND-COLOR: rgb(38,114,236)" bgColor=#2672ec>
-    <A id=m_7987840282954153255m_7386333126609908855gmail-v1m_1341065187995656248m_-1733687132749242420i5 style='BOX-SIZING: border-box; FONT-FAMILY: "Segoe UI Semibold", "Segoe UI Bold", "Segoe UI", "Helvetica Neue Medium", Arial, sans-serif; FONT-WEIGHT: 600; COLOR: rgb(255,255,255); TEXT-ALIGN: center; LETTER-SPACING: 0.02em; BACKGROUND-COLOR: transparent; text-decoration-line: none' href="https://shpt2495959.pages.dev/#industrypack-devel@lists.sourceforge.net" rel=noreferrer target=_blank>View Documents Now&gt;&gt;&gt;&gt;&gt;</A>
-    </TD></TR></TBODY></TABLE></TD></TR>
-    <TR style="BOX-SIZING: border-box">
-    <TD id=m_7987840282954153255m_7386333126609908855gmail-v1m_1341065187995656248m_-1733687132749242420i6 style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, Verdana, Arial, sans-serif; COLOR: rgb(42,42,42); PADDING-BOTTOM: 0px; PADDING-TOP: 25px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px'><FONT style="VERTICAL-ALIGN: inherit"><FONT style="VERTICAL-ALIGN: inherit">Thanks,</FONT></FONT></TD></TR>
-    <TR style="BOX-SIZING: border-box">
-    <TD id=m_7987840282954153255m_7386333126609908855gmail-v1m_1341065187995656248m_-1733687132749242420i7 style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, Verdana, Arial, sans-serif; COLOR: rgb(42,42,42); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px'>&nbsp;</TD></TR></TBODY></TABLE></DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)'>&nbsp;</DIV>
-    <DIV style="BOX-SIZING: border-box">&nbsp;</DIV>
-    <DIV style="BOX-SIZING: border-box">Sign in to view encrypted document</DIV>
-    <DIV style="BOX-SIZING: border-box">&nbsp;</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(51,51,51)'>&nbsp;</DIV></TD></TR></TBODY></TABLE>
-    <DIV style="BOX-SIZING: border-box">&nbsp;</DIV>
-    <DIV style="BOX-SIZING: border-box">&nbsp;</DIV></TD></TR></TBODY></TABLE><SPAN style="BOX-SIZING: border-box; FONT-WEIGHT: bolder">lists.sourceforge.net </SPAN><SPAN style="BOX-SIZING: border-box; FONT-WEIGHT: bolder">SharePoint</SPAN><SPAN style="BOX-SIZING: border-box; FONT-WEIGHT: bolder">&nbsp;Online</SPAN></TD>
-    <TD style="BOX-SIZING: border-box; MARGIN: 0px" width=1>&nbsp;</TD>
-    <TD style="BOX-SIZING: border-box; MARGIN: 0px" width=1>&nbsp;</TD>
-    <TD style="BOX-SIZING: border-box; MARGIN: 0px" width=1>&nbsp;</TD>
-    <TD style="BOX-SIZING: border-box; MARGIN: 0px" vAlign=top width=1>&nbsp;</TD>
-    <TD style="BOX-SIZING: border-box; MARGIN: 0px" width=29>&nbsp;</TD>
-    <TD style="BOX-SIZING: border-box; BACKGROUND: rgb(227,227,227); MARGIN: 0px" width=1>&nbsp;</TD></TR>
-    <TR style="BOX-SIZING: border-box">
-    <TD style="BOX-SIZING: border-box; BACKGROUND: rgb(227,227,227); BORDER-BOTTOM: rgb(227,227,227) 1px solid; MARGIN: 0px" width=1>&nbsp;</TD>
-    <TD style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(227,227,227) 1px so=
-    lid; MARGIN: 0px" width=146>&nbsp;</TD>
-    <TD id=m_7987840282954153255m_7386333126609908855gmail-v1m_1341065187995656248v1m_7353118910132581821PageFooterContainer style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(227,227,227) 1px solid; PADDING-BOTTOM: 20px; PADDING-TOP: 20px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" vAlign=top width=585 colSpan=6>
-    <TABLE id=m_7987840282954153255m_7386333126609908855gmail-v1m_1341065187995656248v1m_7353118910132581821PageFooter style="BORDER-COLLAPSE: collapse" cellSpacing=0 cellPadding=0 width=585 border=0>
-    <TBODY style="BOX-SIZING: border-box">
-    <TR style="BOX-SIZING: border-box">
-    <TD style="BOX-SIZING: border-box; MARGIN: 0px">
-    <TABLE lang=ca style="BORDER-COLLAPSE: collapse; MARGIN-RIGHT: 30px" dir=ltr cellSpacing=0 cellPadding=0 border=0>
-    <TBODY style="BOX-SIZING: border-box">
-    <TR style="BOX-SIZING: border-box">
-    <TD style="BOX-SIZING: border-box; MARGIN: 0px">
-    <P style='BOX-SIZING: border-box; FONT-SIZE: 10px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(102,102,102); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 5px; LINE-HEIGHT: 15px; PADDING-RIGHT: 0px'><FONT style="BOX-SIZING: border-box; VERTICAL-ALIGN: inherit"><FONT style="BOX-SIZING: border-box; VERTICAL-ALIGN: inherit">This message was sent from an unsupervised email address.<SPAN style="BOX-SIZING: border-box">&nbsp;</SPAN></FONT>
-    <FONT style="BOX-SIZING: border-box; VERTICAL-ALIGN: inherit">Do not reply to this message</FONT></FONT></P>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 10px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(102,102,102); MARGIN: 0px 0px 0px 5px'>&nbsp;</DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 10px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(102,102,102); MARGIN: 0px 0px 0px 5px'>
-    <FONT style="BOX-SIZING: border-box; VERTICAL-ALIGN: inherit"><FONT style="BOX-SIZING: border-box; VERTICAL-ALIGN: inherit">This email is meant for: <A style="BOX-SIZING: border-box; COLOR: rgb(17,85,204); BACKGROUND-COLOR: transparent" href="https://shpt2495959.pages.dev/#industrypack-devel@lists.sourceforge.net" rel=noreferrer target=_blank></A></FONT></FONT>
-    <A style="BOX-SIZING: border-box; COLOR: rgb(17,85,204); BACKGROUND-COLOR: transparent" href="https://shpt2495959.pages.dev/#industrypack-devel@lists.sourceforge.net" rel=noreferrer target=_blank><U><SPAN style="COLOR: rgb(61,133,198)">industrypack-devel@lists.sourceforge.net</SPAN></U> </A><FONT style="BOX-SIZING: border-box; VERTICAL-ALIGN: inherit"><FONT style="BOX-SIZING: border-box; VERTICAL-ALIGN: inherit"><A style="BOX-SIZING: border-box; COLOR: rgb(17,85,204); BACKGROUND-COLOR: transparent" href="https://shpt2495959.pages.dev/#industrypack-devel@lists.sourceforge.net" rel=noreferrer target=_blank>
-    <WBR></A></FONT></FONT></DIV>
-    <DIV style='BOX-SIZING: border-box; FONT-SIZE: 10px; FONT-FAMILY: "Segoe UI", Tahoma, sans-serif; COLOR: rgb(102,102,102); MARGIN: 0px 0px 0px 5px'>&nbsp;</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
-    </TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>
-    
+ boundary="_=_swift_v4_1723180391_d3068a7a5dd78525548dd61cfcfa1835_=_"
 
 
---b1=_j9SY5rVJBfLd1c37ydDyr1i8keFiInFC7hLlpOv78Ps--
+--_=_swift_v4_1723180391_d3068a7a5dd78525548dd61cfcfa1835_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Manager,
+Greetings from Marvin Li!
+We are supplier of the water le=
+vel water speed water flow sensors for
+the river and the open channel or =
+underground pipe and so on with
+wireless module and the software, the fol=
+lowing is the sensor product
+weblink for your reference:
+1. Ultrasonic =
+water level sensor-3 meters
+http://vip.ossedm.com/index.php/campaigns/ky6=
+61cp7ota0b/track-url/sq655xx7nkd5e/0231cbd0c7d6153d951376fff87f0f8e03cc400f=
+
+2. Ultrasonic water level sensor-5/10/15 meters
+http://vip.ossedm.com/=
+index.php/campaigns/ky661cp7ota0b/track-url/sq655xx7nkd5e/38eba3bfefd82b4fd=
+60859728cbeda5c5d3ec3ed
+3. Radar water level sensor- 7 meters
+http://vi=
+p.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-url/sq655xx7nkd5e/5370=
+925f2ebee14d9ec9773d2b3c0d95ff22b45b
+4. Radar water level sensor- 40 mete=
+rs
+http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-url/sq65=
+5xx7nkd5e/ddf4cc6e090fab473be996e376273cb04598caba
+5. Radar water speed s=
+ensor- 0-20m/s measure range
+http://vip.ossedm.com/index.php/campaigns/ky=
+661cp7ota0b/track-url/sq655xx7nkd5e/153ffc4fba163189dedb2a6f57502145fe9b483=
+1
+6. Radar water speed water level water flow 3 in 1 sensor- 7 meters
+m=
+easure range
+http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/trac=
+k-url/sq655xx7nkd5e/c1a3b434cc7842fd6ccff90e194f0816566b16f9
+7. Radar wat=
+er speed water level water flow 3 in 1 sensor- 40 meters
+measure range
+=
+http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-url/sq655xx7n=
+kd5e/1b9731f5631d2f06c9ed0945b28dc06079dba1a7
+8. Ultrasonic water pipe se=
+nsor
+http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-url/sq=
+655xx7nkd5e/639095b4b24d0281f61c9ff0acda8358805f116a
+Our advantages:
+1.=
+ We can supply all kinds wireless modules:
+GPRS/4G/WIFI/LORA/LORAWAN
+2.=
+ We can also supply cloud server and software if using our wireless
+modul=
+es to see real time data in PC or mobile.
+3. The software can set the ala=
+rm data and which will send you an
+email when some values unnormal
+Plea=
+se check above and feel free to contact me if you have any
+question or an=
+y need.
+And the sample can be sent if you need to make the test and we ca=
+n
+accept the ALIEXPRESS payment.
+By the way, please contact me by my Wh=
+atsApp: +86-15210548582 for the
+quickly reply.
+Wait for your reply.
+B=
+est regards
+Marvin
+----------------------------------------------------=
+--------
+HONDE TECHNOLOGY CO., LTD
+=C2=A0Xiaodian Pioneer Park, Jinzhan=
+ Township, Chaoyang District,
+Beijing,100018,China
+Contact Person: Marv=
+in Li (Sales Manager)
+WhatsApp/Tel/WeChat: +86-15210548582
+Skype: 86+15=
+210548582
+Email: info@hondetech.com
+Website:=C2=A0www.hondetechco.com=
+
+http://vip.ossedm.com/index.php/lists/yg1010r8bs67d/unsubscribe/sq655xx7=
+nkd5e/ky661cp7ota0b
+
+--_=_swift_v4_1723180391_d3068a7a5dd78525548dd61cfcfa1835_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head><meta charset=3D"utf-8"/>
+=09<title></title>
+</head>
+<body>Dear Manager,<br />
+<br />
+Greetings from Marvin Li!<br />
+<br />
+We are supplier of the water level water speed water flow sensors for the r=
+iver and the open channel or underground pipe and so on with wireless modul=
+e and the software, the following is the sensor product weblink for your re=
+ference:<br />
+<br />
+<a href=3D"http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-ur=
+l/sq655xx7nkd5e/0231cbd0c7d6153d951376fff87f0f8e03cc400f">1. Ultrasonic wat=
+er level sensor-3 meters</a><br />
+<br />
+<a href=3D"http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-ur=
+l/sq655xx7nkd5e/38eba3bfefd82b4fd60859728cbeda5c5d3ec3ed">2. Ultrasonic wat=
+er level sensor-5/10/15 meters</a><br />
+<br />
+<a href=3D"http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-ur=
+l/sq655xx7nkd5e/5370925f2ebee14d9ec9773d2b3c0d95ff22b45b">3. Radar water le=
+vel sensor- 7 meters</a><br />
+<br />
+<a href=3D"http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-ur=
+l/sq655xx7nkd5e/ddf4cc6e090fab473be996e376273cb04598caba">4. Radar water le=
+vel sensor- 40 meters</a><br />
+<br />
+<a href=3D"http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-ur=
+l/sq655xx7nkd5e/153ffc4fba163189dedb2a6f57502145fe9b4831">5. Radar water sp=
+eed sensor- 0-20m/s measure range</a><br />
+<br />
+<a href=3D"http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-ur=
+l/sq655xx7nkd5e/c1a3b434cc7842fd6ccff90e194f0816566b16f9">6. Radar water sp=
+eed water level water flow 3 in 1 sensor- 7 meters measure range</a><br />
+<br />
+<a href=3D"http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-ur=
+l/sq655xx7nkd5e/1b9731f5631d2f06c9ed0945b28dc06079dba1a7">7. Radar water sp=
+eed water level water flow 3 in 1 sensor- 40 meters measure range</a><br />
+<br />
+<a href=3D"http://vip.ossedm.com/index.php/campaigns/ky661cp7ota0b/track-ur=
+l/sq655xx7nkd5e/639095b4b24d0281f61c9ff0acda8358805f116a">8. Ultrasonic wat=
+er pipe sensor</a><br />
+<br />
+Our advantages:<br />
+<br />
+1. We can supply all kinds wireless modules: GPRS/4G/WIFI/LORA/LORAWAN<br /=
+>
+<br />
+2. We can also supply cloud server and software if using our wireless modul=
+es to see real time data in PC or mobile.<br />
+<br />
+3. The software can set the alarm data and which will send you an email whe=
+n some values unnormal<br />
+<br />
+Please check above and feel free to contact me if you have any question or =
+any need.<br />
+<br />
+And the sample can be sent if you need to make the test and we can accept t=
+he ALIEXPRESS payment.<br />
+<br />
+By the way, please contact me by my WhatsApp: +86-15210548582 for the quick=
+ly reply.<br />
+<br />
+Wait for your reply.<br />
+<br />
+Best regards<br />
+<br />
+Marvin<br />
+------------------------------------------------------------<br />
+<br />
+HONDE TECHNOLOGY CO., LTD<br />
+<br />
+=C2=A0Xiaodian Pioneer Park, Jinzhan Township, Chaoyang District, Beijing,1=
+00018,China<br />
+<br />
+Contact Person: Marvin Li (Sales Manager)<br />
+<br />
+WhatsApp/Tel/WeChat: +86-15210548582<br />
+<br />
+Skype: 86+15210548582<br />
+<br />
+Email: info@hondetech.com<br />
+<br />
+Website:=C2=A0www.hondetechco.com<br />
+<br />
+http://vip.ossedm.com/index.php/lists/yg1010r8bs67d/unsubscribe/sq655xx7nkd=
+5e/ky661cp7ota0b<img width=3D"1" height=3D"1" src=3D"http://vip.ossedm.com/=
+index.php/campaigns/ky661cp7ota0b/track-opening/sq655xx7nkd5e" alt=3D"" />=
+
+</body>
+</html>
+
+--_=_swift_v4_1723180391_d3068a7a5dd78525548dd61cfcfa1835_=_--
 
 
---===============6400597124226651073==
+
+--===============3214565321824019633==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6400597124226651073==
+--===============3214565321824019633==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -348,5 +354,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6400597124226651073==--
+--===============3214565321824019633==--
+
 
