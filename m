@@ -2,58 +2,58 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5A69E952ABD
-	for <lists+industrypack-devel@lfdr.de>; Thu, 15 Aug 2024 10:41:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81BB3955980
+	for <lists+industrypack-devel@lfdr.de>; Sat, 17 Aug 2024 22:11:37 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1seW2g-00062C-CW
+	id 1sfPlu-0000be-Nu
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 15 Aug 2024 08:41:11 +0000
+	Sat, 17 Aug 2024 20:11:35 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <cylamarver932@gmail.com>) id 1seW2e-00061f-O8
+ (envelope-from <cylamarver932@gmail.com>) id 1sfPlm-0000bR-0S
  for industrypack-devel@lists.sourceforge.net;
- Thu, 15 Aug 2024 08:41:09 +0000
+ Sat, 17 Aug 2024 20:11:26 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=JNOZAMrpL5wFEXrW6rxLKc2IPQm12q1l6rQM3+kZ1W8=; b=A4XyqLIozmkGPb/J6sagasbOjP
- 0quJTHtihzPsAtL9wZtISh+HK+6rWwAAmNYtcH7/EUTYpAbvf8K4p8mkOjSRymnmQHk70iBJzwPah
- dgH5K6NgfJIBDsKA4H+6pGajCiDOdy0V7EbwvmGSsvdxWQ8fJOVvdIn3My/+JVXR2bwo=;
+ bh=eg3TerVjbgwpqK/h/JiKatmGrbrKp2sYJofI1p+mN5Y=; b=WQHdto26RWjMp3NjeiuFoDlG2G
+ WGFzwkdMSWgj/gYpRCObk/cjLjiY2I9qrM3lbsinUikWZI0Aj2iJwyjzsn3rY58jqwqijACoX+XT/
+ pFUHpx4942HSTXPDFgOXgKuFDnMnZuAF5+PPx3Su/Ufb4D7saFONvmSVxcJehbW3pjlw=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=JNOZAMrpL5wFEXrW6rxLKc2IPQm12q1l6rQM3+kZ1W8=; b=W
- 0dokXfoVSWmQpGHvOi882x1fDc5Qqvuo5ILeS+taKQaWRlD3g1i1HvQ29Iim2dScg9A+9S3XO1+NB
- vyVHkhK8mK7ZMT9V+2fYBYowYgMVMCOcHJtv7ZTDeXFMywaODVOydN3OWGTwKcNGNghvTvYBUuHBk
- NbTYDw3bsGsFU7oY=;
+ List-Owner:List-Archive; bh=eg3TerVjbgwpqK/h/JiKatmGrbrKp2sYJofI1p+mN5Y=; b=f
+ T9NGjL7iD8cJnhZTrulJRGG1N6IgsmOUp2iRF5g50QwDuQz1gdax3l2k3xLBG3fj3PPoM6QxFEC2P
+ vtAmx07OzkjMCRGvuveGkPToFzjMIwdR5Ln0F/qNupfwfr8TGZv8bn+Zp+74rRgu0to5ZFn3+d7tQ
+ nl+2S1m8FZrPed6s=;
 Received: from server.ccclub700.com ([51.89.151.46] helo=cwp.ccclub700.com)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1seW2e-0000Rz-Mu for industrypack-devel@lists.sourceforge.net;
- Thu, 15 Aug 2024 08:41:09 +0000
-Received: from [102.90.43.235] (unknown [105.116.3.16])
+ id 1sfPll-0006KW-UU for industrypack-devel@lists.sourceforge.net;
+ Sat, 17 Aug 2024 20:11:26 +0000
+Received: from [105.113.41.152] (unknown [105.113.41.152])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by cwp.ccclub700.com (Postfix) with ESMTPSA id 85E9123C9FB
+ by cwp.ccclub700.com (Postfix) with ESMTPSA id E79443EE4BD
  for <industrypack-devel@lists.sourceforge.net>;
- Thu, 15 Aug 2024 08:37:29 +0000 (UTC)
+ Sat, 17 Aug 2024 19:54:55 +0000 (UTC)
 From: <PASTORIN ALICE ABRAHAM>cylamarver932@gmail.com
 To: industrypack-devel@lists.sourceforge.net
-Date: 15 Aug 2024 01:37:28 -0700
-Message-ID: <20240815013728.9543693A4379CF8B@gmail.com>
+Date: 17 Aug 2024 12:54:51 -0700
+Message-ID: <20240817125451.60188FA483785ADE@gmail.com>
 MIME-Version: 1.0
-X-Spam-Score: 6.4 (++++++)
+X-Spam-Score: 5.1 (+++++)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has identified this incoming email as possible spam.  The original
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
@@ -63,40 +63,42 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.
    bei guter Gesundheit. Seien Sie darüber nicht überrascht, denn mein Kontakt
     mit Ihnen ist g [...] 
  
- Content analysis details:   (6.4 points, 6.0 required)
+ Content analysis details:   (5.1 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
+  5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+                             [51.89.151.46 listed in dnsbl-1.uceprotect.net]
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
                              high trust
                              [51.89.151.46 listed in list.dnswl.org]
-  5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
-                             [51.89.151.46 listed in dnsbl-1.uceprotect.net]
   0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
                              query to Validity was blocked.  See
                              https://knowledge.validity.com/hc/en-us/articles/20961730681243
                               for more information.
-                             [51.89.151.46 listed in sa-accredit.habeas.com]
-  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
-                             https://senderscore.org/blocklistlookup/
+                           [51.89.151.46 listed in sa-trusted.bondedsender.org]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
                              [51.89.151.46 listed in bl.score.senderscore.com]
-  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+  0.5 SUBJ_ALL_CAPS          Subject is all capitals
   0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
                              in digit
                              [cylamarver932[at]gmail.com]
-  0.5 SUBJ_ALL_CAPS          Subject is all capitals
+  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
   0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
                              provider
                              [cylamarver932[at]gmail.com]
   1.0 FORGED_SPF_HELO        No description available.
- -0.0 T_SCC_BODY_TEXT_LINE   No description available.
   0.0 LOTS_OF_MONEY          Huge... sums of money
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
   2.4 MONEY_NOHTML           Lots of money in plain text
   0.0 MONEY_FREEMAIL_REPTO   Lots of money from someone using free
                              email?
   0.0 FROM_ADDR_WS           Malformed From address
-X-Headers-End: 1seW2e-0000Rz-Mu
+X-Headers-End: 1sfPll-0006KW-UU
 Subject: Re: [Industrypack-devel] 
  =?utf-8?q?GR=C3=9C=C3=9FE_VOM_KALVARIENBERG?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
@@ -135,8 +137,8 @@ bGlvbmVuIERvbGxhciBkb3J0IGluIAplaW4gV2Fpc2VuaGF1cy9IZWltIGbDvHIgbXV0dGVybG9z
 ZSBCYWJ5cyB6dSBpbnZlc3RpZXJlbiB1bmQgYXVjaCAKZGVuIGFybWVuIFdpdHdlbiBpbiBkZXIg
 VW1nZWJ1bmcgenUgaGVsZmVuLgoKV2llIFNpZSB2aWVsbGVpY2h0IHdpc3NlbiwgZXJmb3JkZXJ0
 ZSBkaWVzIGVpbmUgZHJpbmdlbmRlIApBbnR3b3J0LiBCaXR0ZSBhbnR3b3J0ZW4gU2llIG1pciBm
-w7xyIHdlaXRlcmUgRWluemVsaGVpdGVuLgoKUGFzdG9yaW4gQWxpY2UgQWJyYWhhbQoKcGFzdG9y
-bXJzLmFsaWNlYWJyYWhhbUBnbWFpbC5jb20KCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fXwpJbmR1c3RyeXBhY2stZGV2ZWwgbWFpbGluZyBsaXN0CkluZHVz
-dHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXQKaHR0cHM6Ly9saXN0cy5zb3VyY2Vm
-b3JnZS5uZXQvbGlzdHMvbGlzdGluZm8vaW5kdXN0cnlwYWNrLWRldmVsCg==
+w7xyIHdlaXRlcmUgRWluemVsaGVpdGVuLgoKUGFzdG9yaW4gQWxpY2UgQWJyYWhhbQoKCl9fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkluZHVzdHJ5cGFjay1k
+ZXZlbCBtYWlsaW5nIGxpc3QKSW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5l
+dApodHRwczovL2xpc3RzLnNvdXJjZWZvcmdlLm5ldC9saXN0cy9saXN0aW5mby9pbmR1c3RyeXBh
+Y2stZGV2ZWwK
