@@ -2,68 +2,97 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id DC22295D60B
-	for <lists+industrypack-devel@lfdr.de>; Fri, 23 Aug 2024 21:25:39 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 99FE496133C
+	for <lists+industrypack-devel@lfdr.de>; Tue, 27 Aug 2024 17:50:07 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1shZul-000442-9s
+	id 1siySL-0005ve-6u
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 23 Aug 2024 19:25:38 +0000
+	Tue, 27 Aug 2024 15:50:05 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <support@creema.jp>) id 1shZuk-00043v-1h
+ (envelope-from <admin@wenvert.cam>) id 1siySK-0005vV-C1
  for industrypack-devel@lists.sourceforge.net;
- Fri, 23 Aug 2024 19:25:37 +0000
+ Tue, 27 Aug 2024 15:50:05 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Date:Subject:To:From:Message-ID:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=To:Reply-To:From:Subject:Content-Type:Message-ID:
+ Date:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=0EwhHq23gi5AV1gllE4DYVijT1/uRxWNRA9vA8FCFuI=; b=dwsade9jZMswXQYW+sHwgO9BGP
- ly1+FGrapjcyABYjByjfGSwytM9Dckusl3DbogW0JnA/F64/sdcan67RmpJpU3WO44kXEv3r5pBRl
- eso/v7vVS5ZhofpMHctmEDDcFfqtoWpO0ZgMjtq9C5VvZWww1BmtjzcuBYmxB0PSMFVI=;
+ bh=gsq8TPI8R33CD2odJ5heP/0BpgiZuPUgiRyw8Ikb338=; b=bfV5tcYZBnXrFxU8qog7MZ669q
+ dHF5Ny7jyDra+HOHgUINw0WP6Zz1lEyBZbC8ni4tSlmoNFJDCmJdpArhc5iAq8ngpQkcXaMb8biw6
+ aiTEeMquRF+MPhlpKTREcwEmjJsacvtL01rHqFK1wCFL8GPmXYhBLBCkjirTEowmbNis=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Date:Subject:To:From:
- Message-ID:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ h=To:Reply-To:From:Subject:Content-Type:Message-ID:Date:MIME-Version:Sender
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=0EwhHq23gi5AV1gllE4DYVijT1/uRxWNRA9vA8FCFuI=; b=f
- Q2YvPqy+YoMv11Ku0Xcrf6pmCNhHVAyDKiz74mLuL85Jd25A2anPNzNcRyWnggoHGwB80ECQ1gT0o
- 2yK8eXmcfmfxvYIqmTfzBmsdLvHSpiyxoONI6ynjzqpZlad6jqIQi06LtHflxG2Oed0r5ixisp2Fc
- evoxzvoTd7kS69f0=;
-Received: from [160.248.93.31] (helo=mail0.creema.jp)
+ List-Owner:List-Archive; bh=gsq8TPI8R33CD2odJ5heP/0BpgiZuPUgiRyw8Ikb338=; b=I
+ wW9qwf4vErZMmX8XQ82v9Dw/rP49QI5Q7PMXA+qsJeajd/HZBX1CQb+YTNtLwDy5cv5N+vK1q8YCJ
+ MGzpq9eK+R3OnHQjv0GKPR7XCOLAmU0fwOvakz4zvUa+SEMzpEzlFy8Jd4+mRPcA5KU+oYXn3PJWk
+ VOyKSgzX+fbJY8kU=;
+Received: from business48-5.web-hosting.com ([185.61.154.211])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1shZui-0002ZJ-4Z for industrypack-devel@lists.sourceforge.net;
- Fri, 23 Aug 2024 19:25:37 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default; d=creema.jp; 
- h=Message-ID:From:To:Subject:Date:MIME-Version:Content-Type:
- Content-Transfer-Encoding; i=support@creema.jp;
- bh=0EwhHq23gi5AV1gllE4DYVijT1/uRxWNRA9vA8FCFuI=;
- b=UfybYdBwUoBDC6MA2x0jS15J4LkKYhyWIHTg/8228rMZoXD/cp+l0dDTJTsD8FGEiAvOGp3wIdRK
- 8UgyaObjWp6lZKaD7VgmT+GLimgbSAhzkFDju07LfNoLPECzTqsDSvsSyDp5PPj5oTJ/yNqKV3+D
- dIhs+Srtq5I+Hdm+NB4=
-Message-ID: <ab30286a6d32a1dead79c9883ca906b2@creema.jp>
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-Date: Fri, 23 Aug 2024 19:05:20 +0000
+ id 1siySK-0002gy-3T for industrypack-devel@lists.sourceforge.net;
+ Tue, 27 Aug 2024 15:50:05 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=wenvert.cam
+ ; s=default;
+ h=To:Reply-To:From:Subject:Content-Type:Message-ID:Date:
+ MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=gsq8TPI8R33CD2odJ5heP/0BpgiZuPUgiRyw8Ikb338=; b=okmJ+TULYw2OwAEHBRTwzc72y1
+ NF5yZHkvHQYTk0wkMnfVs/BW0tZOwM4+g+kmLMG0g/f15OvlPt/S54E34L8lG0KZX5CSvaewuE+uf
+ pCl0CTlHnGrFq8Lkac/TRw3JS2eCSg8MKlaN7g+Z4cmE63wRS/qANozZRWwu7CNGisTuufz0OYkXx
+ /ZQ/W4NcK3aRRnLuczo39wHBBbVY3BNT9Ql2dswSYBRJtI8BRhn6sqBHPvuAIm/vzqIVa5sWaUAE8
+ 6X9NBku3UxJhY320mRzKnCRs936DpGjX+fU9jbeprKkPlp1lse3f9NTUojPlxtEx/2JERec8F6eR2
+ GxwsJRsQ==;
+Received: from ppp-58-11-4-104.revip2.asianet.co.th ([58.11.4.104]:51115
+ helo=DESKTOP-66TC3RQ)
+ by business48.web-hosting.com with esmtpsa (TLS1.3) tls TLS_AES_128_GCM_SHA256
+ (Exim 4.96.2) (envelope-from <admin@wenvert.cam>) id 1siy1z-009iQD-0T
+ for industrypack-devel@lists.sourceforge.net;
+ Tue, 27 Aug 2024 11:22:51 -0400
 MIME-Version: 1.0
-X-Spam-Score: 2.4 (++)
+Date: Tue, 27 Aug 2024 22:22:48 +0700
+Message-ID: <C6E8DC9ADA892471ED9FADB693DCC58DA5EC4A8E@DESKTOP066TC3RQ>
+X-Priority: 3 (Normal)
+From: "Ms Siriluk" <admin@wenvert.cam>
+To: industrypack-devel@lists.sourceforge.net
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - business48.web-hosting.com
+X-AntiAbuse: Original Domain - lists.sourceforge.net
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - wenvert.cam
+X-Get-Message-Sender-Via: business48.web-hosting.com: authenticated_id:
+ admin@wenvert.cam
+X-Authenticated-Sender: business48.web-hosting.com: admin@wenvert.cam
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-From-Rewrite: unmodified, already matched
+X-Spam-Score: 0.8 (/)
 X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
  
- Content preview:  いつも＜ろうきん＞をご利用いただき、誠にありがとうございます
-    他国の誰かがあなたのアカウントにログインして資金を盗もうとする試みを検出したため、あなたのアカウントは一時的に制限されています。
+ Content preview:  Dear, We’re in need of led light and are considering potential
+    suppliers. Can we discuss your offerings and terms? Looking forward to a
+   fruitful discussion. Best regards, Siriluk   Dear, We’re in need of led
+    light and are considering potential suppliers. Can we discuss your offerings
+    and terms? Looking forward to a fruitful discussion. Best regards, Siriluk
     
  
- Content analysis details:   (2.4 points, 6.0 required)
+ Content analysis details:   (0.8 points, 6.0 required)
  
   pts rule name              description
  ---- ---------------------- --------------------------------------------------
@@ -71,33 +100,36 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.
                              blocked.  See
                              http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
                               for more information.
-                             [URIs: hdlvxingshe.com]
+                             [URIs: wenvert.cam]
   0.0 RCVD_IN_DNSWL_BLOCKED  RBL: ADMINISTRATOR NOTICE: The query to
                              DNSWL was blocked.  See
                              http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
                               for more information.
-                             [160.248.93.31 listed in list.dnswl.org]
-  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
-                             The query to Validity was blocked.  See
+                             [185.61.154.211 listed in list.dnswl.org]
+  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
                              https://knowledge.validity.com/hc/en-us/articles/20961730681243
                               for more information.
-                          [160.248.93.31 listed in sa-trusted.bondedsender.org]
+                         [185.61.154.211 listed in sa-trusted.bondedsender.org]
   0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
                              query to Validity was blocked.  See
                              https://knowledge.validity.com/hc/en-us/articles/20961730681243
                               for more information.
-                             [160.248.93.31 listed in bl.score.senderscore.com]
-  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+                            [185.61.154.211 listed in bl.score.senderscore.com]
   0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
   0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
                              valid
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
-X-Headers-End: 1shZui-0002ZJ-4Z
-Subject: [Industrypack-devel] =?utf-8?b?44CQIOmHjeimgSDjgJHlirTlg43ph5E=?=
-	=?utf-8?b?5bqr44Gr44GK44GR44KL5LiA5pmC55qE44Gq44GU5Yip55So5Yi26ZmQ?=
-	=?utf-8?b?44Gu44GK55+l44KJ44Gb?=
+  1.0 FROM_FMBLA_NEWDOM14    From domain was registered in last 7-14 days
+X-Headers-End: 1siySK-0002gy-3T
+Subject: [Industrypack-devel] Product Inquiry
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -109,42 +141,56 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: =?utf-8?B?44KN44GG44GN44KT44OA44Kk44Os44Kv44OI?= via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: =?utf-8?B?44KN44GG44GN44KT44OA44Kk44Os44Kv44OI?= <support@creema.jp>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Reply-To: siriluk@vembocbiz.shop
+Content-Type: multipart/mixed; boundary="===============7891725115186167466=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-44GE44Gk44KC77yc44KN44GG44GN44KT77ye44KS44GU5Yip55So44GE44Gf44Gg44GN44CB6Kqg
-44Gr44GC44KK44GM44Go44GG44GU44GW44GE44G+44GZDQoNCuS7luWbveOBruiqsOOBi+OBjOOB
-guOBquOBn+OBruOCouOCq+OCpuODs+ODiOOBq+ODreOCsOOCpOODs+OBl+OBpuizh+mHkeOCkueb
-l+OCguOBhuOBqOOBmeOCi+ippuOBv+OCkuaknOWHuuOBl+OBn+OBn+OCgeOAgeOBguOBquOBn+OB
-ruOCouOCq+OCpuODs+ODiOOBr+S4gOaZgueahOOBq+WItumZkOOBleOCjOOBpuOBhOOBvuOBmeOA
-gg0KDQrjg63jgrDjgqTjg7Pml6XmmYI6IDIwMjTlubQ45pyIMjPml6XvvIjph5HvvIkNCklQ44Ki
-44OJ44Os44K5OiAxOTMuMjAwLjE1Ny4zNg0K44OW44Op44Km44K244Gu44OQ44O844K444On44Oz
-OiBNb3ppbGxhLzUuMCAoTGludXg7IEFuZHJvaWQxMTsNCjIyMDExMTdUTClBcHBsZVdlYktpdC81
-MzcuMzYoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMDkuMC4wLjAgTW9iaWxlDQpTYWZhcmkv
-NTM3LjM2DQoNCuOBiuWuouOBleOBvuOBq+OBr+OBiuaJi+aVsOOCkuOBiuOBi+OBkeOBhOOBn+OB
-l+OBvuOBmeOBjOOAgeS9leWNkuOBlOeQhuino+OBqOOBlOWNlOWKm+OCkuOBiumhmOOBhOeUs+OB
-l+OBguOBkuOBvuOBmeOAguacrOS6uueiuuiqjeW+jOOAgeWItumZkOOCkuino+mZpOOBmeOCi+OB
-k+OBqOOBjOOBp+OBjeOBvuOBmQ0KDQrilrzmnKzkurrnorroqo3jgpLjgZTluIzmnJvjga7mlrnj
-ga/jgIHku6XkuIvjga7jg5zjgr/jg7PjgpLjgq/jg6rjg4Pjgq/jgZfjgabjgZTmnKzkurrmp5jn
-orroqo3jgpLooYzjgaPjgabjgY/jgaDjgZXjgYTjgIINCg0KaHR0cHM6Ly9oZGx2eGluZ3NoZS5j
-b20NCg0KDQrigLvlm57nrZTjgYzlrozkuobjgZfjgb7jgZnjgajjgIHpgJrluLjjganjgYrjgorj
-g63jgrDjgqTjg7Plvozjga7jgYrmiYvntprjgY3jgYzlj6/og73jgavjgarjgorjgb7jgZnjgIIN
-CuKAu+S4gOWumuacn+mWk+OBlOeiuuiqjeOBhOOBn+OBoOOBkeOBquOBhOWgtOWQiOOAgeWPo+W6
-p+WPluW8leOCkuWItumZkOOBleOBm+OBpuOBhOOBn+OBoOOBjeOBvuOBmeOAgg0KLS0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCuacrOODoeODvOODq+OBjOOBlOiH
-qui6q+Wum+OBp+OBquOBhOWgtOWQiOOAgeS7luOBruaWueOBjOiqpOOBo+OBpuWQjOOBmOODoeOD
-vOODq+OCouODieODrOOCueOCkueZu+mMsuOBl+OBn+OCguOBruOBqOiAg+OBiOOCieOCjOOBvuOB
-meOAgg0KDQrphY3kv6HlgZzmraLjga7jgYrmiYvntprjgY3jgpLjgZXjgZvjgabjgYTjgZ/jgaDj
-gY3jgb7jgZnjga7jgafjgIHjg6Hjg7zjg6vmnKzmlofjgpLliYrpmaTjgZvjgZrjgIHku7blkI3j
-gpLjgIzlrpvlhYjjga7plpPpgZXjgYTjgI3jgajkv67mraPjga7jgYbjgYjjgIHjgZTov5Tkv6Hj
-gpLjgYrpoZjjgYTjgYTjgZ/jgZfjgb7jgZkNCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tDQrlt67lh7rkurrvvJrlhajlm73lirTlg43ph5HluqvljZTkvJoNCuOB
-k+OBruODoeODvOODq+OCouODieODrOOCueOBr+mAgeS/oeWwgueUqOOBp+OBmQoKCgpfX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpJbmR1c3RyeXBhY2stZGV2
-ZWwgbWFpbGluZyBsaXN0CkluZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXQK
-aHR0cHM6Ly9saXN0cy5zb3VyY2Vmb3JnZS5uZXQvbGlzdHMvbGlzdGluZm8vaW5kdXN0cnlwYWNr
-LWRldmVsCg==
+--===============7891725115186167466==
+Content-Type: multipart/alternative; boundary="------------090805080909090605070908"
+
+--------------090805080909090605070908
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8; format=flowed
+
+Dear,
+We=E2=80=99re in need of led light and are considering potential suppliers.=
+ Can we discuss your offerings and terms?
+Looking forward to a fruitful discussion.
+Best regards,
+Siriluk=20
+=C2=A0
+--------------090805080909090605070908
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset=utf-8
+
+<html><head></head><body><style type="text/css">
+p { margin-top: 0px;margin-bottom: 12px;line-height: 1.15; } 
+body { font-family: 'Verdana';font-size: 16px; } 
+.Normal { telerik-style-type: paragraph;telerik-style-name: Normal;border-collapse: collapse; } 
+.TableNormal { telerik-style-type: table;telerik-style-name: TableNormal;border-collapse: collapse; } 
+.NormalWeb { telerik-style-type: paragraph;telerik-style-name: NormalWeb;margin-top: 6.66px;margin-bottom: 6.66px;border-collapse: collapse; } </style><p class="NormalWeb "><span style="font-family: 'Times New Roman';font-size: 16px;">Dear,</span><br /><span style="font-family: 'Times New Roman';font-size: 16px;">We&rsquo;re in need of led light and are considering potential suppliers. Can we discuss your offerings and terms?</span><br /><span style="font-family: 'Times New Roman';font-size: 16px;">Looking forward to a fruitful discussion.</span><br /><span style="font-family: 'Times New Roman';font-size: 16px;">Best regards,</span><br /><span style="font-family: 'Times New Roman';font-size: 16px;">Siriluk </span></p><p class="Normal ">&nbsp;</p></body></html>
+--------------090805080909090605070908--
+
+
+
+--===============7891725115186167466==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+
+--===============7891725115186167466==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+Industrypack-devel mailing list
+Industrypack-devel@lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/industrypack-devel
+
+--===============7891725115186167466==--
+
+
