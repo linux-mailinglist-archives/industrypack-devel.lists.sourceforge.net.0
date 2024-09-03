@@ -2,125 +2,195 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id A7EFA966EA6
-	for <lists+industrypack-devel@lfdr.de>; Sat, 31 Aug 2024 03:47:20 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id A143596A103
+	for <lists+industrypack-devel@lfdr.de>; Tue,  3 Sep 2024 16:46:29 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1skDCx-0007s4-Ft
+	id 1slUnb-0001q1-Mg
 	for lists+industrypack-devel@lfdr.de;
-	Sat, 31 Aug 2024 01:47:19 +0000
+	Tue, 03 Sep 2024 14:46:28 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <support@autoforce.in>) id 1skDCv-0007rx-BD
- for industrypack-devel@lists.sourceforge.net;
- Sat, 31 Aug 2024 01:47:17 +0000
+ (envelope-from <elizabeth.thomas@educationalnetwork.tech>)
+ id 1slUna-0001pu-Vy for industrypack-devel@lists.sourceforge.net;
+ Tue, 03 Sep 2024 14:46:27 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:From:Date:Subject:To:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=MIME-Version:Content-Type:Message-ID:Date:Subject:
+ To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=c/I6+HikgSkuotGZ6DPOS0oIEibYp9z6oNJU+k/l/qM=; b=Vjaf6oFYzXVkpJOFOt+pKcvmf5
- NT1bbX0W7442f8gFwjQuUEI6pyZyarTTb2xfW4W9mbp7Q8yabuj5GeoIi+9b0NMZH+v5rDoS91mE3
- xjNfVrYXJNyvJoZQyS0w+MyM+Tk/6z1mk3MIJs5wauZiZIsx4I7Xpi5cioM2SDFFsLjk=;
+ bh=WGlw1bFZldMosZ/+hUhkg8PurE0O7dpnzi4oMwFU388=; b=Gsy8gQrRUOGWBEGOMAuvkliM6W
+ p+wX0D/A+OBug9wcF7c11OVvtSz7oHZPG7NH95tplTK8aPvfd2XTR+WbeBGt+jLVVZ7xMzQoTXh1w
+ plwMIJeBqSetL6NmWarjMO47QtJrWRFzlszzS+Jqy8TUGiZ5BiNn9JMb29v1PPXKZyZg=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:From:Date:
- Subject:To:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ h=MIME-Version:Content-Type:Message-ID:Date:Subject:To:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=c/I6+HikgSkuotGZ6DPOS0oIEibYp9z6oNJU+k/l/qM=; b=Z
- VvQMOIWTQnmHa/tXgAhYXx97xtOZgoP1NMISTMH00Rd73vYUkxfvjOjl8B7vNA7dvfsgZD7G64BpN
- loSl9hyRcMJrQcqdSxEgbwe7VPVmJtqe1PBp1Yd+fLqRbt0/FjV9NeRWX3DjDRRBOk5LhnxSwUZL9
- d/p9Bmi/Lo3tbZCg=;
-Received: from server.kalyanicrm.com ([43.254.41.132])
+ List-Owner:List-Archive; bh=WGlw1bFZldMosZ/+hUhkg8PurE0O7dpnzi4oMwFU388=; b=N
+ pTant9IKj3tEVUAxBu1gSy2HzPkA/zARnFqhSqaVNKGuxdj9Lf/l1fXKcwm4NeldL5UqleIKCNxIL
+ ffLOqvRmeCBhvtTbZWV1ZbRYvVfAhGhs3un05gY6BPQgokwcjNUyuBf7cCVrUzyXgPuMqjE8lSVZh
+ XihTcA74qU9coXms=;
+Received: from dispatch1-us1.ppe-hosted.com ([148.163.129.52])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1skDCs-0004jp-IR for industrypack-devel@lists.sourceforge.net;
- Sat, 31 Aug 2024 01:47:17 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=autoforce.in; s=default; h=Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:From:Date:Subject:To:Sender:Reply-To:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=c/I6+HikgSkuotGZ6DPOS0oIEibYp9z6oNJU+k/l/qM=; b=kytsVEJusCMAGVAyx3beuUjJpH
- eLCwORIRmxHQT5M6K+eArPJGnU7h2Ab1fOyzpjAxjUSWrIP85/k07peI+utj6rnq39fzTryoOzOBZ
- 41B8BoQ/tx46nIjkzrHnJ8QFfz9C9PlXSC7zN4t7Gpa80Uy7LZ1Y7chDUVCX9Oqb0KQepCD9d8XqN
- qQ0un9JX+OHOXmR1MLeFJdCc7CiS8qNmZLfaZTC2SnA4CYm9VZMssARx1at6azO+WMPUjFR66+ebW
- dfzvHkSLORj1WtCxZ5lk/sCAvxL/0xdZrA8oB9OTcBZdVJ2sqh6JHjKe8nsO2mwsDNuaVh5N76HCm
- NHSlZtWw==;
-Received: from autoforce20 by server.kalyanicrm.com with local (Exim 4.96.2)
- (envelope-from <support@autoforce.in>) id 1skCSJ-000Mhz-1j
- for industrypack-devel@lists.sourceforge.net;
- Sat, 31 Aug 2024 06:29:07 +0530
-To: industrypack-devel@lists.sourceforge.net
-X-PHP-Script: www.autoforce.in/.well-known/pki-validation/hajar.php for
- 196.64.119.103
-X-PHP-Originating-Script: 1016:hajar.php
-Date: Sat, 31 Aug 2024 00:59:07 +0000
-From: "DHL Express (International)" <support@autoforce.in>
-Message-ID: <a934536687d3f4be3e7d94134dceaed6@www.autoforce.in>
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
+ id 1slUnb-0003M4-1q for industrypack-devel@lists.sourceforge.net;
+ Tue, 03 Sep 2024 14:46:27 +0000
+Received: from dispatch1-us1.ppe-hosted.com (ip6-localhost [127.0.0.1])
+ by dispatch1-us1.ppe-hosted.com (PPE Hosted ESMTP Server) with ESMTP id
+ BAEDE2858F7 for <industrypack-devel@lists.sourceforge.net>;
+ Tue,  3 Sep 2024 14:46:16 +0000 (UTC)
+X-Virus-Scanned: Proofpoint Essentials engine
+Received: from IND01-MAX-obe.outbound.protection.outlook.com
+ (mail-maxind01lp2174.outbound.protection.outlook.com [104.47.74.174])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mx1-us1.ppe-hosted.com (PPE Hosted ESMTP Server) with ESMTPS id EF8D31000B5
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue,  3 Sep 2024 14:46:03 +0000 (UTC)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=bUMIhJkNRZFzJmmZxpVy2IOfjZjcOpw1Yz/jo3pGJGvEVQkKU91K492iuOnW4y2yEE2g7JpYjLW7lcLd4EYhwJQH4VCpsagf6M3vrTY95Mjl2z5ud0B8A+cqcr2SNizBDc+xNGHYq2IHvDyomB2NVSItQvFgvshryimZCO2RMref5dMcGoKm8P7mnQrTDzUZ5a///g3T849NAT8OQuCL5rxmW6RNJzeiLa2vDNb5dfVCrOkP0bhILMcr6I9HM8771cddms79nDE/JO1nvqqlDKsILYKbzfIX8SJToRDuF+aQ5ePQzeasboN2jeSDE2WzAVwaSOHimwbpSSS4mxMVHA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=WGlw1bFZldMosZ/+hUhkg8PurE0O7dpnzi4oMwFU388=;
+ b=xAKOU8Yy7xIN9ciAaQQ+59MAAYIEgHZGfBQooiIsCwGJqvYM3IhpDVWvKUixQhe5mu6sBbu1fs32IoZx0kVY7oPnRIe+2jY24p1yVKqVRruLRgnoEUEFTlCLPyVJhHPQo8nnPjccw3ZRHkT4nL31fBenEhpcD8j2O8xBwoQDQXO4KG8RfjYcYiIFy1pDM1QV8NH1eus0X8zwbnuNzPupzJmV6ctbcwBgVMoPJshiUMZuhqm1oag1B/BZXehBExW6u5p8gPZf0t2MGH2lxdRr6LhCYtnlSsGQyOFpn31bHlPE2BmVEwr7hEhGSZnl9FxFLIDh5BzXFm9mpilSs3aYug==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=educationalnetwork.tech; dmarc=pass action=none
+ header.from=educationalnetwork.tech; dkim=pass
+ header.d=educationalnetwork.tech; arc=none
+Received: from PN3PPFBCDE3C221.INDP287.PROD.OUTLOOK.COM (2603:1096:c04:1::ca)
+ by PN2P287MB1058.INDP287.PROD.OUTLOOK.COM (2603:1096:c01:135::11)
+ with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7918.26; Tue, 3 Sep
+ 2024 14:45:57 +0000
+Received: from PN3PPFBCDE3C221.INDP287.PROD.OUTLOOK.COM
+ ([fe80::ab11:3a26:19bb:8e28]) by PN3PPFBCDE3C221.INDP287.PROD.OUTLOOK.COM
+ ([fe80::ab11:3a26:19bb:8e28%7]) with mapi id 15.20.7918.024; Tue, 3 Sep 2024
+ 14:45:57 +0000
+From: Elizabeth Thomas <elizabeth.thomas@educationalnetwork.tech>
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+Thread-Topic: School Contact Leaders
+Thread-Index: Adr+D+C2VpMYpTJgR4WejH+5TSy0DA==
+Date: Tue, 3 Sep 2024 14:45:57 +0000
+Message-ID: <PN3PPFBCDE3C22197B3D0BDA5EFF2B57BB995932@PN3PPFBCDE3C221.INDP287.PROD.OUTLOOK.COM>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=educationalnetwork.tech;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: PN3PPFBCDE3C221:EE_|PN2P287MB1058:EE_
+x-ms-office365-filtering-correlation-id: e7f125c9-4cfd-411e-de8d-08dccc271f02
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0; ARA:13230040|1800799024|366016|376014|38070700018;
+x-microsoft-antispam-message-info: =?iso-8859-1?Q?VAWeBd6/VpJcUSWEsuCKTXJZSAY41/R09Q2pINJZ1w6xQ40bvm4aBkmKaM?=
+ =?iso-8859-1?Q?Z60rTqYjuEwe7bTfID+gCW1OIPeaqW1OdjjhXhH95lgOdbtrMdXDH3KC3O?=
+ =?iso-8859-1?Q?A2/e6K8itglmOjFX4J/ndwoH7ZqkAgP4leNfbZGWoJMd50NjIF2Sum5KNB?=
+ =?iso-8859-1?Q?0jpgPILNxBUqxVj38TGLLDPASlMsb1QOiLf3fuqQMq9XR2EJd2hldhwOS9?=
+ =?iso-8859-1?Q?7rJ3ROA/NEA6BDqPSpLPyalGJiS8Dg46dskDIjDAZ75i8Xr4pAPcZzQiM6?=
+ =?iso-8859-1?Q?0uBcNqRHwSZDi9jysz8rLmmpfovwWgsHXGILKn9Ow8Hk/7rvFv3nBkRonS?=
+ =?iso-8859-1?Q?dAIIUNL6VEDHHjfPRca0ZE7bP4krsb045/aMpIkPCsw5MBXvdh9dLQWgxU?=
+ =?iso-8859-1?Q?Fn+orFsprLaD8p+66M9kJf88BV/CVeDJZhhSM8aUIgt9Do54ycaYSr7dxY?=
+ =?iso-8859-1?Q?EBKIXLZ8DfGypPq4wNoG2RUR6zQCJuQTTJH+WgsplDsTtfQy82NsrGWp2F?=
+ =?iso-8859-1?Q?ALHIP3ue4PaxQDgqxlozDCn7Kx/4V4dkb4Cf/JuB8tgSI3Hol51rOmGxC2?=
+ =?iso-8859-1?Q?gh+5EFACmujZbht3Fi1eMuhMyx6isZ0/lOYao4tiMG6F/k1h83cG9Wabg6?=
+ =?iso-8859-1?Q?Lrpyq4/CP6qewa06yaFGuXoG1+iVfVfU1amId8gnSetUKhRJAoJohd1UI7?=
+ =?iso-8859-1?Q?GpIS9ZiqOvDJay++WXnizmenidjol0Ubh5pDlrwcJTJdiBoKX1hRoz5ggS?=
+ =?iso-8859-1?Q?qF/s9Y1pwRtkVtMVVQlMdpxUQN+iaJ2EB18RBw3Ehw3FYGmnTq7I8ThSWO?=
+ =?iso-8859-1?Q?4r0MVzd/VHV7kpo1jDpCUAa6KTzY48wsfXxUws0cwsMOyeR9+XepfzGZWZ?=
+ =?iso-8859-1?Q?ZtQgB+xwwW4uL7TV6y69A2qLL49TZfLiLeHhq8hLHY22auNk97v9Jh4Nzj?=
+ =?iso-8859-1?Q?g7NSXKAqkA+w9oL9JBBej4jT2oDpxzrsXvL08j8+uZrNOALSKKJggIhjIY?=
+ =?iso-8859-1?Q?jFlPKlxeTUWfokuPe91RXhRFqQPa0uz2xoNdkV9hJF82PDbes3bumH7OBS?=
+ =?iso-8859-1?Q?nMs2qPUibUPL1pPMWfsKE7kF/04zpbiNZTbKCrOJlWDOHYQfzSslAOxYLe?=
+ =?iso-8859-1?Q?jee77+ZDUxspYHXj0ItwYFYV3s6JYAa9oIoMueuWTrusBD3AQTr02SseWB?=
+ =?iso-8859-1?Q?1FUIPa3ML868FQ+oXuut3zkbBfWmFnzLjltrbeNbAwugFDqeJ1h7YkUxyS?=
+ =?iso-8859-1?Q?gEnC0o2ZeusA+FS67teEXOXnV1cDPgVNPQkj8wb+/3fuI167IRl+4VGjj0?=
+ =?iso-8859-1?Q?KwjW+Ol+x9rwrNFi8OFT7pK69JXSC+n1iesK4lsL1NKhDPMJkbeb/EDgvg?=
+ =?iso-8859-1?Q?AzcyxTZPiIKF7CxAdtNO0tSEcH0RC2bXCHIS/lPz1lJ3WXQzIXQexUEfLM?=
+ =?iso-8859-1?Q?7Yb4C74KOLFZzS7eZNZ5GmGl2zPcG3pBmlsN1g=3D=3D?=
+x-forefront-antispam-report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
+ IPV:NLI; SFV:NSPM; H:PN3PPFBCDE3C221.INDP287.PROD.OUTLOOK.COM; PTR:; CAT:NONE;
+ SFS:(13230040)(1800799024)(366016)(376014)(38070700018); DIR:OUT; SFP:1102; 
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: =?iso-8859-1?Q?f36ze6DHKjBNfi54YGNiZ4cA77DPQNv7jreGZbluH+00HHG41D+kF/1luL?=
+ =?iso-8859-1?Q?mtAK3JgEghMk2kEsB/hnyBLr4MIBrFvyddu5lQM9lAN/ON6cmi3XMqvMiJ?=
+ =?iso-8859-1?Q?f6caTeL4MXm/X9utI49yyT3lPRCtatA3iXsIajksm+tVwOvDwlIYU2bl5K?=
+ =?iso-8859-1?Q?i09OgstzM70Is9hfhtUDdHyuBK5ZbjvJbiZbA/LF/jaUj8qB4gQHZ8AINz?=
+ =?iso-8859-1?Q?8hdensyT79R/KH5MbJv1UyC1xDup/1GQwHl0bJMcY6Ks409SGfc5/ArAYe?=
+ =?iso-8859-1?Q?jQ3wW3mZKvvLQjrfreHMjJ7Q5i/7Tx9wl6pcvjGwZWmWRAoB+hv10V1vFh?=
+ =?iso-8859-1?Q?pHKj/5ru6CDgxRlcvsJXasirz4yedLZKhR62b2zhK+ZbKE4Z46V/yfWvz3?=
+ =?iso-8859-1?Q?AiDtHbDev1GSaGt0/fg3ldRHjQfPhUTundaO2/FePyTm/5Di26ek0C1y+U?=
+ =?iso-8859-1?Q?8LTEWGr2Abpa8YHkyNxteVSHMHrfzfWTCZwXLLb3NCfjHdmtkNu8VMEN8h?=
+ =?iso-8859-1?Q?TB5I9aeJBSkijvUuhiIFiuOgUsEXr5cXY+Ku5qlX1Z/3du8/kFve3rDbkl?=
+ =?iso-8859-1?Q?10PkbWH4Gixuz52KPn+BdsBFYdrXO8BhUU4qkf+uGJZxMLAqsxmws1k6iK?=
+ =?iso-8859-1?Q?y/a1mlb4WVsW+sWUHcb0LGMaGnORlG4IusoDVIrpTgxtKIQcnzqVRmgoAV?=
+ =?iso-8859-1?Q?eFZEgIxe9JGnPnEOWPvTWHGdg/PWB7+6WnGaGz1abbN9MmkE3I8SNqk0bg?=
+ =?iso-8859-1?Q?l5VEJqlZAsCa40Di4GYNk3FLJTuXNLWxPkPKxq7AtcEz3Qe5Ydw6A9ly9T?=
+ =?iso-8859-1?Q?6rZUSixFcFbnWvRlJywdQxMo7yhlEdTizmZqvlqqL8jtC0XIx49rXSXOVB?=
+ =?iso-8859-1?Q?Nia4utX5x/QeqrVVGJYZhIYuzbho90f4G2na/oOpK9jHE6YvK8N4YSCt7r?=
+ =?iso-8859-1?Q?P5CmzDEzm717XbZb9scWmr3lGNMVghc9LvTZoE0hH6SHGWLyB6WRlkTQT4?=
+ =?iso-8859-1?Q?fYR2WzXCyJu8bFfgs7vq2FvMfI7iDkkWFlOEOok05q0w+/GXxrawNncwNO?=
+ =?iso-8859-1?Q?Jr3VxsZ/LIbvdFmso0R7uqaSwS9JCKqNs+gyePe//4RAe4eS4dmh470+yb?=
+ =?iso-8859-1?Q?S1dDpXZ0hCaIThj/zGFfcsyur+7cr4UmoZ0ixWJ/v8JYRLjcTQdtntaWXA?=
+ =?iso-8859-1?Q?fEQ13S0xwFg54CowU2e7+DHYaUsPtx7SG/fwI4dAtaeeyNRSDlBnlPX2Xq?=
+ =?iso-8859-1?Q?8DP0hpYnCvl4XtLR7MNb+siU0BEe/OnWxfYbNslsCNkfOL3TzXnVAa9yKU?=
+ =?iso-8859-1?Q?AUIfvaEIOddmR/3QrhRedsNYhnKHbvq3xuAjR2CcJTplx+lPt+TU4Ge5yT?=
+ =?iso-8859-1?Q?QoXUhSa9M70jtUl2IoQBj9gplcUHUWX8dnMNJJdR2SSMkFN81eyzq9DyIc?=
+ =?iso-8859-1?Q?ilRXTVNVn5XQfyZQh/wFz0/ulKrxbSpUaIz5QXh3FyPYOzZCEzP7Gi8Log?=
+ =?iso-8859-1?Q?Ws6b5YhMhGBGi1H2Q+Rt18Y8RTLfupvSqrkT7+gkp3LsHJWMGiKDItADrk?=
+ =?iso-8859-1?Q?avol6n5GeD67V1YcqDhnriYHH1SxyzMfP/O3Q710G/dPJlxVG77rsL3Vw3?=
+ =?iso-8859-1?Q?yvclkOQEFdiy5gsthD3yK7dDhw0e8TEo9gCqX3okAixv0/P3rRj/4pepeR?=
+ =?iso-8859-1?Q?u1cCN35imCR3Hi7P8UuSP2rOvdj84swVXh9Ouawx8MLH4wgPLgzM3Z1lkT?=
+ =?iso-8859-1?Q?FOfhKt9592gAo9GxG0L2P6Rdk=3D?=
 MIME-Version: 1.0
-X-AntiAbuse: This header was added to track abuse,
- please include it with any abuse report
-X-AntiAbuse: Primary Hostname - server.kalyanicrm.com
-X-AntiAbuse: Original Domain - lists.sourceforge.net
-X-AntiAbuse: Originator/Caller UID/GID - [1016 992] / [47 12]
-X-AntiAbuse: Sender Address Domain - autoforce.in
-X-Get-Message-Sender-Via: server.kalyanicrm.com: authenticated_id:
- autoforce20/from_h
-X-Authenticated-Sender: server.kalyanicrm.com: support@autoforce.in
-X-Source: 
-X-Source-Args: 
-X-Source-Dir: 
-X-Spam-Score: 2.3 (++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+X-MS-Exchange-AntiSpam-ExternalHop-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-ExternalHop-MessageData-0: Y3e6v+Ibrhiw5JztS9UE41Ea186AzYvErP/ev2O+QyznOEO/QFS/Hex6dJlGHAf2OBIMDzj8K0+VNxrsWrEQootx1atJCuG3Q3Hviavh4b/0fMk/8h/KRtoYYxuDnxbvyfX95Ztm0hsHIkYddlI/SgKHHFVyKYKaVC4wZPRa1iMql8XHuOdNDhVWBd8Q7IZ89afRZMpF+UGeMZBx9F61m3QFJdtJPUtfYcuPnWBZXYzAMrkECgFolm6tgEx3eRsDdNEgOVvDrQodsmuyT6K9Dc9nG/uGQBGTLYox5kX576ZkJ5UuKPf/Nb744jRgKHvbsqmXHX1zgD34bDllKjGQxzXEdZms0WAZuyYWUTkNiJgjjJRupxymPwFqmpnRBKI0+D7jC7imcYywLWpj/Rp8kKXgOIDDG+THBHaUKH0zA4vBIV132yaT/El2tnJuUvKjhD/uBHIe0v9aQPyqaDI3gpqm3NqU/5+040JW/KfcdAn9zZrubpgodO6aCFa6/1uUgudi1ktbGLZbLzNTeGdP0F2YEF6ltjXzwjhkFhqtmLukv2cEpPDzzLr07ppDcBLVFV4dJsVcCATg04GsiulTKrqvts1OyDE32tqZe7yOgxY=
+X-OriginatorOrg: educationalnetwork.tech
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: PN3PPFBCDE3C221.INDP287.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: e7f125c9-4cfd-411e-de8d-08dccc271f02
+X-MS-Exchange-CrossTenant-originalarrivaltime: 03 Sep 2024 14:45:57.5627 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: af003f6e-c4e3-4d9c-9ee9-693ca4dcd97b
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: OHH7iW6CqyqDsmiZbEhw7/lPwwtY6+C4eagQW2hGYIthp2rx4ceiyIGY4kbUT4uDm9iybPaPr0UwPzNWB9cvgizrxSVK+89/neJb5bNstHda4FQ7pbPBn3zQ5w1I/XUJFtTHkHqvcmFiXc0UJTOXrg==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PN2P287MB1058
+X-MDID: 1725374765-XnKNCTxWuNfm
+X-MDID-O: us4; ut7; 1725374765; XnKNCTxWuNfm;
+ <elizabeth.thomas@educationalnetwork.tech>; 07f82c66d91dd7663cb5ec50ff0389a4
+X-Spam-Score: -0.7 (/)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:        
- 
- Content analysis details:   (2.3 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Hi there, Are you looking for a comprehensive email list of
+ school districts? We offer a detailed database including: 1. K-12 Schools
+ and Colleges 2. School Superintendents 3. IT Directors 4. Dance Schools 5.
+ Music Schools 6. Libraries and Bookstores 7. Child Daycare Services 8. Sports
+ Clubs and Athletic Directors 
+ Content analysis details:   (-0.7 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
-                             blocked.  See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URIs: autoforce.in]
-  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                             [43.254.41.132 listed in sa-accredit.habeas.com]
-  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                             [43.254.41.132 listed in bl.score.senderscore.com]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [148.163.129.52 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
-                             identical to background
-  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  2.5 PHP_SCRIPT             Sent by PHP script
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [148.163.129.52 listed in wl.mailspike.net]
  -0.0 T_SCC_BODY_TEXT_LINE   No description available.
-  0.0 T_REMOTE_IMAGE         Message contains an external image
-X-Headers-End: 1skDCs-0004jp-IR
-Subject: [Industrypack-devel] Your Package Cannot Be Delivered
+X-Headers-End: 1slUnb-0003M4-1q
+Subject: [Industrypack-devel] School Contact Leaders
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -132,228 +202,128 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============3619875825492748552=="
+Content-Type: multipart/mixed; boundary="===============5623814686687175557=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
-
---===============3619875825492748552==
+--===============5623814686687175557==
+Content-Language: en-US
 Content-Type: multipart/alternative;
-	boundary="b1_a934536687d3f4be3e7d94134dceaed6"
-Content-Transfer-Encoding: 8bit
+	boundary="_000_PN3PPFBCDE3C22197B3D0BDA5EFF2B57BB995932PN3PPFBCDE3C221_"
 
-This is a multi-part message in MIME format.
+--_000_PN3PPFBCDE3C22197B3D0BDA5EFF2B57BB995932PN3PPFBCDE3C221_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
---b1_a934536687d3f4be3e7d94134dceaed6
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 8bit
+Hi there,
 
+Are you looking for a comprehensive email list of school districts? We offe=
+r a detailed database including:
 
-	
-		
-			
-			
-			
-			
-			
-			
-				
-					
-						 
-					
-				
-			
+1. K-12 Schools and Colleges
+2. School Superintendents
+3. IT Directors
+4. Dance Schools
+5. Music Schools
+6. Libraries and Bookstores
+7. Child Daycare Services
+8. Sports Clubs and Athletic Directors
 
-			
-				
-					
-						
-						
-							
-								
-									
-									 
-								
-							
-						
-						
-					
-				
-			
-			
-			
-			
-			
-			
-		
-		
-			
-			
-			
-			 
+If you're interested, please provide your target criteria and preferred geo=
+graphy. We'll follow up with updated counts, samples, and additional inform=
+ation.
 
-			Dear Customer,
-			
+Regards
+Elizabeth Thomas
 
-			
-			We regret to inform you that we were unable to deliver you paracel due to an incorrect adress. Our delivery team made several attempts, but the adress provided appears to be invalid.
+To remove yourself from this mailing list, please reply with the subject li=
+ne "LEAVE US."
 
-			please verify and update your adress information to ensure, successful delivery of your paracel.
-			
+--_000_PN3PPFBCDE3C22197B3D0BDA5EFF2B57BB995932PN3PPFBCDE3C221_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
-			
-			
-			
-				
-					
-						
-						
-							
-								
-									Update adress MyDHL 
-								
-							
-						
-						
-					
-				
-			
-			
-			
-
-			
-			We apologize for any inconvenience tis may have caused. if you have any questions,
-
-			please do not hesitate to contact our customer service team.
-			
-
-			
-			 
-
-			Sincerely,
-
-			MyDHL  Team
-			
-			
-			
-		
-	
-
-
-
-
---b1_a934536687d3f4be3e7d94134dceaed6
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: 8bit
-
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="yiv5776783430body-container" style="font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; outline: none; width: 600px;" width="600">
-	<tbody style="outline: none;">
-		<tr style="outline: none;">
-			<td style="outline: none; width: 600px;" width="600">
-			<div class="yiv5776783430header-container yiv5776783430iparsys yiv5776783430parsys" style="outline: none;">
-			<div class="yiv5776783430iparys_inherited" style="outline: none;">
-			<div class="yiv5776783430header-container yiv5776783430iparsys yiv5776783430parsys" style="outline: none;">
-			<div class="yiv5776783430dhl-email-header yiv5776783430section" style="outline: none;">
-			<table border="0" cellpadding="0" cellspacing="0" style="outline: none; background-color: rgb(241, 241, 241);" width="100%">
-				<tbody style="outline: none;">
-					<tr style="outline: none;">
-						<td style="outline: none; text-align: center; font-size: 11px; color: rgb(24, 154, 202); font-family: sans-serif; padding: 10px 0px;"> </td>
-					</tr>
-				</tbody>
-			</table>
-
-			<table border="0" cellpadding="0" cellspacing="0" style="outline: none; background-color: rgb(254, 203, 47);" width="100%">
-				<tbody style="outline: none;">
-					<tr style="outline: none;">
-						<td style="outline: none; padding: 30px 15px;">
-						<table border="0" cellpadding="0" cellspacing="0" style="outline: none;" width="100%">
-							<tbody style="outline: none;">
-								<tr style="outline: none;">
-									<td style="outline: none;" width="200"><a style="outline: none; color: rgb(24, 154, 202); border: 0px;"><img alt="Logo Alt text" src="https://ecp.yusercontent.com/mail?url=https://mydhl.express.dhl/content/dam/ewf/logos/dhl_email_logo.gif&t=1725035511&ymreqid=ca0d80db-dceb-76cd-1c99-6f000f011a00&sig=cd38dAvsEKFo8ouNWI2I6w--~D" style="text-indent: -9999px; outline: none; border: 0px; display: block;" /></a></td>
-									<td align="right" style="outline: none; border-left: 1px solid rgb(254, 203, 47);"> </td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			</div>
-			</div>
-			</div>
-			</div>
-			</td>
-		</tr>
-		<tr style="outline: none;">
-			<td style="outline: none; font-family: sans-serif; color: rgb(51, 51, 51); font-size: 14px; line-height: 1.4; width: 600px;" width="600">
-			<div style="outline: none;">
-			<div class="yiv5776783430dhl-text yiv5776783430text yiv5776783430parbase" style="outline: none;">
-			<p style="outline: none;"> </p>
-
-			<p style="outline: none;">Dear Customer,</p>
-			</div>
-
-			<div class="yiv5776783430dhl-text yiv5776783430text yiv5776783430parbase" style="outline: none;">
-			<p style="outline: none;"><span style="color: rgb(51, 51, 51); font-family: sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">We regret to inform you that we were unable to deliver you paracel due to an incorrect adress. </span>Our delivery team made several attempts, but the adress provided appears to be invalid.</p>
-
-			<p style="outline: none;">please verify and update your adress information to ensure<span style="color: rgb(51, 51, 51); font-family: sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">, successful delivery of your paracel.</span></p>
-			</div>
-
-			<div class="yiv5776783430dhl-button" style="outline: none;">
-			<div style="outline: none; text-align: center;">
-			<table border="0" cellpadding="0" cellspacing="0" style="outline: none;" width="100%">
-				<tbody style="outline: none;">
-					<tr style="outline: none;">
-						<td align="center" style="outline: none;">
-						<table border="0" cellpadding="0" cellspacing="0" style="outline: none;">
-							<tbody style="outline: none;">
-								<tr style="outline: none;">
-									<td style="outline: none; padding: 10px 15px; background: rgb(43, 184, 43);"><a href="https://sqzr.cz/94490" style="color: rgb(255, 255, 255); outline: none; border: 0px; font-size: 18px; font-weight: bold; display: inline-block;" target="_blank">Update adress MyDHL </a></td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			</div>
-			</div>
-
-			<div class="yiv5776783430dhl-text yiv5776783430text yiv5776783430parbase" style="outline: none;">
-			<p style="outline: none;">We apologize for any inconvenience tis may have caused. if you have any questions<span style="color: rgb(51, 51, 51); font-family: sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">,</span></p>
-
-			<p style="outline: none;">please do not hesitate to contact our customer service team.</p>
-			</div>
-
-			<div class="yiv5776783430dhl-text yiv5776783430text yiv5776783430parbase" style="outline: none;">
-			<p style="outline: none;"> </p>
-
-			<p style="outline: none;">Sincerely,</p>
-
-			<p style="outline: none;">MyDHL  Team</p>
-			</div>
-			</div>
-			</td>
-		</tr>
-	</tbody>
-</table>
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-ligatures:none;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#0563C1" vlink=3D"#954F72" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Hi there,<br>
+<br>
+Are you looking for a comprehensive email list of school districts? We offe=
+r a detailed database including:<br>
+<br>
+1. K-12 Schools and Colleges<br>
+2. School Superintendents<br>
+3. IT Directors<br>
+4. Dance Schools<br>
+5. Music Schools<br>
+6. Libraries and Bookstores<br>
+7. Child Daycare Services<br>
+8. Sports Clubs and Athletic Directors<br>
+<br>
+If you're interested, please provide your target criteria and preferred geo=
+graphy. We&#8217;ll follow up with updated counts, samples, and additional =
+information.<br>
+<br>
+Regards <br>
+Elizabeth Thomas<br>
+<br>
+To remove yourself from this mailing list, please reply with the subject li=
+ne &quot;LEAVE US.&quot;<br>
+<o:p></o:p></p>
+</div>
 </body>
 </html>
 
+--_000_PN3PPFBCDE3C22197B3D0BDA5EFF2B57BB995932PN3PPFBCDE3C221_--
 
 
---b1_a934536687d3f4be3e7d94134dceaed6--
-
-
-
---===============3619875825492748552==
+--===============5623814686687175557==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3619875825492748552==
+--===============5623814686687175557==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -364,6 +334,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3619875825492748552==--
-
+--===============5623814686687175557==--
 
