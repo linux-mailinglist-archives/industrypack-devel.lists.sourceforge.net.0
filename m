@@ -2,29 +2,29 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8480C98A277
-	for <lists+industrypack-devel@lfdr.de>; Mon, 30 Sep 2024 14:31:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C9B2E98A272
+	for <lists+industrypack-devel@lfdr.de>; Mon, 30 Sep 2024 14:30:36 +0200 (CEST)
 Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
 	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1svFYn-0006sC-K0
+	id 1svFXu-0006qo-9I
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 30 Sep 2024 12:31:30 +0000
+	Mon, 30 Sep 2024 12:30:35 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
  <bounces+47021461-4bc1-industrypack-devel=lists.sourceforge.net@em2324.btldem.com>)
- id 1svFYm-0006s5-6q for industrypack-devel@lists.sourceforge.net;
- Mon, 30 Sep 2024 12:31:28 +0000
+ id 1svFXr-0006qe-Vp for industrypack-devel@lists.sourceforge.net;
+ Mon, 30 Sep 2024 12:30:32 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:
  Mime-Version:From:Date:Content-Type:Sender:Cc:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=4hgfQwq0sJy+U8r+s14kddd802FJ/17E5A/+PmvCJXQ=; b=hyh0rXbKJitXqSbyh8RH52kYsI
- ZHAC0ioXjfUmmuGNNzJCEetHuIUA4gKiZ8NOhGjszv6G9dymkJhDGokQQaHLQB+Sj4nN2I4lcXcCk
- cKCX2VuptqLm9M/2Q5+WDxf8YgrwW+HVDrcFuhqp0c6SRuByLbvQFCDWEKmpbI2Ed31o=;
+ bh=ygBeVzPy2+D/LbsXk9KeeBWwFeC548LU74jMSdqyI1E=; b=V6Q6ZpmfKIb2nq3mi/aD9//w7K
+ VyhWsqSK2cPiPaOweDfnZGjx1tUXr/h7pZJD74A5bfj8aB4RGde/m21ryQWqDkRLeVe5uPVDTBia/
+ HFsx2AJ2Yl83OPf9EfaPB1FI3mS/fsCQTqa/utiHn03Y67SMkCBWiCIl/TIqdJC8tGq8=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:Mime-Version:From:Date:
@@ -32,64 +32,65 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=4hgfQwq0sJy+U8r+s14kddd802FJ/17E5A/+PmvCJXQ=; b=M0IuSDXpARIHjXB4V5CeZIN5bO
- BDdi5JYipgqvRYoM93l+Hx09ndofoDryN6oH4hcKwJu/Bn0gcIJuONXk/ovyvdNgpr2+ESWBLNh/9
- bPOaXzJsUJRILzIjm6z4NZ/MQYbForix73XqQuqTNb+TwmFFMxvJlcJYMvlF0uscbQGk=;
+ bh=ygBeVzPy2+D/LbsXk9KeeBWwFeC548LU74jMSdqyI1E=; b=TskFxPAUZ/bo/CMW1sTPu9ZWcO
+ Iuo90iebiQzetBBowZSLH3cmI42Sp7x62tuj3q3y5ZHT/cWRzIFvi9lqIM17/lLrsuqPYaRVjor7r
+ 8qHDTxoA+ySVulVqBG0tWkzU2j7qGFBMkkjJCA52L51iYRyCUVgqIQR8P2euHHF3fzWo=;
 Received: from dhtrphdr.outbound-mail.sendgrid.net ([208.117.48.213])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1svFYk-0006P3-6o for industrypack-devel@lists.sourceforge.net;
- Mon, 30 Sep 2024 12:31:27 +0000
+ id 1svFXr-0006M7-Jd for industrypack-devel@lists.sourceforge.net;
+ Mon, 30 Sep 2024 12:30:32 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=btldem.com;
  h=content-type:from:mime-version:subject:reply-to:to:list-unsubscribe:
  list-unsubscribe-post:cc:content-type:from:subject:to;
- s=s1; bh=4hgfQwq0sJy+U8r+s14kddd802FJ/17E5A/+PmvCJXQ=;
- b=dhNSbYx/Q51CEsRnbygyNg+w587SmuEXTtf01NY2Fq1HX7If7MGE5w3gYKZwWfDFHUH6
- oW/VQNBtoV385/8b5gtl7kP5TTtGgWzTveeHSZlLWyVoP5X4oS9Gi+FglJt1EVuIt7V+eP
- 8RaqNRwAJn0xy+LJGunZojutQVm2QmjGLerg7jM1vSHNiuJjx3IUxEYzmHbscKj84O/fO2
- KbSrVAxsNmxr7j5hIDvORIMTzrfMLrUpSrujoL9ALOsC2pM8HpSOSdfc6RGfty+0QO7S2M
- 1l7qcZEy/uptWCKaixI2w83b3YH1APiHdsn3P+Yh1uddbvi4Tr3G0HEIolmMR2Zg==
-Received: by recvd-dc446d8dd-wr7jx with SMTP id
- recvd-dc446d8dd-wr7jx-1-66FA9708-18
- 2024-09-30 12:18:16.232600457 +0000 UTC m=+1534771.632078238
-Received: from NDcwMjE0NjE (unknown) by geopod-ismtpd-35 (SG) with HTTP
- id WG9FTVLoReiEbDcwtSDc9A Mon, 30 Sep 2024 12:18:16.185 +0000 (UTC)
-Date: Mon, 30 Sep 2024 12:18:18 +0000 (UTC)
+ s=s1; bh=ygBeVzPy2+D/LbsXk9KeeBWwFeC548LU74jMSdqyI1E=;
+ b=MahbsyMbIni6fBEyLwZQ/pI+FMx1hLbmRwNax8N6mli0fUxqek8J3RmUD2ieR5tj62Sw
+ antnpu2M2zyUJGBH3uW2BfKa5VPtE5X702LAPQPVLorLOD6sHR+PW/zoIlhi5pMwf7VYWI
+ 3C4ZSI+IODHJ5CBcQhD1WxNJG9QRerad5cCc2zbv0VpSA5L7GBEWdGNjEMx7gF4rq188OT
+ n6JiRet6FY1YBSPfJL1Kau2p1dJiE+zGr1C1G/r8RkRSuzfhOyXNLgL6k08KO/9aLYBJ9H
+ tXkJoo76FqVFH5fbSBP1gIzIz4P9mcKbBVkkAr/4kDURMeTueOn8SKwn9NMkicRw==
+Received: by recvd-canary-86547ffd5c-stz47 with SMTP id
+ recvd-canary-86547ffd5c-stz47-1-66FA98F4-10
+ 2024-09-30 12:26:28.368519142 +0000 UTC m=+1535428.233280497
+Received: from NDcwMjE0NjE (unknown) by geopod-ismtpd-1 (SG) with HTTP
+ id dJECJKk7Se2vQvoZgqJvCA Mon, 30 Sep 2024 12:26:28.312 +0000 (UTC)
+Date: Mon, 30 Sep 2024 12:26:29 +0000 (UTC)
 From: Maill Reports <itreports.mailsupport@btldem.com>
 Mime-Version: 1.0
-Message-ID: <WG9FTVLoReiEbDcwtSDc9A@geopod-ismtpd-35>
+Message-ID: <dJECJKk7Se2vQvoZgqJvCA@geopod-ismtpd-1>
 X-SG-EID: =?us-ascii?Q?u001=2ECoBd6vZl9adOYzazmSsQJ1znB4XOUx7LNsONbWTLfzDPok+CppTdIyDlm?=
  =?us-ascii?Q?mQaeImgAcqSaCenRpN5DaH4qxrSWThfu=2FsCr=2FWw?=
- =?us-ascii?Q?mb53kQRBdhf1PKqNvSskS+xGdE1RMF6n3Ce18OP?=
- =?us-ascii?Q?ng6=2FOGHIlOL101x=2FARG0jzvSRsdPMcFH5dom5JT?=
- =?us-ascii?Q?1EyvduVe31rxglEsz9hYxM3N5V0W8MsaMbxTVmA?=
- =?us-ascii?Q?uXez9UJ6jVHswIowbrxyKGwqFytaTxbjbfjO+4=2F?=
- =?us-ascii?Q?zU0mdRgmIKwbPuhmvpeyO9mmcYk0bwj=2FIu+RqIi?=
- =?us-ascii?Q?+hcase1k=3D?=
+ =?us-ascii?Q?mb53kQRBdhc1e0jzqm0B9T=2FIrVOGCWrAtwscPNx?=
+ =?us-ascii?Q?bAAtTMjl6HWtDQBReaoB3zkUvErNGu9LnjK2dk0?=
+ =?us-ascii?Q?64b3yaWXKN49cVqgGV8p13Adfff7LSTNmAuqMWR?=
+ =?us-ascii?Q?MN7iG4yLWUdDgwc8M2x=2F=2FHKcuPL=2FRmfzQt+IT59?=
+ =?us-ascii?Q?Q5=2Flt=2F=2FqYpeOBpKe=2Fj6AC8v5eICoIxzm7rMP+SQ?=
+ =?us-ascii?Q?HTOdiu2U=3D?=
 X-SG-ID: =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
  =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
  =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FJNgLRyu?=
- =?us-ascii?Q?SAAfZ6AxB5pyhwcHmJvwcvIY7T5u83e2s+Ead6L?=
- =?us-ascii?Q?gJiLF21gJUh6OsSJxNPmMUDhd0FuY+o2vAhB3ix?=
- =?us-ascii?Q?m+XIXltzlvCfd29IaIickCqP8JhVQN4Zs92QnPi?=
- =?us-ascii?Q?6gS7Bju8l8zIk5Gdzpva5uesjqJS4WeJKjxfJ0i?=
- =?us-ascii?Q?ek1c86aSnWK+BitLmBtTmZhzucP++JCgWjYBdkE?=
- =?us-ascii?Q?tUVlg1Qwoorj=2Fz3xXH7CBZJWUpk4leqfA0Ia9Er?=
- =?us-ascii?Q?SrXXjdLuv3pE5y1sM8GBidXOwxEYaUeuuf5k5XW?=
- =?us-ascii?Q?AbU27J+HP5Bl2Oc=2FL88VEvzwhLC+ZAw4Xq+u0HC?=
- =?us-ascii?Q?KxDZDeUfQUc1P7Mnp7NcqK1PgNwNfmfFH6MqVSd?=
- =?us-ascii?Q?Y1r9buKw2IfHMa9hTWLYeLlh2FUJNXKAbE+kTPT?=
- =?us-ascii?Q?hJj9OUDqqVcNK1WRqQg6f9rT6EolYd=2FiT3hjJjc?=
- =?us-ascii?Q?iz2yjQk0ZJBF9sYBgOfY3Z5tcWcoY1Ma6hl=2Fndy?=
- =?us-ascii?Q?P0s07lFdME=2FMQ9sZHJijFNXtuXKIHRn50fwWpRY?=
- =?us-ascii?Q?ZPVR=2F610DnTfXh7h=2F5W+7p3kVTy+euFRwKt8KC7?=
- =?us-ascii?Q?A8=3D?=
+ =?us-ascii?Q?SAAfZ6AxB5pyhweJ6lPkb6vnAnEK1kfUIzaKq9n?=
+ =?us-ascii?Q?iqsbQvXIDXrDOQI38lWiU1O=2FUk1Nrz+VJcgAVQc?=
+ =?us-ascii?Q?VRGxDqXI9qiyPoMH8hJoV=2Fiou5IrMQFsL=2F+VFmC?=
+ =?us-ascii?Q?qhKcLGoVWTt9ffc8coJDUd1GQ6g6k+NMBUBTBtS?=
+ =?us-ascii?Q?3WVxX8djS+K33ssjTLR1EkGyMCoN9KGbQHnOLVp?=
+ =?us-ascii?Q?+8HvdYCU6nob5iA3bAw44nA73p6dZrhH2k+tQaJ?=
+ =?us-ascii?Q?sehb3RCRqyiti=2FRQSX5Gp4a6XWvskCeuq5nVIJX?=
+ =?us-ascii?Q?aEjW=2FWQwPcU7tjfnzLqCK+kwxnvhxZ+AKnOS4OZ?=
+ =?us-ascii?Q?ctZMiDavDM1lBG7hxkjttvI9t20sMzpCgyIxI33?=
+ =?us-ascii?Q?oj9D52FeEGaZenW+4aAZ=2FTLFeii9gQ6ce2wRTXH?=
+ =?us-ascii?Q?=2FnrdI+U6reCJ5KQenNOv1YW=2F2ebjTZLHWboMk48?=
+ =?us-ascii?Q?Ya1EnZIuZ5806ZXnHT5YMs2VxYMWNhlNotHZ5sP?=
+ =?us-ascii?Q?k5KMayFy3qflDGzhr+8ctjEUcgHD+LmQgapBfH7?=
+ =?us-ascii?Q?qq04C7aHMZLsOMDDXEVA=2Fh9fTVgr=2FDtHEWw2phk?=
+ =?us-ascii?Q?oP7VrK+MEjrx9=2F20f+HgchI0uoxtDTRGKABA+vF?=
+ =?us-ascii?Q?XK7G3ItPEM3ALVehJI9bAr8FXHE=3D?=
 To: industrypack-devel@lists.sourceforge.net
 X-Entity-ID: u001.JJvf74guM7Z+gMwYwz2URg==
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
 X-Spam-Score: 4.2 (++++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -101,21 +102,21 @@ X-Spam-Report: Spam detection software,
  Content analysis details:   (4.2 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 2.5 URIBL_DBL_PHISH        Contains a Phishing URL listed in the Spamhaus
- DBL blocklist [URIs: pppo-govbd.com]
  1.1 URIBL_CT_SURBL         Contains an URL listed in the CT SURBL blocklist
  [URIs: u47021461.ct.sendgrid.net]
+ 2.5 URIBL_DBL_PHISH        Contains a Phishing URL listed in the Spamhaus
+ DBL blocklist [URIs: pppo-govbd.com]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [208.117.48.213 listed in wl.mailspike.net]
  0.4 NO_DNS_FOR_FROM        DNS: Envelope sender has no MX or A DNS records
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [208.117.48.213 listed in wl.mailspike.net]
  0.0 HTML_MESSAGE           BODY: HTML included in message
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
  0.0 TO_IN_SUBJ             To address is in Subject
-X-Headers-End: 1svFYk-0006P3-6o
+X-Headers-End: 1svFXr-0006M7-Jd
 Subject: [Industrypack-devel] industrypack-devel@lists.sourceforge.net,
  You have 5 held mails!
 X-BeenThere: industrypack-devel@lists.sourceforge.net
@@ -130,13 +131,13 @@ List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: itreports.mailsupport@btldem.com
-Content-Type: multipart/mixed; boundary="===============7902806192098492287=="
+Content-Type: multipart/mixed; boundary="===============3788262580530699193=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============7902806192098492287==
-Content-Type: multipart/alternative; boundary=8a6594f98fab9547092d00ab066c5866c88e1cf2310131e91e4a3fff77ed
+--===============3788262580530699193==
+Content-Type: multipart/alternative; boundary=028bc7d48bd8ca3c8c14518ddc05a41f8c135ce7b0ec9b1647ef7bcde09d
 
---8a6594f98fab9547092d00ab066c5866c88e1cf2310131e91e4a3fff77ed
+--028bc7d48bd8ca3c8c14518ddc05a41f8c135ce7b0ec9b1647ef7bcde09d
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/plain; charset=iso-8859-1
 Mime-Version: 1.0
@@ -163,39 +164,41 @@ e.net ) *.*
 
 *=A9 2024=A0 Mail Delivery System*
 Unsubscribe From This List https://u47021461.ct.sendgrid.net/asm/unsubscrib=
-e/?user_id=3D47021461&data=3DESRiJgHhhT-kqyy4rVS4DVpP_v8dsPsNcuAGhnoqUIJoMD=
-AwdTAwMEFdJodzveVjWSNAmm5-u65-pI-JHAFtKoFQ1DlJ-Q50tMdHlT9vS0a_ZoO9N0QCmLL8M=
-y6Xjg5FFlUckKu7Q3sP9AZKRX75c-hachFOZUTBV9lo7vT51WxpULsTMTRo51x0diEAY0p8LRXI=
-_QfGkUUtmBGug_36iEcFVIT6cRin1wYgyRc43ei6qCGfV111s-YeshVUkMBBiqfLXkX6UYUbbae=
-EkyFcCIaxYndwg3SkRpgy2sXPNdTuWVWaHKicwcluxDNfUfZ3qUfSjxpLFhE86Bb2KkL2tHbIhP=
-FaHNMMBt3VDydowhVBvR1WraxZExUATY-zhnyQnN4s24-Q-kFKQ9lq99_BmxwbqbvcJcfespgGr=
-KU83uJ_GfhG18x2fpgo6pjbVi-i3tuVMKWUd4J8B6EP8cIGLJxV79vxa9q1WzK37CpbZVp3tDP8=
-7dKi-6mjjADYhVG70rrfjBHCJRXmmYLWMAuY21VcGWvCRNYA3mSbY-CG7Enu6y_T0bCVzvq-x-D=
-vLgK2f9KkhIBxaPG-yYtOukpDumpvZEefeua0roX0SX74jt7Kp-cGCSV-RCEe-YR_JU_2vXBapP=
-aqEPkU5js6HkZbID8M6iOkkeUoGbr1C5TM5DxPa6ypE-cVx7OcxyWqzCBkyY9McbGMqMKCldhRZ=
-P5n5hxMhR1L3_c7u1Nc8XMxc565VR-a-prlBRfFYFiOQxQx72uysMu1W5Hjyx59kBL2ydkBeX6S=
-pE2ElU4kUmxFXhVLnpoHvz4Wndeq8_APS8hyYRToUAm84UeeEcSqvACU9xvWfHClmkxXD49YDCe=
-mN-n10J2ENkBir1YxB3kTJDkROtWKXD_RtYdfy1hNKzPGX1qIyyo45Vk358bcNKhDtQRS-230YL=
-uazf8bZ3OK84qJDp-toVxdLaly5_3OhN_6FqG4G_3J6zX_a9isiooVTv1bBXS1OSQMstvceAbcG=
-ZKjMhMl2A92CMScBR5uV16suwIA2NCPph5cJBljxSapO_hhXjZrLwpPo-ShJSOy_CW5uLKe8q8N=
-aIhMflZkC83c5jjTaa0Gn4aP | Manage Email Preferences https://u47021461.ct.se=
-ndgrid.net/asm/?user_id=3D47021461&data=3DiSQfCrLVgctt6mhG513ZLprDIFTcK6Y7n=
-S7wRdidvuloMDAwdTAwMMMltLItnqP3qtSQMKA_k1DfwfWkDaiXZ245M8ZjQMiHB3u8r91gDG7h=
-hvUnmXMNGhMc4u47qdauJjx_iu8e2GxJjh6DMsAOJ8pOus1M0jgYvSNdWL0HZP5NdFndaxvNcPa=
-XdYNke_szUzIrOFTyQuehsnDD8FyDz4QbVTbunH4b76eRacmk46qfZpYI3cMpwqAZA0dOl0f1I7=
-nPHJsxvop5jsTzb2l1TbsunqAj4TPOyQbxTSoWCUYEx-xJ9tOPRd-yGki8E1IxFMe7eKBn8TrtC=
-A12UY0C60BCTcosE4rEh0M9n1g89WkL5-qhXjDG5EuND1cvW03EVbCSkUdzA5kUzC1lpVXtkaQR=
-kg3-NAad9IZAIyybdBhNdSMjDCRNL1UZE2UAbTmvrd7WXxeug65PHpD3pqIOpqunegEdWZcjInx=
-sKg17lvnJkNk5iQNuohoUCOak-uuyitJGqKYO1kbuC79BwHu4xl3d-Tht73QgRK36k_PRYVIVbC=
-C4XkIidSkldAQfM_PMagNAN4DTRYyQfGhtu-Xzu5Nv0Rc77F6i091n3nAm9eydpJ1_bFS2VEegm=
-nI5HXcICLxZpHBEI93fzjx1o_ofujGGu1OngqSjMZnefq9vxMqlLzCdXo2J0RNiKpnI2odCZMk6=
-Q-1HLhkmOUJyyCYBQMrJEj99ZVD9RsDm6gdHhdJDZDpyyQhg-KOrZBuMj9KjWUorX1jAgqi7PoE=
-TwyZ_nHlQlvCw4ecrR9CZAXFZk4D-rjbbbVrCPHFcydqzYcZP_akfbWejvMv5LawzKFtqE2Kh4U=
-S9tGYnAakR9cvV1en7CFrl5bFd_vOZc6SmJgI3yoSmCZZ9YJRtRuRmQptu7wSaIkw00zY6rO1gd=
-TfLlol-lYsx3mC8zksqb_XZU4tJYOW4Yrv4g4cfx-10gzlYjm9j59L1nrFCpPZn8x5ehozLaPE7=
-aoGIctqxIhkUl6Ehu-GY2isauqePAKepfH4FgZ7gR9UhqxmqlVWhVDB6lC_4oH1EWbHTuBrKYMB=
-j9Gabn-zwyssqtUVUsKOHuzYVtbqKF-Sr_y5h
---8a6594f98fab9547092d00ab066c5866c88e1cf2310131e91e4a3fff77ed
+e/?user_id=3D47021461&data=3DgYI_JgJrhIy1S0Ew_Em7mvYPqKar6BvMcfX6ReCajPVoMD=
+AwdTAwMEbqkFWyyeFeQm9xWAf33gtaKauWF3UX4QSufk9Sw4q2gdES1Ah6wE1M3dUaUpzyz5wJ3=
+fPtgbKi8g8s-fjboUKJ8KRuCLhzEIzVtR8RSkpoIKST4oTleEBqRmv55w_FTOydKp4-AJ5NAU-Y=
+MhKXaczDkhC_yEZpCtz4kGzB8ey2w2zp0GkHVnToYQ5-gKzvba-6TWOt2Snq3s19Rtk-whwplhN=
+-1uyFlL3Ybs0-wj9TFKfOzpNsUPY3kyF8MA3aiIufbydeMRGtE2yZWNv6Twhq3AaGFU1DFs50x1=
+D0B-ssPZllQn-Gd-FWYPpoFNwWFsoIjvI8K5YsyLUKYBN9sg2Sm8QuPg3dFQPwLgqC8Y1YlGfUV=
+oJa2Ji_48tlhimAZ4AjeF14noUiKWYEApbTwB-_BkJuEsaKlGGYgfIKv6vTjvqST8mOGOFAIq7v=
+fytzN_9MRZ9NJuD-Bd2nHGCtQcBCxvIcDzy377HoayO986wk361y1W68oi0ugBl2ZCBu4aW1vgE=
+0-SqlDyfB2UPj-qN-pUNKZTVvW0hfx0PUqWYDJj6siV4zPe7H2L7gI4aaEKvgY5XGmpGx4PQ1oy=
+pl7B_Jic5MXG2RRzJH26mUkvrRwuWsk_aARdXUDYK9lyyEQXzRfGKrfAS1PygcIKGhyOvRWG5hV=
+ebSMBNlqqJnPeE3vpYMAfWueiJqT4C_7y5SIImZmBoEoPAueOrVJmOPqm0dJWdEdWcVWzArpz3x=
+BfAGaVYrdqXatZ7fhch-KXWXzoTMTUDq7vcVBH2oZOJSdzjmBpET480VFXjy8sQLEmgXGey8sfB=
+Ls64rWQ5LvdNwh1bmXTiQYX680yijnrYNZlJAykemvUncCr_oN-jmCFP6K59zhwmE9VlXnhzUM6=
+c7GXF_ku3MtzYgTExop0jSqRUEZwDFoD9qPX6mvBK9d_xwfmFgF5wmbr0i9WcLajABLLNv_vPBm=
+rwYgVf5SwC0iUomDewvhgNtq2xBiwPoMhRjIrDxAN-K6BgQM7b2icBzVSALi-b2CAFrpZiQE3RB=
+xf8CdIH0PyrkS-YpLEtTm5jyUlY6oi46xhfpxUR_7UuKm2HKO2JUo9FSQmpgyOnrbMhKNL0paS6=
+DxLMZlywFTA5b | Manage Email Preferences https://u47021461.ct.sendgrid.net/=
+asm/?user_id=3D47021461&data=3DqSfj_p0Eryso0o--W27Kx1O6kGyvv1aJXPinGTOVTgBo=
+MDAwdTAwMBzFRHkBRLuRQ0SKVgdTnXRhh_mMOhayDvzu3VUWwwsPgUA8o8Ab35d9fJPKrfSedKr=
+ef_ZF7MPFqmpZH7nHrvrUUoH_YRimJpyYgdmnBGg3L7f5nFI5-D19rQDY2QHjWFXckVnmRJlufH=
+QA25AHFl0bikGXnvDO4dFYtoEL8Uqlz29SDhYW_JWoCncV4r4gQBkTnnMxJnGUth7xNJzElceut=
+HC9pLSD_k0T5zeb5ZFfk-FDpazCD9HMO72O5IXnQJaoUD4-yKzfMmqBVpUlnYajxnZ3RKRtY7Fs=
+lTlUWS6Oqs3MqhYglbL4QF2B1RCXcbNHpOLKFlwFkshCYf3rA-3tNwhkoZUcY8rjUwbDdsi5kN7=
+pCndNNdMwj4poF4iH4gzHXQ3Rj13gJ2STn085X4aQF-DvhoStPt7yFaJ_v3gYJAVtR8VwmvAHUm=
+HRt3oq5aEcwZVxSl1Q_4UQoGonpNE6IHLYD9mb3vkioM59AlZSV7y-a-xz1QmcNubFFu7KF1BhI=
+tXUSKi8sjkwAzUZkm6IFtFniGtlfbAHa09NLxaO01xgAL00UeUgWMefHO0D10yr44qiebo-RVzU=
+zWzR7HQfd1UA7DcqbBBfUIlWg_520oz1Rk0AvxL-L1KiG9RbGgKx6VdwznQmlaF0IXIvcHKBc_H=
+fbTtTG68uFU_SVMVbRHhSxCpIUjVuT-yBGXbWxly32ZVtrE2sZPTzWVqx5JXrikMnaaebec7cXU=
+V-e2KxxAWH2gLd8n1Joj79tqfVvMj32rOAajPO1eveAd8UceW7Joxqvkw9yDnmx6iln2uuHu7m0=
+FQ3wj0E-krt4scFFYAZYKXuE6ER4EhMnwY0q90m5NrDo1FYz2mbY5Z9U6mVrghpOBvFOI9z94c5=
+H_ADYjcf36KDITUpbKHz-JE9iwsii2fy6isWuQu9O61gsd0LtkkTHMQImJ91qHx-WRrFEz_JaOE=
+nAA96U2KfvYNFWHBocnpK86UOAhswWMZR2hs3fUThFyabH0Xo4TAllgPADYXv2VtP5RklPzKDgV=
+U8hzT5Pz-Hk27G0w8unYLouC-2T06LMUbliYIeKfQaSgpyJZ2edFvNtXwcYrVwi4lurb_e2sblw=
+KjDeuB8qNGU63TB
+--028bc7d48bd8ca3c8c14518ddc05a41f8c135ce7b0ec9b1647ef7bcde09d
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset=us-ascii
 Mime-Version: 1.0
@@ -319,69 +322,72 @@ e=3D"font-family: Courier;"><span style=3D"font-family: Corbel Light;">
 ourier New;"><span style=3D"font-family: Courier New;">&copy; 2024&nbsp; Ma=
 il Delivery System</span></span></strong></span></span></span></span></span=
 ></span></span></span></span></span></span></p><a href=3D'https://u47021461=
-.ct.sendgrid.net/asm/unsubscribe/?user_id=3D47021461&amp;data=3DESRiJgHhhT-=
-kqyy4rVS4DVpP_v8dsPsNcuAGhnoqUIJoMDAwdTAwMEFdJodzveVjWSNAmm5-u65-pI-JHAFtKo=
-FQ1DlJ-Q50tMdHlT9vS0a_ZoO9N0QCmLL8My6Xjg5FFlUckKu7Q3sP9AZKRX75c-hachFOZUTBV=
-9lo7vT51WxpULsTMTRo51x0diEAY0p8LRXI_QfGkUUtmBGug_36iEcFVIT6cRin1wYgyRc43ei6=
-qCGfV111s-YeshVUkMBBiqfLXkX6UYUbbaeEkyFcCIaxYndwg3SkRpgy2sXPNdTuWVWaHKicwcl=
-uxDNfUfZ3qUfSjxpLFhE86Bb2KkL2tHbIhPFaHNMMBt3VDydowhVBvR1WraxZExUATY-zhnyQnN=
-4s24-Q-kFKQ9lq99_BmxwbqbvcJcfespgGrKU83uJ_GfhG18x2fpgo6pjbVi-i3tuVMKWUd4J8B=
-6EP8cIGLJxV79vxa9q1WzK37CpbZVp3tDP87dKi-6mjjADYhVG70rrfjBHCJRXmmYLWMAuY21Vc=
-GWvCRNYA3mSbY-CG7Enu6y_T0bCVzvq-x-DvLgK2f9KkhIBxaPG-yYtOukpDumpvZEefeua0roX=
-0SX74jt7Kp-cGCSV-RCEe-YR_JU_2vXBapPaqEPkU5js6HkZbID8M6iOkkeUoGbr1C5TM5DxPa6=
-ypE-cVx7OcxyWqzCBkyY9McbGMqMKCldhRZP5n5hxMhR1L3_c7u1Nc8XMxc565VR-a-prlBRfFY=
-FiOQxQx72uysMu1W5Hjyx59kBL2ydkBeX6SpE2ElU4kUmxFXhVLnpoHvz4Wndeq8_APS8hyYRTo=
-UAm84UeeEcSqvACU9xvWfHClmkxXD49YDCemN-n10J2ENkBir1YxB3kTJDkROtWKXD_RtYdfy1h=
-NKzPGX1qIyyo45Vk358bcNKhDtQRS-230YLuazf8bZ3OK84qJDp-toVxdLaly5_3OhN_6FqG4G_=
-3J6zX_a9isiooVTv1bBXS1OSQMstvceAbcGZKjMhMl2A92CMScBR5uV16suwIA2NCPph5cJBljx=
-SapO_hhXjZrLwpPo-ShJSOy_CW5uLKe8q8NaIhMflZkC83c5jjTaa0Gn4aP'>Unsubscribe Fr=
-om This List</a> | <a href=3D'https://u47021461.ct.sendgrid.net/asm/?user_i=
-d=3D47021461&amp;data=3DiSQfCrLVgctt6mhG513ZLprDIFTcK6Y7nS7wRdidvuloMDAwdTA=
-wMMMltLItnqP3qtSQMKA_k1DfwfWkDaiXZ245M8ZjQMiHB3u8r91gDG7hhvUnmXMNGhMc4u47qd=
-auJjx_iu8e2GxJjh6DMsAOJ8pOus1M0jgYvSNdWL0HZP5NdFndaxvNcPaXdYNke_szUzIrOFTyQ=
-uehsnDD8FyDz4QbVTbunH4b76eRacmk46qfZpYI3cMpwqAZA0dOl0f1I7nPHJsxvop5jsTzb2l1=
-TbsunqAj4TPOyQbxTSoWCUYEx-xJ9tOPRd-yGki8E1IxFMe7eKBn8TrtCA12UY0C60BCTcosE4r=
-Eh0M9n1g89WkL5-qhXjDG5EuND1cvW03EVbCSkUdzA5kUzC1lpVXtkaQRkg3-NAad9IZAIyybdB=
-hNdSMjDCRNL1UZE2UAbTmvrd7WXxeug65PHpD3pqIOpqunegEdWZcjInxsKg17lvnJkNk5iQNuo=
-hoUCOak-uuyitJGqKYO1kbuC79BwHu4xl3d-Tht73QgRK36k_PRYVIVbCC4XkIidSkldAQfM_PM=
-agNAN4DTRYyQfGhtu-Xzu5Nv0Rc77F6i091n3nAm9eydpJ1_bFS2VEegmnI5HXcICLxZpHBEI93=
-fzjx1o_ofujGGu1OngqSjMZnefq9vxMqlLzCdXo2J0RNiKpnI2odCZMk6Q-1HLhkmOUJyyCYBQM=
-rJEj99ZVD9RsDm6gdHhdJDZDpyyQhg-KOrZBuMj9KjWUorX1jAgqi7PoETwyZ_nHlQlvCw4ecrR=
-9CZAXFZk4D-rjbbbVrCPHFcydqzYcZP_akfbWejvMv5LawzKFtqE2Kh4US9tGYnAakR9cvV1en7=
-CFrl5bFd_vOZc6SmJgI3yoSmCZZ9YJRtRuRmQptu7wSaIkw00zY6rO1gdTfLlol-lYsx3mC8zks=
-qb_XZU4tJYOW4Yrv4g4cfx-10gzlYjm9j59L1nrFCpPZn8x5ehozLaPE7aoGIctqxIhkUl6Ehu-=
-GY2isauqePAKepfH4FgZ7gR9UhqxmqlVWhVDB6lC_4oH1EWbHTuBrKYMBj9Gabn-zwyssqtUVUs=
-KOHuzYVtbqKF-Sr_y5h'>Manage Email Preferences</a><img src=3D"https://u47021=
-461.ct.sendgrid.net/wf/open?upn=3Du001.HN9ncswbYi-2BEGN-2FXArB7Yb-2B54Tm43-=
-2B694904Gpq6REDOvMj5jd8r2ODXoOGLI8F0uYDlfdJx8NjvPdhWWcpkCUGsR3P4VRN5MZ7o0ve=
-Gf3rvT-2BLh1aC66WHXNP3uZ2MXALkHEQ-2BFrCPjUx06NxmFri6-2BXxC4qcLErCGgOmjc8H7v=
--2FCmxYtULIhFJ4QC6to7fy-2F4tzUZR0hYqv8ezhRgIxzFxZG3OLhcGK0dW94-2BXnyboWYTdr=
-sg8C6jUgdwGcU6cr5kOBqAhFDiHJLCdacwKqCPsKsAnJ3U0xjvGVeo3bGG0IDZ5-2Bha0KyHKav=
-h-2FnoSO3wr1BRwuUmr8wA68tJxR-2BG9-2BeYdIM6Dt8wCS10l0vabejmChcYY2UcrPEs0hf2N=
-lx3oy8m7kRFK5-2BumxQ9p9smpq-2BNHCAJL00EUWHcab1ZU3enW7MZg7evbZ7Q1Pc1G4fJ1dSD=
-N-2FgG9m0mMQ8n1P2UlOC62O9hZiRYzNLliGXDSIcweu5OXconV8ZqHQljOMyNI6qOhO-2BQM9E=
-tbjcnxfFwdRQZjlCFnr88P-2FgqQ5-2FpOk2RLOoK8qIytqhUF3-2BC-2Fd26rKZf9ZtSeivepV=
-rXR9iKv4at39PoA-2FXJ1LKq0qr4Xbf2rVRJljamAeLH-2BRYFLV6PyZwzsIDjl45h2WqkCw6ip=
-9gQn2kABISH7JI7ikn9mt0-2F9Xcx-2FLd81F0d1WveSGhDdem67rXGkuNhVHjzdIXPlU0IQgEv=
-sgwRACc7R7830th-2FBzhi-2FmG6-2BR43vmiYayFCMgGI-2FWWKdVMBq6jA728RNb08U2y2uD2=
-TDwD7pL86RVxVnhA1J-2B2WM1vH39PSmBAadPRUfVTbz0LWLgnXhhOW6eIj-2BKsDGdeZHCWjIh=
-ZG-2BWjV6Pp4qBDW6jOPiCqiEqWTrX8GBGlNSUB-2F-2F76h2SZt-2FUL8NrM1T9UO8tfko3ifo=
--3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !im=
-portant;width:1px !important;border-width:0 !important;margin-top:0 !import=
-ant;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !imp=
-ortant;padding-top:0 !important;padding-bottom:0 !important;padding-right:0=
- !important;padding-left:0 !important;"/></body></html>
---8a6594f98fab9547092d00ab066c5866c88e1cf2310131e91e4a3fff77ed--
+.ct.sendgrid.net/asm/unsubscribe/?user_id=3D47021461&amp;data=3DgYI_JgJrhIy=
+1S0Ew_Em7mvYPqKar6BvMcfX6ReCajPVoMDAwdTAwMEbqkFWyyeFeQm9xWAf33gtaKauWF3UX4Q=
+Sufk9Sw4q2gdES1Ah6wE1M3dUaUpzyz5wJ3fPtgbKi8g8s-fjboUKJ8KRuCLhzEIzVtR8RSkpoI=
+KST4oTleEBqRmv55w_FTOydKp4-AJ5NAU-YMhKXaczDkhC_yEZpCtz4kGzB8ey2w2zp0GkHVnTo=
+YQ5-gKzvba-6TWOt2Snq3s19Rtk-whwplhN-1uyFlL3Ybs0-wj9TFKfOzpNsUPY3kyF8MA3aiIu=
+fbydeMRGtE2yZWNv6Twhq3AaGFU1DFs50x1D0B-ssPZllQn-Gd-FWYPpoFNwWFsoIjvI8K5YsyL=
+UKYBN9sg2Sm8QuPg3dFQPwLgqC8Y1YlGfUVoJa2Ji_48tlhimAZ4AjeF14noUiKWYEApbTwB-_B=
+kJuEsaKlGGYgfIKv6vTjvqST8mOGOFAIq7vfytzN_9MRZ9NJuD-Bd2nHGCtQcBCxvIcDzy377Ho=
+ayO986wk361y1W68oi0ugBl2ZCBu4aW1vgE0-SqlDyfB2UPj-qN-pUNKZTVvW0hfx0PUqWYDJj6=
+siV4zPe7H2L7gI4aaEKvgY5XGmpGx4PQ1oypl7B_Jic5MXG2RRzJH26mUkvrRwuWsk_aARdXUDY=
+K9lyyEQXzRfGKrfAS1PygcIKGhyOvRWG5hVebSMBNlqqJnPeE3vpYMAfWueiJqT4C_7y5SIImZm=
+BoEoPAueOrVJmOPqm0dJWdEdWcVWzArpz3xBfAGaVYrdqXatZ7fhch-KXWXzoTMTUDq7vcVBH2o=
+ZOJSdzjmBpET480VFXjy8sQLEmgXGey8sfBLs64rWQ5LvdNwh1bmXTiQYX680yijnrYNZlJAyke=
+mvUncCr_oN-jmCFP6K59zhwmE9VlXnhzUM6c7GXF_ku3MtzYgTExop0jSqRUEZwDFoD9qPX6mvB=
+K9d_xwfmFgF5wmbr0i9WcLajABLLNv_vPBmrwYgVf5SwC0iUomDewvhgNtq2xBiwPoMhRjIrDxA=
+N-K6BgQM7b2icBzVSALi-b2CAFrpZiQE3RBxf8CdIH0PyrkS-YpLEtTm5jyUlY6oi46xhfpxUR_=
+7UuKm2HKO2JUo9FSQmpgyOnrbMhKNL0paS6DxLMZlywFTA5b'>Unsubscribe From This Lis=
+t</a> | <a href=3D'https://u47021461.ct.sendgrid.net/asm/?user_id=3D4702146=
+1&amp;data=3DqSfj_p0Eryso0o--W27Kx1O6kGyvv1aJXPinGTOVTgBoMDAwdTAwMBzFRHkBRL=
+uRQ0SKVgdTnXRhh_mMOhayDvzu3VUWwwsPgUA8o8Ab35d9fJPKrfSedKref_ZF7MPFqmpZH7nHr=
+vrUUoH_YRimJpyYgdmnBGg3L7f5nFI5-D19rQDY2QHjWFXckVnmRJlufHQA25AHFl0bikGXnvDO=
+4dFYtoEL8Uqlz29SDhYW_JWoCncV4r4gQBkTnnMxJnGUth7xNJzElceutHC9pLSD_k0T5zeb5ZF=
+fk-FDpazCD9HMO72O5IXnQJaoUD4-yKzfMmqBVpUlnYajxnZ3RKRtY7FslTlUWS6Oqs3MqhYglb=
+L4QF2B1RCXcbNHpOLKFlwFkshCYf3rA-3tNwhkoZUcY8rjUwbDdsi5kN7pCndNNdMwj4poF4iH4=
+gzHXQ3Rj13gJ2STn085X4aQF-DvhoStPt7yFaJ_v3gYJAVtR8VwmvAHUmHRt3oq5aEcwZVxSl1Q=
+_4UQoGonpNE6IHLYD9mb3vkioM59AlZSV7y-a-xz1QmcNubFFu7KF1BhItXUSKi8sjkwAzUZkm6=
+IFtFniGtlfbAHa09NLxaO01xgAL00UeUgWMefHO0D10yr44qiebo-RVzUzWzR7HQfd1UA7DcqbB=
+BfUIlWg_520oz1Rk0AvxL-L1KiG9RbGgKx6VdwznQmlaF0IXIvcHKBc_HfbTtTG68uFU_SVMVbR=
+HhSxCpIUjVuT-yBGXbWxly32ZVtrE2sZPTzWVqx5JXrikMnaaebec7cXUV-e2KxxAWH2gLd8n1J=
+oj79tqfVvMj32rOAajPO1eveAd8UceW7Joxqvkw9yDnmx6iln2uuHu7m0FQ3wj0E-krt4scFFYA=
+ZYKXuE6ER4EhMnwY0q90m5NrDo1FYz2mbY5Z9U6mVrghpOBvFOI9z94c5H_ADYjcf36KDITUpbK=
+Hz-JE9iwsii2fy6isWuQu9O61gsd0LtkkTHMQImJ91qHx-WRrFEz_JaOEnAA96U2KfvYNFWHBoc=
+npK86UOAhswWMZR2hs3fUThFyabH0Xo4TAllgPADYXv2VtP5RklPzKDgVU8hzT5Pz-Hk27G0w8u=
+nYLouC-2T06LMUbliYIeKfQaSgpyJZ2edFvNtXwcYrVwi4lurb_e2sblwKjDeuB8qNGU63TB'>M=
+anage Email Preferences</a><img src=3D"https://u47021461.ct.sendgrid.net/wf=
+/open?upn=3Du001.HN9ncswbYi-2BEGN-2FXArB7Yb-2B54Tm43-2B694904Gpq6REDOvMj5jd=
+8r2ODXoOGLI8F0uYDlfdJx8NjvPdhWWcpkCUGsR3P4VRN5MZ7o0veGf3rvT-2BLh1aC66WHXNP3=
+uZ2MXALkHEQ-2BFrCPjUx06NxmFri6-2BXxC4qcLErCGgOmjc8H7v-2FCmxYtULIhFJ4QC6to7f=
+i-2BPVYX9hjym2ZhOxNwSyzU05sDvpFrWCC3B0GpCAbBALSwGlGC6KaOtNYTTtyXIe-2Bx1Qxhb=
+8VzPl56fWhMSMwrvrPSS24vfSmR9SfHONdMNwegrrZi-2B6T1qI9qfVYmmPMxS6uy28eVN5Sfdo=
+boQAqsIQr4F4eJJmteQFtW82pdSo5-2FHF8IUSA2wvAX5NQZYuDPaCYQYE53i1f-2Fx374hmhpP=
+3QtlXHV9qfQhYsckZ-2Fyagl8ZC5jNgzNdUY9ym8CV5coJFi6C5nDXVU5Huq93tCsvlXwlvecQo=
+DkozOYXGA6moCherRQpJ3DkiC5jte2wrhI90uDGb-2BhZAJx-2FdlDfgbAdWBUtLZi7DG-2FNyX=
+qoo4qmpQyiRXkfZnYDptHMBP7DGK6PYQBrT1nWETPjBf5haF2zOj5X7OU-2BbqNEaTTIB-2B1FP=
+z2KixHKrBy88kyUNw3ma7eIBlv7-2BMeRoMQZsTMKE-2BTqxZIMyEZGTe53cu17GU4fx8OexmwG=
+3NuYYSrZCDFoFiHaYM-2BMto6p3cn-2F1BENEYIhPaaXogfNYYtaRitX02DqJb7jfvmXqb8nQQt=
+f10Ul8jsu1q-2F2QtJRl33YhBJD8nwwTXpNYL7a3HfMGdRa-2BP09AxhtA0Ebd6dPPMBDwm41rw=
+cpoBz0mR2Av9wSkOLjSxLAG1IEbiv1hEKduXmxe9ZPVvop9yC-2FjUG-2BIM77x7GHFWWjCHMao=
+9xZKOIar07FAllYtwhnNL7OCfe4NW-2B4ejpZ5ge0qESWIUCsxJDneb9m59mzkNOCCsJnvROd39=
+ZLnMSiHzBnRseaKFXY9gjWJsXU-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"=
+0" style=3D"height:1px !important;width:1px !important;border-width:0 !impo=
+rtant;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !im=
+portant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 =
+!important;padding-right:0 !important;padding-left:0 !important;"/></body><=
+/html>
+--028bc7d48bd8ca3c8c14518ddc05a41f8c135ce7b0ec9b1647ef7bcde09d--
 
 
---===============7902806192098492287==
+--===============3788262580530699193==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7902806192098492287==
+--===============3788262580530699193==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -392,5 +398,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7902806192098492287==--
+--===============3788262580530699193==--
 
