@@ -2,99 +2,126 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8D2EC9A58BD
-	for <lists+industrypack-devel@lfdr.de>; Mon, 21 Oct 2024 03:56:04 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 276F99A9A37
+	for <lists+industrypack-devel@lfdr.de>; Tue, 22 Oct 2024 08:48:00 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1t2heL-0003aQ-Va
+	id 1t38gR-000824-Hm
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 21 Oct 2024 01:56:01 +0000
+	Tue, 22 Oct 2024 06:47:58 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <bounce-656-8992772-656-248@xbd66.top>)
- id 1t2heK-0003aC-Jv for industrypack-devel@lists.sourceforge.net;
- Mon, 21 Oct 2024 01:56:00 +0000
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
+ <bounces+47773682-ee7d-industrypack-devel=lists.sourceforge.net@sendgrid.net>)
+ id 1t38gQ-00081w-Fm for industrypack-devel@lists.sourceforge.net;
+ Tue, 22 Oct 2024 06:47:57 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:Content-Transfer-Encoding:MIME-Version
- :List-Unsubscribe:Sender:Message-ID:Subject:Reply-to:From:To:Date:Cc:
+ d=sourceforge.net; s=x; h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:
+ Mime-Version:From:Date:Content-Type:Sender:Cc:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=CCZacH0DGGatkm6al1KA9jtOwZCpfLK7GTKQPZXtq34=; b=iJB2XEbgsFerRwHE770WqgV/53
- kdYR1XpgklewlL2wIGAU38g+0hiKkG/U/pKo2fUcQVBuJuWz2XA4CZKhMUn1PvGhFVGgICG6Moozk
- kmgKObAZNc1p6N/10VPoatyxcjsZdOXYjG+BSRp4/FKXNwTPqW1wDVxOmdHeeKxJc1dw=;
+ bh=B7I2MKr2m4QV0Q0ayKy4y4yDEZ5dMub4lG8K8Vvyxv4=; b=KppJpxKZPaF0UD76pqcah3dopO
+ 7uEbTXL76RwAepJujJ2POS167Y4R/I/RjMk9utq6t80I3cggZ2yGfK3bM6lojlK+XUA8mV+kuT7ph
+ p+kqGOgheyj+wN3pTDjAQxSBIOv3DJJpHlmUw9uLE37ROldfQCM6m9+yhtFzgqk+W1r4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:Content-Transfer-Encoding:MIME-Version:List-Unsubscribe:
- Sender:Message-ID:Subject:Reply-to:From:To:Date:Cc:Content-ID:
+ h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:Mime-Version:From:Date:
+ Content-Type:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=CCZacH0DGGatkm6al1KA9jtOwZCpfLK7GTKQPZXtq34=; b=dF5Pr7k8wR3hLBikhb98b3k9nK
- M9LiPh0hIMq2xsQ4nZyeO35ohbDb9ieaiLKl04MZMjSA+m8kTikjJ3eIybMNFY5a6OJaX2545WWdP
- Dmhr6H/Ud8uPzhLYfUox85tHyce04ZJibPrD/btMfYzDe5qSKhYAgJbJxVSc6Fv7FqXs=;
-Received: from [103.121.95.22] (helo=a.xbd66.top)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1t2heJ-0006Yh-2D for industrypack-devel@lists.sourceforge.net;
- Mon, 21 Oct 2024 01:56:00 +0000
-Received: by a.xbd66.top id h2mqb40e97cs for
- <industrypack-devel@lists.sourceforge.net>;
- Mon, 21 Oct 2024 09:33:51 +0800 (envelope-from
- <bounce-656-8992772-656-248@xbd66.top>)
-Date: Mon, 21 Oct 2024 01:33:50 +0000
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-From: Jayne <googbing@yeah.net>
-Message-ID: <7599bc54c4f78e19ae4f2e18e332f3c9@103.121.95.22>
-X-Priority: 3
-X-Mailer: Email Sending System
-X-Complaints-To: googbing@yeah.net
-X-MessageID: M3x8fHw0NDA4Mnx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDN8fHx8MXx8fHww
-X-Report-Abuse: <http://103.121.95.22/oem/report_abuse.php?mid=M3x8fHw0NDA4Mnx8fHxpbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0fHx8fDN8fHx8MXx8fHww>
-MIME-Version: 1.0
-X-Spam-Score: 2.9 (++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+ bh=B7I2MKr2m4QV0Q0ayKy4y4yDEZ5dMub4lG8K8Vvyxv4=; b=b0XtfHj5dUbIOQ1Sgy/ojNd9Dk
+ mN0QCc0T34n3mNrgZt0bmTZOi2tywXblPM554US/zqgwKiB9MEAQsJPEViqlOoiWiBkqbmUWLSeVi
+ 2hzDIXhaMIXbIPdQ8ti7MNtBMaxaCjtqq70xu7d25YIp5RencRZHTzv12DnoaivwZ0rQ=;
+Received: from xtrwhxbr.outbound-mail.sendgrid.net ([167.89.10.181])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
+ id 1t38gO-0002OQ-Vy for industrypack-devel@lists.sourceforge.net;
+ Tue, 22 Oct 2024 06:47:57 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
+ h=content-type:from:mime-version:subject:reply-to:to:list-unsubscribe:
+ list-unsubscribe-post:cc:content-type:from:subject:to;
+ s=smtpapi; bh=B7I2MKr2m4QV0Q0ayKy4y4yDEZ5dMub4lG8K8Vvyxv4=;
+ b=c3AEapXjq5QvCQgnffUKXJi1cefFJ8ORFJYT5dEFkSRgRU3pn3Q2iWSuVCdgvDl4Jds/
+ y3UCpy2tb6VPs8wRhg52jgupyNaKWzgmXOYu4M+SeyHhmHpIc4xAy3avGsa5yC9rq+zSpR
+ vf66qMrDNcIxw1QOfL5d51kPLiLqD+1kU=
+Received: by recvd-55569ddc85-lmgpl with SMTP id
+ recvd-55569ddc85-lmgpl-1-67174A90-28
+ 2024-10-22 06:47:44.619427743 +0000 UTC m=+3415831.383359999
+Received: from NDc3NzM2ODI (unknown) by geopod-ismtpd-26 (SG) with HTTP
+ id s_aBPbjCR9msayYx-L9jkQ Tue, 22 Oct 2024 06:47:44.607 +0000 (UTC)
+Date: Tue, 22 Oct 2024 06:47:46 +0000 (UTC)
+Mime-Version: 1.0
+Message-ID: <s_aBPbjCR9msayYx-L9jkQ@geopod-ismtpd-26>
+X-SG-EID: =?us-ascii?Q?u001=2E=2Fb02Keyrm41cxi8xGIN859xAlFxNWXmxU8bRt31oPJNmR5WnxIN576Bf4?=
+ =?us-ascii?Q?bbhEKEeVQUOSrCoxh1QH9fMQfs=2F4cXlu3ct70Y5?=
+ =?us-ascii?Q?h4Xruv4aKZ63XNwjOWy2lSfLa1mMKR1l9wZzAJ2?=
+ =?us-ascii?Q?vCXsjL1UUJotN7cKy4cntg9dUqeHx5otIG8WcM5?=
+ =?us-ascii?Q?UYkAZsDMzUv17By4zpb38xmuqObi3TqW+p2CuU4?=
+ =?us-ascii?Q?xxQSub=2Fbda2gqyOHnYaEef++6YE6yZOcgj8xPCa?=
+ =?us-ascii?Q?cUf5gKlddcXXT8k7dmi95LDnhp8+w30ZPDj=2FuQb?=
+ =?us-ascii?Q?1Ndf4nIQ=3D?=
+X-SG-ID: =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FobOflWJ?=
+ =?us-ascii?Q?AQOGKhIvQUnekFhxG=2FrJeI4YBRn=2FfPF23ORFrKS?=
+ =?us-ascii?Q?f=2FVJEQxZVBdjrIemQobeFpAI66Zk01y59Dq37gA?=
+ =?us-ascii?Q?qekQ5EM53RS1Z1t5BHQNi5zkJj3Pwh3Om2wnZ+W?=
+ =?us-ascii?Q?KQlKPmn0mCelBeE1iA0CziJnLaMNNoL4eHvMHW1?=
+ =?us-ascii?Q?ClxAxt0XLFLA3QH82wgqtguJSmOcR2dM=2FB2BgwN?=
+ =?us-ascii?Q?FiEKeBSEe7fwBy0a9Lw71DOq9q72sLIYbPGVpXX?=
+ =?us-ascii?Q?cSEW=2FuX2exWley8NY=2FsRHqsjRh=2F+99x9oDj6=2F+p?=
+ =?us-ascii?Q?EmnB5uqJomPyzHAbZe9djzonxs2Q5u2+KN4QHop?=
+ =?us-ascii?Q?Agif+OiDzgJy3Ls6eWtPCenccfzIvzLynSy05Av?=
+ =?us-ascii?Q?sPXn3r+W6h=2FnuSkzK6kbsjEFygr=2FPgYbijNs59b?=
+ =?us-ascii?Q?Y0J08inokKxGo+Rw3JSJQOVglzhcgOWZi=2FPrZQu?=
+ =?us-ascii?Q?uD12Sz1NL3=2FNtQPdauzAGnrdtu6wA25naWyNyWc?=
+ =?us-ascii?Q?QWz37fLeh2Atnr=2FC3NVeXr=2FnKJPORu=2FLK38RlXb?=
+ =?us-ascii?Q?SL1QvgmePeNch37N33hsw2+4w1Ui+dynxftrS4d?= =?us-ascii?Q?T8=3D?=
+To: industrypack-devel@lists.sourceforge.net
+X-Entity-ID: u001.O6q4cE+kSxc6RIJ25atgoA==
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Spam-Score: 6.2 (++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Untitled document 专业国际物流DDP服务商，门到门
-    运输：海运、空运、陆运、铁路 
- 
- Content analysis details:   (2.9 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Dear Sir/Madam, Are you in need of financial leverage? Does
+ your business require major funding for expansion?? Does your business plan
+ or projects require capital funding with a 3% ROI???, If yes, then, I invite
+ you [...] 
+ Content analysis details:   (6.2 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
-  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
-                             provider
-                             [googbing[at]yeah.net]
-  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
-  0.0 NORMAL_HTTP_TO_IP      URI: URI host has a public dotted-decimal IPv4
-                              address
-  0.0 NUMERIC_HTTP_ADDR      URI: Uses a numeric IP address in URL
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.7 HTML_IMAGE_ONLY_20     BODY: HTML: images with 1600-2000 bytes of
-                             words
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
-                             EnvelopeFrom freemail headers are
-                             different
-  0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
-  0.0 SPOOFED_FREEMAIL       No description available.
-  0.1 TO_IN_SUBJ             To address is in Subject
-  0.0 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
-  0.0 T_REMOTE_IMAGE         Message contains an external image
-X-Headers-End: 1t2heJ-0006Yh-2D
-Subject: [Industrypack-devel] =?utf-8?b?5YWo55CD6Iiq6L+QRERQ77yaaW5kdXN0?=
- =?utf-8?q?rypack-devel=40lists=2Esourceforge=2Enet?=
+ 5.0 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
+ bl.spamcop.net
+ [Blocked - see <https://www.spamcop.net/bl.shtml?167.89.10.181>]
+ 1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [shirley.olson[at]financier.com]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 1.1 URIBL_GREY             Contains an URL listed in the URIBL greylist
+ [URIs: sendgrid.net]
+ -1.7 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [167.89.10.181 listed in wl.mailspike.net]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 HTML_EXTRA_CLOSE       BODY: HTML contains far too many close tags
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+X-Headers-End: 1t38gO-0002OQ-Vy
+Subject: [Industrypack-devel] Capital funding, Business communication
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -106,71 +133,139 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: Jayne <googbing@yeah.net>
-Content-Type: multipart/mixed; boundary="===============2788380484298713485=="
+From: Shirley Olson via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: shirley@emiratefinancialsbrokers.com
+Cc: Shirley Olson <Shirley.Olson@financier.com>
+Content-Type: multipart/mixed; boundary="===============5171961354439509403=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============2788380484298713485==
+--===============5171961354439509403==
+Content-Type: multipart/alternative; boundary=aa8be62fb255f4f3cad55f3808102c59a5479a4a171eac46a7e14b957112
+
+--aa8be62fb255f4f3cad55f3808102c59a5479a4a171eac46a7e14b957112
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html; charset="utf-8"
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
-w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+Dear Sir/Madam,
+
+Are you in need of financial leverage? Does your business require major fun=
+ding for expansion?? Does your business plan or projects require capital fu=
+nding with a 3% ROI???, If yes, then, I invite you to reach out to us for f=
+urther discussions.
+
+We would be happy to schedule a zoom meeting to discuss further.
+
+Kindly reachout through my email "shirley@emiratefinancialsbrokers.com"
+
+Best regards,
+LinkedIn:=A0=A0 Shirley Olson
+Email: shirley@emiratefinancialsbrokers.com
+Emirate Financial Consultants
+
+Unsubscribe ( https://u47773682.ct.sendgrid.net/asm/?user_id=3D47773682&dat=
+a=3DijQ3srYszhroMRt3ZwXRgwhayIDQAJOT59EdHZ4NBLtoMDAwdTAwMOpAJyc27d1og-e5VF_=
+GnJq7Rtu6uMExMISKRYj6dtEGA1sqT_XyHGK_yiFkqnYSAnFi1RfDnOToF4p2siJpNJn8nkcnDG=
+U9-qb0okpS0kt8fidYlQhyeFsMAwhya5ucAJo0YGB2aBLJL6XB9A0Vu9KbdTmkq1XKgP8hXyqsI=
+J_I-t95SLJ7rYYZMFNgKnTkyQshby2tcJ_yqbEJdTqlEjOj3_aaU8JugX71Yj4104ii0SGuRrOe=
+B-JuYORJIVupZfUnYH99ft_IO90XOfdZVe-tUznkCs8w3FthwVGmm2ZQWlDwKjZ2jLY2VhVQVWK=
+DLBo5Qv-rQSmBOL0KtzLpu6Fxgv9h1XedtLzLikgGOTzb1TD5OM3CmO-N0jFAgifDthlYC3CH7-=
+Rw5Qc4tKEfxuhZHruMSy8GG1Wlx9pe_JIOC7vhTH9eluhvrkRfsHQqIZjODNCInoUZtVJgmcJx1=
+rIpx833px2xn6FbbIdqFG4d6180orFNtFqql1x3_GupSCHJvwXtYfCISBvCNoORuPIRVbL9lSh4=
+gkJGv1sm5mgACvgOet-16jFDtLCAy2G92vwm6uAPE9pXkWhxkEanY0sRpgcQmaKw92Bd7AukVjo=
+fznwE2t2aya6I_xQsghXjsDYGcBmMlGkvd6HuwNfg7XYDt9wwLJRaG6mY6bMQqDyY89GOpVF5_O=
+8UspbyfuxsZJjoXz6OqlvrOE1ZeKkPeYyjRH-LVkOiwPtDDrjM3-EHdXBymvhCn2F5x89hLA_L7=
+ak7-zutYpP8aEpiT4tu5geZUDkWm6yY9Qh-uedtvsqptyY20X6xlS4HrLTzY1MIU6HmeqodgoCu=
+Pgw0K1Xzag2VtWfhcTUZLAddbxSBU7BBG4-cC28sDlXSI3nU0vaWu0n2lMCfLD4ZoWDGvkkhrlM=
+Da4OSibo2mqirPxDQ-JKvVNHxEXeMvRQ49PJLPDxNF-qRrrNWOFrpfrOjuMSKHttRLcJNanstnX=
+kUeUCvrIu4BOxAISrP8l6L19SIvl1AvO49wG2Z_XGHsdw99o7henQ=3D )
+--aa8be62fb255f4f3cad55f3808102c59a5479a4a171eac46a7e14b957112
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
 <html>
-<head>
-<title>Untitled document</title>
-</head>
-<body>
-<p><strong><span style=3D"font-size: x-large;"><i><span style=3D"font-size:=
- xx-large;"><span style=3D"color: #3366ff;">=E4=B8=93=E4=B8=9A=E5=9B=BD=E9=
-=99=85=E7=89=A9=E6=B5=81DDP=E6=9C=8D=E5=8A=A1=E5=95=86=EF=BC=8C=E9=97=A8=E5=
-=88=B0=E9=97=A8</span></span></i></span></strong></p>
-<p><strong><span style=3D"font-size: x-large;">=E8=BF=90=E8=BE=93=EF=BC=9A<=
-span style=3D"color: #008000;">=E6=B5=B7=E8=BF=90=E3=80=81=E7=A9=BA=E8=BF=
-=90=E3=80=81=E9=99=86=E8=BF=90=E3=80=81=E9=93=81=E8=B7=AF</span></span></st=
-rong></p>
-<p><strong><span style=3D"font-size: x-large;">=E5=8F=AF=E6=8E=A5=EF=BC=9A<=
-span style=3D"color: #008000;">=E8=B6=85=E9=95=BF=E3=80=81=E8=B6=85=E5=A4=
-=A7=E4=BB=B6=E8=B4=A7=E7=89=A9=EF=BC=8C=E6=A0=87=E5=87=86=E4=BB=B6=E3=80=81=
-=E6=99=AE=E8=B4=A7</span></span></strong></p>
-<p><strong><span style=3D"font-size: x-large;">=E8=88=AA=E7=BA=BF=EF=BC=9A<=
-span style=3D"color: #008000;">=E6=AC=A7=E6=B4=B2=E3=80=81=E7=BE=8E=E5=9B=
-=BD=E3=80=81=E8=8B=B1=E5=9B=BD=E3=80=81=E6=BE=B3=E5=A4=A7=E5=88=A9=E4=BA=9A=
-=E3=80=81=E4=B8=9C=E5=8D=97=E4=BA=9A=E3=80=81=E6=B2=99=E7=89=B9=E3=80=81=E4=
-=B8=AD=E4=BA=9A=E7=AD=89</span></span></strong></p>
-<p><strong><span style=3D"font-size: x-large;">=E8=87=AA=E8=90=A5=E6=B5=B7=
-=E5=A4=96=E4=BB=93=EF=BC=8C=E9=AB=98=E6=95=88=E6=B8=85=E5=85=B3=E5=9B=A2=E9=
-=98=9F=EF=BC=8C=E8=87=AA=E4=B8=BB=E8=A3=85=E6=9F=9C=EF=BC=8C=E6=B8=A0=E9=81=
-=93=E5=AE=89=E5=85=A8=EF=BC=8C=E6=97=B6=E6=95=88=E7=A8=B3=E5=AE=9A</span></=
-strong></p>
-<p><strong><span style=3D"font-size: x-large;"><i><span style=3D"font-size:=
- xx-large;"><span style=3D"color: #ff0000;">=E6=AC=A2=E8=BF=8E=E8=AF=A2=E4=
-=BB=B7=EF=BC=8C=E8=87=B4=E7=94=B5=EF=BC=9A18823195257=EF=BC=88=E5=BE=AE=E4=
-=BF=A1=E5=90=8C=E5=8F=B7=EF=BC=89</span></span></i></span></strong></p>
-<p><strong><span style=3D"font-size: x-large;"><i><span style=3D"font-size:=
- xx-large;"><span style=3D"color: #ff0000;">24=E5=B0=8F=E6=97=B6=E5=9C=A8=
-=E7=BA=BFQQ=EF=BC=9A319966504</span></span></i></span></strong></p>
-<p><strong><span style=3D"font-size: x-large;">=E6=A0=B9=E6=8D=AE=E9=9C=80=
-=E6=B1=82=E6=97=B6=E6=95=88=E3=80=81=E4=BA=A7=E5=93=81=E4=BF=A1=E6=81=AF=E3=
-=80=81=E9=87=8D=E9=87=8F=E3=80=81=E5=9B=BD=E5=AE=B6=EF=BC=8C=E6=8E=A8=E8=8D=
-=90=E5=90=88=E9=80=82=E7=9A=84=E7=89=A9=E6=B5=81=E6=B8=A0=E9=81=93</span></=
-strong></p>
-
-<img src=3D"http://103.121.95.22/oem/to.php?p=3Drv/rv/rs/ysa/rv/rs" width=
-=3D"5" height=3D"2" alt=3D".">
-
-</body>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p>
+			Dear Sir/Madam,<br />
+			<br />
+			Are you in need of financial leverage? Does your business require major =
+funding for expansion?? Does your business plan or projects require capital=
+ funding with a 3% ROI???, If yes, then, I invite you to reach out to us fo=
+r further discussions.</p>
+		<p>
+			We would be happy to schedule a zoom meeting to discuss further.</p>
+		<p>
+			Kindly reachout through my email &quot;shirley@emiratefinancialsbrokers.=
+com&quot;</p>
+		<p>
+			<br />
+			Best regards,<br />
+			LinkedIn:&nbsp;&nbsp; Shirley Olson<br />
+			Email: shirley@emiratefinancialsbrokers.com<br />
+			Emirate Financial Consultants</p>
+	</body>
 </html>
 
 
---===============2788380484298713485==
+          <a href=3D"https://u47773682.ct.sendgrid.net/asm/?user_id=3D47773=
+682&amp;data=3DijQ3srYszhroMRt3ZwXRgwhayIDQAJOT59EdHZ4NBLtoMDAwdTAwMOpAJyc2=
+7d1og-e5VF_GnJq7Rtu6uMExMISKRYj6dtEGA1sqT_XyHGK_yiFkqnYSAnFi1RfDnOToF4p2siJ=
+pNJn8nkcnDGU9-qb0okpS0kt8fidYlQhyeFsMAwhya5ucAJo0YGB2aBLJL6XB9A0Vu9KbdTmkq1=
+XKgP8hXyqsIJ_I-t95SLJ7rYYZMFNgKnTkyQshby2tcJ_yqbEJdTqlEjOj3_aaU8JugX71Yj410=
+4ii0SGuRrOeB-JuYORJIVupZfUnYH99ft_IO90XOfdZVe-tUznkCs8w3FthwVGmm2ZQWlDwKjZ2=
+jLY2VhVQVWKDLBo5Qv-rQSmBOL0KtzLpu6Fxgv9h1XedtLzLikgGOTzb1TD5OM3CmO-N0jFAgif=
+DthlYC3CH7-Rw5Qc4tKEfxuhZHruMSy8GG1Wlx9pe_JIOC7vhTH9eluhvrkRfsHQqIZjODNCIno=
+UZtVJgmcJx1rIpx833px2xn6FbbIdqFG4d6180orFNtFqql1x3_GupSCHJvwXtYfCISBvCNoORu=
+PIRVbL9lSh4gkJGv1sm5mgACvgOet-16jFDtLCAy2G92vwm6uAPE9pXkWhxkEanY0sRpgcQmaKw=
+92Bd7AukVjofznwE2t2aya6I_xQsghXjsDYGcBmMlGkvd6HuwNfg7XYDt9wwLJRaG6mY6bMQqDy=
+Y89GOpVF5_O8UspbyfuxsZJjoXz6OqlvrOE1ZeKkPeYyjRH-LVkOiwPtDDrjM3-EHdXBymvhCn2=
+F5x89hLA_L7ak7-zutYpP8aEpiT4tu5geZUDkWm6yY9Qh-uedtvsqptyY20X6xlS4HrLTzY1MIU=
+6HmeqodgoCuPgw0K1Xzag2VtWfhcTUZLAddbxSBU7BBG4-cC28sDlXSI3nU0vaWu0n2lMCfLD4Z=
+oWDGvkkhrlMDa4OSibo2mqirPxDQ-JKvVNHxEXeMvRQ49PJLPDxNF-qRrrNWOFrpfrOjuMSKHtt=
+RLcJNanstnXkUeUCvrIu4BOxAISrP8l6L19SIvl1AvO49wG2Z_XGHsdw99o7henQ=3D" target=
+=3D"_blank" class=3D"Unsubscribe--unsubscribePreferences" style=3D"font-fam=
+ily:sans-serif;text-decoration:none;">
+            Unsubscribe
+          </a>
+        </p>
+      </div>
+    <img src=3D"https://u47773682.ct.sendgrid.net/wf/open?upn=3Du001.HN9ncs=
+wbYi-2BEGN-2FXArB7Yb-2B54Tm43-2B694904Gpq6REDOvMj5jd8r2ODXoOGLI8F0uYDlfdJx8=
+NjvPdhWWcpkCUGsR3P4VRN5MZ7o0veGf3rvT-2BLh1aC66WHXNP3uZ2MXALkHEQ-2BFrCPjUx06=
+NxmFri6-2BXxC4qcLErCGgOmjc8H7v-2FCmxYtULIhFJ4QC6to7fSZ5OkzSTj6dWsSU1nWs5d6a=
+9x98lpInO9D3F1DddH0r2jwSWRe75nKUAGm3KHhXVY-2FQMeVWVeLOeBGOPJrawEDpTgojLOpFB=
+0u4NcB2lgPYRw9SkJ-2BAy05nR43vlSvyqbBV5jVudVT4qCld1gd6TJ-2B-2FIOQKtiAzHmIrKZ=
+y6plEuyPDoHV3Ba8485CqUE5qv6-2F4pTBcdai6TuhAjvkaLd4IJcBC7vRKCPoWQOT58frlDtdE=
+hh0em8QYVRPFabc44nPUYjHUDzmuzU5RlpNHuUUYiCZoJyjkPCoxgkPGNFSciVNX1cBQt6Ujygu=
+ldAaSSUlNGhsJgQzNtDhcWKmtB0XWkmF4EXVlOtJ-2BH2fBWTSqQWtHrYq8rltkTYv1VA2zNzLt=
+7fQZ-2B327SpKbE-2FWjfOPLpYR0BoLhbypTPx0W7JndUAVmyCxfVJsV-2BZDEFrp7dOlajG-2B=
+2xEvo9-2FfD5prePmbHhjS0dLfHmprLJe-2FYUIawH8iq-2FNXl-2FXwpf3-2FXSaGcfgbdDUzz=
+HNAp8B9qDniqEqERYJZU6maMLlzm000uqSfIsQhJTD2lyJx6-2Fah3AAszSpBrKVqDLHvutBeZ4=
+LiKfDafdRTO6Na9512tgeFdFiieu2IXxI8G8N2L9utDkbv5djLTTtki8q-2Bm2UuoDebGTsp6qr=
+Bd4tjw0Gmt49UxFTe4FaiOR-2FeGtiwDzlhY7LfVCIt7LxfAEazzWF-2Bmpvyy3w-2Bw-3D-3D"=
+ alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !import=
+ant;width:1px !important;border-width:0 !important;margin-top:0 !important;=
+margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !importa=
+nt;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !im=
+portant;padding-left:0 !important;"/></body>
+  </html>
+
+--aa8be62fb255f4f3cad55f3808102c59a5479a4a171eac46a7e14b957112--
+
+
+--===============5171961354439509403==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============2788380484298713485==
+--===============5171961354439509403==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -181,4 +276,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============2788380484298713485==--
+--===============5171961354439509403==--
+
