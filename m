@@ -2,101 +2,123 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6969D9B5A4F
-	for <lists+industrypack-devel@lfdr.de>; Wed, 30 Oct 2024 04:22:49 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3C52C9B747E
+	for <lists+industrypack-devel@lfdr.de>; Thu, 31 Oct 2024 07:28:07 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1t5zIF-0006Hn-Jg
+	id 1t6Of8-0005Bs-2I
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 30 Oct 2024 03:22:47 +0000
+	Thu, 31 Oct 2024 06:28:06 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <teknis@decoline.ge>) id 1t5zID-0006He-Qq
- for industrypack-devel@lists.sourceforge.net;
- Wed, 30 Oct 2024 03:22:45 +0000
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
+ <bounces+47829143-d404-industrypack-devel=lists.sourceforge.net@sendgrid.net>)
+ id 1t6Of6-0005Bk-FC for industrypack-devel@lists.sourceforge.net;
+ Thu, 31 Oct 2024 06:28:04 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
- Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=h8wOUv/uGEwB6oztaaGvvfi2S4sUy63a1XtazFCli4g=; b=RvouXDPFAmqzdSxtI/3GsW0LHT
- ZQOhjEyXDL7QN+9B/vhVTRT8EdM/IR0BFuNr1iQVjmTVpIRI7bWPpOaonee4xnqS7uwzl7ub68qOD
- v9yuXVBgjC6lt4N+HbCTlBQlCs62EGviVrm4+sBaf8UjdvGmD67rghPS2diYSqWxHj2Q=;
+ d=sourceforge.net; s=x; h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:
+ Mime-Version:From:Date:Content-Type:Sender:Cc:Content-Transfer-Encoding:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+ List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=jlpmPzzt3GM6HuusORrohs/ged3lJxoVzbA7XDjNyAk=; b=Ku8NnvoMEihLNEMFvhkgmQ4UtT
+ sumcF9408HxcF5eeQ5SEEO9lsFmZxH2hmlz9vgwchaA34xUQot38E5sr8QbdRsnHdFf0QIXwbPtTj
+ cehK1F4yYI4QZauxgBWthjYrfZyDlFchBU3ts58wzEWMrBSCUWZccz6T3yy7zh6fai+Y=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=h8wOUv/uGEwB6oztaaGvvfi2S4sUy63a1XtazFCli4g=; b=m
- JOIRNppYup2zdxuRcACzJwoX+zmAQCwmczja717KcgkmGXdpmCFwsRsc/rQ6IrdUrmKfgD9lPhPNo
- bHm3VZqz8SwSCAtInwRaGiQV0q3HmT9vBXe/pp04i8qD/2f+VcGk01qHy0gyJJDT5ZbNiG6QaaPFU
- eI0ObSMba+hQdZOk=;
-Received: from gw16230.fortimail.com ([66.35.16.230])
+ h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:Mime-Version:From:Date:
+ Content-Type:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ List-Post:List-Owner:List-Archive;
+ bh=jlpmPzzt3GM6HuusORrohs/ged3lJxoVzbA7XDjNyAk=; b=WeC0bOvxtYhTDUiGyNi6TjvnbM
+ 0sEPF5cTeIQoCCsB0O7u0KH97qWBXz9Y/u+GheF8g1sC9sjZfczPqROzujIjXau+oSAYd1PhKhIhj
+ qBZSA8heKh0ZtBHIgXLtr2mF3uDKOUhcqkm8nKhEp9UR9Eju6vsLMoIUpeSv8oN3mE+A=;
+Received: from xtrwhxbr.outbound-mail.sendgrid.net ([167.89.10.181])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1t5zIC-0002Aq-Sf for industrypack-devel@lists.sourceforge.net;
- Wed, 30 Oct 2024 03:22:45 +0000
-Received: from mail.baldom.net (mail.baldom.net [190.166.89.137])
- by gw16230.fortimail.com  with ESMTP id 49U3McIq006418-49U3McIs006418
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
- for <industrypack-devel@lists.sourceforge.net>; Tue, 29 Oct 2024 23:22:39 -0400
-Received: from mail.baldom.net (localhost [127.0.0.1])
- by mail.baldom.net (Postfix) with ESMTPS id D7D2244C6936
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 29 Oct 2024 18:34:03 -0400 (AST)
-Received: from localhost (localhost [127.0.0.1])
- by mail.baldom.net (Postfix) with ESMTP id CC69D44C693B
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 29 Oct 2024 18:34:03 -0400 (AST)
-X-Virus-Scanned: amavisd-new at baldom.net
-Received: from mail.baldom.net ([127.0.0.1])
- by localhost (mail.baldom.net [127.0.0.1]) (amavisd-new, port 10026)
- with ESMTP id ExMecx__wxDZ
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 29 Oct 2024 18:34:03 -0400 (AST)
-Received: from WIN-BS656MOF35Q (unknown [185.238.231.104])
- by mail.baldom.net (Postfix) with ESMTPSA id 8B21144C6936
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 29 Oct 2024 18:34:02 -0400 (AST)
-From: "Technical Support" <teknis@decoline.ge>
-To: <industrypack-devel@lists.sourceforge.net>
-MIME-Version: 1.0
-Date: Tue, 29 Oct 2024 15:34:03 -0700
-Message-Id: <29012024103415D119F16EBD-A2C26D74DE@decoline.ge>
-X-FEAS-Client-IP: 190.166.89.137
-X-FE-Last-Public-Client-IP: 190.166.89.137
-X-FE-Policy-ID: 1:3:3:SYSTEM
-X-Spam-Score: 5.9 (+++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+ (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
+ id 1t6Of4-0004gO-EM for industrypack-devel@lists.sourceforge.net;
+ Thu, 31 Oct 2024 06:28:04 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
+ h=content-type:from:mime-version:subject:reply-to:to:list-unsubscribe:
+ list-unsubscribe-post:cc:content-type:from:subject:to;
+ s=smtpapi; bh=jlpmPzzt3GM6HuusORrohs/ged3lJxoVzbA7XDjNyAk=;
+ b=laXTCugqPCKckQoI1ovPOI75FtSjERNB5y8HPqWt3K3ryKup7qXjJWd414nV6FjX8ti5
+ FjlMMKo545zxpiLOEpXM2wi9q9v8PziVNiOaJwYDI00JJZYlaqmTGrNthGZRSxIBSY21qQ
+ 8cqU/pRivG8a0JQEw0Z2tzBCbLtQ5dPu8=
+Received: by recvd-68fc7bfdf6-bm7fd with SMTP id
+ recvd-68fc7bfdf6-bm7fd-1-67232366-4
+ 2024-10-31 06:27:50.134508545 +0000 UTC m=+4192218.266827974
+Received: from NDc4MjkxNDM (unknown) by geopod-ismtpd-10 (SG) with HTTP
+ id 28ZJBl1uQ1mySI5DUXZ2wQ Thu, 31 Oct 2024 06:27:50.111 +0000 (UTC)
+Date: Thu, 31 Oct 2024 06:27:51 +0000 (UTC)
+From: "Crop Chemicals Intl. Sales" <sales@cropchemicals.co.in>
+Mime-Version: 1.0
+Message-ID: <28ZJBl1uQ1mySI5DUXZ2wQ@geopod-ismtpd-10>
+X-SG-EID: =?us-ascii?Q?u001=2EKL69OQkP5zAVHkq5Uom7ZfQlATYckHGdPRaGBmkIojrQpxCFHmXUAMYi8?=
+ =?us-ascii?Q?Q1MN0+SUO+hOqT+7zQJ8YqA678Bmkm=2FY5LxQKz6?=
+ =?us-ascii?Q?=2FtkLaSvxiaypY4Ll80SzgAnc+rBzTOvb4MAHpEp?=
+ =?us-ascii?Q?jmnPMxmiUsJuXfX0oV7AzxYgo5m+Lc3qWc=2Fn5O7?=
+ =?us-ascii?Q?1IfZ4x2d2vjK9Dh5zu+FbwirCWXDPwFRTWKbpBl?=
+ =?us-ascii?Q?nfaYwROpEqrvSUoQqKnADIoStdHqXnXAdIzeqe6?=
+ =?us-ascii?Q?Dj5kFZHMJ8UtibfjGscnMt43f9rYraT4RpBcfPS?=
+ =?us-ascii?Q?ztSUvbWw=3D?=
+X-SG-ID: =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FnwaK92I?=
+ =?us-ascii?Q?akjjBRaNaQGWlqjxb60ywbl+uMDE1m0rNfWMXf1?=
+ =?us-ascii?Q?N=2F2hT+gGkLKaXibHPoLmVfa2b47Z5y3GhP8WiWL?=
+ =?us-ascii?Q?bJ8dII5ZpQS6Gtrsbj63PeIl5WC0Vm6jX476iat?=
+ =?us-ascii?Q?F3EUEIIKy6UHOL9JZS2HnQ3znH+APrGMoBi+TWv?=
+ =?us-ascii?Q?Cw+Zk8Oh13=2FHkPQvf6nsJzeA9=2F3ZfoV52DVQv=2Fb?=
+ =?us-ascii?Q?wl1aFvIq97kq0LwrOGM6uxwK4Qehd3LbtBmGhOS?=
+ =?us-ascii?Q?EpW0+RS=2Fc9gVw7xWfAYs5yo5f2vqsLZKu0jvad8?=
+ =?us-ascii?Q?qiHhnM97gdd1FFZAF+ULwLIcDw3PCUhsOg7uRyK?=
+ =?us-ascii?Q?Fm2ZgCX8m3XDAIqMgxbS=2FYDIzk8sc8cVw9cOZ64?=
+ =?us-ascii?Q?k3ARQHzUBzXdIlxrNKBmf5Nc1Zgz8MXQ0nAQCT+?=
+ =?us-ascii?Q?60uHd330=2FiSq49ByxGnV+Zfog9O=2FAHXPzN7IOA6?=
+ =?us-ascii?Q?OKrAFTZM0+tYd9zdh=2F0G68CA7AjR8vBvwytw9hT?=
+ =?us-ascii?Q?WE+k7YRJgTQPSq0aC87M=2FeQChIIEsQCT96rOiPC?=
+ =?us-ascii?Q?992ezR0IErD3BfVgrUlENZEAjW3c++iGGMnsxDU?= =?us-ascii?Q?+k=3D?=
+To: industrypack-devel@lists.sourceforge.net
+X-Entity-ID: u001.Z9XaJPJguBcnzU9D5nXjvQ==
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Spam-Score: 6.2 (++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Dear  industrypack-devel@lists.sourceforge.net, You have 5
-    New pending mails. Your mail version 2.0.1 is currently being discontinued
-    from receiving incoming mails, and will no longer work as of 10/29 [...] 
- 
- Content analysis details:   (5.9 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Hello ,
+ RFQ - OCT/2024-10-30/673937 Requisition Title - OLIVER
+ CARPET Purchase Order No - WO/0064181 The Purchase Order for the location
+ OHC (Capex) and Account OLIVER OHS F14 (5055 SQ. FT) has been issued to you
+ Content analysis details:   (6.2 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  2.5 URIBL_DBL_PHISH        Contains a Phishing URL listed in the Spamhaus
-                             DBL blocklist
-                             [URIs: oortech.com]
-  2.5 URIBL_DBL_MALWARE      Contains a malware URL listed in the Spamhaus
-                             DBL blocklist
-                             [URIs: oortech.com]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-X-Headers-End: 1t5zIC-0002Aq-Sf
-Subject: [Industrypack-devel] Final Warning
- industrypack-devel@lists.sourceforge.net
+ 5.0 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in
+ bl.spamcop.net
+ [Blocked - see <https://www.spamcop.net/bl.shtml?167.89.10.181>]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 1.1 URIBL_GREY             Contains an URL listed in the URIBL greylist
+ [URIs: sendgrid.net]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [167.89.10.181 listed in wl.mailspike.net]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium trust sender
+X-Headers-End: 1t6Of4-0004gO-EM
+Subject: Re: [Industrypack-devel] PO - OCT/24/673937 Purchase Order has been
+ issued
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -108,304 +130,310 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============0792123753160614522=="
+Reply-To: sales@saniest.com
+Content-Type: multipart/mixed; boundary="===============3177296570818982164=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
+--===============3177296570818982164==
+Content-Type: multipart/alternative; boundary=b40e9a98e1883e0ff70c4311aff229d3684c7bc8c741c3edbda75febf70e
 
---===============0792123753160614522==
-Content-Type: multipart/alternative; boundary="GUHXNQerZ2YSBzH3oSb=_OTL34oM8hnXJ8"
-
-This is a multi-part message in MIME format
-
---GUHXNQerZ2YSBzH3oSb=_OTL34oM8hnXJ8
-Content-Type: text/plain; charset="iso-8859-1"
+--b40e9a98e1883e0ff70c4311aff229d3684c7bc8c741c3edbda75febf70e
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0
 
+Hello ,
 
-Dear=A0 industrypack-devel@lists.sourceforge.net,
-You have 5 New pending mails. Your mail version 2.0.1 is currently bei=
-ng discontinued from receiving incoming mails, and will no longer work=
- as of 10/29/2024.
+RFQ - OCT/2024-10-30/673937
+Requisition Title - OLIVER CARPET
+Purchase Order No - WO/0064181
 
-=A0
+The Purchase Order for the location OHC (Capex) and Account OLIVER OHS F14 =
+(5055 SQ. FT) has been issued to you
 
-To retrieve your messages and upgrade to version 3.0.1, kindly follow =
-the upgrade information below:=A0
+Attached below, please find the required PO & Pay warranty bonds link.
 
+** *PURCHASE ORDER NO- OCT/673937* *.pdf* ** ( https://s3.timeweb.cloud/d93=
+690fd-2effead1-dc78-49d4-9668-04586a32c70d/PO-673937/PO%20-%20OCT.'24673937=
+.rar )
 
-Upgrade to version 3.0.1 now
-=A0
+**
 
-Email Service Team.
+Send your P.I. as per above P.O.
 
+**
 
-industrypack-devel@lists.sourceforge.net =A02024.
+*Thanks & Regards*
 
---GUHXNQerZ2YSBzH3oSb=_OTL34oM8hnXJ8
-Content-Type: text/html; charset="iso-8859-1"
+*Monika Sangha*
+
+*(Sales Coordinator)*
+
+*S.C.O. 122-123, Suite no. 203, 2nd Floor,*
+
+*Sector 17-C, Chandigarh- 160017*
+
+*Mob: 9875984037*
+
+*E-mail: sales@cropchemicals.co.in*
+
+*Website: www.cropchemicals.co.in*
+
+*From:* Skootr Procurement Helpdesk
+*Sent:* 24 October 2024 22:31
+*To:* industrypack-devel@lists.sourceforge.net
+*Subject:* PO - WO/0064181 Purchase Order has been issued.
+
+Hello ,
+
+RFQ - PR/2024-10-24/0006418
+Requisition Title - OLIVER CARPET
+Purchase Order No - WO/0064181
+
+The Purchase Order for the location OHC (Capex) and Account OLIVER OHS F14 =
+(5055 SQ. FT) has been issued to you.
+
+Thanks,
+
+Skootr Procurement Team Note: This is a system generated email, do not repl=
+y to this email.
+
+Unsubscribe Preferences ( https://u47829143.ct.sendgrid.net/asm/?user_id=3D=
+47829143&data=3Djo6Jq1Hp2l7Y_mTVFBJ1a90DofqIfA-PFhDnCLjQ6bVoMDAwdTAwMNXg_jV=
+E1OYECjy-SS8jh4wo-VbtIFo5MOPZXnLP9z4V-dzeOV8hQLN-sojRuugP_aRaeaXlYxXxoEomKg=
+FQwQzR39yXpCvrJQC5fRBbTtNBAvT2aEC2MD78TuSWNlRQGy_4J0OBcWTNqFCigxnCZpr3ImkZm=
+nj4gX4fGC3OxkNkP0-MX9TKBZ52HgG8ezAcmQTn-V3DhMl-i0sxNvIUkm25yW3oZgGXHeulbry7=
+xyQ-oxhj_HyJAKiAuYom1CSGGMkXv8aUmCkGlYiXX_cVjeg-lWCp8v5fjGJnmtZcV1gD5pvjPuS=
+uuxgpCAzvcBd6bw2KeZF0ZOh-jfMvxjE765KQp739OLcJ1jtM10KFNajnBzQQiJ_cAj_pNccCz9=
+uePGe4_5URtvIuQpl1TkagRHFPi5Op9aE7yCGfM77aySJWpcC6u-QWyhA9jbYqYvl9n1BQWmXAR=
+xEmJYjKvNOrF1xZ294qq4gPYo5eO645q5fqFv83xeFTHYjtGKCdWGTQZrklpp3wGdAMdcXcsmk4=
+uQiFaVKnKHURz32o7HiXezO5KllSbb4RX6TZPMGSfAX5b0Yehw8zLB_03-AfT5iozWzzsflEkaS=
+VkOdhgTKpqDH6FLZyQ_zAWYe73rQBmgcXQoFT4eGE6g1gFTBZ2q7YEuB4yTIEUiqTpDoncmoOfV=
+WR2QZk-750zcsxZMcI1umNJ9Jz7myBmhN4YO9CJUEISEMMTTfRTjflHyT_y_nrpFDliGyEYjB9M=
+Lu6fb1nQnRAD0wPaPD9rZA6HbF3Bnd6El4Noms0dv4DB6gX8AYveTiSOEp5nDA1y7Q1UXBDb52o=
+EcULDdQYgHntEx179Ox4ivpNKAVDYUsW0lUMadQs21dFNrlIev_hdq3XeH8w6-OZGw6RgUcYJvg=
+S6omKH_kNotvlKQecUuAoi6p0rRftiyHbjrDaZCNhjjp5NAJllmKTJ9BBOOrA-3LV0FgJfR3iHJ=
+2FhtVSLV6SpwbPWFqhjM3T-28JQRa3NFeolBO0wA0bDHX4kWZxeZH_iX4fPMdMLmQ=3D )
+--b40e9a98e1883e0ff70c4311aff229d3684c7bc8c741c3edbda75febf70e
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<div class=3D"jb_0 X_6MGW N_6Fd5" style=3D"-webkit-text-stroke-width:0px;ba=
+ckground-color:rgb(255, 255, 255);color:rgb(29, 34, 40);font-family:&quot;H=
+elvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:13px;font-style=
+:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:=
+400;letter-spacing:normal;orphans:2;outline:none !important;padding-bottom:=
+0px;padding-left:24px;padding-right:16px;text-align:left;text-decoration-co=
+lor:initial;text-decoration-style:initial;text-decoration-thickness:initial=
+;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spaci=
+ng:0px;">
+    <div style=3D"outline:none !important;">
+        <div style=3D"outline:none !important;" id=3D"yiv4007774905">
+            <div style=3D"outline:none !important;">
+                <div class=3D"yiv4007774905WordSection1" style=3D"outline:n=
+one !important;">
+                    <p class=3D"yiv4007774905MsoNormal" style=3D"font-famil=
+y:Calibri, sans-serif;font-size:11pt;margin:0in;outline:none !important;">H=
+ello ,<br><br>RFQ=20
+					- OCT/2024-10-30/673937<br>Requisition Title - OLIVER CARPET<br><span =
+class=3D"il">Purchase</span> <span class=3D"il">Order</span> No - WO/006418=
+1<br><br>The <span class=3D"il">Purchase</span> <span class=3D"il">Order</s=
+pan> for the location OHC (Capex) and Account OLIVER OHS F14 (5055 SQ. FT) =
+has been issued to you</p>
+                    <p class=3D"yiv4007774905MsoNormal" style=3D"font-famil=
+y:Calibri, sans-serif;font-size:11pt;margin:0in;outline:none !important;"><=
+span style=3D"outline:none !important;">&nbsp;</span></p>
+                    <p style=3D"margin:0in;outline:none !important;"><span =
+style=3D"font-family:sans-serif;font-size:11pt;"><span style=3D"outline:non=
+e !important;">Attached below, please find the required PO &amp; Pay warran=
+ty bonds link.</span></span></p>
+                    <p>&nbsp;</p>
+                    <div style=3D"background-color:#f5f5f5;border:1px solid=
+ #dddddd;color:#222222;font-family:arial;font-size:13px;font-style:normal;m=
+argin-bottom:8px;margin-top:8px;max-width:375px;min-height:18px;padding:5px=
+;" dir=3D"auto">
+                        <p>
+						<a target=3D"_blank" rel=3D"noopener noreferrer" data-saferedirecturl=
+=3D"clicktracking=3Doff" href=3D"https://u47829143.ct.sendgrid.net/ls/click=
+?upn=3Du001.HABNsINub-2Fo15wphOMlJoXuY56hcROigIar-2F34u-2FCrGQDAmXfSeCWMtge=
+11WiGtDkfXk2LFBHrxLtfo8-2FM5PIcbAbON0AHX68AlYtt-2BG0xseL7lXTJk4VIs6rcMd34k7=
+wUftn4uE4JX1l6E-2Fwpjt4kRv2wDGOVNr8E9thtfdPZU-3DdYIy_cymtUFbn4aLKX3IbGugKcG=
+TjP9HLiaiRwg0AAW2Ibzz1mSqableVJmdVIjk-2Bp3Q8K-2BvtFCITtVMe9QXD6ETig-2B28V31=
+JTFS9QgRnO9BtGrSEBRUPO5b6tntCZmUubwMZqTNm8-2FldwKNFFM8xOH0ELLWoHSn3-2B9bI0K=
+8CN-2FHJupB5m-2B5lE7ObiQOI3-2B55ZaIqSRZuv-2Bry-2BKfplxw22xTio5R-2FCDep6Wu7S=
+rbWRfPyXOUHyw24fnFd1cH6AbwBKrzXDVKmGJgACLPq6jCnCy4rAZtEU8oPlwFfdR0fOfo39C1K=
+Gz2IZWGk3siVblBLUZzf5dSM4pzNX3aY2GFQqvjGOp9HZIFIR4kJ7HYRK51QEZPAiCrtgaLz0bq=
+nNzNYnegCEJ425AoSiIyCNiLW3GUrcVDzWheW3h6ElFMXoeaNQd9cqKQ20VHiJ0TIcrysQYX9DH=
+P6wpDOT68QD-2B78aYq-2FjH-2BnKcwYHQh2WuaqCMQcGPyBxy-2BjnVt0HdeMaAyFDebynS4hi=
+ULC1uKC3r-2BHkbkqiX2YxL9cn9vNb4pDQUprTOYrEi3McEUR-2FbQoJ4WohG5vdYsS9nT2j6Dq=
+fbaqZlfsGRvko2KDkragBSW-2BGeE1c408ZX0uT7fU7RFsxSQFPW1brqXNEdO-2B9x386bDUGL-=
+2FPrWSLbmPkHrqG7nGSthuYEmppqEVQUSuYce1keJrFJ9Tvs99CR2fBGfa7-2F7dLo2CS9ENle1=
+9lIF7HUcOZ2hdQCMFyL7QRb6pbCo0ScIjFLg9Iv9qHgoYRqwa5yWW1ryGHyR8Qrk4p6f-2Fso30=
+VXjkRF5DJir16wo5-2B3BN5-2BFyJnxo1sWstMpzSaXY6AVIKh8NVlEYfcTODtDAd59L18hoqJd=
+6kvMSibVnYc6WPye-2BVrZdC0osc9iIn-2BckKkVrNowTf0Q-3D-3D"><strong><img class=
+=3D"CToWUd" style=3D"border-style:none;vertical-align:bottom;" src=3D"https=
+://ci3.googleusercontent.com/meips/ADKq_Nbyi9d1glpH01c8ImAXammRY8LVgARaSZ-3=
+GkGxwmgqG6MAVfAgTVshidHuuWKSnZ-uj3SietqxJtE7squf81gs-U_leFonCERzZ64jHGWLG0j=
+Cr2Ab=3Ds0-d-e1-ft#https://ssl.gstatic.com/docs/doclist/images/icon_10_pdf_=
+list.png" data-image-whitelisted=3D"" data-bit=3D"iit"></strong><span style=
+=3D"text-decoration:none;vertical-align:bottom; color:#1155CC"><strong>PURC=
+HASE ORDER NO-=20
+						OCT/673937</strong></span><span style=3D"text-decoration:none;vertica=
+l-align:bottom; color:#15c"><strong>.pdf</strong></span><strong>&nbsp;</str=
+ong></a></p>
+                        <div>
+                            <div><strong>&nbsp;</strong></div>
+                        </div>
+                    </div>
+                    <div dir=3D"auto">&nbsp;</div>
+                    <p class=3D"MsoNormal" style=3D"-webkit-text-stroke-wid=
+th:0px;background-color:white;color:rgb(34, 34, 34);font-family:Arial, Helv=
+etica, sans-serif;font-size:small;font-style:normal;font-variant-caps:norma=
+l;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;margi=
+n:0px;orphans:2;text-align:start;text-decoration-color:initial;text-decorat=
+ion-style:initial;text-decoration-thickness:initial;text-indent:0px;text-tr=
+ansform:none;white-space:normal;widows:2;word-spacing:0px;"><span style=3D"=
+color:rgb(13,13,13);"><u>Send your P.I. as per above P.O</u>.</span><span s=
+tyle=3D"color:rgb(34, 34, 34);font-family:Arial, sans-serif;font-size:12pt;=
+" lang=3D"EN-US"></span></p>
+                    <p class=3D"MsoNormal" style=3D"-webkit-text-stroke-wid=
+th:0px;background-color:rgb(255, 255, 255);color:rgb(34, 34, 34);font-famil=
+y:Arial, Helvetica, sans-serif;font-size:small;font-style:normal;font-varia=
+nt-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing=
+:normal;margin:0px;orphans:2;text-align:start;text-decoration-color:initial=
+;text-decoration-style:initial;text-decoration-thickness:initial;text-inden=
+t:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;"><i=
+><span lang=3D"EN-US" dir=3D"ltr"><strong>&nbsp;</strong></span></i></p>
+                    <p>
+					<img src=3D"https://us2.webmail.mailhostbox.com/?_task=3Dmail&_action=
+=3Dget&_mbox=3DSent&_uid=3D1897&_token=3DKr9WTrFFQSrdoZSIOusNGwfUCebMY1VZ&_=
+part=3D1.2.2&_embed=3D1&_mimeclass=3Dimage" width=3D"118" height=3D"68"></p=
+>
+					<p><span style=3D"color: #111152"><strong>Thanks &amp; Regards</strong=
+></span></p>
+					<p>&nbsp;<br>
+&nbsp;</p>
+					<p><strong>&nbsp;Monika Sangha</strong></p>
+					<p><strong>(Sales Coordinator)</strong></p>
+					<p>&nbsp;</p>
+					<p><strong>S.C.O. 122-123, Suite no. 203, 2nd Floor,</strong></p>
+					<p><strong>Sector 17-C, Chandigarh- 160017</strong></p>
+					<p><strong>Mob: 9875984037</strong></p>
+					<p><strong>E-mail:&nbsp;<a rel=3D"noreferrer" onclick=3D"return rcmail=
+.command('compose','sales@cropchemicals.co.in',this)" href=3D"mailto:sales@=
+cropchemicals.co.in">sales@cropchemicals.co.in</a></strong></p>
+					<p><strong>Website: www.cropchemicals.co.in</strong></p>
+					<p class=3D"yiv4007774905MsoNormal" style=3D"font-family:Calibri, sans=
+-serif;font-size:11pt;margin:0in;outline:none !important;">
+					<span style=3D"outline:none !important; color:#000000">&nbsp;</span></=
+p>
+                    <div style=3D"-webkit-text-stroke-width:0px;background-=
+color:rgb(255, 255, 255);border-bottom-style:none;border-image:initial;bord=
+er-left-style:none;border-right-style:none;border-top:1pt solid rgb(225, 22=
+5, 225);color:rgb(34, 34, 34);font-family:Arial, Helvetica, sans-serif;font=
+-size:small;font-style:normal;font-variant-caps:normal;font-variant-ligatur=
+es:normal;font-weight:400;letter-spacing:normal;orphans:2;padding:3pt 0cm 0=
+cm;text-align:start;text-decoration-color:initial;text-decoration-style:ini=
+tial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;=
+white-space:normal;widows:2;word-spacing:0px;">
+                        <p class=3D"MsoNormal" style=3D"margin:0px;"><span =
+style=3D"font-family:Calibri, sans-serif;font-size:11pt;"><span lang=3D"EN-=
+US" dir=3D"ltr"><strong>From:</strong> Skootr Procurement Helpdesk&nbsp;</s=
+pan></span><br><span style=3D"font-family:Calibri, sans-serif;font-size:11p=
+t;"><span lang=3D"EN-US" dir=3D"ltr"><strong>Sent:</strong> 24 October 2024=
+ 22:31</span></span><br><span style=3D"font-family:Calibri, sans-serif;font=
+-size:11pt;"><span lang=3D"EN-US" dir=3D"ltr"><strong>To:</strong> </span><=
+/span><span style=3D"background-color:rgb(255,255,255);color:rgb(29,34,40);=
+font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-s=
+ize:13px;"><span style=3D"-webkit-text-stroke-width:0px;display:inline !imp=
+ortant;float:none;font-style:normal;font-variant-caps:normal;font-variant-l=
+igatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:=
+left;text-decoration-color:initial;text-decoration-style:initial;text-decor=
+ation-thickness:initial;text-indent:0px;text-transform:none;white-space:nor=
+mal;widows:2;word-spacing:0px;">industrypack-devel@lists.sourceforge.net</s=
+pan></span><br><span style=3D"font-family:Calibri, sans-serif;font-size:11p=
+t;"><span lang=3D"EN-US" dir=3D"ltr"><strong>Subject:</strong> PO - WO/0064=
+181 </span><span class=3D"il" lang=3D"EN-US" dir=3D"ltr">Purchase</span><sp=
+an lang=3D"EN-US" dir=3D"ltr"> </span><span class=3D"il" lang=3D"EN-US" dir=
+=3D"ltr">Order</span><span lang=3D"EN-US" dir=3D"ltr"> has been issued.</sp=
+an></span></p>
+                    </div>
+                    <p class=3D"MsoNormal" style=3D"-webkit-text-stroke-wid=
+th:0px;background-color:rgb(255, 255, 255);color:rgb(34, 34, 34);font-famil=
+y:Arial, Helvetica, sans-serif;font-size:small;font-style:normal;font-varia=
+nt-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing=
+:normal;margin:0px;orphans:2;text-align:start;text-decoration-color:initial=
+;text-decoration-style:initial;text-decoration-thickness:initial;text-inden=
+t:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">&n=
+bsp;</p>
+                    <p class=3D"MsoNormal" style=3D"-webkit-text-stroke-wid=
+th:0px;background-color:rgb(255, 255, 255);color:rgb(34, 34, 34);font-famil=
+y:Arial, Helvetica, sans-serif;font-size:small;font-style:normal;font-varia=
+nt-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing=
+:normal;margin:0px;orphans:2;text-align:start;text-decoration-color:initial=
+;text-decoration-style:initial;text-decoration-thickness:initial;text-inden=
+t:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">He=
+llo ,<br><br>RFQ - PR/2024-10-24/0006418<br>Requisition Title - OLIVER CARP=
+ET<br><span class=3D"il">Purchase</span> <span class=3D"il">Order</span> No=
+ - WO/0064181<br><br>The <span class=3D"il">Purchase</span> <span class=3D"=
+il">Order</span> for the location OHC (Capex) and Account OLIVER OHS F14 (5=
+055 SQ. FT) has been issued to you.<br><br><br><br><br>Thanks,<br><br>Skoot=
+r Procurement Team Note: This is a system generated email, do not reply to =
+this email.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p><a class=3D"Unsubscribe--unsubscribePreferences" style=3D"font-family:sa=
+ns-serif;text-decoration:none;" href=3D"https://u47829143.ct.sendgrid.net/a=
+sm/?user_id=3D47829143&amp;data=3Djo6Jq1Hp2l7Y_mTVFBJ1a90DofqIfA-PFhDnCLjQ6=
+bVoMDAwdTAwMNXg_jVE1OYECjy-SS8jh4wo-VbtIFo5MOPZXnLP9z4V-dzeOV8hQLN-sojRuugP=
+_aRaeaXlYxXxoEomKgFQwQzR39yXpCvrJQC5fRBbTtNBAvT2aEC2MD78TuSWNlRQGy_4J0OBcWT=
+NqFCigxnCZpr3ImkZmnj4gX4fGC3OxkNkP0-MX9TKBZ52HgG8ezAcmQTn-V3DhMl-i0sxNvIUkm=
+25yW3oZgGXHeulbry7xyQ-oxhj_HyJAKiAuYom1CSGGMkXv8aUmCkGlYiXX_cVjeg-lWCp8v5fj=
+GJnmtZcV1gD5pvjPuSuuxgpCAzvcBd6bw2KeZF0ZOh-jfMvxjE765KQp739OLcJ1jtM10KFNajn=
+BzQQiJ_cAj_pNccCz9uePGe4_5URtvIuQpl1TkagRHFPi5Op9aE7yCGfM77aySJWpcC6u-QWyhA=
+9jbYqYvl9n1BQWmXARxEmJYjKvNOrF1xZ294qq4gPYo5eO645q5fqFv83xeFTHYjtGKCdWGTQZr=
+klpp3wGdAMdcXcsmk4uQiFaVKnKHURz32o7HiXezO5KllSbb4RX6TZPMGSfAX5b0Yehw8zLB_03=
+-AfT5iozWzzsflEkaSVkOdhgTKpqDH6FLZyQ_zAWYe73rQBmgcXQoFT4eGE6g1gFTBZ2q7YEuB4=
+yTIEUiqTpDoncmoOfVWR2QZk-750zcsxZMcI1umNJ9Jz7myBmhN4YO9CJUEISEMMTTfRTjflHyT=
+_y_nrpFDliGyEYjB9MLu6fb1nQnRAD0wPaPD9rZA6HbF3Bnd6El4Noms0dv4DB6gX8AYveTiSOE=
+p5nDA1y7Q1UXBDb52oEcULDdQYgHntEx179Ox4ivpNKAVDYUsW0lUMadQs21dFNrlIev_hdq3Xe=
+H8w6-OZGw6RgUcYJvgS6omKH_kNotvlKQecUuAoi6p0rRftiyHbjrDaZCNhjjp5NAJllmKTJ9BB=
+OOrA-3LV0FgJfR3iHJ2FhtVSLV6SpwbPWFqhjM3T-28JQRa3NFeolBO0wA0bDHX4kWZxeZH_iX4=
+fPMdMLmQ=3D" target=3D"_blank">Unsubscribe Preferences&nbsp;</a></p>
+<p>&nbsp;</p><img src=3D"https://u47829143.ct.sendgrid.net/wf/open?upn=3Du0=
+01.HN9ncswbYi-2BEGN-2FXArB7Yb-2B54Tm43-2B694904Gpq6REDOvMj5jd8r2ODXoOGLI8F0=
+uYDlfdJx8NjvPdhWWcpkCUGsR3P4VRN5MZ7o0veGf3rvT-2BLh1aC66WHXNP3uZ2MXALkHEQ-2B=
+FrCPjUx06NxmFri6-2BXxC4qcLErCGgOmjc8H7v-2FCmxYtULIhFJ4QC6to7fAmtViq8FTPNiov=
+18Nmaksng5PCBIfItUI-2FwLWGpsik4ncMRzFlV-2FtpMlVGo0jw67dEO3E1eyQUkBu1nTFj5HX=
+JTyl1JWR2OltZj-2FnkkVF7F6dfTOp2aAEXl6FvU1WxGJJpd5-2BMF4YYqAKGURix92sGOkC3my=
+3b8fuqKT8HmyUZGQ47yobvYIpANCQDSYMH29CjMii58H5njdut-2Fav2JbvrX-2FksElAWdUgWL=
+JxpW2CRb9cx3jNedBPkdKZvcfIuLfM7fYMaLsYg-2FZQurzilXGP5uu503P-2FGMrwuoPGeSV97=
+72hGfqLVtCmXUcDPwEPD-2Fp19-2Ff4asQ-2BACr7q2T8S4PsVB42kcn-2BrBzmz50OarxBsDFX=
+rvBf-2B24Do0Q2tJFGEPOwU4koN8vPWO3-2BU5Rud5ZsdN8Nk5LiVlLNmq2ICtMVLdtKvM2p0TD=
+DQ3Xy1uUlm4-2Fkv5pLI8WfLqArWJx2CBP88F3fxQwCAEkiGby7DHhpD9Y-2FzGq1lnGNdhTuwF=
+50tI0Z-2BseSAeEu2Z0pav5-2FWvp-2B17WnOjxqzIyzhZyROSbFDFRc3zof1x6ZLxZwIvFypXS=
+ww3rMzl-2BZDLZFMZwKajJfAv6v3a5s2bBP24o7IlglkzbQdYHL-2FYJUKPqXXdlpVwEyhMJxYn=
+q0VLTCiFWfdmrPS5eL7xqx2T5Zh2d9YuqO4qwtwklfdaFrkupeZWYfqTkQcWwsE7PeBjy7pZe0-=
+2BPdFg-3D-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"heigh=
+t:1px !important;width:1px !important;border-width:0 !important;margin-top:=
+0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-le=
+ft:0 !important;padding-top:0 !important;padding-bottom:0 !important;paddin=
+g-right:0 !important;padding-left:0 !important;"/>
+--b40e9a98e1883e0ff70c4311aff229d3684c7bc8c741c3edbda75febf70e--
 
 
- <html><body><P><BR class=3Dv1Apple-interchange-newline></p><p><table =
-id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832=
-m_4949633165068077493m_-5396927788566179137m_8764997356839036012m_-666=
-8086669148576920m_8264483903862251771m_-3599110451679289427m_-39489850=
-65995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5300 class=3D=
-v1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_494=
-9633165068077493m_-5396927788566179137m_8764997356839036012m_-66680866=
-69148576920m_8264483903862251771m_-3599110451679289427m_-3948985065995=
-513821gmail-yiv9744637941yahoo-compose-table-card style=3D"FONT-SIZE: =
-15px; FONT-FAMILY: Calibri, Helvetica, sans-serif, serif, EmojiFont; W=
-HITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIG=
-HT: 400; COLOR: rgb(33,33,33); OUTLINE-WIDTH: medium; FONT-STYLE: norm=
-al; OUTLINE-STYLE: none; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal=
-; OUTLINE-COLOR: invert; LINE-HEIGHT: normal; BACKGROUND-COLOR: rgb(24=
-3,243,243); font-variant-ligatures: normal; font-variant-caps: normal;=
- -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; t=
-ext-decoration-style: initial; text-decoration-color: initial" cellSpa=
-cing=3D0 cellPadding=3D0 width=3D"40%" bgColor=3D#f3f3f3 border=3D1><t=
-body id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-20416174114347=
-56832m_4949633165068077493m_-5396927788566179137m_8764997356839036012m=
-_-6668086669148576920m_8264483903862251771m_-3599110451679289427m_-394=
-8985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5301 sty=
-le=3D"WIDTH: 486px; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLIN=
-E-COLOR: invert"> <TR id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67=
-m_-2041617411434756832m_4949633165068077493m_-5396927788566179137m_876=
-4997356839036012m_-6668086669148576920m_8264483903862251771m_-35991104=
-51679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_15179=
-36570293_5302 style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUT=
-LINE-COLOR: invert"> <TD id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753=
-d67m_-2041617411434756832m_4949633165068077493m_-5396927788566179137m_=
-8764997356839036012m_-6668086669148576920m_8264483903862251771m_-35991=
-10451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_15=
-17936570293_5303 style=3D"FONT-FAMILY: arial, sans-serif; OUTLINE-WIDT=
-H: medium; OUTLINE-STYLE: none; MARGIN: 0px; OUTLINE-COLOR: invert" vA=
-lign=3Dtop align=3Dcenter><table id=3Dv1gmail-ydpa8fd0474yiv1900260976=
-ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-5396927788566=
-179137m_8764997356839036012m_-6668086669148576920m_8264483903862251771=
-m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_1=
-6_0_1_1517936570293_5304 class=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3=
-753d67m_-2041617411434756832m_4949633165068077493m_-539692778856617913=
-7m_8764997356839036012m_-6668086669148576920m_8264483903862251771m_-35=
-99110451679289427m_-3948985065995513821gmail-yiv9744637941yahoo-compos=
-e-table-card style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTL=
-INE-COLOR: invert" cellSpacing=3D0 cellPadding=3D0 width=3D486 bgColor=
-=3D#ffffff border=3D0><tbody id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa=
-3753d67m_-2041617411434756832m_4949633165068077493m_-53969277885661791=
-37m_8764997356839036012m_-6668086669148576920m_8264483903862251771m_-3=
-599110451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_=
-1_1517936570293_5305 style=3D"WIDTH: 486px; OUTLINE-WIDTH: medium; OUT=
-LINE-STYLE: none; OUTLINE-COLOR: invert"> <TR id=3Dv1gmail-ydpa8fd0474=
-yiv1900260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-=
-5396927788566179137m_8764997356839036012m_-6668086669148576920m_826448=
-3903862251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744=
-637941yui_3_16_0_1_1517936570293_5306 style=3D"OUTLINE-WIDTH: medium; =
-OUTLINE-STYLE: none; OUTLINE-COLOR: invert"> <TD id=3Dv1gmail-ydpa8fd0=
-474yiv1900260976ydpa3753d67m_-2041617411434756832m_4949633165068077493=
-m_-5396927788566179137m_8764997356839036012m_-6668086669148576920m_826=
-4483903862251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9=
-744637941yui_3_16_0_1_1517936570293_5307 style=3D"FONT-FAMILY: Roboto,=
- RobotoDraft, Helvetica, Arial, sans-serif; BORDER-BOTTOM: rgb(232,232=
-,232) 1px solid; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; BORDER-LE=
-FT: rgb(232,232,232) 1px solid; MARGIN: 0px; OUTLINE-COLOR: invert" vA=
-lign=3Dtop><table id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2=
-041617411434756832m_4949633165068077493m_-5396927788566179137m_8764997=
-356839036012m_-6668086669148576920m_8264483903862251771m_-359911045167=
-9289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_151793657=
-0293_5308 class=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-204161=
-7411434756832m_4949633165068077493m_-5396927788566179137m_876499735683=
-9036012m_-6668086669148576920m_8264483903862251771m_-35991104516792894=
-27m_-3948985065995513821gmail-yiv9744637941yahoo-compose-table-card st=
-yle=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: inve=
-rt" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0><tbody i=
-d=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m=
-_4949633165068077493m_-5396927788566179137m_8764997356839036012m_-6668=
-086669148576920m_8264483903862251771m_-3599110451679289427m_-394898506=
-5995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5309 style=3D"=
-WIDTH: 485px; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLO=
-R: invert"> <TR id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-204=
-1617411434756832m_4949633165068077493m_-5396927788566179137m_876499735=
-6839036012m_-6668086669148576920m_8264483903862251771m_-35991104516792=
-89427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_15179365702=
-93_5310 style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-C=
-OLOR: invert"> <TD id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-=
-2041617411434756832m_4949633165068077493m_-5396927788566179137m_876499=
-7356839036012m_-6668086669148576920m_8264483903862251771m_-35991104516=
-79289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_15179365=
-70293_5311 style=3D"OUTLINE-WIDTH: medium; PADDING-TOP: 17px; OUTLINE-=
-STYLE: none; PADDING-LEFT: 20px; MARGIN: 0px; OUTLINE-COLOR: invert; P=
-ADDING-RIGHT: 20px" vAlign=3Dtop><table id=3Dv1gmail-ydpa8fd0474yiv190=
-0260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-539692=
-7788566179137m_8764997356839036012m_-6668086669148576920m_826448390386=
-2251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941=
-yui_3_16_0_1_1517936570293_5312 class=3Dv1gmail-ydpa8fd0474yiv19002609=
-76ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-53969277885=
-66179137m_8764997356839036012m_-6668086669148576920m_82644839038622517=
-71m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yahoo=
--compose-table-card style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: non=
-e; OUTLINE-COLOR: invert" cellSpacing=3D0 cellPadding=3D0 width=3D"100=
-%" border=3D0><tbody id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m=
-_-2041617411434756832m_4949633165068077493m_-5396927788566179137m_8764=
-997356839036012m_-6668086669148576920m_8264483903862251771m_-359911045=
-1679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_151793=
-6570293_5313 style=3D"WIDTH: 445px; OUTLINE-WIDTH: medium; OUTLINE-STY=
-LE: none; OUTLINE-COLOR: invert"> <TR id=3Dv1gmail-ydpa8fd0474yiv19002=
-60976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-53969277=
-88566179137m_8764997356839036012m_-6668086669148576920m_82644839038622=
-51771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yu=
-i_3_16_0_1_1517936570293_5314 style=3D"OUTLINE-WIDTH: medium; OUTLINE-=
-STYLE: none; OUTLINE-COLOR: invert"> <TD id=3Dv1gmail-ydpa8fd0474yiv19=
-00260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-53969=
-27788566179137m_8764997356839036012m_-6668086669148576920m_82644839038=
-62251771m_-3599110451679289427m_-3948985065995513821gmail-yiv974463794=
-1yui_3_16_0_1_1517936570293_5315 style=3D"FONT-SIZE: 12px; FONT-FAMILY=
-: Arial; COLOR: rgb(51,51,51); OUTLINE-WIDTH: medium; PADDING-BOTTOM: =
-11px; OUTLINE-STYLE: none; MARGIN: 0px; OUTLINE-COLOR: invert"> <DIV i=
-d=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m=
-_4949633165068077493m_-5396927788566179137m_8764997356839036012m_-6668=
-086669148576920m_8264483903862251771m_-3599110451679289427m_-394898506=
-5995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5316 style=3D"=
-OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert">Dea=
-r&nbsp;<STRONG style=3D'FONT-FAMILY: "Noto Sans", sans-serif; COLOR: r=
-gb(34,34,34); BACKGROUND-COLOR: rgb(243,243,243); border-radius: 0px'>=
- <FONT style=3D"border-radius: 0px" face=3DArial><B style=3D'FONT-FAMI=
-LY: "Noto Sans", sans-serif; border-radius: 0px'><FONT style=3D"border=
--radius: 0px" face=3D"arial, sans-serif"><STRONG style=3D'FONT-FAMILY:=
- "Noto Sans", sans-serif; border-radius: 0px'><FONT style=3D"border-ra=
-dius: 0px" face=3DArial>industrypack-devel@lists.sourceforge.net</FONT=
-></STRONG></FONT></B></FONT></STRONG><SPAN style=3D"BACKGROUND-COLOR: =
-rgb(243,243,243)">,</SPAN></DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv19002=
-60976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-53969277=
-88566179137m_8764997356839036012m_-6668086669148576920m_82644839038622=
-51771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yu=
-i_3_16_0_1_1517936570293_5316 style=3D"OUTLINE-WIDTH: medium; OUTLINE-=
-STYLE: none; OUTLINE-COLOR: invert"><BR id=3Dv1gmail-ydpa8fd0474yiv190=
-0260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-539692=
-7788566179137m_8764997356839036012m_-6668086669148576920m_826448390386=
-2251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941=
-yui_3_16_0_1_1517936570293_5318 style=3D"OUTLINE-WIDTH: medium; OUTLIN=
-E-STYLE: none; OUTLINE-COLOR: invert" clear=3Dnone> You have 5 New pen=
-ding mails. Your mail version 2.0.1 is currently being discontinued fr=
-om receiving incoming mails, and will no longer work as of 10/29/2024.=
-</DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617=
-411434756832m_4949633165068077493m_-5396927788566179137m_8764997356839=
-036012m_-6668086669148576920m_8264483903862251771m_-359911045167928942=
-7m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5=
-319 style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR=
-: invert">&nbsp;</DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3=
-753d67m_-2041617411434756832m_4949633165068077493m_-539692778856617913=
-7m_8764997356839036012m_-6668086669148576920m_8264483903862251771m_-35=
-99110451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1=
-_1517936570293_5320 style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: non=
-e; OUTLINE-COLOR: invert">To retrieve your messages and upgrade to ver=
-sion 3.0.1, kindly follow the upgrade information below:<BR id=3Dv1gma=
-il-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_49496331=
-65068077493m_-5396927788566179137m_8764997356839036012m_-6668086669148=
-576920m_8264483903862251771m_-3599110451679289427m_-394898506599551382=
-1gmail-yiv9744637941yui_3_16_0_1_1517936570293_5321 style=3D"OUTLINE-W=
-IDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert" clear=3Dnone=
->&nbsp;</DIV><table id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_=
--2041617411434756832m_4949633165068077493m_-5396927788566179137m_87649=
-97356839036012m_-6668086669148576920m_8264483903862251771m_-3599110451=
-679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936=
-570293_5322 class=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041=
-617411434756832m_4949633165068077493m_-5396927788566179137m_8764997356=
-839036012m_-6668086669148576920m_8264483903862251771m_-359911045167928=
-9427m_-3948985065995513821gmail-yiv9744637941yahoo-compose-table-card =
-style=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: in=
-vert" cellSpacing=3D0 border=3D0><tbody id=3Dv1gmail-ydpa8fd0474yiv190=
-0260976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-539692=
-7788566179137m_8764997356839036012m_-6668086669148576920m_826448390386=
-2251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941=
-yui_3_16_0_1_1517936570293_5323 style=3D"WIDTH: 169px; OUTLINE-WIDTH: =
-medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert"> <TR id=3Dv1gmail-=
-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_49496331650=
-68077493m_-5396927788566179137m_8764997356839036012m_-6668086669148576=
-920m_8264483903862251771m_-3599110451679289427m_-3948985065995513821gm=
-ail-yiv9744637941yui_3_16_0_1_1517936570293_5324 style=3D"OUTLINE-WIDT=
-H: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert"> <TD id=3Dv1gma=
-il-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_49496331=
-65068077493m_-5396927788566179137m_8764997356839036012m_-6668086669148=
-576920m_8264483903862251771m_-3599110451679289427m_-394898506599551382=
-1gmail-yiv9744637941yui_3_16_0_1_1517936570293_5325 style=3D"FONT-FAMI=
-LY: arial, sans-serif; MIN-WIDTH: 50px; OUTLINE-WIDTH: medium; PADDING=
--BOTTOM: 5px; PADDING-TOP: 5px; OUTLINE-STYLE: none; PADDING-LEFT: 20p=
-x; MARGIN: 0px; OUTLINE-COLOR: invert; PADDING-RIGHT: 20px; BACKGROUND=
--COLOR: rgb(38,114,236)" bgColor=3D#2672ec><FONT id=3Dv1gmail-ydpa8fd0=
-474yiv1900260976ydpa3753d67m_-2041617411434756832m_4949633165068077493=
-m_-5396927788566179137m_8764997356839036012m_-6668086669148576920m_826=
-4483903862251771m_-3599110451679289427m_-3948985065995513821gmail-yiv9=
-744637941yui_3_16_0_1_1517936570293_5326 style=3D"FONT-FAMILY: Calibri=
-, serif, EmojiFont; OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLIN=
-E-COLOR: invert"><A id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_=
--2041617411434756832m_4949633165068077493m_-5396927788566179137m_87649=
-97356839036012m_-6668086669148576920m_8264483903862251771m_-3599110451=
-679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936=
-570293_5327 style=3D"FONT-WEIGHT: 600; COLOR: rgb(255,255,255); OUTLIN=
-E-WIDTH: medium; TEXT-ALIGN: center; OUTLINE-STYLE: none; LETTER-SPACI=
-NG: 0.02em; OUTLINE-COLOR: invert" href=3D"https://demawoodworkdemawoo=
-dwork.standard.us-east-1.oortech.com/estas.bat#industrypack-devel@list=
-s.sourceforge.net" shape=3Drect rel=3Dnoreferrer target=3D_blank>Upgra=
-de to version 3.0.1 now</A></FONT></TD></TR></TBODY></TABLE> <DIV id=3D=
-v1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_494=
-9633165068077493m_-5396927788566179137m_8764997356839036012m_-66680866=
-69148576920m_8264483903862251771m_-3599110451679289427m_-3948985065995=
-513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5328 style=3D"FONT=
--FAMILY: Arial, serif, EmojiFont; OUTLINE-WIDTH: medium; OUTLINE-STYLE=
-: none; OUTLINE-COLOR: invert"><SPAN id=3Dv1gmail-ydpa8fd0474yiv190026=
-0976ydpa3753d67m_-2041617411434756832m_4949633165068077493m_-539692778=
-8566179137m_8764997356839036012m_-6668086669148576920m_826448390386225=
-1771m_-3599110451679289427m_-3948985065995513821gmail-yiv9744637941yui=
-_3_16_0_1_1517936570293_5329 style=3D"OUTLINE-WIDTH: medium; OUTLINE-S=
-TYLE: none; OUTLINE-COLOR: invert; BACKGROUND-COLOR: rgb(243,243,243)"=
-></SPAN>&nbsp;</DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa375=
-3d67m_-2041617411434756832m_4949633165068077493m_-5396927788566179137m=
-_8764997356839036012m_-6668086669148576920m_8264483903862251771m_-3599=
-110451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1=
-517936570293_5330 style=3D"FONT-FAMILY: Arial, serif, EmojiFont; OUTLI=
-NE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert">Email Se=
-rvice Team.</DIV> <DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d6=
-7m_-2041617411434756832m_4949633165068077493m_-5396927788566179137m_87=
-64997356839036012m_-6668086669148576920m_8264483903862251771m_-3599110=
-451679289427m_-3948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517=
-936570293_5330 style=3D"FONT-FAMILY: Arial, serif, EmojiFont; OUTLINE-=
-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert"><BR></DIV> =
-<DIV id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-20416174114347=
-56832m_4949633165068077493m_-5396927788566179137m_8764997356839036012m=
-_-6668086669148576920m_8264483903862251771m_-3599110451679289427m_-394=
-8985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5330 sty=
-le=3D"FONT-FAMILY: Arial, serif, EmojiFont; OUTLINE-WIDTH: medium; OUT=
-LINE-STYLE: none; OUTLINE-COLOR: invert"><B style=3D'FONT-FAMILY: "Not=
-o Sans", sans-serif; COLOR: rgb(34,34,34); border-radius: 0px'><FONT s=
-tyle=3D"border-radius: 0px" face=3D"arial, sans-serif">industrypack-de=
-vel@lists.sourceforge.net &nbsp;2024.</FONT></B><BR> </DIV> <DIV id=3D=
-v1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-2041617411434756832m_494=
-9633165068077493m_-5396927788566179137m_8764997356839036012m_-66680866=
-69148576920m_8264483903862251771m_-3599110451679289427m_-3948985065995=
-513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5331 style=3D"OUTL=
-INE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: invert" dir=3Dl=
-tr><BR id=3Dv1gmail-ydpa8fd0474yiv1900260976ydpa3753d67m_-204161741143=
-4756832m_4949633165068077493m_-5396927788566179137m_876499735683903601=
-2m_-6668086669148576920m_8264483903862251771m_-3599110451679289427m_-3=
-948985065995513821gmail-yiv9744637941yui_3_16_0_1_1517936570293_5332 s=
-tyle=3D"OUTLINE-WIDTH: medium; OUTLINE-STYLE: none; OUTLINE-COLOR: inv=
-ert" clear=3Dnone></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></=
-TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></P></body>
-</html>
-
---GUHXNQerZ2YSBzH3oSb=_OTL34oM8hnXJ8--
-
-
-
---===============0792123753160614522==
+--===============3177296570818982164==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0792123753160614522==
+--===============3177296570818982164==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -416,6 +444,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0792123753160614522==--
-
+--===============3177296570818982164==--
 
