@@ -2,104 +2,87 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id DD92E9BC8AC
-	for <lists+industrypack-devel@lfdr.de>; Tue,  5 Nov 2024 10:09:07 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 628FE9C6623
+	for <lists+industrypack-devel@lfdr.de>; Wed, 13 Nov 2024 01:39:32 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1t8FYg-00060X-MG
+	id 1tB1Pv-0001dP-QM
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 05 Nov 2024 09:09:06 +0000
+	Wed, 13 Nov 2024 00:39:31 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <administrador@feniceconceito.com.br>)
- id 1t8FYf-00060I-1k for industrypack-devel@lists.sourceforge.net;
- Tue, 05 Nov 2024 09:09:05 +0000
+ (envelope-from <ihjkn@dtccmail.com>) id 1tB1Pp-0001d4-I5
+ for industrypack-devel@lists.sourceforge.net;
+ Wed, 13 Nov 2024 00:39:24 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
- Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:From:Date:Subject:To:List-id:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ :Resent-Message-ID:In-Reply-To:References:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Tr+emEaKV/tnOtYTgV4TMaESHJli93uuO8KcOQvEIXw=; b=CVstn6w6yzzwL/V0BZ4XfD6XV/
- f9Inzrq5xit5MygmluDldUHcaLEJdC2DyK9HWWhEJXdYzBYEzBQNoTgTCS5Pblb9VPEkGLdQdn8Qq
- +csyDh4lk37wh100y+vLc3BJcu0E54cQw9jrLXcmH0dcfVLiEbrY/JStdjvmQ7Dc8B7U=;
+ bh=8/lqsLReDmF2emMESTfRiU5sKzG4auzuJUI2qb/zUl4=; b=T2G8E6/7VFbTb/euFYc1PeXYz/
+ p/gNkQ+kK8B+DswXr7HrPGVixlpp0kT++bzeWVQGZ3+3e+QHnWbXLNgkdbJZL7v/5gIbGvpPGqkoc
+ 1TGxgpa9z7k7psEv/qMXvx6Y/zXXPFAnDUAty0uqZTJu/LGpenQSdPcQlQbsDyp6OeB0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Tr+emEaKV/tnOtYTgV4TMaESHJli93uuO8KcOQvEIXw=; b=G
- gVb3i7FaQ6jdTqW+wZ5a5qXDvxyh1e74uJKVR2oz+5U/UFZ2XvyBdxqhuHfPVNNg+6zv6c5Ik8NY5
- DRzAu7Ccc9HwJXqr7D4GcrScvpXRtJncOJQPBwE2unkuiPUe74yYbtzgveyZiAPd4NX+bFAcSQm2t
- ee0cBWWokcFgczCw=;
-Received: from smtp-sp221-233.uni5.net ([191.6.221.233])
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:From:Date:
+ Subject:To:List-id:Sender:Reply-To:Cc:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=8/lqsLReDmF2emMESTfRiU5sKzG4auzuJUI2qb/zUl4=; b=V
+ F8lYiDGk6hA9h+6HO52vF0YNi8m4ntKtieH+QYY299mfxhXR8Aa+vZQC3IGK7o09aoLnPpgCYUshI
+ JjdSDrMhYUeA4s9eyBoWGEvD4xvvDUVOEMZD1OO6ru+iGd5naL4PEiMomKsAvkcOxqzQD0JWwY0N0
+ SH/LWRvOo5zsv+3M=;
+Received: from [64.235.61.160] (helo=dtccmail.com)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1t8FYd-0003L6-2Y for industrypack-devel@lists.sourceforge.net;
- Tue, 05 Nov 2024 09:09:04 +0000
-Received: from smtp-sp221-11.uni5.net (smtp-sp221-11.uni5.net [191.6.221.11])
- (using TLSv1.2 with cipher ADH-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by smtp-sp221-233.uni5.net (Postfix) with ESMTPS id F1B1B20B1155
- for <industrypack-devel@lists.sourceforge.net>;
- Tue,  5 Nov 2024 05:45:39 -0300 (-03)
-Received: from [192.168.100.153] (unknown
- [IPv6:2804:1e68:c201:d7b0:a941:5673:3040:a1d0])
- (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
- key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
- (No client certificate requested)
- (Authenticated sender: administrador@feniceconceito.com.br)
- by smtp-sp221-11.uni5.net (Postfix) with ESMTPSA id C650B6173407
- for <industrypack-devel@lists.sourceforge.net>;
- Tue,  5 Nov 2024 05:45:23 -0300 (-03)
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=dkim.uni5.net;
- s=uni51; t=1730796327; bh=GywJIbptVdvE42vGWB99BapRofA=;
- h=From:To:Subject:From;
- b=YNVn50nroCDxMWObAzcbcDsk8HYzBxPEhW1TrbW/Fdvw/TAOmwXZaXOhq1sDRNUgF
- jCQ2aGD0bpXS+XprsX5lDkhGFIV4LHQjlJPzPUT9ZzTcWgEpTUn24HArW+2QfItt3E
- oe2bjR6ytEecVIdllu7ebRHg3bMtQxj05Sfsmmrk=
-Content-Type: multipart/mixed; boundary="===============3017210331157174861=="
-MIME-Version: 1.0
-From: adm<administrador@feniceconceito.com.br>
+ id 1tB1Pk-0003qB-5i for industrypack-devel@lists.sourceforge.net;
+ Wed, 13 Nov 2024 00:39:20 +0000
 To: industrypack-devel@lists.sourceforge.net
-X-SND-ID: yhA7QySrZPAfFP1Ng6FAuefsXFMQ4i2O+JFjNbciGzDuxg2DV8aAsXiuMP0D
- lK7DsLzSF5bV6CojLjhJDoaX0dmzoHX8jDRLNq6B2mPFX1/iS1vYhW/e49Vn
- /LnWqc6zVBDbnSeI86gYWCidKTFm32VYZnTXJv5SVllMTtu+zTRcAajWwq10
- a4sxded9qsYzePFAlqj+plb2vj5AWMEIXVIUJsRabGcrWEEkEq4Cnr1Pr8/k
- q99qryGuwvW42Giq7WwoWf6zHagLTEvsqfCt+i7zg0bM/8o1zSwI9a2crr5D
- Bhc8NxDgmPNJA4iNMpayA+i8O4t3i2F6gzvXFzubb4zU61TRO+/78lgFqo24
- Taw0qce42Ho1SIQRHQgNp9IxyQAPhZShlVLSEQUqSxnig/NbaKZstEXg6JTw
- yFLBcTUmwpOWHuQ0B55mrrh7nULOqa0xNbOjB9yKmA7OzJ57Vb8U13MIAvVU
- qjM42jmtTF7lR9Ig/Qe93uvEUrjGjZMlamJ3zatviff5Qfm6K32tcBqGOniY
- gLq9Ir3q+nV+Z4G6fg/oiYjJvSXTRCuvvh0SKP3yIDWlBIQWXdhXM69BxQ==
-X-Spam-Score: 5.2 (+++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+X-PHP-Originating-Script: 0:index.php
+Date: Wed, 13 Nov 2024 08:27:17 +0800
+From: Spotify <info@wecomagency.be>
+Message-ID: <e089e1dfc0f15c3b9c52e22233392e43@wecomagency.be>
+MIME-Version: 1.0
+X-mailer: Cabestan DMS
+X-Helo-Check: bad, Forged Random Domain (dtccmail.com)
+X-Spam-Score: 4.9 (++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  NFe Emissão de Nota Fiscal Eletrônica Prezado Cliente, 
- 
- Content analysis details:   (5.2 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  &nbsp; &nbsp; &nbsp; 
+ Content analysis details:   (4.9 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 MISSING_MID            Missing Message-Id: header
-  1.4 MISSING_DATE           Missing Date: header
-  2.6 DOS_BODY_HIGH_NO_MID   High bit body and no message ID header
-X-Headers-End: 1t8FYd-0003L6-2Y
-Subject: [Industrypack-devel] NFe - 0646698
+ 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [64.235.61.160 listed in bl.score.senderscore.com]
+ 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [64.235.61.160 listed in sa-trusted.bondedsender.org]
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+ 1.6 GOOG_REDIR_NORDNS      Google redirect to obscure spamvertised
+ website + no rDNS
+X-Headers-End: 1tB1Pk-0003qB-5i
+Subject: [Industrypack-devel] =?utf-8?q?Wir_k=C3=B6nnen_Ihre_Zahlung_nicht?=
+ =?utf-8?q?_verarbeiten=2E?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -111,70 +94,270 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
+Content-Type: multipart/mixed; boundary="===============2904983628873560009=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
-Message-Id: <E1t8FYg-00060X-MG@sfs-ml-2.v29.lw.sourceforge.com>
-Date: Tue, 05 Nov 2024 09:09:06 +0000
 
---===============3017210331157174861==
-Content-Type: text/html; charset="utf-8"
-MIME-Version: 1.0
-Content-Transfer-Encoding: base64
+This is a multi-part message in MIME format.
 
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9InB0LUJSIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFy
-c2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJzMDY0NjY5OCIgY29udGVudD0id2lkdGg9ZGV2
-aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+TkZlPC90aXRsZT4KICAg
-IDxzdHlsZT4KICAgICAgICBib2R5IHsKICAgICAgICAgICAgZm9udC1mYW1pbHk6IEFyaWFsLCBz
-YW5zLXNlcmlmOwogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7
-CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmOWY5Zjk7CiAgICAgICAgfQogICAgICAg
-IC5lbWFpbC1jb250YWluZXIgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAg
-bWF4LXdpZHRoOiA2MDBweDsKICAgICAgICAgICAgbWFyZ2luOiAwIGF1dG87CiAgICAgICAgICAg
-IGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7CiAgICAgICAgICAgIGJvcmRlcjogMXB4IHNvbGlk
-ICNlMGUwZTA7CiAgICAgICAgICAgIHBhZGRpbmc6IDIwcHg7CiAgICAgICAgfQogICAgICAgIC5o
-ZWFkZXIgewogICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgICAgIHBhZGRp
-bmctYm90dG9tOiAyMHB4OwogICAgICAgIH0KICAgICAgICAuaGVhZGVyIGgxIHsKICAgICAgICAg
-ICAgY29sb3I6ICMzMzMzMzM7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMjRweDsKICAgICAgICAg
-ICAgbWFyZ2luOiAwOwogICAgICAgIH0KICAgICAgICAuY29udGVudCB7CiAgICAgICAgICAgIGNv
-bG9yOiAjNTU1NTU1OwogICAgICAgICAgICBmb250LXNpemU6IDE2cHg7CiAgICAgICAgICAgIGxp
-bmUtaGVpZ2h0OiAxLjY7CiAgICAgICAgfQogICAgICAgIC5jb250ZW50IHAgewogICAgICAgICAg
-ICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDhweCAwOwogICAgICAgIH0KICAgICAg
-ICAuY3RhIHsKICAgICAgICAgICAgbWFyZ2luLXRvcDogMjBweDsKICAgICAgICAgICAgdGV4dC1h
-bGlnbjogY2VudGVyOwogICAgICAgIH0KICAgICAgICAuY3RhIGEgewogICAgICAgICAgICBkaXNw
-bGF5OiBpbmxpbmUtYmxvY2s7CiAgICAgICAgICAgIHBhZGRpbmc6IDEwcHggMjBweDsKICAgICAg
-ICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzAwN2JmZjsKICAgICAgICAgICAgY29sb3I6ICNmZmZm
-ZmY7CiAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTsKICAgICAgICAgICAgYm9yZGVy
-LXJhZGl1czogNXB4OwogICAgICAgICAgICBmb250LXdlaWdodDogYm9sZDsKICAgICAgICB9CiAg
-ICAgICAgLmZvb3RlciB7CiAgICAgICAgICAgIG1hcmdpbi10b3A6IDIwcHg7CiAgICAgICAgICAg
-IHRleHQtYWxpZ246IGNlbnRlcjsKICAgICAgICAgICAgZm9udC1zaXplOiAxMnB4OwogICAgICAg
-ICAgICBjb2xvcjogI2FhYWFhYTsKICAgICAgICB9CiAgICA8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5
-PgogICAgPGRpdiBjbGFzcz0iZW1haWwtY29udGFpbmVyIj4KICAgICAgICA8ZGl2IGNsYXNzPSJo
-ZWFkZXIiPgogICAgICAgICAgICA8aDE+RW1pc3PDo28gZGUgTm90YSBGaXNjYWwgRWxldHLDtG5p
-Y2E8L2gxPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9ImNvbnRlbnQiPgogICAg
-ICAgICAgICA8cD5QcmV6YWRvIENsaWVudGUsPC9wPgogICAgICAgICAgICA8cD5Hb3N0YXLDrWFt
-b3MgZGUgaW5mb3JtYXIgcXVlIHN1YSBOb3RhIEZpc2NhbCBFbGV0csO0bmljYSBmb2kgZ2VyYWRh
-IGNvbSBzdWNlc3NvLiBBYmFpeG8gZXN0w6NvIG9zIGRldGFsaGVzIHJlZmVyZW50ZXMgw6Agc3Vh
-IG5mOjwvcD4KICAgICAgICAgICAgPHA+PHN0cm9uZz5Ow7ptZXJvIGRhIE5GOjwvc3Ryb25nPiAw
-NjQ2Njk4PC9wPgogICAgICAgICAgICA8cD48c3Ryb25nPkRhdGEgZGUgRW1pc3PDo286PC9zdHJv
-bmc+IDA1IGRlIG5vdmVtYnJvIGRlIDIwMjQ8L3A+CiAgICAgICAgICAgIDxwPjxzdHJvbmc+VmFs
-b3IgVG90YWw6PC9zdHJvbmc+IDE2NzIsMDA8L3A+CiAgICAgICAgICAgIDxwPlBhcmEgdmlzdWFs
-aXphciBhIG5vdGEgZmlzY2FsIGNvbXBsZXRhIGUgZ2FyYW50aXIgbyBhY2Vzc28gYSB0b2RhcyBh
-cyBpbmZvcm1hw6fDtWVzLCBjbGlxdWUgbm8gYm90w6NvIGFiYWl4bzo8L3A+CiAgICAgICAgPC9k
-aXY+CiAgICAgICAgPGRpdiBjbGFzcz0iY3RhIj4KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cHM6
-Ly9pcy5nZC9sWnVmaW8/MDY0NjY5OCIgdGFyZ2V0PSJfYmxhbmsiIHJlbD0ibm9vcGVuZXIgbm9y
-ZWZlcnJlciI+VmlzdWFsaXphciBOb3RhIEZpc2NhbDwvYT4KICAgICAgICA8L2Rpdj4KICAgICAg
-ICA8ZGl2IGNsYXNzPSJmb290ZXIiPgogICAgICAgICAgICA8cD5Fc3RlIMOpIHVtIGUtbWFpbCBh
-dXRvbcOhdGljbyBlbnZpYWRvIHBvciBub3NzbyBzaXN0ZW1hIGRlIGVtaXNzw6NvIGRlIG5vdGFz
-IGZpc2NhaXMuIEVtIGNhc28gZGUgZMO6dmlkYXMsIGVudHJlIGVtIGNvbnRhdG8gY29ub3NjbyBw
-b3Igbm9zc29zIGNhbmFpcyBkZSBhdGVuZGltZW50by48L3A+CiAgICAgICAgPC9kaXY+CiAgICA8
-L2Rpdj4KPC9ib2R5Pgo8L2h0bWw+Cg==
+--===============2904983628873560009==
+Content-Type: multipart/alternative;
+	boundary="10ed3e53d0988f09ff70c12c9637a2cf9"
+Content-Transfer-Encoding: 8bit
 
---===============3017210331157174861==
+This is a multi-part message in MIME format.
+
+--10ed3e53d0988f09ff70c12c9637a2cf9
+Content-Type: text/plain; charset=us-ascii
+
+  
+
+  
+    
+      
+      &nbsp;
+    
+    
+      &nbsp;
+    
+  
+
+
+  
+    
+      &nbsp;
+    
+    
+      &nbsp;
+      
+      Wir
+k&ouml;nnen Ihre Zahlung nicht verarbeiten.
+      
+      &nbsp;
+    
+    
+      &nbsp;
+    
+  
+
+
+  
+    
+      &nbsp;
+    
+    
+      &nbsp;
+      
+      Wir
+haben Probleme beim Einzug Ihrer Spotify Premium-Zahlung. Bitte nehmen
+Sie sich einen Moment Zeit, um Ihre Zahlungsdetails zu
+&uuml;berpr&uuml;fen und sicherzustellen, dass auf dem
+zugeh&ouml;rigen Konto ausreichend Guthaben vorhanden ist. Wir
+werden versuchen, die Zahlung in ein paar Tagen erneut zu bearbeiten.
+      
+      &nbsp;
+    
+    
+      &nbsp;
+    
+  
+
+
+  
+    
+      &nbsp;
+    
+    
+      &nbsp;
+      
+      
+        
+          
+            
+            
+            
+              
+                
+                  &nbsp;
+                  Informationen aktualisieren
+                  &nbsp;
+                
+              
+            
+            
+            
+          
+        
+      
+      
+      &nbsp;
+    
+    
+      &nbsp;
+    
+  
+
+
+
+
+--10ed3e53d0988f09ff70c12c9637a2cf9
+Content-Type: text/html; charset=us-ascii
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>  <title></title></head><body>
+<table
+ style="padding: 0px; border-collapse: collapse; background-color: rgb(255, 255, 255); text-align: left; width: 480px; height: 50px;">
+  <tbody style="border: medium none ; margin: 0px; padding: 0px;">
+    <tr style="border: medium none ; margin: 0px; padding: 0px;">
+      <td style="border: medium none ; margin: 0px; padding: 0px;"><a
+ data-saferedirecturl="https://www.google.com/url?q=https://wl.spotify.com/ss/c/u001.0fJ1LQ6VCBzrSH1Zl1-T2g2RIViyZ1IJSmVF4HNi5HY/481/6JEDNoKfRCe7KqooUFAilw/h0/h001.gK7RhYj5qWKIpnRAn_hUC-zTIsL3QTEomukmwx89mz8&amp;source=gmail&amp;ust=1729613144189000&amp;usg=AOvVaw3jaHSBNfSzhkHz9VBd4f1o"
+ href="https://wl.spotify.com/ss/c/u001.0fJ1LQ6VCBzrSH1Zl1-T2g2RIViyZ1IJSmVF4HNi5HY/481/6JEDNoKfRCe7KqooUFAilw/h0/h001.gK7RhYj5qWKIpnRAn_hUC-zTIsL3QTEomukmwx89mz8"
+ style="color: rgb(30, 215, 96); text-decoration: none;"
+ target="_blank"><img alt="" class="CToWUd"
+ data-bit="iit"
+ src="https://ci3.googleusercontent.com/meips/ADKq_NZk3RskkvSMXw5dTzvcGbdqMi6-Kxvi_10F5eCYmMzZ8T6fnX5rAh-o2hFXNSyiRVJFzRTPbwXpdHtO7y3G414Hi6DMao01NhTWfL3hXS0f1f03HbHfS22Jc8fN4fOAz64JS7o=s0-d-e1-ft#http://message-editor.scdn.co/newsletters/b220713a2d4ac7a75ebe1f9ee0c78549.png"
+ style="display: block; max-width: 100%; margin-right: auto; width: 122px; height: 37px;"
+ height="37"></a></td>
+      <td
+ style="border: medium none ; margin: 0px; padding: 0px; width: 24px;">&nbsp;</td>
+    </tr>
+    <tr
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">
+      <td colspan="3"
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table
+ style="padding: 0px; border-collapse: collapse; width: 480px; background-color: rgb(255, 255, 255); font-size: 28px; font-family: helvetica,arial,sans-serif ! important;"
+ dir="auto">
+  <tbody style="border: medium none ; margin: 0px; padding: 0px;">
+    <tr
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">
+      <td colspan="3"
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">&nbsp;</td>
+    </tr>
+    <tr style="border: medium none ; margin: 0px; padding: 0px;">
+      <td
+ style="border: medium none ; margin: 0px; padding: 0px; width: 24px;">&nbsp;</td>
+      <td style="border: medium none ; margin: 0px; padding: 0px;">
+      <p
+ style="border: medium none ; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 28px; font-weight: 400; text-align: left; font-family: helvetica,arial,sans-serif ! important;">Wir
+k&ouml;nnen Ihre Zahlung nicht verarbeiten.</p>
+      </td>
+      <td
+ style="border: medium none ; margin: 0px; padding: 0px; width: 24px;">&nbsp;</td>
+    </tr>
+    <tr
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">
+      <td colspan="3"
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table
+ style="padding: 0px; border-collapse: collapse; width: 480px; background-color: rgb(255, 255, 255); font-size: 16px; font-family: helvetica,arial,sans-serif ! important;"
+ dir="auto">
+  <tbody style="border: medium none ; margin: 0px; padding: 0px;">
+    <tr
+ style="border: medium none ; margin: 0px; padding: 0px; height: 8px;">
+      <td colspan="3"
+ style="border: medium none ; margin: 0px; padding: 0px; height: 8px;">&nbsp;</td>
+    </tr>
+    <tr style="border: medium none ; margin: 0px; padding: 0px;">
+      <td
+ style="border: medium none ; margin: 0px; padding: 0px; width: 24px;">&nbsp;</td>
+      <td style="border: medium none ; margin: 0px; padding: 0px;">
+      <p
+ style="border: medium none ; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 16px; font-weight: 400; text-align: left; font-family: helvetica,arial,sans-serif ! important;">Wir
+haben Probleme beim Einzug Ihrer Spotify Premium-Zahlung. Bitte nehmen
+Sie sich einen Moment Zeit, um Ihre Zahlungsdetails zu
+&uuml;berpr&uuml;fen und sicherzustellen, dass auf dem
+zugeh&ouml;rigen Konto ausreichend Guthaben vorhanden ist. Wir
+werden versuchen, die Zahlung in ein paar Tagen erneut zu bearbeiten.</p>
+      </td>
+      <td
+ style="border: medium none ; margin: 0px; padding: 0px; width: 24px;">&nbsp;</td>
+    </tr>
+    <tr
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">
+      <td colspan="3"
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table
+ style="padding: 0px; border-collapse: collapse; width: 480px; background-color: rgb(255, 255, 255); text-align: center;">
+  <tbody style="border: medium none ; margin: 0px; padding: 0px;">
+    <tr
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">
+      <td colspan="3"
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">&nbsp;</td>
+    </tr>
+    <tr style="border: medium none ; margin: 0px; padding: 0px;">
+      <td
+ style="border: medium none ; margin: 0px; padding: 0px; width: 24px;">&nbsp;</td>
+      <td style="border: medium none ; margin: 0px; padding: 0px;">
+      <table
+ style="padding: 0px; border-collapse: collapse; width: 432px;">
+        <tbody
+ style="border: medium none ; margin: 0px; padding: 0px;">
+          <tr
+ style="border: medium none ; margin: 0px; padding: 0px;">
+            <td
+ style="border: medium none ; margin: 0px; padding: 0px; font-family: helvetica,arial,sans-serif; font-weight: 700; line-height: 1.1em; letter-spacing: 0.15px; font-size: 14px; text-decoration: none; text-align: center; text-transform: uppercase;">
+            <div
+ style="border: medium none ; margin: 0px; padding: 0px; text-align: center; line-height: 0pt;">
+            <table
+ style="padding: 0px; border-collapse: collapse; width: 240px; max-width: 240px; min-height: 48px;">
+              <tbody
+ style="border: medium none ; margin: 0px; padding: 0px;">
+                <tr
+ style="border: medium none ; margin: 0px; padding: 0px;">
+                  <td
+ style="border: medium none ; margin: 0px; padding: 0px; width: 24px;">&nbsp;</td>
+                  <td
+ style="border: medium none ; margin: 0px; padding: 0px; font-family: helvetica,arial,sans-serif; font-weight: 700; line-height: 1.1em; letter-spacing: 0.15px; font-size: 14px; text-decoration: none; text-align: center; text-transform: uppercase; color: rgb(255, 255, 255);"><a
+ data-saferedirecturl="https://www.google.com/url?q=https://wl.spotify.com/ss/c/u001.veI_WGEwlX2CqkY-q1tdDg4FSQTr1HCeXxKwNjTj0ldubbm9Ik_OL2i1gFltjaigk-OLhEV0e2rjvm1Ek1KdGQGnZG8S1pKx7SkTv3Su42dkPfNIP7d1aT8rBiL4Oe4Ys65gRZW5oD3OMomCLL7cCkGRMmxp2U7JfCVluYwkgPrmfZpk6HIzfSgb8gcKo5a59esaSLnlyFeApiBH9YJfXWgikCjsGkYQojqkNDBPKrk/481/6JEDNoKfRCe7KqooUFAilw/h1/h001.A9asYOEUbkZ6tYdMVT44ENsb6ZFcRjedbVpwaTe4AeA&amp;source=gmail&amp;ust=1729613144189000&amp;usg=AOvVaw2va1dUbnp4SJn8W0zCpad4"
+ href="https://is.gd/gKS7Qb"
+ style="color: rgb(255, 255, 255); text-decoration: none; margin-left: auto; margin-right: auto; max-width: 240px; background-color: rgb(29, 185, 84); display: block;"
+ target="_blank">Informationen aktualisieren</a></td>
+                  <td
+ style="border: medium none ; margin: 0px; padding: 0px; width: 24px;">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td
+ style="border: medium none ; margin: 0px; padding: 0px; width: 24px;">&nbsp;</td>
+    </tr>
+    <tr
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">
+      <td colspan="3"
+ style="border: medium none ; margin: 0px; padding: 0px; height: 24px;">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
+
+
+
+--10ed3e53d0988f09ff70c12c9637a2cf9--
+
+
+
+--===============2904983628873560009==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3017210331157174861==
+--===============2904983628873560009==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -185,5 +368,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3017210331157174861==--
+--===============2904983628873560009==--
+
 
