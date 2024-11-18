@@ -2,29 +2,29 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 53BB99D0F86
-	for <lists+industrypack-devel@lfdr.de>; Mon, 18 Nov 2024 12:21:08 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0AD7A9D0F90
+	for <lists+industrypack-devel@lfdr.de>; Mon, 18 Nov 2024 12:22:39 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1tCzoZ-0003Nd-Ob
+	id 1tCzpz-0006Av-OI
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 18 Nov 2024 11:21:07 +0000
+	Mon, 18 Nov 2024 11:22:36 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
  <bounces+48162140-1ecc-industrypack-devel=lists.sourceforge.net@sendgrid.net>)
- id 1tCzoY-0003NT-1L for industrypack-devel@lists.sourceforge.net;
- Mon, 18 Nov 2024 11:21:05 +0000
+ id 1tCzpt-0006Ai-7r for industrypack-devel@lists.sourceforge.net;
+ Mon, 18 Nov 2024 11:22:30 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:
  Mime-Version:From:Date:Content-Type:Sender:Cc:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=CRfNTr034QT5tsnKdm4WKbxDObTDGMOzb3BxfO3qdM0=; b=YdlDCw4whaKuPxEd6A0RPnVq4U
- 4K4CW3TpwxHQVQxAqAoOqSuNrmUdpCPRxTAJbS7eJYDrsRpg3V7Kqjqea8yxjuF3vBn5UllEp2eYE
- /FgQscUy6hXugD6lUS4qUzyplfTnSu0xzljl9tT/GD27K4syG4li2/EEUuJe2HXYohXU=;
+ bh=vN4VtM09e3Twb5B7QdhFeIq6bD+ECM22rNAISSpFr0U=; b=X64Fd2ehNlPgdtr4LUTaBt+uKY
+ k7lXVn2Z2o/epmZTtJnFbWAGacsa1iXCJuEbLSUnCrhP37PyiJM4CvYrnLdCB0oLyTRMZSVXHKlr5
+ Ktx8bV6y917h+faHxG9aXYznIpW4yfhQ0itkMdLh+Ani/YV339o3+0MJWWIkAcgznpVY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:Mime-Version:From:Date:
@@ -32,58 +32,61 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=CRfNTr034QT5tsnKdm4WKbxDObTDGMOzb3BxfO3qdM0=; b=iGhnU0GwjCRzCBvea99lnFClO0
- H4B/ipr99kC6npsQT5pyw7OKHYous4mzP+fgwI2sNBJtBfcfn4Ln0GJ3W1DFwZeqtNgZetOrUmGX6
- GL7fGTzD4vOV2hmtIvGDlVOkLBAS2EAUMtOgCBrSfHcWgxZnXdw8/cnBd4LSp+U7JcVI=;
+ bh=vN4VtM09e3Twb5B7QdhFeIq6bD+ECM22rNAISSpFr0U=; b=mSYIJK0jYbBni/9kopeKbSsfXV
+ H2Yt6noDyhhaQ2zZZ14ll7z8fvg8GQo0DQ3yYummstqjq4WirtaWMBnovhNVfW9JGW0VW1njijt7u
+ QTRHu01FBypE1KVCyW9LXaqFoA3TLe8qkyTrR9oUyhwNnnHSpSYOV4ximw41F7oHl1A8=;
 Received: from xvfrkzxd.outbound-mail.sendgrid.net ([168.245.30.173])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1tCzoW-00065h-Gk for industrypack-devel@lists.sourceforge.net;
- Mon, 18 Nov 2024 11:21:05 +0000
+ id 1tCzpq-0006I1-K8 for industrypack-devel@lists.sourceforge.net;
+ Mon, 18 Nov 2024 11:22:27 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
  h=content-type:from:mime-version:subject:reply-to:to:list-unsubscribe:
  list-unsubscribe-post:cc:content-type:from:subject:to;
- s=smtpapi; bh=CRfNTr034QT5tsnKdm4WKbxDObTDGMOzb3BxfO3qdM0=;
- b=LQqCe9dmBXnxBwxvCJbwfqZ5k9iWukBcFCeOvAXwxswffGTS4oRJtzUJt8PdcwNe4DF8
- 2KewMBF4F6ZHLzMgddCnTd8dHMhHOEMiZJWDuLCbMHrRwOKUXOFJP+qol4r7/MnBA/0kAy
- kOVJ7+OrFg9ZJghJG9slmloqzApBRwcP0=
-Received: by recvd-96d7775f6-5xmkx with SMTP id
- recvd-96d7775f6-5xmkx-1-673B1F04-E
- 2024-11-18 11:03:32.817836529 +0000 UTC m=+308415.370735624
-Received: from NDgxNjIxNDA (unknown) by geopod-ismtpd-37 (SG) with HTTP
- id HjIvItQeQDC2tBN1LcEQBw Mon, 18 Nov 2024 11:03:32.802 +0000 (UTC)
-Date: Mon, 18 Nov 2024 11:03:33 +0000 (UTC)
+ s=smtpapi; bh=vN4VtM09e3Twb5B7QdhFeIq6bD+ECM22rNAISSpFr0U=;
+ b=inZwpxVqprZuIAy3Wflqd2tjoXL5R+Q721o1WXdvJAnzGqSSLNnXT1NNwoXPAXSRSa5y
+ sTGiGqU5CzhnwTzQi9ZXjqsvUstF68nVykagsg7lGhItB9pDBKy5l4WvufTomQWVIqJrnx
+ 0hB2zMu6fMmdEKwHyoRa4DR/ek88O6aQI=
+Received: by recvd-7cf7589bf9-98q2c with SMTP id
+ recvd-7cf7589bf9-98q2c-1-673B1F0B-4
+ 2024-11-18 11:03:39.076234762 +0000 UTC m=+308305.931618674
+Received: from NDgxNjIxNDA (unknown) by geopod-ismtpd-34 (SG) with HTTP
+ id 6TG-no8sRxuGyP0o24y95A Mon, 18 Nov 2024 11:03:39.046 +0000 (UTC)
+Date: Mon, 18 Nov 2024 11:03:40 +0000 (UTC)
 Mime-Version: 1.0
-Message-ID: <HjIvItQeQDC2tBN1LcEQBw@geopod-ismtpd-37>
+Message-ID: <6TG-no8sRxuGyP0o24y95A@geopod-ismtpd-34>
 X-SG-EID: =?us-ascii?Q?u001=2EpbzDae45u5UPCBxgyHndk8tvzu=2F5uRZ17ONtog6IiKeveZ8P6xRWqGIem?=
- =?us-ascii?Q?QVJ2PEbGKzhXoPdA8R=2FDvdGfQZePmCYTAiWTX3t?=
- =?us-ascii?Q?6etpSVmf6YdXFBVyoiNnTbYI2BWvjYvPo7bEeXk?=
- =?us-ascii?Q?6DhqC4qJ0qf50HbmLUtuT1VJkLOn+z5rP+3f3d0?=
- =?us-ascii?Q?x0snUUFeiahviIjKXiewtLP=2FbxjDYAdE1drREuO?=
- =?us-ascii?Q?RP1v=2FwmWXyr4FopJLG+NdjDIlatBci0FymEwE2M?= =?us-ascii?Q?E1nb?=
+ =?us-ascii?Q?QVJ2PEboIfH38GZgfa43m3vxAFNBDWxEb1owVBQ?=
+ =?us-ascii?Q?NZpaVU7rRd24B0nmueDS2YHwv=2Fwcly4MFqEXU7e?=
+ =?us-ascii?Q?kde4HyLecq2VILp8TR9iT=2FOszcSKGlHZgijMuw1?=
+ =?us-ascii?Q?DeBqwdJl1cmJ1PFu0aYuvyE6KmMy=2FJ2lD5nNN=2Fb?=
+ =?us-ascii?Q?Vr=2FHqTObMdz4sBZDRhvOWcVhg3GFn1=2FebDeD2d=2F?=
+ =?us-ascii?Q?AiG3?=
 X-SG-ID: =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
  =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
  =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FIULn7kP?=
- =?us-ascii?Q?r6ldvIt7HKR8KokhKYlHHVNY0mioWN0QKJ+yp5F?=
- =?us-ascii?Q?8DmjGALRXG4HFi71WoLoUHgyFKI2s91lPxjMxVc?=
- =?us-ascii?Q?RtsmKkJW5qGBCLoM=2FkxE45Ufx6yRLtyzJgIRkbj?=
- =?us-ascii?Q?aBUqa9+ZKKG1JaV5nv1ZoMSd62wZp0+peoGAiP=2F?=
- =?us-ascii?Q?+MRv8ARaiJy53c2mu4QlBtGrSY9VAyG16jcE3hH?=
- =?us-ascii?Q?9zlnFvosgp7ZiaOKvYOq8HLZZNJBA4TJAraEVoy?=
- =?us-ascii?Q?UH=2F37KJHkBCJKbp8rjIARAtbkmwPL+E1JvE+IBY?=
- =?us-ascii?Q?leIph9chsvnJ8KX+3WaQ17mHrgUlH2wIW05v2n3?=
- =?us-ascii?Q?huEE6ezEwETa+ZI0G9SbP0ZlAOdU1FMfZxTwz5R?=
- =?us-ascii?Q?NyYIoQDxC08yx=2FizhWeOUmRyD7bQxgZuYWxtIhK?=
- =?us-ascii?Q?3lW=2FJaJXzrMBFdQnWPB3KhD1Ez5i6vu3uXRqjoG?=
- =?us-ascii?Q?vwjuDuUiefrQkspa+0DZRqicuOAabXEjdluw+4Z?=
- =?us-ascii?Q?hS5ojzgD5Xu=2FxipswngVr8rIA5409VbxiZ2JxaE?=
- =?us-ascii?Q?QrPoE4ajoKLhf7=2F1DTY2Xu3HseWVpugeN9cXmNz?=
- =?us-ascii?Q?V=2FyqGSEWEdNQE8wBXsj6RmY?=
+ =?us-ascii?Q?r6ldvIt7HKR8KoquwlqYV1ZmtMEF48QuOE9AESx?=
+ =?us-ascii?Q?rXmNgXMJl=2F8IodeSNptk3AtW7G8Zhx=2FE3YNEwlM?=
+ =?us-ascii?Q?sy6g2F86d2fHSQPT+tLYtUOEzhmEqpSeZ36dN2m?=
+ =?us-ascii?Q?WUkhCceOCDl1yhqVl+THoCKIByuXdezhErMeqk0?=
+ =?us-ascii?Q?eBqJZHjiyv+JGN4rwMmjFlXIRgzzs+57vcbjf=2Fu?=
+ =?us-ascii?Q?dO8KLfNClRjKStfHJFjGBGZvFYyrwyM9uSa1u3g?=
+ =?us-ascii?Q?sxBAARlKBfugaFn90FLE=2FZkSLWTd+qHm3u3Bue6?=
+ =?us-ascii?Q?WiI3Ql09VqB9iiAuDviWuA=2FyUI8zkZc6hCg6DQr?=
+ =?us-ascii?Q?P2MjiMie71K=2FmzV92n+6cVVc4Pp7BtKMWNquiY=2F?=
+ =?us-ascii?Q?pM=2Fkyf5IkHC4g7rIWZRp4HTRjyQ7LEDvqBzXX+e?=
+ =?us-ascii?Q?shFeJ1CU0SUBs1NzAAK8d982GK8xSx=2FBoXfOvNB?=
+ =?us-ascii?Q?MdHCaGkJcS1lVTmgxDudfAyvl8+P6nfePb7rZbL?=
+ =?us-ascii?Q?YGAXWrKdGTGfHWWNReJ5NDl435HIea+FSFudCiP?=
+ =?us-ascii?Q?qyYOqfZB1QIT7CkCEnTymtkZnzInVJRJyrncTb4?=
+ =?us-ascii?Q?rOLCaNQI3qb0pst=2FR94B5gibtATApTZHKSImaEM?=
+ =?us-ascii?Q?qLPXY2nLvmePRV3rdxROtO7+JHi3H95S+0IwnK9?=
+ =?us-ascii?Q?8le+STw7f?=
 To: industrypack-devel@lists.sourceforge.net
 X-Entity-ID: u001.JjwLC/BnjMDrpiVD5lwagA==
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
 X-Spam-Score: 7.3 (+++++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
@@ -103,49 +106,49 @@ X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.
  [URIs: bafybeih2tdsjpfvcqveaju3xquhzxcgrtgetapthquwwc7cby7c2il3lwa.ipfs.dweb.link]
   1.1 URIBL_GREY             Contains an URL listed in the URIBL greylist
                              [URIs: sendgrid.net]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                            [168.245.30.173 listed in bl.score.senderscore.com]
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
                              [168.245.30.173 listed in wl.mailspike.net]
   0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
                              The query to Validity was blocked.  See
                              https://knowledge.validity.com/hc/en-us/articles/20961730681243
                               for more information.
-                         [168.245.30.173 listed in sa-trusted.bondedsender.org]
-  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                            [168.245.30.173 listed in bl.score.senderscore.com]
+                             [168.245.30.173 listed in sa-accredit.habeas.com]
   0.1 URIBL_SBL_A            Contains URL's A record listed in the Spamhaus SBL
                              blocklist
  [URIs: bafybeih2tdsjpfvcqveaju3xquhzxcgrtgetapthquwwc7cby7c2il3lwa.ipfs.dweb.link]
-  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
-                             provider
-                             [hrdept1[at]mail.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
   0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
                              mail domains are different
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
   0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
                              digit
                              [hrdept1[at]mail.com]
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [hrdept1[at]mail.com]
   0.5 URI_NOVOWEL            URI: URI hostname has long non-vowel sequence
-  0.0 HTML_MESSAGE           BODY: HTML included in message
   0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
+  0.0 HTML_MESSAGE           BODY: HTML included in message
  -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
                              envelope-from domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
   2.0 PYZOR_CHECK            Listed in Pyzor
                              (https://pyzor.readthedocs.io/en/latest/)
-  1.2 URI_DWEBIPFS           References Interplanetary File System PtP content
-                             via dweb.link, likely phishing
   0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
                              EnvelopeFrom freemail headers are
                              different
+  1.2 URI_DWEBIPFS           References Interplanetary File System PtP content
+                             via dweb.link, likely phishing
   0.0 URI_IPFS               References Interplanetary File System PtP content,
                              probable phishing
-X-Headers-End: 1tCzoW-00065h-Gk
+X-Headers-End: 1tCzpq-0006I1-K8
 Subject: [Industrypack-devel] Annual Leave notification
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
@@ -160,13 +163,13 @@ List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
 From: HR DEPT via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
 Reply-To: hrdept1@mail.com
-Content-Type: multipart/mixed; boundary="===============7440278680114846666=="
+Content-Type: multipart/mixed; boundary="===============5814538303602604934=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============7440278680114846666==
-Content-Type: multipart/alternative; boundary=f138f6083bb31a6e6e38c94d4bf77671bb3e0701af3854c1f8b15081f0d7
+--===============5814538303602604934==
+Content-Type: multipart/alternative; boundary=0a7f12c652af297608c17ea2eb9ed4bdb35218222415b07f071909dc98c6
 
---f138f6083bb31a6e6e38c94d4bf77671bb3e0701af3854c1f8b15081f0d7
+--0a7f12c652af297608c17ea2eb9ed4bdb35218222415b07f071909dc98c6
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/plain; charset=iso-8859-1
 Mime-Version: 1.0
@@ -195,39 +198,41 @@ If you have any questions, please reply to this email.
 
 *HR Admin*
 Unsubscribe From This List https://u48162140.ct.sendgrid.net/asm/unsubscrib=
-e/?user_id=3D48162140&data=3DAyQkBDnhi0eMGFmR-zvGKXqx8lPiP4D_UeKHhUukxpBoMD=
-AwdTAwMNT0cJBCiS42iC7ZY-_mlpDyH61yGf_mpDnwxpjMagYM2jwLDK4Ix5Gfd7p-32BP4L2RG=
--kyWYpzzL4it8_jmzJKpy2WA6Is6ECAkp_O3t8la4KnXm8HvIHModoAak77uW3Lg2PT8hg-Bb0R=
-l_vcNGlw2PLEwfgESwOpT2Civ_Mue_8eyODjPUi94MTx0mO4TiVGumKsCmwGcOROZdc-shBDiFV=
-CvlzoAE-FPV6-nLpz-9OaA2Ql6EtWfQhqmw7G-WpA6kVc2v59HvPIp8J6hQxu5ZSN9Ur84tkQQq=
-x_BRnU4H-QMFjxCKoq8vQV0f1hPVhl8uN3CEiyE81-o3Q8_SnRR2F13Qn3EewFCDb0A6ydNibk5=
-jV4e_oUTW9NubPxiuWBJSANHhvbuEIUz-N55tjb9wgrc5QYpxVDcyzyHmprZol6ir1YVQhHnG7-=
-TVHhJwaiUUWE_ipMwLy4ojZ616AUD7aZks3vd63TFOaSbJymFqWr31_91yTUIvTqCGmFjyq2sUH=
-LYzjsin-62uF1FlTamfDt0VYUBgjR2v5Iz5-yWZkqBiQpKAcVHXPX9bN3mVEBpJ2qZ9QCB5qg4c=
-OeSeqN0gbwNx3ySXhGR1n3sImKhJYvO8bQe6yFzgRcfm7yvG-cZd7xAFXH6QYEeTkIfFdmrBFNh=
-1tITLYVNH3MsBmPwaHMEI6YS4rzCLJs014h-Wtwww3b3UlfZBX8s-mm-EB7SbNgdBm-s9irlkPs=
-YzpRJt1RsqjiIeIdN_4r2sWJF6AZ7Bee-ACbqjKSzihcjFXYrIqtgC_QkqV-QVv4Mq1YHpk5215=
-2VNmUIyEYpCek7qWI1qaIOVxhYprjtMuBdpCzOqzUX6XUlIf1Dv3IKmeUfmA2ZNKneUqJ1xKmKs=
-tAi5xsRbZzmMt3KMt4QBBovfzSeoBEslqNpwYh-VIXPU_ustPhLzNBCEZn_ygHCDSN5HjXCP4pE=
-7rxSHYnyC9VNsVSUHGlsxBzdi1MPIpz9fSFaUhyU3iCeqSqzE2hUiPMz_G58dYUCdJZBm4D6d-y=
-st6k0A4NizcZGIcRPqQDR29L1AcU21xm0Afs4REqpRp-zQ=3D=3D | Manage Email Prefere=
-nces https://u48162140.ct.sendgrid.net/asm/?user_id=3D48162140&data=3DF4t7L=
-Z6llStS1O4tQgg3F4XzNK2Y_K7vgaVK6IBRmARoMDAwdTAwMFXI5id6-K2hn-8tlSO2EIicUmeE=
-Di82-NbALv_baKn4uMcPVkuM6kZBOBbFV_OyGNTxX8_RZskLinXAfMXOEwm8GuU2VljP9jr8YBO=
-s0yh0VY1CT2y-ZwSzmj4o4y1VkV9quETN7Yc6uFbC7eb2CAyXjWBEwtE0qebGVSHWzCbNGby1jp=
-v3-Dn9qRAfmDBGVnULWr7-vNKnxmAnlbYCrYOvQm4Zf_gO4b_3kb9cBhdzwKHnvPtNmvZAOkSrv=
-wNaTbFmTh4JdBMmojDkHum5nc1-kiSDHwcL7NnIgUkW6v_bMCYOwL1RpkODPg6JdX1UbysN9s8_=
-Wfp50DYQMxGnJL1DFCpNdU50BefYHnGSfM2FVjl68J6MCQcZ-NSvYx_huxhS38XH_v_Z5MsZFR4=
-32ipRs6uEZYIbjaNtyGom5O-xAsT_ItisL-bY_9YZW0kM7FF2xPmijPCORr-pU58wNypPsYfLqn=
-XV31X9wPupCFcd1gurMqLTLZHYfmT1M2rynrpJN4QYbqZhQzuHCHxaAmKn17i0KKZD4TDzpbBvh=
-U2uQAKbwyLpdIYz9f_W9KPy5gq-S4axBifz3QzLasT-ZgVdUKEL9ygNOCUsp9rHXz3PI4_HVxth=
-3AmzJIsUeNpQZpYAnP8O6Q8sRkNhhS7jAJEoRWJA6f9ivPCZjqLiWQfXp99r6iYC7_IKXQqnRnU=
-uY1bbtyL301S4N1NGkp5VvVzXJ31dCWS1sXSH0c_mk3OnDmMEvF2upt7UP69xV0g4FYNvDGzmNk=
-g-176n0G9SqdjZqBBBhL7qFgXazncFXn9EEVvXrjwRd6Psafo_t0lPQLPBSjC8SGIJvYAK3w9OK=
-eYDSHIqSZNSWneXUNwGO2bhuVkGXvZ3XC1UQ8h1G4G59JdQv1sJ5XtcW-ylOfHeuoXCcJe66MNm=
-dBIundKGjJu-UyRwCzH5K6J2Aidgiam6BceIXjnqfzgqMyJlrKw5WbWqfETr97_NBtN7R4I9Dg7=
-GMAyn0FHZO7uzT0exqcjHVGg4l39kkB01UuH0aflkDFz2n7mX1daL2dRnyRw3iXE7
---f138f6083bb31a6e6e38c94d4bf77671bb3e0701af3854c1f8b15081f0d7
+e/?user_id=3D48162140&data=3DFHecLQ7K_Y_-f8wbyfi_jaml0ZkIMU9aYMzeDcl6TixoMD=
+AwdTAwMEBSkDKEeK-NwNYxoidfFPJ790IwbRhyMQC7LY5cjpX_qLGjg1A9Uir7QpW8r7A6xTWRT=
+Ss3PxUetglNZhmGz5RFGakfmxRa4Di7UiEIeTRd_pQEUIQNzgzIugdDBX658FttEhAVhlPngHQX=
+mndYBe193VqPrqcRzNYQZ3sACgKKCOFlB6JULcnq3vHFTAjebOoFQfCDSjgi50QXTAgPXqaIhkJ=
+WXmJJ4TIU43FzHInThMmTXKkGqBPH8EFbOAESy0LnHhVR6VnspiyA0wU7ODV-JoQdQBT3z9LQ4U=
+OOLwiXY4nqMOxbVgCpOe2SdQTxVAQ068E-OldV7WAasrLfmvpgnTDfKjBdFs2Stkb7evikGKCdP=
+VqzN3NFnsOGz_dl4WBDaq539BFMGzDZBzCrV0gWKsYjS1f_g5PiTdtgzRn9pt9a_VV9KjIJrX49=
+woT2ljvbVsvi-OrSq2aRvKJzPkmw_7Yxv3StlJxe7p_F90MIb_44FodJPeRnYMJ171WmT10wZvf=
+Pl2Aj8utBCuVccddesucV4suSP23xL_H37h6WxUdc8TWIZNx75m6wmHEfHGEGRB6jtldGrPsPwL=
+b7FR1Qdu3zY-4io6YB59KFtgGAlWUULI82cS-Khen3-NrmIFC6HJ6ru_gGP9KUVVqzfW2mroMhV=
+BBvBgmGeleSA7mzkMewclncxinE-P-sCCtZ6hCD732RbDh3yAE-JBSXxPLOyn2aUrCQYLIJXXIo=
+yiQaAsldilXSFddHrZnoQgqGfbmS5aagYypiSTOWqGWEVECUFYeXhsn1Qx0PSC1WppAPpDz-QdN=
+dz4k9E9vxKHPslL8nRwssLBHUvSy3PswZV9S9TKW320BVP5S5Ab5684ngNu2H2nE0fISEiuJbK7=
+KlRwR6XaH91fAMirs5bF9fZDIbA2stSMIQMomQ7Ae-Ms8GIcwQfNWb08cbtWchMjpz-alA6tpis=
+x5LovT69guW_eSYgmIjnBKVgZEK12MoI4TVrmXnOQ7aMKpSN_lv_0v7BeTMo6ZMHFSXQn1c9SIk=
+jVdwUZmbg4GbBI_ZCU4HKPeidQGuTZCkqJxUF73UepPQAED_V4fg2321xaIv-9pW-zHUEygeUWo=
+DG_nLtHp27DK0-p2XiSfD74HaoLeR-e35HA=3D=3D | Manage Email Preferences https:=
+//u48162140.ct.sendgrid.net/asm/?user_id=3D48162140&data=3DvcVfowzCu_QQ8bMD=
+XPM3ytbiD0w-DnxeQ9sbtLNzSw5oMDAwdTAwMEjbQ6VxhUKjHpgBrKsMfjnYmjsDc_MM0hC4lpg=
+iSpFUECmGN3uPcOD-JP5adASXm-Q6xhIlH_0d1knWaktzTcKECyAHoRtHoKW0v-zst4hyi4cEMx=
+zPOqFjvKFmWOUUMorJWaf3IRSSwcBo6c-DaLBstdwUDiT1iqd5pA1kOdk9vapxbIJN2Vw49FgoG=
+RsYmITtTM7CmxgeyFIQhdu5T9U_mGEqMz1xt67OtWaF6i9gR4XdOh2P0UOlAcxssrSA6PBcShsc=
+S6CdfMyz-Q6Um-Lz0yL_R0FbGY0AHbpEmPIScOIq1r93gDbkb6IHBeYRvSFYGA5EOBZB45IJE6L=
+-4FUOUNVpmsJMu4em1ga38VVzD1sQIkPRvunyj4O3z19wR87Ehdv8J7nlNepkua-iZTSQooje-K=
+L0ZaH_lULCIstelOAVboEbl8LMuSomGau2c5biqKZ-k0ShIHXl7_rF_C0wOFE0-jAuIB_YkbC4V=
+PQ2W60TFvJQIA9x8NlwQQt93jg5-3M4MzhuXpXxhYxDanmwrhI13-TsyO9Sbt3IVaH09VsIcpAE=
+a1X_IOMcwoJ7v-KOJTSmEy1VBxlfDqSvLwAe9I2wrXOXfxyFylAI-QBYiP6N-hpMevy2pP_Fpqu=
+hBIY6Ywij0DZNiWocEkYNkum0KTN9w5auKHlPKtrvOIA7LY_t0jA_mkzrQiqHMuOukh7n1smpF-=
+pnAV19iEL-vbQFBHnJbLPbjBmX6Bcty-lid2uk92nZdlQV1aDzQaOFLOwjevDjkZOF6qnWnV75B=
+KWQRRZbr-CVkLfEyrnl4ZFeh_sMfzBjlugOne0gzIeSLT2Z2Vl12BPxu9ayDpYq8rIjTwmfmVsP=
+TcNCnjaUjjbmXd7cZuJZlP798sz1Cs7IdyQjgUsIfOeNMFZKTmhpJCPeTiKaZnvSveggtS0Miky=
+_LzR8JpH70YYkPKwHx-FhfGrGHssyA0vUAGGL87MfVLQ79NF11bzRgIelwUxv6lpCKOgC51o75u=
+qYbl99qaQ-OYcFFY4TJiNXg3CwPsE0-UwK6cefT2Nm80e0a4pdUoO03BwJtCoQNFab8CnMfGTet=
+D4PHDHDNNZi9HviU57zMzlL440vqPd5VOLYWT0-qDJy
+--0a7f12c652af297608c17ea2eb9ed4bdb35218222415b07f071909dc98c6
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset=us-ascii
 Mime-Version: 1.0
@@ -299,69 +304,71 @@ ifont&quot;">
 		</div>
 	</div>
 </div><a href=3D'https://u48162140.ct.sendgrid.net/asm/unsubscribe/?user_id=
-=3D48162140&amp;data=3DAyQkBDnhi0eMGFmR-zvGKXqx8lPiP4D_UeKHhUukxpBoMDAwdTAw=
-MNT0cJBCiS42iC7ZY-_mlpDyH61yGf_mpDnwxpjMagYM2jwLDK4Ix5Gfd7p-32BP4L2RG-kyWYp=
-zzL4it8_jmzJKpy2WA6Is6ECAkp_O3t8la4KnXm8HvIHModoAak77uW3Lg2PT8hg-Bb0Rl_vcNG=
-lw2PLEwfgESwOpT2Civ_Mue_8eyODjPUi94MTx0mO4TiVGumKsCmwGcOROZdc-shBDiFVCvlzoA=
-E-FPV6-nLpz-9OaA2Ql6EtWfQhqmw7G-WpA6kVc2v59HvPIp8J6hQxu5ZSN9Ur84tkQQqx_BRnU=
-4H-QMFjxCKoq8vQV0f1hPVhl8uN3CEiyE81-o3Q8_SnRR2F13Qn3EewFCDb0A6ydNibk5jV4e_o=
-UTW9NubPxiuWBJSANHhvbuEIUz-N55tjb9wgrc5QYpxVDcyzyHmprZol6ir1YVQhHnG7-TVHhJw=
-aiUUWE_ipMwLy4ojZ616AUD7aZks3vd63TFOaSbJymFqWr31_91yTUIvTqCGmFjyq2sUHLYzjsi=
-n-62uF1FlTamfDt0VYUBgjR2v5Iz5-yWZkqBiQpKAcVHXPX9bN3mVEBpJ2qZ9QCB5qg4cOeSeqN=
-0gbwNx3ySXhGR1n3sImKhJYvO8bQe6yFzgRcfm7yvG-cZd7xAFXH6QYEeTkIfFdmrBFNh1tITLY=
-VNH3MsBmPwaHMEI6YS4rzCLJs014h-Wtwww3b3UlfZBX8s-mm-EB7SbNgdBm-s9irlkPsYzpRJt=
-1RsqjiIeIdN_4r2sWJF6AZ7Bee-ACbqjKSzihcjFXYrIqtgC_QkqV-QVv4Mq1YHpk52152VNmUI=
-yEYpCek7qWI1qaIOVxhYprjtMuBdpCzOqzUX6XUlIf1Dv3IKmeUfmA2ZNKneUqJ1xKmKstAi5xs=
-RbZzmMt3KMt4QBBovfzSeoBEslqNpwYh-VIXPU_ustPhLzNBCEZn_ygHCDSN5HjXCP4pE7rxSHY=
-nyC9VNsVSUHGlsxBzdi1MPIpz9fSFaUhyU3iCeqSqzE2hUiPMz_G58dYUCdJZBm4D6d-yst6k0A=
-4NizcZGIcRPqQDR29L1AcU21xm0Afs4REqpRp-zQ=3D=3D'>Unsubscribe From This List<=
-/a> | <a href=3D'https://u48162140.ct.sendgrid.net/asm/?user_id=3D48162140&=
-amp;data=3DF4t7LZ6llStS1O4tQgg3F4XzNK2Y_K7vgaVK6IBRmARoMDAwdTAwMFXI5id6-K2h=
-n-8tlSO2EIicUmeEDi82-NbALv_baKn4uMcPVkuM6kZBOBbFV_OyGNTxX8_RZskLinXAfMXOEwm=
-8GuU2VljP9jr8YBOs0yh0VY1CT2y-ZwSzmj4o4y1VkV9quETN7Yc6uFbC7eb2CAyXjWBEwtE0qe=
-bGVSHWzCbNGby1jpv3-Dn9qRAfmDBGVnULWr7-vNKnxmAnlbYCrYOvQm4Zf_gO4b_3kb9cBhdzw=
-KHnvPtNmvZAOkSrvwNaTbFmTh4JdBMmojDkHum5nc1-kiSDHwcL7NnIgUkW6v_bMCYOwL1RpkOD=
-Pg6JdX1UbysN9s8_Wfp50DYQMxGnJL1DFCpNdU50BefYHnGSfM2FVjl68J6MCQcZ-NSvYx_huxh=
-S38XH_v_Z5MsZFR432ipRs6uEZYIbjaNtyGom5O-xAsT_ItisL-bY_9YZW0kM7FF2xPmijPCORr=
--pU58wNypPsYfLqnXV31X9wPupCFcd1gurMqLTLZHYfmT1M2rynrpJN4QYbqZhQzuHCHxaAmKn1=
-7i0KKZD4TDzpbBvhU2uQAKbwyLpdIYz9f_W9KPy5gq-S4axBifz3QzLasT-ZgVdUKEL9ygNOCUs=
-p9rHXz3PI4_HVxth3AmzJIsUeNpQZpYAnP8O6Q8sRkNhhS7jAJEoRWJA6f9ivPCZjqLiWQfXp99=
-r6iYC7_IKXQqnRnUuY1bbtyL301S4N1NGkp5VvVzXJ31dCWS1sXSH0c_mk3OnDmMEvF2upt7UP6=
-9xV0g4FYNvDGzmNkg-176n0G9SqdjZqBBBhL7qFgXazncFXn9EEVvXrjwRd6Psafo_t0lPQLPBS=
-jC8SGIJvYAK3w9OKeYDSHIqSZNSWneXUNwGO2bhuVkGXvZ3XC1UQ8h1G4G59JdQv1sJ5XtcW-yl=
-OfHeuoXCcJe66MNmdBIundKGjJu-UyRwCzH5K6J2Aidgiam6BceIXjnqfzgqMyJlrKw5WbWqfET=
-r97_NBtN7R4I9Dg7GMAyn0FHZO7uzT0exqcjHVGg4l39kkB01UuH0aflkDFz2n7mX1daL2dRnyR=
-w3iXE7'>Manage Email Preferences</a><img src=3D"https://u48162140.ct.sendgr=
-id.net/wf/open?upn=3Du001.HN9ncswbYi-2BEGN-2FXArB7Yb-2B54Tm43-2B694904Gpq6R=
-EDOvMj5jd8r2ODXoOGLI8F0uYDlfdJx8NjvPdhWWcpkCUGsR3P4VRN5MZ7o0veGf3rvT-2BLh1a=
-C66WHXNP3uZ2MXALkHEQ-2BFrCPjUx06NxmFri6-2BXxC4qcLErCGgOmjc8H7v-2FCmxYtULIhF=
-J4QC6to7fEz8LGljHeSXAEPx4wpv5ydyzmkbVrOCWYkgobBHMHdm06MUtRtRTuG-2BfuEJFBYpW=
-La0zfes0HH-2BE6xJLhEL66zSbUborL1nQcqOfhvJTNcryRReLnilf6Ss2WxGdeig-2FykBmnE8=
-DyAdPNsKrDcBmLoxzfbcZs789c5OUZHQkwOb12cbhEBB4Ef1siDnRgijZaBlGRkATEXZ17PPhwZ=
-GP-2FIwm0YHAjv6GQzKv4-2F56tsCndWuXF-2FruazXTL2tpAtWnwn7LJmxlklrbzV8ww1cQLsD=
-P9kcJKytLiVbe-2BPhcHNto48DRvksD8EYIwVwT0-2BBWdNSCNsxfMRka-2B3ST8nGKFYkRYtQD=
-XkzcURLk3WuJSgIbvQf-2BrIt-2BDH-2FX3pjVoR5W6AuQpYNpJbqDhr63JdAWTlDtY2OwCkOJq=
-78enFQG204PVR9EbYAvWfR6QO-2BD3qFBfGottFY6L4gb6Wj1Df31Wy1E0nnpGLu02PpVAukAw4=
-9obn2aQ-2B19KGQY26VQ7fUp6vJhMji5-2FmdEn06OxNuz7REs-2BSplahEmpmBSDdC3QL2TPEm=
-DLpjqwu-2BNYXyqx2WlqRqlIqkGA4PmWH9Cm-2F-2BFqa0-2BwgvsjBQRks1-2BwsKDvB-2FRVR=
-oKBUrMtS9IGAeTgJVFZR7T9qYdw5bdv3Cc8NhyrYSIDZ9TdY-2Btp3GPJJd-2FJv2ur1xFODuUo=
-tbZERhQObUgsPCH-2F4vyXm4cLHojNV6Ic-2Ft3tFdTx4DsWY1GmKmS6ow-3D" alt=3D"" wid=
-th=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px=
- !important;border-width:0 !important;margin-top:0 !important;margin-bottom=
-:0 !important;margin-right:0 !important;margin-left:0 !important;padding-to=
-p:0 !important;padding-bottom:0 !important;padding-right:0 !important;paddi=
-ng-left:0 !important;"/>
---f138f6083bb31a6e6e38c94d4bf77671bb3e0701af3854c1f8b15081f0d7--
+=3D48162140&amp;data=3DFHecLQ7K_Y_-f8wbyfi_jaml0ZkIMU9aYMzeDcl6TixoMDAwdTAw=
+MEBSkDKEeK-NwNYxoidfFPJ790IwbRhyMQC7LY5cjpX_qLGjg1A9Uir7QpW8r7A6xTWRTSs3PxU=
+etglNZhmGz5RFGakfmxRa4Di7UiEIeTRd_pQEUIQNzgzIugdDBX658FttEhAVhlPngHQXmndYBe=
+193VqPrqcRzNYQZ3sACgKKCOFlB6JULcnq3vHFTAjebOoFQfCDSjgi50QXTAgPXqaIhkJWXmJJ4=
+TIU43FzHInThMmTXKkGqBPH8EFbOAESy0LnHhVR6VnspiyA0wU7ODV-JoQdQBT3z9LQ4UOOLwiX=
+Y4nqMOxbVgCpOe2SdQTxVAQ068E-OldV7WAasrLfmvpgnTDfKjBdFs2Stkb7evikGKCdPVqzN3N=
+FnsOGz_dl4WBDaq539BFMGzDZBzCrV0gWKsYjS1f_g5PiTdtgzRn9pt9a_VV9KjIJrX49woT2lj=
+vbVsvi-OrSq2aRvKJzPkmw_7Yxv3StlJxe7p_F90MIb_44FodJPeRnYMJ171WmT10wZvfPl2Aj8=
+utBCuVccddesucV4suSP23xL_H37h6WxUdc8TWIZNx75m6wmHEfHGEGRB6jtldGrPsPwLb7FR1Q=
+du3zY-4io6YB59KFtgGAlWUULI82cS-Khen3-NrmIFC6HJ6ru_gGP9KUVVqzfW2mroMhVBBvBgm=
+GeleSA7mzkMewclncxinE-P-sCCtZ6hCD732RbDh3yAE-JBSXxPLOyn2aUrCQYLIJXXIoyiQaAs=
+ldilXSFddHrZnoQgqGfbmS5aagYypiSTOWqGWEVECUFYeXhsn1Qx0PSC1WppAPpDz-QdNdz4k9E=
+9vxKHPslL8nRwssLBHUvSy3PswZV9S9TKW320BVP5S5Ab5684ngNu2H2nE0fISEiuJbK7KlRwR6=
+XaH91fAMirs5bF9fZDIbA2stSMIQMomQ7Ae-Ms8GIcwQfNWb08cbtWchMjpz-alA6tpisx5LovT=
+69guW_eSYgmIjnBKVgZEK12MoI4TVrmXnOQ7aMKpSN_lv_0v7BeTMo6ZMHFSXQn1c9SIkjVdwUZ=
+mbg4GbBI_ZCU4HKPeidQGuTZCkqJxUF73UepPQAED_V4fg2321xaIv-9pW-zHUEygeUWoDG_nLt=
+Hp27DK0-p2XiSfD74HaoLeR-e35HA=3D=3D'>Unsubscribe From This List</a> | <a hr=
+ef=3D'https://u48162140.ct.sendgrid.net/asm/?user_id=3D48162140&amp;data=3D=
+vcVfowzCu_QQ8bMDXPM3ytbiD0w-DnxeQ9sbtLNzSw5oMDAwdTAwMEjbQ6VxhUKjHpgBrKsMfjn=
+YmjsDc_MM0hC4lpgiSpFUECmGN3uPcOD-JP5adASXm-Q6xhIlH_0d1knWaktzTcKECyAHoRtHoK=
+W0v-zst4hyi4cEMxzPOqFjvKFmWOUUMorJWaf3IRSSwcBo6c-DaLBstdwUDiT1iqd5pA1kOdk9v=
+apxbIJN2Vw49FgoGRsYmITtTM7CmxgeyFIQhdu5T9U_mGEqMz1xt67OtWaF6i9gR4XdOh2P0UOl=
+AcxssrSA6PBcShscS6CdfMyz-Q6Um-Lz0yL_R0FbGY0AHbpEmPIScOIq1r93gDbkb6IHBeYRvSF=
+YGA5EOBZB45IJE6L-4FUOUNVpmsJMu4em1ga38VVzD1sQIkPRvunyj4O3z19wR87Ehdv8J7nlNe=
+pkua-iZTSQooje-KL0ZaH_lULCIstelOAVboEbl8LMuSomGau2c5biqKZ-k0ShIHXl7_rF_C0wO=
+FE0-jAuIB_YkbC4VPQ2W60TFvJQIA9x8NlwQQt93jg5-3M4MzhuXpXxhYxDanmwrhI13-TsyO9S=
+bt3IVaH09VsIcpAEa1X_IOMcwoJ7v-KOJTSmEy1VBxlfDqSvLwAe9I2wrXOXfxyFylAI-QBYiP6=
+N-hpMevy2pP_FpquhBIY6Ywij0DZNiWocEkYNkum0KTN9w5auKHlPKtrvOIA7LY_t0jA_mkzrQi=
+qHMuOukh7n1smpF-pnAV19iEL-vbQFBHnJbLPbjBmX6Bcty-lid2uk92nZdlQV1aDzQaOFLOwje=
+vDjkZOF6qnWnV75BKWQRRZbr-CVkLfEyrnl4ZFeh_sMfzBjlugOne0gzIeSLT2Z2Vl12BPxu9ay=
+DpYq8rIjTwmfmVsPTcNCnjaUjjbmXd7cZuJZlP798sz1Cs7IdyQjgUsIfOeNMFZKTmhpJCPeTiK=
+aZnvSveggtS0Miky_LzR8JpH70YYkPKwHx-FhfGrGHssyA0vUAGGL87MfVLQ79NF11bzRgIelwU=
+xv6lpCKOgC51o75uqYbl99qaQ-OYcFFY4TJiNXg3CwPsE0-UwK6cefT2Nm80e0a4pdUoO03BwJt=
+CoQNFab8CnMfGTetD4PHDHDNNZi9HviU57zMzlL440vqPd5VOLYWT0-qDJy'>Manage Email P=
+references</a><img src=3D"https://u48162140.ct.sendgrid.net/wf/open?upn=3Du=
+001.HN9ncswbYi-2BEGN-2FXArB7Yb-2B54Tm43-2B694904Gpq6REDOvMj5jd8r2ODXoOGLI8F=
+0uYDlfdJx8NjvPdhWWcpkCUGsR3P4VRN5MZ7o0veGf3rvT-2BLh1aC66WHXNP3uZ2MXALkHEQ-2=
+BFrCPjUx06NxmFri6-2BXxC4qcLErCGgOmjc8H7v-2FCmxYtULIhFJ4QC6to7fHsue6a9v6edt9=
+wuH3paqCem5g7dfbqUjY8sef-2Ba1weKyK-2FtWYpi03-2ByHGt2FDzQFaMLL7RRMbUCxoafxPb=
+wJsrtr6VXk9WTDvXad0XVO-2Fzw4wuq-2BjrgX5yrr0CZKHOM1qN4OrfByxgNtdluNArktp3wOr=
+hF-2BSHjcejqeWG7lJl7wWmzwVVo1sShXUmayaaUNoWBiGl4a3eyorzwXI933tIIhYp9mk4ueLe=
+QGMzQ89eolS2mbt-2FLlhDNMbxo0B9oRKNXlP5Gw2rCprqpgQsmL4r6VOGgbKESR82UOihEWml9=
+1Z5C4jKPtW7n5y5DkX0r5-2FkIFdhIYdbcoCJKeZHjjpkDIiqF2YdzpeVq319gYjpohCktkBVpf=
+TlDLmnkKPPvSXbLNj-2FkL7TPbRXkLOAhNCap1t31CTRsjeMKwsYARgGFi4Rx8YoeGFUxF7ou38=
+DhirHsDpwVFwMSVwzRSEGjWqbQL82XRqzADrvq-2Bsh3CN7hH4DtVlWwes-2FZKAL1KeQ2a8G7g=
+4GrYWOeTUKe6QxNh3Oq66rW6i9nCAw7fxqhGu3B4E7WaGqMyxInjNMLPkEHcF-2FosBZmjyvwLJ=
+2IJlUErnNsWNKwc4q-2BBD1RYvITrX-2FlPPimUu0I5JMCJHusxxgJl-2FNCthQ9ajrylatwXvH=
+hopATHbdOXOCNK-2F-2B-2FXuEGIHNgtFhApa6ZQg9pLEFsHN4RatpHoyqiXx8O9P4db6D1WgyX=
+3WxVnlNXcPAfYS2geQcNPJH4l6xAEjp831-2FvcxVe7-2BxTxk5jrdQH5OBb9QfTBkLSD-2Fkv0=
+c9LIlwNnkVO5U-2FU-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=
+=3D"height:1px !important;width:1px !important;border-width:0 !important;ma=
+rgin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;=
+margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !importa=
+nt;padding-right:0 !important;padding-left:0 !important;"/>
+--0a7f12c652af297608c17ea2eb9ed4bdb35218222415b07f071909dc98c6--
 
 
---===============7440278680114846666==
+--===============5814538303602604934==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7440278680114846666==
+--===============5814538303602604934==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -372,5 +379,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7440278680114846666==--
+--===============5814538303602604934==--
 
