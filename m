@@ -2,155 +2,114 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id AE64A9D1035
-	for <lists+industrypack-devel@lfdr.de>; Mon, 18 Nov 2024 12:52:32 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7219F9D1448
+	for <lists+industrypack-devel@lfdr.de>; Mon, 18 Nov 2024 16:19:19 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1tD0Ix-0004sE-Gr
+	id 1tD3X4-0003oX-1Q
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 18 Nov 2024 11:52:31 +0000
+	Mon, 18 Nov 2024 15:19:18 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
- <bounces+48162140-1ecc-industrypack-devel=lists.sourceforge.net@sendgrid.net>)
- id 1tD0Iw-0004s8-8m for industrypack-devel@lists.sourceforge.net;
- Mon, 18 Nov 2024 11:52:30 +0000
+ <bounce_oonjfmo_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
+ id 1tD3X2-0003oJ-Je for industrypack-devel@lists.sourceforge.net;
+ Mon, 18 Nov 2024 15:19:16 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:
- Mime-Version:From:Date:Content-Type:Sender:Cc:Content-Transfer-Encoding:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
+ Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=TP7bNAD8D8Sf2wJI6lFwoe+79/fzVio7pfMh1LAwuwg=; b=iL7D13XFvfSe5DsC0iywdv0/Y0
- gsC33e2erAuT37jBbTWIq7CG048H5QLcYmn/HxDla6r41o7yv9U7KxiJNIOv+oRAR9C0lvQFtH6d0
- yXCCvuCdbRPdzARh5JP5OEp8ZHhaEbkQr3t+ZAvnL+zOIpxqtWZoHuA7uqYdQmuIYiJw=;
+ bh=+Pfoocfynfnln/HUE+7WYK+U0WtT91PRpMo4JtkrPEg=; b=APlY4u0BQJpn+jq4UIfw9ygI4V
+ MVD/9Z0KZmljrkf0Cluj1inBJXtv9O5mPquyaMCLG/G64K7QAW3Sovl8h4koc7FMC0874MXzrDmCA
+ nA+Kk4K1RMGAASF/8JQUW+m7HqhGRBNaN2xgrRZm9o+JY4v3aJHlodiS+OHezCx0mY84=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:Mime-Version:From:Date:
- Content-Type:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
+ List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=TP7bNAD8D8Sf2wJI6lFwoe+79/fzVio7pfMh1LAwuwg=; b=dzaF6P7eQ+5y12AzzLeHnDiFZ6
- XrKHhoL5lUfeBpYvRHB3agsAyDYG7wcsQCE12UZjoQecXVeERz08SWSWiFnP+VVGzXy+rLO4dIoDC
- aunPdfLW5oG6XlhNsssDM1RBiiMvGGsieiSowm2K7l2iwILw7pw94QUIQHepqMeTCrSE=;
-Received: from xvfrkzxd.outbound-mail.sendgrid.net ([168.245.30.173])
+ bh=+Pfoocfynfnln/HUE+7WYK+U0WtT91PRpMo4JtkrPEg=; b=hPE+0TJqUwu40xIZP8IE0e1G75
+ IU5vqoYNWlbWeLG6H6qdqRS5y95cm6m01zIiL5tLUCLHW3zFJ2008qg+mz7xNvtgF7dfkqeBo741b
+ QIF9xRbcm33pmEz5UH24UY2c1fxdoc6x9nTwdrW2rUkfOsmBCgsvJ/TUbG7IHRR8OxNs=;
+Received: from em.sbaloanadvice.com ([216.24.225.131])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1tD0Iv-0008AE-7o for industrypack-devel@lists.sourceforge.net;
- Mon, 18 Nov 2024 11:52:30 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
- h=content-type:from:mime-version:subject:reply-to:to:list-unsubscribe:
- list-unsubscribe-post:cc:content-type:from:subject:to;
- s=smtpapi; bh=TP7bNAD8D8Sf2wJI6lFwoe+79/fzVio7pfMh1LAwuwg=;
- b=Ke2pFImYCvS72kXzD1t6W/di98npl03RPAQe7tv54g8RaO1C8LBZPh4oFRp3bl1gTOmv
- ByPaFJ7OgCi7TA23RJKCSb/l3+3n6lC9Lw+P3m0pfLmrN81sEgaCF+42JUXNTDxjNx41Mt
- tho9bP8veJLxbc7RlyuO61z2TJpgqdW2E=
-Received: by recvd-canary-7b68dd688-wgjk2 with SMTP id
- recvd-canary-7b68dd688-wgjk2-1-673B2A4E-18
- 2024-11-18 11:51:42.835540754 +0000 UTC m=+319402.515471926
-Received: from NDgxNjIxNDA (unknown) by geopod-ismtpd-10 (SG) with HTTP
- id Jo7s9wuBQyarC9f2IWdcjw Mon, 18 Nov 2024 11:51:42.769 +0000 (UTC)
-Date: Mon, 18 Nov 2024 11:51:44 +0000 (UTC)
-Mime-Version: 1.0
-Message-ID: <Jo7s9wuBQyarC9f2IWdcjw@geopod-ismtpd-10>
-X-SG-EID: =?us-ascii?Q?u001=2EpbzDae45u5UPCBxgyHndk8tvzu=2F5uRZ17ONtog6IiKeveZ8P6xRWqGIem?=
- =?us-ascii?Q?QVJ2PEbtlAPCxNpkgTT2ECLC2DyMPTT8Xz2QySL?=
- =?us-ascii?Q?Ypcti99Fu4pvWQS6XHHFabp=2FXkBtX7wpFhhaZT2?=
- =?us-ascii?Q?mqqVDdMbYAe=2FF=2F3dinRg8NRgwtGLsw5PMSa5aBO?=
- =?us-ascii?Q?V+QTylo8QHyrlmfu45OwdagwcjRXmUCjLNHHv51?=
- =?us-ascii?Q?hzswh6UX9pSjgJMlrCA3RiLD0=2FPiyw8r4cwVkW9?=
- =?us-ascii?Q?byy0DuAjJmgRPRiY1H27JrhMtg=3D=3D?=
-X-SG-ID: =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
- =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
- =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FIULn7kP?=
- =?us-ascii?Q?r6ldvIt7HKR8KouY65pzcy=2FPXm4fyD0L4ps4ybO?=
- =?us-ascii?Q?LeEc3Im5J9EjK0GMBlliyYqxwQD+i2N5LzhWeiW?=
- =?us-ascii?Q?gjblWdxCTj8Lzb+d6xww0zWz5RU2mrs5irWGNhx?=
- =?us-ascii?Q?7WMyIZjxdu6YMWHJpPVuGk8m9tOmRqAVzyXl4x6?=
- =?us-ascii?Q?TZXhXKp77Te9Kc2XoV0jjzdMhTZ4QYia6i=2FNimz?=
- =?us-ascii?Q?Xb9gPvjsT=2FeHc8W2cAFPtW1AvvvOsgCYhgACFrP?=
- =?us-ascii?Q?GOny36b5miiwxM8wso=2FwN9RAkneqGRukD6LjoWI?=
- =?us-ascii?Q?I1Bu3qozBlprxgNT6Gg2WKizs4O82CqFPtk0BDk?=
- =?us-ascii?Q?XsaRAJrMOfC0g9AsKbiSm5gcgiesGzThEgWW3zr?=
- =?us-ascii?Q?2vQkp6JhNiBdFAqNuuXUYlyi8uHglwdUyE1D7sr?=
- =?us-ascii?Q?XsdGfX0P4sa88rpGxOqyGwVkAgrppXWPeDbvxA7?=
- =?us-ascii?Q?BTLig7EIQi6cNAcazc3uXx0iVHrqgNdZGLaz3Xo?=
- =?us-ascii?Q?jYc3gecaCqCGSpbBVxOMHa+IfmrbgPgUwW+jHbp?=
- =?us-ascii?Q?MHI+UKLgvxwTbflePrVm2wkajcCqkfTQs5u1zUp?=
- =?us-ascii?Q?aFPeyrbG0hU8VkWKSzl1QQNxFkgwgigcV=2FpKfJ1?=
- =?us-ascii?Q?TJJtwz8SEd4TYyQ9WICKamPOMsGNIjtOXcqgzOf?=
- =?us-ascii?Q?SuPNAF8IzVCwMTMik8tShQa2wY6L2inCuD2Zzo9?=
- =?us-ascii?Q?StLp9fVj738PuiJqbwWaC5C4XRRfIrHZHO?=
-To: industrypack-devel@lists.sourceforge.net
-X-Entity-ID: u001.JjwLC/BnjMDrpiVD5lwagA==
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1tD3X1-00021Y-Lp for industrypack-devel@lists.sourceforge.net;
+ Mon, 18 Nov 2024 15:19:16 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
+ h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
+ Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1732029555;
+ i=admin@sbaloanadvice.com;
+ bh=+Pfoocfynfnln/HUE+7WYK+U0WtT91PRpMo4JtkrPEg=;
+ b=bttDXMCN1jYj7TVCKH8S89x3Ld7lwEggqlyqlZOpMer63ugBN2wOl7PxOkSWksywPt7ix+9PA4Rh
+ BaHodG12TSCLr4Npims6kfQ75Vcf5SUK8DvmOQ/GWEER34FnqscEF6JlLVLj3DDUnTM+gUEi0FB/
+ DG/QcjuAi+7bJBi9frk=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
+ h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
+ Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1732029555;
+ bh=+Pfoocfynfnln/HUE+7WYK+U0WtT91PRpMo4JtkrPEg=;
+ b=LRJcUQtAggkS7axoxYhvuTQF9ZTKQzBDnJ7s8dL+YTgp+XJL44+wlZ711FAIgFBz8W9ZtvOdtZeT
+ EfC+oK5s+0WujSGLTxhWMHGEw6TeSKYfks172CuCLIj6+PBBmSVkuxjcY07RuQA+5epB/xnxK9om
+ If68anFBVckjwJROKqc=
+Received: by em.sbaloanadvice.com id h7ddeq38vd0r for
+ <industrypack-devel@lists.sourceforge.net>;
+ Mon, 18 Nov 2024 09:30:58 -0500 (envelope-from
+ <bounce_oonjfmo_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
-X-Spam-Score: 7.3 (+++++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has identified this incoming email as possible spam.  The original
+X-Campaign-Shard: 2
+Bounces-To: bounce_cgfans_cezqcnf_n@em.sbaloanadvice.com
+Message-ID: <1731940254804.204828365.17985329.421896101@em.sbaloanadvice.com>
+X-Campaign: 204828365/17985329/421896101
+Date: Mon, 18 Nov 2024 09:30:58 -0500
+To: <industrypack-devel@lists.sourceforge.net>
+From: "SBA Loan Advice" <admin@sbaloanadvice.com>
+MIME-Version: 1.0
+X-Spam-Score: -0.2 (/)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Memo Desk      : HR Department Endorsed by     : Director
-   of Human Resources Dear industrypack-devel@lists.sourceforge.net, The HR Department
-    has released the Annual Leave Compliance Report for 2024. You can access
-   it via the following link: 
- 
- Content analysis details:   (7.3 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview: We're excited to introduce you to two powerful financial
+ tools
+ that can help propel your business forward: the SBA 7(a) Loan and the SBA
+ Micro Loan. Whether you're looking to start a new venture or ex [...] 
+ Content analysis details:   (-0.2 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  1.1 URIBL_GREY             Contains an URL listed in the URIBL greylist
-                             [URIs: sendgrid.net]
-  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
-                             blocklist
- [URIs: bafybeih2tdsjpfvcqveaju3xquhzxcgrtgetapthquwwc7cby7c2il3lwa.ipfs.dweb.link]
-  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                            [168.245.30.173 listed in bl.score.senderscore.com]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [168.245.30.173 listed in wl.mailspike.net]
-  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
-                             The query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                             [168.245.30.173 listed in sa-accredit.habeas.com]
-  0.1 URIBL_SBL_A            Contains URL's A record listed in the Spamhaus SBL
-                             blocklist
- [URIs: bafybeih2tdsjpfvcqveaju3xquhzxcgrtgetapthquwwc7cby7c2il3lwa.ipfs.dweb.link]
-  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
-                             mail domains are different
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
-                             digit
-                             [hrdept1[at]mail.com]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.24.225.131 listed in list.dnswl.org]
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [216.24.225.131 listed in sa-accredit.habeas.com]
+ 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [216.24.225.131 listed in bl.score.senderscore.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
-  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
-                             provider
-                             [hrdept1[at]mail.com]
-  0.5 URI_NOVOWEL            URI: URI hostname has long non-vowel sequence
-  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
-  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 HTML_IMAGE_RATIO_08    BODY: HTML has a low ratio of text to image
+ area
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
-  2.0 PYZOR_CHECK            Listed in Pyzor
-                             (https://pyzor.readthedocs.io/en/latest/)
-  0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
-                             EnvelopeFrom freemail headers are
-                             different
-  1.2 URI_DWEBIPFS           References Interplanetary File System PtP content
-                             via dweb.link, likely phishing
-  0.0 URI_IPFS               References Interplanetary File System PtP content,
-                             probable phishing
-X-Headers-End: 1tD0Iv-0008AE-7o
-Subject: [Industrypack-devel] Annual Leave notification
+ envelope-from domain
+ 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+ Colors in HTML
+X-Headers-End: 1tD3X1-00021Y-Lp
+Subject: [Industrypack-devel] With the rate drops now is the best time!
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -162,219 +121,198 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: HR DEPT via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
-Reply-To: hrdept1@mail.com
-Content-Type: multipart/mixed; boundary="===============5515613982356602479=="
+Reply-To: SBA Loan Advice <admin@sbaloanadvice.com>
+Content-Type: multipart/mixed; boundary="===============4573353255344096980=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============5515613982356602479==
-Content-Type: multipart/alternative; boundary=e92bda37fc98fbab2703385f88ac599deb9fd6ee38ade8a3d3533f758f35
+<!-- X-Campaign: 204828365/17985329/421896101 -->
+--===============4573353255344096980==
+Content-Type: multipart/alternative; boundary="----=_Part_31925260.1731940231733"
 
---e92bda37fc98fbab2703385f88ac599deb9fd6ee38ade8a3d3533f758f35
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain; charset=iso-8859-1
-Mime-Version: 1.0
+<!-- X-Campaign: 204828365/17985329/421896101 -->
+------=_Part_31925260.1731940231733
+Content-Type: text/plain;charset=UTF-8
 
-Memo Desk =A0=A0=A0=A0 : HR Department
-Endorsed by =A0 =A0 : Director of Human Resources
+We're excited to introduce you to two powerful financial tools that can help propel your business forward: the SBA 7(a) Loan and the SBA Micro Loan. Whether you're looking to start a new venture or expand your existing operations, these loans are designed to provide the funding you need to achieve your business goals.
 
-Dear industrypack-devel@lists.sourceforge.net,
+What are SBA 7(a) and Micro Loans?
+SBA 7(a) Loan: The SBA 7(a) is the most popular loan program the Small Business Administration offers. It provides long-term needs such as inventory, working capital, equipment, and real estate acquisitions.
+SBA Micro Loan: The SBA Micro Loan program offers smaller loan amounts to help businesses with short-term needs such as inventory purchases, working capital, or minor equipment expenditures.
 
-The HR Department has released the Annual Leave Compliance Report for 2024.=
- You can access it via the following link:
+Why Are These Loans Beneficial?
+Flexible Uses: Both loan types can be used for various business expenses, providing the flexibility to meet your unique needs.
+Competitive Interest Rates: Enjoy lower interest rates compared to conventional loans, helping you save on financing costs.
+Support and Guidance: Benefit from the SBA's support network, which includes access to business counseling and educational resources.
 
-https://industrypack-devel@lists.sourceforge.net/Annual-Leave-Compliance-Re=
-port-2024.pdf ( https://bafybeih2tdsjpfvcqveaju3xquhzxcgrtgetapthquwwc7cby7=
-c2il3lwa.ipfs.dweb.link/?filename=3Dmaink.htm#industrypack-devel@lists.sour=
-ceforge.net )
+Ready to explore how an SBA loan can benefit your business? Click the button(s)below to learn more and get started on your application or schedule a free consultation call with a specialist!
 
-Employees highlighted in red have not yet complied with the 2024 Annual Lea=
-ve plan, while those in green have met all requirements.
+Apply Now (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6xe-6z6p454/)
 
-If you have any questions, please reply to this email.
+Schedule A Call (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6xf-6z6p455/)
 
-*Thanks & Regards,*
+https://www.sbaloanadvice.com/ (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zs-6z6p450/)
 
-*Human Resources*
+Home (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6xh-6z6p457/)
+Solutions (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zu-6z6p452/)
+Resources (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zv-6z6p453/)
 
-*HR Admin*
-Unsubscribe From This List https://u48162140.ct.sendgrid.net/asm/unsubscrib=
-e/?user_id=3D48162140&data=3D_0k-1sXQMTVmLqz8fDajerFak8uz4jbiml-OTOJUIHloMD=
-AwdTAwMLAbtrvgFH2bTecJn33H_uEUrsR9QVgQ8-7EuJk5ZdYO8pxZ5dCZD-Za53b16_guySqO2=
-g7FR03KHispzqdCr_PUwDkH2PVrn3CW4zMq-xFYaP5SEy4yY3F7d_h-lT2ai7Hg47iz4paMwZO3=
-8TGuMKsY908GVnmKq8EHgMDRagdcHbIxM7sGVR8Z7Mc8U1e9VDBGyGaTn-vRXdYtjiP0i6hMR5i=
-Ups5PV-aluGZ2EGGrPrTfDvAJ18Wr5jgTeEMoHEHYpFGrI4SfrN8oEELb4rWCemwjv-knObFc-H=
-tSySwD_dRW6CWvKiNwWxFj8yIgr21ykEiTb6Ujvq8PRGPoaBTasSFHdRQy-X_QGEI8ujCFWMnh7=
-wgz4GX3niWkuP9lAjMvg7sbZ7wcudzy1LDQd37l75lFvZxtKfbJf57kCz_i6aTkEgtuuZ5I4MRm=
-Uq41yA7-0oyzgApLDPkQOrjjoV8JxSBTTio8Gw-xWDDX0beaaIAtU2nUsCkNADY1N4ez8gRECvN=
-sQLa9TitEFVCgca-elkbGIoxlyZnGah7f6rBY7k-rcyt5DDYXXAUidyqo-Oduigc8snYAphb3tI=
-SNLy_mrPImWDXmCCE_4OFNeWLm36ucKr3BN6JbPB2SmIRRw1Dz0ORQ4xM_cdZa5NHPx2otk-sD3=
-128--wxO0VBOabBbmpSn8S0HSvlRRZuXhKxOURPH_U8LhkFRh2z1ZCPIFbb07wP8Uh82Ty4H5TR=
-Ul9fnQ72qhV5KSIY1HyS0lNFmc9AGUn1cn9w8et70CYjrSD_RT0xvw_QhDP2dzoABnkeV9OtNuq=
-SRCq0VP4QgqGiz0Xhmhj8eItDflv8Uj_cLttoU02phVf5I-iScvzGaFy2lwwl4UDsdJg-XehFOD=
-QZks8sCFYXOO579Mm79BMOVnQ0U20lJyHGWaxtH8nILF-ADLEYIFydCU7n0fOe-u5djdxKw_4g_=
-uZI9cG9Twe-wesx4m9w44z4nso7qnVwm_4AvrUz4ve_JebJ_3OJTDuMaWJvNWeH9j-67TNUoX--=
-GB1Jge19LV0hsV8W6o0QE5KLBsMETKrCqKePwrQfaXXygyRaUFU4oDPmncgJomOcZYatIVTjY9y=
-brcrD22xPAubYVE5sfj3YablIEK-aQNGcFL8Jbcj1xECJGGpLF20F-xw-dJOyaVspSFHxI6r-BF=
-APrxmK2nU7Dok9O9zxXKbJ0w=3D=3D | Manage Email Preferences https://u48162140=
-.ct.sendgrid.net/asm/?user_id=3D48162140&data=3Df6TgjrMIilhEU_L0GENrpmBxlU5=
-E2ERyebc1IZJYf-hoMDAwdTAwMNSvVjytwkKLT_tbHO_59h16179303nAYgjUqtPXFKa9q9gAMl=
-cK9lSbSkzPjNT7T_g4_Y-AGSBR2pXcJPerv2K2yEDA5lvMLhH0LGXj0HzinMbbqAPi0DwaYEaim=
-Hl-74TKwZvJ3vrY37QX814chKeXQJk9_VmDsYl2o3I7zOzdrnquID2N144mP0Zve-AwKsAW5uEH=
-5SVmi8MFKfVUGcHubNk2w13TKA1w5huJUD2jA3Od6-ut9nY4rODCbXYEz74fUnGU7Zl0Ry1uCqo=
-GP3UlTXczFpWjvXox75787AzCVu9N1Qmo3bH5xN70klKNhu9x029cgUO37PdGbJ34pXmh6otVQo=
-1fEw6Z1w3sunP-wptv3XxsAushngobS3Uj2OrAdbC3OjWPJM5nptVO00Zum66RN0ekOxWHQdkQB=
-yJnUvn9mTEqRjA7_wn0Zymz6zABmvTTYRUjS710La9oa2-65yYkll2BF954jyVDOIBl2rt01NxT=
-iXYCSvfE2TKcfcSuGZ8G77JrKzm5VwCDUz0NpNymDy1drbMAKd5iVMc1Zv4E4ShagAEPBEEl1tr=
-XuyIdPyyFFTRl6zyRPjzDix7_qE-3jTkqeP4B_HWcZFfEvY78EJkXgy5yYU6pR99fUnuvUza9eC=
-VquLxhAXgcHwO8UfdFe-xAfhV5kOLTBKHGqUTQKsR-Ptg-4m9CqUzh3Almfx13Kcnd9kVzEBb1p=
-YDU9QKcyy0ObUOW3cL8UklNwfaH0K99bynozNgccaznV_rp_MkIqbwCvfzKwQ9LoJIQvv9uianY=
-SPOirZUrbl5WR3Ee3ZaSStyOeoporQPtrNw5eP8vtHHiYpZmLM3W9BJ3cPvMLu2F6uzYUS-Etq1=
-mF4sd2phhscxEJtJwyVdshnI9G0u_YKakcEqTvq9-UVfqSli41H9o5OB29lZtu6kLY0fnyx5ccf=
-A13VKp4BDoxm50JwNTrOEIq1q7ik1echJsKemx_VUDM2LoSt0dcfwNMNbYlhpE6k8rn5xLEXBGq=
-24HeGYnBrN4fURtkUgfPlpEgug6n6cEHBVCbOuwOl_U_6NaN8KwhCH4eLZq_KDT_JF5Rdwg4_Wj=
-4-UAzxUHUfyN_PG0JMP3BPkVEv0XtyJdW4UIir-_Q2Qayyek_UvjAbyWFXViSd9vlqmrKN8l3cK=
-VaNkr73S3yjOp6H0FyQmpHEGRL7wca6aZ5owZURcN9Q=3D=3D
---e92bda37fc98fbab2703385f88ac599deb9fd6ee38ade8a3d3533f758f35
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html; charset=us-ascii
-Mime-Version: 1.0
+You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.sbaloanadvice.com/form?aphkh--f920-6z6p451&sl=4ef&t=1&ac=gfka or unsubscribe http://click.sbaloanadvice.com/form?aphkh--f920-6z6p451&sl=4ef&t=5&ac=gfka. 
+------=_Part_31925260.1731940231733
+Content-Type: text/html;charset=UTF-8
 
-<div style=3D"color:rgb(33,33,33);font-size:15px">
-	<div>
-		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
-margin-bottom:12pt;margin-left:0px;margin-right:0px">
-		<font color=3D"#1f497d">Memo Desk &nbsp;&nbsp;&nbsp;&nbsp; : HR Departmen=
-t<br>
-		Endorsed by &nbsp; &nbsp; : Director of Human Resources</font></p>
-		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
-margin-bottom:12pt;margin-left:0px;margin-right:0px">&nbsp;</p>
-		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
-margin-bottom:12pt;margin-left:0px;margin-right:0px">
-		Dear industrypack-devel@lists.sourceforge.net, <br>
-		<br>
-		The HR Department has released the Annual Leave Compliance Report for=20
-		2024. You can access it via the following link:</p>
-		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
-margin-bottom:12pt;margin-left:0px;margin-right:0px">
-		<a clicktracking=3D"off" href=3D"https://bafybeih2tdsjpfvcqveaju3xquhzxcg=
-rtgetapthquwwc7cby7c2il3lwa.ipfs.dweb.link/?filename=3Dmaink.htm#industrypa=
-ck-devel@lists.sourceforge.net">https://industrypack-devel@lists.sourceforg=
-e.net/Annual-Leave-Compliance-Report-2024.pdf</a></p>=20
-		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
-margin-bottom:12pt;margin-left:0px;margin-right:0px">
-		Employees highlighted in red have not yet complied with the 2024 Annual=20
-		Leave plan, while those in green have met all requirements.<br>
-		<br>
-		If you have any questions, please reply to this email.</p>
-		<div style=3D"margin:0px">
-			<br>
-			<span lang=3D"en-GB">&nbsp;<font style=3D"font-family:&quot;calibri&quot=
-;,sans-serif,serif,&quot;emojifont&quot;" size=3D"2"><span style=3D"font-si=
-ze:11pt"><font color=3D"#1f497d"><span style=3D"font-size:12pt"><font color=
-=3D"black">&nbsp;<font style=3D"font-family:&quot;arial&quot;,sans-serif,se=
-rif,&quot;emojifont&quot;" size=3D"2" color=3D"black"><span style=3D"font-f=
-amily:&quot;arial&quot;,sans-serif,serif,&quot;emojifont&quot;;font-size:11=
-pt">=20
-			&nbsp;<span style=3D"color:rgb(0,32,96);font-family:&quot;arial&quot;,sa=
-ns-serif,serif,&quot;emojifont&quot;;font-size:10pt" lang=3D"EN-AU">&nbsp;<=
-/span></span></font></font></span></font></span></font></span></div>
-		<div style=3D"margin:0px">
-			<div style=3D"margin:0px">
-				<p style=3D"margin:0in">
-				<font style=3D"font-family: arial,sans-serif,serif,emojifont" size=3D"2=
-" color=3D"black">
-				<i><b>
-				<span style=3D"color:rgb(0,112,192);font-family:&quot;bookman old style=
-&quot;,serif,serif,&quot;emojifont&quot;;font-size:12pt">
-				<font style=3D"font-family:&quot;bodoni mt black&quot;,serif,&quot;emoj=
-ifont&quot;">
-				Thanks &amp; Regards,</font></span></b></i></font></p>
-				<p style=3D"margin:0in">
-				<font style=3D"font-family: arial,sans-serif,serif,emojifont" size=3D"2=
-" color=3D"black">
-				<b>
-				<span style=3D"color:rgb(0,112,192);font-family:&quot;bookman old style=
-&quot;,serif,serif,&quot;emojifont&quot;;font-size:12pt">
-				<font style=3D"font-family:&quot;arial&quot;,serif,&quot;emojifont&quot=
-;" size=3D"2">
-				Human Resources</font></span></b></font></p>
-				<p style=3D"margin:0in">
-				<font style=3D"font-family: arial,sans-serif,serif,emojifont" size=3D"2=
-" color=3D"black">
-				<b><span style=3D"color:rgb(0,112,192)">HR Admin</span></b></font></div=
->
-		</div>
-	</div>
-</div><a href=3D'https://u48162140.ct.sendgrid.net/asm/unsubscribe/?user_id=
-=3D48162140&amp;data=3D_0k-1sXQMTVmLqz8fDajerFak8uz4jbiml-OTOJUIHloMDAwdTAw=
-MLAbtrvgFH2bTecJn33H_uEUrsR9QVgQ8-7EuJk5ZdYO8pxZ5dCZD-Za53b16_guySqO2g7FR03=
-KHispzqdCr_PUwDkH2PVrn3CW4zMq-xFYaP5SEy4yY3F7d_h-lT2ai7Hg47iz4paMwZO38TGuMK=
-sY908GVnmKq8EHgMDRagdcHbIxM7sGVR8Z7Mc8U1e9VDBGyGaTn-vRXdYtjiP0i6hMR5iUps5PV=
--aluGZ2EGGrPrTfDvAJ18Wr5jgTeEMoHEHYpFGrI4SfrN8oEELb4rWCemwjv-knObFc-HtSySwD=
-_dRW6CWvKiNwWxFj8yIgr21ykEiTb6Ujvq8PRGPoaBTasSFHdRQy-X_QGEI8ujCFWMnh7wgz4GX=
-3niWkuP9lAjMvg7sbZ7wcudzy1LDQd37l75lFvZxtKfbJf57kCz_i6aTkEgtuuZ5I4MRmUq41yA=
-7-0oyzgApLDPkQOrjjoV8JxSBTTio8Gw-xWDDX0beaaIAtU2nUsCkNADY1N4ez8gRECvNsQLa9T=
-itEFVCgca-elkbGIoxlyZnGah7f6rBY7k-rcyt5DDYXXAUidyqo-Oduigc8snYAphb3tISNLy_m=
-rPImWDXmCCE_4OFNeWLm36ucKr3BN6JbPB2SmIRRw1Dz0ORQ4xM_cdZa5NHPx2otk-sD3128--w=
-xO0VBOabBbmpSn8S0HSvlRRZuXhKxOURPH_U8LhkFRh2z1ZCPIFbb07wP8Uh82Ty4H5TRUl9fnQ=
-72qhV5KSIY1HyS0lNFmc9AGUn1cn9w8et70CYjrSD_RT0xvw_QhDP2dzoABnkeV9OtNuqSRCq0V=
-P4QgqGiz0Xhmhj8eItDflv8Uj_cLttoU02phVf5I-iScvzGaFy2lwwl4UDsdJg-XehFODQZks8s=
-CFYXOO579Mm79BMOVnQ0U20lJyHGWaxtH8nILF-ADLEYIFydCU7n0fOe-u5djdxKw_4g_uZI9cG=
-9Twe-wesx4m9w44z4nso7qnVwm_4AvrUz4ve_JebJ_3OJTDuMaWJvNWeH9j-67TNUoX--GB1Jge=
-19LV0hsV8W6o0QE5KLBsMETKrCqKePwrQfaXXygyRaUFU4oDPmncgJomOcZYatIVTjY9ybrcrD2=
-2xPAubYVE5sfj3YablIEK-aQNGcFL8Jbcj1xECJGGpLF20F-xw-dJOyaVspSFHxI6r-BFAPrxmK=
-2nU7Dok9O9zxXKbJ0w=3D=3D'>Unsubscribe From This List</a> | <a href=3D'https=
-://u48162140.ct.sendgrid.net/asm/?user_id=3D48162140&amp;data=3Df6TgjrMIilh=
-EU_L0GENrpmBxlU5E2ERyebc1IZJYf-hoMDAwdTAwMNSvVjytwkKLT_tbHO_59h16179303nAYg=
-jUqtPXFKa9q9gAMlcK9lSbSkzPjNT7T_g4_Y-AGSBR2pXcJPerv2K2yEDA5lvMLhH0LGXj0Hzin=
-MbbqAPi0DwaYEaimHl-74TKwZvJ3vrY37QX814chKeXQJk9_VmDsYl2o3I7zOzdrnquID2N144m=
-P0Zve-AwKsAW5uEH5SVmi8MFKfVUGcHubNk2w13TKA1w5huJUD2jA3Od6-ut9nY4rODCbXYEz74=
-fUnGU7Zl0Ry1uCqoGP3UlTXczFpWjvXox75787AzCVu9N1Qmo3bH5xN70klKNhu9x029cgUO37P=
-dGbJ34pXmh6otVQo1fEw6Z1w3sunP-wptv3XxsAushngobS3Uj2OrAdbC3OjWPJM5nptVO00Zum=
-66RN0ekOxWHQdkQByJnUvn9mTEqRjA7_wn0Zymz6zABmvTTYRUjS710La9oa2-65yYkll2BF954=
-jyVDOIBl2rt01NxTiXYCSvfE2TKcfcSuGZ8G77JrKzm5VwCDUz0NpNymDy1drbMAKd5iVMc1Zv4=
-E4ShagAEPBEEl1trXuyIdPyyFFTRl6zyRPjzDix7_qE-3jTkqeP4B_HWcZFfEvY78EJkXgy5yYU=
-6pR99fUnuvUza9eCVquLxhAXgcHwO8UfdFe-xAfhV5kOLTBKHGqUTQKsR-Ptg-4m9CqUzh3Almf=
-x13Kcnd9kVzEBb1pYDU9QKcyy0ObUOW3cL8UklNwfaH0K99bynozNgccaznV_rp_MkIqbwCvfzK=
-wQ9LoJIQvv9uianYSPOirZUrbl5WR3Ee3ZaSStyOeoporQPtrNw5eP8vtHHiYpZmLM3W9BJ3cPv=
-MLu2F6uzYUS-Etq1mF4sd2phhscxEJtJwyVdshnI9G0u_YKakcEqTvq9-UVfqSli41H9o5OB29l=
-Ztu6kLY0fnyx5ccfA13VKp4BDoxm50JwNTrOEIq1q7ik1echJsKemx_VUDM2LoSt0dcfwNMNbYl=
-hpE6k8rn5xLEXBGq24HeGYnBrN4fURtkUgfPlpEgug6n6cEHBVCbOuwOl_U_6NaN8KwhCH4eLZq=
-_KDT_JF5Rdwg4_Wj4-UAzxUHUfyN_PG0JMP3BPkVEv0XtyJdW4UIir-_Q2Qayyek_UvjAbyWFXV=
-iSd9vlqmrKN8l3cKVaNkr73S3yjOp6H0FyQmpHEGRL7wca6aZ5owZURcN9Q=3D=3D'>Manage E=
-mail Preferences</a><img src=3D"https://u48162140.ct.sendgrid.net/wf/open?u=
-pn=3Du001.HN9ncswbYi-2BEGN-2FXArB7Yb-2B54Tm43-2B694904Gpq6REDOvMj5jd8r2ODXo=
-OGLI8F0uYDlfdJx8NjvPdhWWcpkCUGsR3P4VRN5MZ7o0veGf3rvT-2BLh1aC66WHXNP3uZ2MXAL=
-kHEQ-2BFrCPjUx06NxmFri6-2BXxC4qcLErCGgOmjc8H7v-2FCmxYtULIhFJ4QC6to7fag6ybzO=
-nzT0h3DxguNHEERiyQIMncC-2B8mrzWH05GEYh0cdLOqu01gnsSrOIeJECtArR3i0LRV1nDI3iX=
-0RIFX73UWy-2FUMe2MJ3R7KWEXtA1uoqZDpmIoitdyeDTkHgARrtfMzoBjjqkZnCXRMf7Klinpw=
-oLcFDyptDcVJVUJKDgxM-2BYsiHc7zvMsQ54BOBZlb27wftQyk8eUIjE9SMuh6Mb-2BrMHSja77=
-hCdzEKGGjOcUxvN1l-2F0Z6lySDe8U1dChNixkyS0sYK9lYmpgW5oYE6sr21gt85Dv6XTlesrtq=
-CVTbMuFOhP2wIGvIrUhJ7JirHwOpdrcbUTQ-2Bl-2BKlL0PH5kM7EnCLZEMoa95AYLRTG8UBntc=
-01zRP99ro-2FBHrZY8-2FYHVkYHt3Cq70FnqgNVQtODPqb7odcc4l3KjBKSxm6AGsdEib4npPVi=
-V6bw-2BwDpd-2Fo4lKeahKGaySllR6gNALON-2FU-2FzCCaz3zYFRS5FEcyaECpkHcWvNvd0Vf1=
-E6F4BGQvcSqeRdo-2B2BoqiHIUFS7FLO5UOSsaa1xCrdc8RBOMT2ENFbYecq3vttC3nS7ln0e0o=
-RzIw7rTmDkYQ35vbedw0Bk0y5tV3qiSUPzBvi-2FznW3Dao9JZh9GfZrgqNNvtcf8OTkK519uKx=
-phDa9TjX1AmB7BzoVmc-2BvXtqxLGi-2BfnZ2YDZglbuVxMYaSqpbSBu1xRnp2ArONFoYlINH24=
-zqJHf5yqnBtcuoMfxLNNNLzxTn0M62emV5zx1ocUrJsY6TB5hP-2BoXVO5PXjZLmloQUjFrosnY=
-N-2BHH2hizrDoB36U4jOzxCGoIjaMrG5aYRdfA18pVIArSEnb-2FRF-2FljZH-2BxiVH84-2B01=
-S6BcVaSV726JxCKL163SLJz3TZxLVmjzRmF" alt=3D"" width=3D"1" height=3D"1" bord=
-er=3D"0" style=3D"height:1px !important;width:1px !important;border-width:0=
- !important;margin-top:0 !important;margin-bottom:0 !important;margin-right=
-:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bot=
-tom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
---e92bda37fc98fbab2703385f88ac599deb9fd6ee38ade8a3d3533f758f35--
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head><!--[if gte mso 15]>
+			<xml>
+				<o:OfficeDocumentSettings>
+				<o:AllowPNG/>
+				<o:PixelsPerInch>96</o:PixelsPerInch>
+				</o:OfficeDocumentSettings>
+			</xml>
+			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255,255,255);
+}
+
+table td, table th {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 0 none;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+}
+
+.fusionResponsiveColumn h1, 
+.fusionResponsiveColumn h2,
+.fusionResponsiveColumn h3,
+.fusionResponsiveColumn p {
+    font-weight: 400;
+}
+
+.fusionResponsiveColumn {
+    font-weight: normal;
+    text-align: left;
+}
+/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
+@media only screen and (max-width: 620px) {
+    .fusionResponsiveContent{
+        width: 100% !important;
+}
+
+.fusionResponsiveColumn {
+    width: auto !important;
+    display: block;
+}
+
+.fusionResponsiveImage {
+    width: 100% !important;
+}
+
+.fusionResponsiveImageTable {
+    padding-bottom: 0 !important;
+}
+
+.fusionResponsiveCanvas {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+    .fusionResponsiveContent {
+        width: 100% !important;
+    }
+
+    .fusionResponsiveColumn {
+        width: auto !important;
+        display: block;
+    }
+
+    .fusionResponsiveImage {
+        width: 100% !important;
+    }
+
+    .fusionResponsiveCanvas {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+}
+</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
+<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style="width:100%;padding-top:15px;padding-bottom:15px;background-color:rgb(246,246,246);background-repeat:no-repeat;font-family:sans-serif;">
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr><th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:600px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/766666/SBA%20WF1.png?id=kb663ck" class="fusionResponsiveImage" alt="" width="600" height="auto" style="width:600px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;">
+<p style="mso-line-height-rule:exactly;line-height:20px;font-weight:400;margin-top:0px;margin-bottom:0px;">We're excited to introduce you to two powerful financial tools that can help propel your business forward: the SBA 7(a) Loan and the SBA Micro Loan. Whether you're looking to start a new venture or expand your existing operations, these loans are designed to provide the funding you need to achieve your business goals.</p>
+<p style="mso-line-height-rule:exactly;line-height:24px;font-weight:400;margin-top:16px;margin-bottom:0px;"><strong>What are SBA 7(a) and Micro Loans?</strong></p>
+<ul>
+<li style="mso-line-height-rule:exactly;line-height:20px;">
+<strong>SBA 7(a) Loan:</strong> The SBA 7(a) is the most popular loan program the Small Business Administration offers. It provides long-term needs such as inventory, working capital, equipment, and real estate acquisitions.</li>
+<li style="mso-line-height-rule:exactly;line-height:20px;">
+<strong>SBA Micro Loan:</strong> The SBA Micro Loan program offers smaller loan amounts to help businesses with short-term needs such as inventory purchases, working capital, or minor equipment expenditures.</li>
+</ul>
+<p style="mso-line-height-rule:exactly;line-height:20px;font-weight:400;margin-top:16px;margin-bottom:0px;"><strong>Why Are These Loans Beneficial?</strong></p>
+<ul>
+<li style="mso-line-height-rule:exactly;line-height:20px;">
+<strong>Flexible Uses:</strong> Both loan types can be used for various business expenses, providing the flexibility to meet your unique needs.</li>
+<li style="mso-line-height-rule:exactly;line-height:20px;">
+<strong>Competitive Interest Rates:</strong> Enjoy lower interest rates compared to conventional loans, helping you save on financing costs.</li>
+<li style="mso-line-height-rule:exactly;line-height:20px;">
+<strong>Support and Guidance:</strong> Benefit from the SBA's support network, which includes access to business counseling and educational resources.</li>
+</ul>
+<p style="mso-line-height-rule:exactly;line-height:20px;text-align:center;font-weight:400;margin-top:16px;margin-bottom:0px;">Ready to explore how an SBA loan can benefit your business? Click the button(s)below to learn more and get started on your application or schedule a free consultation call with a specialist!</p>
+</div></td></tr></tbody></table></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="text-align:center;background:rgb(41,57,85);border-radius:4px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zq-6z6p458/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_1" name="https   sbaloanadvice cmprsbala">Apply Now </a></td></tr>
+</tbody></table></td></tr></tbody></table></div></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="text-align:center;background:rgb(41,57,85);border-radius:4px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zr-6z6p459/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_2" name="https   calendly loanadvice sba follow up">
+Schedule A Call</a></td></tr></tbody></table></td></tr></tbody></table></div></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:10px;padding-bottom:10px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(136,136,136);">Â </td></tr></tbody></table></td></tr></tbody></table></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;width:36%;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zs-6z6p450/" name="httpssbaloanadvicecom" title="" style="" id="auto_assign_link_num_3">
+<img src="https://media.campaigner.com/media/76/766666/SBA%20(1).png?id=u4i2tca" class="fusionResponsiveImage" alt="" width="91" height="auto" style="width:91px;display:block;height:auto;margin:auto;background-color:transparent;" /></a></td></tr></tbody></table></td></tr></tbody></table></div></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;">
+<p style="text-align:center;font-weight:400;margin-top:0px;margin-bottom:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zt-6z6p451/" name="httpssbaloanadvicecom 2" style="color:rgb(41,57,85);text-decoration:underline;" id="auto_assign_link_num_4">Home</a></p>
+<p style="text-align:center;font-weight:400;margin-top:16px;margin-bottom:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zu-6z6p452/" name="httpssbaloanadvicecomsolutions" style="color:rgb(41,57,85);text-decoration:underline;" id="auto_assign_link_num_5">Solutions</a></p>
+<p style="text-align:center;font-weight:400;margin-top:16px;margin-bottom:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zv-6z6p453/" name="httpssbaloanadvicecomresources" style="color:rgb(41,57,85);text-decoration:underline;" id="auto_assign_link_num_6">Resources</a></p>
+</div></td></tr></tbody></table></th>
+<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+</td></tr></tbody></table></body>
+</html>
+<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
+
+</address>
+<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?aphkh--f920-6z6p451&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?aphkh--f920-6z6p451&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
+<img src="http://click.sbaloanadvice.com/open/gfka-aphkh--6z6p459/img.gif" width="0" height="0" alt="">
+------=_Part_31925260.1731940231733--
 
 
---===============5515613982356602479==
+--===============4573353255344096980==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5515613982356602479==
+--===============4573353255344096980==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -385,5 +323,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5515613982356602479==--
+--===============4573353255344096980==--
 
