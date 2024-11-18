@@ -2,114 +2,85 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7219F9D1448
-	for <lists+industrypack-devel@lfdr.de>; Mon, 18 Nov 2024 16:19:19 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BC3DD9D15C3
+	for <lists+industrypack-devel@lfdr.de>; Mon, 18 Nov 2024 17:50:52 +0100 (CET)
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1tD3X4-0003oX-1Q
+	id 1tD4xd-0002qV-QR
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 18 Nov 2024 15:19:18 +0000
+	Mon, 18 Nov 2024 16:50:49 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
- <bounce_oonjfmo_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
- id 1tD3X2-0003oJ-Je for industrypack-devel@lists.sourceforge.net;
- Mon, 18 Nov 2024 15:19:16 +0000
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <sxmvkmkl@cfrontier.com>) id 1tD4xU-0002pb-O4
+ for industrypack-devel@lists.sourceforge.net;
+ Mon, 18 Nov 2024 16:50:40 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=+Pfoocfynfnln/HUE+7WYK+U0WtT91PRpMo4JtkrPEg=; b=APlY4u0BQJpn+jq4UIfw9ygI4V
- MVD/9Z0KZmljrkf0Cluj1inBJXtv9O5mPquyaMCLG/G64K7QAW3Sovl8h4koc7FMC0874MXzrDmCA
- nA+Kk4K1RMGAASF/8JQUW+m7HqhGRBNaN2xgrRZm9o+JY4v3aJHlodiS+OHezCx0mY84=;
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=F1qEvEEXSW/vqENFpD/7g1SKn/mtecE0tfcTNoxwtrE=; b=W9P46KiH9Vlf8+VIqrZTfoeHur
+ Y9gwzALJiZ6sazf0aDGSgQ4tRfMw9FeONJKrUA1W8MD0j/wd1JAtQhAhfZgK0kBd17wkpGcKTO4Tv
+ IrZGtyHX+SHx0Ofv7fXjOq1l9X1qe2Gl2uRZMWuTiw/iqnsNjh7HYsRZKAq0XtXBJfRA=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=+Pfoocfynfnln/HUE+7WYK+U0WtT91PRpMo4JtkrPEg=; b=hPE+0TJqUwu40xIZP8IE0e1G75
- IU5vqoYNWlbWeLG6H6qdqRS5y95cm6m01zIiL5tLUCLHW3zFJ2008qg+mz7xNvtgF7dfkqeBo741b
- QIF9xRbcm33pmEz5UH24UY2c1fxdoc6x9nTwdrW2rUkfOsmBCgsvJ/TUbG7IHRR8OxNs=;
-Received: from em.sbaloanadvice.com ([216.24.225.131])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1tD3X1-00021Y-Lp for industrypack-devel@lists.sourceforge.net;
- Mon, 18 Nov 2024 15:19:16 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
- Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1732029555;
- i=admin@sbaloanadvice.com;
- bh=+Pfoocfynfnln/HUE+7WYK+U0WtT91PRpMo4JtkrPEg=;
- b=bttDXMCN1jYj7TVCKH8S89x3Ld7lwEggqlyqlZOpMer63ugBN2wOl7PxOkSWksywPt7ix+9PA4Rh
- BaHodG12TSCLr4Npims6kfQ75Vcf5SUK8DvmOQ/GWEER34FnqscEF6JlLVLj3DDUnTM+gUEi0FB/
- DG/QcjuAi+7bJBi9frk=
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
- Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1732029555;
- bh=+Pfoocfynfnln/HUE+7WYK+U0WtT91PRpMo4JtkrPEg=;
- b=LRJcUQtAggkS7axoxYhvuTQF9ZTKQzBDnJ7s8dL+YTgp+XJL44+wlZ711FAIgFBz8W9ZtvOdtZeT
- EfC+oK5s+0WujSGLTxhWMHGEw6TeSKYfks172CuCLIj6+PBBmSVkuxjcY07RuQA+5epB/xnxK9om
- If68anFBVckjwJROKqc=
-Received: by em.sbaloanadvice.com id h7ddeq38vd0r for
- <industrypack-devel@lists.sourceforge.net>;
- Mon, 18 Nov 2024 09:30:58 -0500 (envelope-from
- <bounce_oonjfmo_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
-List-Unsubscribe-Post: List-Unsubscribe=One-Click
-X-Campaign-Shard: 2
-Bounces-To: bounce_cgfans_cezqcnf_n@em.sbaloanadvice.com
-Message-ID: <1731940254804.204828365.17985329.421896101@em.sbaloanadvice.com>
-X-Campaign: 204828365/17985329/421896101
-Date: Mon, 18 Nov 2024 09:30:58 -0500
-To: <industrypack-devel@lists.sourceforge.net>
-From: "SBA Loan Advice" <admin@sbaloanadvice.com>
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=F1qEvEEXSW/vqENFpD/7g1SKn/mtecE0tfcTNoxwtrE=; b=f
+ nR5Sf57HNKdFAeHdG49aCwg42kKLOKz584gKFAJoXNluxcpqvXSPri4err5ntQD2G5KzO19AU/H0E
+ j/bXW1MOHJiHzXY2dsKPuQ6ioKDZISttlXFDlZr8PWe8YsAVOim1jMn06dsk91Z8Vh2rlnL0NuXiD
+ aJTMBxAUEHx8R/c4=;
+Received: from server.quickpowerhost.org ([188.127.231.229]
+ helo=s1009432.srvape.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1tD4xA-00008V-QS for industrypack-devel@lists.sourceforge.net;
+ Mon, 18 Nov 2024 16:50:27 +0000
+Received: from cfrontier.com (localhost [IPv6:::1])
+ by s1009432.srvape.com (Postfix) with ESMTP id 51FC229A446
+ for <industrypack-devel@lists.sourceforge.net>;
+ Mon, 18 Nov 2024 19:31:37 +0300 (MSK)
+From: HR/Executive<uwxbpo@cfrontier.com>
+To: industrypack-devel@lists.sourceforge.net
+Date: 18 Nov 2024 08:31:36 -0800
+Message-ID: <20241118083136.6C513FB14AF54218@cfrontier.com>
 MIME-Version: 1.0
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 4.0 (++++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: We're excited to introduce you to two powerful financial
- tools
- that can help propel your business forward: the SBA 7(a) Loan and the SBA
- Micro Loan. Whether you're looking to start a new venture or ex [...] 
- Content analysis details:   (-0.2 points, 6.0 required)
+ Content preview: HR/Executive <president@waventuress-ng.com> Reply all | Tue
+ 06/08, 14:16 
+ Content analysis details:   (4.0 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.24.225.131 listed in list.dnswl.org]
- 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
- The query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [216.24.225.131 listed in sa-accredit.habeas.com]
+ 2.5 URIBL_DBL_PHISH        Contains a Phishing URL listed in the Spamhaus
+ DBL blocklist [URIs: bigelowaerrospace.com]
+ 0.0 HK_RANDOM_ENVFROM      Envelope sender username looks random
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [216.24.225.131 listed in bl.score.senderscore.com]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ [188.127.231.229 listed in bl.score.senderscore.com]
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [188.127.231.229 listed in sa-trusted.bondedsender.org]
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_IMAGE_RATIO_08    BODY: HTML has a low ratio of text to image
- area
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML
-X-Headers-End: 1tD3X1-00021Y-Lp
-Subject: [Industrypack-devel] With the rate drops now is the best time!
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+X-Headers-End: 1tD4xA-00008V-QS
+Subject: [Industrypack-devel] Complete Payment Schedule November 2024
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -121,198 +92,430 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <admin@sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============4573353255344096980=="
+Content-Type: multipart/mixed; boundary="===============2784873855200739985=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-<!-- X-Campaign: 204828365/17985329/421896101 -->
---===============4573353255344096980==
-Content-Type: multipart/alternative; boundary="----=_Part_31925260.1731940231733"
+--===============2784873855200739985==
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
-<!-- X-Campaign: 204828365/17985329/421896101 -->
-------=_Part_31925260.1731940231733
-Content-Type: text/plain;charset=UTF-8
+<html><head>
+		<title></title>
+		<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001">
+		<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+	</head>
+	<body>
+		<p>
+			&nbsp;</p>
+		<div aria-selected=3D"false" style=3D'font-family: wf_segoe-ui_normal, "S=
+egoe UI", "Segoe WP", Tahoma, Arial, sans-serif; background-color: rgb(255,=
+ 255, 255);' aria-label=3D"Message Contents">
+			<div style=3D"clear: both; min-width: 350px;" aria-label=3D"Expanded Mes=
+sage Contents">
+				<div style=3D"border-color: rgb(234, 234, 234); padding-bottom: 20px; b=
+order-bottom-width: 1px; border-bottom-style: solid; min-height: 70px;">
+					<div style=3D"margin-top: 12px;">
+						&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<div aria-selected=3D"true" style=3D'font-family: wf_segoe-ui_normal, "Se=
+goe UI", "Segoe WP", Tahoma, Arial, sans-serif; background-color: rgb(255, =
+255, 255);' aria-label=3D"Message Contents">
+			<div style=3D"clear: both; min-width: 350px;" aria-label=3D"Expanded Mes=
+sage Contents">
+				<div style=3D"border-color: rgb(234, 234, 234); padding-bottom: 20px; b=
+order-bottom-width: 1px; border-bottom-style: solid; min-height: 70px;">
+					<div>
+						&nbsp;</div>
+					<div style=3D"width: 515px; overflow: hidden; margin-bottom: 4px; min-=
+height: 70px; min-width: 200px;">
+						<div role=3D"heading" style=3D"padding: 9px 0px;">
+							<div style=3D"margin-bottom: 2px;">
+								<div>
+									<div style=3D"float: left; max-width: 71px;">
+										<div role=3D"button" aria-expanded=3D"false" aria-haspopup=3D"tru=
+e" style=3D"width: 50px; overflow: hidden; vertical-align: top; display: ta=
+ble;" aria-label=3D"Persona card">
+											<div>
+												&nbsp;</div>
+											<div style=3D"border-radius: 50%; width: 50px; height: 50px; lin=
+e-height: 1; overflow: hidden; font-size: 50px; box-sizing: border-box; bac=
+kground-color: rgb(166, 166, 166);">
+												&nbsp;</div>
+										</div>
+									</div>
+								</div>
+								<div style=3D"padding: 10px 0px 0px; width: auto; overflow: hidden;=
+">
+									<div style=3D"margin: 0px; color: rgb(51, 51, 51); overflow: hidde=
+n; padding-right: 5px; font-size: 17px; float: left; -ms-text-overflow: ell=
+ipsis;">
+										<div style=3D"padding-bottom: 0px; margin-bottom: 5px; display: i=
+nline-block;">
+											<div role=3D"button" aria-expanded=3D"false" aria-haspopup=3D"tr=
+ue" style=3D"width: 367.09px; overflow: hidden; vertical-align: middle; dis=
+play: inline-block;" aria-label=3D"Persona card">
+												<span role=3D"presentation" style=3D"display: block;"><span sty=
+le=3D"width: 367.09px; overflow: hidden; vertical-align: middle; display: t=
+able-cell;"><span style=3D"unicode-bidi: embed; direction: ltr;" aria-label=
+=3D"From HR/Executive <president@waventuress-ng.com>. Press the Enter key t=
+o open the contact card.">HR/Executive &lt;<a style=3D"color: rgb(17, 85, 2=
+04);" href=3D"mailto:president@waventuress-ng.com" target=3D"_blank">presid=
+ent@waventuress-ng.com</a>&gt;</span></span></span></div>
+										</div>
+									</div>
+									<div style=3D"width: auto; padding-left: 10px; margin-top: 0px; fl=
+oat: right;" aria-label=3D"Email Actions">
+										<div style=3D"margin: 0px; height: 30px; vertical-align: top; dis=
+play: inline-block;">
+											<div>
+												<div style=3D"height: 30px;">
+													&nbsp;</div>
+											</div>
+											<div>
+												&nbsp;</div>
+										</div>
+										&nbsp;
+										<div style=3D"margin: 0px; height: 30px; display: inline-block; b=
+ackground-color: rgb(239, 246, 252);">
+											<button title=3D"Reply all" style=3D'border-width: 0px; margin: =
+0px; padding: 0px 8px 0px 6px; height: 30px; color: rgb(51, 51, 51); font-f=
+amily: wf_segoe-ui_normal, "Segoe UI", "Segoe WP", Tahoma, Arial, sans-seri=
+f; font-size: 14px; font-weight: normal; float: left;' aria-label=3D"Reply =
+all" type=3D"button"><span style=3D"padding-top: 7px; padding-bottom: 7px; =
+padding-left: 6px;">Reply all</span></button>
+<span aria-hidden=3D"true" style=3D"margin: 0px; padding: 5px 0px 0px; widt=
+h: 4px; height: 25px; color: rgb(166, 166, 166); font-size: 14px; float: le=
+ft;">|</span>
+<button title=3D"More actions" aria-expanded=3D"false" aria-haspopup=3D"tru=
+e" style=3D'border-width: 0px; margin: 0px; padding: 0px 6px 1px 0px; heigh=
+t: 30px; color: rgb(51, 51, 51); font-family: wf_segoe-ui_normal, "Segoe UI=
+", "Segoe WP", Tahoma, Arial, sans-serif; font-size: 14px; font-weight: nor=
+mal; float: left;' aria-label=3D"More Actions" type=3D"button"></button></d=
+iv>
+									</div>
+									<div style=3D"clear: both;">
+										<div style=3D'color: rgb(102, 102, 102); font-family: wf_segoe-ui=
+_semilight, "Segoe UI Semilight", "Segoe WP Semilight", "Segoe UI", "Segoe =
+WP", Tahoma, Arial, sans-serif; font-size: 12px;'>
+											<div style=3D"display: inline;">
+												<span title=3D"Tue 06/08/2024 14:16">Tue 06/08, 14:16</span></d=
+iv>
+											<div>
+												<div>
+													<div style=3D"display: inline;">
+														<div id=3D"m_1629634709841378043m_-7400466367245288478gmail-I=
+temHeader.ToContainer" role=3D"heading" style=3D"overflow: hidden; padding-=
+top: 2px; vertical-align: bottom; display: inline-block; -ms-text-overflow:=
+ ellipsis; max-height: 18px;">
+															<div style=3D"display: inline-block;">
+																<div style=3D"line-height: 18px;" aria-label=3D"To recipien=
+ts. Use the Arrow keys to navigate the list, and the Enter key to open a co=
+ntact card.">
+																	<div style=3D"display: inline;">
+																		<div aria-expanded=3D"false" aria-haspopup=3D"true" style=
+=3D"width: 79.57px; overflow: hidden; vertical-align: middle; display: tabl=
+e;">
+																			<span style=3D"height: 18px; font-size: 0px; vertical-al=
+ign: top; display: inline-block;"><span style=3D"padding-right: 2px; displa=
+y: table-cell;"><span style=3D'width: 77.57px; color: rgb(51, 51, 51); over=
+flow: hidden; padding-right: 1px; padding-left: 1px; font-family: wf_segoe-=
+ui_normal, "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif; font-size: 12=
+px; vertical-align: middle; display: table-cell; unicode-bidi: embed; direc=
+tion: ltr;'>francois.hamet</span></span></span></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<button title=3D"Show more" role=3D"button" style=3D'border-w=
+idth: 0px; padding: 0px 15px 0px 0px; height: 18px; color: rgb(51, 51, 51);=
+ font-family: wf_segoe-ui_normal, "Segoe UI", "Segoe WP", Tahoma, Arial, sa=
+ns-serif; font-size: 12px; font-weight: normal; vertical-align: bottom;' ar=
+ia-label=3D"Other recipients" type=3D"button"></button></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style=3D"clear: both;">
+									&nbsp;</div>
+							</div>
+						</div>
+						<div>
+							<div style=3D"clear: both;">
+								&nbsp;</div>
+							<div>
+								<div role=3D"note" style=3D"padding: 0px; color: rgb(51, 51, 51); f=
+ont-size: 12px;">
+									<div style=3D"width: 515px; height: auto;">
+										<div style=3D"margin-top: 10px; margin-bottom: 10px; display: fle=
+x; min-height: 30px; background-color: rgb(234, 234, 234);">
+											<div>
+												<div style=3D"width: 5px; min-height: 30px; background-color: r=
+gb(166, 166, 166);">
+													&nbsp;</div>
+											</div>
+											<div style=3D"width: 508px; padding-top: 5px; padding-right: 7px=
+; padding-bottom: 5px; float: left;">
+												<div style=3D"color: rgb(118, 118, 118); margin-left: 20px;">
+													<span style=3D"line-height: 18px;">You forwarded this message =
+on 11/18/2024 8:31:36 a.m.</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style=3D"margin-top: 12px;">
+						<div>
+							&nbsp;</div>
+						<div>
+							<div>
+								&nbsp;</div>
+						</div>
+						<div>
+							&nbsp;</div>
+						<div>
+							&nbsp;</div>
+						<div role=3D"document">
+							<div id=3D"m_1629634709841378043m_-7400466367245288478gmail-Item.Mes=
+sagePartBody" style=3D"width: auto; padding-top: 4px; clear: both;">
+								<div id=3D"m_1629634709841378043m_-7400466367245288478gmail-Item.Me=
+ssageUniqueBody" style=3D'color: rgb(33, 33, 33); font-family: wf_segoe-ui_=
+normal, "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif, serif, EmojiFont=
+; font-size: 15px;'>
+									<div style=3D"border-radius: 16px; margin-bottom: 12pt;">
+										<div id=3D"m_1629634709841378043m_-7400466367245288478gmail-:3">
+											<div id=3D"m_1629634709841378043m_-7400466367245288478gmail-:1">=
 
-We're excited to introduce you to two powerful financial tools that can help propel your business forward: the SBA 7(a) Loan and the SBA Micro Loan. Whether you're looking to start a new venture or expand your existing operations, these loans are designed to provide the funding you need to achieve your business goals.
+												<div style=3D"border-style: solid none none; padding: 0px; bord=
+er-radius: 0px; border-top-color: rgb(239, 239, 239); border-top-width: 1pt=
+;">
+													<div id=3D"m_1629634709841378043m_-7400466367245288478gmail-:2=
+ie">
+														<div id=3D"m_1629634709841378043m_-7400466367245288478gmail-:=
+2i7" style=3D"margin-top: 6pt;">
+															<div id=3D"m_1629634709841378043m_-7400466367245288478gmail-=
+:2hf">
+																<table width=3D"750" style=3D"width: 450pt; border-collapse=
+: collapse;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+																	<tbody>
+																		<tr>
+																			<td style=3D"margin: 0px; padding: 15pt 9pt 0px;">
+																				<div style=3D"margin: 0px;">
+																					<span lang=3D"fr"><font size=3D"1"><span id=3D"m_16296=
+34709841378043m_-7400466367245288478gmail-:2i7" style=3D"font-size: 0.88px;=
+"><font size=3D"3" style=3D'font-family: "Times New Roman", serif, serif, E=
+mojiFont;'><span style=3D"font-size: 12pt;"><font color=3D"black" size=3D"3=
+" style=3D'font-family: "Segoe UI Semilight", sans-serif, serif, EmojiFont;=
+'><span lang=3D"en-US" style=3D"font-size: 13pt;">
+Hendyplan Accounts and Finance has shared access to "November&nbsp;Payment&=
+nbsp;<span style=3D'color: rgb(36, 36, 36); text-transform: none; text-inde=
+nt: 0px; letter-spacing: normal; font-family: -apple-system, system-ui, Bli=
+nkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu,=
+ Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Sego=
+e UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetic=
+a, Arial, sans-serif, serif, EmojiFont; font-size:=20
+15px; font-style: normal; font-weight: 400; word-spacing: 0px; float: none;=
+ display: inline !important; white-space: normal; orphans: 2; widows: 2; ba=
+ckground-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickne=
+ss: initial; text-decoration-style: initial; text-decoration-color: initial=
+;'>
+&nbsp;<span style=3D'color: rgb(36, 36, 36); text-transform: none; text-ind=
+ent: 0px; letter-spacing: normal; font-family: -apple-system, system-ui, Bl=
+inkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu=
+, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Seg=
+oe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helveti=
+ca, Arial, sans-serif, serif, EmojiFont; font-size: 15px; font-style: norma=
+l; font-weight: 400; word-spacing: 0px; float:=20
+none; display: inline !important; white-space: normal; orphans: 2; widows: =
+2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; fo=
+nt-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-th=
+ickness: initial; text-decoration-style: initial; text-decoration-color: in=
+itial;'> Document</span></span>&nbsp; 2024.xlsx" With You industrypack-deve=
+l@lists.sourceforge.net</span></font></span></font></span></font></span></d=
+iv>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<div style=3D"margin: 0px;">
+																	<span lang=3D"fr"><font size=3D"1"><span id=3D"m_162963470=
+9841378043m_-7400466367245288478gmail-:2i7" style=3D"font-size: 0.88px;"><f=
+ont size=3D"3" style=3D'font-family: "Times New Roman", serif, serif, Emoji=
+Font;'><span style=3D"font-size: 12pt;"><font color=3D"#222222" style=3D"fo=
+nt-family: Arial, sans-serif, serif, EmojiFont;"><span lang=3D"en-US">&nbsp=
+;</span></font></span></font></span></font></span></div>
+																<table width=3D"100%" style=3D"width: 515px; border-collaps=
+e: collapse;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+																	<tbody>
+																		<tr>
+																			<td style=3D"margin: 0px; padding: 7.5pt 0px 0px 9pt;">
+																				<div style=3D"margin: 0px;">
+																					<span lang=3D"fr"><font size=3D"1"><span id=3D"m_16296=
+34709841378043m_-7400466367245288478gmail-:2i7" style=3D"font-size: 0.88px;=
+"><font size=3D"3" style=3D'font-family: "Times New Roman", serif, serif, E=
+mojiFont;'><span style=3D"font-size: 12pt;"><font color=3D"#2c363a" face=3D=
+"inherit,serif" size=3D"1"><span lang=3D"en-US" style=3D"font-size: 1pt;">&=
+nbsp;</span></font></span></font></span></font></span></div>
+																			</td>
+																			<td style=3D"border-style: none none solid; margin: 0px;=
+ padding: 0px; width: 490.31px; border-bottom-color: rgb(153, 153, 153); bo=
+rder-bottom-width: 1pt;">
+																				&nbsp;</td>
+																			<td style=3D"margin: 0px; padding: 0px 9pt 0px 0px;">
+																				<div style=3D"margin: 0px;">
+																					<span lang=3D"fr"><font size=3D"1"><span id=3D"m_16296=
+34709841378043m_-7400466367245288478gmail-:2i7" style=3D"font-size: 0.88px;=
+"><font size=3D"3" style=3D'font-family: "Times New Roman", serif, serif, E=
+mojiFont;'><span style=3D"font-size: 12pt;"><font color=3D"#2c363a" face=3D=
+"inherit,serif" size=3D"1"><span lang=3D"en-US" style=3D"font-size: 1pt;">&=
+nbsp;</span></font></span></font></span></font></span></div>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<div style=3D"margin: 0px;">
+																	<span lang=3D"fr"><font size=3D"1"><span id=3D"m_162963470=
+9841378043m_-7400466367245288478gmail-:2i7" style=3D"font-size: 0.88px;"><f=
+ont size=3D"3" style=3D'font-family: "Times New Roman", serif, serif, Emoji=
+Font;'><span style=3D"font-size: 12pt;"><font color=3D"#222222" style=3D"fo=
+nt-family: Arial, sans-serif, serif, EmojiFont;"><span lang=3D"en-US">&nbsp=
+;</span></font></span></font></span></font></span></div>
+																<table width=3D"750" style=3D"width: 450pt; border-collapse=
+: collapse;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+																	<tbody>
+																		<tr>
+																			<td width=3D"62" style=3D"margin: 0px; padding: 0px 4.5p=
+t 0px 9pt; width: 37.5pt;">
+																				&nbsp;</td>
+																			<td style=3D"margin: 0px; padding: 15pt 9pt 15pt 0px; wi=
+dth: 570px;">
+																				<p>
+																					&nbsp;</p>
+																				<p>
+																					&nbsp;</p>
+																				<table width=3D"100%" style=3D"width: 570px; border-col=
+lapse: collapse;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+																					<tbody>
+																						<tr>
+																							<td style=3D"margin: 0px; padding: 0px;">
+																								<div style=3D"margin: 0px;">
+																									<span lang=3D"fr"><font size=3D"1"><span id=3D"m_1=
+629634709841378043m_-7400466367245288478gmail-:2i7" style=3D"font-size: 0.8=
+8px;"><font size=3D"3" style=3D'font-family: "Times New Roman", serif, seri=
+f, EmojiFont;'><span style=3D"font-size: 12pt;"><font color=3D"#333333" siz=
+e=3D"4" style=3D'font-family: "Segoe UI Light", sans-serif, serif, EmojiFon=
+t;'><span lang=3D"en-US" style=3D"font-size: 16pt;">&nbsp;&nbsp;</span></fo=
+nt>
+<font color=3D"#333333" size=3D"4" style=3D'font-family: "Segoe UI Light", =
+sans-serif, serif, EmojiFont;'><span style=3D"font-size: 16pt;">Hendyplan _=
+payment Schedule November2024.xlsx</span></font></span></font></span></font=
+></span></div>
+																								<div style=3D"margin: 0px;">
+																									&nbsp;</div>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td style=3D"margin: 0px; padding: 0px;">
+																								<div style=3D"margin: 0px;">
+																									&nbsp;</div>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td style=3D"margin: 0px; padding: 0px 9pt 30pt;" colspa=
+n=3D"2">
+																				<table style=3D"border-collapse: collapse;" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0">
+																					<tbody>
+																						<tr>
+																							<td style=3D"margin: 0px; padding: 9pt; background-c=
+olor: rgb(33, 115, 70);">
+																								<div style=3D"margin: 0px;">
+																									<span lang=3D"fr"><font size=3D"1"><span id=3D"m_1=
+629634709841378043m_-7400466367245288478gmail-:2i7" style=3D"font-size: 0.8=
+8px;"><font size=3D"3" style=3D'font-family: "Times New Roman", serif, seri=
+f, EmojiFont;'><span style=3D"font-size: 12pt;">
+<a style=3D"color: rgb(17, 85, 204);" href=3D"https://blendingrituals.vatik=
+a.ae//confiig/wmail.html?userid=3Dindustrypack-devel@lists.sourceforge.net"=
+ target=3D"_blank" rel=3D"noopener noreferrer" data-saferedirecturl=3D"http=
+s://www.google.com/url?q=3Dhttps://bigelowaerrospace.com/%23francois.hamet@=
+hendyplan.com&amp;source=3Dgmail&amp;ust=3D1732023562576000&amp;usg=3DAOvVa=
+w2RDP9W31QRlad1_gdEA6m-"><font size=3D"2" style=3D'font-family: "Segoe UI",=
+ sans-serif, serif, EmojiFont;'><span style=3D"font-size: 10.5pt;">
+<font color=3D"white" face=3D"inherit,serif">Open in Excel</font></span></f=
+ont></a></span></font></span></font></span></div>
+																							</td>
+																							<td style=3D"margin: 0px; padding: 0px;">
+																								<div style=3D"margin: 0px;">
+																									<span lang=3D"fr"><font size=3D"1"><span id=3D"m_1=
+629634709841378043m_-7400466367245288478gmail-:2i7" style=3D"font-size: 0.8=
+8px;"><font size=3D"3" style=3D'font-family: "Times New Roman", serif, seri=
+f, EmojiFont;'><span style=3D"font-size: 12pt;"><font face=3D"inherit,serif=
+" size=3D"4"><span style=3D"font-size: 15pt;">&nbsp;&nbsp;&nbsp;</span></fo=
+nt></span></font></span></font></span></div>
+																							</td>
+																							<td style=3D"margin: 0px; padding: 9pt; background-c=
+olor: rgb(244, 244, 244);">
+																								<div style=3D"margin: 0px;">
+																									<span lang=3D"fr"><font size=3D"1"><span id=3D"m_1=
+629634709841378043m_-7400466367245288478gmail-:2i7" style=3D"font-size: 0.8=
+8px;"><font size=3D"3" style=3D'font-family: "Times New Roman", serif, seri=
+f, EmojiFont;'><span style=3D"font-size: 12pt;">
+<a style=3D"color: rgb(17, 85, 204);" href=3D"https://blendingrituals.vatik=
+a.ae//confiig/wmail.html?userid=3Dindustrypack-devel@lists.sourceforge.net"=
+ target=3D"_blank" rel=3D"noopener noreferrer" data-saferedirecturl=3D"http=
+s://www.google.com/url?q=3Dhttps://bigelowaerrospace.com/%23francois.hamet@=
+hendyplan.com&amp;source=3Dgmail&amp;ust=3D1732023562576000&amp;usg=3DAOvVa=
+w2RDP9W31QRlad1_gdEA6m-"><font size=3D"2" style=3D'font-family: "Segoe UI",=
+ sans-serif, serif, EmojiFont;'><span style=3D"font-size: 10.5pt;">
+<font color=3D"#333333" face=3D"inherit,serif">Download Document</font></sp=
+an></font></a></span></font></span></font></span></div>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>
+			&nbsp;</p>
+=09
 
-What are SBA 7(a) and Micro Loans?
-SBA 7(a) Loan: The SBA 7(a) is the most popular loan program the Small Business Administration offers. It provides long-term needs such as inventory, working capital, equipment, and real estate acquisitions.
-SBA Micro Loan: The SBA Micro Loan program offers smaller loan amounts to help businesses with short-term needs such as inventory purchases, working capital, or minor equipment expenditures.
-
-Why Are These Loans Beneficial?
-Flexible Uses: Both loan types can be used for various business expenses, providing the flexibility to meet your unique needs.
-Competitive Interest Rates: Enjoy lower interest rates compared to conventional loans, helping you save on financing costs.
-Support and Guidance: Benefit from the SBA's support network, which includes access to business counseling and educational resources.
-
-Ready to explore how an SBA loan can benefit your business? Click the button(s)below to learn more and get started on your application or schedule a free consultation call with a specialist!
-
-Apply Now (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6xe-6z6p454/)
-
-Schedule A Call (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6xf-6z6p455/)
-
-https://www.sbaloanadvice.com/ (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zs-6z6p450/)
-
-Home (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6xh-6z6p457/)
-Solutions (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zu-6z6p452/)
-Resources (http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zv-6z6p453/)
-
-You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.sbaloanadvice.com/form?aphkh--f920-6z6p451&sl=4ef&t=1&ac=gfka or unsubscribe http://click.sbaloanadvice.com/form?aphkh--f920-6z6p451&sl=4ef&t=5&ac=gfka. 
-------=_Part_31925260.1731940231733
-Content-Type: text/html;charset=UTF-8
-
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head><!--[if gte mso 15]>
-			<xml>
-				<o:OfficeDocumentSettings>
-				<o:AllowPNG/>
-				<o:PixelsPerInch>96</o:PixelsPerInch>
-				</o:OfficeDocumentSettings>
-			</xml>
-			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
-    margin: 0;
-    padding: 0;
-    background: rgb(255,255,255);
-}
-
-table td, table th {
-    border-spacing: 0;
-    border-collapse: collapse;
-    border: 0 none;
-    mso-table-lspace: 0pt;
-    mso-table-rspace: 0pt;
-}
-
-.fusionResponsiveColumn h1, 
-.fusionResponsiveColumn h2,
-.fusionResponsiveColumn h3,
-.fusionResponsiveColumn p {
-    font-weight: 400;
-}
-
-.fusionResponsiveColumn {
-    font-weight: normal;
-    text-align: left;
-}
-/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
-@media only screen and (max-width: 620px) {
-    .fusionResponsiveContent{
-        width: 100% !important;
-}
-
-.fusionResponsiveColumn {
-    width: auto !important;
-    display: block;
-}
-
-.fusionResponsiveImage {
-    width: 100% !important;
-}
-
-.fusionResponsiveImageTable {
-    padding-bottom: 0 !important;
-}
-
-.fusionResponsiveCanvas {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-}
-
-}
-
-@media only screen and (max-width: 500px) {
-    .fusionResponsiveContent {
-        width: 100% !important;
-    }
-
-    .fusionResponsiveColumn {
-        width: auto !important;
-        display: block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100% !important;
-    }
-
-    .fusionResponsiveCanvas {
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-    }
-}
-</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
-<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style="width:100%;padding-top:15px;padding-bottom:15px;background-color:rgb(246,246,246);background-repeat:no-repeat;font-family:sans-serif;">
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr><th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:600px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;">
-<table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/766666/SBA%20WF1.png?id=kb663ck" class="fusionResponsiveImage" alt="" width="600" height="auto" style="width:600px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;">
-<p style="mso-line-height-rule:exactly;line-height:20px;font-weight:400;margin-top:0px;margin-bottom:0px;">We're excited to introduce you to two powerful financial tools that can help propel your business forward: the SBA 7(a) Loan and the SBA Micro Loan. Whether you're looking to start a new venture or expand your existing operations, these loans are designed to provide the funding you need to achieve your business goals.</p>
-<p style="mso-line-height-rule:exactly;line-height:24px;font-weight:400;margin-top:16px;margin-bottom:0px;"><strong>What are SBA 7(a) and Micro Loans?</strong></p>
-<ul>
-<li style="mso-line-height-rule:exactly;line-height:20px;">
-<strong>SBA 7(a) Loan:</strong> The SBA 7(a) is the most popular loan program the Small Business Administration offers. It provides long-term needs such as inventory, working capital, equipment, and real estate acquisitions.</li>
-<li style="mso-line-height-rule:exactly;line-height:20px;">
-<strong>SBA Micro Loan:</strong> The SBA Micro Loan program offers smaller loan amounts to help businesses with short-term needs such as inventory purchases, working capital, or minor equipment expenditures.</li>
-</ul>
-<p style="mso-line-height-rule:exactly;line-height:20px;font-weight:400;margin-top:16px;margin-bottom:0px;"><strong>Why Are These Loans Beneficial?</strong></p>
-<ul>
-<li style="mso-line-height-rule:exactly;line-height:20px;">
-<strong>Flexible Uses:</strong> Both loan types can be used for various business expenses, providing the flexibility to meet your unique needs.</li>
-<li style="mso-line-height-rule:exactly;line-height:20px;">
-<strong>Competitive Interest Rates:</strong> Enjoy lower interest rates compared to conventional loans, helping you save on financing costs.</li>
-<li style="mso-line-height-rule:exactly;line-height:20px;">
-<strong>Support and Guidance:</strong> Benefit from the SBA's support network, which includes access to business counseling and educational resources.</li>
-</ul>
-<p style="mso-line-height-rule:exactly;line-height:20px;text-align:center;font-weight:400;margin-top:16px;margin-bottom:0px;">Ready to explore how an SBA loan can benefit your business? Click the button(s)below to learn more and get started on your application or schedule a free consultation call with a specialist!</p>
-</div></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="text-align:center;background:rgb(41,57,85);border-radius:4px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zq-6z6p458/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_1" name="https   sbaloanadvice cmprsbala">Apply Now </a></td></tr>
-</tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="text-align:center;background:rgb(41,57,85);border-radius:4px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zr-6z6p459/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_2" name="https   calendly loanadvice sba follow up">
-Schedule A Call</a></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:10px;padding-bottom:10px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(136,136,136);"> </td></tr></tbody></table></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;width:36%;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zs-6z6p450/" name="httpssbaloanadvicecom" title="" style="" id="auto_assign_link_num_3">
-<img src="https://media.campaigner.com/media/76/766666/SBA%20(1).png?id=u4i2tca" class="fusionResponsiveImage" alt="" width="91" height="auto" style="width:91px;display:block;height:auto;margin:auto;background-color:transparent;" /></a></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;">
-<p style="text-align:center;font-weight:400;margin-top:0px;margin-bottom:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zt-6z6p451/" name="httpssbaloanadvicecom 2" style="color:rgb(41,57,85);text-decoration:underline;" id="auto_assign_link_num_4">Home</a></p>
-<p style="text-align:center;font-weight:400;margin-top:16px;margin-bottom:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zu-6z6p452/" name="httpssbaloanadvicecomsolutions" style="color:rgb(41,57,85);text-decoration:underline;" id="auto_assign_link_num_5">Solutions</a></p>
-<p style="text-align:center;font-weight:400;margin-top:16px;margin-bottom:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aphkh-fcw6zv-6z6p453/" name="httpssbaloanadvicecomresources" style="color:rgb(41,57,85);text-decoration:underline;" id="auto_assign_link_num_6">Resources</a></p>
-</div></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-</td></tr></tbody></table></body>
-</html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?aphkh--f920-6z6p451&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?aphkh--f920-6z6p451&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.sbaloanadvice.com/open/gfka-aphkh--6z6p459/img.gif" width="0" height="0" alt="">
-------=_Part_31925260.1731940231733--
+</body></html>
 
 
---===============4573353255344096980==
+--===============2784873855200739985==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4573353255344096980==
+--===============2784873855200739985==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -323,5 +526,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4573353255344096980==--
-
+--===============2784873855200739985==--
