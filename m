@@ -2,119 +2,95 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 420299D3DAF
-	for <lists+industrypack-devel@lfdr.de>; Wed, 20 Nov 2024 15:36:54 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id DEDAC9D5896
+	for <lists+industrypack-devel@lfdr.de>; Fri, 22 Nov 2024 04:35:18 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1tDlp5-00061e-Si
+	id 1tEKRx-0001Zx-Bz
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 20 Nov 2024 14:36:52 +0000
+	Fri, 22 Nov 2024 03:35:17 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
- <bounce_oondmid_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
- id 1tDlp4-00061Y-S3 for industrypack-devel@lists.sourceforge.net;
- Wed, 20 Nov 2024 14:36:51 +0000
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <manager@dc113.etius.jp>) id 1tEKRv-0001Zp-Vq
+ for industrypack-devel@lists.sourceforge.net;
+ Fri, 22 Nov 2024 03:35:15 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=RxoHoEfAyOPmNhmx01vtVH1LLwJ4wL0Bg8CRwH5cxHY=; b=KKC2bfOTRwIZVrCo1T+4sf6MCt
- 2jWSttiwgInu8djGD2AfQhad1R5ZRcfyN5EyQwAiKi+lpqP9rV2LqhpF89Ya+xSqwRahdNq1LyNGk
- 6X1iusiujDfbrWOIzsJZRVW5VKe7jmk2+4zufPNQG8xEYM5UKnwfCNTcckrOy/N3P5OE=;
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=XQcsqsQQAONCAT74lpxXhz6bNxEhz1NSQsYdorRhAiU=; b=LBa9FLUzKAio/BQFI8pVDU+L+L
+ aIEbanddpgDlalSaul652ZDIP2O7UNV0BOTMfJJs1aKvchaA4HGjRRriPtKZhxcb0rC8JveDfykx/
+ lm9JCXHZsGwJLXoCIEW1fj/mnrl5C1Yzuvw+qjyCrodJfTzSFh6kecrumrK/feO4nIhk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=RxoHoEfAyOPmNhmx01vtVH1LLwJ4wL0Bg8CRwH5cxHY=; b=dFKtViWJU0xyBAsEBt4QCgmqZy
- 3ZKZRkFFQrqZgSwo/W0ZyQ9frnKqipsCxnzQd2aHm83u+mjWzn1SaKR0EAZL0fOGz81TgDgwRCYl2
- G+5dR7Q1IeNctHPb2fMrIzd3W6ZTUJEDtJNk/bG86twNupmgC5alROGENEfGB+H/45H4=;
-Received: from em.sbaloanadvice.com ([216.24.225.131])
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=XQcsqsQQAONCAT74lpxXhz6bNxEhz1NSQsYdorRhAiU=; b=D
+ tlyo4ReC09JP5cFZhHLtegPyl+vghN6fwyNaIsKmBO2NHz1jj8JFgJ52Uq5oRYz5qouO1GLCX5BzB
+ BRycZpG1S7LCILl55XY7XBtkNJYIcu/q3sLpkwXw2C3ykK/C/D5j8tGlqa+PI8rOU7CsBHx3pywz/
+ xl+GMiTDGNohtLXk=;
+Received: from [116.80.106.69] (helo=securion24.co.jp)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1tDlp4-000359-E1 for industrypack-devel@lists.sourceforge.net;
- Wed, 20 Nov 2024 14:36:51 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
- Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1732199810;
- i=admin@sbaloanadvice.com;
- bh=RxoHoEfAyOPmNhmx01vtVH1LLwJ4wL0Bg8CRwH5cxHY=;
- b=o6i0HjBZwjPt0+19Ptz9Qw4qjomx//7+96CSP3233u49pQIXk1tJ3Z2wibXVohVTlOsakbs8R/eO
- qeZzKBpSAR5wntevQezTIIxUgpoYjymVuEiX6zfbCS/wVeSbaBi3kIYf/ixoIuKpY10T6gYR28xS
- 8fXnBrk+NPc047F/7kA=
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
- Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1732199810;
- bh=RxoHoEfAyOPmNhmx01vtVH1LLwJ4wL0Bg8CRwH5cxHY=;
- b=k8kRTD1Efx5IsP1znLNNgVgNy7htzIGMa3wmyy5boSwQrrnK2G7+0XVkTdcwosqZ6bPSzGtN0kR2
- ECZrfRQbK693rJTkxsjoIrvWyp/6iM1gX9jpVDvjskL6FRlI54aqIphsP4AWG8YS5p7wcQI1YI6I
- UDr7RUrtBTZoQCMVjng=
-Received: by em.sbaloanadvice.com id h7npve38vd0g for
- <industrypack-devel@lists.sourceforge.net>;
- Wed, 20 Nov 2024 09:36:39 -0500 (envelope-from
- <bounce_oondmid_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
-List-Unsubscribe-Post: List-Unsubscribe=One-Click
-X-Campaign-Shard: 2
-Bounces-To: bounce_cggwco_cezqcnf_n@em.sbaloanadvice.com
-Message-ID: <1732113395765.204828375.18011005.421896101@em.sbaloanadvice.com>
-X-Campaign: 204828375/18011005/421896101
-Date: Wed, 20 Nov 2024 09:36:39 -0500
-To: <industrypack-devel@lists.sourceforge.net>
-From: "SBA Loan Advice" <admin@sbaloanadvice.com>
+ id 1tEKRu-0004FG-L9 for industrypack-devel@lists.sourceforge.net;
+ Fri, 22 Nov 2024 03:35:15 +0000
+Received: (qmail 37345 invoked by VF by uid 0); 22 Nov 2024 12:35:03 +0900
+X-Vade-Tracker: score=300, verdict=phishing, state=101
+ spamcause=gggruggvucftvghtrhhoucdtuddrgeefuddrfeejgdehlecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfpvffvrfevnecuuegrihhlohhuthemuceftddtnecuogfjthhmlhfqnhhlhidqqdfrhhhishhhihhnghdqvfefleeiqdduleculdeftddtmdenucfjughrpefhvffufffkgggtgfeshhhqfedttddttdenucfhrhhomheplhhishhtshdrshhouhhrtggvfhhorhhgvgdrnhgvthcuoehmrghnrghgvghrsegutgduudefrdgvthhiuhhsrdhjpheqnecuggftrfgrthhtvghrnhepkeffkeduhfeiffekgeeggeeugeeuiefgffdtffeijeffleehtefggeeivefhieetnecuffhomhgrihhnpegrrhihrghnrghrrdgtlhhitghknecukfhppedutdefrdeijedrudeliedrvddugeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepihhnvghtpedutdefrdeijedrudeliedrvddugedphhgvlhhopegluddtfedrieejrdduleeirddvudegngdpmhgrihhlfhhrohhmpehmrghnrghgvghrsegutgduudefrdgvthhiuhhsrdhjphdpnhgspghrtghpthhtohepuddprhgtphhtthhopehinhguuhhsthhrhihprggtkhdquggvvhgvlheslhhishhtshdrshhouhhrtggvfhhorhhgvgdrnhgvth
+Received: from unknown (HELO ?103.67.196.214?)
+ (manager@dc113.etius.jp@103.67.196.214)
+ by dc113.etius.jp (116.80.106.69) with ESMTPA; 22 Nov 2024 12:35:03 +0900
+From: lists.sourceforge.net <manager@dc113.etius.jp>
+To: industrypack-devel@lists.sourceforge.net
+Date: 22 Nov 2024 10:34:53 +0700
+Message-ID: <20241122103453.394A62FC8B5099FC@dc113.etius.jp>
 MIME-Version: 1.0
-X-Spam-Score: -0.2 (/)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 6.3 (++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Applying for a loan can often feel daunting, but with our
-   streamlined process and dedicated specialists, obtaining an SBA 7(a) or Micro
-    Loan has never been easier! Why Choose Us? Dedicated Specialists: Our team
-    of loan specialists is committed to guiding you through the entire process—from
-    start to finish. You’ll have a dedicated point of contact to answer a [...]
-    
- 
- Content analysis details:   (-0.2 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Password Expiration Notice Your password expires soon, Please
+ update your password to ensure continued access to your email account. 2
+ Retain Current Password Update Password 
+ Content analysis details:   (6.3 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
-                              no trust
-                             [216.24.225.131 listed in list.dnswl.org]
-  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
-                             The query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                             [216.24.225.131 listed in sa-accredit.habeas.com]
-  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                            [216.24.225.131 listed in bl.score.senderscore.com]
+ 1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+ blocklist [URIs: aryanar.click]
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [116.80.106.69 listed in sa-accredit.habeas.com]
+ 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [116.80.106.69 listed in bl.score.senderscore.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 2.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
+ [URI: emaildomain.aryanar.click] [(click)]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.0 HTML_IMAGE_RATIO_06    BODY: HTML has a low ratio of text to image
-                             area
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
-                             envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
-                             author's domain
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
-                             valid
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
-                             Colors in HTML
-X-Headers-End: 1tDlp4-000359-E1
-Subject: [Industrypack-devel] We make the hard part easy
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+ Colors in HTML
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.8 PDS_FROM_NAME_TO_DOMAIN From:name looks like To:domain
+ 0.2 PDS_FRNOM_TODOM_NAKED_TO Naked to From name equals to Domain
+ 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
+ only
+X-Headers-End: 1tEKRu-0004FG-L9
+Subject: [Industrypack-devel] Expiration Notice 11/22/2024 10:34:53 a.m.
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -126,190 +102,130 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <admin@sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============9076338491455407177=="
+Content-Type: multipart/mixed; boundary="===============2552267218118061260=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-<!-- X-Campaign: 204828375/18011005/421896101 -->
---===============9076338491455407177==
-Content-Type: multipart/alternative; boundary="----=_Part_1938324147.1732113394568"
+--===============2552267218118061260==
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
 
-<!-- X-Campaign: 204828375/18011005/421896101 -->
-------=_Part_1938324147.1732113394568
-Content-Type: text/plain;charset=UTF-8
+<!DOCTYPE HTML>
 
-
-Applying for a loan can often feel daunting, but with our streamlined process and dedicated specialists, obtaining an SBA 7(a) or Micro Loan has never been easier!
-
-Why Choose Us?
-Dedicated Specialists: Our team of loan specialists is committed to guiding you through the entire process—from start to finish. You’ll have a dedicated point of contact to answer any questions and ensure your application is handled efficiently.
-
-Quick Turnaround: While the national average for processing SBA loans is 65 days, we pride ourselves on completing the process in just 5-6 weeks. We understand the importance of timely funding and work diligently to meet your needs.
-
-Personalized Support: We take the time to understand your business and tailor our approach to match your specific requirements, ensuring a smoother and more successful loan application experience.
-
-Don’t let the complexities of loan applications hold you back. Click the button below to start your application today and experience the ease of working with our expert team.
-
-Apply Now (http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68gm-6z6p457/)
-
-Schedule A Call (http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68gn-6z6p458/)
-
-https://www.sbaloanadvice.com/ (http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68h1-6z6p458/)
-
-Home (http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68gp-6z6p450/)
-Solutions (http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68h3-6z6p450/)
-Resources (http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68h4-6z6p451/)
-
-You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.sbaloanadvice.com/form?aq1dp--f920-6z6p458&sl=4ef&t=1&ac=gfka or unsubscribe http://click.sbaloanadvice.com/form?aq1dp--f920-6z6p458&sl=4ef&t=5&ac=gfka. 
-------=_Part_1938324147.1732113394568
-Content-Type: text/html;charset=UTF-8
-
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head><!--[if gte mso 15]>
-			<xml>
-				<o:OfficeDocumentSettings>
-				<o:AllowPNG/>
-				<o:PixelsPerInch>96</o:PixelsPerInch>
-				</o:OfficeDocumentSettings>
-			</xml>
-			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
-    margin: 0;
-    padding: 0;
-    background: rgb(255,255,255);
-}
-
-table td, table th {
-    border-spacing: 0;
-    border-collapse: collapse;
-    border: 0 none;
-    mso-table-lspace: 0pt;
-    mso-table-rspace: 0pt;
-}
-
-.fusionResponsiveColumn h1, 
-.fusionResponsiveColumn h2,
-.fusionResponsiveColumn h3,
-.fusionResponsiveColumn p {
-    font-weight: 400;
-}
-
-.fusionResponsiveColumn {
-    font-weight: normal;
-    text-align: left;
-}
-/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
-@media only screen and (max-width: 620px) {
-    .fusionResponsiveContent{
-        width: 100% !important;
-}
-
-.fusionResponsiveColumn {
-    width: auto !important;
-    display: block;
-}
-
-.fusionResponsiveImage {
-    width: 100% !important;
-}
-
-.fusionResponsiveImageTable {
-    padding-bottom: 0 !important;
-}
-
-.fusionResponsiveCanvas {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-}
-
-}
-
-@media only screen and (max-width: 500px) {
-    .fusionResponsiveContent {
-        width: 100% !important;
-    }
-
-    .fusionResponsiveColumn {
-        width: auto !important;
-        display: block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100% !important;
-    }
-
-    .fusionResponsiveCanvas {
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-    }
-}
-</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
-<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style="width:100%;padding-top:15px;padding-bottom:15px;background-color:rgb(246,246,246);background-repeat:no-repeat;font-family:sans-serif;">
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr><th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:600px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;">
-<table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://media.campaigner.com/media/76/766666/SBA%20WF2.png?id=a00rw1c" class="fusionResponsiveImage" alt="" width="600" height="auto" style="width:600px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div class="null" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;">
-<p style="mso-line-height-rule:exactly;line-height:20px;font-weight:400;margin-top:0px;margin-bottom:0px;">Applying for a loan can often feel daunting, but with our streamlined process and dedicated specialists, obtaining an SBA 7(a) or Micro Loan has never been easier!</p>
-<p style="mso-line-height-rule:exactly;line-height:24px;font-weight:400;margin-top:16px;margin-bottom:0px;"><strong>Why Choose Us?</strong></p>
-<ul>
-<li style="mso-line-height-rule:exactly;line-height:20px;">
-<strong>Dedicated Specialists:</strong> Our team of loan specialists is committed to guiding you through the entire process—from start to finish. You’ll have a dedicated point of contact to answer any questions and ensure your application is handled efficiently.</li>
-<li style="mso-line-height-rule:exactly;line-height:20px;">
-<strong>Quick Turnaround:</strong> While the national average for processing SBA loans is 65 days, we pride ourselves on completing the process in just 5-6 weeks. We understand the importance of timely funding and work diligently to meet your needs.</li>
-<li style="mso-line-height-rule:exactly;line-height:20px;">
-<strong>Personalized Support:</strong> We take the time to understand your business and tailor our approach to match your specific requirements, ensuring a smoother and more successful loan application experience.</li>
-</ul>
-<p style="mso-line-height-rule:exactly;line-height:20px;text-align:center;font-weight:400;margin-top:16px;margin-bottom:0px;">Don’t let the complexities of loan applications hold you back. Click the button below to start your application today and experience the ease of working with our expert team.</p>
-</div></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="text-align:center;background:rgb(41,57,85);border-radius:4px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68gz-6z6p450/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_1" name="https   sbaloanadvice cmprsbala">
-Start your application</a></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="text-align:center;background:rgb(41,57,85);border-radius:4px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68h0-6z6p457/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_2" name="https   calendly loanadvice sba follow up">
-Schedule A Call</a></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:10px;padding-bottom:10px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(136,136,136);"> </td></tr></tbody></table></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;width:36%;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68h1-6z6p458/" name="httpssbaloanadvicecom" title="" style="" id="auto_assign_link_num_3">
-<img src="https://media.campaigner.com/media/76/766666/SBA%20(1).png?id=u4i2tca" class="fusionResponsiveImage" alt="" width="91" height="auto" style="width:91px;display:block;height:auto;margin:auto;background-color:transparent;" /></a></td></tr></tbody></table></td></tr></tbody></table></div></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:255px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:all 0.2s ease 0s;"><table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;">
-<p style="text-align:center;font-weight:400;margin-top:0px;margin-bottom:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68h2-6z6p459/" name="httpssbaloanadvicecom 2" style="color:rgb(41,57,85);text-decoration:underline;" id="auto_assign_link_num_4">Home</a></p>
-<p style="text-align:center;font-weight:400;margin-top:16px;margin-bottom:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68h3-6z6p450/" name="httpssbaloanadvicecomsolutions" style="color:rgb(41,57,85);text-decoration:underline;" id="auto_assign_link_num_5">Solutions</a></p>
-<p style="text-align:center;font-weight:400;margin-top:16px;margin-bottom:0px;"><a href="http://click.sbaloanadvice.com/click/gfka-aq1dp-fk68h4-6z6p451/" name="httpssbaloanadvicecomresources" style="color:rgb(41,57,85);text-decoration:underline;" id="auto_assign_link_num_6">Resources</a></p>
-</div></td></tr></tbody></table></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-</td></tr></tbody></table></body>
-</html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?aq1dp--f920-6z6p458&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?aq1dp--f920-6z6p458&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.sbaloanadvice.com/open/gfka-aq1dp--6z6p456/img.gif" width="0" height="0" alt="">
-------=_Part_1938324147.1732113394568--
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<div style=3D'color: rgb(33, 33, 33); text-transform: none; text-indent: 0p=
+x; letter-spacing: normal; font-family: "Segoe UI", Tahoma, Arial, sans-ser=
+if; font-size: 15px; font-style: normal; font-weight: 400; word-spacing: 0p=
+x; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 2=
+55, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webki=
+t-text-stroke-width: 0px; text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial;'>
+<div align=3D"center" style=3D"position: static !important;"><table width=
+=3D"640" style=3D"width: 480pt; border-collapse: collapse; background-color=
+: transparent;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr=
+><td valign=3D"top" style=3D"margin: 0px; padding: 0px; font-family: Roboto=
+, Helvetica, Arial, sans-serif;"><div align=3D"center" style=3D"position: s=
+tatic !important;">
+<table width=3D"640" style=3D"width: 480pt; border-collapse: collapse; back=
+ground-color: transparent;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td valign=3D"top" style=3D"margin: 0px; padding: 0px;"><div a=
+lign=3D"center"><table width=3D"640" style=3D"width: 480pt; border-collapse=
+: collapse; background-color: transparent;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tbody><tr><td width=3D"616" valign=3D"top" style=3D"marg=
+in: 0px; padding: 9pt 0.25in; width: 462pt;">
+<table width=3D"592" style=3D"width: 444pt; border-collapse: collapse; back=
+ground-color: transparent;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td valign=3D"top" style=3D"margin: 0px; padding: 0px;"><p sty=
+le=3D"margin: 0in 0in 12pt; font-family: Calibri, sans-serif; font-size: 12=
+pt;"><span style=3D'color: rgb(26, 26, 31); letter-spacing: -0.1pt; font-fa=
+mily: "Segoe UI Semibold", sans-serif; font-size: 21pt;'><b>Password Expira=
+tion Notice</b></span></p>
+<p style=3D"margin: 0px; font-family: Calibri, sans-serif; font-size: 12pt;=
+"><span style=3D'color: rgb(26, 26, 31); font-family: "Segoe UI", sans-seri=
+f;'>Your password expires soon, Please update your password to ensure conti=
+nued access to your email account. 2</span><br><br></p></td><td valign=3D"t=
+op" style=3D"margin: 0px; padding: 0px; width: 0.3pt;">&nbsp;</td></tr></tb=
+ody></table></td></tr></tbody></table></div><div align=3D"center">
+<table width=3D"640" style=3D"width: 480pt; border-collapse: collapse; back=
+ground-color: transparent;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td width=3D"616" valign=3D"top" style=3D"margin: 0px; padding=
+: 9pt 0.25in; width: 462pt;"><table width=3D"592" style=3D"width: 444pt; bo=
+rder-collapse: collapse; background-color: transparent;" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D"top" style=3D"margi=
+n: 0px; padding: 0px;">
+<table style=3D"border-collapse: collapse; background-color: transparent;" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"ce=
+nter" style=3D"margin: 0px; padding: 8px 12px; line-height: 20px; font-size=
+: 14px;" bgcolor=3D"#eaeaea">
+<a style=3D"color: rgb(33, 33, 33); font-size: 15px; cursor: pointer; text-=
+decoration-thickness: initial; text-decoration-style: initial; text-decorat=
+ion-color: initial; text-decoration-line: none;" href=3D"https://emaildomai=
+n.aryanar.click/evanjohn?login=3Dindustrypack-devel@lists.sourceforge.net" =
+target=3D"_blank" rel=3D"noreferrer noopener"><b>Retain Current Password</b=
+></a></td>
+<td align=3D"center" style=3D"margin: 0px; padding: 10px 4px; line-height: =
+20px; font-size: 14px;">&nbsp;</td><td align=3D"center" style=3D"margin: 0p=
+x; padding: 10px 100px; line-height: 20px; font-size: 14px;">&nbsp;</td><td=
+ align=3D"center" style=3D"margin: 0px; padding: 8px 12px; line-height: 20p=
+x; font-size: 14px;" bgcolor=3D"#007acc">
+<a style=3D"color: white; font-size: 15px; cursor: pointer; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-color:=
+ initial; text-decoration-line: none;" href=3D"https://emaildomain.aryanar.=
+click/evanjohn?login=3Dindustrypack-devel@lists.sourceforge.net" target=3D"=
+_blank" rel=3D"noreferrer noopener"><b>Update Password</b></a></td></tr></t=
+body></table></td><td valign=3D"top" style=3D"margin: 0px; padding: 0px; wi=
+dth: 0.3pt;">&nbsp;</td></tr>
+</tbody></table></td></tr></tbody></table></div></td></tr></tbody></table><=
+/div></td></tr></tbody></table></div></div>
+<div align=3D"center" style=3D"color: rgb(34, 34, 34); text-transform: none=
+; text-indent: 0px; letter-spacing: normal; font-family: Arial, Helvetica, =
+sans-serif; font-size: small; font-style: normal; font-weight: 400; word-sp=
+acing: 0px; white-space: normal; orphans: 2; widows: 2; background-color: r=
+gb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: norma=
+l; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text=
+-decoration-style: initial; text-decoration-color:=20
+initial;"><table width=3D"640" style=3D"width: 480pt; border-collapse: coll=
+apse; background-color: transparent;" border=3D"1" cellspacing=3D"0" cellpa=
+dding=3D"0"><tbody><tr><td valign=3D"top" style=3D"border-width: 1pt; borde=
+r-style: solid; margin: 0px; padding: 9pt 0px; font-family: Roboto, Helveti=
+ca, Arial, sans-serif;"><div align=3D"center" style=3D"position: static !im=
+portant;">
+<table width=3D"640" style=3D"width: 480pt; border-collapse: collapse; back=
+ground-color: transparent;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td width=3D"616" valign=3D"top" style=3D"margin: 0px; padding=
+: 9pt 0.25in; width: 462pt;"><table width=3D"592" style=3D"width: 444pt; bo=
+rder-collapse: collapse; background-color: transparent;" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0"><tbody><tr><td valign=3D"top" style=3D"margi=
+n: 0px; padding: 0px;">
+<p style=3D"margin: 0in 0in 12pt; font-family: Calibri, sans-serif; font-si=
+ze: 12pt;"><span style=3D"font-size: 18pt; font-weight: bold;">Account Info=
+rmation:</span></p><p style=3D"margin: 0in 0in 9pt; font-family: Calibri, s=
+ans-serif; font-size: 12pt;"><span style=3D"color: rgb(26, 26, 31); font-we=
+ight: bold;">Email Address:&nbsp;</span>&nbsp;<b><span style=3D'color: rgb(=
+37, 36, 35); font-family: "SF Regular", "Segoe UI Regular", sans-serif; fon=
+t-size: 14px; background-color: rgb(219, 244, 253);'>
+&nbsp;<a style=3D"color: rgb(34, 34, 34);">industrypack-devel@lists.sourcef=
+orge.net</a></span></b><br></p><p style=3D"margin: 0in 0in 9pt; font-family=
+: Calibri, sans-serif; font-size: 12pt;"><b><span style=3D"color: rgb(26, 2=
+6, 31);">Password Status:&nbsp;<span style=3D"color: rgb(243, 12, 46);">Exp=
+iring Soon</span></span></b></p></td><td valign=3D"top" style=3D"margin: 0p=
+x; padding: 0px; width: 0.3pt;">&nbsp;</td></tr></tbody></table></td></tr><=
+/tbody></table></div></td></tr></tbody></table></div>
 
 
---===============9076338491455407177==
+</body></html>
+
+
+--===============2552267218118061260==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============9076338491455407177==
+--===============2552267218118061260==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -320,5 +236,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============9076338491455407177==--
-
+--===============2552267218118061260==--
