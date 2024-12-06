@@ -2,92 +2,127 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E204B9E9DD1
-	for <lists+industrypack-devel@lfdr.de>; Mon,  9 Dec 2024 19:05:08 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 301F49EB470
+	for <lists+industrypack-devel@lfdr.de>; Tue, 10 Dec 2024 16:16:24 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1tKi82-0005uJ-Qv
+	id 1tL1yI-0002BZ-Jd
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 09 Dec 2024 18:05:06 +0000
+	Tue, 10 Dec 2024 15:16:22 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <airimp@net-international.co.jp>) id 1tKi81-0005uB-Mu
- for industrypack-devel@lists.sourceforge.net;
- Mon, 09 Dec 2024 18:05:05 +0000
+ (envelope-from <mailrmicro+Clara.Chevallier@gmail.com>)
+ id 1tL1yH-0002BR-Ib for industrypack-devel@lists.sourceforge.net;
+ Tue, 10 Dec 2024 15:16:20 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-Id:Date:MIME-Version:Content-Type:To:
- Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Type:Date:To:From:Mime-Version:
+ Message-Id:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Rb8t38gnp1pGhh5fumfJIkIGtoVEK5nJDRJWCmiBP0s=; b=mVn92O2js1Ta5CLWhZ/6XOzC4k
- ZI9E0cAjoCPPjywqRO7lPIIevpcOpv7828BFJEDCswMVlj1H/kIH8NT0RIkORzPa1b0jOlijIGeYU
- MKKnFK3GWQzfkEn1nRPAyA5ve/gQ+qo36XA0RnuW38bynSRhOVrfjXxdQMyh8SS/txRo=;
+ bh=8xUbqMYOfG3Rq2oXwMNJ+4wi0Ooso/qHsJ2wueQIaBw=; b=jRbSrwWc9SUdz52pt8I8ljby9d
+ z/GcfUgjTJWxlNwqPGss9tOybXb/VTVoJUop2so8/guVetxqXIYXlGmSRuvce7kgak2EmtFUO6Xe0
+ 4Ii0KCV6EQDjCywN/PqSp6zAL7PGrRij55R7oo7WV2hUN/X6reb4dUMLyzYtQvp5f8EU=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
+ h=Subject:Content-Type:Date:To:From:Mime-Version:Message-Id:Sender:Reply-To
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Rb8t38gnp1pGhh5fumfJIkIGtoVEK5nJDRJWCmiBP0s=; b=M
- XjHqeK+6JVCDHJ99Alzu/cckBfvZrNyoilHqdjuwhRZNj1+dtiaYKgY4F1f3s73Kbz87P32nNSEfU
- jRAwTwxfBzekt+A/YgBkAs73nsfuSsKbbMYwVGMiwbUnVG4pthl25m/wGJCSXOPR2yIXSHl9KMwp0
- EYHLvxT1Jt8OLE3Q=;
-Received: from s1042623.srvape.com ([91.184.248.84])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1tKi80-0007ja-2R for industrypack-devel@lists.sourceforge.net;
- Mon, 09 Dec 2024 18:05:05 +0000
-Received: from 99RDP (localhost [IPv6:::1])
- by s1042623.srvape.com (Postfix) with ESMTP id B4F7C2CD00D
+ List-Owner:List-Archive; bh=8xUbqMYOfG3Rq2oXwMNJ+4wi0Ooso/qHsJ2wueQIaBw=; b=I
+ K4hTeU+kYJhwuzXxvqJ6yQ8SAl5KW9Cm/WA9/it4e24mLNtVhSszBSqeG3HN2JvwvjcZaoyLNm8R6
+ 5c8Mt0Yc0hDbyxTdRlsvW0dx/b9RqEQE1X1tHmjjU/Sc0VNjEO2xqrMEW5AhHyIs1f4kVtRLpeW0w
+ pYkgBsHoTg+t9+vk=;
+Received: from 10.mo550.mail-out.ovh.net ([178.32.96.102])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1tL1yF-0006nf-J4 for industrypack-devel@lists.sourceforge.net;
+ Tue, 10 Dec 2024 15:16:20 +0000
+Received: from director4.ghost.mail-out.ovh.net (unknown [10.109.176.72])
+ by mo550.mail-out.ovh.net (Postfix) with ESMTP id 4Y6xZT2RnZz1YQY
  for <industrypack-devel@lists.sourceforge.net>;
- Mon,  9 Dec 2024 18:42:58 +0100 (CET)
-From: "DocuSign System" <airimp@net-international.co.jp>
-To: <industrypack-devel@lists.sourceforge.net>
-MIME-Version: 1.0
-Date: Mon, 9 Dec 2024 09:42:59 -0800
-Priority: urgent
-X-Priority: 2
-Importance: high
-Message-Id: <0958202412420979F3549887$22833CB3C0@net-international.co.jp>
-X-Spam-Score: 5.7 (+++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
- has NOT identified this incoming email as spam.  The original
+ Tue, 10 Dec 2024 11:38:41 +0000 (UTC)
+Received: from ghost-submission-5b5ff79f4f-55dt9 (unknown [10.110.188.168])
+ by director4.ghost.mail-out.ovh.net (Postfix) with ESMTPS id 16A211FE6E
+ for <industrypack-devel@lists.sourceforge.net>;
+ Tue, 10 Dec 2024 11:38:40 +0000 (UTC)
+Received: from rmicro-1.ovh ([37.59.142.106])
+ by ghost-submission-5b5ff79f4f-55dt9 with ESMTPSA
+ id 2rsBNUAoWGc8jAAA/ZKCrA
+ (envelope-from <mailrmicro+Clara.Chevallier@gmail.com>)
+ for <industrypack-devel@lists.sourceforge.net>; Tue, 10 Dec 2024 11:38:40 +0000
+Authentication-Results: garm.ovh; auth=pass
+ (GARM-106R006aed96bbd-7a8e-4970-9d5c-67cfc20b96e2,
+ 7C4E2509A26030476E28F2B9E6AAA46192BD7528) smtp.auth=contact4188@rmicro-1.ovh
+X-OVh-ClientIp: 77.193.51.138
+Message-Id: <MN808LKS-QHM-ZZBA-AIFB-N30AVLNWCGWS@gmail.com>
+Mime-Version: 1.0
+From: Clara.Chevallier <mailrmicro+Clara.Chevallier@gmail.com>
+To: contact industrypack-develaabblists.sourceforge.net
+ <industrypack-devel@lists.sourceforge.net>
+Date: Fri, 6 Dec 2024 17:49:04 +0100
+X-Ovh-Tracer-Id: 2900599636679536991
+X-VR-SPAMSTATE: OK
+X-VR-SPAMSCORE: -70
+X-VR-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgeefuddrjeekgddvlecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucfqggfjpdevjffgvefmvefgnecuuegrihhlohhuthemucehtddtnecusecvtfgvtghiphhivghnthhsucdlqddutddtmdenogfthfevqddqvehonhhtvghnthfvhihpvgdvucdlfedtmdenucfjughrpefkggfhvffuffgtsegrtdftredttdejnecuhfhrohhmpeevlhgrrhgrrdevhhgvvhgrlhhlihgvrhcuoehmrghilhhrmhhitghrohdovehlrghrrgdrvehhvghvrghllhhivghrsehgmhgrihhlrdgtohhmqeenucggtffrrghtthgvrhhnpeevleehgeejfeelfeduteethfetleehvdejudevudffvdfhiefgieelveejieelveenucfkphepuddvjedrtddrtddruddpjeejrdduleefrdehuddrudefkedpfeejrdehledrudegvddruddtieenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepihhnvghtpeduvdejrddtrddtrddupdhmrghilhhfrhhomhepmhgrihhlrhhmihgtrhhoodevlhgrrhgrrdevhhgvvhgrlhhlihgvrhesghhmrghilhdrtghomhdpnhgspghrtghpthhtohepuddprhgtphhtthhopehinhguuhhsthhrhihprggtkhdquggvvhgvlheslhhishhtshdrshhouhhrtggvfhhorhhgvgdrnhgvthdpoffvtefjohhsthepmhhoheehtdgmpdhmohguvgepshhmthhpohhuth
+X-Spam-Score: 8.7 (++++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: DocuSign Secure Document Received Your Document has been
- completed. VIEW DOCUMENT
- https://ipfs.io/ipfs/QmaMnPzpGRv7fEDKhFjm127CAGewoyN2pZwnLt9rCwyHcU#industrypack-devel@lists.sourceforge.net
- Content analysis details:   (5.7 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  Bonjour Trouvez de nouveaux clients en prospectant par mail.
+    Nous disposons d'une liste de 4 Millions d'emails de professionnels, tous
+    actifs et à jour. 
+ 
+ Content analysis details:   (8.7 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.1 URIBL_SBL_A Contains URL's A record listed in the Spamhaus SBL
- blocklist [URIs: harjulekter.com]
- 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [91.184.248.84 listed in bl.score.senderscore.com]
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [91.184.248.84 listed in sa-trusted.bondedsender.org]
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 2.0 PYZOR_CHECK            Listed in Pyzor
- (https://pyzor.readthedocs.io/en/latest/)
- 1.8 URI_IPFSIO References Interplanetary File System PtP content via
- ipfs.io, likely phishing
- 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
- 0.8 URI_IPFS               References Interplanetary File System PtP content, 
- probable phishing
-X-Headers-End: 1tKi80-0007ja-2R
-Subject: [Industrypack-devel] Complete with DocuSign: Pending Documents.pdf
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+                              no trust
+                             [178.32.96.102 listed in list.dnswl.org]
+  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [178.32.96.102 listed in sa-accredit.habeas.com]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [178.32.96.102 listed in bl.score.senderscore.com]
+  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [178.32.96.102 listed in wl.mailspike.net]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [mailrmicro+clara.chevallier[at]gmail.com]
+  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+  0.0 DKIM_ADSP_CUSTOM_MED   No valid author signature, adsp_override is
+                              CUSTOM_MED
+  1.0 FORGED_GMAIL_RCVD      'From' gmail.com does not match 'Received'
+                             headers
+  1.0 HTML_IMAGE_ONLY_16     BODY: HTML: images with 1200-1600 bytes of
+                             words
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  2.0 PYZOR_CHECK            Listed in Pyzor
+                             (https://pyzor.readthedocs.io/en/latest/)
+  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+  0.0 LOTS_OF_MONEY          Huge... sums of money
+  1.2 NML_ADSP_CUSTOM_MED    ADSP custom_med hit, and not from a mailing
+                             list
+  1.0 SPOOFED_FREEMAIL       No description available.
+  1.5 SPOOF_GMAIL_MID        From Gmail but it doesn't seem to be...
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1tL1yF-0006nf-J4
+Subject: [Industrypack-devel] =?utf-8?q?=5BSPAM=5D_-Offre_d=27essai-_=3A_4?=
+ =?utf-8?q?9_=E2=82=AC_pour_se_faire_connaitre_aupr=C3=A8s_de_50_000_soci?=
+ =?utf-8?b?w6l0w6lzLg==?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -99,211 +134,284 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============4621170918503330958=="
+Content-Type: multipart/mixed; boundary="===============8672992461063896895=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format
+Ce message est au format MIME. Comme votre logiciel de courrier ne comprend
+pas ce format, tout ou partie de ce message pourrait être illisible.
 
---===============4621170918503330958==
-Content-Type: multipart/alternative; boundary="H4G6Wb=_kXHixSAucywTrYnfL0gYurfY02"
+--===============8672992461063896895==
+Content-Type: multipart/alternative;
+     Boundary="--=BOUNDARY_1261749_DAJX_KRLS_LJGG_HKAP"
 
-This is a multi-part message in MIME format
+Ce message est au format MIME. Comme votre logiciel de courrier ne comprend
+pas ce format, tout ou partie de ce message pourrait être illisible.
 
---H4G6Wb=_kXHixSAucywTrYnfL0gYurfY02
-Content-Type: text/plain; charset="iso-8859-1"
+----=BOUNDARY_1261749_DAJX_KRLS_LJGG_HKAP
+Content-Type: text/plain;
+     charset=utf-8; format=flowed
 Content-Transfer-Encoding: quoted-printable
 
+Bonjour
 
-DocuSign
+Trouvez de nouveaux clients en prospectant par mail=2E
 
-Secure
-Document Received
+Nous disposons d'une liste de 4 Millions d'emails de professionnels, tous a=
+ctifs et =C3=A0 jour=2E
 
-Your
-Document has been completed.
-VIEW DOCUMENT https://ipfs.io/ipfs/QmaMnPzpGRv7fEDKhFjm127CAGewoyN2pZw=
-nLt9rCwyHcU#industrypack-devel@lists.sourceforge.net
+Pour vos campagnes de prospection, jusqu'au 31 D=C3=A9cembre 2024, jusqu'=
+=C3=A0 50 % de remise=2E
 
-Please
-review and and sign. Document can only be viewed by=A0industrypack-dev=
-el .
-If you are ready to sign please read through the
-agreement. All the red boxes are required fields, you will not be able=
- to skip
-them, the grey fields are optional but encouraged. =A0Sign-in
-authentication with recipient email is required to review and electron=
-ically
-sign the pending document. There is no requirement for a paper copy to=
- be
-produced if completed with DocuSign.
+Quelques exemples :
 
-Do Not Share This Email
-This email contains a secure link to
-DocuSign. Please do not share this email or link with others.About Doc=
-uSignSign documents electronically in just minutes.
-It's safe, secure, and legally binding. Whether you're in an office, a=
-t home,
-on-the-go, or even across the globe -- DocuSign provides a professiona=
-l trusted
-solution for Digital Transaction Management=E2 =A2.Questions about the=
+50 000 mails : 49 euros
+1 000 000 mails : 290 euros au lieu de 450 euros=2E
+4 000 000 mails : 790 euros au lieu de 1500 euros=2E
 
-Document?If you need to modify the
-document or have questions about the details in the document, please r=
-each out
-to the sender by emailing them directly.Stop receiving this
-emailReport this email=A0or read more
-about=A0Declining to sign=A0and=A0Managing notifications.If you are
-having trouble signing the document, please visit the=A0Help with
-Signing=A0page on our=A0Support Center.
+Devis sur notre site sans engagement=2E
 
---H4G6Wb=_kXHixSAucywTrYnfL0gYurfY02
-Content-Type: text/html; charset="iso-8859-1"
+<img src=3D"tel05=2Ejpg">
+
+A bient=C3=B4t
+
+Professionnels en France sans s=C3=A9lection=2E
+
+Pour ne plus recevoir de courriels de notre part : mailto:mailrmicro+Clara=
+=2EChevallier@gmail=2Ecom?subject=3Ddesinscription&body=3Ddesinscription=
+=C2=A0318560826872
+----=BOUNDARY_1261749_DAJX_KRLS_LJGG_HKAP
+Content-Type: multipart/related;
+     Boundary="--=BOUNDARY_1261749_QYBG_NBQG_YEJE_LPNJ"
+
+----=BOUNDARY_1261749_QYBG_NBQG_YEJE_LPNJ
+Content-Type: text/html;
+     charset=utf-8
 Content-Transfer-Encoding: quoted-printable
 
-
-<html><head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
-8859-1">
- <title> Complete with DocuSign: Pending Documents.pdf</title>
+<html>
+<head>
+<title>HTML Message</title>
+<meta name=3Dgenerator content=3DAdvanced HTML parser v2>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
 </head>
- <body style=3D"MARGIN: 0.5em"> <DIV style=3D"BORDER-LEFT-WIDTH: 0px; =
-BOX-SIZING: border-box; FONT-SIZE: 30px; FONT-FAMILY: 'Familjen Grotes=
-k', sans-serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; WHI=
-TE-SPACE: normal; BORDER-BOTTOM-WIDTH: 0px; WORD-SPACING: 0px; TEXT-TR=
-ANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); PADDING-BOTTOM:=
- 12px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING=
--LEFT: 0px; MARGIN: 0px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal=
-; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR: rgb(244=
-,244,244); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-vari=
-ant-caps: normal; text-decoration-thickness: initial; text-decoration-=
-style: initial; text-decoration-color: initial; -webkit-text-stroke-wi=
-dth: 0px; font-stretch: inherit"><SPAN style=3D"BORDER-LEFT-WIDTH: 0px=
-; BOX-SIZING: border-box; FONT-FAMILY: inherit; BORDER-RIGHT-WIDTH: 0p=
-x; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; FONT-WEIGHT: 70=
-0; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0=
-px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; font-stretch: inherit">=
-DocuSign</SPAN></DIV> <DIV style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING=
-: border-box; FONT-SIZE: medium; FONT-FAMILY: inherit; BORDER-RIGHT-WI=
-DTH: 0px; VERTICAL-ALIGN: baseline; WHITE-SPACE: normal; BORDER-BOTTOM=
--WIDTH: 0px; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400=
-; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; FONT-STYLE: normal; TEXT-ALI=
-GN: left; PADDING-TOP: 15px; PADDING-LEFT: 0px; MARGIN: 0px; ORPHANS: =
-2; WIDOWS: 2; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BORDER-TOP-W=
-IDTH: 0px; BACKGROUND-COLOR: rgb(0,86,179); TEXT-INDENT: 0px; font-var=
-iant-ligatures: normal; font-variant-caps: normal; text-decoration-thi=
-ckness: initial; text-decoration-style: initial; text-decoration-color=
-: initial; -webkit-text-stroke-width: 0px; font-stretch: inherit; font=
--size-adjust: inherit"> <DIV style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZI=
-NG: border-box; FONT-FAMILY: 'Segoe UI', Tahoma, Geneva, Verdana, sans=
--serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTT=
-OM-WIDTH: 0px; COLOR: rgb(255,255,255); PADDING-BOTTOM: 0px; TEXT-ALIG=
-N: center; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-R=
-IGHT: 0px; BORDER-TOP-WIDTH: 0px; font-stretch: inherit">Secure Docume=
-nt Received</DIV> <DIV style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: bo=
-rder-box; FONT-FAMILY: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif=
-; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WID=
-TH: 0px; PADDING-BOTTOM: 22px; TEXT-ALIGN: center; PADDING-TOP: 22px; =
-PADDING-LEFT: 22px; MARGIN: 0px; PADDING-RIGHT: 22px; BORDER-TOP-WIDTH=
-: 0px; BACKGROUND-COLOR: rgb(244,244,244); font-stretch: inherit"><SPA=
-N style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-FAMILY=
-: inherit; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-B=
-OTTOM-WIDTH: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; PADDING-T=
-OP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER-TO=
-P-WIDTH: 0px; font-stretch: inherit; font-size-adjust: inherit"><STRON=
-G>Your Document has been completed.</STRONG><BR style=3D"BOX-SIZING: b=
-order-box"><BR style=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZIN=
-G: border-box"></SPAN><SPAN style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZIN=
-G: border-box; FONT-FAMILY: inherit; BORDER-RIGHT-WIDTH: 0px; VERTICAL=
--ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(255,255,255); P=
-ADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; =
-PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR: rgb(215,1=
-50,22); font-stretch: inherit; font-size-adjust: inherit"><B style=3D"=
-BOX-SIZING: border-box; FONT-WEIGHT: bolder"><A id=3Dm_455577063923932=
-9815v1OWA03882727-91dc-041f-1ab6-349bb50a5363 style=3D"BORDER-LEFT-WID=
-TH: 0px; BOX-SIZING: border-box; TEXT-DECORATION: none; FONT-FAMILY: i=
-nherit; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTT=
-OM-WIDTH: 0px; COLOR: rgb(255,255,255); PADDING-BOTTOM: 12px; TEXT-ALI=
-GN: center; PADDING-TOP: 12px; PADDING-LEFT: 22px; MARGIN: 22px 0px; P=
-ADDING-RIGHT: 22px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR: rgb(215,1=
-50,22); font-stretch: inherit; font-size-adjust: inherit" href=3D"http=
-s://ipfs.io/ipfs/QmaMnPzpGRv7fEDKhFjm127CAGewoyN2pZwnLt9rCwyHcU#indust=
-rypack-devel@lists.sourceforge.net" rel=3Dnoreferrer target=3D_blank d=
-ata-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://harjulek=
-ter.com/Onedrivesjldofl/drivinghspeed/opemeipoklp/OneDrive/?id%3D%23sh=
-elley@furuipharma.com&amp;source=3Dgmail&amp;ust=3D1723900144597000&am=
-p;usg=3DAOvVaw3XmH1grj29vGIYrAtUooP-" data-saferedirectreason=3D"2">VI=
-EW DOCUMENT</A></B></SPAN></DIV> <DIV style=3D"BORDER-LEFT-WIDTH: 0px;=
- BOX-SIZING: border-box; FONT-SIZE: 15px; FONT-FAMILY: Helvetica, Aria=
-l, 'Sans Serif', serif, EmojiFont; BORDER-RIGHT-WIDTH: 0px; VERTICAL-A=
-LIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(51,51,51); PADDIN=
-G-BOTTOM: 40px; TEXT-ALIGN: left; PADDING-TOP: 40px; PADDING-LEFT: 0px=
-; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BACKGROUND-C=
-OLOR: white; font-stretch: inherit"><SPAN style=3D"BORDER-LEFT-WIDTH: =
-0px; BOX-SIZING: border-box; FONT-FAMILY: inherit; BORDER-RIGHT-WIDTH:=
- 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTT=
-OM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT=
-: 20px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; font-stretch: inher=
-it">Please review and and sign. Document can only be viewed by<SPAN st=
-yle=3D"BOX-SIZING: border-box">&nbsp;industrypack-devel</SPAN></SPAN> =
-<SPAN style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-FA=
-MILY: inherit; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORD=
-ER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-L=
-EFT: 0px; MARGIN: 0px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px; BORDER-T=
-OP-WIDTH: 0px; font-stretch: inherit">.<BR><BR style=3D"BOX-SIZING: bo=
-rder-box">If you are ready to sign please read through the agreement. =
-All the red boxes are required fields, you will not be able to skip th=
-em, the grey fields are optional but encouraged. &nbsp;<BR style=3D"BO=
-X-SIZING: border-box"><BR style=3D"BOX-SIZING: border-box">Sign-in aut=
-hentication with recipient email is required to review and electronica=
-lly sign the pending document. There is no requirement for a paper cop=
-y to be produced if completed with DocuSign.</SPAN></DIV> <DIV style=3D=
-"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-FAMILY: inherit;=
- BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDT=
-H: 0px; PADDING-BOTTOM: 20px; PADDING-TOP: 20px; PADDING-LEFT: 0px; MA=
-RGIN: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR=
-: rgb(244,244,244); font-stretch: inherit; font-size-adjust: inherit">=
- <DIV style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-SI=
-ZE: 13px; FONT-FAMILY: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif=
-; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WID=
-TH: 0px; COLOR: rgb(136,136,136); PADDING-BOTTOM: 0px; TEXT-ALIGN: cen=
-ter; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: =
-0px; BORDER-TOP-WIDTH: 0px; font-stretch: inherit"><B style=3D"BOX-SIZ=
-ING: border-box; FONT-WEIGHT: bolder">Do Not Share This Email</B> <BR =
-style=3D"BOX-SIZING: border-box">This email contains a secure link to =
-DocuSign. Please do not share this email or link with others.<BR style=
-=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZING: border-box"><B st=
-yle=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder">About DocuSign</B>=
-<BR style=3D"BOX-SIZING: border-box">Sign documents electronically in =
-just minutes. It's safe, secure, and legally binding. Whether you're i=
-n an office, at home, on-the-go, or even across the globe -- DocuSign =
-provides a professional trusted solution for Digital Transaction Manag=
-ement=E2 =A2.<BR style=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZ=
-ING: border-box"><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bold=
-er">Questions about the Document?</B><BR style=3D"BOX-SIZING: border-b=
-ox">If you need to modify the document or have questions about the det=
-ails in the document, please reach out to the sender by emailing them =
-directly.<BR style=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZING:=
- border-box"><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder">=
-Stop receiving this email</B><BR style=3D"BOX-SIZING: border-box">Repo=
-rt this email&nbsp;or read more about&nbsp;Declining to sign&nbsp;and&=
-nbsp;Managing notifications.<BR style=3D"BOX-SIZING: border-box"><BR s=
-tyle=3D"BOX-SIZING: border-box">If you are having trouble signing the =
-document, please visit the&nbsp;Help with Signing&nbsp;page on our&nbs=
-p;Support Center.</DIV></DIV></DIV></body>
+<body>
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td>
+<font face=3D'Helvetica'>Bonjour<br><br>Trouvez de nouveaux clients en pros=
+pectant par mail=2E<br><br>Nous disposons d'une liste de 4 Millions d'email=
+s de professionnels, tous actifs et =C3=A0 jour=2E<br><br>Pour vos campagne=
+s de prospection, jusqu'au 31 D=C3=A9cembre 2024, jusqu'=C3=A0 50 % de remi=
+se=2E<br><br>Quelques exemples :<br><br>50 000 mails : 49 euros<br>1 000 00=
+0 mails : 290 euros au lieu de 450 euros=2E<br>4 000 000 mails : 790 euros =
+au lieu de 1500 euros=2E<br><br>Devis sur notre site sans engagement=
+=2E<br><br></font><font face=3D'Helvetica' size=3D'2'><img src=3D"cid:dGVsM=
+DUuanBn$22594118$58325@gmail"></font><font face=3D'Helvetica'><br><br>A bie=
+nt=C3=B4t<br><br>Professionnels en France sans s=C3=A9lection=2E<br><br></f=
+ont><font face=3D'Helvetica' size=3D'2'>Pour ne plus recevoir de courriels =
+de notre part : <a href=3D"mailto:mailrmicro+Clara=2EChevallier@gmail=
+=2Ecom?subject=3Ddesinscription&body=3Ddesinscription&nbsp;318560826872">ma=
+ilrmicro+Clara=2EChevallier@gmail=2Ecom?subject=3Ddesinscription&amp;body=
+=3Ddesinscription&nbsp;318560826872</a></font>
+</td>
+</tr>
+</table>
+</body>
 </html>
 
---H4G6Wb=_kXHixSAucywTrYnfL0gYurfY02--
+----=BOUNDARY_1261749_QYBG_NBQG_YEJE_LPNJ
+Content-Disposition: attachment;
+     filename="tel05.jpg"
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg;
+     x-unix-mode=0664;
+     name="tel05.jpg";
+Content-ID: <dGVsMDUuanBn$22594118$58325@gmail>
+
+/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAPwAA/+4ADkFkb2JlAGTAAAAAAf/b
+AIQABgQEBAQEBgQEBggFBQUICgcGBgcKCwkJCgkJCw4LDAwMDAsODA0NDg0NDBEREhIRERkYGBgZ
+HBwcHBwcHBwcHAEGBgYLCgsVDg4VFxMQExccHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc
+HBwcHBwcHBwcHBwcHBwcHBwc/8AAEQgAZACyAwERAAIRAQMRAf/EAKcAAQACAwEBAQAAAAAAAAAA
+AAAGBwMEBQgBAgEBAQEBAQAAAAAAAAAAAAAAAAIDAQQQAAEEAQQBAwIEBAIHCQAAAAIBAwQFBgAR
+EgcTISIUMUFRMhUIYUIjFoEzcXKU1FYXGFJislMkNCV1NxEAAQMBBQYFAgQGAgEFAAAAAQARAiEx
+QWESA1FxgZGhIvCxwdEEMhPh8UJSYnKCkrIj0jPC4kNTFCT/2gAMAwEAAhEDEQA/APUFnaV1LXyL
+a2ktwYEMFdkSXyQG2wH6qRLqZSEQ5XYxJLBQTGP3B9R5fdNY/R3wOWEouEZp9iRGR0t9kEDfbbFS
+L+Ud91+ya0jEysUSkI2ruZ32dhHWsViVmNmFd80iGKygOPPOqG3JRbaEz4jum5bcU3T19U1nmDst
+BEkOvxgfaeC9ltSXMOsxnlBVEksE24w8CF+UlbdECUV+xIm32+urylnUZg7KTS5UeDFenSzRqPFb
+J55xfoINipES7fgiaicxGJkbArjEyIAtKq7/AKpeiv8AiVf9gsf921SlTTJ+wsOw3HmspySzbgVU
+pG/jPEJkbqujyAW2gEnTJR9dkH0T1X0TTU7JZTamn3jMLFxMK7z6v7AtP0TGbkXrJRUmoj7TsZx1
+BRSLxeYARxRFFVUHddvXbbVCBIJFy4ZAFT3UrqrjIf3EdP4vdPUFvkADOiGrUoY7EmSDTgrsQEbD
+bgchVNiFF3RfRfXXIESNPHjbYuyDKYTsvxitxtcwm2cZqgFkZKWXNCYJpzbgQkO/PmqogoO6qq7J
+66TOW1IDPYodjn7ien8quGaKpvx+dLNG4wSWJEYXXCXYQE3mwDkSrsIqu6r6Jq4xMrFMpAWqyNSu
+qCZt3h1j17ZJTZPcgxZKKGcRhp2S42JIhCriMgfj5IqKiFsqp6p6akSBLBUYEAE3rt43n+H5djrm
+VY9ZtTqiOJlIkAhCrPiHmYutkguNkI+7iQ77ev31Wr/rjmlYzqdPvLC1Qn/ql6K/4lX/AGCx/wB2
+0RWjElMTorM2KXkYkti8yeypyA0QhXZdl9UX76qUTEkG0KYSEgCLCoFk/f8A1Lh17KxvI7xYVrAU
+Bkx/hzXeCuALg+9pgwXcDRfQtRGQNishlkxLvbqvObtnHMXu/n2kkTNqOsSYzyFoVMve8y2HoKKv
+qWrjAkEi78vVRKYDPetC5/cl0zQ279JYZAiyobisyFYjSpDQGPoQ+RpowLj9+Kr+H11EJCYBFhVy
+iRQqw6u1rbuuj21RJanQJgI7HksEhtmC/cSTVSiQWKiMgQ4W1ripNEVK/ulNydjWMYkrpsxMoySB
+AnKH1KOqkqpv/A+BJ/o1EAJa8Aai3yHkSuzkY6MyLW/H0WL90GM0tf0ws2sit17+JyILlK5GFGij
+f122OLajsojxP6J90RfqmkpkasJj6gfR/Qcl2AGSUbm9VAZGb2s/9w8yxjYu9muQ1tPAj4/Wg42z
+HjeaO1KkSXXnBIWlFXyEC223LbdF21vCGU6jD9ZrsAeLcWHVZGeaGmDZlffI1fl5Aqe9Y5Dj953D
+bu5JisjBuy0r+EiOshH40yFybVXRJsW2zcRRH12XcU9CXZUSdIDJLKb+4bPH/liq1T3RzcPHizBW
+D2/IlxurspKA269Ldq5MeO3HAnHVcfbVkeIghEq7n+GvP8j6W2keYW+gSJOLQ55B1S2OdiZr1519
+RzMm6pIMWrIcWPKtUkxzl+NAEFkHFJtHQ5r7tnOKeuyl99enX1ICfd2g0F7bB6XVxovPpwLdtbSr
+NvcHx/tS3wnslbBp3GaFh2wYrX46KzIGU0BNuGRmKNeJQAlQgX6bemuGP2tQyJu96vx9V3Nn08os
+fwPMcSq5zS6o+2O7cMjdYsjaS8RmtzL/ACaIm0VuGLgn4POCbOoogaD68dy4iq7ns+JTVMzSOWQ3
+khh442Bd15j7f27SSGw8UPAXq+swtTosTurtrfyVlfKlhsm68mWScT09PuOvN8kkacstrUW/xoCe
+rGJvkFV/7b8MoHek4pz4jU53LRlP3Tj4IZSebzjSC4p7qSCA7J/Hdfqq69nytMRiNMUiIjqH/LAB
+ePQnmkdT9Rkehb3PFQzpnAWezuoXMHuZ7zNZieWv8QaQSSSxHQXfAaKvoBm+Rei/XUxkJw0dWQc5
+X21c+nbuW2rHJqaunEkCR4geA60/3B5nR3Uyh6/XG5WLM1l6zGayW2h/Dgsx2DVolhm2q82CTYv5
+U4oi7fcZ+NLN8iEybC+Jw4+bPR1zWgI6E9MBxKLBrB+VnPcfUoqiiiou6KnoqffXCuCxeX63OGuu
+++uwG2KCVnrtsTb5SKJk5kyFxFeUZwVHZA3JBNRLZOKJ6/lHP40j9mUWoJyrcXL9Kje+9afJiPux
+kbTAUvsAfjQ7iFodYWHzet+5cmqmRgWF2b7TeLwgcN+CTrbzbe7aAhe8n1FOI7exfy7bJWrDL8SE
+fqGboTENwA/taq7CRPyTIdpEeeUEvz6vguxjnYma9edfUczJuqSDFqyHFjyrVJMc5fjQBBZBxSbR
+0Oa+7ZzinrspffWuvqQE+7tBoL22D0urjRY6cC3bW0r0VQ3FbkFLBvKY0drrKO3JiGgqO7TooQ+1
+dlH0X6fbTUiYyIKRkCKLnZY9imPUtllmQw4xRq1g5Up42WzcJGx9BRSTciLZBFPx2TWGrMQi/hz7
+lawiZFlV/RuCvXkW17gyJgK/Ic5bcSqBgAFK6sIfGwjSIIpzMEFeSpuQoP3Ut9tXRMdI6T90h3Hf
+dwtbbQuwWcdXPqCbdsKRG60nF36tQste+axj9vHWpYZGxexzKPOizH5s5qE2URwiVfWweTdGxQTQ
+UXiXsHWWvPOMoGWg/PffyWmlBjmtc+OH4qQ/tdYYjdKUTbEtmcqrJcdVhVVGjdkG4rJ8kFUNvkiE
+m22/03TZV9OrFm3ePbgvNpFzL+b2/PcVa2sVsmiKsv3A4VfZjhUd/FQ899jNjHu66Nvt5nI3JFBP
+VPdxNSH19VTb76zlIwnGYD5T0/NuDtVWIxnGUD+oeOjqu83y/NO+aWt60qcMuscWzkR3MmsbaMTE
+WK0wYuGLJlt5Pem6ckEl47IPr7dhpxlqg/8AtxL4nDxfgszqGOmQzzNBs3+PO3rX8HIOm+4ZnYVZ
+js3JsTymvjwZwU7PyJsJ+I2DYKjSbf0yFkfqoiu/13FELmnqnvjL9Usw644no165LRj2SjbGOXxy
+HKty3MBZybsXuh/tmbQzMWx6rqFpq1q1b8E2WZuK4pk16qIjzP13VPy7Kvu2rSjkjIm2bUw96bL8
+KtSWYxA/SX5j8fParJ7JTNv7Lsj66cbbyZoAdgI6LZifAxJxtEdRQ5G2hCPL0329U+usZkhiPHi1
+awZ6qn8s7czTOcFl4FW9eZEzll7EKsmFLieCvZJ4PG84MgiH27KvHmID+K/j3Uh9wjLQODW4W/h6
+XKYHIO6pZqX3fj4dcXtTG8uo6Dr/AKvKnvcixOqhA9lIY5Hed+U83sgs+UAVEAXEIuJKnoqF+ZBV
+KnMS1i4eMYhsbR6Dc65pxMNGlJSkXwFp/wAjdVt6muBdlx6Y63Ece6nyjGqyRIajeYq02o7XlIQV
+99xU3VBReRmaqu31XWoeZqWt3bVDCIoritIDNrWS6uQqozOYcjOKPovF0FBdv8F15tbTzwMdoZba
+c8khIXF150wXPc96ZxCT1ldYPeXdzSOyGqOdWRXJECU28ZOtkTybqg8jX8gkvHZFQSRda6modWIa
+k2b06DhS3ZA0xpzN8Hcfjaz28ee1CwLtjrfpymn4sLruUxrhchyaniknkmMvLu5G9qFzIQFsSEN9
+/dx39N05CB04isIRyt16VD8UiDqZyaTmXHi793Ra/ZmcZL3ji4dcYngl9Am2r8cptheRfiRIYsuC
+4Ro7ue/qPHdeK8d9kVV21P2s8xVog29LOLoNTLEvadnP0XoquiJX18WAhK4kRltjmv1Lxig7r/p2
+1pqTzSJ2lRpwyxA2BefMZucj6IzLMoeQ4hb31Tk9q9cV11QxkmEYvGRI08vIEHghfQiRULl6Kiou
+s9KbaQgXePLZ6fkr1NP/AGGYskOO316cvxi9J23Zr2L2zi1WeKXWTrF/t6psQBH3G4ZIjpOtPCgg
+bzY+zmn5iX147Evcp09NrSZORhX/AJb6Ysu0nqObBFuNPbg+C2Ms7czTOcFl4FW9eZEzll7EKsmF
+LieCvZJ4PG84MgiH27KvHmID+K/jOpD7hGWgcGtwt/D0uSByDuqWal934+HVy9d4y7hmDUeLSHBe
+fqYLMd9wN+BOiP8AUUd9l481Xb+GttWQMqWWcqLLRiYxrieZdQL9yFPkmWUWP4PRQ5kiJkN1Gaup
+MRk3QYhNEhETxCJI2KGonyL09ustMA68BIdoeR2UufEEstpSy6UiPqoB44dVZdrVSDxmXSY+8lVI
+WC5ErZAJ6Rj8StsmKJ/5a7L/AIaa8pSBI+o+a58cQ0zEEdoamCpDGO7ewMRxosWz3Bslu8wrfIwE
+qJF+TFm7qpNEb4b7b78FVsXE2TdPrxStWUZxGQNRiDts62+HSMMkmkXD2+G4daqYftzwS9wTAXWM
+kYGBZ3Vg/avV4ceMZHhAAa9qqie1tF239N9vtq5NGEIO+SLPxJ8YqDMznKZDZj48bFaWs1SaImiJ
+oiaImiJoiaImiJoiaImiJoiaImiJoiaImiJoiaImiJoiaImiJoi0LLIKGmkwoVvYxK+VaueCvYkv
+tsuSHdxHgyJkiuFuYpsO6+qa7EGRYVK6xZ7l8kZFj8W4j47KsojFzNBXYta4+2Mp1tOSqTbKl5DF
+OBeqJ9l/DXBWy5CGDmxadxneEY9MWuvsgq6qaIC4saZMYYdQDXYS4OGJbEv0XbXYAyLRqXbibt6Z
+Sz8fRblnkWP0siHDuLOHXSbRzw17Mp9tk5Dm4jwZEyRXC3MU2Hf6prgqWFq41M1yx22VYxQPtxby
+3g1b7zTj7TUyQ0wZtMCpumIuEKqLYoqkqfRPrrj24etPNdYpJynGYdKGSS7aDHpHRA27R2Q0EQhd
+VEBReIkbVDVfT19ddlQsVwVsWSfkeP1USLPs7OJCiWDjbMORIfbabeceTk2DZGSIZGibig/XXcpz
+Zf1bFwSGXN+m11sz58GqhvWNnIahQooK5IkyDFppsB+pGZKgiifiq6kkC1UASufX5hiltanR1dxB
+nWjTAynIUaQ268LBoKi4oASqgkjgKi/gSfjq8prSy1QJAgEG1dCfYQaqE9Y2chqFCigrkiTIMWmm
+wT6kZkqCKJ+KrqCQLVYBK4a9k9epaM0q5LU/qUpW0YifMY8pq+iE0gjz3VXEIVBP5t02+urECSQ1
+R6WqcwZ7l+ovYmBTrr+3IWRVci48hM/p7Utk31dDfkCAhclMdl3H6ptqY1sXZUtWtFsL0uyptY5b
+VjlI3VNvM0oOCto3IV1EJ9xvjyRgh9qFy/N9td06xk90g2Aaw4vUYLk/qi2w8a3YLJbdn9dUNmdN
+dZNVV9gyqI9FkS2W3G1JEVEcQiThuiovu29NSC66Qy603I8frXIrNjZw4bliLhwgffbbV8WQ8jhN
+IRJzQA9xKP0T10lIRd6NaugEhx4exabedYY7QuZS3eV5UTJq25afJa+KhoqDx8vLhvyVE23+uuyo
+z3rke4kC5McznDcvJ4MXuoNy5GRCfbhvtumAl6IpCKqSIv47a6xZ1x7l1pk2HXRHp9g+1DhxQJ2R
+JfMW2m2wTcjMyVBERRN1VV1JLLrKkun+1bfMMmyvIMmzCpZxyofmR4ePj8VpW4sdxrhYq+q+ZWOJ
+cVIiUFIvt6JqtMNoiUrZN/S9x33PVd1P+zLGwdbVblfmGKW1qdHV3EGdaNMDKchRpDbrwsGgqLig
+BKqCSOAqL+BJ+Ou5TWllqgSBAINq6+pVJoiaIqh/c9VST6+j5dXCpWOE2cS6j8U3Xi26jZov/dTm
+hr/q6kTGnqwmbAWO4+5YKxD7mnOG2NOF/J1UGZ30i/7Qe73p5jb2N4Ra0dUDzSoYORJLalLXyIu3
+9M3lBf8AX/hrT48RpzBJ/wCyc47u1s269Y60hPTLUMNMS3nM4HoRguxPxhvtyk7kz6MqTBefCFjz
+rf8AU5N0QC8pMkm/IZPEduOsZROnoRnZIzz8B2g7wDIcF6IEamtlFQIZeMqt/cx4qL9h3tv27Hqs
+poJbZn1vikO9mk1s5xs3JDfyGiVF9hADPk9fX2/x1vKQhqy1h9InACOBc+rHcvPpxEtOOiaHLNzu
+DcHam9WbjBVHePbmQZByCbj1Ti7FIzsqONq/btK6+oqm6cmwNxo0+u+ploNDV/illicI/wDqYjeu
+x1gTpfwjMRsJo3EeSrSOVjnWA4v+3cZiRr+vvrSJZL/mK2xVtuvNqbfIS8ZE9xDfZNw/hqdQnWya
+jO2kZHCQ7Yje1DvxWoiNHPF7ZgDGJqTzDqRYTfJ2nK6hwhw0cLEQk2eQxuSK405Tl8aH5U+qKSgn
+ov2PW0dQT1jqguBpvvMqHiDVYTgYaX2zadRtwFeRBbeKK8e8f/yDLv8A6qR/4NeT5H0j+aP+QXp0
+fq4S8ioZ1niEHrrqCoy/r7Fmsgy+zrIch9CeBiTI+b4nHh+Q6ioDYIvJAT09qff117flPCZhH6QW
+5X+NuxeXRi4JJrXz9l9y7KM/yPqHPUzjEv7PSNUn8NVmtTfkcxPyf5SJw8fEfr9d9eT5AGQF65o/
+5BenRJz/ANMvIqAdjdV4Pjv7XIN1DqIoXrcWqmnaiH/qjfmOMo9yeVEMm1R4kQF9qenp6Jrb5scm
+tlFgkRyBWPxZ5tMy/cH6jkut2/1vhOD4bgU3GKmPXWMbIKln9SaARluiYmZK68KIbikYIXu+i/Tb
+Vv8A/qiBZmZuK5pxf4syakabvjT33KRX1nLpe783uIIqcquwFZUcE9VV1l0jBNtl/mT8NedyPjax
+BbvjXZ2Gq2jAS+Rog2GJ/wAwuf0d1L15lHS8e2yati2tnkwTJFldTAB2WDhPOtqTcg+RtK2gb7iS
+e7dV9VXW/wAzSEIiI7QICux4gvw5MsfjzMpEkP3GnH1t4qOZxgeKWLnTOAs3K5VjRzLKMlky82fn
+jgbRq0LrCqPEOPi9q7iifZU1xs+v3Bv9fkKc2Wp7Pjyy/wDyQ65n81IMzwnGLHuzCOrVgR6/Da+B
+Kvf0dofFGlzN3B2IB4oZD4hIt99x5IvoS6nR75zJrkgGGx5eVeYU6sRDSi365l+ER+Sy9uYzjuB9
+ldbZTh0WNQ21ldtVEtiCAMBJhPKDZ8mm+IrwE+HJB/mTf6DqviudfLdKE34Bx77w67qwB0CW+iQY
+7LadOTq+ZsKHZQ3q+xYbmQ5QEzIjPgLjTjZpsQGBIokJJ6Ki6zIBXAV5jxnHcfhdG9p2sOtiR7Bq
+dewG5bbLYvDEAm1FhDROSNCqJsCLx/hrmsT/APW0v4owJxOc2qtL/v1BsMmw7FaXQPXWH4rgNBfV
+Fc03c3FVHkzrM0QpLiy223jDyL6i3y22BPT0T7+uvX8nsmYCwU5Xrz6Qo5qXKtDXmWyaImiLn5FS
+RMloLHHp/wD7W2ivQ3tvVUB8FBVT+Kb76z1YZokOyvTnlkDaq2xz9v1XQ9P23VDll8xbsnnn7VY3
+DaQagrTng8pb+HxB6eT12+2+tNf/AGRjGzL/AMn/AAUaLwkZbfZvxUu6y6+h9bYNBwpiR+ohDR1X
+5Zto0rxvuE4ZKCEfFPfxROS+ifXVapEwzUZvfmaqdMGJe93UX6z6Do+uanKKZJi2sfLiNtzkz4Va
+hqDgAx/mOeTijpbn7d/wTWcwZaH2idtcWAfo60jJtb7g4DZV/G5dTpfqSL09jMigZsFuH5ss5kia
+rKR91UAbEEb5u7IIh/2l9VXWspvEBrOuPkOCyEakrVoOk62h7guO2Gp3kK4ZJtur8CCjDzqNI66j
+3kXmp+Ml24J+ZfXUaLacDEXno7tz8let3yif2+zDovnXfSNX19nWT5vHm/NdydwyjxlYRr4bbzxP
+uto55D8iEfH+UduOu6RMNL7ePk7efHBNUCepnw60c9ODrK31Vcu4Zl2I3GUyrdcuflORZkttx1a9
+iSKCLDYOSD5g1t6IhAn8E1kdN9MReoau1m9lYk0zK43bLfdS/EqH+1sWqMa8/wAv9Fgx4HyeHj8n
+x2hb58OR8eXHfbku3469OvqZ5mVjlZQiwZYc4xn+88Qt8U+T8H9ZiORPlePy+PyJty4cg5bfhyTX
+n1IZg2I6F1rCWUvv6hR7NOq0y/qdvq/9T+F440GL+p/H8u/wCaLl4fKH5/F9PJ6b/fWvyZfd1DOz
+uJ5v7rHQj9uAjbRln7G60/v+jpKX9R/Tf0Kzh2fm8Hn8vwxIfHx8jfDny/Nuu34Lpm/2jU2F1UQ2
+jLT/AHRyvy9lnDrxn/mRY5/Ilo+1a0wUjlWTPtQAd8hGrvNeSEnt48P8dTED7c4GonIHlFmSTmcZ
+CmQEcy6rsf275fUQrDE8P7Bl0mD2jjhFSnCbkvNNP/5rTUo3EcES9fy8fr7uS7qvCM0RGdQPHi7C
+5UDllmjQ+PG3FSn/AJIVEOVgP6JOKDA64KQbUY2UdcmFJEeRG4hto2amKmSoC7qv0TWp1CdXP/Dl
+bBm6KW/1GG2Qk+5/GC2u0upx7Afqr6ntXsZyvHHFcqrlgEd4iaoptutqQeQC2/H7r9UVRXERyzzi
+1mOI8E81RLxymxcrHOm8gdzeHn3ZuUFl1lSNq3SRWooQokYjRUN1WwIhMy33+ieqIq77DxuDRJIt
+Pl4p+NVEgZAA2BSqrw66gdhW+ZSMilzKq1itR4uOH5PixDbFtCdDd4g5H41X2tD+ZfVdIFoGJqSX
+fZbTr0VandKJFMsSDjW3hYuFB6cSF19leCfq/k/u+ZYTPnfG2+P+oKnt8XlXyePb68x3/hqJjNpQ
+h+wAb2lmXYFtSc/3k9QymWJUP9rYtUY15/l/osGPA+Tw8fk+O0LfPhyPjy477cl2/HW+vqZ5mVjl
+RCLBl1tZKk0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RN
+ETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRFEeyp+T19RCcxsZvjcmgFu/UssSrFiD
+43CJyMxIE23T8qNiScDLgpKIqW2p/UHsr+CuIobHuff7cPIxzHuw7IYv6PVyjza6lWTkSvZsm1pJ
+kdlqMEh39TFYoeJWuWwm1F96E37fVS1dSzNYTgwIGPc5FONAs3ANXuHEgnk0SX3iq3GO2LO2RYuN
+409ZWtezIfvK92U0wUZIsp6ETTJoLoyXnXozvhH2CQjuRgqomuAg1H0sN9bmwatd2ZXKBjQ/U56A
+G3Z3BqLl5h2qtQ05TMzwrLWfYyBjSLSVBrWWYsD4zj7aPyGnG0M0eRsBJpw9yVfRB5JyMh23gZic
+W1JRbi2HaKkSqs4l81twGBOnGT8HvfuuMaL4PeBi3OyV+E01iiUlTY17pvgEn5drKeii29y4sA35
+G+JGrvEEBT5Eh+3sokDYTICPGILnYzvfzVszG7uffEtRrXuOOxSHqrNky2klxX5jVnaULqRbCfFk
+xpsWQ442L4uMvxW2GiDifHj4xUVFRXfbkrV+jMKXcQPHsLFz9bG+vAksMGZmLlmqXc8fDu0MmPG6
+iZldE6p2dIdjCnNSI6nNeiMC46jrXFhmIshF8jP9RR4/m8apx13UIBNxbM2HaLTsMg601IgTIFmc
+x/yI6RPHmsbPfEJymsZxRq56TWSYUVx6FbNyqgP1Dn4zfsQZRGRbVtUd/orxVR25ctcILA7ZGNaD
+tjmfcXYfxUxWT1N7RBxrLLZhabWjWq1co7tZiwKhGnIdVYSGP1maydtWttPQo7xN+GHLe8jUlZhN
+qrXEBVW0XkTJKioJEZ1dohzStQWDYWljsqXY3l7d5IGyjX3W347Fty/3BYyzcMw4wR3IXKvbklIn
+MRrDlaAy4ysavPd2SDYSAJ4uQ8fXihqJIl/bOcwNuYx4inJ6P0aqyzgwzD9ubZS3iWu3VeikHYXZ
+lfgkmurXEhLYW4vvMLaT2aqGLUXh5FOS8JpzVXRRsBBVJfrxFFJMhLubYH/Lafa1aEUfFvGHhlwn
+u7ykVpXlFQO2FRCp4eQ2kl2U1HJiFKJ8TEAQXfM+2kYyQEJAJEX3p7eW8dNyHoDIRH9QiRyzDNeL
+gVJJsFrS3dpItxahsK6vbGQWtJAoFqZ86sC0twiS36qEFjNWOsOS9xajuMSuSqbQb8W1VE31gfrA
+39AtIMdOUsB1lEeRWpTZncwZFNRxm7jK5eROy3klXsdikehxoRRweI2UiRSIE83INmlIi9N+PqN2
+lsH6tz8YqG7TLFmxYnlSvvRabfesJHLpuRXxydpqufcJEhWUabKBuuMAcZmtsooxHzV1OAobiei7
+qiptrunAyiCKl4in8dA2Iv8ANdmMszHf0vbYbr9oC6Bdp20aXIobDHVjZK49CbqawZoONSAsQkG0
+b0hGkSOrQwn1eFBc48fYrm6aGNjV7iP7QJPuY0oC9zVUixzZlBxqcrb3ZaOQ93JjKx6+5q4tZeJH
+fmT6+ytosFsWGHiZT4jzwp8s5CgRMDwbRR/OTa+ms88XNrAV233cOTbQryFt5IGyjX3Wji+wqx6m
+zi3VVDuYXJYtjHalMc04l43gQx3T7LsX01rq6ZhIxNoLLLTmJxEhetrUK00RNETRE0RcPKsTi5S3
+CNZcqqsKiR8yts4KtpIYdVsmj2R5t5oxcacIDEwJFRfx2VAoXFrNwLU5gHeAhqGu9lxE6rhp/wDI
+DeWqZGsv5y5GpRFmKfg+N4/Esf4fh8Pt8fg2/m/P7tcAaylvF2d/7Y/2hcIe2tjYM7N/dL+4rEvT
+9O0w21W29vVuuR3olrLivMo/ZNSXzlOrJNxk+LhPPOkjjHjIOZIKimyJ2j2dtKXdtmO+vde6oyJ/
+mrXez4XC6jUvfcndZ1z8oLKqtLGjs2npLgT4ZRjcRqYLQvMKMph9omyWO2ScgU0Id0L66XNv6yMu
+hkWwUiIHMHlER8hXFY53VVHOBWyn2TYrXQ65F84OOIdbJWXDmeV5tx1ZLDxkSERKBb+8C0cu42gj
+BqdRQvaqB7cv83HNb7jYu7juOrQsSRkWU26lznfNJm2BtqaqgC2Ig2w2yw0AiKe1tsU33VdyVV0k
+AY5fFVItdRCP0fQDSrj1jcXFvXM1r9RWtTHY28KPKQUcVlWY7XI9gFBV7nxFOI7CqovQSCCPqGVj
+/KQRhbEPtaqvN3PtkZNc8n9JEDY63G+qybkyrEcrvv1Sb8VXJyHBEkKF5Ub2ZGIMfh43zAmlbVtf
+zcfJ79Ho2JPMMfIbmDKGr/S3I5hxfmCQaLG107VQ2AGouraomG1JYsLCEcQH5jcyQcp1HUKMTTSo
+86ZNkwDZByXiqa4AB/KwDbn43l2IfgGoSNt7kg72usP0i0Gze+8vWdc3alPgWtpXw5LkWRPqo74e
+CU/CBttpx102zloqgy2LiA+KOIKc0XcuVZi74k8T4drHUZe1sGxYeuNq38mw5rIpsK1jWU2ita0H
+mGLCu+Orix5XDzMkEpmS0QGTQFvw5IQpsqeu8NbiGKt6Ni603us6F+qtqk5E5Wr6nYoZbpv+V/40
+YZCC4jjomSvF8o1Iz5brt6a1+6WAuE8/Ht6dgxtqpiG5N5+67Vrj0K3kVEmSboHQTEsIqNqKITqR
+3o2zm4luPB8l9Nl329ftrP8AVm39V0UiY3U6EH0Sbj0GdfQchfJ1JVZGlw2WxJEbJucrJOKSceXJ
+Pjjx2JPv9ftJiC+IZVmo2wv0I9VDGukacIDVU7eXD9fFrJVFGiEcIW262Y2AEwnCKKqoq02QuEqu
+KopyIh3RddDUOnIStIymu2BBB99rnBpNhAoK9X973837d91zU3ts/frMm19s4MFI02ITKHFcrikk
+040jrTgKRjMdbcRxCEgXbZNQKWbSeccp4N1rsXcDYzdX6Ee9Fou9UQ1EHYd/dQbFxh+LY2jL0dZU
+1mS8T5i6rsdwG1FwyVomAbVvdUDimuAAHClNrPxvLsa8AwSI3gkg7Ha6xu0UINm95pFjNQ4rMNjl
+4o7YtN8yJwuIIgpyI1UiXZPVVXddXKWYkm9RGOUAbFl1KpNETRE0RNETRE0RNETRE0RNETRE0RNE
+TRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RNETRE0RN
+ETRE0RNETRF//9k=
+
+
+----=BOUNDARY_1261749_QYBG_NBQG_YEJE_LPNJ--
+
+
+----=BOUNDARY_1261749_DAJX_KRLS_LJGG_HKAP--
 
 
 
---===============4621170918503330958==
+
+--===============8672992461063896895==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4621170918503330958==
+--===============8672992461063896895==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -314,6 +422,7 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4621170918503330958==--
+--===============8672992461063896895==--
+
 
 
