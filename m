@@ -2,123 +2,101 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3CBDEA084E8
-	for <lists+industrypack-devel@lfdr.de>; Fri, 10 Jan 2025 02:33:14 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 03B0CA08ECA
+	for <lists+industrypack-devel@lfdr.de>; Fri, 10 Jan 2025 12:03:35 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1tW3th-0003cp-1Y
+	id 1tWCnd-0004IZ-2E
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 10 Jan 2025 01:33:13 +0000
+	Fri, 10 Jan 2025 11:03:33 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <sales@weidss.cn>) id 1tW3tg-0003ci-8q
+ (envelope-from <eki-net@hwwfnwhxsfc.com>) id 1tWCnb-0004IS-Vi
  for industrypack-devel@lists.sourceforge.net;
- Fri, 10 Jan 2025 01:33:12 +0000
+ Fri, 10 Jan 2025 11:03:32 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=List-Id:List-Unsubscribe:Content-Type:MIME-Version:
- To:Reply-To:From:Subject:Date:Message-ID:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Help:
+ d=sourceforge.net; s=x; h=Content-Type:Message-ID:Mime-Version:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=nJDFbNBTrJA+tdyyjND60EzVGhDh35amFTxfkZtLfqM=; b=Bc0PVjtZcVsaw1rmZ1Y8yqUE48
- 00szoD8q+nBxC4OadYikwnMQTfPRX8SPDLtKkOTXqB13pMIc8A19bUrnko5AfccRHTJSwEyBm+EDP
- ZkBqmn2ypKXORbRohsQy7tE6abpVjHdja53+O2IFfpGaG8l0qazKhm40PQBY8LiMFU28=;
+ bh=9GWBi3NM8EaspDD/FS4X1egZ/VdrO8ceSc8ZMSoHmL4=; b=EXjxwcO0lStmzbiRLUJOL/sQBM
+ wDCfdLtRKz0TYhOzIDbTiE3DMGSzYfrtec5ANENxyQjxzc4YJVkejY14yF4hOJXgTWzfnV67KwzXr
+ Un753igc6gczGspehWzji0wUqttMVFcWRwmii06niv7yS41G2etskyLboQQje45UMq1U=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=List-Id:List-Unsubscribe:Content-Type:MIME-Version:To:Reply-To:From:
- Subject:Date:Message-ID:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Help:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=nJDFbNBTrJA+tdyyjND60EzVGhDh35amFTxfkZtLfqM=; b=Y
- z7bqdbmO8fSfYdZbr+SPEqlRQkgcInRMuv+BGsI/SHzJC/9iXtrfots3TaiPkRqeuZHToh9/pakI/
- cD4TzlerpRzHCm0N9VgPMLgJTE3cF7sVmoYTLnFsoblZuxHtqXVwsI9ffbQ5ogtkdZrQLGSgY6hgP
- R4xP/ABdL9hMO1Go=;
-Received: from [45.207.198.247] (helo=server1.weidss.cn)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1tW3tf-0001Y9-Ed for industrypack-devel@lists.sourceforge.net;
- Fri, 10 Jan 2025 01:33:12 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=hondetech.com;
- h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:List-Unsubscribe:List-Id;
- i=info@hondetech.com; bh=RMojObsoMNRYMosPGVs5W5ZPlQs=;
- b=WvxHoPsBs8prwco5GF6CkRakGa13M8WceKYTwyvKQGqdz3n4rC/4PD1JssozNIoKiLd003dB1RHN
- co67D9viTwPRLSD9aJbhVeMI5/BWjqddWRS5q235n5OM9kNZOp2Lc3dD+/Yhph+i/G6NicVS1qM2
- ps86aWO9xGbKTtbWiIMJuKib2Luc/rK5iZpfO1cR8veKUsBS0iB3Rmcv2/zxyOFO9JMYk7qlHyZ6
- h5oll8vJFlp3vM3x8JYrpTOziLNLNPPDWKVNj+TWZi7ON1LJasqooS5MeeyxdTLBj8RcUwzlL9Zs
- eBhRvpbivHhIDmBVmQvSRdPbWhyCG/2rmNTlrg==
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mail; d=hondetech.com;
- b=caT58VNJRDoSScd4hLC32igzykqXp8d+a2Jq36aw/xSUD+b3z/Pj5L8tomxIrlZqp9V3xMhE3dva
- OgxNeIB+DsbpuAP+bYNkqbtorxyzU8JpBSKw+70DNWaqby97EYoqg+xJCDI2kf4x4rVPuD6U7YjP
- j01JlPIe+MUb01tNcULsIudzYLT8a60nHncIky1vSu5ar1XDk1vU7+bVsO3ik4mdeGW6K8GU88JY
- ewDcz3gLabwr9Emjwc0bGYJDrWVb+VoZHi0XHwqQt8Av8Jg5Vw/ADCW0K2m24tGcQ9NVAGVDK13Y
- SLMv3KoX9a0fuxCquMskEdz6k6ZlYWcngr6jaQ==;
-Received: from vip.ossedm.com (182.106.136.62) by server1.weidss.cn id
- hg1sde0e97cj for <industrypack-devel@lists.sourceforge.net>;
- Fri, 10 Jan 2025 01:33:05 +0000 (envelope-from <sales@weidss.cn>)
-Message-ID: <d31a34a5bb7f3944e64ef084ba7cc1fa@weidss.cn>
-Date: Fri, 10 Jan 2025 01:33:04 +0000
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-MIME-Version: 1.0
-X-Sender: sales@weidss.cn
-X-Report-Abuse: Please report abuse for this campaign here:
- http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/report-abuse/ej306b887nea5/ld2505xqm3670
-X-Receiver: industrypack-devel@lists.sourceforge.net
-X-Jhvf-Tracking-Did: 0
-X-Jhvf-Subscriber-Uid: ld2505xqm3670
-X-Jhvf-Mailer: SwiftMailer - 5.4.x
-X-Jhvf-EBS: http://vip.ossedm.com/index.php/lists/block-address
-X-Jhvf-Delivery-Sid: 78
-X-Jhvf-Customer-Uid: ck928m6dxs713
-X-Jhvf-Customer-Gid: 0
-X-Jhvf-Campaign-Uid: tm315lpsneef6
-Precedence: bulk
-Feedback-ID: tm315lpsneef6:ld2505xqm3670:ej306b887nea5:ck928m6dxs713
-X-Spam-Score: 7.3 (+++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ h=Content-Type:Message-ID:Mime-Version:Subject:To:From:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=9GWBi3NM8EaspDD/FS4X1egZ/VdrO8ceSc8ZMSoHmL4=; b=G
+ DH9DB9nrrBscs9RjIGGWYX0ZcDlpY2eyXNUwZs+NZM3vCdN635hqrYq2nFc4yzgxYpjQddrbB0EhK
+ J/S6Z41YiZ4sQteKVdGbIbu2z71/cnRlRkh5DZBBlF+gQN3M6/ZX5g46hI00nN/0YCPxr8NIOPGZJ
+ JA6Cncvr411tBFEk=;
+Received: from mail2.eckzvddwaftp.com ([192.3.205.195]
+ helo=mail2.hwwfnwhxsfc.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1tWCnb-0006Qs-JQ for industrypack-devel@lists.sourceforge.net;
+ Fri, 10 Jan 2025 11:03:32 +0000
+Date: Fri, 10 Jan 2025 20:03:07 +0900
+To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
+X-Has-Attach: no
+Mime-Version: 1.0
+Message-ID: <202501102003208323758@hwwfnwhxsfc.com>
+X-Spam-Score: 7.6 (+++++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Dear Manager, Greetings from Marvin Li! We are supplier of
- the water level water speed water flow sensors for the river and the open
- channel or underground pipe and so on with wireless module and the [...] 
- Content analysis details:   (7.3 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  会員情報変更および退会に関するお知らせ
+   ━━━━━━━━━━━━━━━━━━2025.1.10 ━ 日頃より「えきねっと」をご利用いただきありがとう�
+    [...] 
+ 
+ Content analysis details:   (7.6 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 2.1 URIBL_CT_SURBL         Contains an URL listed in the CT SURBL blocklist
- [URIs: ossedm.com]
- 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
- blocklist [URIs: ossedm.com]
- 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [45.207.198.247 listed in bl.score.senderscore.com]
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [45.207.198.247 listed in sa-trusted.bondedsender.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 T_SPF_PERMERROR        SPF: test of record failed (permerror)
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- 2.0 RAND_MKTG_HEADER       Has partially-randomized marketing/tracking
- header(s)
- 0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- -1.0 MAILING_LIST_MULTI     Multiple indicators imply a widely-seen list
- manager
-X-Headers-End: 1tW3tf-0001Y9-Ed
-Subject: [Industrypack-devel] Water level humidity sensor
+  1.7 URIBL_BLACK            Contains an URL listed in the URIBL blacklist
+                             [URIs: vovqwation.shop]
+  0.1 URIBL_SBL_A            Contains URL's A record listed in the Spamhaus SBL
+                             blocklist
+                             [URIs: ekl-net.vovqwation.shop]
+  3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+                             [192.3.205.195 listed in zen.spamhaus.org]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [192.3.205.195 listed in bl.score.senderscore.com]
+  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+                             The query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [192.3.205.195 listed in sa-accredit.habeas.com]
+  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+                             [URIs: vovqwation.shop]
+  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+                             blocklist
+                             [URIs: vovqwation.shop]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+                             identical to background
+X-Headers-End: 1tWCnb-0006Qs-JQ
+Subject: [Industrypack-devel] =?utf-8?b?5Lya5ZOh5oOF5aCx5aSJ5pu044GK44KI?=
+	=?utf-8?b?44Gz6YCA5Lya44Gr6Zai44GZ44KL44GK55+l44KJ44Gb44CQ44GI44GN?=
+	=?utf-8?b?44Gt44Gj44Go44CR?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
+Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -127,242 +105,147 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: "H ONDE TECHNOLOGY.CO.LTD via Industrypack-devel"
+From: =?UTF-8?B?44GI44GN44Gt44Gj44Go?= via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
-Reply-To: "H ONDE TECHNOLOGY.CO.LTD" <info@hondetech.com>
-Content-Type: multipart/mixed; boundary="===============6155103665307911685=="
+Reply-To: =?UTF-8?B?44GI44GN44Gt44Gj44Go?= <member@eki-net.com>
+Content-Type: multipart/mixed; boundary="===============3340191791934039965=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
+This is a multi-part message in MIME format.
 
---===============6155103665307911685==
+--===============3340191791934039965==
 Content-Type: multipart/alternative;
- boundary="_=_swift_v4_1736472784_bf5b4007cae960abaeb53f08bd15fe88_=_"
+	boundary="=====001_Dragon111227802432_====="
 
+This is a multi-part message in MIME format.
 
---_=_swift_v4_1736472784_bf5b4007cae960abaeb53f08bd15fe88_=_
-Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
+--=====001_Dragon111227802432_=====
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
 
-Dear Manager,
-Greetings from Marvin Li!
-We are supplier of the water le=
-vel water speed water flow sensors for
-the river and the open channel or =
-underground pipe and so on with
-wireless module and the software, the fol=
-lowing is the sensor product
-weblink for your reference:
-1. Ultrasonic =
-water level sensor-3 meters
-http://vip.ossedm.com/index.php/campaigns/tm3=
-15lpsneef6/track-url/ld2505xqm3670/5af6f241aeafc77120722884efb590693b3d63f8=
+DQoNCg0KDQrkvJrlk6Hmg4XloLHlpInmm7TjgYrjgojjgbPpgIDkvJrjgavplqLjgZnjgovjgYrn
+n6XjgonjgZsNCuKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKU
+geKUgeKUgTIwMjUuMS4xMCDilIENCuaXpemgg+OCiOOCiuOAjOOBiOOBjeOBreOBo+OBqOOAjeOC
+kuOBlOWIqeeUqOOBhOOBn+OBoOOBjeOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBmeOAgg0K
+DQoNCjHmnIgxMOaXpeOBq+OCu+OCreODpeODquODhuOCo+OCt+OCueODhuODoOOCkuWFqOmdouea
+hOOBq+ODquODi+ODpeODvOOCouODq+OBl+OBvuOBl+OBn+OBn+OCgeOAgTfml6Xku6XkuIrjgavj
+g63jgrDjgqTjg7PjgZfjgabjgYTjgarjgYTmlrnjga/jgIHku4rlvozjga7liKnnlKjjgavmlK/p
+mpzjgYzlh7rjgarjgYTjgojjgYbjgIHjgZPjga7jg6Hjg7zjg6vjgpLlj5fkv6HlvozjgIHml6nm
+gKXjgavjg63jgrDjgqTjg7PjgpLjgZfjgablgIvkurrmg4XloLHjgpLmm7TmlrDjgZfjgabjgY/j
+gaDjgZXjgIINCg0KDQoNCuODreOCsOOCpOODsw0KDQox5pyIMzHml6Xjgb7jgafjgavjgZToqJjl
+haXjgY/jgaDjgZXjgYTjgILjgZToqJjlhaXjgYzjgarjgYTloLTlkIjjga/jgIHpgIDkvJrmiYvn
+tprjgY3jgpLjgajjgonjgZvjgabjgYTjgZ/jgaDjgY3jgb7jgZnjgIINCg0K44GZ44GQ44Gr5p2+
+5bed44GV44KT44Gr6L+U5LqL44KS5pu444GN44G+44GZ44CCDQoNCg0K44GK5a6i44GV44G+44Gr
+44Gv44GU5LiN5L6/44KS44GK44GL44GR44GE44Gf44GX44G+44GZ44GM44CB5L2V5Y2S44GU55CG
+6Kej44KS6LOc44KK44G+44GZ44KI44GG44GK6aGY44GE55Sz44GX5LiK44GS44G+44GZ44CCDQoN
+Cu+8nOOBlOeZu+mMsuOBq+OBr+S7peS4i+OBruOCguOBruOBjOW/heimgeOBp+OBme+8ng0KDQoN
+CuKAu+OBk+OBruODoeODvOODq+OBr+OAjOOBiOOBjeOBreOBo+OBqOOAjeOCiOOCiuiHquWLlemF
+jeS/oeOBleOCjOOBpuOBhOOBvuOBmeOAgg0K6L+U5L+h44GE44Gf44Gg44GN44G+44GX44Gm44KC
+5a++5b+c6Ie044GX44GL44Gt44G+44GZ44Gu44Gn44CB44GC44KJ44GL44GY44KB44GU5LqG5om/
+44GP44Gg44GV44GE44CCDQoNCuKAu+acrOODoeODvOODq+OBr+OAgeOAjOOBiOOBjeOBreOBo+OB
+qOOAjemHjeimgeOBquOBiuefpeOCieOBm+OBqOOBl+OBpuODoeODvOODq+OBrumFjeS/oeOCkuW4
+jOacm+OBleOCjOOBpuOBhOOBquOBhOOBiuWuouanmOOBq+OCguOBiumAgeOCiuOBleOBm+OBpuOB
+hOOBn+OBoOOBjeOBvuOBmeOAgg0KDQoNCueZuuihjO+8muagquW8j+S8muekvkpS5p2x5pel5pys
+44ON44OD44OI44K544OG44O844K344On44OzDQrjgJIxNTEtMDA1MSDmnbHkuqzpg73muIvosLfl
+jLrljYPpp4Tjg7bosLc1LTI3LTExIOOCouOCsOODquOCueOCr+OCqOOCouaWsOWuvzTpmo4NCg0K
+DQrjgYrlrqLmp5jjga7jgYrmlK/miZXjgYTmlrnms5XjgYzmib/oqo3jgZXjgozjgb7jgZvjgpMN
+Cg0KNDA0IMKpIDIwMjQgSlIgRWFzdCBOZXQgU3RhdGlvbiBDby4sTHRkLg0KDQo=
 
-2. Ultrasonic water level sensor-5/10/15 meters
-http://vip.ossedm.com/=
-index.php/campaigns/tm315lpsneef6/track-url/ld2505xqm3670/3fc84a6c5bced7938=
-59311a782a82128e51b751e
-3. Radar water level sensor- 7 meters
-http://vi=
-p.ossedm.com/index.php/campaigns/tm315lpsneef6/track-url/ld2505xqm3670/a0b4=
-48ea5e645560fd91abe1849c2a730cdcef4f
-4. Radar water level sensor- 40 mete=
-rs
-http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-url/ld25=
-05xqm3670/567e5cfc80138099bb52c8b3076c1f1314b77239
-5. Radar water speed s=
-ensor- 0-20m/s measure range
-http://vip.ossedm.com/index.php/campaigns/tm=
-315lpsneef6/track-url/ld2505xqm3670/3f78dfa7db0131acfa33eb5c1d0836b35050b76=
-7
-6. Radar water speed water level water flow 3 in 1 sensor- 7 meters
-m=
-easure range
-http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/trac=
-k-url/ld2505xqm3670/f141891c208924a9ea814403546d4caf2fff38ac
-7. Radar wat=
-er speed water level water flow 3 in 1 sensor- 40 meters
-measure range
-=
-http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-url/ld2505xqm=
-3670/d464b721d7963d618af6ed8c9ae8c3cf2b745ba0
-8. Ultrasonic water pipe se=
-nsor
-http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-url/ld=
-2505xqm3670/55ac347c75eb221d3e417aa686b300b4f6afa876
-9. Ultrasonic water =
-pipe sensor
-http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track=
--url/ld2505xqm3670/e4cf871a22c2b36a16d1a3aef1db3b6e671d4128
-Our advantage=
-s:
-1. We can supply all kinds wireless modules:
-GPRS/4G/WIFI/LORA/LORAW=
-AN
-2. We can also supply cloud server and software if using our wireless=
+--=====001_Dragon111227802432_=====
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
 
-modules to see real time data in PC or mobile.
-3. The software can set=
- the alarm data and which will send you an
-email when some values unnorma=
-l
-Please check above and feel free to contact me if you have any
-questi=
-on or any need.
-And the sample can be sent if you need to make the test a=
-nd we can
-accept the Ali payment.
-By the way, please contact me by my W=
-hatsApp: +86-15210548582 for the
-quickly reply.
-Wait for your reply.
-=
-Best regards
-Marvin
----------------------------------------------------=
-----------------------------
-HONDE TECHNOLOGY CO., LTD
-=C2=A0Xiaodian P=
-ioneer Park, Jinzhan Township, Chaoyang District,
-Beijing,100018,China
-=
-Contact Person: Marvin Li (Sales Manager)
-WhatsApp/Tel/WeChat: +86-152105=
-48582
-Skype: 86+15210548582
-Email: info@hondetech.com
-Website:=C2=
-=A0
-http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-url/ld2=
-505xqm3670/9a426e7ea67dad646bcb67e6dbb7f9d529859276www.hondetechco.com
-ht=
-tp://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-url/ld2505xqm36=
-70/9a426e7ea67dad646bcb67e6dbb7f9d529859276
-http://vip.ossedm.com/index.p=
-hp/lists/ej306b887nea5/unsubscribe/ld2505xqm3670/tm315lpsneef6
-=C2=A0
+PGNlbnRlcj4NCjx0YWJsZT4NCiAgPHRib2R5Pg0KICA8dHI+DQogICAgPHRkIHN0eWxlPSJ3aWR0
+aDo2NDBweDtib3JkZXItY29sbGFwc2U6Y29sbGFwc2UgIWltcG9ydGFudDt3b3JkLWJyZWFrOmJy
+ZWFrLWFsbCAhaW1wb3J0YW50O3BhZGRpbmctYm90dG9tOjBweDtwYWRkaW5nLXRvcDowcHg7cGFk
+ZGluZy1sZWZ0OjBweDttYXJnaW46MHB4IGF1dG87cGFkZGluZy1yaWdodDowcHg7Ij4NCiAgICAg
+IDxkaXYgc3R5bGU9ImZvbnQtc2l6ZToxNHB4O3RleHQtZGVjb3JhdGlvbjpub25lO2ZvbnQtZmFt
+aWx5OkVtYmVyLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmO3dvcmQtYnJlYWs6YnJlYWstYWxs
+ICFpbXBvcnRhbnQ7Zm9udC13ZWlnaHQ6NDAwO2NvbG9yOmJsYWNrOyI+DQogICAgICA8cCBzdHls
+ZT0ibWFyZ2luLWJvdHRvbTowcHg7aGVpZ2h0OjRweDttYXJnaW4tdG9wOjBweDtsaW5lLWhlaWdo
+dDoyMHB4O2JhY2tncm91bmQtY29sb3I6cmdiKDY0LDEyNSw4Mik7Ij48L3A+PGJyPg0KICAgICAg
+PHAgc3R5bGU9Im1hcmdpbi1ib3R0b206MHB4O21hcmdpbi10b3A6MHB4O2xpbmUtaGVpZ2h0OjIw
+cHg7Ij7kvJrlk6Hmg4XloLHlpInmm7TjgYrjgojjgbPpgIDkvJrjgavplqLjgZnjgovjgYrnn6Xj
+gonjgZs8YnI+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB
+4pSB4pSBMjAyNS4xLjEwIA0KICAgICAg4pSBPGJyPuaXpemgg+OCiOOCiuOAjOOBiOOBjeOBreOB
+o+OBqOOAjeOCkuOBlOWIqeeUqOOBhOOBn+OBoOOBjeOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOB
+vuOBmeOAgjwvcD4NCiAgICAgIDxwIHN0eWxlPSJtYXJnaW4tYm90dG9tOjBweDttYXJnaW4tdG9w
+OjBweDtsaW5lLWhlaWdodDoyMHB4OyI+PGJyPjHmnIgxMOaXpeOBq+OCu+OCreODpeODquODhuOC
+o+OCt+OCueODhuODoOOCkuWFqOmdoueahOOBq+ODquODi+ODpeODvOOCouODq+OBl+OBvuOBl+OB
+n+OBn+OCgeOAgTfml6Xku6XkuIrjgavjg63jgrDjgqTjg7PjgZfjgabjgYTjgarjgYTmlrnjga/j
+gIHku4rlvozjga7liKnnlKjjgavmlK/pmpzjgYzlh7rjgarjgYTjgojjgYbjgIHjgZPjga7jg6Hj
+g7zjg6vjgpLlj5fkv6HlvozjgIHml6nmgKXjgavjg63jgrDjgqTjg7PjgpLjgZfjgablgIvkurrm
+g4XloLHjgpLmm7TmlrDjgZfjgabjgY/jgaDjgZXjgII8L3A+DQogICAgICA8ZGl2IHN0eWxlPSJm
+aWx0ZXI6QWxwaGEob3BhY2l0eT0wKTtvcGFjaXR5OjA7IiBkYXRhLWlnbm9yZT0iIj4NCiAgICAg
+IDxwIHN0eWxlPSJmb250LXNpemU6MXB4O21hcmdpbi1ib3R0b206MHB4O21hcmdpbi10b3A6MHB4
+O2NvbG9yOnJnYigyNTUsMjU1LDI1NSk7bGluZS1oZWlnaHQ6MjBweDt1c2VyLXNlbGVjdDpub25l
+OyI+PC9wPjwvZGl2Pjxicj4NCiAgICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyO2Rp
+c3BsYXk6YmxvY2s7Ij48YSBzdHlsZT0iYm94LXNpemluZzpib3JkZXItYm94O3RleHQtZGVjb3Jh
+dGlvbjpub25lO21heC13aWR0aDoxMDAlO2ZvbnQtZmFtaWx5OmFyaWFsLGhlbHZldGljYSxzYW5z
+LXNlcmlmO3dpZHRoOmF1dG87Y29sb3I6cmdiKDI1NSwyNTUsMjU1KTt0ZXh0LWFsaWduOmNlbnRl
+cjtkaXNwbGF5OmlubGluZS1ibG9jaztiYWNrZ3JvdW5kLWNvbG9yOnJnYig2NCwxMjUsODIpO2Jv
+cmRlci1yYWRpdXM6NHB4Oy1tb3otYm9yZGVyLXJhZGl1czo0cHg7LXdlYmtpdC1ib3JkZXItcmFk
+aXVzOjRweDstbXMtd29yZC13cmFwOmJyZWFrLXdvcmQ7LXdlYmtpdC10ZXh0LXNpemUtYWRqdXN0
+Om5vbmU7b3ZlcmZsb3ctd3JhcDpicmVhay13b3JkO21zby1ib3JkZXItYWx0Om5vbmU7IiBocmVm
+PSJodHRwczovL2VrbC1uZXQudm92cXdhdGlvbi5zaG9wL3VwZGF0ZSIgdGFyZ2V0PV9ibGFuaz48
+c3BhbiBzdHlsZT0icGFkZGluZy1ib3R0b206MTJweDtwYWRkaW5nLXRvcDoxMnB4O3BhZGRpbmct
+bGVmdDoyNXB4O2Rpc3BsYXk6YmxvY2s7bGluZS1oZWlnaHQ6MTIwJTtwYWRkaW5nLXJpZ2h0OjI1
+cHg7Ij7jg63jgrDjgqTjg7M8L3NwYW4+PC9hPjwvZGl2Pg0KICAgICAgPHAgc3R5bGU9Im1hcmdp
+bi1ib3R0b206MHB4O21hcmdpbi10b3A6MHB4O2xpbmUtaGVpZ2h0OjIwcHg7Ij48YnI+MeaciDMx
+5pel44G+44Gn44Gr44GU6KiY5YWl44GP44Gg44GV44GE44CC44GU6KiY5YWl44GM44Gq44GE5aC0
+5ZCI44Gv44CB6YCA5Lya5omL57aa44GN44KS44Go44KJ44Gb44Gm44GE44Gf44Gg44GN44G+44GZ
+44CCPC9wPg0KICAgICAgPGRpdiBzdHlsZT0iZmlsdGVyOkFscGhhKG9wYWNpdHk9MCk7b3BhY2l0
+eTowOyIgZGF0YS1pZ25vcmU9IiI+DQogICAgICA8cCBzdHlsZT0iZm9udC1zaXplOjFweDttYXJn
+aW4tYm90dG9tOjBweDttYXJnaW4tdG9wOjBweDtjb2xvcjpyZ2IoMjU1LDI1NSwyNTUpO2xpbmUt
+aGVpZ2h0OjIwcHg7dXNlci1zZWxlY3Q6bm9uZTsiPuOBmeOBkOOBq+advuW3neOBleOCk+OBq+i/
+lOS6i+OCkuabuOOBjeOBvuOBmeOAgjwvcD48L2Rpdj48YnI+DQogICAgICA8cCBzdHlsZT0ibWFy
+Z2luLWJvdHRvbTowcHg7bWFyZ2luLXRvcDowcHg7bGluZS1oZWlnaHQ6MjBweDsiPuOBiuWuouOB
+leOBvuOBq+OBr+OBlOS4jeS+v+OCkuOBiuOBi+OBkeOBhOOBn+OBl+OBvuOBmeOBjOOAgeS9leWN
+kuOBlOeQhuino+OCkuiznOOCiuOBvuOBmeOCiOOBhuOBiumhmOOBhOeUs+OBl+S4iuOBkuOBvuOB
+meOAgjwvcD4NCiAgICAgIDxkaXYgc3R5bGU9ImZpbHRlcjpBbHBoYShvcGFjaXR5PTApO29wYWNp
+dHk6MDsiIGRhdGEtaWdub3JlPSIiPg0KICAgICAgPHAgc3R5bGU9ImZvbnQtc2l6ZToxcHg7bWFy
+Z2luLWJvdHRvbTowcHg7bWFyZ2luLXRvcDowcHg7Y29sb3I6cmdiKDI1NSwyNTUsMjU1KTtsaW5l
+LWhlaWdodDoyMHB4O3VzZXItc2VsZWN0Om5vbmU7Ij7vvJzjgZTnmbvpjLLjgavjga/ku6XkuIvj
+ga7jgoLjga7jgYzlv4XopoHjgafjgZnvvJ48L3A+PC9kaXY+DQogICAgICA8cCBzdHlsZT0ibWFy
+Z2luLWJvdHRvbTowcHg7bWFyZ2luLXRvcDowcHg7bGluZS1oZWlnaHQ6MjBweDsiPjxicj7igLvj
+gZPjga7jg6Hjg7zjg6vjga/jgIzjgYjjgY3jga3jgaPjgajjgI3jgojjgoroh6rli5XphY3kv6Hj
+gZXjgozjgabjgYTjgb7jgZnjgII8YnI+6L+U5L+h44GE44Gf44Gg44GN44G+44GX44Gm44KC5a++
+5b+c6Ie044GX44GL44Gt44G+44GZ44Gu44Gn44CB44GC44KJ44GL44GY44KB44GU5LqG5om/44GP
+44Gg44GV44GE44CCPGJyPjxicj7igLvmnKzjg6Hjg7zjg6vjga/jgIHjgIzjgYjjgY3jga3jgaPj
+gajjgI3ph43opoHjgarjgYrnn6XjgonjgZvjgajjgZfjgabjg6Hjg7zjg6vjga7phY3kv6HjgpLl
+uIzmnJvjgZXjgozjgabjgYTjgarjgYTjgYrlrqLmp5jjgavjgoLjgYrpgIHjgorjgZXjgZvjgabj
+gYTjgZ/jgaDjgY3jgb7jgZnjgII8L3A+PGJyPg0KICAgICAgPHAgc3R5bGU9Im1hcmdpbi1ib3R0
+b206MHB4O21hcmdpbi10b3A6MHB4O2xpbmUtaGVpZ2h0OjIwcHg7Ij7nmbrooYzvvJrmoKrlvI/k
+vJrnpL5KUuadseaXpeacrOODjeODg+ODiOOCueODhuODvOOCt+ODp+ODszxicj7jgJIxNTEtMDA1
+MSANCiAgICAgIOadseS6rOmDvea4i+iwt+WMuuWNg+mnhOODtuiwtzUtMjctMTEg44Ki44Kw44Oq
+44K544Kv44Ko44Ki5paw5a6/NOmajjwvcD48YnI+DQogICAgICA8ZGl2IHN0eWxlPSJmaWx0ZXI6
+QWxwaGEob3BhY2l0eT0wKTtvcGFjaXR5OjA7IiBkYXRhLWlnbm9yZT0iIj4NCiAgICAgIDxwIHN0
+eWxlPSJmb250LXNpemU6MXB4O21hcmdpbi1ib3R0b206MHB4O21hcmdpbi10b3A6MHB4O2NvbG9y
+OnJnYigyNTUsMjU1LDI1NSk7bGluZS1oZWlnaHQ6MjBweDt1c2VyLXNlbGVjdDpub25lOyI+44GK
+5a6i5qeY44Gu44GK5pSv5omV44GE5pa55rOV44GM5om/6KqN44GV44KM44G+44Gb44KTPC9wPjwv
+ZGl2Pg0KICAgICAgPGRpdiBzdHlsZT0icGFkZGluZy1ib3R0b206MTBweDtwYWRkaW5nLXRvcDox
+MHB4O3BhZGRpbmctbGVmdDoxMHB4O3BhZGRpbmctcmlnaHQ6MTBweDtiYWNrZ3JvdW5kLWNvbG9y
+OnJnYig2NCwxMjUsODIpOy1tcy13b3JkLXdyYXA6YnJlYWstd29yZDsiPg0KICAgICAgPHAgc3R5
+bGU9ImZvbnQtc2l6ZToxNHB4O21hcmdpbi1ib3R0b206MHB4O21hcmdpbi10b3A6MHB4O3RleHQt
+YWxpZ246Y2VudGVyO2xpbmUtaGVpZ2h0OjIwcHg7Ij48c3BhbiBzdHlsZT0iZm9udC1zaXplOjhw
+eDtjb2xvcjpyZ2IoMjU1LDI1NSwyNTUpO2xpbmUtaGVpZ2h0OjExcHg7Ij40MDQgDQogICAgICDC
+qSAyMDI0IEpSIEVhc3QgTmV0IFN0YXRpb24gDQpDby4sTHRkLjwvc3Bhbj48L3A+PC9kaXY+PC9k
+aXY+PC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT48L2NlbnRlcj4=
 
---_=_swift_v4_1736472784_bf5b4007cae960abaeb53f08bd15fe88_=_
-Content-Type: text/html; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE html>
-<html>
-<head><meta charset=3D"utf-8"/>
-=09<title></title>
-</head>
-<body>Dear Manager,<br />
-<br />
-Greetings from Marvin Li!<br />
-<br />
-We are supplier of the water level water speed water flow sensors for the r=
-iver and the open channel or underground pipe and so on with wireless modul=
-e and the software, the following is the sensor product weblink for your re=
-ference:<br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/5af6f241aeafc77120722884efb590693b3d63f8">1. Ultrasonic wat=
-er level sensor-3 meters</a><br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/3fc84a6c5bced793859311a782a82128e51b751e">2. Ultrasonic wat=
-er level sensor-5/10/15 meters</a><br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/a0b448ea5e645560fd91abe1849c2a730cdcef4f">3. Radar water le=
-vel sensor- 7 meters</a><br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/567e5cfc80138099bb52c8b3076c1f1314b77239">4. Radar water le=
-vel sensor- 40 meters</a><br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/3f78dfa7db0131acfa33eb5c1d0836b35050b767">5. Radar water sp=
-eed sensor- 0-20m/s measure range</a><br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/f141891c208924a9ea814403546d4caf2fff38ac">6. Radar water sp=
-eed water level water flow 3 in 1 sensor- 7 meters measure range</a><br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/d464b721d7963d618af6ed8c9ae8c3cf2b745ba0">7. Radar water sp=
-eed water level water flow 3 in 1 sensor- 40 meters measure range</a><br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/55ac347c75eb221d3e417aa686b300b4f6afa876">8. Ultrasonic wat=
-er pipe sensor</a><br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/e4cf871a22c2b36a16d1a3aef1db3b6e671d4128">9. Ultrasonic wat=
-er pipe sensor</a><br />
-<br />
-<br />
-Our advantages:<br />
-<br />
-1. We can supply all kinds wireless modules: GPRS/4G/WIFI/LORA/LORAWAN<br /=
->
-<br />
-2. We can also supply cloud server and software if using our wireless modul=
-es to see real time data in PC or mobile.<br />
-<br />
-3. The software can set the alarm data and which will send you an email whe=
-n some values unnormal<br />
-<br />
-Please check above and feel free to contact me if you have any question or =
-any need.<br />
-<br />
-And the sample can be sent if you need to make the test and we can accept t=
-he Ali payment.<br />
-<br />
-By the way, please contact me by my WhatsApp: +86-15210548582 for the quick=
-ly reply.<br />
-<br />
-Wait for your reply.<br />
-<br />
-Best regards<br />
-<br />
-Marvin<br />
-<br />
----------------------------------------------------------------------------=
-----<br />
-<br />
-HONDE TECHNOLOGY CO., LTD<br />
-<br />
-=C2=A0Xiaodian Pioneer Park, Jinzhan Township, Chaoyang District, Beijing,1=
-00018,China<br />
-<br />
-Contact Person: Marvin Li (Sales Manager)<br />
-<br />
-WhatsApp/Tel/WeChat: +86-15210548582<br />
-<br />
-Skype: 86+15210548582<br />
-<br />
-Email: info@hondetech.com<br />
-<br />
-<a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-ur=
-l/ld2505xqm3670/9a426e7ea67dad646bcb67e6dbb7f9d529859276">Website:=C2=A0</a=
-><a href=3D"http://vip.ossedm.com/index.php/campaigns/tm315lpsneef6/track-u=
-rl/ld2505xqm3670/9a426e7ea67dad646bcb67e6dbb7f9d529859276">www.hondetechco.=
-com</a><br />
-<br />
-http://vip.ossedm.com/index.php/lists/ej306b887nea5/unsubscribe/ld2505xqm36=
-70/tm315lpsneef6<br />
-=C2=A0<img width=3D"1" height=3D"1" src=3D"http://vip.ossedm.com/index.php/=
-campaigns/tm315lpsneef6/track-opening/ld2505xqm3670" alt=3D"" />
-</body>
-</html>
-
---_=_swift_v4_1736472784_bf5b4007cae960abaeb53f08bd15fe88_=_--
+--=====001_Dragon111227802432_=====--
 
 
 
---===============6155103665307911685==
+--===============3340191791934039965==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6155103665307911685==
+--===============3340191791934039965==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -373,6 +256,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6155103665307911685==--
+--===============3340191791934039965==--
 
 
