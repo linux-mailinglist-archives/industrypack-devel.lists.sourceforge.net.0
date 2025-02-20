@@ -2,107 +2,107 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C5E67A3CC89
-	for <lists+industrypack-devel@lfdr.de>; Wed, 19 Feb 2025 23:39:20 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4BE09A3D165
+	for <lists+industrypack-devel@lfdr.de>; Thu, 20 Feb 2025 07:27:42 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1tksit-0004gp-4O
+	id 1tl028-0005th-AW
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 19 Feb 2025 22:39:19 +0000
+	Thu, 20 Feb 2025 06:27:41 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <f8a0t2c8h@gmail.com>) id 1tksir-0004gi-3o
+ (envelope-from <eki-update@sczbgeyvxcxm.com>) id 1tl025-0005tK-TU
  for industrypack-devel@lists.sourceforge.net;
- Wed, 19 Feb 2025 22:39:17 +0000
+ Thu, 20 Feb 2025 06:27:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:Date:To:From:Reply-To:Sender:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Type:Message-ID:Mime-Version:Subject:To:
+ From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=A6I0dPtQupGSalKAXlLrV6Yq5ebAOoOdGj169oVV8SA=; b=m3NNvRRYQL8rB8J44VzcBO6DNO
- rgzVG6TMyH6q5ZV11l33RoR3cGTGkOyrrxI9pjcWG0FftIdxUCkwmSDTfbX4BGiAJBsZm/N8fx3bm
- tqtEa20Cr5OmI2svnRL/SXYck1fpEROXr5AOeSf3ji/slJDsA4cGfSLctEUWRzxocixQ=;
+ bh=MGjH+SFFFtRzO6j97UeuybSJnhoxtbWEL5p6+ZcoHss=; b=Gue/oO1XLrm1w5+ciCuUUMx+Ow
+ Mdd/oZ4H+QX3eRy5UIA33ctfNQ00L6gbJVeJ64flt+WDiCKP5rVoEJynJCsogZoieTs2SwYFk4s9u
+ NHIggWiubvO/vubf8Btedzwqh9tngiil1j+OBXuLb0h/8N0Ty1L9pjdNhm1LWngfCKws=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
- Date:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
+ h=Content-Type:Message-ID:Mime-Version:Subject:To:From:Date:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=A6I0dPtQupGSalKAXlLrV6Yq5ebAOoOdGj169oVV8SA=; b=f
- X6Alf+bGoClQBcA0GHYlh+uye33Y5YRaiqph9+Qfk9KRJN4ZAmbZSpNa1fkJwbjZ3hQJOuNwCg/l5
- kLGlCzLqalx3HaQIVAgnFJFwNpiGWMOXYC2L8RSapDZaDNvtMsPrNIbbqjTRCO3d6j1DQSjtV43Fo
- fU8NbWGXFEb1MzK8=;
-Received: from [172.81.135.69] (helo=chartproducts.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1tksiq-0002x0-WE for industrypack-devel@lists.sourceforge.net;
- Wed, 19 Feb 2025 22:39:17 +0000
-Received: from gmail.com (localhost [IPv6:::1])
- by chartproducts.com (Postfix) with ESMTP id C5380A36F
- for <industrypack-devel@lists.sourceforge.net>;
- Wed, 19 Feb 2025 17:26:35 -0500 (EST)
-From: Adara Jumah<f8a0t2c8h@gmail.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 20 Feb 2025 01:56:32 +0330
-Message-ID: <20250220015632.2D55D5862F2FC314@gmail.com>
-MIME-Version: 1.0
-X-Spam-Score: 8.9 (++++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+ List-Owner:List-Archive; bh=MGjH+SFFFtRzO6j97UeuybSJnhoxtbWEL5p6+ZcoHss=; b=W
+ 1dcLPYSEN6VnflJQIiD0KY1hDMAC/nFajrLDJDDnKCcc1/04DhfCl/EErrQeIaKhohDRfA5Pl7UPf
+ xbxVxcmOV8KQSAInlO5CCcy76nM341Mz44x37B1meCQpTY5X3nt5/NXp1X228B4R1E0wHHNYr/mjU
+ 8FmAfLcWk8inxiec=;
+Received: from [104.168.70.123] (helo=mail5.sczbgeyvxcxm.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1tl025-00012C-7K for industrypack-devel@lists.sourceforge.net;
+ Thu, 20 Feb 2025 06:27:38 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=sczbgeyvxcxm.com; 
+ h=Date:From:To:Subject:Mime-Version:Message-ID:Content-Type;
+ i=eki-update@sczbgeyvxcxm.com;
+ bh=MGjH+SFFFtRzO6j97UeuybSJnhoxtbWEL5p6+ZcoHss=;
+ b=BlWrlku8kP/GdwRGtQGLkpeoyGcSm0cBhMjCurP/yec8KkWZpXbrIp9E7FDBehC6CR4WQRQ6QRFJ
+ DsNg0ovSv923pXmBXTCXlcDtDJWCmyRd4MdK9bh3+cgZxkpnnjXW6fNczZt1ipJaOVFiLxW3ageM
+ Enx1xKa16JPwA2VjZTs=
+Date: Thu, 20 Feb 2025 15:07:07 +0900
+To: industrypack-devel <industrypack-devel@lists.sourceforge.net>
+X-Has-Attach: no
+Mime-Version: 1.0
+Message-ID: <202502201507154443111@sczbgeyvxcxm.com>
+X-Spam-Score: 4.7 (++++)
+X-Spam-Report: Spam detection software, running on the system "util-spamd-1.v13.lw.sourceforge.com",
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Greetings industrypack-devel, We have numerous investors who
- are looking to invest in any project that is profit earning in your Country,
- we also represent top politicians from Arab and beyond who are our best
- investors, looking u [...] 
- Content analysis details:   (8.9 points, 6.0 required)
- pts rule name              description
+ 
+ Content preview:  会員情報変更および退会に関するお知らせ
+   ━━━━━━━━━━━━━━━━━━2025.2.20━ 日頃より「えきねっと」をご利用いただきありがとうご
+    [...] 
+ 
+ Content analysis details:   (4.7 points, 6.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
- digit [a8d7a3j6u1[at]gmail.com]
- 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [172.81.135.69 listed in bl.score.senderscore.com]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [f8a0t2c8h[at]gmail.com]
- 0.0 DKIM_ADSP_CUSTOM_MED   No valid author signature, adsp_override is
- CUSTOM_MED
- 1.0 FORGED_GMAIL_RCVD      'From' gmail.com does not match 'Received'
- headers
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [172.81.135.69 listed in sa-accredit.habeas.com]
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 FROM_MISSP_REPLYTO     From misspaced, has Reply-To
- 1.0 FREEMAIL_REPLYTO       Reply-To/From or Reply-To/body contain
- different freemails
- 0.0 SPOOFED_FREEMAIL_NO_RDNS From SPOOFED_FREEMAIL and no rDNS
- 1.2 NML_ADSP_CUSTOM_MED    ADSP custom_med hit, and not from a mailing
- list
- 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
- only
- 0.0 TO_NO_BRKTS_FROM_MSSP  Multiple header formatting problems
- 0.0 SPOOFED_FREEMAIL       No description available.
- 1.5 SPOOF_GMAIL_MID        From Gmail but it doesn't seem to be...
- 1.6 SPOOFED_FREEM_REPTO    Forged freemail sender with freemail
- reply-to
- 0.0 FROM_MISSP_FREEMAIL    From misspaced + freemail provider
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1tksiq-0002x0-WE
-Subject: [Industrypack-devel] [SPAM] Greeting
+  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [104.168.70.123 listed in sa-accredit.habeas.com]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                            [104.168.70.123 listed in bl.score.senderscore.com]
+  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
+                             blocklist
+                             [URIs: sczbgeyvxcxm.com]
+  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
+                             [URIs: disxsid.sbs]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  1.7 URIBL_BLACK            Contains an URL listed in the URIBL blacklist
+                             [URIs: sczbgeyvxcxm.com]
+  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+                             identical to background
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  0.0 NORDNS_LOW_CONTRAST    No rDNS + hidden text
+X-Headers-End: 1tl025-00012C-7K
+Subject: [Industrypack-devel] =?utf-8?b?5Lya5ZOh5oOF5aCx5aSJ5pu044GK44KI?=
+	=?utf-8?b?44Gz6YCA5Lya44Gr6Zai44GZ44KL44GK55+l44KJ44Gb44CQ44GI44GN?=
+	=?utf-8?b?44Gt44Gj44Go44CR?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -114,73 +114,148 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: a8d7a3j6u1@gmail.com
-Content-Type: multipart/mixed; boundary="===============6406067488228515046=="
+From: =?UTF-8?B?44GI44GN44Gt44Gj44Go?= via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: =?UTF-8?B?44GI44GN44Gt44Gj44Go?= <eki-update@sczbgeyvxcxm.com>
+Content-Type: multipart/mixed; boundary="===============8864550408282361950=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============6406067488228515046==
+This is a multi-part message in MIME format.
+
+--===============8864550408282361950==
+Content-Type: multipart/alternative;
+	boundary="=====001_Dragon632602033712_====="
+
+This is a multi-part message in MIME format.
+
+--=====001_Dragon632602033712_=====
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+DQoNCg0KDQrkvJrlk6Hmg4XloLHlpInmm7TjgYrjgojjgbPpgIDkvJrjgavplqLjgZnjgovjgYrn
+n6XjgonjgZsNCuKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKU
+geKUgeKUgTIwMjUuMi4yMOKUgQ0K5pel6aCD44KI44KK44CM44GI44GN44Gt44Gj44Go44CN44KS
+44GU5Yip55So44GE44Gf44Gg44GN44GC44KK44GM44Go44GG44GU44GW44GE44G+44GZ44CCDQoN
+Cg0KMuaciDIw5pel44Gr44K744Kt44Ol44Oq44OG44Kj44K344K544OG44Og44KS5YWo6Z2i55qE
+44Gr44Oq44OL44Ol44O844Ki44Or44GX44G+44GX44Gf44Gf44KB44CBN+aXpeS7peS4iuOBq+OD
+reOCsOOCpOODs+OBl+OBpuOBhOOBquOBhOaWueOBr+OAgeS7iuW+jOOBruWIqeeUqOOBq+aUr+ma
+nOOBjOWHuuOBquOBhOOCiOOBhuOAgeOBk+OBruODoeODvOODq+OCkuWPl+S/oeW+jOOAgeaXqeaA
+peOBq+ODreOCsOOCpOODs+OCkuOBl+OBpuWAi+S6uuaDheWgseOCkuabtOaWsOOBl+OBpuOBj+OB
+oOOBleOAgg0KDQoNCg0K44Ot44Kw44Kk44OzDQoNCjLmnIgyOOaXpeOBvuOBp+OBq+OBlOiomOWF
+peOBj+OBoOOBleOBhOOAguOBlOiomOWFpeOBjOOBquOBhOWgtOWQiOOBr+OAgemAgOS8muaJi+e2
+muOBjeOCkuOBqOOCieOBm+OBpuOBhOOBn+OBoOOBjeOBvuOBmeOAgg0KDQrjgY7jgaPjgY/jgoro
+hbDjga7loLTlkIjjgIHnibnjgavlpJrjgYTjga7jgYznrYvogonmgKfjga7jgr/jgqTjg5fjgafj
+gZnjgIINCg0KDQrjgYrlrqLjgZXjgb7jgavjga/jgZTkuI3kvr/jgpLjgYrjgYvjgZHjgYTjgZ/j
+gZfjgb7jgZnjgYzjgIHkvZXljZLjgZTnkIbop6PjgpLos5zjgorjgb7jgZnjgojjgYbjgYrpoZjj
+gYTnlLPjgZfkuIrjgZLjgb7jgZnjgIINCg0K44Gk44Gq44GM44KK44Gr44GP44GE54q25rOB44Go
+44Gq44Gj44Gm44GE44G+44GZ44CCDQoNCg0K4oC744GT44Gu44Oh44O844Or44Gv44CM44GI44GN
+44Gt44Gj44Go44CN44KI44KK6Ieq5YuV6YWN5L+h44GV44KM44Gm44GE44G+44GZ44CCDQrov5Tk
+v6HjgYTjgZ/jgaDjgY3jgb7jgZfjgabjgoLlr77lv5zoh7TjgZfjgYvjga3jgb7jgZnjga7jgafj
+gIHjgYLjgonjgYvjgZjjgoHjgZTkuobmib/jgY/jgaDjgZXjgYTjgIINCg0K4oC75pys44Oh44O8
+44Or44Gv44CB44CM44GI44GN44Gt44Gj44Go44CN6YeN6KaB44Gq44GK55+l44KJ44Gb44Go44GX
+44Gm44Oh44O844Or44Gu6YWN5L+h44KS5biM5pyb44GV44KM44Gm44GE44Gq44GE44GK5a6i5qeY
+44Gr44KC44GK6YCB44KK44GV44Gb44Gm44GE44Gf44Gg44GN44G+44GZ44CCDQoNCg0K55m66KGM
+77ya5qCq5byP5Lya56S+SlLmnbHml6XmnKzjg43jg4Pjg4jjgrnjg4bjg7zjgrfjg6fjg7MNCuOA
+kjE1MS0wMDUxIOadseS6rOmDvea4i+iwt+WMuuWNg+mnhOODtuiwtzUtMjctMTEg44Ki44Kw44Oq
+44K544Kv44Ko44Ki5paw5a6/NOmajg0KDQoNCuOBiuWuouanmOOBruOBiuaUr+aJleOBhOaWueaz
+leOBjOaJv+iqjeOBleOCjOOBvuOBm+OCkw0KDQo3NSDCqSAyMDI1IEpSIEVhc3QgTmV0IFN0YXRp
+b24gQ28uLEx0ZC4NCg0K
+
+--=====001_Dragon632602033712_=====
 Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
+PGNlbnRlcj4NCjx0YWJsZT4NCiAgPHRib2R5Pg0KICA8dHI+DQogICAgPHRkIHN0eWxlPSJ3aWR0
+aDo2NDBweDtib3JkZXItY29sbGFwc2U6Y29sbGFwc2UgIWltcG9ydGFudDt3b3JkLWJyZWFrOmJy
+ZWFrLWFsbCAhaW1wb3J0YW50O3BhZGRpbmctYm90dG9tOjBweDtwYWRkaW5nLXRvcDowcHg7cGFk
+ZGluZy1sZWZ0OjBweDttYXJnaW46MHB4IGF1dG87cGFkZGluZy1yaWdodDowcHg7Ij4NCiAgICAg
+IDxkaXYgc3R5bGU9ImZvbnQtc2l6ZToxNHB4O3RleHQtZGVjb3JhdGlvbjpub25lO2ZvbnQtZmFt
+aWx5OkVtYmVyLEhlbHZldGljYSxBcmlhbCxzYW5zLXNlcmlmO3dvcmQtYnJlYWs6YnJlYWstYWxs
+ICFpbXBvcnRhbnQ7Zm9udC13ZWlnaHQ6NDAwO2NvbG9yOmJsYWNrOyI+DQogICAgICA8cCBzdHls
+ZT0ibWFyZ2luLWJvdHRvbTowcHg7aGVpZ2h0OjRweDttYXJnaW4tdG9wOjBweDtsaW5lLWhlaWdo
+dDoyMHB4O2JhY2tncm91bmQtY29sb3I6cmdiKDY0LDEyNSw4Mik7Ij48L3A+PGJyPg0KICAgICAg
+PHAgc3R5bGU9Im1hcmdpbi1ib3R0b206MHB4O21hcmdpbi10b3A6MHB4O2xpbmUtaGVpZ2h0OjIw
+cHg7Ij7kvJrlk6Hmg4XloLHlpInmm7TjgYrjgojjgbPpgIDkvJrjgavplqLjgZnjgovjgYrnn6Xj
+gonjgZs8YnI+4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB4pSB
+4pSB4pSBMjAyNS4yLjIw4pSBPGJyPuaXpemgg+OCiOOCiuOAjOOBiOOBjeOBreOBo+OBqOOAjeOC
+kuOBlOWIqeeUqOOBhOOBn+OBoOOBjeOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBmeOAgjwv
+cD4NCiAgICAgIDxwIHN0eWxlPSJtYXJnaW4tYm90dG9tOjBweDttYXJnaW4tdG9wOjBweDtsaW5l
+LWhlaWdodDoyMHB4OyI+PGJyPjLmnIgyMOaXpeOBq+OCu+OCreODpeODquODhuOCo+OCt+OCueOD
+huODoOOCkuWFqOmdoueahOOBq+ODquODi+ODpeODvOOCouODq+OBl+OBvuOBl+OBn+OBn+OCgeOA
+gTfml6Xku6XkuIrjgavjg63jgrDjgqTjg7PjgZfjgabjgYTjgarjgYTmlrnjga/jgIHku4rlvozj
+ga7liKnnlKjjgavmlK/pmpzjgYzlh7rjgarjgYTjgojjgYbjgIHjgZPjga7jg6Hjg7zjg6vjgpLl
+j5fkv6HlvozjgIHml6nmgKXjgavjg63jgrDjgqTjg7PjgpLjgZfjgablgIvkurrmg4XloLHjgpLm
+m7TmlrDjgZfjgabjgY/jgaDjgZXjgII8L3A+DQogICAgICA8ZGl2IHN0eWxlPSJmaWx0ZXI6QWxw
+aGEob3BhY2l0eT0wKTtvcGFjaXR5OjA7IiBkYXRhLWlnbm9yZT0iIj4NCiAgICAgIDxwIHN0eWxl
+PSJmb250LXNpemU6MXB4O21hcmdpbi1ib3R0b206MHB4O21hcmdpbi10b3A6MHB4O2NvbG9yOnJn
+YigyNTUsMjU1LDI1NSk7bGluZS1oZWlnaHQ6MjBweDt1c2VyLXNlbGVjdDpub25lOyI+PC9wPjwv
+ZGl2Pjxicj4NCiAgICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyO2Rpc3BsYXk6Ymxv
+Y2s7Ij48YSBzdHlsZT0iYm94LXNpemluZzpib3JkZXItYm94O3RleHQtZGVjb3JhdGlvbjpub25l
+O21heC13aWR0aDoxMDAlO2ZvbnQtZmFtaWx5OmFyaWFsLGhlbHZldGljYSxzYW5zLXNlcmlmO3dp
+ZHRoOmF1dG87Y29sb3I6cmdiKDI1NSwyNTUsMjU1KTt0ZXh0LWFsaWduOmNlbnRlcjtkaXNwbGF5
+OmlubGluZS1ibG9jaztiYWNrZ3JvdW5kLWNvbG9yOnJnYig2NCwxMjUsODIpO2JvcmRlci1yYWRp
+dXM6NHB4Oy1tb3otYm9yZGVyLXJhZGl1czo0cHg7LXdlYmtpdC1ib3JkZXItcmFkaXVzOjRweDst
+bXMtd29yZC13cmFwOmJyZWFrLXdvcmQ7LXdlYmtpdC10ZXh0LXNpemUtYWRqdXN0Om5vbmU7b3Zl
+cmZsb3ctd3JhcDpicmVhay13b3JkO21zby1ib3JkZXItYWx0Om5vbmU7IiBocmVmPSJodHRwczov
+L3d3dy5kaXN4c2lkLnNicyIgdGFyZ2V0PV9ibGFuaz48c3BhbiBzdHlsZT0icGFkZGluZy1ib3R0
+b206MTJweDtwYWRkaW5nLXRvcDoxMnB4O3BhZGRpbmctbGVmdDoyNXB4O2Rpc3BsYXk6YmxvY2s7
+bGluZS1oZWlnaHQ6MTIwJTtwYWRkaW5nLXJpZ2h0OjI1cHg7Ij7jg63jgrDjgqTjg7M8L3NwYW4+
+PC9hPjwvZGl2Pg0KICAgICAgPHAgc3R5bGU9Im1hcmdpbi1ib3R0b206MHB4O21hcmdpbi10b3A6
+MHB4O2xpbmUtaGVpZ2h0OjIwcHg7Ij48YnI+MuaciDI45pel44G+44Gn44Gr44GU6KiY5YWl44GP
+44Gg44GV44GE44CC44GU6KiY5YWl44GM44Gq44GE5aC05ZCI44Gv44CB6YCA5Lya5omL57aa44GN
+44KS44Go44KJ44Gb44Gm44GE44Gf44Gg44GN44G+44GZ44CCPC9wPg0KICAgICAgPGRpdiBzdHls
+ZT0iZmlsdGVyOkFscGhhKG9wYWNpdHk9MCk7b3BhY2l0eTowOyIgZGF0YS1pZ25vcmU9IiI+DQog
+ICAgICA8cCBzdHlsZT0iZm9udC1zaXplOjFweDttYXJnaW4tYm90dG9tOjBweDttYXJnaW4tdG9w
+OjBweDtjb2xvcjpyZ2IoMjU1LDI1NSwyNTUpO2xpbmUtaGVpZ2h0OjIwcHg7dXNlci1zZWxlY3Q6
+bm9uZTsiPuOBjuOBo+OBj+OCiuiFsOOBruWgtOWQiOOAgeeJueOBq+WkmuOBhOOBruOBjOeti+iC
+ieaAp+OBruOCv+OCpOODl+OBp+OBmeOAgjwvcD48L2Rpdj48YnI+DQogICAgICA8cCBzdHlsZT0i
+bWFyZ2luLWJvdHRvbTowcHg7bWFyZ2luLXRvcDowcHg7bGluZS1oZWlnaHQ6MjBweDsiPuOBiuWu
+ouOBleOBvuOBq+OBr+OBlOS4jeS+v+OCkuOBiuOBi+OBkeOBhOOBn+OBl+OBvuOBmeOBjOOAgeS9
+leWNkuOBlOeQhuino+OCkuiznOOCiuOBvuOBmeOCiOOBhuOBiumhmOOBhOeUs+OBl+S4iuOBkuOB
+vuOBmeOAgjwvcD4NCiAgICAgIDxkaXYgc3R5bGU9ImZpbHRlcjpBbHBoYShvcGFjaXR5PTApO29w
+YWNpdHk6MDsiIGRhdGEtaWdub3JlPSIiPg0KICAgICAgPHAgc3R5bGU9ImZvbnQtc2l6ZToxcHg7
+bWFyZ2luLWJvdHRvbTowcHg7bWFyZ2luLXRvcDowcHg7Y29sb3I6cmdiKDI1NSwyNTUsMjU1KTts
+aW5lLWhlaWdodDoyMHB4O3VzZXItc2VsZWN0Om5vbmU7Ij7jgaTjgarjgYzjgorjgavjgY/jgYTn
+irbms4HjgajjgarjgaPjgabjgYTjgb7jgZnjgII8L3A+PC9kaXY+DQogICAgICA8cCBzdHlsZT0i
+bWFyZ2luLWJvdHRvbTowcHg7bWFyZ2luLXRvcDowcHg7bGluZS1oZWlnaHQ6MjBweDsiPjxicj7i
+gLvjgZPjga7jg6Hjg7zjg6vjga/jgIzjgYjjgY3jga3jgaPjgajjgI3jgojjgoroh6rli5XphY3k
+v6HjgZXjgozjgabjgYTjgb7jgZnjgII8YnI+6L+U5L+h44GE44Gf44Gg44GN44G+44GX44Gm44KC
+5a++5b+c6Ie044GX44GL44Gt44G+44GZ44Gu44Gn44CB44GC44KJ44GL44GY44KB44GU5LqG5om/
+44GP44Gg44GV44GE44CCPGJyPjxicj7igLvmnKzjg6Hjg7zjg6vjga/jgIHjgIzjgYjjgY3jga3j
+gaPjgajjgI3ph43opoHjgarjgYrnn6XjgonjgZvjgajjgZfjgabjg6Hjg7zjg6vjga7phY3kv6Hj
+gpLluIzmnJvjgZXjgozjgabjgYTjgarjgYTjgYrlrqLmp5jjgavjgoLjgYrpgIHjgorjgZXjgZvj
+gabjgYTjgZ/jgaDjgY3jgb7jgZnjgII8L3A+PGJyPg0KICAgICAgPHAgc3R5bGU9Im1hcmdpbi1i
+b3R0b206MHB4O21hcmdpbi10b3A6MHB4O2xpbmUtaGVpZ2h0OjIwcHg7Ij7nmbrooYzvvJrmoKrl
+vI/kvJrnpL5KUuadseaXpeacrOODjeODg+ODiOOCueODhuODvOOCt+ODp+ODszxicj7jgJIxNTEt
+MDA1MSANCiAgICAgIOadseS6rOmDvea4i+iwt+WMuuWNg+mnhOODtuiwtzUtMjctMTEg44Ki44Kw
+44Oq44K544Kv44Ko44Ki5paw5a6/NOmajjwvcD48YnI+DQogICAgICA8ZGl2IHN0eWxlPSJmaWx0
+ZXI6QWxwaGEob3BhY2l0eT0wKTtvcGFjaXR5OjA7IiBkYXRhLWlnbm9yZT0iIj4NCiAgICAgIDxw
+IHN0eWxlPSJmb250LXNpemU6MXB4O21hcmdpbi1ib3R0b206MHB4O21hcmdpbi10b3A6MHB4O2Nv
+bG9yOnJnYigyNTUsMjU1LDI1NSk7bGluZS1oZWlnaHQ6MjBweDt1c2VyLXNlbGVjdDpub25lOyI+
+44GK5a6i5qeY44Gu44GK5pSv5omV44GE5pa55rOV44GM5om/6KqN44GV44KM44G+44Gb44KTPC9w
+PjwvZGl2Pg0KICAgICAgPGRpdiBzdHlsZT0icGFkZGluZy1ib3R0b206MTBweDtwYWRkaW5nLXRv
+cDoxMHB4O3BhZGRpbmctbGVmdDoxMHB4O3BhZGRpbmctcmlnaHQ6MTBweDtiYWNrZ3JvdW5kLWNv
+bG9yOnJnYig2NCwxMjUsODIpOy1tcy13b3JkLXdyYXA6YnJlYWstd29yZDsiPg0KICAgICAgPHAg
+c3R5bGU9ImZvbnQtc2l6ZToxNHB4O21hcmdpbi1ib3R0b206MHB4O21hcmdpbi10b3A6MHB4O3Rl
+eHQtYWxpZ246Y2VudGVyO2xpbmUtaGVpZ2h0OjIwcHg7Ij48c3BhbiBzdHlsZT0iZm9udC1zaXpl
+OjhweDtjb2xvcjpyZ2IoMjU1LDI1NSwyNTUpO2xpbmUtaGVpZ2h0OjExcHg7Ij43NSANCiAgICAg
+IMKpIDIwMjUgSlIgRWFzdCBOZXQgU3RhdGlvbiANCkNvLixMdGQuPC9zcGFuPjwvcD48L2Rpdj48
+L2Rpdj48L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPjwvY2VudGVyPg==
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.20139"></HEAD>
-<body style=3D"MARGIN: 0.5em">
-<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
-WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
-400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
-R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
-ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
-ess: initial; text-decoration-style: initial; text-decoration-color: initia=
-l" dir=3Dltr>Greetings industrypack-devel,</DIV>
-<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
-WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
-400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
-R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
-ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
-ess: initial; text-decoration-style: initial; text-decoration-color: initia=
-l" dir=3Dltr>
-We have numerous investors who are looking to invest in any project that is=
- profit earning in your Country, we also represent top politicians from Ara=
-b and beyond who are our best investors, looking up to lucrative projects f=
-or investment purposes.</DIV>
-<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
-WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
-400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
-R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
-ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
-ess: initial; text-decoration-style: initial; text-decoration-color: initia=
-l" dir=3Dltr>
-For this purpose we as the financial consulting firm specialize in negotiat=
-ions, business finance planning and client relationship in bringing the two=
- parties together in achieving smooth success.</DIV>
-<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
-WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
-400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
-R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
-ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
-ess: initial; text-decoration-style: initial; text-decoration-color: initia=
-l" dir=3Dltr>Kind Regards<BR>Adara Jumah</DIV>
-<DIV style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; =
-WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
-400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTE=
-R-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
-ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
-ess: initial; text-decoration-style: initial; text-decoration-color: initia=
-l" dir=3Dltr></DIV></BODY></HTML>
+--=====001_Dragon632602033712_=====--
 
 
---===============6406067488228515046==
+
+--===============8864550408282361950==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6406067488228515046==
+--===============8864550408282361950==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -191,4 +266,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6406067488228515046==--
+--===============8864550408282361950==--
+
+
