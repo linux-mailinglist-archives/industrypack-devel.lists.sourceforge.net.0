@@ -2,114 +2,104 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5E9E2A63648
-	for <lists+industrypack-devel@lfdr.de>; Sun, 16 Mar 2025 16:37:24 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id ED55AA63811
+	for <lists+industrypack-devel@lfdr.de>; Mon, 17 Mar 2025 00:43:01 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1ttq3G-00087i-NT
+	id 1ttxdD-0006y7-SE
 	for lists+industrypack-devel@lfdr.de;
-	Sun, 16 Mar 2025 15:37:22 +0000
+	Sun, 16 Mar 2025 23:43:00 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
- <bounce_onmffjd_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
- id 1ttq3F-00087b-1w for industrypack-devel@lists.sourceforge.net;
- Sun, 16 Mar 2025 15:37:21 +0000
+ <CDR_Peter=cd.abmanufacturer.com@bounces.cd.abmanufacturer.com>)
+ id 1ttxd9-0006xw-4y for industrypack-devel@lists.sourceforge.net;
+ Sun, 16 Mar 2025 23:42:55 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
+ d=sourceforge.net; s=x; h=Content-Type:MIME-Version:List-Unsubscribe:To:
+ Sender:Reply-To:Message-Id:Subject:Date:From:Cc:Content-Transfer-Encoding:
  Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
  Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
  List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=nTLHtzsGxbJc5V0j5cbby7xc0WQ4mAuSaw6dV8UsNgY=; b=Yj2XfHUv4OnHTgiQm9WrpOh3ig
- c8evblVIKgia4VVz2yk2VuSGHyp1LCmMcl5WggCldOHgUGXTv6AXdBBXn07FHeMcqCdJLpeb2QwMe
- Z176RPJrzXMVISUasB+HzFcAJ0h1RGwxOwN5sDA3myXnKD+gWMFBLhOUK0y7ko6S60Lg=;
+ bh=FFMTG7IYaG1F1VXa1+fu11J0RFS7Zo8guTsuwu9XwpQ=; b=VbiCJI8OfEmTjvRmUpJE1lGVYc
+ K/NGdOGJBCnNl/oTAMuNsLtxf/2z5IREtYscPY5Broj9FBIrthL7DRRlt8EBiEdtWg4XzQPO3Wnpw
+ 8tGBkm75/9G3mGA1kWBD1YGtmnAP2H+65bKqc/aKXN3K1XMbNM01OS71rldVd7F9KJhk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=nTLHtzsGxbJc5V0j5cbby7xc0WQ4mAuSaw6dV8UsNgY=; b=Z2wlG99eFVTm64zPL9tqSnqsNO
- QXoPLsMk09kEFk5jQ7QpaWVTdij0eGwvg0MlRTIVQUINIgLuAj0W2eEaX9nbJeryd8FZj98ccuVL2
- QTjCSgU/GxWFP9yalxJhzE0t9HZDUzyTJ04KLe33quSy76fV0Mqn9E9PKZYsmKMajyj4=;
-Received: from em.sbaloanadvice.com ([216.24.225.131])
+ h=Content-Type:MIME-Version:List-Unsubscribe:To:Sender:Reply-To:Message-Id:
+ Subject:Date:From:Cc:Content-Transfer-Encoding:Content-ID:Content-Description
+ :Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Id:List-Help:List-Subscribe:List-Post:List-Owner:
+ List-Archive; bh=FFMTG7IYaG1F1VXa1+fu11J0RFS7Zo8guTsuwu9XwpQ=; b=QvN8yM1X6oio
+ FWVp2CdsUTiLHeCXdtRfNvzkYFUfIlo3kK72JqCNAV+hMIK3F25EndQTmwnrADYno3/fgOhx30Nbw
+ 8xJnv3MWzJWxdOHu52e65zUyi9tvdjbDuELO75sZtm+y+sIdFdg2NG7VWZ7vjIrFrg3G/td4QchOh
+ xAYRI=;
+Received: from pn159.mxout.mta2.net ([216.169.99.159])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ttq38-00010N-Sn for industrypack-devel@lists.sourceforge.net;
- Sun, 16 Mar 2025 15:37:21 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
- Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1742225834;
- i=info@sbaloanadvice.com;
- bh=nTLHtzsGxbJc5V0j5cbby7xc0WQ4mAuSaw6dV8UsNgY=;
- b=khQhecGKTRSlH0xzEkBEHnFr/vUqTphn7usEKCT8imxfMTWcBsvYnFrAy9lgfoUW4qP3RDvtFzfu
- j3/wn6UPNxC7M7aFl6HO3eCOEUx+WAL3OUY3nB+ZZICIGmhyHdjP9QQBU04SluSGtkEWKIN33V2A
- YqIemXGh0AkkRvptGTI=
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
- Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1742225834;
- bh=nTLHtzsGxbJc5V0j5cbby7xc0WQ4mAuSaw6dV8UsNgY=;
- b=PlJM64qokVkHB1SWqt6SSLLaEbgtueNt7ts1WYmiOyaV6/XidRof5aeb4rfi6WBlFEAkWl+vWgYQ
- bFPF2nCWNttAAUbjh43dwx3E+VPzOGipKXL/MI0RgSOTpZIppJZY+A0CQBmiU/HELWIBAky8ec67
- daxWv5kijWElVku7uhA=
-Received: by em.sbaloanadvice.com id hqro2039cooc for
- <industrypack-devel@lists.sourceforge.net>;
- Sun, 16 Mar 2025 11:36:42 -0400 (envelope-from
- <bounce_onmffjd_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
+ (TLS1.2:ECDHE-RSA-AES256-SHA384:256) (Exim 4.95) id 1ttxd6-0002kr-Ei
+ for industrypack-devel@lists.sourceforge.net;
+ Sun, 16 Mar 2025 23:42:54 +0000
+DKIM-Signature: v=1; a=rsa-sha256; d=cd.abmanufacturer.com; s=api;
+ c=relaxed/simple; t=1742168565;
+ h=from:date:subject:reply-to:to:list-unsubscribe:list-unsubscribe-post:
+ mime-version; bh=FFMTG7IYaG1F1VXa1+fu11J0RFS7Zo8guTsuwu9XwpQ=;
+ b=EZankGkpOCUZ7FbNZ21hBopVqFJHTTciCjl9pMATze4P8pRQUWEUOV2M70dzKiqLHgM9QaOx8Cv
+ Bq+oV+igA8QcSiXZSzMebaP8D3SjPwUAEaUdr/ySDxsO2o7wsu/IPZhc4/iY7CSTemRFeYj6NOK+P
+ 4oO2o7zqGcKZoR1Yq6o=
+DKIM-Signature: v=1; a=rsa-sha256; d=elasticemail.com; s=api;
+ c=relaxed/simple; t=1742168565;
+ h=from:date:subject:reply-to:to:list-unsubscribe:list-unsubscribe-post;
+ bh=FFMTG7IYaG1F1VXa1+fu11J0RFS7Zo8guTsuwu9XwpQ=;
+ b=Y88NxmMBhJYtAGLgyJ/hY8F4VsksFRSRmJ47EUGpyRX350fuWojCVABvtnAysk+QpkvnQF77n0C
+ fRcIz+wjhZ7cmRhLUg0vLiWdKdV+u8CkiF2GSUQ4Z/Z6YYoJS9qZEWZ24TtTVMfk2XrGtmIB/l85g
+ udFESUAJcsYyiWt9u78=
+From: Peter Lee <CDR_Peter@cd.abmanufacturer.com>
+Date: Sun, 16 Mar 2025 23:42:45 +0000
+Message-Id: <4upns2yhjbu4.aGX-GEozL2s5wIJW6SxZPw2@tracking.cd.abmanufacturer.com>
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
-X-Campaign-Shard: 2
-Bounces-To: bounce_cjrgvo_cezqcnf_n@em.sbaloanadvice.com
-Message-ID: <1742139372596.205351200.19136365.421896101@em.sbaloanadvice.com>
-X-Campaign: 205351200/19136365/421896101
-Date: Sun, 16 Mar 2025 11:36:42 -0400
-To: <industrypack-devel@lists.sourceforge.net>
-From: "SBA Loan Advice" <info@sbaloanadvice.com>
+X-Msg-EID: aGX-GEozL2s5wIJW6SxZPw2
 MIME-Version: 1.0
-X-Spam-Score: 0.3 (/)
+X-Spam-Score: 1.0 (+)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Growing Your Business with SBA-backed Funding - Let's Explore
- Your Opportunities! 7a Loan Up to $5,000,000Short- and long-term working
- capitalRefinancing current business debtPurchasing/installation of machinery, 
- equipment, furniture, fixtures, supplies, or materialsPurchase of rea [...]
- Content analysis details:   (0.3 points, 6.0 required)
+ Content preview:  Hi, I hope you're having a great day! I'm Peter Lee from CDR
+ PRECISION MACHINING, and I wanted to reach out because I know how challenging
+ it can be to find a machining partner who delivers both TOP-N [...] 
+ Content analysis details:   (1.0 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
+ 1.1 URIBL_GREY             Contains an URL listed in the URIBL greylist
+ [URIs: elasticemail.com]
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [216.24.225.131 listed in sa-accredit.habeas.com]
+ [216.169.99.159 listed in sa-accredit.habeas.com]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [216.24.225.131 listed in bl.score.senderscore.com]
+ [216.169.99.159 listed in bl.score.senderscore.com]
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.24.225.131 listed in list.dnswl.org]
+ no trust [216.169.99.159 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- 0.5 SUBJ_ALL_CAPS          Subject is all capitals
- 0.0 HTML_IMAGE_RATIO_04    BODY: HTML has a low ratio of text to image
- area 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain 0.0 LOTS_OF_MONEY          Huge... sums of money
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML
-X-Headers-End: 1ttq38-00010N-Sn
-Subject: [Industrypack-devel] ACTIVATE YOUR SBA 7A TODAY!
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+X-Headers-End: 1ttxd6-0002kr-Ei
+Subject: [Industrypack-devel] How to Reduce Machining Parts Procurement
+ Expenses?
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -121,186 +111,160 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <info@sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============4707938324413074518=="
+Reply-To: Peter Lee <sales@cdrprecisioncnc.com>
+Content-Type: multipart/mixed; boundary="===============0641834876717833659=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-<!-- X-Campaign: 205351200/19136365/421896101 -->
---===============4707938324413074518==
-Content-Type: multipart/alternative; boundary="----=_Part_1935486436.1742139361152"
+--===============0641834876717833659==
+Content-Type: multipart/alternative;
+	boundary="=-eZCfBUXtswLpKN2yONp6fgDr5VJRzcQV23WKzQ=="
 
-<!-- X-Campaign: 205351200/19136365/421896101 -->
-------=_Part_1935486436.1742139361152
-Content-Type: text/plain;charset=UTF-8
+--=-eZCfBUXtswLpKN2yONp6fgDr5VJRzcQV23WKzQ==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
 
+SGksCkkgaG9wZSB5b3UncmUgaGF2aW5nIGEgZ3JlYXQgZGF5ISBJJ20gUGV0ZXIgTGVlIGZy
+b20gQ0RSIFBSRUNJU0lPTgpNQUNISU5JTkcsIGFuZCBJIHdhbnRlZCB0byByZWFjaCBvdXQg
+YmVjYXVzZSBJIGtub3cgaG93IGNoYWxsZW5naW5nIGl0CmNhbiBiZSB0byBmaW5kIGEgbWFj
+aGluaW5nIHBhcnRuZXIgd2hvIGRlbGl2ZXJzIGJvdGggVE9QLU5PVENIIFFVQUxJVFkKQU5E
+IENPTVBFVElUSVZFIFBSSUNJTkcuCkNoaW5hJ3MgbWFudWZhY3R1cmluZyBlZGdlIGdpdmVz
+IHVzIGEgdW5pcXVlIGFkdmFudGFnZeKAlEhJR0gKUFJFQ0lTSU9OIEFUIEEgQ09TVCBUSEFU
+IEtFRVBTIFlPVVIgQlVER0VUIElOIENIRUNLLiBIZXJlJ3Mgd2h5Cndvcmtpbmcgd2l0aCB1
+cyBtYWtlcyBzZW5zZToK8J+UuSBDT1NULUVGRkVDVElWRSBXSVRIT1VUIENVVFRJTkcgQ09S
+TkVSUwpUaGFua3MgdG8gb3VyIEZVTExZIElOVEVHUkFURUQgU1VQUExZIENIQUlOLCB3ZSBz
+b3VyY2UgSElHSC1RVUFMSVRZClJBVyBNQVRFUklBTFMgKHN0ZWVsLCBhbHVtaW51bSwgY29w
+cGVyLCBzdGFpbmxlc3Mgc3RlZWwpIEFUIFRIRSBNT1NUCkNPTVBFVElUSVZFIFBSSUNFUywg
+a2VlcGluZyB5b3VyIHByb2R1Y3Rpb24gY29zdHMgbG93Lgrwn5S5IFBSRUNJU0lPTiBUSEFU
+IE1BVENIRVMgVEhFIEJFU1QgSU4gVEhFIElORFVTVFJZCldlIHVzZSA1LUFYSVMgQ05DLCBT
+V0lTUy1UWVBFIExBVEhFIFRVUk5JTkcsIEFORCBVTFRSQS1QUkVDSVNJT04KTUFDSElOSU5H
+IHRvIGFjaGlldmUgwrEwLjAwMU1NIEFDQ1VSQUNZLCBlbnN1cmluZyB5b3VyIHBhcnRzIG1l
+ZXQgdGhlCmhpZ2hlc3Qgc3RhbmRhcmRz4oCUd2l0aG91dCB0aGUgcHJlbWl1bSBwcmljaW5n
+IG9mIEV1cm9wZSBvciBKYXBhbi4K8J+UuSBTQ0FMQUJJTElUWSBUTyBGSVQgWU9VUiBORUVE
+UwpXaGV0aGVyIHlvdSBuZWVkIFNNQUxMLUJBVENIIFBST1RPVFlQRVMgT1IgTUFTUyBQUk9E
+VUNUSU9OLCBvdXIKQVVUT01BVEVEIENOQyBMSU5FUyBBTkQgU0tJTExFRCBXT1JLRk9SQ0Ug
+YWxsb3cgdXMgdG8gc2NhbGUKZWZmaWNpZW50bHksIGtlZXBpbmcgbGVhZCB0aW1lcyBzaG9y
+dCBhbmQgY29zdHMgcHJlZGljdGFibGUuCvCflLkgV0VTVEVSTi1TVEFOREFSRCBRVUFMSVRZ
+LCBXSVRIT1VUIFRIRSBQUkVNSVVNIFBSSUNFCk91ciBwYXJ0cyBhcmUgcHJvZHVjZWQgdW5k
+ZXIgc3RyaWN0IElTTyA5MDAxLCBJQVRGIDE2OTQ5LCBBTkQgQVM5MTAwCnF1YWxpdHkgY29u
+dHJvbCwgb2ZmZXJpbmcgYSBsZXZlbCBvZiBjb25zaXN0ZW5jeSB0aGF0J3MgbW9yZSBSRUxJ
+QUJMRQpUSEFOIFNPVVRIRUFTVCBBU0lBIGJ1dCBhdCBhIG11Y2ggbW9yZSBDT1NULUVGRkVD
+VElWRSBSQVRFIFRIQU4gVEhFClUuUy4gT1IgRVVST1BFLgpJJ2QgbG92ZSB0byBoZWFyIGFi
+b3V0IHlvdXIgbGF0ZXN0IHByb2plY3QgYW5kIHNlZSBob3cgd2UgY2FuIGhlbHAuCkxldCBt
+ZSBrbm93IGlmIHlvdSdkIGxpa2UgYSBGUkVFIFFVT1RFLCBhbmQgd2UnbGwgc2hvdyB5b3Ug
+anVzdCBob3cKbXVjaCB5b3UgY2FuIHNhdmXigJR3aXRob3V0IHNhY3JpZmljaW5nIHF1YWxp
+dHkuCkxvb2tpbmcgZm9yd2FyZCB0byB5b3VyIHRob3VnaHRzIQpCZXN0IHJlZ2FyZHMsClBl
+dGVyIExlZQpzYWxlc0BjZHJwcmVjaXNpb25jbmMuY29tClNhbGVzIERpcmVjdG9yIHwgQ0RS
+IE1hY2hpbmluZwpDdXN0b21pemF0aW9uIHwgRGV2ZWxvcG1lbnQgfCBSZWxpYWJpbGl0eQpV
+bnN1YnNjcmliZQpbL2h0dHA6Ly90cmFja2luZy5jZC5hYm1hbnVmYWN0dXJlci5jb20vdHJh
+Y2tpbmcvdW5zdWJzY3JpYmU/ZD1TXzFVOGZPQktqd2lOVWdwZ0Z4TWRXbnZXbXBZYVBGOXEw
+UUVtN1kwMUhIcVVITkllZGNnQmpIel9rZ0QzNktoUkE4Vy0tNmpleW5JeThCN2RTV0c4SFNo
+MzRLVUJwQ2ZGVG1JVjlVWEFicXZXNThzZUM1V2VKdHphWWlkMFM4QVJKMmdRV1dMbkVtV2pX
+ZTRxV2h6TnFudDJPX1ZNSWZzR3RRR0ZsWVU5UWEyTDJobllqYUdnSDlHdHd3Njh0V09sWWdN
+WWJSTU81eU5rSDBoV1ZnXzE5ckNVa3hxd3E3RC0xZXJjVkpveFhWdGZKNlROSGl4THFTb0Vt
+dTFfNU91cW9SX0x6SkpXUC1Ya3VVUEdzRzZnVlNZN3BjVVJ0dWE1Ti03QUNURm9oZkp1Nktn
+Q0VUUk9xVUVfX0E1ZjNXUzNTWXBLV0YzLUF0TEZmMzZGOUJaNVdPRlUxRUZERi1Ocmo2TEc1
+UHZJMllsWU5JbHpKeU1wMi13VXQyZWxFek50Mm1GMDItOUhFN2N0cUJmODF0dWFsZ1lJems5
+VGtKOG5oUFJURDFGWWx4cGRNcU5aWWpmbzhqaUJyb1RpNjdMQVhqRVllLU1ETUM2UF80QXEy
+N0dEZ3Nsc3NFMkxxcDd6aFc1V0Q0a09aZThFam5JdzZhVHpQN002MkJGQXVZVVE1QlpCcmdj
+cUhZLVF2OFZjOC1udkJnOXBoYWdiU3lCNE9Ob3k5NDUwWWZUMF0=
 
+--=-eZCfBUXtswLpKN2yONp6fgDr5VJRzcQV23WKzQ==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
 
-Growing Your Business with SBA-backed Funding - Let's Explore Your Opportunities!
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCjxoZWFkPjxtZXRhIGNoYXJzZXQ9InV0Zi04Ii8+
+DQoJPHRpdGxlPkhvdyB0byBSZWR1Y2UgTWFjaGluaW5nIFBhcnRzIFByb2N1cmVtZW50IEV4
+cGVuc2VzPzwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keSBkYXRhLWdyLWV4dC1pbnN0YWxsZWQ9
+IiIgZGF0YS1uZXctZ3ItYy1zLWNoZWNrLWxvYWRlZD0iMTQuMTIyNi4wIiBkYXRhLW5ldy1n
+ci1jLXMtbG9hZGVkPSIxNC4xMjI2LjAiPkhpLA0KPHAgZGF0YS1lbmQ9IjM3NiIgZGF0YS1z
+dGFydD0iMTMzIj5JIGhvcGUgeW91J3JlIGhhdmluZyBhIGdyZWF0IGRheSEgSSdtIFBldGVy
+IExlZSBmcm9tIDxzdHJvbmcgZGF0YS1lbmQ9IjIxMyIgZGF0YS1zdGFydD0iMTg2Ij5DRFIg
+UHJlY2lzaW9uIE1hY2hpbmluZzwvc3Ryb25nPiwgYW5kIEkgd2FudGVkIHRvIHJlYWNoIG91
+dCBiZWNhdXNlIEkga25vdyBob3cgY2hhbGxlbmdpbmcgaXQgY2FuIGJlIHRvIGZpbmQgYSBt
+YWNoaW5pbmcgcGFydG5lciB3aG8gZGVsaXZlcnMgYm90aCA8c3Ryb25nIGRhdGEtZW5kPSIz
+NzMiIGRhdGEtc3RhcnQ9IjMyOCI+dG9wLW5vdGNoIHF1YWxpdHkgYW5kIGNvbXBldGl0aXZl
+IHByaWNpbmc8L3N0cm9uZz4uPC9wPg0KDQo8cCBkYXRhLWVuZD0iNTM2IiBkYXRhLXN0YXJ0
+PSIzNzgiPkNoaW5hJ3MgbWFudWZhY3R1cmluZyBlZGdlIGdpdmVzIHVzIGEgdW5pcXVlIGFk
+dmFudGFnZeKAlDxzdHJvbmcgZGF0YS1lbmQ9IjQ5MyIgZGF0YS1zdGFydD0iNDMzIj5oaWdo
+IHByZWNpc2lvbiBhdCBhIGNvc3QgdGhhdCBrZWVwcyB5b3VyIGJ1ZGdldCBpbiBjaGVjazwv
+c3Ryb25nPi4gSGVyZSdzIHdoeSB3b3JraW5nIHdpdGggdXMgbWFrZXMgc2Vuc2U6PC9wPg0K
+DQo8cCBkYXRhLWVuZD0iNzkxIiBkYXRhLXN0YXJ0PSI1MzgiPiYjeDFmNTM5OyA8c3Ryb25n
+IGRhdGEtZW5kPSI1ODMiIGRhdGEtc3RhcnQ9IjU0MSI+Q29zdC1FZmZlY3RpdmUgV2l0aG91
+dCBDdXR0aW5nIENvcm5lcnM8L3N0cm9uZz48YnIgZGF0YS1lbmQ9IjU4NiIgZGF0YS1zdGFy
+dD0iNTgzIiAvPg0KVGhhbmtzIHRvIG91ciA8c3Ryb25nIGRhdGEtZW5kPSI2MzMiIGRhdGEt
+c3RhcnQ9IjYwMCI+ZnVsbHkgaW50ZWdyYXRlZCBzdXBwbHkgY2hhaW48L3N0cm9uZz4sIHdl
+IHNvdXJjZSA8c3Ryb25nIGRhdGEtZW5kPSI2NzUiIGRhdGEtc3RhcnQ9IjY0NSI+aGlnaC1x
+dWFsaXR5IHJhdyBtYXRlcmlhbHM8L3N0cm9uZz4gKHN0ZWVsLCBhbHVtaW51bSwgY29wcGVy
+LCBzdGFpbmxlc3Mgc3RlZWwpIDxzdHJvbmcgZGF0YS1lbmQ9Ijc1MyIgZGF0YS1zdGFydD0i
+NzE5Ij5hdCB0aGUgbW9zdCBjb21wZXRpdGl2ZSBwcmljZXM8L3N0cm9uZz4sIGtlZXBpbmcg
+eW91ciBwcm9kdWN0aW9uIGNvc3RzIGxvdy48L3A+DQoNCjxwIGRhdGEtZW5kPSIxMDU5IiBk
+YXRhLXN0YXJ0PSI3OTMiPiYjeDFmNTM5OyA8c3Ryb25nIGRhdGEtZW5kPSI4NDciIGRhdGEt
+c3RhcnQ9Ijc5NiI+UHJlY2lzaW9uIFRoYXQgTWF0Y2hlcyB0aGUgQmVzdCBpbiB0aGUgSW5k
+dXN0cnk8L3N0cm9uZz48YnIgZGF0YS1lbmQ9Ijg1MCIgZGF0YS1zdGFydD0iODQ3IiAvPg0K
+V2UgdXNlIDxzdHJvbmcgZGF0YS1lbmQ9IjkyOCIgZGF0YS1zdGFydD0iODU3Ij41LWF4aXMg
+Q05DLCBTd2lzcy10eXBlIGxhdGhlIHR1cm5pbmcsIGFuZCB1bHRyYS1wcmVjaXNpb24gbWFj
+aGluaW5nPC9zdHJvbmc+IHRvIGFjaGlldmUgPHN0cm9uZyBkYXRhLWVuZD0iOTYxIiBkYXRh
+LXN0YXJ0PSI5NDAiPsKxMC4wMDFtbSBhY2N1cmFjeTwvc3Ryb25nPiwgZW5zdXJpbmcgeW91
+ciBwYXJ0cyBtZWV0IHRoZSBoaWdoZXN0IHN0YW5kYXJkc+KAlHdpdGhvdXQgdGhlIHByZW1p
+dW0gcHJpY2luZyBvZiBFdXJvcGUgb3IgSmFwYW4uPC9wPg0KDQo8cCBkYXRhLWVuZD0iMTI5
+NCIgZGF0YS1zdGFydD0iMTA2MSI+JiN4MWY1Mzk7IDxzdHJvbmcgZGF0YS1lbmQ9IjEwOTci
+IGRhdGEtc3RhcnQ9IjEwNjQiPlNjYWxhYmlsaXR5IHRvIEZpdCBZb3VyIE5lZWRzPC9zdHJv
+bmc+PGJyIGRhdGEtZW5kPSIxMTAwIiBkYXRhLXN0YXJ0PSIxMDk3IiAvPg0KV2hldGhlciB5
+b3UgbmVlZCA8c3Ryb25nIGRhdGEtZW5kPSIxMTYyIiBkYXRhLXN0YXJ0PSIxMTE3Ij5zbWFs
+bC1iYXRjaCBwcm90b3R5cGVzIG9yIG1hc3MgcHJvZHVjdGlvbjwvc3Ryb25nPiwgb3VyIDxz
+dHJvbmcgZGF0YS1lbmQ9IjEyMTMiIGRhdGEtc3RhcnQ9IjExNjgiPmF1dG9tYXRlZCBDTkMg
+bGluZXMgYW5kIHNraWxsZWQgd29ya2ZvcmNlPC9zdHJvbmc+IGFsbG93IHVzIHRvIHNjYWxl
+IGVmZmljaWVudGx5LCBrZWVwaW5nIGxlYWQgdGltZXMgc2hvcnQgYW5kIGNvc3RzIHByZWRp
+Y3RhYmxlLjwvcD4NCg0KPHAgZGF0YS1lbmQ9IjE1OTMiIGRhdGEtc3RhcnQ9IjEyOTYiPiYj
+eDFmNTM5OyA8c3Ryb25nIGRhdGEtZW5kPSIxMzU0IiBkYXRhLXN0YXJ0PSIxMjk5Ij5XZXN0
+ZXJuLVN0YW5kYXJkIFF1YWxpdHksIFdpdGhvdXQgdGhlIFByZW1pdW0gUHJpY2U8L3N0cm9u
+Zz48YnIgZGF0YS1lbmQ9IjEzNTciIGRhdGEtc3RhcnQ9IjEzNTQiIC8+DQpPdXIgcGFydHMg
+YXJlIHByb2R1Y2VkIHVuZGVyIHN0cmljdCA8c3Ryb25nIGRhdGEtZW5kPSIxNDI5IiBkYXRh
+LXN0YXJ0PSIxMzkzIj5JU08gOTAwMSwgSUFURiAxNjk0OSwgYW5kIEFTOTEwMDwvc3Ryb25n
+PiBxdWFsaXR5IGNvbnRyb2wsIG9mZmVyaW5nIGEgbGV2ZWwgb2YgY29uc2lzdGVuY3kgdGhh
+dCdzIG1vcmUgPHN0cm9uZyBkYXRhLWVuZD0iMTUyMyIgZGF0YS1zdGFydD0iMTQ5MSI+cmVs
+aWFibGUgdGhhbiBTb3V0aGVhc3QgQXNpYTwvc3Ryb25nPiBidXQgYXQgYSBtdWNoIG1vcmUg
+PHN0cm9uZyBkYXRhLWVuZD0iMTU5MCIgZGF0YS1zdGFydD0iMTU0MyI+Y29zdC1lZmZlY3Rp
+dmUgcmF0ZSB0aGFuIHRoZSBVLlMuIG9yIEV1cm9wZTwvc3Ryb25nPi48L3A+DQoNCjxwIGRh
+dGEtZW5kPSIxNzgzIiBkYXRhLXN0YXJ0PSIxNTk1Ij5JJ2QgbG92ZSB0byBoZWFyIGFib3V0
+IHlvdXIgbGF0ZXN0IHByb2plY3QgYW5kIHNlZSBob3cgd2UgY2FuIGhlbHAuIExldCBtZSBr
+bm93IGlmIHlvdSdkIGxpa2UgYSA8c3Ryb25nIGRhdGEtZW5kPSIxNzA1IiBkYXRhLXN0YXJ0
+PSIxNjkxIj5mcmVlIHF1b3RlPC9zdHJvbmc+LCBhbmQgd2UnbGwgc2hvdyB5b3UganVzdCBo
+b3cgbXVjaCB5b3UgY2FuIHNhdmXigJR3aXRob3V0IHNhY3JpZmljaW5nIHF1YWxpdHkuPC9w
+Pg0KDQo8cCBkYXRhLWVuZD0iMTgyMCIgZGF0YS1zdGFydD0iMTc4NSI+TG9va2luZyBmb3J3
+YXJkIHRvIHlvdXIgdGhvdWdodHMhPC9wPg0KQmVzdCByZWdhcmRzLDxiciAvPg0KUGV0ZXIg
+TGVlPGJyIC8+DQpzYWxlc0BjZHJwcmVjaXNpb25jbmMuY29tPGJyIC8+DQpTYWxlcyBEaXJl
+Y3RvciB8IENEUiBNYWNoaW5pbmc8YnIgLz4NCkN1c3RvbWl6YXRpb24gfCBEZXZlbG9wbWVu
+dCB8IFJlbGlhYmlsaXR5PGJyIC8+DQo8YnIgLz4NCjxzcGFuIHN0eWxlPSJmb250LXNpemU6
+MTJweDsiPjxhIGhyZWY9Imh0dHA6Ly90cmFja2luZy5jZC5hYm1hbnVmYWN0dXJlci5jb20v
+dHJhY2tpbmcvdW5zdWJzY3JpYmU/ZD11ekx2c1VkVnMzaWZUajFNSW5zNzNjdXJNbmpaY3JG
+bFFSbUQwblRlbXBxdS15OFFlS2VXNkxSR1JrZ2NzQUxWcjkwRGhrcG16aHFiZGJfUF9CRmU5
+TFBDWGFJTmx4M0tfQ2VKMmdMV2ticHktTnBoTkF5ZzhrLXN4VXJET1ZoMnByR1A5QjZpaWpk
+UHlBdGp0RW9TbWtPeG5aVkVyRWNFZzhWcDJZNXZIV2RqcDVvZkM0eU1zVkhoTk13VVJGeVRp
+a3BHM2xkNmFoVWJjUXEyNER3Nld1U0hHdGJlVTlUejlIR1RZTmVWYkdZQnVzXzY2M2plbFJk
+c0hKdlZ5UDMtWVZIVXVWNHlmcnAtXzI0QzRjb0pSYzQxIj5VbnN1YnNjcmliZTwvYT48L3Nw
+YW4+PGdyYW1tYXJseS1kZXNrdG9wLWludGVncmF0aW9uIGRhdGEtZ3JhbW1hcmx5LXNoYWRv
+dy1yb290PSJ0cnVlIj48L2dyYW1tYXJseS1kZXNrdG9wLWludGVncmF0aW9uPjxpbWcgd2lk
+dGg9IjEiIGhlaWdodD0iMSIgc3JjPSJodHRwOi8vei54Y3dtcy5jb20vaW5kZXgucGhwL2Nh
+bXBhaWducy9qdjg3NGw4N2V2N2FjL3RyYWNrLW9wZW5pbmcvZmw4MjYyYjR4bWRkYSIgYWx0
+PSIiIC8+CjxpbWcgc3JjPSJodHRwOi8vdHJhY2tpbmcuY2QuYWJtYW51ZmFjdHVyZXIuY29t
+L3RyYWNraW5nL29wZW4/bXNnaWQ9YUdYLUdFb3pMMnM1d0lKVzZTeFpQdzImYz0xOTAxNDE4
+ODk2MzU1OTczNzY4IiBzdHlsZT0id2lkdGg6MXB4O2hlaWdodDoxcHgiIGFsdD0iIiAvPjxh
+IHN0eWxlPSAiZGlzcGxheSA6IG5vbmU7IiBocmVmPSJodHRwOi8vdHJhY2tpbmcuY2QuYWJt
+YW51ZmFjdHVyZXIuY29tL3RyYWNraW5nL2JvdGNsaWNrP21zZ2lkPWFHWC1HRW96TDJzNXdJ
+Slc2U3haUHcyJmM9MTkwMTQxODg5NjM1NTk3Mzc2OCI+PC9hPjwvYm9keT4NCjwvaHRtbD4=
 
-7a Loan 
-Up to $5,000,000Short- and long-term working capitalRefinancing current business debtPurchasing/installation of machinery, equipment, furniture, fixtures, supplies, or materialsPurchase of real estate (land and buildings)Construction of new building or renovation of existing building
-Micro Loan
-Up to $50,000Short- and long-term working capitalPurchasing/installation of machinery, equipment, furniture, fixtures, supplies or materials
-
-Schedule a time with our specialist to find out more!
-
-Click To Schedule A Call  (http://click.sbaloanadvice.com/click/gfka-be5pp-pvvkp0-6z6p456/)
-
-You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.sbaloanadvice.com/form?be5pp--f920-6z6p453&sl=4ef&t=1&ac=gfka or unsubscribe http://click.sbaloanadvice.com/form?be5pp--f920-6z6p453&sl=4ef&t=5&ac=gfka. 
-------=_Part_1935486436.1742139361152
-Content-Type: text/html;charset=UTF-8
-
-<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">Thank you for your interest in the SBA 7a, I look forward to speaking with you!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head><!--[if gte mso 15]>
-			<xml>
-				<o:OfficeDocumentSettings>
-				<o:AllowPNG/>
-				<o:PixelsPerInch>96</o:PixelsPerInch>
-				</o:OfficeDocumentSettings>
-			</xml>
-			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
-    margin: 0;
-    padding: 0;
-    background: rgb(255,255,255);
-}
-
-table td, table th {
-    border-spacing: 0;
-    border-collapse: collapse;
-    border: 0 none;
-    mso-table-lspace: 0pt;
-    mso-table-rspace: 0pt;
-}
-
-.fusionResponsiveColumn h1, 
-.fusionResponsiveColumn h2,
-.fusionResponsiveColumn h3,
-.fusionResponsiveColumn p {
-    font-weight: 400;
-}
-
-.fusionResponsiveColumn {
-    font-weight: normal;
-    text-align: left;
-}
-/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
-@media only screen and (max-width: 620px) {
-    .fusionResponsiveContent{
-        width: 100% !important;
-}
-
-.fusionResponsiveColumn {
-    width: auto !important;
-    display: block;
-}
-
-.fusionResponsiveImage {
-    width: 100% !important;
-}
-
-.fusionResponsiveImageTable {
-    padding-bottom: 0 !important;
-}
-
-.fusionResponsiveCanvas {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-}
-
-}
-
-@media only screen and (max-width: 500px) {
-    .fusionResponsiveContent {
-        width: 100% !important;
-    }
-
-    .fusionResponsiveColumn {
-        width: auto !important;
-        display: block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100% !important;
-    }
-
-    .fusionResponsiveCanvas {
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-    }
-}
-</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
-<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style="width:100%;padding-top:15px;padding-bottom:15px;background-color:rgb(246,246,246);background-repeat:no-repeat;font-family:sans-serif;">
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr><th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:600px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;"><div data-aqa="block-image" style="overflow:hidden;">
-<table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://secure.campaigner.com/media/76/769479/SBA%207a%20Header%20-%20Find%20Business%20Capital%20%20(2).png?id=9x0vlw5" class="fusionResponsiveImage" alt="" width="600" height="auto" style="width:600px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px 8px 15px 7px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:8px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:570px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h1 style="text-align:center;font-weight:400;color:rgb(51,51,51);font-size:32px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><span style="font-family:sans-serif;color:rgb(41, 57, 85);font-size:27px;">Growing Your Business with SBA-backed Funding - Let's Explore Your Opportunities!</span></h1></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:10px;padding-bottom:10px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(136,136,136);"> </td></tr></tbody></table></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:7px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 5px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:5px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:285px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h2 style="text-align:center;font-weight:400;color:rgb(51,51,51);font-size:24px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><u style="font-family:sans-serif;color:rgb(41, 57, 85);">7a Loan </u></h2></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><ul style="margin-top:0px;margin-bottom:0px;">
-<li>
-<span style="color:rgb(41, 57, 85);font-family:sans-serif;">Up to </span><strong style="color:rgb(41, 57, 85);font-family:sans-serif;">$5,000,000</strong>
-</li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Short- and long-term working capital</span></li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Refinancing current business debt</span></li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Purchasing/installation of machinery, equipment, furniture, fixtures, supplies, or materials</span></li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Purchase of real estate (land and buildings)</span></li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Construction of new building or renovation of existing building</span></li>
-</ul></div></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:5px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:5px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:285px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h2 style="text-align:center;font-weight:400;color:rgb(51,51,51);font-size:24px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><u style="color:rgb(41, 57, 85);">Micro Loan</u></h2></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;">
-<ul style="margin-top:0px;">
-<li>
-<span style="font-family:sans-serif;color:rgb(41, 57, 85);">Up to </span><strong style="font-family:sans-serif;color:rgb(41, 57, 85);">$50,000</strong>
-</li>
-<li><span style="font-family:sans-serif;color:rgb(41, 57, 85);">Short- and long-term working capital</span></li>
-<li><span style="font-family:sans-serif;color:rgb(41, 57, 85);">Purchasing/installation of machinery, equipment, furniture, fixtures, supplies or materials</span></li>
-</ul>
-<p style="font-weight:400;margin-top:16px;margin-bottom:0px;"><br></p>
-</div></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:5px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><p style="text-align:center;font-weight:400;margin-top:0px;margin-bottom:0px;">Schedule a time with our specialist to find out more!</p></div></td></tr></tbody></table>
-<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 10px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;width:20%;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://secure.campaigner.com/media/76/769479/1.png?id=ahflt00" class="fusionResponsiveImage" alt="" width="108" height="auto" style="width:108px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
-<div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="text-align:center;background:rgb(11,83,148);border-radius:25px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.sbaloanadvice.com/click/gfka-be5pp-pvvkp1-6z6p457/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_1" name="https   calendly loanadvice sba 7a clone">Click To Schedule A Call </a></td></tr></tbody></table></td></tr></tbody></table></div>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-</td></tr></tbody></table></body>
-</html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?be5pp--f920-6z6p453&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?be5pp--f920-6z6p453&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.sbaloanadvice.com/open/gfka-be5pp--6z6p451/img.gif" width="0" height="0" alt="">
-------=_Part_1935486436.1742139361152--
+--=-eZCfBUXtswLpKN2yONp6fgDr5VJRzcQV23WKzQ==--
 
 
---===============4707938324413074518==
+--===============0641834876717833659==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============4707938324413074518==
+--===============0641834876717833659==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -311,5 +275,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============4707938324413074518==--
+--===============0641834876717833659==--
 
