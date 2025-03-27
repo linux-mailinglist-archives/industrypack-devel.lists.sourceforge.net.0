@@ -2,114 +2,99 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1EBE4A709E2
-	for <lists+industrypack-devel@lfdr.de>; Tue, 25 Mar 2025 20:05:08 +0100 (CET)
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2D523A72DA9
+	for <lists+industrypack-devel@lfdr.de>; Thu, 27 Mar 2025 11:19:55 +0100 (CET)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1tx9aD-0004kt-JT
+	id 1txkL3-0004eC-UR
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 25 Mar 2025 19:05:06 +0000
+	Thu, 27 Mar 2025 10:19:53 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <sales@dipakmachinetools.in>) id 1tx9aB-0004ke-3Q
- for industrypack-devel@lists.sourceforge.net;
- Tue, 25 Mar 2025 19:05:03 +0000
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
+ <010b0195d71d4516-fffb02b0-868b-4524-952c-b1b12099358e-000000@eu-west-2.amazonses.com>)
+ id 1txkL2-0004e6-0t for industrypack-devel@lists.sourceforge.net;
+ Thu, 27 Mar 2025 10:19:52 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=VK2bYQ2zGpfOJ5yHuj9S3qdHJwKTVtO3wdS/cEnYoXc=; b=nLaW7z3I4IGvXJh09dfW3myEKv
- LG/aSlTvcLAZXto8qIrcPRKE2/ToMnFd9/OOsrBPgpDpzOAC1GJyb8eOAkFY7drqw6l5Zr+TFNHTn
- JeSillO/h8Fw0MtBdzhGomRtQp3ACr+HBkPjBH+2hVQvHEKPnaCFPisjFp4O2VRZt7c4=;
+ bh=9VVGy85dw0uexQdZB0q5LlJ1/PhyNsOWFxdDgL2RnOQ=; b=kNAHpTkUfBnIXl0TBY39SZMA4S
+ d+yu/WH5sV3pen+v0DuW9zqyiUl+dkv9AaNk+TA1IpXaSY4J+VwIz6AA80/ANBjJpDhMI8GJQRNBW
+ DMeiRbQf+BGAiyle2Fl50YVn4w+Us0oisYy57UWIQLS+ofiVrRsEEBhuh4LfZ0VPuWpk=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=VK2bYQ2zGpfOJ5yHuj9S3qdHJwKTVtO3wdS/cEnYoXc=; b=c
- 3IVOjHD6ssN2GeKaNMA4z0c5axQnzOZejHXvfYQqApWdUusjgCIfyTq3kTshQpG690yz1aJmzkIz1
- SPcg6XzC6fJ2LEb5YMNv8C1a34QPHTD64dGB/96gO8Mo0aXewx61TQA0UAj3Njxc4HRADkP/WLtot
- 1O3607XWVmAvx2WI=;
-Received: from server.mail.moocowmedia.co.uk ([78.31.110.91])
+ List-Owner:List-Archive; bh=9VVGy85dw0uexQdZB0q5LlJ1/PhyNsOWFxdDgL2RnOQ=; b=c
+ oBlDRHcDGbuBFiV5eBctzAwpVhZQKfRvIgTXy7vOBi14yx3iTI/fSiY3oltIREld2lkXqpqik6XPm
+ I4UwZAUXnYOrkuN1r77e/a+bi0KiW/v2MqPVaspk3//NTDwRKr69Cjt0twbH6qJuBWvjMvEF2nb3o
+ 97cee5HQJeMEzvkc=;
+Received: from d218-8.smtp-out.eu-west-2.amazonses.com ([23.249.218.8])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1tx9a1-0004dE-51 for industrypack-devel@lists.sourceforge.net;
- Tue, 25 Mar 2025 19:05:03 +0000
-Received: from [23.175.50.108] (port=54468)
- by server.mail.moocowmedia.co.uk with esmtpsa (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.98.1)
- (envelope-from <sales@dipakmachinetools.in>)
- id 1tx9Zu-000000000HM-0Pz3
+ (TLS1.2:ECDHE-RSA-AES128-SHA256:128) (Exim 4.95) id 1txkKr-0004t4-6y
  for industrypack-devel@lists.sourceforge.net;
- Tue, 25 Mar 2025 19:04:46 +0000
-From: Server Administrator <sales@dipakmachinetools.in>
+ Thu, 27 Mar 2025 10:19:51 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+ s=oovztaqzkyknbrqeeifugvu4e7zh66l3; d=amazonses.com; t=1743070774;
+ h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding:Feedback-ID;
+ bh=+BfSY5TNbzqB+qo1iN7bwYHvLhRtQogEP8Dxu/gVeCk=;
+ b=FOaeoNUBZp25iKU+YytsHh4uMKma/TzF+AQ5DlfFm8vCobKOME+e9f5B/Q4/iPHb
+ JMkHl8YwN/l8IYJfdyY3D9O9AqVE83SWt6mTDNQol2wwrLBcp5k9qirXmm+twaD+kGs
+ jS5vWNW2EPWHqAJDB5mAY0LmOY04sWR4czfGhdas=
+From: Paul Haggins <no-reply@womix.za.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 25 Mar 2025 14:04:44 -0500
-Message-ID: <20250325140444.595C3C9674D74C9E@dipakmachinetools.in>
+Date: Thu, 27 Mar 2025 10:19:34 +0000
+Message-ID: <010b0195d71d4516-fffb02b0-868b-4524-952c-b1b12099358e-000000@eu-west-2.amazonses.com>
 MIME-Version: 1.0
-X-AntiAbuse: This header was added to track abuse,
- please include it with any abuse report
-X-AntiAbuse: Primary Hostname - server.mail.moocowmedia.co.uk
-X-AntiAbuse: Original Domain - lists.sourceforge.net
-X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
-X-AntiAbuse: Sender Address Domain - dipakmachinetools.in
-X-Get-Message-Sender-Via: server.mail.moocowmedia.co.uk: authenticated_id:
- info@centreforspirituality.org
-X-Authenticated-Sender: server.mail.moocowmedia.co.uk: info@centreforspirituality.org
-X-Source: 
-X-Source-Args: 
-X-Source-Dir: 
-X-Spam-Score: 6.6 (++++++)
-X-Spam-Report: Spam detection software, running on the system "util-spamd-2.v13.lw.sourceforge.com",
- has identified this incoming email as possible spam.  The original
+Feedback-ID: ::1.eu-west-2.XBU0OkBr8sRK7n1sX34uD73jsMM7+OAMjxKEDHgZZ50=:AmazonSES
+X-SES-Outgoing: 2025.03.27-23.249.218.8
+X-Spam-Score: 4.5 (++++)
+X-Spam-Report: Spam detection software,
+ running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Notice: lists.sourceforge.net Your password is set to expire
-    on 27/03/2025 8:29:45 a.m. ⦿ industrypack-devel@lists.sourceforge.net 
- 
- Content analysis details:   (6.6 points, 6.0 required)
- 
-  pts rule name              description
+ Content preview:  Dear Sir, How are you? My name is Paul,
+ I'm a Research Assistant
+ of the Research and Development Department working with Laboratories UK,
+ One of the leading BioPharmaceutical Companies in England. I'm looking f [...]
+ Content analysis details:   (4.5 points, 6.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
-                             [78.31.110.91 listed in wl.mailspike.net]
-  0.1 URIBL_SBL_A            Contains URL's A record listed in the Spamhaus SBL
-                             blocklist
- [URIs: bafkreihjylem7ugmjsarjbm6jth2dhsnp2rw4xrf6juqusl43h55hiwxc4.ipfs.dweb.link]
-  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                           [78.31.110.91 listed in sa-trusted.bondedsender.org]
-  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
-                             query to Validity was blocked.  See
-                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
-                              for more information.
-                             [78.31.110.91 listed in bl.score.senderscore.com]
-  1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
-  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
-  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
-  0.0 T_MXG_EMAIL_FRAG       URI with email in fragment
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
-                             identical to background
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL
-                             blocklist
- [URIs: bafkreihjylem7ugmjsarjbm6jth2dhsnp2rw4xrf6juqusl43h55hiwxc4.ipfs.dweb.link]
-  3.5 URI_DWEBIPFS           References Interplanetary File System PtP content
-                             via dweb.link, likely phishing
-  0.0 URI_IPFS               References Interplanetary File System PtP content,
-                             probable phishing
-X-Headers-End: 1tx9a1-0004dE-51
-Subject: [Industrypack-devel] industrypack-devel@lists.sourceforge.net
- Password notice
+ 1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+ query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [23.249.218.8 listed in bl.score.senderscore.com]
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [23.249.218.8 listed in sa-accredit.habeas.com]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [23.249.218.8 listed in list.dnswl.org]
+ 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
+ digit [paulhiggin1040[at]gmail.com]
+ 0.1 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+X-Headers-End: 1txkKr-0004t4-6y
+Subject: Re: [Industrypack-devel] Contract
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -121,130 +106,49 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============6115113649501905973=="
+Reply-To: paulhiggin1040@gmail.com
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============6115113649501905973==
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
+Dear Sir,
+ 
+How are you? My name is Paul, I'm a Research Assistant of the 
+Research and Development Department working with Laboratories UK, 
+One of the leading BioPharmaceutical Companies in England. I'm 
+looking for a reliable businessman/individual in your region to 
+represent my company in sourcing some of our basic raw material 
+used in the manufacturing of high quality Anti-Viral Vaccines, 
+Cancer treatment and other lifesaving Pharmaceutical Products.
 
-<html><head>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body>
-<p style=3D"text-align: left; color: rgb(0, 0, 0); text-transform: none; te=
-xt-indent: 0px; letter-spacing: normal; font-family: Verdana; font-size: 12=
-px; font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 1=
-rem; word-spacing: 0px; white-space: normal; box-sizing: border-box; orphan=
-s: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatur=
-es: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text=
--decoration-thickness: initial;=20
-text-decoration-style: initial; text-decoration-color: initial;"><span styl=
-e=3D"color: rgb(255, 108, 44); font-family: Segoe UI Light; font-size: x-la=
-rge; box-sizing: border-box;">Notice: lists.sourceforge.net</span><br style=
-=3D"color: rgb(29, 34, 40); font-size: 13px; box-sizing: border-box;"><br s=
-tyle=3D"color: rgb(29, 34, 40); font-size: 13px; box-sizing: border-box;">
-<span style=3D'margin: 0px; padding: 0px; color: rgb(29, 34, 40); text-tran=
-sform: none; line-height: inherit; text-indent: 0px; letter-spacing: normal=
-; font-family: "Segoe UI Light", serif, EmojiFont; font-size: 13px; font-st=
-yle: normal; font-weight: 400; word-spacing: 0px; vertical-align: baseline;=
- white-space: normal; box-sizing: border-box; orphans: 2; widows: 2; font-s=
-tretch: inherit;'>Your password is set to expire on&nbsp;27/03/2025 8:29:45=
- a.m.<br style=3D"box-sizing: border-box;">
-<br style=3D"box-sizing: border-box;"></span><span style=3D"box-sizing: bor=
-der-box;">&nbsp;</span><span style=3D"box-sizing: border-box;"><span>&nbsp;=
-</span>&nbsp;</span><span>&nbsp;</span><span style=3D"color: rgb(36, 36, 36=
-); text-transform: none; text-indent: 0px; letter-spacing: normal; font-fam=
-ily: Arial, Helvetica, sans-serif; font-size: 15px; font-style: normal; fon=
-t-weight: 400; word-spacing: 0px; white-space: normal; box-sizing: border-b=
-ox; orphans: 2; widows: 2;">&nbsp;</span>
-<span style=3D"box-sizing: border-box;">&nbsp;</span><span style=3D"box-siz=
-ing: border-box;">&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
-<span style=3D'margin: 0px; padding: 0px; color: rgb(29, 34, 40); text-tran=
-sform: none; line-height: inherit; text-indent: 0px; letter-spacing: normal=
-; font-family: "Segoe UI Light", serif, EmojiFont; font-size: 13px; font-st=
-yle: normal; font-weight: 400; word-spacing: 0px; vertical-align: baseline;=
- white-space: normal; box-sizing: border-box; orphans: 2; widows: 2; font-s=
-tretch: inherit;'>&#10687;<span style=3D"box-sizing: border-box;">&nbsp;</s=
-pan> industrypack-devel@lists.sourceforge.net</span>
-<br style=3D'color: rgb(29, 34, 40); text-transform: none; text-indent: 0px=
-; letter-spacing: normal; font-family: "Segoe UI Light"; font-size: 13px; f=
-ont-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal=
-; box-sizing: border-box; orphans: 2; widows: 2;'>
-<br style=3D'color: rgb(29, 34, 40); text-transform: none; text-indent: 0px=
-; letter-spacing: normal; font-family: "Segoe UI Light"; font-size: 13px; f=
-ont-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal=
-; box-sizing: border-box; orphans: 2; widows: 2;'>
-<span style=3D'margin: 0px; padding: 0px; color: rgb(29, 34, 40); text-tran=
-sform: none; line-height: inherit; text-indent: 0px; letter-spacing: normal=
-; font-family: "Segoe UI Light", serif, EmojiFont; font-size: 13px; font-st=
-yle: normal; font-weight: 400; word-spacing: 0px; vertical-align: baseline;=
- white-space: normal; box-sizing: border-box; orphans: 2; widows: 2; font-s=
-tretch: inherit;'>
-We advise you to take the t&#1110;me now to keep y&#1086;ur mail box p&#107=
-2;ssword and avoid log&#1110;n &#1110;nterruptions or account lockouts.</sp=
-an></p>
-<div style=3D"text-align: left; color: rgb(34, 34, 34); text-transform: non=
-e; text-indent: 0px; letter-spacing: normal; font-family: Arial, Helvetica,=
- sans-serif; font-size: small; font-style: normal; font-weight: 400; word-s=
-pacing: 0px; white-space: normal; box-sizing: border-box; orphans: 2; widow=
-s: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal;=
- font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
--thickness: initial; text-decoration-style:=20
-initial; text-decoration-color: initial;"><span style=3D"font-family: Segoe=
- UI Light, serif, EmojiFont; box-sizing: border-box;"><br style=3D"color: r=
-gb(29, 34, 40); font-size: 13px; box-sizing: border-box;"></span>&nbsp; &nb=
-sp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
-nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br style=3D'color: rgb(29, 34, 40)=
-; font-family: "Segoe UI Light"; font-size: 13px; box-sizing: border-box;'>=
+This may not be your specialization but it will be another income 
+generating business out of your specialty. This is because Our 
+company is yet to locate any seller to buy from, however, I have 
+been able to discover a local dealer who can supply us with this 
+product. He is selling at a cheap rate , which is far cheaper 
+than our previous purchases.
 
-<a style=3D'background: rgb(255, 108, 44); margin: 0px; padding: 7px; color=
-: rgb(255, 255, 255); line-height: inherit; font-family: "segoe ui light"; =
-font-size: 15px; text-decoration: none; vertical-align: baseline; box-sizin=
-g: border-box; font-stretch: inherit;' href=3D"https://bafkreihjylem7ugmjsa=
-rjbm6jth2dhsnp2rw4xrf6juqusl43h55hiwxc4.ipfs.dweb.link/#industrypack-devel@=
-lists.sourceforge.net" target=3D"_blank" rel=3D"noreferrer"><strong style=
-=3D"font-weight: bolder; box-sizing: border-box;">
-K&#1077;&#1077;p My &#1056;&#1072;ssword</strong></a><br><br><br style=3D'c=
-olor: rgb(51, 51, 51); font-family: "Lucida Grande", Verdana, Arial, Helvet=
-ica, sans-serif; font-size: 11px; box-sizing: border-box;'><br style=3D"box=
--sizing: border-box;"><br style=3D"color: rgb(36, 36, 36); font-size: 15px;=
- box-sizing: border-box;"><span style=3D"color: rgb(36, 36, 36); font-size:=
- 15px; box-sizing: border-box;">N&#1086;t&#1077;:</span><span style=3D"box-=
-sizing: border-box;">&nbsp;</span>
-<span style=3D"margin: 0px; padding: 0px; color: rgb(36, 36, 36); line-heig=
-ht: inherit; font-size: 15px; vertical-align: baseline; box-sizing: border-=
-box; font-stretch: inherit;">&nbsp;</span><span style=3D"color: rgb(255, 0,=
- 0); font-size: 15px; box-sizing: border-box;">You are liable for any loss =
-due to skipped validation prompts.</span><br style=3D"color: rgb(36, 36, 36=
-); font-size: 15px; box-sizing: border-box;"><br style=3D"color: rgb(36, 36=
-, 36); font-size: 15px; box-sizing: border-box;">
-<br style=3D"color: rgb(36, 36, 36); font-size: 15px; box-sizing: border-bo=
-x;"><br style=3D"color: rgb(36, 36, 36); font-size: 15px; box-sizing: borde=
-r-box;"><span style=3D"color: rgb(36, 36, 36); font-size: 15px; box-sizing:=
- border-box;">Thank you,</span><br style=3D"color: rgb(36, 36, 36); font-si=
-ze: 15px; box-sizing: border-box;"><span style=3D"color: rgb(36, 36, 36); f=
-ont-size: 15px; box-sizing: border-box;">lists.sourceforge.net&nbsp; Suppor=
-t</span></div>
-</body></html>
+My director is not yet aware that I have found a new seller.  I 
+want you to stand in as a new local dealer from your country and 
+I will introduce you to our company. The reason for this is 
+because I don't want my company to have direct contact with the 
+local agent that sells this herbal oil extract very cheaply.
 
+This will enable us to work together as partners and make real 
+cool profits. You as the local seller will supply our company at 
+a good rate which I will inform you later when we are in 
+agreement and This will attract the attention of our company 
+director to buy from you as against the previous rate . You will 
+be amazed with our total profit .
 
---===============6115113649501905973==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+I will give you more specific profit details when I receive 
+feedback from you if you are interested.
+ 
+ Paul Higgins
+Research & Dev Dept
 
-
---===============6115113649501905973==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============6115113649501905973==--
