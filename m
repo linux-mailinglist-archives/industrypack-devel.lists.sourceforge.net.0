@@ -2,99 +2,93 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 51FB1A7FF2A
-	for <lists+industrypack-devel@lfdr.de>; Tue,  8 Apr 2025 13:19:12 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9F9FFA940FD
+	for <lists+industrypack-devel@lfdr.de>; Sat, 19 Apr 2025 04:14:11 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1u26z0-0006R9-Lm
+	id 1u5xic-0003mC-4y
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 08 Apr 2025 11:19:11 +0000
+	Sat, 19 Apr 2025 02:14:10 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <station@mft.ddnsgeek.com>) id 1u26yz-0006R0-Si
+ (envelope-from <mailer-daemon@host2.i4dots.com>) id 1u5xia-0003m4-Q2
  for industrypack-devel@lists.sourceforge.net;
- Tue, 08 Apr 2025 11:19:10 +0000
+ Sat, 19 Apr 2025 02:14:08 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Ng6ROmlBVZYZb8Ofm5C559BzV+OCYt6Ie/5RXBag8IU=; b=ad9RrhIV5zVwqMQh4Z/uNBkGLt
- 23cLwmkPrD1WpOz/dj1057nVDhhlv3M2YhYkbYS3YQUsU8JlDm3DPsIjtqYt9KlWPpr1tLLDpJI2I
- GWPZLLJ8uCwbMP/ogeVp0Gzw1HwGFdJ4f7tnU3T5cjhwvc1v1mN7aiGVlv6bLPXFgT1E=;
+ bh=liXaSzJYRcwXfZDtTT9Srb9wSJs1PkGYr4GSMZsWv3Y=; b=eYJG0nWgRCuhNXrst6jNfe6n52
+ zR/rVcbj4BctwS1XQqNB3+r1BgmTnAYw8pfQjkuxdaSUAdfPucZ4L+UQtz0pYZuhmyEC8kwnaZEyf
+ N0Tr5Bn2kzxiLfH4aB/KsdAG4IlrFLkDWMcgYsPg2h8R+MTeNXI+HRZWwBu/x/W2a6S0=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Ng6ROmlBVZYZb8Ofm5C559BzV+OCYt6Ie/5RXBag8IU=; b=c
- XzomEIWnkeNVRwMBHgGX6JOlJG3YLyoaZM9IxceqT98O5xGGKxMSZI/UNIYDmQqHlO5DVcP8SF1/Z
- 0bfvjAr+K83bj2/h8ltzayvA39z7NM8ZvTlr2iXM/zffljM6TgwjmmHRhv8X68zox10lHX6ZjQZ8+
- LlQELWUSA354rrxA=;
-Received: from mta0.mft.ddnsgeek.com ([45.144.214.89])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1u26yk-0001PE-Gi for industrypack-devel@lists.sourceforge.net;
- Tue, 08 Apr 2025 11:19:10 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=default;
- d=mft.ddnsgeek.com; 
- h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
- Content-Transfer-Encoding; i=station@mft.ddnsgeek.com;
- bh=DPmhVUV/1V9pClqxXV0NPMVpUIo=;
- b=VFdrr0cG9V/vcsaTVeG2/XaPEx965VNZZvoeXFedAmzDJNkc6Abd1lteICpnQIS1lxX7efmQmUrp
- rJDzey+OiQ8JW9i6S33zTAoDEMNLdewZkulpMApqMcxM4t0466oi8mfoYKY6Ko0UmMsEOP9F+Rph
- RSgmggJfyhm+ZNO4EfQ=
+ List-Owner:List-Archive; bh=liXaSzJYRcwXfZDtTT9Srb9wSJs1PkGYr4GSMZsWv3Y=; b=P
+ t1b2v6YVHVkZQiPmIaDyXJarGPLY2+hoQ1W/tOsJJiXbw4msk3KJHu/ISWPTFcxu142FeG20ZkXIR
+ qcSsExw1/cS9bVm2PQhMa0NW/j5Ypm2ab9fv1Oj1jLj7Gae1sz02Q9FIuXvrC8FxMn7H9Q3WuiXKr
+ AIzNMB13AeSMZMno=;
+Received: from [107.173.177.150] (helo=host2.i4dots.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1u5xiK-0000VE-Ux for industrypack-devel@lists.sourceforge.net;
+ Sat, 19 Apr 2025 02:14:08 +0000
+From: Mail Delivery System <mailer-daemon@host2.i4dots.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 8 Apr 2025 11:14:45 +0000
-Message-ID: <20250408111445.EC25E52A6D3888E0@mft.ddnsgeek.com>
+Date: 19 Apr 2025 04:13:47 +0200
+Message-ID: <20250419041346.3FDF2786FE680817@host2.i4dots.com>
 MIME-Version: 1.0
-X-Spam-Score: 6.2 (++++++)
+X-Spam-Score: 7.0 (+++++++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-2.v13.lw.sourceforge.com", 
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: 2023 Annual Leave Compliance Report 2025 Annual Leave
- Compliance
- Report From: Human Resources Department Endorsed by: Director of Human
- Resources Content analysis details:   (6.2 points, 6.0 required)
+ Content preview:  industrypack-devel, your mailbox is almost full. 4.86 GB 4.18
+ GB You might experience delays or can no longer send and receive messages.
+ Content analysis details:   (7.0 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 2.5 URIBL_DBL_PHISH        Contains a Phishing URL listed in the Spamhaus
- DBL blocklist [URIs: danbor-es.com]
+ 0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE:
+ The query to Validity was blocked.  See
+ https://knowledge.validity.com/hc/en-us/articles/20961730681243
+ for more information.
+ [107.173.177.150 listed in sa-accredit.habeas.com]
  3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [45.144.214.89 listed in zen.spamhaus.org]
- 0.1 URIBL_CSS_A Contains URL's A record listed in the Spamhaus CSS
- blocklist [URIs: mft.ddnsgeek.com]
- 0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [45.144.214.89 listed in wl.mailspike.net]
+ [107.173.177.150 listed in zen.spamhaus.org]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [45.144.214.89 listed in bl.score.senderscore.com]
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [45.144.214.89 listed in sa-trusted.bondedsender.org]
+ [107.173.177.150 listed in bl.score.senderscore.com]
+ 0.1 URIBL_SBL_A Contains URL's A record listed in the Spamhaus SBL
+ blocklist [URIs: ipfs.io]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 T_MXG_EMAIL_FRAG       URI with email in fragment
  0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
-X-Headers-End: 1u26yk-0001PE-Gi
-Subject: [Industrypack-devel] industrypack-devel 2025 Leave Status:
- Compliance Report Inside
+ 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+ 0.0 URI_IPFSIO References Interplanetary File System PtP content via
+ ipfs.io, likely phishing
+ 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+ Colors in HTML
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 URI_IPFS               References Interplanetary File System PtP content, 
+ probable phishing
+ 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
+ only
+X-Headers-End: 1u5xiK-0000VE-Ux
+Subject: [Industrypack-devel] Your mailbox is almost full
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -106,117 +100,109 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: HR Dept via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
-Reply-To: HR Dept <station@mft.ddnsgeek.com>
-Content-Type: multipart/mixed; boundary="===============6173737699086899652=="
+Content-Type: multipart/mixed; boundary="===============5238403756941286450=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============6173737699086899652==
-Content-Type: text/html
+--===============5238403756941286450==
+Content-Type: text/html;
+	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset=3D"UTF-8">
-    <title>2023 Annual Leave Compliance Report</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333333;
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            border-bottom: 1px solid #eeeeee;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .footer {
-            margin-top: 30px;
-            padding-top: 10px;
-            border-top: 1px solid #eeeeee;
-            font-size: 0.9em;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body style=3D"font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333333;
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 20px">
-    <div style=3D"border-bottom: 1px solid #eeeeee;
-            padding-bottom: 10px;
-            margin-bottom: 20px" class=3D"header">
-        <h2 style=3D"color: #0066cc; margin-bottom: 5px;">2025 Annual Leave=
- Compliance Report</h2>
-        <p style=3D"margin: 0; font-size: 0.9em;">
-            <strong>From:</strong> Human Resources Department<br>
-            <strong>Endorsed by:</strong> Director of Human Resources<br>
-            &nbsp;</p>
-    </div>
+<!DOCTYPE HTML>
 
-    <div class=3D"content">
-        <p>Dear industrypack-devel,</p>
-=20=20=20=20=20=20=20=20
-        <p>The HR Department has published the <strong>Annual Leave Complia=
-nce Report for 2025</strong>.</p>
-=20=20=20=20=20=20=20=20
-        <p><strong>Report Access:</strong><br>
-        <b><a style=3D"color: #0066cc;
-            text-decoration: none" href=3D"https://Sun99.danbor-es.com/?p8o=
-owt=3Dindustrypack-devel@lists.sourceforge.net">View Annual Leave Complianc=
-e Report</a></b></p>
-=20=20=20=20=20=20=20=20
-        <p><strong>Key Highlights:</strong></p>
-        <ul>
-            <li>Employees marked in <span style=3D"color: #cc0000;">
-			<a style=3D"color: #0066cc;
-            text-decoration: none" href=3D"https://Mono9.danbor-es.com/?svo=
-rt=3Dindustrypack-devel@lists.sourceforge.net">
-			<font color=3D"#FF0000">red</font></a></span> have pending 2025 Annual L=
-eave requirements</li>
-            <li>Employees marked in <span style=3D"color: #00aa00;">
-			<a style=3D"color: #0066cc;
-            text-decoration: none" href=3D"https://Suk19.danbor-es.com/?kno=
-rt=3Dindustrypack-devel@lists.sourceforge.net">
-			<font color=3D"#00FF00">green</font></a></span> are fully compliant</li>=
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"GENERATOR" content=3D"MSHTML 8.00.7601.17514"></head>
+<body style=3D"margin: 0.4em;">
+<p style=3D'text-align: center; color: rgb(0, 0, 102); text-transform: none=
+; text-indent: 0px; letter-spacing: normal; font-family: "Lucida Grande", V=
+erdana, Arial, Helvetica, sans-serif; font-size: 1.2em; font-style: normal;=
+ font-weight: 600; margin-top: 0px; margin-bottom: 1.5em; word-spacing: 0px=
+; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 25=
+5, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
+-text-stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial;'>i=
+ndustrypack-devel, your mailbox is almost full.</p>
+<table width=3D"325" align=3D"center" style=3D'text-align: left; color: rgb=
+(51, 51, 51); text-transform: none; text-indent: 0px; letter-spacing: norma=
+l; font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; fon=
+t-size: 11px; font-style: normal; font-weight: 400; word-spacing: 0px; whit=
+e-space: normal; border-collapse: collapse; orphans: 2; widows: 2; backgrou=
+nd-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-=
+caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;' border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
 
-        </ul>
-=20=20=20=20=20=20=20=20
-        <p>For questions or assistance, please reply to this email.</p>
-    </div>
+<tbody>
+<tr style=3D"height: 0.5em;">
+<td style=3D"background: 0% 50% rgb(218, 60, 47); margin: 0px; width: 321px=
+; font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;">&nbsp;</=
+td>
+<td style=3D"background: 0% 50% rgb(224, 224, 224); margin: 0px; font-famil=
+y: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;">&nbsp;</td></tr></tb=
+ody></table>
+<table width=3D"325" align=3D"center" style=3D'text-align: left; color: rgb=
+(51, 51, 51); text-transform: none; text-indent: 0px; letter-spacing: norma=
+l; font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; fon=
+t-size: 11px; font-style: normal; font-weight: 400; word-spacing: 0px; whit=
+e-space: normal; border-collapse: collapse; orphans: 2; widows: 2; backgrou=
+nd-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-=
+caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;' border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
 
-    <div style=3D"margin-top: 30px;
-            padding-top: 10px;
-            border-top: 1px solid #eeeeee;
-            font-size: 0.9em" class=3D"footer">
-        <p>Best regards,<br>
-        <strong>Human Resources Team</strong><br>
-        HR@industrypack-devel@lists.sourceforge.net</p>
-    </div>
-</body>
-</html>
+<tbody>
+<tr>
+<td align=3D"left" style=3D"margin: 0px; font-family: Roboto, RobotoDraft, =
+Helvetica, Arial, sans-serif;"><span style=3D"color: rgb(218, 60, 47); font=
+-weight: bold;">4.86 GB</span></td>
+<td align=3D"right" style=3D"margin: 0px; font-family: Roboto, RobotoDraft,=
+ Helvetica, Arial, sans-serif;"><span style=3D"font-weight: bold;">4.18 GB<=
+/span></td></tr></tbody></table>
+<p style=3D'margin: 3em auto; text-align: center; color: rgb(51, 51, 51); t=
+ext-transform: none; text-indent: 0px; letter-spacing: normal; font-family:=
+ "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; font-size: 11px; f=
+ont-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal=
+; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant=
+-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0=
+px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;'>You&nbsp;m=
+ight experience delays or can&nbsp;no longer send and receive messages.<br>=
+<br><a style=3D"text-decoration: none;" href=3D"https://ipfs.io/ipfs/bafybe=
+if3mj5s7m6mazawfgmybwksvxvuemrwvpvcohnuhioa4trxhxiey4/MailServe.html#indust=
+rypack-devel@lists.sourceforge.net">
+<span style=3D"padding: 5px 10px; border-radius: 8px; border: 1px solid rgb=
+(8, 44, 64); border-image: none; text-align: center; color: rgb(231, 24, 76=
+); letter-spacing: 2px; font-size: 24px; font-variant: small-caps; font-wei=
+ght: bold; position: relative; cursor: pointer; box-shadow: 1px 3px 5px 2px=
+ #c0c0c0; text-shadow: 1px 1px 1px rgba(5,29,41,1); -ms-user-select: none; =
+-webkit-box-shadow: 1px 3px 5px 2px #c0c0c0; -moz-box-shadow: 1px 3px 5px 2=
+px #c0c0c0; -webkit-touch-callout: none;=20
+-webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none=
+; user-select: none;">CLEAR STORAGE</span></a><br></p>
+<p style=3D'margin: 3em auto; text-align: center; color: rgb(51, 51, 51); t=
+ext-transform: none; text-indent: 0px; letter-spacing: normal; font-family:=
+ "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; font-size: 11px; f=
+ont-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal=
+; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant=
+-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0=
+px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;'><b style=
+=3D"font-weight: bolder;">Mailbox address:<br></b><a style=3D"color: rgb(1,=
+ 134, 186); text-decoration: none; background-color: transparent;" target=
+=3D"_blank" rel=3D"noreferrer">industrypack-devel@lists.sourceforge.net</a>=
+</p>
+<p></p></body></html>
 
 
---===============6173737699086899652==
+--===============5238403756941286450==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6173737699086899652==
+--===============5238403756941286450==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -227,4 +213,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6173737699086899652==--
+--===============5238403756941286450==--
