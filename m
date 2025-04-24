@@ -2,114 +2,87 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E1BD8A9B127
-	for <lists+industrypack-devel@lfdr.de>; Thu, 24 Apr 2025 16:38:23 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3F61FA9B286
+	for <lists+industrypack-devel@lfdr.de>; Thu, 24 Apr 2025 17:36:52 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1u7xiY-0005DV-Lq
+	id 1u7yd8-000749-Hv
 	for lists+industrypack-devel@lfdr.de;
-	Thu, 24 Apr 2025 14:38:22 +0000
+	Thu, 24 Apr 2025 15:36:51 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
- <bounce_onhhgdg_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
- id 1u7xiT-0005DL-AD for industrypack-devel@lists.sourceforge.net;
- Thu, 24 Apr 2025 14:38:17 +0000
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <pago236@sho27.digitalefectivale.live>)
+ id 1u7yd7-000743-AQ for industrypack-devel@lists.sourceforge.net;
+ Thu, 24 Apr 2025 15:36:49 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:Reply-To:From:To:Subject:
- Date:Message-ID:List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=bDX6Q8TuJEYA2eYLoeUUfbNe0JlPaGf/RibruQ0NxkU=; b=GBxZ4Ru8lZDAdHwtaJpqEl2Al3
- oIo6FPiT3C9YJe6mieu0c6my2bsfT0HQRYwBERunNhmkMCCuoU2lGKbMnuEkxd3S63tKmTG7gvxfF
- SWNpJN19K5CJlVZuXx1UHbhsdFi/n8lGuJ7zRR++jVNss6rxyWGEfVf6xeGGbTbh8YD4=;
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
- ;
- h=Content-Type:MIME-Version:Reply-To:From:To:Subject:Date:Message-ID:
- List-Unsubscribe:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Message-Id:Subject:To:From:Date:MIME-Version:
+ Content-Type:Content-Transfer-Encoding:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=PNJQ6AD9T8ZmSA65E3pEwSGkEGrNlCW7iON7v36CB6w=; b=V4kxgoOCNkatGuQVqn1RBTgGKy
+ mth1QctPxzKQ/zT8Mg0Dp0TyHneMeHP+6A5jVkDxRq+EqgRnSRdgjnrmCCbl+ysXiShJjXIB+5LP8
+ iPfiqcgK1VMfDw1bQF6P9KBgCbxbB2C/WA8Tm7Z+U4GU8v49oajTDUoTmYdVMGNaC2CQ=;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
+ ; h=Message-Id:Subject:To:From:Date:MIME-Version:Content-Type:
+ Content-Transfer-Encoding:Sender:Reply-To:Cc:Content-ID:Content-Description:
+ Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
  List-Post:List-Owner:List-Archive;
- bh=bDX6Q8TuJEYA2eYLoeUUfbNe0JlPaGf/RibruQ0NxkU=; b=BadsUnzM/fVJERFuE4yQUlL+p8
- UjnqmWIB9rRDax6vdh3YIaLzuLFqP2wXXIbfSLW7QYZ7WpxBPriVbCeH/6JJ+a7Q874C51KPZnMkp
- nsEaBt2fdO4M3KG9248AlePbYqSTiqHFiYi/D4C9jJYlVeBd/ROpTzfsvuqlJ+bumx4A=;
-Received: from em.sbaloanadvice.com ([216.24.225.131])
+ bh=PNJQ6AD9T8ZmSA65E3pEwSGkEGrNlCW7iON7v36CB6w=; b=hK6Fc5W1Od4uBvKP6yB1aTY43e
+ OZIZbgjEfhMqMX4omOykRwE9dZfXLacYWCd6k+O6OKlK7l58j8Ho+vIQKklX4bOQf8wljHDs1TAiS
+ OuFn3BO5eesv7RcrExTu1bsaLQ7c5LRkaqMDFj7riVRoq4IMhWvkslTSJ/zJ0JMy5Das=;
+Received: from sho27.digitalefectivale.live ([141.227.174.121])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1u7xiD-0003ba-5P for industrypack-devel@lists.sourceforge.net;
- Thu, 24 Apr 2025 14:38:17 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
- Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1745591881;
- i=info@sbaloanadvice.com;
- bh=bDX6Q8TuJEYA2eYLoeUUfbNe0JlPaGf/RibruQ0NxkU=;
- b=ZhwI1AqSkbdyk/t/JTPykTAwMWTjVKDrlOPEsgRZ/Fqdk+lFLb1zjmCe801g83KiqHaLGvGtIdck
- iQw6Blc9g5AYVfRMc98T34YBqFYBAgS63YuQM69DHZ6JB2foooCjcvGXSDJolOz60a7VnCUUb/zR
- C6/Rh8w5t/GalQL7qD8=
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=em; d=sbaloanadvice.com;
- h=List-Unsubscribe-Post:List-Unsubscribe:Message-ID:Date:Subject:To:From:
- Reply-To:MIME-Version:Content-Type:Date:Subject:From:To:CC; x=1745591881;
- bh=bDX6Q8TuJEYA2eYLoeUUfbNe0JlPaGf/RibruQ0NxkU=;
- b=V0kACrSUXtzggLmMyCwNwRCKXxDmbM+83SNzHJReNppMB4STT07HK+4jREl0+jdvfThrkMyu+g3l
- r4ofS4Advo38lyiVV9mk0CC3s1cbFUnWNZbFIwwNIJtRZe0hDDalmlE4bmj1VdT/Kg6TBQInY/ny
- TowOxoTPc2Xdd/gDXCw=
-Received: by em.sbaloanadvice.com id h196c639cooj for
- <industrypack-devel@lists.sourceforge.net>;
- Thu, 24 Apr 2025 10:07:23 -0400 (envelope-from
- <bounce_onhhgdg_n-industrypack+2Ddevel=lists.sourceforge.net@em.sbaloanadvice.com>)
-List-Unsubscribe-Post: List-Unsubscribe=One-Click
-X-Campaign-Shard: 2
-Bounces-To: bounce_cloums_cezqcnf_n@em.sbaloanadvice.com
-Message-ID: <1745503623492.205351200.19433945.421896101@em.sbaloanadvice.com>
-X-Campaign: 205351200/19433945/421896101
-Date: Thu, 24 Apr 2025 10:07:23 -0400
-To: <industrypack-devel@lists.sourceforge.net>
-From: "SBA Loan Advice" <info@sbaloanadvice.com>
+ id 1u7ycr-0006oW-Tm for industrypack-devel@lists.sourceforge.net;
+ Thu, 24 Apr 2025 15:36:49 +0000
+Received: by sho27.digitalefectivale.live (Postfix, from userid 1000)
+ id E2DDB26005; Thu, 24 Apr 2025 09:59:49 -0500 (EST)
+Content-Transfer-Encoding: binary
+Content-Type: multipart/mixed; boundary="_----------=_17455067891053619623"
 MIME-Version: 1.0
-X-Spam-Score: 0.3 (/)
+X-Mailer: MIME::Lite 3.031 (F2.85; T2.18; A2.21; B3.15; Q3.13)
+Date: Thu, 24 Apr 2025 09:59:49 -0500
+From: pago236@sho27.digitalefectivale.live
+To: industrypack-devel@lists.sourceforge.net
+Message-Id: <20250424145949.E2DDB26005@sho27.digitalefectivale.live>
+X-Spam-Score: 5.6 (+++++)
 X-Spam-Report: Spam detection software,
- running on the system "util-spamd-2.v13.lw.sourceforge.com", 
+ running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Growing Your Business with SBA-backed Funding - Let's Explore
- Your Opportunities! 7a Loan Up to $5,000,000Short- and long-term working
- capitalRefinancing current business debtPurchasing/installation of machinery, 
- equipment, furniture, fixtures, supplies, or materialsPurchase of rea [...]
- Content analysis details:   (0.3 points, 6.0 required)
+ Content preview:  pago Hola industrypack-devel,
+ Adjunto encontraras el comprobante de pago. 
+ Content analysis details:   (5.6 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.24.225.131 listed in list.dnswl.org]
+ 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+ [141.227.174.121 listed in zen.spamhaus.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [216.24.225.131 listed in sa-trusted.bondedsender.org]
+ [141.227.174.121 listed in sa-trusted.bondedsender.org]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [216.24.225.131 listed in bl.score.senderscore.com]
- 0.5 SUBJ_ALL_CAPS          Subject is all capitals
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ [141.227.174.121 listed in bl.score.senderscore.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 HTML_IMAGE_RATIO_04    BODY: HTML has a low ratio of text to image
- area 0.0 HTML_MESSAGE           BODY: HTML included in message
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML 0.0 LOTS_OF_MONEY          Huge... sums of money
-X-Headers-End: 1u7xiD-0003ba-5P
-Subject: [Industrypack-devel] ACTIVATE YOUR SBA 7A TODAY!
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.0 PYZOR_CHECK            Listed in Pyzor
+ (https://pyzor.readthedocs.io/en/latest/)
+ 0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+X-Headers-End: 1u7ycr-0006oW-Tm
+Subject: [Industrypack-devel] Comprobante Digital de Efectivale para
+ industrypack-devel@lists.sourceforge.net
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -121,186 +94,404 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: SBA Loan Advice <info@sbaloanadvice.com>
-Content-Type: multipart/mixed; boundary="===============5393859633990681677=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-<!-- X-Campaign: 205351200/19433945/421896101 -->
---===============5393859633990681677==
-Content-Type: multipart/alternative; boundary="----=_Part_1623502922.1745503620428"
+This is a multi-part message in MIME format.
 
-<!-- X-Campaign: 205351200/19433945/421896101 -->
-------=_Part_1623502922.1745503620428
-Content-Type: text/plain;charset=UTF-8
+--_----------=_17455067891053619623
+Content-Disposition: inline
+Content-Transfer-Encoding: base64
+Content-Type: text/html
 
+PCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMDEgVHJhbnNpdGlvbmFs
+Ly9FTiI+DQoKPGh0bWw+DQoKPGhlYWQ+DQoKICA8bWV0YSBjb250ZW50PSJ0ZXh0L2h0bWw7IGNo
+YXJzZXQ9SVNPLTg4NTktMSIgaHR0cC1lcXVpdj0iY29udGVudC10eXBlIj4NCgogIDx0aXRsZT5w
+YWdvPC90aXRsZT4NCgo8L2hlYWQ+DQoKPGJvZHk+DQoKPHNwYW4gc3R5bGU9ImNvbG9yOiByZ2Io
+NDQsIDU0LCA1OCk7IGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7IGZvbnQtc2l6ZTogMTNweDsgZm9u
+dC1zdHlsZTogbm9ybWFsOyBmb250LXdlaWdodDogNDAwOyBsZXR0ZXItc3BhY2luZzogbm9ybWFs
+OyBvcnBoYW5zOiAyOyB0ZXh0LWFsaWduOiBsZWZ0OyB0ZXh0LWluZGVudDogMHB4OyB0ZXh0LXRy
+YW5zZm9ybTogbm9uZTsgd2lkb3dzOiAyOyB3b3JkLXNwYWNpbmc6IDBweDsgd2hpdGUtc3BhY2U6
+IG5vcm1hbDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyBkaXNwbGF5OiBp
+bmxpbmUgISBpbXBvcnRhbnQ7IGZsb2F0OiBub25lOyI+SG9sYSBpbmR1c3RyeXBhY2stZGV2ZWws
+PC9zcGFuPjxiciBzdHlsZT0iY29sb3I6IHJnYig0NCwgNTQsIDU4KTsgZm9udC1mYW1pbHk6IG1v
+bm9zcGFjZTsgZm9udC1zaXplOiAxM3B4OyBmb250LXN0eWxlOiBub3JtYWw7IGZvbnQtd2VpZ2h0
+OiA0MDA7IGxldHRlci1zcGFjaW5nOiBub3JtYWw7IG9ycGhhbnM6IDI7IHRleHQtYWxpZ246IGxl
+ZnQ7IHRleHQtaW5kZW50OiAwcHg7IHRleHQtdHJhbnNmb3JtOiBub25lOyB3aWRvd3M6IDI7IHdv
+cmQtc3BhY2luZzogMHB4OyB3aGl0ZS1zcGFjZTogbm9ybWFsOyBiYWNrZ3JvdW5kLWNvbG9yOiBy
+Z2IoMjU1LCAyNTUsIDI1NSk7Ij4NCgo8YnIgc3R5bGU9ImNvbG9yOiByZ2IoNDQsIDU0LCA1OCk7
+IGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7IGZvbnQtc2l6ZTogMTNweDsgZm9udC1zdHlsZTogbm9y
+bWFsOyBmb250LXdlaWdodDogNDAwOyBsZXR0ZXItc3BhY2luZzogbm9ybWFsOyBvcnBoYW5zOiAy
+OyB0ZXh0LWFsaWduOiBsZWZ0OyB0ZXh0LWluZGVudDogMHB4OyB0ZXh0LXRyYW5zZm9ybTogbm9u
+ZTsgd2lkb3dzOiAyOyB3b3JkLXNwYWNpbmc6IDBweDsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgYmFj
+a2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyI+DQoKPHNwYW4gc3R5bGU9ImNvbG9y
+OiByZ2IoNDQsIDU0LCA1OCk7IGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7IGZvbnQtc2l6ZTogMTNw
+eDsgZm9udC1zdHlsZTogbm9ybWFsOyBmb250LXdlaWdodDogNDAwOyBsZXR0ZXItc3BhY2luZzog
+bm9ybWFsOyBvcnBoYW5zOiAyOyB0ZXh0LWFsaWduOiBsZWZ0OyB0ZXh0LWluZGVudDogMHB4OyB0
+ZXh0LXRyYW5zZm9ybTogbm9uZTsgd2lkb3dzOiAyOyB3b3JkLXNwYWNpbmc6IDBweDsgd2hpdGUt
+c3BhY2U6IG5vcm1hbDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyBkaXNw
+bGF5OiBpbmxpbmUgISBpbXBvcnRhbnQ7IGZsb2F0OiBub25lOyI+QWRqdW50byBlbmNvbnRyYXJh
+cyBlbCBjb21wcm9iYW50ZSBkZSBwYWdvLjwvc3Bhbj48YnIgc3R5bGU9ImNvbG9yOiByZ2IoNDQs
+IDU0LCA1OCk7IGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7IGZvbnQtc2l6ZTogMTNweDsgZm9udC1z
+dHlsZTogbm9ybWFsOyBmb250LXdlaWdodDogNDAwOyBsZXR0ZXItc3BhY2luZzogbm9ybWFsOyBv
+cnBoYW5zOiAyOyB0ZXh0LWFsaWduOiBsZWZ0OyB0ZXh0LWluZGVudDogMHB4OyB0ZXh0LXRyYW5z
+Zm9ybTogbm9uZTsgd2lkb3dzOiAyOyB3b3JkLXNwYWNpbmc6IDBweDsgd2hpdGUtc3BhY2U6IG5v
+cm1hbDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyI+DQoKPGJyIHN0eWxl
+PSJjb2xvcjogcmdiKDQ0LCA1NCwgNTgpOyBmb250LWZhbWlseTogbW9ub3NwYWNlOyBmb250LXNp
+emU6IDEzcHg7IGZvbnQtc3R5bGU6IG5vcm1hbDsgZm9udC13ZWlnaHQ6IDQwMDsgbGV0dGVyLXNw
+YWNpbmc6IG5vcm1hbDsgb3JwaGFuczogMjsgdGV4dC1hbGlnbjogbGVmdDsgdGV4dC1pbmRlbnQ6
+IDBweDsgdGV4dC10cmFuc2Zvcm06IG5vbmU7IHdpZG93czogMjsgd29yZC1zcGFjaW5nOiAwcHg7
+IHdoaXRlLXNwYWNlOiBub3JtYWw7IGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1
+KTsiPg0KCjxzcGFuIHN0eWxlPSJjb2xvcjogcmdiKDQ0LCA1NCwgNTgpOyBmb250LWZhbWlseTog
+bW9ub3NwYWNlOyBmb250LXNpemU6IDEzcHg7IGZvbnQtc3R5bGU6IG5vcm1hbDsgZm9udC13ZWln
+aHQ6IDQwMDsgbGV0dGVyLXNwYWNpbmc6IG5vcm1hbDsgb3JwaGFuczogMjsgdGV4dC1hbGlnbjog
+bGVmdDsgdGV4dC1pbmRlbnQ6IDBweDsgdGV4dC10cmFuc2Zvcm06IG5vbmU7IHdpZG93czogMjsg
+d29yZC1zcGFjaW5nOiAwcHg7IHdoaXRlLXNwYWNlOiBub3JtYWw7IGJhY2tncm91bmQtY29sb3I6
+IHJnYigyNTUsIDI1NSwgMjU1KTsgZGlzcGxheTogaW5saW5lICEgaW1wb3J0YW50OyBmbG9hdDog
+bm9uZTsiPkZhdm9yIGRlIGNvbmZpcm1hciBkZSByZWNpYmlkby48L3NwYW4+PGJyIHN0eWxlPSJj
+b2xvcjogcmdiKDQ0LCA1NCwgNTgpOyBmb250LWZhbWlseTogbW9ub3NwYWNlOyBmb250LXNpemU6
+IDEzcHg7IGZvbnQtc3R5bGU6IG5vcm1hbDsgZm9udC13ZWlnaHQ6IDQwMDsgbGV0dGVyLXNwYWNp
+bmc6IG5vcm1hbDsgb3JwaGFuczogMjsgdGV4dC1hbGlnbjogbGVmdDsgdGV4dC1pbmRlbnQ6IDBw
+eDsgdGV4dC10cmFuc2Zvcm06IG5vbmU7IHdpZG93czogMjsgd29yZC1zcGFjaW5nOiAwcHg7IHdo
+aXRlLXNwYWNlOiBub3JtYWw7IGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTsi
+Pg0KCjxiciBzdHlsZT0iY29sb3I6IHJnYig0NCwgNTQsIDU4KTsgZm9udC1mYW1pbHk6IG1vbm9z
+cGFjZTsgZm9udC1zaXplOiAxM3B4OyBmb250LXN0eWxlOiBub3JtYWw7IGZvbnQtd2VpZ2h0OiA0
+MDA7IGxldHRlci1zcGFjaW5nOiBub3JtYWw7IG9ycGhhbnM6IDI7IHRleHQtYWxpZ246IGxlZnQ7
+IHRleHQtaW5kZW50OiAwcHg7IHRleHQtdHJhbnNmb3JtOiBub25lOyB3aWRvd3M6IDI7IHdvcmQt
+c3BhY2luZzogMHB4OyB3aGl0ZS1zcGFjZTogbm9ybWFsOyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2Io
+MjU1LCAyNTUsIDI1NSk7Ij4NCgo8YnIgc3R5bGU9ImNvbG9yOiByZ2IoNDQsIDU0LCA1OCk7IGZv
+bnQtZmFtaWx5OiBtb25vc3BhY2U7IGZvbnQtc2l6ZTogMTNweDsgZm9udC1zdHlsZTogbm9ybWFs
+OyBmb250LXdlaWdodDogNDAwOyBsZXR0ZXItc3BhY2luZzogbm9ybWFsOyBvcnBoYW5zOiAyOyB0
+ZXh0LWFsaWduOiBsZWZ0OyB0ZXh0LWluZGVudDogMHB4OyB0ZXh0LXRyYW5zZm9ybTogbm9uZTsg
+d2lkb3dzOiAyOyB3b3JkLXNwYWNpbmc6IDBweDsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgYmFja2dy
+b3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyI+DQoKPHNwYW4gc3R5bGU9ImNvbG9yOiBy
+Z2IoNDQsIDU0LCA1OCk7IGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7IGZvbnQtc2l6ZTogMTNweDsg
+Zm9udC1zdHlsZTogbm9ybWFsOyBmb250LXdlaWdodDogNDAwOyBsZXR0ZXItc3BhY2luZzogbm9y
+bWFsOyBvcnBoYW5zOiAyOyB0ZXh0LWFsaWduOiBsZWZ0OyB0ZXh0LWluZGVudDogMHB4OyB0ZXh0
+LXRyYW5zZm9ybTogbm9uZTsgd2lkb3dzOiAyOyB3b3JkLXNwYWNpbmc6IDBweDsgd2hpdGUtc3Bh
+Y2U6IG5vcm1hbDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpOyBkaXNwbGF5
+OiBpbmxpbmUgISBpbXBvcnRhbnQ7IGZsb2F0OiBub25lOyI+U2FsdWRvcyEhITwvc3Bhbj4NCgo8
+L2JvZHk+DQoKPC9odG1sPg0K
 
+--_----------=_17455067891053619623
+Content-Disposition: attachment; filename="industrypack-devel@lists.sourceforge.net .pdf"
+Content-Transfer-Encoding: base64
+Content-Type: application/pdf; name="industrypack-devel@lists.sourceforge.net .pdf"
 
-Growing Your Business with SBA-backed Funding - Let's Explore Your Opportunities!
+JVBERi0yLjAKJeLjz9MKNiAwIG9iago8PAovY2EgMQovQk0gL05vcm1hbAo+
+PgplbmRvYmoKOCAwIG9iago8PAovTGVuZ3RoIDI5MwovTiAzCi9GaWx0ZXIg
+L0ZsYXRlRGVjb2RlCj4+CnN0cmVhbQp4nH2QvUrDABSFv9SCKIqDDh0cMji4
+aJOmaVJwaSIW11ahqVOSpkHsT0hT9AF0c3B1Ky6+gOhjKAgO4uAjiKCzpEFS
+kHjgwsfhwL33QK4AkJegP4jCRt0QW1ZbnH9HQGAq2x0FZEuA75ck+7z1Ty5L
+Cx1v5AIfQBS2rDYIHWDNT/gsZifhy5hPoyACYRJzeNAwQbgDNv0ZdmbYDcI4
+/wbs9HtjN72bJW9w2ARawDp1hgzx6eFRpMkJx9gU0TBR2aNGCRkVGYUqGuXp
+1JAoo1PBwMDEREdBQ0FhF5Vq3GeycngD+hfMXaWecw0PF1B4Tb2NCaycw/1j
+6qUdB3ZoT608kOt24fMWli1YfYLFo99iM34V//wqss8Al21ESkjIVH4Ahc1L
+vQplbmRzdHJlYW0KZW5kb2JqCjkgMCBvYmoKPDwKL1R5cGUgL1hPYmplY3QK
+L1N1YnR5cGUgL0ltYWdlCi9XaWR0aCAyNjcKL0hlaWdodCAxODkKL0NvbG9y
+U3BhY2UgWy9JQ0NCYXNlZCA4IDAgUl0KL0JpdHNQZXJDb21wb25lbnQgOAov
+RmlsdGVyIFsvRmxhdGVEZWNvZGUgL0RDVERlY29kZV0KL0RlY29kZVBhcm1z
+IFtudWxsIDw8Ci9RdWFsaXR5IDYwCj4+XQovTGVuZ3RoIDQ5NDEKPj4Kc3Ry
+ZWFtCnic3Vd5OJR/u//OjDF22YosQ2RNWaKxjmRN9i1aKFtIDGULMyhJ1qQS
+IWFEFDH4SajMUP0Qyp49ITujGcyc6T3n/I7e631/73nPud4/zvle131dz3M9
+3+e5789z35/7c3/pffRBcAxwsrKxs7FwsrOxc3FxcvOJC/Dx8vLJiIjtET8o
+p6x0UE7xgKrmcV1VdaMjBxT1HI8anbCwsbVR0XU+52zletzaxvLnRyBcXFx8
+PHzSAgLSlmqKapb/9KI3AR4W0ABhh0H2ASgPBMYDob8FSAAgcMhfFviPBYHC
+mODMCBZG0IwN1bsAFAKDQZlgcDgTE+NpJOM5YOKB80ooH2Xmsz6H2IfhV4lO
+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
+vibRQbEx7QQdkA9jd95AvvzffHffltFQE9Z9HcU4seXSiE9zRUfTtjMZkyQd
+bO5lTvfyMMT4T8zH/759L5uDDkiMt93s0WMe2B4kHUhjN9kQ79ppCaM33iYm
+0oH7v7tlHDvZkbRHSIoqHfR1KvyDIFgWZcu5abvR2/roFS9G0h7vuM7jRP9V
+g+5b5r7VSPj+mLCJSKu0ll7UCg5gIaqnOE/TuhkJPmFM7/83853BIAplbmRz
+dHJlYW0KZW5kb2JqCjE0IDAgb2JqCjw8Ci9MZW5ndGgxIDU5ODAKL0ZpbHRl
+ciAvRmxhdGVEZWNvZGUKL0xlbmd0aCAzNDM5Cj4+CnN0cmVhbQp4nK1YXWwb
+V3a+d2b4I4miJOqPMh15qCtKMjmkaVGUZVmWaf5IVmgntGxnOVaTDK2f2Bs7
+1jpKVym6goNVswrrBmh24exDGgRB290CQXApbwo38ALGPiyKYBddtNtiX/qQ
+9CVPwSJt0TzUUr8zpGg5drbporycueee+91zz989wyHjjDEPu85UlnryzIHh
+w3dXPwbnF7is+T9c0RvPDHkZ4wbGry4tP3fl2Pu9f4XxTxhr+uS5yy8vpb4/
+/qeMNf+QMWfvxcXSQqv1X2OMtd8GfvQiGM6P2L9h/FuM+y9eWVkNriqnGOvo
+wPji5avzpY5325/C+I8Jf6W0uszPev4dY8hn+gulK4t9ziOvYPxr7Lm5fPXF
+le3bLMFY1wbNL19bXD5wIH4L4x9jXGGasqDcYQ7GlLJSBCdf7fkzbJjvB5e5
+G1TqNMyR3fVPZkrX2TtMZ09p1tabjGkWv6Qz/n2a47+FTOxmr/o6nzW0VbZK
+q5Q7HJZvj6m/2Q4rH21/rnzCt7Y/r47ZE2gn0MztcXv87HZiNx9r31Jn7ZU/
+4zerFPOjMckMXbJzxZyp6/nbzHs6L51nzhflSEAOmdaSXj5XlEqo9Hdu5mbz
+8+JCIBiUzJQsI7KbsDtjpaOSG1K3lqJSMfQFXd4tSG3g/OYQb8zk5nPSmSsG
+pRoyZ+eKQREMlIu6LBTASpkBXY4RNWaaeqWKLi3IIbBqI13GaT5OyLuFog5t
+yiVdNhaKFjg6zTUSNUrUqBWwTNMMSB4xTSFZobhomlGpGjrkaKESNHNkCkXp
+EGnpFGnYYUpuRaVmCOilL1QcF9I6zZDGgaoGdJealZuXajiIyYxe1svYoBJ3
+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
+a+4aI8Mm1APKPqfNaEr/tPVu8/XG647riHMDOC3pn2J9ym42R2XZSj/fOI3f
++BvFirqQrQzQ6EP3dfz4Sm3Mny0SxMSHZB9yRLRut+YJ3+bbfyK1P8MrdvaW
+Y8HJsnRG/weS4FzvCmVuZHN0cmVhbQplbmRvYmoKMTMgMCBvYmoKPDwKL1R5
+cGUgL0ZvbnREZXNjcmlwdG9yCi9Gb250TmFtZSAvQVdUTU9BK1NwYWNlTW9u
+by1Cb2xkCi9GbGFncyA1Ci9Bc2NlbnQgMTEyMAovRGVzY2VudCAtMzYxCi9T
+dGVtViAyMDMKL0NhcEhlaWdodCA3MDAKL0l0YWxpY0FuZ2xlIDAKL0ZvbnRC
+Qm94IFstNDggLTMzOCA2NjMgMTEyMF0KL0ZvbnRGaWxlMiAxNCAwIFIKPj4K
+ZW5kb2JqCjE1IDAgb2JqCjw8Ci9SZWdpc3RyeSAoQWRvYmUpCi9PcmRlcmlu
+ZyAoSWRlbnRpdHkpCi9TdXBwbGVtZW50IDAKPj4KZW5kb2JqCjEyIDAgb2Jq
+Cjw8Ci9UeXBlIC9Gb250Ci9Gb250RGVzY3JpcHRvciAxMyAwIFIKL0Jhc2VG
+b250IC9BV1RNT0ErU3BhY2VNb25vLUJvbGQKL1N1YnR5cGUgL0NJREZvbnRU
+eXBlMgovQ0lEVG9HSURNYXAgL0lkZW50aXR5Ci9DSURTeXN0ZW1JbmZvIDE1
+IDAgUgovRFcgNjEyCj4+CmVuZG9iagoxNiAwIG9iago8PAovTGVuZ3RoIDI4
+MQovRmlsdGVyIC9GbGF0ZURlY29kZQo+PgpzdHJlYW0KeJxdkc9qhDAQxu95
+ijnuHpZEq24LIiyK4KF/qN0H0GS0gRpDjAffvjjZ7kIPCfzIfDNfvuFlUzVG
+e+AfbpYtehi0UQ6XeXUSocdRGxbFoLT0N6JbTp1lvGyqdls8To0ZZpbnAPwT
+R714t8HhouYej4y/O4VOmxEO17I9Mt6u1v7ghMaDYEUBCgfGy9fOvnUTAifZ
+qVFovPbb6Vq2j4qvzSLExFFwI2eFi+0kus6MyHIhhCggr+u6Lhga9e89C6p+
+kN+do+qnAnIhYlEQPRMlaaBLoDNRlBKlcaBzoCTQS6CMZt66x3+zHtYSKhNZ
+6BsFrSCKgpGkurUIov0He9L3eOTqHBpP66BI9jC0wfvG7Gx31X5+AQlbjhwK
+ZW5kc3RyZWFtCmVuZG9iagoxMSAwIG9iago8PAovVHlwZSAvRm9udAovU3Vi
+dHlwZSAvVHlwZTAKL0Jhc2VGb250IC9BV1RNT0ErU3BhY2VNb25vLUJvbGQK
+L0VuY29kaW5nIC9JZGVudGl0eS1ICi9EZXNjZW5kYW50Rm9udHMgWzEyIDAg
+Ul0KL1RvVW5pY29kZSAxNiAwIFIKPj4KZW5kb2JqCjE3IDAgb2JqCjw8Ci9U
+eXBlIC9FeHRHU3RhdGUKL2NhIDAKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0Zp
+bHRlciAvRmxhdGVEZWNvZGUKL0xlbmd0aCA0OTkKPj4Kc3RyZWFtCniczVTL
+bhQxELz7K3xGml73w3ZbQkggIOegkeA+JIvQBpTk/yXantcmeKNwQ9auPTWu
+7urqse9dABIfbAzLCmPw0527dxVUFuAcfSwBEkX/cOO+vnG/7C36Or5cLYuH
+oztcsT8+Oga0jZW8ryxenShlj1pqlFt3beO/SBIa25LMiz3JSmnurLywRbB8
+h2/Bf/z9uixAjOYv5ED2L8KtsB68K7C3KhyxSdgeiBJoiJ4ygf2qEBRrni2H
+iEAF2RsUMoKUHToZpPoEQgwC2QARiJyTAWix0Q9MEDH5ySGSgoofyNQVqRyO
+ECsHzOYzAMmYqI0zI1wySEu8AGI6a4VrUGErnPe0IgQ5ziFmZRJtUr8ql4Qm
+1HIuxa3P0+bAipzcQAgY04YMUkBjVWHF6Tmw6Jzchqy1nHZoILOkYHVijru7
++Nz8yf1o317tumat7S0lYe1yIZrb3sFf3/dkPK19/zC6w2fzzyoqyY+3bqYM
+ZjEbolq748c79zaEwO/8+NN9Gitr21cisPCTfantUwROmW3X+L3CSH049GHu
+w/FfYofz3bLD0g+CfTj3Y2vXDTu3XLDr2t+X0TmTNbSbiLgszAsWXFAf3r/k
+zDOZYodRkTynuCYrL1V5oQ0W9bqNw/GR2nfnFWoNIdQJBe00zhfpH6BSOgAK
+ZW5kc3RyZWFtCmVuZG9iago0IDAgb2JqCjw8Ci9UeXBlIC9QYWdlCi9Dcm9w
+Qm94IFswIDguMjUgMjAwLjI1IDE1MF0KL01lZGlhQm94IFswIDguMjUgMjAw
+LjI1IDE1MF0KL1JvdGF0ZSAwCi9SZXNvdXJjZXMgPDwKL0V4dEdTdGF0ZSA8
+PAovRzMgNiAwIFIKL2dzMiAxNyAwIFIKPj4KL1hPYmplY3QgPDwKL1gwIDkg
+MCBSCj4+Ci9Gb250IDw8Ci9GNiAxMSAwIFIKPj4KPj4KL0NvbnRlbnRzIDUg
+MCBSCi9CbGVlZEJveCBbMCA4LjI1IDIwMC4yNSAxNTBdCi9UcmltQm94IFsw
+IDguMjUgMjAwLjI1IDE1MF0KL0Fubm90cyBbMTggMCBSIDIxIDAgUiAyMyAw
+IFJdCi9QYXJlbnQgMiAwIFIKPj4KZW5kb2JqCjI1IDAgb2JqCjw8Ci9UeXBl
+IC9WaWV3ZXJQcmVmZXJlbmNlcwovRGlzcGxheURvY1RpdGxlIHRydWUKPj4K
+ZW5kb2JqCjI2IDAgb2JqCjw8Ci9UeXBlIC9NZXRhZGF0YQovU3VidHlwZSAv
+WE1MCi9MZW5ndGggMTQ0Mgo+PgpzdHJlYW0KPD94cGFja2V0IGJlZ2luPSfv
+u78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0
+YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iMy1IZWlnaHRz
+KFRNKSBYTVAgTGlicmFyeSA0LjEyLjI2LjQgKGh0dHA6Ly93d3cucGRmLXRv
+b2xzLmNvbSkiPgogIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53
+My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgICA8cmRmOkRl
+c2NyaXB0aW9uIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVu
+dHMvMS4xLyIgcmRmOmFib3V0PSIiPgogICAgICA8ZGM6dGl0bGU+CiAgICAg
+ICAgPHJkZjpBbHQ+CiAgICAgICAgICA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRl
+ZmF1bHQiPlZlciBDb21wcm9iYW50ZSBQYWdvPC9yZGY6bGk+CiAgICAgICAg
+PC9yZGY6QWx0PgogICAgICA8L2RjOnRpdGxlPgogICAgICA8ZGM6Y3JlYXRv
+cj4KICAgICAgICA8cmRmOlNlcT4KICAgICAgICAgIDxyZGY6bGk+bWFyY2lh
+IGNvc3RhPC9yZGY6bGk+CiAgICAgICAgPC9yZGY6U2VxPgogICAgICA8L2Rj
+OmNyZWF0b3I+CiAgICAgIDxkYzpzdWJqZWN0PgogICAgICAgIDxyZGY6QmFn
+PgogICAgICAgICAgPHJkZjpsaT5EQUdnVmFXUVB4TTwvcmRmOmxpPgogICAg
+ICAgICAgPHJkZjpsaT5CQUdDaFN1WDhONDwvcmRmOmxpPgogICAgICAgICAg
+PHJkZjpsaT4wPC9yZGY6bGk+CiAgICAgICAgPC9yZGY6QmFnPgogICAgICA8
+L2RjOnN1YmplY3Q+CiAgICAgIDxkYzpmb3JtYXQ+YXBwbGljYXRpb24vcGRm
+PC9kYzpmb3JtYXQ+CiAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgIDxyZGY6
+RGVzY3JpcHRpb24geG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hh
+cC8xLjAvIiByZGY6YWJvdXQ9IiI+CiAgICAgIDx4bXA6Q3JlYXRvclRvb2w+
+Q2FudmE8L3htcDpDcmVhdG9yVG9vbD4KICAgICAgPHhtcDpDcmVhdGVEYXRl
+PjIwMjUtMDQtMDRUMTY6NTM6MjNaPC94bXA6Q3JlYXRlRGF0ZT4KICAgICAg
+PHhtcDpNb2RpZnlEYXRlPjIwMjUtMDQtMjRUMDE6MzU6MzhaPC94bXA6TW9k
+aWZ5RGF0ZT4KICAgICAgPHhtcDpNZXRhZGF0YURhdGU+MjAyNS0wNC0yNFQw
+MTozNTozOFo8L3htcDpNZXRhZGF0YURhdGU+CiAgICA8L3JkZjpEZXNjcmlw
+dGlvbj4KICAgIDxyZGY6RGVzY3JpcHRpb24geG1sbnM6cGRmPSJodHRwOi8v
+bnMuYWRvYmUuY29tL3BkZi8xLjMvIiByZGY6YWJvdXQ9IiI+CiAgICAgIDxw
+ZGY6S2V5d29yZHM+REFHZ1ZhV1FQeE0sQkFHQ2hTdVg4TjQsMDwvcGRmOktl
+eXdvcmRzPgogICAgICA8cGRmOlByb2R1Y2VyPmlMb3ZlUERGPC9wZGY6UHJv
+ZHVjZXI+CiAgICAgIDxwZGY6UERGVmVyc2lvbj4yLjA8L3BkZjpQREZWZXJz
+aW9uPgogICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgPC9yZGY6UkRGPgo8L3g6
+eG1wbWV0YT4KPD94cGFja2V0IGVuZD0ndyc/PgoKZW5kc3RyZWFtCmVuZG9i
+agoyIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovS2lkcyBbNCAwIFJdCi9Db3Vu
+dCAxCj4+CmVuZG9iagoxIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdl
+cyAyIDAgUgovTGFuZyAocHQtQlIpCi9WaWV3ZXJQcmVmZXJlbmNlcyAyNSAw
+IFIKL01ldGFkYXRhIDI2IDAgUgo+PgplbmRvYmoKMyAwIG9iago8PAovQ3Jl
+YXRpb25EYXRlIChEOjIwMjUwNDA0MTY1MzIzWikKL01vZERhdGUgKEQ6MjAy
+NTA0MjQwMTM1MzhaKQo+PgplbmRvYmoKMjAgMCBvYmoKPDwKL1R5cGUgL09i
+alN0bQovTiA2Ci9GaXJzdCA0MAovRmlsdGVyIC9GbGF0ZURlY29kZQovTGVu
+Z3RoIDQzOAo+PgpzdHJlYW0KeJydkltvEzEQhd/9K+YRHjL2eH1bVEpTBCqi
+VG2gEiLiYbvZXFqyXnYdkvTXMw0JhFYCyovtY4+O53waykEBBSDrQGvIrAZN
+YDLeDDgdQGfgVRDi4EDID+umAtkv0yzWQr4HeTl4I+4WeDJNqemeSblcLjGO
+x7OywjLOe/NVjzertSanMuJz08arok7VEXnMLJLKUauA09gl7Kpy0VZd1X6r
+WqyrJPuj60WdonzBF8+bYhKP9hxwvnoqDg/Fb73VdUzc2uIqbfTprL4RclCV
+CYY97TAoS+CQnCbivAFtyDm7QvL6s5CvwQjZB7qDMhDyJQwVnxS/nIA8E/Ji
+UYzO46xOHQw16tyFwG5u40Z5jib4B5pMjs4zz239VrPnOZjNP/cz/Inv9Vj7
+WyyaBicx4uSLfEfHtH57WRx/PH3VnWTkH8nEY57lBAGV/ckkd9xlQB32mPBw
+/J2JQqNc8Jbt7A87pVA/kGQ8+sCGu/LtxX8yGYXpar3P5PYi0ifnVmdlGwt/
+89U9konhkWQmPYWW55+HQ2WbFrUze0DMPwCx6EzGAdUuuvrFwKF3BnYVW30P
+wXdnsOccCmVuZHN0cmVhbQplbmRvYmoKMjcgMCBvYmoKPDwKL1NpemUgMjgK
+L1Jvb3QgMSAwIFIKL0luZm8gMyAwIFIKL0lEIFs8RTQ3NUQyMTc4MDZBODIw
+NjU2MTdGODkzN0UzRUU3QTA+IDw4ODAyQkNBNDk3MzYxNTg4QkQzMzkwRkYz
+QkIxNjEwMT5dCi9UeXBlIC9YUmVmCi9XIFsxIDIgMl0KL0ZpbHRlciAvRmxh
+dGVEZWNvZGUKL0luZGV4IFswIDI4XQovTGVuZ3RoIDEwNgo+PgpzdHJlYW0K
+eJxjYGD//5/RsJiBgdHQCkTcBRKau4CEej2QYOBnAAIuEMsMSDCuYIAARrW9
+QEJlK5BQXgAkRG+CuFlAQjUapDeIgYGJQYSBEUQwMBoZQrjMIIIJRLCCCBZG
+bZBR2q5AwsSXgQEAuyUNvQplbmRzdHJlYW0KZW5kb2JqCnN0YXJ0eHJlZgox
+MzM4OQolJUVPRgo=
 
-7a Loan 
-Up to $5,000,000Short- and long-term working capitalRefinancing current business debtPurchasing/installation of machinery, equipment, furniture, fixtures, supplies, or materialsPurchase of real estate (land and buildings)Construction of new building or renovation of existing building
-Micro Loan
-Up to $50,000Short- and long-term working capitalPurchasing/installation of machinery, equipment, furniture, fixtures, supplies or materials
-
-Schedule a time with our specialist to find out more!
-
-Click To Schedule A Call  (http://click.sbaloanadvice.com/click/gfka-bkjbt-pvvkp0-6z6p455/)
-
-You are subscribed to this email as industrypack-devel@lists.sourceforge.net. Click here to modify your preferences http://click.sbaloanadvice.com/form?bkjbt--f920-6z6p452&sl=4ef&t=1&ac=gfka or unsubscribe http://click.sbaloanadvice.com/form?bkjbt--f920-6z6p452&sl=4ef&t=5&ac=gfka. 
-------=_Part_1623502922.1745503620428
-Content-Type: text/html;charset=UTF-8
-
-<style> .dvPreheader { display: none !important; mso-hide: all; }</style><div class="dvPreheader" style="display: none !important; mso-hide:all;">Thank you for your interest in the SBA 7a, I look forward to speaking with you!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head><!--[if gte mso 15]>
-			<xml>
-				<o:OfficeDocumentSettings>
-				<o:AllowPNG/>
-				<o:PixelsPerInch>96</o:PixelsPerInch>
-				</o:OfficeDocumentSettings>
-			</xml>
-			<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">body {
-    margin: 0;
-    padding: 0;
-    background: rgb(255,255,255);
-}
-
-table td, table th {
-    border-spacing: 0;
-    border-collapse: collapse;
-    border: 0 none;
-    mso-table-lspace: 0pt;
-    mso-table-rspace: 0pt;
-}
-
-.fusionResponsiveColumn h1, 
-.fusionResponsiveColumn h2,
-.fusionResponsiveColumn h3,
-.fusionResponsiveColumn p {
-    font-weight: 400;
-}
-
-.fusionResponsiveColumn {
-    font-weight: normal;
-    text-align: left;
-}
-/*+++++++++++++++++ MOBILE ++++++++++++++++++*/
-@media only screen and (max-width: 620px) {
-    .fusionResponsiveContent{
-        width: 100% !important;
-}
-
-.fusionResponsiveColumn {
-    width: auto !important;
-    display: block;
-}
-
-.fusionResponsiveImage {
-    width: 100% !important;
-}
-
-.fusionResponsiveImageTable {
-    padding-bottom: 0 !important;
-}
-
-.fusionResponsiveCanvas {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-}
-
-}
-
-@media only screen and (max-width: 500px) {
-    .fusionResponsiveContent {
-        width: 100% !important;
-    }
-
-    .fusionResponsiveColumn {
-        width: auto !important;
-        display: block;
-    }
-
-    .fusionResponsiveImage {
-        width: 100% !important;
-    }
-
-    .fusionResponsiveCanvas {
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-    }
-}
-</style><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,400,500,500i,700,700i" rel="stylesheet"><!--<![endif]--></head>
-<body><table cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0px auto;"><tbody><tr><td class="fusionResponsiveCanvas  pt-35" valign="top" style="width:100%;padding-top:15px;padding-bottom:15px;background-color:rgb(246,246,246);background-repeat:no-repeat;font-family:sans-serif;">
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr><th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:600px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;"><div data-aqa="block-image" style="overflow:hidden;">
-<table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://secure.campaigner.com/media/76/769479/SBA%207a%20Header%20-%20Find%20Business%20Capital%20%20(2).png?id=9x0vlw5" class="fusionResponsiveImage" alt="" width="600" height="auto" style="width:600px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div></th></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px 8px 15px 7px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:8px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:570px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h1 style="text-align:center;font-weight:400;color:rgb(51,51,51);font-size:32px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><span style="font-family:sans-serif;color:rgb(41, 57, 85);font-size:27px;">Growing Your Business with SBA-backed Funding - Let's Explore Your Opportunities!</span></h1></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;"><tbody><tr><td style="padding-top:10px;padding-bottom:10px;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="mso-line-height-rule:exactly;font-size:0px;line-height:0px;border-bottom:1px solid rgb(136,136,136);"> </td></tr></tbody></table></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:7px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:0px 5px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:5px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:285px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h2 style="text-align:center;font-weight:400;color:rgb(51,51,51);font-size:24px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><u style="font-family:sans-serif;color:rgb(41, 57, 85);">7a Loan </u></h2></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><ul style="margin-top:0px;margin-bottom:0px;">
-<li>
-<span style="color:rgb(41, 57, 85);font-family:sans-serif;">Up to </span><strong style="color:rgb(41, 57, 85);font-family:sans-serif;">$5,000,000</strong>
-</li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Short- and long-term working capital</span></li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Refinancing current business debt</span></li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Purchasing/installation of machinery, equipment, furniture, fixtures, supplies, or materials</span></li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Purchase of real estate (land and buildings)</span></li>
-<li><span style="color:rgb(41, 57, 85);font-family:sans-serif;">Construction of new building or renovation of existing building</span></li>
-</ul></div></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:5px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:5px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:285px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><h2 style="text-align:center;font-weight:400;color:rgb(51,51,51);font-size:24px;font-family:sans-serif;margin-top:0px;margin-bottom:0px;"><u style="color:rgb(41, 57, 85);">Micro Loan</u></h2></div></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;">
-<ul style="margin-top:0px;">
-<li>
-<span style="font-family:sans-serif;color:rgb(41, 57, 85);">Up to </span><strong style="font-family:sans-serif;color:rgb(41, 57, 85);">$50,000</strong>
-</li>
-<li><span style="font-family:sans-serif;color:rgb(41, 57, 85);">Short- and long-term working capital</span></li>
-<li><span style="font-family:sans-serif;color:rgb(41, 57, 85);">Purchasing/installation of machinery, equipment, furniture, fixtures, supplies or materials</span></li>
-</ul>
-<p style="font-weight:400;margin-top:16px;margin-bottom:0px;"><br></p>
-</div></td></tr></tbody></table>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:5px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-<table cellpadding="0" cellspacing="0" border="0" data-fusion-class="" style="width:100%;margin:0px auto;"><tbody><tr><td valign="top" style="width:100%;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0px auto;width:600px;table-layout:fixed;background-color:rgb(255,255,255);"><tbody><tr><td style="background-color:rgb(255,255,255);padding:15px;border-color:transparent;border-width:0px;border-style:none;"><table class="fusionResponsiveContent" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;"><tbody><tr>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-<th valign="top" class="fusionResponsiveColumn" data-fusion-class="" style="width:540px;background-color:transparent;padding:0px;border-color:transparent;border-style:none;border-width:0px;transition:0.2s;">
-<table cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td><div data-fusion-class="" style="margin:0px;padding:0px;border-color:transparent;border-width:0px;border-style:none;background-color:transparent;display:block;font-weight:400;color:rgb(51,51,51);font-family:sans-serif;font-size:16px;text-align:left;"><p style="text-align:center;font-weight:400;margin-top:0px;margin-bottom:0px;">Schedule a time with our specialist to find out more!</p></div></td></tr></tbody></table>
-<div data-aqa="block-image" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td class="null" style="padding:0px 0px 10px;"><table align="center" cellpadding="0" cellspacing="0" border="0" style="margin:auto;width:20%;"><tbody><tr><td style="border-color:transparent;border-style:none;border-width:0px;"><img src="https://secure.campaigner.com/media/76/769479/1.png?id=ahflt00" class="fusionResponsiveImage" alt="" width="108" height="auto" style="width:108px;display:block;height:auto;margin:auto;background-color:transparent;"></td></tr></tbody></table></td></tr></tbody></table></div>
-<div data-fusion-class="" style="overflow:hidden;"><table cellpadding="0" cellspacing="0" border="0" style="width:100%;"><tbody><tr><td style="padding:0px;"><table cellpadding="0" cellspacing="0" align="center" style="margin:0px auto;width:100%;"><tbody><tr><td style="text-align:center;background:rgb(11,83,148);border-radius:25px;border-color:transparent;border-style:none;border-width:0px;padding:10px 20px;"><a href="http://click.sbaloanadvice.com/click/gfka-bkjbt-pvvkp1-6z6p456/" style="text-decoration:none;color:rgb(255,255,255);font-family:sans-serif;font-size:16px;" id="auto_assign_link_num_1" name="https   calendly loanadvice sba 7a clone">Click To Schedule A Call </a></td></tr></tbody></table></td></tr></tbody></table></div>
-</th>
-<th class="fusionResponsiveColumn" style="mso-line-height-rule:exactly;width:15px;line-height:0;font-size:0px;"><!--[if !mso]><!--><img src="https://media.campaigner.com/editorassets/1px.png" class="css-fisw11" width="1" border="0" style="display: block;"><!--<![endif]--></th>
-</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
-</td></tr></tbody></table></body>
-</html>
-<address style='color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align:center; font-style:normal'>
-
-</address>
-<br/><div align='center' style='background: #FFFFFF; color: #666666; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px'>You are subscribed to this email as industrypack-devel@lists.sourceforge.net.<br> Click here to modify your <a href='http://click.sbaloanadvice.com/form?bkjbt--f920-6z6p452&sl=4ef&t=1&ac=gfka' style='color: #666666; text-decoration: underline'>preferences</a> or <a href='http://click.sbaloanadvice.com/form?bkjbt--f920-6z6p452&sl=4ef&t=5&ac=gfka' style='color: #666666; text-decoration: underline'>unsubscribe</a>.</div>
-<img src="http://click.sbaloanadvice.com/open/gfka-bkjbt--6z6p450/img.gif" width="0" height="0" alt="">
-------=_Part_1623502922.1745503620428--
-
-
---===============5393859633990681677==
+--_----------=_17455067891053619623
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============5393859633990681677==
+--_----------=_17455067891053619623
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -311,5 +502,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============5393859633990681677==--
+--_----------=_17455067891053619623--
 
