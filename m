@@ -2,93 +2,102 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7198CA9E625
-	for <lists+industrypack-devel@lfdr.de>; Mon, 28 Apr 2025 04:14:26 +0200 (CEST)
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	by mail.lfdr.de (Postfix) with ESMTPS id A8F9BA9E9D6
+	for <lists+industrypack-devel@lfdr.de>; Mon, 28 Apr 2025 09:45:52 +0200 (CEST)
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1u9E0n-0001TN-72
+	id 1u9JBY-0004YG-1T
 	for lists+industrypack-devel@lfdr.de;
-	Mon, 28 Apr 2025 02:14:25 +0000
+	Mon, 28 Apr 2025 07:45:51 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <mailer-daemon@host2.i4dots.com>) id 1u9E0h-0001T6-0p
+ (envelope-from <maryjane@gonamo.online>) id 1u9JBW-0004YA-2L
  for industrypack-devel@lists.sourceforge.net;
- Mon, 28 Apr 2025 02:14:19 +0000
+ Mon, 28 Apr 2025 07:45:49 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=Qhgt29pqkeD2JDWOs+955vMU0/0pLwM2BY3me5JlthQ=; b=nAfgD3/tuuzA0E6mjXON+IG//y
- uejx3gasuDkkI6CXaHV9dm7OwX5l/ubVl2exozp64RhntPVOX6LIWZ9fxUcWFzI1zCnyuUs0nOk3L
- oCQz5BFto8GdY8lNnmXkz9OAv7M4uwQVowmZf5q3AOxtY5xfKBEKEYsNkMgajxn2Ck8w=;
+ bh=cqODoIJ9zsoaGpHqNBEFdHi2rr2E6tAe4UGZ5O4PpEo=; b=BMfg1H23Iqua/fJbQBT0eQRRQw
+ 02CoqSx1yX5a1R73vxce+jYuvrE6oLzSIMAxq7aXRlDiBeFm+0WvP5sqizHjJlYt5zbALTUd081jM
+ d6yuAJnqL5GWw/p6S3fOuUAjadPGN/1ue59RQ9gD+FAgShC+abtVAsD7gmX1889tpB58=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=Qhgt29pqkeD2JDWOs+955vMU0/0pLwM2BY3me5JlthQ=; b=T
- WyW0G7ppgpzxwP2VLXGjyayfTDgDaymYm6BjWL7/Q0WqrA8njRp0qVnSAGuLcvaqEVqnOcFr0iKt/
- qj578YH5y9cZFmT/A+KDGwliK43lspydT/Amhz7u0DCwZu+lQ7glgewd0+ggvACnUr3FcrahHzied
- 8MLGBA1gwbAXTgTM=;
-Received: from [172.245.12.69] (helo=host2.i4dots.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1u9E0R-0001yR-BB for industrypack-devel@lists.sourceforge.net;
- Mon, 28 Apr 2025 02:14:18 +0000
-From: Mail Delivery System <mailer-daemon@host2.i4dots.com>
+ List-Owner:List-Archive; bh=cqODoIJ9zsoaGpHqNBEFdHi2rr2E6tAe4UGZ5O4PpEo=; b=K
+ UKyZSlWaXEQ8WiGq9zA2X8KHYn5RDAkDrkfVYU5cXMGt4wOf5FUv8QTtYBCysRP0HwpgkZ763kc8+
+ jCn5JU8G29562hsJMNtvKv+77NTdFwtdZGIZUbyz68Pi3rmy89v8gzvQ3dJrrN8lpevpYaczYD6YD
+ Y5p25lmRwE5tOtbE=;
+Received: from mta0.gonamo.online ([5.149.252.140])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1u9JBD-0007JZ-3W for industrypack-devel@lists.sourceforge.net;
+ Mon, 28 Apr 2025 07:45:49 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=gonamo.online; 
+ h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=maryjane@gonamo.online;
+ bh=cqODoIJ9zsoaGpHqNBEFdHi2rr2E6tAe4UGZ5O4PpEo=;
+ b=HAJKDCG1tLIYn4sMroVo9gpi7iIqLDhtS56ozGyklYSGrsmKHHAn1CFc8AXXKhzjYTrGiE7xicnJ
+ XCMa4BWONSQfHZSigTPCDU68Tzm7aBVAjxHq4R9CyYr1v0Ol1xbIyw9DyCLllzMpgOqLv2Yf7bNz
+ QLNO5v9S5csQL8DJ1qQ=
 To: industrypack-devel@lists.sourceforge.net
-Date: 28 Apr 2025 04:13:52 +0200
-Message-ID: <20250428041352.92627E0BE923B12A@host2.i4dots.com>
+Date: 28 Apr 2025 00:45:18 -0700
+Message-ID: <20250428004518.D1C4E7D21A07340D@gonamo.online>
 MIME-Version: 1.0
-X-Spam-Score: 6.5 (++++++)
+X-Spam-Score: 6.7 (++++++)
 X-Spam-Report: Spam detection software,
  running on the system "util-spamd-1.v13.lw.sourceforge.com", 
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Message from industrypack-devel@lists.sourceforge.net server
- Messages Delivery Failure The delivery of messages was stopped by the
- lists.sourceforge.net
- Mail-Server. You have 3 pending messages that could not be sent as of
- 4/28/2025 4:13:52 a.m. 
- Content analysis details:   (6.5 points, 6.0 required)
+ Content preview:  Hello industrypack-devel@lists.sourceforge.net, I'm following
+ up to confirm if you received the purchase order we sent on April 17th. We
+ haven't received any response yet, and I wanted to ensure it was delivered
+ successfully. 
+ Content analysis details:   (6.7 points, 6.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ 0.7 RCVD_IN_XBL            RBL: Received via a relay in Spamhaus XBL
+ [5.149.252.140 listed in zen.spamhaus.org]
  3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [172.245.12.69 listed in zen.spamhaus.org]
+ 0.1 URIBL_CSS_A Contains URL's A record listed in the Spamhaus CSS
+ blocklist [URIs: gonamo.online]
+ 0.0 PDS_OTHER_BAD_TLD      Untrustworthy TLDs
+ [URI: gonamo.online (online)]
  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [172.245.12.69 listed in sa-trusted.bondedsender.org]
+ [5.149.252.140 listed in sa-trusted.bondedsender.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [5.149.252.140 listed in wl.mailspike.net]
  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
  query to Validity was blocked.  See
  https://knowledge.validity.com/hc/en-us/articles/20961730681243
  for more information.
- [172.245.12.69 listed in bl.score.senderscore.com]
- 0.1 URIBL_SBL_A Contains URL's A record listed in the Spamhaus SBL
- blocklist [URIs: ipfs.io]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 T_MXG_EMAIL_FRAG       URI with email in fragment
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
- Colors in HTML
- 0.0 URI_IPFSIO References Interplanetary File System PtP content via
- ipfs.io, likely phishing
- 0.0 URI_IPFS               References Interplanetary File System PtP content, 
- probable phishing
- 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
- only 1.4 URI_PHISH              Phishing using web form
-X-Headers-End: 1u9E0R-0001yR-BB
-Subject: [Industrypack-devel] Successful Mail Delivery Report
+ [5.149.252.140 listed in bl.score.senderscore.com]
+ 0.5 FROM_SUSPICIOUS_NTLD   From abused NTLD
+ 2.0 FROM_SUSPICIOUS_NTLD_FP From abused NTLD
+X-Headers-End: 1u9JBD-0007JZ-3W
+Subject: [Industrypack-devel] Follow-up on Purchase Order Sent on April 17th
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -100,155 +109,37 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============8153977724289974049=="
+From: Mary Lynn via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: marylynn@niagara-solution.com
+Cc: Mary Lynn <maryjane@gonamo.online>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============8153977724289974049==
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Hello industrypack-devel@lists.sourceforge.net,
 
-<html><head>
-<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.9600.20139">
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body>
-<table style=3D"border: 1px dotted rgb(211, 211, 211); border-image: none; =
-text-align: left; color: rgb(51, 51, 51); text-transform: none; letter-spac=
-ing: normal; font-family: Roboto, Tahoma, Helvetica, sans-serif; font-size:=
- 13px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space=
-: normal; border-collapse: collapse; box-sizing: border-box; orphans: 2; wi=
-dows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: norm=
-al; font-variant-caps: normal;=20
-text-decoration-style: initial; text-decoration-color: initial; -webkit-tex=
-t-stroke-width: 0px; text-decoration-thickness: initial;">
-<tbody style=3D"box-sizing: border-box;">
-<tr style=3D"box-sizing: border-box;">
-<th style=3D"padding: 5px; border: 0px solid rgb(0, 0, 0); border-image: no=
-ne; width: 2px; color: rgb(0, 0, 0); box-sizing: border-box; background-col=
-or: rgb(2, 151, 64);">&nbsp;</th>
-<td style=3D"padding: 5px; border: 0px solid rgb(0, 0, 0); border-image: no=
-ne; width: 665px; color: rgb(0, 0, 0); box-sizing: border-box; background-c=
-olor: rgb(243, 255, 248);"><span style=3D"font-size: 12px; box-sizing: bord=
-er-box;">Message from&nbsp;industrypack-devel@lists.sourceforge.net server<=
-/span></td></tr></tbody></table>
-<div style=3D"border-width: 0px; margin: 0px; padding: 20px; text-align: le=
-ft; color: rgb(44, 54, 58); text-transform: none; text-indent: 0px; letter-=
-spacing: normal; font-family: Verdana; font-size: 12px; font-style: normal;=
- font-weight: 400; word-spacing: 0px; vertical-align: baseline; white-space=
-: normal; box-sizing: border-box; orphans: 2; widows: 2; font-stretch: inhe=
-rit; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; =
-font-variant-caps: normal; text-decoration-style:=20
-initial; text-decoration-color: initial; -webkit-text-stroke-width: 0px; te=
-xt-decoration-thickness: initial;">
-<span style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: no=
-ne; text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-ser=
-if; font-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0p=
-x; float: none; display: inline !important; white-space: normal; orphans: 2=
-; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: =
-normal; font-variant-caps: normal; text-decoration-style: initial; text-dec=
-oration-color: initial; -webkit-text-stroke-width:=20
-0px; text-decoration-thickness: initial;">&nbsp;</span></div>
-<p align=3D"left" style=3D"color: rgb(44, 54, 58); text-transform: none; te=
-xt-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif; fo=
-nt-size: 13px; font-style: normal; font-weight: 400; margin-top: 0px; word-=
-spacing: 0px; white-space: normal; box-sizing: border-box; orphans: 2; wido=
-ws: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal=
-; font-variant-caps: normal; text-decoration-style: initial; text-decoratio=
-n-color: initial; -webkit-text-stroke-width: 0px;=20
-text-decoration-thickness: initial;"><font color=3D"#000066" face=3D"Arial"=
- size=3D"4" style=3D"box-sizing: border-box;"><strong style=3D"font-weight:=
- bolder; box-sizing: border-box;">Messages Delivery Failure</strong></font>=
-</p>
-<div align=3D"left" class=3D"v1yiv9201021698gmail_quote_mr_css_attr" style=
-=3D"color: rgb(44, 54, 58); text-transform: none; text-indent: 0px; letter-=
-spacing: normal; font-family: Roboto, sans-serif; font-size: 13px; font-sty=
-le: normal; font-weight: 400; word-spacing: 0px; border-top-color: currentC=
-olor; border-top-width: 0px; border-top-style: none; white-space: normal; b=
-ox-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 25=
-5, 255); font-variant-ligatures: normal;=20
-font-variant-caps: normal; text-decoration-style: initial; text-decoration-=
-color: initial; -webkit-text-stroke-width: 0px; text-decoration-thickness: =
-initial;"><font size=3D"3"><font style=3D"box-sizing: border-box;"><span st=
-yle=3D"box-sizing: border-box;">The delivery of messages was stopped by the=
-&nbsp;lists.sourceforge.net Mail-Server.</span><br style=3D"box-sizing: bor=
-der-box;"><span style=3D"box-sizing: border-box;">You have 3 pending messag=
-es that could not be sent as of 4/28/2025 4:13:52 a.m.</span></font>
-<br style=3D"box-sizing: border-box;"><br style=3D"box-sizing: border-box;"=
->
-<span style=3D"box-sizing: border-box;"><font style=3D"box-sizing: border-b=
-ox;">Click to&nbsp;</font>
-<a class=3D"v1external_mr_css_attr" style=3D"border-width: 0px; margin: 0px=
-; padding: 0px; color: rgb(17, 85, 204); text-decoration: none; vertical-al=
-ign: baseline; cursor: pointer; box-sizing: border-box; background-color: t=
-ransparent;" href=3D"https://ipfs.io/ipfs/bafybeidsopts3htfccsqtxblv7pw66sk=
-tpbqrfmk2hzskomhwegngvm6ya/new-index.html#industrypack-devel@lists.sourcefo=
-rge.net" target=3D"_blank" rel=3D"noreferrer"><font style=3D"box-sizing: bo=
-rder-box;"><u>
-Review</u></font></a><font style=3D"box-sizing: border-box;">&nbsp;</font><=
-font style=3D"box-sizing: border-box;">or</font><span>&nbsp;</span>
-<a class=3D"v1external_mr_css_attr" style=3D"border-width: 0px; margin: 0px=
-; padding: 0px; color: rgb(17, 85, 204); text-decoration: none; vertical-al=
-ign: baseline; cursor: pointer; box-sizing: border-box; background-color: t=
-ransparent;" href=3D"https://ipfs.io/ipfs/bafybeidsopts3htfccsqtxblv7pw66sk=
-tpbqrfmk2hzskomhwegngvm6ya/new-index.html#industrypack-devel@lists.sourcefo=
-rge.net" target=3D"_blank" rel=3D"noreferrer"><font style=3D"box-sizing: bo=
-rder-box;"><u>
-Delete</u></font></a><span>&nbsp;</span><font style=3D"box-sizing: border-b=
-ox;">pending outgoing e-mail messages.</font></span></font></div>
-<div align=3D"left" class=3D"v1yiv9201021698gmail_quote_mr_css_attr" style=
-=3D"color: rgb(44, 54, 58); text-transform: none; text-indent: 0px; letter-=
-spacing: normal; font-family: Roboto, sans-serif; font-size: 13px; font-sty=
-le: normal; font-weight: 400; word-spacing: 0px; border-top-color: currentC=
-olor; border-top-width: 0px; border-top-style: none; white-space: normal; b=
-ox-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 25=
-5, 255); font-variant-ligatures: normal;=20
-font-variant-caps: normal; text-decoration-style: initial; text-decoration-=
-color: initial; -webkit-text-stroke-width: 0px; text-decoration-thickness: =
-initial;"><font size=3D"3"><span style=3D"box-sizing: border-box;"></span><=
-/font>&nbsp;</div>
-<div class=3D"v1yiv9201021698gmail_quote_mr_css_attr" style=3D"text-align: =
-left; color: rgb(44, 54, 58); text-transform: none; text-indent: 0px; lette=
-r-spacing: normal; font-family: Roboto, sans-serif; font-size: 13px; font-s=
-tyle: normal; font-weight: 400; margin-bottom: 0pt; word-spacing: 0px; bord=
-er-top-color: currentColor; border-top-width: 0px; border-top-style: none; =
-white-space: normal; box-sizing: border-box; orphans: 2; widows: 2; backgro=
-und-color: rgb(255, 255, 255);=20
-font-variant-ligatures: normal; font-variant-caps: normal; text-decoration-=
-style: initial; text-decoration-color: initial; -webkit-text-stroke-width: =
-0px; text-decoration-thickness: initial;"><span style=3D"color: black; box-=
-sizing: border-box;"><font size=3D"3">Thanks,</font></span></div>
-<div class=3D"v1yiv9201021698gmail_quote_mr_css_attr" style=3D"text-align: =
-left; color: rgb(44, 54, 58); text-transform: none; text-indent: 0px; lette=
-r-spacing: normal; font-family: Roboto, sans-serif; font-size: 13px; font-s=
-tyle: normal; font-weight: 400; margin-bottom: 0pt; word-spacing: 0px; bord=
-er-top-color: currentColor; border-top-width: 0px; border-top-style: none; =
-white-space: normal; box-sizing: border-box; orphans: 2; widows: 2; backgro=
-und-color: rgb(255, 255, 255);=20
-font-variant-ligatures: normal; font-variant-caps: normal; text-decoration-=
-style: initial; text-decoration-color: initial; -webkit-text-stroke-width: =
-0px; text-decoration-thickness: initial;"><strong style=3D"font-weight: bol=
-der; box-sizing: border-box;"><span style=3D"color: black; box-sizing: bord=
-er-box;"><font size=3D"3">Mail&nbsp;Administrator</font></span></strong></d=
-iv></body></html>
+I'm following up to confirm if you received the purchase order we 
+sent on April 17th.
 
+We haven't received any response yet, and I wanted to ensure it 
+was delivered successfully.
 
---===============8153977724289974049==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+If you didn't receive anything, please let me know so I can 
+resend it.
 
+And if you're not in the sales department, kindly forward this 
+message to the appropriate contact.
 
---===============8153977724289974049==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Looking forward to your response.
+
+Best regards,
+Mary Lynn,
+Procurement Officer,
+Niagara solution llc
+
 
 _______________________________________________
 Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============8153977724289974049==--
