@@ -2,61 +2,67 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6CCE7AFF025
-	for <lists+industrypack-devel@lfdr.de>; Wed,  9 Jul 2025 19:51:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4260AB0331F
+	for <lists+industrypack-devel@lfdr.de>; Sun, 13 Jul 2025 23:43:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
 	MIME-Version:Message-ID:Date:To:From:Sender:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=27IDnkg18z+ZqMld1w2hLU+thI+w5lf3/rx+gNp2s1o=; b=Z24s1aTdOKxDLUuVlvrrJp/y9M
-	Oi0X5lrcpEjYh7zExcZIVHetuMRCehUSk99Vr+RiRMsunu2yRfzOvPc25yLkFHnLh1cdv0T27Fh4n
-	uP6Y+Qy/tntU9JszZ5WrvTw4tnzRZWET/o/jVeLVCVdEdYWOxiu7pdzHWWWer6k+xqio=;
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	bh=HGdKkwt/TtxGgA3VMikPqU4REZ2ELtJIWVKbGFCOorw=; b=CccSrBvT+yYK2gPdLLesx3ZM61
+	vr6Cxl946T+0p7N+M6UWGI9aXiubSekNlRPORPamhNZcg1qxvwGgFCaypHOLq6kD+x2m4J097NLsm
+	alXw0m6Yg6/xxan0+Da9VVL2T7rsyA8r82tBYnHE8iPl5XH4BMEXISHBbk2itXeXA4+8=;
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1uZYxX-0004WX-Fl
+	id 1ub4Tb-0001KE-6S
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 09 Jul 2025 17:51:55 +0000
+	Sun, 13 Jul 2025 21:43:15 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <noreply@aban-ae.com>) id 1uZYxV-0004WQ-SR
+ (envelope-from <noreply@aban-ae.com>) id 1ub4TY-0001K5-Lu
  for industrypack-devel@lists.sourceforge.net;
- Wed, 09 Jul 2025 17:51:53 +0000
+ Sun, 13 Jul 2025 21:43:12 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
  :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=dI6vLFSZqlZ/0V+xSIlqSYC+QveuEJm2ysV7s1OAIpM=; b=a+rezxQs/ZsH7EUjvc2VYLxUoo
- F0HmIQzzV7geqZW53DRQ4Vk+nVqE0WczSNKOH4a7MmP+sZLR7F/zNgVeoWy/1s4iZlYE/+C/+kVgd
- JtlUOD5Nq0NWhaqdenO36CSCSv79/zPUseolLaV3C/kqqyRnYWtmo/CEpiYCI09hMNEo=;
+ bh=dI6vLFSZqlZ/0V+xSIlqSYC+QveuEJm2ysV7s1OAIpM=; b=h59lqYQH/Xc/KJMP6Skx2vzTLu
+ qta7WUYGd7FhX1P3rTWV90ds972Q9F+ZHczWzYE80FaR30+IpStKZSEAFi+OkfeQIF/1HjqdjuRkq
+ /u/d4T6hvBcJ9jgiZhflD76jmaXuBk9kfOF595NhvnDzrqdAi+dbDOpPgNNN8PwDji8g=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
  Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
  :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=dI6vLFSZqlZ/0V+xSIlqSYC+QveuEJm2ysV7s1OAIpM=; b=O
- SMrAFSOcFfQaQLo3YIQE1LEvHIgOI7eg1fs4nwOsCQCGjWgqkkVDRPLAczSkxsKYozcB2Q42ST1kU
- VX40s+GM69YHhcAOGdeqoyUe9ca3n/o09HDFkWog3byD2kS5QnWSbSSG8YdnbWhjT8cRBck+57GGI
- khW6i7BFWjWmp++I=;
-Received: from [107.174.142.75] (helo=aban-ae.com)
+ List-Owner:List-Archive; bh=dI6vLFSZqlZ/0V+xSIlqSYC+QveuEJm2ysV7s1OAIpM=; b=d
+ cPPfV5jRhmdNBTfczlTul8hgs6iH1cLFWy7uT1GUMcMXn2TB0rRt7L9pJN8sdZz4yppxxxK184f5l
+ KX2nyIiaNno1bhjk2fajeU35LWiHGlyUcW3yoaxDQP1YnxZGs+ZokUYky+j8COKd8q/o4U6+vF8u9
+ KE22Nf0Rpbo5UhqQ=;
+Received: from [107.174.142.75] (helo=hathacloud737)
  by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1uZYxV-0008RI-Ge for industrypack-devel@lists.sourceforge.net;
- Wed, 09 Jul 2025 17:51:53 +0000
+ id 1ub4TY-0006NO-C5 for industrypack-devel@lists.sourceforge.net;
+ Sun, 13 Jul 2025 21:43:12 +0000
+Received: from [107.174.142.75] (account airmail@hathacloud737 HELO
+ aban-ae.com)
+ by hathacloud737 (CommuniGate Pro SMTP 6.2.14 _community_)
+ with ESMTPA id 1491786 for industrypack-devel@lists.sourceforge.net;
+ Sun, 13 Jul 2025 23:43:03 +0200
 From: =?UTF-8?B?RG9jdVNpZ27ihKI=?= <noreply@aban-ae.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 9 Jul 2025 19:51:49 +0200
-Message-ID: <20250709195149.36CFFAE87191ECD5@aban-ae.com>
+Date: 13 Jul 2025 23:43:03 +0200
+Message-ID: <20250713234303.F712776504013EF2@aban-ae.com>
 MIME-Version: 1.0
-X-Spam-Score: 5.4 (+++++)
+X-Helo-Check: bad, Not FQDN (hathacloud737)
+X-Spam-Score: 4.1 (++++)
 X-Spam-Report: Spam detection software,
  running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
- has identified this incoming email as possible spam.  The original
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
@@ -64,21 +70,21 @@ X-Spam-Report: Spam detection software,
  Do Not Share This Email This email contains a secure link to a document which
  requires your signature on DocuSign. Please do not share this email, link,
  or access code with others. 
- Content analysis details:   (5.4 points, 5.0 required)
+ Content analysis details:   (4.1 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  4.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
  [107.174.142.75 listed in dnsbl-1.uceprotect.net]
  0.0 FROM_FMBLA_NEWDOM14    From domain was registered in last 7-14 days
- 0.0 T_MXG_EMAIL_FRAG       BODY: URI with email in fragment
+ 0.0 FSL_HELO_NON_FQDN_1    No description available.
  0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.0 T_MXG_EMAIL_FRAG       BODY: URI with email in fragment
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML only
+ 0.0 HELO_NO_DOMAIN         Relay reports its domain incorrectly
  0.0 HTML_ENTITY_ASCII      Obfuscated ASCII
-X-Headers-End: 1uZYxV-0008RI-Ge
+X-Headers-End: 1ub4TY-0006NO-C5
 Subject: [Industrypack-devel] (1) e-Document Received for your Signature -
- Today: 7/9/2025 7:51:49 p.m.
+ Today: 7/13/2025 11:43:03 p.m.
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,10 +97,10 @@ List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
 Reply-To: DocuSign <noreply@lists.sourceforge.net>
-Content-Type: multipart/mixed; boundary="===============8903104703024330576=="
+Content-Type: multipart/mixed; boundary="===============5993795965855760728=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============8903104703024330576==
+--===============5993795965855760728==
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -293,14 +299,14 @@ Service. </p>
 body></html>
 
 
---===============8903104703024330576==
+--===============5993795965855760728==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8903104703024330576==
+--===============5993795965855760728==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -311,4 +317,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8903104703024330576==--
+--===============5993795965855760728==--
