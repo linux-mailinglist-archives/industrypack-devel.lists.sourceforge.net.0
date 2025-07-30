@@ -2,107 +2,101 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id C4390B153AC
-	for <lists+industrypack-devel@lfdr.de>; Tue, 29 Jul 2025 21:38:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5F754B1679E
+	for <lists+industrypack-devel@lfdr.de>; Wed, 30 Jul 2025 22:29:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:List-Subscribe:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
-	MIME-Version:Message-ID:Date:To:From:Sender:Cc:Content-Transfer-Encoding:
+	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=YlC+q+tAXVY2XmwqBGuzKYkPsvy7KyhQrqqOtFT5Kng=; b=ZvCPiUNJ2BR6u1p8A37+2kOWvL
-	GB129yP5IOZe3CrUeT+KcpOJfejVZa1qav6HOd0C3bSfCR1zBD0D1wzciFfkRZvmSxOrHOTLEAWZX
-	erfsbJBk//Jz4EZoOtxPyu+g8QyJZP1rEXOyWipLnrKiT3mGihDvf6If1YhNMg1cNptU=;
+	bh=KHrEFIFdyO5XgrPQWPdonVRr1q6aC7XSiyYXs1/1eRM=; b=BG45R9FCORj91v331dNFzH7TiK
+	qjvW5oypmMuAsiUIHDMbnwDDTI0EhuxUz5+OZiHzuPWSPo6GSbEktbfP5M8q2U6Q+f3RsZCC4n9y4
+	jWdMBawiOpLbjyyqxcoqR6kFzrI5m5VftO/nMgWrRZ1FdWLqbYmwJayT8pGm+wtCkT4Q=;
 Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
 	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1ugqA3-0001Ev-Ph
+	id 1uhDQg-00056M-W2
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 29 Jul 2025 19:38:56 +0000
+	Wed, 30 Jul 2025 20:29:39 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <jchavez@lanrosh.com>) id 1ugqA1-0001Ec-VC
+ (envelope-from <info@gcgs91.org>) id 1uhDQf-000569-7G
  for industrypack-devel@lists.sourceforge.net;
- Tue, 29 Jul 2025 19:38:54 +0000
+ Wed, 30 Jul 2025 20:29:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:Date:To:From:Reply-To:Sender:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=EY371wOj9scXA0djWXxZUA1wm52gEqrahKx/dqSWnd8=; b=TZhNYhamhihZthY5HWL/84vxE0
- QjA6iHBbCTZzozzzK8XZRIbXDJeBIQRE7L+R0e4CJ/e9t56+/UBDzt7mcnuNVPiDIpW7nxaB0xYS8
- oPKKikij+2jlkZrplq4qMTrq7+4i4hsXNmA8eYctEHDlD2Yc0ogNZl72ptafAe8HxwKg=;
+ bh=H6VVRq2tmw9qhQKt4ZfE5AoqtVR8Jqo7euubFwEiPMg=; b=Q74GfrZf8/tLhvMZeLKTcFl3R1
+ 4yNwxyhllR4osk8prGdbktqcp1W8ZKz0rm39dgwPizp4JJ6niIk5SW1YfLGBnIXP1AnQZhVDwq4JN
+ FGp8o7VOe+xpWDPOqnz8wDV5kItBx8q91mYF33dAN0xdTJQ00m9XBAjMqgy8ySLhQ7S4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
- Date:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=EY371wOj9scXA0djWXxZUA1wm52gEqrahKx/dqSWnd8=; b=P
- xehjkslpCRq/l9HOsYsSQdGD/iZo6SKWrzaNQseNL8t+ssKg4aqmM0e43BhSyAL/V7vyR6qTbXP3A
- 5pxRwQ4uvUx3d92+/TWrES9L7eM6LaenB2Hx32Y4s1wLXmFf1xjRHrJx+SmeRbYQs3XzSST39TUgT
- 9qoj0kZhX3WD4lm0=;
-Received: from 98.red-81-45-93.staticip.rima-tde.net ([81.45.93.98]
- helo=mail.keepergalicia.es)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1ugqA2-0008Lt-73 for industrypack-devel@lists.sourceforge.net;
- Tue, 29 Jul 2025 19:38:54 +0000
-Received: from localhost (localhost [127.0.0.1])
- by mail.keepergalicia.es (Postfix) with ESMTP id 044D32333984
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 29 Jul 2025 21:29:19 +0200 (CEST)
-Received: from mail.keepergalicia.es ([127.0.0.1])
- by localhost (mail.keepergalicia.es [127.0.0.1]) (amavisd-new, port 10032)
- with ESMTP id glVZRJjkPKfb
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 29 Jul 2025 21:29:18 +0200 (CEST)
-Received: from localhost (localhost [127.0.0.1])
- by mail.keepergalicia.es (Postfix) with ESMTP id CCE3E23279A4
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 29 Jul 2025 21:29:18 +0200 (CEST)
-X-Virus-Scanned: amavisd-new at keepergalicia.es
-Received: from mail.keepergalicia.es ([127.0.0.1])
- by localhost (mail.keepergalicia.es [127.0.0.1]) (amavisd-new, port 10026)
- with ESMTP id UaRWIXZFw77P
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 29 Jul 2025 21:29:18 +0200 (CEST)
-Received: from ip-222-51.dataclub.info (unknown [46.183.222.51])
- by mail.keepergalicia.es (Postfix) with ESMTPSA id 813DB233397B
- for <industrypack-devel@lists.sourceforge.net>;
- Tue, 29 Jul 2025 21:29:18 +0200 (CEST)
-From: Dr.Allen Cheng <jchavez@lanrosh.com>
+ List-Owner:List-Archive; bh=H6VVRq2tmw9qhQKt4ZfE5AoqtVR8Jqo7euubFwEiPMg=; b=K
+ oLAIdcaDckJ3ECnMLqjECpemuVJPGrHDrkyY6R6COVokbunpdZiKX3AVrrO/iP+ENorLFi+rscdzG
+ YAuqBYS+LFQ6DTrh4nkoPKc4ShyVCv9pC9nnFznvkPP/KJ+gl3SCF+Dv+N2NgGinjXci9T/NUrXa5
+ evytjOm0knSPWt7g=;
+Received: from gcgs91.org ([185.184.123.128])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1uhDQf-0004iC-7u for industrypack-devel@lists.sourceforge.net;
+ Wed, 30 Jul 2025 20:29:37 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=corp; d=gcgs91.org;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=info@gcgs91.org;
+ bh=H6VVRq2tmw9qhQKt4ZfE5AoqtVR8Jqo7euubFwEiPMg=;
+ b=H0DJSU3kpdIBrmShKibFsOURabgdv6096JEUz3+E5mN7CEVVzvM012rYJ37BZPZYl4ENdR/Z/D/8
+ Ev6/wYYMWCJ/sj1YYhJyGSS5k8GkZhVHg1kVSWecCRskY/mPYDGz4I59IRqFug+QEkD3d0UBx41o
+ t+mP4Xrndlu4sSfEtcuFrWw/5/qe64VQ1BHERM7nCwl5BhBPdRmoxjeVOBzMOVr1XHE3FImYfyT4
+ DhstdesdepIHbI9XRllQ6NpSM2yOF7RheeHsPXnNRrz0CusNfjtIezLaR01H7gh3dpMGNyOIlEkD
+ e1NfliCtrzAZpOKVH8CqnC7m1ygLBoNind1brQ==
 To: industrypack-devel@lists.sourceforge.net
-Date: 29 Jul 2025 22:31:15 +0300
-Message-ID: <20250729223115.98F93E335AFBDEB2@lanrosh.com>
+Date: 30 Jul 2025 16:29:31 -0400
+Message-ID: <20250730162931.CC058A82B37BD68E@gcgs91.org>
 MIME-Version: 1.0
-X-Spam-Score: 7.3 (+++++++)
+X-Spam-Score: 1.3 (+)
 X-Spam-Report: Spam detection software,
  running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
- has identified this incoming email as possible spam.  The original
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Date : 7/29/2025 10:31:15 p.m. Dear industrypack-devel 
- Content analysis details:   (7.3 points, 5.0 required)
+ Content preview: Account Verification Required... Dear
+ industrypack-devel@lists.sourceforge.net, 
+ We've detected that your account requires verification to ensure continued
+ access to all features. This is part of our regular security maintenance.
+ Content analysis details:   (1.3 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 4.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [81.45.93.98 listed in dnsbl-1.uceprotect.net]
  0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [81.45.93.98 listed in wl.mailspike.net]
- 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in digit
- [allencheng00157(at)gmail.com]
+ [185.184.123.128 listed in wl.mailspike.net]
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
  0.0 HTML_MESSAGE           BODY: HTML included in message
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
- 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1ugqA2-0008Lt-73
-Subject: [Industrypack-devel] [SPAM] Re: Correspondence
+ 0.0 GOOG_REDIR_HTML_ONLY   Google redirect to obscure spamvertised website
+ + HTML only
+ 0.0 TVD_PH_BODY_ACCOUNTS_PRE The body matches phrases such as "accounts
+ suspended", "account credited", "account verification"
+ 1.4 URI_IPFSIO References Interplanetary File System PtP content via
+ ipfs.io, likely phishing
+ 0.0 URI_IPFS               References Interplanetary File System PtP content,
+ probable phishing
+X-Headers-End: 1uhDQf-0004iC-7u
+Subject: [Industrypack-devel] Account Verification Required
+ industrypack-devel@lists.sourceforge.net
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -114,36 +108,67 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: "Dr.Allen Cheng" <allencheng00157@gmail.com>
-Content-Type: multipart/mixed; boundary="===============0668363857218990115=="
+From: "lists.sourceforge.net via Industrypack-devel"
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "lists.sourceforge.net" <info@gcgs91.org>
+Content-Type: multipart/mixed; boundary="===============5215476612881006362=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============0668363857218990115==
+--===============5215476612881006362==
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE HTML>
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV style=3D"FONT-SIZE: 24px; MARGIN-BOTTOM: 20px; BORDER-TOP: 0px; FONT-F=
+AMILY: Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRAN=
+SFORM: none; FONT-WEIGHT: 700; COLOR: rgb(44,62,80); FONT-STYLE: normal; PA=
+DDING-TOP: 0px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-C=
+OLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; f=
+ont-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-t=
+hickness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial">Account Verification Required...</DIV>
+<DIV style=3D"FONT-SIZE: 11px; MARGIN-BOTTOM: 20px; FONT-FAMILY: Arial, san=
+s-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT=
+-WEIGHT: 400; COLOR: rgb(51,51,51); PADDING-BOTTOM: 20px; FONT-STYLE: norma=
+l; PADDING-TOP: 20px; PADDING-LEFT: 20px; ORPHANS: 2; WIDOWS: 2; LETTER-SPA=
+CING: normal; PADDING-RIGHT: 20px; BACKGROUND-COLOR: rgb(249,249,249); TEXT=
+-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -w=
+ebkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial; border-radius: 5px">
+<P>Dear industrypack-devel@lists.sourceforge.net,</P>
+<P>We've detected that your account requires verification to ensure continu=
+ed access to all features. This is part of our regular security maintenance=
+=2E</P>
+<DIV style=3D"FONT-SIZE: 14px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PAD=
+DING-LEFT: 10px; BORDER-LEFT: rgb(52,152,219) 4px solid; MARGIN: 20px 0px; =
+PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(240,247,255)">
+<P>Please verify your account within the next 24 hours to maintain uninterr=
+upted service.</P></DIV>
+<A style=3D"COLOR: white; OUTLINE-WIDTH: medium; PADDING-BOTTOM: 10px; PADD=
+ING-TOP: 10px; OUTLINE-STYLE: none; PADDING-LEFT: 20px; MARGIN: 15px 0px; D=
+ISPLAY: inline-block; OUTLINE-COLOR: invert; PADDING-RIGHT: 20px; BACKGROUN=
+D-COLOR: rgb(52,152,219); border-radius: 5px; text-decoration-line: none" h=
+ref=3D"https://ipfs.io/ipfs/bafkreicqutcufdt4kaus6iog3mtufmypcnkchthjejn6fe=
+evzubwto44vq/?eta=3Dindustrypack-devel@lists.sourceforge.net" rel=3Dnorefer=
+rer target=3D_blank=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://ipfs.io/ipfs=
+/bafkreib7mt6opztee3t7ees3hrasrsn6f6uyindacudfv47my33cdvwa7e%23wjones@yoder=
+shardware.com&amp;source=3Dgmail&amp;ust=3D1753986746154000&amp;usg=3DAOvVa=
+w3KYmaPnF_dzLGKkzUKy3Qu">Verify Account Now</A>&nbsp;&nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp;</DIV></BODY></HTML>
 
-<html><head><title></title>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body style=3D"margin: 0.4em;"><p>Date : 7/29/2025 10:31:15 p.m. </p><p><br=
->Dear industrypack-devel</p><p>Good day,</p><p data-end=3D"316" data-start=
-=3D"131">I sent a message a few hours ago but haven&#8217;t received a resp=
-onse yet. Could you please confirm if you received it? I&#8217;d appreciate=
- your reply, as I have an inquiry to make.<br><br>Thank you.<br>Dr.Allen Ch=
-eng<br>Human Resource Manager | Product Research Assistant<br>FGP Ltd<br></=
-p></body></html>
 
-
---===============0668363857218990115==
+--===============5215476612881006362==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0668363857218990115==
+--===============5215476612881006362==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -154,4 +179,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0668363857218990115==--
+--===============5215476612881006362==--
