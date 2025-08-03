@@ -2,100 +2,87 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4C978B186CF
-	for <lists+industrypack-devel@lfdr.de>; Fri,  1 Aug 2025 19:39:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 69985B191AF
+	for <lists+industrypack-devel@lfdr.de>; Sun,  3 Aug 2025 05:35:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Cc:Reply-To:From:
+	d=lists.sourceforge.net; s=beta; h=Date:Message-Id:Content-Type:Reply-To:
 	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	Subject:Message-ID:Mime-Version:To:Date:Sender:Content-Transfer-Encoding:
-	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=3SYCyRqJ39pltqk+xl2ctXm7Gjqd5pM30l9WGSjehow=; b=lv9LV44AgcSqsnXKgLcPXrQCNR
-	7PJo2bNoDaiFI3qfMgA89POQbI9xKMGlR4ARkZHjtL4khrcZ3QYF6+ufVRuCCQ2JtspHEIaKM4KtL
-	1wqrFl5gqPFyvTRfs8My/4M8aFvJ45WdYyrDUvfJCn8gZyu9JMlRJnq69/vTpoyI+/CM=;
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	Subject:To:From:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=plhCXjBIRTEQakoFNjSE6pl6Gmyij5NcoCidDtbNv78=; b=mKiGnJeu03vZAYgkouxdaIICVK
+	ZCj5OL6+2d9BVGfX5mnv6OunYsVnRMcZJ02zC/F33z2FwjKSL4eYiszVx6aqj+3xoQ6OWcfkwtR7J
+	vuHzjs1/3KH0FbIbH1u227ubTDew0oabiwM1m922R/R0ypIGzwJ562Q5818ruRl3UJa4=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1uhtjD-0006kL-5F
+	id 1uiPVb-0007km-QT
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 01 Aug 2025 17:39:35 +0000
+	Sun, 03 Aug 2025 03:35:39 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <199841@rhotelcentral.emktlw-02.com>)
- id 1uhtjB-0006kF-S2 for industrypack-devel@lists.sourceforge.net;
- Fri, 01 Aug 2025 17:39:33 +0000
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1uiPVa-0007kd-Ph
+ for industrypack-devel@lists.sourceforge.net;
+ Sun, 03 Aug 2025 03:35:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Message-ID:List-Unsubscribe:Content-Type:
- Mime-Version:Subject:To:Reply-To:From:Date:Sender:Cc:
- Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Subscribe:List-Post:List-Owner:List-Archive
- ; bh=je6CYe6dtz3Jm6KJZGB2SJhbza79zPAEdyRJO/rqH0Q=; b=FPh1isBIVZg+HOCdBIpGQx1f
- ytWX3EvKFBjGB7ASoaXmDInSmBIR9QHbmijkyqmYU7UpX6gshZbk1KysojL/LCucEpmFd3A/VonRd
- 126EZecsUo2BRKi2NviMky0l4Oi14hVTdxWc7cgd6DC/8mhRSeY5O6NPmu+sPbTJXR1bjY=;
+ d=sourceforge.net; s=x; h=reply-to:Subject:To:From:MIME-Version:Content-Type:
+ Sender:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=ubGTQe3XfPmYhwcmiF0SB6O5j9GtaxYtXPhD6GoCJaY=; b=gzgW9qY4iLt7wY4g4PbfSuv2T8
+ 841SZHHO2NeqSk4kX+Sny7EVkxp17o2/vNghaf6wpiyM/GdW7uuQMC/xfX/Gqc3habBAvJpusskYd
+ B5ywMRMnOO90XYqg42wAkFMlXXG3LRYG1LJOuvgGkmDOrZ1Dv5ikSAG6UPZYpKDTkS7Y=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Message-ID:List-Unsubscribe:Content-Type:Mime-Version:Subject:To:Reply-To
- :From:Date:Sender:Cc:Content-Transfer-Encoding:Content-ID:Content-Description
- :Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
- In-Reply-To:References:List-Id:List-Help:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=je6CYe6dtz3Jm6KJZGB2SJhbza79zPAEdyRJO/rqH0Q=; b=MkoFI25Eo3Js
- QRvBcm5euGZPnttw7PW91bLZGxw+519DhbpUGbrvHImSPfkW0EGSCD92dfFT0pD5bU+bBqOSqX8PV
- XPqRrLRSGtB3MXiliRCVMItqUnVvpw0llHedQhWKjBus6TCyyfCrFk+3qQleG8sHVwP+Ox4Ef0OUP
- qeaP0=;
-Received: from mail15102.delibird-emkt0003.lwdlv.com.br ([191.252.15.102])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1uhtjB-0001Ku-5Y for industrypack-devel@lists.sourceforge.net;
- Fri, 01 Aug 2025 17:39:33 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=emktlw; d=emktlw-02.com;
- h=Date:From:Reply-To:To:Subject:Mime-Version:Content-Type:List-Unsubscribe:
- Message-ID; bh=je6CYe6dtz3Jm6KJZGB2SJhbza79zPAEdyRJO/rqH0Q=;
- b=IIaCz1j8W8w517jiyJTt8BVdX3xSgldOkdP0TLtkduvRTfJ/h5FWNt+PkFc/3wOLYHKx84hjny+t
- lzdPUKuLiTJsxx0fEozSPJztPUXqRtV3slIIR274NRqUtXHErh54QpAzOM8fPiAO+NOZseNfJVYX
- QyjuCJSWIB3lsxxLhz0=
-Received: from localhost (191.252.190.5) by
- mail15102.delibird-emkt0003.lwdlv.com.br id hhjts42n8lge for
- <industrypack-devel@lists.sourceforge.net>;
- Fri, 1 Aug 2025 14:39:12 -0300 (envelope-from
- <199841@rhotelcentral.emktlw-02.com>)
-Date: Fri, 1 Aug 2025 14:39:12 -0300
+ h=reply-to:Subject:To:From:MIME-Version:Content-Type:Sender:Date:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=ubGTQe3XfPmYhwcmiF0SB6O5j9GtaxYtXPhD6GoCJaY=; b=A
+ ZxHvNriKfVb5+357CCFPj/dz8CtjlKvUGzTSooDAYjodEQIQBh7xiiezPBGIhdmLrRbbdNuHo3a64
+ WqRsvjTBIHOLWii1NDeebiVJCTPopuQZg6lnSVgbISI8Q0P2dI6XZRR1Bbj9o4Tx2sM34HkCeSC9N
+ I1u0DNUm0JjXY2W4=;
+Received: from 211.61.247.35.bc.googleusercontent.com ([35.247.61.211]
+ helo=[10.88.0.3]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
+ (Exim 4.95) id 1uiPVa-0000Wz-8m
+ for industrypack-devel@lists.sourceforge.net;
+ Sun, 03 Aug 2025 03:35:38 +0000
+MIME-Version: 1.0
+From: administrator <industrypack-devel@lists.sourceforge.net>
 To: industrypack-devel@lists.sourceforge.net
-Mime-Version: 1.0
-Precedence: bulk
-x-account-id: 199841
-x-contact-id: 6988
-x-envelope-id: 7
-x-message-id: 7
-x-locaweb-id: HV1mAT7WLYfREaYCQzUSbyHfPMIA4X-sYSIaIdeEx8vhBy6icq87ocxm-w7oThqxcZdjvud1xevSZAfpH5oSnEwRT4GGlR1RGpeWUO45GZuhVaP33tWCHAIPE88UDIb7ht9nWKKnpj1WzAxVNO1X9ZNcSk1PJYwzxYlX0X3vZaUI5eoOMK0Tj9AkXdPfBkS-
-x-locaweb-id2: NTI2NTYzNmM2MTZkNjU0MTUxNTU0OTIwM2M3MjY1NzM2NTcyNzY2MTczNDA3MjY4NmY3NDY1NmM2MzY1NmU3NDcyNjE2YzJlNjU2ZDZiNzQ2Yzc3MmQzMDMyMmU2MzZmNmQzZQ==
-Feedback-ID: 199841:7:c:emktlw
-Message-ID: <0.8.0.AC.1DC030B315E05F2.1895E@mail15102.delibird-emkt0003.lwdlv.com.br>
-X-Spam-Score: 0.0 (/)
-X-Spam-Report: Spam detection software, running on the system "sfi-spamd-2.hosts.colo.sdot.me",
+X-Priority: 2
+X-Spam-Score: 4.4 (++++)
+X-Spam-Report: Spam detection software,
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  ReclameAQUI Prezado(a), Informamos que recebemos uma reclamação
-    registrada por um de seus clientes através da plataforma Reclame Aqui. Pedimos
-    que verifique os detalhes da reclamação o quanto ant [...] 
- 
- Content analysis details:   (0.0 points, 5.0 required)
- 
-  pts rule name              description
+ Content preview: reCAPTCHA Verification Failed lists.sourceforge.net
+ Verification Failed 
+ Content analysis details:   (4.4 points, 5.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
-                             background
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.0 MIME_QP_LONG_LINE      RAW: Quoted-printable line longer than 76 chars
-X-Headers-End: 1uhtjB-0001Ku-5Y
-Subject: [Industrypack-devel] ReclameAQUI
+ 0.1 MISSING_MID            Missing Message-Id: header
+ 1.4 MISSING_DATE           Missing Date: header
+ 0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [35.247.61.211 listed in wl.mailspike.net]
+ 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 0.0 TVD_RCVD_IP            Message was received from an IP address
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
+ dynamic-looking rDNS
+ 0.9 TO_EQ_FM_DOM_HTML_ONLY To domain == From domain and HTML only
+ 0.0 TO_EQ_FM_HTML_ONLY     To == From and HTML only
+ 0.0 TO_EQ_FM_DIRECT_MX     To == From and direct-to-MX
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+X-Headers-End: 1uiPVa-0000Wz-8m
+Subject: [Industrypack-devel] =?utf-8?q?Confirm_you=E2=80=98re_not_a_robot?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
+Precedence: list
 List-Id: <industrypack-devel.lists.sourceforge.net>
 List-Unsubscribe: <https://lists.sourceforge.net/lists/options/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=unsubscribe>
@@ -104,141 +91,59 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: ReclameAQUI via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: reservas@hotelcentral-ro.com.br
-Cc: ReclameAQUI <reservas@rhotelcentral.emktlw-02.com>
-Content-Type: multipart/mixed; boundary="===============3081566584261105401=="
+Reply-To: replyemail@exaple.com
+Content-Type: multipart/mixed; boundary="===============1799164329942920567=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1uiPVb-0007km-QT@sfs-ml-1.v29.lw.sourceforge.com>
+Date: Sun, 03 Aug 2025 03:35:39 +0000
+
+--===============1799164329942920567==
+Content-Type: multipart/related; boundary="===============2369026893744196752=="
+
+--===============2369026893744196752==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+Cgo8aHRtbD48aGVhZD4KPG1ldGEgY2hhcnNldD0iVVRGLTgiPgo8bWV0
+YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNj
+YWxlPTEuMCI+Cjx0aXRsZT5yZUNBUFRDSEEgVmVyaWZpY2F0aW9uIEZhaWxlZDwvdGl0bGU+Cjxt
+ZXRhIGh0dHAtZXF1aXY9IlgtVUEtQ29tcGF0aWJsZSIgY29udGVudD0iSUU9ZWRnZSI+CjwvaGVh
+ZD4KPGJvZHkgc3R5bGU9Im1hcmdpbjogMHB4OyBwYWRkaW5nOiAwcHg7IGNvbG9yOiByZ2IoNTEs
+IDUxLCA1MSk7IGZvbnQtZmFtaWx5OiBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmOyBiYWNr
+Z3JvdW5kLWNvbG9yOiByZ2IoMjQ0LCAyNDYsIDI0OCk7Ij4KPHRhYmxlIHdpZHRoPSIxMDAlIiBz
+dHlsZT0ibWFyZ2luOiAyMHB4IGF1dG87IG1heC13aWR0aDogNjAwcHg7IiBib3JkZXI9IjAiIGNl
+bGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCI+Cjx0Ym9keT4KPHRyPgo8dGQgc3R5bGU9InBh
+ZGRpbmc6IDIwcHg7IGJvcmRlci1yYWRpdXM6IDRweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1
+NSwgMjU1LCAyNTUpOyI+CjxoMiBzdHlsZT0ibWFyZ2luOiAwcHggMHB4IDE1cHg7IGNvbG9yOiBy
+Z2IoNTEsIDUxLCA1MSk7Ij5saXN0cy5zb3VyY2Vmb3JnZS5uZXQgVmVyaWZpY2F0aW9uIEZhaWxl
+ZDwvaDI+CjxwIHN0eWxlPSJtYXJnaW46IDBweCAwcHggMTVweDsgY29sb3I6IHJnYig4NSwgODUs
+IDg1KTsgZm9udC1zaXplOiAxNHB4OyI+RGVhciBJbmR1c3RyeXBhY2stZGV2ZWwsPGJyPjxicj5X
+ZSBjb3VsZG4mIzgyMTc7dCBjb25maXJtIHRoYXQgeW91JiM4MjE3O3JlIGEgcmVhbCB1c2VyLiBQ
+bGVhc2UgdHJ5IGFnYWluIHRvIGNvbnRpbnVlOjwvcD4KPHAgc3R5bGU9Im1hcmdpbjogMHB4IDBw
+eCAxNXB4OyI+CjxhIHN0eWxlPSJwYWRkaW5nOiAxMHB4IDIwcHg7IGJvcmRlci1yYWRpdXM6IDRw
+eDsgY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyBkaXNw
+bGF5OiBpbmxpbmUtYmxvY2s7IGJhY2tncm91bmQtY29sb3I6IHJnYigwLCAxMjMsIDI1NSk7IiBo
+cmVmPSJodHRwczovL3d3dy5pc2FoZC5hZS9Ib21lL1NldEN1bHR1cmU/Y3VsdHVyZT1hciZocmVm
+PWh0dHBzJTNBJTJGJTJGc2Zmci52ZXJjZWwuYXBwLz9ldGE9YVc1a2RYTjBjbmx3WVdOckxXUmxk
+bVZzUUd4cGMzUnpMbk52ZFhKalpXWnZjbWRsTG01bGRBPT0iPlZlcmlmeSB5b3UmIzgyMTc7cmUg
+aHVtYW48L2E+CjwvcD4KPHAgc3R5bGU9Im1hcmdpbjogMjBweCAwcHggMHB4OyB0ZXh0LWFsaWdu
+OiBjZW50ZXI7IGNvbG9yOiByZ2IoMTM2LCAxMzYsIDEzNik7IGZvbnQtc2l6ZTogMTJweDsiPgpO
+ZWVkIGhlbHA/IDxhIHN0eWxlPSJjb2xvcjogcmdiKDAsIDEyMywgMjU1KTsgdGV4dC1kZWNvcmF0
+aW9uOiB1bmRlcmxpbmU7IiBocmVmPSJtYWlsdG86IyI+Q29udGFjdCBzdXBwb3J0PC9hPi4KPC9w
+Pgo8L3RkPgo8L3RyPgo8L3Rib2R5Pgo8L3RhYmxlPgoKPC9ib2R5PjwvaHRtbD4=
+
+--===============2369026893744196752==--
 
 
---===============3081566584261105401==
-Content-Type: multipart/alternative;
- boundary="--==_mimepart_688cfbb2c55f6_1f8333fe2697396743236512";
- charset=UTF-8
-
-
-----==_mimepart_688cfbb2c55f6_1f8333fe2697396743236512
-Content-Type: text/plain;
- charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
-
-ReclameAQUI=0D
-Prezado(a),=0D
-Informamos que recebemos uma reclama=C3=A7=C3=A3o registrada por um de se=
-us clientes atrav=C3=A9s da plataforma=C2=A0Reclame Aqui.=0D
-Pedimos que verifique os detalhes da reclama=C3=A7=C3=A3o o quanto antes =
-para tomar as provid=C3=AAncias necess=C3=A1rias e evitar maiores contrat=
-empos. Confira os detalhes abaixo:=0D
-ACESSE A RECLAMA=C3=87=C3=83O=0D
-Data:=C2=A00108/2025=0D
-Hor=C3=A1rio:=C2=A014:35:11=0D
-Protocolo de registro:=C2=A0614430455-6000519-2025=0D
-Solicitamos a especial gentileza de analisar o teor da reclama=C3=A7=C3=A3=
-o e fazer sua r=C3=A9plica em at=C3=A9 24 horas.=0D
-Se voc=C3=AA n=C3=A3o deseja mais receber nossos e-mails, cancele sua ins=
-cri=C3=A7=C3=A3o atrav=C3=A9s do link %{link}=
-
-----==_mimepart_688cfbb2c55f6_1f8333fe2697396743236512
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www=
-.w3.org/TR/REC-html40/loose.dtd">=0D
-<html xmlns=3D"http://www.w3.org/1999/xhtml">=0D
-<head>=0D
-	<title></title>=0D
-	<meta content=3D"text/html; charset=3Dwindows-1252" http-equiv=3D"Conten=
-t-Type" /><meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001" />=
-=0D
-</head>=0D
-<body>=0D
-<div style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Arial=
-, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: non=
-e; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); PADDING-BOTTOM: 15px; FONT-STY=
-LE: normal; TEXT-ALIGN: center; PADDING-TOP: 15px; PADDING-LEFT: 15px; OR=
-PHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; PADDING-RIGHT: 15px; BACKGRO=
-UND-COLOR: rgb(242,242,242); TEXT-INDENT: 0px; font-variant-ligatures: no=
-rmal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-dec=
-oration-thickness: initial; text-decoration-style: initial; text-decorati=
-on-color: initial"><span style=3D"BOX-SIZING: border-box; FONT-SIZE: 28px=
-; FONT-FAMILY: &quot;Arial Black&quot;, sans-serif; FONT-WEIGHT: bold; FO=
-NT-STYLE: italic"><strong style=3D"BOX-SIZING: border-box; FONT-WEIGHT: b=
-older"><span style=3D"BOX-SIZING: border-box; COLOR: rgb(163,200,0)">Recl=
-ame</span><span style=3D"BOX-SIZING: border-box; COLOR: rgb(0,122,61)">AQ=
-UI</span></strong></span></div>=0D
-=0D
-<div style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Arial=
-, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: non=
-e; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); PADDING-BOTTOM: 20px; FONT-STY=
-LE: normal; TEXT-ALIGN: left; PADDING-TOP: 20px; PADDING-LEFT: 20px; ORPH=
-ANS: 2; WIDOWS: 2; LETTER-SPACING: normal; PADDING-RIGHT: 20px; TEXT-INDE=
-NT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webk=
-it-text-stroke-width: 0px; text-decoration-thickness: initial; text-decor=
-ation-style: initial; text-decoration-color: initial">=0D
-<p style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; MARGIN: 0px">Prezado=
-(a),</p>=0D
-=0D
-<p style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; MARGIN-TOP: 0px">Inf=
-ormamos que recebemos uma reclama=C3=A7=C3=A3o registrada por um de seus =
-clientes atrav=C3=A9s da plataforma<span>&nbsp;</span><strong style=3D"BO=
-X-SIZING: border-box; FONT-WEIGHT: bolder">Reclame Aqui</strong>.</p>=0D
-=0D
-<p style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; MARGIN-TOP: 0px">Ped=
-imos que verifique os detalhes da reclama=C3=A7=C3=A3o o quanto antes par=
-a tomar as provid=C3=AAncias necess=C3=A1rias e evitar maiores contratemp=
-os. Confira os detalhes abaixo:</p>=0D
-=0D
-<p style=3D"BOX-SIZING: border-box; TEXT-ALIGN: center; MARGIN: 20px 0px"=
-><a href=3D"https://emailmarketing.locaweb.com.br/accounts/199841/message=
-s/7/clicks/6988/7?envelope_id=3D7" rel=3D"noreferrer" style=3D"BOX-SIZING=
-: border-box; FONT-SIZE: 16px; TEXT-DECORATION: none; FONT-WEIGHT: bold; =
-COLOR: rgb(255,255,255); PADDING-BOTTOM: 12px; PADDING-TOP: 12px; PADDING=
--LEFT: 25px; DISPLAY: inline-block; PADDING-RIGHT: 25px; BACKGROUND-COLOR=
-: rgb(0,122,61); border-radius: 5px" target=3D"_blank">ACESSE A RECLAMA=C3=
-=87=C3=83O</a></p>=0D
-=0D
-<ul style=3D"LIST-STYLE-TYPE: none; BOX-SIZING: border-box; FONT-SIZE: 16=
-px; MARGIN-TOP: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT:=
- 0px; PADDING-RIGHT: 0px">=0D
-	<li style=3D"BOX-SIZING: border-box"><strong style=3D"BOX-SIZING: border=
--box; FONT-WEIGHT: bolder">Data:</strong><span>&nbsp;01</span>08/2025</li=
->=0D
-	<li style=3D"BOX-SIZING: border-box"><strong style=3D"BOX-SIZING: border=
--box; FONT-WEIGHT: bolder">Hor=C3=A1rio:</strong><span>&nbsp;14</span>:35=
-:11</li>=0D
-	<li style=3D"BOX-SIZING: border-box"><strong style=3D"BOX-SIZING: border=
--box; FONT-WEIGHT: bolder">Protocolo de registro:</strong><span>&nbsp;</s=
-pan>614430455-6000519-2025</li>=0D
-</ul>=0D
-=0D
-<p style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; MARGIN-TOP: 0px">Sol=
-icitamos a especial gentileza de analisar o teor da reclama=C3=A7=C3=A3o =
-e fazer sua r=C3=A9plica em at=C3=A9 24 horas.</p>=0D
-</div>=0D
-<div style=3D"text-align:center;"><p><span style=3D"color:#ffffff;"><span=
- style=3D"font-family:arial,helvetica,sans-serif;">Se voc=C3=AA n=C3=A3o =
-deseja mais receber nossos e-mails, </span></span><span style=3D"font-fam=
-ily:arial,helvetica,sans-serif;"><a href=3D"http://emailmarketing.locaweb=
-.com.br/accounts/199841/unsubscribes/7/6988?emkt_c=3D1754059914&amp;emkt_v=3D=
-aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldA&amp;envelope_id=3D7"><span style=3D"color:#ffffff;">cancele a su=
-a inscri=C3=A7=C3=A3o.</span></a></span></p></div><img src=3D"http://emai=
-lmarketing.locaweb.com.br/accounts/199841/messages/7/openings/6988?envelo=
-pe_id=3D7" width=3D"1" height=3D"1" border=3D"0" alt=3D"" /></body>=0D
-</html>=0D
-
-----==_mimepart_688cfbb2c55f6_1f8333fe2697396743236512--
-
-
---===============3081566584261105401==
+--===============1799164329942920567==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3081566584261105401==
+--===============1799164329942920567==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -249,5 +154,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3081566584261105401==--
+--===============1799164329942920567==--
 
