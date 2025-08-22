@@ -2,100 +2,110 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9671BB30D18
-	for <lists+industrypack-devel@lfdr.de>; Fri, 22 Aug 2025 05:56:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6B1F6B32281
+	for <lists+industrypack-devel@lfdr.de>; Fri, 22 Aug 2025 20:58:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:List-Subscribe:List-Help:
-	List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:MIME-Version:
-	Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:References:
+	MIME-Version:To:From:Date:Message-ID:Sender:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=sNwUTH9Df+8kXahSKewaChD/chZgpmASXnrZmGYdcJs=; b=m4rWOJ9TADFjx8kiCgqrmVVxDh
-	Q2s7L7ZGWC6Je6f15n7aZfJv0Vei/NwvC58mLXglWXA3hvqa7MAg4BeMOpv/qJKilZxehP8sL+FK/
-	tr78X5PHe5MP3q8I3K33PAwLSBDw4Ybe0Zk4yApJAbYoA7cMblacrb/VfUvKgRoqZThY=;
-Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
-	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:List-Owner;
+	bh=GrKMz9ITcskAgIpjl1XhypgplfjgYxR+/1yvbh1H32I=; b=EN3LY1b5uBXhWRCYEt9sbu/eBG
+	SJz2hE0XeFWhD9ptqrmggmLBbruy0YgsvbrmRSrT5fDEUuV5MkM3508Mm1NYcIbxR0clZQC1A3x4Y
+	clakC6ojUhb1wEXo6x3ZntqcFXPm0AE05dp0NaaRhyoy4TJhtdaAaEYeCtPkITj0lFBY=;
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1upItS-0006Ai-MW
+	id 1upWyV-0000JH-A5
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 22 Aug 2025 03:56:47 +0000
+	Fri, 22 Aug 2025 18:58:55 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <iris@docuconnex.com>) id 1upItL-0006A0-3g
+ (envelope-from <stowe.strobl@zjdobest.com>) id 1upWyU-0000JA-29
  for industrypack-devel@lists.sourceforge.net;
- Fri, 22 Aug 2025 03:56:39 +0000
+ Fri, 22 Aug 2025 18:58:54 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:References:Content-Type:MIME-Version:To:
+ Reply-To:From:Date:Message-ID:Sender:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ :Resent-Message-ID:In-Reply-To:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=URUjFAQaZi+nOckSHT13LNKBR6bQXGC8fcO3p+SlwiY=; b=ROlYHuXHc8fNkt+qWYU2/P9F4g
- snFjVqyU03pvgxhQi7fjIK5In3K+LMfc3RiyKPR1bU3qDyXdg8y5IPAhmK9WsmrgS2fBR5xiPpOFS
- DSIcxHLTxYwWLviowQCeFdlpU0jpCHvknv1ZrCKjelQc1JxeGRorwuYboQS50kW0Frzo=;
+ bh=2QDJETZoJn8nwh4Sa5tTe5c7HDLiTkF7QJeQFb4YAKk=; b=RyRvcntolnC+KCEY8keACNnY7J
+ nxA6r8lknQBYprWJXAktsDMDdyyK1nIBsVfYE4fJTwGbdc5np1f/Ui1N61Z3jEnM8GrPgwA3kymvN
+ C+LrO3uf/UKfHIyB3Re2Ne4VXmMVoCHSX0pabzqmDhmGTw8Tsg5zeW2BGDxtO9KcJb28=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
- References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=URUjFAQaZi+nOckSHT13LNKBR6bQXGC8fcO3p+SlwiY=; b=i
- UsFCoWVutsT+NtXuRtohCeH+DSRXR9pFzx8QEZ8gJLjSWEIbU37JbsWBTm42mePs9wMYOlbmOvhsJ
- wfpHm6W3dwPLnfi9OBb1y2666ZDXruud6jkc5cUz3W6fuHOSm5LBrlUJNYDZbxyY8GPXEWcLsa6nd
- WMI52JYrmQjCo91A=;
-Received: from enemy.docuconnex.com ([86.106.104.74])
+ h=Subject:References:Content-Type:MIME-Version:To:Reply-To:From:Date:
+ Message-ID:Sender:Cc:Content-Transfer-Encoding:Content-ID:Content-Description
+ :Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+ In-Reply-To:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=2QDJETZoJn8nwh4Sa5tTe5c7HDLiTkF7QJeQFb4YAKk=; b=f
+ tDAWD66hRewXtetVbhD/okUKrZjNGQVo6VA0u/H6emT0pJ69LiKJEDCH8joIxkv6UzrDfLu7XGNia
+ tNsj8n6xJCUljVJlcRyc9OuyB8EBBwQwH5gTvAQai6b1sA/kJ2jwgTesKTUestBibaDADN3m5S/bQ
+ +hGTb2ojwKoV9hhE=;
+Received: from nylon.electromanufacturingtech.com ([107.172.255.117])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1upItL-0006LR-9E for industrypack-devel@lists.sourceforge.net;
- Fri, 22 Aug 2025 03:56:39 +0000
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=docuconnex.com; 
- h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
- i=iris@docuconnex.com; bh=nflMp+BCopszUzBNzggN17xGTRY=;
- b=cABOVrQlHBeeU2bzS4ygn2Cy4DnfHN70NrsYsVr70ybq7B42mgWAlNKodSn5M5BqZUjEpHbGRg+z
- cYCu3GgiQJVw4jYdXKtwrS727u3n+UsJTmCtTtEmCrPDrDfTZSe/PV0O/sBCXHiWbmAWd3JD9/gN
- 2HOcPo0s3zujXcE3pW+//tTVTn2RAa/Z/AQBvWwp3pVUXINnkCTMOlccVeSp/gOa+NgClhfjiydy
- 1cYm5D/AnckCuxQVLS+xQA/tjdTi3dAVa5UybmGEGZryKI7c35AUbg2d41thMr5k2H+026/F2rBR
- NMAgsWWKq5xE58z6V5rL3a4+RZP7kFSCRCHAew==
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=docuconnex.com;
- b=sOZSmhg73AkoKOWULJqfkZ5kpkKF8X+nYxdLBdcKZ/57eL7MBp1UXNBwcOeX9617dahGWVoBYKMd
- K2bGYDDdQue40RqwjM9NBetvs9irk3HY36sYY9YKHqYQTsyMWG+Q2XMvIBSP7Hu4XrdnPraCjL/I
- 1cHhA1H/CuqlGx+oHYLSC3GhVHvTZnQGLBBusQqG35ijDOlqo49TnMt0/WA1kglMxuuueGGlE9Lc
- CMY0zigrPHOQGgfCVfekqVqpinDTgt7jiDS+IMRUdsJDAEw5bGu2xOFWhsUOXYnDlTGCi6BUL7my
- S0xMrOKbMtLaYq+wfsU3J4ZT4/GvnALpav2U1w==;
-From: Admin IT lists.sourceforge.net  <iris@docuconnex.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 22 Aug 2025 05:36:08 +0200
-Message-ID: <20250822053608.0EC580A8A6B49B43@docuconnex.com>
+ id 1upWyT-0007zi-CG for industrypack-devel@lists.sourceforge.net;
+ Fri, 22 Aug 2025 18:58:54 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=selector2;
+ d=xqv.gedoretorquetech.com; 
+ h=Message-ID:Date:Subject:From:Reply-To:To:MIME-Version:Content-Type:
+ References; i=benjamin@xqv.gedoretorquetech.com;
+ bh=2QDJETZoJn8nwh4Sa5tTe5c7HDLiTkF7QJeQFb4YAKk=;
+ b=hUsEBKwcVZLQrqMXaNuy5ZO0LE1h59OGFk9BP8wS5mY4BqA8KTVrdbYrWY76m2RurRTmiGZpRvXk
+ ZFfFh/bTTUx+afX8iIreyi3V0hpZfvQlEHCUugM6b9p8fbLCCIqOSXHtEVnb1dIMLHcMrEjHJtw8
+ C4zxaY1J4Jh7M1YkNPE=
+DKIM-Signature: v=1; a=rsa-sha256;
+ bh=2QDJETZoJn8nwh4Sa5tTe5c7HDLiTkF7QJeQFb4YAKk=; d=xqv.gedoretorquetech.com;
+ h=Message-ID: Date: Subject: From: Reply-To: To: MIME-Version: Content-Type:
+ References; i=@xqv.gedoretorquetech.com; s=mailer; c=relaxed/relaxed;
+ t=1755889126;
+ b=jiThyMfNR3O41pFhANMt/WkoFXobhLhu6j4XWUL++VjHRrFcEBGJGtPM29sdIVi7ywj3gv7aA
+ l6M9X71uxkY2OfDlhAFtfOQJNU8G+YpgTN12n9MJAOTf/E+yGlq8BqtYIw2e4WZKDIsKjv2n5
+ bhCWtGKG9vc5vBbJnsMbbnTeHK7knAlsHnzGiUnEKj31HeKKXCzyWLaon2vivInaGywsc8X6H
+ JXuaGKeAUl3BvsEYijyw8A64VI8/9X2Bp48ZD5UkkrySwHBONTpChoEdmVC80d7dSayFLo00G
+ B7IANk3Gt6bOMnhnSXpFP0YxGGfcT95P7NVAtV5aFowJ+IrikQ==
+Message-ID: <704b58011a399f1b06fbb300cb5e103faae264fb@zjdobest.com>
+Date: Fri, 22 Aug 2025 18:58:45 +0000
+From: Izola Leventer <benjamin@xqv.gedoretorquetech.com>
+To: Industrypack devel <industrypack-devel@lists.sourceforge.net>
 MIME-Version: 1.0
-X-Spam-Score: 3.9 (+++)
+References: wc364femn9a4a
+X-Spam-Score: 8.2 (++++++++)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
- has NOT identified this incoming email as spam.  The original
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: Undelivered Emails Hello
- industrypack-devel@lists.sourceforge.net, 
- We have detected that some of your emails have not been delivered. You can
- view a list of these emails by following the action prompt below; 
- Content analysis details:   (3.9 points, 5.0 required)
+ Content preview:  good afternoon Industrypack devel, Welcome to a world where
+ your innovative product ideas are not just dreams but become impactful
+ realities.
+ At CNM MFG, we specialize in turning these visions into s [...] 
+ Content analysis details:   (8.2 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
- not necessarily valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 4.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [107.172.255.117 listed in dnsbl-1.uceprotect.net]
  -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
  domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
+ not necessarily valid
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+ domains are different
+ 0.3 RCVD_IN_MSPIKE_L3      RBL: Low reputation (-3)
+ [107.172.255.117 listed in bl.mailspike.net]
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 4.0 RCVD_IN_MSPIKE_BL      Mailspike blocklisted
- 0.0 RCVD_IN_MSPIKE_ZBI     No description available.
-X-Headers-End: 1upItL-0006LR-9E
-Subject: [Industrypack-devel] =?utf-8?q?Mail_delivery_failed=3A_returning_?=
- =?utf-8?b?bWVzc2FnZSB0byBzZW5kZXIg4p6h77iP?=
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+ background 4.0 RCVD_IN_MSPIKE_BL      Mailspike blocklisted
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1upWyT-0007zi-CG
+Subject: [Industrypack-devel] [SPAM] Fostering Advancement in Manufacturing
+ with CNC Machining
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -107,102 +117,225 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============0141810573316096010=="
+Reply-To: Izola Leventer <paul@en.limecostings.com>
+Content-Type: multipart/mixed; boundary="===============7653125510865513851=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============0141810573316096010==
-Content-Type: text/html;
-	charset="iso-8859-1"
+
+--===============7653125510865513851==
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1755889125_473e8e554f65f3f1bbcc1638e42ac959_=_"
+
+
+--_=_swift_1755889125_473e8e554f65f3f1bbcc1638e42ac959_=_
+Content-Type: text/plain; charset=utf-8
 Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
+ good afternoon Industrypack devel,
+Welcome to a world where your innovat=
+ive product ideas are not just
+dreams but become impactful realities. At =
+CNM MFG, we specialize in
+turning these visions into successful market pr=
+oducts. Our commitment
+to precision and quality, combined with advanced m=
+anufacturing skills,
+is key in making your ideas come to life. At the cor=
+e of our
+operations is innovation and supreme quality, making visionary=
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
-<body style=3D"MARGIN: 0.5em">
-<H1 style=3D"BOX-SIZING: border-box; FONT-FAMILY: Roboto, sans-serif; WHITE=
--SPACE: normal; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TRANSFORM: none; F=
-ONT-WEIGHT: 500; COLOR: rgb(44,54,58); FONT-STYLE: normal; ORPHANS: 2; WIDO=
-WS: 2; LETTER-SPACING: normal; LINE-HEIGHT: 1.2; TEXT-INDENT: 0px; font-var=
-iant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-widt=
-h: 0px; text-decoration-thickness: initial; text-decoration-style: initial;=
- text-decoration-color: initial">
-Undelivered Emails</H1>
-<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Roboto, s=
-ans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TR=
-ANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; =
-ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-varia=
-nt-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:=
- 0px; text-decoration-thickness: initial; text-decoration-style: initial; t=
-ext-decoration-color: initial">
-Hello industrypack-devel@lists.sourceforge.net,</P>
-<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Roboto, s=
-ans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TR=
-ANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; =
-ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-varia=
-nt-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:=
- 0px; text-decoration-thickness: initial; text-decoration-style: initial; t=
-ext-decoration-color: initial">
-We have detected that some of your emails have not been delivered. You can =
-view a list of these emails by following the action prompt below;</P>
-<P>
-<table style=3D"FONT-SIZE: 14px; FONT-FAMILY: Roboto, sans-serif; WHITE-SPA=
-CE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; TEXT-TRANSFORM: n=
-one; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; ORPHANS: 2=
-; WIDOWS: 2; LETTER-SPACING: normal; font-variant-ligatures: normal; font-v=
-ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
-ess: initial; text-decoration-style: initial; text-decoration-color: initia=
-l">
-<TBODY style=3D"BOX-SIZING: border-box">
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 10px; PADDING-TOP: 10p=
-x; PADDING-LEFT: 10px; MARGIN: 0px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: =
-rgb(0,120,212)"><A title=3D"View Undelivered Emails" style=3D"BOX-SIZING: b=
-order-box; COLOR: white; BACKGROUND-COLOR: transparent; text-decoration-lin=
-e: none" href=3D"https://dulaninfo.com/dubinfo-obij/duberrorserveletsupdate=
-serviceeleeecer404insiki/he-opas.html?email=3Dindustrypack-devel@lists.sour=
-ceforge.net" rel=3Dnoreferrer target=3D_blank>View Undelivered Emails</A></=
-TD></TR></TBODY>
-</TABLE></P>
-<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Roboto, s=
-ans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TR=
-ANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; =
-ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-varia=
-nt-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:=
- 0px; text-decoration-thickness: initial; text-decoration-style: initial; t=
-ext-decoration-color: initial">
-<BR style=3D"BOX-SIZING: border-box">We recommend you view undelivered emai=
-ls and proceed with the call action to resolve undeliverable problems in th=
-e future.</P>
-<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Roboto, s=
-ans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; MARGIN-TOP: 0px; TEXT-TR=
-ANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; =
-ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-varia=
-nt-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:=
- 0px; text-decoration-thickness: initial; text-decoration-style: initial; t=
-ext-decoration-color: initial">
-lists.sourceforge.net Mail Management</P>
-<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Roboto,=
- sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; =
-FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; TEXT-ALIGN: cen=
-ter; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-=
-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-w=
-idth: 0px; text-decoration-thickness: initial; text-decoration-style: initi=
-al; text-decoration-color: initial">
-<SMALL style=3D"BOX-SIZING: border-box; FONT-SIZE: 11px">This notification =
-is&nbsp;from lists.sourceforge.net's mail server for industrypack-devel@lis=
-ts.sourceforge.net.</SMALL></DIV></BODY></HTML>
+products a reality.
+
+WHY CHOOSE CNM MFG? ---=20
+
+ =09* RAPID PROTO=
+TYPING: We excel in swiftly creating cost-efficient,
+high-quality prototy=
+pes, suitable for limited production runs.
+ =09* PLASTIC INJECTION MOLDIN=
+G: Our expertise in producing top-tier
+plastic components through injecti=
+on molding is unmatched, ensuring
+precision and durability.
+ =09* CNC M=
+ACHINING: provides highly accurate and precise multi-axis CNC
+milling and=
+ turning for a range of materials including mild and
+stainless steel, alu=
+minum, brass, and hardened steels.
+ =09* MICRO MOLDING: offer micro plast=
+ic injection molding, which is
+ideal for making mold tools and precision =
+parts on a small scale, with
+costs significantly lower than conventional =
+molding.
+ =09* DIE CASTING: provides highly complex pressure die cast too=
+ls and
+finished parts in materials like magnesium, zinc, and aluminum.
+=
+ =09* VACUUM CASTING: use vacuum casting for making small volumes of
+prod=
+uction-quality plastic resin prototypes quickly and with minimal
+investme=
+nt in materials or tooling.
+ =09* QUALITY ASSURANCE: ensure positive mate=
+rial identification and
+rigid quality control at every step of the manufa=
+cturing process.
+ =09* LASER MARKING / LASER ETCHING: offers laser markin=
+g and etching
+services for permanent markings on various metals and some =
+plastics
+without altering part geometries or damaging mechanical properti=
+es.
+ =09* SHEET METAL STAMPING / BENDING / DRILLING: The company provides=
+
+limited sub-contracted sheet metal fabrication services for products
+r=
+equiring steel and aluminum enclosures, brackets, mounting plates,
+and ot=
+her fittings.
+ =09* LIGHT ASSEMBLY: offer light mechanical assembly servi=
+ces, both
+in-house and sub-contracted, tailored to a range of application=
+s.
+ =09* CUSTOM PACKAGING: For finished products, offers a variety of
+p=
+rinting and packaging options for custom packaging needs.
+ =09* WELDING /=
+ SOLDERING / BRAZING: provide metal joinery services
+through welding, sol=
+dering, or brazing, outsourced on select projects.
+
+At CNM MFG, we are =
+excited about the possibility of working with you
+to bring your innovativ=
+e ideas to life. Let's collaborate to create
+products that exceed market =
+expectations. Focused on creativity and
+excellence, we bring conceptual i=
+deas to life as successful products.
+
+Looking forward to a productive p=
+artnership, We emphasize innovation
+and superior quality, transforming cr=
+eative concepts into practical,
+high-functioning products.
+
+Thank you=
+ for your consideration.
+Darren Zinkl
+ wc364femn9a4a Fostering Advancem=
+ent in Manufacturing with CNC
+Machining
+
+--_=_swift_1755889125_473e8e554f65f3f1bbcc1638e42ac959_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head><meta charset=3D"utf-8"/>
+=09<title>Fost=
+ering Advancement in Manufacturing with CNC Machining</title>
+</head>
+<=
+body data-autofill-highlight=3D"true">good afternoon Industrypack devel,<br=
+ />
+Welcome to a world where your innovative product ideas are not just d=
+reams but become impactful realities. At CNM MFG, we specialize in turning =
+these visions into successful market products. Our commitment to precision =
+and quality, combined with advanced manufacturing skills, is key in making =
+your ideas come to life. At the core of our operations is innovation and su=
+preme quality, making visionary products a reality.<br />
+<br />
+<stron=
+g>Why Choose CNM MFG?  </strong>--- =20
+<ul>
+=09<li><strong>Rapid Prototy=
+ping:</strong> We excel in swiftly creating cost-efficient, high-quality pr=
+ototypes, suitable for limited production runs.</li>
+=09<li><strong>Plast=
+ic Injection Molding:</strong> Our expertise in producing top-tier plastic =
+components through injection molding is unmatched, ensuring precision and d=
+urability.</li>
+=09<li><strong>CNC Machining: </strong>provides highly ac=
+curate and precise multi-axis CNC milling and turning for a range of materi=
+als including mild and stainless steel, aluminum, brass, and hardened steel=
+s.</li>
+=09<li><strong>Micro Molding: </strong>offer micro plastic inject=
+ion molding, which is ideal for making mold tools and precision parts on a =
+small scale, with costs significantly lower than conventional molding.</li>=
+
+=09<li><strong>Die Casting:</strong> provides highly complex pressure di=
+e cast tools and finished parts in materials like magnesium, zinc, and alum=
+inum.</li>
+=09<li><strong>Vacuum Casting: </strong>use vacuum casting for=
+ making small volumes of production-quality plastic resin prototypes quickl=
+y and with minimal investment in materials or tooling.</li>
+=09<li><stron=
+g>Quality Assurance: </strong>ensure positive material identification and r=
+igid quality control at every step of the manufacturing process.</li>
+=09=
+<li><strong>Laser Marking / Laser Etching:</strong> offers laser marking an=
+d etching services for permanent markings on various metals and some plasti=
+cs without altering part geometries or damaging mechanical properties.</li>=
+
+=09<li><strong>Sheet Metal Stamping / Bending / Drilling: </strong>The c=
+ompany provides limited sub-contracted sheet metal fabrication services for=
+ products requiring steel and aluminum enclosures, brackets, mounting plate=
+s, and other fittings.</li>
+=09<li><strong>Light Assembly: </strong>offer=
+ light mechanical assembly services, both in-house and sub-contracted, tail=
+ored to a range of applications.</li>
+=09<li><strong>Custom Packaging:</s=
+trong> For finished products, offers a variety of printing and packaging op=
+tions for custom packaging needs.</li>
+=09<li><strong>Welding / Soldering=
+ / Brazing:</strong> provide metal joinery services through welding, solder=
+ing, or brazing, outsourced on select projects.</li>
+</ul>
+<br />
+At =
+CNM MFG, we are excited about the possibility of working with you to bring =
+your innovative ideas to life. Let's collaborate to create products that ex=
+ceed market expectations. Focused on creativity and excellence, we bring co=
+nceptual ideas to life as successful products.<br />
+<br />
+Looking for=
+ward to a productive partnership, We emphasize innovation and superior qual=
+ity, transforming creative concepts into practical, high-functioning produc=
+ts.<br />
+<br />
+Thank you for your consideration.<br />
+Darren Zinkl=
+<br />
+<scroll-to-top-button-container data-position-horizontal=3D"right"=
+ data-position-vertical=3D"bottom" data-state-active=3D""><noscript>
+<sty=
+le type=3D"text/css">scroll-to-top-button-container { display: none !import=
+ant; }
+</style>
+</noscript> </scroll-to-top-button-container><meta char=
+set=3D"utf-8"/><span style=3D"color:#ffffff;"><span style=3D"font-size:8px;=
+">wc364femn9a4a</span></span>
+</body>
+</html>
+<title>Fostering Advanc=
+ement in Manufacturing with CNC Machining</title>
+
+--_=_swift_1755889125_473e8e554f65f3f1bbcc1638e42ac959_=_--
 
 
---===============0141810573316096010==
+
+--===============7653125510865513851==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0141810573316096010==
+--===============7653125510865513851==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -213,4 +346,6 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0141810573316096010==--
+--===============7653125510865513851==--
+
+
