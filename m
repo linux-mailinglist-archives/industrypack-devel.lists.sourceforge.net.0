@@ -2,80 +2,84 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A19BB59571
-	for <lists+industrypack-devel@lfdr.de>; Tue, 16 Sep 2025 13:42:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 948FAB82BAB
+	for <lists+industrypack-devel@lfdr.de>; Thu, 18 Sep 2025 05:16:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
-	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
+	d=lists.sourceforge.net; s=beta; h=Date:Message-Id:Content-Type:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	Subject:To:From:MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=2tURMDZrhP84mRm3UH8gbAbj9UbCfxOdxlWsgOXHtkw=; b=GpeTo87LFLNlNti9PsQ+m4O9Mn
-	WlgSZBm+0Jdzwx3/DelqqRLDL0g7EJhpmIdp4ILZiut7Lgm45AkTn0OleBQPauSx5Df5OfNZQRdDZ
-	vxBS3JRiIoD5zdsy86B91aEL+ONts6KG5Hrsjmt/BJyaOlojKJ17ZcG7PjU/QAVI1hjU=;
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	bh=CYepuLWpX+4ebFDOT6sEHJV7rPgzZgVB3XlCcdrEC/Y=; b=aId91ipz+uZQ//DG2RzdFzVApW
+	lwr3vr84qpnpFgcusIDFdbsE7Bu3YNJJmasNSQEjVyfAiwYEe5XDqzcjoOTo//4g3EG7OoCvAeKex
+	KdrPu37oxRuY7xusRzI7bfy+yMA9NV1f2c8IC/8XfWCSWzCnCcdtzTPMN7eWYz6d7lRU=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1uyU4o-0000oy-UP
+	id 1uz58W-0003MD-Tg
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 16 Sep 2025 11:42:26 +0000
+	Thu, 18 Sep 2025 03:16:44 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <a.stod@ntlworld.com>) id 1uyU4n-0000om-3e
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1uz58U-0003M5-Ko
  for industrypack-devel@lists.sourceforge.net;
- Tue, 16 Sep 2025 11:42:25 +0000
+ Thu, 18 Sep 2025 03:16:42 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
+ Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=mNo9yB1iY4ujksNWOyaC4+J/CCaDY8rjIJsEzbr24ow=; b=kNhOP8gPd2AHoq3MJac9dpi3RZ
- sALMt7tSeupi2G6oSYKl6BaGxFrC42pFe35tURT7b3LYM+W3ewCMKF7kZkOjNPWJkruVKZtNCqmTO
- k+hNVj5YhHMGzu0C+b37NNcYTz8IrEVCbixhmb5aJa11xL39t6Ov7g2yiqpMgnrcdeqs=;
+ bh=+X9jdN7dbpg5MGJp9wwvTzoSFOWmhbyX2tdqKRNqm14=; b=DKOf7GmmlSaXjg5HmYVLZWH69I
+ J768Y80iJHfcAMkM3DyTIio/0OjuteJL0B7kSczEzVkZE+E3ezxtxGtt63eh78KrF03XI5GH6lJ8I
+ vKkcyChJrzmSO8NNXjYjKWqoxKvHq0JjYkbpd/Gua7F511QQD08cDJ8FGx7R3mEAKCpQ=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
- Date:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=mNo9yB1iY4ujksNWOyaC4+J/CCaDY8rjIJsEzbr24ow=; b=O
- K+twZwtqh1MEzgtlxS1/m31t2Sfho+L1HW5dOtoejds9ymRc+uO0tF1mtOArgWi32tKHR847xuIvV
- MyP+QybZBZ7/17NQustFrCJt3Eq4vo/vxCYMRN4NbKkI3xcN/xp810mGrHq4JGUdBVadTWcmlmfdt
- G4H+9DdIia6vdd/4=;
-Received: from [216.250.252.33] by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
- (Exim 4.95) id 1uyU4l-00045k-Np
+ List-Owner:List-Archive; bh=+X9jdN7dbpg5MGJp9wwvTzoSFOWmhbyX2tdqKRNqm14=; b=F
+ fMHNH3G6O7xVRWg10hTpwJK4/6ALTjkYs/uOEHEeJLoXDaT/MyJiEAwnvMvpOEA0ldcnsMQbMKfBU
+ eRyXkAl+BUufLgTLFM9ECEODvdjjtzAQzJD2hQrRvfbK12FCMp2+y4LidgD+DiJGfiw0SSVV+4fUs
+ q3FW/QFOzcN36D/E=;
+Received: from 142.211.52.34.bc.googleusercontent.com ([34.52.211.142]
+ helo=[10.88.0.3]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
+ (Exim 4.95) id 1uz58R-000186-OE
  for industrypack-devel@lists.sourceforge.net;
- Tue, 16 Sep 2025 11:42:25 +0000
-To: industrypack-devel@lists.sourceforge.net
-Date: 16 Sep 2025 04:42:10 -0700
-Message-ID: <20250916044209.530D22AA379FF032@ntlworld.com>
+ Thu, 18 Sep 2025 03:16:40 +0000
 MIME-Version: 1.0
-X-Spam-Score: 5.4 (+++++)
+From: "Lists ." <no-reply@lists.sourceforge.net>
+To: industrypack-devel@lists.sourceforge.net
+X-Priority: 2
+X-Spam-Score: 4.6 (++++)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
- has identified this incoming email as possible spam.  The original
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
+ has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: industrypack-devel@lists.sourceforge.net Verification
- 9/16/2025
- 4:42:09 a.m. Hi industrypack-devel@lists.sourceforge.net, 
- Content analysis details:   (5.4 points, 5.0 required)
+ Content preview:  Password Expiration Notice Security Notice 
+ Content analysis details:   (4.6 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 4.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [216.250.252.33 listed in dnsbl-1.uceprotect.net]
+ 1.4 MISSING_DATE           Missing Date: header
+ 0.1 MISSING_MID            Missing Message-Id: header
+ 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 0.0 TVD_RCVD_IP            Message was received from an IP address
+ 0.1 TVD_PH_SEC BODY: Message includes a phrase commonly used in phishing
+ mails 0.0 HTML_MESSAGE           BODY: HTML included in message
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 T_MXG_EMAIL_FRAG       BODY: URI with email in fragment
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 HTML_FONT_TINY_NORDNS  Font too small to read, no rDNS
-X-VA-Spam-Flag: YES
-X-Spam-Flag: YES
-X-Headers-End: 1uyU4l-00045k-Np
-Subject: [Industrypack-devel] [SPAM] #Action Required: Avoid Mailbox Shutdown
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+ background
+ 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
+ dynamic-looking rDNS
+ 0.1 TO_IN_SUBJ             To address is in Subject
+ 0.9 TO_EQ_FM_DOM_HTML_ONLY To domain == From domain and HTML only
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+X-Headers-End: 1uz58R-000186-OE
+Subject: [Industrypack-devel] =?utf-8?q?=5Bindustrypack-devel=40lists=2Eso?=
+ =?utf-8?q?urceforge=2Enet=5D=3A__lists=2Esourceforge=2Enet?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -87,138 +91,83 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Mailbox Support via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: Mailbox Support <a.stod@ntlworld.com>
-Content-Type: multipart/mixed; boundary="===============8695318137377746596=="
+Content-Type: multipart/mixed; boundary="===============6929816775089171563=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1uz58W-0003MD-Tg@sfs-ml-1.v29.lw.sourceforge.com>
+Date: Thu, 18 Sep 2025 03:16:44 +0000
 
---===============8695318137377746596==
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
+--===============6929816775089171563==
+Content-Type: multipart/related; boundary="===============0539895768377296872=="
 
-<html><head>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head>
-<body><div tabindex=3D"1" class=3D"Am aiL Al editable LW-avf tS-tW tS-tY" i=
-d=3D":t3" role=3D"textbox" aria-expanded=3D"false" aria-controls=3D":1bv" a=
-ria-owns=3D":1bv" style=3D"direction: ltr; min-height: 409px;" contentedita=
-ble=3D"true" hidefocus=3D"true" spellcheck=3D"false" aria-label=3D"Message =
-Body" aria-multiline=3D"true" itacorner=3D"6,7:1,1,0,0" g_editable=3D"true"=
- writingsuggestions=3D"false"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D=
-"ltr"><div dir=3D"ltr"><div dir=3D"ltr">
+--===============0539895768377296872==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
 
-<div style=3D"padding: 0px; color: rgb(34, 34, 34); font-family: Roboto,Rob=
-otoDraft,Helvetica,Arial,sans-serif; font-size: medium; border-left-color: =
-currentColor; border-left-width: medium; border-left-style: none; display: =
-flex;">
-<div style=3D"margin: 0px; padding: 0px 0px 20px; width: 1290px;">
-<div id=3D"m_-2389165102632629982m_-2862337059400665245m_298147033688663844=
-m_-8429174289056822736m_-7929704800997416724m_-39798808527363889m_906019004=
-1860497799m_-2427145531831029646m_5268039451863485029m_-1310768584506492804=
-m_985345383777259521m_6045255725945160625m_-7684109771908007727m_3521334025=
-784030328m_-914471003173216367m_-5511476127193352846m_-5778870440113700472m=
-_6059766239131675564gmail-m_-4036548085837248123m_-4288977199800308422m_351=
-4033325870818030m_8619773795691599890gmail-:36b"=20
-style=3D"margin: 8px 0px 0px; padding: 0px; direction: ltr;">
-<div id=3D"m_-2389165102632629982m_-2862337059400665245m_298147033688663844=
-m_-8429174289056822736m_-7929704800997416724m_-39798808527363889m_906019004=
-1860497799m_-2427145531831029646m_5268039451863485029m_-1310768584506492804=
-m_985345383777259521m_6045255725945160625m_-7684109771908007727m_3521334025=
-784030328m_-914471003173216367m_-5511476127193352846m_-5778870440113700472m=
-_6059766239131675564gmail-m_-4036548085837248123m_-4288977199800308422m_351=
-4033325870818030m_8619773795691599890gmail-:36a"=20
-style=3D"line-height: 1.5; overflow: hidden; font-family: Arial,Helvetica,s=
-ans-serif; font-size: small; font-stretch: normal; font-variant-numeric: no=
-rmal; font-variant-east-asian: normal;">
-<table style=3D"margin: auto; width: 550px;" border=3D"0" cellspacing=3D"0"=
- cellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; font-family: Roboto,RobotoDraft,Helvetica,Arial,s=
-ans-serif;">
-<table style=3D"width: 550px;" border=3D"0" cellspacing=3D"0" cellpadding=
-=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; height: 4px; line-height: 4px; font-size: 4px; ba=
-ckground-color: rgb(102, 102, 102);">&nbsp;</td></tr>
-<tr>
-<td style=3D"margin: 0px;">
-<table style=3D"background: rgb(246, 246, 246); border: 1px solid rgb(204, =
-204, 204); width: 550px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+PCFET0NUWVBFIGh0bWw+Cgo8SFRNTCBsYW5nPWVuPjxIRUFEPjxUSVRMRT5QYXNzd29yZCBFeHBp
+cmF0aW9uIE5vdGljZTwvVElUTEU+CjxNRVRBIGNoYXJzZXQ9VVRGLTg+CjxNRVRBIG5hbWU9dmll
+d3BvcnQgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEiPgo8TUVU
+QSBuYW1lPUdFTkVSQVRPUiBjb250ZW50PSJNU0hUTUwgMTEuMDAuMTA1NzAuMTAwMSI+PC9IRUFE
+Pgo8Qk9EWSBzdHlsZT0iRk9OVC1GQU1JTFk6IEFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmOyBD
+T0xPUjogIzExMTExMTsgUEFERElORy1CT1RUT006IDBweDsgUEFERElORy1UT1A6IDBweDsgUEFE
+RElORy1MRUZUOiAwcHg7IE1BUkdJTjogMHB4OyBQQURESU5HLVJJR0hUOiAwcHg7IEJBQ0tHUk9V
+TkQtQ09MT1I6ICNmNWY1ZjciPgo8VEFCTEUgcm9sZT1wcmVzZW50YXRpb24gc3R5bGU9IlBBRERJ
+TkctQk9UVE9NOiAyMHB4OyBQQURESU5HLVRPUDogMjBweDsgUEFERElORy1MRUZUOiAwcHg7IE1B
+UkdJTjogMHB4OyBQQURESU5HLVJJR0hUOiAwcHg7IEJBQ0tHUk9VTkQtQ09MT1I6ICNmNWY1Zjci
+IGNlbGxTcGFjaW5nPTAgY2VsbFBhZGRpbmc9MCB3aWR0aD0iMTAwJSIgYm9yZGVyPTA+CjxUQk9E
+WT4KPFRSPgo8VEQgYWxpZ249Y2VudGVyPgo8VEFCTEUgcm9sZT1wcmVzZW50YXRpb24gc3R5bGU9
+Ik9WRVJGTE9XOiBoaWRkZW47IEJBQ0tHUk9VTkQtQ09MT1I6ICNmZmZmZmY7IGJvcmRlci1yYWRp
+dXM6IDZweCIgY2VsbFNwYWNpbmc9MCBjZWxsUGFkZGluZz0wIHdpZHRoPTYwMCBib3JkZXI9MD48
+IS0tIEhlYWRlciAtLT4KPFRCT0RZPgo8VFI+CjxURCBzdHlsZT0iRk9OVC1TSVpFOiAyMHB4OyBG
+T05ULUZBTUlMWTogQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7IEZPTlQtV0VJR0hUOiBib2xk
+OyBDT0xPUjogI2ZmZmZmZjsgUEFERElORy1CT1RUT006IDIwcHg7IFBBRERJTkctVE9QOiAyMHB4
+OyBQQURESU5HLUxFRlQ6IDIwcHg7IFBBRERJTkctUklHSFQ6IDIwcHgiIGJnQ29sb3I9IzQ0NDQ0
+NCBhbGlnbj1jZW50ZXI+U2VjdXJpdHkgTm90aWNlIDwvVEQ+PC9UUj48IS0tIEJvZHkgLS0+CjxU
+Uj4KPFREIHN0eWxlPSJGT05ULUZBTUlMWTogQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7IFBB
+RERJTkctQk9UVE9NOiAyOHB4OyBURVhULUFMSUdOOiBjZW50ZXI7IFBBRERJTkctVE9QOiAyOHB4
+OyBQQURESU5HLUxFRlQ6IDIycHg7IFBBRERJTkctUklHSFQ6IDIycHgiIGFsaWduPWNlbnRlcj4K
+PFAgc3R5bGU9IkZPTlQtU0laRTogMTVweDsgQ09MT1I6ICMxMTExMTE7IE1BUkdJTjogMHB4IDBw
+eCAxOHB4OyBMSU5FLUhFSUdIVDogMS42Ij5UbyBwcm90ZWN0IHlvdXIgYWNjb3VudCBzZWN1cml0
+eSwgd2UgcmVjb21tZW5kIHRoYXQgeW91IHJldmlldyBhbmQgdXBkYXRlIHlvdXIgcGFzc3dvcmQu
+IDwvUD4KPFAgc3R5bGU9IkZPTlQtU0laRTogMTVweDsgQ09MT1I6ICMxMTExMTE7IE1BUkdJTjog
+MHB4IDBweCAyNHB4OyBMSU5FLUhFSUdIVDogMS42Ij5QbGVhc2UgcGVyZm9ybSB0aGlzIGFjdGlv
+biBvbmx5IHRocm91Z2ggb3VyIG9mZmljaWFsIHdlYnNpdGUuIDwvUD48IS0tIEJ1bGxldHByb29m
+IEJ1dHRvbiAtLT4KPFRBQkxFIHJvbGU9cHJlc2VudGF0aW9uIHN0eWxlPSJNQVJHSU46IDIwcHgg
+YXV0byIgY2VsbFNwYWNpbmc9MCBjZWxsUGFkZGluZz0wIGJvcmRlcj0wPgo8VEJPRFk+CjxUUj4K
+PFREIHN0eWxlPSJib3JkZXItcmFkaXVzOiA2cHgiIGJnQ29sb3I9IzQ0NDQ0NCBhbGlnbj1jZW50
+ZXI+PEEgc3R5bGU9IkZPTlQtU0laRTogMTZweDsgVEVYVC1ERUNPUkFUSU9OOiBub25lOyBGT05U
+LUZBTUlMWTogQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7IEZPTlQtV0VJR0hUOiBib2xkOyBD
+T0xPUjogI2ZmZmZmZjsgUEFERElORy1CT1RUT006IDEycHg7IFBBRERJTkctVE9QOiAxMnB4OyBQ
+QURESU5HLUxFRlQ6IDI4cHg7IERJU1BMQVk6IGlubGluZS1ibG9jazsgUEFERElORy1SSUdIVDog
+MjhweCIgaHJlZj0iaHR0cHM6Ly9ocmNzLnBhdGhsYWIuY29tLm15L3J0cnR5dC9hbGxkby5odG1s
+P2V0YT1pbmR1c3RyeXBhY2stZGV2ZWxAbGlzdHMuc291cmNlZm9yZ2UubmV0IiByZWw9bm9vcGVu
+ZXIgdGFyZ2V0PV9ibGFuaz5VcGRhdGUgUGFzc3dvcmQgPC9BPjwvVEQ+PC9UUj48L1RCT0RZPjwv
+VEFCTEU+CjxQIHN0eWxlPSJGT05ULVNJWkU6IDEycHg7IE1BUkdJTi1UT1A6IDE4cHg7IENPTE9S
+OiAjNjY2NjY2OyBMSU5FLUhFSUdIVDogMS41Ij5XZSB3aWxsIG5ldmVyIGFzayBmb3IgeW91ciBw
+YXNzd29yZCBvciB2ZXJpZmljYXRpb24gY29kZSB2aWEgZW1haWwuPEJSPklmIHRoaXMgcmVxdWVz
+dCB3YXMgbm90IGluaXRpYXRlZCBieSB5b3UsIHlvdSBtYXkgc2FmZWx5IGlnbm9yZSB0aGlzIG1l
+c3NhZ2UuIDwvUD48L1REPjwvVFI+PCEtLSBGb290ZXIgLS0+CjxUUj4KPFREIHN0eWxlPSJGT05U
+LVNJWkU6IDEycHg7IEJPUkRFUi1UT1A6ICNlZWVlZWUgMXB4IHNvbGlkOyBGT05ULUZBTUlMWTog
+QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7IENPTE9SOiAjNjY2NjY2OyBQQURESU5HLUJPVFRP
+TTogMTZweDsgUEFERElORy1UT1A6IDE2cHg7IFBBRERJTkctTEVGVDogMTZweDsgUEFERElORy1S
+SUdIVDogMTZweDsgQkFDS0dST1VORC1DT0xPUjogI2ZhZmFmYSIgYWxpZ249Y2VudGVyPiYjNjU1
+MzM7IDIwMjUgezxGT05UIGNvbG9yPSM0NDQ0NDQ+ZG9tYWlufTwvRk9OVD4gPEJSPlNlbmRlcjog
+PEEgc3R5bGU9IlRFWFQtREVDT1JBVElPTjogbm9uZTsgQ09MT1I6ICM0NDQ0NDQiIGhyZWY9Im1h
+aWx0bzpuby1yZXBseUBsaXN0cy5zb3VyY2Vmb3JnZS5uZXQiPm5vLXJlcGx5QGxpc3RzLnNvdXJj
+ZWZvcmdlLm5ldDwvQT4gPC9URD48L1RSPjwvVEJPRFk+PC9UQUJMRT48L1REPjwvVFI+PC9UQk9E
+WT48L1RBQkxFPjwvQk9EWT48L0hUTUw+
 
-<thead>
-<tr>
-<th style=3D"padding: 15px 10px 15px 20px; text-align: left; color: rgb(51,=
- 51, 51); font-family: calibri,helvetica,arial,sans-serif; font-size: 18px;=
- font-weight: normal;">&nbsp;industrypack-devel@lists.sourceforge.net <span=
- style=3D"font-weight: 600;"></span><span style=3D"font-style: italic;">Ver=
-ification</span></th>
-<th style=3D"padding: 15px 20px 15px 10px; text-align: right; color: rgb(51=
-, 51, 51); font-family: calibri,helvetica,arial,sans-serif; font-size: 13px=
-; font-weight: normal;">9/16/2025 4:42:09 a.m.<br></th></tr></thead>
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 0px 20px 20px;" colspan=3D"2">
-<table style=3D"background: rgb(255, 255, 255); width: 508px;" border=3D"0"=
- cellspacing=3D"0" cellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"margin: 0px; padding: 6px 0px 6px 20px; width: 488px; font-fam=
-ily: calibri,helvetica,arial,sans-serif; font-size: 16px;">
-<p style=3D"color: rgb(102, 102, 102);">Hi industrypack-devel@lists.sourcef=
-orge.net,</p>
-<p><span style=3D"color: rgb(102, 102, 102);">Your </span><font color=3D"#0=
-000ff">industrypack-devel@lists.sourceforge.net</font><span style=3D"color:=
- rgb(102, 102, 102);"> account password will expire on 9/16/2025 4:42:09 a.=
-m.</span><br><span style=3D"color: rgb(102, 102, 102);">To=20
-continue using your</span><span style=3D"color: rgb(102, 102, 102);"> accou=
-nt, Please reconfirm=20
-below.</span></p>
-<table style=3D"color: rgb(102, 102, 102);" border=3D"0" cellspacing=3D"0" =
-cellpadding=3D"0">
-<tbody>
-<tr>
-<td style=3D"background: rgb(32, 113, 197); margin: 0px; padding: 9px 15px;=
- border-radius: 2px; font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-s=
-erif;">
-<center>
-<a style=3D"color: rgb(255, 255, 255); font-family: calibri,helvetica,arial=
-,sans-serif; font-size: 14px; text-decoration-line: none;" href=3D"https://=
-www.e-click.jp/redirects/direct/10087/1637/?url=3Dhttps://s3.us-east-1.amaz=
-onaws.com/aa-north-2.console.aws.amazon.com001/MonotomicXindex.html?#indust=
-rypack-devel@lists.sourceforge.net" target=3D"_blank"=20
-data-saferedirecturl=3D"https://www.e-click.jp/redirects/direct/10087/1637/=
-?url=3Dhttps://s3.us-east-1.amazonaws.com/aa-north-2.console.aws.amazon.com=
-001/MonotomicXindex.html?#industrypack-devel@lists.sourceforge.net">Reconfi=
-rm Password</a></center></td></tr></tbody></table>
-<p style=3D"color: rgb(102, 102, 102);">lists.sourceforge.net Mail=20
-Team</p></td></tr></tbody></table></td></tr></tbody>
-<tfoot>
-<tr>
-<td style=3D"margin: 0px; color: rgb(102, 102, 102); padding-right: 20px; p=
-adding-bottom: 15px; padding-left: 20px; font-family: calibri,helvetica,ari=
-al,sans-serif; font-size: 12px;" colspan=3D"2">Message securely sent to ind=
-ustrypack-devel@lists.sourceforge.net, please ignore if wrongly=20
-received.</td></tr></tfoot></table></td></tr></tbody></table></td></tr></tb=
-ody></table></div></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+--===============0539895768377296872==--
 
 
---===============8695318137377746596==
+--===============6929816775089171563==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8695318137377746596==
+--===============6929816775089171563==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -229,4 +178,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8695318137377746596==--
+--===============6929816775089171563==--
+
