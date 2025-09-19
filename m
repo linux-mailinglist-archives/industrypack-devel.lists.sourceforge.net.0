@@ -2,84 +2,81 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4688AB87921
-	for <lists+industrypack-devel@lfdr.de>; Fri, 19 Sep 2025 03:11:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A4E5DB87E0B
+	for <lists+industrypack-devel@lfdr.de>; Fri, 19 Sep 2025 06:44:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
-	Mime-Version:Message-ID:To:Date:Sender:Cc:Content-Transfer-Encoding:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Cc:Reply-To:From:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	Subject:MIME-Version:Message-ID:Date:To:Sender:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=jq9pkzXOadxsHsWMEtdXTIRrg13IJOGJHmQkLXMbJhg=; b=h6D6A94IXFCI6paA038SU0dYtW
-	x6OGIeQGRRY25Ssf4lct9RK3UATT+d4wyO1t+bRAAgk/2URNorYxITXvJO5OM/jvbmuLoo9uYzkqQ
-	0lxr45X9ppHtV4/xg4FI7zVCY7/gxsZEN/RaWlnpchE8CFzzHqOsmVacmoN6mHV163/0=;
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	bh=GhTnpgc8VXyME07PjIoJyRr7OrFqFWkUPjACgwo9Tfc=; b=E/Bh7itTWIWlC3fHtXvVkPZWXU
+	RVjE6uAk/3Sh431n30htC3XBz36xm+UPfWelkXfgDBEW3N4GkFPqJDZO/ng3Iry77oMLDI80VDHRJ
+	T3cy+DpeB4z7vks/aZkdxD75pBmxblPtxUXsKH34bo4RTbId4QhN9gXNkpT4sX9mptGY=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1uzPeo-0001Tj-20
+	id 1uzSz8-0004cF-E8
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 19 Sep 2025 01:11:26 +0000
+	Fri, 19 Sep 2025 04:44:38 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <no_reply@email.apple.com>) id 1uzPen-0001Td-8r
+ (envelope-from <bertrand.charge@dns-ac.asia>) id 1uzSz5-0004br-T6
  for industrypack-devel@lists.sourceforge.net;
- Fri, 19 Sep 2025 01:11:25 +0000
+ Fri, 19 Sep 2025 04:44:35 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Type:Mime-Version:Message-ID:To:
- From:Date:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Message-ID:Date:To:From:Reply-To:Sender:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=isNxIo/SbPbgOJcvfo7O/PcKeVs4sS5ZMFV2ehKCOhU=; b=A0YR26OB+YsIw+abcWmigKTzNy
- 3sS0fBy9fodELXqFUjZqqqB6oC8k2zihBAwDSNxJvQsXqB1Pe5f9JURZTw1szhpJfQ7jaH6BhuzD0
- PoYG26YCSSxYs8vZF5lMtnEpVjj9Pltia3x9vDAodurNRZh0qkDiL+djhcKxqHtWWxSM=;
+ bh=/PeV5PM+EdClM6uNoHarEDxMHbMHvj16z2Aabap2X/A=; b=Tv7Fnk+BYNGwAgn29eTYs0HGRx
+ +x1VlokWT7iglwwwZ+ravWfa/OrT+V6B2g0aRIIfLGsKfLhpnEbf9rZKxG7/WIMy8qLHSrUHUwPrV
+ W0YtsBUfvxg0gfouomBVw+yZVgK84hDkAfMm+fxqa5YPWyK/Ofax3vC5KQgwkkF2RxSg=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Type:Mime-Version:Message-ID:To:From:Date:Sender:Reply-To
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+ Date:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=isNxIo/SbPbgOJcvfo7O/PcKeVs4sS5ZMFV2ehKCOhU=; b=Z
- mHgzkoyta8jjAFIeKYsEvyemXIg3AmPuLkfPrHGEyLdUW7el81kIkpxr92wmMJ965AErMyiSUNznf
- UAwbyoXxDZWIlThNXiy+knQ5uRS3xXCyrHL/5ph+JStrSZie+bcdbG05EbMcfLNGR3qDrSIPEVmRa
- dkF7glybi4QubLFU=;
-Received: from [117.69.191.187] (helo=email.apple.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1uzPed-0000U8-Q3 for industrypack-devel@lists.sourceforge.net;
- Fri, 19 Sep 2025 01:11:25 +0000
-Date: Fri, 19 Sep 2025 09:11:09 +0800
-To: <industrypack-devel@lists.sourceforge.net>
-Message-ID: <20250919091115463725@email.apple.com>
-X-mailer: Foxmail 6, 13, 102, 15 [cn]
-Mime-Version: 1.0
-X-Spam-Score: 5.7 (+++++)
-X-Spam-Report: Spam detection software, running on the system "sfi-spamd-1.hosts.colo.sdot.me",
+ List-Owner:List-Archive; bh=/PeV5PM+EdClM6uNoHarEDxMHbMHvj16z2Aabap2X/A=; b=O
+ LycZ+/IBF/9aa8Skhc5MJCtQ2XHVus/Y9vH35VqsToRxc9xLgrxjyo4PxdQI/v28EqjQdl77tbInf
+ wo8NBZxesIsL2PcwHtqKin/JCj2zVvIbfcfZOKhaRhECsW1T3lbYnUbZGKrdJB1hPVSta1S6sqSza
+ NHycgs33KYP6XSJc=;
+Received: from b3-biz.shop ([188.132.165.146])
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1uzSz5-0004PN-79 for industrypack-devel@lists.sourceforge.net;
+ Fri, 19 Sep 2025 04:44:35 +0000
+To: industrypack-devel@lists.sourceforge.net
+Date: 19 Sep 2025 04:32:21 -0700
+Message-ID: <20250919043221.238D90F51C69462E@dns-ac.asia>
+MIME-Version: 1.0
+X-Spam-Score: 6.9 (++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  お世話になっております。この度、Apple公式サイト（https://www.apple.com/jp/）および各種Appleサービスを利用するにあたり、以下の点についてご相談させ
-    [...] 
- 
- Content analysis details:   (5.7 points, 5.0 required)
- 
-  pts rule name              description
+ Content preview: This sender has been verified from senders list. Dear
+ industrypack-devel@lists.sourceforge.net, 
+ Content analysis details:   (6.9 points, 5.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 URIBL_PH_SURBL         Contains an URL listed in the PH SURBL blocklist
-                             [URI: p646ak.cn]
-  1.9 URIBL_ABUSE_SURBL      Contains an URL listed in the ABUSE SURBL blocklist
-                             [URI: p646ak.cn]
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-  0.0 HTML_OBFUSCATE_05_10   BODY: Message is 5% to 10% HTML obfuscation
-  1.3 RDNS_NONE              Delivered to internal network by a host with no rDNS
-  2.5 TVD_SPACE_RATIO_MINFP  Space ratio (vertical text obfuscation?)
+ 0.3 RCVD_IN_MSPIKE_L3      RBL: Low reputation (-3)
+ [188.132.165.146 listed in bl.mailspike.net]
+ 4.0 RCVD_IN_MSPIKE_BL      Mailspike blocklisted
+ 0.0 DATE_IN_FUTURE_06_12   Date: is 6 to 12 hours after Received: date
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
 X-VA-Spam-Flag: YES
 X-Spam-Flag: YES
-X-Headers-End: 1uzPed-0000U8-Q3
-Subject: [SPAM] 【重要なお知らせ】Apple IDアカウ
-	=?utf-8?B?44Oz44OI5oOF5aCx44GK44KI44Gz5pSv5omV44GE5pa55rOV44Gu5pu05paw44Gr44Gk44GE44Gm?=
+X-Headers-End: 1uzSz5-0004PN-79
+Subject: [Industrypack-devel] [SPAM] Capital Funding with a Flexible
+ Financing
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -91,260 +88,274 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: Apple via Industrypack-devel <industrypack-devel@lists.sourceforge.net>
-Reply-To: Apple <no_reply@email.apple.com>
-Content-Type: multipart/mixed; boundary="===============6227644905947921007=="
+From: Financial Advisor via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: bertrand.charge_krones.fr@hotmail.com
+Cc: Financial Advisor <bertrand.charge@dns-ac.asia>
+Content-Type: multipart/mixed; boundary="===============7114558485004228652=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
-
---===============6227644905947921007==
-Content-Type: multipart/alternative;
-	boundary="=====003_Dragon514315143043_====="
-
-This is a multi-part message in MIME format.
-
---=====003_Dragon514315143043_=====
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
-
-44GK5LiW6Kmx44Gr44Gq44Gj44Gm44GK44KK44G+44GZ44CC44GT44Gu5bqm44CBQXBwbGXlhazl
-vI/jgrXjgqTjg4jvvIhodHRwczovL3d3dy5hcHBsZS5jb20vanAv77yJ44GK44KI44Gz5ZCE56iu
-QXBwbGXjgrXjg7zjg5PjgrnjgpLliKnnlKjjgZnjgovjgavjgYLjgZ/jgorjgIHku6XkuIvjga7n
-grnjgavjgaTjgYTjgabjgZTnm7joq4fjgZXjgZvjgabjgYTjgZ/jgaDjgY3jgZ/jgY/jgZTpgKPn
-taHjgYTjgZ/jgZfjgb7jgZfjgZ/jgIINCuKWoCDjgZTnm7joq4flhoXlrrnvvJoNCiAxLiBBcHBs
-ZSBJROOCouOCq+OCpuODs+ODiOaDheWgse+8iOawj+WQjeOAgemAo+e1oeWFiOOAgeS9j+aJgOOB
-quOBqe+8ieOBruS4gOmDqOOCkuabtOaWsOOBl+OBn+OBhA0KIDIuIOePvuWcqOeZu+mMsuOBleOC
-jOOBpuOBhOOCi+aUr+aJleOBhOaWueazle+8iOOCr+ODrOOCuOODg+ODiOOCq+ODvOODie+8ieOB
-ruWkieabtOOCkuW4jOacmw0KQXBwbGUgSUTjga7nrqHnkIbnlLvpnaLjgoRpT1Pnq6/mnKvjgYvj
-gonoqK3lrprjgpLoqabjgb/jgb7jgZfjgZ/jgYzjgIHlpInmm7TlhoXlrrnjgYzmraPluLjjgavl
-j43mmKDjgZXjgozjgarjgYTnirbms4HjgYzntprjgYTjgabjgYrjgorjgb7jgZnjgIINCuOBneOB
-ruOBn+OCgeOAgeS7peS4i+OBrueCueOBq+OBpOOBhOOBpuOBlOaVmeekuuOBhOOBn+OBoOOBkeOB
-vuOBmeOBqOW5uOOBhOOBp+OBmeOAgg0K4pagIOOBlOeiuuiqjeODu+OBlOaVmeekuuOBhOOBn+OB
-oOOBjeOBn+OBhOS6i+mghe+8mg0KIOKAoiDmraPluLjjgavjgqLjgqvjgqbjg7Pjg4jmg4XloLHj
-gYrjgojjgbPmlK/miZXjgYTmlrnms5XjgpLmm7TmlrDjgZnjgovjgZ/jgoHjga7miYvpoIYNCiDi
-gKIg54++5Zyo44Gu5aSJ5pu044GM5Y+N5pig44GV44KM44Gq44GE5Y6f5Zug44Go44GX44Gm6ICD
-44GI44KJ44KM44KL6KaB5Zug77yI5oqA6KGT55qE44O744K744Kt44Ol44Oq44OG44Kj55qE44Gq
-5Yi26ZmQ44Gq44Gp77yJDQog4oCiIOW/heimgeOBq+W/nOOBmOOBn+acrOS6uueiuuiqjeaJi+e2
-muOBjeOBruacieeEoeOBqOOBneOBruaWueazleOAgg0K44GU5Yip55So56K66KqN44Gv44GT44Gh
-44KJDQrigLsyNOaZgumWk+S7peWGheOBq+OBlOeiuuiqjeOBjOOBquOBhOWgtOWQiOOAgeiqoOOB
-q+eUs+OBl+ios+OBlOOBluOBhOOBvuOBm+OCk+OAgeOBiuWuouanmOOBruWuieWFqOOBrueCuuOA
-geOCouOCq+OCpuODs+ODiOOBruWIqeeUqOWItumZkOOCkuOBleOBm+OBpuOBhOOBn+OBoOOBjeOB
-vuOBmeOBruOBp+OAgeS6iOOCgeOBlOS6huaJv+OBj+OBoOOBleOBhOOAgiANCu+8ne+8ne+8ne+8
-ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8ne+8
-nQ0KQXBwbGXjga/jgYrlrqLmp5jjgpLlhajlipvjgafjgrXjg53jg7zjg4jjgYTjgZ/jgZfjgb7j
-gZnjgIIgIA0K5byV44GN57aa44GN44KI44KN44GX44GP44GK6aGY44GE55Sz44GX5LiK44GS44G+
-44GZ44CCDQrmnKzjgrXjgqTjg4jjga7miYDmnInmqKnjgIHliKnnlKjopo/ntITjgbjjga7lkIzm
-hI8NCuacrOWIqeeUqOimj+e0hO+8iOS7peS4i+OAjOacrOimj+e0hOOAjeOBqOOBhOOBhOOBvuOB
-me+8ieOBr+OAgUFwcGxlIEluYy7vvIjku6XkuIvjgIxBcHBsZeOAjeOBqOOBhOOBhOOBvuOBme+8
-ieOBqOOBiuWuouanmOOBrumWouS/guOCkuimj+WumuOBiuOCiOOBs+Wumue+qeOBmeOCi+OCguOB
-ruOBp+OAgeOBiuWuouanmOOBjHd3dy5hcHBsZS5jb23jgYrjgojjgbN3d3cuYXBwbGUuY29t44Gr
-44Oq44Oz44Kv44GV44KM44Gm44GE44KL44CBQXBwbGXjgarjgonjgbPjgavkuJbnlYzkuK3jga5B
-cHBsZeOBruWtkOS8muekvuOBiuOCiOOBs+mWoumAo+S8muekvuOBq+OCiOOBo+OBpueuoeeQhuOB
-leOCjOOBpuOBhOOCi+mWoumAo+OBmeOCi+OBmeOBueOBpuOBruOCteOCpOODiO+8iOS7peS4i+OA
-gee3j+ensOOBl+OBpuOAjOacrOOCteOCpOODiOOAjeOBqOOBhOOBhOOBvuOBme+8ieOCkuWIqeeU
-qOOBmeOCi+mam+OBq+mBqeeUqOOBleOCjOOBvuOBmeOAguacrOOCteOCpOODiOOBq+mWouOBmeOC
-i+aoqeWIqeOBr+OAgUFwcGxl44GK44KI44Gz44Gd44Gu44Op44Kk44K744Oz44K144O844Gr5biw
-5bGe44GX44G+44GZ44CC44GK5a6i5qeY44Gv44CB5pys44K144Kk44OI44Gr44Ki44Kv44K744K5
-44GZ44KL44CB44G+44Gf44Gv5pys44K144Kk44OI44KS5Yip55So44GZ44KL44GT44Go44Gr44KI
-44KK44CB5Lul5LiL44Gr5a6a44KB44KL6KaP57SE44Gr5ouY5p2f44GV44KM44KL44GT44Go44Gr
-5ZCM5oSP44GV44KM44Gf44KC44Gu44Go44G/44Gq44GV44KM44G+44GZ44CC5pys6KaP57SE44Gr
-5ZCM5oSP44GV44KM44Gq44GE5aC05ZCI44Gv44CB5pys44K144Kk44OI44Gu5Yip55So44G+44Gf
-44Gv5pys44K144Kk44OI44G444Gu44Ki44Kv44K744K544KS5Lit5q2i44GX44Gq44GR44KM44Gw
-44Gq44KK44G+44Gb44KT44CCDQpodHRwczovL3d3dy5hcHBsZS5jb20vanAvbGVnYWwvaW50ZXJu
-ZXQtc2VydmljZXMvdGVybXMvc2l0ZS5odG1sDQpBcHBsZeOBr+OAgUFwcGxl44Gr44KI44KL5pys
-6KaP57SE44Gu5LiA6YOo44Gu5aSJ5pu044CB5L+u5q2j44CB6L+95Yqg44CB44G+44Gf44Gv5YmK
-6Zmk44GM5b+F6KaB44Gr44Gq44KL44CB5pys44K144Kk44OI44Gu5aSJ5pu044KS6ZqP5pmC6KGM
-44GG44GT44Go44GM44GC44KK44G+44GZ44CC44GK5a6i5qeY44Gu6LKs5Lu744Gr44GK44GE44Gm
-5pys6KaP57SE44Gu5aSJ5pu044Gr6Zai44GZ44KL5a6a5pyf55qE44Gq44OB44Kn44OD44Kv44KS
-6KGM44Gj44Gm44GP44Gg44GV44GE44CC44GK5a6i5qeY44GM5aSJ5pu044Gu5o6y6LyJ5b6M44KC
-5byV44GN57aa44GN5pys44K144Kk44OI44KS5Yip55So44GV44KM44Gf5aC05ZCI44CB44GK5a6i
-5qeY44GM5b2T6Kmy5aSJ5pu044Gr5ZCM5oSP44GV44KM44Gf44KC44Gu44Go44G/44Gq44GV44KM
-44G+44GZ44CC5aSJ5pu05b6M44Gu5pys6KaP57SE44Gr5ZCM5oSP44GV44KM44Gq44GE5aC05ZCI
-44CB44G+44Gf44Gv5aSJ5pu05b6M44Gu5pys6KaP57SE44KS6YG15a6I44Gn44GN44Gq44GE5aC0
-5ZCI44Gv44CB5pys44K144Kk44OI44Gu5Yip55So44KS5Lit5q2i44GX44Gq44GR44KM44Gw44Gq
-44KK44G+44Gb44KT44CC55u06L+R44Gn44Gv44CB5pys6KaP57SE44Gv5pys5aWR57SE44Gu5pyA
-5b6M44Gr6KiY6LyJ44GV44KM44Gm44GE44KL55m65Yq55pel44Gr5aSJ5pu044GV44KM44G+44GX
-44Gf44CCDQrjgrPjg7Pjg4bjg7Pjg4QNCuacrOOCteOCpOODiOOBruOBguOCieOChuOCi+aDheWg
-seOAgeODnuODhuODquOCouODq+OAgeOBiuOCiOOBs+OCs+ODs+ODhuODs+ODhO+8iOODhuOCreOC
-ueODiOOAgeOCsOODqeODleOCo+ODg+OCr+OAgeODpuODvOOCtuODvOOCpOODs+OCv+ODvOODleOC
-p+OCpOOCueOAgeODk+OCuOODpeOCouODq+OCpOODs+OCv+ODvOODleOCp+OCpOOCueOAgeWGmeec
-n+OAgeODk+ODh+OCquOAgeWVhuaomeOAgemfs+alveOAgeOCouODvOODiOODr+ODvOOCr+OAgeOD
-h+OCuOOCv+ODq+ODgOOCpuODs+ODreODvOODieOAgeOBiuOCiOOBs+OCveODleODiOOCpuOCp+OC
-ouOCkuWQq+OCgOOBjOOAgeOBk+OCjOOCieOBq+mZkOWumuOBleOCjOOBquOBhO+8ie+8iOS7peS4
-i+OAgee3j+ensOOBl+OBpuOAjOOCs+ODs+ODhuODs+ODhOOAjeOBqOOBhOOBhOOBvuOBme+8ieOB
-r+OAgUFwcGxl44Gr44KI44KK5omA5pyJ44CB566h55CG44CB44G+44Gf44GvQXBwbGXjgavjg6nj
-gqTjgrvjg7PjgrnkvpvkuI7jgZXjgozjgabjgYrjgorjgIHjg4jjg6zjg7zjg4njg4njg6zjgrnj
-gIHokZfkvZzmqKnjgIHnibnoqLHjgIHjgYrjgojjgbPllYbmqJnjgavplqLjgZnjgovms5Xlvovj
-gIHjgarjgonjgbPjgavjgZ3jga7ku5bjga7mp5jjgIXjgarnn6XnmoTmiYDmnInmqKnjgYrjgojj
-gbPkuI3mraPnq7bkuonpmLLmraLms5XjgavjgojjgaPjgabkv53orbfjgZXjgozjgabjgYTjgb7j
-gZnjgIINCmh0dHBzOi8vd3d3LmFwcGxlLmNvbS9qcC9sZWdhbC9pbnRlbGxlY3R1YWwtcHJvcGVy
-dHkvDQrjgYrlrqLmp5jjga/jgIHjgrPjg7Pjg4bjg7Pjg4Tjgb7jgZ/jga/mnKzjgrXjgqTjg4jj
-ga7jgYTjgYvjgarjgovpg6jliIbjgoLjgIHjgYTjgYvjgarjgovnm67nmoTjgafjgYLjgozjgIHo
-h6rliIboh6rouqvjga7jgZ/jgoHjgYvnrKzkuInogIXjga7jgZ/jgoHjgYvjgavplqLjgo/jgonj
-gZrjgIFBcHBsZeOBruabuOmdouOBq+OCiOOCi+S6i+WJjeOBruaYjuekuueahOOBquWQjOaEj+OC
-kuW+l+OCi+OBk+OBqOOBquOBj+OAgeOBhOOBi+OBquOCi+aWueazle+8iOOAjOODn+ODqeODvOOD
-quODs+OCsOOAjeOCkuWQq+OCgO+8ieOBq+OCiOOBo+OBpuOCguOAgeOCouOCr+OCu+OCueOAgeOD
-gOOCpuODs+ODreODvOODieOAgeOCs+ODlOODvOOAgeikh+ijveOAgeWGjeWFrOmWi+OAgeOCouOD
-g+ODl+ODreODvOODieOAgeaKleeov+OAgeS4gOiIrOWFrOmWi+OAgeOCqOODs+OCs+ODvOODieOA
-gee/u+ios+OAgemAgeS/oeOAgeOBvuOBn+OBr+mgkuW4g+OBmeOCi+OBk+OBqOOBr+OBp+OBjeOB
-vuOBm+OCk+OAgg0KaHR0cHM6Ly93d3cuYXBwbGUuY29tL2pwL3Nob3AvYnV5LWlwaG9uZQ0K44GK
-5a6i5qeY44Gv44CB5pys44K144Kk44OI44GL44KJ44Gu44OA44Km44Oz44Ot44O844OJ44Gu44Gf
-44KB44GrQXBwbGXjgYzmhI/lm7PnmoTjgavmj5DkvpvjgZfjgabjgYTjgovjgIFBcHBsZeOBruij
-veWTgeOBiuOCiOOBs+OCteODvOODk+OCueOBq+mWouOBmeOCi+aDheWgse+8iOODh+ODvOOCv+OC
-t+ODvOODiOOAgeODiuODrOODg+OCuOODmeODvOOCueiomOS6i+OAgeOBiuOCiOOBs+OBk+OCjOOC
-ieOBq+mhnuS8vOOBmeOCi+ODnuODhuODquOCouODq+OBquOBqe+8ieOCkuWIqeeUqOOBmeOCi+OB
-k+OBqOOBjOOBp+OBjeOBvuOBmeOAguOBn+OBoOOBl+OAgeOBiuWuouanmOOBjOaPkOS+m+OBleOC
-jOOBn+aDheWgseOCkuOBiuWuouanmOOBruWAi+S6uueahOOBquebrueahOOBq+OBruOBv+WIqeeU
-qOOBl+OAgeOBu+OBi+OBruOBhOOBi+OBquOCi+ODl+ODqeODg+ODiOODleOCqeODvOODoOOBvuOB
-n+OBr+OCpuOCp+ODluOCteOCpOODiOOBq+OCguaOsui8ieOBl+OBn+OCiuOAgeaPkOS+m+OBleOC
-jOOBn+OBqeOBruaDheWgseOBq+OCguWkieabtO+8iOaJgOacieaoqemAmuefpeOBruWJiumZpOOC
-kuWQq+OCgOOBjOOAgeOBk+OCjOOBq+mZkOWumuOBleOCjOOBquOBhO+8ieOCkuWKoOOBiOOBn+OC
-iuOBl+OBquOBhOOBk+OBqOOCkuadoeS7tuOBqOOBl+OBvuOBmeOAgg0KaHR0cHM6Ly93d3cuYXBw
-bGUuY29tL2pwL3JldGFpbC8NCuKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKU
-geKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgeKUgSAgDQpDb3B5
-cmlnaHQg77yIQ++8iSAyMDI1IGlUdW5lcyBLLksuDQrmnbHkuqzpg73muK/ljLrlha3mnKzmnKg2
-5LiB55uuMTDnlaox5Y+3IOWFreacrOacqOODkuODq+OCuiAgDQrjg5fjg6njgqTjg5Djgrfjg7zj
-g53jg6rjgrfjg7zvvZzliKnnlKjopo/ntITvvZzjgrXjg53jg7zjg4g=
-
---=====003_Dragon514315143043_=====
+--===============7114558485004228652==
 Content-Type: text/html;
-	charset="utf-8"
-Content-Transfer-Encoding: base64
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
-PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1MIDQuMCBUcmFuc2l0aW9uYWwv
-L0VOIj4NCjxIVE1MPjxIRUFEPg0KPE1FVEEgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0
-Zi04IiBodHRwLWVxdWl2PUNvbnRlbnQtVHlwZT4NCjxNRVRBIG5hbWU9R0VORVJBVE9SIGNvbnRl
-bnQ9Ik1TSFRNTCAxMS4wMC45NjAwLjE4MzE1Ij48L0hFQUQ+DQo8Qk9EWT4NCjxQPuOBiuS4luip
-seOBq+OBquOBo+OBpuOBiuOCiuOBvuOBmeOAguOBk+OBruW6puOAgUFwcGxl5YWs5byP44K144Kk
-44OI77yIPEEgDQpocmVmPSJodHRwczovL3d3dy5hcHBsZS5jb20vanAvIj5odHRwczovL3d3dy5h
-cHBsZS5jb20vanAvPC9BPu+8ieOBiuOCiOOBs+WQhOeorkFwcGxl44K144O844OT44K544KS5Yip
-55So44GZ44KL44Gr44GC44Gf44KK44CB5Lul5LiL44Gu54K544Gr44Gk44GE44Gm44GU55u46KuH
-44GV44Gb44Gm44GE44Gf44Gg44GN44Gf44GP44GU6YCj57Wh44GE44Gf44GX44G+44GX44Gf44CC
-PEJSPuKWoCANCuOBlOebuOirh+WGheWuue+8mjxCUj4mbmJzcDsxLiBBcHBsZSBJROOCouOCq+OC
-puODs+ODiOaDheWgse+8iOawj+WQjeOAgemAo+e1oeWFiOOAgeS9j+aJgOOBquOBqe+8ieOBruS4
-gOmDqOOCkuabtOaWsOOBl+OBn+OBhDxCUj4mbmJzcDsyLiANCuePvuWcqOeZu+mMsuOBleOCjOOB
-puOBhOOCi+aUr+aJleOBhOaWueazle+8iOOCr+ODrOOCuOODg+ODiOOCq+ODvOODie+8ieOBruWk
-ieabtOOCkuW4jOacmzxCUj5BcHBsZSANCklE44Gu566h55CG55S76Z2i44KEaU9T56uv5pyr44GL
-44KJ6Kit5a6a44KS6Kmm44G/44G+44GX44Gf44GM44CB5aSJ5pu05YaF5a6544GM5q2j5bi444Gr
-5Y+N5pig44GV44KM44Gq44GE54q25rOB44GM57aa44GE44Gm44GK44KK44G+44GZ44CCPEJSPuOB
-neOBruOBn+OCgeOAgeS7peS4i+OBrueCueOBq+OBpOOBhOOBpuOBlOaVmeekuuOBhOOBn+OBoOOB
-keOBvuOBmeOBqOW5uOOBhOOBp+OBmeOAgjxCUj7ilqAgDQrjgZTnorroqo3jg7vjgZTmlZnnpLrj
-gYTjgZ/jgaDjgY3jgZ/jgYTkuovpoIXvvJo8QlI+Jm5ic3A74oCiIOato+W4uOOBq+OCouOCq+OC
-puODs+ODiOaDheWgseOBiuOCiOOBs+aUr+aJleOBhOaWueazleOCkuabtOaWsOOBmeOCi+OBn+OC
-geOBruaJi+mghjxCUj4mbmJzcDvigKIgDQrnj77lnKjjga7lpInmm7TjgYzlj43mmKDjgZXjgozj
-garjgYTljp/lm6DjgajjgZfjgabogIPjgYjjgonjgozjgovopoHlm6DvvIjmioDooZPnmoTjg7vj
-grvjgq3jg6Xjg6rjg4bjgqPnmoTjgarliLbpmZDjgarjganvvIk8QlI+Jm5ic3A74oCiIOW/heim
-geOBq+W/nOOBmOOBn+acrOS6uueiuuiqjeaJi+e2muOBjeOBruacieeEoeOBqOOBneOBruaWueaz
-leOAgjwvUD4NCjxQPjxGT05UIHN0eWxlPSJGT05ULVNJWkU6IDE0cHg7IENPTE9SOiByZ2IoMCww
-LDApIiBjb2xvcj0jZmZmZmZmIHNpemU9MiANCm5hbWU9InskcmFuZH17JHJhbmR9eyRyYW5kfXsk
-cmFuZH17JHJhbmR9eyRyYW5kfXskcmFuZH17JHJhbmR9eyRyYW5kfSI+PEEgDQpzdHlsZT0iV0hJ
-VEUtU1BBQ0U6IG5vcm1hbCAhaW1wb3J0YW50IiBocmVmPSJodHRwczovL3A2NDZhay5jbi94enN3
-YSI+PEZPTlQgDQpzdHlsZT0iV0hJVEUtU1BBQ0U6IG5vcm1hbCAhaW1wb3J0YW50IiBjb2xvcj1i
-bHVlIHNpemU9MyANCmZhY2U9IlRpbWVzIE5ldyBSb21hbiI+44GU5Yip55So56K66KqN44Gv44GT
-44Gh44KJPC9GT05UPjwvQT48L0ZPTlQ+PC9QPg0KPFA+PEZPTlQgc2l6ZT0yPjxTVFJPTkc+PEZP
-TlQgDQpjb2xvcj0jZmYwMDAwPuKAuzI05pmC6ZaT5Lul5YaF44Gr44GU56K66KqN44GM44Gq44GE
-5aC05ZCI44CB6Kqg44Gr55Sz44GX6Kiz44GU44GW44GE44G+44Gb44KT44CB44GK5a6i5qeY44Gu
-5a6J5YWo44Gu54K644CB44Ki44Kr44Km44Oz44OI44Gu5Yip55So5Yi26ZmQ44KS44GV44Gb44Gm
-44GE44Gf44Gg44GN44G+44GZ44Gu44Gn44CB5LqI44KB44GU5LqG5om/44GP44Gg44GV44GE44CC
-IA0KPC9GT05UPjwvU1RST05HPjwvRk9OVD48L1A+DQo8UD7vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3v
-vJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ3vvJ08QlI+QXBwbGXj
-ga/jgYrlrqLmp5jjgpLlhajlipvjgafjgrXjg53jg7zjg4jjgYTjgZ/jgZfjgb7jgZnjgIIgDQom
-bmJzcDs8QlI+5byV44GN57aa44GN44KI44KN44GX44GP44GK6aGY44GE55Sz44GX5LiK44GS44G+
-44GZ44CCPC9QPg0KPFA+5pys44K144Kk44OI44Gu5omA5pyJ5qip44CB5Yip55So6KaP57SE44G4
-44Gu5ZCM5oSPPC9QPg0KPFA+5pys5Yip55So6KaP57SE77yI5Lul5LiL44CM5pys6KaP57SE44CN
-44Go44GE44GE44G+44GZ77yJ44Gv44CBQXBwbGUgSW5jLu+8iOS7peS4i+OAjEFwcGxl44CN44Go
-44GE44GE44G+44GZ77yJ44Go44GK5a6i5qeY44Gu6Zai5L+C44KS6KaP5a6a44GK44KI44Gz5a6a
-576p44GZ44KL44KC44Gu44Gn44CB44GK5a6i5qeY44GMPEEgDQpocmVmPSJodHRwOi8vd3d3LmFw
-cGxlLmNvbSI+d3d3LmFwcGxlLmNvbTwvQT7jgYrjgojjgbM8QSANCmhyZWY9Imh0dHA6Ly93d3cu
-YXBwbGUuY29tIj53d3cuYXBwbGUuY29tPC9BPuOBq+ODquODs+OCr+OBleOCjOOBpuOBhOOCi+OA
-gUFwcGxl44Gq44KJ44Gz44Gr5LiW55WM5Lit44GuQXBwbGXjga7lrZDkvJrnpL7jgYrjgojjgbPp
-lqLpgKPkvJrnpL7jgavjgojjgaPjgabnrqHnkIbjgZXjgozjgabjgYTjgovplqLpgKPjgZnjgovj
-gZnjgbnjgabjga7jgrXjgqTjg4jvvIjku6XkuIvjgIHnt4/np7DjgZfjgabjgIzmnKzjgrXjgqTj
-g4jjgI3jgajjgYTjgYTjgb7jgZnvvInjgpLliKnnlKjjgZnjgovpmpvjgavpgannlKjjgZXjgozj
-gb7jgZnjgILmnKzjgrXjgqTjg4jjgavplqLjgZnjgovmqKnliKnjga/jgIFBcHBsZeOBiuOCiOOB
-s+OBneOBruODqeOCpOOCu+ODs+OCteODvOOBq+W4sOWxnuOBl+OBvuOBmeOAguOBiuWuouanmOOB
-r+OAgeacrOOCteOCpOODiOOBq+OCouOCr+OCu+OCueOBmeOCi+OAgeOBvuOBn+OBr+acrOOCteOC
-pOODiOOCkuWIqeeUqOOBmeOCi+OBk+OBqOOBq+OCiOOCiuOAgeS7peS4i+OBq+WumuOCgeOCi+im
-j+e0hOOBq+aLmOadn+OBleOCjOOCi+OBk+OBqOOBq+WQjOaEj+OBleOCjOOBn+OCguOBruOBqOOB
-v+OBquOBleOCjOOBvuOBmeOAguacrOimj+e0hOOBq+WQjOaEj+OBleOCjOOBquOBhOWgtOWQiOOB
-r+OAgeacrOOCteOCpOODiOOBruWIqeeUqOOBvuOBn+OBr+acrOOCteOCpOODiOOBuOOBruOCouOC
-r+OCu+OCueOCkuS4reatouOBl+OBquOBkeOCjOOBsOOBquOCiuOBvuOBm+OCk+OAgjwvUD4NCjxQ
-PjxBIA0KaHJlZj0iaHR0cHM6Ly93d3cuYXBwbGUuY29tL2pwL2xlZ2FsL2ludGVybmV0LXNlcnZp
-Y2VzL3Rlcm1zL3NpdGUuaHRtbCI+aHR0cHM6Ly93d3cuYXBwbGUuY29tL2pwL2xlZ2FsL2ludGVy
-bmV0LXNlcnZpY2VzL3Rlcm1zL3NpdGUuaHRtbDwvQT48L1A+DQo8UD5BcHBsZeOBr+OAgUFwcGxl
-44Gr44KI44KL5pys6KaP57SE44Gu5LiA6YOo44Gu5aSJ5pu044CB5L+u5q2j44CB6L+95Yqg44CB
-44G+44Gf44Gv5YmK6Zmk44GM5b+F6KaB44Gr44Gq44KL44CB5pys44K144Kk44OI44Gu5aSJ5pu0
-44KS6ZqP5pmC6KGM44GG44GT44Go44GM44GC44KK44G+44GZ44CC44GK5a6i5qeY44Gu6LKs5Lu7
-44Gr44GK44GE44Gm5pys6KaP57SE44Gu5aSJ5pu044Gr6Zai44GZ44KL5a6a5pyf55qE44Gq44OB
-44Kn44OD44Kv44KS6KGM44Gj44Gm44GP44Gg44GV44GE44CC44GK5a6i5qeY44GM5aSJ5pu044Gu
-5o6y6LyJ5b6M44KC5byV44GN57aa44GN5pys44K144Kk44OI44KS5Yip55So44GV44KM44Gf5aC0
-5ZCI44CB44GK5a6i5qeY44GM5b2T6Kmy5aSJ5pu044Gr5ZCM5oSP44GV44KM44Gf44KC44Gu44Go
-44G/44Gq44GV44KM44G+44GZ44CC5aSJ5pu05b6M44Gu5pys6KaP57SE44Gr5ZCM5oSP44GV44KM
-44Gq44GE5aC05ZCI44CB44G+44Gf44Gv5aSJ5pu05b6M44Gu5pys6KaP57SE44KS6YG15a6I44Gn
-44GN44Gq44GE5aC05ZCI44Gv44CB5pys44K144Kk44OI44Gu5Yip55So44KS5Lit5q2i44GX44Gq
-44GR44KM44Gw44Gq44KK44G+44Gb44KT44CC55u06L+R44Gn44Gv44CB5pys6KaP57SE44Gv5pys
-5aWR57SE44Gu5pyA5b6M44Gr6KiY6LyJ44GV44KM44Gm44GE44KL55m65Yq55pel44Gr5aSJ5pu0
-44GV44KM44G+44GX44Gf44CCPC9QPg0KPFA+44Kz44Oz44OG44Oz44OEPC9QPg0KPFA+5pys44K1
-44Kk44OI44Gu44GC44KJ44KG44KL5oOF5aCx44CB44Oe44OG44Oq44Ki44Or44CB44GK44KI44Gz
-44Kz44Oz44OG44Oz44OE77yI44OG44Kt44K544OI44CB44Kw44Op44OV44Kj44OD44Kv44CB44Om
-44O844K244O844Kk44Oz44K/44O844OV44Kn44Kk44K544CB44OT44K444Ol44Ki44Or44Kk44Oz
-44K/44O844OV44Kn44Kk44K544CB5YaZ55yf44CB44OT44OH44Kq44CB5ZWG5qiZ44CB6Z+z5qW9
-44CB44Ki44O844OI44Ov44O844Kv44CB44OH44K444K/44Or44OA44Km44Oz44Ot44O844OJ44CB
-44GK44KI44Gz44K944OV44OI44Km44Kn44Ki44KS5ZCr44KA44GM44CB44GT44KM44KJ44Gr6ZmQ
-5a6a44GV44KM44Gq44GE77yJ77yI5Lul5LiL44CB57eP56ew44GX44Gm44CM44Kz44Oz44OG44Oz
-44OE44CN44Go44GE44GE44G+44GZ77yJ44Gv44CBQXBwbGXjgavjgojjgormiYDmnInjgIHnrqHn
-kIbjgIHjgb7jgZ/jga9BcHBsZeOBq+ODqeOCpOOCu+ODs+OCueS+m+S4juOBleOCjOOBpuOBiuOC
-iuOAgeODiOODrOODvOODieODieODrOOCueOAgeiRl+S9nOaoqeOAgeeJueioseOAgeOBiuOCiOOB
-s+WVhuaomeOBq+mWouOBmeOCi+azleW+i+OAgeOBquOCieOBs+OBq+OBneOBruS7luOBruanmOOA
-heOBquefpeeahOaJgOacieaoqeOBiuOCiOOBs+S4jeato+ertuS6iemYsuatouazleOBq+OCiOOB
-o+OBpuS/neitt+OBleOCjOOBpuOBhOOBvuOBmeOAgjwvUD4NCjxQPjxBIA0KaHJlZj0iaHR0cHM6
-Ly93d3cuYXBwbGUuY29tL2pwL2xlZ2FsL2ludGVsbGVjdHVhbC1wcm9wZXJ0eS8iPmh0dHBzOi8v
-d3d3LmFwcGxlLmNvbS9qcC9sZWdhbC9pbnRlbGxlY3R1YWwtcHJvcGVydHkvPC9BPjwvUD4NCjxQ
-PuOBiuWuouanmOOBr+OAgeOCs+ODs+ODhuODs+ODhOOBvuOBn+OBr+acrOOCteOCpOODiOOBruOB
-hOOBi+OBquOCi+mDqOWIhuOCguOAgeOBhOOBi+OBquOCi+ebrueahOOBp+OBguOCjOOAgeiHquWI
-huiHqui6q+OBruOBn+OCgeOBi+esrOS4ieiAheOBruOBn+OCgeOBi+OBq+mWouOCj+OCieOBmuOA
-gUFwcGxl44Gu5pu46Z2i44Gr44KI44KL5LqL5YmN44Gu5piO56S655qE44Gq5ZCM5oSP44KS5b6X
-44KL44GT44Go44Gq44GP44CB44GE44GL44Gq44KL5pa55rOV77yI44CM44Of44Op44O844Oq44Oz
-44Kw44CN44KS5ZCr44KA77yJ44Gr44KI44Gj44Gm44KC44CB44Ki44Kv44K744K544CB44OA44Km
-44Oz44Ot44O844OJ44CB44Kz44OU44O844CB6KSH6KO944CB5YaN5YWs6ZaL44CB44Ki44OD44OX
-44Ot44O844OJ44CB5oqV56i/44CB5LiA6Iis5YWs6ZaL44CB44Ko44Oz44Kz44O844OJ44CB57+7
-6Kiz44CB6YCB5L+h44CB44G+44Gf44Gv6aCS5biD44GZ44KL44GT44Go44Gv44Gn44GN44G+44Gb
-44KT44CCPC9QPg0KPFA+PEEgDQpocmVmPSJodHRwczovL3d3dy5hcHBsZS5jb20vanAvc2hvcC9i
-dXktaXBob25lIj5odHRwczovL3d3dy5hcHBsZS5jb20vanAvc2hvcC9idXktaXBob25lPC9BPjwv
-UD4NCjxQPuOBiuWuouanmOOBr+OAgeacrOOCteOCpOODiOOBi+OCieOBruODgOOCpuODs+ODreOD
-vOODieOBruOBn+OCgeOBq0FwcGxl44GM5oSP5Zuz55qE44Gr5o+Q5L6b44GX44Gm44GE44KL44CB
-QXBwbGXjga7oo73lk4HjgYrjgojjgbPjgrXjg7zjg5PjgrnjgavplqLjgZnjgovmg4XloLHvvIjj
-g4fjg7zjgr/jgrfjg7zjg4jjgIHjg4rjg6zjg4Pjgrjjg5njg7zjgrnoqJjkuovjgIHjgYrjgojj
-gbPjgZPjgozjgonjgavpoZ7kvLzjgZnjgovjg57jg4bjg6rjgqLjg6vjgarjganvvInjgpLliKnn
-lKjjgZnjgovjgZPjgajjgYzjgafjgY3jgb7jgZnjgILjgZ/jgaDjgZfjgIHjgYrlrqLmp5jjgYzm
-j5DkvpvjgZXjgozjgZ/mg4XloLHjgpLjgYrlrqLmp5jjga7lgIvkurrnmoTjgarnm67nmoTjgavj
-ga7jgb/liKnnlKjjgZfjgIHjgbvjgYvjga7jgYTjgYvjgarjgovjg5fjg6njg4Pjg4jjg5Xjgqnj
-g7zjg6Djgb7jgZ/jga/jgqbjgqfjg5bjgrXjgqTjg4jjgavjgoLmjrLovInjgZfjgZ/jgorjgIHm
-j5DkvpvjgZXjgozjgZ/jganjga7mg4XloLHjgavjgoLlpInmm7TvvIjmiYDmnInmqKnpgJrnn6Xj
-ga7liYrpmaTjgpLlkKvjgoDjgYzjgIHjgZPjgozjgavpmZDlrprjgZXjgozjgarjgYTvvInjgpLl
-iqDjgYjjgZ/jgorjgZfjgarjgYTjgZPjgajjgpLmnaHku7bjgajjgZfjgb7jgZnjgII8L1A+DQo8
-UD48QSANCmhyZWY9Imh0dHBzOi8vd3d3LmFwcGxlLmNvbS9qcC9yZXRhaWwvIj5odHRwczovL3d3
-dy5hcHBsZS5jb20vanAvcmV0YWlsLzwvQT48L1A+DQo8UD7ilIHilIHilIHilIHilIHilIHilIHi
-lIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHilIHi
-lIHilIHilIEgJm5ic3A7PEJSPkNvcHlyaWdodCDvvIhD77yJIDIwMjUgaVR1bmVzIA0KSy5LLjxC
-Uj7mnbHkuqzpg73muK/ljLrlha3mnKzmnKg25LiB55uuMTDnlaox5Y+3IOWFreacrOacqOODkuOD
-q+OCuiANCiZuYnNwOzxCUj7jg5fjg6njgqTjg5Djgrfjg7zjg53jg6rjgrfjg7zvvZzliKnnlKjo
-po/ntITvvZzjgrXjg53jg7zjg4g8QlI+PC9QPjwvQk9EWT48L0hUTUw+DQo=
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head><body>
+<table style=3D'text-align: left; color: rgb(66, 66, 66) !important; text-t=
+ransform: none; line-height: inherit; letter-spacing: normal; font-family: =
+"Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFo=
+nt, Roboto, "Helvetica Neue", sans-serif; font-size: 15px; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; border-collap=
+se: collapse; direction: ltr; border-spacing: 0px; orphans: 2; widows: 2; f=
+ont-size-adjust: inherit; font-stretch: inherit;=20
+font-feature-settings: inherit; background-color: rgb(255, 255, 255); text-=
+decoration-color: initial; font-variant-ligatures: normal; font-variant-cap=
+s: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initi=
+al; text-decoration-style: initial; font-variant-numeric: inherit; font-var=
+iant-east-asian: inherit; font-variant-alternates: inherit; font-variant-po=
+sition: inherit; font-variant-emoji: inherit; font-optical-sizing: inherit;=
+ font-kerning: inherit; font-variation-settings:=20
+inherit;' cellspacing=3D"0" cellpadding=3D"0" data-olk-copy-source=3D"Messa=
+geBody"><tbody><tr><td style=3D"padding: 3.75pt; border: 1pt solid black; b=
+order-image: none; width: 1.5pt; height: 31px; text-align: left; white-spac=
+e: normal !important; direction: ltr; background-color: rgb(2, 151, 64) !im=
+portant;">
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: center; color: black !important; line-height: inher=
+it; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, H=
+elvetica, sans-serif; font-size: 12pt; font-style: inherit; font-variant: i=
+nherit; font-weight: inherit; vertical-align: baseline; direction: ltr; fon=
+t-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inher=
+it; font-optical-sizing: inherit; font-kerning:=20
+inherit; font-variation-settings: inherit;"><b>&nbsp;</b></div></td><td sty=
+le=3D"border-width: 1pt; border-style: solid solid solid none; border-color=
+: black; padding: 3.75pt; width: 525pt; height: 31px; text-align: left; whi=
+te-space: normal !important; direction: ltr; background-color: rgb(243, 255=
+, 248) !important;">
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; line-height: inherit=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; font-style: inherit; font-variant: inh=
+erit; font-weight: inherit; vertical-align: baseline; direction: ltr; font-=
+size-adjust: inherit; font-stretch: inherit; font-feature-settings: inherit=
+; font-optical-sizing: inherit; font-kerning:=20
+inherit; font-variation-settings: inherit;">This sender has been verified f=
+rom senders list.</div></td></tr></tbody></table>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;"><br></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;">Dear industrypack-devel@lists.sourceforg=
+e.net,<br><br></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;"><p style=3D'color: rgb(36, 36, 36) !impo=
+rtant; text-transform: none; text-indent: 0px; letter-spacing: normal; font=
+-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica =
+Neue", sans-serif; font-size: 15px; font-style: normal; font-weight: 400; m=
+argin-top: 0px; margin-bottom: 0px; word-spacing: 0px; orphans: 2; widows: =
+2; background-color: white !important; text-decoration-color: initial; text=
+-decoration-style: initial;'>
+Are you open to exploring funding programs for your business, contract and&=
+nbsp;project?<br><br></p>
+<div style=3D'border-color: rgb(49, 49, 49); height: auto; color: rgb(49, 4=
+9, 49); text-transform: none; text-indent: 0px; letter-spacing: normal; fon=
+t-family: -apple-system, "helvetica neue"; font-size: 16px; font-style: nor=
+mal; font-weight: 400; word-spacing: 1px; white-space: normal; orphans: 2; =
+widows: 2; background-color: rgba(0, 0, 0, 0); text-decoration-color: initi=
+al; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
+-stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial;' dir=3D"auto"><span style=3D"borde=
+r-color: rgb(49, 49, 49);"><span style=3D"border-color: rgb(49, 49, 49); li=
+ne-height: 19.2px; background-color: rgba(0, 0, 0, 0);"><span style=3D"bord=
+er-color: rgb(49, 49, 49); font-family: sans-serif; font-size: 1rem; backgr=
+ound-color: rgba(0, 0, 0, 0);">We make business and real estate financing</=
+span></span></span>&nbsp;<span style=3D"border-color: rgb(49, 49, 49);">
+<span style=3D"border-color: rgb(49, 49, 49); line-height: 19.2px; backgrou=
+nd-color: rgba(0, 0, 0, 0);"><span style=3D"border-color: rgb(49, 49, 49); =
+font-family: sans-serif; font-size: 1rem; background-color: rgba(0, 0, 0, 0=
+);"><strong style=3D"border-color: rgb(49, 49, 49); font-size: 1rem; backgr=
+ound-color: rgba(0, 0, 0, 0);">fast, flexible, and hassle-free</strong>. Wh=
+ether you're Starting up, flipping, building, renting, or bridging the gap,=
+ we have a</span></span></span>
+&nbsp;<span style=3D"border-color: rgb(49, 49, 49);"><span style=3D"border-=
+color: rgb(49, 49, 49); line-height: 19.2px; background-color: rgba(0, 0, 0=
+, 0);"><span style=3D"border-color: rgb(49, 49, 49); font-family: sans-seri=
+f; background-color: rgba(0, 0, 0, 0);"><strong style=3D"border-color: rgb(=
+49, 49, 49); font-size: 1rem; background-color: rgba(0, 0, 0, 0);">custom l=
+oan solution</strong></span></span></span>&nbsp;<span style=3D"border-color=
+: rgb(49, 49, 49);">
+<span style=3D"border-color: rgb(49, 49, 49); line-height: 19.2px; backgrou=
+nd-color: rgba(0, 0, 0, 0);"><span style=3D"border-color: rgb(49, 49, 49); =
+font-family: sans-serif; font-size: 1rem; background-color: rgba(0, 0, 0, 0=
+);">for you.</span></span></span></div>
+<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
+ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
+ BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
+ font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
+ word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
+nt; text-decoration-color: initial; text-decoration-style: initial;'>
+<br style=3D'color: rgb(212, 212, 213); text-transform: none; text-indent: =
+0px; letter-spacing: normal; font-family: -apple-system, "helvetica neue"; =
+font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 1px; w=
+hite-space: normal; orphans: 2; widows: 2; text-decoration-color: initial; =
+font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
+oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
+initial;'></p>
+<div style=3D'border-color: rgb(49, 49, 49); height: auto; color: rgb(49, 4=
+9, 49); text-transform: none; text-indent: 0px; letter-spacing: normal; fon=
+t-family: -apple-system, "helvetica neue"; font-size: 16px; font-style: nor=
+mal; font-weight: 400; word-spacing: 1px; white-space: normal; orphans: 2; =
+widows: 2; background-color: rgba(0, 0, 0, 0); text-decoration-color: initi=
+al; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
+-stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial;'><span style=3D"border-color: rgb(=
+49, 49, 49);"><span style=3D"border-color: rgb(49, 49, 49); line-height: 19=
+=2E2px; background-color: rgba(0, 0, 0, 0);"><span style=3D"border-color: r=
+gb(49, 49, 49); font-family: sans-serif; font-size: 1rem; background-color:=
+ rgba(0, 0, 0, 0);">Book a call, zoom</span></span></span>&nbsp;<span style=
+=3D"border-color: rgb(49, 49, 49);">
+<span style=3D"border-color: rgb(49, 49, 49); line-height: 19.2px; backgrou=
+nd-color: rgba(0, 0, 0, 0);"><span style=3D"border-color: rgb(49, 49, 49); =
+font-family: sans-serif; background-color: rgba(0, 0, 0, 0);"><strong style=
+=3D"border-color: rgb(49, 49, 49); font-size: 1rem; background-color: rgba(=
+0, 0, 0, 0);">today</strong></span></span></span>&nbsp;<span style=3D"borde=
+r-color: rgb(49, 49, 49);"><span style=3D"border-color: rgb(49, 49, 49); li=
+ne-height: 19.2px; background-color: rgba(0, 0, 0, 0);">
+<span style=3D"border-color: rgb(49, 49, 49); font-family: sans-serif; font=
+-size: 1rem; background-color: rgba(0, 0, 0, 0);">&amp; Let's find the righ=
+t program for you!</span></span></span></div>
+<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
+ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
+ BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
+ font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
+ word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
+nt; text-decoration-color: initial; text-decoration-style: initial;'></p>
+<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
+ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
+ BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
+ font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
+ word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
+nt; text-decoration-color: initial; text-decoration-style: initial;'>&nbsp;=
+<br><br></p>
+<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
+ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
+ BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
+ font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
+ word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
+nt; text-decoration-color: initial; text-decoration-style: initial;'>
+Don't miss this chance and opportunity!&nbsp;:<span style=3D"font: inherit;=
+ margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; c=
+olor: inherit; vertical-align: baseline; font-size-adjust: inherit; font-st=
+retch: inherit;">&nbsp;</span>
+<a href=3D"mailto:bertrand.charge_krones.fr@hotmail.com">bertrand.charge_kr=
+ones.fr@hotmail.com</a><br><br></p></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;">Looking forward to hearing from you.</di=
+v>
+<div aria-hidden=3D"true" style=3D"margin: 0px; padding: 0px; border: 0px c=
+urrentColor; border-image: none; text-align: left; color: black !important;=
+ text-transform: none; line-height: inherit; text-indent: 0px; letter-spaci=
+ng: normal; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-wei=
+ght: 400; word-spacing: 0px; vertical-align: baseline; white-space: normal;=
+ direction: ltr; orphans: 2; widows: 2;=20
+font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: in=
+herit; background-color: rgb(255, 255, 255); text-decoration-color: initial=
+; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-s=
+troke-width: 0px; text-decoration-thickness: initial; text-decoration-style=
+: initial; font-variant-numeric: inherit; font-variant-east-asian: inherit;=
+ font-variant-alternates: inherit; font-variant-position: inherit; font-var=
+iant-emoji: inherit; font-optical-sizing:=20
+inherit; font-kerning: inherit; font-variation-settings: inherit;">&nbsp;</=
+div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;">Warmest Regards<br>Bertrand Charge<br>CF=
+O of Business Funding<br>Finacial Advisor<br>Flo Project Management Service=
+s<br>
+<div style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; =
+letter-spacing: normal; font-family: Verdana, Arial, Helvetica, sans-serif;=
+ font-size: 13.33px; font-style: normal; font-weight: 400; word-spacing: 0p=
+x; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 2=
+55, 255); text-decoration-color: initial; font-variant-ligatures: normal; f=
+ont-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-t=
+hickness: initial; text-decoration-style: initial;">
+Business Hours: Monday-Friday: 8:00 am - 6:00 pm</div></div></body></html>
 
---=====003_Dragon514315143043_=====--
 
-
-
---===============6227644905947921007==
+--===============7114558485004228652==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============6227644905947921007==
+--===============7114558485004228652==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -355,6 +366,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============6227644905947921007==--
-
-
+--===============7114558485004228652==--
