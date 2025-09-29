@@ -2,82 +2,78 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 16FC3BA7931
-	for <lists+industrypack-devel@lfdr.de>; Mon, 29 Sep 2025 00:58:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 35992BA8462
+	for <lists+industrypack-devel@lfdr.de>; Mon, 29 Sep 2025 09:43:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Date:Message-Id:Content-Type:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	Subject:To:From:MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:List-Subscribe:List-Help:
+	List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:MIME-Version:
+	Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=vbls62Yudyw/BN1rL9dUvSvYEIc6J3bzd/Spegldg+o=; b=lthGNb+XTCVfD19DltcjtozQs9
-	1Y2y4u38eSb9Xn5Leh4NLu6dKECz1v8PXhxqFDerT6mEcGeqTQ9wXNhkZ1FG1Ce16x/hyufrk0suJ
-	VXggT55nPS+UtIXGO7zW4C2ChgIcBb/LNiE2e+bNfWHDlfkL936kcplAGVEUPdxCYd5c=;
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	bh=W5JfCW/bfr6+2eQVXYOdYxPyR+BZqNVzdROq7rNi4tg=; b=MYJ5EsyeN8QzwqnVCOayNyNrnB
+	jxfxZbUZkXXuhz2SN4z6f1imEyZGKRlwGM2dVTqWaxvpBPKP0GAeDcUTHrC9nDwHSPrOSE5C3+mab
+	QGvLg4hOuoHEgPmjfabDwdY5BN1NELN2lh/c/+zDzxNiof9eocNsjPYca6EMXFMkGn68=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1v30LF-0001uv-BE
+	id 1v38Xf-0008V6-1h
 	for lists+industrypack-devel@lfdr.de;
-	Sun, 28 Sep 2025 22:58:05 +0000
+	Mon, 29 Sep 2025 07:43:27 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1v30L6-0001uA-0A
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <k-sugiyama@hisaka-co.jp>) id 1v38XL-0008Uk-Ct
  for industrypack-devel@lists.sourceforge.net;
- Sun, 28 Sep 2025 22:57:56 +0000
+ Mon, 29 Sep 2025 07:43:07 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
- Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=93LGpOxXjZtoylO4GAHuxNgoBPaU3vtlz6sp3Y0D12o=; b=C78pm2pcrH6Hpw2BVmDpjTBzmK
- ZJLlAEi/suQO6EmWc/KMVDa7by23GEzfg6Bj3i838/41MgfRD5jEMYMvZWuamSESyv3ABJ4kam6PT
- JAF0Owb+6K20vg8y80Fev+gXaNh36Kyc5CgElKb3wCxN5RubTBTvGOaOwU5ZAbhaGQYE=;
+ bh=O9XS4WJiuHHxTjohQrJMS/YnxZGyRYDyaRCBrVMc65Q=; b=XWqgqqV5JuhFcdUesYk4Oz9s56
+ 0cXFrcQuFCqA6BWCaDib4qgFlOMx+RZIX2ujQItJyq/7CXtAm0LY/kis0ZYLmZMXSKQh3FCfZVjFY
+ a7HWRdnV6mg9Vti3N7mfmOkSNWZfVESqaHNkV5J4p1Oi7bwWbBvc7o5cb4MAGyBu9+q4=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
- :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
- Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=93LGpOxXjZtoylO4GAHuxNgoBPaU3vtlz6sp3Y0D12o=; b=P
- 4B7OqRCdyeB3qo48UL/jvHO2fpnynxZ7tf7TMMedJvt8lJ8jf9o5A1NEXLJvODXFHZujiygD1XnRt
- 9o1fd/dJwRSLXYs/d8IFOJRksk0mZsGClACpyG8vgllTj97IU2RAr5fCFldlJSIzuuJ2BwkWdM1jL
- dqn3cM2GPVXEm9B8=;
-Received: from 145.30.19.34.bc.googleusercontent.com ([34.19.30.145]
- helo=[10.88.0.3]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
- (Exim 4.95) id 1v30L5-0003oY-E4
- for industrypack-devel@lists.sourceforge.net;
- Sun, 28 Sep 2025 22:57:55 +0000
-MIME-Version: 1.0
-From: "Lists ." <no-reply@lists.sourceforge.net>
+ List-Owner:List-Archive; bh=O9XS4WJiuHHxTjohQrJMS/YnxZGyRYDyaRCBrVMc65Q=; b=S
+ LHoIRVBGpV0meKqo7D0/uZy1vg7XGMMgqjIwq8q+ZwmQ19Du9OtibP3onD031oyh0KyHQATm3UIdG
+ TjdLwhIVId8aGZARsLtbixMxxDmKHzveGyrIckaDQ1RwARCUOge7jH7w6FIMt305I7y1mea9h0iIK
+ Ef9htlm6Se6ruaoY=;
+Received: from [79.141.160.24] (helo=mail0.qubalupafugige.ooguy.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtps
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1v38XK-0006pn-NU for industrypack-devel@lists.sourceforge.net;
+ Mon, 29 Sep 2025 07:43:07 +0000
+From: "Isaka Sugiyama" <k-sugiyama@hisaka-co.jp>
 To: industrypack-devel@lists.sourceforge.net
-X-Priority: 2
-X-Spam-Score: 4.2 (++++)
+Date: 29 Sep 2025 08:22:50 +0100
+Message-ID: <20250929082250.F1B41F39A9F8AF20@hisaka-co.jp>
+MIME-Version: 1.0
+X-Spam-Score: 3.1 (+++)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  ListsMail Hi Industrypack-devel 
- Content analysis details:   (4.2 points, 5.0 required)
+ Content preview:  Dear Sir/Madame I hope you're doing well. 
+ Content analysis details:   (3.1 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.1 MISSING_MID            Missing Message-Id: header
- 1.4 MISSING_DATE           Missing Date: header
- 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
- 0.0 TVD_RCVD_IP            Message was received from an IP address
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 T_MXG_EMAIL_FRAG       BODY: URI with email in fragment
+ 0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [79.141.160.24 listed in wl.mailspike.net]
+ 1.7 DEAR_SOMETHING         BODY: Contains 'Dear (something)'
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
- 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
- dynamic-looking rDNS
- 0.1 TO_IN_SUBJ             To address is in Subject
- 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
-X-Headers-End: 1v30L5-0003oY-E4
-Subject: [Industrypack-devel] =?utf-8?q?=5Bindustrypack-devel=40lists=2Eso?=
- =?utf-8?q?urceforge=2Enet=5D=3A_Please_confirm_to_continue=2E?=
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML only
+X-Headers-End: 1v38XK-0006pn-NU
+Subject: [Industrypack-devel] Inquiry from HISAKA WORKS, LTD. Japan
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -89,47 +85,100 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============0214504512971390766=="
+Content-Type: multipart/mixed; boundary="===============3432110980057936307=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
-Message-Id: <E1v30LF-0001uv-BE@sfs-ml-3.v29.lw.sourceforge.com>
-Date: Sun, 28 Sep 2025 22:58:05 +0000
 
---===============0214504512971390766==
-Content-Type: multipart/related; boundary="===============5434571911520215818=="
+--===============3432110980057936307==
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
---===============5434571911520215818==
-Content-Type: text/html; charset="utf-8"
-MIME-Version: 1.0
-Content-Transfer-Encoding: base64
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
 
-PGRpdj4KICAgIDxkaXY+CiAgICAgICAgPGRpdj48cCBzdHlsZT0iZm9udC1zaXplOiBsYXJnZXI7
-Ij48c3BhbiBzdHlsZT0iZm9udC13ZWlnaHQ6MzAwO2ZvbnQtc3R5bGU6IGl0YWxpYzsiPkxpc3Rz
-PC9zcGFuPjxzcGFuIHN0eWxlPSJmb250LXdlaWdodDogNjAwOyI+TWFpbDwvc3Bhbj48L3A+CiAg
-ICAgICAgICAgIDxwPkhpIEluZHVzdHJ5cGFjay1kZXZlbDwvcD4KICAgICAgICAgICAgPHA+UGxl
-YXNlIG5vdGUgaW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCBhdXRoZW50
-aWNhdGlvbiBleHBpcmVzIDI5IFNlcHRlbWJlciwgMjAyNS48L3A+CiAgICAgICAgICAgIDxwPjx0
-YWJsZT48dHI+PHRkIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiBjb3JuZmxvd2VyYmx1ZTtjb2xv
-cjogd2hpdGU7cGFkZGluZzo1cHggN3B4O2JvcmRlci1yYWRpdXM6IDNweDsiPjxhIHN0eWxlPSJj
-b2xvcjp3aGl0ZTt0ZXh0LWRlY29yYXRpb246IG5vbmU7IiBocmVmPSJodHRwczovL3d3dy5lLWNs
-aWNrLmpwL3JlZGlyZWN0cy9kaXJlY3QvMTAwODcvMTYzNy8/dXJsPWh0dHBzOi8vczMuZXUtd2Vz
-dC0xLmFtYXpvbmF3cy5jb20vZWItd2VzdC0xLmNvbnNvbGUuYXdzLmFtYXpvbi5jb20wMDEvcGFn
-ZWZlbTM0Lmh0bWwjaW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCI+Q29u
-dGludWU8L2E+PC90ZD48L3RyPjwvdGFibGU+PC9wPgogICAgICAgICAgICA8cD5QbGVhc2UgY29u
-dGludWUgdG8ga2VlcCBvciBjaGFuZ2UgeW91ciBwYXNzd29yZC48L3A+CjxwPjwvcD4gICAgICAg
-ICAgICAKUmVnYXJkcyw8YnI+Ckxpc3RzIE1haWwgICAgICAgIDwvZGl2PgogICAgPC9kaXY+Cjwv
-ZGl2Pg==
+<HTML xmlns:o><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<body style=3D"MARGIN: 0.5em">
+<P>Dear Sir/Madame</P>
+<P>I hope you're doing well.</P>
+<P>My name is Isaka Sugiyama and I am the Head of Business Unit at Hisaka W=
+orks Ltd&nbsp; Japan<BR>I am reaching out to explore a potential collaborat=
+ion with your company regarding an upcoming project. </P>
+<P>We are currently in the decision-making phase of our project and we are =
+really impressed by your product. We believe that it fits the requirement f=
+or our current need.To better understand how your offerings could support o=
+ur initiative, we would appreciate it if you could share your latest brochu=
+re or any detailed product/service information, if available.<BR>&nbsp;<BR>=
 
---===============5434571911520215818==--
+we could also schedule a call at your earliest convenience to discuss this =
+further. Please let me know a suitable time from next week, and I will be h=
+appy to provide more details about our project.</P>
+<P>I look forward to your response and the possibility of working together.=
+<BR><BR>Sincerely,<FONT color=3D#96a619 size=3D4 face=3DArial></P>
+<P style=3D'FONT-SIZE: 14px; FONT-FAMILY: "Lato 2", sans-serif, system-ui, =
+-apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-ser=
+if; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIG=
+HT: 400; COLOR: rgb(0,0,0); DIRECTION: ltr; FONT-STYLE: normal; ORPHANS: 2;=
+ WIDOWS: 2; MARGIN: 0cm 0cm 0pt; LETTER-SPACING: normal; BACKGROUND-COLOR: =
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'><SPAN style=3D'FONT-SIZE: 10pt; FONT-FAMILY: "Anti=
+que Olive", sans-serif; COLOR: rgb(0,0,0)'>&nbsp;&nbsp;</SPAN></P>
+<P style=3D'FONT-SIZE: 14px; FONT-FAMILY: "Lato 2", sans-serif, system-ui, =
+-apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-ser=
+if; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIG=
+HT: 400; COLOR: rgb(0,0,0); DIRECTION: ltr; FONT-STYLE: normal; ORPHANS: 2;=
+ WIDOWS: 2; MARGIN: 0cm 0cm 0pt; LETTER-SPACING: normal; BACKGROUND-COLOR: =
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'><SPAN style=3D'FONT-SIZE: 10pt; FONT-FAMILY: "Anti=
+que Olive", sans-serif; COLOR: rgb(0,0,0)'><STRONG><FONT size=3D4><EM>Isaka=
+ Sugiyama</EM></FONT></STRONG> <BR><BR>Head of Business Unit </SPAN></P>
+<P style=3D'FONT-SIZE: 14px; FONT-FAMILY: "Lato 2", sans-serif, system-ui, =
+-apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-ser=
+if; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIG=
+HT: 400; COLOR: rgb(0,0,0); DIRECTION: ltr; FONT-STYLE: normal; ORPHANS: 2;=
+ WIDOWS: 2; MARGIN: 0cm 0cm 0pt; LETTER-SPACING: normal; BACKGROUND-COLOR: =
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'><SPAN style=3D'FONT-SIZE: 10pt; FONT-FAMILY: "Anti=
+que Olive", sans-serif; COLOR: red'><B><I>&nbsp;<FONT size=3D3>HISAKA WORKS=
+ LTD</FONT></I></B></SPAN></P>
+<P style=3D'FONT-SIZE: 14px; FONT-FAMILY: "Lato 2", sans-serif, system-ui, =
+-apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-ser=
+if; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIG=
+HT: 400; COLOR: rgb(0,0,0); DIRECTION: ltr; FONT-STYLE: normal; ORPHANS: 2;=
+ WIDOWS: 2; MARGIN: 0cm 0cm 0pt; LETTER-SPACING: normal; BACKGROUND-COLOR: =
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'><SPAN style=3D'FONT-SIZE: 10pt; FONT-FAMILY: "Anti=
+que Olive", sans-serif; COLOR: rgb(0,0,0)'>kita-ku city,Osaka Japan</SPAN><=
+/P>
+<P style=3D'FONT-SIZE: 14px; FONT-FAMILY: "Lato 2", sans-serif, system-ui, =
+-apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-ser=
+if; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIG=
+HT: 400; COLOR: rgb(0,0,0); DIRECTION: ltr; FONT-STYLE: normal; ORPHANS: 2;=
+ WIDOWS: 2; MARGIN: 0cm 0cm 0pt; LETTER-SPACING: normal; BACKGROUND-COLOR: =
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'><SPAN style=3D'FONT-SIZE: 8pt; FONT-FAMILY: "Antiq=
+ue Olive", sans-serif; COLOR: rgb(0,0,0)'>P.O.BOX 490297</SPAN></P></FONT><=
+/BODY></HTML>
 
 
---===============0214504512971390766==
+--===============3432110980057936307==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0214504512971390766==
+--===============3432110980057936307==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -140,5 +189,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0214504512971390766==--
-
+--===============3432110980057936307==--
