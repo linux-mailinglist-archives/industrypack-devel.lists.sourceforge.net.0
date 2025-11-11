@@ -2,110 +2,81 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id BD588C4C76E
-	for <lists+industrypack-devel@lfdr.de>; Tue, 11 Nov 2025 09:51:50 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 573ACC4F26F
+	for <lists+industrypack-devel@lfdr.de>; Tue, 11 Nov 2025 17:59:13 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
-	MIME-Version:To:Message-Id:Date:From:Sender:Cc:Content-Transfer-Encoding:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Cc:Reply-To:From:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	Subject:MIME-Version:Message-ID:Date:To:Sender:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=1fDOpdtzQjn1b6/fxQCYm4hvuoVReNZkHmbb93iCDMc=; b=R2sGjrmKeSDvIcggJ2FemwYZLO
-	i/gzTGGmYMHSrFipgc84KulImjrBzfUQMApVigYNSyQLg5YE6ZcUd/wqh5RtRethrIg3bwuPsPdiM
-	z4/XUsLx4E8bnOxnwKgb9rpFCq4YMbZioG4Wbnu0WlOweiFNIDSutVYg4kCwjSsOSY/0=;
-Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
-	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	bh=SRo2Zlge6CQP1F4niDYH+P5gClU7gomocr8DwNO7Ll4=; b=TWsgJ2ix4SJEx/4gdLoiLv5grR
+	5GgGp1Z8d5fmr0XbCJk5UU2RrhTnFEjsJs3f6rvQQpA6fNxjHZiIStkx3IqyYL+jrbYXDDjU7nVUg
+	1XaXbisopUPk7mk6Ru/Y1oS5rA7Uwbp3tXIuHhVbuZyzlI+B/Rm7eFlDXOOqdSfJPh78=;
+Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
+	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1vIk6O-0006aV-Jl
+	id 1vIri4-0004GB-2o
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 11 Nov 2025 08:51:48 +0000
+	Tue, 11 Nov 2025 16:59:12 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <Lily.Bai=jdcasting.kmfgedm.com@bounces.jdcasting.kmfgedm.com>)
- id 1vIk66-0006Tr-Gs for industrypack-devel@lists.sourceforge.net;
- Tue, 11 Nov 2025 08:51:30 +0000
+ (envelope-from <bertrand.charge@dns-ac.asia>) id 1vIrhx-0004Fu-5e
+ for industrypack-devel@lists.sourceforge.net;
+ Tue, 11 Nov 2025 16:59:05 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Content-Type:MIME-Version:List-Unsubscribe:To:
- Sender:Reply-To:Message-Id:Subject:Date:From:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=L1ftGs9aiDZFXftW1elSpIxWwzD5Cb2XOk2xHJ5l9v8=; b=QPs63ApAE7uuF9+qDN/oohxSEI
- rKZ+ni6IN1MhIdkBbEZc91kbdoE4Wb+Hv9XlT57f71QztDyt+IpHUhrfWhxky5bm79cg/I9y801KW
- dHMt2Do6lqrr6QF7Nmv5H8roGybyOQw6kNYPgO7IubBG2BJuynZNb/hSysU0D/vIf2po=;
+ d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Message-ID:Date:To:From:Reply-To:Sender:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=RYoSlZib8DdFIlXHHWIgsEnx2YcHuDqBzaUV5Jhb0nE=; b=eRSbsED9oayFM3Ifn+kJ2ifVy+
+ TBMsRkG5xw5nptMTfu8UnL+bn4tAJ55C6L6CnpijKunvEdBkXceDrKJXw0OaV52y2HQKgqP4iaOIJ
+ 8VJgTI9JGVu1zDej5G76aZ+uwFOJVKZVA5g4sdrTTq9a5xhg2LLQ42zTQ5eNrctN71FY=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Content-Type:MIME-Version:List-Unsubscribe:To:Sender:Reply-To:Message-Id:
- Subject:Date:From:Cc:Content-Transfer-Encoding:Content-ID:Content-Description
- :Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
- In-Reply-To:References:List-Id:List-Help:List-Subscribe:List-Post:List-Owner:
- List-Archive; bh=L1ftGs9aiDZFXftW1elSpIxWwzD5Cb2XOk2xHJ5l9v8=; b=O0gJez3+zjIt
- PMlxOr0qwaL1JTNIMhhgPdH5fK1y8jhw9T7C/SazZt+jOyNjBYhdOcq8qHInlwB0xaQqyV9Ng89BI
- V4CwRhiiHj0R3qiIjmLtxiY9V+XwXrHV2aRrkA+/QkkExsVOl8FHmO/HnE58B5gb1zkDg5LxoOYce
- mCIkk=;
-Received: from w137.mxout.mta1.net ([69.72.31.137])
+ h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+ Date:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
+ Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=RYoSlZib8DdFIlXHHWIgsEnx2YcHuDqBzaUV5Jhb0nE=; b=g
+ oapnTVKXHJkoMeJ6QrlnlviGTOapE+i2iePLbQ4RYZbPbjEMQPCCZC5JTrUyqlwV8DI6f3AkFccdb
+ 6IAPMuuuD4SEcxpQCgwID+kV3ubOKLPFS7l8x7n/SyCVsKcSpPWzrb8O0ujQwCnLbi6P+go7dKmya
+ DvDOJjz4sQZWSVu0=;
+Received: from b2-deepseek.shop ([45.8.125.57])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
  (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1vIk65-0000zS-Ak for industrypack-devel@lists.sourceforge.net;
- Tue, 11 Nov 2025 08:51:30 +0000
-DKIM-Signature: v=1; a=rsa-sha256; d=jdcasting.kmfgedm.com; s=api;
- c=relaxed/simple; t=1762851082;
- h=from:date:subject:reply-to:to:list-unsubscribe:list-unsubscribe-post:
- mime-version; bh=Ia03vFv+i9De+tke1DeIeqouHMKey2xIBqokPdMb8Xg=;
- b=ReObmc+xdbxVMT9/UTz3E2osQo2zvUIdcVoyBIko3cqDatvnwib0eVsSONaA93XfpqH6n4tZZng
- Ml1kwYee5HJlQycK0N6HdWtsFRFjmjz458DRoQ06MtfM3g5nRE6hIJZHpN8TvzgfIrCuEvwYnnrAW
- JJ0r2K/BdmruMepiFdo=
-DKIM-Signature: v=1; a=rsa-sha256; d=elasticemail.com; s=api;
- c=relaxed/simple; t=1762851082;
- h=from:date:subject:reply-to:to:list-unsubscribe:list-unsubscribe-post;
- bh=Ia03vFv+i9De+tke1DeIeqouHMKey2xIBqokPdMb8Xg=;
- b=CwGVmro+HswQW8/OmvgTmR5URc1a+6g5ZHWetsz5Ne66OVZAUSfoWSxLyP5ff2hXc9B5udY5CB6
- NHrIIZm9vOoN9sAGwMMTWbiGcdjR6r66YR5AJHdO+QVr7H0KqiU5wBijdGxdOXu2SeNbpb+qNceYZ
- mFZvMLMd+AkGUUmyzys=
-From: Lily Bai <Lily.Bai@jdcasting.kmfgedm.com>
-Date: Tue, 11 Nov 2025 08:51:22 +0000
-Message-Id: <4urp3d4iticf.QkPGExw7gcagmKrMK_Tc7A2@tracking.jdcasting.kmfgedm.com>
-To: "industrypack-devel@lists.sourceforge.net"
- <industrypack-devel@lists.sourceforge.net>
-List-Unsubscribe-Post: List-Unsubscribe=One-Click
-X-Msg-EID: QkPGExw7gcagmKrMK_Tc7A2
+ id 1vIrhv-0001Z3-0g for industrypack-devel@lists.sourceforge.net;
+ Tue, 11 Nov 2025 16:59:03 +0000
+To: industrypack-devel@lists.sourceforge.net
+Date: 11 Nov 2025 15:50:19 -0800
+Message-ID: <20251111155019.C2634419F07EC122@dns-ac.asia>
 MIME-Version: 1.0
-X-Spam-Score: 1.8 (+)
-X-Spam-Report: Spam detection software, running on the system "sfi-spamd-2.hosts.colo.sdot.me",
- has NOT identified this incoming email as spam.  The original
+X-Spam-Score: 7.6 (+++++++)
+X-Spam-Report: Spam detection software,
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
+ has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- 
- Content preview:  Hi, This is LILY FROM JINDEE CNC — a real manufacturing
-   factory in China specializing in precision CNC machining and die casting.
-   Many of our clients once faced the same dilemma — They needed the precision
-    of CNC machining, but costs quickly grew as production volumes increased.
-    Switching to die casting seemed like a good idea [...] 
- 
- Content analysis details:   (1.8 points, 5.0 required)
- 
-  pts rule name              description
+ Content preview: This sender has been verified from senders list. Dear
+ industrypack-devel@lists.sourceforge.net, 
+ Content analysis details:   (7.6 points, 5.0 required)
+ pts rule name              description
  ---- ---------------------- --------------------------------------------------
-  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
-                             See
-                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
-                              for more information.
-                             [URI: elasticemail.com]
-                             [URI: xcwms.com]
-                             [URI: kmfgedm.com]
-  1.9 URIBL_CT_SURBL         Contains an URL listed in the CT SURBL blocklist
-                             [URI: tracking.jdcasting.kmfgedm.com]
-                             [URI: jdcasting.kmfgedm.com]
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
-                             domain
- -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
-  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
-  0.0 HTML_MESSAGE           BODY: HTML included in message
-X-Headers-End: 1vIk65-0000zS-Ak
-Subject: [Industrypack-devel] Reliable CNC Machining Factory | Medium Volume
- Production
+ 4.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
+ [45.8.125.57 listed in dnsbl-1.uceprotect.net]
+ 1.0 RCVD_IN_UCE2           RBL: IP Subnet Listed in UCEPROTECT Level 2
+ [45.8.125.57 listed in dnsbl-2.uceprotect.net]
+ 0.0 DATE_IN_FUTURE_06_12   Date: is 6 to 12 hours after Received: date
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_MESSAGE           BODY: HTML included in message
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1vIrhv-0001Z3-0g
+Subject: [Industrypack-devel] [SPAM] Apply for Business and Contract Loan
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -117,192 +88,342 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: Lily Bai <sales@jindeecnc.cn>
-Content-Type: multipart/mixed; boundary="===============3287372591078268453=="
+From: =?UTF-8?B?Q2hhcmfDqSBCZXJ0cmFuZA==?= via Industrypack-devel
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: bertrand.charge_krones.fr@hotmail.com
+Cc: =?UTF-8?B?Q2hhcmfDqSBCZXJ0cmFuZA==?= <bertrand.charge@dns-ac.asia>
+Content-Type: multipart/mixed; boundary="===============0392322982658684435=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 
---===============3287372591078268453==
-Content-Type: multipart/alternative;
-	boundary="=-eZCfNWnl2QDUMJCZacgoZALT/y9d4f1y7XWKzQ=="
-
---=-eZCfNWnl2QDUMJCZacgoZALT/y9d4f1y7XWKzQ==
-Content-Type: text/plain; charset=utf-8
+--===============0392322982658684435==
+Content-Type: text/html;
+	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
 
-Hi,
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head><body>
+<table style=3D'text-align: left; color: rgb(66, 66, 66) !important; text-t=
+ransform: none; line-height: inherit; letter-spacing: normal; font-family: =
+"Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFo=
+nt, Roboto, "Helvetica Neue", sans-serif; font-size: 15px; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; border-collap=
+se: collapse; direction: ltr; border-spacing: 0px; orphans: 2; widows: 2; f=
+ont-size-adjust: inherit; font-stretch: inherit;=20
+font-feature-settings: inherit; background-color: rgb(255, 255, 255); text-=
+decoration-color: initial; font-variant-ligatures: normal; font-variant-cap=
+s: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initi=
+al; text-decoration-style: initial; font-variant-numeric: inherit; font-var=
+iant-east-asian: inherit; font-variant-alternates: inherit; font-variant-po=
+sition: inherit; font-variant-emoji: inherit; font-optical-sizing: inherit;=
+ font-kerning: inherit; font-variation-settings:=20
+inherit;' cellspacing=3D"0" cellpadding=3D"0" data-olk-copy-source=3D"Messa=
+geBody"><tbody><tr><td style=3D"padding: 3.75pt; border: 1pt solid black; b=
+order-image: none; width: 1.5pt; height: 31px; text-align: left; white-spac=
+e: normal !important; direction: ltr; background-color: rgb(2, 151, 64) !im=
+portant;">
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: center; color: black !important; line-height: inher=
+it; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, H=
+elvetica, sans-serif; font-size: 12pt; font-style: inherit; font-variant: i=
+nherit; font-weight: inherit; vertical-align: baseline; direction: ltr; fon=
+t-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inher=
+it; font-optical-sizing: inherit; font-kerning:=20
+inherit; font-variation-settings: inherit;"><b>&nbsp;</b></div></td><td sty=
+le=3D"border-width: 1pt; border-style: solid solid solid none; border-color=
+: black; padding: 3.75pt; width: 525pt; height: 31px; text-align: left; whi=
+te-space: normal !important; direction: ltr; background-color: rgb(243, 255=
+, 248) !important;">
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; line-height: inherit=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; font-style: inherit; font-variant: inh=
+erit; font-weight: inherit; vertical-align: baseline; direction: ltr; font-=
+size-adjust: inherit; font-stretch: inherit; font-feature-settings: inherit=
+; font-optical-sizing: inherit; font-kerning:=20
+inherit; font-variation-settings: inherit;">This sender has been verified f=
+rom senders list.</div></td></tr></tbody></table>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;"><br></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;">Dear industrypack-devel@lists.sourceforg=
+e.net,<br></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;"><p style=3D'color: rgb(36, 36, 36) !impo=
+rtant; text-transform: none; text-indent: 0px; letter-spacing: normal; font=
+-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica =
+Neue", sans-serif; font-size: 15px; font-style: normal; font-weight: 400; m=
+argin-top: 0px; margin-bottom: 0px; word-spacing: 0px; orphans: 2; widows: =
+2; background-color: white !important; text-decoration-color: initial; text=
+-decoration-style: initial;'>
+<br></p>
+<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
+ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
+tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
+ margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
+l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
+ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
+ke-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
+ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
+ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
+: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
+r;"><span class=3D"x_814722987colour" style=3D"color: black;">
+At FLO PROJECT MANAGEMENT SERVICES, we understand that securing the right f=
+unding is crucial for both startups and established businesses. That's why =
+we offer flexible financing solutions designed to meet your specific needs.=
+</span></span></span><br></p>
+<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
+ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
+tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
+ margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
+l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
+ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
+ke-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
+ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
+ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
+: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
+r;"><span class=3D"x_814722987colour" style=3D"color: black;">Here's how we=
+ can help:</span></span></span><br></p>
+<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
+ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
+tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
+ margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
+l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
+ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
+ke-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
+ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
+ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
+: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
+r;"><span class=3D"x_814722987colour" style=3D"color: black;">Debt Financin=
+g : 3% annual interest with zero penalties for early repayment.</span></spa=
+n></span><br></p>
+<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
+ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
+tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
+ margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
+l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
+ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
+ke-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
+ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
+ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
+: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
+r;"><span class=3D"x_814722987colour" style=3D"color: black;">
+We're ready to explore the best option for your business. Simply send us yo=
+ur pitch deck or executive summary, and let's discuss the ideal financing o=
+ptions to fuel your growth. We typically schedule a video chat with our&nbs=
+p;company representative&nbsp;to verify details and formally introduce&nbsp=
+;from you.</span></span></span><br></p>
+<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
+ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
+tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
+ margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
+l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
+ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
+ke-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
+ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
+ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
+: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
+r;"><span class=3D"x_814722987colour" style=3D"color: black;">Kindly confir=
+m your availability for a meeting, and let me know a convenient time for di=
+scussion.</span></span></span></p>
+<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
+ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
+ BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
+ font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
+ word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
+nt; text-decoration-color: initial; text-decoration-style: initial;'>
+<br style=3D'color: rgb(212, 212, 213); text-transform: none; text-indent: =
+0px; letter-spacing: normal; font-family: -apple-system, "helvetica neue"; =
+font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 1px; w=
+hite-space: normal; orphans: 2; widows: 2; text-decoration-color: initial; =
+font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
+oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
+initial;'></p>
+<div style=3D'border-color: rgb(49, 49, 49); height: auto; color: rgb(49, 4=
+9, 49); text-transform: none; text-indent: 0px; letter-spacing: normal; fon=
+t-family: -apple-system, "helvetica neue"; font-size: 16px; font-style: nor=
+mal; font-weight: 400; word-spacing: 1px; white-space: normal; orphans: 2; =
+widows: 2; background-color: rgba(0, 0, 0, 0); text-decoration-color: initi=
+al; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
+-stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial;'><span style=3D"border-color: rgb(=
+49, 49, 49);"><span style=3D"border-color: rgb(49, 49, 49); line-height: 19=
+=2E2px; background-color: rgba(0, 0, 0, 0);"><span style=3D"border-color: r=
+gb(49, 49, 49); font-family: sans-serif; font-size: 1rem; background-color:=
+ rgba(0, 0, 0, 0);">Book a call, zoom</span></span></span>&nbsp;<span style=
+=3D"border-color: rgb(49, 49, 49);">
+<span style=3D"border-color: rgb(49, 49, 49); line-height: 19.2px; backgrou=
+nd-color: rgba(0, 0, 0, 0);"><span style=3D"border-color: rgb(49, 49, 49); =
+font-family: sans-serif; background-color: rgba(0, 0, 0, 0);"><strong style=
+=3D"border-color: rgb(49, 49, 49); font-size: 1rem; background-color: rgba(=
+0, 0, 0, 0);">today</strong></span></span></span>&nbsp;<span style=3D"borde=
+r-color: rgb(49, 49, 49);"><span style=3D"border-color: rgb(49, 49, 49); li=
+ne-height: 19.2px; background-color: rgba(0, 0, 0, 0);">
+<span style=3D"border-color: rgb(49, 49, 49); font-family: sans-serif; font=
+-size: 1rem; background-color: rgba(0, 0, 0, 0);">&amp; Let's find the righ=
+t program for you!</span></span></span></div>
+<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
+ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
+ BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
+ font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
+ word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
+nt; text-decoration-color: initial; text-decoration-style: initial;'></p>
+<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
+ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
+ BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
+ font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
+ word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
+nt; text-decoration-color: initial; text-decoration-style: initial;'>&nbsp;=
+<br><br></p>
+<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
+ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
+ BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
+ font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
+ word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
+nt; text-decoration-color: initial; text-decoration-style: initial;'>
+Don't miss this chance and opportunity!&nbsp;:<span style=3D"font: inherit;=
+ margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; c=
+olor: inherit; vertical-align: baseline; font-size-adjust: inherit; font-st=
+retch: inherit;">&nbsp;</span>
+<a href=3D"mailto:bertrand.charge_krones.fr@hotmail.com">bertrand.charge_kr=
+ones.fr@hotmail.com</a><br><br></p></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;">Looking forward to hearing from you.</di=
+v>
+<div aria-hidden=3D"true" style=3D"margin: 0px; padding: 0px; border: 0px c=
+urrentColor; border-image: none; text-align: left; color: black !important;=
+ text-transform: none; line-height: inherit; text-indent: 0px; letter-spaci=
+ng: normal; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-wei=
+ght: 400; word-spacing: 0px; vertical-align: baseline; white-space: normal;=
+ direction: ltr; orphans: 2; widows: 2;=20
+font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: in=
+herit; background-color: rgb(255, 255, 255); text-decoration-color: initial=
+; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-s=
+troke-width: 0px; text-decoration-thickness: initial; text-decoration-style=
+: initial; font-variant-numeric: inherit; font-variant-east-asian: inherit;=
+ font-variant-alternates: inherit; font-variant-position: inherit; font-var=
+iant-emoji: inherit; font-optical-sizing:=20
+inherit; font-kerning: inherit; font-variation-settings: inherit;">&nbsp;</=
+div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: left; color: black !important; text-transform: none=
+; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
+ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
+s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
+ans: 2; widows: 2; font-size-adjust: inherit;=20
+font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
+b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
+ptical-sizing: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;">Warmest Regards<br>
+<div style=3D"margin: 0px; color: black; text-transform: none; line-height:=
+ 1.25; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibr=
+i, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight:=
+ 400; word-spacing: 0px; white-space: normal; direction: ltr; orphans: 2; w=
+idows: 2; background-color: rgb(255, 255, 255); text-decoration-color: init=
+ial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-tex=
+t-stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial;">&nbsp;<span class=3D"x_814722987f=
+ont" style=3D"font-family: Aptos, Calibri, Helvetica, sans-serif;"><br></sp=
+an><span class=3D"x_814722987font" style=3D"font-family: Aptos, Aptos_Embed=
+dedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif;">Charg&eacute=
+; Bertrand&nbsp;</span><span class=3D"x_814722987font" style=3D"font-family=
+: Aptos, Calibri, Helvetica, sans-serif;"><br>BUSINESS MANAGER&nbsp;</span>=
+</div>
+<div style=3D"margin: 0px; color: rgb(0, 0, 0); text-transform: none; text-=
+indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helvetica=
+, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400; wor=
+d-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-colo=
+r: rgb(255, 255, 255); text-decoration-color: initial; font-variant-ligatur=
+es: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text=
+-decoration-thickness: initial;=20
+text-decoration-style: initial;"><div style=3D"color: black; line-height: 1=
+=2E25; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13.33=
+px; direction: ltr;">Flo Project Management Services<br></div><div style=3D=
+"color: black; line-height: 1.25; font-family: Verdana, Arial, Helvetica, s=
+ans-serif; font-size: 13.33px; direction: ltr;">7th floor Corniche Tower,<b=
+r></div>
+<div style=3D"color: black; line-height: 1.25; font-family: Verdana, Arial,=
+ Helvetica, sans-serif; font-size: 13.33px; direction: ltr;">Corniche Road,=
+Al Rumailah 2,<br></div><div style=3D"color: black; line-height: 1.25; font=
+-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13.33px; directi=
+on: ltr;">Ajman United Arab Emirates<br></div><div style=3D"color: black; l=
+ine-height: 1.25; font-family: Verdana, Arial, Helvetica, sans-serif; font-=
+size: 13.33px; direction: ltr;">
+Business Hours: Monday-Friday: 8:00 am - 6:00 pm</div></div></div></body></=
+html>
 
-This is LILY FROM JINDEE CNC =E2=80=94 a real manufacturing factory in=
- China
-specializing in precision CNC machining and die casting.
 
-Many of our clients once faced the same dilemma =E2=80=94
-They needed the precision of CNC machining, but costs quickly grew as
-production volumes increased.
-Switching to die casting seemed like a good idea, yet the anodizing
-results never met the visual or durability standards their customers
-required.
-
-At JINDEE CNC, we=E2=80=99ve developed a solution that combines both
-advantages.
-We are a REAL MANUFACTURING FACTORY with:
-
- 	*
-A CNC PRECISION MACHINING WORKSHOP
-
- 	*
-A CNC TURNING WORKSHOP
-
- 	*
-A DIE CASTING WORKSHOP for aluminum alloy parts and molds
-
-We focus on MEDIUM-VOLUME PRODUCTION (500=E2=80=935000 PCS) and can
-integrate MOLD PRODUCTION to better match your cost and performance
-needs.
-
-CASE EXAMPLE=EF=BC=9F
-A European customer previously produced 2000+ CNC-machined housings
-with high costs.
-After switching to our DIE CASTING + CNC FINISHING + ANODIZING
-process, they reduced total costs by 38%, improved surface quality,
-and shortened lead time by two weeks.
-They were so satisfied that they later introduced another client to
-us.
-If you have DRAWINGS OR UPCOMING PROJECTS, I'd be happy to review them
-and provide a COST ANALYSIS OR QUOTATION within 24 hours.
-
-Best regards,
-
-Lily Bai
-Sales Manager
-sales@jindeecnc.cn
-Jindee CNC
-
-Unsubscribe
-[/http://tracking.jdcasting.kmfgedm.com/tracking/unsubscribe?d=3D_drp3=
-oCEQxOvPGcVlaYrAJ_k_3FwxU1mCzEyJ59mM7dmt65Ra6yZ2hcDX34jEJ0B2oxCtaWgml1=
-7T3XGPN2xkH2NpyyMtiQqpdyNI34bGTuWnn3JBGjuvl8cjzjdHfc-X_4VBfYePKRaAYl0J=
-p6pkeGCeSMA7vUn-q_GvlIvrFwOnL-8CkJjR_zPGOuVmaXiapW5zLgymW4OPT99QatF2Pw=
-605s5jny5wR3wGrHAuRghlsKeAbjTManz-KriBfrDfHodxMe1kWXURJK8MPrV0QQ0Bz3qA=
-XdIivRLwexRaWcs9PmUQEH6JmYfJxj7E6jD3YY2hXdUtPbMp7BZY3NgbtZd_hBp_pox8YN=
--wImuC1YnQnfKj6R0eEqCpa-o0bnIFdUd5kR26eWu9PnLPBSRWFyWFNLU1I6ZzGE9oC9ch=
-6ZGduMqOcOPyxSxGkdxhC3-ZBeWt--FM-kTC3h5dEIZaHZuwp5LXpG33hMNYQqleCi7IJZ=
-3b_cRwze5TLuiNYC6_3RdsTq4VU50S8zurEy9eNVqTPkW01o5Hh8LfPZcjwsmJMQJWR5PU=
-0MqG346uWUS7g2]
---=-eZCfNWnl2QDUMJCZacgoZALT/y9d4f1y7XWKzQ==
-Content-Type: text/html; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE html>
-<html>
-<head><meta charset=3D"utf-8"/>
-	<title>Reliable CNC Machining Factory | Medium Volume Production</tit=
-le>
-</head>
-<body aria-label=3D"To enrich screen reader interactions, please activ=
-ate Accessibility in Grammarly extension settings" data-gr-ext-install=
-ed=3D"" data-new-gr-c-s-check-loaded=3D"14.1261.0" data-new-gr-c-s-loa=
-ded=3D"14.1261.0">
-<p>Hi,</p>
-
-<p data-end=3D"380" data-start=3D"249">This is <strong data-end=3D"281=
-" data-start=3D"257">Lily from Jindee CNC</strong> =E2=80=94 a real ma=
-nufacturing factory in China specializing in precision CNC machining a=
-nd die casting.</p>
-
-<p data-end=3D"652" data-start=3D"382">Many of our clients once faced =
-the same dilemma =E2=80=94<br data-end=3D"193" data-start=3D"190" />
-They needed the precision of CNC machining, but costs quickly grew as =
-production volumes increased.<br data-end=3D"295" data-start=3D"292" /=
->
-Switching to die casting seemed like a good idea, yet the anodizing re=
-sults never met the visual or durability standards their customers req=
-uired.</p>
-
-<p data-end=3D"712" data-start=3D"586">At <strong data-end=3D"603" dat=
-a-start=3D"589">Jindee CNC</strong>, we=E2=80=99ve developed a solutio=
-n that combines both advantages.<br data-end=3D"665" data-start=3D"662=
-" />
-We are a <strong data-end=3D"704" data-start=3D"674">real manufacturin=
-g factory</strong> with:</p>
-
-<ul data-end=3D"852" data-start=3D"713">
-	<li data-end=3D"755" data-start=3D"713">
-	<p data-end=3D"755" data-start=3D"715">A <strong data-end=3D"753" dat=
-a-start=3D"717">CNC precision machining workshop</strong></p>
-	</li>
-	<li data-end=3D"786" data-start=3D"756">
-	<p data-end=3D"786" data-start=3D"758">A <strong data-end=3D"784" dat=
-a-start=3D"760">CNC turning workshop</strong></p>
-	</li>
-	<li data-end=3D"852" data-start=3D"787">
-	<p data-end=3D"852" data-start=3D"789">A <strong data-end=3D"815" dat=
-a-start=3D"791">die casting workshop</strong> for aluminum alloy parts=
- and molds</p>
-	</li>
-</ul>
-
-<p data-end=3D"1053" data-start=3D"654">We focus on <strong data-end=3D=
-"964" data-start=3D"921">medium-volume production (500=E2=80=935000 pc=
-s)</strong> and can integrate <strong data-end=3D"1002" data-start=3D"=
-983">mold production</strong> to better match your cost and performanc=
-e needs.</p>
-
-<p data-end=3D"1416" data-start=3D"1055"><strong data-end=3D"1074" dat=
-a-start=3D"1058">Case Example=EF=BC=9F</strong><br data-end=3D"1077" d=
-ata-start=3D"1074" />
-A European customer previously produced 2000+ CNC-machined housings wi=
-th high costs.<br data-end=3D"1164" data-start=3D"1161" />
-After switching to our <strong data-end=3D"1230" data-start=3D"1187">d=
-ie casting + CNC finishing + anodizing</strong> process, they reduced =
-total costs by <strong data-end=3D"1275" data-start=3D"1268">38%</stro=
-ng>, improved surface quality, and shortened lead time by two weeks.<b=
-r data-end=3D"1343" data-start=3D"1340" />
-They were so satisfied that they later introduced another client to us=
-.<br />
-If you have <strong data-end=3D"1503" data-start=3D"1470">drawings or =
-upcoming projects</strong>, I'd be happy to review them and provide a =
-<strong data-end=3D"1577" data-start=3D"1547">cost analysis or quotati=
-on</strong> within 24 hours.</p>
-
-<p data-end=3D"1664" data-start=3D"1513">Best regards,<br />
-<br />
-Lily Bai<br />
-Sales Manager<br />
-sales@jindeecnc.cn<br />
-Jindee CNC</p>
-<br />
-<br />
-<br />
-<span style=3D"font-size:10px;"><a href=3D"http://tracking.jdcasting.k=
-mfgedm.com/tracking/unsubscribe?d=3DvRuZXJ7QQCu6v6TXpPeO586xAczk55KEK_=
-k90kz6BJVoYYnmC6Xw1vCweEVL4XJ6o8ICIL5NeWHBejLxE4cTBVL53Esh6Uuv0KFX9wXR=
-y1YQ128rtpR5bidVOTin1nEWfcWciHkZdR7HCplJaID6k3pmnkvAdvxYofzCHOXo6kSK68=
-KPIDXh-piGY27J0zTsS2qfBfC6lsTVCcSX8eZQMA3F8u7iXEpJOCtDkxRT0q7Rlx0vDGx2=
-WcUhe3TiqENN5nrAjxz3My7EvSjlJCxC8ECEF-vYpzwRnhM0pg1CIdqI0">Unsubscribe=
-</a></span><grammarly-desktop-integration data-grammarly-shadow-root=3D=
-"true"></grammarly-desktop-integration><grammarly-extension-vbars clas=
-s=3D"dnXmp" data-grammarly-shadow-root=3D"true"></grammarly-extension-=
-vbars><grammarly-extension-vbars-feedback-form class=3D"dnXmp" data-gr=
-ammarly-shadow-root=3D"true"></grammarly-extension-vbars-feedback-form=
-><img width=3D"1" height=3D"1" src=3D"https://edm.xcwms.com/index.php/=
-campaigns/og443bz56gb9c/track-opening/cc239cho30d32" alt=3D"" />
-<img src=3D"http://tracking.jdcasting.kmfgedm.com/tracking/open?msgid=3D=
-QkPGExw7gcagmKrMK_Tc7A2&c=3D1988167658209768686" style=3D"width:1px;he=
-ight:1px" alt=3D"" /><a style=3D "display : none;" href=3D"http://trac=
-king.jdcasting.kmfgedm.com/tracking/botclick?msgid=3DQkPGExw7gcagmKrMK=
-_Tc7A2&c=3D1988167658209768686"></a></body>
-</html>
---=-eZCfNWnl2QDUMJCZacgoZALT/y9d4f1y7XWKzQ==--
-
-
---===============3287372591078268453==
+--===============0392322982658684435==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============3287372591078268453==
+--===============0392322982658684435==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -313,5 +434,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============3287372591078268453==--
-
+--===============0392322982658684435==--
