@@ -2,81 +2,91 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 573ACC4F26F
-	for <lists+industrypack-devel@lfdr.de>; Tue, 11 Nov 2025 17:59:13 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2AEE0C5021A
+	for <lists+industrypack-devel@lfdr.de>; Wed, 12 Nov 2025 01:37:04 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Cc:Reply-To:From:
+	d=lists.sourceforge.net; s=beta; h=Date:Message-Id:Content-Type:
 	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	Subject:MIME-Version:Message-ID:Date:To:Sender:Content-Transfer-Encoding:
+	Subject:To:From:MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=SRo2Zlge6CQP1F4niDYH+P5gClU7gomocr8DwNO7Ll4=; b=TWsgJ2ix4SJEx/4gdLoiLv5grR
-	5GgGp1Z8d5fmr0XbCJk5UU2RrhTnFEjsJs3f6rvQQpA6fNxjHZiIStkx3IqyYL+jrbYXDDjU7nVUg
-	1XaXbisopUPk7mk6Ru/Y1oS5rA7Uwbp3tXIuHhVbuZyzlI+B/Rm7eFlDXOOqdSfJPh78=;
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	bh=77wIdikq19NN/mKT45qqWxr82Gh+xmhQrbtsfvXvE2g=; b=iD8iDAVQAkVBcTm0nZ6ZxFTz++
+	Ipw3uNIGQIwhS7bKo0eTlW+rqrD/HmfFiopvZpabWJaQEfewASjxgx7BXc8iiMKvSnCcgdMcH/kfy
+	gqNsD33z+gdZxzJpkiGjuNnIs9a3JporodSHJE5y7uvYURM8wmcquaLd94FNbdxcwwoE=;
+Received: from [127.0.0.1] (helo=sfs-ml-1.v29.lw.sourceforge.com)
+	by sfs-ml-1.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1vIri4-0004GB-2o
+	id 1vIyr8-0008Jm-SS
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 11 Nov 2025 16:59:12 +0000
+	Wed, 12 Nov 2025 00:37:02 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <bertrand.charge@dns-ac.asia>) id 1vIrhx-0004Fu-5e
+ by sfs-ml-1.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1vIyr7-0008JN-5V
  for industrypack-devel@lists.sourceforge.net;
- Tue, 11 Nov 2025 16:59:05 +0000
+ Wed, 12 Nov 2025 00:37:01 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:Date:To:From:Reply-To:Sender:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
+ Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=RYoSlZib8DdFIlXHHWIgsEnx2YcHuDqBzaUV5Jhb0nE=; b=eRSbsED9oayFM3Ifn+kJ2ifVy+
- TBMsRkG5xw5nptMTfu8UnL+bn4tAJ55C6L6CnpijKunvEdBkXceDrKJXw0OaV52y2HQKgqP4iaOIJ
- 8VJgTI9JGVu1zDej5G76aZ+uwFOJVKZVA5g4sdrTTq9a5xhg2LLQ42zTQ5eNrctN71FY=;
+ bh=VjPmm1lIv7eyOZecf1LDringmY55OvHFFJBb16g5/g0=; b=d4HLf/a0xwzHIQ6dok/eW7E3to
+ Xc2aMZfZBJCtHo2NX2ZyOLoDxprLnvJcxF6rwpFJgnv75DaWwjbiZ41Wqg0gZHUztTViyNFeTghGS
+ ElWQAqKCFClVggfpHhMsfwGIwMqHmbbJnZ6bdKfAgYENPiaJCspQIzQzy1/7oO8DZxbo=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
- Date:To:From:Reply-To:Sender:Cc:Content-ID:Content-Description:Resent-Date:
+ h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=RYoSlZib8DdFIlXHHWIgsEnx2YcHuDqBzaUV5Jhb0nE=; b=g
- oapnTVKXHJkoMeJ6QrlnlviGTOapE+i2iePLbQ4RYZbPbjEMQPCCZC5JTrUyqlwV8DI6f3AkFccdb
- 6IAPMuuuD4SEcxpQCgwID+kV3ubOKLPFS7l8x7n/SyCVsKcSpPWzrb8O0ujQwCnLbi6P+go7dKmya
- DvDOJjz4sQZWSVu0=;
-Received: from b2-deepseek.shop ([45.8.125.57])
- by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
- id 1vIrhv-0001Z3-0g for industrypack-devel@lists.sourceforge.net;
- Tue, 11 Nov 2025 16:59:03 +0000
-To: industrypack-devel@lists.sourceforge.net
-Date: 11 Nov 2025 15:50:19 -0800
-Message-ID: <20251111155019.C2634419F07EC122@dns-ac.asia>
+ List-Owner:List-Archive; bh=VjPmm1lIv7eyOZecf1LDringmY55OvHFFJBb16g5/g0=; b=H
+ a8sNm6j0O7aTGYN0EWblQohQHwtjoz9kpNVCn83fLBviXhOuOfvCrNBNtfdCYJla2tL9EZkeRrGOv
+ CwXumeIFtzATDkmer+1ERTw6aCN3cdq7rJEmeynT1zc43zR4P7fQC0XXjRFl+F7n+SR7u5R6tg1qG
+ Knc2wiUGknHy+cZM=;
+Received: from 213.119.53.34.bc.googleusercontent.com ([34.53.119.213]
+ helo=[10.88.0.4]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
+ (Exim 4.95) id 1vIyr6-0001Da-J4
+ for industrypack-devel@lists.sourceforge.net;
+ Wed, 12 Nov 2025 00:37:01 +0000
 MIME-Version: 1.0
-X-Spam-Score: 7.6 (+++++++)
+From: eDocument|eDocSign|info|donotreply <no-reply@lists.sourceforge.net>
+To: industrypack-devel@lists.sourceforge.net
+X-Priority: 2
+X-Spam-Score: 7.4 (+++++++)
 X-Spam-Report: Spam detection software,
  running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: This sender has been verified from senders list. Dear
- industrypack-devel@lists.sourceforge.net, 
- Content analysis details:   (7.6 points, 5.0 required)
+ Content preview:  industrypack-devel@lists.sourceforge.net, You have received
+ a document to review and sign for your payment to be release immediately 
+ Content analysis details:   (7.4 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 4.0 RCVD_IN_UCE1           RBL: IP Listed in UCEPROTECT Level 1
- [45.8.125.57 listed in dnsbl-1.uceprotect.net]
- 1.0 RCVD_IN_UCE2           RBL: IP Subnet Listed in UCEPROTECT Level 2
- [45.8.125.57 listed in dnsbl-2.uceprotect.net]
- 0.0 DATE_IN_FUTURE_06_12   Date: is 6 to 12 hours after Received: date
+ 1.4 MISSING_DATE           Missing Date: header
+ 1.0 MISSING_MID            Missing Message-Id: header
+ 1.1 DKIM_ADSP_ALL          No valid author signature, domain signs all mail
+ 1.0 TVD_RCVD_IP            Message was received from an IP address
+ 0.0 T_MXG_EMAIL_FRAG       BODY: URI with email in fragment
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+ 0.0 HTML_IMAGE_RATIO_02    BODY: HTML has a low ratio of text to image area
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+ 0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
+ 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
+ dynamic-looking rDNS
+ 1.4 URI_IPFSIO References Interplanetary File System PtP content via
+ ipfs.io, likely phishing
+ 0.0 URI_IPFS               References Interplanetary File System PtP content,
+ probable phishing
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
 X-VA-Spam-Flag: YES
 X-Spam-Flag: YES
-X-Headers-End: 1vIrhv-0001Z3-0g
-Subject: [Industrypack-devel] [SPAM] Apply for Business and Contract Loan
+X-Headers-End: 1vIyr6-0001Da-J4
+Subject: [Industrypack-devel] =?utf-8?q?=5BSPAM=5D_Complete=3A_Document_pe?=
+ =?utf-8?q?nding_review_Sign_and_Return_REF=5FID=3A0ddabbd1ec5258559426449?=
+ =?utf-8?q?46dd360bff70fd602_10/9/2025_-_REF_ID=3A_ff6d8a199a38acb39ea9b56?=
+ =?utf-8?q?1f5ce6d7d0b955d9f?=
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -88,342 +98,206 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-From: =?UTF-8?B?Q2hhcmfDqSBCZXJ0cmFuZA==?= via Industrypack-devel
- <industrypack-devel@lists.sourceforge.net>
-Reply-To: bertrand.charge_krones.fr@hotmail.com
-Cc: =?UTF-8?B?Q2hhcmfDqSBCZXJ0cmFuZA==?= <bertrand.charge@dns-ac.asia>
-Content-Type: multipart/mixed; boundary="===============0392322982658684435=="
+Content-Type: multipart/mixed; boundary="===============1627076728489184989=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1vIyr8-0008Jm-SS@sfs-ml-1.v29.lw.sourceforge.com>
+Date: Wed, 12 Nov 2025 00:37:02 +0000
 
---===============0392322982658684435==
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+--===============1627076728489184989==
+Content-Type: multipart/related; boundary="===============8066808742525199727=="
 
-<html><head>
-<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
-</head><body>
-<table style=3D'text-align: left; color: rgb(66, 66, 66) !important; text-t=
-ransform: none; line-height: inherit; letter-spacing: normal; font-family: =
-"Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFo=
-nt, Roboto, "Helvetica Neue", sans-serif; font-size: 15px; font-style: norm=
-al; font-weight: 400; word-spacing: 0px; white-space: normal; border-collap=
-se: collapse; direction: ltr; border-spacing: 0px; orphans: 2; widows: 2; f=
-ont-size-adjust: inherit; font-stretch: inherit;=20
-font-feature-settings: inherit; background-color: rgb(255, 255, 255); text-=
-decoration-color: initial; font-variant-ligatures: normal; font-variant-cap=
-s: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initi=
-al; text-decoration-style: initial; font-variant-numeric: inherit; font-var=
-iant-east-asian: inherit; font-variant-alternates: inherit; font-variant-po=
-sition: inherit; font-variant-emoji: inherit; font-optical-sizing: inherit;=
- font-kerning: inherit; font-variation-settings:=20
-inherit;' cellspacing=3D"0" cellpadding=3D"0" data-olk-copy-source=3D"Messa=
-geBody"><tbody><tr><td style=3D"padding: 3.75pt; border: 1pt solid black; b=
-order-image: none; width: 1.5pt; height: 31px; text-align: left; white-spac=
-e: normal !important; direction: ltr; background-color: rgb(2, 151, 64) !im=
-portant;">
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: center; color: black !important; line-height: inher=
-it; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, H=
-elvetica, sans-serif; font-size: 12pt; font-style: inherit; font-variant: i=
-nherit; font-weight: inherit; vertical-align: baseline; direction: ltr; fon=
-t-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inher=
-it; font-optical-sizing: inherit; font-kerning:=20
-inherit; font-variation-settings: inherit;"><b>&nbsp;</b></div></td><td sty=
-le=3D"border-width: 1pt; border-style: solid solid solid none; border-color=
-: black; padding: 3.75pt; width: 525pt; height: 31px; text-align: left; whi=
-te-space: normal !important; direction: ltr; background-color: rgb(243, 255=
-, 248) !important;">
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; line-height: inherit=
-; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
-vetica, sans-serif; font-size: 12pt; font-style: inherit; font-variant: inh=
-erit; font-weight: inherit; vertical-align: baseline; direction: ltr; font-=
-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inherit=
-; font-optical-sizing: inherit; font-kerning:=20
-inherit; font-variation-settings: inherit;">This sender has been verified f=
-rom senders list.</div></td></tr></tbody></table>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; text-transform: none=
-; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
-ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
-s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
-g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
-ans: 2; widows: 2; font-size-adjust: inherit;=20
-font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
-b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-thickness: initial; text-decoration-style: initial; font-variant-num=
-eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
-nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
-ptical-sizing: inherit; font-kerning: inherit;=20
-font-variation-settings: inherit;"><br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; text-transform: none=
-; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
-ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
-s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
-g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
-ans: 2; widows: 2; font-size-adjust: inherit;=20
-font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
-b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-thickness: initial; text-decoration-style: initial; font-variant-num=
-eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
-nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
-ptical-sizing: inherit; font-kerning: inherit;=20
-font-variation-settings: inherit;">Dear industrypack-devel@lists.sourceforg=
-e.net,<br></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; text-transform: none=
-; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
-ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
-s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
-g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
-ans: 2; widows: 2; font-size-adjust: inherit;=20
-font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
-b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-thickness: initial; text-decoration-style: initial; font-variant-num=
-eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
-nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
-ptical-sizing: inherit; font-kerning: inherit;=20
-font-variation-settings: inherit;"><p style=3D'color: rgb(36, 36, 36) !impo=
-rtant; text-transform: none; text-indent: 0px; letter-spacing: normal; font=
--family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica =
-Neue", sans-serif; font-size: 15px; font-style: normal; font-weight: 400; m=
-argin-top: 0px; margin-bottom: 0px; word-spacing: 0px; orphans: 2; widows: =
-2; background-color: white !important; text-decoration-color: initial; text=
--decoration-style: initial;'>
-<br></p>
-<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
-ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
-tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
- margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
-l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
-ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
-ke-width: 0px; text-decoration-thickness: initial;=20
-text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
-ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
-ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
-: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
-r;"><span class=3D"x_814722987colour" style=3D"color: black;">
-At FLO PROJECT MANAGEMENT SERVICES, we understand that securing the right f=
-unding is crucial for both startups and established businesses. That's why =
-we offer flexible financing solutions designed to meet your specific needs.=
-</span></span></span><br></p>
-<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
-ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
-tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
- margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
-l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
-ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
-ke-width: 0px; text-decoration-thickness: initial;=20
-text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
-ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
-ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
-: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
-r;"><span class=3D"x_814722987colour" style=3D"color: black;">Here's how we=
- can help:</span></span></span><br></p>
-<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
-ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
-tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
- margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
-l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
-ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
-ke-width: 0px; text-decoration-thickness: initial;=20
-text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
-ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
-ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
-: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
-r;"><span class=3D"x_814722987colour" style=3D"color: black;">Debt Financin=
-g : 3% annual interest with zero penalties for early repayment.</span></spa=
-n></span><br></p>
-<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
-ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
-tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
- margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
-l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
-ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
-ke-width: 0px; text-decoration-thickness: initial;=20
-text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
-ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
-ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
-: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
-r;"><span class=3D"x_814722987colour" style=3D"color: black;">
-We're ready to explore the best option for your business. Simply send us yo=
-ur pitch deck or executive summary, and let's discuss the ideal financing o=
-ptions to fuel your growth. We typically schedule a video chat with our&nbs=
-p;company representative&nbsp;to verify details and formally introduce&nbsp=
-;from you.</span></span></span><br></p>
-<p style=3D"color: rgb(0, 0, 0); text-transform: none; line-height: 1.25; t=
-ext-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helve=
-tica, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400;=
- margin-top: 1em; margin-bottom: 1em; word-spacing: 0px; white-space: norma=
-l; direction: ltr; orphans: 2; widows: 2; text-decoration-color: initial; f=
-ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
-ke-width: 0px; text-decoration-thickness: initial;=20
-text-decoration-style: initial;"><span class=3D"x_814722987font" style=3D'f=
-ont-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helveti=
-ca Neue", sans-serif;'><span class=3D"x_814722987size" style=3D"line-height=
-: 1.25; font-size: 15px; margin-top: 1em; margin-bottom: 1em; direction: lt=
-r;"><span class=3D"x_814722987colour" style=3D"color: black;">Kindly confir=
-m your availability for a meeting, and let me know a convenient time for di=
-scussion.</span></span></span></p>
-<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
-ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
- BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
- font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
- word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
-nt; text-decoration-color: initial; text-decoration-style: initial;'>
-<br style=3D'color: rgb(212, 212, 213); text-transform: none; text-indent: =
-0px; letter-spacing: normal; font-family: -apple-system, "helvetica neue"; =
-font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 1px; w=
-hite-space: normal; orphans: 2; widows: 2; text-decoration-color: initial; =
-font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
-oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
-initial;'></p>
-<div style=3D'border-color: rgb(49, 49, 49); height: auto; color: rgb(49, 4=
-9, 49); text-transform: none; text-indent: 0px; letter-spacing: normal; fon=
-t-family: -apple-system, "helvetica neue"; font-size: 16px; font-style: nor=
-mal; font-weight: 400; word-spacing: 1px; white-space: normal; orphans: 2; =
-widows: 2; background-color: rgba(0, 0, 0, 0); text-decoration-color: initi=
-al; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
--stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial;'><span style=3D"border-color: rgb(=
-49, 49, 49);"><span style=3D"border-color: rgb(49, 49, 49); line-height: 19=
-=2E2px; background-color: rgba(0, 0, 0, 0);"><span style=3D"border-color: r=
-gb(49, 49, 49); font-family: sans-serif; font-size: 1rem; background-color:=
- rgba(0, 0, 0, 0);">Book a call, zoom</span></span></span>&nbsp;<span style=
-=3D"border-color: rgb(49, 49, 49);">
-<span style=3D"border-color: rgb(49, 49, 49); line-height: 19.2px; backgrou=
-nd-color: rgba(0, 0, 0, 0);"><span style=3D"border-color: rgb(49, 49, 49); =
-font-family: sans-serif; background-color: rgba(0, 0, 0, 0);"><strong style=
-=3D"border-color: rgb(49, 49, 49); font-size: 1rem; background-color: rgba(=
-0, 0, 0, 0);">today</strong></span></span></span>&nbsp;<span style=3D"borde=
-r-color: rgb(49, 49, 49);"><span style=3D"border-color: rgb(49, 49, 49); li=
-ne-height: 19.2px; background-color: rgba(0, 0, 0, 0);">
-<span style=3D"border-color: rgb(49, 49, 49); font-family: sans-serif; font=
--size: 1rem; background-color: rgba(0, 0, 0, 0);">&amp; Let's find the righ=
-t program for you!</span></span></span></div>
-<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
-ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
- BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
- font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
- word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
-nt; text-decoration-color: initial; text-decoration-style: initial;'></p>
-<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
-ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
- BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
- font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
- word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
-nt; text-decoration-color: initial; text-decoration-style: initial;'>&nbsp;=
-<br><br></p>
-<p style=3D'color: rgb(36, 36, 36) !important; text-transform: none; text-i=
-ndent: 0px; letter-spacing: normal; font-family: "Segoe UI", -apple-system,=
- BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif; font-size: 15px;=
- font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 0px;=
- word-spacing: 0px; orphans: 2; widows: 2; background-color: white !importa=
-nt; text-decoration-color: initial; text-decoration-style: initial;'>
-Don't miss this chance and opportunity!&nbsp;:<span style=3D"font: inherit;=
- margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; c=
-olor: inherit; vertical-align: baseline; font-size-adjust: inherit; font-st=
-retch: inherit;">&nbsp;</span>
-<a href=3D"mailto:bertrand.charge_krones.fr@hotmail.com">bertrand.charge_kr=
-ones.fr@hotmail.com</a><br><br></p></div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; text-transform: none=
-; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
-ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
-s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
-g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
-ans: 2; widows: 2; font-size-adjust: inherit;=20
-font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
-b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-thickness: initial; text-decoration-style: initial; font-variant-num=
-eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
-nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
-ptical-sizing: inherit; font-kerning: inherit;=20
-font-variation-settings: inherit;">Looking forward to hearing from you.</di=
-v>
-<div aria-hidden=3D"true" style=3D"margin: 0px; padding: 0px; border: 0px c=
-urrentColor; border-image: none; text-align: left; color: black !important;=
- text-transform: none; line-height: inherit; text-indent: 0px; letter-spaci=
-ng: normal; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
-libri, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-wei=
-ght: 400; word-spacing: 0px; vertical-align: baseline; white-space: normal;=
- direction: ltr; orphans: 2; widows: 2;=20
-font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: in=
-herit; background-color: rgb(255, 255, 255); text-decoration-color: initial=
-; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-s=
-troke-width: 0px; text-decoration-thickness: initial; text-decoration-style=
-: initial; font-variant-numeric: inherit; font-variant-east-asian: inherit;=
- font-variant-alternates: inherit; font-variant-position: inherit; font-var=
-iant-emoji: inherit; font-optical-sizing:=20
-inherit; font-kerning: inherit; font-variation-settings: inherit;">&nbsp;</=
-div>
-<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
-mage: none; text-align: left; color: black !important; text-transform: none=
-; line-height: inherit; text-indent: 0px; letter-spacing: normal; font-fami=
-ly: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, san=
-s-serif; font-size: 12pt; font-style: normal; font-weight: 400; word-spacin=
-g: 0px; vertical-align: baseline; white-space: normal; direction: ltr; orph=
-ans: 2; widows: 2; font-size-adjust: inherit;=20
-font-stretch: inherit; font-feature-settings: inherit; background-color: rg=
-b(255, 255, 255); text-decoration-color: initial; font-variant-ligatures: n=
-ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
-ration-thickness: initial; text-decoration-style: initial; font-variant-num=
-eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
-nherit; font-variant-position: inherit; font-variant-emoji: inherit; font-o=
-ptical-sizing: inherit; font-kerning: inherit;=20
-font-variation-settings: inherit;">Warmest Regards<br>
-<div style=3D"margin: 0px; color: black; text-transform: none; line-height:=
- 1.25; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Calibr=
-i, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight:=
- 400; word-spacing: 0px; white-space: normal; direction: ltr; orphans: 2; w=
-idows: 2; background-color: rgb(255, 255, 255); text-decoration-color: init=
-ial; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-tex=
-t-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial;">&nbsp;<span class=3D"x_814722987f=
-ont" style=3D"font-family: Aptos, Calibri, Helvetica, sans-serif;"><br></sp=
-an><span class=3D"x_814722987font" style=3D"font-family: Aptos, Aptos_Embed=
-dedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif;">Charg&eacute=
-; Bertrand&nbsp;</span><span class=3D"x_814722987font" style=3D"font-family=
-: Aptos, Calibri, Helvetica, sans-serif;"><br>BUSINESS MANAGER&nbsp;</span>=
-</div>
-<div style=3D"margin: 0px; color: rgb(0, 0, 0); text-transform: none; text-=
-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helvetica=
-, sans-serif; font-size: 13.33px; font-style: normal; font-weight: 400; wor=
-d-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-colo=
-r: rgb(255, 255, 255); text-decoration-color: initial; font-variant-ligatur=
-es: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text=
--decoration-thickness: initial;=20
-text-decoration-style: initial;"><div style=3D"color: black; line-height: 1=
-=2E25; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13.33=
-px; direction: ltr;">Flo Project Management Services<br></div><div style=3D=
-"color: black; line-height: 1.25; font-family: Verdana, Arial, Helvetica, s=
-ans-serif; font-size: 13.33px; direction: ltr;">7th floor Corniche Tower,<b=
-r></div>
-<div style=3D"color: black; line-height: 1.25; font-family: Verdana, Arial,=
- Helvetica, sans-serif; font-size: 13.33px; direction: ltr;">Corniche Road,=
-Al Rumailah 2,<br></div><div style=3D"color: black; line-height: 1.25; font=
--family: Verdana, Arial, Helvetica, sans-serif; font-size: 13.33px; directi=
-on: ltr;">Ajman United Arab Emirates<br></div><div style=3D"color: black; l=
-ine-height: 1.25; font-family: Verdana, Arial, Helvetica, sans-serif; font-=
-size: 13.33px; direction: ltr;">
-Business Hours: Monday-Friday: 8:00 am - 6:00 pm</div></div></div></body></=
-html>
+--===============8066808742525199727==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PHA+Jm5ic3A7PC9wPgo8cD4mbmJzcDs8L3A+Cjx0YWJsZSBzdHlsZT0iZm9udC1zaXplOiBzbWFs
+bDsgbWF4LXdpZHRoOiA2NDBweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYSwgQXJpYWwsICdTYW5z
+IFNlcmlmJzsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC1zcGFjaW5nOiAwcHg7IGJvcmRlci1j
+b2xsYXBzZTogY29sbGFwc2U7IHRleHQtdHJhbnNmb3JtOiBub25lOyBmb250LXdlaWdodDogNDAw
+OyBjb2xvcjogIzIyMjIyMjsgZm9udC1zdHlsZTogbm9ybWFsOyBvcnBoYW5zOiAyOyB3aWRvd3M6
+IDI7IG1hcmdpbjogMHB4OyBsZXR0ZXItc3BhY2luZzogbm9ybWFsOyBsaW5lLWhlaWdodDogMS4y
+OyBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyBmb250LXZhcmlhbnQtbGlnYXR1cmVzOiBub3Jt
+YWw7IGZvbnQtdmFyaWFudC1jYXBzOiBub3JtYWw7IC13ZWJraXQtdGV4dC1zdHJva2Utd2lkdGg6
+IDBweDsgdGV4dC1kZWNvcmF0aW9uLXRoaWNrbmVzczogaW5pdGlhbDsgdGV4dC1kZWNvcmF0aW9u
+LXN0eWxlOiBpbml0aWFsOyB0ZXh0LWRlY29yYXRpb24tY29sb3I6IGluaXRpYWw7IHBhZGRpbmc6
+IDBweDsiPgo8dGJvZHk+Cjx0cj4KPHRkIHN0eWxlPSJ3aGl0ZS1zcGFjZTogbm9ybWFsICFpbXBv
+cnRhbnQ7IG1hcmdpbjogMHB4OyBwYWRkaW5nOiAxMHB4IDI0cHggMTBweCAyNHB4OyI+PGltZyBz
+dHlsZT0iaGVpZ2h0OiAzNHB4OyB3aWR0aDogNDBweDsgYm9yZGVyLXdpZHRoOiAwcHg7IiBzcmM9
+ImNpZDpId0FBQUFCSlJVNUVya0pnZ2c9PSIgd2lkdGg9IjcyOSIgaGVpZ2h0PSI1OTciIC8+ICZu
+YnNwOzxpbWcgc3R5bGU9ImJvcmRlci13aWR0aDogMHB4OyIgc3JjPSJjaWQ6WDZWU2NUaWN3TUJB
+VUZEK0Z2enA0cTRwTnY2M3NJYllFSGNOc1NIdUdtSkQzRFhFZndBK3pDZk5UUVkzamdBQUFBQkpS
+VTVFcmtKZ2dnPT0iIC8+PC90ZD4KPC90cj4KPHRyPgo8dGQgc3R5bGU9IndoaXRlLXNwYWNlOiBu
+b3JtYWwgIWltcG9ydGFudDsgbWFyZ2luOiAwcHg7IHBhZGRpbmc6IDBweCAyNHB4IDMwcHggMjRw
+eDsiPgo8dGFibGUgc3R5bGU9ImZvbnQtc2l6ZTogMTZweDsgZm9udC1mYW1pbHk6ICdNYWxndW4g
+R290aGljJywgJ+unkeydgCDqs6DrlJUnLCAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZv
+bnQsIHN5c3RlbS11aSwgJ0FwcGxlIFNEIEdvdGhpYyBOZW8nLCAnSGVsdmV0aWNhIE5ldWUnLCBI
+ZWx2ZXRpY2EsIEFyaWFsLCBEb3R1bSwg64+L7JuALCBzYW5zLXNlcmlmOyB3aWR0aDogMTAwJTsg
+Y29sb3I6ICNmZmZmZmYgIWltcG9ydGFudDsgbWFyZ2luOiAwcHg7IGxldHRlci1zcGFjaW5nOiAw
+cHg7IGxpbmUtaGVpZ2h0OiAxLjI7IGJhY2tncm91bmQtY29sb3I6ICMxZTRjYTE7IHBhZGRpbmc6
+IDBweDsiIGJvcmRlcj0iMCIgd2lkdGg9IjEwMCUiIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGlu
+Zz0iMCIgYWxpZ249ImNlbnRlciI+Cjx0Ym9keT4KPHRyPgo8dGQgc3R5bGU9ImZvbnQtc2l6ZTog
+MTZweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYSwgQXJpYWwsICdTYW5zIFNlcmlmJzsgd2lkdGg6
+IDUyMHB4OyB3aGl0ZS1zcGFjZTogbm9ybWFsICFpbXBvcnRhbnQ7IGNvbG9yOiAjZmZmZmZmICFp
+bXBvcnRhbnQ7IHRleHQtYWxpZ246IGNlbnRlcjsgbWFyZ2luOiAwcHg7IGJhY2tncm91bmQtY29s
+b3I6ICMxZTRjYTE7IGJvcmRlci1yYWRpdXM6IDJweDsgcGFkZGluZzogMjhweCAzNnB4IDM2cHgg
+MzZweDsiIGFsaWduPSJjZW50ZXIiPgo8dGFibGUgc3R5bGU9ImZvbnQtc2l6ZTogMTZweDsgZm9u
+dC1mYW1pbHk6ICdNYWxndW4gR290aGljJywgJ+unkeydgCDqs6DrlJUnLCAtYXBwbGUtc3lzdGVt
+LCBCbGlua01hY1N5c3RlbUZvbnQsIHN5c3RlbS11aSwgJ0FwcGxlIFNEIEdvdGhpYyBOZW8nLCAn
+SGVsdmV0aWNhIE5ldWUnLCBIZWx2ZXRpY2EsIEFyaWFsLCBEb3R1bSwg64+L7JuALCBzYW5zLXNl
+cmlmOyB3aWR0aDogMTAwJTsgY29sb3I6ICMxZTFlMjM7IG1hcmdpbjogMHB4OyBsZXR0ZXItc3Bh
+Y2luZzogMHB4OyBsaW5lLWhlaWdodDogMS4yOyBwYWRkaW5nOiAwcHg7IiBib3JkZXI9IjAiIHdp
+ZHRoPSIxMDAlIiBjZWxsc3BhY2luZz0iMCIgY2VsbHBhZGRpbmc9IjAiPgo8dGJvZHk+Cjx0cj4K
+PHRkIHN0eWxlPSJmb250LXNpemU6IDE2cHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2EsIEFyaWFs
+LCAnU2FucyBTZXJpZic7IHdoaXRlLXNwYWNlOiBub3JtYWwgIWltcG9ydGFudDsgY29sb3I6ICNm
+ZmZmZmYgIWltcG9ydGFudDsgdGV4dC1hbGlnbjogY2VudGVyOyBtYXJnaW46IDBweDsgcGFkZGlu
+ZzogMjRweCAwcHggMHB4IDBweDsiIGFsaWduPSJjZW50ZXIiPjxpbWcgc3R5bGU9ImJvcmRlci13
+aWR0aDogMHB4OyIgc3JjPSJjaWQ6RmJZcmNGTW9WZUFBQUFBRWxGVGtTdVFtQ0MiIC8+PGJyIC8+
+aW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCw8YnIgLz48YnIgLz48c3Bh
+biBzdHlsZT0iZm9udC1zaXplOiAxNnB4OyBmb250LWZhbWlseTogSGVsdmV0aWNhLCBzYW5zLXNl
+cmlmLCBzZXJpZiwgRW1vamlGb250OyB2ZXJ0aWNhbC1hbGlnbjogYmFzZWxpbmU7IHdoaXRlLXNw
+YWNlOiBub3JtYWw7IHdvcmQtc3BhY2luZzogMHB4OyB0ZXh0LXRyYW5zZm9ybTogbm9uZTsgZmxv
+YXQ6IG5vbmU7IGZvbnQtd2VpZ2h0OiA0MDA7IGNvbG9yOiAjZmZmZmZmICFpbXBvcnRhbnQ7IGZv
+bnQtc3R5bGU6IG5vcm1hbDsgdGV4dC1hbGlnbjogY2VudGVyOyBvcnBoYW5zOiAyOyB3aWRvd3M6
+IDI7IG1hcmdpbjogMHB4OyBkaXNwbGF5OiBpbmxpbmUgIWltcG9ydGFudDsgbGV0dGVyLXNwYWNp
+bmc6IG5vcm1hbDsgYmFja2dyb3VuZC1jb2xvcjogIzIxNGU5ZjsgdGV4dC1pbmRlbnQ6IDBweDsg
+Ym9yZGVyLXdpZHRoOiAwcHg7IHBhZGRpbmc6IDBweDsiPllvdSBoYXZlIHJlY2VpdmVkIGEgZG9j
+dW1lbnQgdG8gcmV2aWV3IGFuZCBzaWduIGZvciB5b3VyIHBheW1lbnQ8YnIgLz50byBiZSByZWxl
+YXNlIGltbWVkaWF0ZWx5PGJyIC8+PC9zcGFuPjwvdGQ+CjwvdHI+CjwvdGJvZHk+CjwvdGFibGU+
+Cjx0YWJsZSBzdHlsZT0iZm9udC1zaXplOiAxNnB4OyBmb250LWZhbWlseTogJ01hbGd1biBHb3Ro
+aWMnLCAn66eR7J2AIOqzoOuUlScsIC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwg
+c3lzdGVtLXVpLCAnQXBwbGUgU0QgR290aGljIE5lbycsICdIZWx2ZXRpY2EgTmV1ZScsIEhlbHZl
+dGljYSwgQXJpYWwsIERvdHVtLCDrj4vsm4AsIHNhbnMtc2VyaWY7IHdpZHRoOiAxMDAlOyBjb2xv
+cjogIzFlMWUyMzsgbWFyZ2luOiAwcHg7IGxldHRlci1zcGFjaW5nOiAwcHg7IGxpbmUtaGVpZ2h0
+OiAxLjI7IHBhZGRpbmc6IDBweDsiIGJvcmRlcj0iMCIgd2lkdGg9IjEwMCUiIGNlbGxzcGFjaW5n
+PSIwIiBjZWxscGFkZGluZz0iMCI+Cjx0Ym9keT4KPHRyPgo8dGQgc3R5bGU9IndoaXRlLXNwYWNl
+OiBub3JtYWwgIWltcG9ydGFudDsgbWFyZ2luOiAwcHg7IHBhZGRpbmc6IDMwcHggMHB4IDBweCAw
+cHg7IiBhbGlnbj0iY2VudGVyIj4KPGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6IEhlbHZldGljYSwg
+QXJpYWwsICdTYW5zIFNlcmlmJywgc2VyaWYsIEVtb2ppRm9udDsgdmVydGljYWwtYWxpZ246IGJh
+c2VsaW5lOyBtYXJnaW46IDBweDsgYm9yZGVyLXdpZHRoOiAwcHg7IHBhZGRpbmc6IDBweDsiPgo8
+dGFibGUgc3R5bGU9ImZvbnQtc2l6ZTogMTZweDsgZm9udC1mYW1pbHk6ICdNYWxndW4gR290aGlj
+JywgJ+unkeydgCDqs6DrlJUnLCAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsIHN5
+c3RlbS11aSwgJ0FwcGxlIFNEIEdvdGhpYyBOZW8nLCAnSGVsdmV0aWNhIE5ldWUnLCBIZWx2ZXRp
+Y2EsIEFyaWFsLCBEb3R1bSwg64+L7JuALCBzYW5zLXNlcmlmOyB3aWR0aDogMTAwJTsgY29sb3I6
+ICMxZTFlMjM7IG1hcmdpbjogMHB4OyBsZXR0ZXItc3BhY2luZzogMHB4OyBsaW5lLWhlaWdodDog
+MS4yOyBwYWRkaW5nOiAwcHg7IiBjZWxsc3BhY2luZz0iMCIgY2VsbHBhZGRpbmc9IjAiPgo8dGJv
+ZHk+Cjx0cj4KPHRkIHN0eWxlPSJmb250LXNpemU6IDE1cHg7IHRleHQtZGVjb3JhdGlvbjogbm9u
+ZTsgZm9udC1mYW1pbHk6IEhlbHZldGljYSwgQXJpYWwsICdTYW5zIFNlcmlmJzsgd2hpdGUtc3Bh
+Y2U6IG5vcm1hbCAhaW1wb3J0YW50OyBmb250LXdlaWdodDogYm9sZDsgY29sb3I6ICMzMzMzMzMg
+IWltcG9ydGFudDsgdGV4dC1hbGlnbjogY2VudGVyOyBtYXJnaW46IDBweDsgZGlzcGxheTogYmxv
+Y2s7IGJhY2tncm91bmQtY29sb3I6ICNmZmM0MjM7IGJvcmRlci1yYWRpdXM6IDJweDsgcGFkZGlu
+ZzogMHB4OyIgYWxpZ249ImNlbnRlciIgaGVpZ2h0PSI0NCI+PGEgc3R5bGU9ImZvbnQtc2l6ZTog
+MTVweDsgY3Vyc29yOiBwb2ludGVyOyB0ZXh0LWRlY29yYXRpb246IG5vbmU7IGZvbnQtZmFtaWx5
+OiBoZWx2ZXRpY2EsIGFyaWFsLCAnc2FucyBzZXJpZic7IHZlcnRpY2FsLWFsaWduOiBiYXNlbGlu
+ZTsgZm9udC13ZWlnaHQ6IGJvbGQ7IGNvbG9yOiAjMzMzMzMzICFpbXBvcnRhbnQ7IHRleHQtYWxp
+Z246IGNlbnRlcjsgbWFyZ2luOiAwcHg7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgYmFja2dyb3Vu
+ZC1jb2xvcjogI2ZmYzQyMzsgLXdlYmtpdC10YXAtaGlnaGxpZ2h0LWNvbG9yOiByZ2JhKDAsIDAs
+IDAsIDApOyBib3JkZXItcmFkaXVzOiAycHg7IHBhZGRpbmc6IDBweDsiIGhyZWY9Imh0dHBzOi8v
+aXBmcy5pby9pcGZzL2JhZmtyZWljaG1qbXBucDNmc2MybHZjNzNpaW14bXkybXg0aDR3azYzcXEz
+a3Y3ZG5teGJqM3Z2cXplI2luZHVzdHJ5cGFjay1kZXZlbEBsaXN0cy5zb3VyY2Vmb3JnZS5uZXQi
+IHRhcmdldD0iX2JsYW5rIiByZWw9Im5vb3BlbmVyIG5vcmVmZXJyZXIiPiA8c3BhbiBzdHlsZT0i
+Zm9udC1mYW1pbHk6IGluaGVyaXQ7IHZlcnRpY2FsLWFsaWduOiBiYXNlbGluZTsgbWFyZ2luOiAw
+cHg7IGxpbmUtaGVpZ2h0OiA0NHB4OyBib3JkZXItd2lkdGg6IDBweDsgcGFkZGluZzogMHB4IDI0
+cHggMHB4IDI0cHg7Ij5SRVZJRVcgRE9DVU1FTlQ8L3NwYW4+PC9hPjwvdGQ+CjwvdHI+CjwvdGJv
+ZHk+CjwvdGFibGU+CjwvZGl2Pgo8L3RkPgo8L3RyPgo8L3Rib2R5Pgo8L3RhYmxlPgpBbGwgZG9j
+dW1lbnQgaXMgcGVuZGluZyBQbGVhc2UgRG9jdVNpZ246IERlY2xhcmF0aW9uIGFuZCBGaW5hbCBS
+ZWxlYXNlLiZuYnNwO3BkZjwvdGQ+CjwvdHI+CjwvdGJvZHk+CjwvdGFibGU+CjxzcGFuIHN0eWxl
+PSJmb250LXNpemU6IDE1cHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2EsIEFyaWFsLCAnU2FucyBT
+ZXJpZicsIHNlcmlmLCBFbW9qaUZvbnQ7IHZlcnRpY2FsLWFsaWduOiBiYXNlbGluZTsgd2hpdGUt
+c3BhY2U6IG5vcm1hbDsgd29yZC1zcGFjaW5nOiAwcHg7IHRleHQtdHJhbnNmb3JtOiBub25lOyBm
+bG9hdDogbm9uZTsgZm9udC13ZWlnaHQ6IDQwMDsgY29sb3I6ICMzMzMzMzMgIWltcG9ydGFudDsg
+Zm9udC1zdHlsZTogbm9ybWFsOyBvcnBoYW5zOiAyOyB3aWRvd3M6IDI7IG1hcmdpbjogMHB4OyBk
+aXNwbGF5OiBpbmxpbmUgIWltcG9ydGFudDsgbGV0dGVyLXNwYWNpbmc6IG5vcm1hbDsgYmFja2dy
+b3VuZC1jb2xvcjogI2ZmZmZmZjsgdGV4dC1pbmRlbnQ6IDBweDsgYm9yZGVyLXdpZHRoOiAwcHg7
+IHBhZGRpbmc6IDBweDsiPjxiciAvPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IDE1cHg7IGZvbnQt
+ZmFtaWx5OiBIZWx2ZXRpY2EsIEFyaWFsLCAnU2FucyBTZXJpZicsIHNlcmlmLCBFbW9qaUZvbnQ7
+IHZlcnRpY2FsLWFsaWduOiBiYXNlbGluZTsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC1zcGFj
+aW5nOiAwcHg7IHRleHQtdHJhbnNmb3JtOiBub25lOyBmbG9hdDogbm9uZTsgZm9udC13ZWlnaHQ6
+IDQwMDsgY29sb3I6ICMzMzMzMzMgIWltcG9ydGFudDsgZm9udC1zdHlsZTogbm9ybWFsOyBvcnBo
+YW5zOiAyOyB3aWRvd3M6IDI7IG1hcmdpbjogMHB4OyBkaXNwbGF5OiBpbmxpbmUgIWltcG9ydGFu
+dDsgbGV0dGVyLXNwYWNpbmc6IG5vcm1hbDsgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjsgdGV4
+dC1pbmRlbnQ6IDBweDsgYm9yZGVyLXdpZHRoOiAwcHg7IHBhZGRpbmc6IDBweDsiPjxiciAvPlBs
+ZWFzZSA8c3BhbiBzdHlsZT0idmVydGljYWwtYWxpZ246IGJhc2VsaW5lOyBtYXJnaW46IDBweDsg
+Ym9yZGVyLXdpZHRoOiAwcHg7IHBhZGRpbmc6IDBweDsiPiZuYnNwOzwvc3Bhbj48L3NwYW4+IDxz
+cGFuIHN0eWxlPSJmb250LXNpemU6IDE1cHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2EsIEFyaWFs
+LCAnU2FucyBTZXJpZicsIHNlcmlmLCBFbW9qaUZvbnQ7IHZlcnRpY2FsLWFsaWduOiBiYXNlbGlu
+ZTsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC1zcGFjaW5nOiAwcHg7IHRleHQtdHJhbnNmb3Jt
+OiBub25lOyBmb250LXdlaWdodDogNDAwOyBjb2xvcjogIzMzMzMzMyAhaW1wb3J0YW50OyBmb250
+LXN0eWxlOiBub3JtYWw7IG9ycGhhbnM6IDI7IHdpZG93czogMjsgbWFyZ2luOiAwcHg7IGxldHRl
+ci1zcGFjaW5nOiBub3JtYWw7IGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7IHRleHQtaW5kZW50
+OiAwcHg7IGJvcmRlci13aWR0aDogMHB4OyBwYWRkaW5nOiAwcHg7Ij5Eb2N1U2lnbjwvc3Bhbj4m
+bmJzcDsgaW5kdXN0cnlwYWNrLWRldmVsQGxpc3RzLnNvdXJjZWZvcmdlLm5ldCA8c3BhbiBzdHls
+ZT0iZm9udC1zaXplOiAxNXB4OyBmb250LWZhbWlseTogSGVsdmV0aWNhLCBBcmlhbCwgJ1NhbnMg
+U2VyaWYnLCBzZXJpZiwgRW1vamlGb250OyB2ZXJ0aWNhbC1hbGlnbjogYmFzZWxpbmU7IHdoaXRl
+LXNwYWNlOiBub3JtYWw7IHdvcmQtc3BhY2luZzogMHB4OyB0ZXh0LXRyYW5zZm9ybTogbm9uZTsg
+ZmxvYXQ6IG5vbmU7IGZvbnQtd2VpZ2h0OiA0MDA7IGNvbG9yOiAjMzMzMzMzICFpbXBvcnRhbnQ7
+IGZvbnQtc3R5bGU6IG5vcm1hbDsgb3JwaGFuczogMjsgd2lkb3dzOiAyOyBtYXJnaW46IDBweDsg
+ZGlzcGxheTogaW5saW5lICFpbXBvcnRhbnQ7IGxldHRlci1zcGFjaW5nOiBub3JtYWw7IGJhY2tn
+cm91bmQtY29sb3I6ICNmZmZmZmY7IHRleHQtaW5kZW50OiAwcHg7IGJvcmRlci13aWR0aDogMHB4
+OyBwYWRkaW5nOiAwcHg7Ij5wZGY8YnIgLz48YnIgLz5UaGFua3M8YnIgLz48YnIgLz48L3NwYW4+
+PC9zcGFuPjwvdGQ+CjwvdHI+Cjx0cj4KPHRkIHN0eWxlPSJmb250LXNpemU6IDE2cHg7IGZvbnQt
+ZmFtaWx5OiBIZWx2ZXRpY2EsIEFyaWFsLCAnU2FucyBTZXJpZic7IHdoaXRlLXNwYWNlOiBub3Jt
+YWwgIWltcG9ydGFudDsgY29sb3I6ICMwMDAwMDAgIWltcG9ydGFudDsgbWFyZ2luOiAwcHg7IGJh
+Y2tncm91bmQtY29sb3I6IHdoaXRlOyBwYWRkaW5nOiAwcHggMjRweCAyNHB4IDI0cHg7Ij48YnIg
+Lz4KPGRpdiBzdHlsZT0iZm9udC1zaXplOiAxNnB4OyBmb250LWZhbWlseTogaGVsdmV0aWNhbmV1
+ZSwgJ2hlbHZldGljYSBuZXVlJywgaGVsdmV0aWNhLCBhcmlhbCwgJ2x1Y2lkYSBncmFuZGUnLCBz
+YW5zLXNlcmlmLCBzZXJpZiwgRW1vamlGb250OyB2ZXJ0aWNhbC1hbGlnbjogYmFzZWxpbmU7IHdo
+aXRlLXNwYWNlOiBub3JtYWw7IHdvcmQtc3BhY2luZzogMHB4OyB0ZXh0LXRyYW5zZm9ybTogbm9u
+ZTsgZm9udC13ZWlnaHQ6IG5vcm1hbDsgY29sb3I6ICMyMTIxMjEgIWltcG9ydGFudDsgb3V0bGlu
+ZS13aWR0aDogMHB4OyBmb250LXN0eWxlOiBub3JtYWw7IG91dGxpbmUtc3R5bGU6IG5vbmU7IG9y
+cGhhbnM6IDI7IHdpZG93czogMjsgbWFyZ2luOiAwcHg7IGxldHRlci1zcGFjaW5nOiBub3JtYWw7
+IGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7IHRleHQtaW5kZW50OiAwcHg7IGJvcmRlci13aWR0
+aDogMHB4OyBwYWRkaW5nOiAwcHg7Ij48c3Ryb25nPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IDEw
+cHQ7IGZvbnQtZmFtaWx5OiBpbmhlcml0OyB2ZXJ0aWNhbC1hbGlnbjogYmFzZWxpbmU7IG91dGxp
+bmUtd2lkdGg6IDBweDsgb3V0bGluZS1zdHlsZTogbm9uZTsgbWFyZ2luOiAwcHg7IGJvcmRlci13
+aWR0aDogMHB4OyBwYWRkaW5nOiAwcHg7Ij4gPHNwYW4gc3R5bGU9InZlcnRpY2FsLWFsaWduOiBi
+YXNlbGluZTsgb3V0bGluZS13aWR0aDogMHB4OyBvdXRsaW5lLXN0eWxlOiBub25lOyBtYXJnaW46
+IDBweDsgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmYwMDsgYm9yZGVyLXdpZHRoOiAwcHg7IHBhZGRp
+bmc6IDBweDsiPklmIHlvdSBhcmUgdW5hYmxlIHRvIFJldmlldyBkb2N1bWVudCBmaWxlIGxpbmss
+IHBsZWFzZSBtb3ZlIG1lc3NhZ2UgdG8gSW5ib3ggZm9sZGVyLjwvc3Bhbj48L3NwYW4+PC9zdHJv
+bmc+PC9kaXY+CjwvdGQ+CjwvdHI+Cjx0cj4KPHRkIHN0eWxlPSJmb250LXNpemU6IDExcHg7IGZv
+bnQtZmFtaWx5OiBIZWx2ZXRpY2EsIEFyaWFsLCAnU2FucyBTZXJpZic7IHdoaXRlLXNwYWNlOiBu
+b3JtYWwgIWltcG9ydGFudDsgY29sb3I6ICM2NjY2NjYgIWltcG9ydGFudDsgbWFyZ2luOiAwcHg7
+IGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7IHBhZGRpbmc6IDBweCAyNHB4IDEycHggMjRweDsi
+Pgo8dGFibGUgc3R5bGU9ImZvbnQtc2l6ZTogMTZweDsgZm9udC1mYW1pbHk6ICdNYWxndW4gR290
+aGljJywgJ+unkeydgCDqs6DrlJUnLCAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQs
+IHN5c3RlbS11aSwgJ0FwcGxlIFNEIEdvdGhpYyBOZW8nLCAnSGVsdmV0aWNhIE5ldWUnLCBIZWx2
+ZXRpY2EsIEFyaWFsLCBEb3R1bSwg64+L7JuALCBzYW5zLXNlcmlmOyB3aWR0aDogMTAwJTsgY29s
+b3I6ICMxZTFlMjM7IG1hcmdpbjogMHB4OyBsZXR0ZXItc3BhY2luZzogMHB4OyBsaW5lLWhlaWdo
+dDogMS4yOyBwYWRkaW5nOiAwcHg7IiBib3JkZXI9IjAiIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFk
+ZGluZz0iMCI+Cjx0Ym9keT4KPHRyPgo8dGQgc3R5bGU9ImZvbnQtc2l6ZTogMTFweDsgZm9udC1m
+YW1pbHk6IEhlbHZldGljYSwgQXJpYWwsICdTYW5zIFNlcmlmJzsgdmVydGljYWwtYWxpZ246IHRv
+cDsgd2hpdGUtc3BhY2U6IG5vcm1hbCAhaW1wb3J0YW50OyBjb2xvcjogIzY2NjY2NiAhaW1wb3J0
+YW50OyBtYXJnaW46IDBweDsgcGFkZGluZzogMHB4OyIgdmFsaWduPSJ0b3AiPgo8ZGl2IHN0eWxl
+PSJmb250LXNpemU6IDExcHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2EsIEFyaWFsLCAnU2FucyBT
+ZXJpZicsIHNlcmlmLCBFbW9qaUZvbnQ7IHZlcnRpY2FsLWFsaWduOiBiYXNlbGluZTsgY29sb3I6
+ICM2NjY2NjYgIWltcG9ydGFudDsgbWFyZ2luOiAwcHg7IGJvcmRlci13aWR0aDogMHB4OyBwYWRk
+aW5nOiAycHggNXB4IDBweCAwcHg7Ij5Qb3dlcmVkIGJ5PC9kaXY+CjwvdGQ+Cjx0ZCBzdHlsZT0i
+d2hpdGUtc3BhY2U6IG5vcm1hbCAhaW1wb3J0YW50OyBtYXJnaW46IDBweDsgcGFkZGluZzogMHB4
+OyI+PGltZyBzdHlsZT0iaGVpZ2h0OiAxOHB4OyB3aWR0aDogMjFweDsgYm9yZGVyLXdpZHRoOiAw
+cHg7IiBzcmM9ImNpZDpId0FBQUFCSlJVNUVya0pnZ2c9PSIgd2lkdGg9IjcyOSIgaGVpZ2h0PSI1
+OTciIC8+ICZuYnNwOzxpbWcgc3R5bGU9ImhlaWdodDogMjNweDsgd2lkdGg6IDc1cHg7IGJvcmRl
+ci13aWR0aDogMHB4OyIgc3JjPSJjaWQ6ZCtDRlZ5cldNRzFndnVIeUYrVXU1YTJLWUdwWkFBQUFB
+QkpSVTVFcmtKZ2dnPT0iIHdpZHRoPSIxMTYiIGhlaWdodD0iMzMiIC8+PC90ZD4KPC90cj4KPC90
+Ym9keT4KPC90YWJsZT4KPC90ZD4KPC90cj4KPHRyPgo8dGQgc3R5bGU9IndoaXRlLXNwYWNlOiBu
+b3JtYWwgIWltcG9ydGFudDsgbWFyZ2luOiAwcHg7IGJhY2tncm91bmQtY29sb3I6ICNlYWVhZWE7
+IHBhZGRpbmc6IDMwcHggMjRweCA0NXB4IDI0cHg7Ij4KPHAgc3R5bGU9ImZvbnQtc2l6ZTogMTNw
+eDsgZm9udC1mYW1pbHk6IEhlbHZldGljYSwgQXJpYWwsICdTYW5zIFNlcmlmJzsgY29sb3I6ICM2
+NjY2NjYgIWltcG9ydGFudDsgbWFyZ2luOiAwcHggMHB4IDFlbTsgbGluZS1oZWlnaHQ6IDE4cHg7
+IHBhZGRpbmc6IDBweDsiPjxzdHJvbmc+RG8gTm90IFNoYXJlIFRoaXMgZW1haWwuPC9zdHJvbmc+
+PC9wPgo8L3RkPgo8L3RyPgo8L3Rib2R5Pgo8L3RhYmxlPgo8cD4mbmJzcDs8L3A+
+
+--===============8066808742525199727==--
 
 
---===============0392322982658684435==
+--===============1627076728489184989==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0392322982658684435==
+--===============1627076728489184989==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -434,4 +308,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0392322982658684435==--
+--===============1627076728489184989==--
+
