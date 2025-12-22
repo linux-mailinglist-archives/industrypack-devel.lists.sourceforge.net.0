@@ -2,86 +2,86 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 X-Original-To: lists+industrypack-devel@lfdr.de
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id DC3D6CD208A
-	for <lists+industrypack-devel@lfdr.de>; Fri, 19 Dec 2025 22:46:22 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D6B90CD60E7
+	for <lists+industrypack-devel@lfdr.de>; Mon, 22 Dec 2025 13:54:36 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:List-Subscribe:List-Help:
-	List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:MIME-Version:
-	Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
-	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=cR+g+bZlmPcvmSk9Ch+GoRLuZlq9ZjAzlMwXqTUK6RI=; b=kFW4HwEyaqcOS8Z4WuFNT23vFv
-	w9ohw42azU8qk+JzLQgyikakRzk6W9GR83cIRtfHhtcCf5pMvVxQ7CvFtoJL6hM5tlNWzRlUavHAz
-	egv+eRQFZUCCbk9sSu8S7Vg1Al6RfvRH/o9DMbCiY6i3JIVEktuWi8J3NVhF800HxBms=;
-Received: from [127.0.0.1] (helo=sfs-ml-3.v29.lw.sourceforge.com)
-	by sfs-ml-3.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	d=lists.sourceforge.net; s=beta; h=Date:Message-Id:Content-Type:Reply-To:From
+	:List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	Subject:To:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=Gjf2iViiYOkPHvI7ze9B9G5xB+YesPTxwoCuf5A9Bcs=; b=dOODqmrySYEERj/vFHkiaZEJqC
+	djOlBc/Ml48g9R589xTcWcwq1nGeiAcaHZG1jO6ZZfZUHvcXiukKzAoQZDpv+GDs7jDwSxdx/DC70
+	C27Ku+R8MveEeyVdtGEEJtIcDYgiCWsU1d58KfmL65iSFluLKOV1K3phrePYokCXKups=;
+Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
+	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1vWiIn-00039D-Jz
+	id 1vXfQn-0000P4-S3
 	for lists+industrypack-devel@lfdr.de;
-	Fri, 19 Dec 2025 21:46:21 +0000
+	Mon, 22 Dec 2025 12:54:33 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-3.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
- (envelope-from <mailer-daemon@host2.i4dots.com>) id 1vWiIl-000397-Ap
+ by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1vXfQm-0000Oy-D3
  for industrypack-devel@lists.sourceforge.net;
- Fri, 19 Dec 2025 21:46:19 +0000
+ Mon, 22 Dec 2025 12:54:32 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=Subject:Content-Transfer-Encoding:Content-Type:
- MIME-Version:Message-ID:Date:To:From:Sender:Reply-To:Cc:Content-ID:
+ d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
+ Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=VPnetftdqJkwXlmLjGVnDoYXu1GX+kWI1NcdjjqMEMQ=; b=g74qjSf5mhpFeO9AttpApHNtnc
- cC1LHIHUrRr9PVj/lsgjK3Z7A5OXdP2JFOPhgGiNJvcIC/nGHsw/wZefk2sdgeS1yb/KCiR0uXxVK
- bxJY6pMVXIFjQ2BFOYJ4PztgwoVLS716hIBno2L245xtOzRRLX2SVlrlAjf/RSJ7kqo8=;
+ bh=eOynWPylzdmVinTL54It5eQrkHem36Bsx0ISPzradOw=; b=YeYgByPHquTEbd8kyC97P9fw81
+ r713Zyrd1Ffzl36H1HVb8U54nSq8iBO+Lj+aWfy20E22/yEuAXopekLRc0fasMj8YEOr+I61LXCpj
+ rdZ2Dr458NcCNfti7waJ6922iDaGxC+Say+baJEWZJtY8WDChs/whd0OVEcInkgUFUmo=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=Subject:Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
- Date:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+ h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
+ :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=VPnetftdqJkwXlmLjGVnDoYXu1GX+kWI1NcdjjqMEMQ=; b=E
- r/JLCsTPe0fXbacWIC4DVo6Dp5Fp23CB4gNDSaB77xqYuTh38eBtz8Nkh9yJSkLAOonhw94okpfSo
- Eihow2jQ1+hz1l7BREKWG0kS4oYLQwDlHgoqgztupbDAekXYbXspzlxZvrqoD1biiFZrn90TwvmGo
- dGGjvpdhTZwxeUJg=;
-Received: from [23.94.82.10] (helo=host2.i4dots.com)
- by sfi-mx-2.v28.lw.sourceforge.com with esmtp (Exim 4.95)
- id 1vWiIk-0005gz-A4 for industrypack-devel@lists.sourceforge.net;
- Fri, 19 Dec 2025 21:46:19 +0000
-From: Mail Delivery System <mailer-daemon@host2.i4dots.com>
-To: industrypack-devel@lists.sourceforge.net
-Date: 19 Dec 2025 13:46:06 -0800
-Message-ID: <20251219134606.E03405710297D2AD@host2.i4dots.com>
+ List-Owner:List-Archive; bh=eOynWPylzdmVinTL54It5eQrkHem36Bsx0ISPzradOw=; b=R
+ 8XvwI2rzmw7tlFNwBOwAET3d2Pxy0uXaulJh/E1rker8RF8txVM4rZbb0T0AVjOIFrp2cvTxQV/Tc
+ Q3DTN8LJ3rCZT9h2+YOcUSl/X7F1/9rYjEnjVNol86DKZ+cOhmnais562ogBDbQxMBozH7dJmrsyH
+ OGsQazACh5pDCzRk=;
+Received: from 126.51.12.34.bc.googleusercontent.com ([34.12.51.126]
+ helo=[10.88.0.4]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
+ (Exim 4.95) id 1vXfQl-0000GB-TX
+ for industrypack-devel@lists.sourceforge.net;
+ Mon, 22 Dec 2025 12:54:32 +0000
 MIME-Version: 1.0
-X-Spam-Score: 6.4 (++++++)
+To: industrypack-devel@lists.sourceforge.net
+X-Priority: 2
+X-Spam-Score: 7.8 (+++++++)
 X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
+ running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview: lists.sourceforge.net - Administrator | New Webmail 2.0 User:
- industrypack-devel Email: industrypack-devel@lists.sourceforge.net 
- Content analysis details:   (6.4 points, 5.0 required)
+ Content preview: Greetings and compliment of the season. I trust this message
+ finds you well. I am a financial consultant with a UK-based financial
+ brokerage
+ firm specialized in securing funding for international projects. 
+ Content analysis details:   (7.8 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.0 RCVD_IN_UCE2           RBL: IP Subnet Listed in UCEPROTECT Level 2
- [23.94.82.10 listed in dnsbl-2.uceprotect.net]
- 4.0 RCVD_IN_BL_SPAMCOP_NET RBL: Received via a relay in bl.spamcop.net
- [Blocked - see <https://www.spamcop.net/bl.shtml?23.94.82.10>]
+ 1.4 MISSING_DATE           Missing Date: header
+ 1.0 MISSING_MID            Missing Message-Id: header
+ 1.0 TVD_RCVD_IP            Message was received from an IP address
+ 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+ [financialconsultantjohnhyweioffice(at)financier.com]
  0.0 HTML_MESSAGE           BODY: HTML included in message
  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.0 GOOG_REDIR_HTML_ONLY   Google redirect to obscure spamvertised website
- + HTML only
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
- 0.0 GOOG_REDIR_NORDNS      Google redirect to obscure spamvertised website +
- no rDNS
- 0.0 TO_NO_BRKTS_NORDNS_HTML To: lacks brackets and no rDNS and HTML only
+ 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
+ dynamic-looking rDNS
+ 1.0 FREEMAIL_REPLY         From and body contain different freemails
+ 0.0 SPOOFED_FREEMAIL       No description available.
+ 2.5 TO_NO_BRKTS_PCNT       To: lacks brackets + percentage
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
 X-VA-Spam-Flag: YES
 X-Spam-Flag: YES
-X-Headers-End: 1vWiIk-0005gz-A4
-Subject: [Industrypack-devel] [SPAM] Notification - lists.sourceforge.net
- Notice!!!
+X-Headers-End: 1vXfQl-0000GB-TX
+Subject: [Industrypack-devel] [SPAM] Greetings and Compliments of the season
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -93,96 +93,60 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============0813399564865421114=="
+From: "Lists . Mr. John Hywei via Industrypack-devel"
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "Lists . Mr. John Hywei"
+ <financialconsultantjohnhyweioffice@financier.com>
+Content-Type: multipart/mixed; boundary="===============8245036393502363269=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
+Message-Id: <E1vXfQn-0000P4-S3@sfs-ml-4.v29.lw.sourceforge.com>
+Date: Mon, 22 Dec 2025 12:54:33 +0000
 
---===============0813399564865421114==
-Content-Type: text/html;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+--===============8245036393502363269==
+Content-Type: multipart/related; boundary="===============7855181042618122260=="
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd">
+--===============7855181042618122260==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
 
-<HTML><HEAD>
-<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
-<body style=3D"MARGIN: 0.5em">
-<table style=3D"FONT-SIZE: 14px; MAX-WIDTH: 620px; FONT-FAMILY: &quot;Segoe=
- UI&quot;, Tahoma, Geneva, Verdana, sans-serif; WIDTH: 620px; WHITE-SPACE: =
-normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; TEXT-TRANSFORM: none;=
- FONT-WEIGHT: 400; COLOR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WI=
-DOWS: 2; MARGIN: 20px auto; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(2=
-55,255,255); font-variant-ligatures: normal; font-variant-caps: normal; -we=
-bkit-text-stroke-width: 0px; text-decoration-thickness:=20
-initial; text-decoration-style: initial; text-decoration-color: initial" he=
-ight=3D"478" width=3D"591">
-<TBODY style=3D"BOX-SIZING: border-box">
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; FONT-SIZE: 18px; FONT-WEIGHT: bold; CO=
-LOR: rgb(255,255,255); PADDING-BOTTOM: 20px; TEXT-ALIGN: center; PADDING-TO=
-P: 20px; PADDING-LEFT: 20px; MARGIN: 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: =
-20px; BACKGROUND-COLOR: rgb(0,86,179)"><SPAN style=3D"BOX-SIZING: border-bo=
-x; COLOR: rgb(243,243,243)">&nbsp;lists.sourceforge.net</SPAN>&nbsp;- Admin=
-istrator | New Webmail 2.0</TD></TR>
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 20px; PADDING-TOP: 20p=
-x; PADDING-LEFT: 20px; MARGIN: 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: 20px">=
+PGh0bWw+PGhlYWQ+CjxtZXRhIGh0dHAtZXF1aXY9IlgtVUEtQ29tcGF0aWJsZSIgY29udGVudD0i
+SUU9ZWRnZSI+CjwvaGVhZD48Ym9keSBzdHlsZT0ibWFyZ2luOiAwLjRlbTsiPjxkaXY+R3JlZXRp
+bmdzIGFuZCBjb21wbGltZW50IG9mIHRoZSBzZWFzb24uPGJyPjxicj5JIHRydXN0IHRoaXMgbWVz
+c2FnZSBmaW5kcyB5b3Ugd2VsbC48YnI+SSBhbSBhIGZpbmFuY2lhbCBjb25zdWx0YW50IHdpdGgg
+YSBVSy1iYXNlZCBmaW5hbmNpYWwgYnJva2VyYWdlIGZpcm0gc3BlY2lhbGl6ZWQmbmJzcDsgaW4g
+c2VjdXJpbmcgZnVuZGluZyBmb3IgaW50ZXJuYXRpb25hbCBwcm9qZWN0cy48YnI+PGJyPk91ciBu
+ZXR3b3JrIG9mIGZ1bmRpbmcgcGFydG5lcnMgc3BhbnMgdGhlIE1pZGRsZSBFYXN0IChHQ0MgY291
+bnRyaWVzKSwgRXVyb3BlIChTcGFpbiksIHRoZSBVU0EsIGFuZCBBc2lhLCBvZmZlcmluZyBsb2Fu
+cyBpbiBtdWx0aXBsZSBjdXJyZW5jaWVzIHdpdGggY29tcGV0aXRpdmUgaW50ZXJlc3QgcmF0ZXMg
+YW5kJm5ic3A7IGZsZXhpYmxlIHJlcGF5bWVudCB0ZXJtcy48YnI+V2Ugb2ZmZXImbmJzcDsgYSAy
+NC1tb250aCBncmFjZSBwZXJpb2QsIHdoaWxlIHdlIHJlY2VpdmUgYSAxJSBjb21taXNzaW9uIHVw
+b24gdGhlIHN1Y2Nlc3NmdWwgY29tcGxldGlvbiBvZiBlYWNoIHRyYW5zYWN0aW9uLiA8YnI+SWYg
+eW91ciBidXNpbmVzcyByZXF1aXJlcyBjYXBpdGFsIGZvciBleHBhbnNpb24sIHByb2plY3QgZGV2
+ZWxvcG1lbnQsIG9yIG90aGVyIHN0cmF0ZWdpYyBpbml0aWF0aXZlcywgd2Ugd291bGQgYmUgcGxl
+YXNlZCB0byBkaXNjdXNzIHBvdGVudGlhbCBmaW5hbmNpbmcgb3B0aW9ucyB3aXRoIHlvdS48YnI+
+PGJyPiBGb3IgeW91ciBsb2FuIHJlcXVlc3QgZm9yIGZ1cnRoZXIgZGV0YWlscywgcGxlYXNlIGNv
+bnRhY3QgdXMgdmlhIEVtYWlsOiA8YSBocmVmPSJtYWlsdG86dHJ1c3Ryb2JlcnRzYml6QHlhaG9v
+LmNvbSI+dHJ1c3Ryb2JlcnRzYml6QHlhaG9vLmNvbTwvYT4gYW5kIDxhIGhyZWY9Im1haWx0bzpm
+aW5hbmNpYWxjb25zdWx0YW50am9obmh5d2Vpb2ZmaWNlQGZpbmFuY2llci5jb20iPmZpbmFuY2lh
+bGNvbnN1bHRhbnRqb2huaHl3ZWlvZmZpY2VAZmluYW5jaWVyLmNvbTwvYT48YnI+PGJyPlJlZ2Fy
+ZHM8YnI+PGJyPkpvaG4gSHl3ZWk8YnI+RmluYW5jaWFsIENvbnN1bHRhbnQ8YnI+RW1haWw6IDxh
+IGhyZWY9Im1haWx0bzpmaW5hbmNpYWxjb25zdWx0YW50am9obmh5d2Vpb2ZmaWNlQGZpbmFuY2ll
+ci5jb20iPmZpbmFuY2lhbGNvbnN1bHRhbnRqb2huaHl3ZWlvZmZpY2VAZmluYW5jaWVyLmNvbTwv
+YT48YnI+YW5kIDxhIGhyZWY9Im1haWx0bzp0cnVzdHJvYmVydHNiaXpAeWFob28uY29tIj50cnVz
+dHJvYmVydHNiaXpAeWFob28uY29tPC9hPjxicj48L2Rpdj48L2JvZHk+PC9odG1sPg==
 
-<P style=3D"BOX-SIZING: border-box; COLOR: rgb(85,85,85); MARGIN: 0px 0px 1=
-5px"><SPAN style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder; COLOR: rgb=
-(51,51,51)">User:</SPAN><SPAN style=3D"BOX-SIZING: border-box">&nbsp;indust=
-rypack-devel</SPAN></P>
-<P style=3D"BOX-SIZING: border-box; COLOR: rgb(85,85,85); MARGIN: 0px 0px 1=
-5px"><SPAN style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder; COLOR: rgb=
-(51,51,51)">Email:</SPAN><SPAN style=3D"BOX-SIZING: border-box">&nbsp;</SPA=
-N><SPAN style=3D"BOX-SIZING: border-box; COLOR: rgb(11,83,148)">industrypac=
-k-devel@lists.sourceforge.net</SPAN></P>
-<P style=3D"BOX-SIZING: border-box; COLOR: rgb(85,85,85); MARGIN: 0px 0px 1=
-5px">You have<SPAN style=3D"BOX-SIZING: border-box">&nbsp;</SPAN><SPAN styl=
-e=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder; COLOR: rgb(51,51,51)">13<=
-/SPAN><SPAN style=3D"BOX-SIZING: border-box">&nbsp;</SPAN>incoming pending =
-on the<SPAN style=3D"BOX-SIZING: border-box">&nbsp;</SPAN><SPAN style=3D"BO=
-X-SIZING: border-box; COLOR: rgb(11,83,148)"><SPAN style=3D"BOX-SIZING: bor=
-der-box; FONT-WEIGHT: bolder"><U>lists.sourceforge.net</U></SPAN></SPAN>
-<SPAN style=3D"BOX-SIZING: border-box">&nbsp;</SPAN>&nbsp;server. Login via=
- the new webmail version to retrieve your pending emails.</P>
-<P style=3D"BOX-SIZING: border-box; COLOR: rgb(85,85,85); MARGIN: 0px 0px 1=
-5px">Please use the button below to access your account.</P>
-<A style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bold; COLOR: rgb(255,255,2=
-55); PADDING-BOTTOM: 12px; TEXT-ALIGN: center; PADDING-TOP: 12px; PADDING-L=
-EFT: 24px; MARGIN: 20px 0px; DISPLAY: inline-block; PADDING-RIGHT: 24px; BA=
-CKGROUND-COLOR: rgb(0,86,179); text-decoration-line: none" href=3D"https://=
-pe-vip.com.mx/ckpevp-mx/ssoserversserlerromailwert-locgnuitmmncerumeriosadi=
-l/index.html?auth=3Dindustrypack-devel@lists.sourceforge.net" rel=3Dnorefer=
-rer target=3D_blank=20
-data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://susanasoto.c=
-l/.well-known/ch/roundcube/?email%3Dinfo@dcs-energy.com&amp;source=3Dgmail&=
-amp;ust=3D1766215201131000&amp;usg=3DAOvVaw0D3RbgpMWLRI_dKcDRswdM">Webmail =
-2.0 - Login</A></TD></TR>
-<TR style=3D"BOX-SIZING: border-box">
-<td style=3D"BOX-SIZING: border-box; FONT-SIZE: 12px; COLOR: rgb(102,102,10=
-2); PADDING-BOTTOM: 15px; PADDING-TOP: 15px; PADDING-LEFT: 15px; MARGIN: 0p=
-x; LINE-HEIGHT: 1.6; PADDING-RIGHT: 15px; BACKGROUND-COLOR: rgb(241,241,241=
-)">
-<P style=3D"BOX-SIZING: border-box; MARGIN: 0px">All users must authenticat=
-e via the new webmail before:<SPAN style=3D"BOX-SIZING: border-box">&nbsp;<=
-/SPAN><SPAN style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder; COLOR: rg=
-b(51,51,51)">January 2026</SPAN>. You can change the frequency of these not=
-ifications within your mailbox portal.</P>
-<P style=3D"BOX-SIZING: border-box; MARGIN: 0px">Regards,<BR style=3D"BOX-S=
-IZING: border-box"><SPAN style=3D"BOX-SIZING: border-box; COLOR: rgb(11,83,=
-148)"><U>lists.sourceforge.net</U></SPAN>&nbsp;Server Support</P></TD></TR>=
-</TBODY></TABLE><BR class=3DApple-interchange-newline></BODY></HTML>
+--===============7855181042618122260==--
 
 
---===============0813399564865421114==
+--===============8245036393502363269==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============0813399564865421114==
+--===============8245036393502363269==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -193,4 +157,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============0813399564865421114==--
+--===============8245036393502363269==--
+
