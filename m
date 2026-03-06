@@ -2,90 +2,93 @@ Return-Path: <industrypack-devel-bounces@lists.sourceforge.net>
 Delivered-To: lists+industrypack-devel@lfdr.de
 Received: from mail.lfdr.de
 	by lfdr with LMTP
-	id UAuVD08sp2mbfgAAu9opvQ
+	id oH3CKdaMqml0TQEAu9opvQ
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	for <lists+industrypack-devel@lfdr.de>; Tue, 03 Mar 2026 19:45:35 +0100
+	for <lists+industrypack-devel@lfdr.de>; Fri, 06 Mar 2026 09:14:14 +0100
 X-Original-To: lists+industrypack-devel@lfdr.de
 Received: from lists.sourceforge.net (lists.sourceforge.net [216.105.38.7])
-	by mail.lfdr.de (Postfix) with ESMTPS id D70061F56D7
-	for <lists+industrypack-devel@lfdr.de>; Tue, 03 Mar 2026 19:45:34 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4A43121CEAF
+	for <lists+industrypack-devel@lfdr.de>; Fri, 06 Mar 2026 09:14:13 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.sourceforge.net; s=beta; h=Date:Message-Id:Content-Type:
 	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
 	Subject:To:From:MIME-Version:Sender:Reply-To:Cc:Content-Transfer-Encoding:
 	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
 	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
-	bh=3IyEEFjvkCJglvleaju7HGXPmv7wW6aYT7SGcGNuxmI=; b=aUB3mQb8mBEk2viREyCwO7CsF0
-	UsQCDztsBor1eALo+r57Lxx7luZXHNBDzJSwk1CA7EkjSd+LitvdTQc0suQblgP1oMHS8QT6hTQ0v
-	4BUZN+VrkblxsHj/oUlU9SFmrTmPuvMAvUITbzd7WGhBnuIJunEqRsvnJwhlsG06mZ6c=;
+	bh=qmMr7dzAEqT5I6DGa7YGU5dRdDneYxEEJJvfsbeTo7U=; b=ePQxja7B7zvYxt+DWNd4bngqAs
+	v184Z19vGr3odaS3xPSqBIU4CCxTeqbA7OUKvBPtV6RKrWE1PCt8p7VURnaj/7sicPzis3EDEMsv6
+	QqynmTxdo9hG4M45nEbRsSpJ1f8y6F9nF8911zTvdWolYfr4ObFQhx7SyGqX5DnRWS1M=;
 Received: from [127.0.0.1] (helo=sfs-ml-4.v29.lw.sourceforge.com)
 	by sfs-ml-4.v29.lw.sourceforge.com with esmtp (Exim 4.95)
 	(envelope-from <industrypack-devel-bounces@lists.sourceforge.net>)
-	id 1vxUkP-0007tC-8k
+	id 1vyQK4-00022V-5X
 	for lists+industrypack-devel@lfdr.de;
-	Tue, 03 Mar 2026 18:45:33 +0000
+	Fri, 06 Mar 2026 08:14:12 +0000
 Received: from [172.30.29.66] (helo=mx.sourceforge.net)
  by sfs-ml-4.v29.lw.sourceforge.com with esmtps (TLS1.2) tls
- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1vxUkO-0007t4-Cr
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (Exim 4.95) id 1vyQK2-00022L-LE
  for industrypack-devel@lists.sourceforge.net;
- Tue, 03 Mar 2026 18:45:32 +0000
+ Fri, 06 Mar 2026 08:14:10 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=sourceforge.net; s=x; h=Subject:To:From:MIME-Version:Content-Type:Sender:
  Reply-To:Date:Message-ID:Cc:Content-Transfer-Encoding:Content-ID:
  Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
  :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
  List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=z8iLyY76v3qzTgs5rUPxMj/VM9IHnfwxDwfaN10QJWI=; b=IVKR/cg91MLQNx+gLVGSOY9CT1
- jFOFsmsOGfQXxeRUoNbKSplWICnIs2jiHrutz3DpcHxbGnC/nhWV0HXnnVGx6UuNLUXb3pfbvhvYi
- 01KKU7kiiJcufMBsjCVRjoBn1z0XiYZGzM6eSnPI9GjjaOcHpB3RpsIaolMv0QK3iwyo=;
+ bh=1hRuLH1UAXXMiSxhOFV5GZESe/C3Wj6F6Y6e2lM3k1A=; b=PY/3FA46jhgjATnjaPf+cnbUHP
+ WGyWctyz23E2qZXsfnxbuYVGg/nUYgWXnX0+Za3iSZn0ywZeP8haLaZ8HWw5SELcX/70SsyjSreB0
+ bb2j6NONppq1lC2fGerLgTZXbMrFQ9Q1714H6s3HgjzKYhrG4bCGK3YXOgqDRnkuonwg=;
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sf.net; s=x
  ;
  h=Subject:To:From:MIME-Version:Content-Type:Sender:Reply-To:Date:Message-ID
  :Cc:Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
  Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
  References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:List-Post:
- List-Owner:List-Archive; bh=z8iLyY76v3qzTgs5rUPxMj/VM9IHnfwxDwfaN10QJWI=; b=Q
- f2FmiPzEPvMYuLGjB+zsLJcmVf4LbCV5jOOH7sqHH7+2KvDGuNSxZxs2NGzyI/cdA9inonk3oraGQ
- RzD0ve9RfCoC/517edIAt1X6S69zoyZXTpzguPcmD66XyNoarKe0TA2Zk+T2bO0rVI6xUbrgsSOYJ
- oINh/39FPH+qwwMk=;
-Received: from 239.113.155.104.bc.googleusercontent.com ([104.155.113.239]
+ List-Owner:List-Archive; bh=1hRuLH1UAXXMiSxhOFV5GZESe/C3Wj6F6Y6e2lM3k1A=; b=V
+ 0IwAnFmiqdEJ2llGrEEs7+XLqLmGzahTdlg5ZBjaAUAIXvl0S1riwJu5ayn4r+y56MyO4qlHodEQL
+ aVOYROR34n6IRQ/dXAFFi1/EMiE+trW8dKz3muaGwjolJcBqaMul8eVezRYNujlek81cjOuHJ92UA
+ tfycxTN3NLYpZkAQ=;
+Received: from 219.245.26.34.bc.googleusercontent.com ([34.26.245.219]
  helo=[10.88.0.4]) by sfi-mx-2.v28.lw.sourceforge.com with esmtp 
- (Exim 4.95) id 1vxUkN-00029W-Vp
+ (Exim 4.95) id 1vyQK2-0007PH-8m
  for industrypack-devel@lists.sourceforge.net;
- Tue, 03 Mar 2026 18:45:32 +0000
+ Fri, 06 Mar 2026 08:14:10 +0000
 MIME-Version: 1.0
-From: AL MARWA GLOBAL INVESTMENT LLC
- <mohammed.hassan@almarwaglobalinvestment.ae>
+From: Mubadala Energy limited <registration@mubadalaenergy-supplierconnect.com>
 To: industrypack-devel@lists.sourceforge.net
 X-Priority: 2
-X-Spam-Score: 5.0 (+++++)
-X-Spam-Report: Spam detection software,
- running on the system "sfi-spamd-2.hosts.colo.sdot.me", 
+X-Spam-Score: 7.6 (+++++++)
+X-Spam-Report: Spam detection software, running on the system "sfi-spamd-1.hosts.colo.sdot.me",
  has identified this incoming email as possible spam.  The original
  message has been attached to this so you can view it or label
  similar future email.  If you have any questions, see
  the administrator of that system for details.
- Content preview:  Here's the HTML version of your message: ```html Business
- Opportunity Letter Greetings, 
- Content analysis details:   (5.0 points, 5.0 required)
- pts rule name              description
+ 
+ Content preview:  Greetings Industrypack-devel We are expanding our approved
+    vendor list and invite you to register your company for consideration on
+   the ongoing bids and partnership opportunities with Mubadala Energy Expansion
+    Initiative (2026– [...] 
+ 
+ Content analysis details:   (7.6 points, 5.0 required)
+ 
+  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.0 MISSING_MID            Missing Message-Id: header
- 1.4 MISSING_DATE           Missing Date: header
- 0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [104.155.113.239 listed in wl.mailspike.net]
- 1.0 TVD_RCVD_IP            Message was received from an IP address
- 0.5 SUBJ_ALL_CAPS          Subject is all capitals
- 0.0 HTML_MESSAGE           BODY: HTML included in message
- 0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
- 0.4 RDNS_DYNAMIC           Delivered to internal network by host with
- dynamic-looking rDNS
- 0.0 TO_NO_BRKTS_DYNIP      To: lacks brackets and dynamic rDNS
- 0.0 PDS_RDNS_DYNAMIC_FP    RDNS_DYNAMIC with FP steps
- 0.2 HELO_MISC_IP           Looking for more Dynamic IP Relays
- 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
-X-Headers-End: 1vxUkN-00029W-Vp
-Subject: [Industrypack-devel] =?utf-8?q?PROJECT_FUNDING?=
+  1.4 MISSING_DATE           Missing Date: header
+  1.0 MISSING_MID            Missing Message-Id: header
+  1.0 TVD_RCVD_IP            Message was received from an IP address
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.6 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
+  0.4 RDNS_DYNAMIC           Delivered to internal network by host with
+                             dynamic-looking rDNS
+  0.2 HELO_MISC_IP           Looking for more Dynamic IP Relays
+  2.5 FROM_LONG_DOM_MINFP    Absurdly long From domain name, suspicious relays
+  0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+X-VA-Spam-Flag: YES
+X-Spam-Flag: YES
+X-Headers-End: 1vyQK2-0007PH-8m
+Subject: [Industrypack-devel] [SPAM] Mubadala Energy Expansion Initiative
+ (2026-2030)
 X-BeenThere: industrypack-devel@lists.sourceforge.net
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -97,79 +100,74 @@ List-Post: <mailto:industrypack-devel@lists.sourceforge.net>
 List-Help: <mailto:industrypack-devel-request@lists.sourceforge.net?subject=help>
 List-Subscribe: <https://lists.sourceforge.net/lists/listinfo/industrypack-devel>, 
  <mailto:industrypack-devel-request@lists.sourceforge.net?subject=subscribe>
-Content-Type: multipart/mixed; boundary="===============8432202396270093046=="
+Content-Type: multipart/mixed; boundary="===============5147278333005513959=="
 Errors-To: industrypack-devel-bounces@lists.sourceforge.net
-Message-Id: <E1vxUkP-0007tC-8k@sfs-ml-4.v29.lw.sourceforge.com>
-Date: Tue, 03 Mar 2026 18:45:33 +0000
-X-Rspamd-Queue-Id: D70061F56D7
+Message-Id: <E1vyQK4-00022V-5X@sfs-ml-4.v29.lw.sourceforge.com>
+Date: Fri, 06 Mar 2026 08:14:12 +0000
+X-Rspamd-Queue-Id: 4A43121CEAF
 X-Rspamd-Server: lfdr
-X-Spamd-Result: default: False [1.19 / 15.00];
-	SUBJ_EXCESS_QP(1.20)[];
-	MIME_BASE64_TEXT_BOGUS(1.00)[];
+X-Spamd-Result: default: False [3.99 / 15.00];
+	SPAM_FLAG(5.00)[];
 	RWL_MAILSPIKE_EXCELLENT(-0.40)[216.105.38.7:from];
 	MAILLIST(-0.20)[mailman];
 	R_SPF_ALLOW(-0.20)[+ip4:216.105.38.7];
 	R_DKIM_ALLOW(-0.20)[lists.sourceforge.net:s=beta];
-	MIME_BASE64_TEXT(0.10)[];
 	MIME_GOOD(-0.10)[multipart/mixed,multipart/related,text/plain];
+	MIME_BASE64_TEXT(0.10)[];
 	HAS_LIST_UNSUB(-0.01)[];
 	RCVD_COUNT_THREE(0.00)[3];
-	RCVD_TLS_LAST(0.00)[];
 	RECEIVED_HELO_LOCALHOST(0.00)[];
 	HAS_X_PRIO_TWO(0.00)[2];
-	R_DKIM_REJECT(0.00)[sourceforge.net:s=x,sf.net:s=x];
+	DMARC_NA(0.00)[mubadalaenergy-supplierconnect.com];
+	RCVD_TLS_LAST(0.00)[];
 	RCPT_COUNT_ONE(0.00)[1];
 	ARC_NA(0.00)[];
-	DKIM_MIXED(0.00)[];
-	FORGED_RECIPIENTS_MAILLIST(0.00)[];
-	DMARC_NA(0.00)[almarwaglobalinvestment.ae];
-	TO_DN_NONE(0.00)[];
-	FROM_NEQ_ENVFROM(0.00)[mohammed.hassan@almarwaglobalinvestment.ae,industrypack-devel-bounces@lists.sourceforge.net];
-	FROM_HAS_DN(0.00)[];
+	R_DKIM_REJECT(0.00)[sourceforge.net:s=x,sf.net:s=x];
 	DKIM_TRACE(0.00)[lists.sourceforge.net:+,sourceforge.net:-,sf.net:-];
-	NEURAL_HAM(-0.00)[-1.000];
-	FORGED_SENDER_MAILLIST(0.00)[];
+	MIME_TRACE(0.00)[0:+,1:+,2:~,3:+,4:+];
+	TO_DN_NONE(0.00)[];
+	NEURAL_HAM(-0.00)[-0.889];
+	FROM_NEQ_ENVFROM(0.00)[registration@mubadalaenergy-supplierconnect.com,industrypack-devel-bounces@lists.sourceforge.net];
+	FROM_HAS_DN(0.00)[];
+	DKIM_MIXED(0.00)[];
 	TAGGED_RCPT(0.00)[industrypack-devel];
-	MISSING_XM_UA(0.00)[];
 	ASN(0.00)[asn:11320, ipnet:216.105.32.0/21, country:US];
-	MIME_TRACE(0.00)[0:+,1:+,2:~,3:+,4:+]
+	FORGED_SENDER_MAILLIST(0.00)[];
+	FORGED_RECIPIENTS_MAILLIST(0.00)[];
+	MISSING_XM_UA(0.00)[];
+	DBL_BLOCKED_OPENRESOLVER(0.00)[sfs-ml-4.v29.lw.sourceforge.com:mid]
 X-Rspamd-Action: no action
 
---===============8432202396270093046==
-Content-Type: multipart/related; boundary="===============3034343044096813873=="
+--===============5147278333005513959==
+Content-Type: multipart/related; boundary="===============2525169201537293829=="
 
---===============3034343044096813873==
+--===============2525169201537293829==
 Content-Type: text/html; charset="utf-8"
 MIME-Version: 1.0
 Content-Transfer-Encoding: base64
 
-SGVyZSdzIHRoZSBIVE1MIHZlcnNpb24gb2YgeW91ciBtZXNzYWdlOgoKYGBgaHRtbAo8IURPQ1RZ
-UEUgaHRtbD4KPGh0bWwgbGFuZz0iZW4iPgo8aGVhZD4KICAgIDxtZXRhIGNoYXJzZXQ9IlVURi04
-Ij4KICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgs
-IGluaXRpYWwtc2NhbGU9MS4wIj4KICAgIDx0aXRsZT5CdXNpbmVzcyBPcHBvcnR1bml0eSBMZXR0
-ZXI8L3RpdGxlPgo8L2hlYWQ+Cjxib2R5PgogICAgPHA+R3JlZXRpbmdzLDwvcD4KICAgIAogICAg
-PHA+QWwgTWFyd2EgR2xvYmFsIEludmVzdG1lbnQgTExDIGlzIGFjdGl2ZWx5IGV4cGxvcmluZyBu
-ZXcgYnVzaW5lc3Mgb3Bwb3J0dW5pdGllcyBhbmQgcHJvamVjdHMgZm9yIHBvdGVudGlhbCBmdW5k
-aW5nIGFuZCBjYXBpdGFsIGZpbmFuY2luZy4gV2Ugd2VsY29tZSB0aGUgb3Bwb3J0dW5pdHkgdG8g
-ZW5nYWdlIGluIGZ1cnRoZXIgZGlzY3Vzc2lvbnMgcmVnYXJkaW5nIHBvdGVudGlhbCBjb2xsYWJv
-cmF0aW9uIHdpdGggeW91ciBwcm9qZWN0cy48L3A+CiAgICAKICAgIDxwPkJlc3QgcmVnYXJkcyw8
-L3A+CiAgICAKICAgIDxwPjxzdHJvbmc+TW9oYW1tZWQgSGFzc2FuPC9zdHJvbmc+PGJyPgogICAg
-Qm9hcmQgTWVtYmVyPGJyPgogICAgPHN0cm9uZz5BTCBNQVJXQSBHTE9CQUwgSU5WRVNUTUVOVCBM
-TEM8L3N0cm9uZz48L3A+CjwvYm9keT4KPC9odG1sPgpgYGAKClRoaXMgd2lsbCByZW5kZXIgeW91
-ciBtZXNzYWdlIGluIGEgc2ltcGxlIGFuZCBwcm9mZXNzaW9uYWwgZm9ybWF0IHdoZW4gdmlld2Vk
-IGluIGEgd2ViIGJyb3dzZXIuCg==
+R3JlZXRpbmdzIEluZHVzdHJ5cGFjay1kZXZlbAoKPHA+V2UgYXJlIGV4cGFuZGluZyBvdXIgYXBw
+cm92ZWQgdmVuZG9yIGxpc3QgYW5kIGludml0ZSB5b3UgdG8gcmVnaXN0ZXIgeW91ciBjb21wYW55
+IGZvciBjb25zaWRlcmF0aW9uIG9uIHRoZSBvbmdvaW5nIGJpZHMgYW5kIHBhcnRuZXJzaGlwIG9w
+cG9ydHVuaXRpZXMgd2l0aCBNdWJhZGFsYSBFbmVyZ3kgRXhwYW5zaW9uIEluaXRpYXRpdmUgKDIw
+MjbigJMyMDMwKS48cD4KCjxwPlRoaXMgZ2xvYmFsIGluaXRpYXRpdmUgaXMgb3BlbiB0byBxdWFs
+aWZpZWQgY29tcGFuaWVzIHdvcmxkd2lkZS4gSWYgeW91ciBvcmdhbml6YXRpb24gaXMgaW50ZXJl
+c3RlZCBpbiBiZWluZyBjb25zaWRlcmVkLCBraW5kbHkgcmVxdWVzdCBmb3IgUXVlc3Rpb25uYWly
+ZSBhbmQgRXhwcmVzc2lvbiBvZiBJbnRlcmVzdCAoRU9JKSBkb2N1bWVudHMgdG8gYmVnaW4gdGhl
+IHByb2Nlc3MuPHA+Cgo8cD5XZSBsb29rIGZvcndhcmQgdG8geW91ciByZXNwb25zZS48cD4KCjxw
+PkFkbmFuIEZhdGVlbTxwPgo8cD5DaGllZiBPcGVyYXRpbmcgT2ZmaWNlcjxwPiAgIA==
 
---===============3034343044096813873==--
+--===============2525169201537293829==--
 
 
---===============8432202396270093046==
+--===============5147278333005513959==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
 
---===============8432202396270093046==
+--===============5147278333005513959==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -180,5 +178,5 @@ Industrypack-devel mailing list
 Industrypack-devel@lists.sourceforge.net
 https://lists.sourceforge.net/lists/listinfo/industrypack-devel
 
---===============8432202396270093046==--
+--===============5147278333005513959==--
 
